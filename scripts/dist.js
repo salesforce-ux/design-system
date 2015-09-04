@@ -335,7 +335,7 @@ async.series([
    */
   function(done) {
     if (isNpm) return done();
-    gulp.src('git_modules/design-system-swatch/dist/*')
+    gulp.src(path.resolve(__PATHS__.root, 'site/assets/downloads/swatches/**'))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'swatches')))
       .on('error', done)
       .on('finish', done);

@@ -23,9 +23,6 @@ var parseArgs = require('minimist');
 
 var sauce = 'http://ondemand.saucelabs.com:80/wd/hub';
 
-var lndmrkUsername = process.env.LNDMRK_USERNAME;
-var lndmrkPassword = process.env.LNDMRK_PASSWD;
-
 // Setup URLs
 
 var loginUrl;
@@ -86,13 +83,13 @@ console.log("Running tests from: " + runfromlocation);
 var testurl;
 switch (testserver) {
   case 'prod':
-    testurl = 'lndmrk.herokuapp.com';
+    testurl = 'lightning-design-system.herokuapp.com';
     break;
   case 'stage':
-    testurl = 'lndmrk-dev.herokuapp.com';
+    testurl = 'design-system-dev.herokuapp.com';
     break;
   case 'test':
-    testurl = 'lndmrk-dev2.herokuapp.com';
+    testurl = 'design-system-test.herokuapp.com';
     break;
   case 'local':
     testurl = 'localhost:3000';
@@ -130,7 +127,7 @@ before(function(done) {
   if (runfromlocation == 'sauce') {
 
     console.log("*** Running tests on SAUCELABS ***");
-    loginUrl = 'http://' + lndmrkUsername + ':' + lndmrkPassword + '@' + testurl;
+    loginUrl = 'http://' + testurl;
 
     coreUrl = loginUrl + '/develop/core/#/';
     componentsUrl = loginUrl + '/develop/components/#/';

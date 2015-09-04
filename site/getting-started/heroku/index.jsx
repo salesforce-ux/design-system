@@ -17,8 +17,7 @@ import version from '.generated/site.version';
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 import { Link } from 'react-router';
-import globals from 'app_modules/global';
-const moduleName = globals.moduleName;
+import g from 'app_modules/global';
 
 export default (
   <PageBody anchorTitle="Heroku" contentClassName={pf('grid wrap')}>
@@ -30,7 +29,7 @@ export default (
           <li><a href="#step-2">2. Install node dependencies</a></li>
           <li><a href="#step-3">3. Create index.html</a></li>
           <li><a href="#step-4">4. Create server.js</a></li>
-          <li><a href="#step-5">5. Download {globals.displayName}</a></li>
+          <li><a href="#step-5">5. Download {g.displayName}</a></li>
           <li><a href="#step-6">6. Add components</a></li>
           <li><a href="#step-7">7. Deploy to Heroku</a></li>
         </ul>
@@ -40,9 +39,9 @@ export default (
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
       <div className={pf('container--medium')}>
 
-        <p className="site-text-introduction">The following tutorial will set you up with the tools you need to work with the {globals.displayName} in your local development environment and deploy to Heroku. </p>
+        <p className="site-text-introduction">The following tutorial will set you up with the tools you need to work with the {g.displayName} in your local development environment and deploy to Heroku. </p>
 
-        <p>If you&rsquo;re interested in a more in-depth tutorial check out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; github project</a></strong>. His project is a reference application built with the {globals.displayName}, React, Node, Postgres, and Heroku. For a static example, please continue with the steps below!</p>
+        <p>If you&rsquo;re interested in a more in-depth tutorial check out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; github project</a></strong>. His project is a reference application built with the {g.displayName}, React, Node, Postgres, and Heroku. For a static example, please continue with the steps below!</p>
 
         <p>In this tutorial, we&rsquo;ll assume that you have some knowledge of the following:</p>
         <ul className={pf('list--dotted')}>
@@ -58,7 +57,7 @@ export default (
 
         <div className="slds-box slds-box slds-theme--shade slds-theme--alert-texture slds-m-bottom--medium">
           <p>
-            If, for any reason, you wish to bypass these steps to manually create this project, clone the basic setup <a href="https://github.com/salesforce-ux/demo_slds_heroku" target="_blank">here</a>. Once you do that you can skip to <a href="#step-5">Step 5: Download {globals.displayName}</a>.
+            If, for any reason, you wish to bypass these steps to manually create this project, clone the basic setup <a href="https://github.com/salesforce-ux/demo_slds_heroku" target="_blank">here</a>. Once you do that you can skip to <a href="#step-5">Step 5: Download {g.displayName}</a>.
           </p>
         </div>
 
@@ -173,8 +172,8 @@ app.listen(port);
           <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
-        <h2 id="step-5" className="site-text-heading--large">Step 5: Download the {globals.displayName}</h2>
-        <p><a href="https://www.lightningdesignsystem.com/resources/downloads/">Download the {globals.displayName} CSS framework</a></p>
+        <h2 id="step-5" className="site-text-heading--large">Step 5: Download the {g.displayName}</h2>
+        <p><a href="https://www.lightningdesignsystem.com/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
         <p>Once you have unzipped the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -194,7 +193,7 @@ demo_slds_heroku/
         </div>
 
         <h2 id="step-6" className="site-text-heading--large">Step 6: Add components</h2>
-        <p>Add {globals.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
+        <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
         <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
@@ -351,7 +350,7 @@ $ heroku open
         </div>
 
         <h2 id="step-8" className="site-text-heading--large">Congrats! You now have a static  application!</h2>
-        <p>Now that you have a static project using the {globals.displayName} and Heroku you can use it with any framework, add a database to it, whatever! The world is your oyster!</p>
+        <p>Now that you have a static project using the {g.displayName} and Heroku you can use it with any framework, add a database to it, whatever! The world is your oyster!</p>
       </div>
     </div>
   </PageBody>

@@ -24,7 +24,7 @@ module.exports = function(done) {
 
   // Move the zips to .www/assets
   gulp.task('fonts:zip:copy', () => {
-    return gulp.src('site/assets/downloads/salesforce_landmark_fonts.zip')
+    return gulp.src('site/assets/downloads/salesforce_lightning_design_system_fonts.zip')
       .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')));
   });
 

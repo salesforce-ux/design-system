@@ -37,7 +37,6 @@ const tasks = {
   site: {
     compile: require('./site/compile'),
     fonts: require('./site/fonts'),
-    swatches: require('./site/swatches'),
     icons: require('./site/icons'),
     links: require('./site/links'),
     sass: async.apply(compileSass, null)
@@ -68,7 +67,6 @@ module.exports = {
         async.parallel([
           tasks.site.fonts,
           tasks.site.icons,
-          tasks.site.swatches,
           tasks.generate.tokens
         ], done);
       },

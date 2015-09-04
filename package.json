@@ -95,7 +95,6 @@
   },
   "gitDependencies": {
     "design-tokens-winter-16": "git@github.com:salesforce-ux/design-tokens-internal.git#winter-16",
-    "design-tokens": "git@github.com:salesforce-ux/design-tokens-internal.git#winter-16",
-    "design-system-swatch": "git@github.com:salesforce-ux/design-system-swatch.git#master"
+    "design-tokens": "git@github.com:salesforce-ux/design-tokens-internal.git#winter-16"
   }
 }

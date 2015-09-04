@@ -136,7 +136,7 @@ export default (
 
       <div className={pf('col size--1-of-1 medium-size--1-of-2 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="ase-swatches">ASE (Adobe)</h3>
-        <form action="/assets/downloads/swatches/slds.ase">
+        <form action="/assets/downloads/swatches/salesforce-lightning-design-system.ase">
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('swatch-ase'); }}>
             Download ASE Swatch
           </button>
@@ -145,7 +145,7 @@ export default (
 
       <div className={pf('col size--1-of-1 medium-size--1-of-2 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="clr-swatches">CLR (iOS)</h3>
-        <form action="/assets/downloads/swatches/slds.clr">
+        <form action="/assets/downloads/swatches/salesforce-lightning-design-system.clr">
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('swatch-clr'); }}>
             Download CLR Swatch
           </button>

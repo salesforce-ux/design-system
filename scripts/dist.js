@@ -206,7 +206,7 @@ async.series([
     var packageJSON = JSON.parse(fs.readFileSync(local('package.json')).toString());
     delete packageJSON.scripts;
     delete packageJSON.gitDependencies;
-    packageJSON.name = '@salesforce-ux/landmark';
+    packageJSON.name = '@salesforce-ux/design-system';
     packageJSON.dependencies = packageJSON.optionalDependencies;
     delete packageJSON.optionalDependencies;
     fs.writeFile(local('package.json'), JSON.stringify(packageJSON, null, 2), done);
@@ -335,7 +335,7 @@ async.series([
    */
   function(done) {
     if (isNpm) return done();
-    gulp.src('git_modules/landmark-swatch/dist/*')
+    gulp.src('git_modules/design-system-swatch/dist/*')
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'swatches')))
       .on('error', done)
       .on('finish', done);

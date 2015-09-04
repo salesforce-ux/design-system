@@ -1,6 +1,6 @@
 # Lightning Design System
 
-[![Build Status](https://magnum.travis-ci.com/salesforce-ux/landmark-internal.svg?token=BMXxPFKR5GZuYsqAFsEf&branch=master)](https://magnum.travis-ci.com/salesforce-ux/landmark-internal)
+[![Build Status](https://magnum.travis-ci.com/salesforce-ux/design-system-internal.svg?token=BMXxPFKR5GZuYsqAFsEf&branch=master)](https://magnum.travis-ci.com/salesforce-ux/design-system-internal)
 
 ## Setup
 

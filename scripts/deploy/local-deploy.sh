@@ -34,7 +34,7 @@ set -e
 startdir=`pwd`
 export GIT_VERSION=`git describe --abbrev=0`
 
-# clone and build landmark
+# clone and build design-system
 tmpdir=`mktemp -dt salesforce-lightning-design-system.XXXXX`
 echo "Created temp dir: $tmpdir"
 cp scripts/deploy/site/* $tmpdir

@@ -1,10 +1,10 @@
 {
-  "name": "landmark-staging-server",
+  "name": "design-system-staging-server",
   "version": "0.0.1",
-  "description": "Design Systems Interface Guidelines & CSS framework: LANDMARK STAGING SERVER",
+  "description": "Salesforce Lightning Design System",
   "repository": {
     "type": "git",
-    "url": "git@github.com:salesforce-ux/landmark-internal.git#staging-server"
+    "url": "git@github.com:salesforce-ux/design-system-internal.git#staging-server"
   },
   "author": "Salesforce",
   "dependencies": {

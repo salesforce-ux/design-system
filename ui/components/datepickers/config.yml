@@ -1,0 +1,7 @@
+status: 'prototype'
+classBase: 'datepicker'
+flavors:
+  - base
+  - single-select
+  - multi-select
+  - time

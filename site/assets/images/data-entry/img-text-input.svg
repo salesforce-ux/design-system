@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="434px" height="138px" viewBox="0 0 434 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy 22 + Rectangle 398 + Rectangle 232 Copy 177 + Rectangle 232 Copy 175</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="data-entry" sketch:type="MSArtboardGroup" transform="translate(-298.000000, -490.000000)">
+            <g id="Group-Copy-22-+-Rectangle-398-+-Rectangle-232-Copy-177-+-Rectangle-232-Copy-175" sketch:type="MSLayerGroup" transform="translate(298.000000, 490.000000)">
+                <g id="Group-Copy-22" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-396" stroke="#E0E5EE" fill="#FFFFFF" x="0" y="18" width="434" height="45" rx="4"></rect>
+                    <rect id="Rectangle-232-Copy-173" fill="#D3DDE7" x="1.14351358" y="0" width="128.07352" height="6" rx="4"></rect>
+                    <rect id="Rectangle-232-Copy-176" fill="#A8B8D0" x="30.1435136" y="38" width="271.856486" height="6" rx="4"></rect>
+                </g>
+                <g id="Rectangle-398-+-Rectangle-232-Copy-177-+-Rectangle-232-Copy-175" transform="translate(0.000000, 75.000000)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-398" stroke="#E0E5EE" fill="#FFFFFF" x="0" y="18" width="434" height="45" rx="4"></rect>
+                    <rect id="Rectangle-232-Copy-177" fill="#A8B8D0" x="30.1435136" y="37" width="128.07352" height="6" rx="4"></rect>
+                    <rect id="Rectangle-232-Copy-175" fill="#D3DDE7" x="1.14351358" y="0" width="48.0275702" height="6" rx="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

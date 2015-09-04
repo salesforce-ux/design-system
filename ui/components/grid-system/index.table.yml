@@ -1,0 +1,164 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. For brevity when we say to apply to a <code>.{{cssPrefix}}col</code> this also includes <code>.{{cssPrefix}}col--padded</code>.
+classes:
+  -
+    class: grid
+    description: Initializes grid
+    required: true
+    applied: any container
+  -
+    class: grid--frame
+    description: 100% of the width and height of the viewport
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--vertical
+    description: Stack your columns vertically instead of the default row behavior
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--align-center
+    description: Columns align to the center axis and expand in each direction
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--align-spread
+    description: Columns align to the left and right followed by center. Space is equal between them
+    applied: <code>.{{cssPrefix}}grid</code>
+    notes: With only two columns &mdash; you can get a similar effect by setting one of the columns to <code>.{{cssPrefix}}no-flex<code>. (See details below.)
+  -
+    class: grid--align-space
+    description: Columns are evenly distributed with equal space around them all
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: col
+    description: Initializes a grid column
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: This class is not required since all child nodes of a flex grid become columns. It can help with clarity.
+  -
+    class: col--padded
+    description: Initializes a grid column with 0.75rem of horizontal padding
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
+    class: col--padded-medium
+    description: Initializes a grid column with 1rem of horizontal padding
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
+    class: col--padded-large
+    description: Initializes a grid column with 1.5rem of horizontal padding
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
+    class: grid--pull-padded
+    description: Normalizes the 0.75rem of padding when nesting a grid in a <code>.{{cssPrefix}}col--padded</code>
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: Nested <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--pull-padded-medium
+    description: Normalizes the 1rem of padding when nesting a grid in a <code>.{{cssPrefix}}col--padded-medium</code>
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: Nested <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--pull-padded-large
+    description: Normalizes the 1.5rem of padding when nesting a grid in a <code>.{{cssPrefix}}col--padded-large</code>
+    applied: Direct descendant of <code>.{{cssPrefix}}grid</code>
+    notes: Nested <code>.{{cssPrefix}}grid</code>
+  -
+    class: col-rule--right
+    description: Adds border to right side of column
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: This is only applied on a viewport width wider than 1024px
+  -
+    class: col-rule--left
+    description: Adds border to left side of column
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: This is only applied on a viewport width wider than 1024px
+  -
+    class: col-rule--top
+    description: Adds border to top of column
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: This is only applied on a viewport width wider than 1024px
+  -
+    class: col-rule--bottom
+    description: Adds border to bottom of column
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: This is only applied on a viewport width wider than 1024px
+  -
+    class: wrap
+    description: Allows columns to wrap when they exceed 100% of their parent’s width
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: nowrap
+    description: Keeps columns on one line. Allows columns to stretch and fill 100% of the parent&rsquo;s width.
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: nowrap--small
+    description: Allows columns to stretch and fill 100% of the parent’s width when viewport width is wider than 480px.
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: nowrap--medium
+    description: Allows columns to stretch and fill 100% of the parent’s width when viewport width is wider than 768px.
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: nowrap--large
+    description: Allows columns to stretch and fill 100% of the parent’s width when viewport width is wider than 1024px.
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: has-flexi-truncate
+    description: Needed when truncation is nested in a flexible container in a grid
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: This class is placed on a parent column that contains a flexbox element containing <code>.{{cssPrefix}}truncate</code>. For example &mdash; for a media object that is nested in a grid column and contains truncation &mdash; the grid column would require this class.
+  -
+    class: no-flex
+    description: Removes flexbox from grid column
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: Using this class makes the column the same width as the children within and allows the other column to take up all the extra space. The outcome is very much like using <code>.{{cssPrefix}}grid--align-spread</code> on a <code>.{{cssPrefix}}grid</code> element with two columns.
+  -
+    class: no-space
+    description: Sets the column to a min-width of 0
+    applied: <code>.{{cssPrefix}}col</code>
+    notes: Occasionally needed on a flexible element containing <code>.{{cssPrefix}}truncate</code>.
+  -
+    class: grow
+    description: Allows column to grow to children&rsquo;s content
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: grow-none
+    description: Prevents column from growing to children&rsquo;s content
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: shrink
+    description: Allows column to shrink to children's content
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: shrink-none
+    description: Prevents column from shrinking to children's content
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: align-top
+    description: Vertically aligns element to top of <code>.{{cssPrefix}}grid</code>
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: align-middle
+    description: Vertically aligns element to middle of <code>.{{cssPrefix}}grid</code>
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: align-bottom
+    description: Vertically aligns element to bottom of <code>.{{cssPrefix}}grid</code>
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: container--small
+    description: Restrict width of containers to a maximum of 576px/36rem
+  -
+    class: container--medium
+    description: Restrict width of containers to a maximum of 960px/60rem
+  -
+    class: container--large
+    description: Restrict width of containers to a maximum of 1280px/80rem
+  -
+    class: container--center
+    description: Horizontally positions containers in the center of the viewport
+  -
+    class: container--left
+    description: Horizontally positions containers to the left of the viewport
+  -
+    class: container--right
+    description: Horizontally positions containers to the right of the viewport

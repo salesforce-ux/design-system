@@ -1,0 +1,1 @@
+If you desire a multi-select date range, the selected cell will need to have `.{{cssPrefix}}is-selected-multi` applied. Another scenario would be a multi range selection spanning over two or more weeks. If this scenario is true, each `<tr>` will need the class `.{{cssPrefix}}has-multi-row-selections` added.

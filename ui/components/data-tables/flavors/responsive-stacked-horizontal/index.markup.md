@@ -1,0 +1,1 @@
+When `.{{cssPrefix}}max-medium-table--stacked` is applied to the &ldquo;Grid&rdquo; table, we generate faux `<th>` labels using the `data-label` applied to each cell, and stack the cells instead of lining them up horizontally. This works up until the **medium form factor** breakpoint. After the breakpoint is triggered, the table will lay out horizontally as normal.

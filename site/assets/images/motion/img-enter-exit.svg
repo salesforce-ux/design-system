@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="140px" height="60px" viewBox="0 0 140 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="motion" sketch:type="MSArtboardGroup" transform="translate(-337.000000, -798.000000)">
+            <g id="timing-copy" sketch:type="MSLayerGroup" transform="translate(297.000000, 736.000000)">
+                <g id="Group" transform="translate(40.000000, 62.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-88-Copy-3" opacity="0.2" fill="#5EB4FF" cx="30" cy="30" r="30"></circle>
+                    <circle id="Oval-88-Copy-7" opacity="0.2" fill="#5EB4FF" cx="110" cy="30" r="30"></circle>
+                    <circle id="Oval-88-Copy-2" opacity="0.4" fill="#5EB4FF" cx="40" cy="30" r="30"></circle>
+                    <circle id="Oval-88-Copy-6" opacity="0.4" fill="#5EB4FF" cx="100" cy="30" r="30"></circle>
+                    <circle id="Oval-88-Copy" opacity="0.8" fill="#0C8EFF" cx="54" cy="30" r="30"></circle>
+                    <circle id="Oval-88-Copy-5" opacity="0.8" fill="#0C8EFF" cx="86" cy="30" r="30"></circle>
+                    <circle id="Oval-88" fill="#0070D2" cx="70" cy="30" r="30"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

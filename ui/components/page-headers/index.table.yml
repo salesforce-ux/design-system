@@ -1,0 +1,8 @@
+description: Most of the markup for page headers is from other components and utilities. This table gives you a quick overview of the unique {{abbreviatedName}} CSS classes that can be applied to create page headers.
+classes:
+  -
+    class: page-header__detail-row
+    description: Creates margins around the detail section of record home
+    applied: <code>div</code>
+    notes: Only the record home page header contains this detail area
+  

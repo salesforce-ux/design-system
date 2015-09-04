@@ -1,0 +1,33 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: tree-container
+    description: Sets <code>min-</code> and <code>max-width</code> on tree
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: tree
+    description: Initializes tree
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: tree__branch
+    description: Can contain multiple <code>.{{cssPrefix}}tree__item</code> and <code>.{{cssPrefix}}tree__group</code>
+    required: true
+    applied: <code>&lt;li&gt;</code>
+    notes: A branch can be expanded and collapsed
+  -
+    class: tree__item
+    description: Initializes tree item
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: This is used within a <code>.{{cssPrefix}}tree__branch</code> and contains the toggle icon and nested <code>&lt;ul&gt;</code>
+  -
+    class: tree__group
+    description: Defines a nested group of tree branches
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: nested
+    description: Styles for nesting a group of branches
+    applied: <code>.{{cssPrefix}}tree__group</code>

@@ -1,0 +1,14 @@
+flavors:
+  - input
+  - textarea
+  - radio
+  - checkbox
+  - select
+  - horizontal-form
+  - stacked-form
+  - inline-form
+  - compound-form
+  - read-only-state
+  - validation-state
+  - sizing
+  - field-level-help

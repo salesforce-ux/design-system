@@ -1,0 +1,65 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create modals.
+classes:
+  -
+    class: modal
+    description: Positions the modal to stretch to page edges
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: fade-in-open
+    description: Allows the modal to be visible.
+    applied: <code>.{{cssPrefix}}modal</code>
+    required: true
+    notes: Apply this class to a modal with JavaScript to make it visible.
+  -
+    class: modal--large
+    description: Widens the modal to take more horizontal space
+    applied: <code>.{{cssPrefix}}modal</code>
+  -
+    class: modal__container
+    description: Centers and sizes the modal horizontally and confines modal within viewport height
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal</code> with nothing else nested on the same level.
+  -
+    class: modal__header
+    description: Creates the Modal Header container.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal__container</code> as the first element.
+  -
+    class: modal__close
+    description: Positions the close button to the top right outside of the modal.
+    applied: <code>.{{cssPrefix}}button</code>
+    required: true
+    notes: Use JavaScript to make clicking this button remove the modal. This button contains a Close Action Icon.
+  -
+    class: modal__content
+    description: Creates the scrollable content area for the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+  -
+    class: modal__footer
+    description: Creates the Modal Footer container.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__container</code>. Nothing should follow it. Note that by default, elements will be aligned to the right.
+  -
+    class: modal__footer--directional
+    description: Makes buttons inside the footer spread to both left and right.
+    applied: <code>.{{cssPrefix}}modal__footer</code>
+    notes: This is only needed when you have two buttons that indicate a back and forward navigation.
+  -
+    class: modal-backdrop
+    description: Creates the shaded backdrop used behind the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: This should follow after the <code>.{{cssPrefix}}modal</code> as an empty element.
+  -
+    class: modal-backdrop--open
+    description: Allows the backdrop to be visible.
+    applied: <code>.{{cssPrefix}}modal-backdrop</code>
+    required: true
+    notes: Apply this class to a modal backdrop with JavaScript to make it visible.
+    

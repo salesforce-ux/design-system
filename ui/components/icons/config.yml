@@ -1,0 +1,7 @@
+classBase: 'icon'
+status: 'dev-ready'
+flavors:
+  - base
+  - colors
+  - sizes
+

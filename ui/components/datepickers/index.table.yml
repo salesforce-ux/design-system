@@ -1,0 +1,46 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: datepicker
+    description: Initializes datepicker
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: If datepicker is a dropdown, apply <code>.{{cssPrefix}}dropdown</code>
+  -
+    class: datepicker__filter
+    description: Aligns filter items horizontally
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Needs <code>.{{cssPrefix}}grid</code> class
+  -
+    class: datepicker__filter--month
+    description: Spaces out month filter
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: day
+    description: Style for calendar days
+    applied: <code>&lt;span&gt;</code>
+    required: true
+    notes: <code>&lt;span&gt;</code> is inside <code>&lt;td&gt;</code>
+  -
+    class: is-today
+    description: Indicates today
+    applied: <code>&lt;td&gt;</code>
+  -
+    class: is-selected
+    description: Indicates selected days
+    applied: <code>&lt;td&gt;</code>
+  -
+    class: is-selected-multi
+    description: Indicates if selected days are apart of a date range
+    applied: <code>&lt;td&gt;</code>
+  -
+    class: has-multi-row-selection
+    description: Helper class that styles date range appropriately
+    applied: <code>&lt;tr&gt;</code>
+  -
+    class: disabled-text
+    description: Indicates days that are in previous/next months
+    applied: <code>&lt;td&gt;</code>
+

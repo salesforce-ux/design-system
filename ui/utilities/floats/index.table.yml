@@ -1,0 +1,12 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: float--left
+    description: Pulls element from document flow and floats left. Text and other elements wrap around it.
+  -
+    class: float--right
+    description: Pulls element from document flow and floats right. Text and other elements wrap around it.
+  -
+    class: clearfix
+    description: Contains floats and stops wrapping of elements following it.
+    notes: Applies to parent of floats

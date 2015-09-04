@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="3752px" height="669px" viewBox="0 0 3752 669" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>bkgd copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M245.15918,2541.37305 L2378.57812,2544.72754 L3997,2544.72754 L245.951172,3209.47168 L245.15918,2541.37305 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="desktop-wide" sketch:type="MSArtboardGroup" transform="translate(-245.000000, -2541.000000)">
+            <mask id="mask-2" sketch:name="bkgd copy 3" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="bkgd-copy-3" fill="#EEF1F6" sketch:type="MSShapeGroup" transform="translate(2121.079590, 2875.422363) scale(1, -1) translate(-2121.079590, -2875.422363) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

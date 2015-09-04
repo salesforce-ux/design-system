@@ -1,0 +1,4 @@
+classBase: 'breadcrumb'
+status: 'dev-ready'
+flavors:
+  - base

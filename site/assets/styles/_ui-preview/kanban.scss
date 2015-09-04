@@ -1,0 +1,147 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.kanban {
+  overflow-x: auto;
+  padding-left: $spacing-x-small;
+  padding-right: $spacing-x-small;
+  margin-top: -$spacing-medium;
+
+  .cell { // This is the flexbox column of the grid
+    min-width: 11.25em; //equals 180px
+    max-width: 22.5em;  //equals 360px
+  }
+
+  &__header {
+    padding-bottom: 0;
+  }
+
+  &__total {
+    display: block;
+    width: 100%;
+    padding: $spacing-x-small 0;
+    font: {
+      weight: $font-weight-light;
+      size: $font-size-x-large;
+    }
+    color: #10AA52; //$salem; - Getting an unbound variable error (then something about rgb) @TODO - no token
+    text-align: center;
+    border-left: 1px solid $color-border; // Used to extend the column border without going through the headings - may be a better solution
+  }
+
+  &__stage-wrapper {
+    display: block;
+    position: relative;
+    padding: $spacing-x-small $spacing-x-small $spacing-x-small $spacing-large;
+    background: $color-background-button-brand;
+    color: $color-text-inverse;
+    font-size: $font-size-small;
+    text-align: center;
+    letter-spacing: .9px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -$spacing-medium;
+      top: $spacing-xxx-small;
+      display: block;
+      width: 1.85rem;
+      height: 1.85rem;
+      border: 2px solid $color-border-inverse;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(45deg);
+    }
+  }
+  &__stage {
+    display: inline-block;
+    max-width: calc(100% - 2.5rem);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: normal;
+    vertical-align: middle;
+  }
+
+  &__stage-count {
+    display: inline-block;
+  }
+
+  .cell--first { // Can't use :first-child since each heading is in its own column now
+
+    .kanban__stage-wrapper {
+      border-radius: $border-radius-pill 0 0 $border-radius-pill;
+
+       &:before {
+        content: none;
+      }
+    }
+  }
+
+  .cell--last { // This class must programatically be placed on the last column
+
+    .kanban__stage-wrapper {
+      border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    }
+
+    .kanban__column,
+    .kanban__total {
+      border-right: 1px solid $color-border;
+    }
+  }
+
+  // To support rtl on the body
+  &[dir=rtl] {
+
+    .kanban__stage-wrapper{
+
+      &:before {
+        right: -$spacing-medium;
+        border: 2px solid $color-border-inverse;
+        border-right: none;
+        border-top: none;
+      }
+    }
+
+    .cell--first .kanban__stage-wrapper {
+      border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    }
+
+    .cell--last .kanban__stage-wrapper {
+      border-radius: $border-radius-pill 0 0 $border-radius-pill;
+    }
+  }
+
+  &__column {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 13.75rem); // to account for the header
+    border-left: 1px solid $color-border;
+  }
+
+  &__item {
+    margin: $spacing-x-small;
+  }
+}
+.tile--kanban {
+
+  &__amount,
+  &__closing {
+    padding-bottom: 0;
+  }
+
+  &__amount {
+    font-size: $font-size-large;
+  }
+
+  &__closing {
+    color: #686C70;
+    font-size: $font-size-small;
+  }
+}

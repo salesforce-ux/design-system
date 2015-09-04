@@ -1,0 +1,110 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: form-element
+    description: Initializes form element
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: form-element__label
+    description: Initializes form element label
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: form-element__control
+    description: Initializes form element control
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Control can contain an <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>
+  -
+    class: input
+    description: Initializes text input
+    required: true
+    applied: <code>&lt;input&gt;</code>
+  -
+    class: input--small
+    description: Applies styles for a smaller text input
+    applied: <code>.{{cssPrefix}}input</code>
+  -
+    class: input--bare
+    description: Removes background and border from text input
+    applied: <code>.{{cssPrefix}}input</code>
+  -
+    class: input-has-icon
+    description: Lets text input know how to position <code>.{{cssPrefix}}input__icon</code>
+    applied: <code>&lt;div&gt;</code> around <code>&lt;input&gt;</code>
+    notes: The <code>&lt;div&gt;</code> contains both the <code>&lt;svg&gt;</code> and the <code>&lt;input&gt;</code>
+  -
+    class: input__icon
+    description: Hook for <code>.{{cssPrefix}}input-has-icon</code>
+    applied: <code>&lt;svg&gt;</code>
+  -
+    class: input-has-icon--left
+    description: Positions <code>.{{cssPrefix}}input__icon</code> to the left of the text input
+    applied: <code>.{{cssPrefix}}input-has-icon</code>
+  -
+    class: input-has-icon--right
+    description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
+    applied: <code>.{{cssPrefix}}input-has-icon</code>
+  -
+    class: textarea
+    description: Initializes textarea
+    required: true
+    applied: <code>&lt;textarea&gt;</code>
+  -
+    class: select
+    description: Initializes select
+    required: true
+    applied: <code>&lt;select&gt;</code>
+  -
+    class: checkbox
+    description: Initializes checkbox
+    required: true
+    applied: <code>&lt;label&gt;</code>
+    notes: Label wraps the faux checkbox and text, <code>&lt;input&gt;</code> requires <code>[type=checkbox]</code>
+  -
+    class: checkbox--faux
+    description: Creates a custom styled checkbox
+    required: true
+    applied: <code>&lt;span&gt;</code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
+  -
+    class: radio
+    description: Initializes radio button
+    required: true
+    applied: <code>&lt;label&gt;</code>
+    notes: Label wraps the faux radio and text, <code>&lt;input&gt;</code> requires <code>[type=radio]</code>
+  -
+    class: radio--faux
+    description: Creates a custom styled radio button
+    required: true
+    applied: <code>&lt;span&gt;</code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
+  -
+    class: form--horizontal
+    description: Horizontally aligns a single form label and control on the same line
+    applied: <code>&lt;form&gt;</code>
+  -
+    class: form--stacked
+    description: Vertically aligns form label and control, provides spacing between form elements
+    applied: <code>&lt;form&gt;</code>
+    notes: This is the default
+  -
+    class: form--inline
+    description: horizontally align multiple form elements on the same axis
+    applied: <code>&lt;form&gt;</code>
+  -
+    class: form--compound
+    description: Creates a form that consists of multiple form groups
+    applied: <code>&lt;form&gt;</code>
+    notes: Groups are placed in fieldsets and small labels are used for inputs
+  -
+    class: form-element__row
+    description: Use to create rows of form elements in a compound form
+    applied: <code>&lt;div&gt;</code>
+    notes: Wrap form elements in this class
+  -
+    class: form--compound--horizontal
+    description: Layout modifier for compound forms
+    applied: <code>.{{cssPrefix}}form--compound</code>
+    notes: Positions form labels to the left of the form control

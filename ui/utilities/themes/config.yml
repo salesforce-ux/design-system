@@ -1,0 +1,5 @@
+status: 'dev-ready'
+flavors:
+  - box
+  - color
+  - page-header

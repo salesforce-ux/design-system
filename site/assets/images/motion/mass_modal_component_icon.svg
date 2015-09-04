@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px"
+	 viewBox="75 -100 300 300" style="enable-background:new 75 -100 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#32C3B3;}
+	.st1{fill:#FFFFFF;fill-opacity:0.8;}
+	.st2{fill:#D6F3EF;}
+</style>
+<title>Modal</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Modal" sketch:type="MSArtboardGroup">
+		<ellipse id="Oval-1-Copy-11" sketch:type="MSShapeGroup" class="st0" cx="224.4" cy="49.7" rx="134" ry="137.3">
+		</ellipse>
+		<ellipse id="Oval-1-Copy-9" sketch:type="MSShapeGroup" class="st0" cx="224.4" cy="49.7" rx="134" ry="137.3">
+		</ellipse>
+		
+			<g id="Rectangle-239-Copy-5-_x2B_-Rectangle-248-_x2B_-Rectangle-248-Copy" transform="translate(78.000000, 59.000000)" sketch:type="MSLayerGroup">
+			<path id="Rectangle-239-Copy-5" sketch:type="MSShapeGroup" class="st1" d="M81.2-79.4h130.5c3.3,0,6,2.7,6,6V57.1
+				c0,3.3-2.7,6-6,6H81.2c-3.3,0-6-2.7-6-6V-73.4C75.2-76.7,77.9-79.4,81.2-79.4z"/>
+			<g id="Rectangle-248-_x2B_-Rectangle-248-Copy" transform="translate(128.690410, 0.212048)" sketch:type="MSShapeGroup">
+				<path id="Rectangle-248-Copy" class="st2" d="M78.3-86.9c-0.7,0.7-1.8,0.7-2.5,0l0,0c-0.7-0.7-0.7-1.8,0-2.5l9.9-9.9
+					c0.7-0.7,1.8-0.7,2.5,0l0,0c0.7,0.7,0.7,1.8,0,2.5L78.3-86.9L78.3-86.9z"/>
+				<g id="Rectangle-248-_x2B_-Rectangle-248-Copy_1_" transform="translate(128.690410, 0.212048)" sketch:type="MSShapeGroup">
+					<path id="Rectangle-248-Copy_1_" class="st2" d="M-43-87.1l-9.9-9.9c-0.7-0.7-0.7-1.8,0-2.5l0,0c0.7-0.7,1.8-0.7,2.5,0l9.9,9.9
+						c0.7,0.7,0.7,1.8,0,2.5l0,0C-41.2-86.5-42.3-86.4-43-87.1L-43-87.1z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

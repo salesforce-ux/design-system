@@ -1,0 +1,12 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: pill
+    description: Initializes pill
+    required: true
+    applied: <code>&lt;span&gt;</code>
+  -
+    class: pill__label
+    description: Initializes pill label
+    required: true
+    applied: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>

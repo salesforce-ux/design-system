@@ -1,0 +1,27 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: card
+    description: Initializes card
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: card__header
+    description: Initializes card header
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: card__body
+    description: Initializes card body
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: card__footer
+    description: Initializes card footer
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: grid
+    description: Horizontally aligns text and actions on separate ends of card header
+    applied: <code>.{{cssPrefix}}card__header</code>
+    notes: Only required if you have actions

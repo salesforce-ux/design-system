@@ -1,0 +1,4 @@
+status: 'dev-ready'
+className: 'checkbox'
+showFormFactors:
+  - large

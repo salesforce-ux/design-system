@@ -1,0 +1,4 @@
+status: 'prototype'
+classBase: 'tree'
+flavors:
+  - base

@@ -1,0 +1,5 @@
+status: 'dev-ready'
+dependencies:
+  - components/card/*
+showFormFactors:
+  - large

@@ -1,0 +1,7 @@
+{
+  "stage": 2,
+  "optional": [
+    "runtime",
+    "es7.classProperties"
+  ]
+}

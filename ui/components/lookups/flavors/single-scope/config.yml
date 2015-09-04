@@ -1,0 +1,7 @@
+status: 'prototype'
+dependencies:
+  - core/forms
+  - core/forms/flavors/input
+  - core/icons
+showFormFactors:
+  - large

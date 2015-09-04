@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="342px" height="215px" viewBox="0 0 342 215" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="data-entry" sketch:type="MSArtboardGroup" transform="translate(-297.000000, -1426.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(297.000000, 1426.000000)">
+                <rect id="Rectangle-398-Copy-4" stroke="#E0E5EE" fill="#FFFFFF" sketch:type="MSShapeGroup" x="1" y="18" width="340" height="45" rx="4"></rect>
+                <text id="100%" sketch:type="MSTextLayer" font-family="Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                    <tspan x="153" y="94">100%</tspan>
+                </text>
+                <path d="M2.40123141,75.5 L340.536957,75.5" id="Line-Copy-31" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1.5,69.5 L1.5,81.5" id="Line-Copy-6" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M340.5,69.5 L340.5,81.5415945" id="Line-Copy-7" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <text id="67%" sketch:type="MSTextLayer" font-family="Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                    <tspan x="183" y="214">67%</tspan>
+                </text>
+                <text id="33%" sketch:type="MSTextLayer" font-family="Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                    <tspan x="12" y="214">33%</tspan>
+                </text>
+                <path d="M63.4927808,195.5 L340.536957,195.5" id="Line-Copy-32" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1.49278083,195.5 L49.5936432,195.5" id="Line-Copy-33" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M63.5,189.5 L63.5,201.5" id="Line-Copy-8" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M49.5,189.5 L49.5,201.5" id="Line-Copy-10" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1.5,189.5 L1.5,201.5" id="Line-Copy-11" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M340.5,189.5 L340.5,201.541595" id="Line-Copy-9" stroke="#16325C" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <rect id="Rectangle-232-Copy-196" fill="#A8B8D0" sketch:type="MSShapeGroup" x="31.1435136" y="37" width="128.07352" height="6" rx="4"></rect>
+                <rect id="Rectangle-232-Copy-197" fill="#D3DDE7" sketch:type="MSShapeGroup" x="2.14351358" y="0" width="48.0275702" height="6" rx="4"></rect>
+                <rect id="Rectangle-398-Copy-6" stroke="#E0E5EE" fill="#FFFFFF" sketch:type="MSShapeGroup" x="63" y="135" width="278" height="45" rx="4"></rect>
+                <rect id="Rectangle-232-Copy-199" fill="#A8B8D0" sketch:type="MSShapeGroup" x="93.1435136" y="154" width="128.07352" height="6" rx="4"></rect>
+                <rect id="Rectangle-232-Copy-200" fill="#D3DDE7" sketch:type="MSShapeGroup" x="2.14351358" y="153" width="48.0275702" height="6" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

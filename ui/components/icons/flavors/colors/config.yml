@@ -1,0 +1,6 @@
+status: 'dev-ready'
+dependencies:
+  - component/icons
+  - core/visibility
+showFormFactors:
+  - large

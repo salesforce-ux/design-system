@@ -1,0 +1,1 @@
+To place the text to the left of the figure, use the `.{{cssPrefix}}media--reverse` class. You can add the `.{{cssPrefix}}media--center` class to align them in the middle.

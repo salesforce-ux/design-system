@@ -1,0 +1,4 @@
+status: 'dev-ready'
+className: 'form--inline'
+showFormFactors:
+  - large

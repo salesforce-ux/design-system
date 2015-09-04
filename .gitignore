@@ -1,0 +1,13 @@
+/node_modules
+/git_modules
+/.dist
+/.generated
+/site/assets/downloads/design-tokens
+/.www
+/public
+/examples/testpage/*html
+/examples/testpage_pure/*html
+.DS_Store
+npm-debug.log
+.idea
+.tmp

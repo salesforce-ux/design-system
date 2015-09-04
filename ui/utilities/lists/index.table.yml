@@ -1,0 +1,40 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: list--dotted
+    description: Creates an unordered list with markers
+    applied: <code>ul</code>
+    notes: Our application framework takes away default list styling. This recreates it
+  -
+    class: list--ordered
+    description: Creates an ordered list with decimals
+    applied: <code>ol</code>
+    notes: Our application framework removes default list styling. This recreates it
+  -
+    class: list--vertical
+    description: Marks a vertical list
+    applied: <code>ul</code>
+  -
+    class: has-block-links
+    description: Gives the anchors within the list block styling
+    applied: <code>.{{cssPrefix}}list--vertical</code>
+    notes: Typically used for a menu style
+  -
+    class: list--horizontal
+    description: Causes list to display horizontally
+    applied: <code>ul</code>
+    notes: This lists stacks in a mobile context
+  -
+    class: list__item
+    description: Marks a list item
+    applied: <code>li</code>
+    notes: All lists use this class. Different CSS applies depending on the parent class.
+  -
+    class: has-dividers
+    description: Adds spacing and dividers between list items
+    applied: <code>.{{cssPrefix}}list--vertical</code><br><code>.{{cssPrefix}}list--horizontal</code>
+    notes: Both vertical and horizontal lists use this class when separators are needed.<br>On vertical lists a border is added. Horizontal lists are separated by a dot.
+  -
+    class: has-cards
+    description:  Adds spacing and container around list items
+    applied: <code>.{{cssPrefix}}list--vertical</code>

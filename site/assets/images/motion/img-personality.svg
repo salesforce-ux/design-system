@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="62px" viewBox="0 0 55 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="motion" sketch:type="MSArtboardGroup" transform="translate(-1093.000000, -798.000000)" fill="#0070D2">
+            <g id="timing-copy-4" sketch:type="MSLayerGroup" transform="translate(1011.000000, 736.000000)">
+                <g id="Imported-Layers" transform="translate(82.000000, 62.000000)" sketch:type="MSShapeGroup">
+                    <path d="M32.064,59.223 C30.607,61.733 27.387,62.589 24.877,61.132 C22.369,59.676 21.51,56.457 22.967,53.944 C24.426,51.435 27.644,50.581 30.154,52.038 C32.667,53.493 33.521,56.716 32.064,59.223" id="Fill-1"></path>
+                    <path d="M32.139,8.332 C30.682,10.846 27.463,11.7 24.949,10.241 C22.443,8.788 21.586,5.564 23.043,3.054 C24.501,0.545 27.72,-0.31 30.231,1.146 C32.739,2.602 33.594,5.821 32.139,8.332" id="Fill-2"></path>
+                    <path d="M10.005,21.138 C8.545,23.646 5.326,24.505 2.813,23.048 C0.305,21.589 -0.551,18.37 0.907,15.861 C2.362,13.35 5.581,12.495 8.092,13.95 C10.602,15.407 11.458,18.629 10.005,21.138" id="Fill-3"></path>
+                    <path d="M10.191,46.592 C8.738,49.104 5.515,49.96 3.004,48.502 C0.495,47.047 -0.359,43.824 1.098,41.315 C2.553,38.805 5.771,37.949 8.282,39.405 C10.795,40.862 11.65,44.083 10.191,46.592" id="Fill-4"></path>
+                    <path d="M54.143,21.138 C52.686,23.646 49.467,24.505 46.953,23.048 C44.445,21.589 43.59,18.37 45.047,15.861 C46.502,13.35 49.721,12.495 52.23,13.95 C54.743,15.407 55.598,18.629 54.143,21.138" id="Fill-5"></path>
+                    <path d="M54.141,46.592 C52.686,49.102 49.463,49.958 46.953,48.5 C44.445,47.045 43.59,43.824 45.047,41.313 C46.502,38.805 49.721,37.949 52.23,39.405 C54.743,40.862 55.598,44.081 54.141,46.592" id="Fill-6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

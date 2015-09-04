@@ -1,0 +1,30 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: lookup
+    description: Initializes lookup
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Accepts <code>[data-select]</code> and <code>[data-scope]</code> attributes with the values of single/multi
+  -
+    class: lookup__menu
+    description: Initializes lookup results list container
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Applies positioning and container styles
+  -
+    class: lookup__list
+    description: Initializes lookup results list
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: lookup__item
+    description: Results list item
+    required: true
+    applied: <code>&lt;li&gt;</code>
+  -
+    class: form-element
+    description: Initializes lookup form element
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Wraps <code>&lt;input&gt;</code> and <code>.{{cssPrefix}}pill-container</code>

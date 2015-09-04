@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Button" sketch:type="MSArtboardGroup">
+            <ellipse id="Oval-1-Copy-9" fill="#32C3B3" sketch:type="MSShapeGroup" cx="149.433556" cy="149.680951" rx="134.007813" ry="137.319049"></ellipse>
+            <rect id="Rectangle-239-Copy-2" fill-opacity="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="67" y="121" width="168" height="62" rx="15"></rect>
+        </g>
+    </g>
+</svg>

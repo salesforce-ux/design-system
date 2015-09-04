@@ -1,0 +1,12 @@
+classBase: 'dropdown'
+status: 'prototype'
+flavors:
+  - base
+  - menu
+  - menu-with-icons
+  - action-overflow
+  - search-overflow
+  - positioning
+dependencies:
+  - helpers/text
+  - core/icons

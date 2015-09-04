@@ -1,0 +1,31 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. The theme modifiers are found in <a href="/components/utilities/themes#color">themes</a>.
+classes:
+  -
+    class: notify
+    description: Initializes notification
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Applys to alerts and toasts
+  -
+    class: notify-container
+    description: Initializes notification container
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Wraps around notification for positioning
+  -
+    class: notify--toast
+    description: Initializes toast notification
+    required: true
+    applied: <code>.{{cssPrefix}}notify</code>
+    notes: Required for toast notifications
+  -
+    class: notify--alert
+    description: Initializes alert notification
+    required: true
+    notes: Required for alert notifications
+  -
+    class: notify__close
+    description: Positions close icon
+    required: true
+    applied: <code>&lt;button&gt;</code>
+

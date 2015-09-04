@@ -1,0 +1,1 @@
+If you need to keep your DOM in an order different from the application’s visual display, you can add helper classes to adjust the source order within your grid wrapper. A basic usage is to apply the class `.{{cssPrefix}}order--1` to an element that’s lower in the DOM tree and then add `.{{cssPrefix}}order--2` to a top-level DOM element.

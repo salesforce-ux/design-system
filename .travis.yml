@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "0.12"
+before_install:
+  - scripts/travis/before_install.sh
+install:
+  - npm install
+script:
+  - npm run dist
+  - npm run test
+  - scripts/deploy/ci-heroku-stage.sh
+notifications:
+  slack: salesforceux:hxNCRNjM8xWtQzy1488ZLfrn
+cache:
+  directories:
+    - node_modules

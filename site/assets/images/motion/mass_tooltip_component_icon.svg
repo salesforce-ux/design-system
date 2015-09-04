@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Tool Tip </title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Tool-Tip-" sketch:type="MSArtboardGroup">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(17.000000, 10.000000)">
+                <g sketch:type="MSShapeGroup">
+                    <ellipse id="Oval-1-Copy-4" fill="#32C3B3" cx="135.5" cy="138.5" rx="134.651939" ry="137.652501"></ellipse>
+                    <ellipse id="Oval-1-Copy-6" fill="#32C3B3" cx="135.5" cy="138.5" rx="134.651939" ry="137.652501"></ellipse>
+                    <rect id="Rectangle-239-Copy-3" fill-opacity="0.8" fill="#FFFFFF" x="62.2355387" y="128.533039" width="146.528923" height="83.0580078" rx="5"></rect>
+                    <rect id="Rectangle-239-Copy-4" fill-opacity="0.8" fill="#FFFFFF" x="62.2355387" y="72.0535937" width="146.528923" height="38.2066836" rx="5"></rect>
+                    <path d="M157.582933,135.17768 L113.417067,135.17768 L135.331284,113.315332 L157.582933,135.17768 Z" id="Path-531" fill="#D6F3EF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

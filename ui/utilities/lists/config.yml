@@ -1,0 +1,12 @@
+status: 'prototype'
+flavors:
+  - dotted
+  - ordered
+  - vertical
+  - has-divider
+  - vertical-with-dividers
+  - vertical-with-cards
+  - horizontal
+  - horizontal-with-dividers
+  - description-inline
+  - description-horizontal

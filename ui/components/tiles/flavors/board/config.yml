@@ -1,0 +1,11 @@
+status: 'dev-ready'
+dependencies:
+  - components/forms/checkbox
+  - components/media-objects
+  - components/labels
+  - components/icons
+  - utilities/themes
+  - utilities/truncation
+  - utilities/text
+showFormFactors:
+  - large

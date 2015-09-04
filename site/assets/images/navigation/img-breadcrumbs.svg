@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="411px" height="11px" viewBox="0 0 411 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navigation" sketch:type="MSArtboardGroup" transform="translate(-297.000000, -2803.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(297.000000, 2803.000000)">
+                <path d="M130.550548,8.49395315 C130.884841,8.50693295 131.223587,8.39172099 131.478816,8.14831727 L134.884127,4.6903924 C135.368743,4.22823033 135.368743,3.47891755 134.884127,3.01675548 C134.399512,2.5545934 133.613795,2.5545934 133.12918,3.01675548 L130.548886,5.63691672 L127.953166,3.01675548 C127.467608,2.5545934 126.680363,2.5545934 126.194805,3.01675548 C125.709247,3.47891755 125.709247,4.22823033 126.194805,4.6903924 L129.620473,8.14831727 C129.876199,8.39172099 130.215604,8.50693295 130.550548,8.49395315 Z" id="Icon---Arrow-Down-(Small)-29-Copy-8" fill="#B9C2CE" sketch:type="MSShapeGroup" transform="translate(130.539113, 5.582536) rotate(-90.000000) translate(-130.539113, -5.582536) "></path>
+                <path d="M280.550548,8.49395315 C280.884841,8.50693295 281.223587,8.39172099 281.478816,8.14831727 L284.884127,4.6903924 C285.368743,4.22823033 285.368743,3.47891755 284.884127,3.01675548 C284.399512,2.5545934 283.613795,2.5545934 283.12918,3.01675548 L280.548886,5.63691672 L277.953166,3.01675548 C277.467608,2.5545934 276.680363,2.5545934 276.194805,3.01675548 C275.709247,3.47891755 275.709247,4.22823033 276.194805,4.6903924 L279.620473,8.14831727 C279.876199,8.39172099 280.215604,8.50693295 280.550548,8.49395315 Z" id="Icon---Arrow-Down-(Small)-29-Copy-9" fill="#B9C2CE" sketch:type="MSShapeGroup" transform="translate(280.539113, 5.582536) rotate(-90.000000) translate(-280.539113, -5.582536) "></path>
+                <rect id="Rectangle-232-Copy-79" fill="#A5B1BE" sketch:type="MSShapeGroup" x="0" y="2" width="111" height="7" rx="4"></rect>
+                <rect id="Rectangle-232-Copy-90" fill="#A5B1BE" sketch:type="MSShapeGroup" x="150" y="2" width="111" height="7" rx="4"></rect>
+                <rect id="Rectangle-232-Copy-91" fill="#0070D2" sketch:type="MSShapeGroup" x="300" y="2" width="111" height="7" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

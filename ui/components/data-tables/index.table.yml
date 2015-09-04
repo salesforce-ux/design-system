@@ -1,0 +1,54 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: table
+    description: Initializes data table
+    required: true
+    applied: <code>&lt;table&gt;</code>
+  -
+    class: table--bordered
+    description: Adds borders to the table
+    applied: <code>.{{cssPrefix}}table</code>
+  -
+    class: table--striped
+    description: Adds stripes to alternating rows
+    applied: <code>.{{cssPrefix}}table</code>
+  -
+    class: is-selected
+    description: Changes row to selected state
+    applied: <code>&lt;tr&gt;</code>
+  -
+    class: is-sortable
+    description: Enables user interactions for sorting a column
+    applied: <code>&lt;th&gt;</code>
+  -
+    class: cell-wrap
+    description: Forces text to wrap in a cell
+    applied: <code>&lt;td&gt;</code>
+  -
+    class: cell-shrink
+    description: Shrinks cell to width of content
+    applied: <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>
+    notes: Use if cell contains a checkbox or action menu
+  -
+    class: no-row-hover
+    description: Removes hover state on row
+    applied: <code>.{{cssPrefix}}table</code>
+    notes: Rows have a hover state by default
+  -
+    class: scrollable--x
+    description: Creates a scrollable container for a table on smaller viewports
+    applied: parent <code>div</code>
+  -
+    class: max-medium-table--stacked
+    description: Modifies table layout by stacking cells to accommodate smaller viewports
+    applied: <code>.{{cssPrefix}}table</code>
+  -
+    class: max-medium-table--stacked-horizontal
+    description: Modifies table layout by displaying the header and row data side by side for smaller viewports
+    applied: <code>.{{cssPrefix}}table</code>
+  -
+    class: hint-parent
+    description: Highlights action overflow ribbons on row hover
+    applied: <code>&lt;tr&gt;</code>
+    notes: When you have an overflow action menu

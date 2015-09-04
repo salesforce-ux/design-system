@@ -1,0 +1,10 @@
+status: 'dev-ready'
+dependencies:
+  - components/media-objects
+  - components/labels
+  - components/icons
+  - utilities/themes
+  - utilities/truncation
+  - utilities/text
+showFormFactors:
+  - large

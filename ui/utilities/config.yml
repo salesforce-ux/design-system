@@ -1,0 +1,10 @@
+components:
+  - floats
+  - lists
+  - scrollable
+  - sizing
+  - spacing
+  - text
+  - themes
+  - truncation
+  - visibility

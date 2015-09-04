@@ -1,0 +1,98 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create buttons.
+classes:
+  -
+    class: button
+    description: Initializes a 2.25rem (36px) height button
+    required: true
+    applied: <code>button</code> or <code>link</code>
+    notes: This neutralizes all the base styles making it look like a text link
+  -
+    class: button--small
+    description: Creates a smaller 2rem (32px) button
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: button--neutral
+    description: Creates the gray border with white background default style
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: button--brand
+    description: Creates the brand blue Salesforce style
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: button--inverse
+    description: Creates the inverse style for dark backgrounds
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: button--icon-bare
+    description: Creates a button that looks like a plain icon
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: This is 1rem&times;1rem like an icon, not a regular button
+  -
+    class: button--icon-container
+    description: Creates a button that looks like a plain icon
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: This is 2.25rem&times;2.25rem like a button
+  -
+    class: button--icon-border
+    description: Creates an icon button with a border
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: There is no background color until hover for this style
+  -
+    class: button--icon-border-filled
+    description: Creates an icon button with a border
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: This is 2.25rem&times;2.25rem like a button
+  -
+    class: button--icon-small
+    description: Creates an icon button at the smaller 2rem (32px) size
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: Be aware that this sizes the button, not the icon
+  -
+    class: button--icon-more
+    description: Used for the style where only two icons are in a button
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: This is usually an icon with a down arrow icon next to it. Each svg within is sized separately
+  -
+    class: button__icon
+    description: Sets the size and color of the icon inside a button
+    applied: <code>svg</code>
+  -
+    class: button__icon--stateful
+    description: This makes the icon the same color as the text in the button
+    applied: <code>svg</code>
+    notes: This is not used in addition to <code>.{{cssPrefix}}button__icon</code> but instead of
+  -
+    class: button__icon--left
+    description: Puts the icon on the left side of the button
+    applied: <code>.{{cssPrefix}}button__icon</code>
+  -
+    class: button__icon--right
+    description: Puts the icon on the right side of the button
+    applied: <code>.{{cssPrefix}}button__icon</code>
+  -
+    class: button__icon--inverse
+    description: Gives a white icon color on a dark background
+    applied: <code>.{{cssPrefix}}button__icon</code>
+  -
+    class: button__icon--x-small
+    description: Creates a .5rem (8px) size icon
+    applied: <code>.{{cssPrefix}}button__icon</code>
+    notes: This is added to the icon inside the <code>.{{cssPrefix}}button</code>, not the button itself
+  -
+    class: button__icon--small
+    description: Creates a .75rem (12px) size icon
+    applied: <code>.{{cssPrefix}}button__icon</code>
+  -
+    class: button__icon--large
+    description: Creates a 1.5rem (24px) size icon
+    applied: <code>.{{cssPrefix}}button__icon</code>
+  -
+    class: button__icon--hint
+    description: Creates a grayed out icon until the parent is hovered
+    applied: <code>.{{cssPrefix}}button__icon</code>
+    notes: The parent must have the <code>.{{cssPrefix}}hint-parent</code> class applied
+  -
+    class: button-space-left
+    description: Adds space on the left of a button wrapped in a parent
+    applied: <code>button</code> parent
+    notes: Only required if the <code>.{{cssPrefix}}button</code> is wrapped. ie- to include a dropdown

@@ -1,0 +1,6 @@
+status: 'prototype'
+dependencies:
+  - core/icons
+  - components/buttons
+showFormFactors:
+  - large

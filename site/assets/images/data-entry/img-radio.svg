@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="248px" height="82px" viewBox="0 0 248 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="data-entry" sketch:type="MSArtboardGroup" transform="translate(-751.000000, -2775.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(751.000000, 2775.000000)">
+                <rect id="Rectangle-909-Copy-36" stroke="#E0E5EE" sketch:type="MSShapeGroup" x="0" y="0" width="32" height="32" rx="40"></rect>
+                <rect id="Rectangle-232-Copy-194" fill="#A8B8D0" sketch:type="MSShapeGroup" x="50.1435136" y="12" width="197.856486" height="6" rx="4"></rect>
+                <rect id="Rectangle-909-Copy-35" stroke="#E0E5EE" sketch:type="MSShapeGroup" x="0" y="50" width="32" height="32" rx="40"></rect>
+                <circle id="Oval-75" fill="#0070D2" sketch:type="MSShapeGroup" cx="16" cy="66" r="8"></circle>
+                <rect id="Rectangle-232-Copy-195" fill="#A8B8D0" sketch:type="MSShapeGroup" x="50.1435136" y="62" width="197.856486" height="6" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

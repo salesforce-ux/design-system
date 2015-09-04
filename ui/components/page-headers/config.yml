@@ -1,0 +1,9 @@
+status: 'prototype'
+flavors:
+  - record-home
+  - object-home
+  - related-list
+dependencies:
+  - core/icons
+  - components/buttons
+  - components/button-group

@@ -1,0 +1,6 @@
+status: 'prototype'
+className: 'form--compound'
+dependencies:
+  - utilities/sizing
+showFormFactors:
+  - large

@@ -1,0 +1,36 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: tooltip
+    description: Initializes tooltip
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: This is the outermost container
+  -
+    class: tooltip__content
+    description: Hook for nubbin positioning
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: This is placed right inside the  <code>.{{cssPrefix}}tooltip</code> container
+  -
+    class: tooltip__body
+    description: Applies styles for primary content area of tooltip
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: This is placed right inside the  <code>.{{cssPrefix}}tooltip__content</code> container
+  -
+    class: nubbin--top
+    description: Triangle that points upwards
+    applied: <code>.{{cssPrefix}}tooltip</code>
+  -
+    class: nubbin--bottom
+    description: Triangle that points downwards
+    applied: <code>.{{cssPrefix}}tooltip</code>
+  -
+    class: nubbin--left
+    description: Triangle that points to the left
+    applied: <code>.{{cssPrefix}}tooltip</code>
+  -
+    class: nubbin--right
+    description: Triangle that points to the right
+    applied: <code>.{{cssPrefix}}tooltip</code>

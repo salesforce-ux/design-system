@@ -1,0 +1,51 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: hide
+    description: Hides an element from the page by setting display propery to <code>none</code>
+    applied: any element
+    notes: An element hidden with this class will take up no space on the page and will not be announced by screenreaders.
+  -
+    class: show
+    description: Shows the element by setting display property to <code>block</code>
+    applied: the hidden element
+    notes: This is toggled on the element. <code>.{{cssPrefix}}hide</code> class is removed and <code>.{{cssPrefix}}show</code> is added.
+  -
+    class: show--inline-block
+    description: Shows the element by setting display to <code>inline-block</code>
+    applied: the hidden element
+    notes: This is toggled on the element. <code>.{{cssPrefix}}hide</code> class is removed and <code>.{{cssPrefix}}show--inline-block</code> is added.
+  -
+    class: hidden
+    description: Hides an element from the page by setting the visibility property to <code>hidden</code>
+    applied: any element
+    notes: An element hidden with this class will reserve the normal space on the page and will not be announced by screenreaders.
+  -
+    class: visible
+    description: Shows the element by setting the visibility property to <code>visible</code>
+    applied: the hidden element
+    notes: This is toggled on the element. <code>.{{cssPrefix}}hidden</code> class is removed and <code>.{{cssPrefix}}visible</code> is added.
+  -
+    class: transition-hide
+    description: Hides an element from the page by setting the opacity property set to <code>0</code>
+    applied: any element
+    notes: This works like the <code>.{{cssPrefix}}hidden</code> class and reserves the space but allows you to add the <code>transition</code> property to transition the speed that it is shown or hidden.
+  -
+    class: transition-show
+    description: Shows the element using the opacity property set to <code>1</code>
+    applied: the hidden element
+    notes: This is toggled on the element. <code>.{{cssPrefix}}transition-hide</code> class is removed and <code>.{{cssPrefix}}transition-show</code> is added.
+  -
+    class: collapsed
+    description: Hides elements inside a parent
+    applied: Any containing element
+    notes: This hides the elements contained inside the container by controlling the height and overflow properties.
+  -
+    class: expanded
+    description: Shows the elements inside the parent
+    applied: the collapsed element
+  -
+    class: assistive-text
+    description: Hides an element yet enables a screen reader to read the element that is hidden
+    applied: any element
+    notes: This should be used over other methods when you don't want to hide from screenreaders

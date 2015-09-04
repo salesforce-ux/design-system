@@ -1,0 +1,4 @@
+status: 'prototype'
+classBase: 'tooltip'
+flavors:
+  - base

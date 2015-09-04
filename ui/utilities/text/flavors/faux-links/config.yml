@@ -1,0 +1,4 @@
+status: 'dev-ready'
+classBase: 'type-focus'
+showFormFactors:
+  - large

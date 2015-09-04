@@ -1,0 +1,52 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create activity timeline.
+classes:
+  -
+    class: timeline
+    description: Defines the overall timeline component
+    required: true
+    applied: <code>ul</code>
+    notes: By default icons have a white fill color
+  -
+    class: timeline__item
+    description: Defines each item on the timeline
+    required: true
+    applied: <code>li</code>
+  -
+    class: media--timeline
+    description: Applies the left border and bottom padding
+    required: true
+    applied: <code>.{{cssPrefix}}media</code>
+  -
+    class: timeline__media--call
+    description: Gives the left border a unique color to match the call icon
+    applied: <code>.{{cssPrefix}}media--timeline</code>
+  -
+    class: timeline__media--email
+    description: Gives the left border a unique color to match the email icon
+    applied: <code>.{{cssPrefix}}media--timeline</code>
+  -
+    class: timeline__media--event
+    description: Gives the left border a unique color to match the event icon
+    applied: <code>.{{cssPrefix}}media--timeline</code>
+  -
+    class: timeline__media--task
+    description: Gives the left border a unique color to match the task icon
+    applied: <code>.{{cssPrefix}}media--timeline</code>
+  -
+    class: timeline__actions
+    description: Container for date and button icon on the right of a timeline item
+    required: true
+    applied: <code>div</code>
+    notes: This is directly inside the <code>.{{cssPrefix}}media--reverse</code> > <code>.{{cssPrefix}}media__figure</code>
+  -
+    class: timeline__date
+    description: Styles the date inside <code>.{{cssPrefix}}timeline__actions</code>
+    required: true
+    applied: <code>p</code>
+  -
+    class: timeline__icon
+    description: Adds the 2px white border around the icon
+    required: true
+    applied: <code>svg</code>
+    notes: This is added to the icon inside the <code>.{{cssPrefix}}media__figure</code> in
+     <code>.{{cssPrefix}}media--timeline</code>

@@ -1,0 +1,36 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: popover
+    description: Initializes popover
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: popover__content
+    description: Hook for nubbin positioning
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: popover__header
+    description: Applys styles for top area of popover
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: popover__body
+    description: Applys syles for primary content area of popover
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: nubbin--top
+    description: Triangle that points upwards
+    applied: <code>.{{cssPrefix}}nubbin</code>
+  -
+    class: nubbin--bottom
+    description: Triangle that points downwards
+    applied: <code>.{{cssPrefix}}nubbin</code>
+  -
+    class: nubbin--left
+    description: Triangle that points to the left
+    applied: <code>.{{cssPrefix}}nubbin</code>
+  -
+    class: nubbin--right
+    description: Triangle that points to the right
+    applied: <code>.{{cssPrefix}}nubbin</code>

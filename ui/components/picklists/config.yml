@@ -1,0 +1,8 @@
+status: 'prototype'
+classBase: 'picklist'
+flavors:
+  - base
+  - multi-select
+dependencies:
+  - core/forms
+  - core/icons

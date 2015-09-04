@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="114px" height="60px" viewBox="0 0 114 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="motion" sketch:type="MSArtboardGroup" transform="translate(-588.000000, -798.000000)">
+            <g id="timing-copy-2" sketch:type="MSLayerGroup" transform="translate(535.000000, 736.000000)">
+                <g id="Group-Copy" transform="translate(53.000000, 62.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-88" fill="#ABD8FF" cx="10" cy="30" r="10"></circle>
+                    <circle id="Oval-88-Copy-8" fill="#ABD8FF" cx="104" cy="30" r="10"></circle>
+                    <circle id="Oval-88" fill="#0070D2" cx="57" cy="30" r="30"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

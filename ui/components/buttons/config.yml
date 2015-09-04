@@ -1,0 +1,20 @@
+status: 'dev-ready'
+classBase: 'button'
+flavors:
+  - base
+  - neutral
+  - neutral-icon
+  - brand
+  - inverse
+  - stateful
+  - stateful-inverse
+  - icon
+  - icon-sizing
+  - icon-more
+  - icon-stateful
+  - icon-inverse
+  - hint
+dependencies:
+  - core/icons
+  - helpers/visibility
+

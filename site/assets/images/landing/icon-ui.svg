@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="88px" height="90px" viewBox="0 0 88 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M0,45 L0,82 C0,84.1 0.8,86 2.1,87.4 C3.5,89 5.6,90 7.9,90 L80.1,90 C84.5,90 88,86.4 88,82 L88,45" id="Fill-1" fill="#198EE5" sketch:type="MSShapeGroup"></path>
+        <path d="M0,8 C0,3.6 3.5,0 7.9,0 L80.1,0 C82.4,0 84.5,1 85.9,2.6 C87.2,4 88,5.9 88,8 L88,45 L0,45 L0,8" id="Fill-2" fill="#3FADFF" sketch:type="MSShapeGroup"></path>
+        <path d="M22.9,19 L44,19 L44,45 L19,45 L19,22.8 C19,20.7 20.7,19 22.9,19 L22.9,19 Z" id="Rectangle-51" fill="#D9F1FF" sketch:type="MSShapeGroup"></path>
+        <path d="M44,19 L65.1,19 C67.2,19 69,20.7 69,22.6 L69,22.6 L69,45 L44,45 L44,19 L44,19 Z" id="Rectangle-52" fill="#73BEFF" sketch:type="MSShapeGroup"></path>
+        <path d="M65.1,71 L44,71 L44,45 L69,45 L69,67.2 C69,69.3 67.3,71 65.1,71 L65.1,71 Z" id="Rectangle-51_1_" fill="#D9F1FF" sketch:type="MSShapeGroup"></path>
+        <path d="M44,71 L22.9,71 C20.8,71 19,69.3 19,67.4 L19,67.4 L19,45 L44,45 L44,71 L44,71 Z" id="Rectangle-52_1_" fill="#73BEFF" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

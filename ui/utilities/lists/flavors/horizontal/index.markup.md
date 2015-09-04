@@ -1,0 +1,1 @@
+The basic horizontal list is left-aligned. It stacks in a mobile context. It provides an inline-block fallback for older browsers that do not support flexbox.

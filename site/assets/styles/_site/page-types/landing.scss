@@ -1,0 +1,273 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+// Page
+.site-landing-page {
+  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top,
+              url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
+                size: auto rem(560px);
+              }
+  @include mq-medium-max {
+    background-size: auto rem(360px);
+  }
+  padding: {
+    left: 0;
+    right: 0;
+  }
+}
+
+
+
+
+// Hero
+.site-masthead--landing {
+  @include inverse-links;
+  margin-top: -$spacing-xx-large;
+  padding-bottom: ($spacing-xx-large * 3);
+
+  @include mq-medium-min {
+    padding: {
+         top: $spacing-x-large;
+      bottom: $spacing-x-large * 11;
+    }
+  }
+
+  .#{$css-prefix}button {
+    border: none;
+  }
+
+  .site-text-heading--large,
+  .site-text-heading--medium {
+    color: inherit;
+  }
+
+  .site-text-heading--large {
+    font: {
+      size: rem(32px);
+      weight: $font-weight-light;
+    }
+
+    @include mq-x-small-min {
+      font-size: rem(40px);
+    }
+
+    @include mq-small-min {
+      font-size: $site-font-size-xxx-large;
+    }
+
+    @include mq-medium-min {
+      max-width: rem(552px);
+      font-size: $site-font-size-xxxx-large;
+    }
+  }
+
+  .site-text-heading--medium {
+    margin: {
+      top: 0;
+      bottom: $spacing-xx-large;
+    }
+  }
+}
+
+
+
+// Grid
+.site-grid--landing {
+  margin-top: (($spacing-xx-large * 3) * -1);
+
+  .site-text-heading--large {
+    font-size: $site-font-size-xx-large;
+  }
+
+  @include mq-medium-min {
+    margin-top: ($spacing-xx-large * 4) * -1;
+  }
+
+  .grid-card {
+    @include mq-large-min {
+      min-height: rem(460px);
+    }
+  }
+}
+
+.site-grid--landing-primary {
+  li > p {
+    text-align: center;
+    @include mq-medium-max {
+      margin-bottom: $spacing-x-large;
+    }
+  }
+  @include mq-medium-min {
+    li:nth-child(odd) {
+      > dl {
+        padding-right: $spacing-xx-large;
+      }
+      > p {
+        text-align: right;
+      }
+    }
+    li:nth-child(even) {
+      > dl {
+        padding-left: $spacing-xx-large;
+      }
+      > p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// Resource Footer
+.site-resources--landing {
+  background-repeat: no-repeat;
+  @include mq-medium-min {
+    margin-bottom: ($spacing-xx-large * -1);
+    padding: {
+      top: ($spacing-xx-large);
+      bottom: ($spacing-xx-large);
+    }
+  }
+
+  // Deal with grid card
+  .grid-card {
+    padding: $spacing-x-large;
+    min-height: rem(260px);
+
+    @include mq-medium-min {
+      text-align: left;
+    }
+
+    .site-text-heading--label {
+      margin: 0;
+    }
+
+    .hr {
+      margin: $spacing-small 0;
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+// Colorful horizontal rules
+.hr {
+  width: 50%;
+  height: 1px;
+  border: none;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  border-radius: $border-radius-pill;
+
+  &--green {
+    @include gradient-horizontal(#9CE8BC, #48916C)
+  }
+  &--orange {
+    @include gradient-horizontal(#FFCA73, #D67B03)
+  }
+  &--purple {
+    @include gradient-horizontal(#CCD0FF, #696CB4)
+  }
+  &--blue {
+    @include gradient-horizontal(#73BEFF, #2196ED)
+  }
+  &--turquoise {
+    @include gradient-horizontal(#2ECBBE, #2EA193)
+  }
+  &--pink {
+    @include gradient-horizontal(#FA9FBB, #BF4C76)
+  }
+  &--dark-blue {
+    @include gradient-horizontal(#284F8A, #16325c)
+  }
+}
+
+
+
+
+// Floating Shapes
+.site-shapes {
+  display: none;
+
+  @include mq-large-min {
+    display: block;
+    opacity: 0;
+    transition: opacity ($duration-slowly * 2) linear;
+  }
+
+  @media (min-device-width : 760px) and (max-device-width : 1024px) and (orientation : landscape) {
+    display: none;
+  }
+
+  &--on {
+    opacity: 1;
+  }
+}
+
+
+
+
+// CTA Buttons
+.site-cta-buttons {
+  @include mq-x-small-max {
+    .#{$css-prefix}button {
+      width: 100%;
+    }
+  }
+  @include mq-small-max {
+    .#{$css-prefix}button {
+      margin: 0 0 $spacing-large;
+      display: block;
+      width: 75%;
+    }
+    .site-cta-tutorial { display: none; }
+  }
+
+}
+
+
+
+
+// Keep "Design System" on same line
+.text-no-wrap {
+  white-space: nowrap;
+  display: block;
+}
+
+
+
+// Floating Shapes
+@keyframes floater {
+  0% { transform: translate3d(0,0,0) rotate(0); }
+  25% { transform: translate3d(0,-10px,0) rotate(5deg); }
+  50% { transform: translate3d(0,0,0) rotate(0); }
+  75% { transform: translate3d(0,10px,0) rotate(-5deg); }
+  100% { transform: translate3d(0,0,0) rotate(0); }
+}
+
+@keyframes floater-1 {
+  0% { transform: translate3d(0,0,0) rotate(0); }
+  25% { transform: translate3d(0,10px,0) rotate(5deg); }
+  50% { transform: translate3d(0,0,0) rotate(0); }
+  75% { transform: translate3d(0,-10px,0) rotate(-5deg); }
+  100% { transform: translate3d(0,0,0) rotate(0); }
+}
+
+@keyframes floater-2 {
+  0% { transform: translate3d(0,0,0) rotate(0); }
+  25% { transform: translate3d(0,15px,0) rotate(10deg); }
+  50% { transform: translate3d(0,0,0) rotate(0); }
+  75% { transform: translate3d(0,-15px,0) rotate(-5deg); }
+  100% { transform: translate3d(0,0,0) rotate(0); }
+}

@@ -1,0 +1,8 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: badge
+    description: Initializes a Badge
+    applied: <code>&lt;span&gt;</code>
+    required: true
+    notes: Can accept theme utilty classes

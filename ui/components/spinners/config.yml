@@ -1,0 +1,11 @@
+status: 'prototype'
+flavors:
+  - base
+  - medium
+  - large
+  - brand-small
+  - brand-medium
+  - brand-large
+  - inverse-small
+  - inverse-medium
+  - inverse-large

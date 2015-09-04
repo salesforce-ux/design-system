@@ -1,0 +1,9 @@
+status: 'dev-ready'
+dependencies:
+  - components/buttons
+  - components/buttons/flavors/neutral
+  - components/buttons/flavors/icon
+  - components/buttons/flavors/neutral-icon
+  - core/icons
+showFormFactors:
+  - large

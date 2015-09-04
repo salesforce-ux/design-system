@@ -1,0 +1,6 @@
+status: 'prototype'
+className: 'datepicker'
+showFormFactors:
+  - large
+dependencies:
+  - ui/components/dropdowns

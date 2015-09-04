@@ -1,0 +1,11 @@
+classBase: 'notify'
+status: 'prototype'
+flavors:
+  - base
+  - alert
+  - toast
+dependencies:
+  - components/buttons
+  - components/buttons/flavors/icon
+  - core/text
+  - core/visibility

@@ -1,0 +1,12 @@
+status: 'prototype'
+classBase: 'tile'
+flavors:
+  - base
+  - with-icon
+  - with-actions
+  - with-badge
+  - list
+  - board
+  - generic
+  - task
+  - author

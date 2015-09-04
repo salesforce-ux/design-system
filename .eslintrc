@@ -1,0 +1,35 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "__BASE_URL__": false,
+    "__PATHS__": false,
+    "__NODE_MODULES_PATTERN__": false,
+    "FontFaceObserver": false
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "rules": {
+    // Strict mode
+    "strict": [0],
+    // Code style
+    "indent": [2, 2],
+    "quotes": [2, "single"],
+    "comma-spacing": [0],
+    "consistent-return": [0],
+    "curly": [2, "multi-line"],
+    "key-spacing": [2, {
+      "beforeColon": false,
+      "afterColon": true
+    }],
+    "new-cap": [0],
+    "no-shadow": [0],
+    "no-underscore-dangle": [0],
+    "no-use-before-define": [0],
+    "no-unused-vars": [0] // Necessary because of JSX
+  }
+}

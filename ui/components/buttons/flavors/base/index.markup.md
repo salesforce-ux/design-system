@@ -1,0 +1,1 @@
+The base `.{{cssPrefix}}button` looks like a plain text link. It removes all the styling of the native button. It’s typically used to trigger a modal or display a “like” link. All button variations are built by adding another class to `.{{cssPrefix}}button`.

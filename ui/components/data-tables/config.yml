@@ -1,0 +1,10 @@
+status: 'prototype'
+classBase: 'table'
+flavors:
+  - base
+  - responsive-overflow
+  - responsive-stacked
+  - responsive-stacked-horizontal
+dependencies:
+  - helpers/sizing
+  - components/tables

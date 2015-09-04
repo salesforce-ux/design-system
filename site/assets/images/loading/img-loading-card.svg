@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="345px" height="338px" viewBox="0 0 345 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Loading" sketch:type="MSArtboardGroup" transform="translate(-297.000000, -522.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(297.000000, 522.000000)">
+                <g id="related-lists-+-Group" sketch:type="MSShapeGroup">
+                    <g id="related-lists">
+                        <g id="Related-List-5">
+                            <path d="M3.9938211,7.56984538e-15 C1.78809461,7.56984538e-15 0,1.79290686 0,4.00456683 L0,332.995433 C0,335.207094 1.79435564,337 3.9938211,337 L341.006179,337 C343.211905,337 345,335.207093 345,332.995433 L345,4.00456683 C345,1.79290564 343.205644,7.56984538e-15 341.006179,7.56984538e-15 L3.9938211,7.56984538e-15 Z" id="BG" stroke="#E0E5EE" fill="#F4F6F9"></path>
+                            <rect id="Rectangle-13" opacity="0.49714319" fill="#D3DCE7" x="24" y="17" width="24" height="24" rx="2"></rect>
+                            <g id="actions" transform="translate(303.000000, 12.000000)">
+                                <rect id="Rectangle-18" stroke="#E0E5EE" fill="#FFFFFF" transform="translate(15.000000, 15.000000) scale(-1, 1) translate(-15.000000, -15.000000) " x="0" y="0" width="30" height="30" rx="4"></rect>
+                                <path d="M11.4721241,12.8098968 C12.9024184,15.5073399 15.1500237,17.8468286 15.2461779,17.9363172 C15.4625249,18.1408627 15.7990648,18.1408627 16.0154118,17.9363172 C16.111566,17.8468286 18.3591713,15.5073399 19.7894656,12.8098968 C19.8856198,12.6309195 19.8856198,12.4135899 19.7894656,12.2346127 C19.6933113,12.0556354 19.5250414,11.9405786 19.3327329,11.9277945 C19.3086944,11.9150104 17.5058024,11.7999536 15.6307948,11.7999536 C13.7557872,11.7999536 11.9528953,11.9150104 11.9288567,11.9277945 C11.7365483,11.9405786 11.5562591,12.0556354 11.4721241,12.2346127 C11.3759699,12.4135899 11.3759699,12.6309195 11.4721241,12.8098968 L11.4721241,12.8098968 Z" id="dropdown" fill="#54698D"></path>
+                            </g>
+                            <rect id="Rectangle-224-Copy-15" opacity="0.502565299" fill="#B8C4D2" x="60" y="26" width="104" height="7" rx="4"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g id="Imported-Layers" transform="translate(145.000000, 136.000000)" fill="#0070D2" sketch:type="MSShapeGroup">
+                    <path d="M32.064,59.223 C30.607,61.733 27.387,62.589 24.877,61.132 C22.369,59.676 21.51,56.457 22.967,53.944 C24.426,51.435 27.644,50.581 30.154,52.038 C32.667,53.493 33.521,56.716 32.064,59.223" id="Fill-1"></path>
+                    <path d="M32.139,8.332 C30.682,10.846 27.463,11.7 24.949,10.241 C22.443,8.788 21.586,5.564 23.043,3.054 C24.501,0.545 27.72,-0.31 30.231,1.146 C32.739,2.602 33.594,5.821 32.139,8.332" id="Fill-2"></path>
+                    <path d="M10.005,21.138 C8.545,23.646 5.326,24.505 2.813,23.048 C0.305,21.589 -0.551,18.37 0.907,15.861 C2.362,13.35 5.581,12.495 8.092,13.95 C10.602,15.407 11.458,18.629 10.005,21.138" id="Fill-3"></path>
+                    <path d="M10.191,46.592 C8.738,49.104 5.515,49.96 3.004,48.502 C0.495,47.047 -0.359,43.824 1.098,41.315 C2.553,38.805 5.771,37.949 8.282,39.405 C10.795,40.862 11.65,44.083 10.191,46.592" id="Fill-4"></path>
+                    <path d="M54.143,21.138 C52.686,23.646 49.467,24.505 46.953,23.048 C44.445,21.589 43.59,18.37 45.047,15.861 C46.502,13.35 49.721,12.495 52.23,13.95 C54.743,15.407 55.598,18.629 54.143,21.138" id="Fill-5"></path>
+                    <path d="M54.141,46.592 C52.686,49.102 49.463,49.958 46.953,48.5 C44.445,47.045 43.59,43.824 45.047,41.313 C46.502,38.805 49.721,37.949 52.23,39.405 C54.743,40.862 55.598,44.081 54.141,46.592" id="Fill-6"></path>
+                </g>
+                <path d="M0.5,169.5 L144.503479,169.5" id="Line" stroke="#E97293" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M200.5,169.5 L344.503479,169.5" id="Line-Copy-4" stroke="#E97293" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M172.5,0.5 L172.5,135.736832" id="Line" stroke="#E97293" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M172.5,198.5 L172.5,336.589905" id="Line" stroke="#E97293" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

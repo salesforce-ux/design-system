@@ -1,0 +1,8 @@
+status: 'dev-ready'
+flavors:
+  - hide-show
+  - hidden-visible
+  - transition-hide-show
+  - collapsed-expanded
+  - assistive-text
+  - responsive

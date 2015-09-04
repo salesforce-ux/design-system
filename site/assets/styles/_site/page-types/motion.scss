@@ -1,0 +1,399 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+// Atmosphere Graph
+.atmosphere-graph {
+  position: relative;
+  height: 27rem;
+  background: $color-background-alt;
+}
+
+.atmosphere-hlabel {
+  position: absolute;
+  left: -1rem;
+  transform: translateX(5.25rem);
+  font-size: $font-size-small;
+
+  span {
+    position: absolute;
+    top: -0.6rem;
+    right: 1rem;
+  }
+
+  .atmosphere-hline {
+    left: .5rem;
+    width: 2.5rem;
+  }
+}
+
+.atmosphere-hline {
+  position: absolute;
+  left: 5.5rem;
+  width: .5rem;
+  border-top: $border-width-thin solid $color-border-separator-alt;
+  transform: translateX(-1rem);
+}
+
+.atmosphere-0-line {
+  left: 0;
+  right: 0;
+  width: auto;
+  border-top: $border-width-thin solid $color-border-separator-alt-2;
+}
+
+.atmosphere-vertical-ruler {
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  bottom: 0;
+  border-left: $border-width-thick solid $color-border-separator-alt;
+}
+
+.elevation-dot {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-brand;
+  color: $color-text-inverse;
+  border-radius: $border-radius-circle;
+  transform: translate(-50%, 50%);
+  @include mq-medium-min {
+    width: 4rem;
+    height: 4rem;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.elevation-dot-flying {
+  bottom: 23rem;
+  left: 90%;
+  box-shadow: $elevation-shadow-16;
+}
+
+.elevation-dot-floating {
+  bottom: 11rem;
+  left: 75%;
+  box-shadow: $elevation-shadow-4;
+}
+
+.elevation-dot-raised {
+  bottom: 9rem;
+  left: 60%;
+  box-shadow: $elevation-shadow-2;
+}
+
+.elevation-dot-grounded {
+  bottom: 7rem;
+  left: 45%;
+  box-shadow: $elevation-shadow-0;
+}
+
+.elevation-dot-sunken {
+  bottom: 4rem;
+  left: 30%;
+  box-shadow: $elevation-shadow-3-below;
+}
+
+// Motion Examples
+.site-example-tile {
+
+  &__description {
+    color: $site-color-text-strong;
+  }
+
+  &__frame {
+    position: relative;
+    // height: 13rem;
+    background-color: $color-background-alt;
+    padding: {
+      top: 9rem;
+      left: $spacing-large;
+      right: $spacing-large;
+      bottom: $spacing-x-large;
+    }
+    background: $color-background-alt;
+    border-radius: $border-radius-medium;
+    border: $border-width-thin solid $color-border;
+    color: #5876A3;
+    user-select: none;
+    cursor: pointer;
+
+    .hr {
+      margin: {
+        top: $spacing-small;
+        bottom: $spacing-small;
+      }
+    }
+  }
+
+  &__object {
+    @include square(5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $color-background-alt-inverse;
+    color: $color-text-inverse;
+    transform: translate3d(-50%,-50%,0);
+    border-radius: $border-radius-circle;
+    box-shadow: $elevation-shadow-4;
+    margin-top: -3rem;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: $font-size-large;
+    }
+  }
+
+  &__title {
+
+    button {
+      background: transparent;
+      border: 0;
+    }
+  }
+}
+
+// Animations
+.color-example {
+  transition: $duration-promptly background-color linear;
+
+  span {
+    transition: $duration-promptly color linear;
+  }
+
+  &--on {
+    background-color: $color-brand;
+
+    span {
+      color: $color-text-inverse;
+    }
+  }
+}
+
+.elevation-example {
+  height: 9rem;
+  position: relative;
+
+  &:after {
+    @include square(5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: $border-radius-circle;
+    background-color: $article;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fade-example {
+  transition: $duration-promptly opacity linear;
+
+  &--on {
+    opacity: 0;
+  }
+}
+
+.fall-example {
+  transition: $duration-promptly all ease-in-out;
+  box-shadow: $elevation-shadow-8;
+
+  &--on {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(.8);
+    box-shadow: $elevation-shadow-0;
+  }
+}
+
+.flip-example {
+  transition: $duration-promptly transform ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) rotateY(180deg);
+  }
+}
+
+.grow-example {
+  transition: $duration-promptly transform ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) scale(1.1);
+  }
+}
+
+.jiggle-example {
+  &--on {
+    animation: site-mass-jiggle-keyframes $duration-slowly forwards;
+  }
+}
+
+.lower-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+  box-shadow: $elevation-shadow-8;
+
+  &--on {
+    transform: translate3d(-50%, -50%, 0) scale(.9);
+    box-shadow: $elevation-shadow-4;
+  }
+}
+
+.pop-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+  box-shadow: $elevation-shadow-0;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) scale(1.1);
+    box-shadow: $elevation-shadow-4;
+  }
+}
+
+.punch-example {
+  transition: $duration-promptly box-shadow ease-in-out;
+  box-shadow: $elevation-shadow-0;
+
+  span {
+    transition: $duration-promptly transform ease-in-out;
+  }
+
+  &--on {
+    box-shadow: $elevation-shadow-3-below;
+
+    span {
+      transform: translate3d(-50%, -50%, 0) scale(.95);
+    }
+  }
+}
+
+.raise-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+  box-shadow: $elevation-shadow-4;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) scale(1.1);
+    box-shadow: $elevation-shadow-8;
+  }
+}
+
+.roll-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) rotateX(180deg);
+    box-shadow: $elevation-inverse-shadow-4;
+  }
+}
+
+.shake-example--on {
+  animation: site-mass-shake-keyframes $duration-slowly forwards;
+}
+
+.shrink-example {
+  transition: $duration-promptly transform ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%, -50%, 0) scale(.9);
+  }
+}
+
+.slide-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly opacity ease-in-out;
+
+  &--on {
+    transform: translate3d(-25%, -50%, 0);
+    opacity: 0;
+  }
+}
+
+.spin-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) rotate(180deg);
+    box-shadow: $elevation-inverse-shadow-4;
+  }
+}
+
+.tilt-example {
+  transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) rotateX(30deg);
+    box-shadow: $elevation-shadow-8;
+  }
+}
+
+.twist-example {
+  transition: $duration-promptly transform ease-in-out;
+
+  &--on {
+    transform: translate3d(-50%,-50%,0) rotate(25deg);
+  }
+}
+
+// This page styles the examples on the Motion and Animation page.
+
+@keyframes site-mass-jiggle-keyframes {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -55%);
+  }
+
+  40% {
+    transform: translate(-50%, -40%);
+  }
+
+  60% {
+    transform: translate(-50%, -55%);
+  }
+
+  80% {
+    transform: translate(-50%, -48%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes site-mass-shake-keyframes {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-55%, -50%);
+  }
+
+  40% {
+    transform: translate(-40%, -50%);
+  }
+
+  60% {
+    transform: translate(-55%, -50%);
+  }
+
+  80% {
+    transform: translate(-48%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,7 @@
+status: 'prototype'
+classBase: 'timeline'
+flavors:
+  - base
+dependencies:
+  - core/media-objects
+  - core/icons

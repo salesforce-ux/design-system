@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="248px" height="82px" viewBox="0 0 248 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="data-entry" sketch:type="MSArtboardGroup" transform="translate(-298.000000, -2725.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(298.000000, 2725.000000)">
+                <rect id="Rectangle-909-Copy-33" stroke="#E0E5EE" sketch:type="MSShapeGroup" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <rect id="Rectangle-232-Copy-192" fill="#A8B8D0" sketch:type="MSShapeGroup" x="50.1435136" y="12" width="197.856486" height="6" rx="4"></rect>
+                <rect id="Rectangle-909-Copy-34" stroke="#E0E5EE" sketch:type="MSShapeGroup" x="0" y="50" width="32" height="32" rx="2"></rect>
+                <rect id="Rectangle-232-Copy-193" fill="#A8B8D0" sketch:type="MSShapeGroup" x="50.1435136" y="62" width="197.856486" height="6" rx="4"></rect>
+                <path d="M13.656,71.8365 L8.153,65.9702647 C7.949,65.7525 7.949,65.3992059 8.153,65.1814412 L8.892,64.3929706 C9.096,64.1752059 9.42666667,64.1752059 9.631,64.3929706 L13.779,68.8132059 C13.915,68.9582647 14.1356667,68.9582647 14.2716667,68.8132059 L22.369,60.1633235 C22.5733333,59.9455588 22.904,59.9455588 23.108,60.1633235 L23.847,60.9517941 C24.051,61.1695588 24.051,61.5228529 23.847,61.7406176 L14.395,71.8365 C14.1906667,72.0542647 13.86,72.0542647 13.656,71.8365" id="Imported-Layers" fill="#0070D2" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

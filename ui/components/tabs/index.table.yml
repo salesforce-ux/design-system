@@ -1,0 +1,59 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
+classes:
+  -
+    class: tabs--default
+    description: Initializes default tabset
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Only required for the default tabset style.
+  -
+    class: tabs--default__nav
+    description: Creates the container for the tabs
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+    notes: Only used within a default tabset style.
+  -
+    class: tabs--scoped
+    description: Initializes scoped tabset
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Only required for the Scoped tabset style which is used on task and composer tabsets.
+  -
+    class: tabs--scoped__nav
+    description: Creates the container for the tabs
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+    notes: Only used within a scoped tabset.
+  -
+    class: tabs__item
+    description: Styles each list item as a single tab
+    required: true
+    applied: <code>&lt;li&gt;</code>
+    notes: Used in both styles of tabsets.
+  -
+    class: tabs__content
+    description: Styles each tab content wrapper
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Used in both styles of tabsets.
+  -
+    class: text-heading--label
+    description: Applies text styling to a tab list item
+    required: true
+    applied: <code>.{{cssPrefix}}tabs__item</code>
+  -
+    class: active
+    description: Applies the active state to a tab list item
+    required: true
+    applied: <code>.{{cssPrefix}}tabs__item</code>
+    notes: Required on the <code>&lt;li&gt;</code> element that is associated with the active tab panel
+  -
+    class: show
+    description: Shows the tab panel
+    required: true
+    applied: <code>.{{cssPrefix}}tabs__content</code>
+  -
+    class: hide
+    description: Hide the tab panel
+    required: true
+    applied: <code>.{{cssPrefix}}tabs__content</code>

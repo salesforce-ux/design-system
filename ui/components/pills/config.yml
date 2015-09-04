@@ -1,0 +1,10 @@
+classBase: 'pill'
+status: 'dev-ready'
+flavors:
+  - base
+  - unlink
+  - icon
+  - portrait
+dependencies:
+  - helpers/images
+  - core/icons

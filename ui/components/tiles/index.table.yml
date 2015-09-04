@@ -1,0 +1,63 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: tile
+    description: Initializes tile
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: tile__title
+    required: true
+    applied: <code>&lt;p&gt;</code>
+  -
+    class: tile__detail
+    required: true
+    applied: <code>&lt;div&gt;</code> or <code>&lt;ul&gt;</code>
+  -
+    class: tile__meta
+    description: Applies text color change
+    applied: <code>.{{cssPrefix}}list--horizontal</code>
+    notes: Only used on author tile
+  -
+    class: media
+    description: Layout helper that aligns image and text
+    applied: <code>.{{cssPrefix}}tile</code>
+    notes: Use on tiles with Icons, Actions and Badges
+  -
+    class: media__body
+    description: Layout helper
+    applied: <code>&lt;div&gt;</code>
+    notes: Wraps <code>.{{cssPrefix}}tile__title</code> and <code>.{{cssPrefix}}tile__detail</code> inside a <code>.{{cssPrefix}}media</code> object.
+  -
+    class: truncate
+    description: Applies overflow truncation to tile detail items
+    notes: Can be applied to anything that needs truncation
+  -
+    class: list--horizontal
+    description: Horizontally aligns list items
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: has-dividers
+    description: Adds dotted dividers in a horizontal list
+    applied: <code>.{{cssPrefix}}list--horizontal</code>
+  -
+    class: list--vertical
+    description: Vertically aligns list items
+    applied: <code>&lt;ul&gt;</code>
+    notes: Applied to the list that holds multiple tiles
+  -
+    class: grid
+    description: Initializes a grid layout
+    notes: Wrap <code>.{{cssPrefix}}tile__title</code> and icon/badge element
+  -
+    class: grid--align-spread
+    description: Spreads the elements on each end of the same axis
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: has-flexi-truncate
+    description: Layout helper applied to a parent <code>.{{cssPrefix}}grid</code> when <code>.{{cssPrefix}}truncate</code> is within a flex element
+    applied: <code>.{{cssPrefix}}col</code>
+  -
+    class: hint-parent
+    description: Highlights dimmed action overflow icons on tile hover
+    applied: <code>.{{cssPrefix}}tile</code>

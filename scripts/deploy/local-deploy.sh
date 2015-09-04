@@ -71,12 +71,5 @@ cd $tmpdir
 npm install
 
 echo ""
-echo "*** Done. Be sure to set the password."
-echo ""
-echo "Now run:"
-echo ""
-echo "    cd $tmpdir"
-echo ""
-echo "    INTERNAL_LANDMARK_PASSWD=aaa EXTERNAL_LANDMARK_PASSWD=bbb foreman start"
-echo ""
-echo "Then load web browser to: http://localhost:5000. Log in with 'landmark' and 'aaa'."
+echo "*** Done ***"
+

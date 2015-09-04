@@ -41,7 +41,7 @@ export default (
 
         <p className="site-text-introduction">The following tutorial will set you up with the tools you need to work with the {g.displayName} in your local development environment and deploy to Heroku. </p>
 
-        <p>If you&rsquo;re interested in a more in-depth tutorial check out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; github project</a></strong>. His project is a reference application built with the {g.displayName}, React, Node, Postgres, and Heroku. For a static example, please continue with the steps below!</p>
+        <p>If you&rsquo;re interested in a more in-depth tutorial check out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; GitHub project</a></strong>. His project is a reference application built with the {g.displayName}, React, Node, Postgres, and Heroku. For a static example, please continue with the steps below!</p>
 
         <p>In this tutorial, we&rsquo;ll assume that you have some knowledge of the following:</p>
         <ul className={pf('list--dotted')}>

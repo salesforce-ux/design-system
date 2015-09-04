@@ -16,7 +16,7 @@ var should = require('chai').should;
 
 module.exports = function(driver, loginUrl) {
 
-  describe('LANDMARK main site pages', function() {
+  describe('SLDS main site pages', function() {
 
     // ///////////////////////////////////////
     // HOME PAGE CHECK
@@ -24,7 +24,7 @@ module.exports = function(driver, loginUrl) {
     it('should have a home page', function() {
       return driver.get(loginUrl).then(function() {
         return driver.getTitle().then(function(title) {
-          assert.equal("Landmark", title);
+          assert.equal("Salesforce Lightning Design System", title);
         });
       });
     });

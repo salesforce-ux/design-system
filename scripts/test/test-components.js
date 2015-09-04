@@ -19,7 +19,7 @@ module.exports = function(driver, componentsUrl) {
   // ///////////////////////////////////////
   // COMPONENTS
   // ///////////////////////////////////////
-  describe('LANDMARK components', function() {
+  describe('SLDS components', function() {
 
     it('components page should have correct title', function() {
       return driver.get(componentsUrl).then(function() {

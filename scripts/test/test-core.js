@@ -16,7 +16,7 @@ var should = require('chai').should;
 
 module.exports = function(driver, coreUrl) {
 
-  describe('LANDMARK core', function() {
+  describe('SLDS core', function() {
 
     it('core page should have correct title', function() {
       return driver.get(coreUrl).then(function() {

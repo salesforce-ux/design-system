@@ -1,5 +1,5 @@
 {
-  "name": "landmark",
+  "name": "design-system",
   "version": "0.8.0",
   "description": "Design Systems Interface Guidelines & CSS framework",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:salesforce-ux/landmark-internal.git"
+    "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "author": "Salesforce",
   "dependencies": {
@@ -96,6 +96,6 @@
   "gitDependencies": {
     "design-tokens-winter-16": "git@github.com:salesforce-ux/design-tokens-internal.git#winter-16",
     "design-tokens": "git@github.com:salesforce-ux/design-tokens-internal.git#winter-16",
-    "landmark-swatch": "git@github.com:salesforce-ux/landmark-swatch.git#master"
+    "design-system-swatch": "git@github.com:salesforce-ux/design-system-swatch.git#master"
   }
 }

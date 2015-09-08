@@ -136,7 +136,7 @@ export default React.createClass({
     }
     const slds = window.LIGHTNING_DESIGN_SYSTEM;
     this.setState({
-      showingSettings: !(Prefs.hasBeenViewed() || slds.isExternalUser() || slds.isMobile()),
+      showingSettings: !(Prefs.hasBeenViewed() || slds.isMobile()) && slds.userType() === 'internal',
       isExternal: slds.isExternalUser()
     });
   },

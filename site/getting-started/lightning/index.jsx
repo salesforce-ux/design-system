@@ -52,7 +52,7 @@ export default (
     </ul>
     <p>
       Finally, we’d love to hear your feedback. Share your thoughts about any aspect of this
-      tutorial or the {g.displayName} in general via our <a href="https://salesforce.az1.qualtrics.com/SE/?SID=SV_9Ae8M28m6cNf0rP">feedback form</a>.
+      tutorial or the {g.displayName} in general via our <a href="https://github.com/salesforce-ux/design-system/issues">Github issues</a>.
     </p>
   </PageBody>
 );

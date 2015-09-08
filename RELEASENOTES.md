@@ -21,7 +21,7 @@
   - Voice & Tone Added
 
 ### Components
-*** Many accessibility updates ***
+**Many accessibility updates**
 
 - Lookups:
   - Accessibility Requirements added

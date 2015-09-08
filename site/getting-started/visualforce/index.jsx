@@ -46,7 +46,7 @@ export default (
       Details on all the above, as well as introductions to many of the {g.displayName} components, are documented in the <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>.
     </p>
     <p>
-      Finally, we&rsquo;d love to hear your feedback. Please share your thoughts about any aspect of the {g.displayName} via our <a href="https://github.com/salesforce-ux/design-system/issues">Github issues</a>.
+      Finally, we&rsquo;d love to hear your feedback. Please share your thoughts about any aspect of the {g.displayName} via our <a href="https://github.com/salesforce-ux/design-system/issues">GitHub issues</a>.
     </p>
   </PageBody>
 );

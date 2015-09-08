@@ -27,5 +27,5 @@ See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
 
 ## Got feedback?
 
-Please create a <a href="https://github.com/salesforce-ux/design-system/issues">Github Issue</a>
+Please create a <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>
 

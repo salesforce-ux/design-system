@@ -39,9 +39,18 @@ export default (
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
       <div className={pf('container--medium')}>
 
-        <p className="site-text-introduction">The following tutorial will set you up with the tools you need to work with the {g.displayName} in your local development environment and deploy to Heroku. </p>
-
-        <p>If you&rsquo;re interested in a more in-depth tutorial check out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; GitHub project</a></strong>. His project is a reference application built with the {g.displayName}, React, Node, Postgres, and Heroku. For a static example, please continue with the steps below!</p>
+        <p className="site-text-introduction">
+          The following tutorial will set you up with the tools you need to
+          work with the {g.displayName} in your local development environment
+          and deploy to Heroku.
+        </p>
+        <p>
+          If you&rsquo;re interested in a more in-depth tutorial check
+          out <strong><a href="https://github.com/ccoenraets/lightning-react-app" target="_blank">Christophe Coenraets&rsquo; GitHub project</a></strong>.
+          His project is a reference application built with the
+          {g.displayName}, React, Node, Postgres, and Heroku. For a
+          static example, please continue with the steps below!
+        </p>
 
         <p>In this tutorial, we&rsquo;ll assume that you have some knowledge of the following:</p>
         <ul className={pf('list--dotted')}>
@@ -52,9 +61,7 @@ export default (
         </ul>
 
         <h2 id="step-1" className="site-text-heading--large">Step 1: Initialize your project</h2>
-
         <p>Once you&rsquo;ve downloaded and installed all the necessaries for your environment, create a folder for your project.</p>
-
         <div className="slds-box slds-box slds-theme--shade slds-theme--alert-texture slds-m-bottom--medium">
           <p>
             If, for any reason, you wish to bypass these steps to manually create this project, clone the basic setup <a href="https://github.com/salesforce-ux/demo_slds_heroku" target="_blank">here</a>. Once you do that you can skip to <a href="#step-5">Step 5: Download {g.displayName}</a>.

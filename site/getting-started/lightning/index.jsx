@@ -52,7 +52,7 @@ export default (
     </ul>
     <p>
       Finally, we’d love to hear your feedback. Share your thoughts about any aspect of this
-      tutorial or the {g.displayName} in general via our <a href="https://github.com/salesforce-ux/design-system/issues">Github issues</a>.
+      tutorial or the {g.displayName} in general via our <a href="https://github.com/salesforce-ux/design-system/issues">GitHub issues</a>.
     </p>
   </PageBody>
 );

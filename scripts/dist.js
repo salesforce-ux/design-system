@@ -413,7 +413,7 @@ async.series([
     async.map([
       { source: 'index.scss', target: '' },
       { source: 'index-scoped.scss', target: '-scoped' },
-      { source: 'index-lgnt.scss', target: '-lgnt' },
+      { source: 'index-ltng.scss', target: '-ltng' },
       { source: 'index-vf.scss', target: '-vf', isVF: true }
     ], preprocessSCSS, done);
   },

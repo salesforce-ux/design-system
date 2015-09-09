@@ -24,7 +24,7 @@ export default {
     'www.salesforce.com'
   ],
   managedPackageUrls: [
-    { version: '0.9.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000Ip4Q' },
+    { version: '0.9.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000IrV0' },
     { version: '0.8.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000DVio' }
   ],
   moduleName: 'salesforce-lightning-design-system',

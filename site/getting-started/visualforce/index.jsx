@@ -21,7 +21,7 @@ import { Link } from 'react-router';
 const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const managedPackageUrl = g.managedPackageUrl;
+const managedPackageUrl = g.managedPackageUrls[0].url;
 
 export default (
   <PageBody anchorTitle="Visualforce" contentClassName={pf('container--medium')}>
@@ -35,7 +35,7 @@ export default (
       If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:
     </p>
     <ul className={pf('list--dotted')}>
-      <li>As an alternative to downloading the {g.displayName}, you can install it directly in your development org using our <a href={g.managedPackageUrl}>unmanaged package</a> (Summer 2015 release orgs only)</li>
+      <li>As an alternative to downloading the {g.displayName}, you can install it directly in your development org using our <a href={managedPackageUrl}>unmanaged package</a> (Summer 2015 release orgs only)</li>
       <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-visualforce-static-resources-like-stylesheets-and-icons">FAQ</a></li>
       <li>All your Design System markup needs to be contained within a <code>&lt;div class="slds"&gt;</code> outer wrapper.</li>
       <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the <Link to="/components">component examples</Link>, and use Javascript Remoting, Remote Objects or a similar API for data access</li>

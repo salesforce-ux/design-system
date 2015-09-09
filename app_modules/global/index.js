@@ -23,7 +23,7 @@ export default {
     'salesforce.com',
     'www.salesforce.com'
   ],
-  managedPackageUrl: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000Ip4Q',
+  managedPackageUrl080: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000DVio',
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',
   zipName: function(version) {

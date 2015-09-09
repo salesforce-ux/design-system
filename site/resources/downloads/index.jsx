@@ -20,7 +20,7 @@ const pf = componentUtil.prefix;
 import globals from 'app_modules/global';
 import { Link } from 'react-router';
 
-const managedPackageUrl = globals.managedPackageUrl;
+const managedPackageUrl080 = globals.managedPackageUrl080;
 const links = {
   zip: {
     framework: globals.downloadPath(version.sldsVersion)
@@ -30,13 +30,12 @@ const links = {
 export default (
   <PageBody anchorTitle="Downloads" contentClassName={pf('container--medium')}>
 
-    <h2 className="site-text-heading--large" id="framework">Design System</h2>
+    <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
       and icons to include in your project. See
       the <CTALink href="/release-notes" ctaEventName='release-notes-top'>release notes</CTALink> for
-      details on the latest updates. Alternatively, the Design System can be installed directly into
-      a Salesforce org as an <a href={managedPackageUrl}>unmanaged package</a> (Summer 2015 release orgs only).
+      details on the latest updates.
     </p>
     <p>
       All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
@@ -46,6 +45,16 @@ export default (
         Download Design System ({version.sldsVersion})
       </button>
     </form>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
+
+    <p>
+      Alternatively, the Design System can be installed directly into a Salesforce org as an unmanaged package:
+    </p>
+    <ul className={pf('list--dotted')}>
+      <li><a href={managedPackageUrl080}>Version 0.8.0</a> (archive)</li>
+    </ul>
+
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

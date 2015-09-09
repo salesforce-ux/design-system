@@ -17,15 +17,22 @@ import CTALink from 'app_modules/site/components/cta-link';
 import { logDownloadEvent } from 'app_modules/site/util/localytics';
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
-import globals from 'app_modules/global';
+import g from 'app_modules/global';
 import { Link } from 'react-router';
 
-const managedPackageUrl080 = globals.managedPackageUrl080;
 const links = {
   zip: {
-    framework: globals.downloadPath(version.sldsVersion)
+    framework: g.downloadPath(version.sldsVersion)
   }
 };
+
+function managedPackageUrls() {
+  return g.managedPackageUrls.map((item, idx) => {
+    return <li key={`package-v${item.version}`}>
+      <a href={item.url}>Version {item.version} {idx === 0 ? '(Latest)' : ''}</a>
+    </li>;
+  });
+}
 
 export default (
   <PageBody anchorTitle="Downloads" contentClassName={pf('container--medium')}>
@@ -52,7 +59,7 @@ export default (
       Alternatively, the Design System can be installed directly into a Salesforce org as an unmanaged package:
     </p>
     <ul className={pf('list--dotted')}>
-      <li><a href={managedPackageUrl080}>Version 0.8.0</a> (archive)</li>
+      {managedPackageUrls()}
     </ul>
 
 

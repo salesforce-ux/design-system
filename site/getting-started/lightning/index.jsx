@@ -23,7 +23,6 @@ import CTALink from 'app_modules/site/components/cta-link';
 const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const managedPackageUrl = g.managedPackageUrl;
 const lightningTutorialUrl = 'https://github.com/ForceDotComLabs/sldsx/blob/master/tutorial/tutorial.md';
 
 export default (
@@ -32,9 +31,6 @@ export default (
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Lightning apps and components.
     </p>
-
-
-
     <p>
       We have prepared a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you through installation, usage, and examples. It also includes details on how to use the Design System SVG spritemap icons in Lightning components.
     </p>

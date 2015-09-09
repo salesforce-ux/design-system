@@ -20,7 +20,7 @@ let defaults = {
 
 export default {
   dev: _.defaults({
-    role: 'aura',
+    role: 'regular',
     status: 'all'
   }, defaults),
 

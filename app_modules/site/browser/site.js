@@ -47,91 +47,90 @@ const Root = React.createClass({
   render() { return last(this.props.components); }
 });
 
-window.LIGHTNING_DESIGN_SYSTEM = (function(){
-  const self = {
-    /**
-     * Called by an inline script tag once the page loads
-     *
-     * 1. Lazy load the JS module for this page
-     * 2. Build the client-side router
-     * 3. Render the router
-     */
-    init(modulePath) {
-      logCurrentPageVisit();
-      requirePage(`./${modulePath}`)(pageElement => {
-        this.router = this.buildRouter(modulePath, pageElement);
-        ReactDOM.render(this.router, document.getElementById('app'), function(){
-          // Set the defaults based on user type
-          Prefs.setAll(
-            Prefs.getDefaults()[self.userType()],
-            false
-          );
-          //Keep track of the preferences in the url hash
-          Prefs.setStrategies([LocalStorageStrategy(), UrlPrefsStrategy()]);
-        });
-      });
-    },
+window.LIGHTNING_DESIGN_SYSTEM = {
 
-    /**
-     * Build the router
-     *
-     * @param {string} modulePath
-     * @param {ReactElement} pageElement
-     * @returns {ReactElement}
-     */
-    buildRouter(modulePath, pageElement) {
-      let routes = sitemap.getFlattenedRoutes().map(route => {
-        let props = { path: route.path, name: route.uid };
-        // If we're on the current page, we DON'T want to fetch the pageElement
-        // async because ReactRouter will render a temporary <noscript>
-        if (route.modulePath === modulePath) {
-          props.components = pageElement;
-        } else {
-          // Fetch the page async
-          // TODO: Not sure how webpack signals an error
-          // TODO: Spinner if the load takes longer than X milliseconds
-          props.getComponents = function(callback) {
-            requirePage(`./${route.modulePath}`)(pageElement => {
-              callback(null, pageElement);
-            });
-          };
-        }
-        return React.createElement(Route, props);
+  /**
+   * Called by an inline script tag once the page loads
+   *
+   * 1. Lazy load the JS module for this page
+   * 2. Build the client-side router
+   * 3. Render the router
+   */
+  init(modulePath) {
+    logCurrentPageVisit();
+    requirePage(`./${modulePath}`)(pageElement => {
+      this.router = this.buildRouter(modulePath, pageElement);
+      ReactDOM.render(this.router, document.getElementById('app'), () => {
+        // Set the defaults based on user type
+        Prefs.setAll(
+          Prefs.getDefaults()[this.userType()],
+          false
+        );
+        //Keep track of the preferences in the url hash
+        Prefs.setStrategies([LocalStorageStrategy(), UrlPrefsStrategy()]);
       });
-      // ReactRouter requires a class to be the root element
-      let wrapper = React.createElement(Route, {
-        component: Root
-      }, ...routes);
-      // Return the router using HTML5 pushState
-      return React.createElement(Router, {
-        history,
-        onUpdate: function () {
-          logCurrentPageVisit();
-          shared.store = shared.store.set('route', sitemap.getRouteByPath(
-            this.state.location.pathname
-          ));
-          // Restore the preferences hash after a page change
-          Prefs.sync(false);
-        }
-      }, wrapper);
-    },
+    });
+  },
+
+  /**
+   * Build the router
+   *
+   * @param {string} modulePath
+   * @param {ReactElement} pageElement
+   * @returns {ReactElement}
+   */
+  buildRouter(modulePath, pageElement) {
+    let routes = sitemap.getFlattenedRoutes().map(route => {
+      let props = { path: route.path, name: route.uid };
+      // If we're on the current page, we DON'T want to fetch the pageElement
+      // async because ReactRouter will render a temporary <noscript>
+      if (route.modulePath === modulePath) {
+        props.components = pageElement;
+      } else {
+        // Fetch the page async
+        // TODO: Not sure how webpack signals an error
+        // TODO: Spinner if the load takes longer than X milliseconds
+        props.getComponents = function(callback) {
+          requirePage(`./${route.modulePath}`)(pageElement => {
+            callback(null, pageElement);
+          });
+        };
+      }
+      return React.createElement(Route, props);
+    });
+    // ReactRouter requires a class to be the root element
+    let wrapper = React.createElement(Route, {
+      component: Root
+    }, ...routes);
+    // Return the router using HTML5 pushState
+    return React.createElement(Router, {
+      history,
+      onUpdate: function () {
+        logCurrentPageVisit();
+        shared.store = shared.store.set('route', sitemap.getRouteByPath(
+          this.state.location.pathname
+        ));
+        // Restore the preferences hash after a page change
+        Prefs.sync(false);
+      }
+    }, wrapper);
+  },
 
   /**
    * User Type and Browser Information
    *
    */
-    userType: function() {
-      // there will be no usertype in dev
-      return globals.userType(document.cookie) || 'dev';
-    },
+  userType: function() {
+    // there will be no usertype in dev
+    return globals.userType(document.cookie) || 'dev';
+  },
 
-    isExternalUser: function(){
-      return self.userType() === 'external';
-    },
+  isExternalUser: function(){
+    return this.userType() !== 'internal';
+  },
 
-    isMobile: function() {
-      return (window.innerWidth || screen.width) <= 960;
-    }
-  };
-  return self;
-})();
+  isMobile: function() {
+    return (window.innerWidth || screen.width) <= 960;
+  }
+
+};

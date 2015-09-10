@@ -60,13 +60,14 @@ export default (
           <li><a href="https://toolbelt.heroku.com/" target="_blank">Heroku</a></li>
         </ul>
 
-        <h2 id="step-1" className="site-text-heading--large">Step 1: Initialize your project</h2>
-        <p>Once you&rsquo;ve downloaded and installed all the necessaries for your environment, create a folder for your project.</p>
         <div className="slds-box slds-box slds-theme--shade slds-theme--alert-texture slds-m-bottom--medium">
           <p>
-            If, for any reason, you wish to bypass these steps to manually create this project, clone the basic setup <a href="https://github.com/salesforce-ux/demo_slds_heroku" target="_blank">here</a>. Once you do that you can skip to <a href="#step-5">Step 5: Download {g.displayName}</a>.
+            If, for any reason, you wish to bypass the steps to manually create this project, clone the basic setup <a href="https://github.com/salesforce-ux/demo_slds_heroku" target="_blank">here</a>. Once you clone the starter respository, <code>npm install</code>. Then, you can skip to <a href="#step-5">Step 5: Download {g.displayName}</a>.
           </p>
         </div>
+
+        <h2 id="step-1" className="site-text-heading--large">Step 1: Initialize your project</h2>
+        <p>Once you&rsquo;ve downloaded and installed all the necessaries for your environment, create a folder for your project.</p>
 
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -181,7 +182,7 @@ app.listen(port);
 
         <h2 id="step-5" className="site-text-heading--large">Step 5: Download the {g.displayName}</h2>
         <p><a href="https://www.lightningdesignsystem.com/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
-        <p>Once you have unzipped the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
+        <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 demo_slds_heroku/

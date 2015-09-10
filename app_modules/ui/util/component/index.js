@@ -161,15 +161,6 @@ function install(context, methods) {
 function prefix(className) {
   return typeof className === 'string' ?
       className.split(/\s+/).map(c => {
-        // XXX: Leaving this debug utility here to dump out classes for a bit!
-        //
-        // if (whitelist.indexOf(`.${c}`) >= 0) {
-        //   console.log('DEBUG:', c, '=>', `${globals.cssPrefix}${c}`);
-        // } else if (c.indexOf(globals.cssPrefix) === 0) {
-        //   console.log('DEBUG:', c, '(already done)');
-        // } else {
-        //   console.log('DEBUG:', c, '!!! undefined !!!');
-        // }
         return (whitelist.indexOf(`.${c}`) >= 0) ? `${globals.cssPrefix}${c}` : c;
       }).join(' ') : className;
 }

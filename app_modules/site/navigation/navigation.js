@@ -46,6 +46,10 @@ export default [
         label: 'Overview'
       },
       {
+        route: 'design:color',
+        label: 'Color'
+      },
+      {
         route: 'design:data-entry',
         label: 'Data Entry'
       },

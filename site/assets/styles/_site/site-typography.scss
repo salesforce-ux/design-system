@@ -94,7 +94,7 @@ ol {
 }
 
 .site-text-introduction {
-  margin-bottom: $spacing-xx-large;
+  margin-bottom: ($spacing-x-large * 2) + $spacing-medium;
   font: {
     size: $font-size-large;
     weight: $font-weight-light;

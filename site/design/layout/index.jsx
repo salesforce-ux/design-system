@@ -43,7 +43,7 @@ export default (
         {/* End Diagram */}
 
         {/* Workspace Layout */}
-        <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
+        <div className={pf('site-side-by-side grid wrap p-vertical--x-large')}>
           <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
             <h2 className={pf('site-text-heading--medium p-top--x-large')}>Workspace Layouts</h2>
             <p>A workspace layout facilitates user collaboration on records. It highlights the activity and discussion that is happening around a record by placing this information prominently in the larger content area, while simultaneously displaying the related records in the sidebar. A summary of the record’s details are in a panel above the content area for easy reference.</p>
@@ -54,7 +54,7 @@ export default (
         </div>
 
         {/* Reference Layout */}
-        <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
+        <div className={pf('site-side-by-side grid wrap p-vertical--x-large')}>
           <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
             <h2 className={pf('site-text-heading--medium p-top--x-large')}>Reference Layouts</h2>
             <p>A reference layout is optimized for when users are primarily jumping to related records. It highlights the related records by displaying this information in the larger content area. Collaborative items are placed in the smaller sidebar. A summary of the record’s details are in a panel above the content area for easy reference.</p>
@@ -77,7 +77,7 @@ export default (
         </div>
 
         {/* Table Layout */}
-        <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
+        <div className={pf('site-side-by-side grid wrap p-vertical--x-large')}>
           <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
             <h2 className={pf('site-text-heading--medium p-top--x-large')}>Table Layouts</h2>
             <p>Use a table layout for flexibly viewing and managing large sets of data. The layout uses 100% of the viewport. Items are displayed as rows with their fields organized in columns.</p>
@@ -90,7 +90,7 @@ export default (
         </div>
 
         {/* Board Layout */}
-        <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
+        <div className={pf('site-side-by-side grid wrap p-vertical--x-large')}>
           <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
             <h2 className={pf('site-text-heading--medium p-top--x-large')}>Board Layouts</h2>
             <p>Use a board layout for items that are advancing through a linear workflow, such as a sales process, because it allows users to quickly move items between stages.</p>

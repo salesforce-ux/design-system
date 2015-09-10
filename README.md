@@ -1,5 +1,7 @@
 # Salesforce Lightning Design System
 
+
+[<img src="https://img.shields.io/badge/Open%20in%20Cloud9--blue.svg">](https://c9.io/auth/github?r=https%3A%2F%2Fc9.io%2Fopen%2F%3Fclone_url%3Dgit%2540github.com%253Asalesforce-ux%252Fdesign-system.git)
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 
 * Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.

@@ -11,7 +11,7 @@
 
 set -e
 
-export GIT_VERSION=`cat package.json | sed -n 's/.*"version": "\(.*\)".*/\1/p'`
+export GIT_VERSION=`node scripts/helpers/version.js`
 echo "SLDS version: <$GIT_VERSION>"
 
 npm run lint

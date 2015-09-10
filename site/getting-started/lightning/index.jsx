@@ -23,7 +23,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const lightningTutorialUrl = 'https://github.com/ForceDotComLabs/sldsx/blob/master/tutorial/tutorial.md';
+const lightningTutorialUrl = 'https://developer.salesforce.com/trailhead/project/slds-lightning-components-workshop';
 
 export default (
   <PageBody anchorTitle="Lightning Apps and Components" contentClassName={pf('container--medium')}>

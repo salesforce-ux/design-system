@@ -93,7 +93,7 @@
     "zeroclipboard": "2.2.0"
   },
   "gitDependencies": {
-    "design-tokens-winter-16": "git@github.com:salesforce-ux/design-tokens.git#winter-16",
-    "design-tokens": "git@github.com:salesforce-ux/design-tokens.git#winter-16"
+    "design-tokens-winter-16": "https://github.com/salesforce-ux/design-tokens.git#winter-16",
+    "design-tokens": "https://github.com/salesforce-ux/design-tokens.git#winter-16"
   }
 }

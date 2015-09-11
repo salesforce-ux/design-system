@@ -66,8 +66,13 @@ window.LIGHTNING_DESIGN_SYSTEM = {
           Prefs.getDefaults()[this.userType()],
           false
         );
-        //Keep track of the preferences in the url hash
-        Prefs.setStrategies([LocalStorageStrategy(), UrlPrefsStrategy()]);
+        // Strategies that will be used to track preferences
+        let strategies = [LocalStorageStrategy()];
+        // Only use the URL strategy for internal users
+        if (!this.isExternalUser()) {
+          strategies.push(UrlPrefsStrategy());
+        }
+        Prefs.setStrategies(strategies);
       });
     });
   },

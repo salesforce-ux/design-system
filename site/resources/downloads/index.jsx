@@ -37,6 +37,10 @@ function managedPackageUrls() {
 export default (
   <PageBody anchorTitle="Downloads" contentClassName={pf('container--medium')}>
 
+    <p className="site-text-introduction">
+      We provide multiple options for downloading the Design System, as well as specific downloads for icons, design tokens and swatches.
+    </p>
+
     <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
@@ -56,11 +60,18 @@ export default (
     <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
 
     <p>
-      Alternatively, the Design System can be installed directly into a Salesforce org as an unmanaged package:
+      If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
     </p>
     <ul className={pf('list--dotted')}>
       {managedPackageUrls()}
     </ul>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
+
+    <p>
+      If you use npm in your local development environment, we also have a Design System <a href="https://www.npmjs.com/package/@salesforce-ux/design-system">npm module</a>.
+    </p>
+
 
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>

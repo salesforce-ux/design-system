@@ -19,6 +19,7 @@ let defaults = {
 };
 
 export default {
+
   dev: _.defaults({
     role: 'regular',
     status: 'all'
@@ -32,6 +33,6 @@ export default {
   external: _.defaults({
     role: 'regular',
     status: 'all'
-  } ,defaults)
+  }, defaults)
 
 };

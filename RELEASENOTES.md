@@ -3,6 +3,7 @@
 
 ## Release 0.9.0 9/7/2015
 
+- Open Sourced: [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)
 - CSS files scoped in `.slds` have been added/updated for the following:
   - Visualforce (`-vf`)
   - Lightning Platform (`-ltng`)
@@ -19,9 +20,12 @@
     - Displaying Data Added
     - Messaging Added
   - Voice & Tone Added
+  - Native -> iOS - Use our iOS integration to style your native iOS applications
 
 ### Components
 **Many accessibility updates**
+
+- Changed components to dev-ready: Button Groups, Cards, Tiles, Icons
 
 - Lookups:
   - Accessibility Requirements added

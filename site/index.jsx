@@ -64,6 +64,11 @@ class Overview extends React.Component {
       <div className={pf('container--buffer container--large')}>
       {/* Grid */}
       <section className={pf('site-grid--landing p-vertical--xx-large site-text-longform')}>
+        <div className="site-video-container">
+          <div className="site-video">
+            <iframe src="https://www.youtube.com/embed/ZZ5LpwO-An4?showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
         <ul className={pf('grid wrap grid--pull-padded-large site-grid--landing-primary')}>
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
             <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
@@ -83,16 +88,15 @@ class Overview extends React.Component {
               <dd>Utilize our detailed guidelines to confidently design excellent apps that fit right into the Salesforce ecosystem. With the Design System, you get access to all of the Salesforce core visual and interaction design patterns so that you can follow established best practices and build apps that have a consistent look and feel with the Salesforce user experience.</dd>
             </dl>
           </li>
-          {/* This comes after opensource
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
             <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
               <img className="image" src="/assets/images/landing/img-opensource.svg" alt="Image of open source code" />
             </p>
             <dl className={pf('medium-size--1-of-2')}>
-              <dt className={pf('text-heading--large')}>Contribute with Purpose</dt>
+              <dt className={pf('site-text-heading--large')}>Contribute with Purpose</dt>
               <dd>The Design System is an open source project on GitHub, meaning you can directly impact its evolution by filing issues and submitting pull requests.. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
             </dl>
-          </li>*/}
+          </li>
         </ul>
         <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>

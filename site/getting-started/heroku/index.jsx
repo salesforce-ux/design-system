@@ -285,9 +285,9 @@ demo_slds_heroku/
   <aside class="slds-col slds-size--1-of-2">
     Tab Component
   </aside>
-  <footer class="slds-col slds-size--1-of-1">
+  <section class="slds-col slds-size--1-of-1">
     Card Component
-  </footer>
+  </section>
 </div>
           `}</CodeBlock>
         </div>

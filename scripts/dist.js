@@ -204,11 +204,10 @@ async.series([
    */
   function(done) {
     var packageJSON = JSON.parse(fs.readFileSync(local('package.json')).toString());
+    packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
     delete packageJSON.gitDependencies;
-    packageJSON.name = '@salesforce-ux/design-system';
-    packageJSON.dependencies = packageJSON.optionalDependencies;
-    delete packageJSON.optionalDependencies;
+    delete packageJSON.devDependencies;
     fs.writeFile(local('package.json'), JSON.stringify(packageJSON, null, 2), done);
   },
 
@@ -280,7 +279,6 @@ async.series([
    * Copy all the fonts to assets/fonts if not npm
    */
   function(done) {
-    if (isNpm) return done();
     gulp.src('site/assets/fonts/**/*')
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
       .on('error', done)
@@ -291,7 +289,6 @@ async.series([
    * Copy font license
    */
   function(done) {
-    if (isNpm) return done();
     gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-font.txt'))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
       .on('error', done)

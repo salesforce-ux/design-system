@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.0 9/7/2015
+## Release 0.9.0 9/9/2015
 
 - Open Sourced: [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)
 - CSS files scoped in `.slds` have been added/updated for the following:

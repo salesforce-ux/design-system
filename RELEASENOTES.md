@@ -16,6 +16,7 @@
     - Heroku Added
   - Design
     - Overview Added
+    - Colour Added
     - Data Entry Added
     - Displaying Data Added
     - Messaging Added
@@ -54,3 +55,6 @@
 
 ### Utilities
 - Text > Faux Links has added cursor:pointer
+
+Lots of bug fixes and TLC.
+

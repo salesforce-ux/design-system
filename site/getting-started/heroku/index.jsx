@@ -334,7 +334,7 @@ demo_slds_heroku/
         <p>Swap the text <code>Image</code> with an image.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-<img src="http://www.lightningdesignsystem.com/assets/images/tutorial/heroku/house.jpg" alt="Cool house.">
+<img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house.">
           `}</CodeBlock>
         </div>
 

@@ -221,23 +221,23 @@ export default (
         <h2 className="site-text-heading--large">Named Animations</h2>
         <p>This is a vocabulary of animations. Click to run individual demos:</p>
         <ul className={pf('grid wrap grid--pull-padded-large')}>
-          <ToggleExample which="fade" toggle={true} title="fade out, fade in" description="Opacity change" />
-          <ToggleExample which="color" toggle={true} title="color" description="Color transition" />
-          <ToggleExample which="grow" toggle={true} title="grow" description="Scale increase" />
-          <ToggleExample which="shrink" toggle={true} title="shrink" description="Scale decrease" />
+          <ToggleExample which="fade" toggle={true} title="fade out, fade in" description="opacity change" />
+          <ToggleExample which="color" toggle={true} title="color" description="color transition" />
+          <ToggleExample which="grow" toggle={true} title="grow" description="scale increase" />
+          <ToggleExample which="shrink" toggle={true} title="shrink" description="scale decrease" />
           <ToggleExample which="fall" toggle={true} title="fall, rise" description="Scaling, elevation, opacity" />
-          <ToggleExample which="lower" toggle={true} title="lower" description="Scale decrease, elevation" />
-          <ToggleExample which="raise" toggle={true} title="raise" description="Scale increase, elevation" />
-          <ToggleExample which="pop" toggle={false} title="pop" description="Scaling, elevation" />
-          <ToggleExample which="punch" toggle={false} title="punch" description="Scaling, elevation" />
-          <ToggleExample which="shake" toggle={false} title="shake" description="Horizontal translation" />
-          <ToggleExample which="jiggle" toggle={false} title="jiggle" description="Vertical translation" />
-          <ToggleExample which="slide" toggle={true} title="slide" description="Translation, opacity" />
+          <ToggleExample which="lower" toggle={true} title="lower" description="scale decrease, elevation" />
+          <ToggleExample which="raise" toggle={true} title="raise" description="scale increase, elevation" />
+          <ToggleExample which="pop" toggle={false} title="pop" description="scaling, elevation" />
+          <ToggleExample which="punch" toggle={false} title="punch" description="scaling, elevation" />
+          <ToggleExample which="shake" toggle={false} title="shake" description="horizontal translation" />
+          <ToggleExample which="jiggle" toggle={false} title="jiggle" description="vertical translation" />
+          <ToggleExample which="slide" toggle={true} title="slide" description="translation, opacity" />
           <ToggleExample which="flip" toggle={true} title="flip" description="Y-axis rotate" />
           <ToggleExample which="roll" toggle={true} title="roll" description="X-axis rotate" />
-          <ToggleExample which="spin" toggle={true} title="spin" description="Full rotation" />
-          <ToggleExample which="tilt" toggle={true} title="tilt" description="Slight X-axis rotation" />
-          <ToggleExample which="twist" toggle={true} title="twist" description="Slight rotation" />
+          <ToggleExample which="spin" toggle={true} title="spin" description="full rotation" />
+          <ToggleExample which="tilt" toggle={true} title="tilt" description="slight X-axis rotation" />
+          <ToggleExample which="twist" toggle={true} title="twist" description="slight rotation" />
         </ul>
       </div>
     </div>

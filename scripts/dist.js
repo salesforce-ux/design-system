@@ -448,7 +448,7 @@ async.series([
    */
   function(done) {
     gulp.src(local('README-dist.txt'))
-      .pipe(gulprename('README'))
+      .pipe(gulprename('README.md'))
       .pipe(gulpinsert.prepend('# ' + globals.displayName + '\n# Version: ' + gitversion + '\n'))
       .on('error', done)
       .pipe(gulp.dest(local()))

@@ -66,7 +66,7 @@ exports.preview = (
 );
 
 exports.code = (
-  <ul className={pf('list--vertical')}>
+  <ul className={pf('list--vertical has-dividers')}>
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>

@@ -184,7 +184,7 @@ $ mkdir public
 $ touch pubilc/index.html
           `}</CodeBlock>
         </div>
-        <p>The contents of yout <code>public/index.html</code> file should be the following:</p>
+        <p>Copy the following markup into <code>public/index.html</code>:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <!DOCTYPE html>
@@ -205,7 +205,7 @@ $ touch pubilc/index.html
 $ touch server.js
           `}</CodeBlock>
         </div>
-        <p>The contents of yout <code>server.js</code> file should be the following:</p>
+        <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your /public folder!):</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 var express = require('express');
@@ -285,9 +285,9 @@ demo_slds_heroku/
   <aside class="slds-col slds-size--1-of-2">
     Tab Component
   </aside>
-  <nav class="slds-col slds-size--1-of-1">
+  <footer class="slds-col slds-size--1-of-1">
     Card Component
-  </nav>
+  </footer>
 </div>
           `}</CodeBlock>
         </div>

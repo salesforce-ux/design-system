@@ -23,6 +23,10 @@ export default {
     'salesforce.com',
     'www.salesforce.com'
   ],
+  herokuLightingReactAppUrl: [
+    {type: 'heroku-react-app', url: 'https://github.com/ccoenraets/lightning-react-app'},
+    {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
+  ],
   managedPackageUrls: [
     { version: '0.9.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000IrV0' },
     { version: '0.8.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000DVio' }

@@ -32,5 +32,12 @@ export default (
       How to use the {globals.displayName} with Lighting apps and components.
     </p>
 
+    <h2 className="site-text-heading--large">
+      <Link to="/getting-started/heroku">Heroku</Link>
+    </h2>
+    <p>
+      How to use the {globals.displayName} within a static Heroku application.
+    </p>
+
   </PageBody>
 );

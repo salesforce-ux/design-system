@@ -26,6 +26,7 @@ export default new SitemapRouter().map(function () {
 
   this.resource('design', function () {
     this.route('overview');
+    this.route('color');
     this.route('data-entry');
     this.route('displaying-data');
     this.route('layout');

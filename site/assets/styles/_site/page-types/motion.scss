@@ -109,10 +109,6 @@
 // Motion Examples
 .site-example-tile {
 
-  &__description {
-    color: $site-color-text-strong;
-  }
-
   &__frame {
     position: relative;
     // height: 13rem;
@@ -160,11 +156,13 @@
   }
 
   &__title {
+    color: $site-color-text-strong;
 
     button {
       background: transparent;
       border: 0;
     }
+
   }
 }
 

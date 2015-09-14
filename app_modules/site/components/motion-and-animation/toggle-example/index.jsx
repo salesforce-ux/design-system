@@ -75,9 +75,9 @@ class ToggleExample extends React.Component {
         <div className={className}>
           <span>Abc</span>
         </div>
-        <div className="site-example-tile__description">{description}</div>
-        <hr className={pf('hr hr--dark-blue')} />
         <div className="site-example-tile__title">{title}</div>
+        <hr className={pf('hr hr--dark-blue')} />
+        <div className="site-example-tile__description">{description}</div>
       </div>
     </li>;
   }

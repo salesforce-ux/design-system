@@ -17,8 +17,8 @@ const pf = componentUtil.prefix;
 
 module.exports = (
 <div className={pf('demo-only demo-only--dropdown')} style={{height: '220px'}}>
-  <div className={pf('dropdown-trigger')} aria-haspopup="true">
-    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" />
+  <div className={pf('dropdown-trigger')}>
+    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
     <Menu className={pf('dropdown--left')}>
       <Menu.List isSelectable={false}>
         <Menu.Item href="#">Menu Item One</Menu.Item>

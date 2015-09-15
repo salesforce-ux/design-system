@@ -220,7 +220,9 @@ const Tokens = React.createClass({
     return categories.filter(category => {
       return tokensByCategoryFiltered[category.key];
     }).map(category => {
-      const tokens = tokensByCategoryFiltered[category.key] || [];
+      const tokens = (tokensByCategoryFiltered[category.key] || []).filter(token => {
+        return token.deprecated !== true
+      })
       return category.render(tokens, {
         nameFormat,
         role: this.state.role

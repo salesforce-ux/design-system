@@ -55,7 +55,7 @@ class Overview extends React.Component {
           <p className={pf('site-cta-buttons m-bottom--medium')}>
              <CTALink href="/getting-started" className={pf('button button--neutral site-cta-tutorial')}
               ctaEventName='tutorials-top'>Read Tutorials</CTALink> <CTALink href="/resources/downloads"
-              className={pf('button button--neutral button-space-left site-cta-download')} ctaEventName='downloads-top'>Get Design System</CTALink>
+              className={pf('button button--neutral button-space-left site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
           </p>
         </IfPrefs>
         <p className={pf('m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>

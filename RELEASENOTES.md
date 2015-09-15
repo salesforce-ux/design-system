@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.9.1 — September 15th, 2015
+
+- Fixed issue with npm module dependencies
+
 ## Release 0.9.0 — September 9th, 2015
 
 - Open Sourced: [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)

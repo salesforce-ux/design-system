@@ -145,9 +145,9 @@ function install(context, methods) {
     throw new Error('"methods" must be an array');
   }
   methods.forEach(method => {
-    const hastMethod = installMethods.hasOwnProperty(method);
+    const hasMethod = installMethods.hasOwnProperty(method);
     const isFunction = typeof installMethods[method] === 'function';
-    if (!hastMethod || !isFunction) {
+    if (!hasMethod || !isFunction) {
       throw new Error(`"${method}" is not a valid util method`);
     }
     // Add the method prefixed with a "$" and bind it to the context

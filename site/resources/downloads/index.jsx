@@ -29,7 +29,7 @@ const links = {
 function managedPackageUrls() {
   return g.managedPackageUrls.map((item, idx) => {
     return <li key={`package-v${item.version}`}>
-      <a href={item.url}>Version {item.version} {idx === 0 ? '(Latest)' : ''}</a>
+      <a href={item.url}>Version {item.version}</a>
     </li>;
   });
 }

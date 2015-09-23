@@ -14,7 +14,7 @@ import fs from 'fs';
 
 const getSitePath = path.resolve(path, __PATHS__.site);
 const getBuildPath = path.resolve(path, __PATHS__.www);
-const ignore = ['.jsx', '.scss'];
+const ignoredExtensions = ['.jsx', '.scss'];
 
 
 // List all files in a directory recursively
@@ -34,13 +34,12 @@ var walkSync = function(dir, filelist) {
 };
 
 
-
 // identify file which should not be copied 
-// i.e. jsx or scss or a dot file
+//  i.e. jsx or scss or a dot file
 function doNotCopy(filepath) {
   var fileExtension = path.extname(filepath);
   var fileName = filepath.split("/").pop();
-  return ((fileExtension === '.jsx') || (fileExtension === '.scss') || ( fileName.charAt(0) === '.'));
+  return ((ignoredExtensions.indexOf(fileExtension) !== -1) || ( fileName.charAt(0) === '.'));
 }
 
 
@@ -52,30 +51,50 @@ function fileExists(filepath) {
   }
 }
 
-describe('scripts/tasks/site/assets.js', () => {
+
+var mistakenCopies = [];
+var missedCopies = [];
+
+before(function() {
 
   var allSiteFiles = walkSync(getSitePath);
-  console.log('Number of files found: ' + allSiteFiles.length);
-
   allSiteFiles.forEach(function(filepath) {
 
-    console.log(filepath);
     var doNotCopyFlag = doNotCopy(getSitePath + '/' + filepath);
-    var existFlag = fileExists(getBuildPath + '/' + filepath);
+    var copiedFlag = fileExists(getBuildPath + '/' + filepath);
 
-    if (doNotCopyFlag) {
+    if (doNotCopyFlag && copiedFlag) {
 
-      it('does not copy jsx/scss/.file to .www - ' + filepath, () => {
-        expect(existFlag).to.equal(false);
-      });
+      // file SHOULD NOT have been copied
+      mistakenCopies.push(getSitePath + '/' + filepath);
 
-    } else {
+    } else if (!doNotCopyFlag && !copiedFlag) {
 
-      it('does copy non-jsx/scss to .www - ' + filepath, () => {
-        expect(existFlag).to.equal(true);
-      });
-
+      // file SHOULD HAVE been copied
+      missedCopies.push(getSitePath + '/' + filepath)
     }
+
   });
+
+});
+
+describe('scripts/tasks/site/assets.js', () => {
+
+  it('does not copy any jsx/scss/.file to .www', () => {
+    if (mistakenCopies.length > 0) {
+      var detailedErrorMessage = mistakenCopies.length + " mistaken copies: " + mistakenCopies;
+    }
+    expect(mistakenCopies.length).to.equal(0, detailedErrorMessage);
+    
+  });
+
+    
+  it('does copy all non-jsx/scss to .www', () => {
+    if (missedCopies.length > 0) {
+      var detailedErrorMessage = missedCopies.length + ' missed copies: ' + missedCopies;
+    }
+    expect(missedCopies.length).to.equal(0, detailedErrorMessage);
+  });
+
 });
 

@@ -8,7 +8,7 @@ import {
   getPath
 } from 'app_modules/site/navigation/sitemap-utils';
 
-describe('SitemapUtils', () => {
+describe('app_modules/site/navigation/sitemap-utils.js', () => {
   describe('Route', () => {
     describe('#constructor', () => {
       it('saves the name and options', () => {
@@ -28,6 +28,18 @@ describe('SitemapUtils', () => {
         let child = new Route('my-child', {}, parent);
         expect(parent).to.have.property('path', '/my-parent');
         expect(child).to.have.property('path', '/my-parent/my-child');
+      });
+      it('creates a "path" using options.path as an override', () => {
+        let parent = new Route('my-parent', { path: '/other-parent' });
+        let child = new Route('my-child', {}, parent);
+        expect(parent).to.have.property('path', '/other-parent');
+        expect(child).to.have.property('path', '/other-parent/my-child');
+      });
+      it.only('creates a "path" ingoring the parent if the path is prefixed with "/"', () => {
+        let parent = new Route('my-parent', { path: '/other-parent' });
+        let child = new Route('my-child', { path: '/top' }, parent);
+        expect(parent).to.have.property('path', '/other-parent');
+        expect(child).to.have.property('path', '/top');
       });
       it('creates a "modulePath"', () => {
         let parent = new Route('my-parent');

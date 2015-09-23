@@ -6,9 +6,7 @@ before_install:
 install:
   - npm install
 script:
-  - npm run test-before
-  - npm run dist
-  - npm run test-after
+  - npm run test-before && npm run dist && run test-after
 after_success:
   - scripts/travis/after_success.sh
 cache:

@@ -35,7 +35,7 @@ describe('app_modules/site/navigation/sitemap-utils.js', () => {
         expect(parent).to.have.property('path', '/other-parent');
         expect(child).to.have.property('path', '/other-parent/my-child');
       });
-      it.only('creates a "path" ingoring the parent if the path is prefixed with "/"', () => {
+      it('creates a "path" ingoring the parent if the path is prefixed with "/"', () => {
         let parent = new Route('my-parent', { path: '/other-parent' });
         let child = new Route('my-child', { path: '/top' }, parent);
         expect(parent).to.have.property('path', '/other-parent');

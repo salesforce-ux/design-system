@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
@@ -52,7 +53,9 @@ export default (
           <li>Helper Classes</li>
         </ul>
 
-        <h2 id="setup" className="site-text-heading--large">Setup</h2>
+        <Heading type="h2" id="setup" className={pf(`site-text-heading--large`)}>
+          Setup
+        </Heading>
 
         <p>Add this to your Podfile:</p>
       </div>
@@ -78,7 +81,9 @@ pod install
       </div>
 
       <div className={pf('container--medium')}>
-        <h2 id="usage" className="site-text-heading--large">Usage</h2>
+        <Heading type="h2" id="usage" className={pf(`site-text-heading--large`)}>
+          Usage
+        </Heading>
 
         <p>While we encourage a holistic integration of the entire design system,
         you are free to include as many or as few of the following modules
@@ -86,7 +91,9 @@ pod install
         of design tokens or icons.</p>
       </div>
 
-      <h3 id="colors" className="site-text-heading--medium">Colors</h3>
+      <Heading type="h3" id="colors" className={pf(`site-text-heading--medium`)}>
+        Colors
+      </Heading>
 
       <h4 className="site-text-heading--label">Text Colors</h4>
 
@@ -161,7 +168,9 @@ UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
         `}</CodeBlock>
       </div>
 
-      <h3 id="fonts" className="site-text-heading--medium">Fonts and Text Sizes</h3>
+      <Heading type="h3" id="fonts" className={pf(`site-text-heading--medium`)}>
+        Fonts and Text Sizes
+      </Heading>
 
       <div className={pf('site-code--content scrollable--x')}>
         <CodeBlock language="bash">{`
@@ -177,7 +186,9 @@ UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
         `}</CodeBlock>
       </div>
 
-      <h3 id="icons" className="site-text-heading--medium">Icons</h3>
+      <Heading type="h3" id="icons" className={pf(`site-text-heading--medium`)}>
+        Icons
+      </Heading>
 
       <h4 className="site-text-heading--label">Action Icons</h4>
 

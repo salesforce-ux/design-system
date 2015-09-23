@@ -4,7 +4,8 @@
   "description": "Salesforce Lightning Design System",
   "scripts": {
     "postinstall": "./scripts/npm/postinstall.sh",
-    "test": "./scripts/npm/test.sh",
+    "test-before": "./scripts/npm/test-before.sh",
+    "test-after": "./scripts/npm/test-after.sh",
     "dev": "./scripts/npm/dev.sh",
     "prod": "./scripts/npm/prod.sh",
     "dist": "./scripts/npm/dist.sh",

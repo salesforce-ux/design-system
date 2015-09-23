@@ -121,12 +121,15 @@ describe('app_modules/site/navigation/sitemap-utils.js', () => {
         expect(parent.routes[0]).to.have.property('name', 'child');
         expect(parent.routes[0]).to.have.property('foo', 'bar');
       });
-      it('creates a child route with a callback', () => {
+      it('creates a child route with a callback and no options', () => {
         let parent = new Route('parent');
         let spy = sinon.spy();
+        spy.someKey = 'someValue';
         parent.resource('child', spy);
         expect(parent.routes).to.have.length(1);
         expect(parent.routes[0]).to.have.property('name', 'child');
+        // Verify that the callback didn't get merged into the route
+        expect(parent.routes[0]).not.to.have.property('someKey');
         expect(spy.calledOnce).to.be.true;
         expect(spy.thisValues[0]).to.equal(parent.routes[0]);
       });

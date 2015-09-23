@@ -68,7 +68,11 @@ export class Route {
    * @param {function} [callback]
    */
   resource (name, options, callback) {
-    if (_.isFunction(options)) callback = options;
+    // Allow options to be omitted
+    if (_.isFunction(options)) {
+      callback = options;
+      options = {};
+    }
     let route = new Route(name, options, this);
     if (_.isFunction(callback)) {
       callback.call(route);

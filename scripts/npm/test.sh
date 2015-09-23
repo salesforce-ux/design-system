@@ -12,4 +12,5 @@
 set -e
 
 npm run lint
+./node_modules/.bin/mocha --require scripts/bootstrap.js test/before/**/*.js
 ./node_modules/karma/bin/karma start

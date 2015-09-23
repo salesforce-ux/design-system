@@ -11,40 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 
-/**
- * Return the path for the rotue
- *
- * @param {string} routePath
- * @param {Route} [parent]
- * @returns {string}
- */
-function getPath (routePath, parent) {
-  // Remove trailing "/"
-  routePath = _.trimRight(routePath, '/');
-  // If the path begins with "/", return the path
-  if (/^\//.test(routePath)) {
-    return routePath;
-  }
-  // If route has a parent, concat the paths
-  if (parent) {
-    let parentPath = _.trimRight(parent.path, '/');
-    return `${parentPath}/${routePath}`;
-  }
-  // Otherwise just return a root path
-  return `/${routePath}`;
-}
-
-/**
- * Remove leading and trailing slashes from a path
- *
- * @param {string} str
- * @returns {string}
- */
-function trimSlashes (str) {
-  return _.trim(str, '/');
-}
-
-class Route {
+export class Route {
   /**
    * Create a new route
    *
@@ -60,7 +27,7 @@ class Route {
     _.assign(this, options, {
       name,
       uid: parent ? `${parent.uid}:${name}` : name,
-      path: getPath(options.path, parent),
+      path: Route.getPath(options.path, parent),
       routes: []
     });
     this.modulePath = this.getModulePath();
@@ -71,8 +38,8 @@ class Route {
    * @param {string} p
    * @returns {string}
    */
-  trimSlashes (p) {
-    return trimSlashes(p);
+  trimSlashes (str) {
+    return _.trim(str, '/');
   }
   /**
    * Return a path that that appends index.jsx and trims slashes
@@ -83,7 +50,7 @@ class Route {
    * @returns {string}
    */
   getIndexPath (basePath) {
-    return trimSlashes(`${trimSlashes(basePath)}/index.jsx`);
+    return this.trimSlashes(`${this.trimSlashes(basePath)}/index.jsx`);
   }
  /**
    * Return an index path that represents the location of the module
@@ -132,6 +99,28 @@ class Route {
       })
     );
     return _.flatten(routes);
+  }
+  /**
+   * Return the path for the rotue
+   *
+   * @param {string} routePath
+   * @param {Route} [parent]
+   * @returns {string}
+   */
+  static getPath (routePath, parent) {
+    // Remove trailing "/"
+    routePath = _.trimRight(routePath, '/');
+    // If the path begins with "/", return the path
+    if (/^\//.test(routePath)) {
+      return routePath;
+    }
+    // If route has a parent, concat the paths
+    if (parent) {
+      let parentPath = _.trimRight(parent.path, '/');
+      return `${parentPath}/${routePath}`;
+    }
+    // Otherwise just return a root path
+    return `/${routePath}`;
   }
 }
 

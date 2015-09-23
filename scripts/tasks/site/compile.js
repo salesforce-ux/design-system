@@ -32,7 +32,6 @@ import webpack from 'webpack';
 
 import createComponent from 'app_modules/site/util/component/create';
 import { compileSass } from './sass';
-import copyAssets from './assets';
 import ignoreUnderscore from 'app_modules/util/ignore-underscore';
 
 const argv = minimist(process.argv.slice(2));
@@ -313,7 +312,6 @@ function createComponentPage(route, component) {
  */
 function preCompile(callback) {
   async.parallel([
-    copyAssets,
     createPages,
     createComponentPages
   ], callback);

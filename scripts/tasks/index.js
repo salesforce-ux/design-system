@@ -35,6 +35,7 @@ let designSystem = DesignSystemScss({
 const tasks = {
 
   site: {
+    assets: require('./site/assets'),
     compile: require('./site/compile'),
     fonts: require('./site/fonts'),
     icons: require('./site/icons'),
@@ -65,6 +66,7 @@ module.exports = {
 
       function(done) {
         async.parallel([
+          tasks.site.assets,
           tasks.site.fonts,
           tasks.site.icons,
           tasks.generate.tokens

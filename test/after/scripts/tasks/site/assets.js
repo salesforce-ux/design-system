@@ -35,7 +35,7 @@ describe('scripts/tasks/site/assets.js', () => {
       let ignore = glob.sync(`${path}/**/*.{${ignoreExtensions}}`);
       return _.difference(all, ignore);
     })();
-    let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f))
+    let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f));
 
     // build list of www file paths
     let wwwFiles = glob.sync(`${__PATHS__.www}/**/*.*`);

@@ -1,0 +1,11 @@
+classBase: 'feed'
+status: 'prototype'
+flavors:
+  - comment
+  - comment-minimal
+  - comment-with-replies
+  - comment-types
+  - comment-overflow
+  - discussion-feed
+  - publisher
+

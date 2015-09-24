@@ -7,8 +7,8 @@ components:
   - cards
   - data-tables
   - datepickers
-  - discussion-feed
   - dropdowns
+  - feed
   - forms
   - grid-system
   - icons

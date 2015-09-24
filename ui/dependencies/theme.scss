@@ -40,7 +40,7 @@
 
 
 
-@mixin dot-separator($size: 4px, $color: $color-background-alt-inverse) {
+@mixin dot-separator($size: 4px, $color: $color-background-alt-inverse, $mq: true) {
   position: relative;
 
   &:after {
@@ -65,20 +65,22 @@
     }
   }
 
-  @include mq-medium-max {
+  @if $mq {
+    @include mq-medium-max {
 
-    &:before {
-      @include square($size);
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      border-radius: $border-radius-circle;
-      background-color: $color;
-      margin-right: $spacing-small;
-    }
+      &:before {
+        @include square($size);
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: $border-radius-circle;
+        background-color: $color;
+        margin-right: $spacing-small;
+      }
 
-    &:after {
-      content: none;
+      &:after {
+        content: none;
+      }
     }
   }
 }

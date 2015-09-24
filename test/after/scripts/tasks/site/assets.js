@@ -11,10 +11,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import { expect } from 'chai';
 import path from 'path';
 import fs from 'fs';
+import { ignore } from 'scripts/tasks/site/assets'
+import glob from 'glob';
 
-const getSitePath = path.resolve(path, __PATHS__.site);
-const getBuildPath = path.resolve(path, __PATHS__.www);
-const ignoredExtensions = ['.jsx', '.scss'];
+// function getSitePath(arga) {
+//   console.log(arguments);
+// }
+// JOB 1
+// const getSitePath = path.resolve.bind(path, __PATHS__.site);
+
+
+// var getSitePathCustom = getSitePath.bind(null, 'a')
+// getSitePathCustom('b');
+
+// const getBuildPath = path.resolve(path, __PATHS__.www);
 
 
 // List all files in a directory recursively
@@ -39,7 +49,7 @@ var walkSync = function(dir, filelist) {
 function doNotCopy(filepath) {
   var fileExtension = path.extname(filepath);
   var fileName = filepath.split("/").pop();
-  return ((ignoredExtensions.indexOf(fileExtension) !== -1) || ( fileName.charAt(0) === '.'));
+  return ((ignore.indexOf(fileExtension) !== -1) || ( fileName.charAt(0) === '.'));
 }
 
 
@@ -55,45 +65,62 @@ function fileExists(filepath) {
 var mistakenCopies = [];
 var missedCopies = [];
 
-before(function() {
+// before(function() {
 
-  var allSiteFiles = walkSync(getSitePath);
-  allSiteFiles.forEach(function(filepath) {
+//   var allSiteFiles = walkSync(getSitePath);
+//   allSiteFiles.forEach(function(filepath) {
 
-    var doNotCopyFlag = doNotCopy(getSitePath + '/' + filepath);
-    var copiedFlag = fileExists(getBuildPath + '/' + filepath);
+//     var doNotCopyFlag = doNotCopy(getSitePath + '/' + filepath);
+//     var copiedFlag = fileExists(getBuildPath + '/' + filepath);
 
-    if (doNotCopyFlag && copiedFlag) {
+//     if (doNotCopyFlag && copiedFlag) {
 
-      // file SHOULD NOT have been copied
-      mistakenCopies.push(getSitePath + '/' + filepath);
+//       // file SHOULD NOT have been copied
+//       mistakenCopies.push(getSitePath + '/' + filepath);
 
-    } else if (!doNotCopyFlag && !copiedFlag) {
+//     } else if (!doNotCopyFlag && !copiedFlag) {
 
-      // file SHOULD HAVE been copied
-      missedCopies.push(getSitePath + '/' + filepath)
-    }
+//       // file SHOULD HAVE been copied
+//       missedCopies.push(getSitePath + '/' + filepath)
+//     }
 
-  });
+//   });
 
-});
+// });
+
+let ext = ignore.map(e => e.replace(/^\./, '')).join(',');
 
 describe('scripts/tasks/site/assets.js', () => {
 
-  it('does not copy any jsx/scss/.file to .www', () => {
-    if (mistakenCopies.length > 0) {
-      var detailedErrorMessage = mistakenCopies.length + " mistaken copies: " + mistakenCopies;
-    }
-    expect(mistakenCopies.length).to.equal(0, detailedErrorMessage);
-    
+  it.only('does not copy any jsx/scss/.file to .www', () => {
+    // if (mistakenCopies.length > 0) {
+    //   var detailedErrorMessage = mistakenCopies.length + " mistaken copies: " + mistakenCopies;
+    // }
+    // expect(mistakenCopies.length).to.equal(0, detailedErrorMessage);
+    let files = glob.sync(`${__PATHS__.www}/**/*.{${ext}}`);
+    // if (files.length > 0) {
+    //   console.log("Mistaken copies: ");
+    //   files.forEach(file => console.log(file));
+    // }
+    expect(files).to.eql([]);
   });
 
     
   it('does copy all non-jsx/scss to .www', () => {
-    if (missedCopies.length > 0) {
-      var detailedErrorMessage = missedCopies.length + ' missed copies: ' + missedCopies;
-    }
-    expect(missedCopies.length).to.equal(0, detailedErrorMessage);
+    // if (missedCopies.length > 0) {
+    //   var detailedErrorMessage = missedCopies.length + ' missed copies: ' + missedCopies;
+    // }
+    // expect(missedCopies.length).to.equal(0, detailedErrorMessage);
+    let sitefiles = glob.sync([
+        `${__PATHS__.site}/**/*`,
+        `!${__PATHS__.site}/**/*.{${ext}}`
+    ]);
+
+    let wwwfiles = glob.sync([
+        `${__PATHS__.www}/**/*`,
+        `!${__PATHS__.www}/**/*.{${ext}}`
+    ]);
+
   });
 
 });

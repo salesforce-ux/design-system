@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import path from 'path';
 import fs from 'fs';
+import assert from 'assert';
 
 import _ from 'lodash';
 import async from 'async';
@@ -38,8 +39,8 @@ const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
 const isProd = argv.prod === true;
 
-const getSitePath = path.resolve.bind(path, __PATHS__.site);
-const getSitePathTmp = path.resolve.bind(path, __PATHS__.tmp, 'site');
+export const getSitePath = path.resolve.bind(path, __PATHS__.site);
+export const getSitePathTmp = path.resolve.bind(path, __PATHS__.tmp, 'site');
 
 const eslintExclude = new RegExp([
   __PATHS__.node_modules,
@@ -153,7 +154,9 @@ function browserSyncStart() {
  * @params {string} prefix
  * @returns {object}
  */
-function getPrefixedProps(props, prefix) {
+export function getPrefixedProps(props, prefix) {
+  assert.ok(_.isObject(props), 'props must be an object');
+  assert.ok(_.isString(prefix), 'prefix must be a string');
   const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
   const prefixedProps = _.pick(props, (value, key) => pattern.test(key));
   return _.mapKeys(prefixedProps, (value, key) => {
@@ -188,7 +191,10 @@ function webpackLogStats(stats) {
  * @param {string} modulePath - the path to require
  * @returns {string}
  */
-function tryRequire(cache, cacheKey, modulePath) {
+export function tryRequire(cache, cacheKey, modulePath) {
+  assert.ok(_.isString(cache), 'cache must be a string');
+  assert.ok(_.isString(cacheKey), 'cacheKey must be a string');
+  assert.ok(_.isString(modulePath), 'modulePath must be a string');
   return `try { ${cache}['${cacheKey}'] = require('${modulePath}'); } catch(e) {}`;
 }
 
@@ -197,7 +203,8 @@ function tryRequire(cache, cacheKey, modulePath) {
  *
  * @param {function} callback
  */
-function createPages(callback) {
+export function createPages(callback) {
+  assert.ok(_.isFunction(callback), 'callback must be a function');
   console.log('-----> Creating Pages');
   let sitemap = require('app_modules/site/navigation/sitemap');
   let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
@@ -218,7 +225,7 @@ function createPages(callback) {
  * @param {string} enc
  * @param {function} next
  */
-function createPage(route, enc, next) {
+export function createPage(route, enc, next) {
   // Props
   const pageBodyProps = {
     url: route.path
@@ -244,7 +251,7 @@ function createPage(route, enc, next) {
  *
  * @param {function} callback
  */
-function createComponentPages(callback) {
+export function createComponentPages(callback) {
   console.log('-----> Creating Component Pages');
   let sitemap = require('app_modules/site/navigation/sitemap');
   let pages = sitemap.getFlattenedRoutes().filter(route => {
@@ -262,7 +269,7 @@ function createComponentPages(callback) {
  * @param {object} component
  * @returns {function}
  */
-function createComponentPage(route, component) {
+export function createComponentPage(route, component) {
   return function(callback) {
     component = createComponent(component);
     // Imports
@@ -369,7 +376,7 @@ function compile(callback) {
  * @param {string} enc
  * @param {function} next
  */
-function renderPage(routes, route, enc, next) {
+export function renderPage(routes, route, enc, next) {
   try {
     console.log('-----> Rendering page ' + route.path);
     let newFile = new gutil.File({
@@ -411,7 +418,7 @@ function renderPage(routes, route, enc, next) {
  *
  * @param {function} callback
  */
-function renderPages(callback) {
+export function renderPages(callback) {
   console.log('-----> Rendering Pages');
   let sitemap = require('app_modules/site/navigation/sitemap');
   // Needed for ReactRouter

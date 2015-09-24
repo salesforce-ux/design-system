@@ -23,6 +23,9 @@ import { compileSassUtilities } from './generate/sass-utilities';
 import { DesignSystemScss } from '@salesforce-ux/design-system-utils';
 import updateBoilerplate from './update-boilerplate';
 
+import siteCopyAssets from './site/assets';
+
+
 let designSystem = DesignSystemScss({
   path: __PATHS__.ui,
   entryPath: path.resolve(__PATHS__.ui, 'index.scss'),
@@ -35,7 +38,7 @@ let designSystem = DesignSystemScss({
 const tasks = {
 
   site: {
-    assets: require('./site/assets'),
+    assets: siteCopyAssets,
     compile: require('./site/compile'),
     fonts: require('./site/fonts'),
     icons: require('./site/icons'),

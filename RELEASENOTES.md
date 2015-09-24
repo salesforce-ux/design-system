@@ -1,9 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.1 — September 15th, 2015
+## Release 0.9.1 — September 24th, 2015
 
 - Fixed issue with npm module dependencies
+- Fixes issue that caused deprecated design tokens to display
 
 ## Release 0.9.0 — September 9th, 2015
 

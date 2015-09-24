@@ -27,10 +27,8 @@ describe('scripts/tasks/site/assets.js', () => {
 
     
   it('does copy all non-jsx/scss to .www', () => {
-    // let sitefiles = glob.sync([
-    //     `${__PATHS__.site}/**/*`,
-    //     `!${__PATHS__.site}/**/*.{${ignoreExtensions}}`
-    // ]);
+
+    // build list of source site file paths which should be copied 
     let siteFiles = (function () {
       let path = __PATHS__.site;
       let all = glob.sync(`${path}/**/*.*`);
@@ -38,15 +36,13 @@ describe('scripts/tasks/site/assets.js', () => {
       return _.difference(all, ignore);
     })();
     let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f))
-    //console.log(relativeSiteFiles);
 
+    // build list of www file paths
     let wwwFiles = glob.sync(`${__PATHS__.www}/**/*.*`);
     let relativeWwwFiles = wwwFiles.map(f => path.relative(__PATHS__.www, f));
 
-    // all of siteFiles should be in wwwFiles
-    //let missedSiteFiles = _.intersection(relativeSiteFiles, relativeWwwFiles)
+    // all of relativeSiteFiles should be in relativeWwwFiles
     let copiedSiteFiles = _.intersection(relativeSiteFiles, relativeWwwFiles);
-    // let siteFileCoverage = (relativeSiteFiles.length === copiedSiteFiles.length);
     expect(relativeSiteFiles).to.eql(copiedSiteFiles);
   });
 

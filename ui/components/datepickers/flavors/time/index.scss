@@ -10,17 +10,20 @@
 
 
 .#{$css-prefix}datepicker--time {
-  padding: $spacing-small 0;
-  font-size: $font-size-medium;
+  max-width: $size-x-small;
+  max-height: (($line-height-text + ($spacing-x-small * 2)) * 6) - ($spacing-small * 2);
+  overflow: hidden {
+    y: auto;
+  }
 
   &__list {
-    max-height: (($line-height-text + ($spacing-x-small * 2)) * 6) - ($spacing-small * 2);
-    overflow-y: auto;
 
     > li {
       padding: $spacing-x-small {
         left: $spacing-x-large;
+        right: $spacing-x-large;
       }
+      white-space: nowrap;
 
       &:hover,
       &:focus {

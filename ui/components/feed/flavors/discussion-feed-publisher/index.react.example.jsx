@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
+const Button = require('ui/components/buttons/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
 const StatefulClass = require('ui/components/lib/stateful.react');
@@ -18,8 +19,39 @@ const Input = require('ui/components/forms/flavors/input/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
+const image = (
+  <div className={pf('avatar avatar--circle avatar--small')}>
+    <a href="javascript:void(0)" title="Jenna Davis">
+      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+    </a>
+  </div>
+);
+
 module.exports = (
 <div className='demo-only'>
+
+  <div className={pf('publisher')}>
+    <textarea className={pf('textarea text-longform')} placeholder="Write a comment" />
+    <div className={pf('publisher__actions grid grid--align-spread')}>
+      <ul className={pf('grid')}>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="adduser"
+            assistiveText="Add User" />
+        </li>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="attach"
+            assistiveText="Attach a file" />
+        </li>
+      </ul>
+      <Button flavor="brand">Comment</Button>
+    </div>
+  </div>
 
 </div>
 );

@@ -7,5 +7,6 @@ flavors:
   - comment-types
   - comment-overflow
   - discussion-feed
-  - publisher
+  - discussion-feed-publisher
+  - comment-publisher
 

@@ -32,7 +32,7 @@ function getIndexWithDependencies() { return path.resolve(path, __PATHS__.ui, 'u
 /**
  * Sass
  */
-export function compileSassUtilities(e, done) {
+export default function (done) {
   console.log('Compiling Sass utilities');
   function handleError(err) {
     done(err);

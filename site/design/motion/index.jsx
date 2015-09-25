@@ -138,7 +138,7 @@ export default (
               box shadows. The amount of elevation is <em>not</em> the same as the Z-index, rather
               its relative elevation which aids in rendering the shadow.</p>
         </div>
-        <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none text-align--center')}>
+        <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none text-align--left')}>
           <img className={pf('image')} src="/assets/images/motion/img-elevation-perspective.svg" alt="Elevation Perspective Image" />
         </figure>
       </div>

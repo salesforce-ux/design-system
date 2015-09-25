@@ -26,10 +26,141 @@ const image = (
     </a>
   </div>
 );
+const icon = (
+  <span className={pf('icon__container')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
+    <span className={pf('assistive-text')}>Powerpoint</span>
+  </span>
+);
 
-module.exports = (
-<div className='demo-only' style={{height: '300px'}}>
+const commentReply = (
+  <div>
+    <p><a href="javascript:void(0)" title="Sue Jenkins">@sjenkins</a> here is an updated version of that <a href="javascript:void(0)" title="View all presentation tags">#presentation</a> file</p>
+    <div className={pf('comment__content-attachment box box--x-small theme--shade')}>
+      <div className={pf('grid grid--align-spread')}>
+        <MediaObject figureLeft={icon}>
+          <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
+        </MediaObject>
+        <ButtonIcon
+          flavor="icon-bare"
+          sprite="utility"
+          symbol="close"
+          assistiveText="Remove this attachment" />
+      </div>
+    </div>
+  </div>
+);
 
+exports.preview = (
+<div className='demo-only' >
+
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment')}>
+      <textarea className={pf('input--bare text-longform')} placeholder="Write a comment..." />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+  <hr />
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active')}>
+      <textarea className={pf('input--bare text-longform')} placeholder="Write a comment..." />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand" disabled="true">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+  <hr />
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active has-focus')}>
+      <textarea className={pf('input--bare text-longform')} placeholder="Write a comment..." />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand" disabled="true">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+  <hr />
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active')}>
+      <div className={pf('input--bare text-longform')}>
+        {commentReply}
+      </div>
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+
+</div>
+);
+
+exports.code = (
+<div className='demo-only'>
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <textarea className={pf('input--bare text-longform')} placeholder="Write a comment" />
@@ -54,31 +185,5 @@ module.exports = (
       </div>
     </div>
   </MediaObject>
-  <hr />
-  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-    <div className={pf('publisher publisher--comment has-focus')}>
-      <textarea className={pf('input--bare text-longform')} placeholder="Write a comment" />
-      <div className={pf('publisher__actions grid grid--align-spread')}>
-        <ul className={pf('grid')}>
-          <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="adduser"
-              assistiveText="Add User" />
-          </li>
-          <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="attach"
-              assistiveText="Attach a file" />
-          </li>
-        </ul>
-        <Button flavor="brand">Comment</Button>
-      </div>
-    </div>
-  </MediaObject>
-
 </div>
 );

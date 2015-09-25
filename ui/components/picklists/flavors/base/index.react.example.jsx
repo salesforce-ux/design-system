@@ -20,7 +20,7 @@ module.exports = (
   <PickList label="Select an Option" aria-expanded="true">
     <Menu className={pf('dropdown--left dropdown--small')}>
       <Menu.List>
-        <Menu.Item href="#">Option One Option One Option One Option One</Menu.Item>
+        <Menu.Item href="#">Option One</Menu.Item>
         <Menu.Item href="#">Option Two</Menu.Item>
         <Menu.Item href="#">Option Three</Menu.Item>
         <Menu.Item href="#">Option Four</Menu.Item>

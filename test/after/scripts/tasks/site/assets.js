@@ -8,27 +8,43 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
-import path from 'path';
-
+import { expect } from 'chai';
 import _ from 'lodash';
-import gulp from 'gulp';
-import through from 'through2';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
+import { ignore } from 'scripts/tasks/site/assets'
 
-const getSitePath = path.resolve.bind(path, __PATHS__.site);
-export const ignore = ['.jsx', '.scss'];
+// extensions which assets.js should not copy
+let ignoreExtensions = ignore.map(e => e.replace(/^\./, '')).join(',');
 
-export default function(done) {
-  console.log('-----> Copying Assets');
-  gulp.src(getSitePath('**/*.*'), { base: getSitePath() })
-  .pipe(through.obj((file, enc, next) => {
-    const ext = path.extname(file.path);
-    if (_.includes(ignore, ext)) return next(null, null);
-    next(null, file);
-  }))
-  .on('error', done)
-  // Send the files to the public directory
-  .pipe(gulp.dest(__PATHS__.www))
-  .on('error', done)
-  .on('finish', done);
-}
+describe('scripts/tasks/site/assets.js', () => {
+
+  it('does not copy any jsx/scss/.file to .www', () => {
+    let files = glob.sync(`${__PATHS__.www}/**/*.{${ignoreExtensions}}`);
+    expect(files).to.eql([]);
+  });
+
+    
+  it('does copy all non-jsx/scss to .www', () => {
+
+    // build list of source site file paths which should be copied 
+    let siteFiles = (function () {
+      let path = __PATHS__.site;
+      let all = glob.sync(`${path}/**/*.*`);
+      let ignore = glob.sync(`${path}/**/*.{${ignoreExtensions}}`);
+      return _.difference(all, ignore);
+    })();
+    let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f));
+
+    // build list of www file paths
+    let wwwFiles = glob.sync(`${__PATHS__.www}/**/*.*`);
+    let relativeWwwFiles = wwwFiles.map(f => path.relative(__PATHS__.www, f));
+
+    // all of relativeSiteFiles should be in relativeWwwFiles
+    let copiedSiteFiles = _.intersection(relativeSiteFiles, relativeWwwFiles);
+    expect(relativeSiteFiles).to.eql(copiedSiteFiles);
+  });
+
+});
+

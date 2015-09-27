@@ -1,6 +1,7 @@
 {
   "name": "design-system",
   "version": "0.9.1",
+  "license" : "BSD-2-Clause",
   "description": "Salesforce Lightning Design System",
   "scripts": {
     "postinstall": "./scripts/npm/postinstall.sh",

@@ -19,11 +19,11 @@
   &__list {
 
     > li {
+      white-space: nowrap;
       padding: $spacing-x-small {
         left: $spacing-x-large;
         right: $spacing-x-large;
       }
-      white-space: nowrap;
 
       &:hover,
       &:focus {

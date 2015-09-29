@@ -26,6 +26,13 @@ const imagePrimaryLarge = (
     </a>
   </div>
 );
+const imagePrimary = (
+  <div className={pf('avatar avatar--circle avatar--small')}>
+    <a href="javascript:void(0)" title="Jason Rodgers">
+      <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
+    </a>
+  </div>
+);
 const imageSecondaryLarge = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jenna Davis">
@@ -41,10 +48,10 @@ const imageTertiaryLarge = (
   </div>
 );
 
-module.exports = (
+exports.preview = (
 <div className='demo-only'>
 
-  <div className={pf('feed feed--discussion')}>
+  <div className={pf('feed')}>
     <ul className={pf('feed__list')}>
       {/* Feed Item */}
       <li className={pf('feed__item')}>
@@ -103,6 +110,65 @@ module.exports = (
             </li>
           </ul>
         </MediaObject>
+        <ul className={pf('feed__replies')}>
+          <li className={pf('feed__overflow')}>
+            <Button flavor="neutral">3 more comments</Button>
+          </li>
+          <li>
+            <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
+              <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+                <p className={pf('truncate')}>
+                  <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('comment__timestamp')}>16hr Ago</span>
+                </p>
+                <ButtonIcon
+                  className={pf('shrink-none')}
+                  flavor="icon-border-filled,icon-border-small"
+                  iconFlavor="hint,small"
+                  sprite="utility"
+                  symbol="down"
+                  assistiveText="Show More" />
+              </div>
+              <div className={pf('comment__content text-longform')}>
+                <p><a href="javascript:void(0)" title="Jason Rodgers">@jrodgers</a> I left you some feedback!</p>
+              </div>
+              <ul className={pf('comment__actions text-body--small')}>
+                <li className={pf('comment__actions-item')}>
+                  <a href="javascript:void(0)" title="Like this item">Like</a>
+                </li>
+                <li className={pf('comment__actions-item')}>
+                  13 Likes
+                </li>
+              </ul>
+            </MediaObject>
+          </li>
+          <li>
+            <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
+                <div className={pf('publisher__attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
+          </li>
+        </ul>
       </li>
       {/* Feed Item */}
       <li className={pf('feed__item')}>
@@ -145,6 +211,35 @@ module.exports = (
             </li>
           </ul>
         </MediaObject>
+        <ul className={pf('feed__replies')}>
+          <li>
+            <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
+                <div className={pf('publisher__attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
+          </li>
+        </ul>
       </li>
       {/* Feed Item */}
       <li className={pf('feed__item')}>
@@ -200,8 +295,56 @@ module.exports = (
             </li>
           </ul>
         </MediaObject>
+        <ul className={pf('feed__replies')}>
+          <li>
+            <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
+                <div className={pf('publisher__attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
+          </li>
+        </ul>
       </li>
       {/* / Feed Item */}
+    </ul>
+  </div>
+</div>
+);
+
+exports.code = (
+<div className='demo-only'>
+
+  <div className={pf('feed')}>
+    <ul className={pf('feed__list')}>
+      <li className={pf('feed__item')}>
+        -- Comment Goes Here --
+      </li>
+      <li className={pf('feed__item')}>
+        -- Comment Goes Here --
+      </li>
+      <li className={pf('feed__item')}>
+        -- Comment Goes Here --
+      </li>
     </ul>
   </div>
 </div>

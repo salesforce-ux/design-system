@@ -16,28 +16,9 @@
   transition: min-height $duration-slowly ease,
               max-height $duration-slowly ease;
 
-  .#{$css-prefix}input--bare {
-    line-height: $line-height-button;
-    height: $line-height-button;
-    resize: none;
-    width: 100%;
-    padding: 0 $spacing-medium;
-    margin: 0;
-  }
-
   &.#{$css-prefix}is-active {
     min-height: $size-xx-small;
     max-height: $size-small;
-    padding: $spacing-small;
-
-    .#{$css-prefix}input--bare {
-      padding: 0;
-      margin: 0;
-      line-height: $line-height-text;
-      height: auto;
-      max-height: 10rem;
-      resize: vertical;
-    }
 
     .#{$css-prefix}publisher__actions {
       opacity: 1;
@@ -53,5 +34,10 @@
 
   .#{$css-prefix}publisher__actions {
     opacity: 0;
+    padding: 0 $spacing-small $spacing-small;
+  }
+
+  .#{$css-prefix}publisher__attachments {
+    padding: $spacing-x-small $spacing-small;
   }
 }

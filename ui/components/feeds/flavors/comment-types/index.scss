@@ -7,57 +7,9 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.comment-box {
-  position: relative;
+.#{$css-prefix}attachment {
 
-  .#{$css-prefix}textarea {
-    line-height: $line-height-button;
-    min-height: calc(#{$line-height-button} + 2px);
-    max-height: calc(#{$line-height-button} + 2px);
-    resize: none;
-    padding: {
-      top: 0;
-      bottom: 0;
-    }
-    transition: min-height $duration-slowly ease,
-                max-height $duration-slowly ease;
-
-    &:focus,
-    &:active,
-    .has-focus & {
-      line-height: initial;
-      height: auto;
-      min-height: $size-xx-small;
-      max-height: $size-xx-small;
-      resize: vertical;
-      padding: $spacing-x-small $spacing-small {
-        bottom: $spacing-xx-large;
-      }
-
-      ~ .#{$css-prefix}feed__comment-box__actions {
-        // transform: translateY(0);
-        opacity: 1;
-        z-index: 0;
-        transition: opacity $duration-immediately ease;
-      }
-    }
+  + .#{$css-prefix}attachment {
+    margin-top: $spacing-medium;
   }
-
-  // &.has-focus {
-  //   .#{$css-prefix}textarea {
-
-  //   }
-  // }
-}
-
-.comment-box__actions {
-  position: absolute;
-  left: $spacing-small;
-  right: $spacing-small;
-  bottom: $spacing-medium;
-  z-index: -1;
-  opacity: 0;
-  // transform: translateY(-100%);
-  transition: opacity $duration-quickly ease,
-              transform $duration-quickly ease;
 }

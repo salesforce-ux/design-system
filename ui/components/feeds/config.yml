@@ -1,12 +1,10 @@
 classBase: 'feed'
 status: 'prototype'
 flavors:
-  - comment
-  - comment-minimal
-  - comment-with-replies
-  - comment-types
-  - comment-overflow
   - discussion-feed
   - discussion-feed-publisher
   - comment-publisher
-
+  - comment
+  - comment-minimal
+  - comment-with-replies
+  - comment-overflow

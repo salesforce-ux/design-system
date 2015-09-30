@@ -21,18 +21,18 @@ class SvgIcon extends React.Component {
   render() {
     const className = this.$getClassName();
     const props = this.$propsWithoutKeys('className', 'sprite', 'symbol');
+    const {sprite,symbol} = this.props;
+    const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
     return (
       <svg
         {...props}
         aria-hidden={true}
-        className={pf(className)}
-        dangerouslySetInnerHTML={{__html: this.getUse()}} />
+        className={pf(className)}>
+          <use xlinkHref={href}></use>
+      </svg>
     );
   }
   getUse() {
-    const {sprite,symbol} = this.props;
-    const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
-    return `<use xlink:href="${href}"></use>`;
   }
 }
 

@@ -1,9 +1,20 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.1 — September 15th, 2015
+## Release 0.9.2 - October xxx, 2015
+
+- Updated package.json to point to README.md for licensing information
+
+## Site Update - September 25th, 2015
+
+- Doc changes
+- Internal SVG icon helper can now use <use xlinkHref> now
+- Miscellaneous typo fixes
+
+## Release 0.9.1 — September 24th, 2015
 
 - Fixed issue with npm module dependencies
+- Fixes issue that caused deprecated design tokens to display
 
 ## Release 0.9.0 — September 9th, 2015
 

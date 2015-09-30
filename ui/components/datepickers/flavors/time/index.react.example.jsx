@@ -20,8 +20,8 @@ module.exports = (
 <div className='demo-only' style={{height: '315px'}}>
   <form className={pf('form--stacked float--left')}>
     <Input label="Time Picker Label" placeholder="Pick a Time" assistiveText="time" iconFlavor="right" sprite="action" symbol="defer" />
-    <div className={pf('dropdown dropdown--left dropdown--small datepicker datepicker--time')} aria-hidden="false" data-selection="time">
-      <ul className={pf('datepicker--time__list')} tabIndex="0">
+    <div className={pf('dropdown dropdown--left datepicker--time')} aria-hidden="false" data-selection="time">
+      <ul className={pf('datepicker--time__list')}>
         <li aria-selected="false">12:00am</li>
         <li aria-selected="false">12:30am</li>
         <li aria-selected="false">1:00am</li>

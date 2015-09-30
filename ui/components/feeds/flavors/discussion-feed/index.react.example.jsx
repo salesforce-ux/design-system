@@ -47,6 +47,12 @@ const imageTertiaryLarge = (
     </a>
   </div>
 );
+const icon = (
+  <span className={pf('icon__container')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
+    <span className={pf('assistive-text')}>Powerpoint</span>
+  </span>
+);
 
 exports.preview = (
 <div className='demo-only'>
@@ -72,7 +78,6 @@ exports.preview = (
           <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
           <div className={pf('comment__content text-longform')}>
             <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            <p>I think we may need to revisit the ... <a href="javascript:void(0)" title="Show the rest of this post">Show More</a></p>
           </div>
           <div className={pf('comment__tags text-body--small')}>
             <span>Topics:</span>
@@ -91,6 +96,7 @@ exports.preview = (
               </li>
             </ul>
           </div>
+          <div className={pf('attachments')}></div>
           <ul className={pf('comment__actions text-body--small')}>
             <li className={pf('comment__actions-item')}>
               <a href="javascript:void(0)" title="Like this item">
@@ -110,8 +116,8 @@ exports.preview = (
             </li>
           </ul>
         </MediaObject>
-        <ul className={pf('feed__replies')}>
-          <li className={pf('feed__overflow')}>
+        <ul className={pf('comment__replies')}>
+          <li className={pf('comment__overflow')}>
             <Button flavor="neutral">3 more comments</Button>
           </li>
           <li>
@@ -131,6 +137,7 @@ exports.preview = (
               <div className={pf('comment__content text-longform')}>
                 <p><a href="javascript:void(0)" title="Jason Rodgers">@jrodgers</a> I left you some feedback!</p>
               </div>
+              <div className={pf('attachments')}></div>
               <ul className={pf('comment__actions text-body--small')}>
                 <li className={pf('comment__actions-item')}>
                   <a href="javascript:void(0)" title="Like this item">Like</a>
@@ -145,7 +152,7 @@ exports.preview = (
             <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
               <div className={pf('publisher publisher--comment')}>
                 <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
-                <div className={pf('publisher__attachments')}></div>
+                <div className={pf('attachments')}></div>
                 <div className={pf('publisher__actions grid grid--align-spread')}>
                   <ul className={pf('grid')}>
                     <li>
@@ -189,7 +196,9 @@ exports.preview = (
           <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
           <div className={pf('comment__content text-longform')}>
             <p><a href="javascript:void(0)" title="Garrett Lee">@glee</a>, can you review and let me know what's missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
-            <figure>
+          </div>
+          <div className={pf('attachments')}>
+            <figure className={pf('attachments__item')}>
               <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
                 <img src={`/assets/images/feed/feed-image-example.png`} alt='Marketing Plan - Rollout Q1 2016'/>
               </a>
@@ -211,12 +220,11 @@ exports.preview = (
             </li>
           </ul>
         </MediaObject>
-        <ul className={pf('feed__replies')}>
+        <ul className={pf('comment__replies')}>
           <li>
             <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
               <div className={pf('publisher publisher--comment')}>
                 <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
-                <div className={pf('publisher__attachments')}></div>
                 <div className={pf('publisher__actions grid grid--align-spread')}>
                   <ul className={pf('grid')}>
                     <li>
@@ -259,22 +267,21 @@ exports.preview = (
           </div>
           <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
           <div className={pf('comment__content text-longform')}>
-            <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            <p>I think we may need to revisit the ... <a href="javascript:void(0)" title="Show the rest of this post">Show More</a></p>
+            <p>Here's the revised demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a></p>
           </div>
-          <div className={pf('comment__tags text-body--small')}>
-            <span>Topics:</span>
-            <ul className={pf('comment__tags-list')}>
-              <li className={pf('comment__tags-item')}>
-                <a href="javascript:void(0)" title="Powerpoint">Powerpoint</a>
-              </li>
-              <li className={pf('comment__tags-item')}>
-                <a href="javascript:void(0)" title="Sales Presentation">Sales Presentation</a>
-              </li>
-              <li className={pf('comment__tags-item')}>
-                <a href="javascript:void(0)" title="Todo">Todo</a>
-              </li>
-            </ul>
+          <div className={pf('attachments')}>
+            <div className={pf('attachments__item box box--x-small theme--shade')}>
+              <div className={pf('grid grid--align-spread')}>
+                <MediaObject figureLeft={icon}>
+                  <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
+                </MediaObject>
+                <ButtonIcon
+                  flavor="icon-bare"
+                  sprite="utility"
+                  symbol="close"
+                  assistiveText="Remove this attachment" />
+              </div>
+            </div>
           </div>
           <ul className={pf('comment__actions text-body--small')}>
             <li className={pf('comment__actions-item')}>
@@ -295,12 +302,12 @@ exports.preview = (
             </li>
           </ul>
         </MediaObject>
-        <ul className={pf('feed__replies')}>
+        <ul className={pf('comment__replies')}>
           <li>
             <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
               <div className={pf('publisher publisher--comment')}>
                 <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
-                <div className={pf('publisher__attachments')}></div>
+                <div className={pf('attachments')}></div>
                 <div className={pf('publisher__actions grid grid--align-spread')}>
                   <ul className={pf('grid')}>
                     <li>

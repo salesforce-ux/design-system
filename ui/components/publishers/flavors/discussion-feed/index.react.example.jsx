@@ -63,14 +63,14 @@ exports.preview = (
     <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
             symbol="adduser"
             assistiveText="Add User" />
         </li>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
@@ -81,7 +81,7 @@ exports.preview = (
       <Button flavor="brand">Share</Button>
     </div>
   </div>
-  <div className="demo-class-pill"><code>.slds-is-active</code></div>
+  <hr />
   <div className={pf('publisher publisher--discussion is-active')}>
     <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
@@ -90,14 +90,14 @@ exports.preview = (
     <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
             symbol="adduser"
             assistiveText="Add User" />
         </li>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
@@ -108,15 +108,15 @@ exports.preview = (
       <Button flavor="brand" disabled>Share</Button>
     </div>
   </div>
-  <div className="demo-class-pill"></div>
+  <hr />
   <div className={pf('publisher publisher--discussion is-active')}>
     <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
     <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
-    <div className={pf('publisher__attachments')}>
-      <div className={pf('attachment box box--x-small theme--shade')}>
+    <div className={pf('attachments')}>
+      <div className={pf('attachments__item box box--x-small theme--shade')}>
         <div className={pf('grid grid--align-spread')}>
           <MediaObject figureLeft={icon}>
             <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
@@ -131,14 +131,14 @@ exports.preview = (
     </div>
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
             symbol="adduser"
             assistiveText="Add User" />
         </li>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
@@ -160,17 +160,17 @@ exports.code = (
       <dd className={pf('dl--inline__detail')}>My Followers</dd>
     </dl>
     <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
-    <div className={pf('publisher__attachments')}></div>
+    <div className={pf('attachments')}></div>
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"
             symbol="adduser"
             assistiveText="Add User" />
         </li>
-        <li className={pf('publisher__actions-item')}>
+        <li>
           <ButtonIcon
             flavor="icon-container"
             sprite="utility"

@@ -67,7 +67,7 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <div className="demo-class-pill"><code>.slds-is-active</code></div>
+  <hr />
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment..." />
@@ -92,7 +92,7 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <div className="demo-class-pill"><code>.slds-is-active, .slds-has-focus</code></div>
+  <hr />
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active has-focus')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment..." />
@@ -117,14 +117,14 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <div className="demo-class-pill"><code>.slds-is-active</code></div>
+  <hr />
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active')}>
       <div className={pf('publisher__input input--bare text-longform')}>
         <p><a href="javascript:void(0)" title="Sue Jenkins">@sjenkins</a> here is an updated version of that <a href="javascript:void(0)" title="View all presentation tags">#presentation</a> file</p>
       </div>
-      <div className={pf('publisher__attachments')}>
-        <div className={pf('attachment box box--x-small theme--shade')}>
+      <div className={pf('attachments')}>
+        <div className={pf('attachments__item box box--x-small theme--shade')}>
           <div className={pf('grid grid--align-spread')}>
             <MediaObject figureLeft={icon}>
               <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
@@ -167,7 +167,7 @@ exports.code = (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
-      <div className={pf('publisher__attachments')}></div>
+      <div className={pf('attachments')}></div>
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>

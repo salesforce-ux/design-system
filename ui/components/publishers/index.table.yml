@@ -1,0 +1,32 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: publisher
+    description: Initializes publisher
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: publisher--discussion
+    description: Modifier that alters the interactions of the publisher, specific to the discussion feed publisher
+    applied: <code>.{{cssPrefix}}publisher</code>
+  -
+    class: publisher--comment
+    description: Modifier that alters the interactions of the publisher, specific to the comment publisher
+    applied: <code>.{{cssPrefix}}publisher</code>
+  -
+    class: publisher__input
+    description: Abstraction of the text input styles
+    applied: <code>.{{cssPrefix}}textarea</code> or <code>.{{cssPrefix}}input--bare</code>
+    required: true
+  -
+    class: publisher__actions
+    description: Bottom row of actionable items
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: attachments
+    description: Container for content attachment functionality and aesthetics
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Only required if you have content attachment enabled
+

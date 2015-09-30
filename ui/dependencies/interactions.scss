@@ -137,47 +137,62 @@
   }
 }
 
-
-
-@mixin form-states {
+@mixin form-input-container {
   background-color: $color-background-input;
   color: $color-text-default;
   border: $border-width-thin solid $color-border-input {
     radius: $border-radius-medium;
   };
   width: 100%;
+}
+
+@mixin form-input-focus {
+  outline: 0;
+  border-color: $color-border-input-active;
+  background-color: $color-background-input-active;
+  box-shadow: $shadow-button-focus;
+}
+
+@mixin form-input-disabled {
+  background-color: $color-background-input-disabled;
+  border-color: $color-border-input-disabled;
+  cursor: not-allowed;
+  user-select: none;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+@mixin form-input-error {
+  background-color: $color-background-input;
+  border-color: $color-border-error;
+  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+  background-clip: padding-box;
+
+  &:focus,
+  &:active {
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+  }
+}
+
+@mixin form-states {
+  @include form-input-container;
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
   &:focus,
   &:active {
-    outline: 0;
-    border-color: $color-border-input-active;
-    background-color: $color-background-input-active;
-    box-shadow: $shadow-button-focus;
+    @include form-input-focus;
   }
 
-  &[disabled] {
-    background-color: $color-background-input-disabled;
-    border-color: #a8b7c7; // This is throwing an error as if it doesn't exist $color-border-input-disabled;
-    cursor: not-allowed;
-    user-select: none;
-
-    &:focus,
-    &:active {
-      box-shadow: none;
-    }
+  &[disabled],
+  &.#{$css-prefix}is-disabled {
+    @include form-input-disabled;
   }
 
   .#{$css-prefix}has-error & {
-    background-color: $color-background-input;
-    border-color: $color-border-error;
-    box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
-    background-clip: padding-box;
-
-    &:focus,
-    &:active {
-      box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
-    }
+    @include form-input-error;
   }
 }
 

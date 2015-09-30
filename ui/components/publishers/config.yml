@@ -1,4 +1,5 @@
-classBase: 'feed'
+classBase: 'publisher'
 status: 'prototype'
 flavors:
   - discussion-feed
+  - comment

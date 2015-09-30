@@ -5,6 +5,7 @@ components:
   - buttons
   - button-groups
   - cards
+  - comments
   - data-tables
   - datepickers
   - dropdowns
@@ -21,6 +22,7 @@ components:
   - picklists
   - pills
   - popovers
+  - publishers
   - spinners
   - tabs
   - tiles

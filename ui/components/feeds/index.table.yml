@@ -1,0 +1,19 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: feed
+    description: Initializes feed
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: feed__list
+    description: Initializes feed list
+    required: true
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: feed__item
+    description: Initializes feed list item
+    required: true
+    applied: <code>&lt;li&gt;</code>
+    notes: Applies padding and border separator
+

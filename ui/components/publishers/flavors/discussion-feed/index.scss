@@ -7,57 +7,50 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}comment {
-  position: relative;
+.#{$css-prefix}publisher {
 
-  &__content {
-    padding: {
-      top: $spacing-x-small;
+  &.#{$css-prefix}is-active {
+
+    .#{$css-prefix}publisher__toggle-visibility {
+      display: inherit;
+    }
+
+    .#{$css-prefix}publisher__input {
+      line-height: $line-height-text;
+      height: auto;
+      max-height: 10rem;
+      resize: vertical;
+      padding: {
+        top: $spacing-small;
+        bottom: $spacing-small;
+      }
     }
   }
 
-  &__actions {
-    display: flex;
-    padding-top: $spacing-small;
+  &__input {
+    line-height: $line-height-button;
+    padding: 0 $spacing-medium;
+    resize: none;
+    min-height: calc(#{$line-height-button} + 2px);
+    max-height: calc(#{$line-height-button} + 2px);
+    width: 100%;
+    transition: min-height $duration-slowly ease,
+                max-height $duration-slowly ease;
   }
 
-  &__actions-item {
-    @include dot-separator($size: 2px, $color: $color-text-weak, $mq: false);
-    align-self: center;
-
-    a {
-      color: $color-text-weak;
-    }
+  &__toggle-visibility {
+    display: none;
   }
 
-  &__tags {
-    padding-top: $spacing-xx-small;
-
-    a {
-      color: $color-text-weak;
-    }
+  &__actions > .#{$css-prefix}button {
+    margin-left: $spacing-small;
   }
+}
 
-  &__tags,
-  &__tags-list {
-    display: flex;
-  }
+.#{$css-prefix}publisher--discussion {
+  display: flex;
 
-  &__tags-item {
-    margin-left: $spacing-xx-small;
-
-    &:after {
-      content: ', ';
-    }
-
-    &:last-child:after {
-      content: none;
-    }
-  }
-
-  &__timestamp,
-  &__timestamp a {
-    font-size: $font-size-small;
-    color: $color-text-weak;
+  &.#{$css-prefix}is-active {
+    display: block;
   }
 }

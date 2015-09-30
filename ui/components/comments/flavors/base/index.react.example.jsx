@@ -28,11 +28,11 @@ const image = (
 
 module.exports = (
 <div className='demo-only'>
-  <div className="demo-class-pill"><code>Content Posts</code></div>
+
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
-        <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
+        <a href="javascript:void(0)" title="Design Systems">Design Systems</a> - <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
       </p>
       <ButtonIcon
         className={pf('shrink-none')}
@@ -44,39 +44,44 @@ module.exports = (
     </div>
     <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Garrett Lee">@glee</a>, can you review and let me know what's missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
-      <figure>
-        <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
-          <img src={`/assets/images/feed/feed-image-example.png`} alt='Marketing Plan - Rollout Q1 2016'/>
-        </a>
-      </figure>
+      <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
+    <div className={pf('comment__tags text-body--small')}>
+      <span>Topics:</span>
+      <ul className={pf('comment__tags-list')}>
+        <li className={pf('comment__tags-item')}>
+          <a href="javascript:void(0)" title="Powerpoint">Powerpoint</a>
+        </li>
+        <li className={pf('comment__tags-item')}>
+          <a href="javascript:void(0)" title="Sales Presentation">Sales Presentation</a>
+        </li>
+        <li className={pf('comment__tags-item')}>
+          <a href="javascript:void(0)" title="Todo">Todo</a>
+        </li>
+        <li className={pf('comment__tags-item')}>
+          and <a href="javascript:void(0)" title="Show the remaining topics">3 more</a>
+        </li>
+      </ul>
+    </div>
+    <ul className={pf('comment__actions text-body--small')}>
+      <li className={pf('comment__actions-item')}>
+        <a href="javascript:void(0)" title="Like this item">
+          <StatefulClass>
+            <ButtonIcon
+              flavor="icon-border,icon-small"
+              className="m-right--small"
+              sprite="utility"
+              symbol="like"
+              assistiveText="Like" />
+          </StatefulClass>
+          <span>21 Likes</span>
+        </a>
+      </li>
+      <li className={pf('comment__actions-item')}>
+        2 tasks
+      </li>
+    </ul>
   </MediaObject>
 
-  <div className="demo-class-pill"><code>Tracked Change</code></div>
-
-  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-border-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
-    </div>
-    <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
-    <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Garrett Lee">@glee</a>, can you review and let me know what's missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
-      <figure>
-        <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
-          <img src={`/assets/images/feed/feed-image-example.png`} alt='Marketing Plan - Rollout Q1 2016'/>
-        </a>
-      </figure>
-    </div>
-  </MediaObject>
 </div>
 );

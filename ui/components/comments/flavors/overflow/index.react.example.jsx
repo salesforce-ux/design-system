@@ -62,7 +62,6 @@ exports.preview = (
     <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
       <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-      <p>I think we may need to revisit the ... <a href="javascript:void(0)" title="Show the rest of this post">Show More</a></p>
     </div>
     <div className={pf('comment__tags text-body--small')}>
       <span>Topics:</span>
@@ -102,11 +101,11 @@ exports.preview = (
   </MediaObject>
 
   {/* Comment Reply - Child Feed List */}
-  <ul className={pf('feed__replies')}>
-    <li className={pf('feed__overflow')}>
+  <ul className={pf('comment__replies')}>
+    <li className={pf('comment__overflow')}>
       <Button flavor="neutral">3 more comments</Button>
     </li>
-    <li className={pf('feed__replies-item')}>
+    <li>
       <MediaObject figureLeft={imageSecondary} className={pf('comment hint-parent')}>
         <div className={pf('grid grid--align-spread has-flexi-truncate')}>
           <p className={pf('truncate')}>
@@ -133,7 +132,33 @@ exports.preview = (
         </ul>
       </MediaObject>
     </li>
-    {/* Publisher Goes Here*/}
+    <li>
+      <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
+        <div className={pf('publisher publisher--comment')}>
+          <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
+          <div className={pf('publisher__attachments')}></div>
+          <div className={pf('publisher__actions grid grid--align-spread')}>
+            <ul className={pf('grid')}>
+              <li>
+                <ButtonIcon
+                  flavor="icon-container"
+                  sprite="utility"
+                  symbol="adduser"
+                  assistiveText="Add User" />
+              </li>
+              <li>
+                <ButtonIcon
+                  flavor="icon-container"
+                  sprite="utility"
+                  symbol="attach"
+                  assistiveText="Attach a file" />
+              </li>
+            </ul>
+            <Button flavor="brand">Comment</Button>
+          </div>
+        </div>
+      </MediaObject>
+    </li>
   </ul>
 
 </div>
@@ -141,19 +166,13 @@ exports.preview = (
 
 exports.code = (
 <div className='demo-only'>
-  <div className={pf('feed')}>
-    <ul className={pf('feed__list')}>
-      <li className={pf('feed__item')}>
-        <div className={pf('comment')}>...Comment Goes Here...</div>
-        <ul className={pf('feed__replies')}>
-          <li className={pf('feed__overflow')}>
-            <Button flavor="neutral">3 more comments</Button>
-          </li>
-          <li>-- Minimal Comment Goes Here --</li>
-          <li>-- Comment Publisher Goes Here --</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  -- Comment Goes Here --
+  <ul className={pf('comment__replies')}>
+    <li className={pf('comment__overflow')}>
+      <Button flavor="neutral">3 more comments</Button>
+    </li>
+    <li>-- Minimal Comment Goes Here --</li>
+    <li>-- Comment Publisher Goes Here --</li>
+  </ul>
 </div>
 );

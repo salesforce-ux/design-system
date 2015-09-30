@@ -1,0 +1,7 @@
+classBase: 'comment'
+status: 'prototype'
+flavors:
+  - base
+  - minimal
+  - replies
+  - overflow

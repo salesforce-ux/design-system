@@ -21,37 +21,5 @@
     + .#{$css-prefix}feed__item {
       border-top: $border-width-thin solid $color-border;
     }
-
-    .#{$css-prefix}media__body {
-      position: relative;
-    }
-  }
-
-  &__replies {
-    padding-top: $spacing-medium;
-    margin-left: $square-icon-large-boundary + $spacing-small;
-
-    > *:last-child,
-    > *:last-child .#{$css-prefix}comment {
-      padding-bottom: 0;
-
-      &:before {
-        content: none;
-      }
-    }
-
-    .#{$css-prefix}comment {
-      @include feed-vertical-rule($square-icon-medium-boundary-alt);
-      margin-bottom: 0;
-      padding-bottom: $spacing-medium;
-    }
-
-    .#{$css-prefix}avatar {
-      border: $border-width-thick solid $color-background-alt;
-    }
-  }
-
-  &__overflow {
-    margin-bottom: $spacing-medium;
   }
 }

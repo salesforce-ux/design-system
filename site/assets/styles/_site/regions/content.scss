@@ -9,7 +9,7 @@
 
 .site-jump-anchor {
   position: absolute;
-  top: 0 - $size-xx-small;
+  top: ($size-xx-small * -1);
 
   &__container {
     position: relative;

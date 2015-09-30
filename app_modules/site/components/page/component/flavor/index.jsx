@@ -23,6 +23,7 @@ import { html as prettyHTML } from 'js-beautify';
 import componentUtil from 'app_modules/ui/util/component';
 const pf = componentUtil.prefix;
 
+import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
 import { logInputEvent } from 'app_modules/site/util/localytics';
@@ -285,12 +286,11 @@ class ComponentFlavor extends React.Component {
     const {flavor} = this.props;
     return (
       <section>
-        <h2
-          className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}
-          id={flavor.id}>
+
+        <Heading type="h2" id={flavor.id} className="p-top--xx-large site-text-heading--large site-text-heading--callout">
           {flavor.title}
           {this.renderBadge(flavor.status)}
-        </h2>
+        </Heading>
         {this.renderInfo()}
 
         <h3 className={pf('assistive-text')}>Preview</h3>

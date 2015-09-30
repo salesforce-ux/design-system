@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.9.2 - October xxx, 2015
+
+- Updated package.json to point to README.md for licensing information
+
 ## Site Update - September 25th, 2015
 
 - Doc changes

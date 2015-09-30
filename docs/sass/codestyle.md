@@ -93,7 +93,7 @@ BEM naming conventions should be used. Remember Lightning Design System is an
 application framework, not a site — and as such code needs to be both
 understandable, predictable and maintainable.
 
-* ```sass.block { }` — higher level of an abstraction or component - the special,
+* `.block { }` — higher level of an abstraction or component - the special,
   understandable class you create.
 * `.block__element { }` — a descendant of `.block` that helps form it - an
   element __of__ that component (double underscore).

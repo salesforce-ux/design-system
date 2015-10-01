@@ -21,9 +21,9 @@ export default (
     <div className={pf('container--medium')}>
       <p className="site-text-introduction">Text is the primary way that users digest content and accomplish work, so it’s important to use good typographic principles to establish a clear visual hierarchy and to maximize legibility.</p>
       <h2 className="site-text-heading--large">Salesforce Sans</h2>
-      <p>At the heart of good typography is a good typeface. We started from the ground up, partnering with Monotype, to design one that reflects our brand and personality, while also maintaining versatility to address diverse applications, from massive billboards to miniscule UI text.</p>
+      <p>At the heart of good typography is a good typeface. We started from the ground up, partnering with <a href="http://www.monotype.com/">Monotype</a>, to design one that reflects our brand and personality, while also maintaining versatility to address diverse applications, from massive billboards to miniscule UI text.</p>
       <p>Salesforce Sans is the result: a friendly, professional, and modern typeface with four weights. Salesforce Sans is available to partners and developers in our ecosystem to use in conjunction with the Design System.</p>
-      <h2 className="site-text-heading--label">Salesforce Sans - Monotype</h2>
+      <h2 className="site-text-heading--label">Salesforce Sans</h2>
         <h3 className={pf('text-heading--large')}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h3>
         <h3 className={pf('text-heading--large')}>a b c d e f g h i j k l m n o p q r s t u v w x y z</h3>
         <h3 className={pf('text-heading--large')}>0 1 2 3 4 5 6 7 8 9</h3>

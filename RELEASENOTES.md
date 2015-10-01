@@ -5,6 +5,7 @@
 
 - Updated package.json to point to README.md for licensing information
 - Clicking anchor links will position the anchor on the page a bit lower than the top of the window now
+- Upgrade icons to v3.1.0
 
 ## Site Update - September 25th, 2015
 

@@ -8,6 +8,7 @@ components:
   - data-tables
   - datepickers
   - dropdowns
+  - docked-composer
   - forms
   - grid-system
   - icons

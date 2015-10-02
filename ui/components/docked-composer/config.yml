@@ -1,0 +1,6 @@
+classBase: 'docked'
+status: 'prototype'
+flavors:
+  - base
+dependencies:
+  - core/icons

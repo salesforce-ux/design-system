@@ -30,22 +30,25 @@ const image = (
   </span>
 );
 const recordIcon = (
-  <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
+  <ButtonIcon
+    flavor="icon-bare"
+    iconFlavor="large"
+    className={pf('icon-record')}
+    sprite="utility"
+    symbol="record"
+    assistiveText="Recording" />
 );
 
 module.exports = (
   <div className='demo-only'>
     {/*<div className={pf('docked-container')}>*/}
 
-      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+      <div className={pf('docked-composer grid grid--vertical nowrap is-open is-recording')}>
 
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon}>
-            Header
+            Lei Chan - Connected
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -70,8 +73,35 @@ module.exports = (
         </div>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
-
+        <div className={pf('docked-composer__body grow grid grid--vertical nowrap size--1-of-1')}>
+          <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
+            <MediaObject figureLeft={image}>
+              <p className={pf('text-heading--medium')}>Lei Chan</p>
+              <p>Connected</p>
+            </MediaObject>
+            <MediaObject figureLeft={recordIcon} flavor="center">
+              <p className={pf('text-heading--large')}>5:37</p>
+            </MediaObject>
+          </div>
+          <div className={pf('docked-composer__contacts shrink-none grid grid--align-spread')}>
+            <div className={pf('pill-container')}>
+              <span className={pf('pill')}>
+                <a href="#" className={pf('pill__label')}>Lei Chan</a>
+                <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+              </span>
+              <span className={pf('pill')}>
+                <a href="#" className={pf('pill__label')}>Tesla Motors</a>
+                <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+              </span>
+            </div>
+            <ButtonIcon
+              className={pf('shrink-none')}
+              flavor="icon-container"
+              sprite="utility"
+              symbol="add"
+              assistiveText="Add user" />
+          </div>
+          <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
         </div>
 
         {/* Composer Footer */}
@@ -93,7 +123,7 @@ module.exports = (
               symbol="apps"
               assistiveText="Volume" />
           </div>
-          <Button flavor="brand">Action</Button>
+          <Button flavor="brand">End Call</Button>
         </div>
       </div>
 

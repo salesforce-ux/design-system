@@ -11,16 +11,16 @@
   position: fixed;
   bottom: 0;
   right: 0;
-}
-
-.#{$css-prefix}docked {
-  // float: left;
-  width: 420px;
-  position: relative;
+  padding: 0 $spacing-large;
 }
 
 .#{$css-prefix}docked-composer {
   position: relative;
+  width: 360px;
+  height: 400px;
+  + .#{$css-prefix}docked-composer {
+    margin-left: $spacing-large;
+  }
 
   &__header {
     background: $color-background-alt-inverse;
@@ -34,7 +34,8 @@
 
   &__body {
     background: $color-background;
-    height: 350px;
+    min-height: 259px;
+    max-height: 320px;
     border: $border-width-thin solid $color-border {
       top: none;
     }
@@ -46,7 +47,7 @@
   }
 
   &__contacts {
-    max-height: 105px;
+    max-height: 60px;
     overflow-y: auto;
     border: {
       top: $border-width-thin solid $color-border;
@@ -65,6 +66,7 @@
     background: $color-background-alt;
     padding: $spacing-medium;
     min-height: $size-xx-small;
+    resize: none;
     overflow: hidden {
       y: auto;
     }
@@ -74,8 +76,25 @@
     background: $color-background-alt;
     padding: $spacing-x-small;
     border: $border-width-thin solid $color-border {
-      top: none;
       bottom: none;
     }
+  }
+
+  // Recording
+  &.#{$css-prefix}is-recording {
+
+    .#{$css-prefix}icon-record .#{$css-prefix}button__icon {
+      fill: $color-background-notification-badge;
+      @include animation(pulse 2s ease infinite);
+    }
+  }
+}
+
+@include keyframes(pulse) {
+  0%, 100% {
+    filter: drop-shadow(0px 0px 4px rgba($color-background-notification-badge, 0));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 4px rgba(darken($color-background-notification-badge, 10%),1));
   }
 }

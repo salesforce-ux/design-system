@@ -25,16 +25,11 @@ const dialingIcon = (
   </span>
 );
 const image = (
-  <span className={pf('avatar avatar--circle avatar--medium')}>
+  <span className={pf('avatar avatar--circle avatar--large')}>
     <img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
   </span>
 );
-const recordIcon = (
-  <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
-);
+
 
 module.exports = (
   <div className='demo-only'>
@@ -45,7 +40,7 @@ module.exports = (
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon}>
-            Header
+            Lei Chan - Dialing...
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -69,31 +64,38 @@ module.exports = (
           </div>
         </div>
 
-        {/* Composer Body */}
-        <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
-
+      {/* Composer Body */}
+        <div className={pf('docked-composer__body grow grid grid--vertical nowrap size--1-of-1 align-content-center')}>
+          <div className={pf('text-align--center')}>
+            {image}
+            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
+            <h4 className={pf('text-heading--small')}>Dialing...</h4>
+          </div>
         </div>
 
         {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none grid grid--align-spread')}>
-          <div>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="unmuted"
-              assistiveText="Mute Yourself" />
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="volume_high"
-              assistiveText="Volume" />
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="apps"
-              assistiveText="Volume" />
-          </div>
-          <Button flavor="brand">Action</Button>
+        <div className={pf('docked-composer__footer shrink-none grid')}>
+          <ButtonIcon
+            flavor="icon-border"
+            className={pf('size--1-of-3')}
+            sprite="utility"
+            symbol="unmuted"
+            assistiveText="Mute yourself" />
+          <ButtonIcon
+            flavor="icon-border"
+            className={pf('size--1-of-3')}
+            sprite="utility"
+            symbol="volume_high"
+            assistiveText="Volume" />
+          <ButtonIcon
+            flavor="icon-border"
+            className={pf('size--1-of-3')}
+            sprite="utility"
+            symbol="apps"
+            assistiveText="Volume" />
+        </div>
+        <div className={pf('docked-composer__footer shrink-none grid')}>
+          <Button flavor="brand" className={pf('size--1-of-1')}>End Call</Button>
         </div>
       </div>
 

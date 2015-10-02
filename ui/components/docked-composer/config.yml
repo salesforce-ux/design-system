@@ -2,5 +2,8 @@ classBase: 'docked'
 status: 'prototype'
 flavors:
   - base
+  - call-dialing
+  - call-connected
+  - call-voicemail
 dependencies:
   - core/icons

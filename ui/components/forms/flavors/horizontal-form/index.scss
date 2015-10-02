@@ -43,6 +43,11 @@
       display: inline-block;
       text-align: left;
     }
+
+    .#{$css-prefix}checkbox,
+    .#{$css-prefix}radio {
+      display: block;
+    }
   }
 
   .#{$css-prefix}form-element {

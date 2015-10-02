@@ -34,6 +34,7 @@ export default new SitemapRouter().map(function () {
     this.route('navigation');
     this.route('messaging');
     this.route('motion');
+    this.route('typography');
   });
 
   this.resource('components', function () {

@@ -76,6 +76,10 @@ export default [
       {
         route: 'design:navigation',
         label: 'Navigation'
+      },
+      {
+        route: 'design:typography',
+        label: 'Typography'
       }
     ]
   },

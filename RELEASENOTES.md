@@ -5,7 +5,7 @@
 
 - Clicking anchor links will position the anchor on the page a bit lower than the top of the window now
 - Added typography documentation to design section
-- Added examples for a checkbox fieldset and radio fieldset within the horizontal form modifier (salesforce-ux/design-system#11)
+- Added examples for a checkbox fieldset and radio fieldset within the horizontal form modifier
 
 ## Release 0.9.2 - October 5th, 2015
 

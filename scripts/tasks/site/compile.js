@@ -38,6 +38,7 @@ import ignoreUnderscore from 'app_modules/util/ignore-underscore';
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
 const isProd = argv.prod === true;
+const isInternal = argv.internal === true;
 
 const getSitePath = path.resolve.bind(path, __PATHS__.site);
 const getSitePathTmp = path.resolve.bind(path, __PATHS__.tmp, 'site');
@@ -111,7 +112,9 @@ const webpackConfig = {
     root: __PATHS__.root
   },
   plugins: [
-    new webpack.DefinePlugin({})
+    new webpack.DefinePlugin({
+      DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'dev')
+    })
   ],
   cache: {},
   eslint: {

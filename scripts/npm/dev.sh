@@ -15,4 +15,4 @@ export GIT_VERSION=`node scripts/helpers/version.js`
 echo "SLDS version: <$GIT_VERSION>"
 
 npm run lint
-node scripts/build.js --dev
+node scripts/build.js --dev "$@"

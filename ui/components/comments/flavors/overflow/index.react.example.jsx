@@ -42,7 +42,7 @@ const imageSecondary = (
 );
 
 
-exports.preview = (
+module.exports = (
 <div className='demo-only'>
 
   {/* Primary Comment */}
@@ -63,19 +63,19 @@ exports.preview = (
     <div className={pf('comment__content text-longform')}>
       <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <div className={pf('comment__tags text-body--small')}>
+    <div className={pf('tags text-body--small')}>
       <span>Topics:</span>
-      <ul className={pf('comment__tags-list')}>
-        <li className={pf('comment__tags-item')}>
+      <ul className={pf('tags__list')}>
+        <li className={pf('tags__item')}>
           <a href="javascript:void(0)" title="Powerpoint">Powerpoint</a>
         </li>
-        <li className={pf('comment__tags-item')}>
+        <li className={pf('tags__item')}>
           <a href="javascript:void(0)" title="Sales Presentation">Sales Presentation</a>
         </li>
-        <li className={pf('comment__tags-item')}>
+        <li className={pf('tags__item')}>
           <a href="javascript:void(0)" title="Todo">Todo</a>
         </li>
-        <li className={pf('comment__tags-item')}>
+        <li className={pf('tags__item')}>
           and <a href="javascript:void(0)" title="Show the remaining topics">3 more</a>
         </li>
       </ul>
@@ -135,7 +135,7 @@ exports.preview = (
     <li>
       <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
         <div className={pf('publisher publisher--comment')}>
-          <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment" />
+          <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
           <div className={pf('publisher__attachments')}></div>
           <div className={pf('publisher__actions grid grid--align-spread')}>
             <ul className={pf('grid')}>
@@ -164,15 +164,3 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
-<div className='demo-only'>
-  -- Comment Goes Here --
-  <ul className={pf('comment__replies')}>
-    <li className={pf('comment__overflow')}>
-      <Button flavor="neutral">3 more comments</Button>
-    </li>
-    <li>-- Minimal Comment Goes Here --</li>
-    <li>-- Comment Publisher Goes Here --</li>
-  </ul>
-</div>
-);

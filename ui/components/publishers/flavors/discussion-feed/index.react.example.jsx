@@ -56,11 +56,11 @@ const commentReply = (
 exports.preview = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('dl--inline publisher__toggle-visibility')}>
-      <dt className={pf('dl--inline__label text-body--small')}>To: </dt>
-      <dd className={pf('dl--inline__detail')}>My Followers</dd>
+    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
+    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -87,7 +87,7 @@ exports.preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
+    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -114,7 +114,7 @@ exports.preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
+    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('attachments')}>
       <div className={pf('attachments__item box box--x-small theme--shade')}>
         <div className={pf('grid grid--align-spread')}>
@@ -155,11 +155,11 @@ exports.preview = (
 exports.code = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('dl--inline publisher__toggle-visibility')}>
-      <dt className={pf('dl--inline__label text-body--small')}>To: </dt>
-      <dd className={pf('dl--inline__detail')}>My Followers</dd>
+    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment..." />
+    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('attachments')}></div>
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>

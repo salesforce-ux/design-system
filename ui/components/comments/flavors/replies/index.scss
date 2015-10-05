@@ -11,8 +11,8 @@
   padding-top: $spacing-medium;
   margin-left: $square-icon-large-boundary + $spacing-small;
 
-  > *:last-child,
-  > *:last-child .#{$css-prefix}comment {
+  > :last-child,
+  > :last-child .#{$css-prefix}comment {
     padding-bottom: 0;
 
     &:before {

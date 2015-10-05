@@ -14,13 +14,14 @@
 .#{$css-prefix}button--icon-border-filled,
 .#{$css-prefix}button--icon-bare {
   vertical-align: middle;
-  line-height: $line-height-reset;
 }
 
+// .#{$css-prefix}button--icon-bare {
+//   line-height: calc((#{$line-height-reset} * 2) + #{$border-width-thin * 2});
+// }
+
 .#{$css-prefix}button--icon-border {
-  //border: $border-width-thin solid $color-border-button-default;
-  //background-color: $color-background-button-icon;
-// @TODO - CHECK FOR REGRESSIONS
+
   &[disabled] {
 
     &:hover,
@@ -60,6 +61,7 @@
 
 .#{$css-prefix}button--icon-small {
   @include square($square-icon-medium-boundary);
+  line-height: calc((#{$line-height-reset} * 2) + .1428571429);
 }
 
 .#{$css-prefix}button--icon-border-filled {

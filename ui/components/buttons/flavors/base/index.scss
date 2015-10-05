@@ -71,8 +71,12 @@
   margin-left: $spacing-xx-small;
 }
 
-a.#{$css-prefix}button:focus {
-  @include focus-button;
+a.#{$css-prefix}button {
+  text-align: center;
+
+  &:focus {
+    @include focus-button;
+  }
 }
 
 .#{$css-prefix}button--small {

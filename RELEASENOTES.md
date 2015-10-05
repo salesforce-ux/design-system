@@ -9,7 +9,7 @@
 
 ## Release 0.9.2 - October 5th, 2015
 
-- Updated package.json to point to README.md for licensing information
+- Updated package.json to point to README for licensing information
 - Upgrade icons to v3.1.0
 - Updated small input styles
 - Applied styles to fix the height of a select element when used [size] attribute is applied

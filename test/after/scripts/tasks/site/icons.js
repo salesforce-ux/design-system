@@ -15,7 +15,7 @@ import glob from 'glob';
 import path from 'path';
 
 
-describe('scripts/tasks/site/fonts.js', () => {
+describe('scripts/tasks/site/icons.js', () => {
 
   it('does copy all icon files', () => {
 

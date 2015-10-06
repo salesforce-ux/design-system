@@ -38,12 +38,12 @@
                 max-height $duration-slowly ease;
   }
 
-  &__toggle-visibility {
-    display: none;
-  }
-
   &__actions > .#{$css-prefix}button {
     margin-left: $spacing-small;
+  }
+
+  .#{$css-prefix}publisher__toggle-visibility {
+    display: none;
   }
 }
 

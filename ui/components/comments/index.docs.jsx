@@ -19,7 +19,7 @@ module.exports = (
   <ComponentDocs>
     <p className="site-text-introduction">A comment is a user intiated input entity.</p>
     <p>To initialize the comment, apply the <CodeClass className="comment"/> class to a containing <code>&lt;div&gt;</code>. A comment that is associated to a user, should be wrapped within a <CodeClass className="media"/> object. This layout helper will properly align the avatar and body of the comment.</p>
-    <p>The body of a comment can consist of the following: title with description of post, timestamp (<CodeClass className="comment__timestamp"/>), text input (<CodeClass className="comment__content"/>), content attachment (<CodeClass className="attachments"/>), tags/topics (<CodeClass className="comment__tags"/>), actionable items such as the like button (<CodeClass className="comment__actions"/>).</p>
+    <p>The body of a comment can consist of the following: title with description of post, timestamp (<CodeClass className="comment__timestamp"/>), text input (<CodeClass className="comment__content"/>), content attachment (<CodeClass className="attachments"/>), tags/topics (<CodeClass className="tags"/>), actionable items such as the like button (<CodeClass className="comment__actions"/>).</p>
     <p>For available classes and options, see the <a href="#overview">comment overview legend</a> below.</p>
   </ComponentDocs>
 );

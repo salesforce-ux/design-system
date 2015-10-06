@@ -17,21 +17,6 @@ classes:
     required: true
     notes: <code>.{{cssPrefix}}comment__content</code> needs the <code>.{{cssPrefix}}text-longform</code> utility
   -
-    class: comment__tags
-    description: Container for comment "tags" or "topics"
-    applied: <code>&lt;div&gt;</code>
-    notes: Required if comment has "tags" or "topics" associated
-  -
-    class: comment__tags-list
-    description: List for comment "tags" or "topics"
-    applied: <code>&lt;ul&gt;</code>
-    required: true
-  -
-    class: comment__tags-item
-    description: Individual "tag" or "topic" item
-    applied: <code>&lt;li&gt;</code>
-    required: true
-  -
     class: comment__actions
     description: Container for actionable comment items
     applied: <code>&lt;ul&gt;</code>
@@ -42,4 +27,18 @@ classes:
     description: Individual items of the actionable list
     applied: <code>&lt;li&gt;</code>
     notes: Displays dot separators
-
+  -
+    class: tags
+    description: Container for comment "tags" or "topics"
+    applied: <code>&lt;div&gt;</code>
+    notes: Required if comment has "tags" or "topics" associated
+  -
+    class: tags__list
+    description: List for comment "tags" or "topics"
+    applied: <code>&lt;ul&gt;</code>
+    required: true
+  -
+    class: tags__item
+    description: Individual "tag" or "topic" item
+    applied: <code>&lt;li&gt;</code>
+    required: true

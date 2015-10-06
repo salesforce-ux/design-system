@@ -1,0 +1,9 @@
+{
+  "name": "salesforce-lightning-design-system",
+  "description": "Salesforce Lightning Design System",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:salesforce-ux/design-system.git"
+  },
+  "author": "Salesforce"  
+}

@@ -12,4 +12,4 @@
 set -e
 
 npm run lint
-./node_modules/karma/bin/karma start
+./node_modules/.bin/mocha --require scripts/helpers/setup.js test/before/**/*.js

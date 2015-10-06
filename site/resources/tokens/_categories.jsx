@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import tinyColor from 'tinycolor2';
 
+import Heading from 'app_modules/site/components/page/heading';
 import RowHeader from './_components/row-header';
 import Row from './_components/row';
 import ValueCell from './_components/cell-value';
@@ -74,13 +75,13 @@ class CategorySection extends React.Component {
     const {category, tokens} = this.props;
     if (!tokens.length) return null;
     return (
-      <section className={`site-tokens ${category.key}`} id={`category-${category.key}`}>
-        <h2 className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
+      <section className={pf(`site-tokens ${category.key}`)}>
+        <Heading type="h2" id={`category-${category.key}`} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
           <span className={pf('grid grid--align-spread wrap')}>
             <span className={pf('col align-bottom')}>{category.label}</span>
             {this.renderValueFormatSelect()}
           </span>
-        </h2>
+        </Heading>
 
         <div className={pf('scrollable--x')}>
           <table className={pf('table max-medium-table--stacked')}>

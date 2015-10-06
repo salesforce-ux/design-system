@@ -9,16 +9,15 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Input = require('ui/components/forms/flavors/input/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import React from 'react';
+import DatePicker from 'ui/components/datepickers/flavors/base/index.react.example';
 
-module.exports = (
-<div className={pf('form-element')}>
-  <label className={pf('form-element__label form-element__label--small')} htmlFor="inputSampleSmall">Input Label Small</label>
-  <div className={pf('form-element__control')}>
-    <input id="inputSampleSmall" className={pf('input input--small')} placeholder="placeholder" type="text" />
+export default (
+  <div>
+    <DatePicker />
   </div>
-</div>
 );
+
+export let script = `
+  $('div').remove()
+`

@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -121,9 +122,9 @@ class Icons extends React.Component {
     return this.state.categoriesFiltered.map(category => {
       return (
         <div key={category.name}>
-          <h2 id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
+          <Heading type="h2" id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
             {`${category.name} Icons`}
-          </h2>
+          </Heading>
           {/* This is only outputing text without a paragraph. Can we fix? */}
           <div className={pf('container--medium')} dangerouslySetInnerHTML={{__html: category.description}} />
           <ul className={pf(classNames(`${category.name}__icons`,'m-top--x-large grid wrap icon-grid'))}>

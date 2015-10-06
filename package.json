@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Salesforce Lightning Design System",
   "license": "SEE LICENSE IN README.md",
   "scripts": {
@@ -22,7 +22,7 @@
   "dependencies": {
     "@salesforce-ux/design-system-utils": "0.7.1",
     "@salesforce-ux/design-tokens": "1.2.0",
-    "@salesforce-ux/icons": "3.0.3"
+    "@salesforce-ux/icons": "3.1.0"
   },
   "devDependencies": {
     "app-module-path": "1.0.4",

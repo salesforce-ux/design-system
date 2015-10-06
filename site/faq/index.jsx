@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CTALink from 'app_modules/site/components/cta-link';
@@ -40,9 +41,11 @@ class Page extends React.Component {
     this.state.jumpLinks.push(<li key={`${kTitle}-jumplink`}>
       <a href={`#${kTitle}`}>{titleString}</a>
     </li>);
-    this.state.content.push(<h2 id={kTitle} className="site-text-heading--large" key={`${kTitle}-h2`}>
-      {titleString}
-    </h2>);
+    this.state.content.push(
+      <Heading type="h2" id={kTitle} className="site-text-heading--large" key={`${kTitle}-h2`}>
+        {titleString}
+      </Heading>
+    );
     this.state.content.push(<div key={`${kTitle}-content`}>{contentDom}</div>);
 
     this.setState({

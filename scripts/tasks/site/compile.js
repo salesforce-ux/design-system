@@ -38,6 +38,7 @@ import ignoreUnderscore from 'app_modules/util/ignore-underscore';
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
 const isProd = argv.prod === true;
+const isInternal = argv.internal === true;
 
 const eslintExclude = new RegExp([
   __PATHS__.node_modules,
@@ -187,7 +188,9 @@ export const webpackConfig = {
     root: __PATHS__.root
   },
   plugins: [
-    new webpack.DefinePlugin({})
+    new webpack.DefinePlugin({
+       DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'dev')
+    })
   ],
   cache: {},
   eslint: {

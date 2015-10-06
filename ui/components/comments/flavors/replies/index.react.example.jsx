@@ -60,7 +60,7 @@ module.exports = (
     </div>
     <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
-      <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@jdavis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+      <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
     <div className={pf('tags text-body--small')}>
       <span>Topics:</span>
@@ -116,7 +116,7 @@ module.exports = (
             assistiveText="Show More" />
         </div>
         <div className={pf('comment__content text-longform')}>
-          <p><a href="javascript:void(0)" title="Jason Rodgers">@jrodgers</a> I left you some feedback!</p>
+          <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
         </div>
         <ul className={pf('comment__actions text-body--small')}>
           <li className={pf('comment__actions-item')}>
@@ -143,7 +143,7 @@ module.exports = (
             assistiveText="Show More" />
         </div>
         <div className={pf('comment__content text-longform')}>
-          <p><a href="javascript:void(0)" title="Jenna Davis">@jdavis</a> Thank you!</p>
+          <p><a href="javascript:void(0)" title="Jenna Davis">@Jenna Davis</a> Thank you!</p>
         </div>
         <ul className={pf('comment__actions text-body--small')}>
           <li className={pf('comment__actions-item')}>

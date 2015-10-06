@@ -43,7 +43,7 @@ module.exports = (
         assistiveText="Show More" />
     </div>
     <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Jason Rodgers">@jrodgers</a> I left you some feedback!</p>
+      <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
     </div>
     <ul className={pf('comment__actions text-body--small')}>
       <li className={pf('comment__actions-item')}>

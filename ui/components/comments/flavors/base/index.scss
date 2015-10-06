@@ -11,9 +11,7 @@
   position: relative;
 
   &__content {
-    padding: {
-      top: $spacing-x-small;
-    }
+    padding-top: $spacing-x-small;
   }
 
   &__actions {
@@ -35,10 +33,6 @@
     font-size: $font-size-small;
     color: $color-text-weak;
   }
-
-  // .#{$css-prefix}media__body {
-  //   position: relative;
-  // }
 }
 
 .#{$css-prefix}tags {

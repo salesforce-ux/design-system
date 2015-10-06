@@ -19,7 +19,7 @@ import compilePages, {
 
 temp.track();
 
-describe.only('scripts/tasks/site/compile.js', () => {
+describe('scripts/tasks/site/compile.js', () => {
   describe('#getPrefixedProps', () => {
     let a, b;
     beforeEach(() => {

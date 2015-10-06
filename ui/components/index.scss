@@ -7,154 +7,125 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+@import "activity-timeline/flavors/base/index";
 
+@import "page-headers/flavors/record-home/index";
 
-@import
+@import "breadcrumbs/flavors/base/index";
 
-  // Activity Timeline
-  "activity-timeline/flavors/base/index",
+@import "button-groups/flavors/base/index";
+@import "button-groups/flavors/inverse/index";
+@import "button-groups/flavors/icon-group/index";
 
-  // Anchor
-  "page-headers/flavors/record-home/index",
+@import "buttons/flavors/base/index";
+@import "buttons/flavors/neutral/index";
+@import "buttons/flavors/neutral-icon/index";
+@import "buttons/flavors/brand/index";
+@import "buttons/flavors/inverse/index";
+@import "buttons/flavors/stateful/index";
+@import "buttons/flavors/stateful-inverse/index";
+@import "buttons/flavors/icon/index";
+@import "buttons/flavors/hint/index";
+@import "buttons/flavors/icon-more/index";
+@import "buttons/flavors/icon-stateful/index";
+@import "buttons/flavors/icon-inverse/index";
+@import "buttons/flavors/responsive/index";
 
-  // Breadcrumbs
-  "breadcrumbs/flavors/base/index",
+@import "cards/flavors/base/index";
+@import "cards/flavors/empty/index";
 
-  // Button Groups
-  "button-groups/flavors/base/index",
-  "button-groups/flavors/inverse/index",
-  "button-groups/flavors/icon-group/index",
+@import "forms/flavors/form-element/index";
+@import "forms/flavors/input/index";
+@import "forms/flavors/textarea/index";
+@import "forms/flavors/radio/index";
+@import "forms/flavors/checkbox/index";
+@import "forms/flavors/select/index";
+@import "forms/flavors/horizontal-form/index";
+@import "forms/flavors/stacked-form/index";
+@import "forms/flavors/inline-form/index";
+@import "forms/flavors/compound-form/index";
+@import "forms/flavors/read-only-state/index";
 
-  // Button
-  "buttons/flavors/base/index",
-  "buttons/flavors/neutral/index",
-  "buttons/flavors/neutral-icon/index",
-  "buttons/flavors/brand/index",
-  "buttons/flavors/inverse/index",
-  "buttons/flavors/stateful/index",
-  "buttons/flavors/stateful-inverse/index",
-  "buttons/flavors/icon/index",
-  "buttons/flavors/hint/index",
-  "buttons/flavors/icon-more/index",
-  "buttons/flavors/icon-stateful/index",
-  "buttons/flavors/icon-inverse/index",
+@import "grid-system/flavors/automatic-sizing/index";
+@import "grid-system/flavors/containers/index";
+@import "grid-system/flavors/manual-sizing/index";
+@import "grid-system/flavors/horizontal-alignment-center/index";
+@import "grid-system/flavors/horizontal-alignment-space/index";
+@import "grid-system/flavors/horizontal-alignment-spread/index";
+@import "grid-system/flavors/vertical-alignment/index";
+@import "grid-system/flavors/order/index";
+@import "grid-system/flavors/overflow/index";
 
-  // Card
-  "cards/flavors/base/index",
-  "cards/flavors/empty/index",
+@import "tooltips/flavors/base/index";
 
-  // Forms
-  "forms/flavors/form-element/index",
-  "forms/flavors/input/index",
-  "forms/flavors/textarea/index",
-  "forms/flavors/radio/index",
-  "forms/flavors/checkbox/index",
-  "forms/flavors/select/index",
-  "forms/flavors/horizontal-form/index",
-  "forms/flavors/stacked-form/index",
-  "forms/flavors/inline-form/index",
-  "forms/flavors/compound-form/index",
-  "forms/flavors/read-only-state/index",
+@import "popovers/flavors/base/index";
 
-  // Grid
-  "grid-system/flavors/automatic-sizing/index",
-  "grid-system/flavors/containers/index",
-  "grid-system/flavors/manual-sizing/index",
-  "grid-system/flavors/horizontal-alignment-center/index",
-  "grid-system/flavors/horizontal-alignment-space/index",
-  "grid-system/flavors/horizontal-alignment-spread/index",
-  "grid-system/flavors/vertical-alignment/index",
-  "grid-system/flavors/order/index",
-  "grid-system/flavors/overflow/index",
+@import "picklists/flavors/base/index";
+@import "picklists/flavors/multi-select/index";
 
-  // Tooltip
-  "tooltips/flavors/base/index",
+@import "dropdowns/flavors/base/index";
+@import "dropdowns/flavors/menu/index";
 
-  // Popovers
-  "popovers/flavors/base/index",
+@import "dropdowns/flavors/menu-with-icons/index";
+@import "dropdowns/flavors/action-overflow/index";
+@import "dropdowns/flavors/search-overflow/index";
+@import "dropdowns/flavors/positioning/index";
 
-   // Picklists
-  "picklists/flavors/base/index",
-  "picklists/flavors/multi-select/index",
+@import "datepickers/flavors/base/index";
+@import "datepickers/flavors/single-select/index";
+@import "datepickers/flavors/multi-select/index";
+@import "datepickers/flavors/time/index";
 
-  // Menus
-  "dropdowns/flavors/base/index",
-  "dropdowns/flavors/menu/index",
-  //"dropdowns/flavors/menu-with-search/index",
-  "dropdowns/flavors/menu-with-icons/index",
-  "dropdowns/flavors/action-overflow/index",
-  "dropdowns/flavors/search-overflow/index",
-  "dropdowns/flavors/positioning/index",
+@import "modals/flavors/base/index";
+@import "modals/flavors/large/index";
+@import "modals/flavors/directional/index";
+@import "modals/flavors/taglines/index";
 
-  // Datepicker
-  "datepickers/flavors/base/index",
-  "datepickers/flavors/single-select/index",
-  "datepickers/flavors/multi-select/index",
-  "datepickers/flavors/time/index",
+@import "pills/flavors/base/index";
+@import "pills/flavors/portrait/index";
 
- // Modal
-  "modals/flavors/base/index",
-  "modals/flavors/large/index",
-  "modals/flavors/directional/index",
-  "modals/flavors/taglines/index",
+@import "spinners/flavors/base/index";
+@import "spinners/flavors/medium/index";
+@import "spinners/flavors/large/index";
 
-  // Pills
-  "pills/flavors/base/index",
-  "pills/flavors/portrait/index",
+@import "tiles/flavors/base/index";
+@import "tiles/flavors/with-icon/index";
+@import "tiles/flavors/with-actions/index";
+@import "tiles/flavors/with-badge/index";
+@import "tiles/flavors/board/index";
+@import "tiles/flavors/generic/index";
+@import "tiles/flavors/author/index";
 
-  // Spinners
-  "spinners/flavors/base/index",
-  "spinners/flavors/medium/index",
-  "spinners/flavors/large/index",
+@import "trees/flavors/base/index";
 
-  // Title
-  "tiles/flavors/base/index",
-  "tiles/flavors/with-icon/index",
-  "tiles/flavors/with-actions/index",
-  "tiles/flavors/with-badge/index",
-  "tiles/flavors/board/index",
-  "tiles/flavors/generic/index",
-  "tiles/flavors/author/index",
+@import "tabs/flavors/default/index";
+@import "tabs/flavors/scoped/index";
 
-  // Tree
-  "trees/flavors/base/index",
+@import "notifications/flavors/base/index";
+@import "notifications/flavors/alert/index";
+@import "notifications/flavors/toast/index";
 
-  // Tabs
-  "tabs/flavors/default/index",
-  "tabs/flavors/scoped/index",
+@import "lookups/flavors/base/index";
+@import "lookups/flavors/single-select/index";
+@import "lookups/flavors/multi-select/index";
+@import "lookups/flavors/single-scope/index";
+@import "lookups/flavors/multi-scope/index";
+@import "lookups/flavors/advanced-modal/index";
 
-  // Notifications -- Toasts & Alerts
-  "notifications/flavors/base/index",
-  "notifications/flavors/alert/index",
-  "notifications/flavors/toast/index",
+@import "media-objects/flavors/base/index";
+@import "media-objects/flavors/center/index";
+@import "media-objects/flavors/reverse/index";
+@import "media-objects/flavors/double/index";
+@import "media-objects/flavors/responsive/index";
 
-  // Lookup
-  "lookups/flavors/base/index",
-  "lookups/flavors/single-select/index",
-  "lookups/flavors/multi-select/index",
-  "lookups/flavors/single-scope/index",
-  "lookups/flavors/multi-scope/index",
-  "lookups/flavors/advanced-modal/index",
+@import "images/flavors/avatars/index";
 
-  // Objects
-  "media-objects/flavors/base/index",
-  "media-objects/flavors/center/index",
-  "media-objects/flavors/reverse/index",
-  "media-objects/flavors/double/index",
-  "media-objects/flavors/responsive/index",
+@import "badges/flavors/base/index";
 
-  // Images
-  "images/flavors/avatars/index",
+@import "icons/flavors/base/index";
+@import "icons/flavors/colors/index";
+@import "icons/flavors/sizes/index";
 
-  // Badges
-  "badges/flavors/base/index",
-
-  // Icons
-  "icons/flavors/base/index",
-  "icons/flavors/colors/index",
-  "icons/flavors/sizes/index",
-
-  // Tables
-  "data-tables/flavors/base/index",
-  "data-tables/flavors/responsive-stacked/index",
-  "data-tables/flavors/responsive-stacked-horizontal/index";
+@import "data-tables/flavors/base/index";
+@import "data-tables/flavors/responsive-stacked/index";
+@import "data-tables/flavors/responsive-stacked-horizontal/index";

@@ -12,4 +12,4 @@
 set -e
 
 npm run lint
-./node_modules/.bin/mocha --require scripts/bootstrap.js test/before/**/*.js
+./node_modules/.bin/mocha --require scripts/helpers/setup.js test/before/**/*.js

@@ -11,5 +11,5 @@
 
 set -e
 
-./node_modules/.bin/mocha --require scripts/bootstrap.js test/after/**/*.js
+./node_modules/.bin/mocha --require scripts/helpers/setup.js test/after/**/*.js
 ./node_modules/karma/bin/karma start

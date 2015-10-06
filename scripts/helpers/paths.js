@@ -17,7 +17,7 @@ var _ = require('lodash');
 
 var path = require('path');
 
-var root = path.resolve(__dirname, '../');
+var root = path.resolve(__dirname, '../../');
 var app_modules = path.resolve(root, 'app_modules');
 var git_modules = path.resolve(root, 'git_modules');
 var node_modules = path.resolve(root, 'node_modules');

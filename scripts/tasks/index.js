@@ -18,7 +18,6 @@ import _ from 'lodash';
 import globals from 'app_modules/global';
 
 import { DesignSystemScss } from '@salesforce-ux/design-system-utils';
-import updateBoilerplate from './update-boilerplate';
 
 import siteCopyAssets from './site/assets';
 import siteCompile from './site/compile';
@@ -86,10 +85,6 @@ export default {
       if (err) throw err;
     });
 
-  },
-
-  updateBoilerplate: function() {
-    updateBoilerplate();
   }
 
 };

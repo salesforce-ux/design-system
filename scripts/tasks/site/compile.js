@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import path from 'path';
 import fs from 'fs';
+import assert from 'assert';
 
 import _ from 'lodash';
 import async from 'async';
@@ -32,16 +33,12 @@ import webpack from 'webpack';
 
 import createComponent from 'app_modules/site/util/component/create';
 import { compileSass } from './sass';
-import copyAssets from './assets';
 import ignoreUnderscore from 'app_modules/util/ignore-underscore';
 
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
 const isProd = argv.prod === true;
 const isInternal = argv.internal === true;
-
-const getSitePath = path.resolve.bind(path, __PATHS__.site);
-const getSitePathTmp = path.resolve.bind(path, __PATHS__.tmp, 'site');
 
 const eslintExclude = new RegExp([
   __PATHS__.node_modules,
@@ -50,9 +47,88 @@ const eslintExclude = new RegExp([
 ].map(_.escapeRegExp).join('|'));
 
 /**
+ * BrowserSync instance
+ */
+const bs = browserSync.create();
+
+/**
+ * Start BrowserSync
+ */
+function browserSyncStart() {
+  bs.use(browserSyncConsole);
+  bs.init({
+    injectChanges: false,
+    scrollProportionally: false,
+    ghostMode: false,
+    files: false,
+    notify: false,
+    open: false,
+    port: 3000,
+    server: {
+      baseDir: __PATHS__.www
+    },
+    snippetOptions: {
+      blacklist: ['/components/preview-frame']
+    }
+  });
+}
+
+/**
+ * Return a props object with only props prefixed
+ * and then strip the prefix
+ *
+ * @params {object} props
+ * @params {string} prefix
+ * @returns {object}
+ */
+export function getPrefixedProps(props, prefix) {
+  assert.ok(_.isObject(props), 'props must be an object');
+  assert.ok(_.isString(prefix), 'prefix must be a string');
+  const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
+  const prefixedProps = _.pick(props, (value, key) => pattern.test(key));
+  return _.mapKeys(prefixedProps, (value, key) => {
+    return _.camelCase(key.replace(pattern, ''));
+  });
+}
+
+/**
+ * Cleanup webpack error messages and then log them to the console
+ *
+ * @param {object} stats
+ * @returns {object}
+ */
+function webpackLogStats(stats) {
+  stats = stats.toJson();
+  if (stats.errors.length) {
+    stats.errors = stats.errors.map(function(error) {
+      return _.last(error.split('!'));
+    });
+    stats.errors.forEach(function(error) {
+      console.log(error);
+    });
+  }
+  return stats;
+}
+
+/**
+ * Return a string that represents an attempt to require a module
+ *
+ * @param {string} cache - the name of the cache objecrt
+ * @param {string} cacheKey
+ * @param {string} modulePath - the path to require
+ * @returns {string}
+ */
+export function tryRequire(cache, cacheKey, modulePath) {
+  assert.ok(_.isString(cache), 'cache must be a string');
+  assert.ok(_.isString(cacheKey), 'cacheKey must be a string');
+  assert.ok(_.isString(modulePath), 'modulePath must be a string');
+  return `try { ${cache}['${cacheKey}'] = require('${modulePath}'); } catch(e) {}`;
+}
+
+/**
  * The webpack configuration
  */
-const webpackConfig = {
+export const webpackConfig = {
   context: __dirname,
   entry: {
     // Should not be directly imported
@@ -123,154 +199,102 @@ const webpackConfig = {
 };
 
 /**
- * BrowserSync instance
- */
-const bs = browserSync.create();
-
-/**
- * Start BrowserSync
- */
-function browserSyncStart() {
-  bs.use(browserSyncConsole);
-  bs.init({
-    injectChanges: false,
-    scrollProportionally: false,
-    ghostMode: false,
-    files: false,
-    notify: false,
-    open: false,
-    port: 3000,
-    server: {
-      baseDir: __PATHS__.www
-    },
-    snippetOptions: {
-      blacklist: ['/components/preview-frame']
-    }
-  });
-}
-
-/**
- * Return a props object with only props prefixed
- * and then strip the prefix
  *
- * @params {object} props
- * @params {string} prefix
- * @returns {object}
  */
-function getPrefixedProps(props, prefix) {
-  const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
-  const prefixedProps = _.pick(props, (value, key) => pattern.test(key));
-  return _.mapKeys(prefixedProps, (value, key) => {
-    return _.camelCase(key.replace(pattern, ''));
-  });
-}
+export const compiler = {
 
-/**
- * Cleanup webpack error messages and then log them to the console
- *
- * @param {object} stats
- * @returns {object}
- */
-function webpackLogStats(stats) {
-  stats = stats.toJson();
-  if (stats.errors.length) {
-    stats.errors = stats.errors.map(function(error) {
-      return _.last(error.split('!'));
+  init() {
+    _.bindAll(this, _.functions(this)); 
+  },
+
+  getSitePath() {
+    return path.resolve(__PATHS__.site, ...arguments);
+  },
+
+  getSitePathTmp() {
+    return path.resolve(__PATHS__.tmp, 'site', ...arguments);
+  },
+
+  /**
+   * Create a module for each page in the site
+   *
+   * @param {function} callback
+   */
+  createPages(callback) {
+    assert.ok(_.isFunction(callback), 'callback must be a function');
+    console.log('-----> Creating Pages');
+    let sitemap = require('app_modules/site/navigation/sitemap');
+    let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
+    let stream = through.obj();
+    routes.forEach(stream.write, stream);
+    stream.end();
+    stream
+    .pipe(through.obj(this.createPage))
+    .pipe(gulp.dest(this.getSitePathTmp()))
+    .on('error', callback)
+    .on('finish', callback);
+  },
+
+  /**
+   * Create a module that exports a page with extra props
+   *
+   * @param {object} route
+   * @param {string} enc
+   * @param {function} next
+   */
+  createPage(route, enc, next) {
+    // Props
+    const pageBodyProps = {
+      url: route.path
+    };
+    // Create the module
+    const contents = `
+      import React from 'react';
+      import pageBody from 'site/${route.modulePath}';
+      export default React.cloneElement(
+        pageBody,
+        ${JSON.stringify(pageBodyProps)}
+      );
+    `;
+    let file = new gutil.File({
+      path: route.getIndexPath(route.path),
+      contents: new Buffer(contents)
     });
-    stats.errors.forEach(function(error) {
-      console.log(error);
+    next(null, file);
+  },
+
+  /**
+   * Create a module for each component
+   *
+   * @param {function} callback
+   */
+  createComponentPages(callback) {
+    console.log('-----> Creating Component Pages');
+    let sitemap = require('app_modules/site/navigation/sitemap');
+    let routes = sitemap.getFlattenedRoutes().filter(route => {
+      return route.component;
     });
-  }
-  return stats;
-}
+    let stream = through.obj();
+    routes.forEach(stream.write, stream);
+    stream.end();
+    stream
+      .pipe(through.obj(this.createComponentPage))
+      .pipe(gulp.dest(this.getSitePathTmp()))
+      .on('error', callback)
+      .on('finish', callback);
+  },
 
-/**
- * Return a string that represents an attempt to require a module
- *
- * @param {string} cache - the name of the cache objecrt
- * @param {string} cacheKey
- * @param {string} modulePath - the path to require
- * @returns {string}
- */
-function tryRequire(cache, cacheKey, modulePath) {
-  return `try { ${cache}['${cacheKey}'] = require('${modulePath}'); } catch(e) {}`;
-}
-
-/**
- * Create a module for each page in the site
- *
- * @param {function} callback
- */
-function createPages(callback) {
-  console.log('-----> Creating Pages');
-  let sitemap = require('app_modules/site/navigation/sitemap');
-  let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
-  let stream = through.obj();
-  routes.forEach(stream.write, stream);
-  stream.end();
-  stream
-  .pipe(through.obj(createPage))
-  .pipe(gulp.dest(getSitePathTmp()))
-  .on('error', callback)
-  .on('finish', callback);
-}
-
-/**
- * Create a module that exports a page with extra props
- *
- * @param {object} route
- * @param {string} enc
- * @param {function} next
- */
-function createPage(route, enc, next) {
-  // Props
-  const pageBodyProps = {
-    url: route.path
-  };
-  // Create the module
-  const contents = `
-    import React from 'react';
-    import pageBody from 'site/${route.modulePath}';
-    export default React.cloneElement(
-      pageBody,
-      ${JSON.stringify(pageBodyProps)}
-    );
-  `;
-  let file = new gutil.File({
-    path: route.getIndexPath(route.path),
-    contents: new Buffer(contents)
-  });
-  next(null, file);
-}
-
-/**
- * Create a module for each component
- *
- * @param {function} callback
- */
-function createComponentPages(callback) {
-  console.log('-----> Creating Component Pages');
-  let sitemap = require('app_modules/site/navigation/sitemap');
-  let pages = sitemap.getFlattenedRoutes().filter(route => {
-    return route.component;
-  }).map(route => {
-    return createComponentPage(route, route.component);
-  });
-  async.parallel(pages, callback);
-}
-
-/**
- * Create a module for a component
- *
- * @param {object} route
- * @param {object} component
- * @returns {function}
- */
-function createComponentPage(route, component) {
-  return function(callback) {
-    component = createComponent(component);
+  /**
+   * Create a module for a component
+   *
+   * @param {object} route
+   * @param {string} enc
+   * @param {function} next
+   */
+  createComponentPage(route, enc, next) {
+    let component = createComponent(route.component);
     // Imports
-    let requireDocs = tryRequire('elements','docs', `ui/${component.path}/index.docs.jsx`);
+    let requireDocs = tryRequire('elements', 'docs', `ui/${component.path}/index.docs.jsx`);
     let requireExamples = component.flavors.map(flavor => {
       return tryRequire('elements', `example/flavor/${flavor.id}`,
         `ui/${flavor.path}/index.react.example.jsx`);
@@ -290,165 +314,160 @@ function createComponentPage(route, component) {
       const elements = {};
       ${requireDocs}
       ${requireExamples}
-      export default (
-        <PageBody {...bodyProps}>
-          <ComponentBody component={component} elements={elements} />
-        </PageBody>
-      );
+      export default <PageBody {...bodyProps}>
+        <ComponentBody component={component} elements={elements} />
+      </PageBody>;
     `;
-    let stream = through.obj();
-    stream.write(new gutil.File({
+    let file = new gutil.File({
       path: route.getIndexPath(route.path),
       contents: new Buffer(contents)
-    }));
+    });
+    next(null, file);
+  },
+
+  /**
+   * Transform page routes into an HTML string
+   *
+   * @param {array} routes
+   * @param {object} route
+   * @param {string} enc
+   * @param {function} next
+   */
+  renderPage(routes, route, enc, next) {
+    try {
+      console.log('-----> Rendering page ' + route.path);
+      let newFile = new gutil.File({
+        path: route.getIndexPath(route.path)
+      });
+      // Get the <PageBody />
+      let pageBodyProps = {
+        url: route.path
+      };
+      let pageBody = React.cloneElement(
+        require(this.getSitePathTmp(route.trimSlashes(route.path)))
+      , pageBodyProps);
+      // Get the <Page />
+      let Page = require('app_modules/site/components/page');
+      let pageProps = getPrefixedProps(pageBody.props, 'page');
+      let page = React.createElement(Page, pageProps);
+      // Create a cheerio instance from the <Page /> markup string
+      let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
+      // Router
+      let location = new Location(route.path);
+      Router.run(routes, location, (error, initialState, transition) => {
+        let html = ReactDOMServer.renderToString(
+          React.createElement(Router, initialState)
+        );
+        $('#app').append(html);
+        $('body').append(`<script>LIGHTNING_DESIGN_SYSTEM.init('${route.modulePath}')</script>`);
+        $('html').before('<!DOCTYPE html>');
+        newFile.contents = new Buffer($.html());
+        next(null, newFile);
+      });
+    } catch (e) {
+      next(e);
+    }
+  },
+
+  /**
+   * Create the routes needed to render the pages statically
+   * and then stream the metadata through the renderPage() function
+   *
+   * @param {function} callback
+   */
+  renderPages(callback) {
+    console.log('-----> Rendering Pages');
+    let sitemap = require('app_modules/site/navigation/sitemap');
+    // Needed for ReactRouter
+    let Root = React.createClass({
+      render() { return _.last(this.props.components); }
+    });
+    // Create the routes
+    let routes = sitemap.getFlattenedRoutes().map(route => {
+      return React.createElement(Route, {
+        name: route.uid,
+        path: route.path,
+        components: require(
+          this.getSitePathTmp(route.getIndexPath(route.path))
+        )
+      });
+    });
+    routes = React.createElement(Route, {
+      component: Root
+    }, ...routes);
+    // Render each page
+    let stream = through.obj();
+    sitemap.getFlattenedRoutes().forEach(stream.write, stream);
     stream.end();
     stream
-    .pipe(gulp.dest(getSitePathTmp()))
+    .pipe(through.obj(this.renderPage.bind(this, routes)))
+    .on('error', callback)
+    .pipe(rename(path => path.extname = '.html'))
+    .on('error', callback)
+    .pipe(gulp.dest(__PATHS__.www))
     .on('error', callback)
     .on('finish', callback);
-  };
-}
+  },
 
-/**
- * Tasks that need to be run before webpack compiles
- *
- * @param {function} callback
- */
-function preCompile(callback) {
-  async.parallel([
-    copyAssets,
-    createPages,
-    createComponentPages
-  ], callback);
-}
+  /**
+   * Tasks that need to be run before webpack compiles
+   *
+   * @param {function} callback
+   */
+  preCompile(callback) {
+    async.parallel([
+      this.createPages,
+      this.createComponentPages
+    ], callback);
+  },
 
-/**
- * Compile webpack
- *
- * @param {function} callback
- */
-function compile(callback) {
-  console.log('-----> Compiling Webpack');
-  callback = _.once(callback);
-  webpackConfig.plugins.push(
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['common', 'vendor'],
-      minChunks: Infinity
-    })
-  );
-  if (isProd && process.env.TRAVIS !== true) {
-    webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
+  /**
+   * Compile webpack
+   *
+   * @param {function} callback
+   */
+  compile(callback) {
+    console.log('-----> Compiling Webpack');
+    callback = _.once(callback);
+    webpackConfig.plugins.push(
+      new webpack.optimize.CommonsChunkPlugin({
+        names: ['common', 'vendor'],
+        minChunks: Infinity
+      })
+    );
+    if (isProd && process.env.TRAVIS !== true) {
+      webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
+    }
+    // Create the compiler
+    const compiler = webpack(webpackConfig);
+    // Dev / Prod
+    if (isDev) {
+      compiler.watch(100, (err, stats) => {
+        if (err) throw err;
+        stats = webpackLogStats(stats);
+        // If there were errors
+        if (stats.errors.length) {
+          // Log each one to the browser and DONT reload the page
+          stats.errors.forEach(error => {
+            browserSyncConsole.error(error);
+          });
+        } else {
+          // Othewise reload the page
+          bs.reload();
+        }
+        callback();
+      });
+    } else {
+      compiler.run((err, stats) => {
+        webpackLogStats(stats);
+        return callback(err, stats);
+      });
+    }
   }
-  // Create the compiler
-  const compiler = webpack(webpackConfig);
-  // Dev / Prod
-  if (isDev) {
-    compiler.watch(100, (err, stats) => {
-      if (err) throw err;
-      stats = webpackLogStats(stats);
-      // If there were errors
-      if (stats.errors.length) {
-        // Log each one to the browser and DONT reload the page
-        stats.errors.forEach(error => {
-          browserSyncConsole.error(error);
-        });
-      } else {
-        // Othewise reload the page
-        bs.reload();
-      }
-      callback();
-    });
-  } else {
-    compiler.run((err, stats) => {
-      webpackLogStats(stats);
-      return callback(err, stats);
-    });
-  }
+
 }
 
-/**
- * Transform page routes into an HTML string
- *
- * @param {array} routes
- * @param {object} route
- * @param {string} enc
- * @param {function} next
- */
-function renderPage(routes, route, enc, next) {
-  try {
-    console.log('-----> Rendering page ' + route.path);
-    let newFile = new gutil.File({
-      path: route.getIndexPath(route.path)
-    });
-    // Get the <PageBody />
-    let pageBodyProps = {
-      url: route.path
-    };
-    let pageBody = React.cloneElement(
-      require(getSitePathTmp(route.trimSlashes(route.path)))
-    , pageBodyProps);
-    // Get the <Page />
-    let Page = require('app_modules/site/components/page');
-    let pageProps = getPrefixedProps(pageBody.props, 'page');
-    let page = React.createElement(Page, pageProps);
-    // Create a cheerio instance from the <Page /> markup string
-    let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
-    // Router
-    let location = new Location(route.path);
-    Router.run(routes, location, (error, initialState, transition) => {
-      let html = ReactDOMServer.renderToString(
-        React.createElement(Router, initialState)
-      );
-      $('#app').append(html);
-      $('body').append(`<script>LIGHTNING_DESIGN_SYSTEM.init('${route.modulePath}')</script>`);
-      $('html').before('<!DOCTYPE html>');
-      newFile.contents = new Buffer($.html());
-      next(null, newFile);
-    });
-  } catch (e) {
-    next(e);
-  }
-}
-
-/**
- * Create the routes needed to render the pages statically
- * and then stream the metadata through the renderPage() function
- *
- * @param {function} callback
- */
-function renderPages(callback) {
-  console.log('-----> Rendering Pages');
-  let sitemap = require('app_modules/site/navigation/sitemap');
-  // Needed for ReactRouter
-  let Root = React.createClass({
-    render() { return _.last(this.props.components); }
-  });
-  // Create the routes
-  let routes = sitemap.getFlattenedRoutes().map(route => {
-    return React.createElement(Route, {
-      name: route.uid,
-      path: route.path,
-      components: require(
-        getSitePathTmp(route.getIndexPath(route.path))
-      )
-    });
-  });
-  routes = React.createElement(Route, {
-    component: Root
-  }, ...routes);
-  // Render each page
-  let stream = through.obj();
-  sitemap.getFlattenedRoutes().forEach(stream.write, stream);
-  stream.end();
-  stream
-  .pipe(through.obj(renderPage.bind(null, routes)))
-  .on('error', callback)
-  .pipe(rename(path => path.extname = '.html'))
-  .on('error', callback)
-  .pipe(gulp.dest(__PATHS__.www))
-  .on('error', callback)
-  .on('finish', callback);
-}
+compiler.init();
 
 /**
  * GO!
@@ -458,9 +477,9 @@ export default function (done) {
   console.log('Compiling Site');
 
   async.series([
-    preCompile,
-    compile,
-    renderPages
+    compiler.preCompile,
+    compiler.compile,
+    compiler.renderPages
   ], err => {
     if (err) return done(err);
     if (isDev) browserSyncStart();

@@ -17,11 +17,24 @@ import async from 'async';
 import _ from 'lodash';
 import globals from 'app_modules/global';
 
-import auraCSS from './generate/aura-css';
-import { compileSass } from './site/sass';
-import { compileSassUtilities } from './generate/sass-utilities';
 import { DesignSystemScss } from '@salesforce-ux/design-system-utils';
-import updateBoilerplate from './update-boilerplate';
+
+import siteCopyAssets from './site/assets';
+import siteCompile from './site/compile';
+import siteIcons from './site/icons';
+import siteLinks from './site/links';
+import { compileSass as siteSass } from './site/sass';
+
+import generateAuraCSS from './generate/aura-css';
+import generateIcons from './generate/icons';
+import generateReleaseNotes from './generate/release-notes';
+import generateSassUtilities from './generate/sass-utilities';
+import generateTokens from './generate/tokens';
+import generateUI from './generate/ui';
+import generateVersion from './generate/version';
+import generateWhitelist from './generate/whitelist';
+import generateWhitelistUtilities from './generate/whitelist-utilities';
+import generateTokensZip from './generate/zip-tokens';
 
 let designSystem = DesignSystemScss({
   path: __PATHS__.ui,
@@ -32,32 +45,7 @@ let designSystem = DesignSystemScss({
   cssPrefix: globals.cssPrefix
 });
 
-const tasks = {
-
-  site: {
-    compile: require('./site/compile'),
-    fonts: require('./site/fonts'),
-    icons: require('./site/icons'),
-    links: require('./site/links'),
-    sass: async.apply(compileSass, null)
-  },
-
-  generate: {
-    auraCSS: async.apply(auraCSS, designSystem),
-    icons: require('./generate/icons'),
-    releaseNotes: require('./generate/release-notes'),
-    sassUtilities: async.apply(compileSassUtilities, null),
-    tokens: require('./generate/tokens'),
-    ui: require('./generate/ui'),
-    version: require('./generate/version'),
-    whitelist: require('./generate/whitelist'),
-    whitelistUtilities: require('./generate/whitelist-utilities'),
-    zipTokens: require('./generate/zip-tokens')
-  }
-
-};
-
-module.exports = {
+export default {
 
   build: function() {
 
@@ -65,41 +53,38 @@ module.exports = {
 
       function(done) {
         async.parallel([
-          tasks.site.fonts,
-          tasks.site.icons,
-          tasks.generate.tokens
+          siteCopyAssets,
+          siteIcons,
+          generateTokens
         ], done);
       },
 
-      tasks.site.sass,
-      tasks.generate.sassUtilities,
+      async.apply(siteSass, null),
+      generateSassUtilities,
 
-      tasks.generate.whitelist,
-      tasks.generate.ui,
+      generateWhitelist,
+      generateUI,
 
       function(done) {
         async.parallel([
-          tasks.generate.auraCSS,
-          tasks.generate.icons,
-          tasks.generate.releaseNotes,
-          tasks.generate.version,
-          tasks.generate.zipTokens
+          async.apply(generateAuraCSS, designSystem),
+          generateIcons,
+          generateReleaseNotes,
+          generateVersion,
+          generateTokensZip
         ], done);
       },
 
       // For some reason must be after the async.parallel() block...
-      tasks.generate.whitelistUtilities,
+      generateWhitelistUtilities,
 
-      tasks.site.compile,
-      tasks.site.links
+      siteCompile,
+      siteLinks,
 
     ], err => {
       if (err) throw err;
     });
 
-  },
-
-  updateBoilerplate: function() {
-    updateBoilerplate();
   }
+
 };

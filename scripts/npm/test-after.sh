@@ -11,8 +11,5 @@
 
 set -e
 
-export GIT_VERSION=`node scripts/helpers/version.js`
-echo "SLDS version: <$GIT_VERSION>"
-
-npm run lint
-node scripts/build.js --dev "$@"
+./node_modules/.bin/mocha --require scripts/helpers/setup.js test/after/**/*.js
+./node_modules/karma/bin/karma start

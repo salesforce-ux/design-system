@@ -127,7 +127,8 @@ window.LIGHTNING_DESIGN_SYSTEM = {
    */
   userType: function() {
     // there will be no usertype in dev
-    return globals.userType(document.cookie) || 'dev';
+    // DEFAULT_USER_TYPE is provided by webpack in "compile.js"
+    return globals.userType(document.cookie) || DEFAULT_USER_TYPE;
   },
 
   isExternalUser: function(){

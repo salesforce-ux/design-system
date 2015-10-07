@@ -12,4 +12,13 @@
 .#{$css-prefix}select {
   @include form-states;
   height: $line-height-button;
+
+  &[size] {
+    min-height: $line-height-button;
+    height: inherit;
+
+    option {
+      padding: $spacing-x-small;
+    }
+  }
 }

@@ -18,7 +18,7 @@ module.exports = (
 <div className={pf('form-element')}>
   <label className={pf('form-element__label form-element__label--small')} htmlFor="inputSampleSmall">Input Label Small</label>
   <div className={pf('form-element__control')}>
-    <input id="inputSampleSmall" className={pf('input input--small')} type="text" />
+    <input id="inputSampleSmall" className={pf('input input--small')} placeholder="placeholder" type="text" />
   </div>
 </div>
 );

@@ -8,28 +8,41 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+import { expect } from 'chai';
+import _ from 'lodash';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
 
-const path = require('path');
-const gulp = require('gulp');
 
-module.exports = function(done) {
+describe('scripts/tasks/site/icons.js', () => {
 
-  console.log('Processing Fonts');
+  it('does copy all icon files', () => {
 
-  // Move the fonts to .www/assets
-  gulp.task('fonts:copy', () => {
-    return gulp.src('site/assets/fonts/**/*')
-    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/fonts')));
+    // build list of icons file paths which should be copied 
+    let srcIconFiles = (function () {
+      let srcIconPath = __PATHS__.icons;
+      return glob.sync(`${srcIconPath}/**/*.{svg,png}`);
+    })();
+    let relativeSiteIconFiles = srcIconFiles.map(f => path.relative(__PATHS__.icons, f));
+
+    // build list of icon file paths which have been copied to www
+    let wwwIconPath = path.resolve(__PATHS__.www, 'assets/icons')
+    let wwwIconFiles = glob.sync(`${wwwIconPath}/**/*.*`);
+
+    let relativeWwwIconFiles = wwwIconFiles.map(f => path.relative(wwwIconPath, f));
+
+    expect(relativeSiteIconFiles).to.eql(relativeWwwIconFiles);
   });
 
-  // Move the zips to .www/assets
-  gulp.task('fonts:zip:copy', () => {
-    return gulp.src('site/assets/downloads/salesforce_lightning_design_system_fonts.zip')
-      .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')));
+
+  it('does create a icons.zip', () => {
+
+    let wwwDownloadPath = path.resolve(__PATHS__.www, 'assets/downloads');
+    let iconsZipFile = glob.sync(`${wwwDownloadPath}/salesforce-lightning-design-system-icons.zip`);
+    
+    expect(iconsZipFile.length).to.eql(1);
   });
 
-  gulp.task('fonts', ['fonts:copy', 'fonts:zip:copy']);
+});
 
-  gulp.start('fonts', done);
-
-};

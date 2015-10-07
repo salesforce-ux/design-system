@@ -19,85 +19,85 @@ exports.preview = (
   <div className='demo-only'>
     <ol className={pf('list--ordered')}>
       <li>
-      <ButtonIcon
-        flavor="icon-bare"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-      <a className={pf('button button--icon-bare')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
-        symbol="settings" />
-        <span className={pf('assistive-text')}>Settings</span>
-      </a>
-    </li>
-    <li className={pf('m-top--x-small')}>
-      <ButtonIcon
-        flavor="icon-container"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-      <a className={pf('button button--icon-container')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
-        symbol="settings" />
-        <span className={pf('assistive-text')}>Settings</span>
-      </a>
-      <ButtonIcon
-        flavor="icon-container"
-        disabled="true"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-    </li>
-    <li className={pf('m-top--x-small')}>
-      <ButtonIcon
-        flavor="icon-border"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-      <a className={pf('button button--icon-border')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
-        symbol="settings" />
-        <span className={pf('assistive-text')}>Settings</span>
-      </a>
-      <ButtonIcon
-        flavor="icon-border"
-        disabled="true"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-    </li>
-    <li className={pf('m-top--x-small')}>
-      <ButtonIcon
-        flavor="icon-border-filled"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-      <a className={pf('button button--icon-border-filled')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
-        symbol="settings" />
-        <span className={pf('assistive-text')}>Settings</span>
-      </a>
-      <ButtonIcon
-        flavor="icon-border-filled"
-        disabled="true"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-    </li>
-    <li className={pf('m-top--x-small')}>
-      <ButtonIcon
-        flavor="icon-border-filled,icon-small"
-        sprite="utility"
-        symbol="settings"
-        assistiveText="Settings" />
-        <a className={pf('button button--icon-border-filled button--icon-small')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
-        symbol="settings" />
-        <span className={pf('assistive-text')}>Settings</span>
-      </a>
-    </li>
-  </ol>
-</div>
+        <ButtonIcon
+          flavor="icon-bare"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+        <a href="javascript:void(0);" className={pf('button button--icon-bare')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility"
+          symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+        </a>
+      </li>
+      <li className={pf('m-top--x-small')}>
+        <ButtonIcon
+          flavor="icon-container"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+        <a href="javascript:void(0);" className={pf('button button--icon-container')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility"
+          symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+        </a>
+        <ButtonIcon
+          flavor="icon-container"
+          disabled="true"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+      </li>
+      <li className={pf('m-top--x-small')}>
+        <ButtonIcon
+          flavor="icon-border"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+        <a href="javascript:void(0);" className={pf('button button--icon-border')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility"
+          symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+        </a>
+        <ButtonIcon
+          flavor="icon-border"
+          disabled="true"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+      </li>
+      <li className={pf('m-top--x-small')}>
+        <ButtonIcon
+          flavor="icon-border-filled"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+        <a href="javascript:void(0);" className={pf('button button--icon-border-filled')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility"
+          symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+        </a>
+        <ButtonIcon
+          flavor="icon-border-filled"
+          disabled="true"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+      </li>
+      <li className={pf('m-top--x-small')}>
+        <ButtonIcon
+          flavor="icon-border-filled,icon-small"
+          sprite="utility"
+          symbol="settings"
+          assistiveText="Settings" />
+          <a href="javascript:void(0);" className={pf('button button--icon-border-filled button--icon-small')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility"
+          symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+        </a>
+      </li>
+    </ol>
+  </div>
 );
 exports.code = (
   <div className='demo-only'>
@@ -106,7 +106,7 @@ exports.code = (
       sprite="utility"
       symbol="settings"
       assistiveText="Settings" />
-    <a className={pf('button button--icon-bare')}>
+    <a href="javascript:void(0);" className={pf('button button--icon-bare')}>
       <SvgIcon className={pf('button__icon')} sprite="utility"
       symbol="settings" />
       <span className={pf('assistive-text')}>Settings</span>
@@ -117,7 +117,7 @@ exports.code = (
       sprite="utility"
       symbol="settings"
       assistiveText="Settings" />
-    <a className={pf('button button--icon-container')}>
+    <a href="javascript:void(0);" className={pf('button button--icon-container')}>
       <SvgIcon className={pf('button__icon')} sprite="utility"
       symbol="settings" />
       <span className={pf('assistive-text')}>Settings</span>
@@ -134,7 +134,7 @@ exports.code = (
       sprite="utility"
       symbol="settings"
       assistiveText="Settings" />
-    <a className={pf('button button--icon-border')}>
+    <a href="javascript:void(0);" className={pf('button button--icon-border')}>
       <SvgIcon className={pf('button__icon')} sprite="utility"
       symbol="settings" />
       <span className={pf('assistive-text')}>Settings</span>
@@ -151,7 +151,7 @@ exports.code = (
       sprite="utility"
       symbol="settings"
       assistiveText="Settings" />
-    <a className={pf('button button--icon-border-filled')}>
+    <a href="javascript:void(0);" className={pf('button button--icon-border-filled')}>
       <SvgIcon className={pf('button__icon')} sprite="utility"
       symbol="settings" />
       <span className={pf('assistive-text')}>Settings</span>
@@ -168,7 +168,7 @@ exports.code = (
       sprite="utility"
       symbol="settings"
       assistiveText="Settings" />
-      <a className={pf('button button--icon-border-filled button--icon-small')}>
+      <a href="javascript:void(0);" className={pf('button button--icon-border-filled button--icon-small')}>
       <SvgIcon className={pf('button__icon')} sprite="utility"
       symbol="settings" />
       <span className={pf('assistive-text')}>Settings</span>

@@ -19,8 +19,8 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 const dialingIcon = (
-  <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-call icon--x-small')} sprite="utility" symbol="call" />
+  <span className={pf('icon__container icon-action-call')}>
+    <SvgIcon className={pf('icon icon--x-small')} sprite="action" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
@@ -44,7 +44,7 @@ module.exports = (
 
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
-          <MediaObject figureLeft={dialingIcon}>
+          <MediaObject figureLeft={dialingIcon} flavor="center">
             Header
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
@@ -52,14 +52,14 @@ module.exports = (
               flavor="icon-bare"
               iconFlavor="inverse"
               sprite="utility"
-              symbol="dash"
+              symbol="minimize_window"
               assistiveText="Minimize window" />
             <ButtonIcon
               flavor="icon-bare"
               iconFlavor="inverse"
               sprite="utility"
-              symbol="new_window"
-              assistiveText="Open in window" />
+              symbol="expand_alt"
+              assistiveText="Expand Composer" />
             <ButtonIcon
               flavor="icon-bare"
               iconFlavor="inverse"
@@ -75,7 +75,16 @@ module.exports = (
         </div>
 
         {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none grid grid--align-spread')}>
+        <div className={pf('docked-composer__footer shrink-none')}>
+
+          <div className={pf('float--right')}>
+            <ButtonIcon
+                flavor="icon-container"
+                sprite="utility"
+                symbol="delete"
+                assistiveText="Delete" />
+            <Button flavor="brand">Action</Button>
+          </div>
           <div>
             <ButtonIcon
               flavor="icon-container"
@@ -93,7 +102,7 @@ module.exports = (
               symbol="apps"
               assistiveText="Volume" />
           </div>
-          <Button flavor="brand">Action</Button>
+
         </div>
       </div>
 

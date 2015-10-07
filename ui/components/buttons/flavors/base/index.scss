@@ -46,6 +46,10 @@
   &:hover,
   &:focus {
     color: $color-text-link-hover;
+
+    .#{$css-prefix}button__icon {
+      fill: currentColor;
+    }
   }
 
   &:focus {
@@ -54,10 +58,18 @@
 
   &:active {
     color: $color-text-link-active;
+
+    .#{$css-prefix}button__icon {
+      fill: currentColor;
+    }
   }
 
    &[disabled] {
     color: $color-text-button-default-disabled;
+
+    .#{$css-prefix}button__icon {
+      fill: currentColor;
+    }
   }
 
   & + &,

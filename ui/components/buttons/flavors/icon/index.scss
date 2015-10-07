@@ -41,22 +41,6 @@
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
   @include square($square-icon-medium-boundary-alt);
-
-  &:hover,
-  &:focus {
-
-    .#{$css-prefix}button__icon {
-      fill: $color-text-icon-default-hover;
-    }
-  }
-
-  &:active .#{$css-prefix}button__icon {
-    fill: $color-text-icon-default-active;
-  }
-
-  &[disabled] .#{$css-prefix}button__icon {
-    fill: $color-text-icon-default-disabled;
-  }
 }
 
 .#{$css-prefix}button--icon-small {

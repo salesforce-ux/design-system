@@ -24,11 +24,6 @@ const dialingIcon = (
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
-const image = (
-  <span className={pf('avatar avatar--circle avatar--medium')}>
-    <img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
-  </span>
-);
 const recordIcon = (
   <span className={pf('icon__container')}>
     <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />

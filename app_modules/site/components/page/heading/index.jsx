@@ -9,27 +9,50 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const path = require('path');
-const gulp = require('gulp');
+import React from 'react';
+import classNames from 'classnames';
+import { install, prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = function(done) {
+class Heading extends React.Component {
+  constructor(props) {
+    super(props);
+    install(this);
+  }
 
-  console.log('Processing Fonts');
+  render() {
+    const props = this.$propsWithoutKeys('className', 'id');
+    let c = classNames(this.props.className, 'site-jump-anchor__container');
 
-  // Move the fonts to .www/assets
-  gulp.task('fonts:copy', () => {
-    return gulp.src('site/assets/fonts/**/*')
-    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/fonts')));
-  });
+    switch (this.props.type) {
+    case 'h1':
+      return <h1 className={pf(c)} {...props}>
+        <span id={this.props.id} className={pf(`site-jump-anchor`)} />
+        {this.props.children}
+      </h1>;
+      break;
+    case 'h2':
+      return <h2 className={pf(c)} {...props}>
+        <span id={this.props.id} className={pf(`site-jump-anchor`)} />
+        {this.props.children}
+      </h2>;
+      break;
+    case 'h3':
+      return <h3 className={pf(c)} {...props}>
+        <span id={this.props.id} className={pf(`site-jump-anchor`)} />
+        {this.props.children}
+      </h3>;
+      break;
+    default:
+      return React.createElement(this.props.type, this.props, this.props.children);
+    }
+  }
 
-  // Move the zips to .www/assets
-  gulp.task('fonts:zip:copy', () => {
-    return gulp.src('site/assets/downloads/salesforce_lightning_design_system_fonts.zip')
-      .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')));
-  });
+}
 
-  gulp.task('fonts', ['fonts:copy', 'fonts:zip:copy']);
-
-  gulp.start('fonts', done);
-
+Heading.propTypes = {
+  classNames: React.PropTypes.string,
+  type: React.PropTypes.string.isRequired,
+  id: React.PropTypes.string.isRequired
 };
+
+export default Heading;

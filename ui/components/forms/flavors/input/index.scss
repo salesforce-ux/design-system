@@ -21,9 +21,9 @@
   @include placeholder($weight: $font-weight-regular);
   line-height: $line-height-button-small;
   min-height: calc(#{$line-height-button-small} + 2px); /* For IE */
-  font: {
-    size: inherit;
-    weight: $font-weight-regular;
+  padding: {
+    left: $spacing-x-small;
+    right: $spacing-x-small;
   }
 }
 

@@ -1,9 +1,31 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.1 — September 15th, 2015
+## Site Update - October 5th, 2015
+
+- Clicking anchor links will position the anchor on the page a bit lower than the top of the window now
+- Added typography documentation to design section
+- Added examples for a checkbox fieldset and radio fieldset within the horizontal form modifier
+
+## Release 0.9.2 - October 5th, 2015
+
+- Updated package.json to point to README for licensing information
+- Upgrade icons to v3.1.0
+- Updated small input styles
+- Applied styles to fix the height of a select element when used [size] attribute is applied
+- Forced stacking of checkbox and radio elements when inside a horizontal form modifier
+- Updated picklist, font weight on item select, fixed time select dropdown
+
+## Site Update - September 25th, 2015
+
+- Doc changes
+- Internal SVG icon helper can now use <use xlinkHref> now
+- Miscellaneous typo fixes
+
+## Release 0.9.1 — September 24th, 2015
 
 - Fixed issue with npm module dependencies
+- Fixes issue that caused deprecated design tokens to display
 
 ## Release 0.9.0 — September 9th, 2015
 

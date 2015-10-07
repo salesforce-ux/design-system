@@ -16,7 +16,7 @@ import gulp from 'gulp';
 import through from 'through2';
 
 const getSitePath = path.resolve.bind(path, __PATHS__.site);
-const ignore = ['.jsx', '.scss'];
+export const ignore = ['.jsx', '.scss'];
 
 export default function(done) {
   console.log('-----> Copying Assets');

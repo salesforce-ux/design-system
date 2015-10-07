@@ -10,36 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import DatePicker from 'ui/components/datepickers/flavors/base/index.react.example';
 
-class SvgIcon extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-  render() {
-    const className = this.$getClassName();
-    const props = this.$propsWithoutKeys('className', 'sprite', 'symbol');
-    const {sprite,symbol} = this.props;
-    const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
-    return (
-      <svg
-        {...props}
-        aria-hidden={true}
-        className={pf(className)}>
-          <use xlinkHref={href}></use>
-      </svg>
-    );
-  }
-  getUse() {
-  }
-}
+export default (
+  <div>
+    <DatePicker />
+  </div>
+);
 
-SvgIcon.propTypes = {
-  className: React.PropTypes.string,
-  sprite: React.PropTypes.string.isRequired,
-  symbol: React.PropTypes.string.isRequired
-};
-
-export default SvgIcon;
+export let script = `
+  $('div').remove()
+`

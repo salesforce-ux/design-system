@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
@@ -111,7 +112,7 @@ export default (
           </p>
         </div>
 
-        <h2 id="step-1-initialize-project" className="site-text-heading--large">Step 1: Initialize your project</h2>
+        <Heading type="h2" id="step-1-initialize-project" className="site-text-heading--large">Step 1: Initialize your project</Heading>
         <p>Once you&rsquo;ve downloaded and installed all the necessaries for your environment, create a folder for your project.</p>
 
         <div className={pf('site-code--content scrollable--x')}>
@@ -168,7 +169,7 @@ license: (ISC)
           `}</CodeBlock>
         </div>
 
-        <h2 id="step-2-install-node-dependencies" className="site-text-heading--large">Step 2: Install node dependencies - Express</h2>
+        <Heading type="h2" id="step-2-install-node-dependencies" className="site-text-heading--large">Step 2: Install node dependencies - Express</Heading>
         <p>Use NPM to install Express. While in your project folder, install express via NPM.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -177,7 +178,7 @@ $ npm install express --save
         </div>
         <p>You should now have a folder called <code>node_modules/express/</code></p>
 
-        <h2 id="step-3-create-index-html" className="site-text-heading--large">Step 3: Create <code>public/index.html</code></h2>
+        <Heading type="h2" id="step-3-create-index-html" className="site-text-heading--large">Step 3: Create <code>public/index.html</code></Heading>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ mkdir public
@@ -199,7 +200,7 @@ $ touch pubilc/index.html
           `}</CodeBlock>
         </div>
 
-        <h2 id="step-4-create-server-js" className="site-text-heading--large">Step 4: Create <code>server.js</code></h2>
+        <Heading type="h2" id="step-4-create-server-js" className="site-text-heading--large">Step 4: Create <code>server.js</code></Heading>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ touch server.js
@@ -225,7 +226,7 @@ app.listen(port);
           <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
-        <h2 id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</h2>
+        <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
         <p><CTALink ctaEventName='heroku-tutorial-download-slds-assets' href="/resources/downloads/">Download the {g.displayName} CSS framework</CTALink></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
@@ -245,7 +246,7 @@ demo_slds_heroku/
           `}</CodeBlock>
         </div>
 
-        <h2 id="step-6-add-components" className="site-text-heading--large">Step 6: Add components</h2>
+        <Heading type="h2" id="step-6-add-components" className="site-text-heading--large">Step 6: Add components</Heading>
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -353,7 +354,7 @@ demo_slds_heroku/
           <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>
 
-        <h2 id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</h2>
+        <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>
         <p>Lets create a Heroku `Procfile` file. In the root of your <code>demo_slds_heroku/</code> project make a <code>Procfile</code> file.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -400,7 +401,7 @@ $ heroku open
           `}</CodeBlock>
         </div>
 
-        <h2 id="step-8" className="site-text-heading--large">Congrats! You now have a static  application!</h2>
+        <Heading type="h2" id="step-8" className="site-text-heading--large">Congrats! You now have a static  application!</Heading>
         <p>Now that you have a static project using the {g.displayName} and Heroku you can use it with any framework, add a database to it, whatever! The world is your oyster!</p>
       </div>
     </div>

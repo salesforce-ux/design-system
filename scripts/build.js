@@ -10,24 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 var fs = require('fs');
-var path = require('path');
-
-require('./paths').install();
-require('app-module-path').addPath(__PATHS__.root);
-
 var rimraf = require('rimraf');
-
-/////////////////////////////////////////////////////////////
-// Babel
-/////////////////////////////////////////////////////////////
-
-require('babel/register')({
-  ignore: __NODE_MODULES_PATTERN__
-});
 
 /////////////////////////////////////////////////////////////
 // Setup
 /////////////////////////////////////////////////////////////
+
+require('./helpers/setup');
 
 rimraf.sync(__PATHS__.www);
 rimraf.sync(__PATHS__.generated);

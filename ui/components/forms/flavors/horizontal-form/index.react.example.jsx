@@ -12,6 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const React = require('react');
 const Input = require('ui/components/forms/flavors/input/index.react');
 const Textarea = require('ui/components/forms/flavors/textarea/index.react');
+const Radio = require('ui/components/forms/flavors/radio/index.react');
+const Checkbox = require('ui/components/forms/flavors/checkbox/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
@@ -21,6 +23,20 @@ module.exports = (
   <div className={pf('form--horizontal')}>
     <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
     <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
+    <fieldset className={pf('form-element')}>
+      <span className={pf('form-element__label form-element__label--top')}><legend>Checkbox label</legend></span>
+      <div className={pf('form-element__control')}>
+        <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
+        <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
+      </div>
+    </fieldset>
+    <fieldset className={pf('form-element')}>
+      <span className={pf('form-element__label form-element__label--top')}><legend>Radio label</legend></span>
+      <div className={pf('form-element__control')}>
+        <Radio name="options" label="Lead Generation" assistiveText="lead" />
+        <Radio name="options" label="Education Leads" assistiveText="education" />
+      </div>
+    </fieldset>
   </div>
 
 </div>

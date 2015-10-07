@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.9.3 - October XXX, 2015
+
+- Add a full-width button variant for small form factors.
+
 ## Site Update - October 5th, 2015
 
 - Clicking anchor links will position the anchor on the page a bit lower than the top of the window now

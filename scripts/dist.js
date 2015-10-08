@@ -158,7 +158,7 @@ async.series([
    * Cleanup the package.json
    */
   (done) => {
-    var packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
+    let packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
     packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
     delete packageJSON.gitDependencies;
@@ -286,9 +286,9 @@ async.series([
   (done) => {
     gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
-        var newFile = file.clone();
+        const newFile = file.clone();
         // Add the relative node_modules paths to the @import statments
-        var template = newFile.contents.toString()
+        const template = newFile.contents.toString()
           .replace(new RegExp(DESIGN_TOKENS_MODULE_NAME, 'g'), function() {
             return DESIGN_TOKENS_IMPORT_NAME;
           });
@@ -306,15 +306,15 @@ async.series([
    */
   (done) => {
     if (isNpm) return done();
-    var pattern = /\"(.*?)\"(?=[,;])/g;
+    const pattern = /\"(.*?)\"(?=[,;])/g;
     gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
-        var newFile = file.clone();
-        var template = newFile.contents.toString();
-        var sassImports = [];
-        var match;
+        const newFile = file.clone();
+        let sassImports = [];
+        let contents = newFile.contents.toString();
+        let match;
         // Collect the @import paths
-        while ((match = pattern.exec(template)) !== null) {
+        while ((match = pattern.exec(contents)) !== null) {
           sassImports.push(match[1]);
         }
         // Convert the array of paths to an array of file contents
@@ -326,10 +326,10 @@ async.series([
           return fs.readFileSync(i).toString();
         });
         // Repalce @import "..", ".."; with the inlined tokens
-        template = template.replace(/\@import[\s\S]*?;/, function() {
+        contents = contents.replace(/\@import[\s\S]*?;/, function() {
           return sassImports.join('\n');
         });
-        newFile.contents = new Buffer(template);
+        newFile.contents = new Buffer(contents);
         next(null, newFile);
       }))
       .on('error', done)
@@ -359,7 +359,7 @@ async.series([
       .pipe(gulp.dest(distPath()))
       .on('error', done)
       .pipe(through.obj(function(file, enc, next) {
-        var newFile = file.clone();
+        const newFile = file.clone();
         sass.render({
           data: newFile.contents.toString(),
           outputStyle: 'compressed'

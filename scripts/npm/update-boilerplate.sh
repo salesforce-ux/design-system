@@ -11,4 +11,4 @@
 
 set -e
 
-./node_modules/.bin/babel-node scripts/tasks/update-boilerplate.js
+./node_modules/.bin/babel-node scripts/update-boilerplate.js

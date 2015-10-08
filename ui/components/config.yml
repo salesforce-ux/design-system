@@ -5,7 +5,6 @@ components:
   - buttons
   - button-groups
   - cards
-  - comments
   - data-tables
   - datepickers
   - dropdowns

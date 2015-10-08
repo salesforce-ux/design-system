@@ -14,25 +14,28 @@ const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
 const StatefulClass = require('ui/components/lib/stateful.react');
 const MediaObject = require('ui/components/media-objects/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+  <div className={pf('avatar avatar--circle avatar--medium')}>
+    <a href="javascript:void(0)" title="Jason Rodgers">
+      <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
     </a>
   </div>
 );
+const icon = (
+  <span className={pf('icon__container')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
+    <span className={pf('assistive-text')}>Powerpoint</span>
+  </span>
+);
 
 module.exports = (
-<div className='demo-only'>
-
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
-        <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('comment__timestamp')}>16hr Ago</span>
+        <a href="javascript:void(0)" title="Design Systems">Design Systems</a> - <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
       </p>
       <ButtonIcon
         className={pf('shrink-none')}
@@ -42,18 +45,34 @@ module.exports = (
         symbol="down"
         assistiveText="Show More" />
     </div>
+    <p className={pf('text-body--small')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
+      <p><a href="javascript:void(0)" title="Garrett Lee">@Garrett Lee</a>, can you review and let me know what's missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
     </div>
-    <ul className={pf('comment__actions text-body--small')}>
-      <li className={pf('comment__actions-item')}>
-        <a href="javascript:void(0)" title="Like this item">Like</a>
+    <div className={pf('attachments')}>
+      <figure className={pf('attachments__item')}>
+        <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
+          <img src={`/assets/images/feed/feed-image-example.png`} alt='Marketing Plan - Rollout Q1 2016'/>
+        </a>
+      </figure>
+    </div>
+    <ul className={pf('list--horizontal has-dividers text-body--small')}>
+      <li className={pf('list__item')}>
+        <a href="javascript:void(0)" title="Like this item">
+          <StatefulClass>
+            <ButtonIcon
+              flavor="icon-border,icon-small"
+              className="m-right--small"
+              sprite="utility"
+              symbol="like"
+              assistiveText="Like" />
+          </StatefulClass>
+          <span>21 Likes</span>
+        </a>
       </li>
-      <li className={pf('comment__actions-item')}>
-        13 Likes
+      <li className={pf('list__item')}>
+        2 tasks
       </li>
     </ul>
   </MediaObject>
-
-</div>
 );

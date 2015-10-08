@@ -10,43 +10,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Button = require('ui/components/buttons/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
 const StatefulClass = require('ui/components/lib/stateful.react');
 const MediaObject = require('ui/components/media-objects/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-const imagePrimaryLarge = (
+const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jason Rodgers">
       <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
     </a>
   </div>
 );
-const imagePrimary = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jason Rodgers">
-      <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
-    </a>
-  </div>
-);
-const imageSecondary = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
-    </a>
-  </div>
-);
-
 
 module.exports = (
-<div className='demo-only'>
-
-  {/* Primary Comment */}
-  <MediaObject figureLeft={imagePrimaryLarge} className={pf('comment hint-parent')}>
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
         <a href="javascript:void(0)" title="Design Systems">Design Systems</a> - <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
@@ -59,11 +39,11 @@ module.exports = (
         symbol="down"
         assistiveText="Show More" />
     </div>
-    <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
+    <p className={pf('text-body--small')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
       <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <div className={pf('tags text-body--small')}>
+    <div className={pf('tags text-body--small p-bottom--x-small')}>
       <span>Topics:</span>
       <ul className={pf('tags__list')}>
         <li className={pf('tags__item')}>
@@ -80,8 +60,8 @@ module.exports = (
         </li>
       </ul>
     </div>
-    <ul className={pf('comment__actions text-body--small')}>
-      <li className={pf('comment__actions-item')}>
+    <ul className={pf('list--horizontal has-dividers text-body--small')}>
+      <li className={pf('list__item')}>
         <a href="javascript:void(0)" title="Like this item">
           <StatefulClass>
             <ButtonIcon
@@ -94,73 +74,9 @@ module.exports = (
           <span>21 Likes</span>
         </a>
       </li>
-      <li className={pf('comment__actions-item')}>
+      <li className={pf('list__item')}>
         2 tasks
       </li>
     </ul>
   </MediaObject>
-
-  {/* Comment Reply - Child Feed List */}
-  <ul className={pf('comment__replies')}>
-    <li className={pf('comment__overflow')}>
-      <Button flavor="neutral">3 more comments</Button>
-    </li>
-    <li>
-      <MediaObject figureLeft={imageSecondary} className={pf('comment hint-parent')}>
-        <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-          <p className={pf('truncate')}>
-            <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('comment__timestamp')}>16hr Ago</span>
-          </p>
-          <ButtonIcon
-            className={pf('shrink-none')}
-            flavor="icon-border-filled,icon-border-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </div>
-        <div className={pf('comment__content text-longform')}>
-          <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
-        </div>
-        <ul className={pf('comment__actions text-body--small')}>
-          <li className={pf('comment__actions-item')}>
-            <a href="javascript:void(0)" title="Like this item">Like</a>
-          </li>
-          <li className={pf('comment__actions-item')}>
-            13 Likes
-          </li>
-        </ul>
-      </MediaObject>
-    </li>
-    <li>
-      <MediaObject figureLeft={imagePrimary} className={pf('comment hint-parent')}>
-        <div className={pf('publisher publisher--comment')}>
-          <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-          <div className={pf('publisher__attachments')}></div>
-          <div className={pf('publisher__actions grid grid--align-spread')}>
-            <ul className={pf('grid')}>
-              <li>
-                <ButtonIcon
-                  flavor="icon-container"
-                  sprite="utility"
-                  symbol="adduser"
-                  assistiveText="Add User" />
-              </li>
-              <li>
-                <ButtonIcon
-                  flavor="icon-container"
-                  sprite="utility"
-                  symbol="attach"
-                  assistiveText="Attach a file" />
-              </li>
-            </ul>
-            <Button flavor="brand">Comment</Button>
-          </div>
-        </div>
-      </MediaObject>
-    </li>
-  </ul>
-
-</div>
 );
-

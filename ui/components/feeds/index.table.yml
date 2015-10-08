@@ -16,4 +16,29 @@ classes:
     required: true
     applied: <code>&lt;li&gt;</code>
     notes: Applies padding and border separator
-
+  -
+    class: comment
+    description: Initializes comment
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: comment__content
+    description: Comment content goes in this element
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: <code>.{{cssPrefix}}comment__content</code> needs the <code>.{{cssPrefix}}text-longform</code> utility
+  -
+    class: tags
+    description: Container for comment "tags" or "topics"
+    applied: <code>&lt;div&gt;</code>
+    notes: Required if comment has "tags" or "topics" associated
+  -
+    class: tags__list
+    description: List for comment "tags" or "topics"
+    applied: <code>&lt;ul&gt;</code>
+    required: true
+  -
+    class: tags__item
+    description: Individual "tag" or "topic" item
+    applied: <code>&lt;li&gt;</code>
+    required: true

@@ -10,16 +10,29 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
+const Button = require('ui/components/buttons/index.react');
+const Comment = require('ui/components/feeds/flavors/comment-base/index.react.example');
+const CommentMinimal = require('ui/components/feeds/flavors/comment-minimal/index.react.example');
+const CommentPublisher = require('ui/components/publishers/flavors/comment/index.react.example');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
-const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
-  <ComponentDocs>
-    <p className="site-text-introduction">A comment is a user intiated input entity.</p>
-    <p>To initialize the comment, apply the <CodeClass className="comment"/> class to a containing <code>&lt;div&gt;</code>. A comment that is associated to a user, should be wrapped within a <CodeClass className="media"/> object. This layout helper will properly align the avatar and body of the comment.</p>
-    <p>The body of a comment can consist of the following: title with description of post, timestamp (<CodeClass className="comment__timestamp"/>), text input (<CodeClass className="comment__content"/>), content attachment (<CodeClass className="attachments"/>), tags/topics (<CodeClass className="tags"/>), actionable items such as the like button (<CodeClass className="comment__actions"/>).</p>
-    <p>For available classes and options, see the <a href="#overview">comment overview legend</a> below.</p>
-  </ComponentDocs>
+<div className='demo-only'>
+  {/* Primary Comment */}
+  {Comment}
+  {/* Comment Reply - Child Feed List */}
+  <ul className={pf('comment__replies')}>
+    <li className={pf('comment__overflow')}>
+      <Button flavor="neutral">3 more comments</Button>
+    </li>
+    <li>
+      {CommentMinimal}
+    </li>
+    <li>
+      {CommentPublisher}
+    </li>
+  </ul>
+</div>
 );
+

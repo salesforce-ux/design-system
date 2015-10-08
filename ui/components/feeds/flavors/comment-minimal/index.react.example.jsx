@@ -14,25 +14,22 @@ const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
 const StatefulClass = require('ui/components/lib/stateful.react');
 const MediaObject = require('ui/components/media-objects/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 const image = (
-  <div className={pf('avatar avatar--circle avatar--medium')}>
-    <a href="javascript:void(0)" title="Jason Rodgers">
-      <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
+  <div className={pf('avatar avatar--circle avatar--small')}>
+    <a href="javascript:void(0)" title="Jenna Davis">
+      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
     </a>
   </div>
 );
 
 module.exports = (
-<div className='demo-only'>
-
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
-        <a href="javascript:void(0)" title="Design Systems">Design Systems</a> - <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
+        <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
       </p>
       <ButtonIcon
         className={pf('shrink-none')}
@@ -42,46 +39,16 @@ module.exports = (
         symbol="down"
         assistiveText="Show More" />
     </div>
-    <p className={pf('comment__timestamp')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
-      <p>Here's the latest demo presentation <a href="javascript:void(0)" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+      <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
     </div>
-    <div className={pf('tags text-body--small')}>
-      <span>Topics:</span>
-      <ul className={pf('tags__list')}>
-        <li className={pf('tags__item')}>
-          <a href="javascript:void(0)" title="Powerpoint">Powerpoint</a>
-        </li>
-        <li className={pf('tags__item')}>
-          <a href="javascript:void(0)" title="Sales Presentation">Sales Presentation</a>
-        </li>
-        <li className={pf('tags__item')}>
-          <a href="javascript:void(0)" title="Todo">Todo</a>
-        </li>
-        <li className={pf('tags__item')}>
-          and <a href="javascript:void(0)" title="Show the remaining topics">3 more</a>
-        </li>
-      </ul>
-    </div>
-    <ul className={pf('comment__actions text-body--small')}>
-      <li className={pf('comment__actions-item')}>
-        <a href="javascript:void(0)" title="Like this item">
-          <StatefulClass>
-            <ButtonIcon
-              flavor="icon-border,icon-small"
-              className="m-right--small"
-              sprite="utility"
-              symbol="like"
-              assistiveText="Like" />
-          </StatefulClass>
-          <span>21 Likes</span>
-        </a>
+    <ul className={pf('list--horizontal has-dividers text-body--small')}>
+      <li className={pf('list__item')}>
+        <a href="javascript:void(0)" title="Like this item">Like</a>
       </li>
-      <li className={pf('comment__actions-item')}>
-        2 tasks
+      <li className={pf('list__item')}>
+        13 Likes
       </li>
     </ul>
   </MediaObject>
-
-</div>
 );

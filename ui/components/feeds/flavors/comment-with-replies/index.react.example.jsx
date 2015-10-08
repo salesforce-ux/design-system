@@ -10,59 +10,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Button = require('ui/components/buttons/index.react');
 const Comment = require('ui/components/feeds/flavors/comment-base/index.react.example');
 const CommentMinimal = require('ui/components/feeds/flavors/comment-minimal/index.react.example');
-const CommentAttachment = require('ui/components/feeds/flavors/comment-with-attachments/index.react.example');
-const CommentAttachmentInline = require('ui/components/feeds/flavors/comment-with-attachments/index.react.example.inline');
 const CommentPublisher = require('ui/components/publishers/flavors/comment/index.react.example');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
 <div className='demo-only'>
-
-  <div className={pf('feed')}>
-    <ul className={pf('feed__list')}>
-      {/* Feed Item */}
-      <li className={pf('feed__item')}>
-        {Comment}
-        <ul className={pf('comment__replies')}>
-          <li className={pf('comment__overflow')}>
-            <Button flavor="neutral">3 more comments</Button>
-          </li>
-          <li>
-            {CommentMinimal}
-          </li>
-          <li>
-            {CommentPublisher}
-          </li>
-        </ul>
-      </li>
-
-      {/* Feed Item */}
-      <li className={pf('feed__item')}>
-        {CommentAttachmentInline}
-        <ul className={pf('comment__replies')}>
-          <li>
-            {CommentPublisher}
-          </li>
-        </ul>
-      </li>
-
-      {/* Feed Item */}
-      <li className={pf('feed__item')}>
-        {CommentAttachment}
-        <ul className={pf('comment__replies')}>
-          <li>
-            {CommentPublisher}
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
+  {Comment}
+  {/* Comment Replies */}
+  <ul className={pf('comment__replies')}>
+    <li>
+      {CommentMinimal}
+    </li>
+    <li>
+      {CommentPublisher}
+    </li>
+  </ul>
 </div>
 );
-
 

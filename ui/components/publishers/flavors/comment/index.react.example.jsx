@@ -162,8 +162,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
-<div className='demo-only'>
+module.exports = (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
@@ -189,5 +188,4 @@ exports.code = (
       </div>
     </div>
   </MediaObject>
-</div>
 );

@@ -152,7 +152,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+module.exports = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>

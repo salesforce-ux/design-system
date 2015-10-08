@@ -40,7 +40,7 @@
 
 
 
-@mixin dot-separator($size: 4px, $color: $color-background-alt-inverse, $mq: true) {
+@mixin dot-separator($size: 4px, $color: $color-text-weak, $mq: null) {
   position: relative;
 
   &:after {
@@ -65,7 +65,7 @@
     }
   }
 
-  @if $mq {
+  @if $mq != null {
     @include mq-medium-max {
 
       &:before {

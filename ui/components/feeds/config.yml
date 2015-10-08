@@ -2,3 +2,8 @@ classBase: 'feed'
 status: 'prototype'
 flavors:
   - discussion-feed
+  - comment-base
+  - comment-minimal
+  - comment-with-replies
+  - comment-with-overflow
+  - comment-with-attachments

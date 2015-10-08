@@ -88,18 +88,6 @@ function convertRemToPx (css) {
 }
 
 /**
- * Inject an @import statement into index.scss so that all the
- * design tokens and global prefixing gets imported
- */
-function injectImport(opts, done) {
-  gulp.src(distPath(`scss/${opts.source}`))
-    .pipe(gulpinsert.prepend(`@import "design-tokens";\n`))
-    .pipe(gulp.dest(distPath('scss')))
-    .on('error', done)
-    .on('finish', done);
-}
-
-/**
  * Compile the Sass and output to /css
  *
  * @param {object} options

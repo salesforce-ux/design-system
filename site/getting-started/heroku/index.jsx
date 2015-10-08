@@ -182,7 +182,7 @@ $ npm install express --save
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ mkdir public
-$ touch pubilc/index.html
+$ touch public/index.html
           `}</CodeBlock>
         </div>
         <p>Copy the following markup into <code>public/index.html</code>:</p>

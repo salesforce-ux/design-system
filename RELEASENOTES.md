@@ -4,6 +4,7 @@
 ## Release 0.9.3 - October ?, 2015
 
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
+- Updated Voice and Tone guidelines
 
 ## Site Update - October 5th, 2015
 

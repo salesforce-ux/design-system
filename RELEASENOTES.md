@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.9.3 - October ?, 2015
+
+- Upgraded @salesforce-ux/design-tokens to 1.3.0
+
 ## Site Update - October 5th, 2015
 
 - Clicking anchor links will position the anchor on the page a bit lower than the top of the window now

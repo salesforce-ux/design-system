@@ -27,8 +27,7 @@
   "devDependencies": {
     "app-module-path": "1.0.4",
     "async": "1.4.2",
-    "autoprefixer": "5.2.0",
-    "autoprefixer-core": "5.2.1",
+    "autoprefixer": "6.0.1",
     "babel": "5.8.23",
     "babel-core": "5.8.23",
     "babel-eslint": "4.1.1",

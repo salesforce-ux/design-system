@@ -132,7 +132,7 @@ export const webpackConfig = {
   context: __dirname,
   entry: {
     // Should not be directly imported
-    site: path.resolve('app_modules/site/browser/site.js'),
+    site: path.resolve('app_modules/site/browser/site'),
     // TODO: Figure out how to use CommonsChunkPlugin and bundle-loader together
     common: [
       'app_modules/site/components/cta-link',
@@ -165,15 +165,13 @@ export const webpackConfig = {
     publicPath: '/assets/scripts/'
   },
   module: {
-    preLoaders: [
+    loaders: [
       {
         test: /\.jsx?$/,
-        exclude: __NODE_MODULES_PATTERN__,
         loader: 'babel-loader'
       },
       {
         test: /\.jsx?$/,
-        exclude: __NODE_MODULES_PATTERN__,
         loader: path.resolve('app_modules/util/license-loader/index.js')
       },
       {

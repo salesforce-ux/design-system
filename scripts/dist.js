@@ -9,59 +9,46 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-require('./helpers/setup');
+import './helpers/setup';
 
-var argv = require('minimist')(process.argv.slice(2));
-var isNpm = argv.npm === true;
+import fs from 'fs';
+import path from 'path';
+import _ from 'lodash';
+import async from 'async';
+import autoprefixer from 'autoprefixer';
+import globals from '../app_modules/global';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import gulpif from 'gulp-if';
+import gulpinsert from 'gulp-insert';
+import gulpzip from 'gulp-zip';
+import gulprename from 'gulp-rename';
+import { C_STYLE as license } from 'scripts/tasks/update-boilerplate';
+import minimist from 'minimist';
+import postcss from 'postcss';
+import rimraf from 'rimraf';
+import sass from 'node-sass';
+import through from 'through2';
 
-var fs = require('fs');
-var path = require('path');
-var local = path.resolve.bind(path, __PATHS__.dist);
+const argv = minimist(process.argv.slice(2));
+const isNpm = argv.npm === true;
 
-var _ = require('lodash');
-var async = require('async');
-var autoprefixer = require('autoprefixer');
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var gulpif = require('gulp-if');
-var gulpinsert = require('gulp-insert');
-var gulpmatch = require('gulp-match');
-var gutil = require('gulp-util');
-var gulpzip = require('gulp-zip');
-var gulprename = require('gulp-rename');
-var postcss = require('postcss');
-var rimraf = require('rimraf');
-var sass = require('node-sass');
-var through = require('through2');
+const MODULE_NAME = globals.moduleName;
+const DESIGN_TOKENS_MODULE_NAME = '@salesforce-ux/design-tokens';
+const DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME;
+const PRESERVE_COMMENTS_CONTAINING = /(normalize|http|https|license|flag)/ig;
 
-var globals = require('../app_modules/global');
-var MODULE_NAME = globals.moduleName;
-var DESIGN_TOKENS_MODULE_NAME = '@salesforce-ux/design-tokens';
-var DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME;
-var PRESERVE_COMMENTS_CONTAINING = /(normalize|http|https|license|flag)/ig;
-
-var now = new Date();
-var gitversion = process.env.GIT_VERSION;
-
-var license = [
-  commentBanner([globals.displayName + ' ' + gitversion]),
-  '/*',
-  'Copyright (c) 2015, salesforce.com, inc. All rights reserved.',
-  'Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:',
-  'Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.',
-  'Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.',
-  'Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.', 'THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.',
-  '*/',
-  ''
-].join('\n');
+const now = new Date();
+const gitversion = process.env.GIT_VERSION;
 
 ///////////////////////////////////////////////////////////////
 // Helpers
 ///////////////////////////////////////////////////////////////
 
+const distPath = path.resolve.bind(path, __PATHS__.dist);
+
 function isNotVendorFile(file) {
-  var match = gulpmatch(file, /vendor/);
-  return (!match);
+  return /vendor/.test(file.path) === false
 }
 
 function commentBanner(messages) {
@@ -84,9 +71,9 @@ function copy(src, dest, options, done) {
 
 function removeCSSComments (css) {
   return postcss([function (root, result) {
-    root.eachComment(function (comment) {
+    root.walkComments(function (comment) {
       if (!comment.text.match(PRESERVE_COMMENTS_CONTAINING)) {
-        comment.removeSelf();
+        comment.remove();
       }
     });
   }]).process(css).css;
@@ -102,22 +89,12 @@ function convertRemToPx (css) {
 
 /**
  * Inject an @import statement into index.scss so that all the
- * design properties and global prefixing gets imported, as well
- * as build date to track version
+ * design tokens and global prefixing gets imported
  */
 function injectImport(opts, done) {
-  gulp.src(local('scss/' + opts.source))
-    .pipe(through.obj(function(file, enc, next) {
-      var newFile = file.clone();
-      var template = [
-        '@import "design-tokens";\n',
-        newFile.contents.toString()
-      ];
-      newFile.contents = new Buffer(template.join('\n'));
-      next(null, newFile);
-    }))
-    .on('error', done)
-    .pipe(gulp.dest(local('scss')))
+  gulp.src(distPath(`scss/${opts.source}`))
+    .pipe(gulpinsert.prepend(`@import "design-tokens";\n`))
+    .pipe(gulp.dest(distPath('scss')))
     .on('error', done)
     .on('finish', done);
 }
@@ -129,13 +106,16 @@ function injectImport(opts, done) {
  * @param {function} done
  */
 function compileSass(opts, done) {
-  var dest = 'assets/styles/' + MODULE_NAME + opts.target + '.css';
-  var css;
+  const dest = `assets/styles/${MODULE_NAME}${opts.target}.css`;
+  let css;
   try {
     css = sass.renderSync({
-      file: local('scss/' + opts.source),
+      file: distPath('scss/' + opts.source),
       outputStyle: 'nested',
-      sourceComments: false
+      sourceComments: false,
+      includePaths: [
+        __PATHS__.node_modules
+      ]
     }).css.toString();
     // Comments
     css = removeCSSComments(css);
@@ -148,24 +128,17 @@ function compileSass(opts, done) {
   } catch (e) {
     return done(e);
   }
-  var stream = through.obj();
-  var file = new gutil.File({
+  const stream = through.obj();
+  const file = new gutil.File({
     path: dest,
     contents: new Buffer(css)
   });
   stream.write(file);
   stream.end();
   stream
-  .pipe(gulp.dest(local()))
+  .pipe(gulp.dest(distPath()))
   .on('error', done)
   .on('finish', done);
-}
-
-function preprocessSCSS(opts, done) {
-  async.series([
-    function(d){ injectImport(opts, d); },
-    function(d){ compileSass(opts, d); }
-  ], done);
 }
 
 ///////////////////////////////////////////////////////////////
@@ -177,18 +150,16 @@ async.series([
   /**
    * Clean the dist folder
    */
-  function(done) {
-    rimraf(__PATHS__.dist, done);
-  },
+  (done) => rimraf(__PATHS__.dist, done),
 
   /**
    * Copy necessary root files to be included in the final module
    */
-  function(done) {
-    var src = [
+  (done) => {
+    const src = [
+      'README-dist.txt',
       '.npmignore',
-      'package.json',
-      'README-dist.txt'
+      'package.json'
     ].map(function(file) {
       return path.resolve(__PATHS__.root, file);
     });
@@ -198,83 +169,70 @@ async.series([
   /**
    * Cleanup the package.json
    */
-  function(done) {
-    var packageJSON = JSON.parse(fs.readFileSync(local('package.json')).toString());
+  (done) => {
+    var packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
     packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
     delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
-    fs.writeFile(local('package.json'), JSON.stringify(packageJSON, null, 2), done);
+    fs.writeFile(
+      distPath('package.json'), 
+      JSON.stringify(packageJSON, null, 2),
+      done
+    );
   },
 
-
-  /* **** */
-  /* SCSS */
-  /* **** */
-
-  /**
-   * Temporarily copy node_modules so Sass will compile
-   */
-  function(done) {
-    var src = [
-      path.resolve(__PATHS__.root, 'node_modules', '@salesforce-ux', '**/*')
-    ];
-    var dest = __PATHS__.dist;
-    copy(src, dest, { base: __PATHS__.root }, done);
-  },
+  ////////////////////////////////////
+  // Sass
+  ////////////////////////////////////
 
   /**
    * Move all the scss files to dist/scss
    */
-  function(done) {
+  (done) => {
     gulp.src([
       path.resolve(__PATHS__.ui, '**/*.scss')
     ], { base: __PATHS__.ui })
-    .pipe(gulpif(isNotVendorFile, gulpinsert.prepend('/* ' + globals.displayName + ' ' + gitversion + ' */\n')))
-    .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'scss')))
-    .on('error', done)
-    .on('finish', done);
-  },
-
-  /**
-   * Copy Scss license
-   */
-  function(done) {
-    if (isNpm) return done();
-    gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-Sass.txt'))
+      // Not sure that we need the version number in each file.
+      // Makes diffing versions kind of tedious
+      //.pipe(gulpif(isNotVendorFile, gulpinsert.prepend(`/* ${globals.displayName} ${gitversion} */\n`)))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'scss')))
       .on('error', done)
       .on('finish', done);
   },
 
+  /**
+   * Copy the Sass license
+   */
+  (done) => {
+    gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-Sass.txt'))
+      .pipe(gulp.dest(distPath('scss')))
+      .on('error', done)
+      .on('finish', done);
+  },
 
-
-  /* ***** */
-  /* ICONS */
-  /* ***** */
+  ////////////////////////////////////
+  // Icons
+  ////////////////////////////////////
 
   /**
    * Copy all the icons to assets/icons
-   * NB: icons license is already part of icons distro
    */
-  function(done) {
-    if (isNpm) return done();
+  (done) => {
     gulp.src('node_modules/@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**')
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/icons')))
       .on('error', done)
       .on('finish', done);
   },
 
-
-
-  /* ***** */
-  /* FONTS */
-  /* ***** */
+  ////////////////////////////////////
+  // Fonts
+  ////////////////////////////////////
 
   /**
    * Copy all the fonts to assets/fonts if not npm
    */
-  function(done) {
+  (done) => {
     gulp.src('site/assets/fonts/**/*')
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
       .on('error', done)
@@ -284,22 +242,21 @@ async.series([
   /**
    * Copy font license
    */
-  function(done) {
+  (done) => {
     gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-font.txt'))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
       .on('error', done)
       .on('finish', done);
   },
 
-  /* ****** */
-  /* IMAGES */
-  /* ****** */
+  ////////////////////////////////////
+  // Images
+  ////////////////////////////////////
 
   /**
    * Copy select images directories
    */
-  function(done) {
-    if (isNpm) return done();
+  (done) => {
     gulp.src(['site/assets/images/spinners/*','site/assets/images/avatar*'], {base: 'site/assets/images/'})
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/images')))
       .on('error', done)
@@ -309,43 +266,37 @@ async.series([
   /**
    * Copy images license
    */
-  function(done) {
-    if (isNpm) return done();
+  (done) => {
     gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-images.txt'))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/images')))
       .on('error', done)
       .on('finish', done);
   },
 
-
-
-  /* ******** */
-  /* SWATCHES */
-  /* ******** */
+  ////////////////////////////////////
+  // Swatches
+  ////////////////////////////////////
 
   /**
    * Copy the swatches
    */
-  function(done) {
-    if (isNpm) return done();
+  (done) => {
     gulp.src(path.resolve(__PATHS__.root, 'site/assets/downloads/swatches/**'))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'swatches')))
       .on('error', done)
       .on('finish', done);
   },
 
-
-
-  /* ************* */
-  /* DESIGN TOKENS */
-  /* ************* */
+  ////////////////////////////////////
+  // Design Tokens
+  ////////////////////////////////////
 
   /**
    * Prefix the "design-tokens" @imports with the
    * relative node_modules path
    */
-  function(done) {
-    gulp.src(local('scss/design-tokens.scss'))
+  (done) => {
+    gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
         var newFile = file.clone();
         // Add the relative node_modules paths to the @import statments
@@ -357,7 +308,7 @@ async.series([
         next(null, newFile);
       }))
       .on('error', done)
-      .pipe(gulp.dest(local('scss')))
+      .pipe(gulp.dest(distPath('scss')))
       .on('error', done)
       .on('finish', done);
   },
@@ -365,10 +316,10 @@ async.series([
   /**
    * If we're not building for npm, inline the design-tokens
    */
-  function(done) {
+  (done) => {
     if (isNpm) return done();
     var pattern = /\"(.*?)\"(?=[,;])/g;
-    gulp.src(local('scss/design-tokens.scss'))
+    gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
         var newFile = file.clone();
         var template = newFile.contents.toString();
@@ -394,7 +345,7 @@ async.series([
         next(null, newFile);
       }))
       .on('error', done)
-      .pipe(gulp.dest(local('scss')))
+      .pipe(gulp.dest(distPath('scss')))
       .on('error', done)
       .on('finish', done);
   },
@@ -402,22 +353,22 @@ async.series([
   /**
    * Build design system and vf css from the scss files. The big one!
    */
-  function(done) {
+  (done) => {
     async.map([
       { source: 'index.scss', target: '' },
       { source: 'index-scoped.scss', target: '-scoped' },
       { source: 'index-ltng.scss', target: '-ltng' },
       { source: 'index-vf.scss', target: '-vf', isVF: true }
-    ], preprocessSCSS, done);
+    ], compileSass, done);
   },
 
   /**
    * Minify / License / Version
    */
-  function(done) {
-    gulp.src(local('assets/styles/**/*.css'), { base: local() })
+  (done) => {
+    gulp.src(distPath('assets/styles/**/*.css'), { base: distPath() })
       .pipe(gulpinsert.prepend(license))
-      .pipe(gulp.dest(local()))
+      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .pipe(through.obj(function(file, enc, next) {
         var newFile = file.clone();
@@ -434,7 +385,7 @@ async.series([
       .pipe(gulprename({suffix: '.min'}))
       .on('error', done)
       .pipe(gulpinsert.prepend(license))
-      .pipe(gulp.dest(local()))
+      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
   },
@@ -442,12 +393,13 @@ async.series([
   /**
    * Add build date to README.txt
    */
-  function(done) {
-    gulp.src(local('README-dist.txt'))
+  (done) => {
+    gulp.src(distPath('README-dist.txt'))
       .pipe(gulprename('README.md'))
-      .pipe(gulpinsert.prepend('# ' + globals.displayName + '\n# Version: ' + gitversion + '\n'))
       .on('error', done)
-      .pipe(gulp.dest(local()))
+      .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${gitversion} \n`))
+      .on('error', done)
+      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
   },
@@ -455,42 +407,42 @@ async.series([
   /**
    * Remove old README-dist
    */
-  function(done) {
-    rimraf(local('README-dist.txt'), done);
+  (done) => {
+    rimraf(distPath('README-dist.txt'), done);
   },
 
   /**
    * Remove .dist node_modules directory
    */
-  function(done) {
-    rimraf(local('node_modules'), done);
+  (done) => {
+    rimraf(distPath('node_modules'), done);
   },
 
   /**
    * Remove npm related files
    */
-  function(done) {
+  (done) => {
     if (isNpm) return done();
-    async.parallel([
-      async.apply(rimraf, local('package.json')),
-      async.apply(rimraf, local('.npmignore'))
-    ], done);
+    const src = [
+      '.npmignore',
+      'package.json'
+    ].map(file => distPath(file));
+    async.each(src, rimraf, done)
   },
 
   /**
    * Zip everything up
    */
-  function(done) {
+  (done) => {
     if (isNpm) return done();
-    return gulp.src(local('**'))
+    return gulp.src(distPath('**/*'))
       .pipe(gulpzip(globals.zipName(gitversion)))
       .on('error', done)
-      .pipe(gulp.dest(local()))
+      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
   }
 
-],
-function(err) {
+], err => {
   if (err) throw err;
 });

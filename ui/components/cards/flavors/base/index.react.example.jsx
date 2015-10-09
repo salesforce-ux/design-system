@@ -48,7 +48,7 @@ module.exports = (
               <th className={pf('text-heading--label size--1-of-4')} scope="col">Email</th>
               <th className={pf('row-action')} scope="col">
                 <ButtonIcon
-                  flavor="icon-border-filled,icon-border-small"
+                  flavor="icon-border-filled,icon-x-small"
                   iconFlavor="hint,small"
                   sprite="utility"
                   symbol="down"
@@ -64,7 +64,7 @@ module.exports = (
               <td className={pf('size--1-of-4')} data-label="Email">adam@company.com</td>
               <td>
                 <ButtonIcon
-                  flavor="icon-border-filled,icon-border-small"
+                  flavor="icon-border-filled,icon-x-small"
                   iconFlavor="hint,small"
                   sprite="utility"
                   symbol="down"

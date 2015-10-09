@@ -16,19 +16,15 @@
   vertical-align: middle;
 }
 
-.#{$css-prefix}button--icon-bare,
-.#{$css-prefix}button--icon-border-small {
+.#{$css-prefix}button--icon-bare {
   line-height: $line-height-reset;
 }
 
-.#{$css-prefix}button--icon-border {
+.#{$css-prefix}button--icon-border[disabled] {
 
-  &[disabled] {
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
+  &:hover,
+  &:focus {
+    background-color: transparent;
   }
 }
 
@@ -47,6 +43,12 @@
 .#{$css-prefix}button--icon-small {
   @include square($square-icon-medium-boundary);
   line-height: $line-height-button-small;
+}
+
+.#{$css-prefix}button--icon-x-small {
+  @include square($square-icon-x-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
 }
 
 .#{$css-prefix}button--icon-border-filled {

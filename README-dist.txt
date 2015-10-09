@@ -1,5 +1,3 @@
-# Salesforce Lightning Design System
-
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 

@@ -14,14 +14,12 @@ import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import classNames from 'classnames';
 import _ from 'lodash';
-import {last, reduce, forEach, filter, isEmpty} from 'lodash';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
@@ -30,13 +28,14 @@ import { logInputEvent } from 'app_modules/site/util/localytics';
 
 import { cssPrefix } from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
-let whitelist = _.reduce(whitelistUtilities, (obj, val) => {
-  obj[`${cssPrefix}${val.replace(/^\./, '')}`] = true;
-  return obj;
-}, {});
+
+Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
+  .map(c => c.replace(/^\./, ''))
+  .map(c => `${cssPrefix}${c}`)
+  .map(c => new RegExp(_.escapeRegExp(c)))
 
 function getValueAtKeyPath(obj, keyPath) {
-  return reduce(keyPath.split('.'), (obj, key) => {
+  return _.reduce(keyPath.split('.'), (obj, key) => {
     if (obj) { return obj[key]; } else { return obj; }
   }, obj);
 }
@@ -111,25 +110,9 @@ function allCodeTabs() {
   }];
 }
 
-function highlightUtilityClasses(html) {
-  let funkyLongRegex = new RegExp(
-    '(>class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>)([^<]+)(<span)',
-    'g'
-  );
-
-  let transformedHtml = html.
-    replace(funkyLongRegex, (match, before, classNames, after) => {
-      let classes = _.trim(classNames).split(/\s+/).map(c => {
-        return whitelist[c] ? `<dfn title="Utility class" class="site-definition">${c}</dfn>` : c;
-      });
-      return `${before}${classes.join(' ')}${after}`;
-    });
-
-  return transformedHtml;
-}
-
-const renderHTML = _.memoize(function(uid, previewComponent, shouldHighlightUtilityClasses) {
+const renderHTML = _.memoize(function(uid, previewComponent) {
   if (previewComponent.code) previewComponent = previewComponent.code;
+  if (previewComponent.default) previewComponent = previewComponent.default;
   const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
   let html = ReactDOMServer.renderToStaticMarkup(previewComponent);
   // Remove wrapping tag if it has the ".demo-only" class in it
@@ -142,12 +125,7 @@ const renderHTML = _.memoize(function(uid, previewComponent, shouldHighlightUtil
     'unformatted': ['a']
   });
   // Highlight
-  html = highlight(html, 'markup');
-
-  return shouldHighlightUtilityClasses ? highlightUtilityClasses(html) : html;
-}, function (uid, previewComponent, shouldHighlightUtilityClasses) {
-  // Only first and last args needed for resolver.
-  return `${uid}/${shouldHighlightUtilityClasses}`;
+  return highlight(html, 'markup');
 });
 
 function userTypeShouldSeeTab(tab) {
@@ -172,13 +150,13 @@ function getCodeTabs(flavor, previewComponent, role) {
       }
       else if (tab.key === 'html') {
         let shouldHighlightUtilityClasses = role === Prefs.roles.aura;
-        tab.code = renderHTML(flavor.uid, previewComponent, shouldHighlightUtilityClasses);
+        tab.code = renderHTML(flavor.uid, previewComponent);
       }
     })
     .value();
 }
 
-class ComponentFlavor extends React.Component {
+export default class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
@@ -188,7 +166,7 @@ class ComponentFlavor extends React.Component {
     this.state = {
       previewComponent,
       previewTabs,
-      previewTabActive: last(previewTabs),
+      previewTabActive: _.last(previewTabs),
       codeTabs: [],
       role: Prefs.roles.aura
     };
@@ -237,6 +215,7 @@ class ComponentFlavor extends React.Component {
     let {previewComponent, previewTabActive: tab} = this.state;
     // If the module exported a different "preview" element
     if (previewComponent.preview) previewComponent = previewComponent.preview;
+    if (previewComponent.default) previewComponent = previewComponent.default;
     const doc = this.refs.iframe.contentWindow.document;
     ReactDOM.render(previewComponent, doc.getElementById('preview'));
     svgFix(doc);
@@ -250,10 +229,10 @@ class ComponentFlavor extends React.Component {
     function adjustHeight() {
       node.contentWindow.requestAnimationFrame(() => {
         const style = window.getComputedStyle(doc.body);
-        const padding = reduce(['padding-top', 'padding-bottom'], (total, key) => {
+        const padding = _.reduce(['padding-top', 'padding-bottom'], (total, key) => {
           return total + parseFloat(style[key], 10);
         }, 0);
-        node.height = reduce(doc.getElementById('preview').childNodes, (height, node) => {
+        node.height = _.reduce(doc.getElementById('preview').childNodes, (height, node) => {
           return height + node.offsetHeight;
         }, padding);
       });
@@ -265,7 +244,7 @@ class ComponentFlavor extends React.Component {
     link.href = `/assets/styles/${tab.stylesheet}.css`;
     link.onload = function() {
       // Don't remove the old stylesheet until the new one has loaded
-      filter(doc.head.querySelectorAll('link'), tag => {
+      _.filter(doc.head.querySelectorAll('link'), tag => {
         return tag !== link;
       }).forEach(tag => {
         tag.parentNode.removeChild(tag);
@@ -286,16 +265,13 @@ class ComponentFlavor extends React.Component {
     const {flavor} = this.props;
     return (
       <section>
-
         <Heading type="h2" id={flavor.id} className="p-top--xx-large site-text-heading--large site-text-heading--callout">
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
         {this.renderInfo()}
-
         <h3 className={pf('assistive-text')}>Preview</h3>
         {this.renderPreview()}
-
         <h3 className={pf('assistive-text')}>Code</h3>
         {this.renderCode()}
       </section>
@@ -413,5 +389,3 @@ class ComponentFlavor extends React.Component {
   }
 
 }
-
-export default ComponentFlavor;

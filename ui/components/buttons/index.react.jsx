@@ -17,7 +17,7 @@ const {createChainedFunction} = componentUtil;
 class Button extends React.Component {
   static propTypes = {
     flavor: componentUtil.PropTypes.flavor(
-      'neutral', 'brand', 'inverse', 'destroy',
+      'neutral', 'brand', 'inverse', 'destructive',
       'neutral-selected', 'inverse-selected',
       'hint', 'small',
       'more', 'icon-more'

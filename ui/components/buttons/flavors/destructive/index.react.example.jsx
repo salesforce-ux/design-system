@@ -16,14 +16,14 @@ const pf = componentUtil.prefix;
 
 module.exports = (
   <div className='demo-only'>
-    <Button flavor="destroy">
-      Button Destroy
+    <Button flavor="destructive">
+      Button destructive
     </Button>
-    <a href="javascript:void(0);" className={pf('button button--destroy')}>Anchor Button Destroy</a>
-    <Button flavor="destroy" disabled="true">
+    <a href="javascript:void(0);" className={pf('button button--destructive')}>Anchor Button destructive</a>
+    <Button flavor="destructive" disabled="true">
       Disabled
     </Button>
-    <Button flavor="destroy,small">
+    <Button flavor="destructive,small">
       Button Small
     </Button>
   </div>

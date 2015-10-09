@@ -100,7 +100,7 @@
   }
 }
 
-@mixin button-destroy { // @TODO - update when new tokens hit the repo
+@mixin button-destructive { // @TODO - update when new tokens hit the repo
   background-color: #c23934; //$color-background-destructive; 
   border: $border-width-thin solid #c23934; //$color-border-destructive;
   color: $color-text-inverse;

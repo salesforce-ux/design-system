@@ -9,9 +9,9 @@
 
 
 
-.#{$css-prefix}button--destroy {
+.#{$css-prefix}button--destructive {
   @include button;
-  @include button-destroy;
+  @include button-destructive;
 
   &[disabled] {
     background: $color-background-button-brand-disabled;

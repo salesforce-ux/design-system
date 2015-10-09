@@ -5,6 +5,8 @@
 
 - Add a full-width button variant for small form factors.
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
+- ***BIG CHANGE***
+  - Changed `.button--icon-border-small` to `.button--icon-x-small`. This aligns with our other icon names which separate sizing from style
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
 - Added new button variant: `.slds-button--destroy`

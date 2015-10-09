@@ -46,7 +46,7 @@
 
 .#{$css-prefix}button--icon-small {
   @include square($square-icon-medium-boundary);
-  line-height: calc((#{$line-height-reset} * 2) + .1428571429);
+  line-height: $line-height-button-small;
 }
 
 .#{$css-prefix}button--icon-border-filled {

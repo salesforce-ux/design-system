@@ -1,8 +1,9 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.3 - October ?, 2015
+## Release 0.9.3 - October XXX, 2015
 
+- Add a full-width button variant for small form factors.
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
 
 ## Site Update - October 5th, 2015

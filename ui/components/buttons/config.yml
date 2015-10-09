@@ -15,6 +15,7 @@ flavors:
   - icon-stateful
   - icon-inverse
   - hint
+  - responsive
 dependencies:
   - core/icons
   - helpers/visibility

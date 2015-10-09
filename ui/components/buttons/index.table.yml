@@ -101,3 +101,7 @@ classes:
     description: Adds space on the left of a button wrapped in a parent
     applied: <code>button</code> parent
     notes: Only required if the <code>.{{cssPrefix}}button</code> is wrapped. ie- to include a dropdown
+  -
+    class: max-small-button--stretch
+    description: Stretches buttons a full 100% width for small form factors
+    applied: <code>.{{cssPrefix}}button

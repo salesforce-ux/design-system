@@ -19,6 +19,11 @@ classes:
     description: Creates the brand blue Salesforce style
     applied: <code>.{{cssPrefix}}button</code>
   -
+    class: button--destructive
+    description: Creates a red button style
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: The use case for this button is things like delete, cancel, and end call rather than errors.
+  -
     class: button--inverse
     description: Creates the inverse style for dark backgrounds
     applied: <code>.{{cssPrefix}}button</code>

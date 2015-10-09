@@ -5,6 +5,7 @@ flavors:
   - neutral
   - neutral-icon
   - brand
+  - destructive
   - inverse
   - stateful
   - stateful-inverse

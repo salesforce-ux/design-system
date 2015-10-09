@@ -10,40 +10,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
+const Button = require('ui/components/buttons/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
-const {createChainedFunction} = componentUtil;
 
-class Button extends React.Component {
-  static propTypes = {
-    flavor: componentUtil.PropTypes.flavor(
-      'neutral', 'brand', 'inverse', 'destructive',
-      'neutral-selected', 'inverse-selected',
-      'hint', 'small',
-      'more', 'icon-more'
-    )
-  };
-
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-    this.state = {};
-  };
-
-  onClick(e) {
-    this.setState({ active: !this.state.active });
-  }
-
-  render() {
-    const className = this.$getClassNameWithFlavor(pf('button'));
-    const click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    const props = Object.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
-    return (
-      <button className={className} {...props}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-module.exports = Button;
+module.exports = (
+  <div className='demo-only'>
+    <Button flavor="destructive">
+      Button destructive
+    </Button>
+    <a href="javascript:void(0);" className={pf('button button--destructive')}>Anchor Button destructive</a>
+    <Button flavor="destructive" disabled="true">
+      Disabled
+    </Button>
+    <Button flavor="destructive,small">
+      Button Small
+    </Button>
+  </div>
+);

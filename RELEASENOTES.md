@@ -14,6 +14,7 @@
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
   - :hover, :focus state added for `.slds-button--icon-bare`
   - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
+  - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 ## Site Update - October 5th, 2015
 

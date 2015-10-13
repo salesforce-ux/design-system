@@ -2,4 +2,4 @@ Icons are created with no background color. The base `.{{cssPrefix}}icon` class 
 
 Note: Doctype icons have specific colors. You can’t change the color with the fill property.
 
-To give an icon a background color, append the sprite name and the icon name to `.{{cssPrefix}}icon`. For example, for the account icon in the standard icon set, the class is `.{{cssPrefix}}icon-standard-account`. Place the class on the container for the icon.
+To give an icon a background color, append the sprite name and the icon name to `.{{cssPrefix}}icon`. For example, for the account icon in the standard icon set, the class is `.{{cssPrefix}}icon-standard-account`. Place the class on the `.{{cssPrefix}}icon__container`. In the case of icon names with more than one word (separated by an underscore), use a dash in the class name. So `log_a_call` in the standard icon set becomes `.{{cssPrefix}}icon-action-log-a-call`.

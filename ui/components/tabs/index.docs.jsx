@@ -13,11 +13,19 @@ const React = require('react');
 const ComponentDocs = require('app_modules/site/components/page/component/docs');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
+const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
   <ComponentDocs>
     <p className="site-text-introduction">A tab keeps related content in a single container that is shown and hidden through navigation.</p>
     <p>Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.</p>
+    <h4 className="site-text-heading--label">Javascript Needs</h4>
+    <p>The active tab has two markup requirements:</p>
+     <ul>
+      <li>The <CodeClass className="active"/> class should be placed on the <code>li</code> with <CodeClass className="tabs__item"/>.</li>
+      <li>The corresponding <CodeClass className="tabs__content"/> container receives <CodeClass className="show"/>.</li>
+    </ul>
+    <p>Inactive <CodeClass className="tabs__content"/> containers receive <CodeClass className="hide"/>. When the user clicks a different tab, move the <CodeClass className="active"/> class and toggle the <CodeClass className="hide"/>/<CodeClass className="show"/> classes.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Tabbed UIs have three parts with specific <strong>ARIA</strong> role requirements:</p>
     <ul>

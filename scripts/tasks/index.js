@@ -17,7 +17,7 @@ import async from 'async';
 import _ from 'lodash';
 import globals from 'app_modules/global';
 
-import { DesignSystemScss } from '@salesforce-ux/design-system-utils';
+import { DesignSystemScssAura } from '@salesforce-ux/design-system-utils';
 
 import siteCopyAssets from './site/assets';
 import siteCompile from './site/compile';
@@ -36,7 +36,7 @@ import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
 
-let designSystem = DesignSystemScss({
+let designSystem = DesignSystemScssAura({
   path: __PATHS__.ui,
   entryPath: path.resolve(__PATHS__.ui, 'index.scss'),
   designTokensEntryPath: path.resolve(__PATHS__.ui, 'design-tokens.scss'),

@@ -1,10 +1,21 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.3 - October ?, 2015
+## Release 0.9.3 - October XXX, 2015
 
+- Add a full-width button variant for small form factors.
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
 - Updated Voice and Tone guidelines
+- ***BIG CHANGE***
+  - Changed `.button--icon-border-small` to `.button--icon-x-small`. This aligns with our other icon names which separate sizing from style
+- Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
+- Updated `.slds-button--icon-*` demo and fixed class name typo
+- Added new button variant: `.slds-button--destroy`
+- Bug fixes:
+  - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
+  - :hover, :focus state added for `.slds-button--icon-bare`
+  - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
+  - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 ## Site Update - October 5th, 2015
 

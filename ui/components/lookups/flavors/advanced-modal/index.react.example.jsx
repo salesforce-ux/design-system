@@ -43,8 +43,8 @@ module.exports = (
             <tr>
               <th colSpan="4" scope="col">
                 <div className={pf('float--right')}>
-                  <ButtonIcon flavor="icon-bare,icon-border-small" sprite="utility" symbol="filterList" assistiveText="Filter List" />
-                  <ButtonIcon flavor="icon-bare,icon-border-small" sprite="utility" symbol="sort" assistiveText="Sort" />
+                  <ButtonIcon flavor="icon-bare,icon-x-small" sprite="utility" symbol="filterList" assistiveText="Filter List" />
+                  <ButtonIcon flavor="icon-bare,icon-x-small" sprite="utility" symbol="sort" assistiveText="Sort" />
                 </div>
                 5 Results, sorted by relevancy
               </th>

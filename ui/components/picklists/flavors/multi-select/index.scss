@@ -28,6 +28,10 @@
   width: $size-small;
   height: $size-small;
   background-color: $color-background-input-active;
+
+  &--multi {
+    overflow: auto;
+  }
 }
 
 .#{$css-prefix}picklist__item {

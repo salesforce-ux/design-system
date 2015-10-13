@@ -7,7 +7,6 @@
   "globals": {
     "__BASE_URL__": false,
     "__PATHS__": false,
-    "__NODE_MODULES_PATTERN__": false,
     "FontFaceObserver": false
   },
   "ecmaFeatures": {

@@ -15,6 +15,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import categories from '.generated/ui.icons';
+import { Link } from 'react-router';
 import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
 import Sticky from 'app_modules/site/components/sticky';
@@ -108,8 +109,8 @@ class Icons extends React.Component {
           </Sticky>
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             <p className={pf('site-text-introduction m-bottom--reset container--medium')}>
-              Rendering icons in SVG may require an
-              additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName='lightning-svg-icon-helper'>Lightning helper component</CTALink>.
+              Choose the icon you need from this page, then follow the implementation instructions on the <Link to="/components/icons/">icon component page</Link>. If you are building a Lightning Component, you may require an
+              additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName='lightning-svg-icon-helper'>Lightning helper component</CTALink> to use&nbsp;SVGs. 
             </p>
             {this.renderCategories()}
           </div>

@@ -11,6 +11,7 @@
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
 - Added new button variant: `.slds-button--destructive
+- Removed max-width (960px) from Modals > Large
 - Bug fixes:
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
   - :hover, :focus state added for `.slds-button--icon-bare`

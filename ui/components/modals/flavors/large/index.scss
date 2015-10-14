@@ -11,6 +11,6 @@
 
 .#{$css-prefix}modal--large .#{$css-prefix}modal__container {
       width: 90%;
-  max-width: 960px; // @TODO: Tokenize
+  max-width: none;
   min-width: 640px; // TODO: Tokenize
 }

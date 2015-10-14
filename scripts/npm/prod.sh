@@ -16,8 +16,10 @@ echo "SLDS version: <$GIT_VERSION>"
 
 npm run lint
 
-if [[ X"$INTERNAL_BRANCHES" == *X"$TRAVIS_BRANCH"* ]]
+if [[ X"$INTERNAL_BRANCHES" == *X"$TRAVIS_BRANCH"* ]]; then
+  echo "--prod --internal"
   ./node_modules/.bin/babel-node scripts/build.js --prod --internal
 else
+  echo "--prod"
   ./node_modules/.bin/babel-node scripts/build.js --prod
 fi

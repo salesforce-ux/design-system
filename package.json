@@ -43,6 +43,7 @@
     "deep-diff": "0.3.2",
     "eslint": "1.3.1",
     "eslint-loader": "1.0.0",
+    "fs-extra": "^0.24.0",
     "gdm": "0.0.9",
     "glob": "5.0.14",
     "glob-watcher": "2.0.0",

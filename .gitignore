@@ -4,6 +4,7 @@
 /.generated
 /.www
 /scripts/deploy
+/scripts-internal
 /git_modules
 /node_modules
 /public

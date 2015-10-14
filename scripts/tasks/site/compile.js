@@ -187,7 +187,7 @@ export const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'dev')
+      DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'external')
     })
   ],
   cache: {},

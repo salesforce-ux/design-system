@@ -15,5 +15,9 @@ export GIT_VERSION=`node scripts/helpers/version.js`
 echo "SLDS version: <$GIT_VERSION>"
 
 npm run lint
-./node_modules/.bin/babel-node scripts/build.js --prod
 
+if [[ X"$INTERNAL_BRANCHES" == *X"$TRAVIS_BRANCH"* ]]
+  ./node_modules/.bin/babel-node scripts/build.js --prod --internal
+else
+  ./node_modules/.bin/babel-node scripts/build.js --prod
+fi

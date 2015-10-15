@@ -13,11 +13,6 @@
   fill: $color-text-icon-default-hint;
 }
 
-.#{$css-prefix}button--icon-border-small {
-  @include square($square-icon-x-small-boundary);
-  border-radius: $border-radius-small;
-}
-
 .#{$css-prefix}hint-parent {
 
   &:hover,

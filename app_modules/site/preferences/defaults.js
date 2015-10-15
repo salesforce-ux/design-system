@@ -14,16 +14,9 @@ import _ from 'lodash';
 /**
  * Defaults that will be merged in to both user types
  */
-let defaults = {
-
-};
+let defaults = {};
 
 export default {
-
-  dev: _.defaults({
-    role: 'regular',
-    status: 'all'
-  }, defaults),
 
   internal: _.defaults({
     role: 'aura',

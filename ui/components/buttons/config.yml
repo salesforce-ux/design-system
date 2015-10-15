@@ -5,6 +5,7 @@ flavors:
   - neutral
   - neutral-icon
   - brand
+  - destructive
   - inverse
   - stateful
   - stateful-inverse
@@ -14,6 +15,7 @@ flavors:
   - icon-stateful
   - icon-inverse
   - hint
+  - responsive
 dependencies:
   - core/icons
   - helpers/visibility

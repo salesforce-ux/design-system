@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import path from 'path';
 
 import _ from 'lodash';
-import autoprefixer from 'autoprefixer-core';
+import autoprefixer from 'autoprefixer';
 import css from 'css';
 import { diff } from 'deep-diff';
 import gulp from 'gulp';
@@ -32,7 +32,7 @@ function getIndexWithDependencies() { return path.resolve(path, __PATHS__.ui, 'u
 /**
  * Sass
  */
-export function compileSassUtilities(e, done) {
+export default function (done) {
   console.log('Compiling Sass utilities');
   function handleError(err) {
     done(err);

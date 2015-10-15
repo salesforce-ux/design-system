@@ -11,5 +11,5 @@
 
 set -e
 
-npm run lint
+./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js test/after/**/*.js
 ./node_modules/karma/bin/karma start

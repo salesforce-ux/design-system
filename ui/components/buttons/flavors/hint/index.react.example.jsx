@@ -20,7 +20,7 @@ module.exports = (
   <div className='demo-only'>
      <div className={pf('hint-parent hint-parent-demo')}>
       <ButtonIcon
-        flavor="icon-border-filled,icon-border-small"
+        flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
         sprite="utility"
         symbol="down"

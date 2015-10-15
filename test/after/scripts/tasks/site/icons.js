@@ -8,51 +8,41 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+import { expect } from 'chai';
+import _ from 'lodash';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
 
-/* eslint-disable camelcase */
 
-var argv = require('minimist')(process.argv.slice(2));
-var isProd = argv.prod === true;
-var _ = require('lodash');
+describe('scripts/tasks/site/icons.js', () => {
 
-var path = require('path');
+  it('does copy all icon files', () => {
 
-var root = path.resolve(__dirname, '../');
-var app_modules = path.resolve(root, 'app_modules');
-var git_modules = path.resolve(root, 'git_modules');
-var node_modules = path.resolve(root, 'node_modules');
+    // build list of icons file paths which should be copied 
+    let srcIconFiles = (function () {
+      let srcIconPath = __PATHS__.icons;
+      return glob.sync(`${srcIconPath}/**/*.{svg,png}`);
+    })();
+    let relativeSiteIconFiles = srcIconFiles.map(f => path.relative(__PATHS__.icons, f));
 
-var paths = {
-  root: root,
+    // build list of icon file paths which have been copied to www
+    let wwwIconPath = path.resolve(__PATHS__.www, 'assets/icons')
+    let wwwIconFiles = glob.sync(`${wwwIconPath}/**/*.*`);
 
-  app_modules: app_modules,
-  git_modules: git_modules,
-  node_modules: node_modules,
+    let relativeWwwIconFiles = wwwIconFiles.map(f => path.relative(wwwIconPath, f));
 
-  scripts: path.resolve(root, 'scripts'),
-  site: path.resolve(root, 'site'),
-  ui: path.resolve(root, 'ui'),
+    expect(relativeSiteIconFiles).to.eql(relativeWwwIconFiles);
+  });
 
-  design_tokens: path.resolve(git_modules, 'design-tokens/tokens'),
-  icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
 
-  dist: path.resolve(root, '.dist'),
-  generated: path.resolve(root, '.generated'),
-  tmp: path.resolve(root, '.tmp'),
-  test: path.resolve(root, '.test'),
-  www: path.resolve(root, '.www')
-};
+  it('does create a icons.zip', () => {
 
-module.exports = {
+    let wwwDownloadPath = path.resolve(__PATHS__.www, 'assets/downloads');
+    let iconsZipFile = glob.sync(`${wwwDownloadPath}/salesforce-lightning-design-system-icons.zip`);
+    
+    expect(iconsZipFile.length).to.eql(1);
+  });
 
-  /**
-   * Make __PATHS__ available in all modules
-   */
-  install: function() {
-    global.__PATHS__ = paths;
-    global.__NODE_MODULES_PATTERN__ = new RegExp(
-      _.escapeRegExp(path.resolve(root, 'node_modules'))
-    );
-  }
+});
 
-};

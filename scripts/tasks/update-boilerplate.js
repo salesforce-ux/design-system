@@ -23,7 +23,7 @@ const searchPaths = [
   __PATHS__.ui
 ];
 
-const C_STYLE = `/*
+export const C_STYLE = `/*
 Copyright (c) 2015, salesforce.com, inc. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -35,7 +35,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 `;
-const SHELL_STYLE = `# Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+export const SHELL_STYLE = `# Copyright (c) 2015, salesforce.com, inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 # Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.

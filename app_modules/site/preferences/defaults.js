@@ -14,7 +14,9 @@ import _ from 'lodash';
 /**
  * Defaults that will be merged in to both user types
  */
-let defaults = {};
+let defaults = {
+  userType: process.env.DEFAULT_USER_TYPE
+};
 
 export default {
 

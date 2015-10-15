@@ -110,7 +110,7 @@ export default React.createClass({
     return {
       navItems: Immutable.fromJS(navItems),
       showingSettings: false,
-      isExternal: true
+      isExternal: process.env.DEFAULT_USER_TYPE === 'external'
     };
   },
 
@@ -136,8 +136,7 @@ export default React.createClass({
     }
     const slds = window.LIGHTNING_DESIGN_SYSTEM;
     this.setState({
-      showingSettings: !(Prefs.hasBeenViewed() || slds.isMobile()) && slds.userType() === 'internal',
-      isExternal: slds.isExternalUser()
+      showingSettings: !(Prefs.hasBeenViewed() || slds.isMobile()) && process.env.DEFAULT_USER_TYPE === 'internal'
     });
   },
 

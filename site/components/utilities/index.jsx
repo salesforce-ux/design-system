@@ -38,15 +38,17 @@ const Utilities = React.createClass({
   },
 
   renderDownload: function() {
-    if (this.hasPreference('role', Prefs.roles.regular)) return null;
-    return (
-      <a
-        href={`/assets/downloads/aura/css/_dev/utilities/index.css`}
-        className={pf('button button--neutral')}
-        download={`utilities.css`}>
-        Download Utilities CSS
-      </a>
-    );
+    if (this.hasPreferences({ role: 'aura', userType: 'internal' })) {
+      return (
+        <a
+          href={`/assets/downloads/aura/css/_dev/utilities/index.css`}
+          className={pf('button button--neutral')}
+          download={`utilities.css`}>
+          Download Utilities CSS
+        </a>
+      );
+    }
+    return null;
   }
 
 });

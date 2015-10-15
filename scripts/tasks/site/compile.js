@@ -187,7 +187,7 @@ export const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'dev')
+      DEFAULT_USER_TYPE: JSON.stringify(isInternal ? 'internal' : 'external')
     })
   ],
   cache: {},
@@ -498,7 +498,7 @@ export default function (done) {
         if (new RegExp(_.escapeRegExp(route.component.path)).test(e.path)) {
           // Recreate the component module which will cause webpack
           // to recompile and reload the browser
-          compiler.createComponentPage(route, route.component)(function(err) {
+          compiler.createComponentPage(route, route.component, err => {
             if (err) return console.log(err);
           });
         }

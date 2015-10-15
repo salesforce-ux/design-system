@@ -21,7 +21,7 @@ export default [
   {
     route: 'getting-started',
     label: 'Getting Started',
-    aura: false,
+    internal: false,
     children: [
       {
         route: 'getting-started:visualforce',
@@ -107,12 +107,11 @@ export default [
   {
     route: 'native',
     label: 'Native',
-    aura: false,
+    internal: false,
     children: [
       {
         route: 'native:ios',
-        label: 'iOS',
-        aura: false
+        label: 'iOS'
       }
     ]
   },
@@ -123,7 +122,7 @@ export default [
       {
         route: 'resources:downloads',
         label: 'Downloads',
-        aura: false
+        internal: false
       },
       {
         route: 'resources:icons',

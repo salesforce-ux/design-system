@@ -8,6 +8,7 @@ components:
   - data-tables
   - datepickers
   - dropdowns
+  - feeds
   - forms
   - grid-system
   - icons
@@ -20,6 +21,7 @@ components:
   - picklists
   - pills
   - popovers
+  - publishers
   - spinners
   - tabs
   - tiles

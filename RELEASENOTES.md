@@ -7,16 +7,24 @@
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
 - Updated Voice and Tone guidelines
 - ***BIG CHANGE***
-  - Changed `.button--icon-border-small` to `.button--icon-x-small`. This aligns with our other icon names which separate sizing from style
+  - Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
 - Added new button variant: `.slds-button--destructive
 - Removed max-width (960px) from Modals > Large
+- Added notifications in modals Notifications > Modal
+- Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
+- Added new button variant: `.slds-button--destroy`
+- Abstracted form states into own mixins (SASS Framework related)
+- Abstracted feed vertical rule into own mixin (SASS Framework related)
 - Bug fixes:
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
   - :hover, :focus state added for `.slds-button--icon-bare`
   - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
   - Added `overflow: auto;` to the options container for a Multi Select picklist
+- ***NEW***
+  - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
+  - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
 
 ## Site Update - October 5th, 2015
 

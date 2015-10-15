@@ -17,15 +17,14 @@ export default React.createClass({
 
   mixins: [PrefsMixin],
 
-  shouldShowIt: function() {
-    const props = _.omit(this.props, 'children');
-    return _.all(Object.keys(props).map(k => {
-      return this.hasPreference(k, props[k]);
-    }));
+  shouldRender: function() {
+    return _(this.props).omit('children').map((value, key) => {
+      return this.hasPreference(key, value);
+    }).every();
   },
 
   render: function() {
-    return this.shouldShowIt() ? this.props.children : null;
+    return this.shouldRender() ? this.props.children : null;
   }
 
 });

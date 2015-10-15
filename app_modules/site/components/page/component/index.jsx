@@ -43,7 +43,11 @@ const ComponentBody = React.createClass({
 
   renderAnchor() {
     const {component} = this.props;
-    let button = this.hasPreference('role', 'aura') ? (
+    let showDownloadButton = this.hasPreferences({
+      role: 'aura',
+      userType: 'internal'
+    });
+    let button = showDownloadButton ? (
       <div className={pf('site-masthead-actions col no-flex align-middle')}>
         <a
           className={pf('button button--inverse')}

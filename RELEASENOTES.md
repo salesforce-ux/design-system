@@ -10,6 +10,8 @@
   - Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
+- Added notifications in modals Notifications > Modal
+- Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
 - Added new button variant: `.slds-button--destroy`
 - Abstracted form states into own mixins
 - Abstracted feed vertical rule into own mixin

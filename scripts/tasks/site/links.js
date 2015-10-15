@@ -14,6 +14,11 @@ import fs from 'fs';
 import glob from 'glob';
 import _ from 'lodash';
 
+export const excludeLinks = [
+  '/bugs',
+  '/feedback'
+];
+
 export default function (done) {
   console.log('Checking links');
   _(glob.sync(path.resolve(__PATHS__.www, '**/*.html')))
@@ -31,6 +36,7 @@ export default function (done) {
     })
     .flatten()
     .filter(({url}) => /^\/[^/]/.test(url))
+    .filter(({url}) => !_.includes(excludeLinks, url))
     .map(({filePath, url}) => {
       return {
         filePath,

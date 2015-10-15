@@ -37,8 +37,7 @@ body {
 .demo-only {
   position: relative;
 
-  .#{$css-prefix}picklist__options,
-  .#{$css-prefix}notify-container {
+  .#{$css-prefix}picklist__options {
     position: static;
   }
 
@@ -47,6 +46,9 @@ body {
   }
 }
 
+.demo-only--notification .#{$css-prefix}notify-container {
+    position: static;
+}
 .demo-only--dropdown .#{$css-prefix}dropdown-trigger .#{$css-prefix}dropdown {
   visibility: visible;
   opacity: 1;

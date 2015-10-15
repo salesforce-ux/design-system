@@ -16,7 +16,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 exports.preview = (
-<div className='demo-only'>
+<div className='demo-only demo-only--notification'>
   <div className={pf('notify-container')}>
 
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">

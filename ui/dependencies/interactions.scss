@@ -100,6 +100,28 @@
   }
 }
 
+@mixin button-destructive { // @TODO - update when new tokens hit the repo
+  background-color: #c23934; //$color-background-destructive; 
+  border: $border-width-thin solid #c23934; //$color-border-destructive;
+  color: $color-text-inverse;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-inverse;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #A61A14; //$color-background-destructive-hover;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: #870500; //$color-background-button-destructive-active;
+    border-color: #870500; //$color-border-destructive-active;
+  }
+}
 
 
 @mixin nubbin($position: bottom, $location: "after", $color: $color-background-alt) {

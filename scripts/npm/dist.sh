@@ -14,9 +14,4 @@ set -e
 export GIT_VERSION=`node scripts/helpers/version.js`
 echo "SLDS version: <$GIT_VERSION>"
 
-echo "==============npm run prod======================="
-
-npm run prod
-
-echo "==============node scripts/dist.js======================="
-node scripts/dist.js "$@"
+./node_modules/.bin/babel-node scripts/dist.js "$@"

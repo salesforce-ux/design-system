@@ -19,6 +19,11 @@ classes:
     description: Creates the brand blue Salesforce style
     applied: <code>.{{cssPrefix}}button</code>
   -
+    class: button--destructive
+    description: Creates a red button style
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: The use case for this button is things like delete, cancel, and end call rather than errors.
+  -
     class: button--inverse
     description: Creates the inverse style for dark backgrounds
     applied: <code>.{{cssPrefix}}button</code>
@@ -48,10 +53,19 @@ classes:
     applied: <code>.{{cssPrefix}}button</code>
     notes: Be aware that this sizes the button, not the icon
   -
+    class: button--icon-x-small
+    description: Creates an icon button at the smaller 1.25rem (20px) size
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: Be aware that this sizes the button, not the icon
+  -
     class: button--icon-more
     description: Used for the style where only two icons are in a button
     applied: <code>.{{cssPrefix}}button</code>
     notes: This is usually an icon with a down arrow icon next to it. Each svg within is sized separately
+  -
+    class: max-small-button--stretch
+    description: Stretches buttons a full 100% width for small form factors
+    applied: <code>.{{cssPrefix}}button</code>
   -
     class: button__icon
     description: Sets the size and color of the icon inside a button

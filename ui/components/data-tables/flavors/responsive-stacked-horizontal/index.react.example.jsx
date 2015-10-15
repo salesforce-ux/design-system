@@ -24,7 +24,7 @@ module.exports = (
       <th className={pf('is-sortable')} scope="col">
         <span className={pf('truncate')}>Opportunity Name</span>
         <ButtonIcon
-          flavor="icon-bare,icon-border-small"
+          flavor="icon-bare,icon-x-small"
           iconFlavor="small"
           sprite="utility"
           symbol="arrowdown"
@@ -38,7 +38,7 @@ module.exports = (
       <th scope="col"><span className={pf('truncate')}>Contact</span></th>
       <th className={pf('row-action')} scope="col">
         <ButtonIcon
-          flavor="icon-border-filled,icon-border-small"
+          flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"
           sprite="utility"
           symbol="down"
@@ -58,7 +58,7 @@ module.exports = (
       <td data-label="contact"><span className={pf('truncate')}>--</span></td>
       <td className={pf('row-action')}>
         <ButtonIcon
-          flavor="icon-border-filled,icon-border-small"
+          flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"
           sprite="utility"
           symbol="down"
@@ -76,7 +76,7 @@ module.exports = (
         <td data-label="contact"><a href="#" className={pf('truncate')}>achoi@rohdecorp.com</a></td>
         <td className={pf('row-action')}>
           <ButtonIcon
-            flavor="icon-border-filled,icon-border-small"
+            flavor="icon-border-filled,icon-x-small"
             iconFlavor="hint,small"
             sprite="utility"
             symbol="down"

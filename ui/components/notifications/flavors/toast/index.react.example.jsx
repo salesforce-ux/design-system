@@ -16,7 +16,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 exports.preview = (
-<div className='demo-only'>
+<div className='demo-only demo-only--notification'>
 
   <div className={pf('notify-container')}>
     <div className={pf('notify notify--toast')} role="alert">
@@ -43,7 +43,7 @@ exports.preview = (
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col')} sprite="utility" symbol="notification" />
+        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="notification" />
         <div className={pf('col align-middle')}>
           <h2 className={pf('text-heading--small ')}>Your new contact <a href="#">Sara Smith</a> was successfully created.</h2>
         </div>
@@ -74,7 +74,7 @@ exports.preview = (
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col')} sprite="utility" symbol="warning" />
+        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
         <div className={pf('col align-middle')}>
           <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
         </div>
@@ -91,7 +91,7 @@ exports.preview = (
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col')} sprite="utility" symbol="warning" />
+        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
         <div className={pf('col align-middle')}>
           <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
           <p>Here's some detail of what happened, being very descriptive and transparent :P.</p>

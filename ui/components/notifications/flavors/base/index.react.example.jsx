@@ -16,7 +16,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className='demo-only'>
+<div className='demo-only demo-only--notification'>
 
   <div className={pf('notify notify--alert theme--inverse-text theme--alert-texture')} role="alert">
     <span className={pf('assistive-text')}>Info</span>

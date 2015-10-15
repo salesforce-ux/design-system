@@ -197,7 +197,7 @@ const Tokens = React.createClass({
           maintain a scalable and consistent visual system
           for <abbr title="User Interface">UI</abbr> development.
         </p>
-        <IfPref role="aura">
+        <IfPref role="aura" userType="internal">
           <div>
             <h3 className={pf('site-text-heading--label')}>Form Factor Overrides</h3>
             <p>

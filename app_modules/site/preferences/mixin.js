@@ -34,6 +34,12 @@ export default {
 
   hasPreference(name, value) {
     return this.state[name] === value;
+  },
+
+  hasPreferences(preferences) {
+    return _(preferences).map((value, key) => {
+      return this.hasPreference(key, value);
+    }).every();
   }
 
 };

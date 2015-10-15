@@ -35,6 +35,11 @@
     transform: translateX(0);
   }
 
+  &--bottom {
+    bottom: 100%;
+    transform: translateX(0);
+  }
+
   &--small {
     min-width: $size-small;
   }
@@ -46,6 +51,29 @@
   &--large {
     min-width: $size-large;
     max-width: $max-width-action-overflow-menu;
+  }
+
+  &--overflow {
+    background: $color-background;
+    padding: $spacing-x-small;
+    width: 290px; // @todo : token
+
+    &:before,
+    &:after {
+      background: $color-background;
+    }
+
+    .#{$css-prefix}dropdown__list {
+      background: $color-background-alt;
+      border-radius: $border-radius-medium;
+      border: $border-width-thin solid $color-border;
+      max-height: 38px * 7; // @todo : token
+      overflow-y: auto;
+    }
+
+    .#{$css-prefix}dropdown__item + .#{$css-prefix}dropdown__item {
+      border-top: $border-width-thin solid $color-border;
+    }
   }
 
   mark {
@@ -66,6 +94,43 @@
       background: $color-background-alt;
       box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
       z-index: -1;
+    }
+
+    &.#{$css-prefix}dropdown--left {
+      left: -#{$spacing-medium};
+
+      &:before,
+      &:after {
+        left: $spacing-large;
+        margin-left: 0;
+      }
+    }
+
+    &.#{$css-prefix}dropdown--right {
+      right: -#{$spacing-medium};
+
+      &:before,
+      &:after {
+        left: auto;
+        right: $spacing-large;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--nubbin-bottom {
+    @include nubbin(bottom, "before", $color-background-alt);
+    @include nubbin(bottom, $color: $color-background-alt);
+    margin-bottom: ($square-tooltip-nubbin / 2);
+
+    &:before,
+    &:after {
+      z-index: -1;
+      background-color: inherit;
+    }
+
+    &:after {
+      box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
     }
 
     &.#{$css-prefix}dropdown--left {
@@ -193,3 +258,5 @@
     }
   }
 }
+
+

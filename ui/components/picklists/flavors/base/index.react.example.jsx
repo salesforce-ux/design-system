@@ -16,14 +16,23 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className='demo-only demo-only--dropdown' style={{height: '200px'}}>
+<div className='demo-only demo-only--dropdown' style={{height: '240px'}}>
   <PickList label="Select an Option" aria-expanded="true">
     <Menu className={pf('dropdown--left dropdown--small')}>
       <Menu.List>
-        <Menu.Item href="#">Option One</Menu.Item>
-        <Menu.Item href="#">Option Two</Menu.Item>
-        <Menu.Item href="#">Option Three</Menu.Item>
-        <Menu.Item href="#">Option Four</Menu.Item>
+        <Menu.Item href="#">Option A</Menu.Item>
+        <Menu.Item href="#">Option B</Menu.Item>
+        <Menu.Item href="#">Option C</Menu.Item>
+        <Menu.Item href="#">Option D</Menu.Item>
+        <Menu.Item href="#">Option E</Menu.Item>
+        <Menu.Item href="#">Option F</Menu.Item>
+        <Menu.Item href="#">Option G</Menu.Item>
+        <Menu.Item href="#">Option H</Menu.Item>
+        <Menu.Item href="#">Option I</Menu.Item>
+        <Menu.Item href="#">Option J</Menu.Item>
+        <Menu.Item href="#">Option K</Menu.Item>
+        <Menu.Item href="#">Option L</Menu.Item>
+        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
       </Menu.List>
     </Menu>
   </PickList>

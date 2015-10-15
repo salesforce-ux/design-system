@@ -212,10 +212,9 @@ body {
     bottom: $spacing-large;
   }
 
-  > code {
+  &__content {
     display: inline-block;
     background: $color-background-alt-2;
     padding: 0 $spacing-x-small;
-    border-radius: 0 0 $border-radius-medium $border-radius-medium;
   }
 }

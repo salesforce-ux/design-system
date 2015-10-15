@@ -81,7 +81,14 @@ exports.preview = (
       <Button flavor="brand">Share</Button>
     </div>
   </div>
-  <hr />
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>
+    </p>
+  </div>
+
+  {/* Is Active */}
   <div className={pf('publisher publisher--discussion is-active')}>
     <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
@@ -108,13 +115,20 @@ exports.preview = (
       <Button flavor="brand" disabled>Share</Button>
     </div>
   </div>
-  <hr />
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code> with text input
+    </p>
+  </div>
+
+  {/* Is Active with Content */}
   <div className={pf('publisher publisher--discussion is-active')}>
     <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <textarea className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
     <div className={pf('attachments')}>
       <div className={pf('attachments__item box box--x-small theme--shade')}>
         <div className={pf('grid grid--align-spread')}>
@@ -152,7 +166,7 @@ exports.preview = (
 </div>
 );
 
-module.exports = (
+exports.code = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>

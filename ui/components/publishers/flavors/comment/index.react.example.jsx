@@ -67,7 +67,14 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <hr />
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>
+    </p>
+  </div>
+
+  {/* Is Active */}
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
@@ -92,7 +99,14 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <hr />
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>, <code>.{pf('has-focus')}</code>
+    </p>
+  </div>
+
+  {/* Is Active, Has Focus */}
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active has-focus')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
@@ -117,7 +131,14 @@ exports.preview = (
       </div>
     </div>
   </MediaObject>
-  <hr />
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code> with text input
+    </p>
+  </div>
+
+  {/* Is Active with Content */}
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active')}>
       <div className={pf('publisher__input input--bare text-longform')}>
@@ -162,7 +183,7 @@ exports.preview = (
 </div>
 );
 
-module.exports = (
+exports.code = (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />

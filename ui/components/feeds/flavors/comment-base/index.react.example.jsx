@@ -33,7 +33,7 @@ module.exports = (
       </p>
       <ButtonIcon
         className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-border-small"
+        flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
         sprite="utility"
         symbol="down"

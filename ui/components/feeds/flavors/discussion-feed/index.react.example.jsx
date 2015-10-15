@@ -11,6 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const React = require('react');
 const Button = require('ui/components/buttons/index.react');
+const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
+const MediaObject = require('ui/components/media-objects/index.react');
 const Comment = require('ui/components/feeds/flavors/comment-base/index.react.example');
 const CommentMinimal = require('ui/components/feeds/flavors/comment-minimal/index.react.example');
 const CommentAttachment = require('ui/components/feeds/flavors/comment-with-attachments/index.react.example');
@@ -18,6 +21,21 @@ const CommentAttachmentInline = require('ui/components/feeds/flavors/comment-wit
 const CommentPublisher = require('ui/components/publishers/flavors/comment/index.react.example');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
+
+const image = (
+  <div className={pf('avatar avatar--circle avatar--small')}>
+    <a href="javascript:void(0)" title="Jenna Davis">
+      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+    </a>
+  </div>
+);
+
+const icon = (
+  <span className={pf('icon__container')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
+    <span className={pf('assistive-text')}>Powerpoint</span>
+  </span>
+);
 
 module.exports = (
 <div className='demo-only'>
@@ -35,7 +53,31 @@ module.exports = (
             {CommentMinimal}
           </li>
           <li>
-            {CommentPublisher}
+            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+                <div className={pf('attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
           </li>
         </ul>
       </li>
@@ -45,7 +87,31 @@ module.exports = (
         {CommentAttachmentInline}
         <ul className={pf('comment__replies')}>
           <li>
-            {CommentPublisher}
+            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+                <div className={pf('attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
           </li>
         </ul>
       </li>
@@ -55,7 +121,31 @@ module.exports = (
         {CommentAttachment}
         <ul className={pf('comment__replies')}>
           <li>
-            {CommentPublisher}
+            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+              <div className={pf('publisher publisher--comment')}>
+                <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+                <div className={pf('attachments')}></div>
+                <div className={pf('publisher__actions grid grid--align-spread')}>
+                  <ul className={pf('grid')}>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="adduser"
+                        assistiveText="Add User" />
+                    </li>
+                    <li>
+                      <ButtonIcon
+                        flavor="icon-container"
+                        sprite="utility"
+                        symbol="attach"
+                        assistiveText="Attach a file" />
+                    </li>
+                  </ul>
+                  <Button flavor="brand">Comment</Button>
+                </div>
+              </div>
+            </MediaObject>
           </li>
         </ul>
       </li>

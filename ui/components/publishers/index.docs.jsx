@@ -20,7 +20,6 @@ module.exports = (
     <p className="site-text-introduction">A publisher is an advanced longform text input form element.</p>
     <p>To initialize the publisher, apply the <CodeClass className="publisher"/> class to a containing <code>&lt;div&gt;</code>. The publisher consists of, but not limited to, a text input form element that is either a plain text or rich text editor. A row of actionable interactions, such as attaching additional content, adding followers and a submit button.</p>
     <p>The variants of the publishers have different use cases, so please pay attention to the markup structure of each.</p>
-    <p>The publishers have different states based on interactions. The documenation will cover the intended experience but here is a CodePen for demo purposes. <a href="http://codepen.io/salesforce-ux/pen/b33a4693da5dd02ae76b86fd41dac65f?editors=110">http://codepen.io/salesforce-ux/pen/b33a4693da5dd02ae76b86fd41dac65f?editors=110</a></p>
     <p>For available classes and options, see the <a href="#overview">publisher overview legend</a> below.</p>
   </ComponentDocs>
 );

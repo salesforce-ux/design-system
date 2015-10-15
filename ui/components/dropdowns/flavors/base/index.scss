@@ -162,9 +162,9 @@
   &__item {
     line-height: $line-height-text;
 
-    > a,
-    > span {
-      display: block;
+    > a {
+      display: flex;
+      justify-content: space-between;
       padding: $spacing-x-small $spacing-small;
       color: $color-text-default;
       position: relative;
@@ -176,6 +176,10 @@
         outline: 0;
         text-decoration: none;
         background-color: $color-background-row-hover;
+
+        .#{$css-prefix}icon--selected {
+          opacity: 1;
+        }
       }
 
       &:active {
@@ -193,48 +197,54 @@
       }
     }
 
+    .#{$css-prefix}icon--selected {
+      opacity: 0;
+      transition: opacity $duration-immediately ease;
+    }
+
     &.#{$css-prefix}is-selected .#{$css-prefix}icon {
       fill: $color-text-icon-default-hover;
+      opacity: 1;
     }
 
-    .#{$css-prefix}icon {
-      @include square($square-icon-medium-content);
-      position: absolute;
-      top: 50%;
-      margin-top: (($square-icon-medium-content / 2) * -1);
-      fill: $color-text-icon-default;
+    // .#{$css-prefix}icon {
+    //   @include square($square-icon-medium-content);
+    //   position: absolute;
+    //   top: 50%;
+    //   margin-top: (($square-icon-medium-content / 2) * -1);
+    //   fill: $color-text-icon-default;
 
-      &--left {
-        left: $spacing-small;
-      }
+    //   &--left {
+    //     left: $spacing-small;
+    //   }
 
-      &--right {
-        right: $spacing-small;
-      }
-    }
+    //   &--right {
+    //     right: $spacing-small;
+    //   }
+    // }
   }
 
-  .#{$css-prefix}has-icon {
-    position: relative;
+  // .#{$css-prefix}has-icon {
+  //   position: relative;
 
-    &--left > a,
-    &--left > span {
-      padding-left: $spacing-x-large;
-    }
+  //   &--left > a,
+  //   &--left > span {
+  //     padding-left: $spacing-x-large;
+  //   }
 
-    &--right > a,
-    &--right > span {
-      padding-right: $spacing-x-large;
-    }
+  //   &--right > a,
+  //   &--right > span {
+  //     padding-right: $spacing-x-large;
+  //   }
 
-    &--left-right > a,
-    &--left-right > span {
-      padding: {
-        left: $spacing-x-large;
-        right: $spacing-x-large;
-      }
-    }
-  }
+  //   &--left-right > a,
+  //   &--left-right > span {
+  //     padding: {
+  //       left: $spacing-x-large;
+  //       right: $spacing-x-large;
+  //     }
+  //   }
+  // }
 }
 
 .#{$css-prefix}dropdown-trigger {

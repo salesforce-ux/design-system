@@ -24,25 +24,59 @@ module.exports = (
       <span className={pf('assistive-text')}>Settings</span>
       <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
     </Button>
-    <Menu className={pf('dropdown--left dropdown--small')}>
+    <div className={pf('dropdown dropdown--left dropdown--small ')}>
+      <div className={pf('dropdown__header')}>
+        <span className={pf('text-heading--label')}>Display As</span>
+      </div>
+      <ul className={pf('dropdown__list')} role="menu">
+        <li className={pf('dropdown__item is-selected')} aria-selected="true">
+          <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+            <p>
+              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+              Table
+            </p>
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="table" />
+          </a>
+        </li>
+        <li className={pf('dropdown__item')}>
+          <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+            <p>
+              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+              Cards
+            </p>
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="kanban" />
+          </a>
+        </li>
+        <li className={pf('dropdown__item')}>
+          <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+            <p>
+              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+              Compact List
+            </p>
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="side_list" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    {/*<Menu className={pf('dropdown--left dropdown--small')}>
       <Menu.Header>
         <Menu.Title>Display As</Menu.Title>
       </Menu.Header>
       <Menu.List>
-        <Menu.Item className={pf('is-selected')} href="#" aria-selected="true">
+        <Menu.Item className={pf('is-selected')} href="javascript:void(0)" aria-selected="true">
           Table
           <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="table" />
         </Menu.Item>
-        <Menu.Item href="#">
+        <Menu.Item href="javascript:void(0)">
           Cards
           <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="kanban" />
         </Menu.Item>
-        <Menu.Item href="#">
+        <Menu.Item href="javascript:void(0)">
           Compact List
           <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="side_list" />
         </Menu.Item>
       </Menu.List>
-    </Menu>
+    </Menu>*/}
   </div>
 </div>
 );

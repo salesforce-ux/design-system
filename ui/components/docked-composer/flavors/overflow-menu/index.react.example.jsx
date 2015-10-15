@@ -29,15 +29,69 @@ module.exports = (
       </a>
       <Menu className={pf('dropdown--left dropdown--bottom dropdown--nubbin-bottom dropdown--overflow')}>
         <Menu.List isSelectable={false}>
-          <Menu.Item>Agenda for next week</Menu.Item>
-          <Menu.Item>Lei Chan</Menu.Item>
-          <Menu.Item>August 14 Meeting Notes</Menu.Item>
-          <Menu.Item>New Email</Menu.Item>
-          <Menu.Item>Janet Fitzpatrick</Menu.Item>
-          <Menu.Item>Call with Adam Fraser</Menu.Item>
-          <Menu.Item>Log 5 calls with new leads</Menu.Item>
-          <Menu.Item>August 26 Meeting Notes</Menu.Item>
-          <Menu.Item>New Email</Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-email m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+              <span className={pf('assistive-text')}>Email Icon</span>
+            </span>
+            Agenda for next week
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-call m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+              <span className={pf('assistive-text')}>Call Icon</span>
+            </span>
+            Lei Chan
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-task m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
+              <span className={pf('assistive-text')}>Task Icon</span>
+            </span>
+            August 14 Meeting Notes
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-email m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+              <span className={pf('assistive-text')}>Email Icon</span>
+            </span>
+            New Email
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-call m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+              <span className={pf('assistive-text')}>Call Icon</span>
+            </span>
+            Janet Fitzpatrick
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-call m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+              <span className={pf('assistive-text')}>Call Icon</span>
+            </span>
+            Call with Adam Fraser
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-note m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
+              <span className={pf('assistive-text')}>Note Icon</span>
+            </span>
+            Log 5 calls with new leads
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-note m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
+              <span className={pf('assistive-text')}>Note Icon</span>
+            </span>
+            August 26 Meeting Notes
+          </Menu.Item>
+          <Menu.Item>
+            <span className={pf('icon__container icon-standard-email m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+              <span className={pf('assistive-text')}>Email Icon</span>
+            </span>
+            New Email
+          </Menu.Item>
         </Menu.List>
       </Menu>
     </div>

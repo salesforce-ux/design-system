@@ -81,7 +81,7 @@ module.exports = (
 
         {/* Composer Footer */}
         <div className={pf('docked-composer__footer shrink-none grid')}>
-          <Button flavor="brand" className={pf('size--1-of-1')}>End Call</Button>
+          <Button flavor="destructive" className={pf('size--1-of-1')}>End Call</Button>
         </div>
       </div>
 

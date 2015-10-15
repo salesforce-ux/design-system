@@ -36,7 +36,7 @@ const recordIcon = (
     className={pf('icon-record')}
     sprite="utility"
     symbol="record"
-    assistiveText="Stop Recording" />
+    assistiveText="Recording" />
 );
 
 module.exports = (
@@ -48,7 +48,7 @@ module.exports = (
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon} flavor="center">
-            Lei Chan - Connected
+            Lei Chan
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -82,13 +82,12 @@ module.exports = (
                 <li className={pf('list__item ')}>Acme Corporation</li>
               </ul>
             </MediaObject>
-            <MediaObject figureLeft={recordIcon} flavor="center">
-              <p className={pf('text-heading--large')}>5:37</p>
-            </MediaObject>
+
           </div>
           <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
             <ButtonIcon
               flavor="icon-border-filled,icon-small"
+              disabled="true"
               sprite="utility"
               symbol="unmuted"
               assistiveText="Mute Yourself" />
@@ -99,7 +98,7 @@ module.exports = (
         {/* Composer Footer */}
         <div className={pf('docked-composer__footer shrink-none')}>
           <div className={pf('float--right')}>
-            <Button flavor="destructive">End Call</Button>
+            <Button flavor="brand">Finish Notes</Button>
           </div>
         </div>
       </div>

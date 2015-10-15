@@ -104,12 +104,6 @@ class DropdownItem extends React.Component {
     return this.context.hasFilter ? this.context.filterWith(this.context.searchTerm, this) : true;
   }
 
-  iconClassName() {
-    if(hasChild(this.props.children, 'SvgIcon')) {
-      return `${cssPrefix}has-icon--left-right`;
-    }
-  }
-
   boldSearchText(children) {
     const term = this.context.searchTerm;
     if(!children || !term) return children;
@@ -135,19 +129,19 @@ class DropdownItem extends React.Component {
   }
 
   renderItem() {
-    const className = this.$getClassName(`${cssPrefix}dropdown__item`, this.iconClassName(), {
-      [`${cssPrefix}is-selected`]: this.isSelected(),
-      [`${cssPrefix}has-icon--left`]: this.context.isSelectable
+    const className = this.$getClassName(`${cssPrefix}dropdown__item`, {
+      [`${cssPrefix}is-selected`]: this.isSelected()
     });
     const aRole = this.context.isSelectable ? 'menuitemradio' : 'menuitem';
 
     return (
         <li id={this.id} onClick={this.selectedItem.bind(this)} { ...this.props }
             className={className} onFocus={this.itemFocused.bind(this)}>
-          <a href={ this.props.href } aria-disabled={ this.props.disabled }
+          <a href="javascript:void(0)" aria-disabled={ this.props.disabled }
               className={pf('truncate')} role={aRole}>
-            { this.isSelected() ? <SvgIcon className={pf('icon icon--small icon--left')} sprite="standard" symbol="task2" /> : null }
-            { this.boldSearchText(this.props.children) }
+            <p>
+            { this.context.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }
+            { this.boldSearchText(this.props.children) }</p>
           </a>
         </li>
       );

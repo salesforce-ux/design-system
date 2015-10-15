@@ -21,11 +21,11 @@ module.exports = (
     <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
     <Menu className={pf('dropdown--left text-heading--label')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Account Functions</Menu.Item>
-        <Menu.Item href="#">Agreements</Menu.Item>
-        <Menu.Item href="#">Approval Matrix</Menu.Item>
-        <Menu.Item href="#">Approvals</Menu.Item>
-        <Menu.Item href="#">Approval Requests</Menu.Item>
+        <Menu.Item>Account Functions</Menu.Item>
+        <Menu.Item>Agreements</Menu.Item>
+        <Menu.Item>Approval Matrix</Menu.Item>
+        <Menu.Item>Approvals</Menu.Item>
+        <Menu.Item>Approval Requests</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

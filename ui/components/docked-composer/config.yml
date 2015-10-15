@@ -4,7 +4,7 @@ flavors:
   - base
   - call-dialing
   - call-connected
-  - call-voicemail
+  - call-finished
   - overflow-menu
 dependencies:
   - core/icons

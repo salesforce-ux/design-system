@@ -13,8 +13,8 @@
 - Added notifications in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
 - Added new button variant: `.slds-button--destroy`
-- Abstracted form states into own mixins
-- Abstracted feed vertical rule into own mixin
+- Abstracted form states into own mixins (SASS Framework related)
+- Abstracted feed vertical rule into own mixin (SASS Framework related)
 - Bug fixes:
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
   - :hover, :focus state added for `.slds-button--icon-bare`

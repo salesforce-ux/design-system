@@ -69,7 +69,7 @@ window.LIGHTNING_DESIGN_SYSTEM = {
         // Strategies that will be used to track preferences
         let strategies = [LocalStorageStrategy()];
         // Only use the URL strategy for internal users
-        if (!this.isExternalUser()) {
+        if (process.env.DEFAULT_USER_TYPE === 'internal') {
           strategies.push(UrlPrefsStrategy());
         }
         Prefs.setStrategies(strategies);
@@ -127,11 +127,7 @@ window.LIGHTNING_DESIGN_SYSTEM = {
    */
   userType: function() {
     // DEFAULT_USER_TYPE is provided by webpack in "compile.js"
-    return DEFAULT_USER_TYPE;
-  },
-
-  isExternalUser: function(){
-    return this.userType() === 'external';
+    return process.env.DEFAULT_USER_TYPE;
   },
 
   isMobile: function() {

@@ -13,10 +13,6 @@ import _ from 'lodash';
 import { EventEmitter } from 'events';
 import { DefaultsStrategy } from './strategies';
 import PrefsDefaults from './defaults';
-import minimist from 'minimist';
-
-const argv = minimist(process.argv.slice(2));
-const isInternal = argv.internal === true;
 
 const emitter = new EventEmitter();
 emitter.setMaxListeners(20);
@@ -42,7 +38,9 @@ const statuses = [
 /**
  * Default set of preferences before the browser loads
  */
-let prefs = isInternal ? PrefsDefaults.internal : PrefsDefaults.external;
+let prefs = process.env.DEFAULT_USER_TYPE === 'internal'
+  ? PrefsDefaults.internal
+  : PrefsDefaults.external;
 
 /**
  * Default strategy before the browser loads

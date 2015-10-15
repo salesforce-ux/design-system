@@ -55,6 +55,7 @@ const commentReply = (
 
 exports.preview = (
 <div className='demo-only'>
+
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small')}>To: </dt>

@@ -29,4 +29,15 @@ classes:
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: Only required if you have content attachment enabled
-
+  -
+    class: is-active
+    description: Opens publisher container to display additional functionality
+    applied: <code>.{{cssPrefix}}publisher</code>
+    required: true
+    notes: Added through Javascript
+  -
+    class: has-focus
+    description: Applies focus to comment publisher container when inside <code>textarea</code>
+    applied: <code>.{{cssPrefix}}publisher</code>
+    required: true
+    notes: Added through Javascript

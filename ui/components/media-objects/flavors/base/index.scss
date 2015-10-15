@@ -24,7 +24,7 @@
   }
 
   &__body,
-  &__body :last-child { // @TODO: Watch this - overreaching?
+  &__body > :last-child { // @TODO: Watch this - overreaching?
     margin-bottom: 0;
   }
 }

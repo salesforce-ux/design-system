@@ -207,3 +207,17 @@ body {
 .demo-visibility [class*="-hide"] {
   opacity: .5;
 }
+
+.demo-class-pill {
+  border-top: $border-width-thin solid $color-border;
+  margin: {
+    top: $spacing-large;
+    bottom: $spacing-large;
+  }
+
+  &__content {
+    display: inline-block;
+    background: $color-background-alt-2;
+    padding: 0 $spacing-x-small;
+  }
+}

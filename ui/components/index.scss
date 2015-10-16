@@ -98,7 +98,19 @@
   "docked-composer/flavors/base/index",
   "docked-composer/flavors/overflow-menu/index",
 
-  // Modal
+  // Publishers
+  "publishers/flavors/discussion-feed/index",
+  "publishers/flavors/comment/index",
+
+  // Discussion Feed
+  "feeds/flavors/discussion-feed/index",
+  "feeds/flavors/comment-base/index",
+  "feeds/flavors/comment-minimal/index",
+  "feeds/flavors/comment-with-replies/index",
+  "feeds/flavors/comment-with-overflow/index",
+  "feeds/flavors/comment-with-attachments/index",
+
+ // Modal
   "modals/flavors/base/index",
   "modals/flavors/large/index",
   "modals/flavors/directional/index",

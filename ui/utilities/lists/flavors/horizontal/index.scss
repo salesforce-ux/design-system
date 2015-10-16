@@ -10,30 +10,7 @@
 
 
 .#{$css-prefix}list--horizontal {
-  display: flex;
-  flex-direction: column;
-
-  > .#{$css-prefix}list__item {
-
-    > a {
-      padding: 0 $spacing-x-small;
-      display: block;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-
-  @include mq-medium-min {
-    flex-direction: row;
-  }
-
-  > .#{$css-prefix}list__item {
-    display: inline-block; /* older browsers */
-    vertical-align: middle;  /* older browsers */
-  }
+  @include align-horizontal('.#{$css-prefix}list__item', true);
 }
 
 .#{$css-prefix}list--horizontal-large {

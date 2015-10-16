@@ -9,6 +9,7 @@ components:
   - datepickers
   - dropdowns
   - docked-composer
+  - feeds
   - forms
   - grid-system
   - icons
@@ -21,6 +22,7 @@ components:
   - picklists
   - pills
   - popovers
+  - publishers
   - spinners
   - tabs
   - tiles

@@ -40,7 +40,7 @@ module.exports = (
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon} flavor="center">
-            Lei Chan - Dialing...
+            Lei Chan
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon

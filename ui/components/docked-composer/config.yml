@@ -5,6 +5,8 @@ flavors:
   - call-dialing
   - call-connected
   - call-finished
+  - email
+  - email-modal
   - overflow-menu
 dependencies:
   - core/icons

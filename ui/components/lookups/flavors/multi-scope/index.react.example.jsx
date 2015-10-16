@@ -23,7 +23,7 @@ module.exports = (
   <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
 
     <div className={pf('form-element')}>
-      <div className={pf('grid form-element__control')}>
+      <div className={pf('grid form-element__control box--border')}>
         <label className={pf('form-element__label text-align--right')} htmlFor="lookup">
           <p className={pf('truncate align-middle')}>Contacts</p>
         </label>

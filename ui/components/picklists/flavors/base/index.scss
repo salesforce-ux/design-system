@@ -39,4 +39,16 @@
   .#{$css-prefix}truncate {
     display: block;
   }
+
+  &--small {
+    min-width: auto;
+    padding: {
+      left: $spacing-x-small;
+      right: $spacing-large;
+    }
+
+    .#{$css-prefix}icon {
+      right: $spacing-xx-small;
+    }
+  }
 }

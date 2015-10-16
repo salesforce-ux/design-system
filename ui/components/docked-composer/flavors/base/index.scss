@@ -36,11 +36,6 @@
     background: $color-background-alt-inverse;
     padding: $spacing-x-small;
     color: $color-text-inverse;
-
-    .#{$css-prefix}icon__container {
-      @include square($square-icon-small-boundary);
-      text-align: center;
-    }
   }
 
   &__actions .#{$css-prefix}button {

@@ -42,7 +42,6 @@
   }
 
   .#{$css-prefix}form-element__control {
-    @include form-states;
     @include flex-wrap(true);
     display: flex;
 

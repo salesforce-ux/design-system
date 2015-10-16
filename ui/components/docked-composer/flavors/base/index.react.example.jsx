@@ -19,8 +19,8 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 const dialingIcon = (
-  <span className={pf('icon__container icon-action-call')}>
-    <SvgIcon className={pf('icon icon--x-small')} sprite="action" symbol="call" />
+  <span className={pf('icon__container icon-standard-call')}>
+    <SvgIcon className={pf('icon icon--x-small')} sprite="standard" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
@@ -72,15 +72,16 @@ module.exports = (
         {/* Composer Footer */}
         <div className={pf('docked-composer__footer shrink-none')}>
 
-          <div className={pf('float--right')}>
+          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <ButtonIcon
-                flavor="icon-container"
+                flavor="icon-small"
                 sprite="utility"
                 symbol="delete"
                 assistiveText="Delete" />
             <Button flavor="brand">Action</Button>
           </div>
-          <div>
+
+          <div className={pf('float--left size--1-of-2')}>
             <ButtonIcon
               flavor="icon-container"
               sprite="utility"

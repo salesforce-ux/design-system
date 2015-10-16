@@ -18,103 +18,201 @@ const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-const dialingIcon = (
-  <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-call icon--x-small')} sprite="utility" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
-);
-const image = (
-  <span className={pf('avatar avatar--circle avatar--medium')}>
-    <img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
-  </span>
-);
-const recordIcon = (
-  <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+const headerIcon = (
+  <span className={pf('icon__container icon-standard-email')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+    <span className={pf('assistive-text')}>Email Icon</span>
   </span>
 );
 
 module.exports = (
   <div className='demo-only'>
     {/*<div className={pf('docked-container')}>*/}
-      <div className={pf('docked grid grid--vertical nowrap is-open')}>
 
-        <div className={pf('docked-composer')}>
-          <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
-            <MediaObject figureLeft={dialingIcon}>
-              Lei Chan - Connected
-            </MediaObject>
-            <div className={pf('docked-composer__actions')}>
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="dash"
-                assistiveText="Minimize window" />
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="new_window"
-                assistiveText="Open in window" />
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="close"
-                assistiveText="Close" />
-            </div>
-          </div>
-          <div className={pf('docked-composer__body grow grid grid--vertical nowrap')}>
-            <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
-              <MediaObject figureLeft={image}>
-                <p className={pf('text-heading--medium')}>Lei Chan</p>
-                <p>Connected</p>
-              </MediaObject>
-              <MediaObject figureLeft={recordIcon} flavor="center">
-                <p className={pf('text-heading--large')}>5:37</p>
-              </MediaObject>
-            </div>
-            <div className={pf('docked-composer__contacts grid grid--align-spread')}>
-              <div className={pf('pill-container')}>
-                <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Lei Chan</a>
-                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-                </span>
-                <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Tesla Motors</a>
-                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-                </span>
-              </div>
-              <ButtonIcon
-                className={pf('shrink-none')}
-                flavor="icon-container"
-                sprite="utility"
-                symbol="add"
-                assistiveText="Add user" />
-            </div>
-            <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
-          </div>
-          <div className={pf('docked-composer__footer shrink-none grid grid--align-spread')}>
-            <div>
-              <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
-                symbol="chat"
-                assistiveText="Chat" />
-              <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
-                symbol="settings"
-                assistiveText="Settings" />
-            </div>
-            <Button flavor="brand">Call</Button>
+      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+
+        {/* Composer Header */}
+        <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+          <MediaObject figureLeft={headerIcon} flavor="center">
+            New Email
+          </MediaObject>
+          <div className={pf('docked-composer__actions')}>
+            <ButtonIcon
+              flavor="icon-bare"
+              iconFlavor="inverse"
+              sprite="utility"
+              symbol="minimize_window"
+              assistiveText="Minimize window" />
+            <ButtonIcon
+              flavor="icon-bare"
+              iconFlavor="inverse"
+              sprite="utility"
+              symbol="expand_alt"
+              assistiveText="Expand Composer" />
+            <ButtonIcon
+              flavor="icon-bare"
+              iconFlavor="inverse"
+              sprite="utility"
+              symbol="close"
+              assistiveText="Close" />
           </div>
         </div>
 
+        {/* Composer Body */}
+        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap size--1-of-1')}>
+          <div className={pf('grid grid--align-spread')}>
+            <div className={pf('grid grow p-horizontal--small')}>
+              <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerTo">To</label>
+              <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
+              <div className={pf('pill-container show')}>
+                <span className={pf('pill')}>
+                  <a href="#" className={pf('pill__label')}>
+                    <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
+                    Lei Chan
+                  </a>
+                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+                </span>
+              </div>
+            </div>
+            <div className={pf('grid shrink-none p-horizontal--small')}>
+              <Button>Cc</Button>
+              <Button>Bcc</Button>
+            </div>
+          </div>
+          <div className={pf('grid p-horizontal--small hide')}>
+            <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerCc">Cc</label>
+            <input className={pf('input--bare input--height show')} id="emailComposerCc" type="text" />
+            <div className={pf('pill-container hide')}></div>
+          </div>
+          <div className={pf('grid p-horizontal--small hide')}>
+            <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerBcc">Bcc</label>
+            <input className={pf('input--bare input--height show')} id="emailComposerBcc" type="text" />
+            <div className={pf('pill-container hide')}></div>
+          </div>
+
+          {/* Subject Line */}
+          <input className={pf('input')} placeholder="Enter Subject" />
+
+          {/* Toolbar */}
+          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
+            <div className={pf('grid')}>
+              <div className={pf('button-group picklist shrink-none')}>
+                <button className={pf('button button--neutral picklist__label picklist__label--small')}>
+                  Font <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
+                </button>
+              </div>
+              <div className={pf('button-group picklist shrink-none')}>
+                <button className={pf('button button--neutral picklist__label picklist__label--small')}>
+                  14 <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
+                </button>
+              </div>
+              <div className={pf('button-group')} role="group">
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="bold"
+                  assistiveText="Bold" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="italic"
+                  assistiveText="Italic" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="underline"
+                  assistiveText="Underline" />
+              </div>
+              <div className={pf('button-group')} role="group">
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="richtextnumberedlist"
+                  assistiveText="Numbered List" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="richtextbulletedlist"
+                  assistiveText="Bulleted List" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="left_align_text"
+                  assistiveText="Left Align Text" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="center_align_text"
+                  assistiveText="Center Align Text" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="right_align_text"
+                  assistiveText="Right Align Text" />
+                <ButtonIcon
+                  flavor="icon-border-filled"
+                  sprite="utility"
+                  symbol="link"
+                  assistiveText="Link" />
+              </div>
+            </div>
+          </div>
+          <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+        </div>
+
+        {/* Composer Footer */}
+        <div className={pf('docked-composer__footer shrink-none')}>
+
+          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
+            <ButtonIcon
+                flavor="icon-small"
+                sprite="utility"
+                symbol="link"
+                assistiveText="Attach File" />
+            <ButtonIcon
+                flavor="icon-small"
+                sprite="utility"
+                symbol="insert_template"
+                assistiveText="Insert Template" />
+            <ButtonIcon
+                flavor="icon-small"
+                sprite="utility"
+                symbol="insert_tag_field"
+                assistiveText="Insert HTML" />
+            <ButtonIcon
+                flavor="icon-small"
+                sprite="utility"
+                symbol="preview"
+                assistiveText="Preview" />
+            <ButtonIcon
+                flavor="icon-small"
+                sprite="utility"
+                symbol="delete"
+                assistiveText="Delete" />
+            <Button flavor="brand">Send</Button>
+          </div>
+
+          <div className={pf('float--left size--1-of-2')}>
+            <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="true">
+              <div className={pf('form-element')}>
+                <div className={pf('grid form-element__control')}>
+                  {/*<label className={pf('form-element__label text-align--right')} htmlFor="lookup">
+                    <p className={pf('truncate align-middle')}>Related Item</p>
+                  </label>*/}
+                  <div className={pf('dropdown-trigger align-middle')}>
+                    <SvgIcon className={pf('icon icon-standard-user icon--small shrink-none')} sprite="standard" symbol="user" />
+                    <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="down" assistiveText="Filter" />
+                  </div>
+                  <input id="lookup" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Add Related Object" />
+                </div>
+                <div className={pf('pill-container hide')}></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
     {/*</div>*/}
   </div>
 );

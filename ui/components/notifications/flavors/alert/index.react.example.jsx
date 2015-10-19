@@ -22,7 +22,7 @@ exports.preview = (
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -33,7 +33,7 @@ exports.preview = (
     <div className={pf('notify notify--alert theme--success theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -47,7 +47,7 @@ exports.preview = (
     <div className={pf('notify notify--alert theme--error theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -61,7 +61,7 @@ exports.preview = (
     <div className={pf('notify notify--alert theme--offline theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -81,7 +81,7 @@ exports.code = (
     <span className={pf('assistive-text')}>Info</span>
     <ButtonIcon
       className={pf('close icon--small')}
-      iconFlavor="inverse"
+      flavor="icon-inverse"
       sprite="action"
       symbol="close"
       assistiveText="Close" />

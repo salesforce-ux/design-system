@@ -22,7 +22,7 @@ module.exports = (
     <span className={pf('assistive-text')}>Info</span>
     <ButtonIcon
       className={pf('notify__close')}
-      iconFlavor="inverse"
+      flavor="icon-inverse"
       sprite="action"
       symbol="close"
       assistiveText="Close" />
@@ -36,7 +36,7 @@ module.exports = (
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse"
+        flavor="icon-inverse"
         sprite="action"
         symbol="close"
         assistiveText="Close" />

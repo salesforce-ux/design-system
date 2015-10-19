@@ -23,7 +23,8 @@ exports.preview = (
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse,large"
+        iconFlavor="large"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -38,7 +39,8 @@ exports.preview = (
       <span className={pf('assistive-text')}>Success</span>
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse,large"
+        iconFlavor="large"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -69,7 +71,8 @@ exports.preview = (
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse,large"
+        iconFlavor="large"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />
@@ -86,7 +89,8 @@ exports.preview = (
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
         className={pf('notify__close')}
-        iconFlavor="inverse,large"
+        iconFlavor="large"
+        flavor="icon-inverse"
         sprite="utility"
         symbol="close"
         assistiveText="Close" />

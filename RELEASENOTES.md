@@ -5,8 +5,9 @@
 
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
 - Updated Voice and Tone guidelines
-- ***BIG CHANGE***
+- ***BREAKING CHANGE***
   - Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
+  - Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
 - Added new button variant: `.slds-button--destructive

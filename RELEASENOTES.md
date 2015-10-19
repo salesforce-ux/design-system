@@ -16,6 +16,7 @@
 - Removed max-width (960px) from Modals > Large
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
+- Changed picklist label and selection list to fixed width. Applied a 5 option max-height with overflow on list.
 
 - ***BUG FIXES***
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center

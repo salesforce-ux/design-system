@@ -5,25 +5,32 @@
 
 - Upgraded @salesforce-ux/design-tokens to 1.3.0
 - Updated Voice and Tone guidelines
-- ***BIG CHANGE***
+
+- ***BREAKING CHANGES***
   - Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
+  - Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
+
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
 - Added new button variant: `.slds-button--destructive
 - Removed max-width (960px) from Modals > Large
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
-- Abstracted form states into own mixins (SASS Framework related)
-- Abstracted feed vertical rule into own mixin (SASS Framework related)
-- Bug fixes:
+
+- ***BUG FIXES***
   - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
   - :hover, :focus state added for `.slds-button--icon-bare`
   - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
   - Added `overflow: auto;` to the options container for a Multi Select picklist
+
 - ***NEW***
   - Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
   - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
   - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
+  
+- ***SASS UPDATES***
+  - Abstracted form states into own mixins
+  - Abstracted feed vertical rule into own mixin
 
 ## Site Update - October 5th, 2015
 

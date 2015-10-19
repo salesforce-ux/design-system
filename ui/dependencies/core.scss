@@ -94,14 +94,15 @@
 
 
   a {
+    color: $color-text-link;
     text-decoration: none;
     transition: color .1s linear;
 
 
-    &:link,
-    &:visited {
-      color: $color-text-link;
-    }
+    // &:link,
+    // &:visited {
+    //   color: $color-text-link;
+    // }
 
     &:hover,
     &:focus {

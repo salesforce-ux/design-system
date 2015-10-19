@@ -38,11 +38,6 @@
     text-decoration: none;
   }
 
-  &:link,
-  &:visited {
-    color: $color-text-link;
-  }
-
   &:hover,
   &:focus {
     color: $color-text-link-hover;

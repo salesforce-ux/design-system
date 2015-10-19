@@ -76,7 +76,8 @@ class ModalHeader extends React.Component {
         { this.props.closeButton ?
             <ButtonIcon
               onClick={this.context.onRequestClose}
-              iconFlavor="inverse,large"
+              flavor="icon-inverse"
+              iconFlavor="large"
               className={pf('modal__close')}
               sprite="action"
               symbol="close"

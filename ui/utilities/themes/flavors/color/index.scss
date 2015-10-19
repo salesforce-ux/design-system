@@ -37,6 +37,10 @@
   &--warning {
     background-color: $color-background-warning;
     color: $color-text-default;
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-icon-default;
+    }
   }
 
   &--error {

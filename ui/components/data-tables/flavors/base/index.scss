@@ -139,7 +139,7 @@
   }
 
   .#{$css-prefix}button__icon {
-    fill: $color-text-link;
+    fill: $color-text-link; /* This - can we fix it? */
   }
 
   &:hover {

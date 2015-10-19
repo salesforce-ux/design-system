@@ -47,7 +47,7 @@ Component.propTypes = {
   flavor: componentUtil.PropTypes.flavor(
     'icon-container', 'icon-border', 'icon-small',
     'icon-bare', 'icon-inverse', 'icon-x-small',
-    'icon-border-filled'
+    'icon-border-filled', 'icon-inverse'
   ),
   iconFlavor: componentUtil.PropTypes.flavor(
     'inverse', 'hint', 'small', 'x-small', 'large'

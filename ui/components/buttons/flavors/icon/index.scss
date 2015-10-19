@@ -12,8 +12,10 @@
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled,
-.#{$css-prefix}button--icon-bare {
+.#{$css-prefix}button--icon-bare,
+.#{$css-prefix}button--icon-more {
   vertical-align: middle;
+  color: $color-text-icon-default;
 }
 
 .#{$css-prefix}button--icon-bare {
@@ -62,7 +64,7 @@
 
 .#{$css-prefix}button__icon { // This is the icon inside the button--icon button
   @include square($square-icon-medium-content);
-  fill: $color-text-icon-default;
+    fill: currentColor;
 
   &--large { // Usually used for the large close button
     @include square($square-icon-utility-large);

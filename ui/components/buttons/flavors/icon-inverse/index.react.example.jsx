@@ -17,13 +17,13 @@ const pf = componentUtil.prefix;
 module.exports = (
   <div className='demo-only demo--inverse'>
     <ButtonIcon
-      iconFlavor="inverse"
+      flavor="icon-inverse"
       sprite="action"
       symbol="close"
       assistiveText="close" />
     <ButtonIcon
       disabled="true"
-      iconFlavor="inverse"
+      flavor="icon-inverse"
       sprite="action"
       symbol="close"
       assistiveText="close" />

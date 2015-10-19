@@ -24,7 +24,7 @@
   - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
   - Added `overflow: auto;` to the options container for a Multi Select picklist
 
-- ***NEW***
+- ***NEW COMPONENTS***
   - Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
   - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
   - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)

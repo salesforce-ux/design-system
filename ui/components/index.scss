@@ -94,6 +94,18 @@
   "datepickers/flavors/multi-select/index",
   "datepickers/flavors/time/index",
 
+  // Publishers
+  "publishers/flavors/discussion-feed/index",
+  "publishers/flavors/comment/index",
+
+  // Discussion Feed
+  "feeds/flavors/discussion-feed/index",
+  "feeds/flavors/comment-base/index",
+  "feeds/flavors/comment-minimal/index",
+  "feeds/flavors/comment-with-replies/index",
+  "feeds/flavors/comment-with-overflow/index",
+  "feeds/flavors/comment-with-attachments/index",
+
  // Modal
   "modals/flavors/base/index",
   "modals/flavors/large/index",
@@ -129,6 +141,7 @@
   "notifications/flavors/base/index",
   "notifications/flavors/alert/index",
   "notifications/flavors/toast/index",
+  "notifications/flavors/modal/index",
 
   // Lookup
   "lookups/flavors/base/index",

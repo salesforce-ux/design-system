@@ -51,7 +51,7 @@ class Overview extends React.Component {
         <h2 className={pf('site-text-heading--medium m-bottom--xx-large')}>
           Create the world’s best enterprise app experiences.
         </h2>
-        <IfPrefs role="regular">
+        <IfPrefs userType="external">
           <p className={pf('site-cta-buttons m-bottom--medium')}>
              <CTALink href="/getting-started" className={pf('button button--neutral site-cta-tutorial')}
               ctaEventName='tutorials-top'>Read Tutorials</CTALink> <CTALink href="/resources/downloads"
@@ -129,7 +129,7 @@ class Overview extends React.Component {
         </ul>
       </section>
       {/* Resources */}
-      <IfPrefs role="regular">
+      <IfPrefs userType="external">
         <footer className={pf('site-resources--landing p-vertical--xx-large')}>
           <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
             <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>

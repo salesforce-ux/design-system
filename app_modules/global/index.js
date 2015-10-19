@@ -39,16 +39,5 @@ export default {
   },
   downloadPath: function(version) {
     return '/assets/downloads/' + this.zipName(version);
-  },
-
-  /**
-   * Determines internal/external user based on cookie.
-   *
-   * @returns {string|false} 'internal' or 'external'
-   */
-  userType(cookie) {
-    const matches = cookie.match(/usertype=(\w+)/);
-    return matches && matches[1];
   }
-
 };

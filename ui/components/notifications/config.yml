@@ -4,6 +4,7 @@ flavors:
   - base
   - alert
   - toast
+  - modal
 dependencies:
   - components/buttons
   - components/buttons/flavors/icon

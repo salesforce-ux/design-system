@@ -26,7 +26,7 @@ module.exports = (
         <th className={pf('is-sortable')} scope="col">
           <span className={pf('truncate')}>Opportunity Name</span>
           <ButtonIcon
-            flavor="icon-bare,icon-x-small"
+            flavor="icon-bare"
             iconFlavor="small"
             sprite="utility"
             symbol="arrowdown"

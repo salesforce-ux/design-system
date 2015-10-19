@@ -139,7 +139,7 @@
   }
 
   .#{$css-prefix}button__icon {
-    fill: $color-text-link; /* This - can we fix it? */
+    fill: $color-text-link;
   }
 
   &:hover {
@@ -148,10 +148,6 @@
 
     .#{$css-prefix}button {
       visibility: visible;
-    }
-
-    .#{$css-prefix}button__icon {
-      fill: $color-text-link;
     }
   }
 }

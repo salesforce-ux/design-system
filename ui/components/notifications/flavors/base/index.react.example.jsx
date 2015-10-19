@@ -37,6 +37,7 @@ module.exports = (
       <ButtonIcon
         className={pf('notify__close')}
         flavor="icon-inverse"
+        iconFlavor="large"
         sprite="action"
         symbol="close"
         assistiveText="Close" />

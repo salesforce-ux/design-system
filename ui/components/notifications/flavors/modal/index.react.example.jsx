@@ -49,7 +49,8 @@ class ModalExample extends React.Component {
                 <span className={pf('assistive-text')}>Error</span>
                 <ButtonIcon
                   className={pf('notify__close')}
-                  iconFlavor="inverse,large"
+                  iconFlavor="large"
+                  flavor="icon-inverse"
                   sprite="utility"
                   symbol="close"
                   assistiveText="Close" />

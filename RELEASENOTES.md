@@ -5,7 +5,7 @@
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
-- Added new button variant: `.slds-button--destructive
+- Added new button variant: `.slds-button--destructive`
 - Removed max-width (960px) from Modals > Large
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)

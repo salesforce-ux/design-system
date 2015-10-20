@@ -214,33 +214,6 @@
   }
 }
 
-@mixin form-non-input-error($element: null) {
-  @if $element != null {
-
-    #{$element}--faux {
-      border-color: $color-border-error;
-      border-width: $border-width-thick;
-    }
-
-    #{$element}:checked ~ #{$element}--faux {
-      border-color: $color-border-error;
-      background-color: $color-background-input;
-    }
-
-    #{$element}:checked ~ #{$element}--faux:after {
-      border-color: $color-background-error;
-    }
-
-
-    // .#{$css-prefix}is-required > & ~ .#{$css-prefix}checkbox--faux:after {
-    //   content: '*';
-    //   color: $color-text-error;
-    //   position: absolute;
-    //   left: ($spacing-x-small * -1);
-    // }
-  }
-}
-
 @mixin form-states {
   @include form-input-container;
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
@@ -254,10 +227,6 @@
   &.#{$css-prefix}is-disabled {
     @include form-input-disabled;
   }
-
-  // .#{$css-prefix}has-error & {
-  //   @include form-input-error;
-  // }
 }
 
 

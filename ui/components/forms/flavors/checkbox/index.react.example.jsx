@@ -14,7 +14,60 @@ const Checkbox = require('ui/components/forms/flavors/checkbox/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
+exports.preview = (
+<div className={pf('demo-only form--stacked')}>
+
+  <div className={pf('form-element')}>
+    <Checkbox label="Checkbox Default" assistiveText="checkboxSample1" />
+  </div>
+
+  <div className={pf('form-element')}>
+    <label className={pf('checkbox')} htmlFor="checkboxSample2">
+      <input name="checkboxSample2" type="checkbox" id="checkboxSample2" checked />
+      <span className={pf('checkbox--faux')}></span>
+      <span className={pf('form-element__label')}>Checkbox Checked</span>
+    </label>
+  </div>
+
+  <div className={pf('form-element is-required')}>
+    <Checkbox label="Checkbox Required" assistiveText="checkboxSample3" />
+  </div>
+
+  <div className={pf('form-element has-error')}>
+    <Checkbox label="Checkbox Error" assistiveText="checkboxSample4" />
+  </div>
+
+  <div className={pf('form-element has-error')}>
+    <label className={pf('checkbox')} htmlFor="checkboxSample5">
+      <input name="checkboxSample5" type="checkbox" id="checkboxSample5" checked />
+      <span className={pf('checkbox--faux')}></span>
+      <span className={pf('form-element__label')}>Checkbox Error Checked</span>
+    </label>
+  </div>
+
+  <div className={pf('form-element is-required has-error')}>
+    <Checkbox label="Checkbox Error Required" assistiveText="checkboxSample6" />
+  </div>
+
+  <fieldset className={pf('form-element')}>
+    <span className={pf('form-element__label form-element__label--top')}><legend>Checkbox Group</legend></span>
+    <div className={pf('form-element__control')}>
+      <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership1" />
+      <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership2" />
+    </div>
+  </fieldset>
+
+  <fieldset className={pf('form-element is-required')}>
+    <span className={pf('form-element__label form-element__label--top')}><legend>Checkbox Group Required</legend></span>
+    <div className={pf('form-element__control')}>
+      <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership3" />
+      <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership4" />
+    </div>
+  </fieldset>
+</div>
+);
+
+exports.code = (
 <div className='demo-only'>
   <div className={pf('form-element')}>
     <Checkbox label="Checkbox Label" assistiveText="checkboxSample1" />

@@ -38,10 +38,6 @@
     padding: 0;
     position: absolute;
 
-    .#{$css-prefix}form-element & ~ .#{$css-prefix}checkbox--faux {
-      margin-right: $spacing-x-small;
-    }
-
     &:checked ~ .#{$css-prefix}checkbox--faux {
 
       &:after {
@@ -83,29 +79,30 @@
         border-color: $color-background-input;
       }
     }
-
-    .#{$css-prefix}has-error & {
-
-      ~ .#{$css-prefix}checkbox--faux {
-          border-color: $color-border-error;
-          border-width: $border-width-thick;
-      }
-
-      &:checked ~ .#{$css-prefix}checkbox--faux {
-        border-color: $color-border-error;
-        background-color: $color-background-input;
-      }
-
-      &:checked ~ .#{$css-prefix}checkbox--faux:after {
-        border-color: $color-background-error;
-      }
-    }
-
-    .#{$css-prefix}is-required > & ~ .#{$css-prefix}checkbox--faux:after {
-      content: '*';
-      color: $color-text-error;
-      position: absolute;
-      left: ($spacing-x-small * -1);
-    }
   }
+}
+
+.#{$css-prefix}has-error .#{$css-prefix}checkbox [type="checkbox"] {
+  ~ .#{$css-prefix}checkbox--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+  &:checked ~ .#{$css-prefix}checkbox--faux {
+    border-color: $color-border-error;
+    background-color: $color-background-input;
+  }
+  &:checked ~ .#{$css-prefix}checkbox--faux:after {
+    border-color: $color-background-error;
+  }
+}
+
+.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before {
+  content: '*';
+  color: $color-text-error;
+  position: absolute;
+  left: ($spacing-x-small * -1);
+}
+
+.#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux {
+  margin-right: $spacing-x-small;
 }

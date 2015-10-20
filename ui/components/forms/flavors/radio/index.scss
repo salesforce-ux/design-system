@@ -38,10 +38,6 @@
     padding: 0;
     position: absolute;
 
-    .#{$css-prefix}form-element & ~ .#{$css-prefix}radio--faux {
-      margin-right: $spacing-x-small;
-    }
-
     &:checked ~ .#{$css-prefix}radio--faux {
       background: $color-background-input;
 
@@ -71,32 +67,33 @@
         border-color: $color-border-input-disabled;
       }
     }
-
-    .#{$css-prefix}has-error & {
-
-      ~ .#{$css-prefix}radio--faux {
-          border-color: $color-border-error;
-          border-width: $border-width-thick;
-      }
-
-      &:checked ~ .#{$css-prefix}radio--faux {
-        background: $color-background-input;
-      }
-
-      &:checked ~ .#{$css-prefix}radio--faux:after {
-        background: $color-background-error;
-      }
-    }
-
-    .#{$css-prefix}is-required > & ~ .#{$css-prefix}radio--faux:after {
-      content: '*';
-      color: $color-text-error;
-      position: absolute;
-      left: ($spacing-x-small * -1);
-    }
   }
+}
+
+.#{$css-prefix}has-error .#{$css-prefix}radio [type="radio"] {
+  ~ .#{$css-prefix}radio--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+  &:checked ~ .#{$css-prefix}radio--faux {
+    background: $color-background-input;
+  }
+  &:checked ~ .#{$css-prefix}radio--faux:after {
+    background: $color-background-error;
+  }
+}
+
+.#{$css-prefix}is-required > .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}form-element__label:before {
+  content: '*';
+  color: $color-text-error;
+  position: absolute;
+  left: ($spacing-x-small * -1);
 }
 
 .#{$css-prefix}form-element__control .#{$css-prefix}radio {
   display: block;
+}
+
+.#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}radio--faux {
+  margin-right: $spacing-x-small;
 }

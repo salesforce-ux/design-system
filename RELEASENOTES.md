@@ -1,14 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.9.3 - October XXX, 2015
-
-- Upgraded @salesforce-ux/design-tokens to 1.3.0
-- Updated Voice and Tone guidelines
-
-- ***BREAKING CHANGES***
-  - Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
-  - Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
+## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
 - Updated `.slds-button--icon-*` demo and fixed class name typo
@@ -17,21 +10,32 @@
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
 - Changed picklist label and selection list to fixed width. Applied a 5 option max-height with overflow on list.
+- Upgraded `@salesforce-ux/design-tokens` to 1.3.0
+- `@salesforce-ux/design-system` package now includes */assets/icons* and */assets/images*
 
-- ***BUG FIXES***
-  - `.slds-button--icon-*` can be placed on an `a` and aligns to the center
-  - :hover, :focus state added for `.slds-button--icon-bare`
-  - fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
-  - Added `overflow: auto;` to the options container for a Multi Select picklist
+**BREAKING CHANGES**
+- Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
+- Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
 
-- ***NEW COMPONENTS***
-  - Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
-  - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
-  - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
+**BUG FIXES**
+- `.slds-button--icon-*` can be placed on an `a` and aligns to the center
+- :hover, :focus state added for `.slds-button--icon-bare`
+- fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
+- Added `overflow: auto;` to the options container for a Multi Select picklist
+
+**NEW COMPONENTS**
+- Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
+- Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
+- Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
   
-- ***SASS UPDATES***
-  - Abstracted form states into own mixins
-  - Abstracted feed vertical rule into own mixin
+**SASS UPDATES**
+- Abstracted form states into own mixins
+- Abstracted feed vertical rule into own mixin
+
+## Site Update - October 20, 2015
+
+- Fixed issues when installing with NPM 3
+- Updated Voice and Tone guidelines
 
 ## Site Update - October 5th, 2015
 

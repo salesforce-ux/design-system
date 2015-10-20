@@ -38,6 +38,7 @@
     padding: 0;
     position: absolute;
 
+    &:checked > .#{$css-prefix}checkbox--faux
     &:checked ~ .#{$css-prefix}checkbox--faux {
 
       &:after {
@@ -56,12 +57,14 @@
 
     &:focus {
 
+      > .#{$css-prefix}checkbox--faux,
       ~ .#{$css-prefix}checkbox--faux {
         content: '';
         border-color: $color-border-input-active;
         box-shadow: $shadow-button-focus;
       }
 
+      &:checked > .#{$css-prefix}checkbox--faux,
       &:checked ~ .#{$css-prefix}checkbox--faux {
         border-color: $color-border-input-active;
         background-color: $color-background-input;
@@ -70,11 +73,13 @@
 
     &[disabled] {
 
+      > .#{$css-prefix}checkbox--faux,
       ~ .#{$css-prefix}checkbox--faux {
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
       }
 
+      > .#{$css-prefix}checkbox--faux:after,
       ~ .#{$css-prefix}checkbox--faux:after {
         border-color: $color-background-input;
       }
@@ -83,19 +88,26 @@
 }
 
 .#{$css-prefix}has-error .#{$css-prefix}checkbox [type="checkbox"] {
+
+  > .#{$css-prefix}checkbox--faux,
   ~ .#{$css-prefix}checkbox--faux {
     border-color: $color-border-error;
     border-width: $border-width-thick;
   }
+
+  &:checked > .#{$css-prefix}checkbox--faux,
   &:checked ~ .#{$css-prefix}checkbox--faux {
     border-color: $color-border-error;
     background-color: $color-background-input;
   }
+
+  &:checked > .#{$css-prefix}checkbox--faux:after,
   &:checked ~ .#{$css-prefix}checkbox--faux:after {
     border-color: $color-background-error;
   }
 }
 
+.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}form-element__label:before,
 .#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before {
   content: '*';
   color: $color-text-error;
@@ -103,6 +115,7 @@
   left: ($spacing-x-small * -1);
 }
 
+.#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}checkbox--faux,
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux {
   margin-right: $spacing-x-small;
 }

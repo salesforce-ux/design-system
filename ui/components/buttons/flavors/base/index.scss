@@ -70,9 +70,8 @@
     }
   }
 
-  & + &,
-  & + .#{$css-prefix}button-group,
-  .#{$css-prefix}button-group + & {
+  & + .#{$css-prefix}button,
+  & + .#{$css-prefix}button-group {
     margin-left: $spacing-xx-small;
   }
 }

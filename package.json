@@ -28,7 +28,7 @@
     "@salesforce-ux/icons": "3.1.0"
   },
   "devDependencies": {
-    "@salesforce-ux/design-system-utils": "0.9.0",
+    "@salesforce-ux/design-system-utils": "0.9.1",
     "app-module-path": "1.0.4",
     "async": "1.4.2",
     "autoprefixer": "6.0.1",

@@ -101,7 +101,7 @@
 }
 
 @mixin button-destructive { // @TODO - update when new tokens hit the repo
-  background-color: #c23934; //$color-background-destructive; 
+  background-color: #c23934; //$color-background-destructive;
   border: $border-width-thin solid #c23934; //$color-border-destructive;
   color: $color-text-inverse;
 
@@ -187,15 +187,30 @@
   }
 }
 
-@mixin form-input-error {
-  background-color: $color-background-input;
-  border-color: $color-border-error;
-  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
-  background-clip: padding-box;
+@mixin form-element-required($element: null) {
+  @if $element != null {
+    > #{$element}:before {
+      content: '*';
+      color: $color-text-error;
+      position: absolute;
+      left: ($spacing-x-small * -1);
+    }
+  }
+}
 
-  &:focus,
-  &:active {
-    box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+@mixin form-input-error($element: null) {
+  @if $element != null {
+    #{$element} {
+      background-color: $color-background-input;
+      border-color: $color-border-error;
+      box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+      background-clip: padding-box;
+
+      &:focus,
+      &:active {
+        box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+      }
+    }
   }
 }
 
@@ -211,10 +226,6 @@
   &[disabled],
   &.#{$css-prefix}is-disabled {
     @include form-input-disabled;
-  }
-
-  .#{$css-prefix}has-error & {
-    @include form-input-error;
   }
 }
 

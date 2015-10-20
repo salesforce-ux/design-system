@@ -55,10 +55,20 @@
            top: 0;
         bottom: 0;
       }
-      height: $height-banner;
-      line-height: $height-banner;
+      height: $height-banner - $height-banner-badge;
+      line-height: $height-banner - $height-banner-badge;
     }
   }
+}
+
+.site-banner-badge {
+  @include gradient-striped(rgba(white,.2), -45deg, #FBBC05);
+  background-size: 12px 12px;
+  color: #16325C;
+  font-weight: $font-weight-bold;
+  height: $height-banner-badge;
+  line-height: $height-banner-badge;
+  padding: 0 $spacing-x-large;
 }
 
 .site-logo {

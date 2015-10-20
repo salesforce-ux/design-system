@@ -278,6 +278,7 @@ export default React.createClass({
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </Link>
+        <div className={pf('site-banner-badge')}>Spring 16 and Internal Only</div>
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
         </div>

@@ -26,8 +26,8 @@ const links = {
   }
 };
 
-function managedPackageUrls() {
-  return g.managedPackageUrls.map((item, idx) => {
+function unmanagedPackageUrls() {
+  return g.unmanagedPackageUrls.map((item, idx) => {
     return <li key={`package-v${item.version}`}>
       <a href={item.url}>Version {item.version}</a>
     </li>;
@@ -63,7 +63,7 @@ export default (
       If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
     </p>
     <ul className={pf('list--dotted')}>
-      {managedPackageUrls()}
+      {unmanagedPackageUrls()}
     </ul>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>

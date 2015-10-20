@@ -10,7 +10,7 @@
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
 - Changed picklist label and selection list to fixed width. Applied a 5 option max-height with overflow on list.
-- Upgraded `@salesforce-ux/design-tokens` to 1.3.0
+- Upgraded `@salesforce-ux/design-tokens` to 1.3.1
 - `@salesforce-ux/design-system` package now includes */assets/icons* and */assets/images*
 
 **BREAKING CHANGES**

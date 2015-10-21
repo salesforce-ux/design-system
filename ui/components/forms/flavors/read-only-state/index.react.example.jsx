@@ -15,7 +15,7 @@ const pf = componentUtil.prefix;
 
 module.exports = (
 <form className='demo-only'>
-  <div className={pf('form-element')}>
+  <div className={pf('form-element has-divider--bottom')}>
     <span className={pf('form-element__label')}>Amount</span>
     <div className={pf('form-element__control')}>
       <span className={pf('form-element__static')}>Read Only</span>

@@ -177,3 +177,15 @@
     height: auto;
   }
 }
+
+@mixin deprecate($deprecated-version) {
+  @if & {
+    $parent: &;
+    @if ($debug) {
+      @warn "#{$parent} deprecated in version #{$deprecated-version}";
+    }
+  }
+  @if number(#{$version}) <= number(#{$deprecated-version}) {
+    @content;
+  }
+}

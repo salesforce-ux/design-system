@@ -23,7 +23,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--top #{$parent}__content {
+  .#{$css-prefix}nubbin--top {
     @include nubbin(top, "before", $color);
 
     @if $shadow != null {
@@ -36,7 +36,46 @@
     }
   }
 
-  .#{$css-prefix}nubbin--bottom #{$parent}__content {
+  .#{$css-prefix}nubbin--top-left {
+    @include nubbin(top, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(top, $color: $color);
+
+      &:after {
+        box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: $spacing-x-large;
+      top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  .#{$css-prefix}nubbin--top-right {
+    @include nubbin(top, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(top, $color: $color);
+
+      &:after {
+        box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $spacing-x-large;
+      top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  .#{$css-prefix}nubbin--bottom {
     @include nubbin(bottom, "before", $color);
 
     @if $shadow != null {
@@ -49,7 +88,48 @@
     }
   }
 
-  .#{$css-prefix}nubbin--left #{$parent}__content {
+  .#{$css-prefix}nubbin--bottom-left {
+    @include nubbin(bottom, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(bottom, $color: $color);
+
+      &:after {
+        box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: $spacing-x-large;
+      top: 100%;
+      margin-top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  .#{$css-prefix}nubbin--bottom-right {
+    @include nubbin(bottom, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(bottom, $color: $color);
+
+      &:after {
+        box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $spacing-x-large;
+      top: 100%;
+      margin-top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  .#{$css-prefix}nubbin--left {
     @include nubbin(left, "before", $color);
 
     @if $shadow != null {
@@ -62,7 +142,44 @@
     }
   }
 
-  .#{$css-prefix}nubbin--right #{$parent}__content {
+  .#{$css-prefix}nubbin--left-top {
+    @include nubbin(left, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(left, $color: $color);
+
+      &:after {
+        box-shadow: -1px 1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: $spacing-x-large;
+    }
+  }
+
+  .#{$css-prefix}nubbin--left-bottom {
+    @include nubbin(left, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(left, $color: $color);
+
+      &:after {
+        box-shadow: -1px 1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: auto;
+      bottom: $spacing-x-large;
+    }
+  }
+
+  .#{$css-prefix}nubbin--right {
     @include nubbin(right, "before", $color);
 
     @if $shadow != null {
@@ -72,6 +189,43 @@
         box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
+    }
+  }
+
+  .#{$css-prefix}nubbin--right-top {
+    @include nubbin(right, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(right, $color: $color);
+
+      &:after {
+        box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: $spacing-x-large;
+    }
+  }
+
+  .#{$css-prefix}nubbin--right-bottom {
+    @include nubbin(right, "before", $color);
+
+    @if $shadow != null {
+      @include nubbin(right, $color: $color);
+
+      &:after {
+        box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: auto;
+      bottom: $spacing-x-large;
     }
   }
 }

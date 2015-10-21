@@ -21,9 +21,9 @@ module.exports = (
     <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
     <Menu className={pf('dropdown--left dropdown--nubbin-top')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
+        <Menu.Item>Menu Item One</Menu.Item>
+        <Menu.Item>Menu Item Two</Menu.Item>
+        <Menu.Item>Menu Item Three</Menu.Item>
       </Menu.List>
     </Menu>
   </div>
@@ -31,9 +31,9 @@ module.exports = (
     <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
     <Menu className={pf('dropdown--nubbin-top')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
+        <Menu.Item>Menu Item One</Menu.Item>
+        <Menu.Item>Menu Item Two</Menu.Item>
+        <Menu.Item>Menu Item Three</Menu.Item>
       </Menu.List>
     </Menu>
   </div>
@@ -41,9 +41,9 @@ module.exports = (
     <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
     <Menu className={pf('dropdown--right dropdown--nubbin-top')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
+        <Menu.Item>Menu Item One</Menu.Item>
+        <Menu.Item>Menu Item Two</Menu.Item>
+        <Menu.Item>Menu Item Three</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

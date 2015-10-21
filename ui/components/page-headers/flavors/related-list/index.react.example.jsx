@@ -46,23 +46,40 @@ exports.preview = (
                 </Button>
               </Control>
               <Popover id="menu1" visible={false}>
-              <Menu className={pf('dropdown--small')}>
-                <Menu.Header>
-                  <Menu.Title>Display As</Menu.Title>
-                </Menu.Header>
-                <Menu.List>
-                  <Menu.Item className={pf('is-selected')} href="#rename">
-                    <SvgIcon className={pf('icon icon--small icon--left')} sprite="standard" symbol="task2" />
-                    Table <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="table" />
-                  </Menu.Item>
-                  <Menu.Item href="#share">
-                    Cards <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="kanban" />
-                  </Menu.Item>
-                  <Menu.Item href="#delete">
-                    Compact List <SvgIcon className={pf('icon icon--small icon--right')} sprite="utility" symbol="side_list" />
-                  </Menu.Item>
-                </Menu.List>
-              </Menu>
+                <div className={pf('dropdown dropdown--small ')}>
+                  <div className={pf('dropdown__header')}>
+                    <span className={pf('text-heading--label')}>Display As</span>
+                  </div>
+                  <ul className={pf('dropdown__list')} role="menu">
+                    <li className={pf('dropdown__item is-selected')} aria-selected="true">
+                      <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+                        <p>
+                          <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+                          Table
+                        </p>
+                        <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="table" />
+                      </a>
+                    </li>
+                    <li className={pf('dropdown__item')}>
+                      <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+                        <p>
+                          <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+                          Cards
+                        </p>
+                        <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="kanban" />
+                      </a>
+                    </li>
+                    <li className={pf('dropdown__item')}>
+                      <a href="javascript:void(0)" className={pf('truncate')} role="menuitemradio">
+                        <p>
+                          <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
+                          Compact List
+                        </p>
+                        <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="side_list" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </Popover>
             </div>
             <div className={pf('button-group button-space-left')}>

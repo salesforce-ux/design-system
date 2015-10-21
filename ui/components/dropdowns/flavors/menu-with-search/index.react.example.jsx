@@ -23,22 +23,22 @@ module.exports = (
       <Menu.Title>Lists</Menu.Title>
     </Menu.Header>
     <Menu.List>
-      <Menu.Item href="#">
+      <Menu.Item>
         Opportunities Closing this Quarter
       </Menu.Item>
-      <Menu.Item className={pf('is-selected')} href="#" aria-selected="true">
+      <Menu.Item className={pf('is-selected')} aria-selected="true">
         All Opportunities
       </Menu.Item>
-      <Menu.Item href="#">
+      <Menu.Item>
         My Opportunities
       </Menu.Item>
-      <Menu.Item href="#">
+      <Menu.Item>
         United Partner Opportunities
       </Menu.Item>
-      <Menu.Item href="#">
+      <Menu.Item>
         Acme Inc Opportunities
       </Menu.Item>
-      <Menu.Item href="#">
+      <Menu.Item>
         My Opportunities about 80k
       </Menu.Item>
     </Menu.List>

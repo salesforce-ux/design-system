@@ -25,13 +25,6 @@
   margin-right: $spacing-small;
   margin-bottom: $spacing-xx-small;
 
-  .#{$css-prefix}is-required > &:before {
-    content: '*';
-    color: $color-text-error;
-    position: absolute;
-    left: ($spacing-x-small * -1);
-  }
-
   &:empty {
     margin: 0;
   }
@@ -41,8 +34,4 @@
   font-size: $font-size-small;
   margin-top: $spacing-x-small;
   display: block;
-
-  .#{$css-prefix}has-error & {
-    color: $color-text-error;
-  }
 }

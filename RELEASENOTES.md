@@ -1,6 +1,11 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.10.1 - October 21, 2015
+- Hot fix for picklist width on datepicker
+- `.slds-is-required` and `.slds-has-error` on form elements are now properly scoped within the `-vf`, `-ltng` and `-scoped` compiled css files
+- Font size on datepicker properly displays within scoped compiled css files
+
 ## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
@@ -27,7 +32,7 @@
 - Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
 - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
 - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
-  
+
 **SASS UPDATES**
 - Abstracted form states into own mixins
 - Abstracted feed vertical rule into own mixin

@@ -28,6 +28,7 @@
   td {
     padding: $spacing-xx-small;
     text-align: center;
+    font-size: $font-size-small;
 
     > .#{$css-prefix}day {
       @include square($square-icon-medium-boundary);
@@ -86,14 +87,6 @@
 
   &__filter--month {
     padding: 0 $spacing-xx-small 0 0;
-  }
-
-  .#{$css-prefix}picklist__label {
-    min-width: 0;
-    font: {
-      size: $font-size-small;
-      weight: $font-weight-regular;
-    }
   }
 }
 

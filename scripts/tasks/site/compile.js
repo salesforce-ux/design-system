@@ -187,9 +187,7 @@ export const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
-        DEFAULT_USER_TYPE: `"${process.env.DEFAULT_USER_TYPE}"`
-      }
+      'process.env': _.mapValues(process.env, value => `"${value}"`)
     })
   ],
   cache: {},

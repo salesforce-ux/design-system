@@ -38,7 +38,7 @@
     padding: 0;
     position: absolute;
 
-    &:checked > .#{$css-prefix}checkbox--faux
+    &:checked > .#{$css-prefix}checkbox--faux,
     &:checked ~ .#{$css-prefix}checkbox--faux {
 
       &:after {

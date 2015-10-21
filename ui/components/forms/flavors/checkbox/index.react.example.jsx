@@ -23,7 +23,7 @@ exports.preview = (
 
   <div className={pf('form-element')}>
     <label className={pf('checkbox')} htmlFor="checkboxSample2">
-      <input name="checkboxSample2" type="checkbox" id="checkboxSample2" checked />
+      <input name="checkboxSample2" type="checkbox" id="checkboxSample2" defaultChecked />
       <span className={pf('checkbox--faux')}></span>
       <span className={pf('form-element__label')}>Checkbox Checked</span>
     </label>
@@ -39,7 +39,7 @@ exports.preview = (
 
   <div className={pf('form-element has-error')}>
     <label className={pf('checkbox')} htmlFor="checkboxSample5">
-      <input name="checkboxSample5" type="checkbox" id="checkboxSample5" checked />
+      <input name="checkboxSample5" type="checkbox" id="checkboxSample5" defaultChecked />
       <span className={pf('checkbox--faux')}></span>
       <span className={pf('form-element__label')}>Checkbox Error Checked</span>
     </label>

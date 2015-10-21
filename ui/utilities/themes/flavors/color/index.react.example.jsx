@@ -58,16 +58,16 @@ exports.code = (
   <div className={pf('box theme--alt-inverse')}>
     <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
-  <div className={pf('box theme--success theme--inverse-text')}>
+  <div className={pf('box theme--success')}>
     <p>This is a <strong>success</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
-  <div className={pf('box theme--warning theme--inverse-text')}>
+  <div className={pf('box theme--warning')}>
     <p>This is a <strong>warning</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
-  <div className={pf('box theme--error theme--inverse-text')}>
+  <div className={pf('box theme--error')}>
     <p>This is a <strong>error</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
-  <div className={pf('box theme--offline theme--inverse-text')}>
+  <div className={pf('box theme--offline')}>
     <p>This is an <strong>offline</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
   <div className={pf('box box theme--shade theme--alert-texture')}>

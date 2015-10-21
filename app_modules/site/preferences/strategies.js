@@ -33,12 +33,18 @@ export const LocalStorageStrategy = stampit().methods({
   load () {
     if (!window.localStorage) { return {}; }
     const prefs = localStorage.getItem('prefs');
-    return prefs && JSON.parse(prefs);
+    try {
+      return JSON.parse(prefs);
+    } catch (e) {
+      return {};
+    }
   },
 
   update (prefs) {
     if (!window.localStorage) { return; }
-    localStorage.setItem('prefs', JSON.stringify(prefs));
+    try {
+      localStorage.setItem('prefs', JSON.stringify(prefs));
+    } catch (e) {}
   }
 });
 

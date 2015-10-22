@@ -136,6 +136,7 @@ class PickListArrows extends React.Component {
     );
   }
 }
+// @TODO: assistive text needs to be unique for each icon
 
 class PickList extends React.Component {
   static childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };

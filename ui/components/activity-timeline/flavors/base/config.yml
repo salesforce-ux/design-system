@@ -10,3 +10,5 @@ dependencies:
   - utilities/sizing
 showFormFactors:
   - large
+  - medium
+  - small

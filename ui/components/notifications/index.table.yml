@@ -28,4 +28,9 @@ classes:
     description: Positions close icon
     required: true
     applied: <code>&lt;button&gt;</code>
-
+  -
+    class: modal--prompt
+    description: Initializes Prompt style notification
+    required: true
+    applied: <code>.{{cssPrefix}}modal</code>
+    notes: Themes can be added to the <code>.{{cssPrefix}}modal__header</code> to create the alert style required

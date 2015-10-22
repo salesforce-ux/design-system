@@ -19,6 +19,7 @@
 
 .#{$css-prefix}docked-composer {
   position: relative;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
   width: 480px;
   height: 40px;
   float: left;
@@ -28,14 +29,27 @@
     height: 480px;
   }
 
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}docked-composer__header {
+      background: $color-background-inverse;
+    }
+  }
+
   + .#{$css-prefix}docked-composer {
     margin-left: $spacing-large;
   }
 
   &__header {
     background: $color-background-alt-inverse;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
     padding: $spacing-x-small;
     color: $color-text-inverse;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__actions .#{$css-prefix}button {
@@ -79,7 +93,7 @@
   }
 
   &__footer {
-    background: $color-background-alt;
+    background: $color-background;
     padding: $spacing-small $spacing-x-small;
     border: $border-width-thin solid $color-border {
       bottom: none;

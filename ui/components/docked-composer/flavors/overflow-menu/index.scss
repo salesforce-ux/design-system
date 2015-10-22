@@ -15,7 +15,12 @@
   display: flex;
   padding: 0 $spacing-small;
   height: inherit;
-
+  border: {
+    top: {
+      left-radius: $border-radius-medium;
+      right-radius: $border-radius-medium;
+    }
+  }
   &:hover,
   &:focus {
     text-decoration: none;

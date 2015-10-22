@@ -18,5 +18,10 @@
     height: 100%;
     box-shadow: none;
     float: none;
+    border-radius: 0;
+
+    &__header {
+      border-radius: 0;
+    }
   }
 }

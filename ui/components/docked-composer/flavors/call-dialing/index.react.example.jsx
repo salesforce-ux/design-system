@@ -44,20 +44,17 @@ module.exports = (
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="minimize_window"
               assistiveText="Minimize window" />
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="expand_alt"
               assistiveText="Expand Composer" />
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="close"
               assistiveText="Close" />

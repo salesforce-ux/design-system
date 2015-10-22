@@ -38,20 +38,17 @@ module.exports = (
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="minimize_window"
               assistiveText="Minimize window" />
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="expand_alt"
               assistiveText="Expand Composer" />
             <ButtonIcon
-              flavor="icon-bare"
-              iconFlavor="inverse"
+              flavor="icon-bare,icon-inverse"
               sprite="utility"
               symbol="close"
               assistiveText="Close" />
@@ -62,7 +59,7 @@ module.exports = (
         <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap size--1-of-1')}>
           <div className={pf('grid grid--align-spread')}>
             <div className={pf('grid grow p-horizontal--small')}>
-              <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerTo">To</label>
+              <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
               <div className={pf('pill-container show')}>
                 <span className={pf('pill')}>
@@ -79,14 +76,14 @@ module.exports = (
               <Button>Bcc</Button>
             </div>
           </div>
-          <div className={pf('grid p-horizontal--small hide')}>
-            <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerCc">Cc</label>
-            <input className={pf('input--bare input--height show')} id="emailComposerCc" type="text" />
+          <div className={pf('grid p-horizontal--small')}>
+            <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerCc">Cc</label>
+            <input className={pf('input--bare input--height')} id="emailComposerCc" type="text" />
             <div className={pf('pill-container hide')}></div>
           </div>
           <div className={pf('grid p-horizontal--small hide')}>
-            <label className={pf('size--1-of-12 align-middle')} htmlFor="emailComposerBcc">Bcc</label>
-            <input className={pf('input--bare input--height show')} id="emailComposerBcc" type="text" />
+            <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerBcc">Bcc</label>
+            <input className={pf('input--bare input--height')} id="emailComposerBcc" type="text" />
             <div className={pf('pill-container hide')}></div>
           </div>
 
@@ -96,12 +93,12 @@ module.exports = (
           {/* Toolbar */}
           <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
             <div className={pf('grid')}>
-              <div className={pf('button-group picklist shrink-none')}>
+              <div className={pf('button-group picklist picklist--fluid shrink-none')}>
                 <button className={pf('button button--neutral picklist__label picklist__label--small')}>
                   Font <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
                 </button>
               </div>
-              <div className={pf('button-group picklist shrink-none')}>
+              <div className={pf('button-group picklist picklist--fluid shrink-none')}>
                 <button className={pf('button button--neutral picklist__label picklist__label--small')}>
                   14 <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
                 </button>
@@ -165,27 +162,27 @@ module.exports = (
 
           <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <ButtonIcon
-                flavor="icon-small"
+                flavor="icon-container"
                 sprite="utility"
                 symbol="link"
                 assistiveText="Attach File" />
             <ButtonIcon
-                flavor="icon-small"
+                flavor="icon-container"
                 sprite="utility"
                 symbol="insert_template"
                 assistiveText="Insert Template" />
             <ButtonIcon
-                flavor="icon-small"
+                flavor="icon-container"
                 sprite="utility"
                 symbol="insert_tag_field"
                 assistiveText="Insert HTML" />
             <ButtonIcon
-                flavor="icon-small"
+                flavor="icon-container"
                 sprite="utility"
                 symbol="preview"
                 assistiveText="Preview" />
             <ButtonIcon
-                flavor="icon-small"
+                flavor="icon-container"
                 sprite="utility"
                 symbol="delete"
                 assistiveText="Delete" />

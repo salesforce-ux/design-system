@@ -18,9 +18,7 @@ const pf = componentUtil.prefix;
 module.exports = (
   <div className={pf('popover nubbin--left')} role="dialog">
 
-    <div className={pf('popover__header')}>
-
-    </div>
+    <div className={pf('popover__header')}></div>
     <div className={pf('popover__body')}>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
     </div>

@@ -10,165 +10,170 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const MediaObject = require('ui/components/media-objects/index.react');
-const Button = require('ui/components/buttons/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-const iconHeader = (
-  <span className={pf('icon__container icon-standard-account')}>
-    <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="account" />
-    <span className={pf('assistive-text')}>Tesla Motors</span>
-  </span>
-);
-const iconOpportunity = (
-  <span className={pf('icon__container icon-standard-opportunity')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="opportunity" />
-    <span className={pf('assistive-text')}>Opportunities</span>
-  </span>
-);
-const iconCases = (
-  <span className={pf('icon__container icon-standard-case')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="case" />
-    <span className={pf('assistive-text')}>Cases</span>
-  </span>
-);
-
-module.exports = (
-  <div className={pf('popover nubbin--left-top')} role="dialog">
-
-    <div className={pf('popover__header')}>
-
-      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <a href="javascript:void(0)" className={pf('text-heading--medium')}>Tesla Motors</a>
-      </MediaObject>
-
-      {/* Additional Info */}
-      <div className={pf('grid wrap grid--pull-padded')}>
-
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
-          <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Billing Address</p></dt>
-            <dd>
-              <p className={pf('truncate')}>3500 Deer Creek Rd.</p>
-              <p className={pf('truncate')}>Palo Alto, CA 94304</p>
-            </dd>
-          </dl>
-        </div>
-
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
-          <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Phone</p></dt>
-            <dd><a href="javascript:void(0)">212-345-3485</a></dd>
-          </dl>
-        </div>
-
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
-          <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Website</p></dt>
-            <dd><a href="javascript:void(0)">teslamotors.com</a></dd>
-          </dl>
-        </div>
-
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
-          <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Account Owner</p></dt>
-            <dd><a href="javascript:void(0)">Jeff Maguire</a></dd>
-          </dl>
-        </div>
-
+exports.preview = (
+<div className={pf('demo-only demo-only--nubbin-example')}>
+  <div className={pf('grid grid--align-spread')}>
+    {/* Nubbin Left Top */}
+    <div className={pf('popover nubbin--top-left')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--top-left')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
       </div>
     </div>
-    <div className={pf('popover__body')}>
-      <dl className={pf('popover__body-list')}>
-        <dt className={pf('m-bottom--small')}>
-          <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <h3 className={pf('text-heading--small')}>Opportunities (2+)</h3>
-          </MediaObject>
-        </dt>
-        {/* Opportunity One */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Mule ESB</a>
-          </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$500,000</p>
-              </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Dec 15, 2015</p>
-              </dd>
-            </dl>
-          </div>
-        </dd>
-        {/* Opportunity Two */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Anypoint Studios</a>
-          </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$60,000</p>
-              </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Jan 15, 2016</p>
-              </dd>
-            </dl>
-          </div>
-        </dd>
-        <dd className={pf('m-top--small')}><a href="javascript:void(0)" title="View all Opportunities">View All</a></dd>
-      </dl>
 
-
-      <dl className={pf('popover__body-list')}>
-        <dt className={pf('m-bottom--small')}>
-          <MediaObject figureLeft={iconCases} flavor="center">
-            <h3 className={pf('text-heading--small')}>Cases (1)</h3>
-          </MediaObject>
-        </dt>
-        {/* Case One */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Anypoint Studios</a>
-          </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$60,000</p>
-              </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
-              </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Jan 15, 2016</p>
-              </dd>
-            </dl>
-          </div>
-        </dd>
-        <dd className={pf('m-top--small')}><a href="javascript:void(0)" title="View all Cases">View All</a></dd>
-      </dl>
-
-
+    {/* Nubbin Left */}
+    <div className={pf('popover nubbin--top')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--top')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
     </div>
 
+    {/* Nubbin Left Bottom */}
+    <div className={pf('popover nubbin--top-right')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--top-right')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
   </div>
+  <hr />
+  <div className={pf('grid grid--align-spread')}>
+    {/* Nubbin Left Top */}
+    <div className={pf('popover nubbin--left-top')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--left-top')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+
+    {/* Nubbin Left Bottom */}
+    <div className={pf('popover nubbin--right-top')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--right-top')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div className={pf('grid grid--align-spread')}>
+    {/* Nubbin Left Top */}
+    <div className={pf('popover nubbin--left')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--left')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+
+    {/* Nubbin Left Bottom */}
+    <div className={pf('popover nubbin--right')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--right')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div className={pf('grid grid--align-spread')}>
+    {/* Nubbin Left Top */}
+    <div className={pf('popover nubbin--left-bottom')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--left-bottom')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+
+    {/* Nubbin Left Bottom */}
+    <div className={pf('popover nubbin--right-bottom')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--right-bottom')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div className={pf('grid grid--align-spread')}>
+    {/* Nubbin Left Top */}
+    <div className={pf('popover nubbin--bottom-left')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--bottom-left')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+
+    {/* Nubbin Left */}
+    <div className={pf('popover nubbin--bottom')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--bottom')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+
+    {/* Nubbin Left Bottom */}
+    <div className={pf('popover nubbin--bottom-right')} role="dialog">
+      <div className={pf('popover__body')}>
+        <code>.{pf('nubbin--bottom-right')}</code>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </div>
+    </div>
+  </div>
+</div>
+);
+
+exports.code = (
+<div className={pf('demo-only')}>
+
+  <div className={pf('popover nubbin--top-left')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--top')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--top-right')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--left-top')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--right-top')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--left')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--right')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--left-bottom')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--right-bottom')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--bottom-left')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--bottom')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+  <div className={pf('popover nubbin--bottom-right')} role="dialog">
+    <div className={pf('popover__body')}></div>
+  </div>
+
+</div>
 );

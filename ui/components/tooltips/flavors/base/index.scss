@@ -9,51 +9,13 @@
 
 
 .#{$css-prefix}tooltip {
-  @include popover($color: $color-background-inverse);
+  @include deprecate("0.200") {
+    @include popover($color: $color-background-inverse);
 
-  &__body {
-    padding: $spacing-x-small $spacing-small;
-    font-size: $font-size-small;
-    color: $color-text-inverse;
+    &__body {
+      padding: $spacing-x-small $spacing-small;
+      font-size: $font-size-small;
+      color: $color-text-inverse;
+    }
   }
-}
-
-.#{$css-prefix}rise-from-ground {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0%, 0%);
-  transition: opacity $duration-quickly linear,
-              visibility $duration-quickly linear,
-              transform $duration-quickly linear;
-  will-change: transform;
-}
-
-.#{$css-prefix}fall-into-ground {
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(0%, 0%);
-  transition: opacity $duration-quickly linear,
-              visibility $duration-quickly linear,
-              transform $duration-quickly linear;
-  will-change: transform;
-}
-
-.#{$css-prefix}slide-from-bottom-to-top {
-  transform: translateY(10%);
-  will-change: transform;
-}
-
-.#{$css-prefix}slide-from-top-to-bottom {
-  transform: translateY(-10%);
-  will-change: transform;
-}
-
-.#{$css-prefix}slide-from-right-to-left {
-  transform: translateX(5%);
-  will-change: transform;
-}
-
-.#{$css-prefix}slide-from-left-to-right {
-  transform: translateX(-5%);
-  will-change: transform;
 }

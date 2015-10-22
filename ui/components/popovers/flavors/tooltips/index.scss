@@ -9,11 +9,10 @@
 
 
 .#{$css-prefix}popover--tooltip {
-  // @include popover($color: $color-background-inverse);
   background: $color-background-inverse;
+  border: none;
 
   .#{$css-prefix}popover__body {
-    // padding: $spacing-x-small $spacing-small;
     font-size: $font-size-small;
     color: $color-text-inverse;
   }

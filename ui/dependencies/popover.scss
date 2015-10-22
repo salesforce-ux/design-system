@@ -262,9 +262,4 @@
   @if $shadow != null {
     box-shadow: $shadow;
   }
-  @else {
-    &:after {
-      content: none;
-    }
-  }
 }

@@ -10,8 +10,6 @@
 
 
 .#{$css-prefix}popover--panel {
-  @include popover($shadow: $shadow-drop-down);
-  border: $border-width-thin solid $color-border;
 
   .#{$css-prefix}popover__header {
     background: $color-background;
@@ -20,7 +18,6 @@
   }
 
   .#{$css-prefix}popover__body {
-    position: relative;
     padding: 0;
   }
 

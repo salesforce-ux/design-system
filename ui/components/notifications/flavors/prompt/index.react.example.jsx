@@ -40,7 +40,6 @@ class ModalExample extends React.Component {
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
-          className={pf('modal--prompt')}
         >
 
           <Modal.Header className={pf('modal--prompt__header theme--error theme--alert-texture')}>

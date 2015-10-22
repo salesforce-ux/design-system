@@ -43,17 +43,17 @@ class ModalExample extends React.Component {
           className={pf('modal--prompt')}
         >
 
-          <Modal.Header className={pf('theme--error theme--alert-texture')}>
+          <Modal.Header className={pf('modal--prompt__header theme--error theme--alert-texture')}>
             <h2 className={pf('text-heading--medium')}>
               Service Unavailable
             </h2>
           </Modal.Header>
 
-          <Modal.Body>
+          <Modal.Body className={pf('modal--prompt__content')}>
             <Lorem count={1} paragraphLowerBound={2} />
           </Modal.Body>
 
-          <Modal.Footer className={pf('theme--default')}>
+          <Modal.Footer className={pf('modal--prompt__footer theme--default')}>
             <Button flavor="neutral">Okay</Button>
           </Modal.Footer>
         </Modal>

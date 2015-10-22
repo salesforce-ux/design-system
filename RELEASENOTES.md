@@ -1,6 +1,16 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release xxx - October xx, 2015
+
+- Changed notifications > modal to notifications > modal-toast
+- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
+- Stateful button has a `[disabled]` state
+
+***NEW COMPONENTS***
+
+- Added notifications > prompt, modal-style alert
+
 ## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes

@@ -14,6 +14,7 @@ const ReactDOM = require('react-dom');
 const Modal = require('ui/components/modals/index.react');
 const Button = require('ui/components/buttons/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
 const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
@@ -30,36 +31,29 @@ class ModalExample extends React.Component {
 
   closeModal() {
     this.setState({showing: false});
-    this.refs.opener.focus();
+    ReactDOM.findDOMNode(this.refs.opener).focus();
   }
 
   render() {
     return (
-      <div className='demo-only' style={{height: '720px'}}>
+      <div className='demo-only' style={{height: '480px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
         >
 
-          <Modal.Header>
+          <Modal.Header className={pf('modal--prompt__header theme--error theme--alert-texture')}>
             <h2 className={pf('text-heading--medium')}>
-              Modal Header
+              Service Unavailable
             </h2>
-
-            <p className={pf('m-top--x-small')}>
-              Here&rsquo;s a tagline if you need it. It is allowed to extend
-              across mulitple lines, so I&rsquo;m making up content to show that
-              to you. It is allowed to <a href="#">contain links or be a link</a>.
-            </p>
           </Modal.Header>
 
-          <Modal.Body>
-            <Lorem count={2} paragraphLowerBound={5} />
+          <Modal.Body className={pf('modal--prompt__content')}>
+            <Lorem count={1} paragraphLowerBound={2} />
           </Modal.Body>
 
-          <Modal.Footer>
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Save</Button>
+          <Modal.Footer className={pf('modal--prompt__footer theme--default')}>
+            <Button flavor="neutral">Okay</Button>
           </Modal.Footer>
         </Modal>
       </div>

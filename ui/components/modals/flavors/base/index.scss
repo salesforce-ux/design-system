@@ -29,14 +29,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    padding: $square-icon-large-boundary 0;
-    border-radius: $border-radius-medium;
     width: 50%;
     max-width: 40rem; // TODO: Tokenize
     min-width: 20rem; // TODO: Tokenize
     height: 100%;
-
+    margin: 0 auto;
+    padding: $square-icon-large-boundary 0;
+    border-radius: $border-radius-medium;
   }
 
   &__header,
@@ -80,6 +79,7 @@
     padding: $spacing-small $spacing-medium;
     background-color: $color-background;
     text-align: right;
+    box-shadow: $shadow-drop-down;
   }
 
   &__close {

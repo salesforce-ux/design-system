@@ -2,3 +2,6 @@ status: 'prototype'
 classBase: 'popover'
 flavors:
   - base
+  - tooltips
+  - panels
+  - nubbins

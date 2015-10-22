@@ -14,16 +14,10 @@ const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-
 module.exports = (
-  <div className={pf('popover nubbin--left')} role="dialog">
-
-    <div className={pf('popover__header')}>
-
-    </div>
+  <div className={pf('popover popover--tooltip nubbin--left')} role="tooltip">
     <div className={pf('popover__body')}>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
     </div>
-
   </div>
 );

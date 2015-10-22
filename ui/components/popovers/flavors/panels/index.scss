@@ -9,12 +9,35 @@
 
 
 
-.#{$css-prefix}popover {
+.#{$css-prefix}popover--panel {
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
 
-  &__body {
+  .#{$css-prefix}popover__header {
+    background: $color-background;
+    padding: $spacing-medium;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+
+  .#{$css-prefix}popover__body {
     position: relative;
-    padding: $spacing-x-small $spacing-small;
+    padding: 0;
+  }
+
+  .#{$css-prefix}popover__body-list {
+    padding: $spacing-medium;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Deal with Nubbin Color
+  &.#{$css-prefix}nubbin--left-top,
+  &.#{$css-prefix}nubbin--right-top,
+  &.#{$css-prefix}nubbin--top-left,
+  &.#{$css-prefix}nubbin--top-right {
+
+    &:before,
+    &:after {
+      background: $color-background;
+    }
   }
 }

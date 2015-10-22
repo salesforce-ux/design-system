@@ -8,13 +8,54 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+.#{$css-prefix}popover--tooltip {
+  // @include popover($color: $color-background-inverse);
+  background: $color-background-inverse;
 
-.#{$css-prefix}popover {
-  @include popover($shadow: $shadow-drop-down);
-  border: $border-width-thin solid $color-border;
-
-  &__body {
-    position: relative;
-    padding: $spacing-x-small $spacing-small;
+  .#{$css-prefix}popover__body {
+    // padding: $spacing-x-small $spacing-small;
+    font-size: $font-size-small;
+    color: $color-text-inverse;
   }
+}
+
+
+.#{$css-prefix}rise-from-ground {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0%, 0%);
+  transition: opacity $duration-quickly linear,
+              visibility $duration-quickly linear,
+              transform $duration-quickly linear;
+  will-change: transform;
+}
+
+.#{$css-prefix}fall-into-ground {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0%, 0%);
+  transition: opacity $duration-quickly linear,
+              visibility $duration-quickly linear,
+              transform $duration-quickly linear;
+  will-change: transform;
+}
+
+.#{$css-prefix}slide-from-bottom-to-top {
+  transform: translateY(10%);
+  will-change: transform;
+}
+
+.#{$css-prefix}slide-from-top-to-bottom {
+  transform: translateY(-10%);
+  will-change: transform;
+}
+
+.#{$css-prefix}slide-from-right-to-left {
+  transform: translateX(5%);
+  will-change: transform;
+}
+
+.#{$css-prefix}slide-from-left-to-right {
+  transform: translateX(-5%);
+  will-change: transform;
 }

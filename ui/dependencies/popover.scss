@@ -7,21 +7,42 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+@mixin nubbin($position: bottom, $location: "after", $color: $color-background-alt, $size: $square-tooltip-nubbin) {
 
-
-@mixin popover($parent, $shadow: null, $color: $color-background-alt) {
-
-  #{$parent} {
-    position: relative;
-    border-radius: $border-radius-medium;
-    max-width: $size-medium;
-    z-index: $z-index-dialog;
+  &:#{$location} {
+    @include square($size);
+    position: absolute;
+    transform: rotate(45deg);
+    content: "";
     background-color: $color;
 
-    @if $shadow != null {
-      box-shadow: $shadow;
+    @if $position == top {
+      left: 50%;
+      top: (($size / 2) * -1);
+      margin-left: (($size / 2) * -1);
+    }
+
+    @elseif $position == bottom {
+      left: 50%;
+      bottom: (($size / 2) * -1);
+      margin-left: (($size / 2) * -1);
+    }
+
+    @elseif $position == left  {
+      top: 50%;
+      left: (($size / 2) * -1);
+      margin-top: (($size / 2) * -1);
+    }
+
+    @elseif $position == right  {
+      top: 50%;
+      right: (($size / 2) * -1);
+      margin-top: (($size / 2) * -1);
     }
   }
+}
+
+@mixin popover-nubbins($color: inherit, $shadow: true) {
 
   .#{$css-prefix}nubbin--top {
     @include nubbin(top, "before", $color);
@@ -227,5 +248,18 @@
       top: auto;
       bottom: $spacing-x-large;
     }
+  }
+}
+
+@mixin popover($color: $color-background-alt, $shadow: null) {
+  position: relative;
+  border-radius: $border-radius-medium;
+  max-width: $size-medium;
+  min-height: ($square-tooltip-nubbin * 2);
+  z-index: $z-index-dialog;
+  background-color: $color;
+
+  @if $shadow != null {
+    box-shadow: $shadow;
   }
 }

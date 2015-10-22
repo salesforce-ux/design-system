@@ -7,12 +7,6 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: This is the outermost container
   -
-    class: tooltip__content
-    description: Hook for nubbin positioning
-    required: true
-    applied: <code>&lt;div&gt;</code>
-    notes: This is placed right inside the  <code>.{{cssPrefix}}tooltip</code> container
-  -
     class: tooltip__body
     description: Applies styles for primary content area of tooltip
     required: true
@@ -20,17 +14,49 @@ classes:
     notes: This is placed right inside the  <code>.{{cssPrefix}}tooltip__content</code> container
   -
     class: nubbin--top
-    description: Triangle that points upwards
-    applied: <code>.{{cssPrefix}}tooltip</code>
+    description: Triangle that points upwards which is horizontally centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--top-left
+    description: Triangle that points upwards which is left aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--top-right
+    description: Triangle that points upwards which is right aligned
+    applied: <code>.{{cssPrefix}}popover</code>
   -
     class: nubbin--bottom
-    description: Triangle that points downwards
-    applied: <code>.{{cssPrefix}}tooltip</code>
+    description: Triangle that points downwards which is horizontally centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--bottom-left
+    description: Triangle that points downwards which is left aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--bottom-right
+    description: Triangle that points downwards which is right aligned
+    applied: <code>.{{cssPrefix}}popover</code>
   -
     class: nubbin--left
-    description: Triangle that points to the left
-    applied: <code>.{{cssPrefix}}tooltip</code>
+    description: Triangle that points to the left which is vertically centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--left-top
+    description: Triangle that points to the left which is top aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--left-bottom
+    description: Triangle that points to the right which is bottom aligned
+    applied: <code>.{{cssPrefix}}popover</code>
   -
     class: nubbin--right
-    description: Triangle that points to the right
-    applied: <code>.{{cssPrefix}}tooltip</code>
+    description: Triangle that points to the right which is vertically centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--right-top
+    description: Triangle that points to the right which is top aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--right-bottom
+    description: Triangle that points to the right which is bottom aligned
+    applied: <code>.{{cssPrefix}}popover</code>

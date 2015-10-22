@@ -27,7 +27,9 @@ export default {
     {type: 'heroku-react-app', url: 'https://github.com/ccoenraets/lightning-react-app'},
     {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
   ],
-  managedPackageUrls: [
+  unmanagedPackageUrls: [
+    { version: '0.10.1', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000ShId' },    
+    { version: '0.10.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000KQm3' },
     { version: '0.9.2', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000JvoY' },
     { version: '0.9.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000IrV0' },
     { version: '0.8.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000DVio' }
@@ -39,16 +41,5 @@ export default {
   },
   downloadPath: function(version) {
     return '/assets/downloads/' + this.zipName(version);
-  },
-
-  /**
-   * Determines internal/external user based on cookie.
-   *
-   * @returns {string|false} 'internal' or 'external'
-   */
-  userType(cookie) {
-    const matches = cookie.match(/usertype=(\w+)/);
-    return matches && matches[1];
   }
-
 };

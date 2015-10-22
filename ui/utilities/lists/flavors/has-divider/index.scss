@@ -10,7 +10,30 @@
 
 
 .#{$css-prefix}has-divider {
-  margin-top: $spacing-x-small;
-  padding-top: $spacing-x-small;
-  border-top: $border-width-thin solid $color-border;
+
+  @include deprecate("0.200") {
+    margin-top: $spacing-x-small;
+    padding-top: $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  &--top {
+    border-top: $border-width-thin solid $color-border;
+
+    &-space {
+      margin-top: $spacing-x-small;
+      padding-top: $spacing-x-small;
+      border-top: $border-width-thin solid $color-border;
+    }
+  }
+
+  &--bottom {
+    border-bottom: $border-width-thin solid $color-border;
+
+    &-space {
+      margin-bottom: $spacing-x-small;
+      padding-bottom: $spacing-x-small;
+      border-bottom: $border-width-thin solid $color-border;
+    }
+  }
 }

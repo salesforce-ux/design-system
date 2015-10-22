@@ -31,7 +31,7 @@ module.exports = (
             <ButtonIcon flavor="icon-container" iconFlavor="small" sprite="utility" symbol="right" assistiveText="Next Month" />
           </div>
         </div>
-        <div className={pf('picklist datepicker__filter--year shrink-none')}>
+        <div className={pf('picklist picklist--fluid shrink-none')}>
           <button id="year" className={pf('button button--neutral picklist__label')}
             aria-haspopup="true">
             2015 <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />

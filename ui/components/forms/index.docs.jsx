@@ -27,7 +27,7 @@ module.exports = (
   <p>For optimum spacing and layout, wrap each element in <CodeClass className="form-element" />. Layout helper classes are available through the following class names, <CodeClass className="form--stacked" />, <CodeClass className="form--horizontal" /> and <CodeClass className="form--inline" />.</p>
   <p>Every form field requires an associated, non-empty text <code>&lt;label&gt;</code> element, which is linked to the form field either by wrapping the <code>&lt;label&gt;</code> tag around the field or by giving the <code>&lt;label&gt;</code> a <code>for</code> attribute whose value is that input field&rsquo;s id. This association ensures that assistive technology users can tell what information to enter where.</p>
   <h3 className={pf('text-heading--small')}>Form Example</h3>
-  <form role="form" className={pf('form--stacked grid wrap m-top--large')}>
+  <form role="form" className={pf('form--stacked grid wrap grid--pull-padded-large m-top--large')}>
     <div className={pf('col--padded size--1-of-1 medium-size--1-of-2')}>
       <Input label="Opportunity Name" placeholder="Moderna 10k" assistiveText="Opportunity Name" />
       <Input label="Account Name" placeholder="Moderno Bistro" assistiveText="Account Name" />
@@ -36,8 +36,7 @@ module.exports = (
       <Textarea label="Notes" assistiveText="textarea"></Textarea>
     </div>
     <div className={pf('col--padded size--1-of-1 medium-size--1-of-2')}>
-
-      <div className={pf('form-element')}>
+      <div className={pf('form-element has-divider--bottom')}>
         <span className={pf('form-element__label')}>Opportunity Owner</span>
         <div className={pf('form-element__control')}>
           <span className={pf('form-element__static')}>Erin Buck</span>

@@ -37,7 +37,7 @@ module.exports = (
 
     <p>Expected keyboard interactions:</p>
     <ul>
-      <li>Arrow keys cycle focus through menu items</li>
+      <li>Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)</li>
       <li>Tab key closes menu and moves focus to the next focusable element on the page</li>
       <li>Esc key closes menu and moves focus back to the menu trigger</li>
       <li>Any character key moves focus to the next menu item that starts with that character, if applicable</li>

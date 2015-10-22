@@ -18,5 +18,7 @@ const CodeClass = require('app_modules/site/components/code-class');
 module.exports = (
   <ComponentDocs>
     <p className="site-text-introduction">A popover is a non-modal dialog.</p>
+    <p>A popover is most commonly used as a preview panel. The popover accepts a nubbin position class that determines the location of the nubbin and the direction</p>
+    <p>A popover can accept the following nubbin position classes, <CodeClass className="nubbin--left"/>, <CodeClass className="nubbin--left-top"/>, <CodeClass className="nubbin--left-bottom"/>, <CodeClass className="nubbin--top-left"/>, <CodeClass className="nubbin--top-right"/>, <CodeClass className="nubbin--right-top"/>, <CodeClass className="nubbin--right-bottom"/>, <CodeClass className="nubbin--bottom-left"/>, <CodeClass className="nubbin--bottom-right"/>.</p>
   </ComponentDocs>
 );

@@ -11,15 +11,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import globals from 'app_modules/global';
 
-
 /**
  * Only allows production-level logging.
  */
 function canLogEvent() {
-  return globals.userType(document.cookie) &&
-      window.ll &&
-      window.location &&
-      globals.localyticsHostWhitelist.indexOf(window.location.host) >= 0;
+  return window.ll && window.location &&
+    globals.localyticsHostWhitelist.indexOf(window.location.host) >= 0;
 }
 
 /**
@@ -46,7 +43,7 @@ function logCurrentPageVisit() {
  */
 function logCTAEvent(type, extraValues) {
   if (canLogEvent()) {
-    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': globals.userType(document.cookie)}, extraValues);
+    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
     window.ll('tagEvent', 'CTA', values);
   }
 }
@@ -59,7 +56,7 @@ function logCTAEvent(type, extraValues) {
  */
 function logInputEvent(type, extraValues) {
   if (canLogEvent()) {
-    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': globals.userType(document.cookie)}, extraValues);
+    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
     window.ll('tagEvent', 'Input', values);
   }
 }
@@ -71,7 +68,7 @@ function logInputEvent(type, extraValues) {
  */
 function logDownloadEvent(type) {
   if (canLogEvent()) {
-    window.ll('tagEvent', 'Download', {'path': normalizedLocationPathname(), 'type': type, 'usertype': globals.userType(document.cookie)});
+    window.ll('tagEvent', 'Download', {'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE});
   }
 }
 

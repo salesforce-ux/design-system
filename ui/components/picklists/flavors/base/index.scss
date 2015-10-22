@@ -11,12 +11,26 @@
 
 .#{$css-prefix}picklist {
   position: relative;
+
+  .#{$css-prefix}dropdown {
+    width: $size-small;
+    max-height: calc((((#{$font-size-medium} * #{$line-height-text}) + #{$spacing-medium}) * 5) + #{$spacing-x-small} + #{$border-width-thick});
+    overflow-y: auto;
+  }
+
+  &--fluid {
+    .#{$css-prefix}picklist__label,
+    .#{$css-prefix}dropdown {
+      width: auto;
+      min-width: 0;
+      max-width: $size-small;
+    }
+  }
 }
 
 .#{$css-prefix}picklist__label {
   padding-right: $spacing-x-large;
-  min-width: $size-small;
-  max-width: $size-medium;
+  width: $size-small;
   color: $color-text-default;
   text-align: left;
 

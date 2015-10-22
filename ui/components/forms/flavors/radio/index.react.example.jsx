@@ -14,8 +14,9 @@ const Radio = require('ui/components/forms/flavors/radio/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
-<div className='demo-only'>
+exports.preview = (
+<div className={pf('demo-only form--stacked')}>
+
   <fieldset className={pf('form-element')}>
     <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
     <div className={pf('form-element__control')}>
@@ -23,5 +24,31 @@ module.exports = (
       <Radio name="options" label="Education Leads" assistiveText="education" />
     </div>
   </fieldset>
+
+  <fieldset className={pf('form-element is-required')}>
+    <legend className={pf('form-element__label form-element__label--top')}>Options Required</legend>
+    <div className={pf('form-element__control')}>
+      <Radio name="options" label="Lead Generation" assistiveText="lead1" />
+      <Radio name="options" label="Education Leads" assistiveText="education1" />
+    </div>
+  </fieldset>
+
+  <fieldset className={pf('form-element is-required has-error')}>
+    <legend className={pf('form-element__label form-element__label--top')}>Options Required Error</legend>
+    <div className={pf('form-element__control')}>
+      <Radio name="options" label="Lead Generation" assistiveText="lead2" />
+      <Radio name="options" label="Education Leads" assistiveText="education2" />
+    </div>
+  </fieldset>
 </div>
+);
+
+exports.code = (
+  <fieldset className={pf('form-element')}>
+    <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
+    <div className={pf('form-element__control')}>
+      <Radio name="options" label="Lead Generation" assistiveText="lead" />
+      <Radio name="options" label="Education Leads" assistiveText="education" />
+    </div>
+  </fieldset>
 );

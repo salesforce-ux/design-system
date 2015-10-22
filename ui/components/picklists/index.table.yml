@@ -6,6 +6,10 @@ classes:
     required: true
     applied: <code>&lt;div&gt;</code>
   -
+    class: picklist--fluid
+    description: Forces width of picklist and picklist dropdown to inherit width of its content
+    applied: <code>.{{cssPrefix}}picklist</code>
+  -
     class: picklist__label
     description: Custom select
     required: true

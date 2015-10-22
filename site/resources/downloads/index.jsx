@@ -15,8 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import version from '.generated/site.version';
 import CTALink from 'app_modules/site/components/cta-link';
 import { logDownloadEvent } from 'app_modules/site/util/localytics';
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 import { Link } from 'react-router';
 
@@ -26,8 +25,8 @@ const links = {
   }
 };
 
-function managedPackageUrls() {
-  return g.managedPackageUrls.map((item, idx) => {
+function unmanagedPackageUrls() {
+  return g.unmanagedPackageUrls.map((item, idx) => {
     return <li key={`package-v${item.version}`}>
       <a href={item.url}>Version {item.version}</a>
     </li>;
@@ -63,16 +62,32 @@ export default (
       If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
     </p>
     <ul className={pf('list--dotted')}>
-      {managedPackageUrls()}
+      {unmanagedPackageUrls()}
     </ul>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
 
     <p>
-      If you use npm in your local development environment, we also have a Design System <a href="https://www.npmjs.com/package/@salesforce-ux/design-system">npm module</a>.
+      If you use npm in your local development environment, it can be installed with the folllowing command:
     </p>
 
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="bash">{`
+npm install @salesforce-ux/design-system
+      `}</CodeBlock>
+    </div>
 
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Bower Package</h2>
+
+    <p>
+      If you use bower in your local development environment, it can be installed with the folllowing command:
+    </p>
+
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="bash">{`
+bower install salesforce-lightning-design-system
+      `}</CodeBlock>
+    </div>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

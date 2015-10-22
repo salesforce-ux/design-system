@@ -19,7 +19,7 @@ const getSitePath = path.resolve.bind(path, __PATHS__.site);
 export const ignore = ['.jsx', '.scss'];
 
 export default function(done) {
-  console.log('-----> Copying Assets');
+  console.log('Copying Assets');
   gulp.src(getSitePath('**/*.*'), { base: getSitePath() })
   .pipe(through.obj((file, enc, next) => {
     const ext = path.extname(file.path);

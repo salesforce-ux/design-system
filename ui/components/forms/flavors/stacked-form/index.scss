@@ -15,4 +15,9 @@
   + .#{$css-prefix}form-element {
     margin-top: $spacing-x-small;
   }
+
+  .#{$css-prefix}checkbox,
+  .#{$css-prefix}radio {
+    display: block;
+  }
 }

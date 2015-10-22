@@ -129,6 +129,7 @@ function unlisten (listener) {
  *
  */
 function storeViewed () {
+  if (!window.localStorage) { return; }
   window.localStorage.setItem('hasBeenViewed', 'true');
 }
 
@@ -136,6 +137,7 @@ function storeViewed () {
  *
  */
 function hasBeenViewed () {
+  if (!window.localStorage) { return; }
   return window.localStorage.getItem('hasBeenViewed');
 }
 

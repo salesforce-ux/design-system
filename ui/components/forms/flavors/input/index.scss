@@ -27,11 +27,6 @@
   }
 }
 
-.#{$css-prefix}input--big {
-  padding: $spacing-x-small;
-  min-height: calc(#{$line-height-button} + #{$spacing-small} + 2px); /* For IE */
-}
-
 .#{$css-prefix}input--bare {
   background-color: transparent;
   border: none;

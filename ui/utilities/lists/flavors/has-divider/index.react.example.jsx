@@ -17,6 +17,6 @@ module.exports = (
   <ul className={pf('list--vertical')}>
     <li className={pf('list__item')}>List Item</li>
     <li className={pf('list__item')}>List Item</li>
-    <li className={pf('list__item has-divider')}>List Item</li>
+    <li className={pf('list__item has-divider--top-space')}>List Item</li>
   </ul>
 );

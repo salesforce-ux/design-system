@@ -27,12 +27,14 @@ class SvgIcon extends React.Component {
       <svg
         {...props}
         aria-hidden={true}
-        className={pf(className)}>
-          <use xlinkHref={href}></use>
-      </svg>
+        className={pf(className)}
+        dangerouslySetInnerHTML={{__html: this.getUse()}} />
     );
   }
   getUse() {
+    const {sprite,symbol} = this.props;
+    const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
+    return `<use xlink:href="${href}"></use>`;
   }
 }
 

@@ -11,6 +11,11 @@
 
 - Added notifications > prompt, modal-style alert
 
+## Release 0.10.1 - October 21, 2015
+- Hot fix for picklist width on datepicker
+- `.slds-is-required` and `.slds-has-error` on form elements are now properly scoped within the `-vf`, `-ltng` and `-scoped` compiled css files
+- Font size on datepicker properly displays within scoped compiled css files
+
 ## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
@@ -20,7 +25,7 @@
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
 - Changed picklist label and selection list to fixed width. Applied a 5 option max-height with overflow on list.
-- Upgraded `@salesforce-ux/design-tokens` to 1.3.0
+- Upgraded `@salesforce-ux/design-tokens` to 1.3.1
 - `@salesforce-ux/design-system` package now includes */assets/icons* and */assets/images*
 
 **BREAKING CHANGES**
@@ -37,7 +42,7 @@
 - Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
 - Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
 - Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
-  
+
 **SASS UPDATES**
 - Abstracted form states into own mixins
 - Abstracted feed vertical rule into own mixin

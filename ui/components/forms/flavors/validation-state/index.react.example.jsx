@@ -25,11 +25,11 @@ module.exports = (
         <span id="errorSample1" className={pf('form-element__help')}>This field is required</span>
       </div>
     </div>
-    <div className={pf('form-element has-error')}>
+    <div className={pf('form-element has-error is-required')}>
       <Checkbox label="Checkbox Error" assistiveText="errorSample2" />
         <span id="errorSample2" className={pf('form-element__help')}>This field is required</span>
     </div>
-    <div className={pf('form-element has-error')}>
+    <div className={pf('form-element has-error is-required')}>
       <Radio label="Radio Error" assistiveText="errorSample3" />
         <span id="errorSample3" className={pf('form-element__help')}>This field is required</span>
     </div>

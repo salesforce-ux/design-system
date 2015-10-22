@@ -29,10 +29,6 @@
       border-left: $border-width-thin solid $color-border-button-default;
     }
 
-    &:last-child[disabled] {
-      display: none;
-    }
-
     &:last-child {
       border-radius: 0 $border-radius-medium $border-radius-medium 0;
     }
@@ -43,6 +39,14 @@
 
     &:only-child{
       border-radius: .25rem;
+    }
+  }
+
+  .#{$css-prefix}button--icon-border,
+  .#{$css-prefix}button--icon-border-filled {
+
+    &:last-child[disabled] {
+      display: none;
     }
   }
 

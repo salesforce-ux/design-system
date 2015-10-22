@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.10.2 - October 22, 2015
+- Updated Icons to version 3.2.0
+
+
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker
 - `.slds-is-required` and `.slds-has-error` on form elements are now properly scoped within the `-vf`, `-ltng` and `-scoped` compiled css files

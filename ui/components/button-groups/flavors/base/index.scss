@@ -42,8 +42,7 @@
     }
   }
 
-  .#{$css-prefix}button--icon-border,
-  .#{$css-prefix}button--icon-border-filled {
+  .#{$css-prefix}toggle-visibility {
 
     &:last-child[disabled] {
       display: none;

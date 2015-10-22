@@ -119,6 +119,7 @@ exports.preview = (
               <div className={pf('button--last')}>
                 <ButtonIcon
                 flavor="icon-border-filled"
+                className={pf('toggle-visibility')}
                 sprite="utility"
                 symbol="down"
                 assistiveText="More Actions" />

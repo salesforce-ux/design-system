@@ -29,6 +29,7 @@ module.exports = (
       </Button>
       <ButtonIcon
       flavor="icon-border-filled"
+      className={pf('toggle-visibility')}
       sprite="utility"
       symbol="down"
       assistiveText="More Actions"/>
@@ -39,6 +40,7 @@ module.exports = (
       </Button>
       <ButtonIcon
       flavor="icon-border-filled"
+      className={pf('toggle-visibility')}
       sprite="utility"
       symbol="down"
       assistiveText="More Actions" />
@@ -55,6 +57,7 @@ module.exports = (
       </Button>
       <ButtonIcon
       flavor="icon-border-filled"
+      className={pf('toggle-visibility')}
       disabled="true"
       sprite="utility"
       symbol="down"

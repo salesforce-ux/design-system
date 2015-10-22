@@ -10,18 +10,55 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
+const ReactDOM = require('react-dom');
+const Modal = require('ui/components/modals/index.react');
+const Button = require('ui/components/buttons/index.react');
+const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
+const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
-const CodeClass = require('app_modules/site/components/code-class');
 
-module.exports = (
-  <ComponentDocs>
-    <p className="site-text-introduction">A popover is a non-modal dialog.</p>
-    <p>A popover is used to display contextual information to the user. It can be a simple tooltip or used for more complex components, such as a preview panel.</p>
-    <p>A popover can accept the following nubbin position classes, <CodeClass className="nubbin--left"/>, <CodeClass className="nubbin--left-top"/>, <CodeClass className="nubbin--left-bottom"/>, <CodeClass className="nubbin--top-left"/>, <CodeClass className="nubbin--top-right"/>, <CodeClass className="nubbin--right-top"/>, <CodeClass className="nubbin--right-bottom"/>, <CodeClass className="nubbin--bottom-left"/>, <CodeClass className="nubbin--bottom-right"/>.</p>
-    <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Showing the popover on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.</p>
-    <p>Give the popover an ID and use that as the value of the <code>aria-describedby</code> attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.</p>
-  </ComponentDocs>
-);
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showing: true };
+  }
+
+  openModal() {
+    this.setState({showing: true});
+  }
+
+  closeModal() {
+    this.setState({showing: false});
+    ReactDOM.findDOMNode(this.refs.opener).focus();
+  }
+
+  render() {
+    return (
+      <div className='demo-only' style={{height: '480px'}}>
+        <Modal
+          isOpen={this.state.showing}
+          renderInline={true}
+        >
+
+          <Modal.Header className={pf('modal--prompt__header theme--error theme--alert-texture')}>
+            <h2 className={pf('text-heading--medium')}>
+              Service Unavailable
+            </h2>
+          </Modal.Header>
+
+          <Modal.Body className={pf('modal--prompt__content')}>
+            <Lorem count={1} paragraphLowerBound={2} />
+          </Modal.Body>
+
+          <Modal.Footer className={pf('modal--prompt__footer theme--default')}>
+            <Button flavor="neutral">Okay</Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    );
+  }
+}
+
+module.exports = <ModalExample/>;

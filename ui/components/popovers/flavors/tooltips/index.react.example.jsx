@@ -10,18 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
+const Lorem = require('react-lorem-component');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
-const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
-  <ComponentDocs>
-    <p className="site-text-introduction">A popover is a non-modal dialog.</p>
-    <p>A popover is used to display contextual information to the user. It can be a simple tooltip or used for more complex components, such as a preview panel.</p>
-    <p>A popover can accept the following nubbin position classes, <CodeClass className="nubbin--left"/>, <CodeClass className="nubbin--left-top"/>, <CodeClass className="nubbin--left-bottom"/>, <CodeClass className="nubbin--top-left"/>, <CodeClass className="nubbin--top-right"/>, <CodeClass className="nubbin--right-top"/>, <CodeClass className="nubbin--right-bottom"/>, <CodeClass className="nubbin--bottom-left"/>, <CodeClass className="nubbin--bottom-right"/>.</p>
-    <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Showing the popover on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.</p>
-    <p>Give the popover an ID and use that as the value of the <code>aria-describedby</code> attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.</p>
-  </ComponentDocs>
+  <div className={pf('popover popover--tooltip nubbin--left')} role="tooltip">
+    <div className={pf('popover__body')}>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+    </div>
+  </div>
 );

@@ -13,8 +13,8 @@
   border-color: transparent;
   background-color: transparent;
 
-  &:hover,
-  &:focus {
+  &:hover:not([disabled]),
+  &:focus:not([disabled]) {
     border: $border-width-thin solid $color-border-button-default;
     background-color: $color-background-button-default-hover;
   }
@@ -31,7 +31,9 @@
 
 .#{$css-prefix}text-not-selected,
 .#{$css-prefix}text-selected,
-.#{$css-prefix}text-selected-focus {
+.#{$css-prefix}text-selected-focus,
+.#{$css-prefix}is-selected[disabled]:hover .#{$css-prefix}text-selected,
+.#{$css-prefix}is-selected[disabled]:focus .#{$css-prefix}text-selected {
   display: block;
 }
 
@@ -39,6 +41,7 @@
 .#{$css-prefix}not-selected .#{$css-prefix}text-selected-focus,
 .#{$css-prefix}is-selected .#{$css-prefix}text-not-selected,
 .#{$css-prefix}is-selected:not(:hover):not(:focus) .#{$css-prefix}text-selected-focus,
+.#{$css-prefix}is-selected[disabled]:hover .#{$css-prefix}text-selected-focus,
 .#{$css-prefix}is-selected:hover .#{$css-prefix}text-selected,
 .#{$css-prefix}is-selected:focus .#{$css-prefix}text-selected
 {

@@ -131,11 +131,12 @@ class PickListArrows extends React.Component {
   render() {
     return (
       <div className={pf('grid grid--vertical')}>
-        { this.symbols.map((s, i) => <ButtonIcon flavor="icon-container" sprite="utility" assistiveText="Pick list" symbol={s} onClick={this.arrowClicked.bind(this, s)} key={i} /> ) }
+        { this.symbols.map((s, i) => <ButtonIcon flavor="icon-container" sprite="utility" assistiveText={'Arrow ' + s} symbol={s} onClick={this.arrowClicked.bind(this, s)} key={i} /> ) }
       </div>
     );
   }
 }
+// @TODO: assistive text needs to be unique for each icon
 
 class PickList extends React.Component {
   static childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };

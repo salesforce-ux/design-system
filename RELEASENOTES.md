@@ -1,7 +1,13 @@
 # Salesforce Lightning Design System
 # Release notes
 
+
 ## Release 0.11.0 - October XX, 2015
+
+- Changed notifications > modal to notifications > modal-toast
+- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
+- Stateful button has a `[disabled]` state
+- If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
 
 **SITE IA**
 - Moved tooltips to popovers, deprecated tooltip section [www.lightningdesignsystem.com/components/popovers#tooltips](www.lightningdesignsystem.com/components/popovers#tooltips)
@@ -12,12 +18,9 @@
 - <em> (*) Code is still in codebase but will be deprecated, eta TBD</em>
 
 **NEW COMPONENT**
+- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
 - Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
 - More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
-- Changed notifications > modal to notifications > modal-toast
-- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
-- Stateful button has a `[disabled]` state
-- Added notifications > prompt, modal-style alert
 
 
 ## Release 0.10.1 - October 21, 2015

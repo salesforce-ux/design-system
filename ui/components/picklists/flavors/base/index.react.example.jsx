@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
+const Menu = require('ui/components/menu/index.react');
 const PickList = require('ui/components/picklists/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
@@ -18,7 +18,7 @@ const pf = componentUtil.prefix;
 module.exports = (
 <div className='demo-only demo-only--dropdown' style={{height: '240px'}}>
   <PickList label="Select an Option" aria-expanded="true">
-    <Menu className={pf('dropdown--left dropdown--small')}>
+    <Menu className={pf('dropdown--left')}>
       <Menu.List>
         <Menu.Item href="#">Option A</Menu.Item>
         <Menu.Item href="#">Option B</Menu.Item>

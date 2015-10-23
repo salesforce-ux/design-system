@@ -93,6 +93,7 @@
       left: auto;
       right: $spacing-x-large;
       top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 
@@ -147,6 +148,7 @@
       right: $spacing-x-large;
       top: 100%;
       margin-top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 

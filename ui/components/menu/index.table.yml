@@ -5,17 +5,22 @@ classes:
     description: Initializes dropdown
     required: true
     applied: <code>&lt;div&gt;</code>
-    notes: Applies positioning and container styles
+    notes: Applies positioning and container styles, by default, dropdown appears below and center of target
   -
     class: dropdown-trigger
     description: Initializes dropdown hover interactions
     required: true
     applied: <code>&lt;div&gt;</code>
+    notes: Element can also be used as a Javascript hook
   -
     class: dropdown__item
     description: Initializes dropdown item
     required: true
     applied: <code>&lt;li&gt;</code>
+  -
+    class: dropdown--bottom
+    description: Positions dropdown to above target
+    applied: <code>.{{cssPrefix}}dropdown</code>
   -
     class: dropdown--left
     description: Positions dropdown to left side of target
@@ -37,25 +42,54 @@ classes:
     description: Sets min-width of 25rem/400px
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
+    class: dropdown__header
+    description: Adds padding to area above dropdown menu list
+  -
+    class: nubbin--top
+    description: Triangle that points upwards which is horizontally centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--top-left
+    description: Triangle that points upwards which is left aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--top-right
+    description: Triangle that points upwards which is right aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--bottom
+    description: Triangle that points downwards which is horizontally centered
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--bottom-left
+    description: Triangle that points downwards which is left aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: nubbin--bottom-right
+    description: Triangle that points downwards which is right aligned
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
     class: dropdown--nubbin-top
     description: Applies triangle indicator pointing at content
     applied: <code>.{{cssPrefix}}dropdown</code>
-  -
-    class: dropdown__header
-    description: Adds padding to area above dropdown menu list
+    notes: deprecated
   -
     class: has-icon
     description: Lets dropdown item know how to position icon
     applied: <code>.{{cssPrefix}}dropdown__item</code>
+    notes: deprecated
   -
     class: has-icon--left
     description: Position icon in dropdown item to the left
     applied: <code>.{{cssPrefix}}dropdown__item</code>
+    notes: deprecated
   -
     class: has-icon--right
     description: Position icon in dropdown item to the right
     applied: <code>.{{cssPrefix}}dropdown__item</code>
+    notes: deprecated
   -
     class: is-selected
     description: Applies selected state to dropdown item
     applied: <code>.{{cssPrefix}}dropdown__item</code>
+    notes: deprecated

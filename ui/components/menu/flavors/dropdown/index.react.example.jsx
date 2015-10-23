@@ -10,38 +10,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
-const Button = require('ui/components/buttons/index.react');
+const Menu = require('ui/components/menu/index.react');
+const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '325px'}}>
-  <Menu className={pf('dropdown--left dropdown--small')}>
-    <Menu.Header>
-      <Menu.Filter placeholder="Find in list..." />
-      <Menu.Title>Lists</Menu.Title>
-    </Menu.Header>
-    <Menu.List>
-      <Menu.Item>
-        Opportunities Closing this Quarter
-      </Menu.Item>
-      <Menu.Item className={pf('is-selected')} aria-selected="true">
-        All Opportunities
-      </Menu.Item>
-      <Menu.Item>
-        My Opportunities
-      </Menu.Item>
-      <Menu.Item>
-        United Partner Opportunities
-      </Menu.Item>
-      <Menu.Item>
-        Acme Inc Opportunities
-      </Menu.Item>
-      <Menu.Item>
-        My Opportunities about 80k
-      </Menu.Item>
-    </Menu.List>
-  </Menu>
+<div className={pf('demo-only demo-only--dropdown')} style={{height: '220px'}}>
+  <div className={pf('dropdown-trigger')}>
+    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+    <Menu className={pf('dropdown--left')}>
+      <Menu.List isSelectable={false}>
+        <Menu.Item>Menu Item One</Menu.Item>
+        <Menu.Item>Menu Item Two</Menu.Item>
+        <Menu.Item>Menu Item Three</Menu.Item>
+        <Menu.Item className={pf('has-divider')}>Menu Item Four</Menu.Item>
+      </Menu.List>
+    </Menu>
+  </div>
 </div>
 );
+
+

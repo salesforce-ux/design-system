@@ -1,9 +1,8 @@
 classBase: 'dropdown'
 status: 'prototype'
 flavors:
-  - base
-  - menu
-  - menu-with-icons
+  - dropdown
+  - with-icons
   - action-overflow
   - search-overflow
   - positioning

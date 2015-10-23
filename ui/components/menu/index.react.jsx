@@ -137,9 +137,8 @@ class DropdownItem extends React.Component {
     return (
         <li id={this.id} onClick={this.selectedItem.bind(this)} { ...this.props }
             className={className} onFocus={this.itemFocused.bind(this)}>
-          <a href="javascript:void(0)" aria-disabled={ this.props.disabled }
-              className={pf('truncate')} role={aRole}>
-            <p>{ this.context.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }{ this.boldSearchText(this.props.children) }</p>
+          <a href="javascript:void(0)" aria-disabled={ this.props.disabled } role={aRole}>
+            <p className={pf('truncate')}>{ this.context.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }{ this.boldSearchText(this.props.children) }</p>
           </a>
         </li>
       );

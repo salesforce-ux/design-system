@@ -10,22 +10,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
+const Menu = require('ui/components/menu/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '225px'}}>
+<div className={pf('demo-only demo-only--dropdown p-horizontal--medium')} style={{height: '320px'}}>
   <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left text-heading--label')}>
+    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
+    <Menu className={pf('dropdown--left dropdown--nubbin-top')}>
+      <Menu.Header>
+        <Menu.Title>List View Controls</Menu.Title>
+      </Menu.Header>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Account Functions</Menu.Item>
-        <Menu.Item href="#">Agreements</Menu.Item>
-        <Menu.Item href="#">Approval Matrix</Menu.Item>
-        <Menu.Item href="#">Approvals</Menu.Item>
-        <Menu.Item href="#">Approval Requests</Menu.Item>
+        <Menu.Item disabled={true}>Rename...</Menu.Item>
+        <Menu.Item disabled={true}>Share...</Menu.Item>
+        <Menu.Item disabled={true}>Delete</Menu.Item>
+        <Menu.Item disabled={true}>Save</Menu.Item>
+        <Menu.Item>Save As...</Menu.Item>
+        <Menu.Item>Discard Changes to List</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

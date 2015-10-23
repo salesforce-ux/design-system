@@ -7,7 +7,6 @@ components:
   - cards
   - data-tables
   - datepickers
-  - dropdowns
   - feeds
   - forms
   - grid-system
@@ -15,6 +14,7 @@ components:
   - images
   - lookups
   - media-objects
+  - menu
   - modals
   - notifications
   - page-headers

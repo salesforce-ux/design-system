@@ -3,5 +3,6 @@ dependencies:
   - components/modals
   - core/icons
   - components/buttons
+  - components/buttons/flavors/icon
 showFormFactors:
   - large

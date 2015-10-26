@@ -10,25 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/menu/index.react');
+const Menu = require('ui/components/menus/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '220px'}}>
+<div className={pf('demo-only demo-only--dropdown')} style={{height: '165px'}}>
   <div className={pf('dropdown-trigger')}>
     <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left')}>
+    <Menu className={pf('dropdown--left dropdown--actions')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item>Menu Item One</Menu.Item>
-        <Menu.Item>Menu Item Two</Menu.Item>
-        <Menu.Item>Menu Item Three</Menu.Item>
-        <Menu.Item className={pf('has-divider')}>Menu Item Four</Menu.Item>
+        <Menu.Item href="#">Action One</Menu.Item>
+        <Menu.Item href="#">Action Two</Menu.Item>
+        <Menu.Item href="#">Action Three</Menu.Item>
       </Menu.List>
     </Menu>
   </div>
 </div>
 );
-
-

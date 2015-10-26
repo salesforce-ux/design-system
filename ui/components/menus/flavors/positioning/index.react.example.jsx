@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/menu/index.react');
+const Menu = require('ui/components/menus/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const Button = require('ui/components/buttons/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');

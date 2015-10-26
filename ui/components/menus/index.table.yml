@@ -69,6 +69,15 @@ classes:
     description: Triangle that points downwards which is right aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
+    class: is-selected
+    description: Applies selected state to dropdown item
+    applied: <code>.{{cssPrefix}}dropdown__item</code>
+    notes: Class modifies the visibility of <code>.{{cssPrefix}}icon-selected</code>
+  -
+    class: icon-selected
+    description: Creates icon when a user selects a <code>.{{cssPrefix}}dropdown__item</code>
+    applied: <code>.{{cssPrefix}}dropdown__item</code>
+  -
     class: dropdown--nubbin-top
     description: Applies triangle indicator pointing at content
     applied: <code>.{{cssPrefix}}dropdown</code>
@@ -86,10 +95,5 @@ classes:
   -
     class: has-icon--right
     description: Position icon in dropdown item to the right
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
-    notes: deprecated
-  -
-    class: is-selected
-    description: Applies selected state to dropdown item
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: deprecated

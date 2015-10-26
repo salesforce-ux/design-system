@@ -10,40 +10,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/menu/index.react');
+const Menu = require('ui/components/menus/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const SvgIcon = require('app_modules/ui/svg-icon');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '250px'}}>
+<div className={pf('demo-only demo-only--dropdown')} style={{height: '220px'}}>
   <div className={pf('dropdown-trigger')}>
     <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left text-heading--label')}>
+    <Menu className={pf('dropdown--left')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item>
-          <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
-          Accounts
-        </Menu.Item>
-        <Menu.Item>
-          <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
-          Approvals
-        </Menu.Item>
-        <Menu.Item>
-          <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
-          Lead
-        </Menu.Item>
-        <Menu.Item>
-          <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
-          Opportunities
-        </Menu.Item>
-        <Menu.Item>
-          <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
-          Products
-        </Menu.Item>
+        <Menu.Item>Menu Item One</Menu.Item>
+        <Menu.Item>Menu Item Two</Menu.Item>
+        <Menu.Item>Menu Item Three</Menu.Item>
+        <Menu.Item className={pf('has-divider')}>Menu Item Four</Menu.Item>
       </Menu.List>
     </Menu>
   </div>
 </div>
 );
+
+

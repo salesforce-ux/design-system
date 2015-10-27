@@ -18,7 +18,6 @@ components:
   - modals
   - notifications
   - page-headers
-  - picklists
   - pills
   - popovers
   - publishers

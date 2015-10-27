@@ -9,60 +9,51 @@
 
 
 
-.#{$css-prefix}button-group {
-  display: flex;
+.#{$css-prefix}picklist--draggable {
 
   .#{$css-prefix}button {
-    border-radius: 0;
-    border-left: 0;
+    margin: $spacing-xx-small;
 
-    + .#{$css-prefix}button {
-      margin-left: 0;
+    &:first-of-type {
+      margin-top: $spacing-large;
+    }
+  }
+}
+
+.#{$css-prefix}picklist__options {
+  border: $border-width-thin solid $color-border-input {
+    radius: $border-radius-medium;
+  };
+  padding: $spacing-xx-small 0;
+  width: $size-small;
+  height: $size-small;
+  background-color: $color-background-input-active;
+
+  &--multi {
+    overflow: auto;
+  }
+}
+
+.#{$css-prefix}picklist__item {
+  position: relative;
+  line-height: $line-height-text;
+
+  > a,
+  > span {
+    display: block;
+    padding: $spacing-x-small $spacing-small;
+
+    &:hover {
+      background-color: $color-background-row-hover;
+      cursor: pointer;
     }
 
-    &:first-child {
-      border-radius: $border-radius-medium 0 0 $border-radius-medium;
-      border-left: $border-width-thin solid $color-border-button-default;
-    }
-
-    &:first-child:not(.#{$css-prefix}button--last .#{$css-prefix}button) {
-      border-left: $border-width-thin solid $color-border-button-default;
-    }
-
-    &:last-child {
-      border-radius: 0 $border-radius-medium $border-radius-medium 0;
-    }
-
-    &:focus { // @TODO: not sure this is doing anything anymore?
-      z-index: $z-index-default;
-    }
-
-    &:only-child{
-      border-radius: .25rem;
+    &:active {
+      background-color: $color-background-row-active;
     }
   }
 
-  .#{$css-prefix}toggle-visibility {
-
-    &:last-child[disabled] {
-      display: none;
-    }
-  }
-
-  & + .#{$css-prefix}button-group,
-  & + .#{$css-prefix}button {
-    margin-left: $spacing-xx-small;
-  }
-
-  .#{$css-prefix}button--last { /* This class should be placed on the wrapper of a button that's the final in a button-group */
-
-    .#{$css-prefix}button {
-      border-radius: 0 $border-radius-medium $border-radius-medium 0;
-      border-left: 0;
-    }
-  }
-
-  .#{$css-prefix}button.#{$css-prefix}button--last {
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  &[aria-selected="true"] {
+    background-color: $color-background-row-active;
   }
 }

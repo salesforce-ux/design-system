@@ -59,14 +59,13 @@ class PickListItem extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className');
-    const classNameWithSelected = pf(classNames('picklist__item has-icon has-icon--left', {'is-selected': this.isSelected()}));
+    const classNameWithSelected = pf(classNames('picklist__item', {'is-selected': this.isSelected()}));
     const className = this.$getClassName(classNameWithSelected);
     const tabIndex = this.props.idx === 0 ? 0 : -1;
 
     return (
       <li {...props} id={this.id} className={className} onFocus={this.itemFocused.bind(this)} onClick={this.itemSelected.bind(this)} onMouseDown={this.itemSelected.bind(this)} aria-selected={this.isSelected()} tabIndex={tabIndex} role="option">
         <span className={pf('truncate')}>
-          { this.showCheck() ? <SvgIcon className={pf('icon icon--small icon--left')} sprite="standard" symbol="task2" /> : null }
           {this.children()}
         </span>
       </li>

@@ -1,0 +1,1 @@
+A picklist is a list of actionable items that invokes on selection of a particular item. That value is then shown as selected and its' value is updated within the `{{cssPrefix}}picklist__label`. The picklist menu options are usually displayed within a `{{cssPrefix}}dropdown` as its presentation layer.

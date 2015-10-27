@@ -10,50 +10,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Button = require('ui/components/buttons/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
+const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const PickList = require('ui/components/picklists/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className='demo-only demo--inverse'>
-    <div className={pf('button-group')} role="group">
-      <Button flavor="inverse">
-      Refresh
-      </Button>
-      <Button flavor="inverse">
-        Edit
-      </Button>
-      <Button flavor="inverse">
-        Save
-      </Button>
-      <ButtonIcon
-      flavor="icon-border"
-      iconFlavor="inverse"
-      className={pf('toggle-visibility')}
-      sprite="utility"
-      symbol="down"
-      assistiveText="View More" />
-    </div>
-    <div className={pf('button-group demo-space')} role="group">
-      <Button flavor="inverse" disabled="true">
-      Refresh
-      </Button>
-      <Button flavor="inverse">
-        Edit
-      </Button>
-      <Button flavor="inverse" className={pf('button--last')}>
-        Save
-      </Button>
-      <ButtonIcon
-      flavor="icon-border"
-      iconFlavor="inverse"
-      className={pf('toggle-visibility')}
-      disabled="true"
-      sprite="utility"
-      symbol="down"
-      assistiveText="View More" />
-    </div>
-  </div>
+<div className='demo-only'>
+  <PickList flavor="multi" label="First Category" label2="Second Category">
+    <PickList.Options flavor="multi">
+      <PickList.Item><span>Option One</span></PickList.Item>
+      <PickList.Item><span>Option Two</span></PickList.Item>
+      <PickList.Item><span>Option Three</span></PickList.Item>
+      <PickList.Item><span>Option Four</span></PickList.Item>
+      <PickList.Item><span>Option Five</span></PickList.Item>
+      <PickList.Item><span>Option Six</span></PickList.Item>
+      <PickList.Item><span>Option Seven</span></PickList.Item>
+      <PickList.Item><span>Option Eight</span></PickList.Item>
+    </PickList.Options>
+    <PickList.Options flavor="multi">
+    </PickList.Options>
+  </PickList>
+</div>
 );

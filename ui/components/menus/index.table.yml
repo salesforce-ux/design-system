@@ -45,6 +45,20 @@ classes:
     class: dropdown__header
     description: Adds padding to area above dropdown menu list
   -
+    class: picklist
+    description: Initializes picklist
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: picklist--fluid
+    description: Forces width of picklist and picklist dropdown to inherit width of its content
+    applied: <code>.{{cssPrefix}}picklist</code>
+  -
+    class: picklist__label
+    description: Custom select
+    required: true
+    applied: <code>&lt;button&gt;</code>
+  -
     class: nubbin--top
     description: Triangle that points upwards which is horizontally centered
     applied: <code>.{{cssPrefix}}popover</code>
@@ -81,19 +95,19 @@ classes:
     class: dropdown--nubbin-top
     description: Applies triangle indicator pointing at content
     applied: <code>.{{cssPrefix}}dropdown</code>
-    notes: deprecated
+    notes: Deprecated
   -
     class: has-icon
     description: Lets dropdown item know how to position icon
     applied: <code>.{{cssPrefix}}dropdown__item</code>
-    notes: deprecated
+    notes: Deprecated
   -
     class: has-icon--left
     description: Position icon in dropdown item to the left
     applied: <code>.{{cssPrefix}}dropdown__item</code>
-    notes: deprecated
+    notes: Deprecated
   -
     class: has-icon--right
     description: Position icon in dropdown item to the right
     applied: <code>.{{cssPrefix}}dropdown__item</code>
-    notes: deprecated
+    notes: Deprecated

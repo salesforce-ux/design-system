@@ -74,61 +74,45 @@
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
-  // &.#{$css-prefix}dropdown--left {
-  //   &:before,
-  //   &:after {
-  //     left: $spacing-large;
-  //     margin-left: 0;
-  //   }
-  // }
+  @include deprecate("0.200") {
 
-  // &.#{$css-prefix}dropdown--right {
-  //   right: -#{$spacing-medium};
+    &--nubbin-top {
+      @include nubbin(top, "before");
+      @include nubbin(top);
+      margin-top: ($square-tooltip-nubbin / 2);
 
-  //   &:before,
-  //   &:after {
-  //     left: auto;
-  //     right: $spacing-large;
-  //     margin-left: 0;
-  //   }
-  // }
+      &:before {
+        background: $color-background-alt;
+      }
 
-  // &--nubbin-top {
-  //   @include nubbin(top, "before");
-  //   @include nubbin(top);
-  //   margin-top: ($square-tooltip-nubbin / 2);
+      &:after {
+        background: $color-background-alt;
+        box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
+        z-index: -1;
+      }
 
-  //   &:before {
-  //     background: $color-background-alt;
-  //   }
+      &.#{$css-prefix}dropdown--left {
+        left: -#{$spacing-medium};
 
-  //   &:after {
-  //     background: $color-background-alt;
-  //     box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
-  //     z-index: -1;
-  //   }
+        &:before,
+        &:after {
+          left: $spacing-large;
+          margin-left: 0;
+        }
+      }
 
-  //   &.#{$css-prefix}dropdown--left {
-  //     left: -#{$spacing-medium};
+      &.#{$css-prefix}dropdown--right {
+        right: -#{$spacing-medium};
 
-  //     &:before,
-  //     &:after {
-  //       left: $spacing-large;
-  //       margin-left: 0;
-  //     }
-  //   }
-
-  //   &.#{$css-prefix}dropdown--right {
-  //     right: -#{$spacing-medium};
-
-  //     &:before,
-  //     &:after {
-  //       left: auto;
-  //       right: $spacing-large;
-  //       margin-left: 0;
-  //     }
-  //   }
-  // }
+        &:before,
+        &:after {
+          left: auto;
+          right: $spacing-large;
+          margin-left: 0;
+        }
+      }
+    }
+  }
 
   &__header {
     padding: $spacing-x-small $spacing-small;
@@ -177,49 +161,48 @@
       fill: $color-text-icon-default-hover;
       opacity: 1;
     }
-
-    // &.#{$css-prefix}is-selected .#{$css-prefix}icon {
-    //   fill: $color-text-icon-default-hover;
-    // }
-
-    // .#{$css-prefix}icon {
-    //   @include square($square-icon-medium-content);
-    //   position: absolute;
-    //   top: 50%;
-    //   margin-top: (($square-icon-medium-content / 2) * -1);
-    //   fill: $color-text-icon-default;
-
-    //   &--left {
-    //     left: $spacing-small;
-    //   }
-
-    //   &--right {
-    //     right: $spacing-small;
-    //   }
-    // }
   }
 
-  // .#{$css-prefix}has-icon {
-  //   position: relative;
+  @include deprecate("0.200") {
 
-  //   &--left > a,
-  //   &--left > span {
-  //     padding-left: $spacing-x-large;
-  //   }
+    .#{$css-prefix}has-icon {
+      position: relative;
 
-  //   &--right > a,
-  //   &--right > span {
-  //     padding-right: $spacing-x-large;
-  //   }
+      &--left > a,
+      &--left > span {
+        padding-left: $spacing-x-large;
+      }
 
-  //   &--left-right > a,
-  //   &--left-right > span {
-  //     padding: {
-  //       left: $spacing-x-large;
-  //       right: $spacing-x-large;
-  //     }
-  //   }
-  // }
+      &--right > a,
+      &--right > span {
+        padding-right: $spacing-x-large;
+      }
+
+      &--left-right > a,
+      &--left-right > span {
+        padding: {
+          left: $spacing-x-large;
+          right: $spacing-x-large;
+        }
+      }
+
+      .#{$css-prefix}icon {
+        @include square($square-icon-medium-content);
+        position: absolute;
+        top: 50%;
+        margin-top: (($square-icon-medium-content / 2) * -1);
+        fill: $color-text-icon-default;
+
+        &--left {
+          left: $spacing-small;
+        }
+
+        &--right {
+          right: $spacing-small;
+        }
+      }
+    }
+  } // Deprecate has-icon
 }
 
 .#{$css-prefix}dropdown-trigger {

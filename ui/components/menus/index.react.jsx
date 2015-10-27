@@ -218,8 +218,8 @@ class Dropdown extends React.Component {
 
   menuClassName() {
     return classNames(`${cssPrefix}dropdown`, this.props.className, {
-      [`${cssPrefix}dropdown--menu`]: !this.hasFilter,
-      [`${cssPrefix}dropdown--search`]: this.hasFilter,
+      //[`${cssPrefix}dropdown--menu`]: !this.hasFilter,
+      //[`${cssPrefix}dropdown--search`]: this.hasFilter,
       [`${cssPrefix}hide`]: this.props.hidden
     } );
   }

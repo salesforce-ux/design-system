@@ -1,1 +1,3 @@
-These are positioning helpers to assist in the location of the dropdown menu when invoked by a user. The default location of a dropdown menu is **top** and **center**, so when the dropdown is invoked, its location is at the center base of the target and expands top down. The support locations are top and bottom, `{{cssPrefix}}dropdown--bottom`, that can additional have a horizontal direction passed into it, `{{cssPrefix}}dropdown--left`.
+Positioning helpers allow the developer to position a dropdown menu. The default location is **top** and **center**. When the dropdown is activated, it is at the center base of the target and expands down. 
+
+A dropdown may also be positioned with the bottom above its target using `{{cssPrefix}}dropdown--bottom`. Horizontal modifiers can be added to either top or bottom positioned dropdowns using `{{cssPrefix}}dropdown--left` or `{{cssPrefix}}dropdown--right`.

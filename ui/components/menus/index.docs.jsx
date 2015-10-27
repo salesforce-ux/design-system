@@ -17,11 +17,11 @@ const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
   <ComponentDocs>
-    <p className="site-text-introduction">A Menu offers a list of actions or functions that a user can invoke.</p>
+    <p className="site-text-introduction">A Menu offers a list of actions or functions that a user can access.</p>
 
-    <p>There are some requirements to have dropdown menus be displayed in their desired output. The unordered menu list (<code>[role="menu"]</code>) should be wrapped in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. By default, a dropdown menu will show on hover since we are triggering the dropdown through CSS. If you need to instantiate the hover to show, the target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
+    <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. Since we are triggering the dropdown through CSS, the menu will show on hover. The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
 
-    <p>By default, dropdown menus do not come with a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin--top"/> to the <CodeClass className="dropdown"/> HTML element.</p>
+    <p>By default, dropdown menus do not display a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin--top"/> to the <CodeClass className="dropdown"/> HTML element.</p>
     <p>See the <a href="#overview">Component Overview</a> table for further nubbin support.</p>
 
     <h4 className="site-text-heading--label">Accessibility</h4>

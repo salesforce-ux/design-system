@@ -10,19 +10,19 @@
 
 
 .#{$css-prefix}dropdown {
-  margin-top: $spacing-xxx-small;
-  padding: $spacing-xx-small 0;
-  z-index: $z-index-dropdown;
-  float: left;
   position: absolute;
+  z-index: $z-index-dropdown;
+  left: 50%;
+  float: left;
   min-width: $size-xx-small;
   max-width: $size-medium;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: $spacing-xxx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
-  box-shadow: $shadow-drop-down;
+  padding: $spacing-xx-small 0;
   background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  transform: translateX(-50%);
 
   &--left {
     left: 0;
@@ -53,8 +53,8 @@
   }
 
   mark {
-    background-color: transparent;
     font-weight: $font-weight-bold;
+    background-color: transparent;
   }
 
   &[class*="#{$css-prefix}nubbin"] {
@@ -122,11 +122,11 @@
     line-height: $line-height-text;
 
     > a {
+      position: relative;
       display: flex;
       justify-content: space-between;
       padding: $spacing-x-small $spacing-small;
       color: $color-text-default;
-      position: relative;
       white-space: nowrap;
       cursor: pointer;
 

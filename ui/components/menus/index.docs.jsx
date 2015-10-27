@@ -17,13 +17,13 @@ const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
   <ComponentDocs>
-    <p className="site-text-introduction">Dropdowns are contextual menu for displaying lists of links.</p>
+    <p className="site-text-introduction">A Menu offers a list of actions or functions that a user can invoke.</p>
 
     <p>Our dropdowns, by default, show on hover. There are some requirements to have the dropdowns be displayed in their desired output. The wrapper of the dropdown link list will need the class <CodeClass className="dropdown"/>. If you need to instantiate the hover to show, the HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
 
     <p>We provide variations of dropdowns depending on a particular action. Top level menu, form action menu, toggle action with icon support and filterable searches.</p>
 
-    <p>By default, dropdowns do not come with a nubbin (the little cute triangle pointing at your target). If you want to apply one, add the class <CodeClass className="dropdown--nubbin-top"/> to the <CodeClass className="dropdown"/> HTML element. Modifiers can be chained to achieve additional outcomes.</p>
+    <p>By default, dropdowns do not come with a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin-top"/> to the <CodeClass className="dropdown"/> HTML element. Modifiers can be chained to achieve additional outcomes.</p>
 
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>The main thing that distinguishes menus from other popover blocks is keyboard navigation: elsewhere, users press the Tab key to navigate through actionable items, but in a menu, users press the arrow keys to navigate.</p>

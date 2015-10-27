@@ -199,13 +199,11 @@ class PickList extends React.Component {
     if(this.isMulti()) return <PickListMulti {...this.props} />;
 
     return (
-      <div className={pf('form-element')}>
-        <div {...props} className={className} aria-expanded={!this.state.hidden}>
-          <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onSpaceBar.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
-            <span className={pf('truncate')}>{this.label()}</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
-          </button>
-          { this.children() }
-        </div>
+      <div className={className} aria-expanded={!this.state.hidden} {...props} >
+        <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onSpaceBar.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
+          <span className={pf('truncate')}>{this.label()}</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        </button>
+        { this.children() }
       </div>
     );
   }

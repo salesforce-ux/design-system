@@ -74,7 +74,7 @@ classes:
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Class modifies the visibility of <code>.{{cssPrefix}}icon-selected</code>
   -
-    class: icon-selected
+    class: icon--selected
     description: Creates icon when a user selects a <code>.{{cssPrefix}}dropdown__item</code>
     applied: <code>.{{cssPrefix}}dropdown__item</code>
   -

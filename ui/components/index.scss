@@ -52,6 +52,7 @@
   "forms/flavors/radio/index",
   "forms/flavors/checkbox/index",
   "forms/flavors/select/index",
+  "forms/flavors/multi-select/index",
   "forms/flavors/horizontal-form/index",
   "forms/flavors/stacked-form/index",
   "forms/flavors/inline-form/index",
@@ -79,18 +80,13 @@
   "popovers/flavors/panels/index",
   "popovers/flavors/nubbins/index",
 
-   // Picklists
-  "picklists/flavors/base/index",
-  "picklists/flavors/multi-select/index",
-
   // Menus
-  "dropdowns/flavors/base/index",
-  "dropdowns/flavors/menu/index",
-  //"dropdowns/flavors/menu-with-search/index",
-  "dropdowns/flavors/menu-with-icons/index",
-  "dropdowns/flavors/action-overflow/index",
-  "dropdowns/flavors/search-overflow/index",
-  "dropdowns/flavors/positioning/index",
+  "menus/flavors/dropdown/index",
+  "menus/flavors/dropdown-with-icons/index",
+  "menus/flavors/dropdown-positioning/index",
+  "menus/flavors/picklist/index",
+  "menus/flavors/action-overflow/index",
+  "menus/flavors/search-overflow/index",
 
   // Datepicker
   "datepickers/flavors/base/index",

@@ -93,6 +93,7 @@
       left: auto;
       right: $spacing-x-large;
       top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 
@@ -103,7 +104,7 @@
       @include nubbin(bottom, $color: $color);
 
       &:after {
-        box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -116,7 +117,7 @@
       @include nubbin(bottom, $color: $color);
 
       &:after {
-        box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -136,7 +137,7 @@
       @include nubbin(bottom, $color: $color);
 
       &:after {
-        box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -147,6 +148,7 @@
       right: $spacing-x-large;
       top: 100%;
       margin-top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 
@@ -157,7 +159,7 @@
       @include nubbin(left, $color: $color);
 
       &:after {
-        box-shadow: -1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -170,7 +172,7 @@
       @include nubbin(left, $color: $color);
 
       &:after {
-        box-shadow: -1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -187,8 +189,12 @@
     @if $shadow != null {
       @include nubbin(left, $color: $color);
 
+      &:before {
+        margin-bottom: -1px;
+      }
+
       &:after {
-        box-shadow: -1px 1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: -1px 2px 3px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -207,7 +213,7 @@
       @include nubbin(right, $color: $color);
 
       &:after {
-        box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 1px -1px 2px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -220,7 +226,7 @@
       @include nubbin(right, $color: $color);
 
       &:after {
-        box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 1px -1px 2px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }
@@ -237,8 +243,12 @@
     @if $shadow != null {
       @include nubbin(right, $color: $color);
 
+      &:before {
+        margin-bottom: -1px;
+      }
+
       &:after {
-        box-shadow: 1px -1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: 2px -1px 3px 0px rgba(0, 0, 0, .16);
         z-index: -1;
       }
     }

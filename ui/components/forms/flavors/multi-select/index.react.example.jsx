@@ -10,42 +10,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const PickList = require('ui/components/picklists/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('grid grid--align-space demo-only demo-only--dropdown')} style={{height: '200px'}}>
-  <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left dropdown--nubbin-top')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </div>
-  <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-    <Menu className={pf('dropdown--nubbin-top')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </div>
-  <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-    <Menu className={pf('dropdown--right dropdown--nubbin-top')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Menu Item One</Menu.Item>
-        <Menu.Item href="#">Menu Item Two</Menu.Item>
-        <Menu.Item href="#">Menu Item Three</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </div>
+<div className='demo-only'>
+  <PickList flavor="multi" label="First Category" label2="Second Category">
+    <PickList.Options flavor="multi">
+      <PickList.Item><span>Option One</span></PickList.Item>
+      <PickList.Item><span>Option Two</span></PickList.Item>
+      <PickList.Item><span>Option Three</span></PickList.Item>
+      <PickList.Item><span>Option Four</span></PickList.Item>
+      <PickList.Item><span>Option Five</span></PickList.Item>
+      <PickList.Item><span>Option Six</span></PickList.Item>
+      <PickList.Item><span>Option Seven</span></PickList.Item>
+      <PickList.Item><span>Option Eight</span></PickList.Item>
+    </PickList.Options>
+    <PickList.Options flavor="multi">
+    </PickList.Options>
+  </PickList>
 </div>
 );

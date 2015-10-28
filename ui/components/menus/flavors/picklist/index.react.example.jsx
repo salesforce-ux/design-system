@@ -10,24 +10,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const Menu = require('ui/components/menus/index.react');
+const PickList = require('ui/components/picklists/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '225px'}}>
-  <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left text-heading--label')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Account Functions</Menu.Item>
-        <Menu.Item href="#">Agreements</Menu.Item>
-        <Menu.Item href="#">Approval Matrix</Menu.Item>
-        <Menu.Item href="#">Approvals</Menu.Item>
-        <Menu.Item href="#">Approval Requests</Menu.Item>
+<div className='demo-only demo-only--dropdown' style={{height: '240px'}}>
+  <PickList label="Select an Option" aria-expanded="true">
+    <Menu className={pf('dropdown--left')}>
+      <Menu.List>
+        <Menu.Item href="#">Option A</Menu.Item>
+        <Menu.Item href="#">Option B</Menu.Item>
+        <Menu.Item href="#">Option C</Menu.Item>
+        <Menu.Item href="#">Option D</Menu.Item>
+        <Menu.Item href="#">Option E</Menu.Item>
+        <Menu.Item href="#">Option F</Menu.Item>
+        <Menu.Item href="#">Option G</Menu.Item>
+        <Menu.Item href="#">Option H</Menu.Item>
+        <Menu.Item href="#">Option I</Menu.Item>
+        <Menu.Item href="#">Option J</Menu.Item>
+        <Menu.Item href="#">Option K</Menu.Item>
+        <Menu.Item href="#">Option L</Menu.Item>
+        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
       </Menu.List>
     </Menu>
-  </div>
+  </PickList>
 </div>
 );

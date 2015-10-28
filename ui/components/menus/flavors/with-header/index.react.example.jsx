@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
+const Menu = require('ui/components/menus/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
@@ -24,12 +24,12 @@ module.exports = (
         <Menu.Title>List View Controls</Menu.Title>
       </Menu.Header>
       <Menu.List isSelectable={false}>
-        <Menu.Item disabled={true} href="#rename">Rename...</Menu.Item>
-        <Menu.Item disabled={true} href="#share">Share...</Menu.Item>
-        <Menu.Item disabled={true} href="#delete">Delete</Menu.Item>
-        <Menu.Item disabled={true} href="#save">Save</Menu.Item>
-        <Menu.Item href="#save_as">Save As...</Menu.Item>
-        <Menu.Item href="#discard">Discard Changes to List</Menu.Item>
+        <Menu.Item disabled={true}>Rename...</Menu.Item>
+        <Menu.Item disabled={true}>Share...</Menu.Item>
+        <Menu.Item disabled={true}>Delete</Menu.Item>
+        <Menu.Item disabled={true}>Save</Menu.Item>
+        <Menu.Item>Save As...</Menu.Item>
+        <Menu.Item>Discard Changes to List</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

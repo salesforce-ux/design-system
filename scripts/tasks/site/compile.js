@@ -145,7 +145,7 @@ export const webpackConfig = {
       'app_modules/site/navigation/sitemap',
       'app_modules/site/navigation/sitemap-utils',
       'app_modules/site/shared',
-      'app_modules/site/util/localytics'
+      'app_modules/site/util/analytics'
     ],
     vendor: [
       'app_modules/site/vendor/prism',

@@ -16,7 +16,7 @@ import globals from 'app_modules/global';
  */
 function canLogEvent() {
   return window.ll && window.location &&
-    globals.localyticsHostWhitelist.indexOf(window.location.host) >= 0;
+    globals.analyticsHostWhitelist.indexOf(window.location.host) >= 0;
 }
 
 /**

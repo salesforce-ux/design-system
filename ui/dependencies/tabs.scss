@@ -24,19 +24,23 @@
   padding: $spacing-medium 0;
 }
 
+@mixin tabs-item-link {
+  @include truncate;
+  display: block;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
 @mixin tabs-item {
   overflow: hidden;
 
   a {
-    @include truncate;
-    display: block;
-    text-decoration: none;
-    cursor: pointer; // needed in case links have no href & use JS
-    height: $line-height-tab;
-    line-height: $line-height-tab;
-
-    &:focus {
-      outline: 0;
-    }
+    @include tabs-item-link;
   }
 }

@@ -18,7 +18,7 @@
       right: 0;
       bottom: 0;
     }
-    font-size: $font-size-medium;
+    // font-size: $font-size-medium;
     max-width: $size-x-small;
     justify-content: flex-end;
   }
@@ -42,7 +42,6 @@
   }
 
   .#{$css-prefix}form-element__control {
-    @include form-states;
     @include flex-wrap(true);
     display: flex;
 

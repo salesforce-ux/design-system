@@ -21,9 +21,9 @@ module.exports = (
     <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
     <Menu className={pf('dropdown--left dropdown--actions')}>
       <Menu.List isSelectable={false}>
-        <Menu.Item href="#">Action One</Menu.Item>
-        <Menu.Item href="#">Action Two</Menu.Item>
-        <Menu.Item href="#">Action Three</Menu.Item>
+        <Menu.Item>Action One</Menu.Item>
+        <Menu.Item>Action Two</Menu.Item>
+        <Menu.Item>Action Three</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

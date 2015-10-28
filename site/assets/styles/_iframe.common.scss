@@ -35,6 +35,7 @@ body {
 
 // For Absolutely Positioned Demos
 .demo-only {
+  @include clearfix;
   position: relative;
 
   .#{$css-prefix}picklist__options {

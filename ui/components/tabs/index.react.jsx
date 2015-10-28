@@ -61,6 +61,7 @@ class TabItem extends React.Component {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
     const className = classNames(this.props.className, pf(classNames('tabs__item text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
+    
     return (
       <li className={className} {...props} role='presentation'>
         {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
@@ -69,11 +70,30 @@ class TabItem extends React.Component {
   };
 }
 
+class TabItemOverflow extends React.Component {
+  static propTypes = { title: PT.string, content: PT.node }
+  constructor(props) {
+    super(props);
+    componentUtil.install(this);
+  };
+
+  render() {
+    const props = this.$propsWithoutKeys('className', 'id', 'role');
+    const className = classNames(this.props.className, pf(classNames('tabs__item tabs__item-overflow text-heading--label', {active: this.props.current})));
+    const tabIndex = this.props.current ? 0 : -1;
+    
+    return (
+      <li className={className} {...props} role='presentation'>
+        {React.cloneElement(this.props.children, {onClick: this.props.onClick.bind(this), tabIndex: tabIndex, 'aria-selected': this.props.current})}
+      </li>
+    );
+  };
+}
 
 class Tabs extends React.Component {
   static propTypes = {
     selectedIndex: PT.number,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default')
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'overflow')
   };
   static defaultProps = { selectedIndex: 0 };
   constructor(props) {
@@ -96,10 +116,14 @@ class Tabs extends React.Component {
 
   currentPanel() {
     return React.Children.map(this.props.children, (c, i) => {
-      if(c.props.children.type === TabContent) {
-        return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id});
+      if(c.type === TabItemOverflow) {
+        return null;
       } else {
-        return <TabContent current={this.state.currentTab === i} id={c.props.id}>{c.props.children}</TabContent>;
+        if(c.props.children.type === TabContent) {
+          return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id});
+        } else {
+          return <TabContent current={this.state.currentTab === i} id={c.props.id}>{c.props.children}</TabContent>;
+        }
       }
     });
   }
@@ -118,6 +142,7 @@ class Tabs extends React.Component {
 }
 
 Tabs.Item = TabItem;
+Tabs.ItemOverflow = TabItemOverflow;
 Tabs.Content = TabContent;
 
 module.exports = Tabs;

@@ -1,0 +1,1 @@
+The overflow tab set style encapsulates everything that is underneath it without enclosing it visually. Initialize a default tab set by applying the `.{{cssPrefix}}tab--default` class to the containing `<div>` around the tab list and tab panels. The `<ul>` element also requires the class `.{{cssPrefix}}tab--default__nav` to prevent styles from bleeding into nested tabs.

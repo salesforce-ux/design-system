@@ -35,3 +35,7 @@ h5,
 h6 {
   display: inherit; // TODO: why? what if's parent is display: inline?
 }
+
+li {
+  margin-left: 0; // TODO: To override core.css - enough?
+}

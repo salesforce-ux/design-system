@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const Menu = require('ui/components/dropdowns/index.react');
+const Menu = require('ui/components/menus/index.react');
 const Button = require('ui/components/buttons/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
@@ -27,7 +27,7 @@ module.exports = (
         </span>
         <span className={pf('text-body--small align-middle')}>99 +</span>
       </a>
-      <Menu className={pf('dropdown--left dropdown--bottom dropdown--nubbin-bottom dropdown--overflow')}>
+      <Menu className={pf('dropdown--left dropdown--bottom dropdown--overflow nubbin--bottom-left')}>
         <Menu.List isSelectable={false}>
           <Menu.Item>
             <span className={pf('icon__container icon-standard-email m-right--x-small')}>

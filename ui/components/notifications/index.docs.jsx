@@ -13,6 +13,7 @@ const React = require('react');
 const ComponentDocs = require('app_modules/site/components/page/component/docs');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
+const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
   <ComponentDocs>

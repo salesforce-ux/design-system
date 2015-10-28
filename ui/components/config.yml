@@ -7,7 +7,6 @@ components:
   - cards
   - data-tables
   - datepickers
-  - dropdowns
   - docked-composer
   - feeds
   - forms
@@ -16,15 +15,14 @@ components:
   - images
   - lookups
   - media-objects
+  - menus
   - modals
   - notifications
   - page-headers
-  - picklists
   - pills
   - popovers
   - publishers
   - spinners
   - tabs
   - tiles
-  - tooltips
   - trees

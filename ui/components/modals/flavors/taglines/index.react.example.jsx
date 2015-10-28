@@ -46,7 +46,7 @@ class ModalExample extends React.Component {
               Modal Header
             </h2>
 
-            <p>
+            <p className={pf('m-top--x-small')}>
               Here&rsquo;s a tagline if you need it. It is allowed to extend
               across mulitple lines, so I&rsquo;m making up content to show that
               to you. It is allowed to <a href="#">contain links or be a link</a>.

@@ -1,1 +1,0 @@
-When you require a list that indicates which list item is currently selected, or you require a list that has icons to help visualize each option, or you require a list that does both of the aforementioned things, please use this variation.

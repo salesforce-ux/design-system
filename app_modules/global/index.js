@@ -14,7 +14,7 @@ export default {
   cssPrefix: 'slds-',
   displayName: 'Lightning Design System',
   filenamePrefix: 'slds',
-  localyticsHostWhitelist: [
+  analyticsHostWhitelist: [
     'getslds.com',
     'www.getslds.com',
     'lightningdesignsystem.com',

@@ -21,7 +21,7 @@ import Radio from 'ui/components/forms/flavors/radio/index.react';
 import Modal from 'ui/components/modals/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
-import { logCTAEvent } from 'app_modules/site/util/localytics';
+import { logCTAEvent } from 'app_modules/site/util/analytics';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 const Settings = React.createClass({

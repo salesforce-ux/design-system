@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
-import { logInputEvent } from 'app_modules/site/util/localytics';
+import { logInputEvent } from 'app_modules/site/util/analytics';
 
 import ExampleCell from '../cell-example';
 import ValueCell from '../cell-value';

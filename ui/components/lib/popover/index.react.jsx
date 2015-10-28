@@ -44,7 +44,7 @@ class Popover extends React.Component {
 
   render() {
     return (
-      <div {...this.props} className={this.$getClassName(pf(`popover ${this.visibilityClass()}`))}>
+      <div {...this.props} className={this.$getClassName(pf(`${this.visibilityClass()}`))}>
       { this.children() }
       </div>
     );

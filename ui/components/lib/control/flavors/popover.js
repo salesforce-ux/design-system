@@ -99,8 +99,7 @@ class PopoverControl extends Control {
 
   createPopover() {
     return React.cloneElement(this.target()._reactInternalInstance._currentElement, {
-      visible: true,
-      className: pf(classNames(this.nubbinClass()))
+      visible: true
     });
   }
 

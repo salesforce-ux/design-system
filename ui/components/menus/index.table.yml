@@ -90,7 +90,7 @@ classes:
   -
     class: icon--selected
     description: Creates icon when a user selects a <code>.{{cssPrefix}}dropdown__item</code>
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
+    applied: <code>&lt;svg&gt;</code>
   -
     class: dropdown--nubbin-top
     description: Applies triangle indicator pointing at content

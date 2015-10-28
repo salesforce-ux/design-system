@@ -56,6 +56,7 @@ export default new SitemapRouter().map(function () {
     this.route('downloads');
     this.route('icons');
     this.route('tokens');
+    this.route('links');
     this.route('branding');
     this.route('lightning-svg-icon-component-helper');
   });

@@ -131,6 +131,10 @@ export default [
       {
         route: 'resources:tokens',
         label: 'Design Tokens'
+      },
+      {
+        route: 'resources:links',
+        label: 'Links'
       }
     ]
   },

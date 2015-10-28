@@ -14,7 +14,7 @@ import _ from 'lodash';
 import shared from 'app_modules/site/shared';
 import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
-import { logCTAEvent } from 'app_modules/site/util/localytics';
+import { logCTAEvent } from 'app_modules/site/util/analytics';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';

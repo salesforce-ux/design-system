@@ -59,14 +59,13 @@ class PickListItem extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className');
-    const classNameWithSelected = pf(classNames('picklist__item has-icon has-icon--left', {'is-selected': this.isSelected()}));
+    const classNameWithSelected = pf(classNames('picklist__item', {'is-selected': this.isSelected()}));
     const className = this.$getClassName(classNameWithSelected);
     const tabIndex = this.props.idx === 0 ? 0 : -1;
 
     return (
       <li {...props} id={this.id} className={className} onFocus={this.itemFocused.bind(this)} onClick={this.itemSelected.bind(this)} onMouseDown={this.itemSelected.bind(this)} aria-selected={this.isSelected()} tabIndex={tabIndex} role="option">
         <span className={pf('truncate')}>
-          { this.showCheck() ? <SvgIcon className={pf('icon icon--small icon--left')} sprite="standard" symbol="task2" /> : null }
           {this.children()}
         </span>
       </li>
@@ -131,11 +130,12 @@ class PickListArrows extends React.Component {
   render() {
     return (
       <div className={pf('grid grid--vertical')}>
-        { this.symbols.map((s, i) => <ButtonIcon flavor="icon-container" sprite="utility" assistiveText="Pick list" symbol={s} onClick={this.arrowClicked.bind(this, s)} key={i} /> ) }
+        { this.symbols.map((s, i) => <ButtonIcon flavor="icon-container" sprite="utility" assistiveText={'Arrow ' + s} symbol={s} onClick={this.arrowClicked.bind(this, s)} key={i} /> ) }
       </div>
     );
   }
 }
+// @TODO: assistive text needs to be unique for each icon
 
 class PickList extends React.Component {
   static childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };
@@ -198,13 +198,11 @@ class PickList extends React.Component {
     if(this.isMulti()) return <PickListMulti {...this.props} />;
 
     return (
-      <div className={pf('form-element')}>
-        <div {...props} className={className} aria-expanded={!this.state.hidden}>
-          <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onSpaceBar.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
-            <span className={pf('truncate')}>{this.label()}</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
-          </button>
-          { this.children() }
-        </div>
+      <div className={className} aria-expanded={!this.state.hidden} {...props} >
+        <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onSpaceBar.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
+          <span className={pf('truncate')}>{this.label()}</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        </button>
+        { this.children() }
       </div>
     );
   }

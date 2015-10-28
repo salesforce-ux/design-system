@@ -123,42 +123,6 @@
   }
 }
 
-
-@mixin nubbin($position: bottom, $location: "after", $color: $color-background-alt) {
-
-  &:#{$location} {
-    @include square($square-tooltip-nubbin);
-    position: absolute;
-    transform: rotate(45deg);
-    content: "";
-    background-color: $color;
-
-    @if $position == top {
-      left: 50%;
-      top: (($square-tooltip-nubbin / 2) * -1);
-      margin-left: (($square-tooltip-nubbin / 2) * -1);
-    }
-
-    @elseif $position == bottom {
-      left: 50%;
-      bottom: (($square-tooltip-nubbin / 2) * -1);
-      margin-left: (($square-tooltip-nubbin / 2) * -1);
-    }
-
-    @elseif $position == left  {
-      top: 50%;
-      left: (($square-tooltip-nubbin / 2) * -1);
-      margin-top: (($square-tooltip-nubbin / 2) * -1);
-    }
-
-    @elseif $position == right  {
-      top: 50%;
-      right: (($square-tooltip-nubbin / 2) * -1);
-      margin-top: (($square-tooltip-nubbin / 2) * -1);
-    }
-  }
-}
-
 @mixin form-input-container {
   background-color: $color-background-input;
   color: $color-text-default;

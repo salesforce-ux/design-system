@@ -11,3 +11,8 @@ classes:
     description: Identifies the last button when wrapped in another element
     applied: button wrapper
     notes: Only required if the <code>.{{cssPrefix}}button</code> is wrapped. ie- to include a dropdown
+  -
+    class: toggle-visibility
+    description: Identifies the last icon button when it should be hidden when `[disabled]`
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: Only required when you want the the icon button indicating there's more data to be hidden when inactive/disabled

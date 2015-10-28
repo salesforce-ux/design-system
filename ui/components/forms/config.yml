@@ -4,6 +4,7 @@ flavors:
   - radio
   - checkbox
   - select
+  - multi-select
   - horizontal-form
   - stacked-form
   - inline-form

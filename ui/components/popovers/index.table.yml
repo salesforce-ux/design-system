@@ -7,12 +7,20 @@ classes:
     applied: <code>&lt;div&gt;</code>
   -
     class: popover__header
-    description: Applys styles for top area of popover
+    description: Applies styles for top area of popover
     applied: <code>&lt;div&gt;</code>
   -
     class: popover__body
-    description: Applys syles for primary content area of popover
+    description: Applies syles for primary content area of popover
     applied: <code>&lt;div&gt;</code>
+  -
+    class: popover--tooltip
+    description: Modifier used to apply tooltip specific styles
+    applied: <code>.{{cssPrefix}}popover</code>
+  -
+    class: popover--panel
+    description: Modifier used to apply panel specific styles
+    applied: <code>.{{cssPrefix}}popover</code>
   -
     class: nubbin--top
     description: Triangle that points upwards which is horizontally centered

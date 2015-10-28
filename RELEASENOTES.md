@@ -8,20 +8,37 @@
 - Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
 - Stateful button has a `[disabled]` state
 - If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
+- Nubbins shadows now have proper light source
+- Removed interactive dropdowns from page header examples
 
 **SITE IA**
 - Moved tooltips to popovers, deprecated tooltip section [www.lightningdesignsystem.com/components/popovers#tooltips](www.lightningdesignsystem.com/components/popovers#tooltips)
+- Moved Dropdowns into Menus, deprecated dropdowns section [www.lightningdesignsystem.com/components/menus](www.lightningdesignsystem.com/components/menus)
+- Moved Picklist Dropdown Menu into Menus [www.lightningdesignsystem.com/components/menus#picklist](www.lightningdesignsystem.com/components/menus#picklist)
+- Moved Multi-Select Picklist into Forms [www.lightningdesignsystem.com/components/forms#multi-select](www.lightningdesignsystem.com/components/forms#multi-select)
+- Menus component variants are now more explicit
+ - Dropdown
+ - Dropdown with Icons
+ - Dropdown Positioning
+ - Picklist
+ - Action Overflow
+ - Search Overflow
 
 **BREAKING CHANGES**
 - Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
-- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`
-- <em> (*) Code is still in codebase but will be deprecated, eta TBD</em>
+- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
+- Deprecated "Menu with Icons" dropdown variant
+ - No longer depends on class names that deal with icon positioning
+ - `.slds-dropdown__item` are set to `display: flex` with `justify-content: space-between` by default now. This allows for icon + text to be left aligned and a single icon to be positioned on the same axis to the right hand side. The icon + text that is positioned to the left requires an HTML element, like a `<p>` with the class `.slds-truncate` applied.
+ - `.slds-has-icon`, `.slds-has-icon--left`, `.slds-has-icon--right` and children classes `.slds-icon--left`, `.slds-icon--right` have been deprecated but will persist in code base (*)
+ - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that svg now requires a class of `.slds-icon--selected`
+- <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
-**NEW COMPONENT**
+**NEW COMPONENTS**
 - Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
 - Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
 - More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
-
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
 
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker

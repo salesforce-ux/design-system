@@ -29,11 +29,9 @@ class Tooltip extends React.Component {
     const props = this.$propsWithoutKeys('id', 'visible');
     return (
       <Popover id={this.props.id} visible={this.props.visible}>
-        <div {...props} className={this.$getClassName(pf('tooltip'))} role="tooltip">
-          <div className={pf('tooltip__content')}>
-            <div className={this.$getClassName(pf('tooltip__body'))}>
-              {this.props.children}
-            </div>
+        <div {...props} className={this.$getClassName(pf('popover popover--tooltip'))} role="tooltip">
+          <div className={this.$getClassName(pf('popover__body'))}>
+            {this.props.children}
           </div>
         </div>
       </Popover>

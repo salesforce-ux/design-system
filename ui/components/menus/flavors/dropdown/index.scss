@@ -137,43 +137,6 @@
     }
   }
 
-  &--nubbin-bottom {
-    @include nubbin(bottom, "before", $color-background-alt);
-    @include nubbin(bottom, $color: $color-background-alt);
-    margin-bottom: ($square-tooltip-nubbin / 2);
-
-    &:before,
-    &:after {
-      z-index: -1;
-      background-color: inherit;
-    }
-
-    &:after {
-      box-shadow: 1px 1px 0 0px rgba(0, 0, 0, .16);
-    }
-
-    &.#{$css-prefix}dropdown--left {
-      left: -#{$spacing-medium};
-
-      &:before,
-      &:after {
-        left: $spacing-large;
-        margin-left: 0;
-      }
-    }
-
-    &.#{$css-prefix}dropdown--right {
-      right: -#{$spacing-medium};
-
-      &:before,
-      &:after {
-        left: auto;
-        right: $spacing-large;
-        margin-left: 0;
-      }
-    }
-  }
-
   &__header {
     padding: $spacing-x-small $spacing-small;
   }
@@ -182,6 +145,7 @@
     line-height: $line-height-text;
 
     > a {
+      position: relative;
       display: flex;
       justify-content: space-between;
       padding: $spacing-x-small $spacing-small;
@@ -194,10 +158,6 @@
         outline: 0;
         text-decoration: none;
         background-color: $color-background-row-hover;
-
-        .#{$css-prefix}icon--selected {
-          opacity: 1;
-        }
       }
 
       &:active {

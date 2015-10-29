@@ -34,7 +34,7 @@ module.exports = (
     </div>
   </form>
 
-  <Tooltip id="help" visible={false}>
+  <Tooltip id="help" visible={false} className={pf('nubbin--bottom')}>
     <Lorem count={1} />
   </Tooltip>
 </div>

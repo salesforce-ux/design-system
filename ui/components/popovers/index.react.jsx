@@ -59,7 +59,7 @@ class Dialog extends React.Component {
 
     return (
       <Popover id={this.props.id} visible={this.props.visible}>
-        <div {...props} className={this.$getClassName(pf('popover'))} role="dialog">
+        <div {...props} role="dialog">
           <div className={pf('popover__content')}>
             { this.props.children }
           </div>

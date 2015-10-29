@@ -8,10 +8,15 @@ classes:
     notes: Applies positioning and container styles, by default, dropdown appears below and center of target
   -
     class: dropdown-trigger
-    description: Initializes dropdown hover interactions
+    description: Enables dropdown to show on hover
     required: true
     applied: <code>&lt;div&gt;</code>
-    notes: Element can also be used as a Javascript hook
+    notes: The target HTML element and dropdown need to be wrapped in this class
+  -
+    class: dropdown-trigger--click
+    description: Modifier that enables dropdown to show on click
+    applied: <code>.{{cssPrefix}}dropdown-trigger</code>
+    notes: Forces <code>display:none</code> on dropdown, applying <code>.{{cssPrefix}}is-open</code> to <code>.{{cssPrefix}}dropdown-trigger</code> will show the dropdown
   -
     class: dropdown__item
     description: Initializes dropdown item

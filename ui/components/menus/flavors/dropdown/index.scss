@@ -57,15 +57,6 @@
     background-color: transparent;
   }
 
-  &[class*="#{$css-prefix}nubbin"] {
-    &.#{$css-prefix}dropdown--left {
-      left: -#{$spacing-medium};
-    }
-    &.#{$css-prefix}dropdown--right {
-      right: -#{$spacing-medium};
-    }
-  }
-
   &[class*="#{$css-prefix}nubbin--top"] {
     margin-top: ($square-tooltip-nubbin / 2);
   }
@@ -223,6 +214,32 @@
       visibility: visible;
       opacity: 1;
       transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+  }
+
+  // If someone is using javascript for click to toggle - this modifier will help
+  &--click {
+
+    .#{$css-prefix}dropdown {
+      display: none;
+    }
+
+    &.#{$css-prefix}is-open {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // Deal with positioning when target is just an icon
+  > [class*="#{$css-prefix}button--icon"] {
+
+    ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
+      left: -#{$spacing-medium};
+    }
+
+    ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
+      right: -#{$spacing-medium};
     }
   }
 }

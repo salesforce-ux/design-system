@@ -11,8 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 
-const INTERNAL_LOCALYTICS_ID = '3a008518ae1f97363637cd4-f1aff88c-e404-11e4-ad48-005cf8cbabd8';
-const EXTERNAL_LOCALYTICS_ID = '2a6dc90c85e5991e50f752a-f8539a44-1e85-11e5-44ef-006918dcf667';
+const LOCALYTICS_ID = '2a6dc90c85e5991e50f752a-f8539a44-1e85-11e5-44ef-006918dcf667';
 const GOOGLE_ANALYTICS_ID = 'UA-45076517-7';
 import globals from 'app_modules/global';
 
@@ -62,7 +61,6 @@ class Page extends React.Component {
 
   renderAnalytics() {
     return <script dangerouslySetInnerHTML={{__html: `
-      function getLLId(){ return (document.cookie.indexOf('usertype=external') >= 0) ? '${EXTERNAL_LOCALYTICS_ID}' : '${INTERNAL_LOCALYTICS_ID}';  }
       +function(l,y,t,i,c,s) {
               l['LocalyticsGlobal'] = i;
               l[i] = function() { (l[i].q = l[i].q || []).push(arguments) };
@@ -70,7 +68,7 @@ class Page extends React.Component {
               (s = y.createElement(t)).type = 'text/javascript';
               s.src = '//web.localytics.com/v3/localytics.min.js';
               (c = y.getElementsByTagName(t)[0]).parentNode.insertBefore(s, c);
-              ll('init', getLLId(), {} /* Options */);
+              ll('init', '${LOCALYTICS_ID}', {} /* Options */);
           }(window, document, 'script', 'll');
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

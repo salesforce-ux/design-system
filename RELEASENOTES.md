@@ -1,8 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-
-## Release 0.11.0 - October XX, 2015
+## Release 0.10.2 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
 - Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
@@ -10,6 +9,7 @@
 - If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
 - Removed interactive dropdowns from page header examples
+- Added Google Analytics
 
 **SITE IA**
 - Moved tooltips to popovers, deprecated tooltip section [www.lightningdesignsystem.com/components/popovers#tooltips](www.lightningdesignsystem.com/components/popovers#tooltips)

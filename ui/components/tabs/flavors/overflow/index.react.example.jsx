@@ -18,8 +18,8 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className='demo-only' style={{height: '180px'}}>
-  <Tabs flavor="overflow">
+<div className='demo-only' style={{height: '30rem'}}>
+  <Tabs flavor="default">
     <Tabs.Item title="Item One" id="tab-default-1">
       <h2>Item One Content</h2>
     </Tabs.Item>
@@ -41,26 +41,62 @@ module.exports = (
     <Tabs.Item title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More" id="tab-overflow">
-      <div className={pf('dropdown-trigger')}>
-        <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-more" aria-haspopup="true">More<SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" /></a>
-        <Menu className={pf('dropdown--right')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item className={pf('is-selected has-icon-left')} href="#" aria-selected="true">
-              Item Eight
-              <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
-            </Menu.Item>
-            <Menu.Item className={pf('has-icon-left has-divider')} href="#">
-              Item Nine
-              <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
-            </Menu.Item>
-            <Menu.Item className={pf('has-icon-left')} href="#">
-              Item Ten
-              <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="side_list" />
-            </Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
+    <Tabs.ItemOverflow title="More" id="tab-overflow" className={pf('dropdown-trigger')}>
+      <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-more" aria-haspopup="true">More
+        <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+      </a>
+      <Menu className={pf('dropdown--right')}>
+        <Menu.List isSelectable={false}>
+          <Menu.Item className={pf('has-icon-left')} href="#" aria-selected="true">
+            Item Eight
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Nine
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Ten
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="side_list" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Eleven
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left has-divider--bottom slds-has-divider--bottom-space')} href="#">
+            Item Twelve
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Thirteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="side_list" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Fourteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Fifteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Sixteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="side_list" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Seventeen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Eighteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
+          </Menu.Item>
+          <Menu.Item className={pf('has-icon-left')} href="#">
+            Item Nineteen
+            <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="side_list" />
+          </Menu.Item>
+        </Menu.List>
+      </Menu>
     </Tabs.ItemOverflow>
   </Tabs>
 </div>

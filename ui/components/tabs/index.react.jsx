@@ -79,12 +79,15 @@ class TabItemOverflow extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames('tabs__item tabs__item-overflow text-heading--label', {active: this.props.current})));
+    const className = classNames(this.props.className, pf(classNames('tabs__item--overflow text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
-    
+    const contents = React.Children.map(this.props.children, function(c,i) {
+      return React.cloneElement(c);
+    });
+
     return (
-      <li className={className} {...props} role='presentation'>
-        {React.cloneElement(this.props.children, {onClick: this.props.onClick.bind(this), tabIndex: tabIndex, 'aria-selected': this.props.current})}
+      <li className={className} {...props} role='presentation' onClick={null}>
+        {contents}
       </li>
     );
   };
@@ -130,6 +133,7 @@ class Tabs extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'flavor');
+
     return (
       <div {...props} className={pf(`tabs--${this.props.flavor}`)}>
         <AccessibleList selector='a' click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>

@@ -14,16 +14,16 @@
 **SITE IA**
 
 - Moved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
-- Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus]
+- Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus
 - Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
-- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select]
+- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
- - Dropdown
- - Dropdown with Icons
- - Dropdown Positioning
- - Picklist
- - Action Overflow
- - Search Overflow
+	- Dropdown
+	- Dropdown with Icons
+	- Dropdown Positioning
+ 	- Picklist
+ 	- Action Overflow
+ 	- Search Overflow
 
 **BREAKING CHANGES**
 

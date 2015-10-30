@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.10.2 - October 29, 2015
+## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
 - Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
@@ -12,10 +12,11 @@
 - Added Google Analytics
 
 **SITE IA**
-- Moved tooltips to popovers, deprecated tooltip section [www.lightningdesignsystem.com/components/popovers#tooltips](www.lightningdesignsystem.com/components/popovers#tooltips)
-- Moved Dropdowns into Menus, deprecated dropdowns section [www.lightningdesignsystem.com/components/menus](www.lightningdesignsystem.com/components/menus)
-- Moved Picklist Dropdown Menu into Menus [www.lightningdesignsystem.com/components/menus#picklist](www.lightningdesignsystem.com/components/menus#picklist)
-- Moved Multi-Select Picklist into Forms [www.lightningdesignsystem.com/components/forms#multi-select](www.lightningdesignsystem.com/components/forms#multi-select)
+
+- Moved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
+- Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus]
+- Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
+- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select]
 - Menus component variants are now more explicit
  - Dropdown
  - Dropdown with Icons
@@ -25,6 +26,7 @@
  - Search Overflow
 
 **BREAKING CHANGES**
+
 - Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
 - Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
 - Deprecated "Menu with Icons" dropdown variant
@@ -35,10 +37,11 @@
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
-- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
-- Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
-- More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
-- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
+
+- Added notifications > prompt (modal-style alert) www.lightningdesignsystem.com/components/notifications#prompt
+- Added Preview Panel Popovers www.lightningdesignsystem.com/components/popovers#panels 
+- More directional support for popover nubbins www.lightningdesignsystem.com/components/popovers#nubbins
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support www.lightningdesignsystem.com/components/menus#dropdown-positioning
 
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker
@@ -68,11 +71,13 @@
 - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 **NEW COMPONENTS**
-- Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
-- Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
-- Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
+
+- Full-width button variant for small form factors www.lightningdesignsystem.com/components/buttons#responsive
+- Feed and Comment components have been added www.lightningdesignsystem.com/components/feeds
+- Publisher component has been added www.lightningdesignsystem.com/components/publishers
 
 **SASS UPDATES**
+
 - Abstracted form states into own mixins
 - Abstracted feed vertical rule into own mixin
 
@@ -109,8 +114,8 @@
 
 ## Release 0.9.0 — September 9th, 2015
 
-- Open Sourced: [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)
-- CSS files scoped in `.slds` have been added/updated for the following:
+- Open Sourced: github.com/salesforce-ux/design-system
+  - CSS files scoped in `.slds` have been added/updated for the following:
   - Visualforce (`-vf`)
   - Lightning Platform (`-ltng`)
   - General Use (Most likely in conjuction with other frameworks) (`-scoped`)

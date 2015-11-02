@@ -52,15 +52,4 @@
   @include mq-medium-min {
     padding: 0 $spacing-medium;
   }
-
-  &:hover,
-  &:focus {
-    border-color: $color-text-tab-label-selected;
-    color: $color-text-action-label-active;
-  }
-
-  &:focus {
-    color: $color-text-tab-label-selected;
-    box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
-  }
 }

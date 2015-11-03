@@ -31,7 +31,7 @@
   // Loop through nested map and do some bizness */
   @each $key in $size {
 
-    @media (min-width: #{$breakpoint}) {
+    @media (min-width: #{pem($breakpoint)}) {
       // Generate responsive width names,
       // e.g. <div class="medium-size--3-of-6">
       @include width(1, #{$size});
@@ -46,6 +46,26 @@
       // ordering helpers, e.g. <div class="medium-order--2">
       @for $i from 1 through $columns {
         .#{$css-prefix}#{$size}-order--#{$i} {
+          order: $i;
+        }
+      }
+    }
+
+    @media (max-width: #{pem($breakpoint - 1)}) {
+      // Generate responsive width names (up to size),
+      // e.g. <div class="max-medium-size--3-of-6">
+      @include width(1, #{$size}, true);
+      @include width(2, #{$size}, true);
+      @include width(3, #{$size}, true);
+      @include width(4, #{$size}, true);
+      @include width(5, #{$size}, true);
+      @include width(6, #{$size}, true);
+      @include width($columns, #{$size}, true);
+
+      // Loop through column spread and generate
+      // ordering helpers, e.g. <div class="medium-order--2">
+      @for $i from 1 through $columns {
+        .#{$css-prefix}max-#{$size}-order--#{$i} {
           order: $i;
         }
       }

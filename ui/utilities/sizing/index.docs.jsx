@@ -23,7 +23,14 @@ module.exports = (
   <p className="site-text-introduction">Sizing utilities allow for easy width sizing on an element.</p>
   <p>Our sizing class names are set up in a human-readable format, e.g. <CodeClass className="size--1-of-2" />. This equates to a width of 50%.</p>
   <p>By default, a group of sizing helpers are created based on standard grid column spans of &ndash;2, 3, 4, 5, 6, and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class <CodeClass className="size--1-of-3" /> on each element. This will make each card take up 33.333% of containing section.</p>
-  <p>Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. <CodeClass className="medium-size--1-of-3" /> you will output a width at the specified breakpoint name. Here is an overview of our available breakpoint names:</p>
+  <p>Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. <CodeClass className="medium-size--1-of-3" /> you will output a width at the specified breakpoint name.
+  </p>
+  <p>
+    In some uncommon cases, you may need a sizing helper that is up to a
+    certain breakpoint. For these, use the classes prefixed
+    with <code>max-</code> to achieve this result.
+  </p>
+  <p>Here is an overview of our available breakpoint names:</p>
   <div className={pf('scrollable--x m-bottom--medium')}>
     <table className={pf('table table--bordered max-medium-table--stacked-horizontal no-row-hover')}>
       <thead>
@@ -35,15 +42,27 @@ module.exports = (
       <tbody>
         <tr>
           <td data-label="Breakpoint Name:">small-</td>
-          <td data-label="Width:">30rem / 480px</td>
+          <td data-label="Width:">30em / 480px and higher</td>
         </tr>
         <tr>
           <td data-label="Breakpoint Name:">medium-</td>
-          <td data-label="Width:">48rem / 768px</td>
+          <td data-label="Width:">48em / 768px and higher</td>
         </tr>
         <tr>
           <td data-label="Breakpoint Name:">large-</td>
-          <td data-label="Width:">64rem / 1024px</td>
+          <td data-label="Width:">64em / 1024px and higher</td>
+        </tr>
+        <tr>
+          <td data-label="Breakpoint Name:">max-small-</td>
+          <td data-label="Width:">up to 29.9375em / 479px</td>
+        </tr>
+        <tr>
+          <td data-label="Breakpoint Name:">max-medium-</td>
+          <td data-label="Width:">up to 47.9375em / 767px</td>
+        </tr>
+        <tr>
+          <td data-label="Breakpoint Name:">max-large-</td>
+          <td data-label="Width:">up to 63.9375em / 1023px</td>
         </tr>
       </tbody>
     </table>

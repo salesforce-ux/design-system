@@ -168,14 +168,20 @@ $grid: (
 
 
 // Sizing Helper
-@mixin width($columns, $breakpoint: null) {
+@mixin width($columns, $breakpoint: null, $max: false) {
   $breakpoint-string: null;
 
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {
 
     @if ($breakpoint != null) {
-      $breakpoint-string: $breakpoint + '-';
+      @if $max == true {
+        $breakpoint-string: 'max-' + $breakpoint + '-';
+      }
+
+      @else {
+        $breakpoint-string: $breakpoint + '-';
+      }
     }
 
     // If we’re trying to make wholes, just spit a 100% width utility out one time only.

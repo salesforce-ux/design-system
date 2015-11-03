@@ -1,4 +1,4 @@
 status: 'dev-ready'
-classBase: 'tabs--overflow'
+classBase: 'tabs--default'
 showFormFactors:
   - large

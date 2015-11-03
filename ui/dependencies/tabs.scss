@@ -44,12 +44,3 @@
     @include tabs-item-link;
   }
 }
-
-@mixin tabs-overflow-item-link {
-  border-bottom: 2px solid transparent;
-  padding: 0 $spacing-x-small;
-  color: $color-text-action-label;
-  @include mq-medium-min {
-    padding: 0 $spacing-medium;
-  }
-}

@@ -42,12 +42,12 @@ module.exports = (
       <h2>Item Seven Content</h2>
     </Tabs.Item>
     <Tabs.ItemOverflow title="More" id="tab-overflow" className={pf('dropdown-trigger')}>
-      <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-more" aria-haspopup="true">More
+      <a className={pf('button')} href="#" role="tab" tabindex="-1">More
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
       <Menu className={pf('dropdown--right')}>
         <Menu.List isSelectable={false}>
-          <Menu.Item className={pf('has-icon-left')} href="#" aria-selected="true">
+          <Menu.Item className={pf('has-icon-left')} href="#">
             Item Eight
             <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
           </Menu.Item>
@@ -63,7 +63,7 @@ module.exports = (
             Item Eleven
             <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="table" />
           </Menu.Item>
-          <Menu.Item className={pf('has-icon-left has-divider--bottom slds-has-divider--bottom-space')} href="#">
+          <Menu.Item className={pf('has-icon-left has-divider--top slds-has-divider--top-space')} href="#">
             Item Twelve
             <SvgIcon className={pf('icon icon--small icon--left')} sprite="utility" symbol="kanban" />
           </Menu.Item>

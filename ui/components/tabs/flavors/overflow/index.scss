@@ -12,18 +12,6 @@
   overflow: visible;
 }
 
-.#{$css-prefix}tabs--default__button {
-  text-transform: inherit;
-  border-radius: 0;
-  
-  &:hover,
-  &:focus {
-    box-shadow: none;
-    color: inherit;
-    box-shadow: inherit;
-  }
-}
-
 .#{$css-prefix}dropdown--overflow {
   max-height: calc((#{$square-icon-medium-boundary} + (#{$spacing-xx-small} * 2)) * 10);
   overflow: auto;

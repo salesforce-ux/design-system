@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import CTALink from 'app_modules/site/components/cta-link';
+import GithubButton from 'app_modules/site/components/github-button';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import version from '.generated/site.version';
@@ -54,11 +55,7 @@ class Overview extends React.Component {
         <IfPrefs userType="external">
           <p className={pf('site-cta-buttons m-bottom--medium')}>
             <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
-            <CTALink href="/getting-started" className={pf('button button--neutral m-right--small')}>
-              <img src="https://dl.dropboxusercontent.com/u/484023860/social-github-icon-only.svg" className="slds-button__icon--large slds-button__icon--left"/>
-                Star
-            </CTALink>
-            <a href="#" className={pf('button button--neutral nubbin--left')}>1,234</a>  
+            <GithubButton></GithubButton> 
           </p>
         </IfPrefs>
         <p className={pf('m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>

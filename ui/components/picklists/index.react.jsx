@@ -174,8 +174,14 @@ class PickList extends React.Component {
     this.setState({hidden: !this.state.hidden });
   }
 
-  onSpaceBar(e) {
-    if(e.keyCode === Helper.keys.space) return Helper.stopEvent(e) && this.toggleHidden();
+  onKeyDown(e) {
+    if(e.keyCode === Helper.keys.space) {
+      return Helper.stopEvent(e) && this.toggleHidden();
+    }
+
+    if(e.keyCode === Helper.keys.esc) {
+      return Helper.stopEvent(e) && this.setState({hidden: true });
+    }
   }
 
   selectionText() {
@@ -199,7 +205,7 @@ class PickList extends React.Component {
 
     return (
       <div className={className} aria-expanded={!this.state.hidden} {...props} >
-        <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onSpaceBar.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
+        <button onClick={this.toggleHidden.bind(this)} onKeyDown={this.onKeyDown.bind(this)} className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant={this.state.currentFocus}>
           <span className={pf('truncate')}>{this.label()}</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
         </button>
         { this.children() }

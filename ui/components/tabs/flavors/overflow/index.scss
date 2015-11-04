@@ -8,46 +8,23 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}tabs--default {
+.#{$css-prefix}tabs--default .#{$css-prefix}tabs__item--overflow {
+  overflow: visible;
+}
 
-  &__nav {
-
-    .#{$css-prefix}tabs__item {
-
-      &--overflow {
-        overflow: visible;
-
-        @include mq-medium-min {
-          margin-left: $spacing-large;
-        }
-
-        > a {
-          @include tabs-item-link; 
-          color: inherit;
-          text-transform: inherit;
-          
-          &:hover,
-          &:focus {
-            border-radius: 0;
-            box-shadow: none;
-          }
-        }
-
-        &.#{$css-prefix}dropdown-trigger {
-          .#{$css-prefix}dropdown {
-            @include dropdown-show;
-            max-height: 23rem; //approximation of 10[menu items]*((.75rem[font-size]*$line-height-text[line-height])+($spacing-x-small*2[top/bottom padding]));
-            overflow: auto;
-          }
-        }
-
-        &:hover {
-          > a {
-            border-color: $color-text-tab-label-selected;
-            color: $color-text-action-label-active;
-          }
-        }
-      }
-    }
+.#{$css-prefix}tabs--default__button {
+  text-transform: inherit;
+  border-radius: 0;
+  
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    color: inherit;
+    box-shadow: inherit;
   }
+}
+
+.#{$css-prefix}dropdown--overflow {
+  max-height: calc((#{$square-icon-medium-boundary} + (#{$spacing-xx-small} * 2)) * 10);
+  overflow: auto;
 }

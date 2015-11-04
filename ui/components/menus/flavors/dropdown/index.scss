@@ -211,7 +211,9 @@
     outline: 0;
 
     .#{$css-prefix}dropdown {
-      @include dropdown-show;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
     }
   }
 

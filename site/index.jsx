@@ -53,9 +53,12 @@ class Overview extends React.Component {
         </h2>
         <IfPrefs userType="external">
           <p className={pf('site-cta-buttons m-bottom--medium')}>
-             <CTALink href="/getting-started" className={pf('button button--neutral site-cta-tutorial')}
-              ctaEventName='tutorials-top'>Read Tutorials</CTALink> <CTALink href="/resources/downloads"
-              className={pf('button button--neutral button-space-left site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
+            <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
+            <CTALink href="/getting-started" className={pf('button button--neutral m-right--small')}>
+              <img src="https://dl.dropboxusercontent.com/u/484023860/social-github-icon-only.svg" className="slds-button__icon--large slds-button__icon--left"/>
+                Star
+            </CTALink>
+            <a href="#" className={pf('button button--neutral nubbin--left')}>1,234</a>  
           </p>
         </IfPrefs>
         <p className={pf('m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>

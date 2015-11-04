@@ -10,12 +10,6 @@
 
 
 // Initialize Basic Sizing Helpers
-@include width(1);
-@include width(2);
-@include width(3);
-@include width(4);
-@include width(5);
-@include width(6);
 @include width(12);
 @include order(12);
 
@@ -34,12 +28,6 @@
     @media (min-width: #{pem($breakpoint)}) {
       // Generate responsive width names,
       // e.g. <div class="medium-size--3-of-6">
-      @include width(1, #{$size});
-      @include width(2, #{$size});
-      @include width(3, #{$size});
-      @include width(4, #{$size});
-      @include width(5, #{$size});
-      @include width(6, #{$size});
       @include width($columns, #{$size});
 
       // Loop through column spread and generate
@@ -51,15 +39,9 @@
       }
     }
 
-    @media (max-width: #{pem($breakpoint - 1)}) {
+    @media (max-width: #{pem($breakpoint)}) {
       // Generate responsive width names (up to size),
       // e.g. <div class="max-medium-size--3-of-6">
-      @include width(1, #{$size}, true);
-      @include width(2, #{$size}, true);
-      @include width(3, #{$size}, true);
-      @include width(4, #{$size}, true);
-      @include width(5, #{$size}, true);
-      @include width(6, #{$size}, true);
       @include width($columns, #{$size}, true);
 
       // Loop through column spread and generate

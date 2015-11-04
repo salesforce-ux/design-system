@@ -76,13 +76,13 @@ module.exports = (
     <CodeBlock language="scss">{`
 .foo {
   width: 50%;
-  @media screen-only and (min-width:30rem) {
+  @media only-screen and (min-width:30rem) {
     width: 33.3333%;
   }
-  @media screen-only and (min-width:48rem) {
+  @media only-screen and (min-width:48rem) {
     width: 25%;
   }
-  @media screen-only and (min-width:64rem) {
+  @media only-screen and (min-width:64rem) {
     width: 33.3333%;
   }
 }

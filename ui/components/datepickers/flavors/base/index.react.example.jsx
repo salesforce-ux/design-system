@@ -17,7 +17,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-<div className='demo-only' style={{height: '290px'}}>
+<div className='demo-only' style={{height: '330px'}}>
   <div className={pf('dropdown dropdown--left datepicker')} aria-hidden="false" data-selection="single">
     <div className={pf('datepicker__filter grid')}>
       <div className={pf('datepicker__filter--month grid grid--align-spread size--3-of-4')}>
@@ -39,13 +39,13 @@ module.exports = (
     <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
       <thead>
         <tr id="weekdays">
-          <th id="Sunday"><abbr title="Sunday">S</abbr></th>
-          <th id="Monday"><abbr title="Monday">M</abbr></th>
-          <th id="Tuesday"><abbr title="Tuesday">T</abbr></th>
-          <th id="Wednesday"><abbr title="Wednesday">W</abbr></th>
-          <th id="Thursday"><abbr title="Thursday">T</abbr></th>
-          <th id="Friday"><abbr title="Friday">F</abbr></th>
-          <th id="Saturday"><abbr title="Saturday">S</abbr></th>
+          <th id="Sunday"><abbr title="Sunday">Sun</abbr></th>
+          <th id="Monday"><abbr title="Monday">Mon</abbr></th>
+          <th id="Tuesday"><abbr title="Tuesday">Tue</abbr></th>
+          <th id="Wednesday"><abbr title="Wednesday">Wed</abbr></th>
+          <th id="Thursday"><abbr title="Thursday">Thu</abbr></th>
+          <th id="Friday"><abbr title="Friday">Fri</abbr></th>
+          <th id="Saturday"><abbr title="Saturday">Sat</abbr></th>
         </tr>
       </thead>
       <tbody>
@@ -93,6 +93,9 @@ module.exports = (
           <td className={pf('disabled-text')} headers="Thursday" role="gridcell" aria-disabled="true"><span className={pf('day')}>2</span></td>
           <td className={pf('disabled-text')} headers="Friday" role="gridcell" aria-disabled="true"><span className={pf('day')}>3</span></td>
           <td className={pf('disabled-text')} headers="Saturday" role="gridcell" aria-disabled="true"><span className={pf('day')}>4</span></td>
+        </tr>
+        <tr>
+          <td colSpan="7" role="gridcell"><a href="javascript:void(0)" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
         </tr>
       </tbody>
     </table>

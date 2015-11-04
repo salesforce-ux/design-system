@@ -27,6 +27,9 @@ exports.preview = (
   <div className={pf('box theme--alt-inverse m-bottom--x-small')}>
     <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
+  <div className={pf('box theme--info m-bottom--x-small')}>
+    <p>This is an <strong>info</strong> theme and here is a <a href="#">link</a>.</p>
+  </div>
   <div className={pf('box theme--success m-bottom--x-small')}>
     <p>This is a <strong>success</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
@@ -57,6 +60,9 @@ exports.code = (
   </div>
   <div className={pf('box theme--alt-inverse')}>
     <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="#">link</a>.</p>
+  </div>
+  <div className={pf('box theme--info')}>
+    <p>This is a <strong>info</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
   <div className={pf('box theme--success')}>
     <p>This is a <strong>success</strong> theme and here is a <a href="#">link</a>.</p>

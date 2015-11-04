@@ -13,19 +13,24 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import Heading from 'app_modules/site/components/page/heading';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import g from 'app_modules/global';
+import { Link } from 'react-router';
 
 export default (
-  <PageBody anchorTitle="Links">
-    <ul>
-      <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/10/react-university-sample-app-react-node-js-4-lightning-design-system">React University: Sample Application with React, Node.js 4, and the Lightning Design System</a></li>
-      <li>Jina Bolton: <a href="https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b">The Salesforce Team Model for Scaling a Design System</a></li>
-      <li>Ken Skistimas: <a href="https://medium.com/salesforce-ux/people-powered-design-371a6d180d2e">People-Powered Design</a></li>
-      <li>Stephanie Rewis: <a href="https://medium.com/salesforce-ux/building-an-enterprise-framework-is-hard-1e8d8b33e082">Building an Enterprise CSS Framework</a></li>
-      <li>Christophe Coenraets: <a href="https://medium.com/salesforce-ux/salesforce-lightning-design-system-lightning-experience-everywhere-dd15400da69">Salesforce Lightning Design System</a></li>
-      <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/09/the-new-salesforce-lightning-design-system-lightning-experience-everywhere">The New Salesforce Lightning Design System: Lightning Experience Everywhere</a></li>
-      <li>Amy Lee: <a href="https://medium.com/salesforce-ux/the-lightning-design-system-is-the-next-generation-of-living-style-guides-9addc769c317">The Lightning Design System — the Next Generation of Living Style Guides</a></li>
-      <li>Craig Villamor: <a href="https://medium.com/salesforce-ux/how-we-designed-the-new-salesforce-at-scale-6d3607fd92e5">How We Designed the New Salesforce at Scale</a></li>
-      <li>Sönke Rohde: <a href="https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7">Living Design System</a></li>
-    </ul>
+  <PageBody anchorTitle="Links" contentClassName={pf('text-longform')}>
+    <div className={pf('container--medium')}>
+      <h2 className={pf('site-text-heading--large')}>Blog Posts</h2>
+      <ul>
+        <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/10/react-university-sample-app-react-node-js-4-lightning-design-system">React University: Sample Application with React, Node.js 4, and the Lightning Design System</a></li>
+        <li>Jina Bolton: <a href="https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b">The Salesforce Team Model for Scaling a Design System</a></li>
+        <li>Ken Skistimas: <a href="https://medium.com/salesforce-ux/people-powered-design-371a6d180d2e">People-Powered Design</a></li>
+        <li>Stephanie Rewis: <a href="https://medium.com/salesforce-ux/building-an-enterprise-framework-is-hard-1e8d8b33e082">Building an Enterprise CSS Framework</a></li>
+        <li>Christophe Coenraets: <a href="https://medium.com/salesforce-ux/salesforce-lightning-design-system-lightning-experience-everywhere-dd15400da69">Salesforce Lightning Design System</a></li>
+        <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/09/the-new-salesforce-lightning-design-system-lightning-experience-everywhere">The New Salesforce Lightning Design System: Lightning Experience Everywhere</a></li>
+        <li>Amy Lee: <a href="https://medium.com/salesforce-ux/the-lightning-design-system-is-the-next-generation-of-living-style-guides-9addc769c317">The Lightning Design System — the Next Generation of Living Style Guides</a></li>
+        <li>Craig Villamor: <a href="https://medium.com/salesforce-ux/how-we-designed-the-new-salesforce-at-scale-6d3607fd92e5">How We Designed the New Salesforce at Scale</a></li>
+        <li>Sönke Rohde: <a href="https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7">Living Design System</a></li>
+      </ul>
+    </div>
   </PageBody>
 );

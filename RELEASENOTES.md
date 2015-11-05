@@ -1,6 +1,12 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.12.0 - 
+
+**SITE IA**
+
+- Added Resources -> Links
+
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast

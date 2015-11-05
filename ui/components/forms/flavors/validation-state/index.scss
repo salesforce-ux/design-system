@@ -20,11 +20,7 @@
     color: $color-text-error;
   }
 
-  .#{$css-prefix}button {
-    .#{$css-prefix}button__icon,
-    &:hover .#{$css-prefix}button__icon,
-    &:focus .#{$css-prefix}button__icon {
-      fill: $color-text-error;
-    }
+  .#{$css-prefix}input__icon {
+    fill: $color-text-error;
   }
 }

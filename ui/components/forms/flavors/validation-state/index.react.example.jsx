@@ -31,11 +31,7 @@ module.exports = (
       <label className={pf('form-element__label')} htmlFor="email-0-2">Input Error with Icon Left</label>
       <div className={pf('form-element__control')}>
         <div className={pf('input-has-icon input-has-icon--left')}>
-          <a href="javascript:void(0);" className={pf('button button--icon-bare input__icon')}>
-            <SvgIcon className={pf('button__icon')} sprite="utility"
-            symbol="warning" />
-            <span className={pf('assistive-text')}>Warning</span>
-          </a>
+          <SvgIcon className={pf('icon input__icon')} sprite="utility" symbol="warning" />
           <input id="email-0-2" className={pf('input')} type="email" aria-describedby="errorSample1" required />
         </div>
         <span id="errorSample1" className={pf('form-element__help')}>This field is required</span>

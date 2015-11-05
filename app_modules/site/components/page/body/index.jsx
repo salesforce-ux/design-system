@@ -303,11 +303,11 @@ export default React.createClass({
       return <a href={item.get('url')} onClick={handler}>{label}</a>;
     }
     let content = (
-      <span className={pf('media media--center media--reverse')}>
-        {this.renderNavItemIcons(item)}
+      <span className={pf('media media--center')}>
         <span className={pf('media__body')}>
           {label}
         </span>
+        {this.renderNavItemIcons(item)}
       </span>
     );
     if (item.has('children')) {
@@ -382,7 +382,7 @@ export default React.createClass({
     if (!item.get('hasChildren')) return null;
     let direction = item.get('isOpen') ? 'down' : 'right';
     return (
-      <span className={pf('media__figure')}>
+      <span className={pf('media__figure--reverse')}>
         <SvgIcon sprite="utility" symbol={direction} className={`icon icon__svg icon-utility-${direction} icon--small icon-text-default`} />
       </span>
     );

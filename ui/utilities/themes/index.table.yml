@@ -29,24 +29,29 @@ classes:
     description: Sets the alternative dark blue background and light text and links
     applied: <code>.{{cssPrefix}}box</code>
   -
+    class: theme--info
+    description: Info feedback theme modifier
+    applied:
+    notes: This class can be applied to modify a <code>.{{cssPrefix}}box</code>, notification, <code>.{{cssPrefix}}badge</code> and other elements.
+  -
     class: theme--success
     description: Success feedback theme modifier
-    applied: 
+    applied:
     notes: This class can be applied to modify a <code>.{{cssPrefix}}box</code>, notification, <code>.{{cssPrefix}}badge</code> and other elements.
   -
     class: theme--warning
     description: Warning feedback theme modifier
-    applied: 
+    applied:
     notes: This class can be applied to modify a <code>.{{cssPrefix}}box</code>, notification, <code>.{{cssPrefix}}badge</code> and other elements.
   -
     class: theme--error
     description: Error feedback theme modifier
-    applied: 
+    applied:
     notes: This class can be applied to modify a <code>.{{cssPrefix}}box</code>, notification, <code>.{{cssPrefix}}badge</code> and other elements.
   -
     class: theme--offline
     description: Offline feedback theme modifier
-    applied: 
+    applied:
     notes: This class can be applied to modify a <code>.{{cssPrefix}}box</code>, notification, <code>.{{cssPrefix}}badge</code> and other elements.
   -
     class: theme--alert-texture
@@ -55,11 +60,11 @@ classes:
   -
     class: theme--inverse-text
     description: Applies white text and links
-    applied: 
+    applied:
   -
     class: page-header
     description: Applies background color and padding
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Required on the main container for the page header
-  
+

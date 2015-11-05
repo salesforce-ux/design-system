@@ -45,7 +45,7 @@ module.exports = (
       <a href="#" aria-haspopup="true">More
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
-      <Menu className={pf('text-heading--label dropdown--medium dropdown--right dropdown--overflow')}>
+      <Menu className={pf('dropdown--medium dropdown--right dropdown--overflow')}>
         <Menu.List isSelectable={false}>
           <Menu.Item>
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />

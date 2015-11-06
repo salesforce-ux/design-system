@@ -1,6 +1,14 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.13.0
+
+**BREAKING CHANGES**
+- Switch sizing utility media queries to use `em` instead of `px`
+
+** NEW COMPONENTS**
+- Add max-width sizing utilities
+
 ## Release 0.12.0 - 
 
 **SITE IA**

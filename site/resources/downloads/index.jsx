@@ -40,6 +40,15 @@ export default (
       We provide multiple options for downloading the Design System, as well as specific downloads for icons, design tokens and swatches.
     </p>
 
+    <h2 className="site-text-heading--large" id="framework">Find us on GitHub</h2>
+    <p>
+      We&rsquo;re on GitHub, so that&rsquo;s pretty awesome, and you are too.
+    </p>
+    <CTALink href='#' className={pf('button button--neutral')}>
+      <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+        Design System on GitHub
+    </CTALink>
+
     <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font

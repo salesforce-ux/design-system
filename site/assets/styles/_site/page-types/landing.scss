@@ -236,6 +236,25 @@
 
 }
 
+// Social Counter Button Pair
+.site-button-group--social-counter {
+  .slds-button + .slds-button {
+    margin: {
+      left: $spacing-small;
+    }
+  }
+}
+.site-button--social-counter {
+  &-bubble {
+    opacity: 0;
+    transition: opacity $duration-immediately ease;
+
+    &.is-loaded {
+      opacity: 1;
+    }
+  }
+}
+
 
 
 

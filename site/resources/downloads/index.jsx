@@ -42,12 +42,36 @@ export default (
 
     <h2 className="site-text-heading--large" id="framework">Find us on GitHub</h2>
     <p>
-      We&rsquo;re on GitHub, so that&rsquo;s pretty awesome, and you are too.
+      Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone on Github</a>.
     </p>
-    <CTALink href='#' className={pf('button button--neutral')}>
+    <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')}>
       <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
         Design System on GitHub
     </CTALink>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
+
+    <p>
+      If you use npm in your local development environment, it can be installed with the folllowing command:
+    </p>
+
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="bash">{`
+npm install @salesforce-ux/design-system
+      `}</CodeBlock>
+    </div>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Bower Package</h2>
+
+    <p>
+      If you use bower in your local development environment, it can be installed with the folllowing command:
+    </p>
+
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="bash">{`
+bower install salesforce-lightning-design-system
+      `}</CodeBlock>
+    </div>
 
     <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
     <p>
@@ -73,30 +97,6 @@ export default (
     <ul className={pf('list--dotted')}>
       {unmanagedPackageUrls()}
     </ul>
-
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
-
-    <p>
-      If you use npm in your local development environment, it can be installed with the folllowing command:
-    </p>
-
-    <div className={pf('site-code--content scrollable--x')}>
-      <CodeBlock language="bash">{`
-npm install @salesforce-ux/design-system
-      `}</CodeBlock>
-    </div>
-
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Bower Package</h2>
-
-    <p>
-      If you use bower in your local development environment, it can be installed with the folllowing command:
-    </p>
-
-    <div className={pf('site-code--content scrollable--x')}>
-      <CodeBlock language="bash">{`
-bower install salesforce-lightning-design-system
-      `}</CodeBlock>
-    </div>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

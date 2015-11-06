@@ -10,20 +10,19 @@
 
 
 .#{$css-prefix}media--timeline {
-  border-left: $border-width-thick solid transparent;
   padding-bottom: $spacing-x-large;
+  @include feed-vertical-rule($square-icon-medium-boundary-alt, $border-width-thick);
 
-  > .#{$css-prefix}media__figure {
-    margin-left: calc(((#{$square-icon-medium-boundary} / 2) + (#{$border-width-thick} / 2)) * -1);
+  &:before {
+    margin-left: -3px;
+  }
 
-    .#{$css-prefix}timeline__icon {
-      border: $border-width-thick solid white;
-    }
+  .#{$css-prefix}timeline__icon {
+    border: $border-width-thick solid white;
   }
 }
 
 .#{$css-prefix}timeline {
-  background-color: $color-background-alt;
 
   &__actions {
     display: flex;
@@ -37,24 +36,24 @@
     color: $color-text-weak;
   }
 
-  &__media--call {
-    border-left-color: $log-a-call;
+  &__media--call:before {
+    background: $log-a-call;
   }
 
-  &__media--email {
-    border-left-color: $email;
+  &__media--email:before {
+    background: $email;
   }
 
-  &__media--event {
-    border-left-color: $event;
+  &__media--event:before {
+    background: $event;
   }
 
-  &__media--task {
-    border-left-color: $task;
+  &__media--task:before {
+    background: $task;
   }
 
   &__item {
+    padding-left: $spacing-small;
     padding-right: $spacing-small;
-    padding-left: calc(((#{$square-icon-medium-boundary} / 2) + (#{$border-width-thick} / 2) + #{$spacing-medium}));
   }
 }

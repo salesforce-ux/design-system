@@ -19,4 +19,8 @@
   .#{$css-prefix}form-element__help {
     color: $color-text-error;
   }
+
+  .#{$css-prefix}input__icon {
+    fill: $color-text-error;
+  }
 }

@@ -12,6 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const React = require('react');
 const Checkbox = require('ui/components/forms/flavors/checkbox/index.react');
 const Radio = require('ui/components/forms/flavors/radio/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
+const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
@@ -19,9 +21,19 @@ module.exports = (
 <div className='demo-only'>
   <form className={pf('form--stacked')}>
     <div className={pf('form-element has-error is-required')}>
-      <label className={pf('form-element__label')} htmlFor="email">Input Error</label>
+      <label className={pf('form-element__label')} htmlFor="email-0-1">Input Error</label>
       <div className={pf('form-element__control')}>
-        <input id="email" className={pf('input')} type="email" aria-describedby="errorSample1" required />
+        <input id="email-0-1" className={pf('input')} type="email" aria-describedby="errorSample1" required />
+        <span id="errorSample1" className={pf('form-element__help')}>This field is required</span>
+      </div>
+    </div>
+    <div className={pf('form-element has-error is-required')}>
+      <label className={pf('form-element__label')} htmlFor="email-0-2">Input Error with Icon Left</label>
+      <div className={pf('form-element__control')}>
+        <div className={pf('input-has-icon input-has-icon--left')}>
+          <SvgIcon className={pf('icon input__icon')} sprite="utility" symbol="warning" />
+          <input id="email-0-2" className={pf('input')} type="email" aria-describedby="errorSample1" required />
+        </div>
         <span id="errorSample1" className={pf('form-element__help')}>This field is required</span>
       </div>
     </div>

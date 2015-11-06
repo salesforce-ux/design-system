@@ -20,7 +20,7 @@ const pf = componentUtil.prefix;
 
 const dialingIcon = (
   <span className={pf('icon__container')}>
-    <SvgIcon className={pf('icon icon-text-call icon--x-small')} sprite="utility" symbol="call" />
+    <SvgIcon className={pf('icon icon-text-call icon--small')} sprite="utility" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );

@@ -40,30 +40,14 @@ export default (
       We provide multiple options for downloading the Design System, as well as specific downloads for icons, design tokens and swatches.
     </p>
 
-    <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
+    <h2 className="site-text-heading--large" id="framework">Find us on GitHub</h2>
     <p>
-      Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
-      and icons to include in your project. See
-      the <CTALink href="/release-notes" ctaEventName='release-notes-top'>release notes</CTALink> for
-      details on the latest updates.
+      Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone on Github</a>.
     </p>
-    <p>
-      All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
-    </p>
-    <form action={links.zip.framework}>
-      <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('css'); }}>
-        Download Design System ({version.sldsVersion})
-      </button>
-    </form>
-
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
-
-    <p>
-      If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
-    </p>
-    <ul className={pf('list--dotted')}>
-      {unmanagedPackageUrls()}
-    </ul>
+    <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')}>
+      <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+        Design System on GitHub
+    </CTALink>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
 
@@ -88,6 +72,31 @@ npm install @salesforce-ux/design-system
 bower install salesforce-lightning-design-system
       `}</CodeBlock>
     </div>
+
+    <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
+    <p>
+      Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
+      and icons to include in your project. See
+      the <CTALink href="/release-notes" ctaEventName='release-notes-top'>release notes</CTALink> for
+      details on the latest updates.
+    </p>
+    <p>
+      All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
+    </p>
+    <form action={links.zip.framework}>
+      <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('css'); }}>
+        Download Design System ({version.sldsVersion})
+      </button>
+    </form>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
+
+    <p>
+      If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
+    </p>
+    <ul className={pf('list--dotted')}>
+      {unmanagedPackageUrls()}
+    </ul>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

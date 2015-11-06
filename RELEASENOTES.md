@@ -6,6 +6,11 @@
 **SITE IA**
 
 - Added Resources -> Links
+- 
+**BREAKING CHANGES**
+
+- Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
+- Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
 
 ## Release 0.11.0 - October 29, 2015
 

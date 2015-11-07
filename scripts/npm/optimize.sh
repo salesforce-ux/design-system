@@ -17,4 +17,4 @@
 ./node_modules/.bin/imagemin site/assets/images site/assets/images --plugin=pngquant --optimizationLevel=2 || true
 
 # Optimize SVG
-find site/assets/images -type d -exec ./node_modules/.bin/svgo -f {} --enable=removeViewBox --enable=removeTitle \;
+find site/assets/images -type d -exec ./node_modules/.bin/svgo -f {} --enable=removeViewBox --enable=removeTitle --enable=cleanupIDs --enable=cleanupNumericValues --precision=4 \;

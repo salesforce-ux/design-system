@@ -46,23 +46,22 @@ class GithubButton extends React.Component {
   componentDidMount() {
     this.getStars((data) => { 
       this.setState({ 
-        stargazersCount: data.stargazers_count,
+        stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
     }.bind(this))
   }
 
   render() {
-    const linkUrlRepo = this.state.repoData.html_url;
+    const linkUrlRepo = 'https://github.com/salesforce-ux/design-system';
     const linkUrlGazer = linkUrlRepo + '/stargazers';
     const countStr = String(this.state.stargazersCount).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
     const classesButtonGroup = classNames('site-button-group--social-counter', pf('button'));
     const classesBubbleButton = classNames('site-button--social-counter', 
-      pf('button button--neutral nubbin--left')
-    );
-    const classesBubble = classNames('site-button--social-counter-bubble', 
+      pf('button button--neutral nubbin--left'),
       (this.state.stargazersCount > 0 ? 'is-loaded' : '')
     );
+
     return (
     <span className={classesButtonGroup}>
       <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
@@ -70,7 +69,7 @@ class GithubButton extends React.Component {
           Star
       </CTALink>
       <a href={linkUrlGazer} className={classesBubbleButton}>
-        <span className={classesBubble}>{countStr}</span>
+        <span className='site-button--social-counter-bubble'>{countStr}</span>
       </a>
     </span>
     )

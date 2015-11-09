@@ -42,11 +42,11 @@ export default (
 
     <h2 className="site-text-heading--large" id="framework">Find us on GitHub</h2>
     <p>
-      Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone on Github</a>.
+      Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone it on GitHub</a>.
     </p>
     <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')}>
       <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
-        Design System on GitHub
+      Design System on GitHub
     </CTALink>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>

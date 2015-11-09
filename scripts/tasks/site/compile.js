@@ -22,7 +22,7 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import MD5 from 'md5';
 import minimist from 'minimist';
-import Location from 'react-router/lib/Location';
+import { createLocation } from 'history';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Router, Route, Link } from 'react-router';
@@ -353,7 +353,7 @@ export const compiler = {
       // Create a cheerio instance from the <Page /> markup string
       let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
       // Router
-      let location = new Location(route.path);
+      let location = createLocation(route.path);
       Router.run(routes, location, (error, initialState, transition) => {
         let html = ReactDOMServer.renderToString(
           React.createElement(Router, initialState)

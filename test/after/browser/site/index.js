@@ -22,6 +22,8 @@ import {
 
 describe('site/', () => {
 
+  var renderedPage = renderIntoDocument(page);
+
   it('should have a download button', () => {
     expect(scryRenderedDOMComponentsWithClass(renderedPage, 'site-cta-download')).to.have.length(1);
   });

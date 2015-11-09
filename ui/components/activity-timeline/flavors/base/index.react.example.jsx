@@ -49,15 +49,15 @@ module.exports = (
     <ul className={pf('timeline')}>
       <li className={pf('timeline__item')}>
         <span className={pf('assistive-text')}>Task</span>
-        <MediaObject figureLeft={content} flavor="reverse">
+        <MediaObject figureRight={content}>
           <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1}>
             <MediaObject figureLeft={form} className={pf('tile media--small')}>
               <p className={pf('tile__title truncate')}>
                 <a href="#">Review proposals for EBC deck with larger team and have marketing review this</a>
               </p>
               <ul className={pf('tile__detail list--horizontal text-body--small')}>
-                <li className={pf('list__item m-right--large')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Contact:</dt><dd className={pf('dl--inline__detail')}><a href="#">Lei Chan</a></dd></dl></li>
-                <li className={pf('list__item')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Assigned to:</dt><dd className={pf('dl--inline__detail')}><a href="#">Betty Mason</a></dd></dl></li>
+                <li className={pf('list__item m-right--large')}><span>Contact:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
+                <li className={pf('list__item')}><span>Assigned to:</span><span className={pf('m-left--xx-small')}><a href="#">Betty Mason</a></span></li>
               </ul>
             </MediaObject>
           </MediaObject>
@@ -65,34 +65,36 @@ module.exports = (
       </li>
       <li className={pf('timeline__item')}>
         <span className={pf('assistive-text')}>Event</span>
-        <MediaObject figureLeft={content} flavor="reverse">
+        <MediaObject figureRight={content}>
           <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2}>
             <p><a href="#">Company One — EBC Meeting</a></p>
             <p className={pf('truncate')}>Let's get together to review the theater's layout and facilities. We'll also discuss potential things that truncate at a certain width.</p>
             <ul className={pf('list--horizontal text-body--small')}>
-              <li className={pf('list__item m-right--large')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Time:</dt><dd className={pf('dl--inline__detail')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></dd></dl></li>
-              <li className={pf('list__item')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Location:</dt><dd className={pf('dl--inline__detail')}><a href="#">300 Pike St, San Francisco CA</a></dd></dl></li>
+              <li className={pf('list__item m-right--large')}><span>Time:</span><span className={pf('m-left--xx-small')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></span></li>
+              <li className={pf('list__item')}><span>Location:</span><span className={pf('m-left--xx-small')}><a href="#">300 Pike St, San Francisco CA</a></span></li>
             </ul>
-            <dl className={pf('dl--inline text-body--small')}><dt className={pf('dl--inline__label')}>Name:</dt><dd className={pf('dl--inline__detail')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></dd></dl>
+            <span className={pf('text-body--small')}>
+              <span>Name:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></span>
+            </span>
           </MediaObject>
         </MediaObject>
       </li>
       <li className={pf('timeline__item')}>
         <span className={pf('assistive-text')}>Call</span>
-        <MediaObject figureLeft={content} flavor="reverse">
+        <MediaObject figureRight={content}>
           <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3}>
             <p><a href="#">Mobile conversation on Monday</a></p>
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let's move move.</p>
             <ul className={pf('list--horizontal text-body--small')}>
-              <li className={pf('list__item m-right--large')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Name:</dt><dd className={pf('dl--inline__detail')}><a href="#">Lei Chan</a></dd></dl></li>
-              <li className={pf('list__item')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>Assigned to:</dt><dd className={pf('dl--inline__detail')}><a href="#">Betty Mason</a></dd></dl></li>
+              <li className={pf('list__item m-right--large')}><span>Name:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
+              <li className={pf('list__item')}><span>Assigned to:</span><span className={pf('m-left--xx-small')}><a href="#">Betty Mason</a></span></li>
             </ul>
           </MediaObject>
         </MediaObject>
       </li>
       <li className={pf('timeline__item')}>
         <span className={pf('assistive-text')}>Email</span>
-        <MediaObject figureLeft={content} flavor="reverse">
+        <MediaObject figureRight={content}>
           <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4}>
             <div className={pf('tile')}>
               <p className={pf('tile__title truncate')}>
@@ -101,8 +103,8 @@ module.exports = (
               <div className={pf('tile__detail')}>
                 <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it's truncated.</p>
                 <ul className={pf('list--horizontal text-body--small')}>
-                  <li className={pf('list__item m-right--large')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>To:</dt><dd className={pf('dl--inline__detail')}><a href="#">Lei Chan</a></dd></dl></li>
-                  <li className={pf('list__item')}><dl className={pf('dl--inline')}><dt className={pf('dl--inline__label')}>From:</dt><dd className={pf('dl--inline__detail')}><a href="#">Jason Dewar</a></dd></dl></li>
+                  <li className={pf('list__item m-right--large')}><span>To:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
+                  <li className={pf('list__item')}><span>From:</span><span className={pf('m-left--xx-small')}><a href="#">Jason Dewar</a></span></li>
                 </ul>
               </div>
             </div>

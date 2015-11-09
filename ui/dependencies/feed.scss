@@ -14,7 +14,7 @@
     content: '';
     background: $color-border;
     height: 100%;
-    width: $border-width-thin;
+    width: $rule-width;
     position: absolute;
     left: ($rule-position / 2);
     top: 0;
@@ -23,5 +23,3 @@
     z-index: -1;
   }
 }
-
-

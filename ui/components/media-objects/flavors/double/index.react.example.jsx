@@ -25,14 +25,14 @@ const image2 = (
 
 exports.preview = (
   <div className={pf('size--3-of-4')}>
-    <MediaObject figureLeft={image2} figureRight={image} flavor="double">
+    <MediaObject figureLeft={image2} figureRight={image}>
       <Lorem count={1} />
     </MediaObject>
   </div>
 );
 
 exports.code = (
-  <MediaObject figureLeft={image2} figureRight={image} flavor="double">
+  <MediaObject figureLeft={image2} figureRight={image}>
     <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
   </MediaObject>
 );

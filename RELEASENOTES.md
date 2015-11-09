@@ -1,6 +1,25 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.13.0
+
+**BREAKING CHANGES**
+- Switch sizing utility media queries to use `em` instead of `px`
+
+** NEW COMPONENTS**
+- Add max-width sizing utilities
+
+## Release 0.12.0 - 
+
+**SITE IA**
+
+- Added Resources -> Links
+- 
+**BREAKING CHANGES**
+
+- Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
+- Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
+
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
@@ -9,21 +28,24 @@
 - If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
 - Removed interactive dropdowns from page header examples
+- Added Google Analytics
 
 **SITE IA**
-- Moved tooltips to popovers, deprecated tooltip section [www.lightningdesignsystem.com/components/popovers#tooltips](www.lightningdesignsystem.com/components/popovers#tooltips)
-- Moved Dropdowns into Menus, deprecated dropdowns section [www.lightningdesignsystem.com/components/menus](www.lightningdesignsystem.com/components/menus)
-- Moved Picklist Dropdown Menu into Menus [www.lightningdesignsystem.com/components/menus#picklist](www.lightningdesignsystem.com/components/menus#picklist)
-- Moved Multi-Select Picklist into Forms [www.lightningdesignsystem.com/components/forms#multi-select](www.lightningdesignsystem.com/components/forms#multi-select)
+
+- Moved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
+- Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus
+- Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
+- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
- - Dropdown
- - Dropdown with Icons
- - Dropdown Positioning
- - Picklist
- - Action Overflow
- - Search Overflow
+	- Dropdown
+	- Dropdown with Icons
+	- Dropdown Positioning
+ 	- Picklist
+ 	- Action Overflow
+ 	- Search Overflow
 
 **BREAKING CHANGES**
+
 - Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
 - Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
 - Deprecated "Menu with Icons" dropdown variant
@@ -71,11 +93,13 @@
 - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 **NEW COMPONENTS**
-- Full-width button variant for small form factors [www.lightningdesignsystem.com/components/buttons#responsive](www.lightningdesignsystem.com/components/buttons#responsive)
-- Feed and Comment components have been added [www.lightningdesignsystem.com/components/feeds](www.lightningdesignsystem.com/components/feeds)
-- Publisher component has been added [www.lightningdesignsystem.com/components/publishers](www.lightningdesignsystem.com/components/publishers)
+
+- Full-width button variant for small form factors www.lightningdesignsystem.com/components/buttons#responsive
+- Feed and Comment components have been added www.lightningdesignsystem.com/components/feeds
+- Publisher component has been added www.lightningdesignsystem.com/components/publishers
 
 **SASS UPDATES**
+
 - Abstracted form states into own mixins
 - Abstracted feed vertical rule into own mixin
 
@@ -112,8 +136,8 @@
 
 ## Release 0.9.0 — September 9th, 2015
 
-- Open Sourced: [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)
-- CSS files scoped in `.slds` have been added/updated for the following:
+- Open Sourced: github.com/salesforce-ux/design-system
+  - CSS files scoped in `.slds` have been added/updated for the following:
   - Visualforce (`-vf`)
   - Lightning Platform (`-ltng`)
   - General Use (Most likely in conjuction with other frameworks) (`-scoped`)

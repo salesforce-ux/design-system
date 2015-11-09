@@ -31,16 +31,29 @@ classes:
     applied: <code>&lt;li&gt;</code>
     notes: Used in both styles of tabsets.
   -
+    class: tabs__item--overflow
+    description: Styles an overflow tab item
+    required: true
+    applied: <code>.{{cssPrefix}}tabs__item</code>
+    notes: Only used within an overflow tab item.
+  -
     class: tabs__content
     description: Styles each tab content wrapper
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Used in both styles of tabsets.
   -
-    class: text-heading--label
-    description: Applies text styling to a tab list item
+    class: dropdown-trigger
+    description: Initializes tab item as menu
     required: true
-    applied: <code>.{{cssPrefix}}tabs__item</code>
+    applied: <code>.{{cssPrefix}}tabs__item--overflow</code>
+    notes: Only used within an overflow tab item.
+  -
+    class: dropdown--overflow
+    description: Applies size settings on tab item menu
+    required: true
+    applied: <code>.{{cssPrefix}}dropdown</code>
+    notes: Only used within an overflow tab item.
   -
     class: active
     description: Applies the active state to a tab list item

@@ -25,10 +25,10 @@ class Component extends React.Component {
       <div className={className}>
         {this.renderFigure(this.props.figureCenter, 'media__figure--stacked')}
         {this.renderFigure(this.props.figureLeft)}
-        {this.renderFigure(this.props.figureRight, 'media__figure--reverse')}
         <div className={pf('media__body')}>
           {this.props.children}
         </div>
+        {this.renderFigure(this.props.figureRight, 'media__figure--reverse')}
       </div>
     );
   }
@@ -48,7 +48,7 @@ Component.PropTypes = {
   figureLeft: React.PropTypes.node,
   figureRight: React.PropTypes.node,
   figureCenter: React.PropTypes.node,
-  flavor: React.PropTypes.oneOf(['center', 'reverse', 'double', 'small', 'stacked'])
+  flavor: React.PropTypes.oneOf(['center', 'small', 'stacked'])
 };
 
 module.exports = Component;

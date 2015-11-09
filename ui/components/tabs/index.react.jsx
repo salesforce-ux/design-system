@@ -61,6 +61,7 @@ class TabItem extends React.Component {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
     const className = classNames(this.props.className, pf(classNames('tabs__item text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
+    
     return (
       <li className={className} {...props} role='presentation'>
         {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
@@ -69,11 +70,33 @@ class TabItem extends React.Component {
   };
 }
 
+class TabItemOverflow extends React.Component {
+  static propTypes = { title: PT.string, content: PT.node }
+  constructor(props) {
+    super(props);
+    componentUtil.install(this);
+  };
+
+  render() {
+    const props = this.$propsWithoutKeys('className', 'id', 'role');
+    const className = classNames(this.props.className, pf(classNames('tabs__item--overflow text-heading--label', {active: this.props.current})));
+    const tabIndex = this.props.current ? 0 : -1;
+    const contents = React.Children.map(this.props.children, function(c,i) {
+      return React.cloneElement(c);
+    });
+
+    return (
+      <li className={className} {...props} role='presentation' onClick={null}>
+        {contents}
+      </li>
+    );
+  };
+}
 
 class Tabs extends React.Component {
   static propTypes = {
     selectedIndex: PT.number,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default')
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'overflow')
   };
   static defaultProps = { selectedIndex: 0 };
   constructor(props) {
@@ -96,16 +119,21 @@ class Tabs extends React.Component {
 
   currentPanel() {
     return React.Children.map(this.props.children, (c, i) => {
-      if(c.props.children.type === TabContent) {
-        return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id});
+      if(c.type === TabItemOverflow) {
+        return null;
       } else {
-        return <TabContent current={this.state.currentTab === i} id={c.props.id}>{c.props.children}</TabContent>;
+        if(c.props.children.type === TabContent) {
+          return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id});
+        } else {
+          return <TabContent current={this.state.currentTab === i} id={c.props.id}>{c.props.children}</TabContent>;
+        }
       }
     });
   }
 
   render() {
     const props = this.$propsWithoutKeys('className', 'flavor');
+
     return (
       <div {...props} className={pf(`tabs--${this.props.flavor}`)}>
         <AccessibleList selector='a' click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
@@ -118,6 +146,7 @@ class Tabs extends React.Component {
 }
 
 Tabs.Item = TabItem;
+Tabs.ItemOverflow = TabItemOverflow;
 Tabs.Content = TabContent;
 
 module.exports = Tabs;

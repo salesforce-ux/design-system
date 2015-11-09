@@ -128,10 +128,6 @@ window.LIGHTNING_DESIGN_SYSTEM = {
   userType: function() {
     // DEFAULT_USER_TYPE is provided by webpack in "compile.js"
     return process.env.DEFAULT_USER_TYPE;
-  },
-
-  isMobile: function() {
-    return (window.innerWidth || screen.width) <= 960;
   }
 
 };

@@ -2,9 +2,8 @@
 // Generated on Tue Mar 24 2015 16:05:39 GMT-0400 (EDT)
 
 var path = require('path');
+var webpack = require('webpack');
 var _ = require('lodash');
-
-var NODE_MODULES_PATTERN = new RegExp(_.escapeRegExp(path.resolve(__dirname, 'node_modules')));
 
 module.exports = function(config) {
   config.set({
@@ -24,8 +23,9 @@ module.exports = function(config) {
       './node_modules/lodash/index.js',
       './node_modules/sinon/pkg/sinon.js',
       './scripts/test/accessibility/a11y.js',
-      './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
-      './ui/**/*.spec.+(js|jsx)'
+      // './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
+      // './ui/**/*.spec.+(js|jsx)',
+      './test/after/browser/**/*.+(js|jsx)'
     ],
 
     // list of files to exclude
@@ -35,7 +35,8 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       './scripts/test/accessibility/index.react.spec.jsx': ['webpack'],
-      './ui/**/*.+(js|jsx)': ['webpack']
+      './ui/**/*.+(js|jsx)': ['webpack'],
+      './test/after/browser/**/*.+(js|jsx)': ['webpack']
     },
 
     plugins: [
@@ -81,10 +82,19 @@ module.exports = function(config) {
       module: {
         loaders: [{
           test: /\.jsx?$/,
-          exclude: NODE_MODULES_PATTERN,
+          exclude: /node_modules/,
           loaders: ['babel-loader']
         }]
       },
+
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env': _({ 
+            'DEFAULT_USER_TYPE': 'external'
+          }).mapValues(value => `"${value}"`).value()
+        })
+      ],
+
       // React will be available in the window.
       // This will greatly increase the speed at which webpack can bundle tests
       externals: [{

@@ -1,6 +1,7 @@
 components:
   - floats
   - lists
+  - rotation
   - scrollable
   - sizing
   - spacing

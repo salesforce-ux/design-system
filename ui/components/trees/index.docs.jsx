@@ -16,6 +16,7 @@ const CodeClass = require('app_modules/site/components/code-class');
 module.exports = (
   <ComponentDocs>
     <p className="site-text-introduction">A tree is visualization a structure heiarchy. A branch can be expanded or collapsed.</p>
+
     <p>A tree is composed of three core elements, <CodeClass className="tree" />, <CodeClass className="tree__item" />, and <CodeClass className="tree__branch" />. The tree wrapper, the outer most parent <code>ul</code>, will receive the class <CodeClass className="tree" />. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.</p>
 
     <p>Whenever the tree has a nested group, the <code>li</code> element should receive the class <CodeClass className="tree__branch" />. This class will add appropiate styling to decendent <CodeClass className="tree__item" /> elements. A helper class of <CodeClass className="is-open" /> and <CodeClass className="is-closed" /> will need to be toggled on the list item node if the decendent groups are visible or not visible.</p>
@@ -23,5 +24,8 @@ module.exports = (
     <p>A tree will need helper classes added and removed to help structure the layout. Each child node list needs <CodeClass className="tree__group" /> applied along with the class <CodeClass className="nested" /> to indicate the distinct grouping is nested within another node of the tree. The <CodeClass className="nested" /> group will need to toggle the following classes, <CodeClass className="collapsed" /> and <CodeClass className="expanded" /> based on its state.</p>
 
     <p>A <CodeClass className="tree__item" /> is any element of the tree that is a single node within a <CodeClass className="tree__group" />. To achieve interactions demostrated in the demo, some helper classes are being added and removed based on actions to the list item node. To achieve the desired hover and focus states, applying the <CodeClass className="is-hovered" /> and <CodeClass className="is-focused" /> class helpers to the <code>li</code> on its respective interactions. If an item is selected and want to demostrate that state, applying the <CodeClass className="is-selected" /> helper class will give you this outcome.</p>
+
+    <p>In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the three branch will perform, whether disclosing or closing it. The effect of rotating the icon to indicate open/closed status is achieved with the <a href="/components/utilities/rotation">rotation utility</a> helper class <CodeClass className="rotate--90" />, which will rotate the icon 90° clockwise. </p>
+
   </ComponentDocs>
 );

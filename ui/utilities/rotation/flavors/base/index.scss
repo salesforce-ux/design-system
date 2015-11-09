@@ -7,84 +7,26 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+// $css-prefix: 'slds-';
+// $duration-promptly: 0.2s !default;
 
-
-.#{$css-prefix}tree-container {
-  min-width: rem(120px);
-  max-width: rem(400px);
-
-  > .#{$css-prefix}text-heading--label {
-    margin-bottom: $spacing-x-small;
+$class-name-stub: "rotate" !default;
+$rotation-steps: 8 !default;
+$deg-step-increment: (360 / $rotation-steps);
+@each $rotation-axis in "", "X", "Y", "Z" {
+  $rule-name-stub-default: "." + $css-prefix + $class-name-stub + "--";
+  @if $rotation-axis == "" {
+    $rule-name-stub: $rule-name-stub-default;
+  } @else {
+    $rule-name-stub: $rule-name-stub-default + to-lower-case($rotation-axis) + "-";
+  }
+  // Creates rules for 8 steps of rotation, along the supplied axis, or in 45 degree steps.
+  @for $step from 0 to $rotation-steps {
+    $deg: $deg-step-increment * $step;
+    #{$rule-name-stub}#{$deg}  {
+        transition: $duration-promptly transform ease-in-out;
+        transform: rotate#{$rotation-axis}(#{$deg}deg);
+    }
   }
 }
-
-
-
-.#{$css-prefix}tree {
-
-  &__item {
-    display: flex;
-    line-height: $line-height-button;
-    padding-left: $spacing-medium;
-
-    a {
-      color: $color-text-default;
-    }
-
-    a:hover,
-    a:focus {
-      outline: 0;
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus {
-      @include tree-item-hover;
-    }
-  }
-  
-  // Depth 1
-  &__group > &__item > a,
-  &__group > &__item > button + a,
-  &__group > &__item > &__item-label + a
-  {
-    display: inline-block;
-    padding-left: ($spacing-medium + $spacing-x-small); // width of button + gutter
-  }
-
-  &__branch > &__item > button + a
-  {
-    display: inline-block;
-    padding-left: ($spacing-x-small / 2);
-  }
-
-  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
-  $i: "." + $css-prefix + nested;
-  @for $j from 1 through 20 {
-    #{$i} > &__branch > &__item,
-    #{$i} &__item {
-        padding-left: ((($spacing-medium * ($j + 1)) + ($spacing-x-small * $j)));
-    }
-    $i: $i + " ." + $css-prefix + nested;
-  }
-
-
-  .#{$css-prefix}is-selected {
-    @include tree-item-selected;
-  }
-
-  .#{$css-prefix}is-hovered,
-  .#{$css-prefix}is-focused {
-    @include tree-item-hover;
-  }
-
-  .#{$css-prefix}button {
-    align-self: center;
-  }
-
-  .#{$css-prefix}pill {
-    margin-left: $spacing-small;
-  }
-}
-
 

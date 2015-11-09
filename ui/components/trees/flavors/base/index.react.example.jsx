@@ -19,47 +19,171 @@ const pf = componentUtil.prefix;
 
 module.exports = (
 <div className='demo-only'>
-  <div className={pf('tree-container')} role="application">
-    <h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
-    <ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node0">
-      <li id="tree0-node0" className={pf('tree__branch is-open')} role="treeitem" aria-level="1" aria-expanded="true">
-        <div className={pf('tree__item')}>
-          <ButtonIcon className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
-          <a href="#" id="tree0-node0-link" tabIndex="-1" role="presentation">Tree Branch</a>
-        </div>
-        <ul className={pf('tree__group nested is-expanded')} role="group" aria-labelledby="tree0-node0-link">
-          <li id="tree0-node0-0" className={pf('tree__branch is-open')} role="treeitem" aria-level="2" aria-expanded="true">
-            <div className={pf('tree__item')}>
-              <ButtonIcon className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
-              <a href="#" id="tree0-node0-0-link" tabIndex="-1" role="presentation">Tree Branch</a>
-            </div>
-            <ul className={pf('tree__group nested is-expanded')} role="group" aria-labelledby="tree0-node0-0-link">
-              <li id="tree0-node0-0-1" className={pf('tree__item')} role="treeitem" aria-level="3">
-                <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-              </li>
-              <li id="tree0-node0-0-2" className={pf('tree__item')} role="treeitem" aria-level="3">
-                <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-                <span className={pf('pill shrink-none align-middle')}>
-                  <span className={pf('pill__label')}>Label</span>
-                </span>
-              </li>
-              <li id="tree0-node0-0-3" className={pf('tree__item')} role="treeitem" aria-level="3">
-                <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-              </li>
-            </ul>
-          </li>
-          <li id="tree0-node0-1" className={pf('tree__item')} role="treeitem" aria-level="2">
-            <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-          </li>
-          <li id="tree0-node0-2" className={pf('tree__item')} role="treeitem" aria-level="2">
-            <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-          </li>
-          <li id="tree0-node0-2" className={pf('tree__item')} role="treeitem" aria-level="2">
-            <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+	<div className={pf('tree-container')} role="application">
+		<h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
+		<ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1">
+
+			<li id="tree0-node0" className={pf('tree__item')} role="treeitem" aria-level="1">
+				<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+			</li>
+
+
+			<li id="tree0-node1" className={pf('tree__branch is-open')} role="treeitem" aria-level="1" aria-expanded="true">
+				
+				<div className={pf('tree__item')}>
+					
+					<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+					<a href="#" id="tree0-node1__label" tabIndex="-1" role="presentation">Tree Branch</a>
+				</div>
+
+				<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1__label">
+					
+
+					<li id="tree0-node1-0" className={pf('tree__item')} role="treeitem" aria-level="2">
+						<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+					</li>
+
+					<li id="tree0-node1-1" className={pf('tree__branch is-open')} role="treeitem" aria-level="2" aria-expanded="true">
+						<div className={pf('tree__item')}>
+							
+							<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+							<a href="#" id="tree0-node1-1__label" tabIndex="-1" role="presentation">Tree Branch</a>
+						</div>
+						<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1__label">
+
+							<li id="tree0-node1-1-0" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+							</li>
+
+							<li id="tree0-node1-1-1" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+								<span className={pf('pill shrink-none align-middle')}>
+									<span className={pf('pill__label')}>Label</span>
+								</span>
+							</li>
+
+
+							<li id="tree0-node1-1-2" className={pf('tree__branch is-closed')} role="treeitem" aria-level="2" aria-expanded="false">
+								<div className={pf('tree__item')}>
+									<ButtonIcon className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+									<a href="#" id="tree0-node1-1-2__label" tabIndex="-1" role="presentation">Tree Branch</a>
+								</div>
+								<ul className={pf('tree__group nested collapsed')} role="group" aria-labelledby="tree0-node1-1-2__label">
+									<li id="tree0-node1-1-2-0" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+									</li>
+									<li id="tree0-node1-1-2-1" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+										<span className={pf('pill shrink-none align-middle')}>
+											<span className={pf('pill__label')}>Label</span>
+										</span>
+									</li>
+									<li id="tree0-node1-1-2-2" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="tree0-node1-1-3" className={pf('tree__branch is-open')} role="treeitem" aria-level="2" aria-expanded="true">
+								<div className={pf('tree__item')}>
+									
+									<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+									<a href="#" id="tree0-node1-1-3__label" tabIndex="-1" role="presentation">Tree Branch</a>
+								</div>
+								<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
+									<li id="tree0-node1-1-3-1" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+									</li>
+									<li id="tree0-node1-1-3-2" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+										<span className={pf('pill shrink-none align-middle')}>
+											<span className={pf('pill__label')}>Label</span>
+										</span>
+									</li>
+									<li id="tree0-node1-1-3-3" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+									</li>
+
+									<li id="tree0-node1-1-3-4" className={pf('tree__branch is-open')} role="treeitem" aria-level="3" aria-expanded="true">
+										<div className={pf('tree__item')}>
+											
+											<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+											<a href="#" id="tree0-node1-1-3-4__label" tabIndex="-1" role="presentation">Tree Branch</a>
+										</div>
+										<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
+											<li id="tree0-node1-1-3-4-1" className={pf('tree__item')} role="treeitem" aria-level="4">
+												<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+											</li>
+											<li id="tree0-node1-1-3-4-2" className={pf('tree__item')} role="treeitem" aria-level="4">
+												<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+												<span className={pf('pill shrink-none align-middle')}>
+													<span className={pf('pill__label')}>Label</span>
+												</span>
+											</li>
+											<li id="tree0-node1-1-3-4-3" className={pf('tree__item')} role="treeitem" aria-level="4">
+												<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+											</li>
+										</ul>
+
+									</li>
+
+
+									<li id="tree0-node1-1-3-5" className={pf('tree__item')} role="treeitem" aria-level="3">
+										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+									</li>
+								</ul>
+							</li>
+
+
+							<li id="tree0-node1-1-4" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+							</li>
+
+						</ul>
+					</li>
+
+					<li id="tree0-node1-2" className={pf('tree__item')} role="treeitem" aria-level="2">
+						<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+					</li>
+
+					<li id="tree0-node1-3" className={pf('tree__item')} role="treeitem" aria-level="2">
+						<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+					</li>
+
+					<li id="tree0-node1-4" className={pf('tree__branch is-open')} role="treeitem" aria-level="2" aria-expanded="true">
+						<div className={pf('tree__item')}>
+							
+							<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+							<a href="#" id="tree0-node1-4__label" tabIndex="-1" role="presentation">Tree Branch</a>
+						</div>
+						<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-4__label">
+							<li id="tree0-node1-4-1" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+							</li>
+							<li id="tree0-node1-4-2" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+								<span className={pf('pill shrink-none align-middle')}>
+									<span className={pf('pill__label')}>Label</span>
+								</span>
+							</li>
+							<li id="tree0-node1-4-3" className={pf('tree__item')} role="treeitem" aria-level="3">
+								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+
+			<li id="tree0-node2" className={pf('tree__item')} role="treeitem" aria-level="1">
+				<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+			</li>
+
+			<li id="tree0-node3" className={pf('tree__item')} role="treeitem" aria-level="1">
+				<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+			</li>
+
+		</ul>
+	</div>
 </div>
 );

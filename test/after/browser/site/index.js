@@ -39,6 +39,10 @@ describe('site/', () => {
     })).to.have.length(2);
   });
 
+  it('should have a navigation area', () => {
+    expect(scryRenderedDOMComponentsWithClass(renderedPage, 'site-navigation')).to.have.length(1);
+  });
+
 });
 
 // 

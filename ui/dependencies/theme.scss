@@ -198,8 +198,7 @@
 // Apply theme on hover for list items
 @mixin list-has-hovers {
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $color-background-row-hover;
     border-color: $color-border;
   }

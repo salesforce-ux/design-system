@@ -18,8 +18,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link } from 'react-router';
-import { history } from 'react-router/lib/BrowserHistory';
-import { last } from 'lodash';
+import { createHistory} from 'history';
 import 'app_modules/site/util/analytics';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { logCurrentPageVisit } from 'app_modules/site/util/analytics';
@@ -39,13 +38,6 @@ svgFix(document);
  * that can be lazy loaded using the requirePage() function
  */
 const requirePage = require.context('bundle?lazy!.tmp/site', true, /\.jsx$/);
-
-/**
- * A wrapper component needed for ReactRouter
- */
-const Root = React.createClass({
-  render() { return last(this.props.components); }
-});
 
 window.LIGHTNING_DESIGN_SYSTEM = {
 
@@ -85,31 +77,37 @@ window.LIGHTNING_DESIGN_SYSTEM = {
    * @returns {ReactElement}
    */
   buildRouter(modulePath, pageElement) {
+    // react-router requires route components to be a class so this
+    // is a simple wrapper class which renders an element
+    let createClass = pageElement => {
+      return React.createClass({
+        render() {
+          return pageElement;
+        }
+      });
+    }
     let routes = sitemap.getFlattenedRoutes().map(route => {
       let props = { path: route.path, name: route.uid };
       // If we're on the current page, we DON'T want to fetch the pageElement
       // async because ReactRouter will render a temporary <noscript>
       if (route.modulePath === modulePath) {
-        props.components = pageElement;
+        props.component = createClass(pageElement);
       } else {
         // Fetch the page async
         // TODO: Not sure how webpack signals an error
         // TODO: Spinner if the load takes longer than X milliseconds
-        props.getComponents = function(callback) {
+        props.getComponent = function(location, callback) {
           requirePage(`./${route.modulePath}`)(pageElement => {
-            callback(null, pageElement);
+            callback(null, createClass(pageElement));
           });
         };
       }
       return React.createElement(Route, props);
     });
-    // ReactRouter requires a class to be the root element
-    let wrapper = React.createElement(Route, {
-      component: Root
-    }, ...routes);
+
     // Return the router using HTML5 pushState
     return React.createElement(Router, {
-      history,
+      history: createHistory(),
       onUpdate: function () {
         logCurrentPageVisit();
         shared.store = shared.store.set('route', sitemap.getRouteByPath(
@@ -118,7 +116,7 @@ window.LIGHTNING_DESIGN_SYSTEM = {
         // Restore the preferences hash after a page change
         Prefs.sync(false);
       }
-    }, wrapper);
+    }, ...routes);
   },
 
   /**

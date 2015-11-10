@@ -87,7 +87,7 @@
     "react-addons-test-utils": "0.14.0-beta3",
     "react-dom": "0.14.0-beta3",
     "react-lorem-component": "https://github.com/aputinski/react-lorem-component.git",
-    "react-router": "1.0.0-beta4",
+    "react-router": "1.0.0",
     "rimraf": "2.4.3",
     "sinon": "1.16.1",
     "stampit": "2.1.0",

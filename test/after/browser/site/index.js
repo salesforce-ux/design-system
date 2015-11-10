@@ -28,6 +28,17 @@ describe('site/', () => {
     expect(scryRenderedDOMComponentsWithClass(renderedPage, 'site-cta-download')).to.have.length(1);
   });
 
+  it('should have 2 "Learn More" buttons', () => {
+    const buttons = scryRenderedDOMComponentsWithClass(renderedPage, 'slds-button');
+    expect(buttons.filter(b => {
+      if (b.innerHTML === 'Learn More') {
+        return true;
+      } else {
+        return false;
+      }
+    })).to.have.length(2);
+  });
+
 });
 
 // 

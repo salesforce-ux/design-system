@@ -42,10 +42,10 @@ class GithubButton extends React.Component {
     req.open('GET', 'https://api.github.com/repos/salesforce-ux/design-system', true);
     req.send();
   }
-  
+
   componentDidMount() {
-    this.getStars((data) => { 
-      this.setState({ 
+    this.getStars((data) => {
+      this.setState({
         stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
@@ -56,9 +56,9 @@ class GithubButton extends React.Component {
     const linkUrlRepo = 'https://github.com/salesforce-ux/design-system';
     const linkUrlGazer = linkUrlRepo + '/stargazers';
     const countStr = String(this.state.stargazersCount).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-    const classesButtonGroup = classNames('site-button-group--social-counter', pf('button'));
-    const classesBubbleButton = classNames('site-button--social-counter', 
-      pf('button button--neutral nubbin--left'),
+    const classesButtonGroup = classNames('site-button-group--social-counter');
+    const classesBubbleButton = classNames('site-button--social-counter',
+      pf('button button--neutral'),
       (this.state.stargazersCount > 0 ? 'is-loaded' : '')
     );
 

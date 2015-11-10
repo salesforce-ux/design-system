@@ -43,6 +43,14 @@ describe('site/', () => {
     expect(scryRenderedDOMComponentsWithClass(renderedPage, 'site-navigation')).to.have.length(1);
   });
 
+  it('should have a numeric release number of form X.Y.Z', () => {
+    const releaseNumberMarkup = scryRenderedDOMComponentsWithClass(renderedPage, 'site-releasenumber');
+    const releaseNumberRaw = releaseNumberMarkup[0].lastChild.innerHTML;
+    expect(releaseNumberMarkup).to.have.length(1);
+    expect(releaseNumberRaw).to.match(/\d+\.\d+\.\d+/);
+  });
+
+
 });
 
 // 

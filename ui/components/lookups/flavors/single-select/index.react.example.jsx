@@ -26,10 +26,11 @@ module.exports = (
       <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
         <div className={pf('pill-container show')}>
-          <span className={pf('pill pill--bare')}>
-            <a href="#" className={pf('pill__label')}><SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />Pied Piper</a>
-            <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-          </span>
+          <a href="#void" className={pf('pill')}>
+            <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+            <span className={pf('pill__label')}>Pied Piper</span>
+            <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+          </a>
         </div>
         <input id="lookup" className={pf('input hide')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-activedescendant="" />
       </div>

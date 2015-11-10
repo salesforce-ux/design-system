@@ -17,12 +17,10 @@ const pf = componentUtil.prefix;
 
 module.exports = (
 <div className='demo-only'>
-  <span className={pf('pill')}>
-    <a href="#" className={pf('pill__label')}>
-      <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-      Pill Label
-    </a>
-    <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>
+  <a href="#void" className={pf('pill')}>
+    <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+    <span className={pf('pill__label')}>Pill Label</span>
+    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+  </a>
 </div>
 );

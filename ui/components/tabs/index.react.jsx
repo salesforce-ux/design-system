@@ -45,9 +45,14 @@ class TabItem extends React.Component {
     componentUtil.install(this);
   };
 
-  renderCustom(tabIndex) {
-    return React.cloneElement(this.props.content, {onClick: this.props.onClick.bind(this), tabIndex: tabIndex, 'aria-selected': this.props.current});
-  }
+ renderCustom(tabIndex) {
+  return React.cloneElement(this.props.content, {
+    onClick: this.props.onClick.bind(this),
+    tabIndex: tabIndex,
+    className: pf(this.props.innerClass),
+    'aria-selected': this.props.current
+  });
+}
 
   renderDefault(tabIndex) {
     return (

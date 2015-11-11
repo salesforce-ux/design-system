@@ -29,7 +29,7 @@ classes:
     description: Styles each list item as a single tab
     required: true
     applied: <code>&lt;li&gt;</code>
-    notes: Used in both styles of tabsets.
+    notes: Used in all styles of tabsets.
   -
     class: tabs__item--overflow
     description: Styles an overflow tab item

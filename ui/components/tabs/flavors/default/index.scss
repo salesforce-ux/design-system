@@ -24,35 +24,6 @@
           margin-left: $spacing-large;
         }
       }
-
-      > a {
-        border-bottom: 2px solid transparent;
-        padding: 0 $spacing-x-small;
-        color: $color-text-action-label;
-        @include mq-medium-min {
-          padding: 0 $spacing-medium;
-        }
-
-        &:hover,
-        &:focus {
-          border-color: $color-text-tab-label-selected;
-          color: $color-text-action-label-active;
-        }
-
-        &:focus {
-          color: $color-text-tab-label-selected;
-          box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
-        }
-      }
-
-      &.#{$css-prefix}active > a {
-        border-color: $color-text-tab-label-selected;
-        color: $color-text-action-label-active;
-
-        &:focus {
-          color: $color-text-tab-label-selected;
-        }
-      }
     }
   }
 
@@ -60,3 +31,37 @@
     @include tabs-content;
   }
 }
+
+.#{$css-prefix}tabs--default__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  border-bottom: $border-width-thick solid transparent;
+  padding: 0 $spacing-x-small;
+  color: $color-text-action-label;
+
+  @include mq-medium-min {
+    padding: 0 $spacing-medium;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    border-color: $color-text-tab-label-selected;
+    color: $color-text-action-label-active;
+  }
+
+  &:focus {
+    color: $color-text-tab-label-selected;
+    box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
+  }
+}
+
+&.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
+  border-color: $color-text-tab-label-selected;
+  color: $color-text-action-label-active;
+
+  &:focus {
+    color: $color-text-tab-label-selected;
+  }
+} 

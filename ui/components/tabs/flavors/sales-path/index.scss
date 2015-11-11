@@ -1,0 +1,174 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}tabs--path {
+  @include tabs;
+
+  &__nav {
+    @include tabs-nav;
+  }
+
+  .#{$css-prefix}tabs__item {
+    @include tabs-item;
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 5rem;
+    max-height: 2rem;
+    text-align: center;
+    background-color: $color-background-shade;
+    perspective: 500;
+    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+
+    &:first-child {
+      border-radius: $border-radius-pill 0 0 $border-radius-pill; 
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius-pill $border-radius-pill 0;
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: rgb(216, 221, 230); //@TODO - no matching token
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -1em;
+      top: $border-width-thick;
+      width: 2em;
+      height: 2em;
+      border: $border-width-thick solid white;
+      border-left: none;
+      border-bottom: none;
+      background-color: $color-background-shade;
+      transform: rotate(45deg); 
+      transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+
+    + .slds-tabs__item:before {
+      background-color: $color-background-shade;
+    }
+
+    &:hover + .slds-tabs__item:before {
+      background-color: rgb(216, 221, 230);
+    }
+
+    + .slds-is-completed:before {
+      background-color: rgb(75, 202, 129);
+    }
+
+    &:hover + .slds-is-completed:before {
+      background-color: rgb(4, 132, 75);
+    }
+
+    + .slds-is-current:before {
+      background-color: rgb(75, 202, 129);
+    }
+
+    &:hover + .slds-is-current:before {
+      background-color: rgb(4, 132, 75);
+    }
+  }
+
+  .slds-is-current {
+
+    + .slds-tabs__item:before {
+      background-color: #0076DE;
+    }
+
+    &:hover + .slds-tabs__item:before {
+      //background-color: rgb(216, 221, 230);
+      background-color: rgb(0, 95, 178);
+    }
+  }
+
+  .#{$css-prefix}is-completed {
+    background-color: rgb(75, 202, 129);
+
+    .#{$css-prefix}tabs--path__link {
+      color: white;
+    }
+
+    .#{$css-prefix}path__stage {
+      //display: block;
+      transform: rotateX(0deg);
+    }
+
+    .#{$css-prefix}path__title {
+      //display: none;
+      transform: rotateX(180deg);
+    }
+
+    &:hover {
+      background-color: rgb(4, 132, 75);
+
+      .#{$css-prefix}path__title {
+        //display: block;
+        transform: rotateX(0deg);
+      }
+
+      .#{$css-prefix}path__stage {
+        //display: none;
+        transform: rotateX(-180deg);
+      }
+    }
+  }
+
+  .#{$css-prefix}is-current {
+    background-color: #0076DE;
+
+    .#{$css-prefix}tabs--path__link {
+      color: white;
+    }
+
+    &:hover {
+      background-color: rgb(0, 95, 178);
+    }
+  }
+}
+
+.#{$css-prefix}path__title {
+  //display: block;
+}
+
+.#{$css-prefix}path__stage {
+  //display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -8px;
+  transform: rotateX(-180deg);
+}
+
+.#{$css-prefix}is-active {
+  background-color: black;
+}
+
+.#{$css-prefix}tabs--path__link {
+  @include tabs-link;
+  position: relative;
+  color: rgb(84, 105, 141);
+  padding: 7px .5rem 7px 1rem;
+  line-height: 1.15rem;
+
+  span {
+    display: block;
+    transition: transform 0.2s linear;
+    backface-visibility: hidden;
+  }
+}

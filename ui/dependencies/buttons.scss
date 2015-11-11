@@ -88,7 +88,7 @@
 
   @media (max-width: $size) {
     .#{$css-prefix}#{$max-delimiter}#{$size-modifier} {
-      &-button--stacked + .#{$css-prefix}#{$size-modifier}-button--stacked,
+      &-button--stacked + .#{$css-prefix}#{$max-delimiter}#{$size-modifier}-button--stacked,
       &-buttons--stacked .#{$css-prefix}button + .#{$css-prefix}button {
         display: block;
         margin: {
@@ -97,7 +97,7 @@
         }
       }
 
-      &-button--horizontal + .#{$css-prefix}#{$size-modifier}-button--horizontal,
+      &-button--horizontal + .#{$css-prefix}#{$max-delimiter}#{$size-modifier}-button--horizontal,
       &-buttons--horizontal .#{$css-prefix}button + .#{$css-prefix}button {
         margin-left: $spacing-x-small;
       }

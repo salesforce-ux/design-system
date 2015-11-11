@@ -45,7 +45,7 @@ class TabItem extends React.Component {
     componentUtil.install(this);
   };
 
- renderCustom(tabIndex) {
+renderCustom(tabIndex) {
   return React.cloneElement(this.props.content, {
     onClick: this.props.onClick.bind(this),
     tabIndex: tabIndex,

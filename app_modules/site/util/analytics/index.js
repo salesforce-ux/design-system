@@ -14,9 +14,12 @@ import globals from 'app_modules/global';
 /**
  * Only allows production-level logging.
  */
-function canLogEvent() {
-  return window.ll && window.location &&
-    globals.analyticsHostWhitelist.indexOf(window.location.host) >= 0;
+function logEvent(tagEvent, type, extraValues) {
+  let canLogEvent = window.ll && window.location && globals.analyticsHostWhitelist.indexOf(window.location.host);
+  if (canLogEvent >= 0) { 
+    window.ll(tagEvent, type, extraValues);
+    window.ga(tagEvent, type, extraValues);
+  }
 }
 
 /**
@@ -30,9 +33,7 @@ function normalizedLocationPathname() {
  * Records a page visit + screen flow.
  */
 function logCurrentPageVisit() {
-  if (canLogEvent()) {
-    window.ll('tagScreen', normalizedLocationPathname());
-  }
+  logEvent('tagScreen', normalizedLocationPathname());
 }
 
 /**
@@ -42,10 +43,8 @@ function logCurrentPageVisit() {
  * @param {object} extraValues - Optional extra tracking parameters
  */
 function logCTAEvent(type, extraValues) {
-  if (canLogEvent()) {
-    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
-    window.ll('tagEvent', 'CTA', values);
-  }
+  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
+  logEvent('tagEvent', 'CTA', values);
 }
 
 /**
@@ -55,10 +54,8 @@ function logCTAEvent(type, extraValues) {
  * @param {object} extraValues - Optional extra tracking parameters
  */
 function logInputEvent(type, extraValues) {
-  if (canLogEvent()) {
-    let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
-    window.ll('tagEvent', 'Input', values);
-  }
+  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
+  logEvent('tagEvent', 'CTA', values);
 }
 
 /**

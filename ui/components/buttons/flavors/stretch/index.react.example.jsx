@@ -14,10 +14,34 @@ const Button = require('ui/components/buttons/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
+exports.preview = (
   <div className={'demo-only'}>
     <Button flavor="neutral" className={pf('max-small-button--stretch')}>
-      Mobile Stretched Button
+      Button
     </Button>
+    <div className={pf('max-small-buttons--stretch max-small-buttons--stacked small-buttons--horizontal')} style={{marginTop: '1rem'}}>
+      <Button flavor="neutral">
+        Button
+      </Button>
+      <Button flavor="neutral">
+        Button
+      </Button>
+    </div>
+  </div>
+);
+
+exports.code = (
+  <div className={'demo-only'}>
+    <Button flavor="neutral" className={pf('max-small-button--stretch')}>
+      Button
+    </Button>
+    <div className={pf('max-small-buttons--stretch max-small-buttons--stacked small-buttons--horizontal')}>
+      <Button flavor="neutral">
+        Button
+      </Button>
+      <Button flavor="neutral">
+        Button
+      </Button>
+    </div>
   </div>
 );

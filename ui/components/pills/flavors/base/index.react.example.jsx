@@ -18,7 +18,7 @@ const pf = componentUtil.prefix;
 module.exports = (
 <div className='demo-only'>
   <a href="#void" className={pf('pill')}>
-    <span className={pf('pill__label')}>GgggggGgggggGgggggGgggggGgggggGgggggGgggggGggggg</span>
+    <span className={pf('pill__label')}>Pill Label</span>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
   </a>
 </div>

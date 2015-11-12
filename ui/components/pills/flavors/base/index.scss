@@ -16,6 +16,7 @@
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   vertical-align: middle;
+  line-height: $line-height-text; // Retain height if nested within a flexbox container
 
   + .#{$css-prefix}pill {
     margin-left: $spacing-xx-small;
@@ -41,8 +42,8 @@
 
   &-container {
     padding: 1px;
-    border-top: $border-width-thin solid transparent;
-    border-bottom: $border-width-thin solid $color-border;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
     min-height: calc(#{$line-height-button} + 2px);
   }
 
@@ -61,12 +62,7 @@
     border-radius: $border-radius-small;
   }
 
-  &__close {
+  &__remove {
     margin-left: $spacing-x-small;
   }
-}
-
-.#{$css-prefix}form-element__control .#{$css-prefix}pill-container {
-  border: $border-width-thin solid $color-border;
-  border-radius: $border-radius-medium;
 }

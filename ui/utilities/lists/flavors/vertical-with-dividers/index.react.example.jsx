@@ -15,11 +15,25 @@ const pf = componentUtil.prefix;
 
 module.exports = (
 <div className='demo-only'>
-  <ul className={pf('list--vertical has-dividers')}>
-    <li className={pf('list__item')}>List Item One</li>
-    <li className={pf('list__item')}>List Item One</li>
-    <li className={pf('list__item')}>List Item One</li>
-    <li className={pf('list__item')}>List Item One</li>
+  <ul className={pf('list--vertical has-dividers--top')}>
+    <li className={pf('list__item')}>List item with top divider</li>
+    <li className={pf('list__item')}>List item with top divider</li>
+    <li className={pf('list__item')}>List item with top divider</li>
+  </ul>
+  <ul className={pf('list--vertical has-dividers--top-space')}>
+    <li className={pf('list__item')}>List item with top divider with space</li>
+    <li className={pf('list__item')}>List item with top divider with space</li>
+    <li className={pf('list__item')}>List item with top divider with space</li>
+  </ul>
+  <ul className={pf('list--vertical has-dividers--bottom')}>
+    <li className={pf('list__item')}>List item with bottom divider</li>
+    <li className={pf('list__item')}>List item with bottom divider</li>
+    <li className={pf('list__item')}>List item with bottom divider</li>
+  </ul>
+  <ul className={pf('list--vertical has-dividers--bottom-space')}>
+    <li className={pf('list__item')}>List item with bottom divider with space</li>
+    <li className={pf('list__item')}>List item with bottom divider with space</li>
+    <li className={pf('list__item')}>List item with bottom divider with space</li>
   </ul>
 </div>
 );

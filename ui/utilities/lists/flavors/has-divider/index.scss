@@ -18,22 +18,29 @@
   }
 
   &--top {
-    border-top: $border-width-thin solid $color-border;
+    // border-top: $border-width-thin solid $color-border;
+    @include border(top);
 
     &-space {
+      @include border(top);
       margin-top: $spacing-x-small;
       padding-top: $spacing-x-small;
-      border-top: $border-width-thin solid $color-border;
+      // border-top: $border-width-thin solid $color-border;
     }
   }
 
   &--bottom {
-    border-bottom: $border-width-thin solid $color-border;
+    // border-bottom: $border-width-thin solid $color-border;
+    @include border(bottom);
 
     &-space {
+      @include border(bottom);
       margin-bottom: $spacing-x-small;
       padding-bottom: $spacing-x-small;
-      border-bottom: $border-width-thin solid $color-border;
+      // border-bottom: $border-width-thin solid $color-border;
     }
   }
 }
+
+
+

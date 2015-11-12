@@ -22,7 +22,7 @@ module.exports = (
     <div aria-hidden="false" role="dialog" className={pf('action-overflow--touch')}>
       <div className={pf('action-overflow--touch__container')}>
         <div className={pf('action-overflow--touch__content')}>
-          <div className={pf('action-overflow--touch__content__body')}>
+          <div className={pf('action-overflow--touch__body')}>
             <ul role="menu" className={pf('list--vertical has-block-links has-dividers')}>
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">

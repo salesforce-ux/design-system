@@ -28,19 +28,23 @@
     overflow: hidden {
       y: auto;
     }
-
-    &__body {
-      // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
-      position: relative;
-      top: $spacing-large;
-      // box-styling
-      background: $color-background-alt;
-      box-shadow: $shadow-overlay;
-    }
   }
 
-  .#{$css-prefix}has-block-links a {
-    padding: $spacing-xx-small $spacing-x-small;
+  &__body {
+    // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
+    position: relative;
+    top: $spacing-x-large;
+    // box-styling
+    background: $color-background-alt;
+    box-shadow: $shadow-overlay;
+  }
+
+  .#{$css-prefix}list--vertical.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
+    padding: 0;
+  }
+
+  a {
+    padding: $spacing-medium $spacing-large;
   }
 
   &__footer {

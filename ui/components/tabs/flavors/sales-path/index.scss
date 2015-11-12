@@ -7,6 +7,8 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+$sales-path: 2rem; // @TODO: Temp token till we align sizing
+
 .#{$css-prefix}tabs--path {
   @include tabs;
 
@@ -14,161 +16,190 @@
     @include tabs-nav;
   }
 
-  .#{$css-prefix}tabs__item {
-    @include tabs-item;
-    position: relative;
-    flex: 1 1 auto;
-    min-width: 5rem;
-    max-height: 2rem;
-    text-align: center;
-    background-color: $color-background-shade;
-    perspective: 500;
-    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+  .#{$css-prefix}is-complete {
+    background-color: $color-background-success; // @TODO: need to change token name
 
-    &:first-child {
-      border-radius: $border-radius-pill 0 0 $border-radius-pill; 
-    }
-
-    &:last-child {
-      border-radius: 0 $border-radius-pill $border-radius-pill 0;
-      border-right: none;
-    }
-
-    &:hover {
-      background-color: rgb(216, 221, 230); //@TODO - no matching token
-    }
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: -1em;
-      top: $border-width-thick;
-      width: 2em;
-      height: 2em;
-      border: $border-width-thick solid white;
-      border-left: none;
-      border-bottom: none;
-      background-color: $color-background-shade;
-      transform: rotate(45deg); 
-      transition: transform 0.1s ease-in-out, background-color 0.1s linear;
-    }
-
-    &:first-child:before {
-      display: none;
-    }
-
-    + .slds-tabs__item:before {
-      background-color: $color-background-shade;
-    }
-
-    &:hover + .slds-tabs__item:before {
-      background-color: rgb(216, 221, 230);
-    }
-
-    + .slds-is-completed:before {
-      background-color: rgb(75, 202, 129);
-    }
-
-    &:hover + .slds-is-completed:before {
-      background-color: rgb(4, 132, 75);
-    }
-
-    + .slds-is-current:before {
-      background-color: rgb(75, 202, 129);
-    }
-
-    &:hover + .slds-is-current:before {
-      background-color: rgb(4, 132, 75);
-    }
-  }
-
-  .slds-is-current {
-
-    + .slds-tabs__item:before {
-      background-color: #0076DE;
-    }
-
-    &:hover + .slds-tabs__item:before {
-      //background-color: rgb(216, 221, 230);
-      background-color: rgb(0, 95, 178);
-    }
-  }
-
-  .#{$css-prefix}is-completed {
-    background-color: rgb(75, 202, 129);
-
-    .#{$css-prefix}tabs--path__link {
-      color: white;
-    }
-
-    .#{$css-prefix}path__stage {
-      //display: block;
+    .#{$css-prefix}tabs--path__stage {
       transform: rotateX(0deg);
     }
 
-    .#{$css-prefix}path__title {
-      //display: none;
+    .#{$css-prefix}tabs--path__title {
       transform: rotateX(180deg);
     }
 
     &:hover {
-      background-color: rgb(4, 132, 75);
+      background-color: $color-background-toast-success; // @TODO: need to change token name
 
-      .#{$css-prefix}path__title {
-        //display: block;
-        transform: rotateX(0deg);
+      .#{$css-prefix}tabs--path__stage {
+        transform: rotateX(-180deg);
       }
 
-      .#{$css-prefix}path__stage {
-        //display: none;
-        transform: rotateX(-180deg);
+      .#{$css-prefix}tabs--path__title {
+        transform: rotateX(0deg);
       }
     }
   }
 
   .#{$css-prefix}is-current {
-    background-color: #0076DE;
+    background-color: #0076DE; // @TODO: Need a token for this
+
+    &:hover {
+      background-color: rgb(0, 95, 178); // @TODO: Need a token for this blue
+    }
+
+    + .#{$css-prefix}is-incomplete:before {
+      background-color: #0076DE; // @TODO: Need a token for this
+    }
+
+    &:hover + .#{$css-prefix}is-incomplete:before {
+      background-color: rgb(0, 95, 178); // @TODO: Need a token for this
+    }
+  }
+
+  .#{$css-prefix}is-incomplete {
+    background-color: $color-background-shade;
 
     .#{$css-prefix}tabs--path__link {
-      color: white;
+      color: $color-text-default;
+    }
+  }
+
+  .#{$css-prefix}is-current,
+  .#{$css-prefix}is-complete {
+
+    .#{$css-prefix}tabs--path__link {
+      color: $color-text-inverse;
+    }
+  }
+
+  .#{$css-prefix}is-active { // This class must be added with JS when a section of the sales path is clicked on to see the coaching information
+    background-color: $color-background-inverse;
+
+    .#{$css-prefix}tabs--path__link {
+      color: $color-text-inverse;
+    }
+
+    .#{$css-prefix}tabs--path__stage {
+      transform: rotateX(-180deg);
+    }
+
+    .#{$css-prefix}tabs--path__title {
+      transform: rotateX(0deg);
     }
 
     &:hover {
-      background-color: rgb(0, 95, 178);
+      background-color: $color-background-alt-inverse;
+
+      + .#{$css-prefix}tabs--path__item:before {
+        background-color: $color-background-alt-inverse;
+      }
+    }
+
+    + .#{$css-prefix}tabs--path__item:before {
+      background-color: $color-background-inverse;
+    }
+
+    ~ .#{$css-prefix}is-current {
+      background-color: $color-background-alt;
+
+      .#{$css-prefix}tabs--path__link {
+        color: $color-text-default;
+      }
+
+      + .#{$css-prefix}tabs--path__item:before {
+        background-color: $color-background-alt;
+      }
     }
   }
 }
 
-.#{$css-prefix}path__title {
-  //display: block;
+.#{$css-prefix}tabs--path__item{
+  @include tabs-item;
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 5rem;
+  max-height: $sales-path;
+  text-align: center;
+  perspective: 500;
+  transition: 
+    transform 0.1s ease-in-out, 
+    background-color 0.1s linear;
+
+  &:first-child {
+    border-radius: $border-radius-pill 0 0 $border-radius-pill; 
+  }
+
+  &:last-child {
+    border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: rgb(216, 221, 230); //@TODO - no matching token
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc((#{$sales-path} / 2 ) * -1); // -1em;
+    top: $border-width-thick;
+    width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
+    border: $border-width-thick solid white;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg); 
+    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__itemorder
+  + .#{$css-prefix}is-complete:before,
+  + .#{$css-prefix}is-current:before {
+    background-color: $color-background-success; //@TODO: this token should be updated/aliased
+  }
+
+  &:hover + .#{$css-prefix}is-complete:before {
+    background-color: $color-background-toast-success; //@TODO: this token should be updated/aliased
+  }
+
+  &:hover + .#{$css-prefix}is-current:before {
+    background-color: $color-background-toast-success; //@TODO: this token should be updated/aliased
+  }
+
+  + .#{$css-prefix}is-incomplete:before {
+    background-color: $color-background-shade;
+  }
+
+  &:hover + .#{$css-prefix}is-incomplete:before {
+    background-color: rgb(216, 221, 230); //@TODO - no matching token
+  }
 }
 
-.#{$css-prefix}path__stage {
-  //display: none;
+.#{$css-prefix}tabs--path__title,
+.#{$css-prefix}tabs--path__stage {
+  display: block;
+  transition: transform 0.2s linear;
+  backface-visibility: hidden;
+}
+
+.#{$css-prefix}tabs--path__stage {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   height: 100%;
-  margin-top: -8px;
+  margin-top: calc((#{$square-icon-medium-content} - #{$spacing-xx-small}) * -1);
   transform: rotateX(-180deg);
-}
-
-.#{$css-prefix}is-active {
-  background-color: black;
 }
 
 .#{$css-prefix}tabs--path__link {
   @include tabs-link;
   position: relative;
-  color: rgb(84, 105, 141);
-  padding: 7px .5rem 7px 1rem;
-  line-height: 1.15rem;
-
-  span {
-    display: block;
-    transition: transform 0.2s linear;
-    backface-visibility: hidden;
-  }
-}
+  padding: $spacing-xx-small $spacing-x-small $spacing-xx-small $spacing-medium;
+  line-height: calc(#{$line-height-tab} / 2)
+} 

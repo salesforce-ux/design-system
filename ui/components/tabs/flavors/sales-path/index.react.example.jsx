@@ -20,46 +20,46 @@ module.exports = (
 <div className='demo-only'>
   <div className={pf('tabs--path')} role="application tablist">
     <ul className={pf('tabs--path__nav')} role="presentation">
-      <li className={pf('tabs__item is-completed')} role="presentation">
+      <li className={pf('tabs--path__item is-complete')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
-        <span className={pf('path__stage')}>
+        <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
           <span className={pf('assistive-text')}>Stage Complete</span>
         </span>
-        <span className={pf('path__title')}>Contacted</span>
+        <span className={pf('tabs--path__title')}>Contacted</span>
         </a>
       </li>
-      <li className={pf('tabs__item is-completed')} role="presentation">
+      <li className={pf('tabs--path__item is-complete')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
-        <span className={pf('path__stage')}>
+        <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
           <span className={pf('assistive-text')}>Stage Complete</span>
         </span>
-        <span className={pf('path__title')}>Open</span>
+        <span className={pf('tabs--path__title')}>Open</span>
         </a>
       </li>
-      <li className={pf('tabs__item is-current')} role="presentation">
+      <li className={pf('tabs--path__item is-current')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="true" tabindex="0" role="tab" href="#void" aria-live="assertive">
-        <span className={pf('path__stage')}>
+        <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>
-        <span className={pf('path__title')}>Unqualified</span>
+        <span className={pf('tabs--path__title')}>Unqualified</span>
         </a>
       </li>
-      <li className={pf('tabs__item is-incomplete')} role="presentation">
+      <li className={pf('tabs--path__item is-incomplete is-active')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
-        <span className={pf('path__stage')}>
+        <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>
-        <span className={pf('path__title')}>Nurturing</span>
+        <span className={pf('tabs--path__title')}>Nurturing</span>
         </a>
       </li>
-      <li className={pf('tabs__item is-incomplete')} role="presentation">
+      <li className={pf('tabs--path__item is-incomplete')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
-        <span className={pf('path__stage')}>
+        <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>
-        <span className={pf('path__title')}>Closed</span>
+        <span className={pf('tabs--path__title')}>Closed</span>
         </a>
       </li>
     </ul>

@@ -129,8 +129,8 @@ class Modal extends React.Component {
       [`${cssPrefix}slide-up-saving`]: this.props.saving,
       [`${cssPrefix}slide-down-cancel`]: this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
     });
-    const classNameModalBackdrop = classNames(pf('modal-backdrop'), {
-      [`${cssPrefix}modal-backdrop--open`]: this.props.isOpen
+    const classNameModalBackdrop = classNames(pf('backdrop'), {
+      [`${cssPrefix}backdrop--open`]: this.props.isOpen
     });
     return (
       <AccessibleDialogContainer onEsc={this.onClick.bind(this)}>

@@ -65,7 +65,7 @@
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
-  @include deprecate("0.200") {
+  @include deprecate("0.20.0") {
 
     &--nubbin-top {
       @include nubbin(top, "before");
@@ -154,7 +154,7 @@
     }
   }
 
-  @include deprecate("0.200") {
+  @include deprecate("0.20.0") {
 
     .#{$css-prefix}has-icon {
       position: relative;

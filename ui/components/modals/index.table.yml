@@ -51,15 +51,27 @@ classes:
     applied: <code>.{{cssPrefix}}modal__footer</code>
     notes: This is only needed when you have two buttons that indicate a back and forward navigation.
   -
-    class: modal-backdrop
+    class: backdrop
     description: Creates the shaded backdrop used behind the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: This should follow after the <code>.{{cssPrefix}}modal</code> as an empty element.
   -
-    class: modal-backdrop--open
+    class: modal-backdrop
+    description: Creates the shaded backdrop used behind the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Deprecated
+  -
+    class: backdrop--open
     description: Allows the backdrop to be visible.
     applied: <code>.{{cssPrefix}}modal-backdrop</code>
     required: true
     notes: Apply this class to a modal backdrop with JavaScript to make it visible.
-    
+  -
+    class: modal-backdrop--open
+    description: Allows the backdrop to be visible.
+    applied: <code>.{{cssPrefix}}modal-backdrop</code>
+    required: true
+    notes: Deprecated
+

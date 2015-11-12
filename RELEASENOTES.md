@@ -6,6 +6,21 @@
 **SITE IA**
 
 - Added Resources -> Links
+- 
+**BREAKING CHANGES**
+- Removed default horizontal spacing from buttons in favor of new spacing utilities (see New Components below).
+- Switch sizing utility media queries to use `em` instead of `px`
+- Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
+- Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
+- `slds-modal-backdrop` and `slds-modal-backdrop--open` is deprecated in favor of `slds-backdrop` and `slds-backdrop--open` since it is used in other components.
+
+** NEW COMPONENTS**
+- Add max-width sizing utilities
+- Add button spacing utilities for stacked and horizontal sets of buttons.
+- Add stretched button utilities for full-width buttons on small form factors.
+- Dialog Menus for small form factor
+  - Action overflow for touch
+- Add `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch.
 
 ## Release 0.11.0 - October 29, 2015
 

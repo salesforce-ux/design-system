@@ -11,8 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 @include mq-small-max {
 
-  .#{$css-prefix}max-small-button--stretch {
-    display: block;
+  .#{$css-prefix}max-small-button--stretch,
+  .#{$css-prefix}max-small-buttons--stretch .#{$css-prefix}button {
     width: 100%;
   }
 }

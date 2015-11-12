@@ -9,12 +9,13 @@
 
 
 
-.#{$css-prefix}modal--large .#{$css-prefix}modal__container {
+.#{$css-prefix}modal__header {
 
-  // TODO: We'll want to readdress this to do the .99 thing
-  @media (min-width: pem($mq-small + 1)) {
-    width: 90%;
-    max-width: none;
-    min-width: 40rem; // TODO: Tokenize
+  .#{$css-prefix}notify-container {
+    position: absolute;
   }
-}
+
+  .#{$css-prefix}notify--toast {
+    display: block;
+  }
+} 

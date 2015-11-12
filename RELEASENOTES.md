@@ -21,6 +21,7 @@
 - Dialog Menus for small form factor
   - Action overflow for touch
 - Add `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch.
+- Add mobile dialog menus
 
 ## Release 0.11.0 - October 29, 2015
 

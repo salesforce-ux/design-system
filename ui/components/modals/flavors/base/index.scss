@@ -25,17 +25,21 @@
     position: relative;
     transform: translate(0, 0);
     transition: transform $duration-quickly linear,
-                opacity $duration-quickly linear;
+                  opacity $duration-quickly linear;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    max-width: 40rem; // TODO: Tokenize
-    min-width: 20rem; // TODO: Tokenize
+    margin: 0 $spacing-x-large;
     height: 100%;
-    margin: 0 auto;
     padding: $square-icon-large-boundary 0;
     border-radius: $border-radius-medium;
+
+    @media (min-width: pem($mq-small + 1)) {
+      margin: 0 auto;
+      width: 50%;
+      max-width: 40rem; // TODO: Tokenize
+      min-width: 20rem; // TODO: Tokenize
+    }
   }
 
   &__header,
@@ -68,6 +72,20 @@
     }
   }
 
+  &__menu {
+    position: relative;
+    border-radius: $border-radius-medium;
+    padding: $spacing-medium;
+    background-color: $color-background;
+
+    .#{$css-prefix}modal__header + & {
+      border-top: {
+        left-radius: 0;
+        right-radius: 0;
+      }
+    }
+  }
+
   &__footer {
     border: {
       top: $border-width-thick solid $color-border;
@@ -83,10 +101,10 @@
   }
 
   &__close {
+    @include square($square-icon-large-boundary);
     position: absolute;
     top: -$square-icon-large-boundary;
     right: -(($square-icon-large-boundary - $square-icon-large-content) / 2);
-    @include square($square-icon-large-boundary);
   }
 }
 

@@ -116,3 +116,7 @@ classes:
     description: Position icon in dropdown item to the right
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Deprecated
+  -
+    class: action-overflow--touch
+    description: Creates the Action Overflow for Touch
+    applied: <code>div</code>

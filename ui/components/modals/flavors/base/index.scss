@@ -114,7 +114,7 @@
 // old class
 .#{$css-prefix}modal-backdrop {
 
-  @include deprecate(\'0.13.0\') {
+  @include deprecate("0.13.0") {
     @include backdrop;
   }
 }

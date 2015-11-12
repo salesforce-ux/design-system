@@ -63,6 +63,13 @@
     }
     padding: $spacing-large $spacing-medium;
     text-align: center;
+
+    + .#{$css-prefix}modal__menu {
+      border-top: {
+        left-radius: 0;
+        right-radius: 0;
+      }
+    }
   }
 
   &__content {
@@ -77,13 +84,6 @@
     border-radius: $border-radius-medium;
     padding: $spacing-medium;
     background-color: $color-background;
-
-    .#{$css-prefix}modal__header + & {
-      border-top: {
-        left-radius: 0;
-        right-radius: 0;
-      }
-    }
   }
 
   &__footer {

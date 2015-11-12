@@ -46,7 +46,7 @@ module.exports = (
         <span className={pf('tabs--path__title')}>Unqualified</span>
         </a>
       </li>
-      <li className={pf('tabs--path__item is-incomplete is-active')} role="presentation">
+      <li className={pf('tabs--path__item is-incomplete')} role="presentation">
         <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />

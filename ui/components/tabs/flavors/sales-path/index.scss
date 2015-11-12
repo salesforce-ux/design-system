@@ -98,8 +98,8 @@ $sales-path: 2rem; // @TODO: Temp token till we align sizing
     + .#{$css-prefix}tabs--path__item:before {
       background-color: $color-background-inverse;
     }
-
-    ~ .#{$css-prefix}is-current {
+    
+    ~ .#{$css-prefix}is-current { // @TODO: This needs to work both directions in the path
       background-color: $color-background-alt;
 
       .#{$css-prefix}tabs--path__link {

@@ -129,7 +129,7 @@ classes:
     description: Creates a scrolling area that is pushed down the screen by a third of the viewport height.
     applied: <code>div</code>
   -
-    class: action-overflow--touch__content__body
+    class: action-overflow--touch__body
     description: Draws the white menu.
     applied: <code>div</code>
   -

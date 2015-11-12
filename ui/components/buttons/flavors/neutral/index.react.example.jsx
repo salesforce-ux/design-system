@@ -15,11 +15,13 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="neutral">
       Button neutral
     </Button>
-    <a href="#" className={pf('button button--neutral')}>Anchor Button Neutral</a>
+    <a href="#" className={pf('button button--neutral')}>
+      Anchor Button Neutral
+    </a>
     <Button flavor="neutral" disabled="true">
       Disabled
     </Button>

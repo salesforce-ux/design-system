@@ -16,7 +16,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="neutral">
       <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="download" />
       Download

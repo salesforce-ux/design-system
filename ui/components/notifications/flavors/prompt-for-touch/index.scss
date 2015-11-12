@@ -9,42 +9,13 @@
 
 
 
-.#{$css-prefix}notify-container {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: $z-index-toast;
-  text-align: center;
-}
+.#{$css-prefix}modal__header {
 
-.#{$css-prefix}notify {
-  @include inverse-links;
-  position: relative;
-  background: $color-background-toast;
-  font-weight: $font-weight-light;
-
-  &--toast {
-    border-radius: $border-radius-medium;
-    margin: $spacing-x-small;
-    padding: $spacing-medium $spacing-large;
-    min-width: rem(480px);
-    display: inline-block;
-    text-align: left;
-
-    .#{$css-prefix}notify__close {
-      transform: translate3d($spacing-x-small, 0, 0);
-    }
+  .#{$css-prefix}notify-container {
+    position: absolute;
   }
 
-  &__close {
-    float: right;
-    margin-left: $spacing-xx-small;
-    line-height: $line-height-reset;
+  .#{$css-prefix}notify--toast {
+    display: block;
   }
-
-  &--alert {
-    padding: $spacing-x-small;
-    text-align: center;
-  }
-}
+} 

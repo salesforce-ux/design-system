@@ -15,7 +15,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className={'demo-only demo--inverse'}>
+  <div className={pf('demo-only demo--inverse x-small-buttons--horizontal')}>
     <Button flavor="inverse">
       Button Inverse
     </Button>

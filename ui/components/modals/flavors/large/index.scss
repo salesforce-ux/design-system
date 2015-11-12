@@ -10,7 +10,11 @@
 
 
 .#{$css-prefix}modal--large .#{$css-prefix}modal__container {
-      width: 90%;
-  max-width: none;
-  min-width: 640px; // TODO: Tokenize
+
+  // TODO: We'll want to readdress this to do the .99 thing
+  @include mq-medium-min {
+    width: 90%;
+    max-width: none;
+    min-width: 40rem; // TODO: Tokenize
+  }
 }

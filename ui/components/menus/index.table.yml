@@ -118,5 +118,21 @@ classes:
     notes: Deprecated
   -
     class: action-overflow--touch
-    description: Creates the Action Overflow for Touch
+    description: Positions the Action overflow for touch to take up full screen
+    applied: <code>div</code>
+  -
+    class: action-overflow--touch__container
+    description: Pushes the menu to the bottom of the screen.
+    applied: <code>div</code>
+  -
+    class: action-overflow--touch__content
+    description: Creates a scrolling area that is pushed down the screen by a third of the viewport height.
+    applied: <code>div</code>
+  -
+    class: action-overflow--touch__content__body
+    description: Draws the white menu.
+    applied: <code>div</code>
+  -
+    class: action-overflow--touch__footer
+    description: Creates the footer for the Cancel button.
     applied: <code>div</code>

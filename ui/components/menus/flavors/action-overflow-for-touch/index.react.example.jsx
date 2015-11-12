@@ -225,8 +225,8 @@ module.exports = (
             </ul>
           </div>
         </div>
-        <div className={pf('action-overflow--touch____footer')}>
-          <button className="slds-button slds-button--neutral">Cancel</button>
+        <div className={pf('action-overflow--touch__footer')}>
+          <button className="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</button>
         </div>
       </div>
     </div>

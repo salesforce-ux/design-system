@@ -16,7 +16,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 exports.preview = (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <ol className={pf('list--ordered')}>
       <li>
         <ButtonIcon

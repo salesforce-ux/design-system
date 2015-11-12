@@ -34,7 +34,7 @@ class ModalFooter extends React.Component {
   }
 
   render() {
-    const className = this.$getClassNameWithFlavor(pf('modal__footer'));
+    const className = this.$getClassNameWithFlavor(pf('modal__footer x-small-buttons--horizontal'));
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
       <div { ...props } className={className}>

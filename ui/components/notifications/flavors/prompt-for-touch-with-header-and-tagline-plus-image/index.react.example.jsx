@@ -59,7 +59,7 @@ class ModalExample extends React.Component {
             </p>
           </Modal.Header>
 
-          <div className={pf('modal__menu')}>
+          <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
             <Button flavor="brand">Rate Salesforce1</Button>
             <Button flavor="neutral">No, thanks</Button>
             <Button flavor="neutral">Remind Me Later</Button>

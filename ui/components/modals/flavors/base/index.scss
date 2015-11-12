@@ -34,7 +34,7 @@
     padding: $square-icon-large-boundary 0;
     border-radius: $border-radius-medium;
 
-    @media (min-width: pem($mq-small + 1)) {
+    @include mq-medium-min {
       margin: 0 auto;
       width: 50%;
       max-width: 40rem; // TODO: Tokenize

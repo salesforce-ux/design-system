@@ -133,9 +133,10 @@ class Tabs extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'flavor');
+    const className = classNames(this.props.className, pf(`tabs--${this.props.flavor}`));
 
     return (
-      <div {...props} className={pf(`tabs--${this.props.flavor}`)}>
+      <div {...props} className={className}>
         <AccessibleList selector='a' click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
           { this.tabs() }
         </AccessibleList>

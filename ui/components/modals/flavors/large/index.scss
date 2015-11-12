@@ -12,7 +12,7 @@
 .#{$css-prefix}modal--large .#{$css-prefix}modal__container {
 
   // TODO: We'll want to readdress this to do the .99 thing
-  @media (min-width: pem($mq-small + 1)) {
+  @include mq-medium-min {
     width: 90%;
     max-width: none;
     min-width: 40rem; // TODO: Tokenize

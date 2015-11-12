@@ -19,6 +19,7 @@ import { Link } from 'react-router';
 export default (
   <PageBody anchorTitle="Links" contentClassName={pf('text-longform')}>
     <div className={pf('container--medium')}>
+      <p>Interested in learning more about the Design System, how we built it, and how you can use it? Check out the links below, and check back often - we&#39;re always writing articles and gathering community-generated content.</p>
       <h2 className={pf('site-text-heading--large')}>Articles</h2>
       <ul>
         <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/10/react-university-sample-app-react-node-js-4-lightning-design-system">React University: Sample Application with React, Node.js 4, and the Lightning Design System</a></li>

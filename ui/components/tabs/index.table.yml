@@ -81,6 +81,18 @@ classes:
     required: true
     applied: <code>&lt;div&gt;</code>
   -
+    class: tabs--path__stage
+    description: Contains the check mark when the stage is completed
+    required: true
+    applied: <code>&lt;span&gt;</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+  -
+    class: tabs--path__title
+    description: Contains the name of the stage
+    required: true
+    applied: <code>&lt;span&gt;</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+  -
     class: is-complete
     description: Creates the completed stage of the sales path
     applied: <code>.{{cssPrefix}}tabs--path__item</code>

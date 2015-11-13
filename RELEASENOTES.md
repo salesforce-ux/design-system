@@ -1,12 +1,12 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - 
+## Release 0.12.0 - November 13, 2015
 
 **SITE IA**
+- Added Resources > Links
+- Changed tabs to use new refactored tab classes (deprecated)
 
-- Added Resources -> Links
-- 
 **BREAKING CHANGES**
 - Removed default horizontal spacing from buttons in favor of new spacing utilities (deprecated, see New Components below).
 - Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
@@ -20,18 +20,15 @@
 - Updated demo for icons > color and added `slds-text-error` for validation errors
 
 **NEW COMPONENTS**
-- Added initial state of tabs > sales path 
-- Added max-width sizing utilities
-- Added button spacing utilities for stacked and horizontal sets of buttons.
-  - Added both a single class and a wrapper class
-- Added stretched button utilities for full-width buttons on small form factors.
+- Added initial state of tabs > sales path www.lightningdesignsystem.com/components/tabs#sales-path
+- Added max-width sizing utilities www.lightningdesignsystem.com/utilities/sizing
+- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) www.lightningdesignsystem.com/components/buttons#overview
+- Added stretched button utilities for full-width buttons on small form factors www.lightningdesignsystem.com/components/buttons#overview
 - Dialog Menus for small form factor
-  - Action overflow for touch
-- Added `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch devices.
-- Added mobile dialog menus for touch devices.
-- Added Edit dialog form for touch devices.
+  - Action overflow for touch www.lightningdesignsystem.com/components/menus#action-overflow-for-touch
+- Added Edit dialog form for touch devices www.lightningdesignsystem.com/components/forms#edit-dialog-for-touch
 
-**DEPRECATED**
+**DEPRECATED in 0.20**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
 - Name change: Responsive button changed to Horizontal button
 - `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead

@@ -17,30 +17,30 @@
     background-color: $color-background;
     border: $border-width-thin solid $color-border-button-default;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+}
 
-    .#{$css-prefix}tabs__item {
-      @include tabs-item;
-      position: relative;
-      margin-bottom: -#{$border-width-thin};
+.#{$css-prefix}tabs--scoped__item {
+  @include tabs-item;
+  position: relative;
+  margin-bottom: -#{$border-width-thin};
 
-      + .#{$css-prefix}tabs__item {
-        margin-left: -#{$border-width-thin};
-      }
-
-      &:first-child .#{$css-prefix}tabs--scoped__link {
-        border-left: none;
-        border-radius: $border-radius-medium 0 0 0;
-      }
-    }
+  + .#{$css-prefix}tabs--scoped__item {
+    margin-left: -#{$border-width-thin};
   }
 
-  > .#{$css-prefix}tabs__content {
-    background-color: $color-background-alt;
-    border: $border-width-thin solid $color-border-button-default;
-    border-top: none;
-    border-radius: 0 0 $border-radius-medium $border-radius-medium;
-    padding: $spacing-medium;
+  &:first-child .#{$css-prefix}tabs--scoped__link {
+    border-left: none;
+    border-radius: $border-radius-medium 0 0 0;
   }
+}
+
+.#{$css-prefix}tabs--scoped__content {
+  background-color: $color-background-alt;
+  border: $border-width-thin solid $color-border-button-default;
+  border-top: none;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  padding: $spacing-medium;
 }
 
 .#{$css-prefix}tabs--scoped__link {
@@ -70,5 +70,64 @@
 
   &:focus {
     text-decoration: underline;
+  }
+}
+
+@include deprecate("0.20.0") {
+
+  .#{$css-prefix}tabs--scoped {
+
+    .#{$css-prefix}tabs__item {
+      @include tabs-item;
+      position: relative;
+      margin-bottom: -#{$border-width-thin};
+
+      + .#{$css-prefix}tabs__item {
+        margin-left: -#{$border-width-thin};
+      }
+
+      &:first-child a {
+        border-left: none;
+        border-radius: $border-radius-medium 0 0 0;
+      }
+
+      a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        padding: 0 $spacing-large;
+        color: $color-text-weak;
+        background-clip: padding-box;
+        border: {
+          left: $border-width-thin solid transparent;
+          right: $border-width-thin solid transparent;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $color-text-link-hover;
+          border-color: $color-border;
+        }
+      }
+
+      .#{$css-prefix}active a {
+        background-color: $color-background-alt;
+        color: $color-text-link;
+        border-color: $color-border;
+
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    > .#{$css-prefix}tabs__content {
+      background-color: $color-background-alt;
+      border: $border-width-thin solid $color-border-button-default;
+      border-top: none;
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+      padding: $spacing-medium;
+    }
   }
 }

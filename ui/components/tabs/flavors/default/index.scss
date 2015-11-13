@@ -15,21 +15,21 @@
   &__nav {
     @include tabs-nav;
     border-bottom: $border-width-thin solid $color-border;
+  }
+}
 
-    .#{$css-prefix}tabs__item {
-      @include tabs-item;
+.#{$css-prefix}tabs--default__item {
+  @include tabs-item;
 
-      + .#{$css-prefix}tabs__item {
-        @include mq-medium-min {
-          margin-left: $spacing-large;
-        }
-      }
+  + .#{$css-prefix}tabs--default__item {
+    @include mq-medium-min {
+      margin-left: $spacing-large;
     }
   }
+}
 
-  > .#{$css-prefix}tabs__content {
-    @include tabs-content;
-  }
+.#{$css-prefix}tabs--default__content {
+  @include tabs-content;
 }
 
 .#{$css-prefix}tabs--default__link {
@@ -65,3 +65,56 @@
     color: $color-text-tab-label-selected;
   }
 } 
+
+@include deprecate("0.20.0") {
+  .#{$css-prefix}tabs--default {
+
+    .#{$css-prefix}tabs__item {
+        @include tabs-item;
+
+        + .#{$css-prefix}tabs__item {
+          @include mq-medium-min {
+            margin-left: $spacing-large;
+          }
+        }
+      
+      a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        border-bottom: $border-width-thick solid transparent;
+        padding: 0 $spacing-x-small;
+        color: $color-text-action-label;
+
+        @include mq-medium-min {
+          padding: 0 $spacing-medium;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-color: $color-text-tab-label-selected;
+          color: $color-text-action-label-active;
+        }
+
+        &:focus {
+          color: $color-text-tab-label-selected;
+          box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
+        }
+      } 
+
+      &.#{$css-prefix}active a {
+        border-color: $color-text-tab-label-selected;
+        color: $color-text-action-label-active;
+
+        &:focus {
+          color: $color-text-tab-label-selected;
+        }
+      }
+    }
+
+     > .#{$css-prefix}tabs__content {
+      @include tabs-content;
+    }
+  }
+}

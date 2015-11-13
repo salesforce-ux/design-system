@@ -12,9 +12,9 @@
 .#{$css-prefix}list--vertical.#{$css-prefix}has-cards {
 
   .#{$css-prefix}list__item {
-    // @include box($padding: $spacing-x-small, $borders: around);
-    // @include list-has-hovers;
-    // @include list-has-selections;
+    @include box($padding: $spacing-x-small, $borders: around);
+    @include list-has-hovers;
+    @include list-has-selections;
 
     + .#{$css-prefix}list__item {
       margin-top: $spacing-x-small;

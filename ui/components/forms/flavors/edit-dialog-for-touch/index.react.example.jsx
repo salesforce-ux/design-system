@@ -60,7 +60,7 @@ class ModalExample extends React.Component {
           </Modal.Header>
 
           <Modal.Body>
-            <h3 className={pf('text-heading--label')}>Section Information</h3>
+            <h3 className={pf('section-title')}>Section Information</h3>
             <div className={pf('form--stacked m-bottom--large')}>
               <Input label="Name Suffix" placeholder="Ms." assistiveText="inputNameSample1" />
               <Input label="First Name" placeholder="Esther" assistiveText="inputNameSample2" />
@@ -83,7 +83,7 @@ class ModalExample extends React.Component {
 
               <Input label="Text Input" assistiveText="inputSample2" />
             </div>
-            <h3 className={pf('text-heading--label')}>Section Information</h3>
+            <h3 className={pf('section-title')}>Section Information</h3>
             <div className={pf('form--stacked m-bottom--large')}>
               <Input label="Text Input" assistiveText="inputSample3" />
               <Input label="Text Input" assistiveText="inputSample4" />

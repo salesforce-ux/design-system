@@ -10,35 +10,46 @@
 
 
 .#{$css-prefix}section-title {
-  font-size: $font-size-large;
 
-  > a {
-    display: inline-block;
-    color: $color-text-default;
+  @include mq-small-max {
+    @include text-heading--label;
+    margin: 0 (-$spacing-medium) $spacing-medium;
+    padding: $spacing-small $spacing-medium;
+    background: $color-background;
 
-    &:hover {
-      color: $color-text-link-hover;
+    &:first-child {
+      margin-top: -$spacing-medium;
     }
+  }
 
-    &:active {
+  @include mq-medium-min {
+    font-size: $font-size-large;
+
+    > a {
+      display: inline-block;
       color: $color-text-default;
+
+      &:hover,
+      &:focus {
+        color: $color-text-link-hover;
+      }
+
+      &:focus {
+        box-shadow: $shadow-button-focus;
+      }
+
+      &:active {
+        color: $color-text-default;
+      }
     }
 
-    &:focus {
-      color: $color-text-link-hover;
-      box-shadow: $shadow-button-focus;
+    .#{$css-prefix}icon {
+      @include square($square-icon-medium-content);
+      fill: currentColor;
     }
 
-  }
-
-  .#{$css-prefix}icon {
-    @include square($square-icon-medium-content);
-    fill: currentColor;
-  }
-}
-
-.#{$css-prefix}section-group--is-closed {
-  .#{$css-prefix}icon {
-    transform: rotate(-90deg);
+    .#{$css-prefix}section-group--is-closed .#{$css-prefix}icon {
+      transform: rotate(-90deg);
+    }
   }
 }

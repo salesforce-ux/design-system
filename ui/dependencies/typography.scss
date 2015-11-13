@@ -32,3 +32,12 @@
     }
   }
 }
+
+
+@mixin text-heading--label {
+  font-size: $font-size-small;
+  line-height: $line-height-heading;
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+  color: $color-text-weak;
+}

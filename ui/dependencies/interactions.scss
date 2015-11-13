@@ -73,7 +73,8 @@
     background-color: $color-background-button-default-hover;
   }
 
-  &:active {
+  &:active,
+  &.slds-is-selected {
     background-color: $color-background-button-default-active;
   }
 }
@@ -95,7 +96,8 @@
     color: $color-text-button-brand-hover;
   }
 
-  &:active {
+  &:active,
+  &.slds-is-selected {
     background-color: $color-background-button-brand-active;
   }
 }
@@ -117,7 +119,8 @@
     color: $color-text-inverse;
   }
 
-  &:active {
+  &:active,
+  &.slds-is-selected {
     background-color: #870500; //$color-background-button-destructive-active;
     border-color: #870500; //$color-border-destructive-active;
   }

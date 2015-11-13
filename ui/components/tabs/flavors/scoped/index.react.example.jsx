@@ -17,13 +17,13 @@ const pf = componentUtil.prefix;
 module.exports = (
 <div className='demo-only'>
   <Tabs flavor="scoped">
-    <Tabs.Item title="Item One" id="tab-scoped-1">
+    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item One" id="tab-scoped-1">
       <h2>Item One Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Two" id="tab-scoped-2">
+    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item Two" id="tab-scoped-2">
       <h2>Item Two Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Three" id="tab-scoped-3">
+    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item Three" id="tab-scoped-3">
       <h2>Item Three Content</h2>
     </Tabs.Item>
   </Tabs>

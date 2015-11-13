@@ -70,7 +70,7 @@ class ModalExample extends React.Component {
                 <div className={pf('form-element')}>
                   <label className={pf('form-element__label')} htmlFor="lookup">Lookup</label>
                   <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
-                    <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+                    <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
                     <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
                   </div>
                 </div>

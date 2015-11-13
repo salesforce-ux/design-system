@@ -18,7 +18,10 @@ import AccessibleList from 'ui/components/lib/accessible-list.react';
 import classNames from 'classnames';
 
 class TabContent extends React.Component {
-  static propTypes = { current: PT.bool };
+  static propTypes = { 
+    current: PT.bool,
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+  };
   static defaultProps = { current: true };
 
   constructor(props) {
@@ -27,7 +30,7 @@ class TabContent extends React.Component {
   };
 
   render() {
-    const className = classNames(this.props.className, pf(classNames('tabs__content', {'show': this.props.current, 'hide': !this.props.current})));
+    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__content`, {'show': this.props.current, 'hide': !this.props.current})));
     const props = this.$propsWithoutKeys('className');
     return (
       <div {...props} className={className} role="tabpanel">
@@ -39,7 +42,11 @@ class TabContent extends React.Component {
 
 
 class TabItem extends React.Component {
-  static propTypes = { title: PT.string, content: PT.node }
+  static propTypes = { 
+    title: PT.string,
+    content: PT.node,
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+  }
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -64,7 +71,7 @@ renderCustom(tabIndex) {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames('tabs__item text-heading--label', {active: this.props.current})));
+    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
     
     return (
@@ -76,7 +83,11 @@ renderCustom(tabIndex) {
 }
 
 class TabItemOverflow extends React.Component {
-  static propTypes = { title: PT.string, content: PT.node }
+  static propTypes = { 
+    title: PT.string,
+    content: PT.node,
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+  }
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -84,7 +95,7 @@ class TabItemOverflow extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames('tabs__item--overflow text-heading--label', {active: this.props.current})));
+    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__item--overflow`, 'text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
     const contents = React.Children.map(this.props.children, function(c,i) {
       return React.cloneElement(c);
@@ -101,7 +112,7 @@ class TabItemOverflow extends React.Component {
 class Tabs extends React.Component {
   static propTypes = {
     selectedIndex: PT.number,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'overflow')
+    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
   };
   static defaultProps = { selectedIndex: 0 };
   constructor(props) {
@@ -118,7 +129,7 @@ class Tabs extends React.Component {
 
   tabs() {
     return React.Children.map(this.props.children, (c, i) => {
-      return React.cloneElement(c, {current: this.state.currentTab === i, onClick: createChainedFunction(c.props.onClick, this.onClick.bind(this, i))});
+      return React.cloneElement(c, {current: this.state.currentTab === i, flavor: this.props.flavor, onClick: createChainedFunction(c.props.onClick, this.onClick.bind(this, i))});
     });
   }
 
@@ -128,9 +139,9 @@ class Tabs extends React.Component {
         return null;
       } else {
         if(c.props.children.type === TabContent) {
-          return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id});
+          return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id, flavor: this.props.flavor});
         } else {
-          return <TabContent current={this.state.currentTab === i} id={c.props.id}>{c.props.children}</TabContent>;
+          return <TabContent current={this.state.currentTab === i} id={c.props.id} flavor={this.props.flavor}>{c.props.children}</TabContent>;
         }
       }
     });
@@ -138,9 +149,10 @@ class Tabs extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'flavor');
+    const className = classNames(this.props.className, pf(`tabs--${this.props.flavor}`));
 
     return (
-      <div {...props} className={pf(`tabs--${this.props.flavor}`)}>
+      <div {...props} className={className}>
         <AccessibleList selector='a' click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
           { this.tabs() }
         </AccessibleList>

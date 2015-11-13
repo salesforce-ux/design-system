@@ -1,1 +1,3 @@
-The basic horizontal list is left-aligned. It stacks in a mobile context. It provides an inline-block fallback for older browsers that do not support flexbox.
+A horizontal list aligns the list items horizontally from left to right.
+
+The horizontal list accepts other helpful utilities that can alter the look of the list items. If you have anchor links in your list items, adding the class `.{{cssPrefix}}has-inline-block-links` or `.{{cssPrefix}}has-block-links` to the `<ul class={{cssPrefix}}list--horizontal>` will set a display inline-block or block to the anchor links. If you have anchor links within your horizontal list with dividers and want spacing on the links, using `.{{cssPrefix}}has-inline-block-links-space` will reset the spacing on the list item and re-apply that padding to the anchor link.

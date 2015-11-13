@@ -1,1 +1,1 @@
-Section Titles are titles typically for forms. For touch devices, these typically are given a darker background to show a clear separation of sections. For desktop, some of these titles are interactive and open and close sections.
+Section Titles are interactive titles that open and close sections, typically on a form.

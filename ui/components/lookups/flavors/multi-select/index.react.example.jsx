@@ -27,7 +27,7 @@ module.exports = (
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
         <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-activedescendant="" />
       </div>
-      <div className={pf('pill-container')}>
+      <div className={pf('pill__container')}>
         <a href="#void" className={pf('pill')}>
           <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
           <span className={pf('pill__label')}>Pied Piper</span>

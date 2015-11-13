@@ -21,7 +21,7 @@ classes:
     required: true
     applied: <code>.{{cssPrefix}}button</code>
   -
-    class: pill-container
+    class: pill__container
     description: Container to hold pill(s)
     required: true
     applied: <code>&lt;div&gt;</code>
@@ -29,3 +29,7 @@ classes:
     class: pill--bare
     description: Modifier that removes border and background from a pill
     applied: <code>.{{cssPrefix}}pill</code>
+  -
+    class: pill-container
+    description: Container to hold pills(s)
+    notes: Deprecated

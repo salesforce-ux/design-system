@@ -25,7 +25,7 @@ module.exports = (
       <label className={pf('form-element__label')} htmlFor="lookup">Accounts</label>
       <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-        <div className={pf('pill-container show')}>
+        <div className={pf('pill__container show')}>
           <a href="#void" className={pf('pill')}>
             <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
             <span className={pf('pill__label')}>Pied Piper</span>

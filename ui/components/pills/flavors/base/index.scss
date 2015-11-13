@@ -41,6 +41,15 @@
   }
 
   &-container {
+    @include deprecate("0.13.0") {
+      padding: 1px;
+      border: $border-width-thin solid $color-border;
+      border-radius: $border-radius-medium;
+      min-height: calc(#{$line-height-button} + 2px);
+    }
+  }
+
+  &__container {
     padding: 1px;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;

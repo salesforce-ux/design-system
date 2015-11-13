@@ -11,7 +11,7 @@
 
 .#{$css-prefix}lookup[data-select="multi"] {
 
-  .#{$css-prefix}pill-container {
+  .#{$css-prefix}pill__container {
     border: transparent {
       bottom: $border-width-thin solid $color-border;
       radius: 0;

@@ -15,6 +15,7 @@ export default {
   displayName: 'Lightning Design System',
   filenamePrefix: 'slds',
   analyticsHostWhitelist: [
+    'design-system-dev.herokuapp.com', //TEMP! Remvove after testign!!!
     'getslds.com',
     'www.getslds.com',
     'lightningdesignsystem.com',

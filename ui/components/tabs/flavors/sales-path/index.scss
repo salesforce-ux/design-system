@@ -149,6 +149,7 @@
     border: $border-width-thick solid white;
     border-left: none;
     border-bottom: none;
+    background-clip: padding-box;
     transform: rotate(45deg); 
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;
   }

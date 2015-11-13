@@ -11,7 +11,7 @@
   outline: 1px solid $color-border;
   background: $color-background;
 
-  &.#{$css-prefix}tabs__content {
+  &.#{$css-prefix}tabs--default__content {
     padding: 0;
   }
 }

@@ -17,38 +17,38 @@ const pf = componentUtil.prefix;
 exports.preview = (
 <div className='demo-only'>
   <ul className={pf('list--vertical has-cards')}>
-    <li className={pf('list__item')}>Vertical List</li>
+    <li className={pf('list__item')}>Vertical List with cards</li>
     <li className={pf('list__item')}>List Item</li>
     <li className={pf('list__item')}>List Item</li>
   </ul>
   <ul className={pf('list--vertical has-cards--space')} style={{ marginTop: '2rem' }}>
-    <li className={pf('list__item')}>Vertical List</li>
+    <li className={pf('list__item')}>Vertical List with cards with space</li>
     <li className={pf('list__item')}>List Item</li>
     <li className={pf('list__item')}>List Item</li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links')} style={{ marginTop: '2rem' }}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links-space')} style={{ marginTop: '2rem' }}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-inline-block-links')} style={{ marginTop: '2rem' }}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-inline-block-links-space')} style={{ marginTop: '2rem' }}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links-space has-selections')} style={{ marginTop: '2rem' }}>
     <StatefulClass>
-    <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space with selections</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space with selections</a></li>
     </StatefulClass>
     <StatefulClass>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
@@ -63,32 +63,37 @@ exports.preview = (
 exports.code = (
 <div className='demo-only'>
   <ul className={pf('list--vertical has-cards')}>
-    <li className={pf('list__item')}>Vertical List</li>
+    <li className={pf('list__item')}>Vertical List with cards</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-cards--space')}>
+    <li className={pf('list__item')}>Vertical List with cards with space</li>
     <li className={pf('list__item')}>List Item</li>
     <li className={pf('list__item')}>List Item</li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links')}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links-space')}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-inline-block-links')}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-inline-block-links-space')}>
-    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
     <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
   </ul>
   <ul className={pf('list--vertical has-cards has-block-links-space has-selection')}>
-    <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space with selections</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space with selections</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>

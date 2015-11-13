@@ -109,18 +109,8 @@
   }
 
   @if $mq != null {
+
     @include mq-medium-max {
-
-      // &:before {
-      //   @include square($size);
-      //   content: '';
-      //   display: inline-block;
-      //   vertical-align: middle;
-      //   border-radius: $border-radius-circle;
-      //   background-color: $color;
-      //   margin-right: $spacing-small;
-      // }
-
       &:before,
       &:after {
         content: none;

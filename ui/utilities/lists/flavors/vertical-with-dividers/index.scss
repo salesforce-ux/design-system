@@ -59,7 +59,7 @@
 // New in 0.12.0
 //
 // @require .slds-list__item
-.#{$css-prefix}has-selections {
+.#{$css-prefix}has-list-interactions {
 
   > .#{$css-prefix}list__item {
     @include list-has-hovers;

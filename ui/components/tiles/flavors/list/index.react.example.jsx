@@ -21,7 +21,7 @@ const image = (
 
 exports.preview = (
 <div className='demo-only'>
-  <ul className={pf('list--vertical has-dividers')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-selections')}>
     <StatefulClass>
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>
@@ -66,7 +66,7 @@ exports.preview = (
 );
 
 exports.code = (
-  <ul className={pf('list--vertical has-dividers')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-selection')}>
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>

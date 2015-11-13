@@ -7,52 +7,53 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}action-overflow--touch {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: $z-index-modal + 1;
 
-  &__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+
+.#{$css-prefix}has-block-links {
+
+  a {
+    display: block;
+    text-decoration: none;
   }
 
-  &__content {
-    padding-top: 33.33333333333333%;
-    overflow: hidden {
-      y: auto;
+  .#{$css-prefix}is-nested {
+    margin-left: $spacing-medium;
+  }
+
+  // New in 0.12.0
+  &-space {
+
+    .#{$css-prefix}list__item {
+      padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: $spacing-small;
+
+      @include mq-medium-min {
+        padding: $spacing-x-small; // Re-apply that padding to the link
+      }
     }
   }
+}
 
-  &__body {
-    // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
-    position: relative;
-    top: $spacing-x-large;
-    // box-styling
-    background: $color-background-alt;
-    box-shadow: $shadow-overlay;
+// New in 0.12.0
+.#{$css-prefix}has-inline-block-links {
+
+  a {
+    display: inline-block;
+    text-decoration: none;
   }
 
-  // .#{$css-prefix}list--vertical.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
-  //   padding: 0;
-  // }
+  &-space a {
+    display: inline-block;
+    text-decoration: none;
+    padding: $spacing-small;
 
-  // a {
-  //   padding: $spacing-medium $spacing-large;
-  // }
-
-  &__footer {
-    position: relative;
-    flex-shrink: 0;
-    border-top: $border-width-thin solid $color-border;
-    padding: $spacing-small $spacing-medium;
-    background-color: $color-background;
-    box-shadow: $shadow-action-overflow-footer;
+    @include mq-medium-min {
+      padding: $spacing-x-small;
+    }
   }
 }

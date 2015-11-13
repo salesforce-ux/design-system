@@ -10,6 +10,7 @@
 
 // Deprecate in 0.15.0
 .#{$css-prefix}list--vertical.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
+
   @include deprecate("0.15.0") {
     // @include box($padding: $spacing-x-small, $border-radius: null, $borders: bottom);
     // @include list-has-hovers;
@@ -28,7 +29,11 @@
 
   &-space > .#{$css-prefix}list__item {
     @include border(top);
-    padding: $spacing-x-small;
+    padding: $spacing-small;
+
+    @include mq-small-min {
+      padding: $spacing-x-small;
+    }
   }
 }
 
@@ -43,7 +48,22 @@
 
   &-space > .#{$css-prefix}list__item {
     @include border(bottom);
-    padding: $spacing-x-small;
+    padding: $spacing-small;
+
+    @include mq-small-min {
+      padding: $spacing-x-small;
+    }
+  }
+}
+
+// New in 0.12.0
+//
+// @require .slds-list__item
+.#{$css-prefix}has-selections {
+
+  > .#{$css-prefix}list__item {
+    @include list-has-hovers;
+    @include list-has-selections;
   }
 }
 

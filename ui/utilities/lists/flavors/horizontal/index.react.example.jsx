@@ -13,12 +13,52 @@ const React = require('react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
+exports.preview = (
 <div className='demo-only'>
   <ul className={pf('list--horizontal')}>
-    <li className={pf('list__item')}><a href="#">Horizontal List</a></li>
-    <li className={pf('list__item')}><a href="#">List Item</a></li>
-    <li className={pf('list__item')}><a href="#">List Item</a></li>
+    <li className={pf('list__item')}>Horizontal List</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--horizontal')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--horizontal has-inline-block-links')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--horizontal has-inline-block-links-space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+</div>
+);
+
+exports.code = (
+<div className='demo-only'>
+  <ul className={pf('list--horizontal')}>
+    <li className={pf('list__item')}>Horizontal List</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--horizontal')}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--horizontal has-inline-block-links')}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--horizontal has-inline-block-links-space')}>
+    <li className={pf('list__item')}><a href="#void">Horizontal List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
 </div>
 );

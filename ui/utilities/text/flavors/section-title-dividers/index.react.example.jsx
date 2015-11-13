@@ -10,22 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className={pf('demo-only demo--inverse x-small-buttons--horizontal')}>
-    <ButtonIcon
-      flavor="icon-inverse"
-      sprite="action"
-      symbol="close"
-      assistiveText="close" />
-    <ButtonIcon
-      disabled="true"
-      flavor="icon-inverse"
-      sprite="action"
-      symbol="close"
-      assistiveText="close" />
-  </div>
+<div className='demo-only'>
+  <h3 className={pf('section-title--divider')}>Section Title</h3>
+</div>
 );

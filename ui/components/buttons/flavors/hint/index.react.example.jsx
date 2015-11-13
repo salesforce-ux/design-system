@@ -17,7 +17,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
      <div className={pf('hint-parent hint-parent-demo')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"

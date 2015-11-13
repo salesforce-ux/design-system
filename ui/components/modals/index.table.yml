@@ -38,7 +38,13 @@ classes:
     description: Creates the scrollable content area for the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+    notes: Either <code>.{{cssPrefix}}modal__content</code> or <code>.{{cssPrefix}}modal__menu</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+  -
+    class: modal__menu
+    description: Creates the shaded menu area for the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Either <code>.{{cssPrefix}}modal__menu</code> or <code>.{{cssPrefix}}modal__content</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
   -
     class: modal__footer
     description: Creates the Modal Footer container.

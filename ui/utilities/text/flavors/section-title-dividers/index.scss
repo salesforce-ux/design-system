@@ -9,49 +9,13 @@
 
 
 
-.#{$css-prefix}picklist {
-  position: relative;
+.#{$css-prefix}section-title--divider {
+  @include text-heading--label;
+  margin: 0 (-$spacing-medium) $spacing-medium;
+  padding: $spacing-small $spacing-medium;
+  background: $color-background;
 
-  .#{$css-prefix}dropdown {
-    width: $size-small;
-    max-height: calc((((#{$font-size-medium} * #{$line-height-text}) + #{$spacing-medium}) * 5) + #{$spacing-x-small} + #{$border-width-thick});
-    overflow-y: auto;
-    @include enable-ios-momentum-scrolling;
-  }
-
-  &--fluid {
-    .#{$css-prefix}picklist__label,
-    .#{$css-prefix}dropdown {
-      width: auto;
-      min-width: 0;
-      max-width: $size-small;
-    }
-  }
-}
-
-.#{$css-prefix}picklist__label {
-  padding-right: $spacing-x-large;
-  width: $size-small;
-  color: $color-text-default;
-  text-align: left;
-
-  .#{$css-prefix}icon {
-    @include square($square-icon-small-content);
-    position: absolute;
-    right: $spacing-medium;
-    top: 50%;
-    margin-top: (($square-icon-small-content / 2) * -1);
-    fill: $color-text-icon-default;
-  }
-
-  &[aria-disabled="true"] {
-    border-color: $color-border-input-disabled;
-    background-color: $color-background-input-disabled;
-    cursor: not-allowed;
-    user-select: none;
-  }
-
-  .#{$css-prefix}truncate {
-    display: block;
+  &:first-child {
+    margin-top: -$spacing-medium;
   }
 }

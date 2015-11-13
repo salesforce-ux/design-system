@@ -10,22 +10,55 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
+const ReactDOM = require('react-dom');
+const Modal = require('ui/components/modals/index.react');
+const Button = require('ui/components/buttons/index.react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
-  <div className={pf('demo-only demo--inverse x-small-buttons--horizontal')}>
-    <ButtonIcon
-      flavor="icon-inverse"
-      sprite="action"
-      symbol="close"
-      assistiveText="close" />
-    <ButtonIcon
-      disabled="true"
-      flavor="icon-inverse"
-      sprite="action"
-      symbol="close"
-      assistiveText="close" />
-  </div>
-);
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showing: true };
+  }
+
+  openModal() {
+    this.setState({showing: true});
+  }
+
+  closeModal() {
+    this.setState({showing: false});
+    ReactDOM.findDOMNode(this.refs.opener).focus();
+  }
+
+  render() {
+    return (
+      <div className='demo-only' style={{height: '800px'}}>
+        <Modal
+          isOpen={this.state.showing}
+          renderInline={true}
+        >
+
+          <Modal.Header
+            closeButton={false}
+          >
+            <h2 className={pf('text-heading--medium')}>
+              Select a New Record Type
+            </h2>
+          </Modal.Header>
+
+          <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
+            <Button flavor="neutral">Simple</Button>
+            <Button flavor="neutral">Advanced</Button>
+            <Button flavor="neutral">Partner</Button>
+            <Button flavor="neutral">Person Accounts</Button>
+            <Button flavor="neutral">Cancel</Button>
+          </div>
+        </Modal>
+      </div>
+    );
+  }
+}
+
+module.exports = <ModalExample/>;

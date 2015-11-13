@@ -177,3 +177,12 @@
     background: $track;
   }
 }
+
+// Enable momentum scrolling in Mobile Safari (iOS)
+// Side effect: hides scrollbars for this browser
+//
+// Fixes a bug where some zones were not scrollable:
+// https://github.com/salesforce-ux/design-system/issues/81
+@mixin enable-ios-momentum-scrolling {
+  -webkit-overflow-scrolling: touch;
+}

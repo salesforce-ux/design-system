@@ -21,7 +21,7 @@
   }
 
   // New in 0.12.0
-  &-space {
+  &--space {
 
     .#{$css-prefix}list__item {
       padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
@@ -47,7 +47,7 @@
     text-decoration: none;
   }
 
-  &-space a {
+  &--space a {
     display: inline-block;
     text-decoration: none;
     padding: $spacing-small;

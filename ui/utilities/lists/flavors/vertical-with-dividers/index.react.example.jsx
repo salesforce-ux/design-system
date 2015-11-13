@@ -41,12 +41,12 @@ exports.preview = (
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
-  <ul className={pf('list--vertical has-dividers--bottom-space has-block-links-space')} style={{ marginTop: '2rem' }}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-block-links--space')} style={{ marginTop: '2rem' }}>
     <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
-  <ul className={pf('list--vertical has-dividers--bottom has-block-links-space has-list-interactions')} style={{ marginTop: '2rem' }}>
+  <ul className={pf('list--vertical has-dividers--bottom has-block-links--space has-list-interactions')} style={{ marginTop: '2rem' }}>
     <StatefulClass>
     <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space with list item interactions</a></li>
     </StatefulClass>
@@ -88,12 +88,12 @@ exports.code = (
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
-  <ul className={pf('list--vertical has-dividers--bottom-space has-block-links-space')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-block-links--space')}>
     <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
-  <ul className={pf('list--vertical has-dividers--bottom has-block-links-space has-list-interactions')}>
+  <ul className={pf('list--vertical has-dividers--bottom has-block-links--space has-list-interactions')}>
     <li className={pf('list__item')}><a href="#void">List item block level link with bottom divider with space with list item interactions</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>
     <li className={pf('list__item')}><a href="#void">List Item</a></li>

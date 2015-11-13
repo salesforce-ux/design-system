@@ -33,11 +33,11 @@ classes:
     description: Gives the anchors within the list inline-block styling
     applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
   -
-    class: has-block-links-space
+    class: has-block-links--space
     description: Gives the anchors within the list block styling with 0.5rem padding
     applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
   -
-    class: has-inline-block-links-space
+    class: has-inline-block-links--space
     description: Gives the anchors within the list inline-block styling with 0.5rem padding
     applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
   -

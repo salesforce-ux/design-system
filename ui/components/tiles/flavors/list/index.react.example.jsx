@@ -21,7 +21,7 @@ const image = (
 
 exports.preview = (
 <div className='demo-only'>
-  <ul className={pf('list--vertical has-dividers--bottom-space has-selections')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>

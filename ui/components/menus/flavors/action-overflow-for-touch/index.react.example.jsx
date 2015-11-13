@@ -23,7 +23,7 @@ module.exports = (
       <div className={pf('action-overflow--touch__container')}>
         <div className={pf('action-overflow--touch__content')}>
           <div className={pf('action-overflow--touch__body')}>
-            <ul role="menu" className={pf('list--vertical has-block-links-space has-dividers--bottom')}>
+            <ul role="menu" className={pf('list--vertical has-block-links--space has-dividers--bottom')}>
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>

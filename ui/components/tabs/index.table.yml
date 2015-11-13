@@ -16,11 +16,6 @@ classes:
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: tabs--default__item--overflow
-    description: Styles an overflow tab item
-    applied: <code>.{{cssPrefix}}tabs__item</code>
-    notes: This is used on the tab containing the overflow dropdown for search
-  -
     class: tabs--default__link
     description: Styles each <code>&lt;a&gt;</code> element in the <code>&lt;li&gt;</code>
     required: true
@@ -109,6 +104,11 @@ classes:
     description: Creates the active stage of the sales path
     applied: <code>.{{cssPrefix}}tabs--path__item</code>
     notes: This class must be placed on the item programatically when the guidance section is used
+  -
+    class: tabs__item--overflow
+    description: Styles an overflow tab item
+    applied: <code>.{{cssPrefix}}tabs__item</code>
+    notes: This is used on a tab containing an overflow dropdown menu
   -
     class: dropdown-trigger
     description: Initializes tab item as menu

@@ -95,7 +95,7 @@ class TabItemOverflow extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__item--overflow`, 'text-heading--label', {active: this.props.current})));
+    const className = classNames(this.props.className, pf(classNames('tabs__item--overflow text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
     const contents = React.Children.map(this.props.children, function(c,i) {
       return React.cloneElement(c);

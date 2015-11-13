@@ -19,5 +19,7 @@ module.exports = (
 <ComponentDocs>
   <p className="site-text-introduction">Within a form control, a pill represents an existing item in a database, as opposed to user-generated freeform text.</p>
   <p>The context of the pill can be either a link or static text. To create a pill, apply the <CodeClass className="pill" /> class on a <code>span</code> or an <code>a</code>. Inside, place an element with the <CodeClass className="pill__label" /> class around the text.</p>
+  <p>Additionally, a pill can have an icon or image that sits to the left-hand side of the <CodeClass className="pill__label" />. That icon or image should receive the class <CodeClass className="pill__icon" />.</p>
+  <p>You may also want the functionality to remove the pill as a selection. An "X" icon is normally used and will sit to the right-hand side of the <CodeClass className="pill__label" />. That icon should receive the class <CodeClass className="pill__remove" />.</p>
 </ComponentDocs>
 );

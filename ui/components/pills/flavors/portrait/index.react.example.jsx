@@ -20,12 +20,10 @@ const image = (
 
 module.exports = (
 <div className='demo-only'>
-  <span className={pf('pill')}>
-    <a href="#" className={pf('pill__label')}>
-      <span className={pf('avatar avatar--circle avatar--x-small')}>{image}</span>
-      Pill Label
-    </a>
-    <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>
+  <a href="#void" className={pf('pill')}>
+    <span className={pf('pill__icon avatar avatar--circle')}>{image}</span>
+    <span className={pf('pill__label')}>Pill Label</span>
+    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+  </a>
 </div>
 );

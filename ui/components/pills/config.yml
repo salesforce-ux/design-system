@@ -5,6 +5,7 @@ flavors:
   - unlink
   - icon
   - portrait
+  - container
 dependencies:
   - helpers/images
   - core/icons

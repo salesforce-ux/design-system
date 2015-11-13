@@ -309,7 +309,7 @@ export default class ComponentFlavor extends React.Component {
           ref="iframe"
           data-form-factor={this.state.previewTabActive.key}
           scrolling="no" />
-      </Tabs.Content> 
+      </Tabs.Content>
     );
     return (
       <Tabs className={pf('site-example--tabs')} flavor="default" panel={previewPanel} selectedIndex={2}>

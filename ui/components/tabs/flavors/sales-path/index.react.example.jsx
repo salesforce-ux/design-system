@@ -21,7 +21,7 @@ module.exports = (
   <div className={pf('tabs--path')} role="application tablist">
     <ul className={pf('tabs--path__nav')} role="presentation">
       <li className={pf('tabs--path__item is-complete')} role="presentation">
-        <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
+        <a className={pf('tabs--path__link')} aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
           <span className={pf('assistive-text')}>Stage Complete</span>
@@ -30,7 +30,7 @@ module.exports = (
         </a>
       </li>
       <li className={pf('tabs--path__item is-complete')} role="presentation">
-        <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
+        <a className={pf('tabs--path__link')} aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
           <span className={pf('assistive-text')}>Stage Complete</span>
@@ -39,7 +39,7 @@ module.exports = (
         </a>
       </li>
       <li className={pf('tabs--path__item is-current')} role="presentation">
-        <a className={pf('tabs--path__link')} aria-selected="true" tabindex="0" role="tab" href="#void" aria-live="assertive">
+        <a className={pf('tabs--path__link')} aria-selected="true" tabIndex="0" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>
@@ -47,7 +47,7 @@ module.exports = (
         </a>
       </li>
       <li className={pf('tabs--path__item is-incomplete')} role="presentation">
-        <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
+        <a className={pf('tabs--path__link')} aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>
@@ -55,7 +55,7 @@ module.exports = (
         </a>
       </li>
       <li className={pf('tabs--path__item is-incomplete')} role="presentation">
-        <a className={pf('tabs--path__link')} aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">
+        <a className={pf('tabs--path__link')} aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
         <span className={pf('tabs--path__stage')}>
           <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
         </span>

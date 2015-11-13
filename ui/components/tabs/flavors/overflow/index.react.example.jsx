@@ -42,7 +42,7 @@ module.exports = (
       <h2>Item Seven Content</h2>
     </Tabs.Item>
     <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger tabs--default__item')}>
-      <a className={pf('tabs--default__link')} href="#" aria-haspopup="true">More
+      <a className={pf('tabs--default__link')} href="#" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
       <Menu className={pf('dropdown--medium dropdown--right dropdown--overflow')}>

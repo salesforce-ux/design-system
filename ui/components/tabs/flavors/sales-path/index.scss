@@ -193,7 +193,6 @@
   top: 50%;
   left: 0;
   width: 100%;
-  height: 100%;
   margin-top: calc((#{$square-icon-medium-content} - #{$spacing-xx-small}) * -1);
   transform: rotateX(-180deg);
 }

@@ -95,6 +95,38 @@ classes:
     description: Stacking buttons inside of this class with spacing for at least large breakpoint.
     applied: parent of <code>.{{cssPrefix}}button</code>
   -
+    class: max-x-small-button--stacked
+    description: Stacking buttons with spacing for at most x-small breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-small-button--stacked
+    description: Stacking buttons with spacing for at most small breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-medium-button--stacked
+    description: Stacking buttons with spacing for at most medium breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-large-button--stacked
+    description: Stacking buttons with spacing for at most large breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-x-small-buttons--stacked
+    description: Stacking buttons inside of this class with spacing for at most x-small breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-small-buttons--stacked
+    description: Stacking buttons inside of this class with spacing for at most small breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-medium-buttons--stacked
+    description: Stacking buttons inside of this class with spacing for at most medium breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-large-buttons--stacked
+    description: Stacking buttons inside of this class with spacing for at most large breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
     class: x-small-button--horizontal
     description: Giving horizontal buttons spacing for at least x-small breakpoint.
     applied: <code>.{{cssPrefix}}button</code>
@@ -125,6 +157,38 @@ classes:
   -
     class: large-buttons--horizontal
     description: Giving horizontal buttons inside of this class spacing for at least large breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-x-small-button--horizontal
+    description: Giving horizontal buttons spacing for at most x-small breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-small-button--horizontal
+    description: Giving horizontal buttons spacing for at most small breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-medium-button--horizontal
+    description: Giving horizontal buttons spacing for at most medium breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-large-button--horizontal
+    description: Giving horizontal buttons spacing for at most large breakpoint.
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: max-x-small-buttons--horizontal
+    description: Giving horizontal buttons inside of this class spacing for at most x-small breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-small-buttons--horizontal
+    description: Giving horizontal buttons inside of this class spacing for at most small breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-medium-buttons--horizontal
+    description: Giving horizontal buttons inside of this class spacing for at most medium breakpoint.
+    applied: parent of <code>.{{cssPrefix}}button</code>
+  -
+    class: max-large-buttons--horizontal
+    description: Giving horizontal buttons inside of this class spacing for at most large breakpoint.
     applied: parent of <code>.{{cssPrefix}}button</code>
   -
     class: max-small-button--stretch

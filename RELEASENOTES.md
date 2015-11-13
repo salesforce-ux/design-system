@@ -20,8 +20,9 @@
 - Add stretched button utilities for full-width buttons on small form factors.
 - Dialog Menus for small form factor
   - Action overflow for touch
-- Add `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch.
-- Add mobile dialog menus
+- Add `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch devices.
+- Add mobile dialog menus for touch devices.
+- Add Edit dialog form for touch devices.
 
 ## Release 0.11.0 - October 29, 2015
 

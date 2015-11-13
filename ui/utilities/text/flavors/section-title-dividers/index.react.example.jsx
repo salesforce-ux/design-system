@@ -10,55 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
-const ReactDOM = require('react-dom');
-const Modal = require('ui/components/modals/index.react');
-const Button = require('ui/components/buttons/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-class ModalExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showing: true };
-  }
-
-  openModal() {
-    this.setState({showing: true});
-  }
-
-  closeModal() {
-    this.setState({showing: false});
-    ReactDOM.findDOMNode(this.refs.opener).focus();
-  }
-
-  render() {
-    return (
-      <div className='demo-only' style={{height: '800px'}}>
-        <Modal
-          isOpen={this.state.showing}
-          renderInline={true}
-        >
-
-          <Modal.Header
-            closeButton={false}
-          >
-            <h2 className={pf('text-heading--medium')}>
-              Delete Account
-            </h2>
-            <p className={pf('m-top--x-small')}>
-              Are you sure you want to delete this account?
-            </p>
-          </Modal.Header>
-
-          <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
-            <Button flavor="destructive">Delete</Button>
-            <Button flavor="neutral">Cancel</Button>
-          </div>
-        </Modal>
-      </div>
-    );
-  }
-}
-
-module.exports = <ModalExample/>;
+module.exports = (
+<div className='demo-only'>
+  <h3 className={pf('section-title--divider')}>Section Title</h3>
+</div>
+);

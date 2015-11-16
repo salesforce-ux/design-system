@@ -68,7 +68,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -91,7 +91,7 @@ module.exports = function(config) {
         new webpack.DefinePlugin({
           'process.env': _({ 
             'DEFAULT_USER_TYPE': 'external'
-          }).mapValues(value => `"${value}"`).value()
+          }).mapValues(function (value) { return '"' + value + '"' }).value()
         })
       ],
 

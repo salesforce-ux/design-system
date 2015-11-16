@@ -23,8 +23,8 @@ module.exports = function(config) {
       './node_modules/lodash/index.js',
       './node_modules/sinon/pkg/sinon.js',
       './scripts/test/accessibility/a11y.js',
-      // './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
-      // './ui/**/*.spec.+(js|jsx)',
+      './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
+      './ui/**/*.spec.+(js|jsx)',
       './test/after/browser/**/*.+(js|jsx)'
     ],
 
@@ -68,7 +68,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

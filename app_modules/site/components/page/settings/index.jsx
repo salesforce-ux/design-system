@@ -66,7 +66,6 @@ const Settings = React.createClass({
   },
 
   render: function() {
-    console.log(this.state)
     return (
       <Modal isOpen={this.props.isOpen}
         onRequestClose={this.props.onClose}

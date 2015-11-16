@@ -258,7 +258,7 @@ export default React.createClass({
         </main>
         { this.renderNav() }
         { this.renderFooter() }
-        { /* <Settings isOpen={this.state.showingSettings} onClose={this.closeSettings} /> */ }
+        <Settings isOpen={this.state.showingSettings} onClose={this.closeSettings} />
       </div>
     );
   },

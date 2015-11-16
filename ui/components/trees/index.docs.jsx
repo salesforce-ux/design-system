@@ -9,11 +9,11 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
-const CodeClass = require('app_modules/site/components/code-class');
+import React from 'react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 
-module.exports = (
+export default (
   <ComponentDocs>
     <p className="site-text-introduction">A tree is visualization a structure heiarchy. A branch can be expanded or collapsed.</p>
     <p>A tree is composed of three core elements, <CodeClass className="tree" />, <CodeClass className="tree__item" />, and <CodeClass className="tree__branch" />. The tree wrapper, the outer most parent <code>ul</code>, will receive the class <CodeClass className="tree" />. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.</p>

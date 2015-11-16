@@ -14,7 +14,7 @@ import globals from 'app_modules/global';
 /**
  * Only allows production-level logging.
  */
-function canLogEvent() {
+export function canLogEvent() {
   return window.ll && window.location &&
     globals.analyticsHostWhitelist.indexOf(window.location.host) >= 0;
 }
@@ -22,14 +22,14 @@ function canLogEvent() {
 /**
  * Normalizes pathname
  */
-function normalizedLocationPathname() {
+export function normalizedLocationPathname() {
   return (window.location.pathname || '').replace(/\/$/, '');
 }
 
 /**
  * Records a page visit + screen flow.
  */
-function logCurrentPageVisit() {
+export function logCurrentPageVisit() {
   if (canLogEvent()) {
     window.ll('tagScreen', normalizedLocationPathname());
   }
@@ -41,7 +41,7 @@ function logCurrentPageVisit() {
  * @param {string} type - Which CTA was interacted with?
  * @param {object} extraValues - Optional extra tracking parameters
  */
-function logCTAEvent(type, extraValues) {
+export function logCTAEvent(type, extraValues) {
   if (canLogEvent()) {
     let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
     window.ll('tagEvent', 'CTA', values);
@@ -54,7 +54,7 @@ function logCTAEvent(type, extraValues) {
  * @param {string} type - Which CTA was interacted with?
  * @param {object} extraValues - Optional extra tracking parameters
  */
-function logInputEvent(type, extraValues) {
+export function logInputEvent(type, extraValues) {
   if (canLogEvent()) {
     let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
     window.ll('tagEvent', 'Input', values);
@@ -66,7 +66,7 @@ function logInputEvent(type, extraValues) {
  *
  * @param {string} type - Which file was downloaded?
  */
-function logDownloadEvent(type) {
+export function logDownloadEvent(type) {
   if (canLogEvent()) {
     window.ll('tagEvent', 'Download', {'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE});
   }

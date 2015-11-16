@@ -42,4 +42,4 @@ Component.defaultProps = {
   name: 'radio'
 };
 
-module.exports = Component;
+export default Component;

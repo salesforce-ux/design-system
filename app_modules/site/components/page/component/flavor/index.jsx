@@ -156,7 +156,7 @@ function getCodeTabs(flavor, previewComponent, role) {
     .value();
 }
 
-export default class ComponentFlavor extends React.Component {
+class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
@@ -389,3 +389,5 @@ export default class ComponentFlavor extends React.Component {
   }
 
 }
+
+export default ComponentFlavor;

@@ -9,13 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
-const componentUtil = require('app_modules/ui/util/component');
-const CodeClass = require('app_modules/site/components/code-class');
+import React from 'react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import componentUtil from 'app_modules/ui/util/component';
+import CodeClass from 'app_modules/site/components/code-class';
 const pf = componentUtil.prefix;
 
-module.exports = (
+export default (
 <ComponentDocs>
   <p className="site-text-introduction">Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.</p>
   <p>To float an element on the left, add the <CodeClass className="float--left" /> class to the element. To float it on the right, add the <CodeClass className="float--right" /> class.</p>

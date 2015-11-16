@@ -173,11 +173,6 @@ export const webpackConfig = {
       {
         test: /\.jsx?$/,
         loader: path.resolve('app_modules/util/license-loader/index.js')
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: eslintExclude,
-        loader: 'eslint-loader'
       }
     ]
   },
@@ -193,10 +188,7 @@ export const webpackConfig = {
       ]).mapValues(value => `"${value}"`).value()
     })
   ],
-  cache: {},
-  eslint: {
-    configFile: path.resolve(__PATHS__.root, '.eslintrc')
-  }
+  cache: {}
 };
 
 /**
@@ -224,7 +216,7 @@ export const compiler = {
   createPages(callback) {
     assert.ok(_.isFunction(callback), 'callback must be a function');
     console.log('-----> Creating Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
     let stream = through.obj();
     routes.forEach(stream.write, stream);
@@ -271,7 +263,7 @@ export const compiler = {
    */
   createComponentPages(callback) {
     console.log('-----> Creating Component Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     let routes = sitemap.getFlattenedRoutes().filter(route => {
       return route.component;
     });
@@ -378,7 +370,7 @@ export const compiler = {
    */
   renderPages(callback) {
     console.log('-----> Rendering Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     // Needed for ReactRouter
     let Root = React.createClass({
       render() { return _.last(this.props.components); }
@@ -390,7 +382,7 @@ export const compiler = {
         path: route.path,
         components: require(
           this.getSitePathTmp(route.getIndexPath(route.path))
-        )
+        ).default
       });
     });
     routes = React.createElement(Route, {
@@ -495,7 +487,7 @@ export default function (done) {
     watch([
       path.resolve(__PATHS__.ui, '**/*.{md,yml}')
     ]).on('change', e => {
-      let sitemap = require('app_modules/site/navigation/sitemap');
+      let sitemap = require('app_modules/site/navigation/sitemap').default;
       let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
       routes.forEach(route => {
         if (new RegExp(_.escapeRegExp(route.component.path)).test(e.path)) {

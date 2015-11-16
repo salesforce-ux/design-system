@@ -44,12 +44,12 @@ class GithubButton extends React.Component {
   }
   
   componentDidMount() {
-    this.getStars((data) => { 
+    this.getStars(data => { 
       this.setState({ 
         stargazersCount: data.stargazers_count,
         repoData: data
       });
-    }.bind(this))
+    })
   }
 
   render() {

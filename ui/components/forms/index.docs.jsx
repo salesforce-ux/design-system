@@ -9,19 +9,19 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Radio = require('ui/components/forms/flavors/radio/index.react');
-const Checkbox = require('ui/components/forms/flavors/checkbox/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
-const Textarea = require('ui/components/forms/flavors/textarea/index.react');
-const Select = require('ui/components/forms/flavors/select/index.react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
-const componentUtil = require('app_modules/ui/util/component');
+import React from 'react';
+import Radio from 'ui/components/forms/flavors/radio/index.react';
+import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
+import Input from 'ui/components/forms/flavors/input/index.react';
+import Textarea from 'ui/components/forms/flavors/textarea/index.react';
+import Select from 'ui/components/forms/flavors/select/index.react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import componentUtil from 'app_modules/ui/util/component';
 const pf = componentUtil.prefix;
-const globals = require('app_modules/global');
-const CodeClass = require('app_modules/site/components/code-class');
+import globals from 'app_modules/global';
+import CodeClass from 'app_modules/site/components/code-class';
 
-module.exports = (
+export default (
 <ComponentDocs>
   <p className="site-text-introduction">An HTML form contains interactive controls to submit information to a web server.</p>
   <p>For optimum spacing and layout, wrap each element in <CodeClass className="form-element" />. Layout helper classes are available through the following class names, <CodeClass className="form--stacked" />, <CodeClass className="form--horizontal" /> and <CodeClass className="form--inline" />.</p>

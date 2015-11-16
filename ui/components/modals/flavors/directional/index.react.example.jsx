@@ -9,11 +9,11 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Modal = require('ui/components/modals/index.react');
-const Button = require('ui/components/buttons/index.react');
-const Lorem = require('react-lorem-component');
-const componentUtil = require('app_modules/ui/util/component');
+import React from 'react';
+import Modal from 'ui/components/modals/index.react';
+import Button from 'ui/components/buttons/index.react';
+import Lorem from 'react-lorem-component';
+import componentUtil from 'app_modules/ui/util/component';
 const pf = componentUtil.prefix;
 
 class DirectionalExample extends React.Component {
@@ -83,4 +83,4 @@ class DirectionalExample extends React.Component {
   }
 }
 
-module.exports = <DirectionalExample/>;
+export default <DirectionalExample/>;

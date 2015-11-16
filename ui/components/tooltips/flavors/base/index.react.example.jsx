@@ -9,15 +9,15 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Tooltip = require('ui/components/tooltips/index.react');
-const Lorem = require('react-lorem-component');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const Control = require('ui/components/lib/control/flavors/popover');
-const componentUtil = require('app_modules/ui/util/component');
+import React from 'react';
+import Tooltip from 'ui/components/tooltips/index.react';
+import Lorem from 'react-lorem-component';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import Control from 'ui/components/lib/control/flavors/popover';
+import componentUtil from 'app_modules/ui/util/component';
 const pf = componentUtil.prefix;
 
-module.exports = (
+export default (
   <div className={pf('tooltip nubbin--left')} role="tooltip">
     <div className={pf('tooltip__body')}>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.

@@ -7,11 +7,12 @@
 
 - Added Resources -> Links
 - 
+
 **BREAKING CHANGES**
 - Removed default horizontal spacing from buttons in favor of new spacing utilities (see New Components below).
 - Switch sizing utility media queries to use `em` instead of `px`
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
-- Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
+- Adjusted Activity Timeline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
 
 ** NEW COMPONENTS**
 - Add max-width sizing utilities
@@ -54,11 +55,14 @@
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
+- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
+- Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
+- More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
 
-- Added notifications > prompt (modal-style alert) www.lightningdesignsystem.com/components/notifications#prompt
-- Added Preview Panel Popovers www.lightningdesignsystem.com/components/popovers#panels 
-- More directional support for popover nubbins www.lightningdesignsystem.com/components/popovers#nubbins
-- Dropdown menus now have bottom positioning support, with accommodating nubbin support www.lightningdesignsystem.com/components/menus#dropdown-positioning
+## Release 0.10.2 - October 29, 2015
+- Updated Icons to version 3.2.0
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
+- Added Google Analytics
 
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker

@@ -272,12 +272,16 @@ export default React.createClass({
   },
 
   renderBanner(banner) {
+    let badge = process.env.DEFAULT_USER_TYPE === 'internal'
+      ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_ID})</div>
+      : null
     return (
       <header className={pf('site-banner')} role="banner">
         <Link to="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </Link>
+        {badge}
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
         </div>

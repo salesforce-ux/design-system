@@ -15,4 +15,8 @@
   text-transform: uppercase;
   letter-spacing: .0625em;
   color: $color-text-weak;
+
+  a {
+    color: inherit;
+  }
 }

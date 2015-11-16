@@ -6,5 +6,6 @@ var argv = require('minimist')(process.argv.slice(2));
 var isInternal = argv.internal === true;
 
 _.defaults(process.env, {
-  DEFAULT_USER_TYPE: isInternal ? 'internal' : 'external'
+  DEFAULT_USER_TYPE: isInternal ? 'internal' : 'external',
+  INTERNAL_RELEASE_ID: ''
 });

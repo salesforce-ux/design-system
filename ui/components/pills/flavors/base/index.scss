@@ -59,7 +59,7 @@
 
 .#{$css-prefix}pill-container {
   padding: 1px $spacing-xx-small;
-  border-bottom: $border-width-thin solid $color-border;
+  // border-bottom: $border-width-thin solid $color-border;
   min-height: calc(#{$line-height-button} + 2px);
 }
 

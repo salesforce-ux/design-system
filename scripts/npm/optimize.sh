@@ -9,11 +9,12 @@
 #
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-set -e
+# Optimize favicons
+# (not that they change very often)
+node --harmony ./node_modules/.bin/imagemin --plugin=pngquant --optimizationLevel=2 site/favicons site/favicons || true
 
-export GIT_VERSION=`node scripts/helpers/version.js`
-echo "SLDS version: <$GIT_VERSION>"
+# Optimize site images (png, jpg, gif)
+node --harmony ./node_modules/.bin/imagemin --plugin=pngquant --plugin jpegtran --optimizationLevel=2 site/assets/images site/assets/images || true
 
-npm run lint
-npm run optimize
-./node_modules/.bin/babel-node scripts/build.js --dev "$@"
+# Optimize SVG
+find site/assets/images -type d -exec ./node_modules/.bin/svgo -f {} --enable=removeViewBox --enable=removeTitle --enable=cleanupIDs --enable=cleanupNumericValues --precision=4 \;

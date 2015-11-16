@@ -21,6 +21,7 @@
     "dist": "./scripts/npm/dist.sh",
     "dist-npm": "./scripts/npm/dist.sh --npm",
     "lint": "./scripts/npm/lint.sh",
+    "optimize": "./scripts/npm/optimize.sh",
     "update-boilerplate": "./scripts/npm/update-boilerplate.sh"
   },
   "dependencies": {
@@ -61,6 +62,8 @@
     "gulp-replace": "0.5.4",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",
+    "imagemin-cli": "^2.0.0",
+    "imagemin-pngquant": "^4.2.0",
     "immutable": "3.7.5",
     "js-beautify": "1.5.10",
     "js-yaml": "3.4.0",
@@ -90,6 +93,7 @@
     "rimraf": "2.4.3",
     "sinon": "1.16.1",
     "stampit": "2.1.0",
+    "svgo": "^0.5.6",
     "temp": "^0.8.3",
     "theo": "4.0.1",
     "through2": "2.0.0",

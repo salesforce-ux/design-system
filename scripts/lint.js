@@ -61,4 +61,4 @@ gulp.task('eslint', () =>
   .pipe(eslint.failAfterError())
 );
 
-gulp.task('default', ['lintspaces'/*, 'eslint'*/]);
+gulp.task('default', ['lintspaces', 'eslint']);

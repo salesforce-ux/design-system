@@ -47,7 +47,7 @@
     "css": "2.2.1",
     "deep-diff": "0.3.2",
     "eslint-loader": "1.0.0",
-    "eslint-path-formatter": "^0.1.1",
+    "eslint-path-formatter": "git://github.com/kaelig/eslint-path-formatter.git#master",
     "fs-extra": "^0.24.0",
     "gdm": "0.0.9",
     "glob": "5.0.14",

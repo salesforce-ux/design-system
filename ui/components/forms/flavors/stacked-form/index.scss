@@ -11,11 +11,11 @@
 
 .#{$css-prefix}form--stacked .#{$css-prefix}form-element {
   display: block;
-
+  
   + .#{$css-prefix}form-element {
-    margin-top: $spacing-x-small;
+    @include form-element-vertical-spacing;
   }
-
+  
   .#{$css-prefix}checkbox,
   .#{$css-prefix}radio {
     display: block;

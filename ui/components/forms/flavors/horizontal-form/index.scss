@@ -15,19 +15,23 @@
     text-align: right;
   }
 
-  .#{$css-prefix}form-element > .#{$css-prefix}form-element__label {
+  .#{$css-prefix}form-element {
+    > .#{$css-prefix}form-element__label {
+      @include mq-medium-min {
+        display: inline-block;
+        max-width: 33%;
+        vertical-align: top;
+        position: relative;
+        top: (($line-height-button / 2) - ($line-height-text / 2));
+        margin-bottom: 0;
 
-    @include mq-medium-min {
-      display: inline-block;
-      max-width: 33%;
-      vertical-align: top;
-      position: relative;
-      top: (($line-height-button / 2) - ($line-height-text / 2));
-      margin-bottom: 0;
-
-      &--top {
-        top: 0;
+        &--top {
+          top: 0;
+        }
       }
+    }
+    + .#{$css-prefix}form-element {
+      @include form-element-vertical-spacing;
     }
   }
 

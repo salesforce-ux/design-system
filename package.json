@@ -17,7 +17,7 @@
     "test-before": "./scripts/npm/test-before.sh",
     "test-after": "./scripts/npm/test-after.sh",
     "dev": "./scripts/npm/dev.sh",
-    "prod": "./scripts/npm/prod.sh",
+    "prod": "babel-node ./scripts/npm/prod.js",
     "dist": "./scripts/npm/dist.sh",
     "dist-npm": "./scripts/npm/dist.sh --npm",
     "lint": "./scripts/npm/lint.sh",

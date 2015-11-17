@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import { execSync } from 'child_process';
 import _ from 'lodash';
 import packageJSON from '../../package.json';
-import deployments, { branches } from '../../scripts-internal/deploy/config/deployments.json';
+import deployments, { releases } from '../../scripts-internal/deploy/config/deployments.json';
 
 const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH || '';
 
@@ -25,11 +25,11 @@ console.log(`SLDS version: ${packageJSON.version}`);
 // Lint
 exec('npm run lint');
 
-// Check to see if the current branch matches a known version
-let branch = _.find(branches, { name: TRAVIS_BRANCH });
+// Check to see if the current branch matches a known release
+let release = _.find(releases, { sourceBranch: TRAVIS_BRANCH });
 
 // Build
-if (branch && _.includes(deployments.internal, branch.id)) {
+if (release && _.includes(deployments.internal, release.id)) {
   console.log('Building site with arguments: --prod --internal\n');
   exec('./node_modules/.bin/babel-node scripts/build.js --prod --internal');
 } else {

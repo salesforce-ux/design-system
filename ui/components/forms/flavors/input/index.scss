@@ -49,9 +49,12 @@
   .#{$css-prefix}input__icon {
     @include square($square-icon-medium-content);
     position: absolute;
-    fill: $color-text-icon-default;
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
+
+    @include deprecate("0.20.0") {
+      fill: $color-text-icon-default;
+    }
   }
 
   &--left {

@@ -227,31 +227,33 @@
   }
   @include mq-small-max {
     .#{$css-prefix}button {
-      margin: 0 0 $spacing-large;
-      display: block;
-      width: 75%;
+      margin: 0 0 $spacing-small;
     }
-    .site-cta-tutorial { display: none; }
   }
 
 }
 
 // Social Counter Button Pair
 .site-button-group--social-counter {
-  .slds-button + .slds-button {
-    margin: {
-      left: $spacing-small;
-    }
+  margin-left: $spacing-medium;
+
+  .#{$css-prefix}button + .#{$css-prefix}button {
+    margin-left: $spacing-small;
   }
 }
-.site-button--social-counter {
-  &-bubble {
-    opacity: 0;
-    transition: opacity $duration-immediately ease;
 
-    &.is-loaded {
-      opacity: 1;
-    }
+.site-button--social-counter {
+  @include nubbin($position: left, $location: "before", $color: $color-background-alt, $size: $square-icon-small-content);
+  display: none;
+  opacity: 0;
+  transition: opacity $duration-immediately ease;
+
+  @include mq-small-min {
+    display: inline-block;
+  }
+
+  &.is-loaded {
+    opacity: 1;
   }
 }
 

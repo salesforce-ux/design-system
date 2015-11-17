@@ -17,13 +17,13 @@ const pf = componentUtil.prefix;
 module.exports = (
 <div className='demo-only'>
   <Tabs flavor="default">
-    <Tabs.Item title="Item One" id="tab-default-1">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item One" id="tab-default-1">
       <h2>Item One Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Two" id="tab-default-2">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Two" id="tab-default-2">
       <h2>Item Two Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Three" id="tab-default-3">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Three" id="tab-default-3">
       <h2>Item Three Content</h2>
     </Tabs.Item>
   </Tabs>

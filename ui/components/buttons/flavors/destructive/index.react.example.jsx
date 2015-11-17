@@ -15,7 +15,7 @@ const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
 module.exports = (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="destructive">
       Button destructive
     </Button>

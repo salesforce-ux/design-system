@@ -1,5 +1,7 @@
 status: 'prototype'
 dependencies:
+  - components/modals
+  - core/icons
   - components/buttons
 showFormFactors:
   - small

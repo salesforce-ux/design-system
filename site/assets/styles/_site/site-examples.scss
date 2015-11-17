@@ -9,8 +9,9 @@
 
 .site-example--content {
   outline: 1px solid $color-border;
+  background: $color-background;
 
-  &.#{$css-prefix}tabs__content {
+  &.#{$css-prefix}tabs--default__content {
     padding: 0;
   }
 }
@@ -18,6 +19,8 @@
 iframe {
   border: 0;
   width: 100%;
+  background: $color-background-alt;
+  outline: 1px solid $color-border;
 
   &[data-form-factor="mobile"] {
     width: 30rem;

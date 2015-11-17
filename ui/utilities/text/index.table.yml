@@ -50,6 +50,10 @@ classes:
     description: Interactive titles with icons that open and close sections
     notes: These are typically on a form
   -
+    class: section-title--divider
+    description: Titles that also act as a divider
+    notes: These are typically on a form
+  -
     class: type-focus
     description: Creates a faux link with interactions
     applied: container

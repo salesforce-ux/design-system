@@ -19,8 +19,11 @@
   .#{$css-prefix}form-element__help {
     color: $color-text-error;
   }
-
-  .#{$css-prefix}input__icon {
-    fill: $color-text-error;
+  
+   @include deprecate("0.20.0") {
+    
+    .#{$css-prefix}input__icon {
+      fill: $color-text-error;
+    }
   }
 }

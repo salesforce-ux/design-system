@@ -57,7 +57,7 @@ pre[class*="language-"] {
     @include scrollbar;
   }
 
-  &.#{$css-prefix}tabs__content {
+  &.#{$css-prefix}tabs--default__content {
     margin-top: -1px;
     padding: $spacing-medium;
   }

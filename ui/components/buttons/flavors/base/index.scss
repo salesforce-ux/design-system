@@ -65,9 +65,15 @@
     }
   }
 
-  & + .#{$css-prefix}button,
   & + .#{$css-prefix}button-group {
     margin-left: $spacing-xx-small;
+  }
+
+   @include deprecate("0.20.0") {
+
+    & + .#{$css-prefix}button {
+      margin-left: $spacing-xx-small;
+    }
   }
 }
 

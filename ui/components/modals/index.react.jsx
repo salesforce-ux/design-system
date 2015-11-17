@@ -38,7 +38,9 @@ class ModalFooter extends React.Component {
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
       <div { ...props } className={className}>
-        { this.props.children }
+        <div className={pf('x-small-buttons--horizontal')}>
+          { this.props.children }
+        </div>
       </div>
     );
   }
@@ -129,8 +131,8 @@ class Modal extends React.Component {
       [`${cssPrefix}slide-up-saving`]: this.props.saving,
       [`${cssPrefix}slide-down-cancel`]: this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
     });
-    const classNameModalBackdrop = classNames(pf('modal-backdrop'), {
-      [`${cssPrefix}modal-backdrop--open`]: this.props.isOpen
+    const classNameModalBackdrop = classNames(pf('backdrop'), {
+      [`${cssPrefix}backdrop--open`]: this.props.isOpen
     });
     return (
       <AccessibleDialogContainer onEsc={this.onClick.bind(this)}>

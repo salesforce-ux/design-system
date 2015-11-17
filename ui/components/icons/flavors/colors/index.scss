@@ -20,3 +20,7 @@
 .#{$css-prefix}icon-standard-call {
   background: #CB5FFF; // Temp - Need token
 }
+
+.#{$css-prefix}icon-text-error {
+  fill: $color-text-error;
+}

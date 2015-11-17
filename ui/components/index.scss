@@ -39,7 +39,13 @@
   "buttons/flavors/icon-more/index",
   "buttons/flavors/icon-stateful/index",
   "buttons/flavors/icon-inverse/index",
-  "buttons/flavors/responsive/index",
+  "buttons/flavors/stretch/index",
+  "buttons/flavors/horizontal/index",
+
+  // Icons
+  "icons/flavors/base/index",
+  "icons/flavors/colors/index",
+  "icons/flavors/sizes/index",
 
   // Card
   "cards/flavors/base/index",
@@ -59,6 +65,7 @@
   "forms/flavors/compound-form/index",
   "forms/flavors/read-only-state/index",
   "forms/flavors/validation-state/index",
+  "forms/flavors/edit-dialog-for-touch/index",
 
   // Grid
   "grid-system/flavors/automatic-sizing/index",
@@ -86,6 +93,7 @@
   "menus/flavors/dropdown-positioning/index",
   "menus/flavors/picklist/index",
   "menus/flavors/action-overflow/index",
+  "menus/flavors/action-overflow-for-touch/index",
   "menus/flavors/search-overflow/index",
 
   // Datepicker
@@ -144,12 +152,14 @@
   "tabs/flavors/default/index",
   "tabs/flavors/overflow/index",
   "tabs/flavors/scoped/index",
+  "tabs/flavors/sales-path/index",
 
   // Notifications -- Toasts & Alerts
   "notifications/flavors/base/index",
   "notifications/flavors/alert/index",
   "notifications/flavors/toast/index",
   "notifications/flavors/prompt/index",
+  "notifications/flavors/prompt-for-touch/index",
   "notifications/flavors/modal-toast/index",
 
   // Lookup
@@ -172,11 +182,6 @@
 
   // Badges
   "badges/flavors/base/index",
-
-  // Icons
-  "icons/flavors/base/index",
-  "icons/flavors/colors/index",
-  "icons/flavors/sizes/index",
 
   // Tables
   "data-tables/flavors/base/index",

@@ -26,7 +26,7 @@ function image() {
 
 exports.preview = (
 <div className='demo-only' style={{width: '300px'}}>
-  <ul className={pf('list--vertical has-cards')}>
+  <ul className={pf('list--vertical has-cards--space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
         <div className={pf('tile tile--board')}>
@@ -75,7 +75,7 @@ exports.preview = (
 );
 exports.code = (
 <div className='demo-only' style={{width: '300px'}}>
-  <ul className={pf('list--vertical has-cards')}>
+  <ul className={pf('list--vertical has-cards--space has-selections')}>
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>
         <p className={pf('tile__title truncate')}>

@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { createChainedFunction } from 'app_modules/ui/util/component';
 import { logCTAEvent } from 'app_modules/site/util/analytics';
@@ -31,25 +32,42 @@ class GithubButton extends React.Component {
     };
   }
 
+  protectFromUnmount() {
+    let hasUnmounted_ = false;
+    const protect = (callback) => {
+      return (...args) => {
+        !hasUnmounted_ && callback(...args);
+      }
+    };
+    protect.unmount = () => hasUnmounted_ = true;
+    return protect;
+  }
+
   getStars(cb) {
     const req = new XMLHttpRequest()
     req.onreadystatechange = () => {
-      if (req.readyState == 4) {
+      if (req.readyState == 4 && req.responseText) {
         const json = JSON.parse(req.responseText);
         cb(json);
       }
     }
     req.open('GET', 'https://api.github.com/repos/salesforce-ux/design-system', true);
     req.send();
+    return req;
   }
 
   componentDidMount() {
-    this.getStars((data) => {
+    this.protect = this.protectFromUnmount();
+    this.asyncReq = this.protect(this.getStars((data) => {
       this.setState({
         stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
-    }.bind(this))
+    }.bind(this)))
+  }
+
+  componentWillUnmount() {
+    this.protect.unmount();
   }
 
   render() {

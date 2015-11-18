@@ -15,11 +15,15 @@ import _ from 'lodash';
 /**
  * Only allows production-level logging.
  */
-function logEvent(tagEvent, type, extraValues) {
+function logEvent(tagEvent, type, extraValues = {}) {
   let canLogEvent = window.location && _.includes(globals.analyticsHostWhitelist, window.location.host);
+  _.defaults(extraValues, {
+    path: window.location.path,
+    type: ''
+  });
   if (canLogEvent) { 
     if (window.ll) window.ll(tagEvent, type, extraValues);
-    if (window.ga) window.ga(tagEvent, type, extraValues);
+    if (window.ga) window.ga('send', 'event', type, extraValues.type);
   }
 }
 

@@ -8,25 +8,57 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+'use strict';
 
-const React = require('react');
-const Menu = require('ui/components/menus/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import './helpers/setup';
 
-module.exports = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '220px'}}>
-  <div className={pf('dropdown-trigger')}>
-    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item>Menu Item One</Menu.Item>
-        <Menu.Item>Menu Item Two</Menu.Item>
-        <Menu.Item>Menu Item Three</Menu.Item>
-        <Menu.Item className={pf('has-divider')}>Menu Item Four</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </div>
-</div>
+import path from 'path';
+import gulp from 'gulp';
+import lintspaces from 'gulp-lintspaces';
+import eslint from 'gulp-eslint';
+import eslintPathFormatter from 'eslint-path-formatter';
+eslintPathFormatter.editor('sublime');
+
+const rootPath = p => path.resolve(__PATHS__.root, p);
+
+gulp.task('lintspaces', () =>
+  gulp.src([
+    '*.{js,json,md,yml,txt}',
+    '.*',
+    '!.DS_Store',
+    'ui/**/*.*',
+    'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
+    'scripts/**/*.{js,sh,jsx}'
+  ], { cwd: __PATHS__.root })
+  .pipe(lintspaces({
+    editorconfig: rootPath('.editorconfig'),
+    ignores: [
+      /\/\*[\s\S]*?\*\//g // Ignore comments
+    ]
+  }))
+  .pipe(lintspaces.reporter())
 );
+
+gulp.task('eslint', () =>
+  gulp.src([
+    '*.{js}',
+    'ui/**/*.{js,jsx}',
+    'site/**/*.{js,jsx}',
+    'scripts/**/*.{js,jsx}'
+  ], { cwd: __PATHS__.root })
+  // eslint() attaches the lint output to the "eslint" property
+  // of the file object so it can be used by other modules.
+  .pipe(eslint({
+    options: {
+      configFile: rootPath('.eslintrc')
+    }
+  }))
+  // eslint.format() outputs the lint results to the console.
+  // Alternatively use eslint.formatEach() (see Docs).
+  .pipe(eslint.format(rootPath('node_modules/eslint-path-formatter')))
+  // To have the process exit with an error code (1) on
+  // lint error, return the stream and pipe to failAfterError last.
+  .pipe(eslint.failAfterError())
+);
+
+gulp.task('default', ['lintspaces', 'eslint']);

@@ -82,7 +82,7 @@ module.exports = (
           {/* Close Button Group */}
           <div className={pf('button-group')} role="group">
             <Button flavor="neutral">
-             New Lead
+              New Lead
             </Button>
             <div className={pf('button--last')}>
               <ButtonIcon

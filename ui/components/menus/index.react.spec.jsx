@@ -29,22 +29,22 @@ describe(`React`, () => {
     let cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
-          <Dropdown>
-            <Dropdown.Header id="theHeader">
-              <Dropdown.Title>Filterless</Dropdown.Title>
-            </Dropdown.Header>
-            <Dropdown.List className={'bling'}>
-              <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
-              <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
-            </Dropdown.List>
-          </Dropdown>
+        <Dropdown>
+          <Dropdown.Header id='theHeader'>
+            <Dropdown.Title>Filterless</Dropdown.Title>
+          </Dropdown.Header>
+          <Dropdown.List className={'bling'}>
+            <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
+            <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
+          </Dropdown.List>
+        </Dropdown>
       );
     });
     it(`renders its list`, () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__list`);
       expect(node).length.to.be(1);
     });
-    it(`sets the "menu" accessibility role on the <ul>`, () => {
+    it(`sets the 'menu' accessibility role on the <ul>`, () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__list`)[0];
       expect(node.props.role).to.equal('menu');
     });
@@ -52,7 +52,7 @@ describe(`React`, () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__item`);
       expect(node).length.to.be(2);
     });
-    it(`sets the "menuitemradio" accessibility role on the <li> <a>`, () => {
+    it(`sets the 'menuitemradio' accessibility role on the <li> <a>`, () => {
       // Because by default the dropdowns are selectable
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__item`)[0].children[0];
       expect(node.tagName).to.equal('A');
@@ -85,12 +85,12 @@ describe(`React`, () => {
       cmp = renderIntoDocument(
           <Dropdown>
             <Dropdown.Header>
-               <Dropdown.Title>Filterless</Dropdown.Title>
-               <Dropdown.Filter placeholder="tacos" />
+              <Dropdown.Title>Filterless</Dropdown.Title>
+              <Dropdown.Filter placeholder='tacos' />
             </Dropdown.Header>
             <Dropdown.List>
-              <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
-              <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
+              <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
+              <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
             </Dropdown.List>
           </Dropdown>
       );
@@ -119,8 +119,8 @@ describe(`React`, () => {
     describe(`filtering`, () => {
       let node, getItems;
       beforeEach(() => {
-         node = scryRenderedDOMComponentsWithTag(cmp, `input`)[0];
-         getItems = () => scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__item`);
+        node = scryRenderedDOMComponentsWithTag(cmp, `input`)[0];
+        getItems = () => scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__item`);
       });
 
       it(`filters its items`, () => {
@@ -144,21 +144,21 @@ describe(`React`, () => {
     beforeEach(() => {
       cmp = renderIntoDocument(
           <Dropdown>
-            <Dropdown.Header id="theHeader">
+            <Dropdown.Header id='theHeader'>
               <Dropdown.Title>Filterless</Dropdown.Title>
             </Dropdown.Header>
             <Dropdown.List className={'bling'} isSelectable={false}>
-              <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
-              <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
+              <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
+              <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
             </Dropdown.List>
           </Dropdown>
       );
     });
-    it(`sets the "menu" accessibility role on the <ul>`, () => {
+    it(`sets the 'menu' accessibility role on the <ul>`, () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__list`)[0];
       expect(node.props.role).to.equal('menu');
     });
-    it(`sets the "menuitem" accessibility role on the <li> <a>`, () => {
+    it(`sets the 'menuitem' accessibility role on the <li> <a>`, () => {
       // Because by default the dropdowns are selectable
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}dropdown__item`)[0].children[0];
       expect(node.tagName).to.equal('A');

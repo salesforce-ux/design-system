@@ -18,7 +18,7 @@ const pf = componentUtil.prefix;
 
 module.exports = (
   <div className={pf('demo-only x-small-buttons--horizontal')}>
-     <div className={pf('hint-parent hint-parent-demo')}>
+    <div className={pf('hint-parent hint-parent-demo')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"

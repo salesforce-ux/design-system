@@ -5,4 +5,3 @@ It uses the class `.{{cssPrefix}}not-selected` in its initial state. When the us
 <h4 class="site-text-heading--label">Accessibility</h4>
 
 For accessibility, include the attribute `aria-live="assertive"` on the button. The <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside the button will be spoken whenever it changes.
-

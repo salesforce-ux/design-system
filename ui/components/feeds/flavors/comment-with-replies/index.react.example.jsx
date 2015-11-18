@@ -73,4 +73,3 @@ module.exports = (
   </ul>
 </div>
 );
-

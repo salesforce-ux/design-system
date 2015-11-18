@@ -5,4 +5,3 @@ classes:
     description: Initializes a breadcrumb component
     applied: <code>ol</code>
     notes: This class allows the <code>.{{cssPrefix}}list__item</code> to display in the breadcrumb style
-

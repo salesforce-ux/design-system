@@ -13,12 +13,96 @@ const React = require('react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
+exports.preview = (
 <div className='demo-only'>
+  <ul className={pf('list--vertical')}>
+    <li className={pf('list__item')}>Vertical List</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-block-links')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-block-links--space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-inline-block-links')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-inline-block-links--space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}>Vertical List with nested vertical lists</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>
+      <ul className={pf('list--vertical is-nested')}>
+        <li className={pf('list__item')}>Nested Vertical List</li>
+        <li className={pf('list__item')}>List Item</li>
+        <li className={pf('list__item')}>
+          <ul className={pf('list--vertical is-nested')}>
+            <li className={pf('list__item')}>Nested Vertical List</li>
+            <li className={pf('list__item')}>List Item</li>
+            <li className={pf('list__item')}>List Item</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+);
+
+exports.code = (
+<div className='demo-only'>
+  <ul className={pf('list--vertical')}>
+    <li className={pf('list__item')}>Vertical List</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
   <ul className={pf('list--vertical has-block-links')}>
-    <li className={pf('list__item')}><a href="#">Vertical List with block level links</a></li>
-    <li className={pf('list__item')}><a href="#">List Item</a></li>
-    <li className={pf('list__item')}><a href="#">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">Vertical List with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-block-links--space')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-inline-block-links')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-inline-block-links--space')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+  </ul>
+  <ul className={pf('list--vertical')}>
+    <li className={pf('list__item')}>Vertical List with nested vertical lists</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>
+      <ul className={pf('list--vertical is-nested')}>
+        <li className={pf('list__item')}>Nested Vertical List</li>
+        <li className={pf('list__item')}>List Item</li>
+        <li className={pf('list__item')}>
+          <ul className={pf('list--vertical is-nested')}>
+            <li className={pf('list__item')}>Nested Vertical List</li>
+            <li className={pf('list__item')}>List Item</li>
+            <li className={pf('list__item')}>List Item</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>
 );

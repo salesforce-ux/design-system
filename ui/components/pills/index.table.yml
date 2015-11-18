@@ -10,3 +10,26 @@ classes:
     description: Initializes pill label
     required: true
     applied: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>
+  -
+    class: pill__icon
+    description: Initializes pill icon that sits to the left of the label
+    required: true
+    applied: <code>&lt;svg class="icon"&gt;</code>
+  -
+    class: pill__remove
+    description: Initializes remove icon in pill that sits to the right of the label
+    required: true
+    applied: <code>.{{cssPrefix}}button</code>
+  -
+    class: pill__container
+    description: Container to hold pill(s)
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: pill--bare
+    description: Modifier that removes border and background from a pill
+    applied: <code>.{{cssPrefix}}pill</code>
+  -
+    class: pill-container
+    description: Container to hold pills(s)
+    notes: Deprecated

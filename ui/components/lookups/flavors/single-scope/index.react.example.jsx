@@ -25,7 +25,7 @@ module.exports = (
       <label className={pf('form-element__label')} htmlFor="lookup">Accounts</label>
       <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-        <div className={pf('pill-container hide')}></div>
+        <div className={pf('pill__container hide')}></div>
         <input id="lookup" className={pf('input show')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
       </div>
     </div>

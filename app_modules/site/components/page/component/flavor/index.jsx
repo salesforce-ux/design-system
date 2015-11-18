@@ -336,6 +336,7 @@ export default class ComponentFlavor extends React.Component {
           key={tab.key}
           aria-controls={`${flavor.uid}__preview-content`}
           aria-describedby={flavor.uid}
+          innerClass={pf('tabs--default__link')}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
           content={content}
           onClick={this.onPreviewTabClick.bind(this, tab)}
@@ -367,6 +368,7 @@ export default class ComponentFlavor extends React.Component {
         <Tabs.Item
           key={tab.key}
           aria-controls={`${flavor.uid}__code-block--${tab.key}`}
+          innerClass={pf('tabs--default__link')}
           content={content}
           aria-describedby={flavor.uid}>
           <Tabs.Content className={pf('site-code--content scrollable--x')}>

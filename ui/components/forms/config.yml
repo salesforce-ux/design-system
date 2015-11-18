@@ -13,3 +13,4 @@ flavors:
   - validation-state
   - sizing
   - field-level-help
+  - edit-dialog-for-touch

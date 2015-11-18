@@ -1,34 +1,52 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - 
+## Release 0.12.0 - November 13, 2015
 
 **SITE IA**
+- Added Resources > Links
+- Changed tabs to use new refactored tab classes (deprecated)
 
-- Added Resources -> Links
-- 
 **BREAKING CHANGES**
-- Removed default horizontal spacing from buttons in favor of new spacing utilities (see New Components below).
-- Switch sizing utility media queries to use `em` instead of `px`
+- Removed default horizontal spacing from buttons in favor of new spacing utilities (deprecated, see New Components below).
+- Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
 - Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
 - `slds-modal-backdrop` and `slds-modal-backdrop--open` is deprecated in favor of `slds-backdrop` and `slds-backdrop--open` since it is used in other components.
+- Removed icon color from `.slds-input__icon` so that an icon color class is required in addition
 
-** NEW COMPONENTS**
-- Add max-width sizing utilities
-- Add button spacing utilities for stacked and horizontal sets of buttons.
-- Add stretched button utilities for full-width buttons on small form factors.
+**CHANGES**
+- Switched sizing utility media queries to use `em` instead of `px`
+- Updated demo for icons > color and added `slds-text-error` for validation errors
+
+**NEW COMPONENTS**
+- Added initial state of tabs > sales path www.lightningdesignsystem.com/components/tabs#sales-path
+- Added max-width sizing utilities www.lightningdesignsystem.com/utilities/sizing
+- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) www.lightningdesignsystem.com/components/buttons#overview
+- Added stretched button utilities for full-width buttons on small form factors www.lightningdesignsystem.com/components/buttons#overview
 - Dialog Menus for small form factor
-  - Action overflow for touch
-- Add `slds-backdrop` and `slds-backdrop--open` to be used in modals and action overflows for touch.
-- Add mobile dialog menus
+  - Action overflow for touch www.lightningdesignsystem.com/components/menus#action-overflow-for-touch
+- Added Edit dialog form for touch devices www.lightningdesignsystem.com/components/forms#edit-dialog-for-touch
+
+**DEPRECATED in 0.20**
+- Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
+- Name change: Responsive button changed to Horizontal button
+- `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead
+- Descendant selectors on tabs were changed to BEM syntax
+  - `slds-tabs--default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--default__item` instead
+  - `slds-tabs--default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--default__content` instead
+  - `slds-tabs--default > a` deprecated in version 0.12.0, use `slds-tabs--default__link` instead
+  - `slds-tabs--scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--scoped__item` instead
+  - `slds-tabs--scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--scoped__content` instead
+  - `slds-tabs--scoped > a` deprecated in version 0.12.0, use `slds-tabs--scoped__link` instead
+- Decendent selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
 
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
 - Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
 - Stateful button has a `[disabled]` state
-- If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
+- If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-visibility` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
 - Removed interactive dropdowns from page header examples
 - Added Google Analytics

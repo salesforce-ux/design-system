@@ -17,8 +17,17 @@ const pf = componentUtil.prefix;
 exports.preview = (
   <div className='demo-only'>
     <span className={pf('icon__container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="lock" />
+      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
+
+    </span>
+    <span className={pf('icon__container m-right--small')}>
+      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
+    </span>
+    <span className={pf('icon__container m-right--small')}>
+      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
     <span className={pf('icon__container icon-standard-case m-right--small')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
@@ -33,8 +42,16 @@ exports.preview = (
 exports.code = (
   <div className='demo-only'>
     <span className={pf('icon__container')}>
-      <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="lock" />
+      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
+    </span>
+    <span className={pf('icon__container')}>
+      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
+    </span>
+    <span className={pf('icon__container')}>
+      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
     <span className={pf('icon__container icon-standard-case')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />

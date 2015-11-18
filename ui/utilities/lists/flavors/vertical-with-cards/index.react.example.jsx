@@ -10,16 +10,92 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
+const StatefulClass = require('ui/components/lib/stateful.react');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
-module.exports = (
+exports.preview = (
 <div className='demo-only'>
   <ul className={pf('list--vertical has-cards')}>
-    <li className={pf('list__item')}><a href="#">List Item One</a></li>
-    <li className={pf('list__item')}><a href="#">List Item Two</a></li>
-    <li className={pf('list__item')}><a href="#">List Item Three</a></li>
-    <li className={pf('list__item')}><a href="#">List Item Four</a></li>
+    <li className={pf('list__item')}>Vertical List with cards</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-cards--space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}>Vertical List with cards with space</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links--space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-inline-block-links')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-inline-block-links--space')} style={{ marginTop: '2rem' }}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links--space has-list-interactions')} style={{ marginTop: '2rem' }}>
+    <StatefulClass>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space with list item interactions</a></li>
+    </StatefulClass>
+    <StatefulClass>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    </StatefulClass>
+    <StatefulClass>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    </StatefulClass>
+  </ul>
+</div>
+);
+
+exports.code = (
+<div className='demo-only'>
+  <ul className={pf('list--vertical has-cards')}>
+    <li className={pf('list__item')}>Vertical List with cards</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-cards--space')}>
+    <li className={pf('list__item')}>Vertical List with cards with space</li>
+    <li className={pf('list__item')}>List Item</li>
+    <li className={pf('list__item')}>List Item</li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links--space')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-inline-block-links')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-inline-block-links--space')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with inline-block level links with space</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Two</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item Three</a></li>
+  </ul>
+  <ul className={pf('list--vertical has-cards has-block-links--space has-list-interactions')}>
+    <li className={pf('list__item')}><a href="#void">Vertical List with cards with block level links with space with list item interactions</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
+    <li className={pf('list__item')}><a href="#void">List Item</a></li>
   </ul>
 </div>
 );

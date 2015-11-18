@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - November 13, 2015
+## Release 0.12.0 - November 17, 2015
 
 **SITE IA**
 - Added Resources > Links
@@ -28,7 +28,7 @@
   - Action overflow for touch www.lightningdesignsystem.com/components/menus#action-overflow-for-touch
 - Added Edit dialog form for touch devices www.lightningdesignsystem.com/components/forms#edit-dialog-for-touch
 
-**DEPRECATED in 0.20**
+**DEPRECATED**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
 - Name change: Responsive button changed to Horizontal button
 - `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*
 Copyright (c) 2015, salesforce.com, inc. All rights reserved.
 
@@ -16,7 +18,7 @@ window.$A11y = {
    * @param {String[]} checksToRun Array of function names to run. Defaults to run all
    * @param {Boolean} dontShowErrors Whether or not to show error state for error elements
    */
-  checkA11y     : function(domElem, checksToRun, dontShowErrors) {
+  checkA11y       : function(domElem, checksToRun, dontShowErrors) {
     var errorArray = [];
     var index;
     var funcObject;
@@ -52,7 +54,7 @@ window.$A11y = {
 
     return errorArray;
   },
-  errorMessages  : {
+  errorMessages    : {
     "A11Y_DOM_01": "All image tags require the presence of the alt attribute.",
     "A11Y_DOM_02": "Labels are required for all input controls.",
     "A11Y_DOM_03": "Buttons must have non-empty text labels.",
@@ -69,8 +71,8 @@ window.$A11y = {
    * and puts a solid red border around the elements to highlight them
    * @param {Object[]} errorArray An array of objects, each with a String error and an HTMLElement element
    */
-  showErrors    : function(errorArray) {
-    var error  = null;
+  showErrors      : function(errorArray) {
+    var error    = null;
     var errorEls = null;
     var errorMsg = null;
     for(var i = 0; i < errorArray.length; i++) {
@@ -264,7 +266,7 @@ window.$A11y = {
      * @return true if element contains an image with non-empty alt, false otherwise
      */
     _elementContainsImageWithNonEmptyAlt : function(element) {
-      var alt = null;
+      var alt    = null;
       var images = element.getElementsByTagName("img");
 
       if(images.length > 0) {
@@ -370,7 +372,7 @@ window.$A11y = {
 
         //If there are any lingering errors, grab them
         if(tmpErrorArray.length > 0 ){
-          errorArray =  errorArray.concat(tmpErrorArray);
+          errorArray = errorArray.concat(tmpErrorArray);
         }
         return $A11y.util.formatOutput(errorArray, this.tag);
       }
@@ -383,7 +385,7 @@ window.$A11y = {
       "tag"  : "A11Y_DOM_01",
       "func" : function(domElem) {
         var errorArray = [];
-        var images   = $A11y.util._getElementsByTagName("img", domElem);
+        var images     = $A11y.util._getElementsByTagName("img", domElem);
 
         for(var i = 0; i < images.length; i++) {
           var image = images[i];
@@ -412,7 +414,7 @@ window.$A11y = {
       "func" : function(domElem) {
         var errorArray = [];
         var formFields = domElem.querySelectorAll("input, select, textarea");
-        var labels   = domElem.querySelectorAll("label");
+        var labels     = domElem.querySelectorAll("label");
         var formField = null;
         var type = null;
         var ancestor = null;
@@ -454,11 +456,11 @@ window.$A11y = {
       "tag"  : "A11Y_DOM_03",
       "func" : function(domElem) {
         var errorArray   = [];
-        var buttons    = $A11y.util._getElementsByTagName("button", domElem);
+        var buttons      = $A11y.util._getElementsByTagName("button", domElem);
 
-        var button    = null;
-        var images    = null;
-        var imageAlt  = null;
+        var button      = null;
+        var images      = null;
+        var imageAlt    = null;
         var ariaLabel   = null;
         var foundText   = false;
         var text = null;
@@ -490,7 +492,7 @@ window.$A11y = {
       "tag"  : "A11Y_DOM_04",
       "func" :  function(domElem){
         var errorArray = [];
-        var anchors  = $A11y.util._getElementsByTagName("a", domElem);
+        var anchors    = $A11y.util._getElementsByTagName("a", domElem);
 
         var anchor = null;
         for(var i = 0; i < anchors.length; i++) {
@@ -512,9 +514,9 @@ window.$A11y = {
       "tag" : "A11Y_DOM_06",
       "func" : function(domElem) {
         var errorArray = [];
-        var iframes  = $A11y.util._getElementsByTagName("iframe", domElem);
-        var iframe   = null;
-        var title    = null;
+        var iframes    = $A11y.util._getElementsByTagName("iframe", domElem);
+        var iframe     = null;
+        var title      = null;
 
         for(var i = 0; i < iframes.length; i++) {
           iframe = iframes[i];
@@ -643,10 +645,12 @@ window.$A11y = {
         if(!$A11y.util._isUndefinedOrNull(allElements)) {
           for(var i = 0; i < allElements.length; i++) {
             if(allElements[i].hasAttribute("onclick")) {
-              if(allElements[i].tagName != "A" &&
+              if(
+                allElements[i].tagName != "A" &&
                 allElements[i].tagName != "BUTTON" &&
                 allElements[i].tagName != "INPUT" &&
-                allElements[i].tagName != "CANVAS") {
+                allElements[i].tagName != "CANVAS"
+              ) {
                 errorArray.push(allElements[i]);
               }
             }

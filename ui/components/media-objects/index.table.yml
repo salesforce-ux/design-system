@@ -32,4 +32,3 @@ classes:
     class: media--responsive
     description: <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__body</code> stack on smaller screens
     applied: <code>.{{cssPrefix}}media</code>
-

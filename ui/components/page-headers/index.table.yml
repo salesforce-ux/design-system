@@ -5,4 +5,3 @@ classes:
     description: Creates margins around the detail section of record home
     applied: <code>div</code>
     notes: Only the record home page header contains this detail area
-  

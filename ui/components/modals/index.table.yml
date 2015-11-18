@@ -80,4 +80,3 @@ classes:
     applied: <code>.{{cssPrefix}}modal-backdrop</code>
     required: true
     notes: Deprecated
-

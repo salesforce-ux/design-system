@@ -33,13 +33,13 @@
 .#{$css-prefix}col--padded {
   padding: {
     right: $spacing-large;
-     left: $spacing-large;
+    left: $spacing-large;
   }
 }
 
 .#{$css-prefix}col--padded > .#{$css-prefix}grid {
   margin: {
     right: ($spacing-large * -1);
-     left: ($spacing-large * -1);
+    left: ($spacing-large * -1);
   }
 }

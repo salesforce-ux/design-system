@@ -20,14 +20,14 @@
   @include deprecate("0.20.0") {
 
     .#{$css-prefix}tabs__item {
-        @include tabs-item;
+      @include tabs-item;
 
-        + .#{$css-prefix}tabs__item {
-          @include mq-medium-min {
-            margin-left: $spacing-large;
-          }
+      + .#{$css-prefix}tabs__item {
+        @include mq-medium-min {
+          margin-left: $spacing-large;
         }
-      
+      }
+
       > a {
         @include tabs-link;
         height: $line-height-tab;
@@ -51,7 +51,7 @@
           color: $color-text-tab-label-selected;
           box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
         }
-      } 
+      }
 
       &.#{$css-prefix}active a {
         border-color: $color-text-tab-label-selected;
@@ -63,7 +63,7 @@
       }
     }
 
-     > .#{$css-prefix}tabs__content {
+    > .#{$css-prefix}tabs__content {
       @include tabs-content;
     }
   }
@@ -115,4 +115,4 @@
   &:focus {
     color: $color-text-tab-label-selected;
   }
-} 
+}

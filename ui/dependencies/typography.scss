@@ -17,7 +17,7 @@
     font-family: "Salesforce Sans";
 
     src: url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff2') format('woff2'),
-         url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff')  format('woff');
+    url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff') format('woff');
 
 
     font: {

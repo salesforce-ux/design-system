@@ -1,10 +1,12 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - November 18, 2015
+## Release 1.0.0 (internal only) - November 18, 2015 
 
-**NEW COMPONENTS (internal only)**
+**NEW COMPONENTS**
 - Added the Docked Composer
+
+## Release 0.12.0 - November 18, 2015
 
 **SITE IA**
 - Added Resources > Links

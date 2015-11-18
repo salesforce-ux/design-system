@@ -49,4 +49,4 @@ classes:
     required: true
     applied: <code>svg</code>
     notes: This is added to the icon inside the <code>.{{cssPrefix}}media__figure</code> in
-     <code>.{{cssPrefix}}media--timeline</code>
+      <code>.{{cssPrefix}}media--timeline</code>

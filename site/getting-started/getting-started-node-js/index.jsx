@@ -65,7 +65,7 @@ export default (
         <h2 id="step-3" className="site-text-heading--large">Step 3: Download the {globals.displayName}</h2>
 
         <p>Download the <Link to="/resources/downloads">Design System</Link> zip file
-         and extract the contents to your <code>DEV_DIRECTORY</code>.</p>
+          and extract the contents to your <code>DEV_DIRECTORY</code>.</p>
 
         <p>You should now have a folder called <code>{moduleName}-{version.sldsVersion}</code></p>
 
@@ -90,7 +90,7 @@ cp -R ${moduleName}-${version.sldsVersion}/assets getting-started-node-js/www
         <ul>
           <li>
             <code>getting-started-node-js/</code>
-             <ul>
+            <ul>
               <li><code>salesforce-design-system-vXXX/</code></li>
               <li>
                 <code>www/</code>

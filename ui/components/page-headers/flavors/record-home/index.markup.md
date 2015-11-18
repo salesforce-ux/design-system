@@ -1,7 +1,7 @@
 Page header record home contains up to four
- compact layout fields. They're contained in the `.{{cssPrefix}}page-header__detail-row`
-  div. That div contains the top and bottom spacing needed for this version of
-   the page header.
+compact layout fields. They're contained in the `.{{cssPrefix}}page-header__detail-row`
+div. That div contains the top and bottom spacing needed for this version of
+the page header.
 
 When text is truncated, the full text should be placed in
 a tooltip on hover (currently shown in the title
@@ -23,4 +23,3 @@ As shown in Field 3, web addresses and email addresses should be parsed and disp
 When text is truncated, display full field text in browser tooltip on hover.
 
 Display addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.{{cssPrefix}}truncate` class. Display the full address via browser tooltip.
-

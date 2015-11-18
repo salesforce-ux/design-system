@@ -49,13 +49,13 @@ module.exports = (
       <div className={pf('col no-flex align-bottom')}>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
-           Edit
+            Edit
           </Button>
           <Button flavor="neutral">
-           Delete
+            Delete
           </Button>
           <Button flavor="neutral">
-           Clone
+            Clone
           </Button>
           <div className={pf('button--last')}>
             <ButtonIcon
@@ -116,4 +116,3 @@ module.exports = (
     </Anchor.DetailRow>
   </Anchor>
 );
-

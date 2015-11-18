@@ -18,7 +18,7 @@ import AccessibleList from 'ui/components/lib/accessible-list.react';
 import classNames from 'classnames';
 
 class TabContent extends React.Component {
-  static propTypes = { 
+  static propTypes = {
     current: PT.bool,
     flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
   };
@@ -42,7 +42,7 @@ class TabContent extends React.Component {
 
 
 class TabItem extends React.Component {
-  static propTypes = { 
+  static propTypes = {
     title: PT.string,
     content: PT.node,
     flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
@@ -73,7 +73,7 @@ renderCustom(tabIndex) {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
     const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {active: this.props.current})));
     const tabIndex = this.props.current ? 0 : -1;
-    
+
     return (
       <li className={className} {...props} role='presentation'>
         {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
@@ -83,7 +83,7 @@ renderCustom(tabIndex) {
 }
 
 class TabItemOverflow extends React.Component {
-  static propTypes = { 
+  static propTypes = {
     title: PT.string,
     content: PT.node,
     flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')

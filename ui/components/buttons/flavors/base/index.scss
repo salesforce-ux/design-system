@@ -51,7 +51,7 @@
     color: $color-text-link-active;
   }
 
-   &[disabled] {
+  &[disabled] {
     color: $color-text-button-default-disabled;
   }
 
@@ -69,7 +69,7 @@
     margin-left: $spacing-xx-small;
   }
 
-   @include deprecate("0.20.0") {
+  @include deprecate("0.20.0") {
 
     & + .#{$css-prefix}button {
       margin-left: $spacing-xx-small;

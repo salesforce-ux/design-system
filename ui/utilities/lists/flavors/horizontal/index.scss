@@ -15,7 +15,7 @@
 
 .#{$css-prefix}list--horizontal-large {
 
-   > .#{$css-prefix}list__item > a {
-     padding: $spacing-small $spacing-medium;
+  > .#{$css-prefix}list__item > a {
+    padding: $spacing-small $spacing-medium;
   }
 }

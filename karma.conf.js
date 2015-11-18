@@ -89,7 +89,7 @@ module.exports = function(config) {
 
       plugins: [
         new webpack.DefinePlugin({
-          'process.env': _({ 
+          'process.env': _({
             'DEFAULT_USER_TYPE': 'external'
           }).mapValues(function (value) { return '"' + value + '"' }).value()
         })

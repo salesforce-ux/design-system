@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - November 17, 2015
+## Release 0.12.0 - November 18, 2015
 
 **SITE IA**
 - Added Resources > Links

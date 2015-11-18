@@ -85,8 +85,8 @@ describe(`React`, () => {
       cmp = renderIntoDocument(
           <Dropdown>
             <Dropdown.Header>
-               <Dropdown.Title>Filterless</Dropdown.Title>
-               <Dropdown.Filter placeholder='tacos' />
+              <Dropdown.Title>Filterless</Dropdown.Title>
+              <Dropdown.Filter placeholder='tacos' />
             </Dropdown.Header>
             <Dropdown.List>
               <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>

@@ -23,7 +23,7 @@ export default (
       <p>Before selecting a layout, review these guidelines:</p>
       <ul>
         <li><strong>Know your use case.</strong> Understand how the information on the page will be used.</li>
-        <li><strong>Prioritize your content.</strong> Organize your content to highlight the most important information. </li>
+        <li><strong>Prioritize your content.</strong> Organize your content to highlight the most important information.</li>
         <li><strong>Group related content together.</strong> Make it efficient for users to work with the content.</li>
       </ul>
 
@@ -70,9 +70,9 @@ export default (
           <p>A list layout consists of a simple page header and body that allows users to switch between predefined lists of items. Common controls include sorting, filtering, charting, and actions for the item type. Users can also switch between list layouts using the “Display” menu.</p>
           <p>Choose the types of list layout that best supports your use case:</p>
           <ul>
-            <li><strong>Table</strong> — Best for managing large sets of data and comparing values </li>
-            <li><strong>Board</strong> — Use to monitor a workflow or milestones where users can drag cards between stages to indicate progress </li>
-            <li><strong>Master-Detail</strong> — Allows users to see and edit the details of an item on one screen </li>
+            <li><strong>Table</strong> — Best for managing large sets of data and comparing values</li>
+            <li><strong>Board</strong> — Use to monitor a workflow or milestones where users can drag cards between stages to indicate progress</li>
+            <li><strong>Master-Detail</strong> — Allows users to see and edit the details of an item on one screen</li>
           </ul>
         </div>
 

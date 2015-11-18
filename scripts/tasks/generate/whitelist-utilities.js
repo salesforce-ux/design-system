@@ -17,8 +17,8 @@ import gutil from 'gulp-util';
 import through from 'through2';
 import css from 'css';
 import { allowPrefixedClasses, fixParenthesized, onlyClasses,
-       removeAttrs, removeNonWordSuffix,
-       removePrefix, removePseudo, splitParts } from './util';
+        removeAttrs, removeNonWordSuffix,
+        removePrefix, removePseudo, splitParts } from './util';
 
 const CSS_SOURCE = path.resolve(__PATHS__.generated, 'utilities.css');
 const COMPONENTS_MAP = path.resolve(__PATHS__.generated, 'ui.js');

@@ -12,73 +12,73 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 /* eslint-disable */
 
 $(document).ready(function() {
-   var dp1 = new datepicker('dp1', 'date', true);
+  var dp1 = new datepicker('dp1', 'date', true);
 
-   $('#bn_date').click(function(e) {
-      dp1.showDlg();
+  $('#bn_date').click(function(e) {
+    dp1.showDlg();
 
-      e.stopPropagation();
-      return false;
-   });
+    e.stopPropagation();
+    return false;
+  });
 });
 
 function datepicker(id, target, modal) {
 
 
-   this.$id = $('#' + id); // element to attach widget to
-   this.$monthObj = this.$id.find('#month');
-   this.$prev = this.$id.find('#bn_prev');
-   this.$next = this.$id.find('#bn_next');
-   this.$grid = this.$id.find('#cal');
-   this.$target = $('#' + target); // div or text box that will receive the selected date string and focus (if modal)
-   this.bModal = modal; // true if datepicker should appear in a modal dialog box.
+  this.$id = $('#' + id); // element to attach widget to
+  this.$monthObj = this.$id.find('#month');
+  this.$prev = this.$id.find('#bn_prev');
+  this.$next = this.$id.find('#bn_next');
+  this.$grid = this.$id.find('#cal');
+  this.$target = $('#' + target); // div or text box that will receive the selected date string and focus (if modal)
+  this.bModal = modal; // true if datepicker should appear in a modal dialog box.
 
-   this.monthNames = ['January', 'February', 'March', 'April','May','June',
-         'July', 'August', 'September', 'October', 'November', 'December'];
+  this.monthNames = ['January', 'February', 'March', 'April','May','June',
+      'July', 'August', 'September', 'October', 'November', 'December'];
 
-   this.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  this.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-   this.dateObj = new Date();
+  this.dateObj = new Date();
 
-   this.curYear = this.dateObj.getFullYear();
-   this.year = this.curYear;
+  this.curYear = this.dateObj.getFullYear();
+  this.year = this.curYear;
 
-   this.curMonth = this.dateObj.getMonth();
-   this.month = this.curMonth;
-   this.currentDate = true;
+  this.curMonth = this.dateObj.getMonth();
+  this.month = this.curMonth;
+  this.currentDate = true;
 
-   this.date = this.dateObj.getDate();
+  this.date = this.dateObj.getDate();
 
-   this.keys = {
-                tab:       9,
-                enter:    13,
-                esc:      27,
-                space:    32,
-                pageup:   33,
-                pagedown: 34,
-                end:      35,
-                home:     36,
-                left:     37,
-                up:       38,
-                right:    39,
-                down:     40
-               };
+  this.keys = {
+    tab:       9,
+    enter:    13,
+    esc:      27,
+    space:    32,
+    pageup:   33,
+    pagedown: 34,
+    end:      35,
+    home:     36,
+    left:     37,
+    up:       38,
+    right:    39,
+    down:     40
+  };
 
-   // display the current month
-   this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
+  // display the current month
+  this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
 
-   // populate the calendar grid
-   this.popGrid();
+  // populate the calendar grid
+  this.popGrid();
 
-   // update the table's activedescdendant to point to the current day
-   this.$grid.attr('aria-activedescendant', this.$grid.find('.today').attr('id'));
+  // update the table's activedescdendant to point to the current day
+  this.$grid.attr('aria-activedescendant', this.$grid.find('.today').attr('id'));
 
-   this.bindHandlers();
+  this.bindHandlers();
 
-   // hide dialog if in modal mode
-   if (this.bModal == true) {
-      this.$id.attr('aria-hidden', 'true');
-   }
+  // hide dialog if in modal mode
+  if (this.bModal == true) {
+    this.$id.attr('aria-hidden', 'true');
+  }
 }
 
 //
@@ -89,61 +89,61 @@ function datepicker(id, target, modal) {
 //
 datepicker.prototype.popGrid = function() {
 
-   var numDays = this.calcNumDays(this.year, this.month);
-   var startWeekday = this.calcStartWeekday(this.year, this.month);
-   var weekday = 0;
-   var curDay = 1;
-   var rowCount = 1;
-   var $tbody = this.$grid.find('tbody');
+  var numDays = this.calcNumDays(this.year, this.month);
+  var startWeekday = this.calcStartWeekday(this.year, this.month);
+  var weekday = 0;
+  var curDay = 1;
+  var rowCount = 1;
+  var $tbody = this.$grid.find('tbody');
 
-   var gridCells = '\t<tr id="row1">\n';
+  var gridCells = '\t<tr id="row1">\n';
 
-   // clear the grid
-   $tbody.empty();
-   $('#msg').empty();
+  // clear the grid
+  $tbody.empty();
+  $('#msg').empty();
 
-   // Insert the leading empty cells
-   for (weekday = 0; weekday < startWeekday; weekday++) {
+  // Insert the leading empty cells
+  for (weekday = 0; weekday < startWeekday; weekday++) {
 
-      gridCells += '\t\t<td class="empty">&nbsp;</td>\n';
-   }
+    gridCells += '\t\t<td class="empty">&nbsp;</td>\n';
+  }
 
-   // insert the days of the month.
-   for (curDay = 1; curDay <= numDays; curDay++) {
+  // insert the days of the month.
+  for (curDay = 1; curDay <= numDays; curDay++) {
 
-      if (curDay == this.date && this.currentDate == true) {
+    if (curDay == this.date && this.currentDate == true) {
 
-         gridCells += '\t\t<td id="day' + curDay + '" class="today" headers="row' +
-                      rowCount + ' ' + this.dayNames[weekday] + '" role="gridcell" aria-selected="false">' + curDay + '</td>';
+      gridCells += '\t\t<td id="day' + curDay + '" class="today" headers="row';
+      gridCells += rowCount + ' ' + this.dayNames[weekday] + '" role="gridcell" aria-selected="false">' + curDay + '</td>';
 
-      }
-      else {
-         gridCells += '\t\t<td id="day' + curDay + '" headers="row' +
-                      rowCount + ' ' + this.dayNames[weekday] + '" role="gridcell" aria-selected="false">' + curDay + '</td>';
-      }
+    }
+    else {
+      gridCells += '\t\t<td id="day' + curDay + '" headers="row';
+      gridCells += rowCount + ' ' + this.dayNames[weekday] + '" role="gridcell" aria-selected="false">' + curDay + '</td>';
+    }
 
 
-      if (weekday == 6 && curDay < numDays) {
-         // This was the last day of the week, close it out
-         // and begin a new one
-         gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '">\n';
-         rowCount++;
-         weekday = 0;
-      }
-      else {
-         weekday++;
-      }
-   }
+    if (weekday == 6 && curDay < numDays) {
+      // This was the last day of the week, close it out
+      // and begin a new one
+      gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '">\n';
+      rowCount++;
+      weekday = 0;
+    }
+    else {
+      weekday++;
+    }
+  }
 
-   // Insert any trailing empty cells
-   for (weekday; weekday < 7; weekday++) {
+  // Insert any trailing empty cells
+  for (weekday; weekday < 7; weekday++) {
 
-      gridCells += '\t\t<td class="empty">&nbsp;</td>\n';
-   }
+    gridCells += '\t\t<td class="empty">&nbsp;</td>\n';
+  }
 
-   gridCells += '\t</tr>';
+  gridCells += '\t</tr>';
 
-   $tbody.append(gridCells);
+  $tbody.append(gridCells);
 }
 
 //
@@ -153,7 +153,7 @@ datepicker.prototype.popGrid = function() {
 //
 datepicker.prototype.calcNumDays = function(year, month) {
 
-   return 32 - new Date(year, month, 32).getDate();
+  return 32 - new Date(year, month, 32).getDate();
 }
 
 //
@@ -164,7 +164,7 @@ datepicker.prototype.calcNumDays = function(year, month) {
 //
 datepicker.prototype.calcStartWeekday = function(year, month) {
 
-   return  new Date(year, month, 1).getDay();
+  return  new Date(year, month, 1).getDay();
 
 } // end calcStartWeekday()
 
@@ -177,35 +177,35 @@ datepicker.prototype.calcStartWeekday = function(year, month) {
 // @return N/A
 //
 datepicker.prototype.showPrevMonth = function(offset) {
-   // show the previous month
-   if (this.month == 0) {
-      this.month = 11;
-      this.year--;
-   }
-   else {
-      this.month--;
-   }
+  // show the previous month
+  if (this.month == 0) {
+    this.month = 11;
+    this.year--;
+  }
+  else {
+    this.month--;
+  }
 
-   if (this.month != this.curMonth || this.year != this.curYear) {
-      this.currentDate = false;
-   }
-   else {
-      this.currentDate = true;
-   }
+  if (this.month != this.curMonth || this.year != this.curYear) {
+    this.currentDate = false;
+  }
+  else {
+    this.currentDate = true;
+  }
 
-   // populate the calendar grid
-   this.popGrid();
+  // populate the calendar grid
+  this.popGrid();
 
-   this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
+  this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
 
-   // if offset was specified, set focus on the last day - specified offset
-   if (offset != null) {
-      var numDays = this.calcNumDays(this.year, this.month);
-      var day = 'day' + (numDays - offset);
+  // if offset was specified, set focus on the last day - specified offset
+  if (offset != null) {
+    var numDays = this.calcNumDays(this.year, this.month);
+    var day = 'day' + (numDays - offset);
 
-      this.$grid.attr('aria-activedescendant', day);
-      $('#' + day).addClass('focus').attr('aria-selected', 'true');
-   }
+    this.$grid.attr('aria-activedescendant', day);
+    $('#' + day).addClass('focus').attr('aria-selected', 'true');
+  }
 
 } // end showPrevMonth()
 
@@ -219,34 +219,34 @@ datepicker.prototype.showPrevMonth = function(offset) {
 //
 datepicker.prototype.showNextMonth = function(offset) {
 
-   // show the next month
-   if (this.month == 11) {
-      this.month = 0;
-      this.year++;
-   }
-   else {
-      this.month++;
-   }
+  // show the next month
+  if (this.month == 11) {
+    this.month = 0;
+    this.year++;
+  }
+  else {
+    this.month++;
+  }
 
-   if (this.month != this.curMonth || this.year != this.curYear) {
-      this.currentDate = false;
-   }
-   else {
-      this.currentDate = true;
-   }
+  if (this.month != this.curMonth || this.year != this.curYear) {
+    this.currentDate = false;
+  }
+  else {
+    this.currentDate = true;
+  }
 
-   // populate the calendar grid
-   this.popGrid();
+  // populate the calendar grid
+  this.popGrid();
 
-   this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
+  this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
 
-      // if offset was specified, set focus on the first day + specified offset
-      if (offset != null) {
-         var day = 'day' + offset;
+    // if offset was specified, set focus on the first day + specified offset
+    if (offset != null) {
+      var day = 'day' + offset;
 
-         this.$grid.attr('aria-activedescendant', day);
-         $('#' + day).addClass('focus').attr('aria-selected', 'true');
-      }
+      this.$grid.attr('aria-activedescendant', day);
+      $('#' + day).addClass('focus').attr('aria-selected', 'true');
+    }
 
 } // end showNextMonth()
 
@@ -257,20 +257,20 @@ datepicker.prototype.showNextMonth = function(offset) {
 //
 datepicker.prototype.showPrevYear = function() {
 
-      // decrement the year
-      this.year--;
+    // decrement the year
+    this.year--;
 
-      if (this.month != this.curMonth || this.year != this.curYear) {
-         this.currentDate = false;
-      }
-      else {
-         this.currentDate = true;
-      }
+    if (this.month != this.curMonth || this.year != this.curYear) {
+      this.currentDate = false;
+    }
+    else {
+      this.currentDate = true;
+    }
 
-      // populate the calendar grid
-      this.popGrid();
+    // populate the calendar grid
+    this.popGrid();
 
-      this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
+    this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
 
 } // end showPrevYear()
 
@@ -281,20 +281,20 @@ datepicker.prototype.showPrevYear = function() {
 //
 datepicker.prototype.showNextYear = function() {
 
-   // increment the year
-   this.year++;
+  // increment the year
+  this.year++;
 
-   if (this.month != this.curMonth || this.year != this.curYear) {
-      this.currentDate = false;
-   }
-   else {
-      this.currentDate = true;
-   }
+  if (this.month != this.curMonth || this.year != this.curYear) {
+    this.currentDate = false;
+  }
+  else {
+    this.currentDate = true;
+  }
 
-   // populate the calendar grid
-   this.popGrid();
+  // populate the calendar grid
+  this.popGrid();
 
-   this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
+  this.$monthObj.html(this.monthNames[this.month] + ' ' + this.year);
 
 } // end showNextYear()
 
@@ -305,46 +305,46 @@ datepicker.prototype.showNextYear = function() {
 //
 datepicker.prototype.bindHandlers = function() {
 
-   var thisObj = this;
+  var thisObj = this;
 
-   ////////////////////// bind button handlers //////////////////////////////////
-   this.$prev.click(function(e) {
-      return thisObj.handlePrevClick(e);
-   });
+  ////////////////////// bind button handlers //////////////////////////////////
+  this.$prev.click(function(e) {
+    return thisObj.handlePrevClick(e);
+  });
 
-   this.$next.click(function(e) {
-      return thisObj.handleNextClick(e);
-   });
+  this.$next.click(function(e) {
+    return thisObj.handleNextClick(e);
+  });
 
-   this.$prev.keydown(function(e) {
-      return thisObj.handlePrevKeyDown(e);
-   });
+  this.$prev.keydown(function(e) {
+    return thisObj.handlePrevKeyDown(e);
+  });
 
-   this.$next.keydown(function(e) {
-      return thisObj.handleNextKeyDown(e);
-   });
+  this.$next.keydown(function(e) {
+    return thisObj.handleNextKeyDown(e);
+  });
 
-   ///////////// bind grid handlers //////////////
+  ///////////// bind grid handlers //////////////
 
-   this.$grid.keydown(function(e) {
-      return thisObj.handleGridKeyDown(e);
-   });
+  this.$grid.keydown(function(e) {
+    return thisObj.handleGridKeyDown(e);
+  });
 
-   this.$grid.keypress(function(e) {
-      return thisObj.handleGridKeyPress(e);
-   });
+  this.$grid.keypress(function(e) {
+    return thisObj.handleGridKeyPress(e);
+  });
 
-   this.$grid.focus(function(e) {
-      return thisObj.handleGridFocus(e);
-   });
+  this.$grid.focus(function(e) {
+    return thisObj.handleGridFocus(e);
+  });
 
-   this.$grid.blur(function(e) {
-      return thisObj.handleGridBlur(e);
-   });
+  this.$grid.blur(function(e) {
+    return thisObj.handleGridBlur(e);
+  });
 
-   this.$grid.delegate('td', 'click', function(e) {
-      return thisObj.handleGridClick(this, e);
-   });
+  this.$grid.delegate('td', 'click', function(e) {
+    return thisObj.handleGridClick(this, e);
+  });
 
 } // end bindHandlers();
 
@@ -357,24 +357,24 @@ datepicker.prototype.bindHandlers = function() {
 //
 datepicker.prototype.handlePrevClick = function(e) {
 
-   var active = this.$grid.attr('aria-activedescendant');
+  var active = this.$grid.attr('aria-activedescendant');
 
-   if (e.ctrlKey) {
-      this.showPrevYear();
-   }
-   else {
-      this.showPrevMonth();
-   }
+  if (e.ctrlKey) {
+    this.showPrevYear();
+  }
+  else {
+    this.showPrevMonth();
+  }
 
-   if (this.currentDate == false) {
-      this.$grid.attr('aria-activedescendant', 'day1');
-   }
-   else {
-      this.$grid.attr('aria-activedescendant', active);
-   }
+  if (this.currentDate == false) {
+    this.$grid.attr('aria-activedescendant', 'day1');
+  }
+  else {
+    this.$grid.attr('aria-activedescendant', active);
+  }
 
-   e.stopPropagation();
-   return false;
+  e.stopPropagation();
+  return false;
 
 } // end handlePrevClick()
 
@@ -387,24 +387,24 @@ datepicker.prototype.handlePrevClick = function(e) {
 //
 datepicker.prototype.handleNextClick = function(e) {
 
-   var active = this.$grid.attr('aria-activedescendant');
+  var active = this.$grid.attr('aria-activedescendant');
 
-   if (e.ctrlKey) {
-      this.showNextYear();
-   }
-   else {
-      this.showNextMonth();
-   }
+  if (e.ctrlKey) {
+    this.showNextYear();
+  }
+  else {
+    this.showNextMonth();
+  }
 
-   if (this.currentDate == false) {
-      this.$grid.attr('aria-activedescendant', 'day1');
-   }
-   else {
-      this.$grid.attr('aria-activedescendant', active);
-   }
+  if (this.currentDate == false) {
+    this.$grid.attr('aria-activedescendant', 'day1');
+  }
+  else {
+    this.$grid.attr('aria-activedescendant', active);
+  }
 
-   e.stopPropagation();
-   return false;
+  e.stopPropagation();
+  return false;
 
 } // end handleNextClick()
 
@@ -417,39 +417,39 @@ datepicker.prototype.handleNextClick = function(e) {
 //
 datepicker.prototype.handlePrevKeyDown = function(e) {
 
-   if (e.altKey) {
-      return true;
-   }
+  if (e.altKey) {
+    return true;
+  }
 
-   switch (e.keyCode) {
-      case this.keys.tab: {
-         if (this.bModal == false || !e.shiftKey || e.ctrlKey) {
-            return true;
-         }
-
-         this.$grid.focus();
-         e.stopPropagation();
-         return false;
+  switch (e.keyCode) {
+    case this.keys.tab: {
+      if (this.bModal == false || !e.shiftKey || e.ctrlKey) {
+        return true;
       }
-      case this.keys.enter:
-      case this.keys.space: {
-         if (e.shiftKey) {
-            return true;
-         }
 
-         if (e.ctrlKey) {
-            this.showPrevYear();
-         }
-         else {
-            this.showPrevMonth();
-         }
-
-         e.stopPropagation();
-         return false;
+      this.$grid.focus();
+      e.stopPropagation();
+      return false;
+    }
+    case this.keys.enter:
+    case this.keys.space: {
+      if (e.shiftKey) {
+        return true;
       }
-   }
 
-   return true;
+      if (e.ctrlKey) {
+        this.showPrevYear();
+      }
+      else {
+        this.showPrevMonth();
+      }
+
+      e.stopPropagation();
+      return false;
+    }
+  }
+
+  return true;
 
 } // end handlePrevKeyDown()
 
@@ -462,27 +462,27 @@ datepicker.prototype.handlePrevKeyDown = function(e) {
 //
 datepicker.prototype.handleNextKeyDown = function(e) {
 
-   if (e.altKey) {
-      return true;
-   }
+  if (e.altKey) {
+    return true;
+  }
 
-   switch (e.keyCode) {
-      case this.keys.enter:
-      case this.keys.space: {
+  switch (e.keyCode) {
+    case this.keys.enter:
+    case this.keys.space: {
 
-         if (e.ctrlKey) {
-            this.showNextYear();
-         }
-         else {
-            this.showNextMonth();
-         }
-
-         e.stopPropagation();
-         return false;
+      if (e.ctrlKey) {
+        this.showNextYear();
       }
-   }
+      else {
+        this.showNextMonth();
+      }
 
-   return true;
+      e.stopPropagation();
+      return false;
+    }
+  }
+
+  return true;
 
 } // end handleNextKeyDown()
 
@@ -495,239 +495,239 @@ datepicker.prototype.handleNextKeyDown = function(e) {
 //
 datepicker.prototype.handleGridKeyDown = function(e) {
 
-      var $rows = this.$grid.find('tbody tr');
-      var $curDay = $('#' + this.$grid.attr('aria-activedescendant'));
-      var $days = this.$grid.find('td').not('.empty');
-      var $curRow = $curDay.parent();
+    var $rows = this.$grid.find('tbody tr');
+    var $curDay = $('#' + this.$grid.attr('aria-activedescendant'));
+    var $days = this.$grid.find('td').not('.empty');
+    var $curRow = $curDay.parent();
 
-      if (e.altKey) {
-         return true;
-      }
-
-      switch(e.keyCode) {
-         case this.keys.tab: {
-
-            if (this.bModal == true) {
-               if (e.shiftKey) {
-                  this.$next.focus();
-               }
-               else {
-                  this.$prev.focus();
-               }
-               e.stopPropagation()
-               return false;
-            }
-            break;
-         }
-         case this.keys.enter:
-         case this.keys.space: {
-
-            if (e.ctrlKey) {
-               return true;
-            }
-
-            // update the target box
-            this.$target.val((this.month < 9 ? '0' : '') + (this.month+1) + '/' + $curDay.html() + '/' + this.year);
-
-            // fall through
-         }
-         case this.keys.esc: {
-            // dismiss the dialog box
-            this.hideDlg();
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.left: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            var dayIndex = $days.index($curDay) - 1;
-            var $prevDay = null;
-
-            if (dayIndex >= 0) {
-               $prevDay = $days.eq(dayIndex);
-
-               $curDay.removeClass('focus').attr('aria-selected', 'false');
-               $prevDay.addClass('focus').attr('aria-selected', 'true');
-
-               this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
-            }
-            else {
-               this.showPrevMonth(0);
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.right: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            var dayIndex = $days.index($curDay) + 1;
-            var $nextDay = null;
-
-            if (dayIndex < $days.length) {
-               $nextDay = $days.eq(dayIndex);
-               $curDay.removeClass('focus').attr('aria-selected', 'false');
-               $nextDay.addClass('focus').attr('aria-selected', 'true');
-
-               this.$grid.attr('aria-activedescendant', $nextDay.attr('id'));
-            }
-            else {
-               // move to the next month
-               this.showNextMonth(1);
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.up: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            var dayIndex = $days.index($curDay) - 7;
-            var $prevDay = null;
-
-            if (dayIndex >= 0) {
-               $prevDay = $days.eq(dayIndex);
-
-               $curDay.removeClass('focus').attr('aria-selected', 'false');
-               $prevDay.addClass('focus').attr('aria-selected', 'true');
-
-               this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
-            }
-            else {
-               // move to appropriate day in previous month
-               dayIndex = 6 - $days.index($curDay);
-
-               this.showPrevMonth(dayIndex);
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.down: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            var dayIndex = $days.index($curDay) + 7;
-            var $prevDay = null;
-
-            if (dayIndex < $days.length) {
-               $prevDay = $days.eq(dayIndex);
-
-               $curDay.removeClass('focus').attr('aria-selected', 'false');
-               $prevDay.addClass('focus').attr('aria-selected', 'true');
-
-               this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
-            }
-            else {
-               // move to appropriate day in next month
-               dayIndex = 8 - ($days.length - $days.index($curDay));
-
-               this.showNextMonth(dayIndex);
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.pageup: {
-            var active = this.$grid.attr('aria-activedescendant');
-
-
-            if (e.shiftKey) {
-               return true;
-            }
-
-
-            if (e.ctrlKey) {
-               this.showPrevYear();
-            }
-            else {
-               this.showPrevMonth();
-            }
-
-            if ($('#' + active).attr('id') == undefined) {
-               var lastDay = 'day' + this.calcNumDays(this.year, this.month);
-               $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
-            }
-            else {
-               $('#' + active).addClass('focus').attr('aria-selected', 'true');
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.pagedown: {
-            var active = this.$grid.attr('aria-activedescendant');
-
-
-            if (e.shiftKey) {
-               return true;
-            }
-
-            if (e.ctrlKey) {
-               this.showNextYear();
-            }
-            else {
-               this.showNextMonth();
-            }
-
-            if ($('#' + active).attr('id') == undefined) {
-               var lastDay = 'day' + this.calcNumDays(this.year, this.month);
-               $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
-            }
-            else {
-               $('#' + active).addClass('focus').attr('aria-selected', 'true');
-            }
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.home: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            $curDay.removeClass('focus').attr('aria-selected', 'false');
-
-            $('#day1').addClass('focus').attr('aria-selected', 'true');
-
-            this.$grid.attr('aria-activedescendant', 'day1');
-
-            e.stopPropagation();
-            return false;
-         }
-         case this.keys.end: {
-
-            if (e.ctrlKey || e.shiftKey) {
-               return true;
-            }
-
-            var lastDay = 'day' + this.calcNumDays(this.year, this.month);
-
-            $curDay.removeClass('focus').attr('aria-selected', 'false');
-
-            $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
-
-            this.$grid.attr('aria-activedescendant', lastDay);
-
-            e.stopPropagation();
-            return false;
-         }
-      }
-
+    if (e.altKey) {
       return true;
+    }
+
+    switch(e.keyCode) {
+      case this.keys.tab: {
+
+        if (this.bModal == true) {
+          if (e.shiftKey) {
+            this.$next.focus();
+          }
+          else {
+            this.$prev.focus();
+          }
+          e.stopPropagation()
+          return false;
+        }
+        break;
+      }
+      case this.keys.enter:
+      case this.keys.space: {
+
+        if (e.ctrlKey) {
+          return true;
+        }
+
+        // update the target box
+        this.$target.val((this.month < 9 ? '0' : '') + (this.month+1) + '/' + $curDay.html() + '/' + this.year);
+
+        // fall through
+      }
+      case this.keys.esc: {
+        // dismiss the dialog box
+        this.hideDlg();
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.left: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        var dayIndex = $days.index($curDay) - 1;
+        var $prevDay = null;
+
+        if (dayIndex >= 0) {
+          $prevDay = $days.eq(dayIndex);
+
+          $curDay.removeClass('focus').attr('aria-selected', 'false');
+          $prevDay.addClass('focus').attr('aria-selected', 'true');
+
+          this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
+        }
+        else {
+          this.showPrevMonth(0);
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.right: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        var dayIndex = $days.index($curDay) + 1;
+        var $nextDay = null;
+
+        if (dayIndex < $days.length) {
+          $nextDay = $days.eq(dayIndex);
+          $curDay.removeClass('focus').attr('aria-selected', 'false');
+          $nextDay.addClass('focus').attr('aria-selected', 'true');
+
+          this.$grid.attr('aria-activedescendant', $nextDay.attr('id'));
+        }
+        else {
+          // move to the next month
+          this.showNextMonth(1);
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.up: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        var dayIndex = $days.index($curDay) - 7;
+        var $prevDay = null;
+
+        if (dayIndex >= 0) {
+          $prevDay = $days.eq(dayIndex);
+
+          $curDay.removeClass('focus').attr('aria-selected', 'false');
+          $prevDay.addClass('focus').attr('aria-selected', 'true');
+
+          this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
+        }
+        else {
+          // move to appropriate day in previous month
+          dayIndex = 6 - $days.index($curDay);
+
+          this.showPrevMonth(dayIndex);
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.down: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        var dayIndex = $days.index($curDay) + 7;
+        var $prevDay = null;
+
+        if (dayIndex < $days.length) {
+          $prevDay = $days.eq(dayIndex);
+
+          $curDay.removeClass('focus').attr('aria-selected', 'false');
+          $prevDay.addClass('focus').attr('aria-selected', 'true');
+
+          this.$grid.attr('aria-activedescendant', $prevDay.attr('id'));
+        }
+        else {
+          // move to appropriate day in next month
+          dayIndex = 8 - ($days.length - $days.index($curDay));
+
+          this.showNextMonth(dayIndex);
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.pageup: {
+        var active = this.$grid.attr('aria-activedescendant');
+
+
+        if (e.shiftKey) {
+          return true;
+        }
+
+
+        if (e.ctrlKey) {
+          this.showPrevYear();
+        }
+        else {
+          this.showPrevMonth();
+        }
+
+        if ($('#' + active).attr('id') == undefined) {
+          var lastDay = 'day' + this.calcNumDays(this.year, this.month);
+          $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
+        }
+        else {
+          $('#' + active).addClass('focus').attr('aria-selected', 'true');
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.pagedown: {
+        var active = this.$grid.attr('aria-activedescendant');
+
+
+        if (e.shiftKey) {
+          return true;
+        }
+
+        if (e.ctrlKey) {
+          this.showNextYear();
+        }
+        else {
+          this.showNextMonth();
+        }
+
+        if ($('#' + active).attr('id') == undefined) {
+          var lastDay = 'day' + this.calcNumDays(this.year, this.month);
+          $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
+        }
+        else {
+          $('#' + active).addClass('focus').attr('aria-selected', 'true');
+        }
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.home: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        $curDay.removeClass('focus').attr('aria-selected', 'false');
+
+        $('#day1').addClass('focus').attr('aria-selected', 'true');
+
+        this.$grid.attr('aria-activedescendant', 'day1');
+
+        e.stopPropagation();
+        return false;
+      }
+      case this.keys.end: {
+
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        var lastDay = 'day' + this.calcNumDays(this.year, this.month);
+
+        $curDay.removeClass('focus').attr('aria-selected', 'false');
+
+        $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
+
+        this.$grid.attr('aria-activedescendant', lastDay);
+
+        e.stopPropagation();
+        return false;
+      }
+    }
+
+    return true;
 
 } // end handleGridKeyDown()
 
@@ -741,29 +741,29 @@ datepicker.prototype.handleGridKeyDown = function(e) {
 //
 datepicker.prototype.handleGridKeyPress = function(e) {
 
-      if (e.altKey) {
-         return true;
-      }
+  if (e.altKey) {
+    return true;
+  }
 
-      switch(e.keyCode) {
-         case this.keys.tab:
-         case this.keys.enter:
-         case this.keys.space:
-         case this.keys.esc:
-         case this.keys.left:
-         case this.keys.right:
-         case this.keys.up:
-         case this.keys.down:
-         case this.keys.pageup:
-         case this.keys.pagedown:
-         case this.keys.home:
-         case this.keys.end: {
-            e.stopPropagation();
-            return false;
-         }
-      }
+  switch(e.keyCode) {
+    case this.keys.tab:
+    case this.keys.enter:
+    case this.keys.space:
+    case this.keys.esc:
+    case this.keys.left:
+    case this.keys.right:
+    case this.keys.up:
+    case this.keys.down:
+    case this.keys.pageup:
+    case this.keys.pagedown:
+    case this.keys.home:
+    case this.keys.end: {
+      e.stopPropagation();
+      return false;
+    }
+  }
 
-      return true;
+  return true;
 
 } // end handleGridKeyPress()
 
@@ -777,26 +777,26 @@ datepicker.prototype.handleGridKeyPress = function(e) {
 // @return (boolean) false if consuming event, true if propagating
 //
 datepicker.prototype.handleGridClick = function(id, e) {
-   var $cell = $(id);
+  var $cell = $(id);
 
-   if ($cell.is('.empty')) {
-      return true;
-   }
+  if ($cell.is('.empty')) {
+    return true;
+  }
 
-   this.$grid.find('.focus').removeClass('focus').attr('aria-selected', 'false');
-   $cell.addClass('focus').attr('aria-selected', 'true');
-   this.$grid.attr('aria-activedescendant', $cell.attr('id'));
+  this.$grid.find('.focus').removeClass('focus').attr('aria-selected', 'false');
+  $cell.addClass('focus').attr('aria-selected', 'true');
+  this.$grid.attr('aria-activedescendant', $cell.attr('id'));
 
-   var $curDay = $('#' + this.$grid.attr('aria-activedescendant'));
+  var $curDay = $('#' + this.$grid.attr('aria-activedescendant'));
 
-   // update the target box
-   this.$target.val((this.month < 9 ? '0' : '') + (this.month+1) + '/' + $curDay.html() + '/' + this.year);
+  // update the target box
+  this.$target.val((this.month < 9 ? '0' : '') + (this.month+1) + '/' + $curDay.html() + '/' + this.year);
 
-   // dismiss the dialog box
-   this.hideDlg();
+  // dismiss the dialog box
+  this.hideDlg();
 
-   e.stopPropagation();
-   return false;
+  e.stopPropagation();
+  return false;
 
 } // end handleGridClick()
 
@@ -808,17 +808,17 @@ datepicker.prototype.handleGridClick = function(id, e) {
 // @return (boolean) true
 //
 datepicker.prototype.handleGridFocus = function(e) {
-   var active = this.$grid.attr('aria-activedescendant');
+  var active = this.$grid.attr('aria-activedescendant');
 
-   if ($('#' + active).attr('id') == undefined) {
-      var lastDay = 'day' + this.calcNumDays(this.year, this.month);
-      $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
-   }
-   else {
-      $('#' + active).addClass('focus').attr('aria-selected', 'true');
-   }
+  if ($('#' + active).attr('id') == undefined) {
+    var lastDay = 'day' + this.calcNumDays(this.year, this.month);
+    $('#' + lastDay).addClass('focus').attr('aria-selected', 'true');
+  }
+  else {
+    $('#' + active).addClass('focus').attr('aria-selected', 'true');
+  }
 
-   return true;
+  return true;
 
 } // end handleGridFocus()
 
@@ -830,9 +830,9 @@ datepicker.prototype.handleGridFocus = function(e) {
 // @return (boolean) true
 //
 datepicker.prototype.handleGridBlur = function(e) {
-   $('#' + this.$grid.attr('aria-activedescendant')).removeClass('focus').attr('aria-selected', 'false');
+  $('#' + this.$grid.attr('aria-activedescendant')).removeClass('focus').attr('aria-selected', 'false');
 
-   return true;
+  return true;
 
 } // end handleGridBlur()
 
@@ -844,7 +844,7 @@ datepicker.prototype.handleGridBlur = function(e) {
 //
 datepicker.prototype.showDlg = function() {
 
-   var thisObj = this;
+  var thisObj = this;
 
   // Bind an event listener to the document to capture all mouse events to make dialog modal
   $(document).bind('click mousedown mouseup mousemove mouseover', function(e) {
@@ -857,10 +857,10 @@ datepicker.prototype.showDlg = function() {
     return false;
   });
 
-   // show the dialog
-   this.$id.attr('aria-hidden', 'false');
+  // show the dialog
+  this.$id.attr('aria-hidden', 'false');
 
-   this.$grid.focus();
+  this.$grid.focus();
 
 } // end showDlg()
 
@@ -872,15 +872,15 @@ datepicker.prototype.showDlg = function() {
 //
 datepicker.prototype.hideDlg = function() {
 
-   var thisObj = this;
+  var thisObj = this;
 
   // unbind the modal event sinks
   $(document).unbind('click mousedown mouseup mousemove mouseover');
 
-   // hide the dialog
-   this.$id.attr('aria-hidden', 'true');
+  // hide the dialog
+  this.$id.attr('aria-hidden', 'true');
 
-   // set focus on the focus target
-   this.$target.focus();
+  // set focus on the focus target
+  this.$target.focus();
 
 } // end showDlg()

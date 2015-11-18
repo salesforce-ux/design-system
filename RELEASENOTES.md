@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 1.0.0 (internal only) - November 18, 2015 
+## Release 1.0.0 (internal only) - November 18, 2015
 
 **NEW COMPONENTS**
 - Added the Docked Composer
@@ -63,12 +63,12 @@
 - Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
 - Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
-	- Dropdown
-	- Dropdown with Icons
-	- Dropdown Positioning
- 	- Picklist
- 	- Action Overflow
- 	- Search Overflow
+  - Dropdown
+  - Dropdown with Icons
+  - Dropdown Positioning
+  - Picklist
+  - Action Overflow
+  - Search Overflow
 
 **BREAKING CHANGES**
 
@@ -216,4 +216,3 @@
 - Text > Faux Links has added cursor:pointer
 
 Lots of bug fixes and TLC.
-

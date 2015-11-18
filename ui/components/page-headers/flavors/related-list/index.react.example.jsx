@@ -66,7 +66,7 @@ module.exports = (
             </div>
             <div className={pf('button-group')}>
               <Button flavor="neutral">
-               Add Contact
+                Add Contact
               </Button>
               <div className={pf('button--last')}>
                 <ButtonIcon

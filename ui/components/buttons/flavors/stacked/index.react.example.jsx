@@ -51,4 +51,3 @@ exports.code = (
     </div>
   </div>
 );
-

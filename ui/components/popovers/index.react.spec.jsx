@@ -45,19 +45,19 @@ xdescribe(`Dialog`, () => {
       );
     });
     it(`renders the dialog`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "dialog");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'dialog');
       expect(nodes).length.to.be(1);
     });
     it(`renders the content`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "dialog__content");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'dialog__content');
       expect(nodes).length.to.be(1);
     });
     it(`renders the header`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "dialog__head");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'dialog__head');
       expect(nodes).length.to.be(1);
     });
     it(`renders the body`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "dialog__body");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'dialog__body');
       expect(nodes).length.to.be(1);
     });
   });
@@ -68,14 +68,14 @@ xdescribe(`Dialog`, () => {
       let cls = React.createClass({
         render: function() {
           return (
-            <div style={{height: '200px', width: '300px', margin: "20px"}}>
-              <Control trigger="click" placement="right" target="#real-dialog">
-                <Button flavor="neutral" style={{padding: '10px'}}>Backstreets back</Button>
+            <div style={{height: '200px', width: '300px', margin: '20px'}}>
+              <Control trigger='click' placement='right' target='#real-dialog'>
+                <Button flavor='neutral' style={{padding: '10px'}}>Backstreets back</Button>
               </Control>
 
-              <Dialog id="other-dialog"></Dialog>
+              <Dialog id='other-dialog'></Dialog>
 
-              <Dialog id="real-dialog" visible={false} style={{width: '10px', height: '20px'}}>
+              <Dialog id='real-dialog' visible={false} style={{width: '10px', height: '20px'}}>
                 <Dialog.Header>
                   <h2>Everybody</h2>
                 </Dialog.Header>
@@ -91,18 +91,18 @@ xdescribe(`Dialog`, () => {
       cmp = ReactDOM.render(React.createElement(cls), document.body);
     });
     it(`hides the popover surrounding the dialog`, () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, "popover")[1];
+      const node = scryRenderedDOMComponentsWithClass(cmp, 'popover')[1];
       expect(node.props.className).to.contain('hide');
     });
     it(`renders the control`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "button");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'button');
       expect(nodes).length.to.be(1);
     });
 
     describe(`toggling the popup`, () => {
       let control, popover;
       beforeEach(() => {
-        control = scryRenderedDOMComponentsWithTag(cmp, "button")[0];
+        control = scryRenderedDOMComponentsWithTag(cmp, 'button')[0];
         Simulate.click(control, {});
         popover = document.querySelectorAll('.popover-wrapper')[0];
       });
@@ -128,14 +128,14 @@ xdescribe(`Dialog`, () => {
       let cls = React.createClass({
         render: function() {
           return (
-            <div style={{height: '200px', width: '500px', margin: "20px"}}>
-              <Control trigger="click" placement="top" target="#real-dialog">
-                <Button flavor="base" style={{padding: '10px'}}>Harold Clickerton</Button>
+            <div style={{height: '200px', width: '500px', margin: '20px'}}>
+              <Control trigger='click' placement='top' target='#real-dialog'>
+                <Button flavor='base' style={{padding: '10px'}}>Harold Clickerton</Button>
               </Control>
 
-              <Dialog id="other-dialog"></Dialog>
+              <Dialog id='other-dialog'></Dialog>
 
-              <Dialog id="real-dialog" visible={false} style={{width: '100px', height: '150px'}}>
+              <Dialog id='real-dialog' visible={false} style={{width: '100px', height: '150px'}}>
                 <Dialog.Body>
                   <h1>How embarassing, I'm neighbors with the backstreet boys</h1>
                 </Dialog.Body>
@@ -151,7 +151,7 @@ xdescribe(`Dialog`, () => {
       let control;
       var popover;
       beforeEach(() => {
-        control = scryRenderedDOMComponentsWithTag(cmp, "button")[0];
+        control = scryRenderedDOMComponentsWithTag(cmp, 'button')[0];
         Simulate.click(control, {});
         popover = ReactDOM.findDOMNode(cmp).querySelectorAll('.dialog')[2]; // [other, real, popover]
       });

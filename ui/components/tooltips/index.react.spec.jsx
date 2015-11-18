@@ -38,12 +38,11 @@ xdescribe(`Tooltip`, () => {
       let cls = React.createClass({
         render: function() {
           return (
-            <div style={{height: '80px', width: '200px', margin: "20px"}}>
-              <Control trigger="click" placement="top" target="#tip1">
+            <div style={{height: '80px', width: '200px', margin: '20px'}}>
+              <Control trigger='click' placement='top' target='#tip1'>
                 <Button className={pf('clicky-mcduck')}>Click me</Button>
               </Control>
-
-              <Tooltip id="tip1" visible={false} style={{width: '10px', height: '20px'}}>
+              <Tooltip id='tip1' visible={false} style={{width: '10px', height: '20px'}}>
                 <h1>Tip the Toolman Taylor</h1>
               </Tooltip>
             </div>
@@ -54,17 +53,17 @@ xdescribe(`Tooltip`, () => {
       cmp = ReactDOM.render(React.createElement(cls), document.body);
     });
     it(`hides the tooltip via the popover`, () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, "popover")[0];
+      const node = scryRenderedDOMComponentsWithClass(cmp, 'popover')[0];
       expect(node.props.className).to.contain('hide');
     });
     it(`renders the control`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "clicky-mcduck");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'clicky-mcduck');
       expect(nodes).length.to.be(1);
     });
     describe(`toggling the tooltip`, () => {
       let control, popover, wrapper;
       beforeEach(() => {
-        control = scryRenderedDOMComponentsWithClass(cmp, "clicky-mcduck")[0];
+        control = scryRenderedDOMComponentsWithClass(cmp, 'clicky-mcduck')[0];
         Simulate.click(control, {});
         popover = document.querySelectorAll('.popover')[1] // it clones the original;
         wrapper = document.querySelectorAll('.popover-wrapper')[0];

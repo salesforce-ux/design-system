@@ -58,7 +58,7 @@ class Overview extends React.Component {
             <GithubButton></GithubButton>
           </p>
         </IfPrefs>
-        <p className={pf('m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>
+        <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>
       </header>
 
       <div className={pf('container--buffer container--large')}>

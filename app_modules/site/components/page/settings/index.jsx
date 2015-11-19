@@ -28,27 +28,18 @@ const Settings = React.createClass({
   mixins: [PrefsMixin],
 
   componentDidMount: function() {
-    this.originalPrefs = Prefs.getDefaults()[window.LIGHTNING_DESIGN_SYSTEM.userType()];
-  },
-
-  componentWillReceiveProps: function(nextProps) {
-    if(nextProps.isOpen) {
-      const radio = ReactDOM.findDOMNode(this.refs.firstOption);
-      setTimeout(() => radio.focus(), 100);
-    }
+    this.originalPrefs = Prefs.getDefaults()[process.env.DEFAULT_USER_TYPE];
   },
 
   roleChanged: function(e) {
     const val = e.currentTarget.value;
     Prefs.set('role', val);
-
     logCTAEvent('role-selector', {value: val});
   },
 
   statusChanged: function(e) {
     const val = e.currentTarget.value;
     Prefs.set('status', val);
-
     logCTAEvent('status-selector', {value: val});
   },
 
@@ -65,12 +56,11 @@ const Settings = React.createClass({
     return (
       <div key={status.id}>
         <Radio
-              name="type"
-              label={status.desc}
-              assistiveText={status.name} value={status.id}
-              checked={this.shouldCheckStatus(status)}
-              onChange={this.statusChanged}
-            />
+          name="type"
+          label={status.desc}
+          assistiveText={status.name} value={status.id}
+          checked={this.shouldCheckStatus(status)}
+          onChange={this.statusChanged} />
       </div>
     );
   },
@@ -78,20 +68,17 @@ const Settings = React.createClass({
   render: function() {
     return (
       <Modal isOpen={this.props.isOpen}
-            onRequestClose={this.props.onClose}
-            className="site-settings"
-          >
+        onRequestClose={this.props.onClose}
+        className="site-settings">
         <Modal.Header>
           <h2 className="site-text-heading--large">Settings</h2>
         </Modal.Header>
-
         <Modal.Body>
           <div className={pf('p-horizontal--small p-vertical--medium')}>
             <fieldset className={pf('p-horizontal--large form-element')}>
               <legend className={pf('form-element__label site-text-heading--medium')}>Are you an Aura developer?</legend>
                 <div className={pf('form-element__control')}>
                   <Radio
-                    ref="firstOption"
                     tabIndex="0"
                     label="Yes"
                     name="aura"
@@ -119,7 +106,6 @@ const Settings = React.createClass({
             </fieldset>
           </div>
         </Modal.Body>
-
         <Modal.Footer>
           <Button flavor="neutral" onClick={this.revertChangesAndClose} >Cancel</Button>
           <Button flavor="neutral,brand" onClick={this.props.onClose}>Save</Button>

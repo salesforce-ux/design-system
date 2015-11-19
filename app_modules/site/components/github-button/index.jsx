@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { createChainedFunction } from 'app_modules/ui/util/component';
+import protectFromUnmount from 'app_modules/site/util/component/protect-from-unmount';
 import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { Link } from 'react-router';
 import { find } from 'lodash';
@@ -32,17 +33,6 @@ class GithubButton extends React.Component {
     };
   }
 
-  protectFromUnmount() {
-    let hasUnmounted_ = false;
-    const protect = (callback) => {
-      return (...args) => {
-        !hasUnmounted_ && callback(...args);
-      }
-    };
-    protect.unmount = () => hasUnmounted_ = true;
-    return protect;
-  }
-
   getStars(cb) {
     const req = new XMLHttpRequest()
     req.onreadystatechange = () => {
@@ -57,7 +47,7 @@ class GithubButton extends React.Component {
   }
 
   componentDidMount() {
-    this.protect = this.protectFromUnmount();
+    this.protect = protectFromUnmount();
     this.asyncReq = this.protect(this.getStars((data) => {
       this.setState({
         stargazersCount: data.stargazers_count || 0,

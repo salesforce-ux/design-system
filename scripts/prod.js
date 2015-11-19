@@ -9,21 +9,14 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import { execSync } from 'child_process';
+import './helpers/setup';
+
 import _ from 'lodash';
-import packageJSON from '../../package.json';
-import deployments, { releases } from '../../scripts-internal/deploy/config/deployments.json';
+import deployments, { releases } from '../scripts-internal/deploy/config/deployments.json';
 
 const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH || '';
 
-const exec = (command, options) => {
-  execSync(command, _.defaults({}, options, { stdio: [0,1,2], cwd: process.cwd() }));
-};
-
-console.log(`SLDS version: ${packageJSON.version}`);
-
-// Lint
-exec('npm run lint');
+console.log(`SLDS version: ${process.env.SLDS_VERSION}`);
 
 // Check to see if the current branch matches a known release
 let release = _.find(releases, { sourceBranch: TRAVIS_BRANCH });
@@ -31,8 +24,10 @@ let release = _.find(releases, { sourceBranch: TRAVIS_BRANCH });
 // Build
 if (release && _.includes(deployments.internal, release.id)) {
   console.log('Building site with arguments: --prod --internal\n');
-  exec('./node_modules/.bin/babel-node scripts/build.js --prod --internal');
+  process.argv.push('--prod', '--internal');
+  require('scripts/build');
 } else {
   console.log('Building site with arguments: --prod\n');
-  exec('./node_modules/.bin/babel-node scripts/build.js --prod');
+  process.argv.push('--prod');
+  require('scripts/build');
 }

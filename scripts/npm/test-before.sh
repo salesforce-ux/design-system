@@ -11,5 +11,4 @@
 
 set -e
 
-npm run lint
 ./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js --reporter min test/before/**/*.js

@@ -38,7 +38,7 @@ window.$A11y = {
       funcObject = tmpFuncArray[funcLabel];
       var index = checksToRun.indexOf(funcObject["tag"]);
       if(index > -1) {
-         testFuncs[index] = funcObject;
+        testFuncs[index] = funcObject;
       }
     }
 
@@ -46,7 +46,6 @@ window.$A11y = {
     for(var i = 0;  i < testFuncs.length; i++) {
       funcObject = testFuncs[i];
       errorArray = errorArray.concat(funcObject["func"](domElem));
-
     }
 
     if(!dontShowErrors) {
@@ -235,7 +234,7 @@ window.$A11y = {
       var fieldId = null;
       var dict = {};
       if(this._isUndefinedOrNull(labels)) {
-         return dict;
+        return dict;
       }
 
       for(var i = 0; i < labels.length; i++) {
@@ -243,7 +242,7 @@ window.$A11y = {
         fieldId = this._getAttribute(label, "for");
         // check that label explicitly references a field and that label isn't empty
         if(!this._isEmpty(fieldId) && !(this._hasEmptyText(label))) {
-           dict[fieldId] = true;
+          dict[fieldId] = true;
         }
       }
       return dict;
@@ -283,27 +282,27 @@ window.$A11y = {
    * This is where all of our tests go
    **/
   testFunctions   : {
-     /**
-      * Check making sure that table cells have scope in them, and that they are equal to row, col, rowgroup, colgroup
-      * @returns String - Returns a string representation of the errors
-      */
-     checkTableCellsHaveScope : {
+    /**
+     * Check making sure that table cells have scope in them, and that they are equal to row, col, rowgroup, colgroup
+     * @returns String - Returns a string representation of the errors
+     */
+    checkTableCellsHaveScope : {
       "tag"  : "A11Y_DOM_08",
       "func" : function(domElem){
-         var hlprFunc = $A11y.util;
-         var headerDict = {};
-         var ths = [];
-         var scopeVal = "";
-         var idVals = "";
-         var errorArray = [];
-         var tmpErrorArray = [];
-         var i = 0, j = 0;
-         var skipTDCheck = false;
-         var allThsHaveScope = [];
-         var validScopes = {'row': false, 'col': false, 'rowgroup': false, 'colgroup' : false};
-         var tables = hlprFunc._getElementsByTagName("table", domElem);
+        var hlprFunc = $A11y.util;
+        var headerDict = {};
+        var ths = [];
+        var scopeVal = "";
+        var idVals = "";
+        var errorArray = [];
+        var tmpErrorArray = [];
+        var i = 0, j = 0;
+        var skipTDCheck = false;
+        var allThsHaveScope = [];
+        var validScopes = {'row': false, 'col': false, 'rowgroup': false, 'colgroup' : false};
+        var tables = hlprFunc._getElementsByTagName("table", domElem);
 
-         for(var index = 0; index<tables.length; index++){
+        for(var index = 0; index<tables.length; index++){
           ths = tables[index].getElementsByTagName("th");
 
           //Store all the previously found errors
@@ -322,12 +321,12 @@ window.$A11y = {
 
           //Phase 1:  If all <th> within a <table> contain scope attribute and scope attribute value is one of col, row, colgroup, rowgroup, then pass test.
           for(i = 0; i<ths.length; i++){
-             //Grab scope
-             scopeVal = hlprFunc._getAttribute(ths[i], "scope");
-             idVals   = hlprFunc._getAttribute(ths[i], "id");
+            //Grab scope
+            scopeVal = hlprFunc._getAttribute(ths[i], "scope");
+            idVals   = hlprFunc._getAttribute(ths[i], "id");
 
-             //If Scope exists
-             if(!hlprFunc._isEmpty(scopeVal)){
+            //If Scope exists
+            if(!hlprFunc._isEmpty(scopeVal)){
               if(!(scopeVal in validScopes) || hlprFunc._trim(scopeVal) === ""){
                 tmpErrorArray.push(ths[i]);
               }
@@ -373,10 +372,10 @@ window.$A11y = {
 
         //If there are any lingering errors, grab them
         if(tmpErrorArray.length > 0 ){
-           errorArray =  errorArray.concat(tmpErrorArray);
+          errorArray = errorArray.concat(tmpErrorArray);
         }
         return $A11y.util.formatOutput(errorArray, this.tag);
-       }
+      }
     },
     /**
      * Check that images have alt attributes
@@ -527,7 +526,7 @@ window.$A11y = {
           }
         }
         return $A11y.util.formatOutput(errorArray, this.tag);
-       }
+      }
     },
 
     /**
@@ -555,7 +554,7 @@ window.$A11y = {
      * Check to make sure that all fieldset tags have a legend and that it is not empty
      * @returns {Object[]} array of errors
      */
-     checkFieldSetsAreCorrect : {
+    checkFieldSetsAreCorrect : {
       "tag" : "A11Y_DOM_09",
       "func" : function(domElem) {
         var errorArray = [];
@@ -568,7 +567,7 @@ window.$A11y = {
           legends = fieldSets[i].getElementsByTagName("legend");
 
           if($A11y.util._isUndefinedOrNull(fieldSetDisplay) || fieldSetDisplay == "none")
-             continue;
+            continue;
 
           if(legends.length === 0) {
             errorArray.push(fieldSets[i]);
@@ -584,9 +583,9 @@ window.$A11y = {
 
         return $A11y.util.formatOutput(errorArray, this.tag);
       }
-     },
+    },
 
-     /**
+    /**
      * Check to make sure that all radio buttons are grouped within a fieldset
      * @returns {Object[]} array of errors
      */
@@ -638,7 +637,7 @@ window.$A11y = {
      * Check to make sure that onClick is set only on acceptable elements
      * @returns {Object[]} array of errors
      */
-     checkOnClick : {
+    checkOnClick : {
       "tag" : "A11Y_DOM_15",
       "func" : function(domElem) {
         var errorArray = [];
@@ -646,10 +645,12 @@ window.$A11y = {
         if(!$A11y.util._isUndefinedOrNull(allElements)) {
           for(var i = 0; i < allElements.length; i++) {
             if(allElements[i].hasAttribute("onclick")) {
-              if(allElements[i].tagName != "A" &&
-                 allElements[i].tagName != "BUTTON" &&
-                 allElements[i].tagName != "INPUT" &&
-                 allElements[i].tagName != "CANVAS") {
+              if(
+                allElements[i].tagName != "A" &&
+                allElements[i].tagName != "BUTTON" &&
+                allElements[i].tagName != "INPUT" &&
+                allElements[i].tagName != "CANVAS"
+              ) {
                 errorArray.push(allElements[i]);
               }
             }

@@ -31,6 +31,5 @@ $mq-large:  1024px !default;
 $sales-path: 2rem; // @TODO: Temp token till we align sizing
 
 $force-base-map: map-merge($force-base-map, (
-  "spacing-xx-large": $spacing-xx-large
+    "spacing-xx-large": $spacing-xx-large
 ));
-

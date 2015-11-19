@@ -81,8 +81,7 @@ function getVisibleRectForElement(element) {
 
   // Determine the size of the visible rect by climbing the dom accounting for
   // all scrollable containers.
-  for (el = element;
-       (el = getOffsetParent(el));) {
+  for (el = element; (el = getOffsetParent(el));) {
     // clientWidth is zero for inline block elements in ie.
     if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
         // body may have overflow set on it, yet we still get the entire

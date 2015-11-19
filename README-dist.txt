@@ -24,4 +24,3 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 * swatches/
   - slds.ase
   - slds.clr - adobe and ios swatch formats, respectively. See [https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html](https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html)
-

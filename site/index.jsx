@@ -55,7 +55,7 @@ class Overview extends React.Component {
         <IfPrefs userType="external">
           <p className={pf('site-cta-buttons m-bottom--medium')}>
             <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
-            <GithubButton></GithubButton> 
+            <GithubButton></GithubButton>
           </p>
         </IfPrefs>
         <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>
@@ -101,10 +101,10 @@ class Overview extends React.Component {
         <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <img src={`/assets/images/landing/icon-trust.svg`} alt="Trustworthy Image" />
+              <img src="" alt="Trustworthy Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Trustworthy</dt>
-                <dd><hr className="hr hr--orange"/>We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports. </dd>
+                <dd><hr className="hr hr--orange" />We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports.</dd>
               </dl>
             </div>
           </li>
@@ -113,7 +113,7 @@ class Overview extends React.Component {
               <img src={`/assets/images/landing/icon-platform.svg`} alt="Platform-Agnostic Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Platform-Agnostic</dt>
-                <dd><hr className="hr hr--purple" />You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku. </dd>
+                <dd><hr className="hr hr--purple" />You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku.</dd>
               </dl>
             </div>
           </li>
@@ -122,7 +122,7 @@ class Overview extends React.Component {
               <img src={`/assets/images/landing/icon-living.svg`} alt="Living Design System Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Living</dt>
-                <dd><hr className="hr hr--pink" />The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync. </dd>
+                <dd><hr className="hr hr--pink" />The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</dd>
               </dl>
             </div>
           </li>

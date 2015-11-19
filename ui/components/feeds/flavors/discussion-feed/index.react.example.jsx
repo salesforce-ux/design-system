@@ -154,5 +154,3 @@ module.exports = (
 
 </div>
 );
-
-

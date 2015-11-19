@@ -12,18 +12,19 @@
   $checker-color: rgba($color-background, .5);
   background: {
     color: $color-background-alt;
-    image: linear-gradient(45deg,
-                           $checker-color 25%,
-                           transparent 25%,
-                           transparent 75%,
-                           $checker-color 75%,
-                           $checker-color),
-           linear-gradient(45deg,
-                           $checker-color 25%,
-                           transparent 25%,
-                           transparent 75%,
-                           $checker-color 75%,
-                           $checker-color);
+    image:
+          linear-gradient(45deg,
+                          $checker-color 25%,
+                          transparent 25%,
+                          transparent 75%,
+                          $checker-color 75%,
+                          $checker-color),
+          linear-gradient(45deg,
+                          $checker-color 25%,
+                          transparent 25%,
+                          transparent 75%,
+                          $checker-color 75%,
+                          $checker-color);
     size: ($checker-size * 2) ($checker-size * 2);
     position: 0 0, $checker-size $checker-size
   }

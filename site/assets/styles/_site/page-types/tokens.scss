@@ -41,9 +41,9 @@
     &-pass,
     &-fail {
       position: absolute;
-        top: $spacing-x-small;
+      top: $spacing-x-small;
       right: -$spacing-x-small;
-       width: $spacing-x-small;
+      width: $spacing-x-small;
       height: $spacing-x-small;
       overflow: hidden;
       text: {
@@ -70,7 +70,7 @@
     &-radius,
     &-shadow {
       display: inline-block;
-       width: 2rem;
+      width: 2rem;
       height: 2rem;
       vertical-align: middle;
     }
@@ -115,9 +115,9 @@
           left: 50%;
           content: "";
           border: {
-             right: .5rem solid transparent;
+            right: .5rem solid transparent;
             bottom: .5rem solid $color-text-inverse;
-              left: .5rem solid transparent;
+            left: .5rem solid transparent;
           }
           transform: translate(-50%, -300%);
         }
@@ -128,9 +128,9 @@
           left: 50%;
           content: "";
           border: {
-              top: .5rem solid $color-text-inverse;
+            top: .5rem solid $color-text-inverse;
             right: .5rem solid transparent;
-             left: .5rem solid transparent;
+            left: .5rem solid transparent;
           }
           transform: translate(-50%, 200%);
         }

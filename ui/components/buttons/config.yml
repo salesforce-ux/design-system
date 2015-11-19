@@ -21,4 +21,3 @@ flavors:
 dependencies:
   - core/icons
   - helpers/visibility
-

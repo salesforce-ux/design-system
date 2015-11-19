@@ -345,7 +345,11 @@ export default React.createClass({
     if (item.get('hasChildren')) {
       return this.onToggleNavItem.bind(this, item);
     }
-    return function() {};
+    return function() {
+      // Scroll to top after a page change
+      // This will be handled by React Router in the future
+      window.scrollTo(0, 0);
+    };
   },
 
   renderNavItems(items, level) {

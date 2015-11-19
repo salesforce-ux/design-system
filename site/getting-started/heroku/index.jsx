@@ -19,6 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import { Link } from 'react-router';
 import g from 'app_modules/global';
 import CTALink from 'app_modules/site/components/cta-link';
+import Img from 'app_modules/ui/img';
 
 export default (
   <PageBody anchorTitle="Heroku" contentClassName={pf('grid wrap')}>
@@ -222,7 +223,7 @@ app.listen(port);
         </div>
         <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <CTALink ctaEventName='heroku-tutorial-step-7-deploy-to-heroku' href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</CTALink>. You may also run <code>npm run start</code> as it will yield the same results.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
+          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
@@ -322,7 +323,7 @@ demo_slds_heroku/
           `}</CodeBlock>
           </div>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
+          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
         </figure>
 
         <h3 className="site-text-heading--medium">
@@ -334,7 +335,7 @@ demo_slds_heroku/
         <p>Swap the text <code>Image</code> with an image.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-<img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house.">
+<Img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house.">
           `}</CodeBlock>
         </div>
 
@@ -350,7 +351,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
         <p>If you feel kind of cramped, check out the <CTALink ctaEventName='heroku-tutorial-utilities-spacing-link' href="/components/utilities/spacing" target="_blank">Utilities</CTALink> page for spacing classes.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
+          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>

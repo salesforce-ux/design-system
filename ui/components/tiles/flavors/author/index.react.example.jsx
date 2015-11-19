@@ -11,11 +11,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const React = require('react');
 const MediaObject = require('ui/components/media-objects/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <img src={`/assets/images/company1.jpg`} style={{height: '48px'}} alt="" />
+  <Img src={`/assets/images/company1.jpg`} style={{height: '48px'}} alt="" />
 );
 
 module.exports = (

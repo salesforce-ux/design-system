@@ -65,7 +65,7 @@
     "gulp-replace": "0.5.4",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",
-    "history": "^1.13.0",
+    "history": "1.13.1",
     "imagemin-cli": "^2.0.0",
     "imagemin-pngquant": "^4.2.0",
     "immutable": "3.7.5",

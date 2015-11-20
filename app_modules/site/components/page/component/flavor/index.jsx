@@ -304,7 +304,7 @@ export default class ComponentFlavor extends React.Component {
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
         aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
         <iframe
-          src={`${getHistory().makeHref('/')}components/preview-frame`}
+          src={`${getHistory().createHref('/')}components/preview-frame`}
           height='100%'
           name={flavor.uid}
           ref="iframe"

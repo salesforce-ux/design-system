@@ -14,19 +14,36 @@ import appModulePath from 'app-module-path';
 import minimist from 'minimist';
 import _ from 'lodash'
 import { getDefaultEnvVars } from './env';
+import packageJSON from '../../package.json';
 
 paths.install();
 appModulePath.addPath(__PATHS__.root);
 
+const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH || '';
+const BUILD_NUMBER = process.env.TRAVIS_JOB_NUMBER;
+const ENV_DEFAULTS = getDefaultEnvVars();
+
 const argv = minimist(process.argv.slice(2));
-const env = getDefaultEnvVars();
+
+try {
+  let deployments =  require('scripts-internal/deploy/config/deployments.json');
+  // Check to see if the current branch matches a known release
+  let release = _.find(deployments.releases, { sourceBranch: TRAVIS_BRANCH });
+  // Internal
+  if (release && _.includes(deployments.internal, release.id)) {
+    process.env.SLDS_VERSION = `${packageJSON.version}-dev.${BUILD_NUMBER}`;
+    process.env.DEFAULT_USER_TYPE = 'internal';
+    process.env.INTERNAL_RELEASE_ID = release.releaseInternalName;
+    process.argv.push('--internal');
+  }
+} catch (e) {}
 
 if (argv.internal === true) {
-  env.DEFAULT_USER_TYPE = 'internal';
+  ENV_DEFAULTS.DEFAULT_USER_TYPE = 'internal';
 }
 
 if (_.isString(argv['url-prefix'])) {
-  env.URL_PREFIX = argv['url-prefix'];
+  ENV_DEFAULTS.URL_PREFIX = argv['url-prefix'];
 }
 
-_.defaults(process.env, env);
+_.defaults(process.env, ENV_DEFAULTS);

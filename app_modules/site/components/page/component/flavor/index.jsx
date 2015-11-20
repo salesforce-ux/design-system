@@ -242,7 +242,7 @@ export default class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `/assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
     link.onload = function() {
       // Don't remove the old stylesheet until the new one has loaded
       _.filter(doc.head.querySelectorAll('link'), tag => {

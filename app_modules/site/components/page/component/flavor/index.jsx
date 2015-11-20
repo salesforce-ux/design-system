@@ -316,7 +316,7 @@ export default class ComponentFlavor extends React.Component {
       </Tabs.Content>
     );
     return (
-      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={2}>
+      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
         {this.renderPreviewTabs()}
       </Tabs>
     );

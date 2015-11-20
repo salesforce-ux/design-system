@@ -35,6 +35,7 @@ import webpack from 'webpack';
 import createComponent from 'app_modules/site/util/component/create';
 import { compileSass } from './sass';
 import ignoreUnderscore from 'app_modules/util/ignore-underscore';
+import { getDefaultEnvVars } from 'scripts/helpers/env'
 
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
@@ -188,10 +189,10 @@ export const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': _(process.env).pick([
-        'DEFAULT_USER_TYPE',
-        'INTERNAL_RELEASE_ID'
-      ]).mapValues(value => `"${value}"`).value()
+      'process.env': _(process.env)
+        .pick(_.keys(getDefaultEnvVars()))
+        .mapValues(value => `"${value}"`)
+        .value()
     })
   ],
   cache: {},
@@ -356,7 +357,6 @@ export const compiler = {
       let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
       // Router
       let location = createLocation(route.path);
-      
       RouterMatch({ routes, location }, (error, redirectLocation, renderProps) => {
         if (error) {
           throw error;

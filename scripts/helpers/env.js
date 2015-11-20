@@ -9,26 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const MediaObject = require('ui/components/media-objects/index.react');
-const Lorem = require('react-lorem-component');
+import packageJSON from '../../package.json';
 
-import Img from 'app_modules/ui/img';
-import { prefix as pf } from 'app_modules/ui/util/component';
-
-const image = (
-  <Img src={`/assets/images/avatar2.jpg`} style={{height: '100px'}} alt='Placeholder'/>
-);
-
-exports.preview = (
-  <div className={pf('size--3-of-4')}>
-    <MediaObject figureLeft={image} flavor="center">
-      <Lorem count={1} />
-    </MediaObject>
-  </div>
-);
-exports.code = (
-  <MediaObject figureLeft={image} flavor="center">
-    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
-  </MediaObject>
-);
+exports.getDefaultEnvVars = function () {
+  return {
+    'DEFAULT_USER_TYPE': 'external',
+    'INTERNAL_RELEASE_ID': '',
+    'URL_PREFIX': '/',
+    'SLDS_VERSION': packageJSON.version
+  };
+}

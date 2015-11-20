@@ -11,15 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { createChainedFunction } from 'app_modules/ui/util/component';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
-import { Link } from 'react-router';
-import { find } from 'lodash';
 import sitemap from 'app_modules/site/navigation/sitemap';
 import CTALink from 'app_modules/site/components/cta-link';
-
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 class GithubButton extends React.Component {
   constructor(props) {
@@ -65,7 +60,7 @@ class GithubButton extends React.Component {
     return (
     <span className={classesButtonGroup}>
       <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
-        <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+        <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
           Star
       </CTALink>
       <a href={linkUrlGazer} className={classesBubbleButton}>

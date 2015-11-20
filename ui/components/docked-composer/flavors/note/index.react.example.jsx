@@ -15,8 +15,9 @@ const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const MediaObject = require('ui/components/media-objects/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
 const Lorem = require('react-lorem-component');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const dialingIcon = (
   <span className={pf('icon__container')}>
@@ -26,7 +27,7 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--circle avatar--medium')}>
-    <img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
+    <Img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
   </span>
 );
 const recordIcon = (

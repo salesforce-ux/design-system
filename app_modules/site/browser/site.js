@@ -18,7 +18,8 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link } from 'react-router';
-import { createHistory} from 'history';
+import { createHistory, useBasename } from 'history';
+import { setHistory } from 'app_modules/site/navigation/history';
 import 'app_modules/site/util/analytics';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { logCurrentPageVisit } from 'app_modules/site/util/analytics';
@@ -104,10 +105,18 @@ window.LIGHTNING_DESIGN_SYSTEM = {
       }
       return React.createElement(Route, props);
     });
-
+    let history = createHistory();
+    let versionPattern = /^\/(\d+|\d+\.\d+\.\d)\//;
+    let versionMatch = versionPattern.exec(window.location.pathname);
+    if (versionMatch) {
+      history = useBasename(createHistory)({
+        basename: `/${versionMatch[1]}`
+      });
+    }
+    setHistory(history);
     // Return the router using HTML5 pushState
     return React.createElement(Router, {
-      history: createHistory(),
+      history: history,
       onUpdate: function () {
         logCurrentPageVisit();
         shared.store = shared.store.set('route', sitemap.getRouteByPath(

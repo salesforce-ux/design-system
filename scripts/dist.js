@@ -164,7 +164,7 @@ async.series([
     delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
     fs.writeFile(
-      distPath('package.json'), 
+      distPath('package.json'),
       JSON.stringify(packageJSON, null, 2),
       done
     );

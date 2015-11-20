@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.0 - November 17, 2015
+## Release 0.12.0 - November 18, 2015
 
 **SITE IA**
 - Added Resources > Links
@@ -58,12 +58,12 @@
 - Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
 - Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
-	- Dropdown
-	- Dropdown with Icons
-	- Dropdown Positioning
- 	- Picklist
- 	- Action Overflow
- 	- Search Overflow
+  - Dropdown
+  - Dropdown with Icons
+  - Dropdown Positioning
+  - Picklist
+  - Action Overflow
+  - Search Overflow
 
 **BREAKING CHANGES**
 
@@ -77,11 +77,14 @@
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
+- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
+- Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
+- More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
 
-- Added notifications > prompt (modal-style alert) www.lightningdesignsystem.com/components/notifications#prompt
-- Added Preview Panel Popovers www.lightningdesignsystem.com/components/popovers#panels 
-- More directional support for popover nubbins www.lightningdesignsystem.com/components/popovers#nubbins
-- Dropdown menus now have bottom positioning support, with accommodating nubbin support www.lightningdesignsystem.com/components/menus#dropdown-positioning
+## Release 0.10.2 - October 29, 2015
+- Updated Icons to version 3.2.0
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
+- Added Google Analytics
 
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker
@@ -208,4 +211,3 @@
 - Text > Faux Links has added cursor:pointer
 
 Lots of bug fixes and TLC.
-

@@ -2,4 +2,3 @@ status: 'dev-ready'
 classBase: 'badge'
 flavors:
   - base
-

@@ -204,7 +204,7 @@ export const webpackConfig = {
 export const compiler = {
 
   init() {
-    _.bindAll(this, _.functions(this)); 
+    _.bindAll(this, _.functions(this));
   },
 
   getSitePath() {

@@ -80,7 +80,7 @@ describe(`Accessiblity`, () => {
                     var error = a11yErrors[i];
                     console.log(`Got error ${error.errorTag} (${error.errorMsg}) for the following DOM elements:`);
                     for(var j = 0; j < error.errorEls.length; j++) {
-                      console.log(error.errorEls[j].outerHTML);                    
+                      console.log(error.errorEls[j].outerHTML);
                     }
                   }
                   expect(a11yErrors).length.to.be(0);

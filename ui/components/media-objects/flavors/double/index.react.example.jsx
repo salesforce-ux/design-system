@@ -12,15 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const React = require('react');
 const MediaObject = require('ui/components/media-objects/index.react');
 const Lorem = require('react-lorem-component');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <img src={`/assets/images/avatar1.jpg`} style={{height: '100px'}} alt='Placeholder'/>
+  <Img src={`/assets/images/avatar1.jpg`} style={{height: '100px'}} alt='Placeholder'/>
 );
 
 const image2 = (
-  <img src={`/assets/images/avatar3.jpg`} style={{height: '100px'}} alt='Placeholder'/>
+  <Img src={`/assets/images/avatar3.jpg`} style={{height: '100px'}} alt='Placeholder'/>
 );
 
 exports.preview = (

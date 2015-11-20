@@ -21,7 +21,7 @@ module.exports = (
     <p>Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.</p>
     <h4 className="site-text-heading--label">Javascript Needs</h4>
     <p>The active tab has two markup requirements:</p>
-     <ul>
+    <ul>
       <li>The <CodeClass className="active"/> class should be placed on the <code>li</code> with <CodeClass className="tabs__item"/>.</li>
       <li>The corresponding <CodeClass className="tabs__content"/> container receives <CodeClass className="show"/>.</li>
     </ul>

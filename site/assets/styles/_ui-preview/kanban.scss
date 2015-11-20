@@ -78,7 +78,7 @@
     .kanban__stage-wrapper {
       border-radius: $border-radius-pill 0 0 $border-radius-pill;
 
-       &:before {
+      &:before {
         content: none;
       }
     }

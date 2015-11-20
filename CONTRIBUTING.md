@@ -6,7 +6,7 @@ External contributors will be required to sign a Contributor's License Agreement
 2. Fork off this repository.
 3. Create a topic branch for the issue that you are trying to add. When possible, you should branch off winter-16.
 4. Edit the code in your fork.
-5. Send us a well documented pull request when you are done. 
+5. Send us a well documented pull request when you are done.
 
 The **GitHub pull requests** should meet the following criteria:
 
@@ -16,3 +16,13 @@ The **GitHub pull requests** should meet the following criteria:
   - add helpful GitHub comments on lines that you have questions / concerns about
 
 We'll review your code, suggest any needed changes, and merge it in. Thank you.
+
+## Adding and modifying images?
+
+Web performance matters a lot to us.
+
+Whenever modifying images (SVG, PNG, JPG), please run this script that will optimize the project's images for the web:
+
+```sh
+$ npm run optimize
+```

@@ -12,15 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const React = require('react');
 const MediaObject = require('ui/components/media-objects/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image1 = (
   <SvgIcon className={pf('icon icon-standard-groups')} sprite="standard" symbol="groups" />
 );
 const image2 = (
   <span className={pf('avatar avatar--circle avatar--small')}>
-    <img src={`/assets/images/avatar2.jpg`} alt="" />
+    <Img src={`/assets/images/avatar2.jpg`} alt="" />
   </span>
 );
 

@@ -98,7 +98,7 @@
     + .#{$css-prefix}tabs--path__item:before {
       background-color: $color-background-inverse;
     }
-    
+
     ~ .#{$css-prefix}is-current { // @TODO: This needs to work both directions in the path
       background-color: $color-background-alt;
 
@@ -121,12 +121,12 @@
   max-height: $sales-path;
   text-align: center;
   perspective: 500;
-  transition: 
-    transform 0.1s ease-in-out, 
+  transition:
+    transform 0.1s ease-in-out,
     background-color 0.1s linear;
 
   &:first-child {
-    border-radius: $border-radius-pill 0 0 $border-radius-pill; 
+    border-radius: $border-radius-pill 0 0 $border-radius-pill;
   }
 
   &:last-child {
@@ -150,7 +150,7 @@
     border-left: none;
     border-bottom: none;
     background-clip: padding-box;
-    transform: rotate(45deg); 
+    transform: rotate(45deg);
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;
   }
 
@@ -202,4 +202,4 @@
   position: relative;
   padding: $spacing-xx-small $spacing-x-small $spacing-xx-small $spacing-medium;
   line-height: calc(#{$line-height-tab} / 2)
-} 
+}

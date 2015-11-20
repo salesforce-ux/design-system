@@ -52,6 +52,29 @@
     max-width: $max-width-action-overflow-menu;
   }
 
+  &--overflow {
+    background: $color-background;
+    padding: $spacing-x-small;
+    width: 290px; // @todo : token
+
+    &:before,
+    &:after {
+      background: $color-background;
+    }
+
+    .#{$css-prefix}dropdown__list {
+      background: $color-background-alt;
+      border-radius: $border-radius-medium;
+      border: $border-width-thin solid $color-border;
+      max-height: 38px * 7; // @todo : token
+      overflow-y: auto;
+    }
+
+    .#{$css-prefix}dropdown__item + .#{$css-prefix}dropdown__item {
+      border-top: $border-width-thin solid $color-border;
+    }
+  }
+
   mark {
     font-weight: $font-weight-bold;
     background-color: transparent;
@@ -243,3 +266,5 @@
     }
   }
 }
+
+

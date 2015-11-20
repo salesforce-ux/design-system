@@ -31,9 +31,9 @@
 
     &:first-child {
 
-       > a {
+      > a {
         padding-left: 0;
-       }
+      }
 
       &:before {
         content: "";

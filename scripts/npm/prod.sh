@@ -11,8 +11,15 @@
 
 set -e
 
-<<<<<<< HEAD
-./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js --reporter min test/before/**/*.js
-=======
-./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js test/before/**/*.js
->>>>>>> c480088ce77e82cd7f69edb024b0f23799622bec
+export GIT_VERSION=`node scripts/helpers/version.js`
+echo "SLDS version: <$GIT_VERSION>"
+
+npm run lint
+
+if [[ X"$INTERNAL_BRANCHES" == *X"$TRAVIS_BRANCH"* ]] && [ ! -z $INTERNAL_BRANCHES ]; then
+  echo "--prod --internal"
+  ./node_modules/.bin/babel-node scripts/build.js --prod --internal
+else
+  echo "--prod"
+  ./node_modules/.bin/babel-node scripts/build.js --prod
+fi

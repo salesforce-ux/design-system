@@ -91,7 +91,7 @@
     "react-addons-css-transition-group": "0.14.0-beta3",
     "react-addons-test-utils": "0.14.0-beta3",
     "react-dom": "0.14.0-beta3",
-    "react-lorem-component": "https://github.com/aputinski/react-lorem-component.git",
+    "react-lorem-component": "aputinski/react-lorem-component",
     "react-router": "1.0.0",
     "rimraf": "2.4.3",
     "sinon": "1.16.1",

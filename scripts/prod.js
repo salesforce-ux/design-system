@@ -24,6 +24,8 @@ let release = _.find(releases, { sourceBranch: TRAVIS_BRANCH });
 // Build
 if (release && _.includes(deployments.internal, release.id)) {
   console.log('Building site with arguments: --prod --internal\n');
+  process.env.INTERNAL_RELEASE_ID = release.releaseInternalName;
+  process.env.DEFAULT_USER_TYPE = 'internal';
   process.argv.push('--prod', '--internal');
   require('scripts/build');
 } else {

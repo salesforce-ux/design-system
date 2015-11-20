@@ -20,6 +20,7 @@ import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { getHistory } from 'app_modules/site/navigation/history';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
@@ -242,7 +243,7 @@ export default class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `/assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
     link.onload = function() {
       // Don't remove the old stylesheet until the new one has loaded
       _.filter(doc.head.querySelectorAll('link'), tag => {
@@ -306,7 +307,7 @@ export default class ComponentFlavor extends React.Component {
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
         aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
         <iframe
-          src="/components/preview-frame"
+          src={`${getHistory().createHref('/')}components/preview-frame`}
           height='100%'
           name={flavor.uid}
           ref="iframe"

@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.12.0",
+  "version": "1.0.0",
   "description": "Salesforce Lightning Design System",
   "license": "SEE LICENSE IN README.md",
   "repository": {
@@ -13,22 +13,23 @@
     "npm": ">=2.7.0"
   },
   "scripts": {
-    "postinstall": "./scripts/npm/postinstall.sh",
-    "test-before": "./scripts/npm/test-before.sh",
-    "test-after": "./scripts/npm/test-after.sh",
-    "dev": "./scripts/npm/dev.sh",
-    "prod": "./scripts/npm/prod.sh",
-    "dist": "./scripts/npm/dist.sh",
-    "dist-npm": "./scripts/npm/dist.sh --npm",
-    "lint": "./scripts/npm/lint.sh",
-    "optimize": "./scripts/npm/optimize.sh",
-    "update-boilerplate": "./scripts/npm/update-boilerplate.sh"
+    "postinstall": "gdm",
+    "test-before": "scripts/npm/test-before.sh",
+    "test-after": "scripts/npm/test-after.sh",
+    "dev": "babel-node scripts/build.js --dev",
+    "prod": "npm run lint && babel-node scripts/prod.js",
+    "dist": "babel-node scripts/dist.js",
+    "dist-npm": "babel-node scripts/dist.js --npm",
+    "lint": "babel-node node_modules/.bin/gulp --gulpfile scripts/lint.js || true",
+    "optimize": "scripts/npm/optimize.sh",
+    "update-boilerplate": "babel-node scripts/update-boilerplate.js"
   },
   "dependencies": {
     "@salesforce-ux/design-tokens": "1.3.1",
-    "@salesforce-ux/icons": "3.1.0"
+    "@salesforce-ux/icons": "3.2.0"
   },
   "devDependencies": {
+    "@salesforce-ux/design-system": "0.11.0",
     "@salesforce-ux/design-system-utils": "0.9.1",
     "app-module-path": "1.0.4",
     "async": "1.4.2",
@@ -64,6 +65,7 @@
     "gulp-replace": "0.5.4",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",
+    "history": "1.13.1",
     "imagemin-cli": "^2.0.0",
     "imagemin-pngquant": "^4.2.0",
     "immutable": "3.7.5",
@@ -90,8 +92,8 @@
     "react-addons-css-transition-group": "0.14.0-beta3",
     "react-addons-test-utils": "0.14.0-beta3",
     "react-dom": "0.14.0-beta3",
-    "react-lorem-component": "https://github.com/aputinski/react-lorem-component.git",
-    "react-router": "1.0.0-beta3",
+    "react-lorem-component": "aputinski/react-lorem-component",
+    "react-router": "1.0.0",
     "rimraf": "2.4.3",
     "sinon": "1.16.1",
     "stampit": "2.1.0",

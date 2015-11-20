@@ -17,6 +17,7 @@
   td {
     padding: $spacing-x-small;
     white-space: nowrap;
+    position: relative;
 
     &.#{$css-prefix}text-center {
       text-align: center;

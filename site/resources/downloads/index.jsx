@@ -18,6 +18,7 @@ import { logDownloadEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 import { Link } from 'react-router';
+import Img from 'app_modules/ui/img';
 
 const links = {
   zip: {
@@ -45,7 +46,7 @@ export default (
       Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone it on GitHub</a>.
     </p>
     <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')} ctaEventName='GitHub'>
-      <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+      <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
       Design System on GitHub
     </CTALink>
 

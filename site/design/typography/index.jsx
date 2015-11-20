@@ -13,8 +13,8 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import { Link } from 'react-router';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Typography" contentClassName={pf('site-design site-design-layout')}>
@@ -28,7 +28,7 @@ export default (
         <h3 className={pf('text-heading--large')}>a b c d e f g h i j k l m n o p q r s t u v w x y z</h3>
         <h3 className={pf('text-heading--large')}>0 1 2 3 4 5 6 7 8 9</h3>
       <figure className={pf('p-top--medium')}>
-        <img className={pf('image')} src="/assets/images/typography/img-font-scale.svg" alt="" />
+        <Img className={pf('image')} src="/assets/images/typography/img-font-scale.svg" alt="" />
       </figure>
       <h2 className="site-text-heading--large">Type Sizes</h2>
       <p>We use different type sizes and weights to convey a visual</p>

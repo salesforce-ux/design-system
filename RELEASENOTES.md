@@ -1,6 +1,11 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 1.0.0 (internal only) - November 18, 2015
+
+**NEW COMPONENTS**
+- Added the Docked Composer
+
 ## Release 0.12.0 - November 18, 2015
 
 **SITE IA**
@@ -77,11 +82,14 @@
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
+- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
+- Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
+- More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
 
-- Added notifications > prompt (modal-style alert) www.lightningdesignsystem.com/components/notifications#prompt
-- Added Preview Panel Popovers www.lightningdesignsystem.com/components/popovers#panels
-- More directional support for popover nubbins www.lightningdesignsystem.com/components/popovers#nubbins
-- Dropdown menus now have bottom positioning support, with accommodating nubbin support www.lightningdesignsystem.com/components/menus#dropdown-positioning
+## Release 0.10.2 - October 29, 2015
+- Updated Icons to version 3.2.0
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
+- Added Google Analytics
 
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker

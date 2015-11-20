@@ -1,0 +1,14 @@
+classBase: 'docked'
+status: 'prototype'
+flavors:
+  - base
+  - call-dialing
+  - call-connected
+  - call-finished
+  - log-a-call
+  - email
+  - email-modal
+  - task
+  - overflow-menu
+dependencies:
+  - core/icons

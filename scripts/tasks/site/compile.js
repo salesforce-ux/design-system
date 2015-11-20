@@ -22,10 +22,11 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import MD5 from 'md5';
 import minimist from 'minimist';
-import Location from 'react-router/lib/Location';
+import { createLocation } from 'history';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { Router, Route, Link } from 'react-router';
+import { Router, Route, Link, match as RouterMatch, RoutingContext } from 'react-router';
+
 import rename from 'gulp-rename';
 import through from 'through2';
 import watch from 'glob-watcher';
@@ -34,6 +35,7 @@ import webpack from 'webpack';
 import createComponent from 'app_modules/site/util/component/create';
 import { compileSass } from './sass';
 import ignoreUnderscore from 'app_modules/util/ignore-underscore';
+import { getDefaultEnvVars } from 'scripts/helpers/env'
 
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
@@ -187,9 +189,10 @@ export const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': _(process.env).pick([
-        'DEFAULT_USER_TYPE'
-      ]).mapValues(value => `"${value}"`).value()
+      'process.env': _(process.env)
+        .pick(_.keys(getDefaultEnvVars()))
+        .mapValues(value => `"${value}"`)
+        .value()
     })
   ],
   cache: {},
@@ -353,10 +356,13 @@ export const compiler = {
       // Create a cheerio instance from the <Page /> markup string
       let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
       // Router
-      let location = new Location(route.path);
-      Router.run(routes, location, (error, initialState, transition) => {
+      let location = createLocation(route.path);
+      RouterMatch({ routes, location }, (error, redirectLocation, renderProps) => {
+        if (error) {
+          throw error;
+        }
         let html = ReactDOMServer.renderToString(
-          React.createElement(Router, initialState)
+          React.createElement(RoutingContext, renderProps)
         );
         $('#app').append(html);
         $('body').append(`<script>LIGHTNING_DESIGN_SYSTEM.init('${route.modulePath}')</script>`);
@@ -380,16 +386,20 @@ export const compiler = {
     let sitemap = require('app_modules/site/navigation/sitemap');
     // Needed for ReactRouter
     let Root = React.createClass({
-      render() { return _.last(this.props.components); }
+      render() { return this.props.children; }
     });
     // Create the routes
     let routes = sitemap.getFlattenedRoutes().map(route => {
+      let page = require(this.getSitePathTmp(route.getIndexPath(route.path)));
+      let Page = React.createClass({
+        render() {
+          return page;
+        }
+      });
       return React.createElement(Route, {
         name: route.uid,
         path: route.path,
-        components: require(
-          this.getSitePathTmp(route.getIndexPath(route.path))
-        )
+        component: Page
       });
     });
     routes = React.createElement(Route, {

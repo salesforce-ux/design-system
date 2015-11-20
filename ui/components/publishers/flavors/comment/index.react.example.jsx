@@ -16,13 +16,14 @@ const SvgIcon = require('app_modules/ui/svg-icon');
 const StatefulClass = require('ui/components/lib/stateful.react');
 const MediaObject = require('ui/components/media-objects/index.react');
 const Input = require('ui/components/forms/flavors/input/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
     </a>
   </div>
 );

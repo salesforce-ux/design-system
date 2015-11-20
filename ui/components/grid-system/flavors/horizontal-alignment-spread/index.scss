@@ -17,3 +17,8 @@
     flex-grow: 0;
   }
 }
+
+// @todo - move this
+.#{$css-prefix}grid--align-end {
+  justify-content: flex-end;
+}

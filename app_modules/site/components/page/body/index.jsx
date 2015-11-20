@@ -31,6 +31,7 @@ import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { isMobile } from 'app_modules/site/browser/util';
 
 /**
  * Add extra meta data to the nav items
@@ -134,9 +135,8 @@ export default React.createClass({
       });
       window.__eventsQueue.length = 0;
     }
-    const slds = window.LIGHTNING_DESIGN_SYSTEM;
     this.setState({
-      showingSettings: !(Prefs.hasBeenViewed() || slds.isMobile()) && process.env.DEFAULT_USER_TYPE === 'internal'
+      showingSettings: !(Prefs.hasBeenViewed() || isMobile()) && process.env.DEFAULT_USER_TYPE === 'internal'
     });
   },
 
@@ -248,16 +248,16 @@ export default React.createClass({
     }
     return (
       <div>
-        {this.renderBanner()}
-          <main className={pf('site-main')} role="main">
-            {this.renderAnchor()}
-            {this.props.header}
-            <BodyContent role={this.state.role} className={contentClassName}>
-              {this.props.children}
-            </BodyContent>
-          </main>
-          {this.renderNav()}
-        {this.renderFooter()}
+        { this.renderBanner() }
+        <main className={pf('site-main')} role="main">
+          { this.renderAnchor() }
+          { this.props.header }
+          <BodyContent role={this.state.role} className={contentClassName}>
+            {this.props.children}
+          </BodyContent>
+        </main>
+        { this.renderNav() }
+        { this.renderFooter() }
         <Settings isOpen={this.state.showingSettings} onClose={this.closeSettings} />
       </div>
     );
@@ -272,12 +272,16 @@ export default React.createClass({
   },
 
   renderBanner(banner) {
+    let badge = process.env.DEFAULT_USER_TYPE === 'internal'
+      ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_ID})</div>
+      : null
     return (
       <header className={pf('site-banner')} role="banner">
         <Link to="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </Link>
+        {badge}
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
         </div>
@@ -341,7 +345,11 @@ export default React.createClass({
     if (item.get('hasChildren')) {
       return this.onToggleNavItem.bind(this, item);
     }
-    return function() {};
+    return function() {
+      // Scroll to top after a page change
+      // This will be handled by React Router in the future
+      window.scrollTo(0, 0);
+    };
   },
 
   renderNavItems(items, level) {

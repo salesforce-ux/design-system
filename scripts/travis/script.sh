@@ -1,9 +1,16 @@
 #!/bin/bash
+
 set -e
 
+npm run test-before
+npm run prod
+npm run dist
+npm run test-after
+
+# Deployment
 if [ -n "$DEPLOY_SCRIPTS_REPO" ]; then
   echo "TRAVIS: running heroku deployment"
-  ./node_modules/.bin/babel-node scripts-internal/deploy/heroku-ci.js
+  npm run deploy
 else
   echo "TRAVIS: skipping heroku deployment"
 fi

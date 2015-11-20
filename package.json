@@ -20,7 +20,7 @@
     "prod": "npm run lint && babel-node scripts/prod.js",
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
-    "lint": "babel-node node_modules/.bin/gulp --gulpfile scripts/lint.js || true",
+    "lint": "scripts/npm/lint.sh",
     "optimize": "scripts/npm/optimize.sh",
     "update-boilerplate": "babel-node scripts/update-boilerplate.js",
     "deploy": "babel-node scripts-internal/deploy/heroku-ci.js"
@@ -64,6 +64,7 @@
     "gulp-postcss": "6.0.0",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
+    "gulp-scss-lint": "^0.3.8",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",
     "history": "1.13.1",

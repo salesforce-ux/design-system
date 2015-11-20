@@ -357,7 +357,6 @@ export const compiler = {
       let $ = cheerio.load(ReactDOMServer.renderToStaticMarkup(page));
       // Router
       let location = createLocation(route.path);
-      
       RouterMatch({ routes, location }, (error, redirectLocation, renderProps) => {
         if (error) {
           throw error;

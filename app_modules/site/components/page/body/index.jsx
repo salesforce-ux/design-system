@@ -409,9 +409,9 @@ export default React.createClass({
           Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>. <CTALink href="http://salesforce.com/company/legal/intellectual.jsp" ctaEventName='copyright'>All rights reserved</CTALink>. {versionDateBuildString}
         </p>
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
-          <a className="site-social-twitter" href="http://twitter.com/salesforceux">Twitter</a>
-          <a className="site-social-dribbble" href="http://dribbble.com/salesforce">Dribbble</a>
-          <a className="site-social-github" href="https://github.com/salesforce-ux/design-system">GitHub Repository</a>
+          <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
+          <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
+          <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>
         </p>
       </footer>
     );

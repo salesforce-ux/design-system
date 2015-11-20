@@ -3,8 +3,8 @@
 set -e
 
 npm run test-before
-npm run prod
 npm run lint -- --linters sass || true
+npm run prod
 npm run dist
 npm run test-after
 

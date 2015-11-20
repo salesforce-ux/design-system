@@ -399,7 +399,7 @@ export default React.createClass({
   renderFooter(footer) {
     let versionDateBuildString;
     if (version.travisJobNumber && version.travisJobNumber !== 'NOT_SET') {
-      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${ version.dateNow}. Travis build ${version.travisJobNumber}.`;
+      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${ version.dateNow}. Build ${version.travisJobNumber}.`;
     } else {
       versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
     }

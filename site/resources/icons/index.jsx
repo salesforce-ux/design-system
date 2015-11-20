@@ -110,7 +110,7 @@ class Icons extends React.Component {
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             <p className={pf('site-text-introduction m-bottom--reset container--medium')}>
               Choose the icon you need from this page, then follow the implementation instructions on the <Link to="/components/icons/">icon component page</Link>. If you are building a Lightning Component, you may require an
-              additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName='lightning-svg-icon-helper'>Lightning helper component</CTALink> to use&nbsp;SVGs. 
+              additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName='lightning-svg-icon-helper'>Lightning helper component</CTALink> to use&nbsp;SVGs.
             </p>
             {this.renderCategories()}
           </div>

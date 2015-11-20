@@ -30,5 +30,3 @@ module.exports = (
   </div>
 </div>
 );
-
-

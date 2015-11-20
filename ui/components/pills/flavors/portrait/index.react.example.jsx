@@ -12,10 +12,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const React = require('react');
 const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
 const SvgIcon = require('app_modules/ui/svg-icon');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 const image = (
-  <img src={`/assets/images/avatar2.jpg`} alt="" />
+  <Img src={`/assets/images/avatar2.jpg`} alt="" />
 );
 
 module.exports = (

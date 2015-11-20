@@ -19,7 +19,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-index-modal + 1;
+  z-index: ($z-index-modal + 1);
 
   &__container {
     position: relative;
@@ -57,7 +57,7 @@
     border: {
       top: {
         right-radius: $border-radius-medium;
-         left-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
       }
       bottom: $border-width-thick solid $color-border;
     }
@@ -91,7 +91,7 @@
       top: $border-width-thick solid $color-border;
       bottom: {
         right-radius: $border-radius-medium;
-         left-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
       }
     }
     padding: $spacing-small $spacing-medium;

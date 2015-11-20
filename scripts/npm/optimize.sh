@@ -14,7 +14,7 @@
 node --harmony ./node_modules/.bin/imagemin --plugin=pngquant --optimizationLevel=2 site/favicons site/favicons || true
 
 # Optimize site images (png, jpg, gif)
-node --harmony ./node_modules/.bin/imagemin --plugin=pngquant --plugin jpegtran --optimizationLevel=2 site/assets/images site/assets/images || true
+node --harmony ./node_modules/.bin/imagemin --plugin=pngquant --plugin=jpegtran --optimizationLevel=2 site/assets/images site/assets/images || true
 
 # Optimize SVG
 find site/assets/images -type d -exec ./node_modules/.bin/svgo -f {} --enable=removeViewBox --enable=removeTitle --enable=cleanupIDs --enable=cleanupNumericValues --precision=4 \;

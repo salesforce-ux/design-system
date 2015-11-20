@@ -38,6 +38,11 @@
   }
 }
 
+// Because sometimes I need elements the same height as inputs
+.#{$css-prefix}input--height {
+  min-height: calc(#{$line-height-button} + 2px); /* For IE */
+}
+
 .#{$css-prefix}input-has-icon {
   position: relative;
 

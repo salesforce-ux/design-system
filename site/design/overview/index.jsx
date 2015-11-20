@@ -13,8 +13,8 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import { Link } from 'react-router';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Design" contentClassName={pf('site-design site-design-layout')}>
@@ -25,7 +25,7 @@ export default (
       <ul className={pf('grid wrap grid--pull-padded-large text-align--center p-vertical--x-large')}>
         <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
           <div className="grid-card">
-            <img src={`/assets/images/design/img-clarity.svg`} alt="" />
+            <Img src={`/assets/images/design/img-clarity.svg`} alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Clarity</dt>
               <dd>
@@ -37,7 +37,7 @@ export default (
         </li>
         <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
           <div className="grid-card">
-            <img src={`/assets/images/design/img-efficiency.svg`} alt="" />
+            <Img src={`/assets/images/design/img-efficiency.svg`} alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Efficiency</dt>
               <dd>
@@ -49,7 +49,7 @@ export default (
         </li>
         <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
           <div className="grid-card">
-            <img src={`/assets/images/design/img-consistency.svg`} alt="" />
+            <Img src={`/assets/images/design/img-consistency.svg`} alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Consistency</dt>
               <dd>
@@ -61,7 +61,7 @@ export default (
         </li>
         <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
           <div className="grid-card">
-            <img src={`/assets/images/design/img-beauty.svg`} alt="" />
+            <Img src={`/assets/images/design/img-beauty.svg`} alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Beauty</dt>
               <dd>

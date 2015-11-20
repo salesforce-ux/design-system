@@ -14,7 +14,8 @@ import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Displaying Data" contentClassName={pf('site-design site-design-layout')}>
@@ -38,7 +39,7 @@ export default (
           <p>On narrow screens where only a few columns will fit, tables should elegantly and responsively collapse into tile lists.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/displaying-data/img-table.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-table.svg" alt="" />
         </figure>
       </div>
 
@@ -51,7 +52,7 @@ export default (
           <p>On wider screens where more than 2 columns of tiles will appear, tile lists should elegantly and responsively expand into tables.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/displaying-data/img-tile.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-tile.svg" alt="" />
         </figure>
       </div>
 
@@ -62,7 +63,7 @@ export default (
           <p>To make tiles more interactive, you can add a card wrapper around individual tiles and allow users to drag and drop them. Use cards when the order and placement of individual items in a list is important.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/displaying-data/img-interactive-card.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-interactive-card.svg" alt="" />
         </figure>
       </div>
 
@@ -82,7 +83,7 @@ export default (
           <p>The discussion feed can include multiple message types that add interactive features. For example, you could include a poll.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/displaying-data/img-discussion-feed.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-discussion-feed.svg" alt="" />
         </figure>
       </div>
 
@@ -94,7 +95,7 @@ export default (
           <p>The activity feed can show past and future events. If you’re displaying future events, don’t include the timeline connector between the events.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/displaying-data/img-activity-feed.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-activity-feed.svg" alt="" />
         </figure>
       </div>
 

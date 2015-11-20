@@ -18,8 +18,8 @@ import through from 'through2';
 import css from 'css';
 import globals from 'app_modules/global';
 import { allowPrefixedClasses, fixParenthesized, onlyClasses,
-       removeAttrs, removeNonWordSuffix,
-       removePrefix, removePseudo, splitParts } from './util';
+        removeAttrs, removeNonWordSuffix,
+        removePrefix, removePseudo, splitParts } from './util';
 
 function getSelectors(r) {
   if (r.rules) {

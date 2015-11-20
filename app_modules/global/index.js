@@ -42,6 +42,6 @@ export default {
     return this.moduleName + '-' + version + '.zip';
   },
   downloadPath: function(version) {
-    return '/assets/downloads/' + this.zipName(version);
+    return 'assets/downloads/' + this.zipName(version);
   }
 };

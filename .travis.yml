@@ -2,10 +2,15 @@ language: node_js
 node_js:
   - "0.12"
 before_install:
+  - rvm install 2.2.2
   - scripts/travis/before_install.sh
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+install:
+  - bundle install --path vendor/bundle
+  - npm install
 script:
   - scripts/travis/script.sh
 cache:
   directories:
     - node_modules
+    - vendor/bundle

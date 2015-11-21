@@ -397,12 +397,14 @@ export default React.createClass({
   },
 
   renderFooter(footer) {
-    let versionDateBuildString;
+    let versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
     if (version.travisJobNumber && version.travisJobNumber !== 'NOT_SET') {
-      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${ version.dateNow}. Build ${version.travisJobNumber}.`;
-    } else {
-      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
+      if (process.env.DEFAULT_USER_TYPE === 'external') {
+        // external travis build
+        versionDateBuildString = `Version ${version.sldsVersion} (build ${version.travisJobNumber}). Last Updated on ${version.dateNow}.`;
+      }
     }
+
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>

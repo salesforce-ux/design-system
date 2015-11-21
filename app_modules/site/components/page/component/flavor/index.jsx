@@ -169,7 +169,8 @@ export default class ComponentFlavor extends React.Component {
       previewTabs,
       previewTabActive: _.last(previewTabs),
       codeTabs: [],
-      role: Prefs.roles.aura
+      role: Prefs.roles.aura,
+      initialView: true
     };
     // Listen for the iframe to load
     if (typeof window !== 'undefined') {
@@ -258,6 +259,7 @@ export default class ComponentFlavor extends React.Component {
   onPreviewTabClick(tab, event) {
     event.preventDefault();
     this.setState({
+      initialView: false,
       previewTabActive: tab
     }, this.updatePreview);
   }
@@ -298,6 +300,7 @@ export default class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.state.previewComponent) return null;
     const {flavor} = this.props;
+    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView})
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
@@ -313,7 +316,7 @@ export default class ComponentFlavor extends React.Component {
       </Tabs.Content>
     );
     return (
-      <Tabs className={pf('site-example--tabs')} flavor="default" panel={previewPanel} selectedIndex={2}>
+      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
         {this.renderPreviewTabs()}
       </Tabs>
     );
@@ -337,7 +340,8 @@ export default class ComponentFlavor extends React.Component {
           innerClass={pf('tabs--default__link')}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
           content={content}
-          onClick={this.onPreviewTabClick.bind(this, tab)}>
+          onClick={this.onPreviewTabClick.bind(this, tab)}
+          initialView={this.state.initialView}>
         </Tabs.Item>
       );
     });
@@ -347,7 +351,7 @@ export default class ComponentFlavor extends React.Component {
     if (!this.state.codeTabs.length) return null;
     const {flavor} = this.props;
     return (
-      <Tabs flavor="default">
+      <Tabs className={{'site-example--tabs-initial-view': this.state.initialView}} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );

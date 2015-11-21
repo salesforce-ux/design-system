@@ -5,8 +5,8 @@ set -e
 npm run test-before
 npm run lint -- --linters sass || true
 npm run prod
-npm run dist
 npm run test-after
+npm run dist
 
 # Deployment
 if [ -n "$DEPLOY_SCRIPTS_REPO" ]; then

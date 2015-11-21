@@ -28,7 +28,6 @@
   overflow: hidden;
 }
 
-
 @mixin tabs-link {
   @include truncate;
   display: block;
@@ -39,3 +38,9 @@
     outline: 0;
   }
 }
+
+@mixin tab-focus {
+  color: $color-text-tab-label-selected;
+  box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
+}
+

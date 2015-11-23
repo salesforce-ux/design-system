@@ -23,3 +23,5 @@ else
   echo "--prod"
   ./node_modules/.bin/babel-node scripts/build.js --prod
 fi
+
+// Testing the mention bot

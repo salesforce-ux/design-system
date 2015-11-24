@@ -15,6 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import Img from 'app_modules/ui/img';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>

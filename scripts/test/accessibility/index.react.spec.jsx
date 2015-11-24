@@ -54,16 +54,17 @@ describe(`Accessiblity`, () => {
                   // get the right component
                   previewCmp = getExample(flavor.examplePath);
                   /* TODO: should we be using .preview?? */
+                  if (previewCmp.default) {
+                    previewCmp = previewCmp.default;
+                  }
                   if (previewCmp.preview) {
                     previewCmp = previewCmp.preview;
                   }
-
                   let cls = React.createClass({
                     render: function() {
                       return <div><previewCmp/></div>
                     }
                   });
-
                   // render it and get its DOM node
                   cmp = renderIntoDocument(React.createElement(cls));
                   $cmp = ReactDOM.findDOMNode(cmp);

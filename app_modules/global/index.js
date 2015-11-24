@@ -15,11 +15,10 @@ export default {
   displayName: 'Lightning Design System',
   filenamePrefix: 'slds',
   analyticsHostWhitelist: [
-    'getslds.com',
-    'www.getslds.com',
-    'lightningdesignsystem.com',
-    'www.lightningdesignsystem.com',
-    'lightning-design-system.herokuapp.com',
+    'asdasdasdasdasd.com',
+    'www.asdasdasd.com',
+    'asdasdadasd.com',
+    'lightning-design-system.asdasdasdasd.com',
     'salesforce.com',
     'www.salesforce.com'
   ],
@@ -28,7 +27,6 @@ export default {
     {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
   ],
   unmanagedPackageUrls: [
-    { version: '0.12.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000Tji5' },
     { version: '0.11.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000T0UT' },
     { version: '0.10.1', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000ShId' },    
     { version: '0.10.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000KQm3' },
@@ -38,10 +36,7 @@ export default {
   ],
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',
-  zipName: function(version) {
-    return this.moduleName + '-' + version + '.zip';
+  // zipName: function(version) {
+    // return this.moduleName + '-' + version + '.zip';
   },
-  downloadPath: function(version) {
-    return '/assets/downloads/' + this.zipName(version);
-  }
 };

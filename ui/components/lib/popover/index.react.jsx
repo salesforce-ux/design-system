@@ -10,10 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import Registry from '../control/registry';
-const pf = componentUtil.prefix;
+
+const PT = React.PropTypes;
 
 class Popover extends React.Component {
   static propTypes = { id: PT.string, visible: PT.bool };

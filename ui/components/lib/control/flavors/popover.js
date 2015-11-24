@@ -11,13 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import Registry from '../registry';
 import Control from '../index.react';
 import domAlign from '../dom-align/index';
-const pf = componentUtil.prefix;
+
+const PT = React.PropTypes;
 
 // This component clones calculates position for popover.
 // It inherits from the Control Component which sets up listeners...ugh inheritence

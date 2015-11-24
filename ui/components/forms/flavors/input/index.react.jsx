@@ -10,9 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import SvgIcon from 'app_modules/ui/svg-icon';
-const pf = componentUtil.prefix;
 
 class Component extends React.Component {
   constructor(props) {

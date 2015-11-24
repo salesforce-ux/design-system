@@ -10,11 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import Popover from 'ui/components/lib/popover/index.react';
-const pf = componentUtil.prefix;
+
+const PT = React.PropTypes;
 
 class DialogHeader extends React.Component {
   constructor(props) {

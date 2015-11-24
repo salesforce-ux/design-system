@@ -11,16 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
-const {textContent} = componentUtil;
+import componentUtil, { prefix as pf, textContent } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import Popover from 'ui/components/lib/popover/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import AccessibleList from 'ui/components/lib/accessible-list.react';
-const pf = componentUtil.prefix;
 import Helper from 'ui/components/lib/dom-helpers';
+
+const PT = React.PropTypes;
+const pf = componentUtil.prefix;
 
 class PickListItem extends React.Component {
   static contextTypes = { itemSelected: PT.func, itemFocused: PT.func };

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'ui/components/modals/index.react';
-import componentUtil from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
 

@@ -13,7 +13,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import componentUtil from 'app_modules/ui/util/component';
 import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 

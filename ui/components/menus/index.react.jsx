@@ -12,16 +12,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-const PT = React.PropTypes;
 import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import AccessibleList from 'ui/components/lib/accessible-list.react';
 import Helper from 'ui/components/lib/dom-helpers';
-
-import componentUtil from 'app_modules/ui/util/component';
-const {textContent, hasChild} = componentUtil;
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf, textContent, hasChild } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
+
+const PT = React.PropTypes;
 const cssPrefix = globals.cssPrefix;
 
 const defaultFilter = (term, item) => {

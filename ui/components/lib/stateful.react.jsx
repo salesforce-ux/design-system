@@ -10,10 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
-const {createChainedFunction} = componentUtil;
+import { createChainedFunction } from 'app_modules/ui/util/component';
 import classNames from 'classnames/dedupe';
 import globals from 'app_modules/global';
+
 const cssPrefix = globals.cssPrefix;
 
 function addClass(element, className) {

@@ -12,15 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
+import globals from 'app_modules/global';
+import Img from 'app_modules/ui/img';
+
 const imageNameForColor = {
   'base': 'slds_spinner.gif', // 9FAAB5
   'brand': 'slds_spinner_brand.gif', // 1589EE
   'inverse': 'slds_spinner_inverse.gif' // FFFFFF
 };
-import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
-
-import Img from 'app_modules/ui/img';
 
 class Spinner extends React.Component {
   static propTypes = {

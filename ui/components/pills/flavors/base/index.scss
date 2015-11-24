@@ -56,6 +56,10 @@
     min-height: calc(#{$line-height-button} + 2px);
   }
 
+  &__container--bare {
+    padding: $spacing-xxx-small 1px; // $spacing-xxx-small/2px to accomodate for missing borders
+  }
+
   &__label {
     max-width: 13.5rem; // Roughly 30 Characters
     display: inline-block;

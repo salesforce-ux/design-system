@@ -7,19 +7,8 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 
 ## Setup
 
-Your `npm` version must be at least 2.1.x. You can update your npm with: `sudo npm install npm -g`
+### Your `npm` version must be at least 2.1.x. You can update your npm with: `sudo npm install npm -g`
 
-```bash
-npm install
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000)
-
-## Contributing to the code base
-
-See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
-
-## Licenses
 
 * Source code is licensed under [BSD License Clause 2](http://opensource.org/licenses/BSD-2-Clause)
 * All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
@@ -27,6 +16,6 @@ See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
 
 ## Got feedback?
 
-Please create a <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>
+Test Please create a <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>
 
 

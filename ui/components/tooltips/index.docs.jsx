@@ -15,8 +15,8 @@ import Tooltip from 'ui/components/tooltips/index.react';
 import Lorem from 'react-lorem-component';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Control from 'ui/components/lib/control/flavors/popover';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
   <ComponentDocs>

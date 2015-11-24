@@ -13,14 +13,15 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image1 = (
   <SvgIcon className={pf('icon icon-standard-groups')} sprite="standard" symbol="groups" />
 );
 const image2 = (
   <span className={pf('avatar avatar--circle avatar--small')}>
-    <img src={`/assets/images/avatar2.jpg`} alt="" />
+    <Img src={`/assets/images/avatar2.jpg`} alt="" />
   </span>
 );
 

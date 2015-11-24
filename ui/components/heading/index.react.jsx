@@ -12,8 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 const PT = React.PropTypes;
 import Truncate from 'ui/components/lib/truncate/index.react.jsx';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 class LabelHeading extends React.Component {
   constructor(props) {

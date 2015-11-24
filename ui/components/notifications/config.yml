@@ -5,6 +5,10 @@ flavors:
   - alert
   - toast
   - prompt
+  - prompt-for-touch
+  - prompt-for-touch-with-header
+  - prompt-for-touch-with-header-and-tagline
+  - prompt-for-touch-with-header-and-tagline-plus-image
   - modal-toast
 dependencies:
   - components/buttons

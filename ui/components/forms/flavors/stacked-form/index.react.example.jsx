@@ -14,8 +14,8 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 import Textarea from 'ui/components/forms/flavors/textarea/index.react';
 import Radio from 'ui/components/forms/flavors/radio/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className='demo-only'>

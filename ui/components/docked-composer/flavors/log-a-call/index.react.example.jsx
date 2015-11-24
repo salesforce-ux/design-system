@@ -16,8 +16,8 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Lorem from 'react-lorem-component';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const dialingIcon = (
   <span className={pf('icon__container icon-standard-log-a-call')}>

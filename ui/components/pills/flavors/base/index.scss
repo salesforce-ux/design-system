@@ -15,7 +15,12 @@
   padding: $spacing-xx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
-  line-height: $line-height-reset;
+  vertical-align: middle;
+  line-height: $line-height-text; // Retain height if nested within a flexbox container
+
+  + .#{$css-prefix}pill {
+    margin-left: $spacing-xx-small;
+  }
 
   &:hover {
     background-color: $color-background-button-default-hover;
@@ -24,14 +29,6 @@
   &:focus {
     outline: 0;
     box-shadow: $shadow-button-focus;
-  }
-
-  .#{$css-prefix}button {
-    margin-left: $spacing-x-small;
-  }
-
-  .#{$css-prefix}icon {
-    margin-right: $spacing-x-small;
   }
 
   &--bare {
@@ -43,27 +40,38 @@
     }
   }
 
-  + .#{$css-prefix}pill {
-    margin-left: $spacing-xx-small;
+  &-container {
+    @include deprecate("0.13.0") {
+      padding: 1px;
+      border: $border-width-thin solid $color-border;
+      border-radius: $border-radius-medium;
+      min-height: calc(#{$line-height-button} + 2px);
+    }
   }
-}
 
-.#{$css-prefix}pill__label {
-  max-width: 13.5rem; // Roughly 30 Characters
-  display: inline-block;
-  vertical-align: middle;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  &__container {
+    padding: 1px;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    min-height: calc(#{$line-height-button} + 2px);
+  }
 
-.#{$css-prefix}pill-container {
-  padding: 1px $spacing-xx-small;
-  // border-bottom: $border-width-thin solid $color-border;
-  min-height: calc(#{$line-height-button} + 2px);
-}
+  &__label {
+    max-width: 13.5rem; // Roughly 30 Characters
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.#{$css-prefix}form-element__control .#{$css-prefix}pill-container {
-  border: $border-width-thin solid $color-border;
-  border-radius: $border-radius-medium;
+  &__icon {
+    @include square($square-icon-x-small-boundary);
+    margin-right: $spacing-x-small;
+    border-radius: $border-radius-small;
+  }
+
+  &__remove {
+    margin-left: $spacing-x-small;
+  }
 }

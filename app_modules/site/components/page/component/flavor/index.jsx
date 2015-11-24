@@ -20,6 +20,7 @@ import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { getHistory } from 'app_modules/site/navigation/history';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
@@ -168,7 +169,8 @@ class ComponentFlavor extends React.Component {
       previewTabs,
       previewTabActive: _.last(previewTabs),
       codeTabs: [],
-      role: Prefs.roles.aura
+      role: Prefs.roles.aura,
+      initialView: true
     };
     // Listen for the iframe to load
     if (typeof window !== 'undefined') {
@@ -241,7 +243,7 @@ class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `/assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
     link.onload = function() {
       // Don't remove the old stylesheet until the new one has loaded
       _.filter(doc.head.querySelectorAll('link'), tag => {
@@ -257,6 +259,7 @@ class ComponentFlavor extends React.Component {
   onPreviewTabClick(tab, event) {
     event.preventDefault();
     this.setState({
+      initialView: false,
       previewTabActive: tab
     }, this.updatePreview);
   }
@@ -297,13 +300,14 @@ class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.state.previewComponent) return null;
     const {flavor} = this.props;
+    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView})
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
         aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
         <iframe
-          src="/components/preview-frame"
+          src={`${getHistory().createHref('/')}components/preview-frame`}
           height='100%'
           name={flavor.uid}
           ref="iframe"
@@ -312,7 +316,7 @@ class ComponentFlavor extends React.Component {
       </Tabs.Content>
     );
     return (
-      <Tabs className={pf('site-example--tabs')} flavor="default" panel={previewPanel} selectedIndex={2}>
+      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
         {this.renderPreviewTabs()}
       </Tabs>
     );
@@ -333,9 +337,11 @@ class ComponentFlavor extends React.Component {
           key={tab.key}
           aria-controls={`${flavor.uid}__preview-content`}
           aria-describedby={flavor.uid}
+          innerClass={pf('tabs--default__link')}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
           content={content}
-          onClick={this.onPreviewTabClick.bind(this, tab)}>
+          onClick={this.onPreviewTabClick.bind(this, tab)}
+          initialView={this.state.initialView}>
         </Tabs.Item>
       );
     });
@@ -345,7 +351,7 @@ class ComponentFlavor extends React.Component {
     if (!this.state.codeTabs.length) return null;
     const {flavor} = this.props;
     return (
-      <Tabs flavor="default">
+      <Tabs className={{'site-example--tabs-initial-view': this.state.initialView}} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );
@@ -363,6 +369,7 @@ class ComponentFlavor extends React.Component {
         <Tabs.Item
           key={tab.key}
           aria-controls={`${flavor.uid}__code-block--${tab.key}`}
+          innerClass={pf('tabs--default__link')}
           content={content}
           aria-describedby={flavor.uid}>
           <Tabs.Content className={pf('site-code--content scrollable--x')}>

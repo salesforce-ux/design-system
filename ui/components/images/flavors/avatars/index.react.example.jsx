@@ -10,16 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const avatar = (
-  <img src={`/assets/images/company1.jpg`} alt="company name" />
+  <Img src={`/assets/images/company1.jpg`} alt="company name" />
 );
+
 const avatar2 = (
-  <img src={`/assets/images/avatar2.jpg`} alt="person name" />
+  <Img src={`/assets/images/avatar2.jpg`} alt="person name" />
 );
-exports.preview = (
+
+export const preview = (
   <div className='demo-only'>
     <span className={pf('avatar avatar--x-small m-right--x-small')}>{avatar}</span>
     <span className={pf('avatar avatar--small m-right--x-small')}>{avatar}</span>
@@ -31,7 +33,8 @@ exports.preview = (
     <span className={pf('avatar avatar--circle avatar--large m-right--x-small')}>{avatar2}</span>
   </div>
 );
-exports.code = (
+
+export const code = (
   <div className='demo-only'>
     <span className={pf('avatar avatar--x-small')}>{avatar}</span>
     <span className={pf('avatar avatar--small')}>{avatar}</span>

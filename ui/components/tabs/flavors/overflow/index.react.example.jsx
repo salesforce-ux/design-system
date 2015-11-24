@@ -14,35 +14,35 @@ import Tabs from '../../index.react';
 import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className='demo-only demo-only--dropdown' style={{height: '30rem'}}>
   <Tabs flavor="default">
-    <Tabs.Item title="Item One" id="tab-default-1">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item One" id="tab-default-1">
       <h2>Item One Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Two" id="tab-default-2">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Two" id="tab-default-2">
       <h2>Item Two Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Three" id="tab-default-3">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Three" id="tab-default-3">
       <h2>Item Three Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Four" id="tab-default-4">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Four" id="tab-default-4">
       <h2>Item Four Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Five" id="tab-default-5">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Five" id="tab-default-5">
       <h2>Item Five Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Six" id="tab-default-6">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Six" id="tab-default-6">
       <h2>Item Six Content</h2>
     </Tabs.Item>
-    <Tabs.Item title="Item Seven" id="tab-default-7">
+    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger tabs__item')}>
-      <a href="#" aria-haspopup="true">More
+    <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger tabs--default__item')}>
+      <a className={pf('tabs--default__link')} href="#" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
       <Menu className={pf('dropdown--medium dropdown--right dropdown--overflow')}>

@@ -12,17 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className='demo-only'>
-  <span className={pf('pill')}>
-    <a href="#" className={pf('pill__label')}>
-      <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-      Pill Label
-    </a>
-    <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>
+  <a href="#void" className={pf('pill')}>
+    <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+    <span className={pf('pill__label')}>Pill Label</span>
+    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+  </a>
 </div>
 );

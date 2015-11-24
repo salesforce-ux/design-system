@@ -15,8 +15,8 @@ import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Lorem from 'react-lorem-component';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 class ModalExample extends React.Component {
 

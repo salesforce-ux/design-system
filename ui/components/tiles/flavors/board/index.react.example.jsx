@@ -12,8 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 function image() {
   return (
@@ -26,7 +26,7 @@ function image() {
 
 exports.preview = (
 <div className='demo-only' style={{width: '300px'}}>
-  <ul className={pf('list--vertical has-cards')}>
+  <ul className={pf('list--vertical has-cards--space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
         <div className={pf('tile tile--board')}>
@@ -75,7 +75,7 @@ exports.preview = (
 );
 exports.code = (
 <div className='demo-only' style={{width: '300px'}}>
-  <ul className={pf('list--vertical has-cards')}>
+  <ul className={pf('list--vertical has-cards--space has-selections')}>
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>
         <p className={pf('tile__title truncate')}>

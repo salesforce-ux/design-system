@@ -14,8 +14,8 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Menu from 'ui/components/menus/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className='demo-only'>
@@ -27,15 +27,17 @@ export default (
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
         <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-activedescendant="" />
       </div>
-      <div className={pf('pill-container')}>
-        <span className={pf('pill')}>
-          <a href="#" className={pf('pill__label')}><SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />Pied Piper</a>
-          <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-        </span>
-        <span className={pf('pill')}>
-          <a href="#" className={pf('pill__label')}><SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />Weyland-Yutani Corporation</a>
-          <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-        </span>
+      <div className={pf('pill__container')}>
+        <a href="#void" className={pf('pill')}>
+          <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+          <span className={pf('pill__label')}>Pied Piper</span>
+          <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+        </a>
+        <a href="#void" className={pf('pill')}>
+          <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+          <span className={pf('pill__label')}>Weyland-Yutani Corporation</span>
+          <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+        </a>
       </div>
     </div>
   </div>

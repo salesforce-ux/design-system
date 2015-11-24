@@ -15,8 +15,8 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const headerIcon = (
   <span className={pf('icon__container icon-standard-email')}>

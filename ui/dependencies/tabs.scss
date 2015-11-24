@@ -26,17 +26,21 @@
 
 @mixin tabs-item {
   overflow: hidden;
+}
 
-  > a {
-    @include truncate;
-    display: block;
-    text-decoration: none;
-    cursor: pointer; // needed in case links have no href & use JS
-    height: $line-height-tab;
-    line-height: $line-height-tab;
+@mixin tabs-link {
+  @include truncate;
+  display: block;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
 
-    &:focus {
-      outline: 0;
-    }
+  &:focus {
+    outline: 0;
   }
 }
+
+@mixin tab-focus {
+  color: $color-text-tab-label-selected;
+  box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
+}
+

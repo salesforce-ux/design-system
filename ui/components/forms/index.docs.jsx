@@ -16,8 +16,8 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 import Textarea from 'ui/components/forms/flavors/textarea/index.react';
 import Select from 'ui/components/forms/flavors/select/index.react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
 

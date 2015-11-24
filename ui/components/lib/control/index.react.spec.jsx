@@ -13,8 +13,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Control from './index.react';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 import {
   isCompositeComponent,
@@ -32,20 +32,20 @@ describe(`Control`, () => {
       // real shared document needed for querySelector
       let cls = React.createClass({
         setTestVariable: function() {
-          testVariable = "success!";
+          testVariable = 'success!';
         },
         render: function() {
           return (
             <div>
-              <Control target="#myDiv" trigger="click">
-                <Button onClick={this.setTestVariable} className={pf('clique')} href="#">Clickable</Button>
+              <Control target='#myDiv' trigger='click'>
+                <Button onClick={this.setTestVariable} className={pf('clique')} href='#'>Clickable</Button>
               </Control>
 
-              <Control target="#myDiv" trigger="hover">
+              <Control target='#myDiv' trigger='hover'>
                 <p>Hoverable</p>
               </Control>
 
-              <div className={pf('party-time hide')} id="myDiv"><h1>You found me</h1></div>
+              <div className={pf('party-time hide')} id='myDiv'><h1>You found me</h1></div>
             </div>
           );
         }
@@ -53,22 +53,22 @@ describe(`Control`, () => {
       cmp = ReactDOM.render(React.createElement(cls), document.body);
     });
     it(`renders the children`, () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, "clique");
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'clique');
       expect(nodes).length.to.be(1);
     });
     it(`maintains the hidden className`, () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, "party-time")[0];
+      const node = scryRenderedDOMComponentsWithClass(cmp, 'party-time')[0];
       expect(node.props.className).to.contain('hide');
     });
 
     describe(`click the clickable control`, () => {
       let control;
       beforeEach(() => {
-        control = scryRenderedDOMComponentsWithClass(cmp, "clique")[0];
+        control = scryRenderedDOMComponentsWithClass(cmp, 'clique')[0];
       });
 
       it(`shows the div`, () => {
-        let toggleable = document.querySelector("#myDiv");
+        let toggleable = document.querySelector('#myDiv');
         expect(toggleable.className).to.contain('hide');
         expect(testVariable).to.be.undefined;
         Simulate.click(control, {});
@@ -77,7 +77,7 @@ describe(`Control`, () => {
       });
 
       it(`hides the div`, () => {
-        let toggleable = document.querySelector("#myDiv");
+        let toggleable = document.querySelector('#myDiv');
         expect(toggleable.className).to.contain('show');
         Simulate.click(control, {});
         expect(toggleable.className).to.contain('hide');
@@ -87,19 +87,19 @@ describe(`Control`, () => {
     describe(`hover the hoverable control`, () => {
       let control;
       beforeEach(() => {
-        control = scryRenderedDOMComponentsWithTag(cmp, "p")[0];
+        control = scryRenderedDOMComponentsWithTag(cmp, 'p')[0];
       });
 
       // mouseOver stopgap: https://github.com/facebook/react/issues/1297
       it(`shows the div`, () => {
-        let toggleable = document.querySelector("#myDiv");
+        let toggleable = document.querySelector('#myDiv');
         expect(toggleable.className).to.contain('hide');
         SimulateNative.mouseOver(ReactDOM.findDOMNode(control));
         expect(toggleable.className).to.contain('show');
       });
 
       it(`hides the div`, () => {
-        let toggleable = document.querySelector("#myDiv");
+        let toggleable = document.querySelector('#myDiv');
         expect(toggleable.className).to.contain('show');
         SimulateNative.mouseOut(ReactDOM.findDOMNode(control), {relatedTarget: toggleable});
         expect(toggleable.className).to.contain('hide');

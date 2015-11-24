@@ -16,13 +16,13 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import Input from 'ui/components/forms/flavors/input/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
     </a>
   </div>
 );
@@ -40,7 +40,7 @@ const commentReply = (
   </div>
 );
 
-exports.preview = (
+export const preview = (
 <div className='demo-only' >
 
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
@@ -183,7 +183,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />

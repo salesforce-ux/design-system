@@ -14,7 +14,8 @@ import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Loading" contentClassName={pf('site-design site-design-loading site-text-longform')}>
@@ -27,7 +28,7 @@ export default (
       <p>Spinners are animated SVGs or GIFs. They reduce the use of awkward white screens and blank containers to communicate that the system is working. Use spinners when a component on a page is making an asynchronous update without refreshing the page.</p>
       <div className={pf('site-diagram-section-list grid wrap')}>
         <figure className={pf('large-size--1-of-2')}>
-          <img className="image" src="/assets/images/loading/img-loading-card.svg" alt="Wireframe image of card loading" />
+          <Img className="image" src="/assets/images/loading/img-loading-card.svg" alt="Wireframe image of card loading" />
           <figcaption>Card</figcaption>
         </figure>
         <div className={pf('site-diagram-section-middle large-size--1-of-2')}>
@@ -36,7 +37,7 @@ export default (
       </div>
       <div className={pf('site-diagram-section-list grid wrap')}>
         <figure className={pf('large-size--1-of-2')}>
-          <img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
+          <Img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
           <figcaption>List View</figcaption>
         </figure>
         <div className={pf('site-diagram-section-middle large-size--1-of-2')}>
@@ -50,31 +51,31 @@ export default (
         <ul className={pf('grid wrap grid--pull-padded-large')}>
           <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2 medium-size--1-of-3')}>
             <figure>
-              <img className="image" src="/assets/images/loading/img-loading-record.svg" alt="Wireframe image of record home card loading" />
+              <Img className="image" src="/assets/images/loading/img-loading-record.svg" alt="Wireframe image of record home card loading" />
               <figcaption>Card Loading</figcaption>
             </figure>
           </li>
           <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2 medium-size--1-of-3')}>
             <figure>
-              <img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
+              <Img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
               <figcaption>Lazy Loading</figcaption>
             </figure>
           </li>
           <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2 medium-size--1-of-3')}>
             <figure>
-              <img className="image" src="/assets/images/loading/img-loading-list.svg" alt="Wireframe image of list loading" />
+              <Img className="image" src="/assets/images/loading/img-loading-list.svg" alt="Wireframe image of list loading" />
               <figcaption>List Loading</figcaption>
             </figure>
           </li>
           <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2 medium-size--1-of-3')}>
             <figure>
-              <img className="image" src="/assets/images/loading/img-loading-modal.svg" alt="Wireframe image of modal loading" />
+              <Img className="image" src="/assets/images/loading/img-loading-modal.svg" alt="Wireframe image of modal loading" />
               <figcaption>Modal Loading</figcaption>
             </figure>
           </li>
           <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2 medium-size--1-of-3')}>
             <figure>
-              <img className="image" src="/assets/images/loading/img-loading-page.svg" alt="Wireframe image of full screen loading" />
+              <Img className="image" src="/assets/images/loading/img-loading-page.svg" alt="Wireframe image of full screen loading" />
               <figcaption>Full Screen Loading</figcaption>
             </figure>
           </li>
@@ -87,7 +88,7 @@ export default (
         <p><strong>Stencils are placeholders that visually communicate that content is in the process of loading.</strong></p>
         <div className={pf('site-side-by-side site-side-by-side--img-left grid wrap m-bottom--x-large')}>
           <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none')}>
-            <img className={pf('image')} src="/assets/images/loading/img-stencils.svg" alt="Wireframe image of stencil loading" />
+            <Img className={pf('image')} src="/assets/images/loading/img-stencils.svg" alt="Wireframe image of stencil loading" />
           </figure>
           <div className={pf('size--1-of-1 medium-size--1-of-2 grow-none')}>
             <p className={pf('p-top--x-large')}>Stencils abstractly represent what the resulting content layout will look like. Use stencils for full page refreshes, not asynchronous updates. Stencils offer a more visually appealing experience than dozens of spinners animating at the same time or a blank white page.</p>
@@ -105,14 +106,14 @@ export default (
           <h2 className={pf('site-text-heading--medium')}>Table Data Loading Stencil</h2>
           <p className={pf('grow')}>For table lists, don’t fill the screen up with stencils. Render a table data row stencil 20 times and reduce the opacity of each row by 5% to create a fade effect from 100% to 0% opacity, giving an infinite data effect. (see example below)</p>
           <figure>
-            <img className={pf('image')} src="/assets/images/loading/img-stencil-table.svg" alt="Wireframe image of table stencil" />
+            <Img className={pf('image')} src="/assets/images/loading/img-stencil-table.svg" alt="Wireframe image of table stencil" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
           <h2 className={pf('site-text-heading--medium')}>Record Detail Stencil</h2>
           <p className={pf('grow')}>Feed fades out over five instances to indicate infinite scroll. Each related list shows one instance of the component-specific stencil. </p>
           <figure>
-            <img className={pf('image')} src="/assets/images/loading/img-stencil-record.svg" alt="Wireframe image of record stencil" />
+            <Img className={pf('image')} src="/assets/images/loading/img-stencil-record.svg" alt="Wireframe image of record stencil" />
           </figure>
         </div>
       </div>

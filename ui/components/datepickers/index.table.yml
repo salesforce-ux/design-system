@@ -43,4 +43,3 @@ classes:
     class: disabled-text
     description: Indicates days that are in previous/next months
     applied: <code>&lt;td&gt;</code>
-

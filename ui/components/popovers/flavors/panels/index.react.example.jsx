@@ -14,8 +14,8 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/components/media-objects/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const iconHeader = (
   <span className={pf('icon__container icon-standard-account')}>

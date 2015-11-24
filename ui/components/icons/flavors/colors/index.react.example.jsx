@@ -11,14 +11,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 exports.preview = (
   <div className='demo-only'>
     <span className={pf('icon__container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="lock" />
+      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
+
+    </span>
+    <span className={pf('icon__container m-right--small')}>
+      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
+    </span>
+    <span className={pf('icon__container m-right--small')}>
+      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
     <span className={pf('icon__container icon-standard-case m-right--small')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
@@ -33,8 +42,16 @@ exports.preview = (
 exports.code = (
   <div className='demo-only'>
     <span className={pf('icon__container')}>
-      <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="lock" />
+      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
+    </span>
+    <span className={pf('icon__container')}>
+      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
+    </span>
+    <span className={pf('icon__container')}>
+      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
+      <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
     <span className={pf('icon__container icon-standard-case')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />

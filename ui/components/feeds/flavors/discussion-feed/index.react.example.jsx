@@ -19,13 +19,13 @@ import CommentMinimal from 'ui/components/feeds/flavors/comment-minimal/index.re
 import CommentAttachment from 'ui/components/feeds/flavors/comment-with-attachments/index.react.example';
 import CommentAttachmentInline from 'ui/components/feeds/flavors/comment-with-attachments/index.react.example.inline';
 import CommentPublisher from 'ui/components/publishers/flavors/comment/index.react.example';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
     </a>
   </div>
 );
@@ -154,5 +154,3 @@ export default (
 
 </div>
 );
-
-

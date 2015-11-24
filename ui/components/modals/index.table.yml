@@ -38,7 +38,13 @@ classes:
     description: Creates the scrollable content area for the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+    notes: Either <code>.{{cssPrefix}}modal__content</code> or <code>.{{cssPrefix}}modal__menu</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+  -
+    class: modal__menu
+    description: Creates the shaded menu area for the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Either <code>.{{cssPrefix}}modal__menu</code> or <code>.{{cssPrefix}}modal__content</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
   -
     class: modal__footer
     description: Creates the Modal Footer container.
@@ -51,15 +57,26 @@ classes:
     applied: <code>.{{cssPrefix}}modal__footer</code>
     notes: This is only needed when you have two buttons that indicate a back and forward navigation.
   -
-    class: modal-backdrop
+    class: backdrop
     description: Creates the shaded backdrop used behind the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: This should follow after the <code>.{{cssPrefix}}modal</code> as an empty element.
   -
-    class: modal-backdrop--open
+    class: modal-backdrop
+    description: Creates the shaded backdrop used behind the modal.
+    applied: <code>&lt;div&gt;</code>
+    required: true
+    notes: Deprecated
+  -
+    class: backdrop--open
     description: Allows the backdrop to be visible.
     applied: <code>.{{cssPrefix}}modal-backdrop</code>
     required: true
     notes: Apply this class to a modal backdrop with JavaScript to make it visible.
-    
+  -
+    class: modal-backdrop--open
+    description: Allows the backdrop to be visible.
+    applied: <code>.{{cssPrefix}}modal-backdrop</code>
+    required: true
+    notes: Deprecated

@@ -15,8 +15,8 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+import Img from 'app_modules/ui/img';
 
 const dialingIcon = (
   <span className={pf('icon__container icon-standard-call')}>
@@ -26,7 +26,7 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--large')}>
-    <img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
+    <Img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
   </span>
 );
 

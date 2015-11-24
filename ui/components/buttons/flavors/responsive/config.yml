@@ -1,5 +1,0 @@
-status: 'prototype'
-dependencies:
-  - components/buttons
-showFormFactors:
-  - small

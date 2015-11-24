@@ -12,8 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Menu from 'ui/components/menus/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className={pf('demo-only demo-only--dropdown')} style={{height: '165px'}}>

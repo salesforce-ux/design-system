@@ -11,15 +11,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
   <ComponentDocs>
     <p className="site-text-introduction">A Menu offers a list of actions or functions that a user can access.</p>
 
-    <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. Since we are triggering the dropdown through CSS, the menu will show on hover. The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
+    <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. The exception to this is the <strong>Action Overflow for Touch</strong>, which not a dropdown menu.</p>
+
+    <p>Since we are triggering the dropdown through CSS, the menu will show on hover. The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
 
     <p>By default, dropdown menus do not display a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin--top"/> to the <CodeClass className="dropdown"/> HTML element.</p>
     <p>See the <a href="#overview">Component Overview</a> table for further nubbin support.</p>

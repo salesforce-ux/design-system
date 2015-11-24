@@ -13,20 +13,22 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import Lorem from 'react-lorem-component';
 import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <img src={`/assets/images/avatar2.jpg`} style={{height: '100px'}} alt='Placeholder'/>
+  <Img src={`/assets/images/avatar2.jpg`} style={{height: '100px'}} alt='Placeholder'/>
 );
 
-exports.preview = (
+export const preview = (
   <div className={pf('size--3-of-4')}>
     <MediaObject figureRight={image}>
       <Lorem count={1} />
     </MediaObject>
   </div>
 );
-exports.code = (
+
+export const code = (
   <MediaObject figureRight={image}>
     <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
   </MediaObject>

@@ -14,8 +14,8 @@ import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import Radio from 'ui/components/forms/flavors/radio/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
 <div className='demo-only'>
@@ -31,7 +31,7 @@ export default (
       <label className={pf('form-element__label')} htmlFor="email-0-2">Input Error with Icon Left</label>
       <div className={pf('form-element__control')}>
         <div className={pf('input-has-icon input-has-icon--left')}>
-          <SvgIcon className={pf('icon input__icon')} sprite="utility" symbol="warning" />
+          <SvgIcon className={pf('icon input__icon icon-text-error')} sprite="utility" symbol="warning" />
           <input id="email-0-2" className={pf('input')} type="email" aria-describedby="errorSample1" required />
         </div>
         <span id="errorSample1" className={pf('form-element__help')}>This field is required</span>

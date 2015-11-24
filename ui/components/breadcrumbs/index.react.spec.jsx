@@ -28,14 +28,14 @@ describe(`React`, () => {
     let cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
-        <BreadCrumbs id="bumblebees">
-          <Crumb href="#">Parent Entity</Crumb>
-          <Crumb href="#">Parent Record Name</Crumb>
+        <BreadCrumbs id='bumblebees'>
+          <Crumb href='#'>Parent Entity</Crumb>
+          <Crumb href='#'>Parent Record Name</Crumb>
         </BreadCrumbs>
       );
     });
     it(`renders its nav`, () => {
-      const node = scryRenderedDOMComponentsWithTag(cmp, "nav");
+      const node = scryRenderedDOMComponentsWithTag(cmp, 'nav');
       expect(node).length.to.be(1);
     });
     it(`renders its items`, () => {
@@ -47,8 +47,8 @@ describe(`React`, () => {
       expect(node).length.to.be(1);
     });
     it(`mixes in the props`, () => {
-      const node = scryRenderedDOMComponentsWithTag(cmp, "nav")[0];
-      expect(node.props.id).to.equal("bumblebees");
+      const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
+      expect(node.props.id).to.equal('bumblebees');
     });
   });
 });

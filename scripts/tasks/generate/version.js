@@ -24,8 +24,8 @@ export default function(done) {
 
     version.dateNow = moment().format('MMMM Do YYYY, h:mm a');
 
-    if (process.env.GIT_VERSION) {
-      version.sldsVersion = process.env.GIT_VERSION;
+    if (process.env.SLDS_VERSION) {
+      version.sldsVersion = process.env.SLDS_VERSION;
     }
 
     if (process.env.TRAVIS_JOB_NUMBER) {

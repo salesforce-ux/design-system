@@ -13,8 +13,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+import Img from 'app_modules/ui/img';
 
 export default (
   <PageBody anchorTitle="Colors" contentClassName={pf('site-design site-design-layout')}>
@@ -25,21 +25,21 @@ export default (
       <h2 className="site-text-heading--large">Neutrals</h2>
       <p>Salesforce uses cool-toned grays injected with a hint of blue to create a lively and modern mood for the interface. In general, color is used sparingly to keep the content center stage and not distract end users.</p>
       <figure>
-        <img className={pf('image')} src="/assets/images/color/img-neutral-colors.svg" alt="" />
+        <Img className={pf('image')} src="/assets/images/color/img-neutral-colors.svg" alt="" />
       </figure>
 
       {/* Primary Colors */}
       <h2 className="site-text-heading--large">Primary Colors</h2>
       <p>Salesforce’s primary brand color is a bright, friendly blue. We also use some darker blues for various other use cases.</p>
       <figure>
-        <img className={pf('image')} src="/assets/images/color/img-primary-colors.svg" alt="" />
+        <Img className={pf('image')} src="/assets/images/color/img-primary-colors.svg" alt="" />
       </figure>
 
       {/* Secondary Colors */}
       <h2 className="site-text-heading--large">Secondary Colors</h2>
       <p>We use a broad range of secondary colors that complement the neutral and primary colors. The level of saturation is vibrant but not neon, mellow but not muted.</p>
       <figure>
-        <img className={pf('image')} src="/assets/images/color/img-secondary-colors.svg" alt="" />
+        <Img className={pf('image')} src="/assets/images/color/img-secondary-colors.svg" alt="" />
       </figure>
 
       {/* Usage */}
@@ -52,7 +52,7 @@ export default (
           <p>Certain colors have inherent meaning for a large majority of users, although we recognize that cultural differences are plentiful. For example, we use red to communicate an error.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/color/img-messaging.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/color/img-messaging.svg" alt="" />
         </figure>
       </div>
 
@@ -63,7 +63,7 @@ export default (
           <p>Salesforce uses many secondary colors in conjunction with iconography to visually differentiate between similar types of content, such as records of different object types. However, it’s important to not always rely on color to provide visual differentiation. If too many use cases employ color in this manner, the colors lose their meaning.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/color/img-differentiation.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/color/img-differentiation.svg" alt="" />
         </figure>
       </div>
 
@@ -74,7 +74,7 @@ export default (
           <p>Color is used sparingly to draw attention to important elements and those that we want the user to take action on. Because most of the application is gray, pops of color catch a user’s eye.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/color/img-hierarchy.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/color/img-hierarchy.svg" alt="" />
         </figure>
       </div>
 
@@ -86,7 +86,7 @@ export default (
           <p>You can find some of the most common text and background color combinations in the CSS Framework Themes section. They are all vetted to pass the minimum contrast ratios, including both normal text and link text styles.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <img className={pf('image')} src="/assets/images/color/img-accessibility.svg" alt="" />
+          <Img className={pf('image')} src="/assets/images/color/img-accessibility.svg" alt="" />
         </figure>
       </div>
     </div>

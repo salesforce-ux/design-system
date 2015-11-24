@@ -12,11 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="neutral">
       <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="download" />
       Download

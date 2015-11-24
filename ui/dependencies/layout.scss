@@ -51,7 +51,7 @@ $grid: (
 
 @mixin mq-x-small-max {
 
-  @media (max-width: pem($mq-x-small - 1)) {
+  @media (max-width: pem($mq-x-small)) {
     @content;
   }
 }
@@ -68,7 +68,7 @@ $grid: (
 
 @mixin mq-small-max {
 
-  @media (max-width: pem($mq-small - 1)) {
+  @media (max-width: pem($mq-small)) {
     @content;
   }
 }
@@ -85,7 +85,7 @@ $grid: (
 
 @mixin mq-medium-max {
 
-  @media (max-width: pem($mq-medium - 1)) {
+  @media (max-width: pem($mq-medium)) {
     @content;
   }
 }
@@ -102,7 +102,7 @@ $grid: (
 
 @mixin mq-large-max {
 
-  @media (max-width: pem($mq-large - 1)) {
+  @media (max-width: pem($mq-large)) {
     @content;
   }
 }
@@ -119,7 +119,7 @@ $grid: (
 
 @mixin mq-huge-max {
 
-  @media (max-width: pem(1223)) {
+  @media (max-width: pem(1224)) {
     @content;
   }
 }
@@ -136,7 +136,7 @@ $grid: (
 
 @mixin mq-super-max {
 
-  @media (max-width: pem(1823)) {
+  @media (max-width: pem(1824)) {
     @content;
   }
 }
@@ -147,10 +147,10 @@ $grid: (
 @mixin retina {
 
   @media only screen and (min--moz-device-pixel-ratio: 1.3),
-                         (-o-min-device-pixel-ratio: 2.6/2),
-                         (-webkit-min-device-pixel-ratio: 1.3),
-                         (min-device-pixel-ratio: 1.3),
-                         (min-resolution: 1.3dppx) {
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
     @content;
   }
 }
@@ -343,7 +343,7 @@ $grid: (
 
 
 @mixin square($size) {
-   width: $size;
+  width: $size;
   height: $size;
 }
 

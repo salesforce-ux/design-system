@@ -20,6 +20,8 @@ const imageNameForColor = {
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
 
+import Img from 'app_modules/ui/img';
+
 class Spinner extends React.Component {
   static propTypes = {
     flavor: componentUtil.PropTypes.flavor(
@@ -61,7 +63,7 @@ class Spinner extends React.Component {
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
       <div className={classnames} {...props}>
-        <img src={spinnerImage} alt="Loading..." />
+        <Img src={spinnerImage} alt="Loading..." />
         {children}
       </div>
     );

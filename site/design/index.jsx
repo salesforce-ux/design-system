@@ -13,8 +13,8 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import { Link } from 'react-router';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 export default (
   <PageBody anchorTitle="Design"></PageBody>

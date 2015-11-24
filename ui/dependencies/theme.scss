@@ -39,54 +39,6 @@
 }
 
 
-
-@mixin dot-separator($size: 4px, $color: $color-text-weak, $mq: null) {
-  position: relative;
-
-  &:after {
-    @include square($size);
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    margin: {
-      left: $spacing-x-small;
-      right: $spacing-x-small;
-    }
-    border-radius: $border-radius-circle;
-    background-color: $color;
-  }
-
-  &:last-child {
-    margin-right: 0;
-    padding-right: 0;
-
-    &:after {
-      content: none;
-    }
-  }
-
-  @if $mq != null {
-    @include mq-medium-max {
-
-      &:before {
-        @include square($size);
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        border-radius: $border-radius-circle;
-        background-color: $color;
-        margin-right: $spacing-small;
-      }
-
-      &:after {
-        content: none;
-      }
-    }
-  }
-}
-
-
-
 // Inverse Links
 @mixin inverse-links {
   color: $color-text-inverse;
@@ -118,7 +70,7 @@
 
 
 // Border Helper
-@mixin border($borders: null) {
+@mixin border($borders: null, $radius: null) {
 
   @if $borders != null {
 
@@ -135,6 +87,11 @@
         }
       }
     }
+  }
+
+  @if $radius != null {
+    border-radius: $radius;
+    background-clip: padding-box;
   }
 }
 
@@ -192,50 +149,6 @@
     @include border($borders);
   }
 }
-
-
-
-// Apply theme on hover for list items
-@mixin list-has-hovers {
-
-  &:hover,
-  &:focus {
-    background-color: $color-background-row-hover;
-    border-color: $color-border;
-  }
-
-  &:active {
-    background-color: $color-background-row-active;
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
-  }
-}
-
-
-
-// Apply theme on selection for list items
-@mixin list-has-selections {
-
-  &.#{$css-prefix}is-selected {
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
-    background-color: $color-background-row-selected;
-
-    &:hover,
-    &:focus {
-      box-shadow: $color-border-selection-hover 0 ($border-width-thick * -1) 0 inset, $color-border-selection-hover 0 0 0 $border-width-thin inset;
-    }
-  }
-}
-
-@mixin list-has-bullets {
-  margin-left: $spacing-large;
-  list-style: disc;
-}
-
-@mixin list-has-numbers {
-  margin-left: $spacing-large;
-  list-style: decimal;
-}
-
 
 
 // Striped Gradient

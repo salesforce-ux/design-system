@@ -14,8 +14,8 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const image1 = (
   <SvgIcon className={pf('icon icon-standard-task timeline__icon')} sprite="standard" symbol="task" />

@@ -13,8 +13,8 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const form = (
   <Checkbox assistiveText="mark-complete"/>

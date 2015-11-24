@@ -11,21 +11,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 const image = (
-  <img src={`/assets/images/avatar2.jpg`} alt="" />
+  <Img src={`/assets/images/avatar2.jpg`} alt="" />
 );
 
 export default (
 <div className='demo-only'>
-  <span className={pf('pill')}>
-    <a href="#" className={pf('pill__label')}>
-      <span className={pf('avatar avatar--circle avatar--x-small')}>{image}</span>
-      Pill Label
-    </a>
-    <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>
+  <a href="#void" className={pf('pill')}>
+    <span className={pf('pill__icon avatar avatar--circle')}>{image}</span>
+    <span className={pf('pill__label')}>Pill Label</span>
+    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+  </a>
 </div>
 );

@@ -20,7 +20,7 @@ import { Link } from 'react-router';
 const moduleName = globals.moduleName;
 
 export default (
-   <PageBody anchorTitle="Branding" contentClassName={pf('grid wrap')}>
+  <PageBody anchorTitle="Branding" contentClassName={pf('grid wrap')}>
     <Sticky className={pf('site-sidebar-content col size--1-of-1 large-size--2-of-6 large-order--2')}>
       <div className={pf('site-menu--jump-links')}>
         <h3 className="site-text-heading--label">Steps</h3>

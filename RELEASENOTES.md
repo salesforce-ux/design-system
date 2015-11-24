@@ -1,32 +1,57 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.13.0
+## Release 1.0.0 (internal only) - November 18, 2015
 
-**BREAKING CHANGES**
-- Switch sizing utility media queries to use `em` instead of `px`
+**NEW COMPONENTS**
+- Added the Docked Composer
 
-** NEW COMPONENTS**
-- Add max-width sizing utilities
-
-## Release 0.12.0 - 
+## Release 0.12.0 - November 18, 2015
 
 **SITE IA**
-
-- Added Resources -> Links
-- 
+- Added Resources > Links
+- Changed tabs to use new refactored tab classes (deprecated)
 
 **BREAKING CHANGES**
-
+- Removed default horizontal spacing from buttons in favor of new spacing utilities (deprecated, see New Components below).
+- Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
-- Adjusted Activity Timeline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
+- Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
+- `slds-modal-backdrop` and `slds-modal-backdrop--open` is deprecated in favor of `slds-backdrop` and `slds-backdrop--open` since it is used in other components.
+- Removed icon color from `.slds-input__icon` so that an icon color class is required in addition
+
+**CHANGES**
+- Switched sizing utility media queries to use `em` instead of `px`
+- Updated demo for icons > color and added `slds-text-error` for validation errors
+
+**NEW COMPONENTS**
+- Added initial state of tabs > sales path www.lightningdesignsystem.com/components/tabs#sales-path
+- Added max-width sizing utilities www.lightningdesignsystem.com/utilities/sizing
+- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) www.lightningdesignsystem.com/components/buttons#overview
+- Added stretched button utilities for full-width buttons on small form factors www.lightningdesignsystem.com/components/buttons#overview
+- Dialog Menus for small form factor
+  - Action overflow for touch www.lightningdesignsystem.com/components/menus#action-overflow-for-touch
+- Added Edit dialog form for touch devices www.lightningdesignsystem.com/components/forms#edit-dialog-for-touch
+
+**DEPRECATED**
+- Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
+- Name change: Responsive button changed to Horizontal button
+- `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead
+- Descendant selectors on tabs were changed to BEM syntax
+  - `slds-tabs--default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--default__item` instead
+  - `slds-tabs--default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--default__content` instead
+  - `slds-tabs--default > a` deprecated in version 0.12.0, use `slds-tabs--default__link` instead
+  - `slds-tabs--scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--scoped__item` instead
+  - `slds-tabs--scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--scoped__content` instead
+  - `slds-tabs--scoped > a` deprecated in version 0.12.0, use `slds-tabs--scoped__link` instead
+- Decendent selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
 
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
 - Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
 - Stateful button has a `[disabled]` state
-- If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-disability` should be added to the icon. (This affects all page headers, and cards > base.)
+- If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-visibility` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
 - Removed interactive dropdowns from page header examples
 - Added Google Analytics
@@ -38,22 +63,22 @@
 - Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
 - Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
-	- Dropdown
-	- Dropdown with Icons
-	- Dropdown Positioning
- 	- Picklist
- 	- Action Overflow
- 	- Search Overflow
+  - Dropdown
+  - Dropdown with Icons
+  - Dropdown Positioning
+  - Picklist
+  - Action Overflow
+  - Search Overflow
 
 **BREAKING CHANGES**
 
 - Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
 - Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
 - Deprecated "Menu with Icons" dropdown variant
- - No longer depends on class names that deal with icon positioning
- - `.slds-dropdown__item` are set to `display: flex` with `justify-content: space-between` by default now. This allows for icon + text to be left aligned and a single icon to be positioned on the same axis to the right hand side. The icon + text that is positioned to the left requires an HTML element, like a `<p>` with the class `.slds-truncate` applied.
- - `.slds-has-icon`, `.slds-has-icon--left`, `.slds-has-icon--right` and children classes `.slds-icon--left`, `.slds-icon--right` have been deprecated but will persist in code base (*)
- - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that svg now requires a class of `.slds-icon--selected`
+  - No longer depends on class names that deal with icon positioning
+  - `.slds-dropdown__item` are set to `display: flex` with `justify-content: space-between` by default now. This allows for icon + text to be left aligned and a single icon to be positioned on the same axis to the right hand side. The icon + text that is positioned to the left requires an HTML element, like a `<p>` with the class `.slds-truncate` applied.
+  - `.slds-has-icon`, `.slds-has-icon--left`, `.slds-has-icon--right` and children classes `.slds-icon--left`, `.slds-icon--right` have been deprecated but will persist in code base (*)
+  - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that svg now requires a class of `.slds-icon--selected`
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
@@ -191,4 +216,3 @@
 - Text > Faux Links has added cursor:pointer
 
 Lots of bug fixes and TLC.
-

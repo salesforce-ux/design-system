@@ -11,15 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className='demo-only'>
+  <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="neutral">
       Button neutral
     </Button>
-    <a href="#" className={pf('button button--neutral')}>Anchor Button Neutral</a>
+    <a href="#" className={pf('button button--neutral')}>
+      Anchor Button Neutral
+    </a>
     <Button flavor="neutral" disabled="true">
       Disabled
     </Button>

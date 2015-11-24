@@ -13,15 +13,15 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 const image = (
   <SvgIcon className={pf('icon icon-doctype-zip')} sprite="doctype" symbol="zip" />
 );
 
 exports.preview = (
 <div className='demo-only'>
-  <ul className={pf('list--vertical has-dividers')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>
@@ -66,7 +66,7 @@ exports.preview = (
 );
 
 exports.code = (
-  <ul className={pf('list--vertical has-dividers')}>
+  <ul className={pf('list--vertical has-dividers--bottom-space has-selection')}>
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>

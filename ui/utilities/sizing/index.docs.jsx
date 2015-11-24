@@ -13,8 +13,8 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeBlock from 'app_modules/ui/code-block';
 import { Link } from 'react-router';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
 

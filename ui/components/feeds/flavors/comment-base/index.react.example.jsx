@@ -14,13 +14,12 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import MediaObject from 'ui/components/media-objects/index.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jason Rodgers">
-      <img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
+      <Img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
     </a>
   </div>
 );

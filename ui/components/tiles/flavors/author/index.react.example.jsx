@@ -12,10 +12,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <img src={`/assets/images/company1.jpg`} style={{height: '48px'}} alt="" />
+  <Img src={`/assets/images/company1.jpg`} style={{height: '48px'}} alt="" />
 );
 
 export default (
@@ -46,4 +47,3 @@ export default (
   </MediaObject>
 </div>
 );
-

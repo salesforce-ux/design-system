@@ -3,7 +3,7 @@
 [[TOC]]
 
 ## Sass Syntax Guidelines
-We want to make our Sass files easy to read and collaborate with. Therfore, we
+We want to make our Sass files easy to read and collaborate with. Therefore, we
 use the newer SCSS syntax of Sass instead of the original whitespace-sensitive
 syntax.
 
@@ -59,7 +59,7 @@ For more information on the Sass syntax, check out
   * animations & transitions
 
 For example:
-```sass
+```scss
 .button {
   -webkit-appearance: none;
   position: relative;
@@ -121,7 +121,7 @@ two).
 Do not use IDs for styling (as it increases specificity). IDs should be used
 for JS and Aria headings.
 
-Avoid qualifying selectors (ul.foo). This makes styles much harder to reuse
+Avoid qualifying selectors (`ul.foo`). This makes styles much harder to reuse
 and also increases specificity.
 
 Selectors should be written to be additive. Try to avoid having to reset and
@@ -146,10 +146,10 @@ the naming differences?)
 
 Nest selectors to avoid repetition.
 
-The parent selector (`&``) helps with tacking on classes, pseudo-classes, and
+The parent selector (`&`) helps with tacking on classes, pseudo-classes, and
 the unique parts of hyphenated classes.
 
-```sass
+```scss
 a {
   …
   &:hover { … }
@@ -162,7 +162,7 @@ a {
 
 **IMPORTANT**: Do not over-nest. Only nest when it’s needed. (We should define
 "needed".) Selectors should be kept as flat as possible avoiding descendant
-selectors.  A 3-levels deep maximum is the general suggestion. Over nesting
+selectors.  A 3-level deep maximum is the general suggestion. Over nesting
 causes too much specificity.
 
 Avoid reactive `!important` declarations.

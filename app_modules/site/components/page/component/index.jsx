@@ -17,8 +17,8 @@ import CTALink from 'app_modules/site/components/cta-link';
 import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 
 const ComponentBody = React.createClass({

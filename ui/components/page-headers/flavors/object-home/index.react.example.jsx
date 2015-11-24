@@ -18,8 +18,8 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const image = (
   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Down" />
@@ -82,7 +82,7 @@ export default (
           {/* Close Button Group */}
           <div className={pf('button-group')} role="group">
             <Button flavor="neutral">
-             New Lead
+              New Lead
             </Button>
             <div className={pf('button--last')}>
               <ButtonIcon

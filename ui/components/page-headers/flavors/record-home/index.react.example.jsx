@@ -19,8 +19,8 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 const image = (
   <SvgIcon className={pf('icon icon--large icon-standard-user')} sprite="standard" symbol="user" />
@@ -49,13 +49,13 @@ export default (
       <div className={pf('col no-flex align-bottom')}>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
-           Edit
+            Edit
           </Button>
           <Button flavor="neutral">
-           Delete
+            Delete
           </Button>
           <Button flavor="neutral">
-           Clone
+            Clone
           </Button>
           <div className={pf('button--last')}>
             <ButtonIcon
@@ -116,4 +116,3 @@ export default (
     </Anchor.DetailRow>
   </Anchor>
 );
-

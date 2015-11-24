@@ -17,6 +17,9 @@
     background-color: $color-background;
     border: $border-width-thin solid $color-border-button-default;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+
+  @include deprecate("0.20.0") {
 
     .#{$css-prefix}tabs__item {
       @include tabs-item;
@@ -27,104 +30,101 @@
         margin-left: -#{$border-width-thin};
       }
 
-      &:first-child a {
+      &:first-child > a {
         border-left: none;
         border-radius: $border-radius-medium 0 0 0;
       }
-    }
 
-    a {
-      padding: 0 $spacing-large;
-      color: $color-text-weak;
-      background-clip: padding-box;
-      border: {
-        left: $border-width-thin solid transparent;
-        right: $border-width-thin solid transparent;
+      > a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        padding: 0 $spacing-large;
+        color: $color-text-weak;
+        background-clip: padding-box;
+        border: {
+          left: $border-width-thin solid transparent;
+          right: $border-width-thin solid transparent;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $color-text-link-hover;
+          border-color: $color-border;
+        }
       }
 
-      &:hover,
-      &:focus {
-        color: $color-text-link-hover;
+      .#{$css-prefix}active > a {
+        background-color: $color-background-alt;
+        color: $color-text-link;
         border-color: $color-border;
+
+        &:focus {
+          text-decoration: underline;
+        }
       }
     }
 
-    .#{$css-prefix}active a {
+    > .#{$css-prefix}tabs__content {
       background-color: $color-background-alt;
-      color: $color-text-link;
-      border-color: $color-border;
-
-      &:focus {
-        text-decoration: underline;
-      }
+      border: $border-width-thin solid $color-border-button-default;
+      border-top: none;
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+      padding: $spacing-medium;
     }
-  }
-
-  > .#{$css-prefix}tabs__content {
-    background-color: $color-background-alt;
-    border: $border-width-thin solid $color-border-button-default;
-    border-top: none;
-    border-radius: 0 0 $border-radius-medium $border-radius-medium;
-    padding: $spacing-medium;
   }
 }
 
-// .#{$css-prefix}tabs--scoped {
-//   @include tabs;
+.#{$css-prefix}tabs--scoped__item {
+  @include tabs-item;
+  position: relative;
+  margin-bottom: -#{$border-width-thin};
 
-//   .#{$css-prefix}&__nav {
-//     @include tabs-nav;
-//     background-color: $color-background;
-//     border: $border-width-thin solid $color-border-button-default;
-//     border-radius: $border-radius-medium $border-radius-medium 0 0;
+  + .#{$css-prefix}tabs--scoped__item {
+    margin-left: -#{$border-width-thin};
+  }
 
-//     > .#{$css-prefix}tabs__item {
-//       @include tabs-item;
-//       position: relative;
-//       margin-bottom: -#{$border-width-thin};
+  &:first-child .#{$css-prefix}tabs--scoped__link {
+    border-left: none;
+    border-radius: $border-radius-medium 0 0 0;
+  }
+}
 
-//       + .#{$css-prefix}tabs__item {
-//         margin-left: -#{$border-width-thin};
-//       }
+.#{$css-prefix}tabs--scoped__content {
+  background-color: $color-background-alt;
+  border: $border-width-thin solid $color-border-button-default;
+  border-top: none;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  padding: $spacing-medium;
+}
 
-//       a {
-//         padding: 0 $spacing-large;
-//         color: $color-text-weak;
-//         background-clip: padding-box;
-//         border: {
-//           left: $border-width-thin solid transparent;
-//           right: $border-width-thin solid transparent;
-//         }
+.#{$css-prefix}tabs--scoped__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  padding: 0 $spacing-large;
+  color: $color-text-weak;
+  background-clip: padding-box;
+  border: {
+    left: $border-width-thin solid transparent;
+    right: $border-width-thin solid transparent;
+  }
 
-//         &:hover,
-//         &:focus {
-//           color: $color-text-link-hover;
-//           border-color: $color-border;
-//         }
-//       }
-//     }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-text-link-hover;
+    border-color: $color-border;
+  }
+}
 
-//     &.#{$css-prefix}active a {
-//       background-color: $color-background-alt;
-//       color: $color-text-link;
-//       border-color: $color-border;
+.#{$css-prefix}active .#{$css-prefix}tabs--scoped__link {
+  background-color: $color-background-alt;
+  color: $color-text-link;
+  border-color: $color-border;
 
-//       &:focus {
-//         text-decoration: underline;
-//       }
-//     }
-
-//     &:first-child a {
-//       border-left: none;
-//       border-radius: $border-radius-medium 0 0 0;
-//     }
-//   }
-
-//   > .#{$css-prefix}tabs__content {
-//     background-color: $color-background-alt;
-//     border: $border-width-thin solid $color-border-button-default;
-//     border-top: none;
-//     border-radius: 0 0 $border-radius-medium $border-radius-medium;
-//     padding: $spacing-medium;
-//   }
-// }
+  &:focus {
+    text-decoration: underline;
+  }
+}

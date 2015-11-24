@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Dropdown from 'ui/components/menus/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;

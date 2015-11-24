@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (

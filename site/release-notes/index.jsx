@@ -13,7 +13,7 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import releaseNotes from '.generated/site.release-notes';
 import { Link } from 'react-router';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (

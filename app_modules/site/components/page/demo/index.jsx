@@ -14,7 +14,7 @@ import _ from 'lodash';
 import Heading from 'ui/components/heading/index.react';
 import classNames from 'classnames';
 import version from '.generated/site.version';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 import { Link } from 'react-router';
 

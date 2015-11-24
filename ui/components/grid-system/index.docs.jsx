@@ -13,7 +13,7 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { Link } from 'react-router';
 import CTALink from 'app_modules/site/components/cta-link';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 import globals from 'app_modules/global';

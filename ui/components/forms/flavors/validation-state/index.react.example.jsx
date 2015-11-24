@@ -14,7 +14,7 @@ import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import Radio from 'ui/components/forms/flavors/radio/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (

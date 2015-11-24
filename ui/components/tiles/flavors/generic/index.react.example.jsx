@@ -13,7 +13,7 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image = (

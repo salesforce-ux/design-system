@@ -10,9 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
-
-const {createChainedFunction} = componentUtil;
+import componentUtil, { prefix as pf, createChainedFunction } from 'app_modules/ui/util/component';
 
 class Button extends React.Component {
   static propTypes = {

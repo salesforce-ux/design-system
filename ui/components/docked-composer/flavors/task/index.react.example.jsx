@@ -16,7 +16,7 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Lorem from 'react-lorem-component';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const dialingIcon = (

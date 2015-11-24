@@ -19,7 +19,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 import { getHistory } from 'app_modules/site/navigation/history';
 
 import Heading from 'app_modules/site/components/page/heading';

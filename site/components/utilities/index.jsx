@@ -17,7 +17,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import Prefs from 'app_modules/site/preferences';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
 
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const Utilities = React.createClass({

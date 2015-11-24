@@ -13,7 +13,7 @@ import React from 'react';
 import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (

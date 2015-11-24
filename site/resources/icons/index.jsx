@@ -20,7 +20,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
 import Sticky from 'app_modules/site/components/sticky';
 import _ from 'lodash';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 class Icons extends React.Component {

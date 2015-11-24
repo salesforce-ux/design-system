@@ -13,7 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Control from './index.react';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import {

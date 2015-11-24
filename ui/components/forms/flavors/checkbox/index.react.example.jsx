@@ -14,7 +14,7 @@ import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className={pf('demo-only form--stacked')}>
 
   <div className={pf('form-element')}>
@@ -67,7 +67,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
 <div className='demo-only'>
   <div className={pf('form-element')}>
     <Checkbox label="Checkbox Label" assistiveText="checkboxSample1" />

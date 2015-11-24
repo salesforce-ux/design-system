@@ -19,7 +19,7 @@ const image = (
   <SvgIcon className={pf('icon icon-doctype-zip')} sprite="doctype" symbol="zip" />
 );
 
-exports.preview = (
+export const preview = (
 <div className='demo-only'>
   <ul className={pf('list--vertical has-dividers--bottom-space has-list-interactions')}>
     <StatefulClass>
@@ -65,7 +65,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
   <ul className={pf('list--vertical has-dividers--bottom-space has-selection')}>
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>

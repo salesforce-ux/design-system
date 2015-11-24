@@ -14,7 +14,7 @@ import Lorem from 'react-lorem-component';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className={pf('demo-only demo-only--nubbin-example')}>
   <div className={pf('grid grid--align-spread')}>
     {/* Nubbin Left Top */}
@@ -124,7 +124,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
 <div className={pf('demo-only')}>
 
   <div className={pf('popover nubbin--top-left')} role="dialog">

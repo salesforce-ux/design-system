@@ -17,7 +17,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className={pf('demo-only demo-only--dropdown')} style={{height: '400px'}}>
   <div className={pf('grid grid--vertical grid--align-spread')} style={{height: '100%'}}>
     <div className={pf('grid grid--align-spread p-horizontal--medium')}>
@@ -89,7 +89,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
 <div className="demo-only">
 
   {/* Top Left */}

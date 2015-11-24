@@ -13,7 +13,7 @@ import React from 'react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
   <div className='demo-only demo-container'>
     <div className={pf('grid')}>
       <div className={pf('col')}>1</div>
@@ -39,7 +39,7 @@ exports.preview = (
   </div>
 );
 
-exports.code = (
+export const code = (
   <div className={pf('grid')}>
     <div className={pf('col')}>Contents go here.</div>
     <div className={pf('col')}>Contents go here.</div>

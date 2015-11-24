@@ -13,7 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
-exports.preview = (
+export const preview = (
   <div className={'demo-only'}>
     <Button flavor="neutral" className={pf('x-small-button--horizontal')}>
       Button
@@ -32,7 +32,7 @@ exports.preview = (
   </div>
 );
 
-exports.code = (
+export const code = (
   <div className={'demo-only'}>
     <Button flavor="neutral" className={pf('x-small-button--horizontal')}>
       Button

@@ -15,7 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className='demo-only demo-only--notification'>
   <div className={pf('notify-container')}>
 
@@ -76,7 +76,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
   <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
     <span className={pf('assistive-text')}>Info</span>
     <ButtonIcon

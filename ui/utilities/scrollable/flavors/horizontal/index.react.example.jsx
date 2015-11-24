@@ -14,7 +14,7 @@ import Lorem from 'react-lorem-component';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className='demo-only' style={{height: '240px'}}>
   <div className={pf('scrollable--x')}>
     <div className={pf('grid grid--overflow')}>
@@ -34,7 +34,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
 <div className={pf('scrollable--x')}>
   Scrollable Content Here
 </div>

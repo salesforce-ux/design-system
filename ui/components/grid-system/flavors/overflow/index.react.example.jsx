@@ -13,7 +13,7 @@ import React from 'react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('scrollable--x')}>
     <div className={pf('grid grid--overflow')}>
@@ -32,7 +32,7 @@ exports.preview = (
   </div>
 </div>
 );
-exports.code = (
+export const code = (
 <div className={pf('scrollable--x')}>
   <div className={pf('grid grid--overflow')}>
     <div className={pf('col')}>Contents go here.</div>

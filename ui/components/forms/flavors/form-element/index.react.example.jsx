@@ -14,11 +14,11 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <Input label="Label" assistiveText="text input" />
 );
 
-exports.code = (
+export const code = (
 <div className={pf('form-element')}>
   <label className={pf('form-element__label')}>Label</label>
   <div className={pf('form-element__control')}>Form Element</div>

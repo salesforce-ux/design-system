@@ -13,7 +13,7 @@ import React from 'react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className='demo-only'>
   <div className={pf('box m-bottom--medium')}>
     <p>This is a regular sized box.</p>
@@ -26,7 +26,7 @@ exports.preview = (
   </div>
 </div>
 );
-exports.code = (
+export const code = (
 <div className='demo-only'>
   <div className={pf('box')}>
     <p>This is a regular sized box.</p>

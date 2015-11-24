@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 
-module.exports = (
+export default (
   <div className='demo-only'>
     <Button>
       Button

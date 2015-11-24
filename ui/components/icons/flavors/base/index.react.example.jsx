@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
   <div className='demo-only'>
     <span className={pf('m-right--small')}>
       <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
@@ -34,7 +34,7 @@ exports.preview = (
     </span>
   </div>
 );
-exports.code = (
+export const code = (
   <div className='demo-only'>
     <span>
       <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />

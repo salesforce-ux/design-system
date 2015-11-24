@@ -15,7 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
   <div className={pf('demo-only x-small-buttons--horizontal')}>
     <ol className={pf('list--ordered')}>
       <li>
@@ -99,7 +99,7 @@ exports.preview = (
     </ol>
   </div>
 );
-exports.code = (
+export const code = (
   <div className='demo-only'>
     <ButtonIcon
       flavor="icon-bare"

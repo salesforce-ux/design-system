@@ -14,7 +14,7 @@ import Radio from 'ui/components/forms/flavors/radio/index.react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
-exports.preview = (
+export const preview = (
 <div className={pf('demo-only form--stacked')}>
 
   <fieldset className={pf('form-element')}>
@@ -43,7 +43,7 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
   <fieldset className={pf('form-element')}>
     <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
     <div className={pf('form-element__control')}>

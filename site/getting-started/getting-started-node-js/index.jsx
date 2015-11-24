@@ -14,8 +14,8 @@ import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
 import version from '.generated/site.version';
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 import { Link } from 'react-router';
 import globals from 'app_modules/global';
 const moduleName = globals.moduleName;

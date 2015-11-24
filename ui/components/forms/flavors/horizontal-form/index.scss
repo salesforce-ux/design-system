@@ -24,7 +24,7 @@
         position: relative;
         top: (($line-height-button / 2) - ($line-height-text / 2));
         margin-bottom: 0;
-
+        
         &--top {
           top: 0;
         }
@@ -51,17 +51,6 @@
     .#{$css-prefix}checkbox,
     .#{$css-prefix}radio {
       display: block;
-    }
-  }
-
-  .#{$css-prefix}form-element {
-
-    @include mq-small-max {
-      margin-bottom: $spacing-medium;
-    }
-
-    + .#{$css-prefix}form-element {
-      margin-top: $spacing-medium;
     }
   }
 }

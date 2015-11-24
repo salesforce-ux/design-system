@@ -20,7 +20,6 @@ import AccessibleList from 'ui/components/lib/accessible-list.react';
 import Helper from 'ui/components/lib/dom-helpers';
 
 const PT = React.PropTypes;
-const pf = componentUtil.prefix;
 
 class PickListItem extends React.Component {
   static contextTypes = { itemSelected: PT.func, itemFocused: PT.func };

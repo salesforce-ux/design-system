@@ -53,7 +53,7 @@ const commentReply = (
   </div>
 );
 
-exports const preview = (
+export const preview = (
 <div className='demo-only'>
 
   <div className={pf('publisher publisher--discussion')}>
@@ -167,7 +167,7 @@ exports const preview = (
 </div>
 );
 
-exports const code = (
+export const code = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>

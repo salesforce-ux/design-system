@@ -13,20 +13,14 @@
 $class-name-stub: "rotate" !default;
 $rotation-steps: 8 !default;
 $deg-step-increment: (360 / $rotation-steps);
-@each $rotation-axis in "", "X", "Y", "Z" {
-  $rule-name-stub-default: "." + $css-prefix + $class-name-stub + "--";
-  @if $rotation-axis == "" {
-    $rule-name-stub: $rule-name-stub-default;
-  } @else {
-    $rule-name-stub: $rule-name-stub-default + to-lower-case($rotation-axis) + "-";
-  }
-  // Creates rules for 8 steps of rotation, along the supplied axis, or in 45 degree steps.
-  @for $step from 0 to $rotation-steps {
-    $deg: $deg-step-increment * $step;
-    #{$rule-name-stub}#{$deg}  {
-        transition: $duration-promptly transform ease-in-out;
-        transform: rotate#{$rotation-axis}(#{$deg}deg);
-    }
+$rule-name-stub: "." + $css-prefix + $class-name-stub + "--";
+// Creates rules for 8 steps of rotation in 45 degree steps, starting with zero, so that 360 is not one of them
+@for $step from 0 to $rotation-steps {
+  $deg: $deg-step-increment * $step;
+  #{$rule-name-stub}#{$deg}  {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(#{$deg}deg);
   }
 }
+
 

@@ -22,8 +22,7 @@ module.exports = (
 <ComponentDocs>
   <p className="site-text-introduction">Rotation utilities allow for easy rotation transformations on an element.</p>
   <p>Our rotation class names are set up in a human&ndash;readable format, e.g. <CodeClass className="rotate--90" />. This equates to a clockwise rotation of 90°.</p>
-  <p>By default, a group of rotation helpers are created at steps of 45 degree angles up to 360 degrees.</p>
-  <p>Our rotation helpers work along the X, Y, and Z axes, like <CodeClass className="rotate--x-90" />, <CodeClass className="rotate--y-90" />, and <CodeClass className="rotate--z-90" />.</p>
-  <p>Following CSS precedent, omitting the axis altogether defaults to rotating along the Z-axis, so <CodeClass className="rotate--z-90" /> and <CodeClass className="rotate--90" /> produce the same result.</p>
+  <p>By default, a group of rotation helpers are created at steps of 45 degree angles up to (but not including) 360 degrees.</p>
+  <p>Our rotation helper works along Z axis.</p>
 </ComponentDocs>
 );

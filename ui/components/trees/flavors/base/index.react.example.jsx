@@ -21,6 +21,7 @@ module.exports = (
 <div className='demo-only'>
 	<div className={pf('tree-container')} role="application">
 		<h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
+
 		<ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1">
 
 			<li id="tree0-node0" className={pf('tree__item')} role="treeitem" aria-level="1">
@@ -36,7 +37,7 @@ module.exports = (
 					<a href="#" id="tree0-node1__label" tabIndex="-1" role="presentation">Tree Branch</a>
 				</div>
 
-				<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1__label">
+				<ul className={pf('tree__group nested--level-1 expanded')} role="group" aria-labelledby="tree0-node1__label">
 					
 
 					<li id="tree0-node1-0" className={pf('tree__item')} role="treeitem" aria-level="2">
@@ -49,7 +50,7 @@ module.exports = (
 							<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
 							<a href="#" id="tree0-node1-1__label" tabIndex="-1" role="presentation">Tree Branch</a>
 						</div>
-						<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1__label">
+						<ul className={pf('tree__group nested--level-2 expanded')} role="group" aria-labelledby="tree0-node1-1__label">
 
 							<li id="tree0-node1-1-0" className={pf('tree__item')} role="treeitem" aria-level="3">
 								<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
@@ -68,7 +69,7 @@ module.exports = (
 									<ButtonIcon className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
 									<a href="#" id="tree0-node1-1-2__label" tabIndex="-1" role="presentation">Tree Branch</a>
 								</div>
-								<ul className={pf('tree__group nested collapsed')} role="group" aria-labelledby="tree0-node1-1-2__label">
+								<ul className={pf('tree__group nested--level-3 collapsed')} role="group" aria-labelledby="tree0-node1-1-2__label">
 									<li id="tree0-node1-1-2-0" className={pf('tree__item')} role="treeitem" aria-level="3">
 										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
 									</li>
@@ -90,7 +91,7 @@ module.exports = (
 									<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
 									<a href="#" id="tree0-node1-1-3__label" tabIndex="-1" role="presentation">Tree Branch</a>
 								</div>
-								<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
+								<ul className={pf('tree__group nested--level-3 expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
 									<li id="tree0-node1-1-3-1" className={pf('tree__item')} role="treeitem" aria-level="3">
 										<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
 									</li>
@@ -110,7 +111,7 @@ module.exports = (
 											<ButtonIcon className={pf('m-right--x-small rotate--90')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
 											<a href="#" id="tree0-node1-1-3-4__label" tabIndex="-1" role="presentation">Tree Branch</a>
 										</div>
-										<ul className={pf('tree__group nested expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
+										<ul className={pf('tree__group nested--level-4 expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
 											<li id="tree0-node1-1-3-4-1" className={pf('tree__item')} role="treeitem" aria-level="4">
 												<a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
 											</li>

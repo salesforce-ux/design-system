@@ -59,13 +59,18 @@
   }
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+
+
+  $class-name-stub: "nested" !default;
+  $max-nesting-depth: 20 !default;
+  $rule-name-stub: "." + $css-prefix + $class-name-stub + "--level-";
+
   $i: "." + $css-prefix + nested;
-  @for $j from 1 through 20 {
-    #{$i} > &__branch > &__item,
-    #{$i} &__item {
+  @for $j from 0 through $max-nesting-depth {
+    #{$rule-name-stub}#{$j} > &__branch > &__item,
+    #{$rule-name-stub}#{$j} &__item {
         padding-left: ((($spacing-medium * ($j + 1)) + ($spacing-x-small * $j)));
     }
-    $i: $i + " ." + $css-prefix + nested;
   }
 
 

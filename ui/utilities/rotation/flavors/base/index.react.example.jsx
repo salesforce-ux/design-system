@@ -31,42 +31,6 @@ module.exports = (
             <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--315')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--315</span>.slds-rotate--315</li>
         </ul>
       </div>
-      <div className={pf('col--padded')}>
-        <ul className={pf('list--vertical has-cards--space')}>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-0')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-0</span>.slds-rotate--x-0</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-45')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-45</span>.slds-rotate--x-45</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-90')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-90</span>.slds-rotate--x-90</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-135')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-135</span>.slds-rotate--x-135</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-180')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-180</span>.slds-rotate--x-180</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-225')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-225</span>.slds-rotate--x-225</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-270')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-270</span>.slds-rotate--x-270</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--x-315')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--x-315</span>.slds-rotate--x-315</li>
-        </ul>
-      </div>
-      <div className={pf('col--padded')}>
-        <ul className={pf('list--vertical has-cards--space')}>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-0')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-0</span>.slds-rotate--y-0</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-45')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-45</span>.slds-rotate--y-45</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-90')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-90</span>.slds-rotate--y-90</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-135')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-135</span>.slds-rotate--y-135</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-180')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-180</span>.slds-rotate--y-180</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-225')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-225</span>.slds-rotate--y-225</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-270')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-270</span>.slds-rotate--y-270</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--y-315')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--y-315</span>.slds-rotate--y-315</li>
-        </ul>
-      </div>
-      <div className={pf('col--padded')}>
-        <ul className={pf('list--vertical has-cards--space')}>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-0')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-0</span>.slds-rotate--z-0</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-45')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-45</span>.slds-rotate--z-45</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-90')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-90</span>.slds-rotate--z-90</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-135')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-135</span>.slds-rotate--z-135</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-180')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-180</span>.slds-rotate--z-180</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-225')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-225</span>.slds-rotate--z-225</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-270')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-270</span>.slds-rotate--z-270</li>
-            <li className={pf('list__item')}><SvgIcon className={pf('icon icon--small m-right--small icon-text-default rotate--z-315')}  sprite="utility" symbol="announcement" /><span className={pf('assistive-text')}>slds-rotate--z-315</span>.slds-rotate--z-315</li>
-        </ul>
-      </div>
     </div>
   </div>
 );

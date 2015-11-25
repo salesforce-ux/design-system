@@ -11,5 +11,5 @@
 .#{$css-prefix}form-element__static {
   display: inline-block;
   line-height: $line-height-button;
-  min-height: calc(#{$line-height-button} + 2px); // For IE
+  min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
 }

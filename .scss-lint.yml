@@ -9,6 +9,7 @@ linters:
     enabled: false
   Comment:
     enabled: true
+    allowed: '\* Note\: '
   DeclarationOrder:
     enabled: false
   DuplicateProperty:

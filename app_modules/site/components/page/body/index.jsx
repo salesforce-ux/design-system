@@ -30,7 +30,6 @@ import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 import { isMobile } from 'app_modules/site/browser/util';
 
 /**
@@ -379,9 +378,7 @@ export default React.createClass({
     });
     return (
       <ul className={pf(classnames)}>
-        <CSSTransitionGroup transitionName="site-fade-transition">
-          {items.toArray()}
-        </CSSTransitionGroup>
+        {items.toArray()}
       </ul>
     );
   },

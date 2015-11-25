@@ -1,7 +1,7 @@
 {
-  "stage": 2,
-  "optional": [
-    "runtime",
-    "es7.classProperties"
+  "presets": ["react", "es2015"],
+  "plugins": [
+    "syntax-class-properties",
+    "transform-class-properties"
   ]
 }

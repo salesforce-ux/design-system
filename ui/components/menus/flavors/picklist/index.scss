@@ -44,13 +44,6 @@
     fill: $color-text-icon-default;
   }
 
-  &[aria-disabled="true"] {
-    border-color: $color-border-input-disabled;
-    background-color: $color-background-input-disabled;
-    cursor: not-allowed;
-    user-select: none;
-  }
-
   .#{$css-prefix}truncate {
     display: block;
   }

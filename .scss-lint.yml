@@ -19,6 +19,9 @@ linters:
     enabled: false
   EmptyRule:
     enabled: false
+  ExtendDirective:
+    enabled: true
+    severity: error
   FinalNewline:
     enabled: false
   HexNotation:
@@ -28,7 +31,7 @@ linters:
   ImportPath:
     enabled: false
   ImportantRule:
-    enabled: false
+    enabled: true
   Indentation:
     enabled: false
   LeadingZero:

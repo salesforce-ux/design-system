@@ -11,18 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import _ from 'lodash';
-import ui from '.generated/ui';
-import CTALink from 'app_modules/site/components/cta-link';
-import Prefs from 'app_modules/site/preferences';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
-
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const Utilities = React.createClass({
-  mixins: [PrefsMixin],
-
   render: function() {
     return (
       <div className="site-text-longform">
@@ -32,25 +23,9 @@ const Utilities = React.createClass({
           markup to consistently and easily accomplish specific spacing
           and layout tasks.
         </p>
-        {this.renderDownload()}
       </div>
     );
-  },
-
-  renderDownload: function() {
-    if (this.hasPreferences({ role: 'aura', userType: 'internal' })) {
-      return (
-        <a
-          href={`/assets/downloads/aura/css/_dev/utilities/index.css`}
-          className={pf('button button--neutral')}
-          download={`utilities.css`}>
-          Download Utilities CSS
-        </a>
-      );
-    }
-    return null;
   }
-
 });
 
 export default (

@@ -9,19 +9,17 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const _ = require('lodash');
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PT = React.PropTypes;
-const classNames = require('classnames');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const AccessibleList = require('ui/components/lib/accessible-list.react');
+import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import classNames from 'classnames';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import AccessibleList from 'ui/components/lib/accessible-list.react';
 import Helper from 'ui/components/lib/dom-helpers';
+import componentUtil, { prefix as pf, textContent, hasChild } from 'app_modules/ui/util/component';
+import globals from 'app_modules/global';
 
-const componentUtil = require('app_modules/ui/util/component');
-const {textContent, hasChild} = componentUtil;
-const pf = componentUtil.prefix;
-const globals = require('app_modules/global');
+const PT = React.PropTypes;
 const cssPrefix = globals.cssPrefix;
 
 const defaultFilter = (term, item) => {
@@ -239,4 +237,4 @@ Dropdown.Title = DropdownTitle;
 Dropdown.List = DropdownList;
 Dropdown.Item = DropdownItem;
 
-module.exports = Dropdown;
+export default Dropdown;

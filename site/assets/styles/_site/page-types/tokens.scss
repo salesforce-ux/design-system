@@ -182,38 +182,6 @@
     }
   }
 
-  &-example-spec {
-    margin: $spacing-medium 0;
-    position: relative;
-
-    &-container {
-      background: rgba(0, 0, 0, .0625);
-      padding: $spacing-medium;
-
-      &.#{$css-prefix}cell {
-        padding: $spacing-x-small;
-
-        &:first-child { margin-right: $spacing-medium; }
-      }
-
-      & & & { padding: 0; }
-    }
-
-    .site-box-spacing { position: absolute; }
-  }
-
-  &-box-spacing {
-    &-x-small {
-      @extend .site-box-spacing;
-      @include square($spacing-x-small);
-      background-color: red;
-    }
-    &-medium {
-      @extend .site-box-spacing;
-      @include square($spacing-medium);
-      background-color: orange;
-    }
-  }
 }
 
 .ruled .site-example-spec-container.#{$css-prefix}cell:first-child {

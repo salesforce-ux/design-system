@@ -375,7 +375,7 @@ function domAlign(el, refNode, align) {
   };
 }
 
-module.exports = domAlign;
+export default domAlign;
 /**
  *  2012-04-26 yiminghe@gmail.com
  *   - 优化智能对齐算法

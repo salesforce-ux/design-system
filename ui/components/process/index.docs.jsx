@@ -16,6 +16,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 module.exports = (
   <ComponentDocs>
-    <p className="site-text-introduction">Process Introduction</p>
+    <p className="site-text-introduction">A process component communicates to the user the progress of a particular process.</p>
   </ComponentDocs>
 );

@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
 import componentUtil from 'app_modules/ui/util/component';
 const pf = componentUtil.prefix;
 
@@ -40,8 +39,6 @@ class ToggleExample extends React.Component {
     e.stopPropagation();
 
     const {toggle, title} = this.props;
-
-    logCTAEvent('play-example', { title: title });
 
     if (this._isAnimating) return;
 

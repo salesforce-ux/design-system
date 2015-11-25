@@ -319,10 +319,10 @@ export default class ComponentFlavor extends React.Component {
     const {flavor} = this.props;
     return this.state.previewTabs.map((tab, index) => {
       const content = (
-        <CTALink ctaEventName='component-preview-tab-click' ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
+        <span>
           <SvgIcon sprite="utility" symbol={tab.icon} className={pf(`icon icon__svg icon-utility-${tab.iconClass} icon--x-small icon-text-default m-right--x-small`)} />
           {tab.label}
-        </CTALink>
+        </span>
       );
       return (
         <Tabs.Item

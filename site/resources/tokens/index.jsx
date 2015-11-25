@@ -15,7 +15,6 @@ import Anchor from 'app_modules/site/components/page/anchor';
 import Sticky from 'app_modules/site/components/sticky';
 import _ from 'lodash';
 import classNames from 'classnames';
-import CTALink from 'app_modules/site/components/cta-link';
 import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import Prefs from 'app_modules/site/preferences';
@@ -162,11 +161,9 @@ const Tokens = React.createClass({
     }).map(category => {
       return (
         <li className={pf('list__item')} key={category.key}>
-          <CTALink href={`#category-${category.key}`}
-              ctaEventName='tokens-category-click'
-              ctaExtraValues={{ category: category.key, format: this.format().name }}>
+          <a href={`#category-${category.key}`}>
             {category.label}
-          </CTALink>
+          </a>
         </li>
       );
     });

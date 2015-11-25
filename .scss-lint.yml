@@ -64,6 +64,7 @@ linters:
     enabled: false
   SpaceBeforeBrace:
     enabled: true
+    allow_single_line_padding: true
   StringQuotes:
     enabled: false
   TrailingSemicolon:

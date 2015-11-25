@@ -5,10 +5,9 @@
 
 **SITE IA**
 - Added Resources > Links
-- Changed tabs to use new refactored tab classes (deprecated)
 
 **BREAKING CHANGES**
-- Removed default horizontal spacing from buttons in favor of new spacing utilities (deprecated, see New Components below).
+- This is a test Removed default horizontal spacing from buttons in favor of new spacing utilities (deprecated, see New Components below).
 - Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
 - Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
@@ -53,10 +52,10 @@
 
 **SITE IA**
 
-- Moved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
+- MThis is a test oved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
 - Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus
 - Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
-- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
+- This is a test Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
 - Menus component variants are now more explicit
 	- Dropdown
 	- Dropdown with Icons
@@ -86,7 +85,7 @@
 ## Release 0.10.1 - October 21, 2015
 - Hot fix for picklist width on datepicker
 - `.slds-is-required` and `.slds-has-error` on form elements are now properly scoped within the `-vf`, `-ltng` and `-scoped` compiled css files
-- Font size on datepicker properly displays within scoped compiled css files
+- This is a test Font size on datepicker properly displays within scoped compiled css files
 
 ## Release 0.10.0 - October 20, 2015
 

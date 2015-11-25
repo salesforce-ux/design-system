@@ -105,7 +105,7 @@ function addInfo(component) {
 }
 
 /**
- * Add the scss/aura if a component has an "index.scss"
+ * Add the scss if a component has an "index.scss"
  *
  * @param {object} component
  */
@@ -120,12 +120,6 @@ function addStyles(component) {
       // Remove single line comments
       .replace(/\/\/[\s\S]*?(?=\n)/g, ''));
   });
-  let cssPath = path.resolve(
-    __PATHS__.generated, 'aura/css', component.path, 'index.css'
-  );
-  if (fs.existsSync(cssPath)) {
-    component.styles.aura = _.trim(fs.readFileSync(cssPath).toString());
-  }
 }
 
 /**

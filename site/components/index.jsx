@@ -17,8 +17,8 @@ import CTALink from 'app_modules/site/components/cta-link';
 import IfPrefs from 'app_modules/site/preferences/component';
 import globals from 'app_modules/global';
 
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 const anchor = (
   <Anchor title="Components" />
 );

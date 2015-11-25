@@ -19,7 +19,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 import { getHistory } from 'app_modules/site/navigation/history';
 
 import Heading from 'app_modules/site/components/page/heading';
@@ -90,13 +90,6 @@ function allCodeTabs() {
     info: 'info.styles',
     roles: [Prefs.roles.regular]
   },{
-    key: 'aura-css',
-    label: 'Lightning CSS',
-    language: 'scss',
-    code: 'styles.aura',
-    info: 'info.styles',
-    roles: [Prefs.roles.aura]
-  },{
     key: 'design-tokens',
     label: 'Design Tokens',
     language: 'scss',
@@ -157,7 +150,7 @@ function getCodeTabs(flavor, previewComponent, role) {
     .value();
 }
 
-export default class ComponentFlavor extends React.Component {
+class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
@@ -396,3 +389,5 @@ export default class ComponentFlavor extends React.Component {
   }
 
 }
+
+export default ComponentFlavor;

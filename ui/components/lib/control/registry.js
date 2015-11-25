@@ -27,4 +27,4 @@ let Registry = function() {
   return {lookup: lookup, register: register, unregister: unregister};
 };
 
-module.exports = Registry();
+export default Registry();

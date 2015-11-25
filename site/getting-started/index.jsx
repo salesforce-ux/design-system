@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-const componentUtil = require('app_modules/ui/util/component');
 import globals from 'app_modules/global';
 import { Link } from 'react-router';
 

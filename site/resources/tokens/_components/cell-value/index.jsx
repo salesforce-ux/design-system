@@ -11,8 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 
 class ValueCell extends React.Component {
 

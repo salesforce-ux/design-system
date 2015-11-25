@@ -17,15 +17,12 @@ import async from 'async';
 import _ from 'lodash';
 import globals from 'app_modules/global';
 
-import { DesignSystemScssAura } from '@salesforce-ux/design-system-utils';
-
 import siteCopyAssets from './site/assets';
 import siteCompile from './site/compile';
 import siteIcons from './site/icons';
 import siteLinks from './site/links';
 import { compileSass as siteSass } from './site/sass';
 
-import generateAuraCSS from './generate/aura-css';
 import generateIcons from './generate/icons';
 import generateReleaseNotes from './generate/release-notes';
 import generateSassUtilities from './generate/sass-utilities';
@@ -35,15 +32,6 @@ import generateVersion from './generate/version';
 import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
-
-let designSystem = DesignSystemScssAura({
-  path: __PATHS__.ui,
-  entryPath: path.resolve(__PATHS__.ui, 'index.scss'),
-  designTokensEntryPath: path.resolve(__PATHS__.ui, 'design-tokens.scss'),
-  designTokensModulePath: __PATHS__.node_modules,
-  scopedCategories: ['components'],
-  cssPrefix: globals.cssPrefix
-});
 
 export default {
 
@@ -67,7 +55,6 @@ export default {
 
       function(done) {
         async.parallel([
-          async.apply(generateAuraCSS, designSystem),
           generateIcons,
           generateReleaseNotes,
           generateVersion,

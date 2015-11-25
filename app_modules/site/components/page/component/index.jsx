@@ -17,8 +17,8 @@ import CTALink from 'app_modules/site/components/cta-link';
 import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 
 
 const ComponentBody = React.createClass({
@@ -26,9 +26,10 @@ const ComponentBody = React.createClass({
   mixins: [PrefsMixin],
 
   render() {
+    const { component } = this.props;
     return (
       <div>
-        {this.renderAnchor()}
+        <Anchor title={component.title} />
         <div className={pf('site-content p-around--xx-large grid wrap')}>
           {this.renderFlavorsDropDown()}
           <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
@@ -38,27 +39,6 @@ const ComponentBody = React.createClass({
           </div>
         </div>
       </div>
-    );
-  },
-
-  renderAnchor() {
-    const {component} = this.props;
-    let showDownloadButton = this.hasPreferences({
-      role: 'aura',
-      userType: 'internal'
-    });
-    let button = showDownloadButton ? (
-      <div className={pf('site-masthead-actions col no-flex align-middle')}>
-        <a
-          className={pf('button button--inverse')}
-          href={`/assets/downloads/aura/css/${component.path}/index.css`}
-          download={`${component.uid}.css`}>
-          Download CSS
-        </a>
-      </div>
-    ) : null;
-    return (
-      <Anchor title={component.title} actions={button} />
     );
   },
 

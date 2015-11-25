@@ -15,7 +15,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import ToggleExample from 'app_modules/site/components/motion-and-animation/toggle-example';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil from 'app_modules/ui/util/component';
 import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 

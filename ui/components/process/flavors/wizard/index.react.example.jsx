@@ -17,51 +17,39 @@ module.exports = (
     <div className={pf('wizard')} role="navigation">
       <ol className={pf('wizard__list')}>
         <li className={pf('wizard__item is-active')}>
-          <span className={pf('wizard__progress')}>
-            <span className={pf('wizard__progress-bar')} style={{ width: '100%' }}></span>
-          </span>
           <a href="#void" className={pf('wizard__item-link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Navigation</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
-          <span className={pf('wizard__progress')}>
-            <span className={pf('wizard__progress-bar')} style={{ width: '100%' }}></span>
-          </span>
           <a href="#void" className={pf('wizard__item-link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Actions</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
-          <span className={pf('wizard__progress')}>
-            <span className={pf('wizard__progress-bar')} style={{ width: '100%' }}></span>
-          </span>
           <a href="#void" className={pf('wizard__item-link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Compact Layout</span>
           </a>
         </li>
-        <li className={pf('wizard__item is-active')}>
-          <span className={pf('wizard__progress')}>
-            <span className={pf('wizard__progress-bar')} style={{ width: '100%' }}></span>
-          </span>
+        <li className={pf('wizard__item')}>
           <a href="#void" className={pf('wizard__item-link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Review</span>
           </a>
         </li>
         <li className={pf('wizard__item')}>
-          <span className={pf('wizard__progress')}>
-            <span className={pf('wizard__progress-bar')} style={{ width: '100%' }}></span>
-          </span>
           <a href="#void" className={pf('wizard__item-link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Invite</span>
           </a>
         </li>
       </ol>
+      <span className={pf('wizard__progress')}>
+        <span className={pf('wizard__progress-bar')} style={{ width: '50%' }}></span>
+      </span>
     </div>
   </div>
 );

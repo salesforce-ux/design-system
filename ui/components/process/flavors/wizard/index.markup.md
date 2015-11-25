@@ -1,1 +1,1 @@
-The process wizard communicates to the user which step of a process they may be on. The length of the progress bar can be changed by modifying the inline width style on `.{{cssPrefix}}wizard__progress-bar` with Javascript. Each step accepts a range from 0% to 100%.
+The process wizard communicates to the user which step of a process they may be on. The length of the progress bar can be changed by modifying the inline width style on `.{{cssPrefix}}wizard__progress-bar` with Javascript.

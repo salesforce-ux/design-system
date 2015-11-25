@@ -63,7 +63,7 @@ linters:
   SpaceAroundOperator:
     enabled: false
   SpaceBeforeBrace:
-    enabled: false
+    enabled: true
   StringQuotes:
     enabled: false
   TrailingSemicolon:

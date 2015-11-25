@@ -142,11 +142,11 @@ module.exports = (
   <div className={pf('pill__container--bare')}>
     <span className={pf('pill')}>
       <span className={pf('pill__label')}>Option B</span>
-      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Option B" />
     </span>
     <span className={pf('pill')}>
       <span className={pf('pill__label')}>Option C</span>
-      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Option C" />
     </span>
   </div>
 </div>

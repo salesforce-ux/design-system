@@ -50,14 +50,14 @@
   }
 
   &__container {
-    padding: 1px;
+    padding: $border-width-thin;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
     min-height: calc(#{$line-height-button} + 2px);
   }
 
   &__container--bare {
-    padding: $spacing-xxx-small 1px; // $spacing-xxx-small/2px to accomodate for missing borders
+    padding: ($border-width-thin * 2) $border-width-thin; // $border-width-thin * 2 to accomodate for missing borders
   }
 
   &__label {

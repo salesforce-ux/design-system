@@ -14,6 +14,9 @@
   .#{$css-prefix}form-element { 
     @include mq-small-max {
       margin-bottom: $spacing-small;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
     @include mq-small-min {
       margin-right: $spacing-medium;

@@ -75,4 +75,4 @@ linters:
   VendorPrefix:
     enabled: false
   ZeroUnit:
-    enabled: false
+    enabled: true

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
-import { logInputEvent } from 'app_modules/site/util/analytics';
 
 import ExampleCell from '../cell-example';
 import ValueCell from '../cell-value';
@@ -32,9 +31,6 @@ class Row extends React.Component {
 
   handleMouseUp() {
     let sel = window.getSelection && window.getSelection();
-    if (sel && sel.toString().length > 0) {
-      logInputEvent('token-name-select', {name: this.props.token.name, formattedName: this.getName(), format: this.props.nameFormat.name});
-    }
   }
 
   render() {

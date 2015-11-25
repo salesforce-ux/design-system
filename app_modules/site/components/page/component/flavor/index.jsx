@@ -24,7 +24,6 @@ import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logInputEvent } from 'app_modules/site/util/analytics';
 
 import { cssPrefix } from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
@@ -200,9 +199,6 @@ export default class ComponentFlavor extends React.Component {
 
   handleCodeMouseUp(tabKey) {
     let sel = window.getSelection && window.getSelection();
-    if (sel && sel.toString().length > 0) {
-      logInputEvent('component-code-text-select', {flavor: this.props.flavor.id, tab: tabKey});
-    }
   }
 
   onFrameLoad(caller) {

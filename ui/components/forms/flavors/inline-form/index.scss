@@ -11,7 +11,7 @@
 
 .#{$css-prefix}form--inline {
 
-  .#{$css-prefix}form-element { 
+  .#{$css-prefix}form-element {
     @include mq-small-max {
       margin-bottom: $spacing-small;
       &:last-of-type {

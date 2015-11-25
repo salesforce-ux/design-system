@@ -26,9 +26,10 @@ const ComponentBody = React.createClass({
   mixins: [PrefsMixin],
 
   render() {
+    const { component } = this.props;
     return (
       <div>
-        {this.renderAnchor()}
+        <Anchor title={component.title} />
         <div className={pf('site-content p-around--xx-large grid wrap')}>
           {this.renderFlavorsDropDown()}
           <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
@@ -38,27 +39,6 @@ const ComponentBody = React.createClass({
           </div>
         </div>
       </div>
-    );
-  },
-
-  renderAnchor() {
-    const {component} = this.props;
-    let showDownloadButton = this.hasPreferences({
-      role: 'aura',
-      userType: 'internal'
-    });
-    let button = showDownloadButton ? (
-      <div className={pf('site-masthead-actions col no-flex align-middle')}>
-        <a
-          className={pf('button button--inverse')}
-          href={`/assets/downloads/aura/css/${component.path}/index.css`}
-          download={`${component.uid}.css`}>
-          Download CSS
-        </a>
-      </div>
-    ) : null;
-    return (
-      <Anchor title={component.title} actions={button} />
     );
   },
 

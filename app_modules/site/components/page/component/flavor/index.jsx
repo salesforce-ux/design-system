@@ -90,13 +90,6 @@ function allCodeTabs() {
     info: 'info.styles',
     roles: [Prefs.roles.regular]
   },{
-    key: 'aura-css',
-    label: 'Lightning CSS',
-    language: 'scss',
-    code: 'styles.aura',
-    info: 'info.styles',
-    roles: [Prefs.roles.aura]
-  },{
     key: 'design-tokens',
     label: 'Design Tokens',
     language: 'scss',

@@ -99,7 +99,7 @@ class AnchorDetail extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('text-body--small m-top--x-small'));
+    const className = this.$getClassName(pf('text-body--small page-header__info'));
     return (
       <p className={className}>
         { this.props.children }

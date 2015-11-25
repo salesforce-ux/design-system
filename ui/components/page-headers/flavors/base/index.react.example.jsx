@@ -10,12 +10,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const React = require('react');
+
 const Anchor = require('ui/components/page-headers/index.react');
+const Truncate = require('ui/components/lib/truncate/index.react');
+const Heading = require('ui/components/heading/index.react');
+const MediaObject = require('ui/components/media-objects/index.react');
+const SvgIcon = require('app_modules/ui/svg-icon');
 const componentUtil = require('app_modules/ui/util/component');
 const pf = componentUtil.prefix;
 
+const image = (
+  <SvgIcon className={pf('icon icon--large icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+);
+
 module.exports = (
-  <div className={pf('page-header')}>
-    This is a page header theme.
-  </div>
+  <Anchor>
+    <MediaObject figureLeft={image}>
+      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
+        Rohde Corp - 80,000 Widgets
+      </p>
+      <p className={pf('text-body--small page-header__info')}>
+        Mark Jaeckal
+        &bull;
+        Unlimited Customer
+        &bull;
+        11/13/15
+      </p>
+    </MediaObject>
+  </Anchor>
 );

@@ -33,7 +33,7 @@ module.exports = (
         <Heading flavor="label">Leads</Heading>
         <div className={pf('grid')}>
           <div className={pf('grid type-focus no-space')}>
-            <Heading flavor="medium" className={pf('truncate')} title="My Leads (truncates)">My Leads (truncates)</Heading>
+            <h1 className={pf('page-header__title truncate')} title="My Leads (truncates)">My Leads (truncates)</h1>
             <ButtonIcon className={pf('shrink-none align-middle m-left--x-small')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="View More" />
           </div>
           <Button className={pf('shrink-none m-left--large')} flavor="icon-more" aria-haspopup="true">

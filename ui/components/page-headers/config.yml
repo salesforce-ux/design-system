@@ -1,5 +1,6 @@
 status: 'prototype'
 flavors:
+  - base
   - record-home
   - object-home
   - related-list

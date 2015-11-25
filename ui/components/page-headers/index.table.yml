@@ -1,7 +1,21 @@
-description: Most of the markup for page headers is from other components and utilities. This table gives you a quick overview of the unique {{abbreviatedName}} CSS classes that can be applied to create page headers.
+description: This table gives you a quick overview of the unique {{abbreviatedName}} CSS classes that can be applied to create page headers.
 classes:
+  -
+    class: page-header
+    description: Applies background color and padding
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Required on the main container for the page header
+  -
+    class: page-header__title
+    description: Page title (header text).
+    applied: <code>&lt;p&gt;</code>
+  -
+    class: page-header__info
+    description: For the small supporting info text after the heading
+    applied: <code>&lt;p&gt;</code>
   -
     class: page-header__detail-row
     description: Creates margins around the detail section of record home
-    applied: <code>div</code>
+    applied: <code>&lt;div&gt;</code>
     notes: Only the record home page header contains this detail area

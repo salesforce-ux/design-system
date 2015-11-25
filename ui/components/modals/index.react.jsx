@@ -74,7 +74,6 @@ class ModalHeader extends React.Component {
   render() {
     return (
       <div { ...this.props } className={this.$getClassName(pf('modal__header'))}>
-        { this.props.children }
         { this.props.closeButton ?
             <ButtonIcon
               onClick={this.context.onRequestClose}
@@ -86,6 +85,7 @@ class ModalHeader extends React.Component {
               assistiveText="Close" />
             : null
         }
+        { this.props.children }
       </div>
     );
   }

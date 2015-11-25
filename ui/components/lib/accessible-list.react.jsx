@@ -11,10 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
-const {createChainedFunction} = componentUtil;
+import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
 import Helper from 'ui/components/lib/dom-helpers';
+import _ from 'lodash';
+
+const PT = React.PropTypes;
 
 class AccessibleList extends React.Component {
   static propTypes = { selector: PT.string, click: PT.bool, selectedIndex: PT.number }
@@ -73,7 +74,7 @@ class AccessibleList extends React.Component {
   }
 
   render() {
-    const props = Object.assign({onKeyDown: createChainedFunction(this.props.onKeyDown, this.navigateMenu.bind(this))}, this.props);
+    const props = _.assign({onKeyDown: createChainedFunction(this.props.onKeyDown, this.navigateMenu.bind(this))}, this.props);
     return (<ul {...props} />);
   }
 }

@@ -20,8 +20,8 @@ import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
 import Sticky from 'app_modules/site/components/sticky';
 import _ from 'lodash';
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
+
 
 class Icons extends React.Component {
 

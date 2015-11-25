@@ -371,7 +371,7 @@ function mix(to, from) {
   return to;
 }
 
-var utils = module.exports = {
+var utils = {
   getWindow: function (node) {
     if (node && node.document && node.setTimeout) {
       return node;
@@ -421,3 +421,5 @@ var utils = module.exports = {
 };
 
 mix(utils, domUtils);
+
+export default utils;

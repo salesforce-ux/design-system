@@ -11,8 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import _ from 'lodash';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+
 
 class Component extends React.Component {
   constructor(props) {
@@ -42,4 +42,4 @@ Component.defaultProps = {
   name: 'radio'
 };
 
-module.exports = Component;
+export default Component;

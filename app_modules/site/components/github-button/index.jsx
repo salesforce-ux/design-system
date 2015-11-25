@@ -81,4 +81,4 @@ class GithubButton extends React.Component {
 GithubButton.displayName = 'GithubButton';
 GithubButton.propTypes = {};
 
-module.exports = GithubButton;
+export default GithubButton;

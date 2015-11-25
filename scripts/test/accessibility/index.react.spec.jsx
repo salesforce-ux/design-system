@@ -51,19 +51,21 @@ describe(`Accessiblity`, () => {
               let a11yErrors = null;
               beforeEach(() => {
                 try {
-                  // get the right component
                   previewCmp = getExample(flavor.examplePath);
-                  /* TODO: should we be using .preview?? */
+                  // HACK: Mixing ES6 exports with CommonJS exports
+                  if (previewCmp.default) {
+                    previewCmp = previewCmp.default;
+                  }
+                  // Some components export a default (above)
+                  // and others have separate preview/code
                   if (previewCmp.preview) {
                     previewCmp = previewCmp.preview;
                   }
-
                   let cls = React.createClass({
                     render: function() {
                       return <div><previewCmp/></div>
                     }
                   });
-
                   // render it and get its DOM node
                   cmp = renderIntoDocument(React.createElement(cls));
                   $cmp = ReactDOM.findDOMNode(cmp);

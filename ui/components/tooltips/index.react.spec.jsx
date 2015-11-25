@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 import Tooltip from './index.react';
 import Control from '../lib/control/flavors/popover';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 // ci server runs at different window size I think so we use this helper.
 function pxToNumber(x) {

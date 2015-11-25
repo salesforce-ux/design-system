@@ -16,8 +16,7 @@ import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import componentUtil from 'app_modules/ui/util/component';
-import pf = componentUtil.prefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 import image = (
   <SvgIcon className={pf('icon icon--large icon-standard-opportunity')} sprite="standard" symbol="opportunity" />

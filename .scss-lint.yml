@@ -28,7 +28,7 @@ linters:
   ImportPath:
     enabled: false
   ImportantRule:
-    enabled: false
+    enabled: true
   Indentation:
     enabled: false
   LeadingZero:

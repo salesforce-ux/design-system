@@ -38,6 +38,7 @@ const rootPath = p => path.resolve(__PATHS__.root, p);
 gulp.task('sass', () =>
   gulp.src([
     'ui/**/*.scss',
+    '!ui/vendor/**/*',
     'site/assets/styles/**/*.scss'
   ], { cwd: __PATHS__.root })
   .pipe(

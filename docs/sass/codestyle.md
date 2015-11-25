@@ -176,15 +176,6 @@ Avoid reactive `!important` declarations.
 Mixins duplicate a set of rules. Use these when you need to alter variables
 within a set of shared rules.
 
-### Extends
-Extends comma-delineates selectors. Use these sparingly when you need to reuse
-code without extra output. Make sure compiled selectors do not chain more than
-three. The best use of extends is for the "base state" of a component. For
-example, `.button` can be created for the base state, and then it can be
-extended for each button style.
-
-(Perhaps we should mention the silent selector here?)
-
 ---
 
 

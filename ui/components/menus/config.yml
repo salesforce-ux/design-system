@@ -5,6 +5,7 @@ flavors:
   - dropdown-with-icons
   - dropdown-positioning
   - picklist
+  - picklist-multi-select
   - search-overflow
   - action-overflow
   - action-overflow-for-touch

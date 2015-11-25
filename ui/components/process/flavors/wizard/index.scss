@@ -23,10 +23,6 @@
     width: 0%; // Needed for truncation due to different flex grow on items
     user-select: none;
 
-    .wizard__item-link {
-      display: block;
-    }
-
     &:first-child {
       text-align: left;
       flex-grow: 1;
@@ -46,6 +42,10 @@
         background: rgb(216, 221, 230); //@TODO - no matching token
       }
     }
+  }
+
+  &__item-link {
+    display: block;
   }
 
   &__marker {

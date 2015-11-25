@@ -29,7 +29,9 @@
     color: $color-text-button-default;
   }
 }
-/* A parent class must be put on anything that contains a .#{$css-prefix}button--hint so that when the parent is hovered, the child reacts */
+// A parent class must be put on anything that contains
+// a .#{$css-prefix}button--hint so that when the parent
+// is hovered, the child reacts
 .#{$css-prefix}hint-parent {
 
   &:hover,

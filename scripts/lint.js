@@ -39,7 +39,8 @@ gulp.task('sass', () =>
   gulp.src([
     'ui/**/*.scss',
     '!ui/vendor/**/*',
-    'site/assets/styles/**/*.scss'
+    'site/assets/styles/**/*.scss',
+    '!site/assets/styles/_vendor/**/*'
   ], { cwd: __PATHS__.root })
   .pipe(
     scsslint({

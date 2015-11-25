@@ -12,10 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 .#{$css-prefix}lookup {
 
   .#{$css-prefix}modal & {
-    tr:first-child > th  {
+    tr:first-child > th {
       border-top: $border-width-thick solid $color-border;
     }
-    tr:last-child > th  {
+    tr:last-child > th {
       border-bottom: $border-width-thick solid $color-border;
     }
   }

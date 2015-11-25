@@ -14,7 +14,7 @@
   @include button-base;
   background-color: $color-background-button-default;
 
-  &[disabled]{
+  &[disabled] {
     background-color: $color-background-button-default-disabled;
     cursor: default;
   }

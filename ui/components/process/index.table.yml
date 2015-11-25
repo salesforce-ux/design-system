@@ -16,7 +16,7 @@ classes:
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: wizard__item-link
+    class: wizard__link
     description: Hyperlink of the list item, user can jump between steps
     required: true
     applied: <code>&lt;a&gt;</code>

@@ -17,31 +17,31 @@ module.exports = (
     <div className={pf('wizard')} role="navigation">
       <ol className={pf('wizard__list')}>
         <li className={pf('wizard__item is-active')}>
-          <a href="#void" className={pf('wizard__item-link')}>
+          <a href="#void" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Navigation</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
-          <a href="#void" className={pf('wizard__item-link')}>
+          <a href="#void" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Actions</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
-          <a href="#void" className={pf('wizard__item-link')}>
+          <a href="#void" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Compact Layout</span>
           </a>
         </li>
         <li className={pf('wizard__item')}>
-          <a href="#void" className={pf('wizard__item-link')}>
+          <a href="#void" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Review</span>
           </a>
         </li>
         <li className={pf('wizard__item')}>
-          <a href="#void" className={pf('wizard__item-link')}>
+          <a href="#void" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
             <span className={pf('wizard__label text-heading--label truncate')}>Invite</span>
           </a>

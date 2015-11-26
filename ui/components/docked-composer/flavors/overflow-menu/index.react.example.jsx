@@ -27,8 +27,8 @@ export default (
         </span>
         <span className={pf('text-body--small align-middle')}>99 +</span>
       </a>
-      <Menu className={pf('dropdown--left dropdown--bottom dropdown--overflow nubbin--bottom-left')}>
-        <Menu.List isSelectable={false}>
+      <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
+        <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
           <Menu.Item>
             <span className={pf('icon__container icon-standard-email m-right--x-small')}>
               <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />

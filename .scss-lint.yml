@@ -67,7 +67,7 @@ linters:
   StringQuotes:
     enabled: false
   TrailingSemicolon:
-    enabled: false
+    enabled: true
   UnnecessaryParentReference:
     enabled: false
   UrlQuotes:

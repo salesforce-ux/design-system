@@ -19,16 +19,9 @@
     src: url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff2') format('woff2'),
     url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff') format('woff');
 
-
     font: {
-
-      @if $font-style-setting != null {
-        style: $font-style-setting;
-      }
-
-      @if $font-weight-setting != null {
-        weight: $font-weight-setting;
-      }
+      style: $font-style-setting;
+      weight: $font-weight-setting;
     }
   }
 }

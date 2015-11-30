@@ -117,7 +117,7 @@
     box-shadow: $color-border-selection 0 ($border-width-thick * -1) 0 inset;
 
     &.#{$css-prefix}is-selected {
-      box-shadow: $color-border-selection 0 ($border-width-thin * -1) 0 $border-width-thick inset
+      box-shadow: $color-border-selection 0 ($border-width-thin * -1) 0 $border-width-thick inset;
     }
   }
 }

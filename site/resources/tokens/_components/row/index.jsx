@@ -12,29 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
-import { logInputEvent } from 'app_modules/site/util/analytics';
 
 import ExampleCell from '../cell-example';
 import ValueCell from '../cell-value';
 
 class Row extends React.Component {
 
-  /*shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.token !== nextProps.token) return true;
-    if (this.props.nameFormat !== nextProps.nameFormat) return true;
-    return false;
-  }*/
-
   getName() {
     const {token, nameFormat} = this.props;
     return nameFormat.formatter(token.name);
-  }
-
-  handleMouseUp() {
-    let sel = window.getSelection && window.getSelection();
-    if (sel && sel.toString().length > 0) {
-      logInputEvent('token-name-select', {name: this.props.token.name, formattedName: this.getName(), format: this.props.nameFormat.name});
-    }
   }
 
   render() {
@@ -43,7 +29,7 @@ class Row extends React.Component {
     return (
       <tr className={className}>
         <td>
-          <code onMouseUp={this.handleMouseUp.bind(this)}>{this.getName()}</code>
+          <code>{this.getName()}</code>
         </td>
         {this.renderValues()}
       </tr>

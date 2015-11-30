@@ -23,7 +23,7 @@ module.exports = (
 
   <PickList label="2 options selected" aria-expanded="true">
     <div className={pf('dropdown dropdown--left')}>
-      <ul className={pf('dropdown__list')} role="menu">
+      <ul className={pf('dropdown__list dropdown--length-5')} role="menu">
         <li className={pf('dropdown__item')}>
           <a href="javascript:void(0)" role="menuitemradio">
             <p className={pf('truncate')}>

@@ -19,8 +19,6 @@ import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-
 const ComponentBody = React.createClass({
 
   mixins: [PrefsMixin],
@@ -67,7 +65,9 @@ const ComponentBody = React.createClass({
   },
 
   renderDocs() {
-    return this.props.elements.docs || null;
+    return this.props.elements.docs
+      ? this.props.elements.docs.default
+      : null;
   },
 
   renderComponentOverviewLink() {

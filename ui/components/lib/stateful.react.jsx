@@ -13,6 +13,7 @@ import React from 'react';
 import { createChainedFunction } from 'app_modules/ui/util/component';
 import classNames from 'classnames/dedupe';
 import globals from 'app_modules/global';
+import _ from 'lodash';
 
 const cssPrefix = globals.cssPrefix;
 
@@ -99,7 +100,7 @@ class StateClass extends React.Component {
   render() {
     let child = React.Children.only(this.props.children);
     let className = this.initialClassName(child.props.className || '');
-    let props = Object.assign({ref: '$control', className: className}, this.getProperEventTrigger(child.props));
+    let props = _.assign({ref: '$control', className: className}, this.getProperEventTrigger(child.props));
     return React.cloneElement(child, props);
   }
 }

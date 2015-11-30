@@ -156,6 +156,8 @@ export const webpackConfig = {
       'js-beautify',
       'lodash',
       'react',
+      'react-dom',
+      'react-dom/server',
       'react-lorem-component',
       'react-router',
       'tinycolor2'
@@ -170,22 +172,36 @@ export const webpackConfig = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        query: '{ compact: false }'
       },
       {
         test: /\.jsx?$/,
-        loader: path.resolve('app_modules/util/license-loader/index.js')
+        loader: path.resolve('app_modules/util/license-loader/index.js'),
+        exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
         exclude: eslintExclude,
         loader: 'eslint-loader'
       }
+    ],
+    noParse: [
+      /\.generated/,
+      /immutable\/immutable\.js/,
+      /lodash\/index\.js/,
+      /react\/dist\/react\.js/
     ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    root: __PATHS__.root
+    root: __PATHS__.root,
+    alias: {
+      'immutable$': path.resolve(__PATHS__.node_modules, 'immutable/dist/immutable.js'),
+      'react$': path.resolve(__PATHS__.node_modules, 'react/dist/react.js'),
+      'react-dom$': path.resolve(__PATHS__.node_modules, 'react-dom/dist/react-dom.js'),
+      'react-dom/server$': path.resolve(__PATHS__.node_modules, 'react-dom/dist/react-dom-server.js')
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -226,7 +242,7 @@ export const compiler = {
   createPages(callback) {
     assert.ok(_.isFunction(callback), 'callback must be a function');
     console.log('-----> Creating Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
     let stream = through.obj();
     routes.forEach(stream.write, stream);
@@ -273,7 +289,7 @@ export const compiler = {
    */
   createComponentPages(callback) {
     console.log('-----> Creating Component Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     let routes = sitemap.getFlattenedRoutes().filter(route => {
       return route.component;
     });
@@ -383,14 +399,14 @@ export const compiler = {
    */
   renderPages(callback) {
     console.log('-----> Rendering Pages');
-    let sitemap = require('app_modules/site/navigation/sitemap');
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
     // Needed for ReactRouter
     let Root = React.createClass({
       render() { return this.props.children; }
     });
     // Create the routes
     let routes = sitemap.getFlattenedRoutes().map(route => {
-      let page = require(this.getSitePathTmp(route.getIndexPath(route.path)));
+      let page = require(this.getSitePathTmp(route.getIndexPath(route.path))).default;
       let Page = React.createClass({
         render() {
           return page;
@@ -445,7 +461,7 @@ export const compiler = {
         minChunks: Infinity
       })
     );
-    if (isProd && process.env.TRAVIS !== true) {
+    if (isProd) {
       webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
     }
     // Create the compiler
@@ -504,7 +520,7 @@ export default function (done) {
     watch([
       path.resolve(__PATHS__.ui, '**/*.{md,yml}')
     ]).on('change', e => {
-      let sitemap = require('app_modules/site/navigation/sitemap');
+      let sitemap = require('app_modules/site/navigation/sitemap').default;
       let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
       routes.forEach(route => {
         if (new RegExp(_.escapeRegExp(route.component.path)).test(e.path)) {

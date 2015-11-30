@@ -46,7 +46,7 @@ class GithubButton extends React.Component {
         stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
-    }.bind(this)))
+    }))
   }
 
   componentWillUnmount() {

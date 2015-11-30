@@ -88,6 +88,33 @@ classes:
     description: Triangle that points downwards which is right aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
+    class: dropdown--length-5
+    description: Forces overflow scrolling after 5 list items
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: dropdown--length-7
+    description: Forces overflow scrolling after 7 list items
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: dropdown--length-10
+    description: Forces overflow scrolling after 10 list items
+    applied: <code>&lt;ul&gt;</code>
+  -
+    class: dropdown--length-with-icon-5
+    description: Forces overflow scrolling after 5 list items
+    applied: <code>&lt;ul&gt;</code>
+    notes: Use if an icon is within the list items
+  -
+    class: dropdown--length-with-icon-7
+    description: Forces overflow scrolling after 7 list items
+    applied: <code>&lt;ul&gt;</code>
+    notes: Use if an icon is within the list items
+  -
+    class: dropdown--length-with-icon-7
+    description: Forces overflow scrolling after 10 list items
+    applied: <code>&lt;ul&gt;</code>
+    notes: Use if an icon is within the list items
+  -
     class: is-selected
     description: Applies selected state to dropdown item
     applied: <code>.{{cssPrefix}}dropdown__item</code>

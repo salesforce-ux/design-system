@@ -6,7 +6,7 @@
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
 
-**BREAKING CHNAGES**
+**BREAKING CHANGES**
 - Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
 
 **CHANGES**
@@ -17,8 +17,12 @@
 **NEW COMPONENTS**
 - Process > Wizard component added
 - Menu > Picklist Multi-Select component added
-- Page Header > BASE component added
+- Page Header > Base component added
 - `.slds-page-header__info` added to Page header for better responsive spacing.
+- Utility classes added to help with dropdown menu overflow length. `.slds-dropdown--length-5`, `.slds-dropdown--length-7` and `.slds-dropdown--length-10` for 5, 7 or 10 text only menu items. `.slds-dropdown--length-with-icon-5`, `.slds-dropdown--length-with-icon-7` and `.slds-dropdown--length-with-icon-10` for 5, 7 or 10 text with icon menu items.
+
+**DEPRECATED**
+- `.slds-dropdown--overflow` has been deprecated. Dropdown length utilities should be used instead.
 
 ## Release 1.0.0 (internal only) - November 18, 2015
 

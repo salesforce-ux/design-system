@@ -18,19 +18,9 @@ import ValueCell from '../cell-value';
 
 class Row extends React.Component {
 
-  /*shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.token !== nextProps.token) return true;
-    if (this.props.nameFormat !== nextProps.nameFormat) return true;
-    return false;
-  }*/
-
   getName() {
     const {token, nameFormat} = this.props;
     return nameFormat.formatter(token.name);
-  }
-
-  handleMouseUp() {
-    let sel = window.getSelection && window.getSelection();
   }
 
   render() {
@@ -39,7 +29,7 @@ class Row extends React.Component {
     return (
       <tr className={className}>
         <td>
-          <code onMouseUp={this.handleMouseUp.bind(this)}>{this.getName()}</code>
+          <code>{this.getName()}</code>
         </td>
         {this.renderValues()}
       </tr>

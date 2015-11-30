@@ -3,8 +3,19 @@
 
 ## Release 1.0.0 (internal only) - November 18, 2015
 
+**SITE IA**
+- Move Page Header theme from Utilities to its top-level component category
+
+**BREAKING CHNAGES**
+- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
+
+**CHANGES**
+- Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
+
 **NEW COMPONENTS**
+- Base *Page Header* component
 - Added the Docked Composer
+- `.slds-page-header__info` added to Page header for better responsive spacing.
 
 ## Release 0.12.0 - November 18, 2015
 

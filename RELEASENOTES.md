@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 1.0.0 (internal only) - November 18, 2015
+## Release 1.1.0 (internal only) - November 30, 2015
 
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
@@ -11,11 +11,19 @@
 
 **CHANGES**
 - Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
+- Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
+- a11y fix - Close button now first in source order on modal
 
 **NEW COMPONENTS**
-- Base *Page Header* component
-- Added the Docked Composer
+- Process > Wizard component added
+- Menu > Picklist Multi-Select component added
+- Page Header > BASE component added
 - `.slds-page-header__info` added to Page header for better responsive spacing.
+
+## Release 1.0.0 (internal only) - November 18, 2015
+
+**NEW COMPONENTS**
+- Added the Docked Composer
 
 ## Release 0.12.0 - November 18, 2015
 

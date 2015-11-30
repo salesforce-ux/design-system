@@ -225,7 +225,7 @@ app.listen(port);
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
-        <p><a href="/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
+        <p><Link to="/resources/downloads/">Download the {g.displayName} CSS framework</Link></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -248,7 +248,7 @@ demo_slds_heroku/
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-        <link rel="stylesheet" type="text/css" ref="/assets/styles/salesforce-lightning-design-system.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look similar to the following:</p>
@@ -258,7 +258,7 @@ demo_slds_heroku/
 <html>
   <head>
     <title>Playground</title>
-    <link rel="stylesheet" type="text/css" ref="/assets/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
   </head>
   <body>
     Kaixo!

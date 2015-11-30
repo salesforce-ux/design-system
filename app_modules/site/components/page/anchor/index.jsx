@@ -16,6 +16,7 @@ import classNames from 'classnames';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
+import { Link } from 'react-router';
 
 class Anchor extends React.Component {
 
@@ -57,10 +58,7 @@ class Anchor extends React.Component {
     let breadcrumbs = childNavItems.map(item => {
       return (
         <li className={pf('list__item')} key={item.id}>
-          <a
-            href={item.path}>
-          {item.label}
-          </a>
+          <Link to={item.route}>{item.label}</Link>
         </li>
       );
     });

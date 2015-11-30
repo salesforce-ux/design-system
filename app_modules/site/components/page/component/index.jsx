@@ -16,9 +16,8 @@ import ComponentFlavor from './flavor';
 import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
-
+import { prefix as pf } from 'app_modules/ui/util/component';
+import { Link } from 'react-router';
 
 const ComponentBody = React.createClass({
 

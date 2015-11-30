@@ -13,11 +13,11 @@ import './helpers/setup';
 
 import fs from 'fs';
 import rimraf from 'rimraf';
-import { build as buildSite } from './tasks';
+import tasks from './tasks';
 
 rimraf.sync(__PATHS__.www);
 rimraf.sync(__PATHS__.generated);
 rimraf.sync(__PATHS__.tmp);
 
 fs.mkdirSync(__PATHS__.tmp);
-buildSite();
+tasks.build();

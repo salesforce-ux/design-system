@@ -11,4 +11,4 @@
 
 set -e
 
-./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js test/before/**/*.js
+./node_modules/.bin/mocha --compilers js:babel/register --require scripts/helpers/setup.js --reporter min test/before/**/*.js

@@ -3,12 +3,11 @@ node_js:
   - "0.12"
 before_install:
   - scripts/travis/before_install.sh
+  - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
 install:
   - npm install
 script:
-  - npm run test-before && npm run prod && npm run dist && npm run test-after
-after_success:
-  - scripts/travis/after_success.sh
+  - scripts/travis/script.sh
 cache:
   directories:
     - node_modules

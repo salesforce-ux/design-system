@@ -20,7 +20,9 @@ module.exports = (
   <form className={pf('form--inline')}>
     <Input label="Name" placeholder="John Smith" assistiveText="name" />
     <Input label="Email" placeholder="jsmith@salesforce.com" assistiveText="email" />
-    <Button type="button" flavor="brand">Send</Button>
+    <div className={pf('form-element')}>
+      <Button type="button" flavor="brand">Send</Button>
+    </div>
   </form>
 </div>
 );

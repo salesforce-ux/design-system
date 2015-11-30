@@ -18,6 +18,7 @@
   .#{$css-prefix}form-element {
 
     > .#{$css-prefix}form-element__label {
+
       @include mq-medium-min {
         display: inline-block;
         max-width: 33%;

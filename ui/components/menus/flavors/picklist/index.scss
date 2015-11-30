@@ -14,9 +14,6 @@
 
   .#{$css-prefix}dropdown {
     width: $size-small;
-    max-height: calc((((#{$font-size-medium} * #{$line-height-text}) + #{$spacing-medium}) * 5) + #{$spacing-x-small} + #{$border-width-thick});
-    overflow-y: auto;
-    @include enable-ios-momentum-scrolling;
   }
 
   &--fluid {

@@ -461,7 +461,7 @@ export const compiler = {
         minChunks: Infinity
       })
     );
-    if (isProd && process.env.TRAVIS !== true) {
+    if (isProd) {
       webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
     }
     // Create the compiler

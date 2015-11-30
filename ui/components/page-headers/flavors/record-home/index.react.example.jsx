@@ -33,7 +33,7 @@ export default (
         <MediaObject figureLeft={image}>
           <Heading flavor="label">Record Type</Heading>
           <div className={pf('grid')}>
-            <Heading flavor="medium" className={pf('m-right--small truncate align-middle')} title="Record Title">Record Title</Heading>
+            <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
             <div className={pf('col shrink-none')}>
               <StatefulClass>
                 <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">

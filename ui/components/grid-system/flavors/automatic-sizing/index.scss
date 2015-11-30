@@ -28,13 +28,10 @@
   }
 }
 
-.#{$css-prefix}grid {
-
-  &,
-  .#{$css-prefix}text-longform & {
-    margin-left: 0;
-    list-style: none;
-  }
+// Resets spacing/bullets for when grids are used on unordered lists
+ul.#{$css-prefix}grid {
+  margin-left: 0;
+  list-style: none;
 }
 
 .#{$css-prefix}col,

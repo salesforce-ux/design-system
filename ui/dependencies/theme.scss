@@ -159,14 +159,14 @@
   }
 
   background-image: linear-gradient($angle, $stripe_color 25%, transparent 25%, transparent 50%, $stripe_color 50%, $stripe_color 75%, transparent 75%, transparent);
-  background-size: 64px 64px
+  background-size: 64px 64px;
 }
-
-
 
 // Page header
 @mixin page-header {
-  padding: $spacing-large $spacing-large $spacing-small;
-  border-bottom: $border-width-thin solid $color-border;
-  background: $color-background;
+  @include deprecate("0.20.0") {
+    padding: $spacing-large $spacing-large $spacing-small;
+    border-bottom: $border-width-thin solid $color-border;
+    background: $color-background;
+  }
 }

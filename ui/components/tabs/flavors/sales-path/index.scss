@@ -201,5 +201,5 @@
   @include tabs-link;
   position: relative;
   padding: $spacing-xx-small $spacing-x-small $spacing-xx-small $spacing-medium;
-  line-height: calc(#{$line-height-tab} / 2)
+  line-height: calc(#{$line-height-tab} / 2);
 }

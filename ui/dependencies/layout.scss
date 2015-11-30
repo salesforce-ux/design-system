@@ -227,7 +227,7 @@ $grid: (
 
   @if type-of($span) == number and unitless($span) == false {
     flex: 0 0 rem($span);
-    max-width: rem($span)
+    max-width: rem($span);
   }
 
   @else {

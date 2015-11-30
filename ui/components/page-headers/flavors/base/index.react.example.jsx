@@ -10,15 +10,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+
+import Anchor from 'ui/components/page-headers/index.react';
+import Truncate from 'ui/components/lib/truncate/index.react';
+import Heading from 'ui/components/heading/index.react';
+import MediaObject from 'ui/components/media-objects/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+const image = (
+  <SvgIcon className={pf('icon icon--large icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+);
 
 export default (
-<ComponentDocs>
-  <p className="site-text-introduction">
-    Themes apply a set of styles to elements or areas. They apply a
-    combination of colors for backgrounds, text, and borders.
-  </p>
-</ComponentDocs>
+  <Anchor>
+    <MediaObject figureLeft={image}>
+      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
+        Rohde Corp - 80,000 Widgets
+      </p>
+      <p className={pf('text-body--small page-header__info')}>
+        Mark Jaeckal
+        &bull;
+        Unlimited Customer
+        &bull;
+        11/13/15
+      </p>
+    </MediaObject>
+  </Anchor>
 );

@@ -26,6 +26,6 @@
                           $checker-color 75%,
                           $checker-color);
     size: ($checker-size * 2) ($checker-size * 2);
-    position: 0 0, $checker-size $checker-size
+    position: 0 0, $checker-size $checker-size;
   }
 }

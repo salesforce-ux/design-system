@@ -115,9 +115,9 @@
           left: 50%;
           content: "";
           border: {
-            right: .5rem solid transparent;
-            bottom: .5rem solid $color-text-inverse;
-            left: .5rem solid transparent;
+            right: 0.5rem solid transparent;
+            bottom: 0.5rem solid $color-text-inverse;
+            left: 0.5rem solid transparent;
           }
           transform: translate(-50%, -300%);
         }
@@ -128,9 +128,9 @@
           left: 50%;
           content: "";
           border: {
-            top: .5rem solid $color-text-inverse;
-            right: .5rem solid transparent;
-            left: .5rem solid transparent;
+            top: 0.5rem solid $color-text-inverse;
+            right: 0.5rem solid transparent;
+            left: 0.5rem solid transparent;
           }
           transform: translate(-50%, 200%);
         }

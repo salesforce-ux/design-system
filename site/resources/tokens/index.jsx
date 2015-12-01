@@ -15,8 +15,6 @@ import Anchor from 'app_modules/site/components/page/anchor';
 import Sticky from 'app_modules/site/components/sticky';
 import _ from 'lodash';
 import classNames from 'classnames';
-import { logInputEvent } from 'app_modules/site/util/analytics';
-import CTALink from 'app_modules/site/components/cta-link';
 import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import Prefs from 'app_modules/site/preferences';
@@ -73,10 +71,6 @@ const Tokens = React.createClass({
     return categories;
   },
 
-  logSearchChange: function(query) {
-    logInputEvent('design-token-search', { format: this.format().name, query: query });
-  },
-
   onSearchChange: function(e) {
     let {tokensByCategory} = this.state;
     const target = event.target || event.currentTarget;
@@ -101,14 +95,6 @@ const Tokens = React.createClass({
       tokensByCategory = _.pick(tokensByCategory, tokens => {
         return tokens.length > 0;
       });
-
-      if (this.logSearchChangeDebounce) {
-        clearTimeout(this.logSearchChangeDebounce);
-      }
-      this.logSearchChangeDebounce = setTimeout(() => {
-        this.logSearchChangeDebounce = null;
-        this.logSearchChange(query);
-      }, 600);
     }
     this.setState({
       query,
@@ -175,11 +161,9 @@ const Tokens = React.createClass({
     }).map(category => {
       return (
         <li className={pf('list__item')} key={category.key}>
-          <CTALink href={`#category-${category.key}`}
-              ctaEventName='tokens-category-click'
-              ctaExtraValues={{ category: category.key, format: this.format().name }}>
+          <a href={`#category-${category.key}`}>
             {category.label}
-          </CTALink>
+          </a>
         </li>
       );
     });

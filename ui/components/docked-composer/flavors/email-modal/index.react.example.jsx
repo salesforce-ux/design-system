@@ -83,14 +83,12 @@ class ModalExample extends React.Component {
                   <div className={pf('grid grow p-horizontal--small')}>
                     <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
                     <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
-                    <div className={pf('pill-container show')}>
-                      <span className={pf('pill')}>
-                        <a href="#" className={pf('pill__label')}>
-                          <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-                          Lei Chan
-                        </a>
-                        <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-                      </span>
+                    <div className={pf('pill__container--bare show')}>
+                      <a href="#void" className={pf('pill')}>
+                        <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+                        <span className={pf('pill__label')}>Lei Chan</span>
+                        <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />
+                      </a>
                     </div>
                   </div>
                   <div className={pf('grid shrink-none p-horizontal--small')}>
@@ -101,12 +99,12 @@ class ModalExample extends React.Component {
                 <div className={pf('grid p-horizontal--small hide')}>
                   <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerCc">Cc</label>
                   <input className={pf('input--bare input--height show')} id="emailComposerCc" type="text" />
-                  <div className={pf('pill-container hide')}></div>
+                  <div className={pf('pill__container--bare hide')}></div>
                 </div>
                 <div className={pf('grid p-horizontal--small hide')}>
                   <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerBcc">Bcc</label>
                   <input className={pf('input--bare input--height show')} id="emailComposerBcc" type="text" />
-                  <div className={pf('pill-container hide')}></div>
+                  <div className={pf('pill__container--bare hide')}></div>
                 </div>
 
                 {/* Subject Line */}

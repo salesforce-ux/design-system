@@ -84,6 +84,14 @@
   }
 }
 
+@mixin form-element-vertical-spacing {
+  margin-top: $spacing-small;
+
+  @include mq-large-min {
+    margin-top: $spacing-x-small;
+  }
+}
+
 @mixin form-element-required($element: null) {
   @if $element != null {
     > #{$element}:before {

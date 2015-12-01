@@ -14,9 +14,6 @@
 
   .#{$css-prefix}dropdown {
     width: $size-small;
-    max-height: calc((((#{$font-size-medium} * #{$line-height-text}) + #{$spacing-medium}) * 5) + #{$spacing-x-small} + #{$border-width-thick});
-    overflow-y: auto;
-    @include enable-ios-momentum-scrolling;
   }
 
   &--fluid {
@@ -42,13 +39,6 @@
     top: 50%;
     margin-top: (($square-icon-small-content / 2) * -1);
     fill: $color-text-icon-default;
-  }
-
-  &[aria-disabled="true"] {
-    border-color: $color-border-input-disabled;
-    background-color: $color-background-input-disabled;
-    cursor: not-allowed;
-    user-select: none;
   }
 
   .#{$css-prefix}truncate {

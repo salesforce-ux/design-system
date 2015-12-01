@@ -11,8 +11,3 @@
 .#{$css-prefix}tabs--default .#{$css-prefix}tabs__item--overflow {
   overflow: visible;
 }
-
-.#{$css-prefix}dropdown--overflow {
-  max-height: calc((#{$square-icon-medium-boundary} + (#{$spacing-xx-small} * 2)) * 10);
-  overflow: auto;
-}

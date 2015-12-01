@@ -83,7 +83,7 @@ window.LIGHTNING_DESIGN_SYSTEM = {
     let createClass = pageElement => {
       return React.createClass({
         render() {
-          return pageElement;
+          return pageElement.default;
         }
       });
     }

@@ -19,6 +19,9 @@ linters:
     enabled: false
   EmptyRule:
     enabled: false
+  ExtendDirective:
+    enabled: true
+    severity: error
   FinalNewline:
     enabled: false
   HexNotation:
@@ -64,7 +67,7 @@ linters:
   StringQuotes:
     enabled: false
   TrailingSemicolon:
-    enabled: false
+    enabled: true
   UnnecessaryParentReference:
     enabled: false
   UrlQuotes:

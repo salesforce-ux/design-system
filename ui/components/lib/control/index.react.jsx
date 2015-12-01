@@ -10,11 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
-const {createChainedFunction} = componentUtil;
+import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-const eventDict = {click: ['onClick'], hover: ['onMouseEnter', 'onMouseLeave', 'onFocus', 'onBlur'], focus: ['onFocus', 'onBlur'] };
+
+const eventDict = {
+  click: ['onClick'],
+  hover: ['onMouseEnter', 'onMouseLeave', 'onFocus', 'onBlur'],
+  focus: ['onFocus', 'onBlur']
+};
+
+const PT = React.PropTypes;
 
 class Control extends React.Component {
   static propTypes = { trigger: PT.oneOf(Object.keys(eventDict)), target: PT.string };

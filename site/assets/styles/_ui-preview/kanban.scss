@@ -99,7 +99,7 @@
   // To support rtl on the body
   &[dir=rtl] {
 
-    .kanban__stage-wrapper{
+    .kanban__stage-wrapper {
 
       &:before {
         right: -$spacing-medium;

@@ -106,7 +106,7 @@
 
   // Default Table Row Hover
   &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > td,
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th  {
+  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
   }
 

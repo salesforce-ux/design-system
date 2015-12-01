@@ -242,4 +242,4 @@
 ### Utilities
 - Text > Faux Links has added cursor:pointer
 
-Lots of bug fixes and TLC.>>>>>>> 
+Lots of bug fixes and TLC.

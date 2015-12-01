@@ -167,7 +167,7 @@
 @mixin scrollbar($size: 10px,$thumb: $color-background-scrollbar,$track: $color-background-scrollbar-track) {
 
   &::-webkit-scrollbar {
-    width:  $size;
+    width: $size;
     height: $size;
 
     &:window-inactive {

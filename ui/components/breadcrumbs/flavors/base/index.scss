@@ -15,7 +15,7 @@
     position: relative;
 
     &:before {
-      content:'\003E';
+      content: '\003E';
       position: absolute;
       left: -$spacing-x-small / 2;
     }

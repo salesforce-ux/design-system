@@ -59,7 +59,7 @@ linters:
   SingleLinePerSelector:
     enabled: false
   SpaceAfterComma:
-    enabled: false
+    enabled: true
   SpaceAfterPropertyColon:
     enabled: false
   SpaceAroundOperator:

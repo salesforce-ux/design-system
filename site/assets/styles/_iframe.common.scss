@@ -21,7 +21,7 @@ body {
     line-height: 2rem;
     background-color: $color-brand;
     color: $color-text-inverse;
-    box-shadow: rgba(black,.1) 0 0 0 1px inset;
+    box-shadow: rgba(black, 0.1) 0 0 0 1px inset;
   }
 
   .#{$css-prefix}grid--overflow
@@ -109,8 +109,8 @@ body {
 // For the .button--hint demo - parent needs to have some space
 .hint-parent-demo {
   padding: 20px;
-  background-color: rgba($color-brand,.35);
-  border: 1px solid rgba($color-brand,.1);
+  background-color: rgba($color-brand, 0.35);
+  border: 1px solid rgba($color-brand, 0.1);
 }
 
 // To space separate rows of demo items apart
@@ -160,7 +160,7 @@ body {
 .demo-only--margin-theme > div:before {
   content: '';
   position: absolute;
-  background: rgba(black,.1);
+  background: rgba(black, 0.1);
   width: 100%;
   height: 1px;
   left: 0;
@@ -168,7 +168,7 @@ body {
 }
 
 .demo-only--padding-theme > div {
-  border-bottom: 1px solid rgba(black,.1);
+  border-bottom: 1px solid rgba(black, 0.1);
 }
 
 .demo-only--padding-theme > div:before {
@@ -198,12 +198,12 @@ body {
   }
   .hidden {
     color: $color-text-weak;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
 .demo-visibility [class*="-hide"] {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .demo-class-pill {

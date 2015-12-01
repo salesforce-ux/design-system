@@ -18,7 +18,7 @@
   text-align: center;
 
   &--disabled img {
-    filter: grayscale(.9);
+    filter: grayscale(0.9);
   }
 }
 
@@ -35,6 +35,6 @@
   }
   .hidden {
     color: $color-text-weak;
-    opacity: .5;
+    opacity: 0.5;
   }
 }

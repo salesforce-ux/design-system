@@ -9,14 +9,14 @@
 
 .site-contentinfo {
   padding: $spacing-medium;
-  background: rgba($color-background-alt-2, .3);
+  background: rgba($color-background-alt-2, 0.3);
 
   a {
     color: $color-text-default;
 
     &:hover,
     &:focus {
-      background-color: rgba($color-background-alt-2, .5);
+      background-color: rgba($color-background-alt-2, 0.5);
     }
 
     &:active {

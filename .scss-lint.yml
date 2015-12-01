@@ -8,7 +8,8 @@ linters:
   ColorVariable:
     enabled: false
   Comment:
-    enabled: false
+    enabled: true
+    allowed: '\* Note\: '
   DeclarationOrder:
     enabled: false
   DuplicateProperty:

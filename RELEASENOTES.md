@@ -6,10 +6,8 @@
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
 
-**BREAKING CHANGES**
-- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
-
 **CHANGES**
+- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
 - Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
 - a11y fix - Close button now first in source order on modal

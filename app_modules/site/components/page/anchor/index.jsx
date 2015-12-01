@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import _ from 'lodash';
 import shared from 'app_modules/site/shared';
-import CTALink from 'app_modules/site/components/cta-link';
 import classNames from 'classnames';
 import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -60,11 +59,7 @@ class Anchor extends React.Component {
     let breadcrumbs = childNavItems.map(item => {
       return (
         <li className={pf('list__item')} key={item.id}>
-          <CTALink
-            href={item.path}
-            ctaEventName='anchor-breadcumb'>
-          {item.label}
-          </CTALink>
+          <Link to={item.route}>{item.label}</Link>
         </li>
       );
     });

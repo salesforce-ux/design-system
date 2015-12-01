@@ -13,7 +13,6 @@ import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
 import Sticky from 'app_modules/site/components/sticky';
 import ComponentFlavor from './flavor';
-import CTALink from 'app_modules/site/components/cta-link';
 import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
@@ -44,9 +43,9 @@ const ComponentBody = React.createClass({
     const flavors = this.props.component.flavors.filter(this.shouldDisplayFlavor, this).map(flavor => {
       return (
         <li className={pf('list__name')} key={flavor.uid}>
-          <CTALink href={`#${flavor.id}`} ctaEventName='variant-link' ctaExtraValues={{ value: flavor.id }}>
+          <a href={`#${flavor.id}`}>
             {flavor.title}
-          </CTALink>
+          </a>
         </li>
       );
     });

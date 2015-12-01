@@ -11,23 +11,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 /* eslint-disable camelcase */
 
-var argv = require('minimist')(process.argv.slice(2));
-var isProd = argv.prod === true;
-var _ = require('lodash');
+import _ from 'lodash';
+import path from 'path';
 
-var path = require('path');
+import minimist from 'minimist';
 
-var root = path.resolve(__dirname, '../../');
-var app_modules = path.resolve(root, 'app_modules');
-var git_modules = path.resolve(root, 'git_modules');
-var node_modules = path.resolve(root, 'node_modules');
+const argv = minimist(process.argv.slice(2));
+const isProd = argv.prod === true;
 
-var paths = {
-  root: root,
+const root = path.resolve(__dirname, '../../');
+const app_modules = path.resolve(root, 'app_modules');
+const git_modules = path.resolve(root, 'git_modules');
+const node_modules = path.resolve(root, 'node_modules');
 
-  app_modules: app_modules,
-  git_modules: git_modules,
-  node_modules: node_modules,
+const paths = {
+  root,
+  app_modules,
+  git_modules,
+  node_modules,
 
   scripts: path.resolve(root, 'scripts'),
   site: path.resolve(root, 'site'),
@@ -43,7 +44,7 @@ var paths = {
   www: path.resolve(root, '.www')
 };
 
-module.exports = {
+export default {
 
   /**
    * Make __PATHS__ available in all modules

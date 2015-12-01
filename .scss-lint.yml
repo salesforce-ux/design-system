@@ -43,7 +43,8 @@ linters:
   NameFormat:
     enabled: false
   NestingDepth:
-    enabled: false
+    enabled: true
+    ignore_parent_selectors: true
   PlaceholderInExtend:
     enabled: false
   PropertySortOrder:

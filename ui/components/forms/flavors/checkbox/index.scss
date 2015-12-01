@@ -72,6 +72,7 @@
     }
 
     &[disabled] {
+      // scss-lint:disable NestingDepth
 
       > .#{$css-prefix}checkbox--faux,
       ~ .#{$css-prefix}checkbox--faux {

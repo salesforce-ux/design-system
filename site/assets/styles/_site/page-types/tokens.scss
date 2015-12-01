@@ -218,6 +218,7 @@
     }
 
     &.token--empty {
+      // scss-lint:disable NestingDepth
 
       > div:before {
         margin: $spacing-xx-small 0;
@@ -248,6 +249,7 @@
     @include mq-small-max {
 
       td.token {
+        // scss-lint:disable NestingDepth
 
         > div {
           border: $border-width-thin solid $color-border;
@@ -268,6 +270,7 @@
     @include mq-medium-min {
 
       td.token {
+        // scss-lint:disable NestingDepth
         vertical-align: top;
         padding: {
           top: $spacing-small;

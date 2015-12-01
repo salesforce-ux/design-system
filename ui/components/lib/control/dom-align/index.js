@@ -16,7 +16,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
  * @author yiminghe@gmail.com
  */
 
-var utils = require('./utils');
+import utils from './utils';
 
 // http://yiminghe.iteye.com/blog/1124720
 

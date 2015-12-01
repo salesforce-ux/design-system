@@ -28,7 +28,7 @@
   }
 
   .atmosphere-hline {
-    left: .5rem;
+    left: 0.5rem;
     width: 2.5rem;
   }
 }
@@ -36,7 +36,7 @@
 .atmosphere-hline {
   position: absolute;
   left: 5.5rem;
-  width: .5rem;
+  width: 0.5rem;
   border-top: $border-width-thin solid $color-border-separator-alt;
   transform: translateX(-1rem);
 }
@@ -212,7 +212,7 @@
 
   &--on {
     opacity: 0;
-    transform: translate3d(-50%, -50%, 0) scale(.8);
+    transform: translate3d(-50%, -50%, 0) scale(0.8);
     box-shadow: $elevation-shadow-0;
   }
 }
@@ -244,7 +244,7 @@
   box-shadow: $elevation-shadow-8;
 
   &--on {
-    transform: translate3d(-50%, -50%, 0) scale(.9);
+    transform: translate3d(-50%, -50%, 0) scale(0.9);
     box-shadow: $elevation-shadow-4;
   }
 }
@@ -271,7 +271,7 @@
     box-shadow: $elevation-shadow-3-below;
 
     span {
-      transform: translate3d(-50%, -50%, 0) scale(.95);
+      transform: translate3d(-50%, -50%, 0) scale(0.95);
     }
   }
 }
@@ -303,7 +303,7 @@
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
-    transform: translate3d(-50%, -50%, 0) scale(.9);
+    transform: translate3d(-50%, -50%, 0) scale(0.9);
   }
 }
 

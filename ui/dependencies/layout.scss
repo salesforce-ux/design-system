@@ -223,7 +223,7 @@ $grid: (
 
 
 // Sizing Helper
-@mixin flex-size($span: 1,$spread: 12) {
+@mixin flex-size($span: 1, $spread: 12) {
 
   @if type-of($span) == number and unitless($span) == false {
     flex: 0 0 rem($span);
@@ -259,7 +259,7 @@ $grid: (
 @mixin flex-item($size: expand) {
 
   @if (type-of($size) == 'number') {
-    @include flex-size($size,$columns);
+    @include flex-size($size, $columns);
   }
 
   @if ($size == shrink) {

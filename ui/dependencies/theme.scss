@@ -16,7 +16,7 @@
 
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
-    background-image: linear-gradient(to $direction, rgba($start,0), $end);
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
   }
 
   @else {
@@ -30,7 +30,7 @@
 
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
-    background-image: linear-gradient(to $direction, rgba($start,0), $end);
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
   }
 
   @else {

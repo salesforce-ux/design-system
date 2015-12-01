@@ -115,6 +115,6 @@
     filter: drop-shadow(0 0 4px rgba($color-background-notification-badge, 0));
   }
   50% {
-    filter: drop-shadow(0 0 4px rgba(darken($color-background-notification-badge, 10%),1));
+    filter: drop-shadow(0 0 4px rgba(darken($color-background-notification-badge, 10%), 1));
   }
 }

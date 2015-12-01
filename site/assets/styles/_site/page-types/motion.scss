@@ -141,7 +141,7 @@
     left: 50%;
     background-color: $color-background-alt-inverse;
     color: $color-text-inverse;
-    transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%, -50%, 0);
     border-radius: $border-radius-circle;
     box-shadow: $elevation-shadow-4;
     margin-top: -3rem;
@@ -221,7 +221,7 @@
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) rotateY(180deg);
+    transform: translate3d(-50%, -50%, 0) rotateY(180deg);
   }
 }
 
@@ -229,7 +229,7 @@
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) scale(1.1);
+    transform: translate3d(-50%, -50%, 0) scale(1.1);
   }
 }
 
@@ -254,7 +254,7 @@
   box-shadow: $elevation-shadow-0;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) scale(1.1);
+    transform: translate3d(-50%, -50%, 0) scale(1.1);
     box-shadow: $elevation-shadow-4;
   }
 }
@@ -281,7 +281,7 @@
   box-shadow: $elevation-shadow-4;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) scale(1.1);
+    transform: translate3d(-50%, -50%, 0) scale(1.1);
     box-shadow: $elevation-shadow-8;
   }
 }
@@ -290,7 +290,7 @@
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) rotateX(180deg);
+    transform: translate3d(-50%, -50%, 0) rotateX(180deg);
     box-shadow: $elevation-inverse-shadow-4;
   }
 }
@@ -320,7 +320,7 @@
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) rotate(180deg);
+    transform: translate3d(-50%, -50%, 0) rotate(180deg);
     box-shadow: $elevation-inverse-shadow-4;
   }
 }
@@ -329,7 +329,7 @@
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) rotateX(30deg);
+    transform: translate3d(-50%, -50%, 0) rotateX(30deg);
     box-shadow: $elevation-shadow-8;
   }
 }
@@ -338,7 +338,7 @@
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
-    transform: translate3d(-50%,-50%,0) rotate(25deg);
+    transform: translate3d(-50%, -50%, 0) rotate(25deg);
   }
 }
 

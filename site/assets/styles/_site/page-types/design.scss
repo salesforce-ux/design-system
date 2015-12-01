@@ -101,7 +101,7 @@
       &:before {
         width: 120px;
         height: 160px;
-        transform: translate3d(-160px,$font-size-medium,0);
+        transform: translate3d(-160px, $font-size-medium, 0);
         border-radius: 50%/50% 0 0 0;
         border: {
           top: $border-width-thin solid $site-color-text-strong;
@@ -115,7 +115,7 @@
       &:before {
         width: 120px;
         height: 140px;
-        transform: translate3d(-160px,-125px,0);
+        transform: translate3d(-160px, -125px, 0);
         border-radius: 50%/0 0 0 50%;
         border: {
           bottom: $border-width-thin solid $site-color-text-strong;

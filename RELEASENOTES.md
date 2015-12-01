@@ -1,15 +1,19 @@
 # Salesforce Lightning Design System
 # Release notes
 
+
+## Release 1.X.X - [date]
+
+**CHANGES**
+- Spacing in modal content (`.slds-modal__content`) have been removed by default, to allow for full-width items such as tables. To get spacing back, you now opt in via a spacing utility.
+
 ## Release 1.1.0 (internal only) - November 30, 2015
 
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
 
-**BREAKING CHANGES**
-- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
-
 **CHANGES**
+- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
 - Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
 - a11y fix - Close button now first in source order on modal
@@ -238,4 +242,4 @@
 ### Utilities
 - Text > Faux Links has added cursor:pointer
 
-Lots of bug fixes and TLC.
+Lots of bug fixes and TLC.>>>>>>> 

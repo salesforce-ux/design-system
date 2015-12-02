@@ -24,4 +24,4 @@ CodeClass.propTypes = {
   className: React.PropTypes.string
 };
 
-module.exports = CodeClass;
+export default CodeClass;

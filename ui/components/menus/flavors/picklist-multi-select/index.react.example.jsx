@@ -17,7 +17,7 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+export default (
 <div className={pf('demo-only demo-only--dropdown')} style={{ height: '240px' }}>
 
   <PickList label="2 options selected" aria-expanded="true">

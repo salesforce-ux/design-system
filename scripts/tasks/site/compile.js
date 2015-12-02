@@ -366,7 +366,7 @@ export const compiler = {
         require(this.getSitePathTmp(route.trimSlashes(route.path)))
       , pageBodyProps);
       // Get the <Page />
-      let Page = require('app_modules/site/components/page');
+      let Page = require('app_modules/site/components/page').default;
       let pageProps = getPrefixedProps(pageBody.props, 'page');
       let page = React.createElement(Page, pageProps);
       // Create a cheerio instance from the <Page /> markup string

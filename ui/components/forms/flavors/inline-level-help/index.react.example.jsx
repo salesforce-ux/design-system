@@ -10,15 +10,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
+import Button from 'ui/components/buttons/index.react';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-
 export default (
-  <div className={pf('popover nubbin--left')} role="dialog">
-    <div className={pf('popover__body')}>
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+<div className={pf('demo-only demo-only--top grid grid--align-center')}>
+  <div className={pf('form--inline')}>
+    <div className={pf('form-element')}>
+      <a href="#void" className={pf('button button--icon-bare theme--error m-right--xx-small')}>
+        <SvgIcon className={pf('button__icon')} sprite="utility"
+        symbol="warning" />
+        <span className={pf('assistive-text')}>Review the Following Errors</span>
+      </a>
+      <div className={pf('popover nubbin--left theme--error')} role="dialog">
+        <div className={pf('popover__body')}>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+        </div>
+      </div>
+    </div>
+    <div className={pf('form-element')}>
+      <Button type="button" flavor="neutral">Cancel</Button>
+    </div>
+    <div className={pf('form-element')}>
+      <Button type="button" flavor="brand">Save</Button>
     </div>
   </div>
+</div>
 );

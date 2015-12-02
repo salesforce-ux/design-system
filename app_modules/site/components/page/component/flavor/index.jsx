@@ -26,7 +26,7 @@ import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
 
-import { cssPrefix } from 'app_modules/global';
+import globals from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
 
 /**
@@ -35,7 +35,7 @@ import whitelistUtilities from '.generated/whitelist-utilities.js';
  */
 Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
   .map(c => c.replace(/^\./, ''))
-  .map(c => `${cssPrefix}${c}`)
+  .map(c => `${globals.cssPrefix}${c}`)
   .map(c => new RegExp(_.escapeRegExp(c)))
 
 /**
@@ -289,8 +289,8 @@ class ComponentFlavor extends React.Component {
 
   componentWillUnmount() {
     Prefs.unlisten(this.prefsChanged);
-    window.__events.removeEventListener(
-      `iframe:load:${flavor.uid}`,
+    window.__events.removeListener(
+      `iframe:load:${this.props.flavor.uid}`,
       this.onPreviewFrameLoad.bind(this, 'event')
     );
   }

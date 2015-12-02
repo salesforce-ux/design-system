@@ -8,5 +8,6 @@
 /git_modules
 /node_modules
 /public
+/design-system-regression-testing
 /site/assets/downloads/design-tokens
 npm-debug.log

@@ -234,7 +234,7 @@ function renderElementState (element, actions) {
       nextProps.children = [action.text]
     );
     // Recursivley update the children
-    nextProps.children = React.Children.toArray(nextProps.children).map(child =>
+    nextProps.children = React.Children.map(nextProps.children, child =>
       React.isValidElement(child) ? renderElementState(child, actions) : child
     );
   }

@@ -35,7 +35,7 @@
     font-size: $size;
   }
 
-  &:-moz-placeholder{
+  &:-moz-placeholder {
     color: $color;
     font-weight: $weight;
     font-size: $size;
@@ -81,6 +81,14 @@
   &:focus,
   &:active {
     box-shadow: none;
+  }
+}
+
+@mixin form-element-vertical-spacing {
+  margin-top: $spacing-small;
+
+  @include mq-large-min {
+    margin-top: $spacing-x-small;
   }
 }
 
@@ -156,10 +164,10 @@
 
 
 
-@mixin scrollbar($size: 10px,$thumb: $color-background-scrollbar,$track: $color-background-scrollbar-track) {
+@mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
 
   &::-webkit-scrollbar {
-    width:  $size;
+    width: $size;
     height: $size;
 
     &:window-inactive {

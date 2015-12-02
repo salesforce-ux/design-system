@@ -19,7 +19,7 @@ export default (
 <div className='demo-only demo-only--dropdown' style={{height: '240px'}}>
   <PickList label="Select an Option" aria-expanded="true">
     <Menu className={pf('dropdown--left')}>
-      <Menu.List>
+      <Menu.List className={pf('dropdown--length-5')}>
         <Menu.Item href="#">Option A</Menu.Item>
         <Menu.Item href="#">Option B</Menu.Item>
         <Menu.Item href="#">Option C</Menu.Item>

@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import componentUtil, { prefix as pf, createChainedFunction } from 'app_modules/ui/util/component';
+import _ from 'lodash';
 
 class Button extends React.Component {
   static propTypes = {
@@ -35,7 +36,7 @@ class Button extends React.Component {
   render() {
     const className = this.$getClassNameWithFlavor(pf('button'));
     const click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    const props = Object.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
+    const props = _.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
     return (
       <button className={className} {...props}>
         {this.props.children}

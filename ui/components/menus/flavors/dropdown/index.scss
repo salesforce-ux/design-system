@@ -52,27 +52,31 @@
     max-width: $max-width-action-overflow-menu;
   }
 
-  &--overflow {
-    background: $color-background;
-    padding: $spacing-x-small;
-    width: 290px; // @todo : token
+  // New in 1.00
+  //
+  // Apply to Dropdown UL
+  &--length-5 {
+    @include dropdown-overflow-length(5);
+  }
 
-    &:before,
-    &:after {
-      background: $color-background;
-    }
+  &--length-7 {
+    @include dropdown-overflow-length(7);
+  }
 
-    .#{$css-prefix}dropdown__list {
-      background: $color-background-alt;
-      border-radius: $border-radius-medium;
-      border: $border-width-thin solid $color-border;
-      max-height: 38px * 7; // @todo : token
-      overflow-y: auto;
-    }
+  &--length-10 {
+    @include dropdown-overflow-length(10);
+  }
 
-    .#{$css-prefix}dropdown__item + .#{$css-prefix}dropdown__item {
-      border-top: $border-width-thin solid $color-border;
-    }
+  &--length-with-icon-5 {
+    @include dropdown-overflow-length(5, $icon-size: $square-icon-small-boundary);
+  }
+
+  &--length-with-icon-7 {
+    @include dropdown-overflow-length(7, $icon-size: $square-icon-small-boundary);
+  }
+
+  &--length-with-icon-10 {
+    @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
   }
 
   mark {
@@ -101,7 +105,7 @@
 
       &:after {
         background: $color-background-alt;
-        box-shadow: -1px -1px 0 0px rgba(0, 0, 0, .16);
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
         z-index: -1;
       }
 

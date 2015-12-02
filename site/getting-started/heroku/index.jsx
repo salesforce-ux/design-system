@@ -28,39 +28,39 @@ export default (
         <h3 className="site-text-heading--label">Steps</h3>
         <ul className={pf('list--vertical has-block-links')}>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-1-initialize-project' href='#step-1-initialize-project'>
+            <a href='#step-1-initialize-project'> 
               1. Initialize your project
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-2-install-node-dependencies' href='#step-2-install-node-dependencies'>
+            <a href='#step-2-install-node-dependencies'>
               2. Install node dependencies
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-3-create-index-html' href='#step-3-create-index-html'>
+            <a href='#step-3-create-index-html'>
               3. Create index.html
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-4-create-server-js' href='#step-4-create-server-js'>
+            <a href='#step-4-create-server-js'>
               4. Create server.js
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-5-download-slds-assets' href='#step-5-download-slds-assets'>
+            <a href='#step-5-download-slds-assets'>
               5. Download {g.displayName}
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-6-add-components' href='#step-6-add-components'>
+            <a href='#step-6-add-components'>
               6. Add components
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-step-7-deploy-to-heroku' href='#step-7-deploy-to-heroku'>
+            <a href='#step-7-deploy-to-heroku'>
               7. Deploy to Heroku
-            </CTALink>
+            </a>
           </li>
         </ul>
       </div>
@@ -76,7 +76,7 @@ export default (
         </p>
         <p>
           If you&rsquo;re interested in a more in-depth tutorial check
-          out <strong><CTALink ctaEventName='heroku-tutorial-react-app' href={g.herokuLightingReactAppUrl[0].url} target="_blank">Christophe Coenraets&rsquo; GitHub project</CTALink></strong>.
+          out <strong><a href={g.herokuLightingReactAppUrl[0].url} target="_blank">Christophe Coenraets&rsquo; GitHub project</a></strong>.
           His project is a reference application built with the
           {g.displayName}, React, Node, Postgres, and Heroku. For a
           static example, please continue with the steps below!
@@ -85,30 +85,30 @@ export default (
         <p>In this tutorial, we&rsquo;ll assume that you have some knowledge of the following:</p>
         <ul className={pf('list--dotted')}>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-nodejs-link' href="https://nodejs.org/" target="_blank">
+            <a href="https://nodejs.org/" target="_blank">
               Node.js
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-npm-link' href="https://www.npmjs.com/package/npm" target="_blank">
+            <a href="https://www.npmjs.com/package/npm" target="_blank">
               NPM
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-git-link' href="https://git-scm.com/" target="_blank">
+            <a href="https://git-scm.com/" target="_blank">
               Git
-            </CTALink>
+            </a>
           </li>
           <li>
-            <CTALink ctaEventName='heroku-tutorial-heroku-toolbelt-link' href="https://toolbelt.heroku.com/" target="_blank">
+            <a href="https://toolbelt.heroku.com/" target="_blank">
               Heroku
-            </CTALink>
+            </a>
           </li>
         </ul>
 
         <div className="slds-box slds-box slds-theme--shade slds-theme--alert-texture slds-m-bottom--medium">
           <p>
-            If, for any reason, you wish to bypass the steps to manually create this project, clone the basic setup <CTALink ctaEventName='heroku-tutorial-static-starter' href={g.herokuLightingReactAppUrl[1].url} target="_blank">here</CTALink>. Once you clone the starter respository, <code>npm install</code>. Then, you can skip to <CTALink ctaEventName='heroku-tutorial-step-7-deploy-to-heroku' href="#step-5-download-slds-assets">Step 5: Download {g.displayName}</CTALink>.
+            If, for any reason, you wish to bypass the steps to manually create this project, clone the basic setup <a href={g.herokuLightingReactAppUrl[1].url} target="_blank">here</a>. Once you clone the starter respository, <code>npm install</code>. Then, you can skip to <a href="#step-5-download-slds-assets">Step 5: Download {g.displayName}</a>.
           </p>
         </div>
 
@@ -221,13 +221,13 @@ console.log('Served: http://localhost:' + port);
 app.listen(port);
           `}</CodeBlock>
         </div>
-        <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <CTALink ctaEventName='heroku-tutorial-step-7-deploy-to-heroku' href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</CTALink>. You may also run <code>npm run start</code> as it will yield the same results.</p>
+        <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm run start</code> as it will yield the same results.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
           <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
-        <p><CTALink ctaEventName='heroku-tutorial-download-slds-assets' href="/resources/downloads/">Download the {g.displayName} CSS framework</CTALink></p>
+        <p><Link to="/resources/downloads/">Download the {g.displayName} CSS framework</Link></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -273,7 +273,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">
           A. Use the Grid System Component (Order)
         </h3>
-        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <CTALink ctaEventName='heroku-tutorial-grid-system-component-link' href="/components/grid-system#order" target="_blank">Grid System component page</CTALink>.</p>
+        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/grid-system#order" target="_blank">Grid System component page</a>.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <div class="slds-grid slds-wrap">
@@ -329,7 +329,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">
           B. Use the Page Header Component (Record-Home)
         </h3>
-        <p>Swap the text <strong>Page Header Component</strong> with the markup from the example on the <CTALink ctaEventName='heroku-tutorial-page-header-component-link' href="/components/page-headers#record-home" target="_blank">Page Header component page</CTALink>.</p>
+        <p>Swap the text <strong>Page Header Component</strong> with the markup from the example on the <a href="/components/page-headers#record-home" target="_blank">Page Header component page</a>.</p>
 
         <h3 className="site-text-heading--medium">C. Add a Fun Image</h3>
         <p>Swap the text <code>Image</code> with an image.</p>
@@ -340,16 +340,16 @@ demo_slds_heroku/
         </div>
 
         <h3 className="site-text-heading--medium">D. Use the Tabs Component</h3>
-        <p>Swap the text <code>Tab Component</code> with the markup from the example on the <CTALink ctaEventName='heroku-tutorial-tabs-component-link' href="/components/tabs#default" target="_blank">Tabs component page</CTALink></p>
+        <p>Swap the text <code>Tab Component</code> with the markup from the example on the <a href="/components/tabs#default" target="_blank">Tabs component page</a></p>
 
         <h3 className="site-text-heading--medium">E. Use the Activity Timeline Component</h3>
-        <p>Swap the <code>H2</code> tags and its contents <code>Item One Content</code> with the markup from the example on the <CTALink ctaEventName='heroku-tutorial-activity-timeline-link' href="/components/activity-timeline#base" target="_blank">Activity Timeline component page</CTALink>.</p>
+        <p>Swap the <code>H2</code> tags and its contents <code>Item One Content</code> with the markup from the example on the <a href="/components/activity-timeline#base" target="_blank">Activity Timeline component page</a>.</p>
 
         <h3 className="site-text-heading--medium">F. Use the Card Component (Base)</h3>
-        <p>Swap the text <code>Card Component</code> with the markup from the example on the <CTALink ctaEventName='heroku-tutorial-card-component-link' href="/components/cards#base" target="_blank">Card component page</CTALink>.</p>
+        <p>Swap the text <code>Card Component</code> with the markup from the example on the <a href="/components/cards#base" target="_blank">Card component page</a>.</p>
 
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
-        <p>If you feel kind of cramped, check out the <CTALink ctaEventName='heroku-tutorial-utilities-spacing-link' href="/components/utilities/spacing" target="_blank">Utilities</CTALink> page for spacing classes.</p>
+        <p>If you feel kind of cramped, check out the <a href="/components/utilities/spacing" target="_blank">Utilities</a> page for spacing classes.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
           <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>

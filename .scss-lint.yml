@@ -8,7 +8,8 @@ linters:
   ColorVariable:
     enabled: false
   Comment:
-    enabled: false
+    enabled: true
+    allowed: '\* Note\: '
   DeclarationOrder:
     enabled: false
   DuplicateProperty:
@@ -18,7 +19,8 @@ linters:
   EmptyLineBetweenBlocks:
     enabled: false
   EmptyRule:
-    enabled: false
+    enabled: true
+    severity: error
   ExtendDirective:
     enabled: true
     severity: error
@@ -35,13 +37,15 @@ linters:
   Indentation:
     enabled: false
   LeadingZero:
-    enabled: false
+    enabled: true
+    style: include_zero
   MergeableSelector:
     enabled: false
   NameFormat:
     enabled: false
   NestingDepth:
-    enabled: false
+    enabled: true
+    ignore_parent_selectors: true
   PlaceholderInExtend:
     enabled: false
   PropertySortOrder:
@@ -57,17 +61,19 @@ linters:
   SingleLinePerSelector:
     enabled: false
   SpaceAfterComma:
-    enabled: false
+    enabled: true
   SpaceAfterPropertyColon:
-    enabled: false
+    enabled: true
+    style: one_space_or_newline
   SpaceAroundOperator:
     enabled: false
   SpaceBeforeBrace:
-    enabled: false
+    enabled: true
+    allow_single_line_padding: true
   StringQuotes:
     enabled: false
   TrailingSemicolon:
-    enabled: false
+    enabled: true
   UnnecessaryParentReference:
     enabled: false
   UrlQuotes:
@@ -75,4 +81,4 @@ linters:
   VendorPrefix:
     enabled: false
   ZeroUnit:
-    enabled: false
+    enabled: true

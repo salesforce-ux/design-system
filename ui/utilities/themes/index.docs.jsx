@@ -17,8 +17,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <ComponentDocs>
   <p className="site-text-introduction">
-    Themes apply a set of styles to elements or areas. They apply a combination of colors for backgrounds, text, and
-    borders.
+    Themes apply a set of styles to elements or areas. They apply a
+    combination of colors for backgrounds, text, and borders.
   </p>
 </ComponentDocs>
 );

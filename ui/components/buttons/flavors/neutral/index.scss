@@ -14,7 +14,7 @@
   @include button-base;
   background-color: $color-background-button-default;
 
-  &[disabled]{
+  &[disabled] {
     background-color: $color-background-button-default-disabled;
     cursor: default;
   }
@@ -29,7 +29,12 @@
     color: $color-text-button-default;
   }
 }
-/* A parent class must be put on anything that contains a .#{$css-prefix}button--hint so that when the parent is hovered, the child reacts */
+
+/**
+ * Note: A parent class must be put on anything that contains
+ * a .#{$css-prefix}button--hint so that the child reacts
+ * when the parent is hovered.
+ */
 .#{$css-prefix}hint-parent {
 
   &:hover,

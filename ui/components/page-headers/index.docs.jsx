@@ -17,6 +17,6 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Page headers, also referred to as anchors, are used at the top of several page types. They use the <CodeClass className="page-header"/> theme as a base and are comprised of multiple components.</p>
+    <p className="site-text-introduction">Page headers are used at the top of several page types. They use the <CodeClass className="page-header"/> class as a base and are comprised of multiple components.</p>
   </ComponentDocs>
 );

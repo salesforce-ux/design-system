@@ -14,7 +14,6 @@ import classNames from 'classnames';
 import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
 const TIMING_MAP_SECS = {
   'instantly': 0,
   'quickly': 0.1,
@@ -40,8 +39,6 @@ class ToggleExample extends React.Component {
     e.stopPropagation();
 
     const {toggle, title} = this.props;
-
-    logCTAEvent('play-example', { title: title });
 
     if (this._isAnimating) return;
 

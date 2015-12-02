@@ -11,20 +11,28 @@
 
 .#{$css-prefix}form--inline {
 
-  @include mq-small-max {
-
-    .#{$css-prefix}form-element {
-      margin-bottom: $spacing-small;
-    }
+  .#{$css-prefix}form-element,
+  .#{$css-prefix}form-element__label,
+  .#{$css-prefix}form-element__control {
+    display: block;
   }
 
-  @include mq-small-min {
+  .#{$css-prefix}form-element + .#{$css-prefix}form-element {
+    margin-top: $spacing-small;
+  }
+
+  @include mq-large-min {
 
     .#{$css-prefix}form-element {
       margin-right: $spacing-medium;
+
+      + .#{$css-prefix}form-element {
+        margin-top: 0;
+      }
     }
 
     .#{$css-prefix}form-element,
+    .#{$css-prefix}form-element__label,
     .#{$css-prefix}form-element__control {
       display: inline-block;
       vertical-align: middle;

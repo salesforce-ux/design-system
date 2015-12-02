@@ -61,9 +61,3 @@ classes:
     class: theme--inverse-text
     description: Applies white text and links
     applied:
-  -
-    class: page-header
-    description: Applies background color and padding
-    required: true
-    applied: <code>&lt;div&gt;</code>
-    notes: Required on the main container for the page header

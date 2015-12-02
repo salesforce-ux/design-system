@@ -20,7 +20,7 @@
     color: $color-text-default;
 
     &:hover {
-      background-color: rgba($color-background, .5);
+      background-color: rgba($color-background, 0.5);
     }
   }
 
@@ -68,7 +68,7 @@
     .icon__svg {
       @include square($square-icon-x-small-content);
       display: inline-block;
-      opacity: .5;
+      opacity: 0.5;
     }
 
     .#{$css-prefix}is-selected > a .icon__svg {

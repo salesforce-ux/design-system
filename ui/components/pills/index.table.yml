@@ -22,8 +22,12 @@ classes:
     applied: <code>.{{cssPrefix}}button</code>
   -
     class: pill__container
-    description: Container to hold pill(s)
+    description: Container to hold pill(s) with borders
     required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: pill__container--bare
+    description: Container to hold pill(s) with no borders
     applied: <code>&lt;div&gt;</code>
   -
     class: pill--bare

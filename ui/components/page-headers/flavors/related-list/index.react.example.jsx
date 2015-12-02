@@ -30,8 +30,8 @@ export default (
       </BreadCrumbs>
       <div className={pf('grid')}>
         <div className={pf('col has-flexi-truncate')}>
-          <Heading flavor="medium" className={pf('truncate')} title="Contacts (will truncate)">Contacts (will truncate)
-          </Heading>
+          <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)
+          </h1>
         </div>
         <div className={pf('col no-flex align-bottom')}>
           <div className={pf('grid')}>

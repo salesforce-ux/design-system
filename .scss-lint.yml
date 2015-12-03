@@ -62,7 +62,7 @@ linters:
     enabled: true
     allow_single_line_rule_sets: false
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
   SpaceAfterComma:
     enabled: true
   SpaceAfterPropertyColon:

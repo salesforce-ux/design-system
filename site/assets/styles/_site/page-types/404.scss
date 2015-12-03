@@ -25,14 +25,14 @@
     }
 
     @include mq-medium-min {
-      padding-top: rem(60px);
+      padding-top: $spacing-xx-large;
 
       &:after {
         position: absolute;
         left: 0;
-        bottom: -60px;
+        bottom: (($size-x-small / 2) * -1);
         width: 100%;
-        height: 120px;
+        height: $size-x-small;
         overflow: visible;
         background: $color-background-alt-inverse;
         content: '';
@@ -47,40 +47,31 @@
       size: rem(110px);
       weight: $font-weight-light;
     }
-    color: inherit;
   }
 }
 
-@mixin floaties {
 
-  @for $i from 1 to 4 {
+@for $i from 1 to 4 {
 
-    $value1: if($i == 2, (random(16) * -1), random(16));
-    $value2: random(16);
+  $value1: if($i == 2, (random(16) * -1), random(16));
+  $value2: random(16);
 
-    .site-404__image#{$i} {
-      margin: 0 $spacing-small;
-      transform: scale(.8);
+  .site-404__image#{$i} {
+    display: none;
 
-      @include mq-medium-min {
-        position: relative;
-        top: ($spacing-large * random($i));
-        margin: 0 ($spacing-medium * random($i));
-        transform: scale(1);
-        animation: floater#{$i} (24 + (4 * random($i))) + s ease-out .5s infinite;
-      }
-    }
-
-    @keyframes floater#{$i} {
-      0%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
-      25% { transform: translate3d(0, ($value2 * -1) + px, 0) rotate($value1 + deg); }
-      75% { transform: translate3d(0, $value2 + px, 0) rotate($value1 * -1 + deg); }
+    @include mq-medium-min {
+      display: initial;
+      position: relative;
+      top: ($spacing-large * random($i));
+      margin: 0 ($spacing-medium * random($i));
+      transform: scale(1);
+      animation: floater#{$i} (24 + (4 * random($i))) + s ease-out .5s infinite;
     }
   }
+
+  @keyframes floater#{$i} {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
+    25% { transform: translate3d(0, ($value2 * -1) + px, 0) rotate($value1 + deg); }
+    75% { transform: translate3d(0, $value2 + px, 0) rotate($value1 * -1 + deg); }
+  }
 }
-
-@include floaties;
-
-
-
-

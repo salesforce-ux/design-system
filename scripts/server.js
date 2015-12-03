@@ -20,25 +20,30 @@ import watch from 'glob-watcher';
 
 import { compileSass } from './tasks/site/sass';
 import { createPageCompiler } from './tasks/site/compile';
-import { watch as webpackWatch } from './tasks/site/webpack';
+import { watch as compileWebpack } from './tasks/site/webpack';
 
 const argv = minimist(process.argv.slice(2));
+const bs = browserSync.create();
 const pageCompiler = createPageCompiler();
 
-/**
- * BrowserSync instance
- */
-const bs = browserSync.create();
+let watchTasks = ['webpack', 'sass'];
+let tasks = {
+  webpack: watchWebpack,
+  sass: watchSass
+};
 
-/**
- * Log errors to the browser
- */
-bs.use(browserSyncConsole);
+if (_.isString(argv.watch)) {
+  watchTasks = argv.watch.split(',').map(_.trim);
+}
 
 /**
  * Start BrowserSync
  */
-function browserSyncStart () {
+function startServer () {
+  watchTasks.forEach(task => {
+    tasks[task]();
+  });
+  bs.use(browserSyncConsole);
   bs.init({
     injectChanges: false,
     scrollProportionally: false,
@@ -56,30 +61,11 @@ function browserSyncStart () {
   });
 }
 
-if (argv['watch-webpack'] === true) {
-  const start = _.once(() => {
-    console.log('Watching Webpack');
-    browserSyncStart();
-  });
-  webpackWatch({}, (err, stats) => {
-    if (err) throw err;
-    start();
-    // If there were errors
-    if (stats.errors.length) {
-      // Log each one to the browser and DONT reload the page
-      stats.errors.forEach(error => {
-        browserSyncConsole.error(error);
-      });
-    } else {
-      // Othewise reload the page
-      bs.reload();
-    }
-  });
-} else {
-  browserSyncStart();
-}
-
-if (argv['watch-components'] === true) {
+/**
+ *
+ */
+function watchComponents () {
+  console.log('Watching Webpack');
   console.log('Watching Components');
   watch([
     path.resolve(__PATHS__.ui, '**/*.{md,yml}')
@@ -98,15 +84,58 @@ if (argv['watch-components'] === true) {
   });
 }
 
-if (argv['watch-sass'] === true) {
+/**
+ *
+ */
+function watchSass () {
   console.log('Watching Sass');
   watch([
     path.resolve(__PATHS__.site, '**/*.scss'),
     path.resolve(__PATHS__.ui, '**/*.scss')
   ]).on('change', e => {
+    console.time('Sass Duration');
     // TODO: use e.path to selectivley compile Sass
     compileSass(e, err => {
+      console.timeEnd('Sass Duration');
       if (!err) bs.reload();
     });
   });
+}
+
+/**
+ * Compile and watch webpack
+ *
+ * @param {function} callback - called after the first compile
+ */
+function watchWebpack (callback) {
+  const done = _.once(() => {
+    watchComponents();
+    callback();
+  });
+  compileWebpack({}, (err, stats) => {
+    if (err) throw err;
+    done();
+    // If there were errors
+    if (stats.errors.length) {
+      // Log each one to the browser and DONT reload the page
+      stats.errors.forEach(error => {
+        browserSyncConsole.error(error);
+      });
+    } else {
+      // Othewise reload the page
+      bs.reload();
+    }
+  });
+}
+
+/**
+ * If webpack was specified, let it compile once before starting the server
+ */
+if (_.includes(watchTasks, 'webpack')) {
+  _.pull(watchTasks, 'webpack')
+  watchWebpack(() => {
+    startServer();
+  });
+} else {
+  startServer();
 }

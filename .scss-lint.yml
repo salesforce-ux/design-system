@@ -58,6 +58,9 @@ linters:
     enabled: false
   Shorthand:
     enabled: false
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
   SingleLinePerSelector:
     enabled: false
   SpaceAfterComma:

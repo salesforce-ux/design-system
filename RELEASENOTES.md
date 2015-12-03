@@ -1,6 +1,12 @@
 # Salesforce Lightning Design System
 # Release notes
 
+
+## Release 1.X.X - [date]
+
+**CHANGES**
+- Spacing in modal content (`.slds-modal__content`) have been removed by default, to allow for full-width items such as tables. To get spacing back, you now opt in via a spacing utility.
+
 ## Release 1.1.0 (internal only) - November 30, 2015
 
 **SITE IA**

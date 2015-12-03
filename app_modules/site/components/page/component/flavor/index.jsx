@@ -273,8 +273,10 @@ class ComponentFlavor extends React.Component {
   renderBadge(status) {
     if (!status) return null;
     const words = _.words(status).join(' ');
+    const statusBadgeType = _.words(status).join('-');
+    const classes = classNames(pf('badge m-left--medium shrink-none align-middle'), 'badge--' + statusBadgeType);
     return (
-      <span className={pf('badge m-left--medium shrink-none align-middle')}>{words}</span>
+      <span className={classes}>{words}</span>
     );
   }
 

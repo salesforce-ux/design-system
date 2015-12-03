@@ -24,10 +24,10 @@
 $color-border-inverse: #fff !default;
 $spacing-xx-large: 3rem !default;
 $square-tooltip-nubbin: $spacing-medium !default;
-$mq-x-small:   320px !default;
-$mq-small:  480px !default;
+$mq-x-small: 320px !default;
+$mq-small: 480px !default;
 $mq-medium: 768px !default;
-$mq-large:  1024px !default;
+$mq-large: 1024px !default;
 $sales-path: 2rem; // @TODO: Temp token till we align sizing
 
 $force-base-map: map-merge($force-base-map, (

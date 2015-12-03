@@ -64,7 +64,7 @@
 
 .#{$css-prefix}button__icon { // This is the icon inside the button--icon button
   @include square($square-icon-medium-content);
-    fill: currentColor;
+  fill: currentColor;
 
   &--large { // Usually used for the large close button
     @include square($square-icon-utility-large);

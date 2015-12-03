@@ -65,7 +65,7 @@
       top: ($spacing-large * random($i));
       margin: 0 ($spacing-medium * random($i));
       transform: scale(1);
-      animation: floater#{$i} (24 + (4 * random($i))) + s ease-out .5s infinite;
+      animation: floater#{$i} (24 + (4 * random($i))) + s ease-out 0.5s infinite;
     }
   }
 

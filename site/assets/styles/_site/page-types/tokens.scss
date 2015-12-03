@@ -201,7 +201,7 @@
 .site-tokens {
 
   thead th {
-      border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 
   tr > td:first-child {
@@ -238,7 +238,7 @@
     td.token > div {
       height: 2rem;
       box-shadow: $color-background-alt 0 1px 0 inset,
-                    $color-background-alt 0 -1px 0 inset;
+                  $color-background-alt 0 -1px 0 inset;
       border: {
         top: $border-width-thin solid $color-border;
         bottom: $border-width-thin solid $color-border;
@@ -286,16 +286,16 @@
 
       tr > td:first-child ~ td[data-label="small"] > div {
         box-shadow: $color-background-alt 0 1px 0 inset,
-                      $color-background-alt 0 -1px 0 inset,
-                      $color-background-alt 1px 0 0 inset;
+                    $color-background-alt 0 -1px 0 inset,
+                    $color-background-alt 1px 0 0 inset;
         border-left: $border-width-thin solid $color-border;
         border-radius: $border-radius-medium 0 0 $border-radius-medium;
       }
 
       tr > td:first-child ~ td:last-child > div {
         box-shadow: $color-background-alt 0 1px 0 inset,
-                      $color-background-alt 0 -1px 0 inset,
-                      $color-background-alt -1px 0 0 inset;
+                    $color-background-alt 0 -1px 0 inset,
+                    $color-background-alt -1px 0 0 inset;
         border-right: $border-width-thin solid $color-border;
         border-radius: 0 $border-radius-medium $border-radius-medium 0;
       }

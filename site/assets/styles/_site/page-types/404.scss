@@ -7,15 +7,71 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-main {
+.site-404 {
+  padding: 0;
 
   @include mq-medium-min {
-    flex: 1 1 auto;
-    margin-left: $width-sidebar;
-    min-height: calc(100vh - 5.375rem);
+    min-height: calc(100vh - 5rem);
   }
 
-  @include mq-large-min {
-    min-height: calc(100vh - 5rem);
+  &__content {
+    position: relative;
+    text-align: center;
+    background: $color-background-alt-inverse;
+    color: white;
+    padding: {
+      left: $spacing-medium;
+      right: $spacing-medium;
+    }
+
+    @include mq-medium-min {
+      padding-top: $spacing-xx-large;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: (($size-x-small / 2) * -1);
+        width: 100%;
+        height: $size-x-small;
+        overflow: visible;
+        background: $color-background-alt-inverse;
+        content: '';
+        z-index: -1;
+        transform: skewY(-3deg);
+      }
+    }
+  }
+
+  h1 {
+    font: {
+      size: rem(110px);
+      weight: $font-weight-light;
+    }
+  }
+}
+
+
+@for $i from 1 to 4 {
+
+  $value1: if($i == 2, (random(16) * -1), random(16));
+  $value2: random(16);
+
+  .site-404__image#{$i} {
+    display: none;
+
+    @include mq-medium-min {
+      display: initial;
+      position: relative;
+      top: ($spacing-large * random($i));
+      margin: 0 ($spacing-medium * random($i));
+      transform: scale(1);
+      animation: floater#{$i} (24 + (4 * random($i))) + s ease-out .5s infinite;
+    }
+  }
+
+  @keyframes floater#{$i} {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
+    25% { transform: translate3d(0, ($value2 * -1) + px, 0) rotate($value1 + deg); }
+    75% { transform: translate3d(0, $value2 + px, 0) rotate($value1 * -1 + deg); }
   }
 }

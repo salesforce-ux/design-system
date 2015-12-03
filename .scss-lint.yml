@@ -65,6 +65,8 @@ linters:
   SpaceAfterPropertyColon:
     enabled: true
     style: one_space_or_newline
+  SpaceAfterVariableName:
+    enabled: true
   SpaceAroundOperator:
     enabled: false
   SpaceBeforeBrace:

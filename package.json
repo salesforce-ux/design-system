@@ -95,7 +95,7 @@
     "minimist": "1.2.0",
     "mocha": "2.3.0",
     "moment": "2.10.6",
-    "node-sass": "3.3.2",
+    "node-sass": "3.4.2",
     "postcss": "5.0.4",
     "react": "0.14.3",
     "react-addons-test-utils": "0.14.3",

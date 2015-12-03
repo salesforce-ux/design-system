@@ -348,7 +348,7 @@ $grid: (
 }
 
 
-@mixin visibility($class-name, $min:null, $max:null) {
+@mixin visibility($class-name, $min: null, $max: null) {
 
   .#{$css-prefix}#{$class-name} {
 

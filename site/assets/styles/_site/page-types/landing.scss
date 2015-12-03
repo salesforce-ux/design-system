@@ -270,25 +270,55 @@
 
 // Floating Shapes
 @keyframes floater {
-  0% { transform: translate3d(0, 0, 0) rotate(0); }
-  25% { transform: translate3d(0, -10px, 0) rotate(5deg); }
-  50% { transform: translate3d(0, 0, 0) rotate(0); }
-  75% { transform: translate3d(0, 10px, 0) rotate(-5deg); }
-  100% { transform: translate3d(0, 0, 0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, -10px, 0) rotate(5deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }
 
 @keyframes floater-1 {
-  0% { transform: translate3d(0, 0, 0) rotate(0); }
-  25% { transform: translate3d(0, 10px, 0) rotate(5deg); }
-  50% { transform: translate3d(0, 0, 0) rotate(0); }
-  75% { transform: translate3d(0, -10px, 0) rotate(-5deg); }
-  100% { transform: translate3d(0, 0, 0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 10px, 0) rotate(5deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }
 
 @keyframes floater-2 {
-  0% { transform: translate3d(0, 0, 0) rotate(0); }
-  25% { transform: translate3d(0, 15px, 0) rotate(10deg); }
-  50% { transform: translate3d(0, 0, 0) rotate(0); }
-  75% { transform: translate3d(0, -15px, 0) rotate(-5deg); }
-  100% { transform: translate3d(0, 0, 0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 15px, 0) rotate(10deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, -15px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }

@@ -70,8 +70,14 @@
   }
 
   @keyframes floater#{$i} {
-    0%, 100% { transform: translate3d(0, 0, 0) rotate(0); }
-    25% { transform: translate3d(0, ($value2 * -1) + px, 0) rotate($value1 + deg); }
-    75% { transform: translate3d(0, $value2 + px, 0) rotate($value1 * -1 + deg); }
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+    25% {
+      transform: translate3d(0, ($value2 * -1) + px, 0) rotate($value1 + deg);
+    }
+    75% {
+      transform: translate3d(0, $value2 + px, 0) rotate($value1 * -1 + deg);
+    }
   }
 }

@@ -22,3 +22,35 @@
     }
   }
 }
+
+#{$css-prefix}form-element__select-container {
+    position: relative;
+    .#{$css-prefix}select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding-left: $spacing-x-small;
+    }
+    
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+    }
+    
+    &:before {
+        border-bottom: 5px solid $color-background-inverse;
+        top: 10px;
+    }
+    
+    &:after {
+        border-top: 5px solid $color-background-inverse;
+        bottom: 10px;
+    }
+}

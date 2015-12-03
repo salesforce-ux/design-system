@@ -10,15 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import path from 'path';
-import async from 'async';
 import _ from 'lodash';
+import async from 'async';
 import globals from 'app_modules/global';
+import minimist from 'minimist';
 
 import siteCopyAssets from './site/assets';
-import siteCompile from './site/compile';
+import { createPageCompiler } from './site/compile';
 import siteIcons from './site/icons';
 import siteLinks from './site/links';
 import { compileSass as siteSass } from './site/sass';
+import { compile as siteWebpack } from './site/webpack';
 
 import generateIcons from './generate/icons';
 import generateReleaseNotes from './generate/release-notes';
@@ -30,50 +32,49 @@ import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
 
-import minimist from 'minimist';
-
 const argv = minimist(process.argv.slice(2));
+const isDev = argv.dev === true;
 const isProd = argv.prod === true;
+const isInternal = argv.internal === true;
 
-export default {
+const sitePages = createPageCompiler();
 
-  build: function() {
+export default function (callback) {
 
-    async.series([
+  async.series([
 
-      function(done) {
-        async.parallel([
-          siteCopyAssets,
-          siteIcons,
-          generateTokens
-        ], done);
-      },
+    function(done) {
+      async.parallel([
+        siteCopyAssets,
+        siteIcons,
+        generateTokens
+      ], done);
+    },
 
-      async.apply(siteSass, null),
-      generateSassUtilities,
+    async.apply(siteSass, null),
+    generateSassUtilities,
 
-      generateWhitelist,
-      generateUI,
+    generateWhitelist,
+    generateUI,
 
-      function(done) {
-        async.parallel([
-          generateIcons,
-          generateReleaseNotes,
-          generateVersion,
-          generateTokensZip
-        ], done);
-      },
+    function(done) {
+      async.parallel([
+        generateIcons,
+        generateReleaseNotes,
+        generateVersion,
+        generateTokensZip
+      ], done);
+    },
 
-      // For some reason must be after the async.parallel() block...
-      generateWhitelistUtilities,
+    generateWhitelistUtilities,
 
-      siteCompile,
-      siteLinks,
+    sitePages.compile,
+    siteLinks,
 
-    ], err => {
-      if (err) throw err;
-    });
+    async.apply(siteWebpack, {
+      prod: isProd
+    })
 
-  }
+  ], callback);
 
-};
+}

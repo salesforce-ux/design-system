@@ -10,120 +10,76 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import path from 'path';
+import fs from 'fs-extra';
 
 import _ from 'lodash';
+import async from 'async';
 import autoprefixer from 'autoprefixer';
-import css from 'css';
-import { diff } from 'deep-diff';
+import glob from 'glob';
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import minimist from 'minimist';
-import postcss from 'gulp-postcss';
+import postcss from 'postcss';
 import sass from 'node-sass';
 import through from 'through2';
-
-import ignoreUnderscore from 'app_modules/util/ignore-underscore';
 
 const argv = minimist(process.argv.slice(2));
 const isDev = argv.dev === true;
 const isProd = argv.prod === true;
 
 const getSitePath = path.resolve.bind(path, __PATHS__.site);
-const getSitePathTmp = path.resolve.bind(path, __PATHS__.tmp, 'site');
 
-/**
- * Update override stylesheets to only include rules that have updated values
- * (not currently being used)
- *
- * @return {TransformStream}
- */
-function optimizeTokenOverrides() {
-  const files = {};
-  const filesOverride = [];
-  function transform(file, enc, next) {
-    const name = path.basename(file.path);
-    // Collect all iframe files
-    if (name.match(/iframe/)) {
-      files[name] = file.clone();
-      // Collect files that use override tokens
-      if (name.match(/iframe\.(medium|large)\.css$/)) {
-        filesOverride.push(file.clone());
-        return next(null, null);
-      }
+function render (file, callback) {
+  sass.render({
+    file: file,
+    outputStyle: isProd ? 'compressed' : 'nested',
+    sourceComments: isProd ? false : true,
+    includePaths: [
+      __PATHS__.root,
+      __PATHS__.ui,
+      __PATHS__.node_modules
+    ]
+  }, (err, result) => {
+    if (err) {
+      console.log(`Error processing file: ${err.message} (${err.file}: ${err.line}:${err.column})`);
+      return callback(err);
     }
-    next(null, file);
-  }
-  function flush(next) {
-    if (filesOverride.length === 0) return next();
-    // Create a base ast to diff against
-    const baseTree = css.parse(files['iframe.css'].contents.toString());
-    // Diff each override against the base
-    filesOverride.forEach(override => {
-      // Create an ast for the override
-      const overrideTree = css.parse(override.contents.toString());
-      // This represents final stylehseet
-      const newStylesheet = { stylesheet: { rules: [] } };
-      // Diff
-      const differences = diff(baseTree, overrideTree);
-      if (differences) {
-        differences
-        // Only use diffs that have a keypath like: ['stylesheet', 'rules', index, ..., 'value']
-        .filter(d => _.isNumber(d.path[2]) && _.last(d.path) === 'value')
-        .forEach(d => {
-          const index = d.path[2];
-          // Add the changed rule to the new stylehsheet
-          newStylesheet.stylesheet.rules.push(overrideTree.stylesheet.rules[index]);
-        });
-      }
-      // Save the new stylesheet
-      override.contents = new Buffer(css.stringify(newStylesheet));
-      this.push(override);
-    });
-    next();
-  }
-  return through.obj(transform, flush);
+    callback(null, result);
+  });
 }
 
-/**
- * Sass
- */
-export function compileSass(e, done) {
+function autoprefix (sassResult, callback) {
+  postcss([autoprefixer()]).process(sassResult.css.toString()).then(result => {
+    sassResult.cssPrefixed = new Buffer(result.css)
+    callback(null, sassResult);
+  }, callback);
+}
+
+export function compile(callback) {
   console.log('Compiling Sass');
-  function handleError(err) {
-    //browserSyncConsole.error(err);
-    done(err);
-  }
-  gulp.src(getSitePath('**/*.scss'), { base: getSitePath() })
-  .pipe(ignoreUnderscore(getSitePath()))
-  // Sass
-  .pipe(through.obj((file, enc, next) => {
-    const newFile = file.clone();
-    let contents = file.contents.toString();
-    try {
-      contents = sass.renderSync({
-        data: contents,
-        file: newFile.path,
-        outputStyle: isProd ? 'compressed' : 'nested',
-        sourceComments: isProd ? false : true,
-        includePaths: [
-          __PATHS__.root,
-          __PATHS__.ui,
-          __PATHS__.node_modules
-        ]
-      }).css;
-    } catch(error) {
-      console.log('Error processing file: ' + error.message + ' (' + error.file + ':' + error.line + ':' + error.column + ')');
-      return next(error);
+  async.waterfall([
+    // Files
+    (callback) => glob(getSitePath('**/*.scss'), callback),
+    // Filter files/dirs prefixed with an _
+    (files, callback) => {
+      callback(null, files.filter(file => {
+        let pattern = new RegExp(_.escapeRegExp(path.sep) + '_');
+        return !pattern.test(file.replace(getSitePath(), ''));
+      }));
+    },
+    // Sass
+    (files, callback) => async.map(files, render, callback),
+    // Autoprefixer
+    (results, callback) => async.map(results, autoprefix, callback),
+    // Write to disk
+    (results, callback) => {
+      async.each(results, (result, callback) => {
+        let p = result.stats.entry;
+        p = p.replace(getSitePath(), '');
+        p = path.join(__PATHS__.www, p);
+        p = path.join(path.dirname(p), path.basename(p, path.extname(p)) + '.css');
+        fs.outputFile(p, result.cssPrefixed.toString(), callback);
+      }, callback);
     }
-    newFile.contents = new Buffer(contents);
-    newFile.path = newFile.path.replace(/\.scss$/, '.css');
-    next(null, newFile);
-  }))
-  .on('error', handleError)
-  // Autoprefixer
-  .pipe(postcss([autoprefixer()]))
-  .on('error', handleError)
-  // Send the files to the public directory
-  .pipe(gulp.dest(__PATHS__.www))
-  .on('error', handleError)
-  .on('finish', done);
+  ], callback);
 }

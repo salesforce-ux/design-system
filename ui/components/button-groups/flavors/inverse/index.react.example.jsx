@@ -29,8 +29,7 @@ export default (
         Save
       </Button>
       <ButtonIcon
-      flavor="icon-border"
-      iconFlavor="inverse"
+      flavor="icon-border,icon-inverse"
       className={pf('toggle-visibility')}
       sprite="utility"
       symbol="down"

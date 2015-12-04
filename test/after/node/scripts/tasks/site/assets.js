@@ -25,10 +25,9 @@ describe('scripts/tasks/site/assets.js', () => {
     expect(files).to.eql([]);
   });
 
-    
   it('does copy all non-jsx/scss to .www', () => {
 
-    // build list of source site file paths which should be copied 
+    // build list of source site file paths which should be copied
     let siteFiles = (function () {
       let path = __PATHS__.site;
       let all = glob.sync(`${path}/**/*.*`);

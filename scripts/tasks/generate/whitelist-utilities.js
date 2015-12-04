@@ -16,9 +16,11 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import through from 'through2';
 import css from 'css';
+
 import {
   allowPrefixedClasses,
   fixParenthesized,
+  getSelectors,
   onlyClasses,
   removeAttrs,
   removeNonWordSuffix,
@@ -28,73 +30,45 @@ import {
 } from './whitelist';
 
 const CSS_SOURCE = path.resolve(__PATHS__.generated, 'utilities.css');
-const COMPONENTS_MAP = path.resolve(__PATHS__.generated, 'ui.js');
-let componentsClassMap = null;
-function removeComponentsClasses (x) {
-  return !componentsClassMap[x];
-}
 
-function getComponentAndFlavorClassesMap() {
-  if (componentsClassMap) return componentsClassMap;
-
-  componentsClassMap = {};
-  const ui = require(COMPONENTS_MAP);
-  (ui || []).forEach(entry => {
-    if (entry.id === 'components' && entry.components) {
-      entry.components.forEach(comp => {
-        const base = comp.classBase;
-        if (base) {
-          componentsClassMap[`.${base}`] = true;
-          (comp.flavors || []).forEach(flav => {
-            componentsClassMap[`.${flav.classBase || base}--${flav.id}`] = true;
-          });
-        }
-      });
-    }
+function getClassMap() {
+  const map = {};
+  const ui = require('.generated/ui');
+  const components = _.result(_.find(ui, { id: 'components' }), 'components', []);
+  components.filter(cmp => _.isString(cmp.classBase)).forEach(cmp => {
+    map[`.${cmp.classBase}`] = true;
+    _.result(cmp, 'flavors', []).forEach(flavor => {
+      let classBase = flavor.classBase || cmp.classBase;
+      map[`.${classBase}--${flavor.id}`] = true;
+    })
   });
-
-  return componentsClassMap;
-}
-
-function getSelectors(r) {
-  if (r.rules) {
-    return r.rules.map(getSelectors);
-  }
-  return (r.selectors || [])
-    .filter(allowPrefixedClasses)
-    .map(removePrefix)
-    .map(removePseudo)
-    .map(removeAttrs)
-    .map(fixParenthesized)
-    .map(splitParts);
+  return map;
 }
 
 export default function(done) {
-  console.log('Generating utilities whitelist');
-
-  getComponentAndFlavorClassesMap();
-
-  gulp.src(CSS_SOURCE)
-  .pipe(through.obj(function(file, enc, next) {
-    const contents = file.contents.toString();
-    const parsedCSS = css.parse(contents);
-    const rs = parsedCSS.stylesheet.rules.map(getSelectors);
-    const rules = _.sortBy(_.uniq(
-      _.compact(_.flattenDeep(rs))
-      .map(removeNonWordSuffix)
-      .filter(onlyClasses)
-      .filter(removeComponentsClasses)
+  console.log('Generating CSS class whitelist (utilities)');
+  const map = getClassMap();
+  gulp.src(path.resolve(__PATHS__.generated, 'utilities.css'))
+    .pipe(through.obj(function(file, enc, next) {
+      const contents = file.contents.toString();
+      const parsedCSS = css.parse(contents);
+      const rs = parsedCSS.stylesheet.rules.map(getSelectors);
+      const rules = _.sortBy(_.uniq(
+        _.compact(_.flattenDeep(rs))
+        .map(removeNonWordSuffix)
+        .filter(onlyClasses)
+        .filter(className => !map[className])
       ));
-    try {
-      const file = new gutil.File({
-        path: 'whitelist-utilities.js',
-        contents: new Buffer(`export default ${JSON.stringify(rules)}`)
-      });
-      next(null, file);
-    } catch(e) { next(e); }
-  }))
-  .on('error', done)
-  .pipe(gulp.dest(__PATHS__.generated))
-  .on('error', done)
-  .on('finish', done);
+      try {
+        const file = new gutil.File({
+          path: 'whitelist-utilities.js',
+          contents: new Buffer(`export default ${JSON.stringify(rules)}`)
+        });
+        next(null, file);
+      } catch(e) { next(e); }
+    }))
+    .on('error', done)
+    .pipe(gulp.dest(__PATHS__.generated))
+    .on('error', done)
+    .on('finish', done);
 }

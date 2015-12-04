@@ -58,13 +58,18 @@ linters:
     enabled: false
   Shorthand:
     enabled: false
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
   SpaceAfterComma:
     enabled: true
   SpaceAfterPropertyColon:
     enabled: true
     style: one_space_or_newline
+  SpaceAfterVariableName:
+    enabled: true
   SpaceAroundOperator:
     enabled: false
   SpaceBeforeBrace:

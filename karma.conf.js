@@ -19,8 +19,6 @@ module.exports = function(config) {
     files: [
       './ui/test-helper.js',
       './scripts/helpers/phantom-polyfill.js',
-      './node_modules/react/dist/react.js',
-      './node_modules/lodash/index.js',
       './node_modules/sinon/pkg/sinon.js',
       './scripts/test/accessibility/a11y.js',
       './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
@@ -97,14 +95,7 @@ module.exports = function(config) {
             'DEFAULT_USER_TYPE': 'external'
           }).mapValues(function (value) { return '"' + value + '"' }).value()
         })
-      ],
-
-      // React will be available in the window.
-      // This will greatly increase the speed at which webpack can bundle tests
-      externals: [{
-        'react': 'React',
-        'lodash': '_'
-      }]
+      ]
     },
 
     webpackMiddleware: {

@@ -317,7 +317,7 @@ async.series([
         }
         // Convert the array of paths to an array of file contents
         sassImports = sassImports.map(function(i) {
-          return path.resolve(__dirname, i + '.scss');
+          return path.resolve(__dirname, i);
         }).filter(function(i) {
           return fs.existsSync(i);
         }).map(function(i) {

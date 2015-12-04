@@ -26,7 +26,9 @@ const argv = minimist(process.argv.slice(2));
 const bs = browserSync.create();
 const pageCompiler = createPageCompiler();
 
-let watchTasks = ['webpack', 'sass'];
+let watchTasksDefalt = ['webpack', 'sass'];
+let watchTasks = [];
+
 let tasks = {
   webpack: watchWebpack,
   sass: watchSass
@@ -34,6 +36,10 @@ let tasks = {
 
 if (_.isString(argv.watch)) {
   watchTasks = argv.watch.split(',').map(_.trim);
+}
+
+if (_.isBoolean(argv.watch)) {
+  watchTasks = watchTasksDefalt;
 }
 
 /**

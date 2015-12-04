@@ -50,7 +50,4 @@ describe('site/', () => {
     expect(releaseNumberRaw).to.match(/\d+\.\d+\.\d+/);
   });
 
-
 });
-
-// 

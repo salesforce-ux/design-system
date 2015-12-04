@@ -11,5 +11,5 @@
 
 set -e
 
-./node_modules/.bin/mocha --compilers js:babel-core/register --require scripts/helpers/setup.js --reporter min test/after/**/*.js
+./node_modules/.bin/mocha --compilers js:babel-core/register --require scripts/helpers/setup.js --reporter min "test/after/node/**/*.js"
 ./node_modules/karma/bin/karma start

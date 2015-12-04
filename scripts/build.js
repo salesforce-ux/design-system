@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import './helpers/setup';
+import './clean';
 
 import fs from 'fs';
-import rimraf from 'rimraf';
-import tasks from './tasks';
-
-rimraf.sync(__PATHS__.www);
-rimraf.sync(__PATHS__.generated);
-rimraf.sync(__PATHS__.tmp);
+import runTasks from './tasks';
 
 fs.mkdirSync(__PATHS__.tmp);
-tasks.build();
+
+runTasks(err => {
+  if (err) throw err;
+});

@@ -29,7 +29,7 @@ export const removePrefix = x => x.replace(new RegExp(`\.${cssPrefix}`, 'g'), '.
 export const removePseudo = x => x.replace(/:+[a-zA-Z_\-]+/g, '');
 export const splitParts = x => x.replace(/[>+*]/g, ' ').replace(/\./g, ' .').split(/\s+/);
 
-function getSelectors(r) {
+export function getSelectors(r) {
   if (r.rules) {
     return r.rules.map(getSelectors);
   }
@@ -43,7 +43,7 @@ function getSelectors(r) {
 }
 
 export default function(done) {
-  console.log('Generating master whitelist');
+  console.log('Generating CSS class whitelist');
   gulp.src(path.resolve(__PATHS__.www, 'assets/styles/slds.css'))
   .pipe(through.obj(function(file, enc, next) {
     const parsedCSS = css.parse(file.contents.toString());
@@ -52,7 +52,7 @@ export default function(done) {
       _.compact(_.flattenDeep(rs))
       .map(removeNonWordSuffix)
       .filter(onlyClasses)
-      ));
+    ));
     try {
       const file = new gutil.File({
         path: 'whitelist.js',

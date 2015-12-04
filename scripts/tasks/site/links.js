@@ -78,7 +78,6 @@ export default function (done) {
       console.log(`${indent}In: ${item.filePath}`);
     })
     .thru(allItems => {
-      console.log('');
       return allItems;
     })
     .value();

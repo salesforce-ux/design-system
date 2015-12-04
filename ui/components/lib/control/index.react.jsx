@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 const eventDict = {
   click: ['onClick'],
@@ -94,7 +95,7 @@ class Control extends React.Component {
 
   renderControl() {
     let child = React.Children.only(this.props.children);
-    let props = Object.assign({ref: '$control'}, this.getProperEventTrigger(child.props));
+    let props = _.assign({ref: '$control'}, this.getProperEventTrigger(child.props));
     return React.cloneElement(child, props);
   }
 

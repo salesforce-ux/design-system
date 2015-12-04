@@ -52,21 +52,24 @@ export default function (callback) {
     },
 
     async.apply(siteSass, null),
-    generateSassUtilities,
-
-    generateWhitelist,
-    generateUI,
 
     function(done) {
       async.parallel([
+        generateSassUtilities,
+        generateUI,
+      ], done);
+    },
+
+    function(done) {
+      async.parallel([
+        generateWhitelist,
+        generateWhitelistUtilities,
         generateIcons,
         generateReleaseNotes,
         generateVersion,
         generateTokensZip
       ], done);
     },
-
-    generateWhitelistUtilities,
 
     sitePages.compile,
     siteLinks,

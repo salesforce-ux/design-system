@@ -19,7 +19,7 @@ import siteCopyAssets from './site/assets';
 import { createPageCompiler } from './site/compile';
 import siteIcons from './site/icons';
 import siteLinks from './site/links';
-import { compileSass as siteSass } from './site/sass';
+import { compile as siteSass } from './site/sass';
 import { compile as siteWebpack } from './site/webpack';
 
 import generateIcons from './generate/icons';

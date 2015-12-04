@@ -29,7 +29,7 @@ const isProd = argv.prod === true;
 
 const getSitePath = path.resolve.bind(path, __PATHS__.site);
 
-export function renderSass (file, callback) {
+function render (file, callback) {
   sass.render({
     file: file,
     outputStyle: isProd ? 'compressed' : 'nested',
@@ -48,36 +48,37 @@ export function renderSass (file, callback) {
   });
 }
 
-/**
- * Sass
- */
-export function compileSass(e, callback) {
+function autoprefix (sassResult, callback) {
+  postcss([autoprefixer()]).process(sassResult.css.toString()).then(result => {
+    sassResult.cssPrefixed = new Buffer(result.css)
+    callback(null, sassResult);
+  }, callback);
+}
+
+export function compile(e, callback) {
   console.log('Compiling Sass');
-  let files = glob.sync(getSitePath('**/*.scss')).filter(file =>
-    !/\_/.test(file.replace(getSitePath(), ''))
-  );
   async.waterfall([
-    // Sass
-    (callback) => async.map(files, renderSass, callback),
-    // Autoprefixer
-    (results, callback) => {
-      async.map(results, (sassResult, callback) => {
-        postcss([autoprefixer()]).process(sassResult.css.toString()).then(result => {
-          callback(null, {
-            entry: sassResult.stats.entry,
-            css: result.css
-          });
-        }, callback);
-      }, callback)
+    // Files
+    (callback) => glob(getSitePath('**/*.scss'), callback),
+    // Filter files/dirs prefixed with an _
+    (files, callback) => {
+      callback(null, files.filter(file => {
+        let pattern = new RegExp(_.escapeRegExp(path.sep) + '_');
+        return !pattern.test(file.replace(getSitePath(), ''));
+      }));
     },
+    // Sass
+    (files, callback) => async.map(files, render, callback),
+    // Autoprefixer
+    (results, callback) => async.map(results, autoprefix, callback),
     // Write to disk
     (results, callback) => {
       async.each(results, (result, callback) => {
-        let p = result.entry;
+        let p = result.stats.entry;
         p = p.replace(getSitePath(), '');
         p = path.join(__PATHS__.www, p);
         p = path.join(path.dirname(p), path.basename(p, path.extname(p)) + '.css');
-        fs.outputFile(p, result.css, callback);
+        fs.outputFile(p, result.cssPrefixed.toString(), callback);
       }, callback);
     }
   ], callback);

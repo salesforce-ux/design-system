@@ -29,7 +29,7 @@ export default function(done) {
       category.components.forEach(component => {
         component.status = Status.or(component.flavors.map(x => x.status));
         component.flavors.forEach(flavor => {
-          let examplePath = `${flavor.path}/index.react.example.jsxs`;
+          let examplePath = `${flavor.path}/index.react.example.jsx`;
           try {
             fs.accessSync(path.resolve(__PATHS__.ui, examplePath));
             flavor.examplePath = examplePath;

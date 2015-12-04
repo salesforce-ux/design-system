@@ -2,10 +2,10 @@
 
 set -e
 
-npm run test-before
+npm run test
 npm run lint -- --linters sass || true
 npm run build-prod
-npm run test-after
+npm run test-integration
 npm run dist
 
 # Deployment

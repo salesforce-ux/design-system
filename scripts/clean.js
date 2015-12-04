@@ -15,3 +15,4 @@ import rimraf from 'rimraf';
 rimraf.sync(__PATHS__.www);
 rimraf.sync(__PATHS__.generated);
 rimraf.sync(__PATHS__.tmp);
+rimraf.sync(__PATHS__.dist);

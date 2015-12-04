@@ -17,13 +17,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './ui/test-helper.js',
       './scripts/helpers/phantom-polyfill.js',
       './node_modules/sinon/pkg/sinon.js',
-      './scripts/test/accessibility/a11y.js',
-      './scripts/test/accessibility/index.react.spec.jsx', // accessibility tests
+      './ui/test-helper.js',
       './ui/**/*.spec.+(js|jsx)',
-      './test/after/browser/**/*.+(js|jsx)'
+      './test/browser/site/**/*.+(js|jsx)',
+      './test/browser/accessibility/a11y.js',
+      './test/browser/accessibility/components.jsx'
     ],
 
     // list of files to exclude
@@ -32,9 +32,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './scripts/test/accessibility/index.react.spec.jsx': ['webpack'],
       './ui/**/*.+(js|jsx)': ['webpack'],
-      './test/after/browser/**/*.+(js|jsx)': ['webpack']
+      './test/browser/**/*.+(js|jsx)': ['webpack']
     },
 
     plugins: [

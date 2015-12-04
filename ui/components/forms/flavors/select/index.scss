@@ -21,36 +21,39 @@
       padding: $spacing-x-small;
     }
   }
-}
-
-#{$css-prefix}form-element__select-container {
+  
+  &__container {
     position: relative;
+
     .#{$css-prefix}select {
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        padding-left: $spacing-x-small;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding: {
+        left: $spacing-x-small;
+        right: $spacing-large;
+      }
     }
-    
+
     &:before,
     &:after {
-        position: absolute;
-        content: "";
-        display: block;
-        right: 10px;
-        width: 0;
-        height: 0;
-        border-left: 3px solid transparent;
-        border-right: 3px solid transparent;
+      position: absolute;
+      content: "";
+      display: block;
+      right: $spacing-xx-small;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
     }
-    
+
     &:before {
-        border-bottom: 5px solid $color-background-inverse;
-        top: 10px;
+      border-bottom: 5px solid $color-background-inverse;
+      top: calc((#{$line-height-button} / 2) - 6px);
     }
-    
+
     &:after {
-        border-top: 5px solid $color-background-inverse;
-        bottom: 10px;
+      border-top: 5px solid $color-background-inverse;
+      bottom: calc((#{$line-height-button} / 2) - 6px);
     }
+  }
 }

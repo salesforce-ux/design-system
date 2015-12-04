@@ -16,7 +16,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Docked Composer is a persistent utility bar that allows a user to continually use the app to complete tasks or gather information whilst expanding/collapsing a composer window.</p>
+    <p className="site-text-introduction">Docked Composer is a persistent utility bar that allows a user to continually use the app to complete tasks or gather information while expanding/collapsing a composer window.</p>
     <p>The docked composer relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
   </ComponentDocs>
 );

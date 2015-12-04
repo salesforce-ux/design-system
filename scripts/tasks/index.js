@@ -51,7 +51,7 @@ export default function (callback) {
       ], done);
     },
 
-    async.apply(siteSass, null),
+    siteSass,
 
     function(done) {
       async.parallel([

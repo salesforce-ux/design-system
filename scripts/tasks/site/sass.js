@@ -55,7 +55,7 @@ function autoprefix (sassResult, callback) {
   }, callback);
 }
 
-export function compile(e, callback) {
+export function compile(callback) {
   console.log('Compiling Sass');
   async.waterfall([
     // Files

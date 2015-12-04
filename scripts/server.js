@@ -18,7 +18,7 @@ import browserSyncConsole from 'app_modules/util/browser-sync-console';
 import minimist from 'minimist';
 import watch from 'glob-watcher';
 
-import { compileSass } from './tasks/site/sass';
+import { compile as compileSass } from './tasks/site/sass';
 import { createPageCompiler } from './tasks/site/compile';
 import { watch as compileWebpack } from './tasks/site/webpack';
 
@@ -100,8 +100,7 @@ function watchSass () {
     path.resolve(__PATHS__.ui, '**/*.scss')
   ]).on('change', e => {
     console.time('Sass Duration');
-    // TODO: use e.path to selectivley compile Sass
-    compileSass(e, err => {
+    compileSass(err => {
       console.timeEnd('Sass Duration');
       if (!err) bs.reload();
     });

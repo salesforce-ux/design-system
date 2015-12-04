@@ -53,10 +53,6 @@ export default function (callback) {
 
     siteSass,
 
-    // Any React component that uses pf() inherently needs the whitelist to
-    // properly function, so this task must be run before generateUI
-    generateWhitelist,
-
     function(done) {
       async.parallel([
         generateSassUtilities,
@@ -66,6 +62,7 @@ export default function (callback) {
 
     function(done) {
       async.parallel([
+        generateWhitelist,
         generateWhitelistUtilities,
         generateIcons,
         generateReleaseNotes,

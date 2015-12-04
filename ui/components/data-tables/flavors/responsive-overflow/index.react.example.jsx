@@ -50,7 +50,7 @@ export default (
     <tbody>
       <tr className={pf('hint-parent')}>
         <td className={pf('row-select')}><Checkbox assistiveText="select row1" name="select-row1" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
         <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>
@@ -68,7 +68,7 @@ export default (
       </tr>
       <tr className={pf('hint-parent')}>
         <td><Checkbox assistiveText="select row2" name="select-row2" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Cloudhub + Anypoint Connectors</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Cloudhub + Anypoint Connectors</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Cloudhub</a></td>
         <td data-label="activity"><span className={pf('truncate')}>9/30/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Closing</span></td>
@@ -86,7 +86,7 @@ export default (
       </tr>
       <tr className={pf('hint-parent')}>
         <td><Checkbox assistiveText="select row3" name="select-row3" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Rohde Corp 30</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Rohde Corp 30</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Rohde Corp</a></td>
         <td data-label="activity"><span className={pf('truncate')}>6/18/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>

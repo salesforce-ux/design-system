@@ -75,3 +75,29 @@ pre[class*="language-"] {
     padding-top: $spacing-medium;
   }
 }
+
+.badge {
+
+  &--deprecated {
+    background: $color-background-error;
+    color: $color-text-inverse;
+  }
+
+  &--prototype {
+    background: $site-color-text-heading-callout;
+    color: $color-text-inverse;
+
+    &:after {
+      content: ' : In Progress'
+    }
+  }
+
+  &--dev-ready {
+    background: $color-background-success;
+    color: $color-text-inverse;
+
+    &:after {
+      content: ' : Stable'
+    }
+  }
+}

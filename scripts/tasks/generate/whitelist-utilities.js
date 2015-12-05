@@ -40,7 +40,7 @@ function getClassMap() {
     _.result(cmp, 'flavors', []).forEach(flavor => {
       let classBase = flavor.classBase || cmp.classBase;
       map[`.${classBase}--${flavor.id}`] = true;
-    })
+    });
   });
   return map;
 }

@@ -25,7 +25,7 @@ import { Router, Route, Link, match as RouterMatch, RoutingContext } from 'react
 import through from 'through2';
 
 import createComponent from 'app_modules/site/util/component/create';
-import { getDefaultEnvVars } from 'scripts/helpers/env'
+import { getDefaultEnvVars } from 'scripts/helpers/env';
 
 /**
  * Return a props object with only props prefixed

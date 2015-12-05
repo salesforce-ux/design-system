@@ -50,7 +50,7 @@ function render (file, callback) {
 
 function autoprefix (sassResult, callback) {
   postcss([autoprefixer()]).process(sassResult.css.toString()).then(result => {
-    sassResult.cssPrefixed = new Buffer(result.css)
+    sassResult.cssPrefixed = new Buffer(result.css);
     callback(null, sassResult);
   }, callback);
 }

@@ -105,16 +105,6 @@
 
     .#{$css-prefix}icon-record .#{$css-prefix}button__icon {
       fill: $color-background-notification-badge;
-      @include animation(pulse 2s ease infinite);
     }
-  }
-}
-
-@include keyframes(pulse) {
-  0%, 100% {
-    filter: drop-shadow(0 0 4px rgba($color-background-notification-badge, 0));
-  }
-  50% {
-    filter: drop-shadow(0 0 4px rgba(darken($color-background-notification-badge, 10%), 1));
   }
 }

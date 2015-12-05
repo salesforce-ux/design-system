@@ -90,7 +90,9 @@ class TableYAML extends React.Component {
               <th colSpan="2" className={pf('theme--shade')}>Usage</th>
             </tr>
           </thead>
-          {this.getRows()}
+          <tbody>
+            {this.getRows()}
+          </tbody>
         </table>
       </div>
     </div>;

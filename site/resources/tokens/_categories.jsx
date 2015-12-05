@@ -258,9 +258,11 @@ const categories = {
       /*if (this.options.showAccessibility === true) {
         return (
           <table>
-            <tr>
-              {this.renderExampleContrastRatios(token)}
-            </tr>
+            <tbody>
+              <tr>
+                {this.renderExampleContrastRatios(token)}
+              </tr>
+            </tbody>
           </table>
         );
       }*/

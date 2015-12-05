@@ -16,7 +16,7 @@ import _ from 'lodash';
 import minimist from 'minimist';
 import webpack from 'webpack';
 
-import { getDefaultEnvVars } from 'scripts/helpers/env'
+import { getDefaultEnvVars } from 'scripts/helpers/env';
 
 const eslintExclude = new RegExp([
   __PATHS__.node_modules,

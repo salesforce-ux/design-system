@@ -137,7 +137,7 @@ function watchWebpack (callback) {
  * If webpack was specified, let it compile once before starting the server
  */
 if (_.includes(watchTasks, 'webpack')) {
-  _.pull(watchTasks, 'webpack')
+  _.pull(watchTasks, 'webpack');
   watchWebpack(() => {
     startServer();
   });

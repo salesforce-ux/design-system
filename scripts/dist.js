@@ -47,7 +47,7 @@ const now = new Date();
 const distPath = path.resolve.bind(path, __PATHS__.dist);
 
 function isNotVendorFile(file) {
-  return /vendor/.test(file.path) === false
+  return /vendor/.test(file.path) === false;
 }
 
 function commentBanner(messages) {
@@ -415,7 +415,7 @@ async.series([
       '.npmignore',
       'package.json'
     ].map(file => distPath(file));
-    async.each(src, rimraf, done)
+    async.each(src, rimraf, done);
   },
 
   /**

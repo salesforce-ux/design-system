@@ -32,7 +32,7 @@ import whitelistUtilities from '.generated/whitelist-utilities.js';
 Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
   .map(c => c.replace(/^\./, ''))
   .map(c => `${cssPrefix}${c}`)
-  .map(c => new RegExp(_.escapeRegExp(c)))
+  .map(c => new RegExp(_.escapeRegExp(c)));
 
 function getValueAtKeyPath(obj, keyPath) {
   return _.reduce(keyPath.split('.'), (obj, key) => {
@@ -291,7 +291,7 @@ class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.state.previewComponent) return null;
     const {flavor} = this.props;
-    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView})
+    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView});
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}

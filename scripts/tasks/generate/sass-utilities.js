@@ -44,7 +44,7 @@ export default function (done) {
   .on('error', done)
   .pipe(rename(path => {
     path.basename = 'utilities';
-    path.extname = '.css'
+    path.extname = '.css';
   }))
   .on('error', done)
   .pipe(gulp.dest(__PATHS__.generated))

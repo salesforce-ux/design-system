@@ -10,13 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import './helpers/setup';
-import './clean';
 
 import fs from 'fs';
+import minimist from 'minimist';
 import runTasks from './tasks';
 
-fs.mkdirSync(__PATHS__.tmp);
+const argv = minimist(process.argv.slice(2));
 
-runTasks(err => {
+if (argv.clean === true) {
+  require('./clean');
+  fs.mkdirSync(__PATHS__.tmp);
+}
+
+runTasks(argv, err => {
   if (err) throw err;
 });

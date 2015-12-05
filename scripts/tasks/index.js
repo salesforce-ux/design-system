@@ -12,8 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import path from 'path';
 import _ from 'lodash';
 import async from 'async';
-import globals from 'app_modules/global';
-import minimist from 'minimist';
 
 import siteCopyAssets from './site/assets';
 import { createPageCompiler } from './site/compile';
@@ -32,24 +30,11 @@ import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
 
-const argv = minimist(process.argv.slice(2));
-const isDev = argv.dev === true;
-const isProd = argv.prod === true;
-const isInternal = argv.internal === true;
-
 const sitePages = createPageCompiler();
 
-export default function (callback) {
+function generate (callback) {
 
   async.series([
-
-    function(done) {
-      async.parallel([
-        siteCopyAssets,
-        siteIcons,
-        generateTokens
-      ], done);
-    },
 
     siteSass,
 
@@ -62,22 +47,39 @@ export default function (callback) {
 
     function(done) {
       async.parallel([
-        generateWhitelist,
-        generateWhitelistUtilities,
         generateIcons,
         generateReleaseNotes,
+        generateTokens,
         generateVersion,
-        generateTokensZip
+        generateWhitelist,
+        generateWhitelistUtilities
       ], done);
     },
 
-    sitePages.compile,
-    siteLinks,
-
-    async.apply(siteWebpack, {
-      prod: isProd
-    })
-
   ], callback);
+
+}
+
+export default function (options, callback) {
+
+  const tasks = [];
+
+  if (options.generate === true) {
+    tasks.push(generate);
+  }
+
+  if (options.site === true) {
+    tasks.push(
+      siteCopyAssets,
+      siteIcons,
+      sitePages.compile,
+      siteLinks,
+      async.apply(siteWebpack, {
+        prod: options.prod === true
+      })
+    );
+  }
+
+  async.series(tasks, callback);
 
 }

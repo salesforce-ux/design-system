@@ -25,7 +25,7 @@ export default (
         <div className={pf('form-element__control dropdown-trigger')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
             <SvgIcon className={pf('input__icon')} sprite="utility" symbol="event" />
-            <input className={pf('input')} type="text" defaultValue="6/23/15" />
+            <input id="start-date" className={pf('input')} type="text" defaultValue="6/23/15" />
           </div>
           <div className={pf('dropdown dropdown--left datepicker')} aria-hidden="false" data-selection="multi">
             <div className={pf('datepicker__filter grid')}>
@@ -48,13 +48,13 @@ export default (
             <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
               <thead>
                 <tr id="weekdays">
-                  <th id="Sunday"><abbr title="Sunday">Sun</abbr></th>
-                  <th id="Monday"><abbr title="Monday">Mon</abbr></th>
-                  <th id="Tuesday"><abbr title="Tuesday">Tue</abbr></th>
-                  <th id="Wednesday"><abbr title="Wednesday">Wed</abbr></th>
-                  <th id="Thursday"><abbr title="Thursday">Thu</abbr></th>
-                  <th id="Friday"><abbr title="Friday">Fri</abbr></th>
-                  <th id="Saturday"><abbr title="Saturday">Sat</abbr></th>
+                  <th id="Sunday" scope="col"><abbr title="Sunday">Sun</abbr></th>
+                  <th id="Monday" scope="col"><abbr title="Monday">Mon</abbr></th>
+                  <th id="Tuesday" scope="col"><abbr title="Tuesday">Tue</abbr></th>
+                  <th id="Wednesday" scope="col"><abbr title="Wednesday">Wed</abbr></th>
+                  <th id="Thursday" scope="col"><abbr title="Thursday">Thu</abbr></th>
+                  <th id="Friday" scope="col"><abbr title="Friday">Fri</abbr></th>
+                  <th id="Saturday" scope="col"><abbr title="Saturday">Sat</abbr></th>
                 </tr>
               </thead>
               <tbody>
@@ -109,14 +109,14 @@ export default (
               </tbody>
             </table>
           </div>
-          <span className={pf('form-element__helper')}>Start Date</span>
+          <label className={pf('form-element__helper')} htmlFor="start-date">Start Date</label>
         </div>
         <div className={pf('form-element__control dropdown-trigger')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
             <SvgIcon className={pf('input__icon')} sprite="utility" symbol="event" />
-            <input className={pf('input')} type="text" defaultValue="6/29/15" />
+            <input id="end-date" className={pf('input')} type="text" defaultValue="6/29/15" />
           </div>
-          <span className={pf('form-element__helper')}>End Date</span>
+          <label className={pf('form-element__helper')} htmlFor="end-date">End Date</label>
         </div>
       </div>
     </div>

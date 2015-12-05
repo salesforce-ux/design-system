@@ -60,6 +60,7 @@ export default (
         <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap size--1-of-1')}>
 
           <fieldset className={pf('form--compound')}>
+            <legend className={pf('assistive-text')}>Log a call</legend>
             <div className={pf('form-element__group')}>
               <div className={pf('form-element__row')}>
                 <label className={pf('form-element__control size--1-of-1')}>

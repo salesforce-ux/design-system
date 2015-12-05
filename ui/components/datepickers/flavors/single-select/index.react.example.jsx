@@ -49,13 +49,13 @@ export default (
       <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
         <thead>
           <tr id="weekdays">
-            <th id="Sunday"><abbr title="Sunday">Sun</abbr></th>
-            <th id="Monday"><abbr title="Monday">Mon</abbr></th>
-            <th id="Tuesday"><abbr title="Tuesday">Tue</abbr></th>
-            <th id="Wednesday"><abbr title="Wednesday">Wed</abbr></th>
-            <th id="Thursday"><abbr title="Thursday">Thu</abbr></th>
-            <th id="Friday"><abbr title="Friday">Fri</abbr></th>
-            <th id="Saturday"><abbr title="Saturday">Sat</abbr></th>
+            <th id="Sunday" scope="col"><abbr title="Sunday">Sun</abbr></th>
+            <th id="Monday" scope="col"><abbr title="Monday">Mon</abbr></th>
+            <th id="Tuesday" scope="col"><abbr title="Tuesday">Tue</abbr></th>
+            <th id="Wednesday" scope="col"><abbr title="Wednesday">Wed</abbr></th>
+            <th id="Thursday" scope="col"><abbr title="Thursday">Thu</abbr></th>
+            <th id="Friday" scope="col"><abbr title="Friday">Fri</abbr></th>
+            <th id="Saturday" scope="col"><abbr title="Saturday">Sat</abbr></th>
           </tr>
         </thead>
         <tbody>

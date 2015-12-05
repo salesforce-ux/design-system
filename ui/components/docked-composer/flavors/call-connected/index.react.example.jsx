@@ -90,7 +90,8 @@ export default (
               symbol="unmuted"
               assistiveText="Mute Yourself" />
           </div>
-          <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+          <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
+          <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
         </div>
 
         {/* Composer Footer */}

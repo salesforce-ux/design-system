@@ -23,14 +23,14 @@ export default (
 
       {/* Neutral Colors */}
       <h2 className="site-text-heading--large">Neutrals</h2>
-      <p>Salesforce uses cool-toned grays injected with a hint of blue to create a lively and modern mood for the interface. In general, color is used sparingly to keep the content center stage and not distract end users.</p>
+      <p>Salesforce uses cool-toned greys injected with a hint of blue to create a lively and modern mood for the interface. In general, color is used sparingly to keep the content center stage and not distract end users.</p>
       <figure>
         <img className={pf('image')} src="/assets/images/color/img-neutral-colors.svg" alt="" />
       </figure>
 
       {/* Primary Colors */}
       <h2 className="site-text-heading--large">Primary Colors</h2>
-      <p>Salesforce’s primary brand color is a bright, friendly blue. We also use some darker blues for various other use cases.</p>
+      <p>Salesforce’s primary brand colour is a bright, friendly blue. We also use some darker blues for various other use cases.</p>
       <figure>
         <img className={pf('image')} src="/assets/images/color/img-primary-colors.svg" alt="" />
       </figure>

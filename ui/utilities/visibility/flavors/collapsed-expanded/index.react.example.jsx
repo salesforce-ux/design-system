@@ -15,11 +15,11 @@ const pf = componentUtil.prefix;
 
 module.exports = (
   <div className='demo-only'>
-    <div className={pf('collapsed')}>
+    <div className={pf('is-collapsed')}>
       <h3>I am collapsed</h3>
       <p>I am a child inside a collapsed element</p>
     </div>
-    <div className={pf('expanded')}>
+    <div className={pf('is-expanded')}>
       <h3>I am expanded</h3>
       <p>I am a child inside an expanded element</p></div>
   </div>

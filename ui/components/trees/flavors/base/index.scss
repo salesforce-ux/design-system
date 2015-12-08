@@ -9,16 +9,10 @@
 
 
 
-.#{$css-prefix}tree-container {
+.#{$css-prefix}tree__container {
   min-width: rem(120px);
   max-width: rem(400px);
-
-  > .#{$css-prefix}text-heading--label {
-    margin-bottom: $spacing-x-small;
-  }
 }
-
-
 
 .#{$css-prefix}tree {
 
@@ -42,37 +36,6 @@
       @include tree-item-hover;
     }
   }
-  
-  // Depth 1
-  &__group > &__item > a,
-  &__group > &__item > button + a,
-  &__group > &__item > &__item-label + a
-  {
-    display: inline-block;
-    padding-left: ($spacing-medium + $spacing-x-small); // width of button + gutter
-  }
-
-  &__branch > &__item > button + a
-  {
-    display: inline-block;
-    padding-left: ($spacing-x-small / 2);
-  }
-
-  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
-
-
-  $class-name-stub: "nested" !default;
-  $max-nesting-depth: 20 !default;
-  $rule-name-stub: "." + $css-prefix + $class-name-stub + "--level-";
-
-  $i: "." + $css-prefix + nested;
-  @for $j from 0 through $max-nesting-depth {
-    #{$rule-name-stub}#{$j} > &__branch > &__item,
-    #{$rule-name-stub}#{$j} &__item {
-        padding-left: ((($spacing-medium * ($j + 1)) + ($spacing-x-small * $j)));
-    }
-  }
-
 
   .#{$css-prefix}is-selected {
     @include tree-item-selected;
@@ -83,13 +46,22 @@
     @include tree-item-hover;
   }
 
-  .#{$css-prefix}button {
-    align-self: center;
+  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+  $max-nesting-depth: 20 !default;
+  @for $currentLevel from 1 through $max-nesting-depth {
+    [aria-level="#{$currentLevel}"] > &__item
+     {
+        padding-left: ((($spacing-medium * $currentLevel) + ($spacing-x-small * $currentLevel)));
+    }
   }
 
-  .#{$css-prefix}pill {
-    margin-left: $spacing-small;
+  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon {
+    transition: $duration-promptly transform ease-in-out;
+    transform: rotate(0deg);
   }
+  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon {
+    transition: $duration-promptly transform ease-in-out;
+    transform: rotate(90deg);
+  }
+
 }
-
-

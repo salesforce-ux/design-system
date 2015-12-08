@@ -9,12 +9,12 @@
 
 
 
-.#{$css-prefix}collapsed {
+.#{$css-prefix}is-collapsed {
   height: 0;
   overflow: hidden;
 }
 
-.#{$css-prefix}expanded {
+.#{$css-prefix}is-expanded {
   height: auto;
   overflow: visible;
 }

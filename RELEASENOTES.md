@@ -1,6 +1,16 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.12.1 - December 8, 2015
+
+**SITE IA**
+- Improved status labels, associated to colors now
+- Improved Component Overview tables
+
+**CHANGES**
+- Apply proper a11y requirements to tabs fixes [https://github.com/salesforce-ux/design-system/issues/107](https://github.com/salesforce-ux/design-system/issues/107)
+- Fix for inverse button-group bug
+
 ## Release 0.12.0 - November 18, 2015
 
 **SITE IA**

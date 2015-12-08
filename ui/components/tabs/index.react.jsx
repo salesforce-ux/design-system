@@ -33,7 +33,7 @@ class TabContent extends React.Component {
     const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__content`, {'show': this.props.current, 'hide': !this.props.current})));
     const props = this.$propsWithoutKeys('className');
     return (
-      <div {...props} className={className} role="tabpanel">
+      <div {...props} className={className} role="tabpanel" aria-labelledby={`${this.props.id}__item`}>
         {this.props.children}
       </div>
     );
@@ -63,7 +63,7 @@ renderCustom(tabIndex) {
 
   renderDefault(tabIndex) {
     return (
-      <a className={pf(this.props.innerClass)} onClick={this.props.onClick.bind(this)} href="#" role="tab" tabIndex={tabIndex} aria-selected={this.props.current} aria-controls={this.props.id}>
+      <a className={pf(this.props.innerClass)} onClick={this.props.onClick.bind(this)} href="#void" role="tab" tabIndex={tabIndex} aria-selected={this.props.current} aria-controls={this.props.id} id={`${this.props.id}__item`}>
         {this.props.title}
       </a>
     );

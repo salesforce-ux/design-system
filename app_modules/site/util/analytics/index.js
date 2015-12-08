@@ -53,17 +53,6 @@ function logCTAEvent(type, extraValues) {
 }
 
 /**
- * Records an input event.
- *
- * @param {string} type - Which CTA was interacted with?
- * @param {object} extraValues - Optional extra tracking parameters
- */
-function logInputEvent(type, extraValues) {
-  let values = _.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
-  logEvent('tagEvent', 'Input', values);
-}
-
-/**
  * Records a download event.
  *
  * @param {string} type - Which file was downloaded?
@@ -77,6 +66,5 @@ function logDownloadEvent(type, extraValues) {
 export default {
   logCurrentPageVisit,
   logCTAEvent,
-  logDownloadEvent,
-  logInputEvent
+  logDownloadEvent
 };

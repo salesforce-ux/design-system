@@ -24,7 +24,6 @@ import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logInputEvent } from 'app_modules/site/util/analytics';
 
 import { cssPrefix } from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
@@ -200,9 +199,6 @@ export default class ComponentFlavor extends React.Component {
 
   handleCodeMouseUp(tabKey) {
     let sel = window.getSelection && window.getSelection();
-    if (sel && sel.toString().length > 0) {
-      logInputEvent('component-code-text-select', {flavor: this.props.flavor.id, tab: tabKey});
-    }
   }
 
   onFrameLoad(caller) {
@@ -281,8 +277,10 @@ export default class ComponentFlavor extends React.Component {
   renderBadge(status) {
     if (!status) return null;
     const words = _.words(status).join(' ');
+    const statusBadgeType = _.words(status).join('-');
+    const classes = classNames(pf('badge m-left--medium shrink-none align-middle'), 'badge--' + statusBadgeType);
     return (
-      <span className={pf('badge m-left--medium shrink-none align-middle')}>{words}</span>
+      <span className={classes}>{words}</span>
     );
   }
 
@@ -323,10 +321,10 @@ export default class ComponentFlavor extends React.Component {
     const {flavor} = this.props;
     return this.state.previewTabs.map((tab, index) => {
       const content = (
-        <CTALink ctaEventName='component-preview-tab-click' ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
+        <span>
           <SvgIcon sprite="utility" symbol={tab.icon} className={pf(`icon icon__svg icon-utility-${tab.iconClass} icon--x-small icon-text-default m-right--x-small`)} />
           {tab.label}
-        </CTALink>
+        </span>
       );
       return (
         <Tabs.Item

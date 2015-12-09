@@ -18,6 +18,7 @@ export default (
     <Button flavor="inverse">
       Button Inverse
     </Button>
+    <a href="#void" className={pf('button button--inverse')}>Anchor Button Brand</a>
     <Button flavor="inverse" disabled="true">
       Disabled
     </Button>

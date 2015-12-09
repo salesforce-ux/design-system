@@ -1,7 +1,7 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: tree-container
+    class: tree_container
     description: Sets <code>min-</code> and <code>max-width</code> on tree
     required: true
     applied: <code>&lt;div&gt;</code>
@@ -31,3 +31,7 @@ classes:
     class: nested
     description: Styles for nesting a group of branches
     applied: <code>.{{cssPrefix}}tree__group</code>
+  -
+    class: tree-container
+    description: Sets <code>min-</code> and <code>max-width</code> on tree
+    deprecated: true

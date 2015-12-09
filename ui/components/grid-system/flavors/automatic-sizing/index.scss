@@ -62,24 +62,21 @@ ul.#{$css-prefix}grid {
   }
 }
 
-.#{$css-prefix}grid--pull-padded,
-.#{$css-prefix}col--padded > .#{$css-prefix}grid {
+.#{$css-prefix}grid--pull-padded {
   margin: {
     right: ($spacing-small * -1);
     left: ($spacing-small * -1);
   }
 }
 
-.#{$css-prefix}grid--pull-padded-medium,
-.#{$css-prefix}col--padded-medium > .#{$css-prefix}grid {
+.#{$css-prefix}grid--pull-padded-medium {
   margin: {
     right: ($spacing-medium * -1);
     left: ($spacing-medium * -1);
   }
 }
 
-.#{$css-prefix}grid--pull-padded-large,
-.#{$css-prefix}col--padded-large > .#{$css-prefix}grid {
+.#{$css-prefix}grid--pull-padded-large {
   margin: {
     right: ($spacing-large * -1);
     left: ($spacing-large * -1);
@@ -112,6 +109,7 @@ ul.#{$css-prefix}grid {
   @include flex-wrap(true);
 }
 
+// Deprecate
 .#{$css-prefix}nowrap {
   @include flex-item(expand);
   @include flex-wrap(false);

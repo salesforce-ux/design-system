@@ -21,7 +21,7 @@ export default (
       <dd>Second description</dd>
     </dl>
     <dl className={pf('dl--horizontal')}>
-      <dt className={pf('dl--horizontal__label')}>Horizontal Description List Label</dt>
+      <dt className={pf('dl--horizontal__label')}>Horizontal Description List Label Horizontal Description List Label</dt>
       <dd className={pf('dl--horizontal__detail')}>First description</dd>
       <dd className={pf('dl--horizontal__detail')}>Second description for first label</dd>
       <dt className={pf('dl--horizontal__label')}>Second Label</dt>

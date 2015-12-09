@@ -27,11 +27,20 @@ classes:
     description: Creates a 3rem&times;3rem icon
     applied: <code>.{{cssPrefix}}icon</code>
   -
-    class: icon__container
+    class: icon_container
     description: Creates the rounded square background
+    required: true
     applied: outer <code>span</code>
     notes: Used when an icon with a background color is accompanied by <code>.{{cssPrefix}}assistive-text</code> and also receives a <code>background-color</code> class
   -
+    class: icon_container--circle
+    description: Creates a circular icon shape
+    applied: <code>.{{cssPrefix}}icon_container</code>
+  -
+    class: icon__container
+    description: Creates the rounded square background
+    deprecated: true
+  -
     class: icon__container--circle
     description: Creates a circular icon shape
-    applied: <code>.{{cssPrefix}}icon__container</code>
+    deprecated: true

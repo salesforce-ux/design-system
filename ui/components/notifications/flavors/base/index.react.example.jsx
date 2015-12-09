@@ -31,7 +31,7 @@ export default (
     </h2>
   </div>
 
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--inverse-text')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon

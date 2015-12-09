@@ -21,12 +21,12 @@ classes:
     required: true
     applied: <code>.{{cssPrefix}}button</code>
   -
-    class: pill__container
+    class: pill_container
     description: Container to hold pill(s) with borders
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: pill__container--bare
+    class: pill_container--bare
     description: Container to hold pill(s) with no borders
     applied: <code>&lt;div&gt;</code>
   -
@@ -35,5 +35,9 @@ classes:
     applied: <code>.{{cssPrefix}}pill</code>
   -
     class: pill-container
+    description: Container to hold pills(s)
+    notes: Deprecated
+
+    class: pill__container
     description: Container to hold pills(s)
     notes: Deprecated

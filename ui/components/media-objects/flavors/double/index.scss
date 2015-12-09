@@ -9,7 +9,7 @@
 
 .#{$css-prefix}media--double {
 
-  @include deprecate("0.20.0") {
+  @include deprecate("2.0.0") {
 
     > .#{$css-prefix}media__figure {
       order: 1;

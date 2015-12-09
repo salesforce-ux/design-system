@@ -18,7 +18,7 @@ export default (
     <Button flavor="destructive">
       Button destructive
     </Button>
-    <a href="javascript:void(0);" className={pf('button button--destructive')}>Anchor Button destructive</a>
+    <a href="#void" className={pf('button button--destructive')}>Anchor Button destructive</a>
     <Button flavor="destructive" disabled="true">
       Disabled
     </Button>

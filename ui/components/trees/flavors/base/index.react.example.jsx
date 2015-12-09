@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className='demo-only'>
-  <div className={pf('tree-container')} role="application">
+  <div className={pf('tree_container')} role="application">
     <h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
     <ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node0">
       <li id="tree0-node0" className={pf('tree__branch is-open')} role="treeitem" aria-level="1" aria-expanded="true">

@@ -19,7 +19,6 @@ module.exports = function(config) {
     files: [
       './scripts/helpers/phantom-polyfill.js',
       './node_modules/sinon/pkg/sinon.js',
-      './ui/test-helper.js',
       './ui/**/*.spec.+(js|jsx)',
       './test/browser/site/**/*.+(js|jsx)',
       './test/browser/accessibility/a11y.js',

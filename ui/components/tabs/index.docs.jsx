@@ -22,10 +22,10 @@ module.exports = (
     <h4 className="site-text-heading--label">Javascript Needs</h4>
     <p>The active tab has two markup requirements:</p>
     <ul>
-      <li>The <CodeClass className="active"/> class should be placed on the <code>li</code> with <CodeClass className="tabs__item"/>.</li>
-      <li>The corresponding <CodeClass className="tabs__content"/> container receives <CodeClass className="show"/>.</li>
+      <li>The <CodeClass className="active"/> class should be placed on the <code>li</code> with <CodeClass className="tabs--{variant}__item"/>.</li>
+      <li>The corresponding <CodeClass className="tabs--{variant}__content"/> container receives <CodeClass className="show"/>.</li>
     </ul>
-    <p>Inactive <CodeClass className="tabs__content"/> containers receive <CodeClass className="hide"/>. When the user clicks a different tab, move the <CodeClass className="active"/> class and toggle the <CodeClass className="hide"/>/<CodeClass className="show"/> classes.</p>
+    <p>Inactive <CodeClass className="tabs--{variant}__content"/> containers receive <CodeClass className="hide"/>. When the user clicks a different tab, move the <CodeClass className="active"/> class and toggle the <CodeClass className="hide"/>/<CodeClass className="show"/> classes.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Tabbed UIs have three parts with specific <strong>ARIA</strong> role requirements:</p>
     <ul>
@@ -37,6 +37,7 @@ module.exports = (
     <ul>
       <li>Selected tab&rsquo;s anchor has <code>aria-selected="true"</code>, all other tabs&rsquo; anchors have <code>aria-selected="false"</code></li>
       <li>Selected tab&rsquo;s anchor has <code>tabindex="0"</code>, all other tabs have <code>tabindex="-1"</code></li>
+      <li>Each tab&rsquo;s anchor has an <code>aria-controls</code> attribute whose value is the id of the associated <code>&lt;div role="tabpanel"&gt;</code></li>
       <li>Each tab panel has an <code>aria-labelledby</code> attribute whose value is the id of its associated <code>&lt;a role="tab"&gt;</code></li>
     </ul>
     <p>Expected keyboard interactions:</p>

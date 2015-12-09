@@ -17,15 +17,13 @@ export default (
 <div className='demo-only demo-stack'>
     <dl>
       <dt>Basic Description List Label</dt>
-      <dd>First description</dd>
-      <dd>Second description</dd>
+      <dd>Basic Description List Detail</dd>
     </dl>
     <dl className={pf('dl--horizontal')}>
       <dt className={pf('dl--horizontal__label')}>Horizontal Description List Label</dt>
-      <dd className={pf('dl--horizontal__detail')}>First description</dd>
-      <dd className={pf('dl--horizontal__detail')}>Second description for first label</dd>
+      <dd className={pf('dl--horizontal__detail')}>First Horizontal Description List Detail</dd>
       <dt className={pf('dl--horizontal__label')}>Second Label</dt>
-      <dd className={pf('dl--horizontal__detail')}>First description for second label</dd>
+      <dd className={pf('dl--horizontal__detail')}>Second description</dd>
     </dl>
 </div>
 );

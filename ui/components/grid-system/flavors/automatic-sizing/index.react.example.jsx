@@ -13,35 +13,17 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export const preview = (
+export default (
   <div className='demo-only demo-container'>
     <div className={pf('grid')}>
-      <div className={pf('col')}>1</div>
-      <div className={pf('col')}>1</div>
+      <div className={pf('col')}>col</div>
+      <div className={pf('col')}>col</div>
     </div>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>2</div>
-      <div className={pf('col')}>
-        <div className={pf('grid')}>
-          <div className={pf('col')}>I&rsquo;m</div>
-          <div className={pf('col')}>a nested</div>
-          <div className={pf('col')}>grid</div>
-        </div>
-      </div>
-      <div className={pf('col')}>2</div>
-    </div>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>4</div>
-      <div className={pf('col')}>4</div>
-      <div className={pf('col')}>4</div>
-      <div className={pf('col')}>4</div>
+    <hr />
+    <div className={pf('grid grid--pull-padded')}>
+      <div className={pf('col--padded')}><span>col--padded</span></div>
+      <div className={pf('col--padded')}><span>col--padded</span></div>
     </div>
   </div>
 );
 
-export const code = (
-  <div className={pf('grid')}>
-    <div className={pf('col')}>Contents go here.</div>
-    <div className={pf('col')}>Contents go here.</div>
-  </div>
-);

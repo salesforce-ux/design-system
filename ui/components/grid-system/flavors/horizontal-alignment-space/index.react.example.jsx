@@ -13,13 +13,24 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export default (
+export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid grid--align-space')}>
-    <div className={pf('col--padded')}>Content determines the width unless otherwise set</div>
-    <div className={pf('col--padded')}>1</div>
-    <div className={pf('col--padded')}>1</div>
-    <div className={pf('col--padded')}>1</div>
+    <div className={pf('col--padded')}><span>Content determines the width unless otherwise set</span></div>
+    <div className={pf('col--padded')}><span>1</span></div>
+    <div className={pf('col--padded')}><span>2</span></div>
+    <div className={pf('col--padded')}><span>3</span></div>
+  </div>
+</div>
+);
+
+export const code = (
+<div className='demo-only demo-container'>
+  <div className={pf('grid grid--align-space')}>
+    <div>Content determines the width unless otherwise set</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
   </div>
 </div>
 );

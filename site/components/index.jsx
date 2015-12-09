@@ -32,7 +32,7 @@ class UILib extends React.Component {
   render () {
     return (<div>
 
-      <section className={pf('container--medium site-text-longform')}>
+      <section className={pf('container--x-large site-text-longform')}>
         <p className="site-text-introduction">
           At the heart of the {globals.displayName} is
           a <abbr title="Cascading Style Sheets">CSS</abbr> framework that enables

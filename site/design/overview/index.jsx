@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Design" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">The Lightning Design System reflects the patterns and components that underpin the Salesforce product. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the Salesforce ecosystem.</p>
       <h2 className="site-text-heading--large">Design Principles</h2>
       <p><strong>We constantly keep these core principles in mind when making design decisions at Salesforce, and we encourage you to adopt them as well.</strong></p>

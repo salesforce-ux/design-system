@@ -16,9 +16,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className='demo-only demo-container'>
   <div className={pf('grid wrap')}>
-    <nav className={pf('col size--1-of-1 small-order--2 medium-order--1')}>1</nav>
-    <main className={pf('col size--1-of-2 small-order--1 medium-order--3')}>2</main>
-    <aside className={pf('col size--1-of-2 small-order--1 medium-order--2')}>3</aside>
+    <nav className={pf('col small-order--2 medium-order--1 large-order--3')}>1</nav>
+    <main className={pf('col small-order--3 medium-order--2 large-order--2')}>2</main>
+    <aside className={pf('col small-order--1 medium-order--3 large-order--1')}>3</aside>
   </div>
 </div>
 );

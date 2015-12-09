@@ -17,39 +17,40 @@ import CodeClass from 'app_modules/site/components/code-class';
 export const preview = (
 <div className='demo-only demo-container'>
 <div>
-  <div className={pf('container')}>
-    Container
-  </div>
-  <div className={pf('container--small')}>
-    Max Width: 576px
+  <div className={pf('container--small grid')}>
+    <div className={pf('col')}>Max Width: 480px</div>
   </div>
   <div className={pf('container--medium')}>
-    Max Width: 980px
+    <div className={pf('col')}>Max Width: 768px</div>
   </div>
   <div className={pf('container--large')}>
-    Max Width: 1210px
+    <div className={pf('col')}>Max Width: 1024px</div>
+  </div>
+  <div className={pf('container--x-large')}>
+    <div className={pf('col')}>Max Width: 1280px</div>
   </div>
   <div className={pf('container--fluid')}>
-    Width 100%
+    <div className={pf('col')}>Width 100%</div>
   </div>
   <div className={pf('container--left container--small')}>
-    Left Aligned
+    <div className={pf('col')}>Left Aligned</div>
   </div>
   <div className={pf('container--center container--small')}>
-    Center Aligned
+    <div className={pf('col')}>Center Aligned</div>
   </div>
   <div className={pf('container--right container--small')}>
-    Right Aligned
+    <div className={pf('col')}>Right Aligned</div>
   </div>
   </div>
 </div>
 );
+
 export const code = (
 <div className='demo-only demo-container'>
-  <div className={pf('container')}>Contents go here.</div>
   <div className={pf('container--small')}>Contents go here.</div>
   <div className={pf('container--medium')}>Contents go here.</div>
   <div className={pf('container--large')}>Contents go here.</div>
+  <div className={pf('container--x-large')}>Contents go here.</div>
   <div className={pf('container--fluid')}>Contents go here.</div>
   <div className={pf('container--left container--small')}>Contents go here.</div>
   <div className={pf('container--center container--small')}>Contents go here.</div>

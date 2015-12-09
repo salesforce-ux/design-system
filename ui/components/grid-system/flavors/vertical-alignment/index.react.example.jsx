@@ -12,14 +12,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
+export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid grid--align-spread')} style={{height: '150px'}}>
-    <div className={pf('align-top col--padded')}>Top Align</div>
-    <div className={pf('align-middle col--padded')}>Middle Align</div>
-    <div className={pf('align-middle col--padded')}>Middle Align</div>
-    <div className={pf('align-bottom col--padded')}>Bottom Align</div>
+    <div className={pf('align-top col--padded')}><span>Top Align</span></div>
+    <div className={pf('align-middle col--padded')}><span>Middle Align</span></div>
+    <div className={pf('align-middle col--padded')}><span>Middle Align</span></div>
+    <div className={pf('align-bottom col--padded')}><span>Bottom Align</span></div>
+
+  </div>
+</div>
+);
+
+export const code = (
+<div className='demo-only demo-container'>
+  <div className={pf('grid')}>
+    <div className={pf('align-top')}>Top Align</div>
+    <div className={pf('align-middle')}>Middle Align</div>
+    <div className={pf('align-middle')}>Middle Align</div>
+    <div className={pf('align-bottom')}>Bottom Align</div>
   </div>
 </div>
 );

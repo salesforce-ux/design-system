@@ -16,15 +16,15 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className='demo-only demo-container'>
   <div className={pf('grid wrap')}>
-    <nav className={pf('col size--1-of-1')}>Header</nav>
-    <main className={pf('col size--1-of-2 medium-size--5-of-6 large-size--8-of-12')}>Main</main>
-    <aside className={pf('col size--1-of-2 medium-size--1-of-6 large-size--4-of-12')}>Aside</aside>
-    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>Complementary</section>
-    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>Complementary</section>
+    <nav className={pf('col size--1-of-1')}>1</nav>
+    <main className={pf('col size--1-of-2 medium-size--5-of-6 large-size--8-of-12')}>2</main>
+    <aside className={pf('col size--1-of-2 medium-size--1-of-6 large-size--4-of-12')}>3</aside>
+    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>4</section>
+    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>5</section>
     <footer className={pf('col size--1-of-1 medium-size--1-of-1 large-size--1-of-3')}>
       <div className={pf('grid wrap')}>
-        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--6-of-12')}>Content Info</div>
-        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--6-of-12')}>Content Info</div>
+        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--6-of-12')}>6</div>
+        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--6-of-12')}>7</div>
       </div>
     </footer>
   </div>

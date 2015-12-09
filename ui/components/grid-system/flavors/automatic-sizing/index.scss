@@ -23,24 +23,14 @@
     flex-direction: column;
   }
 
-  .#{$css-prefix}text-longform & {
-    padding-left: 0;
+  &--reverse {
+    flex-direction: row-reverse;
   }
-}
-
-// Resets spacing/bullets for when grids are used on unordered lists
-ul.#{$css-prefix}grid {
-  margin-left: 0;
-  list-style: none;
 }
 
 .#{$css-prefix}col,
 .#{$css-prefix}col--padded {
   @include flex-item(expand);
-
-  .#{$css-prefix}text-longform & {
-    list-style: none;
-  }
 }
 
 .#{$css-prefix}col--padded {
@@ -48,17 +38,19 @@ ul.#{$css-prefix}grid {
     right: $spacing-small;
     left: $spacing-small;
   }
-}
-.#{$css-prefix}col--padded-medium {
-  padding: {
-    right: $spacing-medium;
-    left: $spacing-medium;
+
+  &-medium {
+    padding: {
+      right: $spacing-medium;
+      left: $spacing-medium;
+    }
   }
-}
-.#{$css-prefix}col--padded-large {
-  padding: {
-    right: $spacing-large;
-    left: $spacing-large;
+
+  &-large {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
   }
 }
 
@@ -67,41 +59,57 @@ ul.#{$css-prefix}grid {
     right: ($spacing-small * -1);
     left: ($spacing-small * -1);
   }
-}
 
-.#{$css-prefix}grid--pull-padded-medium {
-  margin: {
-    right: ($spacing-medium * -1);
-    left: ($spacing-medium * -1);
+  &-medium {
+    margin: {
+      right: ($spacing-medium * -1);
+      left: ($spacing-medium * -1);
+    }
   }
-}
 
-.#{$css-prefix}grid--pull-padded-large {
-  margin: {
-    right: ($spacing-large * -1);
-    left: ($spacing-large * -1);
+  &-large {
+    margin: {
+      right: ($spacing-large * -1);
+      left: ($spacing-large * -1);
+    }
   }
 }
 
 .#{$css-prefix}col-rule {
 
-  @include mq-large-min {
+  &--left {
+    border-left: 1px solid $color-border-separator;
+  }
 
-    &--left {
-      border-left: 1px solid $color-border-separator;
-    }
+  &--right {
+    border-right: 1px solid $color-border-separator;
+  }
 
-    &--right {
-      border-right: 1px solid $color-border-separator;
-    }
+  &--top {
+    border-top: 1px solid $color-border-separator;
+  }
 
-    &--top {
-      border-top: 1px solid $color-border-separator;
-    }
+  &--bottom {
+    border-bottom: 1px solid $color-border-separator;
+  }
+}
 
-    &--bottom {
-      border-bottom: 1px solid $color-border-separator;
-    }
+.#{$css-prefix}col-bump {
+
+  &--left {
+    margin-left: auto;
+  }
+
+  &--right {
+    margin-right: auto;
+  }
+
+  &--top {
+    margin-top: auto;
+  }
+
+  &--bottom {
+    margin-right: auto;
   }
 }
 
@@ -163,4 +171,10 @@ ul.#{$css-prefix}grid {
 
 .#{$css-prefix}shrink-none {
   flex-shrink: 0;
+}
+
+// Resets spacing/bullets for when grids are used on unordered lists
+.#{$css-prefix}text-longform ul.#{$css-prefix}grid {
+  margin-left: 0;
+  list-style: none;
 }

@@ -18,7 +18,7 @@ import Img from 'app_modules/ui/img';
 
 export default (
   <PageBody anchorTitle="Colors" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">Salesforce uses a specific color palette to communicate meaning, convey visual differentiation, and provide a consistent look and feel. From neutrals to brights, each hue is chosen to fit into the overall visual language and promote a contemporary and vibrant user experience.</p>
 
       {/* Neutral Colors */}

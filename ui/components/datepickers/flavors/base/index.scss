@@ -51,6 +51,7 @@
     }
 
     &.#{$css-prefix}is-selected-multi {
+      // scss-lint:disable NestingDepth
 
       > .#{$css-prefix}day {
         overflow: visible;

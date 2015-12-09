@@ -9,15 +9,15 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const Checkbox = require('ui/components/forms/flavors/checkbox/index.react');
-const StatefulClass = require('ui/components/lib/stateful.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import React from 'react';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
+import StatefulClass from 'ui/components/lib/stateful.react';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+
+export default (
 <div className='demo-only'>
   <table className={pf('table table--bordered')}>
     <thead>
@@ -51,7 +51,7 @@ module.exports = (
     <tbody>
       <tr className={pf('hint-parent')}>
         <td className={pf('row-select')}><Checkbox assistiveText="select row1" name="select-row1" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
         <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>
@@ -69,7 +69,7 @@ module.exports = (
       </tr>
       <tr className={pf('hint-parent')}>
         <td className={pf('row-select')}><Checkbox assistiveText="select row2" name="select-row2" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Cloudhub + Anypoint Connectors</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Cloudhub + Anypoint Connectors</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Cloudhub</a></td>
         <td data-label="activity"><span className={pf('truncate')}>9/30/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Closing</span></td>
@@ -87,7 +87,7 @@ module.exports = (
       </tr>
       <tr className={pf('hint-parent')}>
         <td className={pf('row-select')}><Checkbox assistiveText="select row3" name="select-row3" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Rohde Corp 30</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Rohde Corp 30</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Rohde Corp</a></td>
         <td data-label="activity"><span className={pf('truncate')}>6/18/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>

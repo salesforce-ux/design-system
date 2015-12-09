@@ -19,7 +19,8 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
 import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
+import { getHistory } from 'app_modules/site/navigation/history';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
@@ -31,7 +32,7 @@ import whitelistUtilities from '.generated/whitelist-utilities.js';
 Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
   .map(c => c.replace(/^\./, ''))
   .map(c => `${cssPrefix}${c}`)
-  .map(c => new RegExp(_.escapeRegExp(c)))
+  .map(c => new RegExp(_.escapeRegExp(c)));
 
 function getValueAtKeyPath(obj, keyPath) {
   return _.reduce(keyPath.split('.'), (obj, key) => {
@@ -87,13 +88,6 @@ function allCodeTabs() {
     code: 'styles.scss',
     info: 'info.styles',
     roles: [Prefs.roles.regular]
-  },{
-    key: 'aura-css',
-    label: 'Lightning CSS',
-    language: 'scss',
-    code: 'styles.aura',
-    info: 'info.styles',
-    roles: [Prefs.roles.aura]
   },{
     key: 'design-tokens',
     label: 'Design Tokens',
@@ -155,7 +149,7 @@ function getCodeTabs(flavor, previewComponent, role) {
     .value();
 }
 
-export default class ComponentFlavor extends React.Component {
+class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
@@ -167,7 +161,8 @@ export default class ComponentFlavor extends React.Component {
       previewTabs,
       previewTabActive: _.last(previewTabs),
       codeTabs: [],
-      role: Prefs.roles.aura
+      role: Prefs.roles.aura,
+      initialView: true
     };
     // Listen for the iframe to load
     if (typeof window !== 'undefined') {
@@ -237,7 +232,7 @@ export default class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `/assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
     link.onload = function() {
       // Don't remove the old stylesheet until the new one has loaded
       _.filter(doc.head.querySelectorAll('link'), tag => {
@@ -253,6 +248,7 @@ export default class ComponentFlavor extends React.Component {
   onPreviewTabClick(tab, event) {
     event.preventDefault();
     this.setState({
+      initialView: false,
       previewTabActive: tab
     }, this.updatePreview);
   }
@@ -295,13 +291,14 @@ export default class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.state.previewComponent) return null;
     const {flavor} = this.props;
+    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView});
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
         aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
         <iframe
-          src="/components/preview-frame"
+          src={`${getHistory().createHref('/')}components/preview-frame`}
           height='100%'
           name={flavor.uid}
           ref="iframe"
@@ -310,7 +307,7 @@ export default class ComponentFlavor extends React.Component {
       </Tabs.Content>
     );
     return (
-      <Tabs className={pf('site-example--tabs')} flavor="default" panel={previewPanel} selectedIndex={2}>
+      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
         {this.renderPreviewTabs()}
       </Tabs>
     );
@@ -334,7 +331,8 @@ export default class ComponentFlavor extends React.Component {
           innerClass={pf('tabs--default__link')}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
           content={content}
-          onClick={this.onPreviewTabClick.bind(this, tab)}>
+          onClick={this.onPreviewTabClick.bind(this, tab)}
+          initialView={this.state.initialView}>
         </Tabs.Item>
       );
     });
@@ -344,7 +342,7 @@ export default class ComponentFlavor extends React.Component {
     if (!this.state.codeTabs.length) return null;
     const {flavor} = this.props;
     return (
-      <Tabs flavor="default">
+      <Tabs className={{'site-example--tabs-initial-view': this.state.initialView}} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );
@@ -389,3 +387,5 @@ export default class ComponentFlavor extends React.Component {
   }
 
 }
+
+export default ComponentFlavor;

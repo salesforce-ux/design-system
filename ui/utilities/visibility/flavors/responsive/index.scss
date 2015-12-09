@@ -9,7 +9,7 @@
 
 
 
-@include visibility(x-small,$mq-x-small,$mq-small);
-@include visibility(small,$mq-small,$mq-medium);
-@include visibility(medium,$mq-medium,$mq-large);
-@include visibility(large,$mq-large);
+@include visibility(x-small, $mq-x-small, $mq-small);
+@include visibility(small, $mq-small, $mq-medium);
+@include visibility(medium, $mq-medium, $mq-large);
+@include visibility(large, $mq-large);

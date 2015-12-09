@@ -16,10 +16,12 @@ import createChainedFunction from './create-chained-function';
 import globals from 'app_modules/global';
 import whitelist from '.generated/whitelist';
 
+export { default as createChainedFunction } from './create-chained-function';
+
 /**
  * Traverse all children
  */
-function flatMapChildren(children, f) {
+export function flatMapChildren(children, f) {
   var result = [];
   function go(xs, f) {
     return React.Children.map(xs, function(c) {
@@ -34,7 +36,7 @@ function flatMapChildren(children, f) {
 /**
  * Perhaps there's a more pragmatic way to do this. Eventually, I suspect we'll have some utils to help find children.
  */
-function hasChild(children, name) {
+export function hasChild(children, name) {
   var flag = false;
   flatMapChildren(children, function(c) {
     flag = flag || (c.type && c.type.name === name);
@@ -44,7 +46,7 @@ function hasChild(children, name) {
 
 
 // findDOMNode complains so filter out strings from virtual dom
-function textContent(children) {
+export function textContent(children) {
   return flatMapChildren(children, (c) => {
     if(typeof c === 'string') return c;
   }).join(' ');
@@ -134,7 +136,7 @@ const installMethods = {
  * }
  *
  */
-function install(context, methods) {
+export function install(context, methods) {
   if (typeof context !== 'object') {
     throw new Error('"context" must be an object');
   }
@@ -158,14 +160,14 @@ function install(context, methods) {
 /**
  * Prefixes all classes in className with globals.cssPrefix.
  */
-function prefix(className) {
+export function prefix(className) {
   return typeof className === 'string' ?
       className.split(/\s+/).map(c => {
         return (whitelist.indexOf(`.${c}`) >= 0) ? `${globals.cssPrefix}${c}` : c;
       }).join(' ') : className;
 }
 
-const PropTypes = {
+export const PropTypes = {
 
   /**
    * Verify that a component has valid flavors

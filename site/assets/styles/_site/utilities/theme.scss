@@ -9,7 +9,7 @@
 
 .site-theme--checker {
   $checker-size: $spacing-small;
-  $checker-color: rgba($color-background, .5);
+  $checker-color: rgba($color-background, 0.5);
   background: {
     color: $color-background-alt;
     image:
@@ -26,6 +26,6 @@
                           $checker-color 75%,
                           $checker-color);
     size: ($checker-size * 2) ($checker-size * 2);
-    position: 0 0, $checker-size $checker-size
+    position: 0 0, $checker-size $checker-size;
   }
 }

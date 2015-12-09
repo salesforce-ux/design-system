@@ -14,13 +14,13 @@
   display: inline-block;
   padding: 0 $spacing-medium 0 $spacing-small;
   line-height: $line-height-button;
-  min-height: calc(#{$line-height-button} + 2px); /* For IE */
+  min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
 }
 
 .#{$css-prefix}input--small {
   @include placeholder($weight: $font-weight-regular);
   line-height: $line-height-button-small;
-  min-height: calc(#{$line-height-button-small} + 2px); /* For IE */
+  min-height: calc(#{$line-height-button-small} + 2px); /* Note: for IE */
   padding: {
     left: $spacing-x-small;
     right: $spacing-x-small;
@@ -36,6 +36,11 @@
   &:active {
     outline: 0;
   }
+}
+
+// Because sometimes I need elements the same height as inputs
+.#{$css-prefix}input--height {
+  min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
 }
 
 .#{$css-prefix}input-has-icon {

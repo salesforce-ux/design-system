@@ -9,12 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PT = React.PropTypes;
-const componentUtil = require('app_modules/ui/util/component');
-const {createChainedFunction} = componentUtil;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
 import Helper from 'ui/components/lib/dom-helpers';
+import _ from 'lodash';
+
+const PT = React.PropTypes;
 
 class AccessibleList extends React.Component {
   static propTypes = { selector: PT.string, click: PT.bool, selectedIndex: PT.number }
@@ -73,9 +74,9 @@ class AccessibleList extends React.Component {
   }
 
   render() {
-    const props = Object.assign({onKeyDown: createChainedFunction(this.props.onKeyDown, this.navigateMenu.bind(this))}, this.props);
+    const props = _.assign({onKeyDown: createChainedFunction(this.props.onKeyDown, this.navigateMenu.bind(this))}, this.props);
     return (<ul {...props} />);
   }
 }
 
-module.exports = AccessibleList;
+export default AccessibleList;

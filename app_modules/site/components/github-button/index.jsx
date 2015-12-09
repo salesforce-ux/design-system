@@ -11,15 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { createChainedFunction } from 'app_modules/ui/util/component';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
-import { Link } from 'react-router';
-import { find } from 'lodash';
-import sitemap from 'app_modules/site/navigation/sitemap';
+import protectFromUnmount from 'app_modules/site/util/component/protect-from-unmount';
 import CTALink from 'app_modules/site/components/cta-link';
-
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 class GithubButton extends React.Component {
   constructor(props) {
@@ -32,24 +27,30 @@ class GithubButton extends React.Component {
   }
 
   getStars(cb) {
-    const req = new XMLHttpRequest()
+    const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
-      if (req.readyState == 4) {
+      if (req.readyState == 4 && req.responseText) {
         const json = JSON.parse(req.responseText);
         cb(json);
       }
-    }
+    };
     req.open('GET', 'https://api.github.com/repos/salesforce-ux/design-system', true);
     req.send();
+    return req;
   }
 
   componentDidMount() {
-    this.getStars((data) => {
+    this.protect = protectFromUnmount();
+    this.asyncReq = this.protect(this.getStars((data) => {
       this.setState({
         stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
-    }.bind(this))
+    }));
+  }
+
+  componentWillUnmount() {
+    this.protect.unmount();
   }
 
   render() {
@@ -63,16 +64,16 @@ class GithubButton extends React.Component {
     );
 
     return (
-    <span className={classesButtonGroup}>
-      <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
-        <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
-          Star
-      </CTALink>
-      <a href={linkUrlGazer} className={classesBubbleButton}>
-        <span className='site-button--social-counter-bubble'>{countStr}</span>
-      </a>
-    </span>
-    )
+      <span className={classesButtonGroup}>
+        <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
+          <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+            Star
+        </CTALink>
+        <a href={linkUrlGazer} className={classesBubbleButton}>
+          <span className='site-button--social-counter-bubble'>{countStr}</span>
+        </a>
+      </span>
+    );
   }
 
 }
@@ -80,4 +81,4 @@ class GithubButton extends React.Component {
 GithubButton.displayName = 'GithubButton';
 GithubButton.propTypes = {};
 
-module.exports = GithubButton;
+export default GithubButton;

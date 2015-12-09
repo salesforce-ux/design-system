@@ -17,11 +17,19 @@ import gutil from 'gulp-util';
 import through from 'through2';
 import css from 'css';
 import globals from 'app_modules/global';
-import { allowPrefixedClasses, fixParenthesized, onlyClasses,
-        removeAttrs, removeNonWordSuffix,
-        removePrefix, removePseudo, splitParts } from './util';
 
-function getSelectors(r) {
+const { cssPrefix } = globals;
+
+export const allowPrefixedClasses = x => x.match(`.${cssPrefix}`);
+export const fixParenthesized = x => x.replace(/[\(\)]/g, ' ');
+export const onlyClasses = x => x.match(/^\.[a-zA-Z0-9_\-]+$/);
+export const removeAttrs = x => x.replace(/\[[^\]]*\]/g, '');
+export const removeNonWordSuffix = x => x.replace(/\W*$/, '');
+export const removePrefix = x => x.replace(new RegExp(`\.${cssPrefix}`, 'g'), '.');
+export const removePseudo = x => x.replace(/:+[a-zA-Z_\-]+/g, '');
+export const splitParts = x => x.replace(/[>+*]/g, ' ').replace(/\./g, ' .').split(/\s+/);
+
+export function getSelectors(r) {
   if (r.rules) {
     return r.rules.map(getSelectors);
   }
@@ -35,7 +43,7 @@ function getSelectors(r) {
 }
 
 export default function(done) {
-  console.log('Generating master whitelist');
+  console.log('Generating CSS class whitelist');
   gulp.src(path.resolve(__PATHS__.www, 'assets/styles/slds.css'))
   .pipe(through.obj(function(file, enc, next) {
     const parsedCSS = css.parse(file.contents.toString());
@@ -44,7 +52,7 @@ export default function(done) {
       _.compact(_.flattenDeep(rs))
       .map(removeNonWordSuffix)
       .filter(onlyClasses)
-      ));
+    ));
     try {
       const file = new gutil.File({
         path: 'whitelist.js',

@@ -11,19 +11,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import path from 'path';
 import fs from 'fs';
-
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import through from 'through2';
-
-import { DesignSystemScheme } from '@salesforce-ux/design-system-utils';
 import Status from 'app_modules/site/util/component/status';
+import Scheme from 'app_modules/ui/util/scheme';
 
-module.exports = function(done) {
+export default function(done) {
   console.log('Compiling UI');
 
   try {
-    let scheme = DesignSystemScheme({
+    let scheme = Scheme({
       path: __PATHS__.ui
     }).generate();
 
@@ -31,9 +29,9 @@ module.exports = function(done) {
       category.components.forEach(component => {
         component.status = Status.or(component.flavors.map(x => x.status));
         component.flavors.forEach(flavor => {
+          let examplePath = `${flavor.path}/index.react.example.jsx`;
           try {
-            let examplePath = `${flavor.path}/index.react.example.jsx`;
-            require(path.resolve(__PATHS__.ui, examplePath));
+            fs.accessSync(path.resolve(__PATHS__.ui, examplePath));
             flavor.examplePath = examplePath;
           } catch(error) { // eslint-disable-line no-empty
           }

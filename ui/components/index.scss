@@ -14,9 +14,6 @@
   // Activity Timeline
   "activity-timeline/flavors/base/index",
 
-  // Anchor
-  "page-headers/flavors/record-home/index",
-
   // Breadcrumbs
   "breadcrumbs/flavors/base/index",
 
@@ -81,6 +78,10 @@
   // Tooltip
   "tooltips/flavors/base/index",
 
+  // Page Headers
+  "page-headers/flavors/base/index",
+  "page-headers/flavors/record-home/index",
+
   // Popovers
   "popovers/flavors/base/index",
   "popovers/flavors/tooltips/index",
@@ -101,6 +102,13 @@
   "datepickers/flavors/single-select/index",
   "datepickers/flavors/multi-select/index",
   "datepickers/flavors/time/index",
+
+  // Docked Composer
+  "docked-composer/flavors/base/index",
+  "docked-composer/flavors/email/index",
+  "docked-composer/flavors/email-modal/index",
+  "docked-composer/flavors/task/index",
+  "docked-composer/flavors/overflow-menu/index",
 
   // Publishers
   "publishers/flavors/discussion-feed/index",
@@ -123,6 +131,9 @@
   // Pills
   "pills/flavors/base/index",
   "pills/flavors/portrait/index",
+
+  // Process
+  "process/flavors/wizard/index",
 
   // Spinners
   "spinners/flavors/base/index",
@@ -178,5 +189,6 @@
 
   // Tables
   "data-tables/flavors/base/index",
+  "data-tables/flavors/resizable-columns/index",
   "data-tables/flavors/responsive-stacked/index",
   "data-tables/flavors/responsive-stacked-horizontal/index";

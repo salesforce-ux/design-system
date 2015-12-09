@@ -9,19 +9,19 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Anchor = require('ui/components/page-headers/index.react');
-const BreadCrumbs = require('ui/components/breadcrumbs/index.react');
+import React from 'react';
+import Anchor from 'ui/components/page-headers/index.react';
+import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
-const Button = require('ui/components/buttons/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const Heading = require('ui/components/heading/index.react');
-const StatefulClass = require('ui/components/lib/stateful.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import Button from 'ui/components/buttons/index.react';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import Heading from 'ui/components/heading/index.react';
+import StatefulClass from 'ui/components/lib/stateful.react';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+
+export default (
   <div className='demo-only'>
     <Anchor flavor="object-home">
       <BreadCrumbs className={pf('m-bottom--xx-small')}>
@@ -30,8 +30,8 @@ module.exports = (
       </BreadCrumbs>
       <div className={pf('grid')}>
         <div className={pf('col has-flexi-truncate')}>
-          <Heading flavor="medium" className={pf('truncate')} title="Contacts (will truncate)">Contacts (will truncate)
-          </Heading>
+          <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)
+          </h1>
         </div>
         <div className={pf('col no-flex align-bottom')}>
           <div className={pf('grid')}>

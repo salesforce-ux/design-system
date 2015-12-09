@@ -18,12 +18,8 @@ import { logDownloadEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 import { Link } from 'react-router';
-
-const links = {
-  zip: {
-    framework: g.downloadPath(version.sldsVersion)
-  }
-};
+import Img from 'app_modules/ui/img';
+import { getHistory } from 'app_modules/site/navigation/history';
 
 function unmanagedPackageUrls() {
   return g.unmanagedPackageUrls.map((item, idx) => {
@@ -45,7 +41,7 @@ export default (
       Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone it on GitHub</a>.
     </p>
     <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')} ctaEventName='GitHub'>
-      <img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+      <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
       Design System on GitHub
     </CTALink>
 
@@ -83,7 +79,7 @@ bower install salesforce-lightning-design-system
     <p>
       All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
     </p>
-    <form action={links.zip.framework}>
+    <form action={`${getHistory().createHref('/')}${g.downloadPath(version.sldsVersion)}`}>
       <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('css'); }}>
         Download Design System ({version.sldsVersion})
       </button>
@@ -107,7 +103,7 @@ bower install salesforce-lightning-design-system
     <p>
       All icons are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>.
     </p>
-    <form action="/assets/downloads/salesforce-lightning-design-system-icons.zip">
+    <form action={`${getHistory().createHref('/')}assets/downloads/salesforce-lightning-design-system-icons.zip`}>
       <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('icons'); }}>
         Download Icons
       </button>
@@ -131,7 +127,7 @@ bower install salesforce-lightning-design-system
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="sass-design-tokens">Sass</h3>
-        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_scss.zip">
+        <form action={`${getHistory().createHref('/')}assets/downloads/design-tokens/salesforce_design_tokens_scss.zip`}>
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-scss'); }}>
             Download Sass Tokens
           </button>
@@ -140,7 +136,7 @@ bower install salesforce-lightning-design-system
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="less-design-tokens">Less</h3>
-        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_less.zip">
+        <form action={`${getHistory().createHref('/')}assets/downloads/design-tokens/salesforce_design_tokens_less.zip`}>
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-less'); }}>
             Download Less Tokens
           </button>
@@ -149,7 +145,7 @@ bower install salesforce-lightning-design-system
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="stylus-design-tokens">Stylus</h3>
-        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_styl.zip">
+        <form action={`${getHistory().createHref('/')}assets/downloads/design-tokens/salesforce_design_tokens_styl.zip`}>
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-stylus'); }}>
             Download Stylus Tokens
           </button>
@@ -158,7 +154,7 @@ bower install salesforce-lightning-design-system
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="android-design-tokens">Android</h3>
-        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_android.zip">
+        <form action={`${getHistory().createHref('/')}assets/downloads/design-tokens/salesforce_design_tokens_android.zip`}>
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-android'); }}>
             Download Android Tokens
           </button>
@@ -167,7 +163,7 @@ bower install salesforce-lightning-design-system
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="ios-design-tokens">iOS</h3>
-        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_ios.zip">
+        <form action={`${getHistory().createHref('/')}assets/downloads/design-tokens/salesforce_design_tokens_ios.zip`}>
           <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-ios'); }}>
             Download iOS Tokens
           </button>

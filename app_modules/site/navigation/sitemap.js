@@ -69,6 +69,6 @@ export default new SitemapRouter().map(function () {
   this.route('faq');
   this.route('voice-and-tone');
   this.route('release-notes');
-  this.route('examples');
+  this.route('error-404');
 
 });

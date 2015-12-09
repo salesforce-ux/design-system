@@ -9,13 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-const _ = require('lodash');
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const through = require('through2');
+import fs from 'fs';
+import path from 'path';
+import glob from 'glob';
+import _ from 'lodash';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import through from 'through2';
 
 const _category = {
   /**
@@ -149,7 +149,7 @@ function getCategories () {
     });
 }
 
-module.exports = function(done) {
+export default function(done) {
   let categories;
   try {
     categories = JSON.stringify(getCategories(), null, 2);

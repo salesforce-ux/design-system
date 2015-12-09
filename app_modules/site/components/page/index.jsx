@@ -147,4 +147,4 @@ Page.propTypes = {
   )
 };
 
-module.exports = Page;
+export default Page;

@@ -9,14 +9,14 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import React from 'react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import Input from 'ui/components/forms/flavors/input/index.react';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+
+export default (
 <div className='demo-only demo-only--dropdown' style={{height: '390px'}}>
 
   <div className={pf('form-element dropdown-trigger')}>
@@ -49,13 +49,13 @@ module.exports = (
       <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
         <thead>
           <tr id="weekdays">
-            <th id="Sunday"><abbr title="Sunday">Sun</abbr></th>
-            <th id="Monday"><abbr title="Monday">Mon</abbr></th>
-            <th id="Tuesday"><abbr title="Tuesday">Tue</abbr></th>
-            <th id="Wednesday"><abbr title="Wednesday">Wed</abbr></th>
-            <th id="Thursday"><abbr title="Thursday">Thu</abbr></th>
-            <th id="Friday"><abbr title="Friday">Fri</abbr></th>
-            <th id="Saturday"><abbr title="Saturday">Sat</abbr></th>
+            <th id="Sunday" scope="col"><abbr title="Sunday">Sun</abbr></th>
+            <th id="Monday" scope="col"><abbr title="Monday">Mon</abbr></th>
+            <th id="Tuesday" scope="col"><abbr title="Tuesday">Tue</abbr></th>
+            <th id="Wednesday" scope="col"><abbr title="Wednesday">Wed</abbr></th>
+            <th id="Thursday" scope="col"><abbr title="Thursday">Thu</abbr></th>
+            <th id="Friday" scope="col"><abbr title="Friday">Fri</abbr></th>
+            <th id="Saturday" scope="col"><abbr title="Saturday">Sat</abbr></th>
           </tr>
         </thead>
         <tbody>

@@ -43,7 +43,6 @@
 .#{$css-prefix}is-selected:not(:hover):not(:focus) .#{$css-prefix}text-selected-focus,
 .#{$css-prefix}is-selected[disabled]:hover .#{$css-prefix}text-selected-focus,
 .#{$css-prefix}is-selected:hover .#{$css-prefix}text-selected,
-.#{$css-prefix}is-selected:focus .#{$css-prefix}text-selected
-{
+.#{$css-prefix}is-selected:focus .#{$css-prefix}text-selected {
   display: none;
 }

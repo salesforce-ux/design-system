@@ -1,0 +1,89 @@
+# Documentation:
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+linters:
+  BorderZero:
+    enabled: false
+  ColorKeyword:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  Comment:
+    enabled: true
+    allowed: '\* Note\: '
+  DeclarationOrder:
+    enabled: false
+  DuplicateProperty:
+    enabled: false
+  ElsePlacement:
+    enabled: false
+  EmptyLineBetweenBlocks:
+    enabled: false
+  EmptyRule:
+    enabled: true
+    severity: error
+  ExtendDirective:
+    enabled: true
+    severity: error
+  FinalNewline:
+    enabled: false # Already checked by another task
+  HexNotation:
+    enabled: false
+  IdSelector:
+    enabled: false
+  ImportPath:
+    enabled: false
+  ImportantRule:
+    enabled: true
+  Indentation:
+    enabled: false # Already checked by another task
+  LeadingZero:
+    enabled: true
+    style: include_zero
+  MergeableSelector:
+    enabled: false
+  NameFormat:
+    enabled: false
+  NestingDepth:
+    enabled: true
+    ignore_parent_selectors: true
+  PlaceholderInExtend:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  SelectorFormat:
+    enabled: false
+  Shorthand:
+    enabled: false
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
+  SingleLinePerSelector:
+    enabled: true
+  SpaceAfterComma:
+    enabled: true
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space_or_newline
+  SpaceAfterVariableName:
+    enabled: true
+  SpaceAroundOperator:
+    enabled: false
+  SpaceBeforeBrace:
+    enabled: true
+    allow_single_line_padding: true
+  StringQuotes:
+    enabled: false
+  TrailingSemicolon:
+    enabled: true
+  UnnecessaryParentReference:
+    enabled: false
+  UrlQuotes:
+    enabled: false
+  VendorPrefix:
+    enabled: false
+  ZeroUnit:
+    enabled: true

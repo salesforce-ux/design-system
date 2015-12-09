@@ -9,18 +9,19 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import React from 'react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+
+export default (
   <ComponentDocs>
     <p className="site-text-introduction">Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.</p>
     <p>Default modals are used in the vast majority of cases. They are as wide as 50% of the viewport, but include a minimum and maximum width to avoid going too narrow or too wide.</p>
     <p>Modals always have an equal amount of space at the top and bottom to account for the height of the close button.</p>
     <p>Modals grow according to how much content is within, but once the modal reaches full height (including the previously mentioned space on top and bottom), the content area will begin to scroll.</p>
     <p>Modals can have a tagline in the header, simply by adding a paragraph after the heading.</p>
+    <p>By default, the content area of the modal does not have spacing. This allows for content such as Tables to be full-width to the modal. To get spacing when you need it, apply a padding utility (<CodeClass className="p-around--medium" />).</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn&rsquo;t return to the underlying page until the user presses the Esc key, presses an explicit &ldquo;Cancel&rdquo; or &ldquo;Close&rdquo; button in the modal, or performs another action that closes the modal.</p>
     <p>Expected markup:</p>

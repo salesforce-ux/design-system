@@ -9,23 +9,17 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const argv = require('minimist')(process.argv.slice(2));
-const isProd = argv.prod === true;
-
 import path from 'path';
-import async from 'async';
 import _ from 'lodash';
-import globals from 'app_modules/global';
-
-import { DesignSystemScssAura } from '@salesforce-ux/design-system-utils';
+import async from 'async';
 
 import siteCopyAssets from './site/assets';
-import siteCompile from './site/compile';
+import { createPageCompiler } from './site/compile';
 import siteIcons from './site/icons';
 import siteLinks from './site/links';
-import { compileSass as siteSass } from './site/sass';
+import { compile as siteSass } from './site/sass';
+import { compile as siteWebpack } from './site/webpack';
 
-import generateAuraCSS from './generate/aura-css';
 import generateIcons from './generate/icons';
 import generateReleaseNotes from './generate/release-notes';
 import generateSassUtilities from './generate/sass-utilities';
@@ -36,55 +30,56 @@ import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
 
-let designSystem = DesignSystemScssAura({
-  path: __PATHS__.ui,
-  entryPath: path.resolve(__PATHS__.ui, 'index.scss'),
-  designTokensEntryPath: path.resolve(__PATHS__.ui, 'design-tokens.scss'),
-  designTokensModulePath: __PATHS__.node_modules,
-  scopedCategories: ['components'],
-  cssPrefix: globals.cssPrefix
-});
+const sitePages = createPageCompiler();
 
-export default {
+function generate (callback) {
 
-  build: function() {
+  async.series([
 
-    async.series([
+    siteSass,
 
-      function(done) {
-        async.parallel([
-          siteCopyAssets,
-          siteIcons,
-          generateTokens
-        ], done);
-      },
+    function(done) {
+      async.parallel([
+        generateSassUtilities,
+        generateUI,
+      ], done);
+    },
 
-      async.apply(siteSass, null),
-      generateSassUtilities,
+    function(done) {
+      async.parallel([
+        generateIcons,
+        generateReleaseNotes,
+        generateTokens,
+        generateVersion,
+        generateWhitelist,
+        generateWhitelistUtilities
+      ], done);
+    },
 
-      generateWhitelist,
-      generateUI,
+  ], callback);
 
-      function(done) {
-        async.parallel([
-          async.apply(generateAuraCSS, designSystem),
-          generateIcons,
-          generateReleaseNotes,
-          generateVersion,
-          generateTokensZip
-        ], done);
-      },
+}
 
-      // For some reason must be after the async.parallel() block...
-      generateWhitelistUtilities,
+export default function (options, callback) {
 
-      siteCompile,
-      siteLinks,
+  const tasks = [];
 
-    ], err => {
-      if (err) throw err;
-    });
-
+  if (options.generate === true) {
+    tasks.push(generate);
   }
 
-};
+  if (options.site === true) {
+    tasks.push(
+      siteCopyAssets,
+      siteIcons,
+      sitePages.compile,
+      siteLinks,
+      async.apply(siteWebpack, {
+        prod: options.prod === true
+      })
+    );
+  }
+
+  async.series(tasks, callback);
+
+}

@@ -15,13 +15,13 @@ import _ from 'lodash';
 /**
  * Only allows production-level logging.
  */
-function logEvent(tagEvent, type, extraValues = {}) {
+export function logEvent(tagEvent, type, extraValues = {}) {
   let canLogEvent = window.location && _.includes(globals.analyticsHostWhitelist, window.location.host);
   _.defaults(extraValues, {
     path: window.location.path,
     type: ''
   });
-  if (canLogEvent) { 
+  if (canLogEvent) {
     if (window.ll) window.ll(tagEvent, type, extraValues);
     if (window.ga) window.ga('send', 'event', type, extraValues.type);
   }
@@ -30,14 +30,14 @@ function logEvent(tagEvent, type, extraValues = {}) {
 /**
  * Normalizes pathname
  */
-function normalizedLocationPathname() {
+export function normalizedLocationPathname() {
   return (window.location.pathname || '').replace(/\/$/, '');
 }
 
 /**
  * Records a page visit + screen flow.
  */
-function logCurrentPageVisit() {
+export function logCurrentPageVisit() {
   logEvent('tagScreen', normalizedLocationPathname());
 }
 
@@ -47,7 +47,7 @@ function logCurrentPageVisit() {
  * @param {string} type - Which CTA was interacted with?
  * @param {object} extraValues - Optional extra tracking parameters
  */
-function logCTAEvent(type, extraValues) {
+export function logCTAEvent(type, extraValues) {
   let values = _.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
   logEvent('tagEvent', 'CTA', values);
 }
@@ -58,7 +58,7 @@ function logCTAEvent(type, extraValues) {
  * @param {string} type - Which file was downloaded?
  * @param {object} extraValues - Optional extra tracking parameters
  */
-function logDownloadEvent(type, extraValues) {
+export function logDownloadEvent(type, extraValues) {
   let values = _.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
   logEvent('tagEvent', 'Download', values);
 }

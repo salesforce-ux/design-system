@@ -19,4 +19,8 @@
   &--small {
     padding: $spacing-small;
   }
+
+  &--border {
+    @include box($padding: 0, $borders: around);
+  }
 }

@@ -13,21 +13,38 @@
 
   @include mq-medium-min {
     text-align: right;
+
+    .#{$css-prefix}form-element__legend {
+      float: left;
+      width: calc(33% + (#{$spacing-small} * 2)); // calculate available width left over from form control
+      text-align: right;
+
+      > .#{$css-prefix}form-element__label {
+        margin-right: 0;
+      }
+    }
   }
 
-  .#{$css-prefix}form-element > .#{$css-prefix}form-element__label {
+  .#{$css-prefix}form-element {
 
-    @include mq-medium-min {
-      display: inline-block;
-      max-width: 33%;
-      vertical-align: top;
-      position: relative;
-      top: (($line-height-button / 2) - ($line-height-text / 2));
-      margin-bottom: 0;
+    > .#{$css-prefix}form-element__label {
 
-      &--top {
-        top: 0;
+      @include mq-medium-min {
+        display: inline-block;
+        max-width: 33%;
+        vertical-align: top;
+        position: relative;
+        top: (($line-height-button / 2) - ($line-height-text / 2));
+        margin-bottom: 0;
+
+        &--top {
+          top: 0;
+        }
       }
+    }
+
+    + .#{$css-prefix}form-element {
+      @include form-element-vertical-spacing;
     }
   }
 
@@ -47,17 +64,6 @@
     .#{$css-prefix}checkbox,
     .#{$css-prefix}radio {
       display: block;
-    }
-  }
-
-  .#{$css-prefix}form-element {
-
-    @include mq-small-max {
-      margin-bottom: $spacing-medium;
-    }
-
-    + .#{$css-prefix}form-element {
-      margin-top: $spacing-medium;
     }
   }
 }

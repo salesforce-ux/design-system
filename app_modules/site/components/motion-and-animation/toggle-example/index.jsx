@@ -11,8 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import componentUtil from 'app_modules/ui/util/component';
-const pf = componentUtil.prefix;
+import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const TIMING_MAP_SECS = {
   'instantly': 0,
@@ -86,4 +86,4 @@ ToggleExample.propTypes = {
   description: React.PropTypes.string
 };
 
-module.exports = ToggleExample;
+export default ToggleExample;

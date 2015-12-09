@@ -16,6 +16,7 @@ import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { Link } from 'react-router';
 import { find } from 'lodash';
 import sitemap from 'app_modules/site/navigation/sitemap';
+import _ from 'lodash';
 
 class CTALink extends React.Component {
 
@@ -25,7 +26,7 @@ class CTALink extends React.Component {
 
   render() {
     let click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    let props = Object.assign({}, this.props, {onClick: click});
+    let props = _.assign({}, this.props, {onClick: click});
     let hasRoute = sitemap.getRouteByPath(props.href);
     if (hasRoute) {
       return <Link to={props.href} {...props}>{this.props.children}</Link>;
@@ -42,4 +43,4 @@ CTALink.propTypes = {
   ctaExtraValues: React.PropTypes.object
 };
 
-module.exports = CTALink;
+export default CTALink;

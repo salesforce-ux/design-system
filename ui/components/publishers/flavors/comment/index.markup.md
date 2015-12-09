@@ -4,4 +4,4 @@ The comment publisher is in a collapsed state by default. There are 4 states of 
 
 Due to the implementation of the comment publisher design, we used a faux textarea container and we'll need to apply the our focus state to that custom container. Using javascript, the class `{{cssPrefix}}has-focus` should be applied to the `{{cssPrefix}}publisher` element when the user interacts with `<textarea>`. When the user loses focus on the `<textarea>`, the class `{{cssPrefix}}has-focus` should be toggled off from the `{{cssPrefix}}publisher` element.
 
-During the active state, before the user has begun typing or attaching additional content, the "Comment" button should be disabled by applying the `disabled` attribute to the `<textrea>`. When the user begins typing, the `disabled` attribute should be toggled off.
+During the active state, before the user has begun typing or attaching additional content, the "Comment" button should be disabled by applying the `disabled` attribute to the `<textarea>`. When the user begins typing, the `disabled` attribute should be toggled off.

@@ -17,6 +17,7 @@
   td {
     padding: $spacing-x-small;
     white-space: nowrap;
+    position: relative;
 
     &.#{$css-prefix}text-center {
       text-align: center;
@@ -105,7 +106,7 @@
 
   // Default Table Row Hover
   &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > td,
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th  {
+  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
   }
 
@@ -116,7 +117,7 @@
     box-shadow: $color-border-selection 0 ($border-width-thick * -1) 0 inset;
 
     &.#{$css-prefix}is-selected {
-      box-shadow: $color-border-selection 0 ($border-width-thin * -1) 0 $border-width-thick inset
+      box-shadow: $color-border-selection 0 ($border-width-thin * -1) 0 $border-width-thick inset;
     }
   }
 }

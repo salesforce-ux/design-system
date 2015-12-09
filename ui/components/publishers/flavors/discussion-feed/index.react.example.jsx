@@ -9,21 +9,21 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const Tabs = require('ui/components/tabs/index.react');
-const Button = require('ui/components/buttons/index.react');
-const ButtonIcon = require('ui/components/buttons/flavors/icon/index.react');
-const SvgIcon = require('app_modules/ui/svg-icon');
-const StatefulClass = require('ui/components/lib/stateful.react');
-const MediaObject = require('ui/components/media-objects/index.react');
-const Input = require('ui/components/forms/flavors/input/index.react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
+import React from 'react';
+import Tabs from 'ui/components/tabs/index.react';
+import Button from 'ui/components/buttons/index.react';
+import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import StatefulClass from 'ui/components/lib/stateful.react';
+import MediaObject from 'ui/components/media-objects/index.react';
+import Input from 'ui/components/forms/flavors/input/index.react';
+import Img from 'app_modules/ui/img';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
     </a>
   </div>
 );
@@ -53,7 +53,7 @@ const commentReply = (
   </div>
 );
 
-exports.preview = (
+export const preview = (
 <div className='demo-only'>
 
   <div className={pf('publisher publisher--discussion')}>
@@ -61,7 +61,8 @@ exports.preview = (
       <dt className={pf('list__item text-body--small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -95,7 +96,8 @@ exports.preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -129,7 +131,8 @@ exports.preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
+    <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input3" className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
     <div className={pf('attachments')}>
       <div className={pf('attachments__item box box--x-small theme--shade')}>
         <div className={pf('grid grid--align-spread')}>
@@ -167,14 +170,15 @@ exports.preview = (
 </div>
 );
 
-exports.code = (
+export const code = (
 <div className='demo-only'>
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('attachments')}></div>
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>

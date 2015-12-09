@@ -9,10 +9,9 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
-const {createChainedFunction} = componentUtil;
+import React from 'react';
+import componentUtil, { prefix as pf, createChainedFunction } from 'app_modules/ui/util/component';
+import _ from 'lodash';
 
 class Button extends React.Component {
   static propTypes = {
@@ -37,7 +36,7 @@ class Button extends React.Component {
   render() {
     const className = this.$getClassNameWithFlavor(pf('button'));
     const click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    const props = Object.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
+    const props = _.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
     return (
       <button className={className} {...props}>
         {this.props.children}
@@ -46,4 +45,4 @@ class Button extends React.Component {
   }
 }
 
-module.exports = Button;
+export default Button;

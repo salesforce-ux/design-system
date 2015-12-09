@@ -43,7 +43,7 @@
       background: $color-background-input;
 
       &:after {
-        @include square(.5rem);
+        @include square(0.5rem);
         content: '';
         position: absolute;
         top: 50%;
@@ -61,6 +61,7 @@
     }
 
     &[disabled] {
+      // scss-lint:disable NestingDepth
       cursor: not-allowed;
       user-select: none;
 

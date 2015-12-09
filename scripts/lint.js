@@ -8,20 +8,49 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-'use strict';
 
 import './helpers/setup';
 
 import path from 'path';
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import eslintPathFormatter from 'eslint-path-formatter';
 eslintPathFormatter.editor('sublime');
+import scsslint from 'gulp-scss-lint';
+import minimist from 'minimist';
+
+const argv = minimist(process.argv.slice(2));
+
+// Set default linters
+const defaultLinters = 'spaces,js';
+// Did the user override linters?
+// e.g. `npm run lint -- --linters sass,js`
+const linters = argv.linters || defaultLinters;
+
+// Assign linters to gulp tasks
+const isLinterActive = linter => linters.indexOf(linter) > -1;
+const tasks = ['sass', 'js', 'spaces'].filter(isLinterActive);
 
 const rootPath = p => path.resolve(__PATHS__.root, p);
 
-gulp.task('lintspaces', () =>
+gulp.task('sass', () =>
+  gulp.src([
+    'ui/**/*.scss',
+    '!ui/vendor/**/*',
+    'site/assets/styles/**/*.scss',
+    '!site/assets/styles/_vendor/**/*'
+  ], { cwd: __PATHS__.root })
+  .pipe(
+    scsslint({
+      'config': rootPath('.scss-lint.yml'),
+      'bundleExec': true
+    })
+  )
+);
+
+gulp.task('spaces', () =>
   gulp.src([
     '*.{js,json,md,yml,txt}',
     '.*',
@@ -39,12 +68,13 @@ gulp.task('lintspaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-gulp.task('eslint', () =>
+gulp.task('js', () =>
   gulp.src([
     '*.{js}',
-    'ui/**/*.{js,jsx}',
+    'app_modules/**/*.{js,jsx}',
+    'scripts/**/*.{js,jsx}',
     'site/**/*.{js,jsx}',
-    'scripts/**/*.{js,jsx}'
+    'ui/**/*.{js,jsx}'
   ], { cwd: __PATHS__.root })
   // eslint() attaches the lint output to the "eslint" property
   // of the file object so it can be used by other modules.
@@ -61,4 +91,4 @@ gulp.task('eslint', () =>
   .pipe(eslint.failAfterError())
 );
 
-gulp.task('default', ['lintspaces', 'eslint']);
+gulp.task('default', tasks);

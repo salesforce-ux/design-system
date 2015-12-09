@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 import Tooltip from './index.react';
 import Control from '../lib/control/flavors/popover';
 import Button from 'ui/components/buttons/index.react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 // ci server runs at different window size I think so we use this helper.
 function pxToNumber(x) {
@@ -65,7 +65,7 @@ xdescribe(`Tooltip`, () => {
       beforeEach(() => {
         control = scryRenderedDOMComponentsWithClass(cmp, 'clicky-mcduck')[0];
         Simulate.click(control, {});
-        popover = document.querySelectorAll('.popover')[1] // it clones the original;
+        popover = document.querySelectorAll('.popover')[1]; // it clones the original;
         wrapper = document.querySelectorAll('.popover-wrapper')[0];
       });
       it(`has the appropriate nubbin classname`, () => {

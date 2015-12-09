@@ -10,7 +10,8 @@
 
 
 .#{$css-prefix}assistive-text {
-  position:  absolute !important;
+  // scss-lint:disable ImportantRule
+  position: absolute !important;
   margin: -1px !important;
   border: 0 !important;
   padding: 0 !important;

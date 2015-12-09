@@ -9,13 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const React = require('react');
-const ComponentDocs = require('app_modules/site/components/page/component/docs');
-const componentUtil = require('app_modules/ui/util/component');
-const pf = componentUtil.prefix;
-const CodeClass = require('app_modules/site/components/code-class');
+import React from 'react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+import CodeClass from 'app_modules/site/components/code-class';
+
+export default (
   <ComponentDocs>
     <p className="site-text-introduction">Page level toasts are universally visible and are fixed to the top of the page even as the user scrolls. This ensures that the message is always delivered to the user.</p>
     <p>Toasts accept two parameters: duration and dismissible. Duration controls how long the toast is visible, with a minimum time of 5 seconds. Dismissible controls whether the X is visible on the toast to let the user close the toast.</p>

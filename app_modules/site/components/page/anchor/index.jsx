@@ -13,10 +13,12 @@ import React from 'react';
 import _ from 'lodash';
 import shared from 'app_modules/site/shared';
 import classNames from 'classnames';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import { Link } from 'react-router';
+import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
-import { Link } from 'react-router';
+import Img from 'app_modules/ui/img';
 
 class Anchor extends React.Component {
 
@@ -26,7 +28,7 @@ class Anchor extends React.Component {
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>
-              <img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
+              <Img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
             </span>
             <div className={pf('media__body')}>
               {this.renderBreadcrumbs()}

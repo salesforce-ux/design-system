@@ -39,7 +39,6 @@ const DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME
 const PRESERVE_COMMENTS_CONTAINING = /(normalize|http|https|license|flag)/ig;
 
 const now = new Date();
-const gitversion = process.env.GIT_VERSION;
 
 ///////////////////////////////////////////////////////////////
 // Helpers
@@ -48,7 +47,7 @@ const gitversion = process.env.GIT_VERSION;
 const distPath = path.resolve.bind(path, __PATHS__.dist);
 
 function isNotVendorFile(file) {
-  return /vendor/.test(file.path) === false
+  return /vendor/.test(file.path) === false;
 }
 
 function commentBanner(messages) {
@@ -181,9 +180,8 @@ async.series([
     gulp.src([
       path.resolve(__PATHS__.ui, '**/*.scss')
     ], { base: __PATHS__.ui })
-      // Not sure that we need the version number in each file.
-      // Makes diffing versions kind of tedious
-      //.pipe(gulpif(isNotVendorFile, gulpinsert.prepend(`/* ${globals.displayName} ${gitversion} */\n`)))
+      // Add the version
+      .pipe(gulpif(isNotVendorFile, gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`)))
       .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'scss')))
       .on('error', done)
       .on('finish', done);
@@ -319,7 +317,7 @@ async.series([
         }
         // Convert the array of paths to an array of file contents
         sassImports = sassImports.map(function(i) {
-          return path.resolve(__dirname, i + '.scss');
+          return path.resolve(__dirname, i);
         }).filter(function(i) {
           return fs.existsSync(i);
         }).map(function(i) {
@@ -356,6 +354,7 @@ async.series([
   (done) => {
     gulp.src(distPath('assets/styles/**/*.css'), { base: distPath() })
       .pipe(gulpinsert.prepend(license))
+      .pipe(gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
       .pipe(gulp.dest(distPath()))
       .on('error', done)
       .pipe(through.obj(function(file, enc, next) {
@@ -373,6 +372,7 @@ async.series([
       .pipe(gulprename({suffix: '.min'}))
       .on('error', done)
       .pipe(gulpinsert.prepend(license))
+      .pipe(gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
       .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
@@ -385,7 +385,7 @@ async.series([
     gulp.src(distPath('README-dist.txt'))
       .pipe(gulprename('README.md'))
       .on('error', done)
-      .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${gitversion} \n`))
+      .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${process.env.SLDS_VERSION} \n`))
       .on('error', done)
       .pipe(gulp.dest(distPath()))
       .on('error', done)
@@ -415,7 +415,7 @@ async.series([
       '.npmignore',
       'package.json'
     ].map(file => distPath(file));
-    async.each(src, rimraf, done)
+    async.each(src, rimraf, done);
   },
 
   /**
@@ -424,7 +424,7 @@ async.series([
   (done) => {
     if (isNpm) return done();
     return gulp.src(distPath('**/*'))
-      .pipe(gulpzip(globals.zipName(gitversion)))
+      .pipe(gulpzip(globals.zipName(process.env.SLDS_VERSION)))
       .on('error', done)
       .pipe(gulp.dest(distPath()))
       .on('error', done)

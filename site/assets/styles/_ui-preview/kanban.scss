@@ -43,7 +43,7 @@
     color: $color-text-inverse;
     font-size: $font-size-small;
     text-align: center;
-    letter-spacing: .9px;
+    letter-spacing: 0.9px;
 
     &:before {
       content: "";
@@ -99,7 +99,7 @@
   // To support rtl on the body
   &[dir=rtl] {
 
-    .kanban__stage-wrapper{
+    .kanban__stage-wrapper {
 
       &:before {
         right: -$spacing-medium;

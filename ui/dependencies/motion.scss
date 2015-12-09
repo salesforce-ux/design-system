@@ -72,3 +72,13 @@
 @mixin duration-paused {
   transition-duration: $duration-paused;
 }
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($param) {
+  animation: $param;
+}

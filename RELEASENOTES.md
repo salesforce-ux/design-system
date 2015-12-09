@@ -4,12 +4,15 @@
 ## Release 0.12.1 - December 8, 2015
 
 **SITE IA**
-- Improved status labels, associated to colors now
-- Improved Component Overview tables
+- Improve status labels. Now associated with colors and contain more information
+- Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Apply proper a11y requirements to tabs fixes [https://github.com/salesforce-ux/design-system/issues/107](https://github.com/salesforce-ux/design-system/issues/107)
-- Fix for inverse button-group bug
+- Apply proper accessibility requirements (aria-labelledby) to tabs [https://github.com/salesforce-ux/design-system/issues/107](https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
+- Fix for inverse button-group icon bug
+- Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
+- Revise horizontal dl for proper clearing. Change margin to padding. www.lightningdesignsystem.com/utilities/lists#description-horizontal
+- Mark all list utilities "dev-ready" - www.lightningdesignsystem.com/utilities/lists
 
 ## Release 0.12.0 - November 18, 2015
 

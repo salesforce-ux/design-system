@@ -171,25 +171,25 @@
   border-radius: $border-radius-pill;
 
   &--green {
-    @include gradient-horizontal(#9CE8BC, #48916C)
+    @include gradient-horizontal(#9ce8bc, #48916c)
   }
   &--orange {
-    @include gradient-horizontal(#FFCA73, #D67B03)
+    @include gradient-horizontal(#ffca73, #d67b03)
   }
   &--purple {
-    @include gradient-horizontal(#CCD0FF, #696CB4)
+    @include gradient-horizontal(#ccd0ff, #696cb4)
   }
   &--blue {
-    @include gradient-horizontal(#73BEFF, #2196ED)
+    @include gradient-horizontal(#73beff, #2196ed)
   }
   &--turquoise {
-    @include gradient-horizontal(#2ECBBE, #2EA193)
+    @include gradient-horizontal(#2ecbbe, #2ea193)
   }
   &--pink {
-    @include gradient-horizontal(#FA9FBB, #BF4C76)
+    @include gradient-horizontal(#fa9fbb, #bf4c76)
   }
   &--dark-blue {
-    @include gradient-horizontal(#284F8A, #16325c)
+    @include gradient-horizontal(#284f8a, #16325c)
   }
 }
 

@@ -30,11 +30,14 @@ linters:
     severity: error
   FinalNewline:
     enabled: false # Already checked by another task
-  HexNotation:
-    enabled: false
   HexLength:
     enabled: true
     style: short
+  HexNotation:
+    enabled: true
+    style: lowercase
+  HexValidation:
+    enabled: true
   IdSelector:
     enabled: true
     severity: error

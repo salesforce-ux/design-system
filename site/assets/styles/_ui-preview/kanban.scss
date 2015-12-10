@@ -30,7 +30,7 @@
       weight: $font-weight-light;
       size: $font-size-x-large;
     }
-    color: #10AA52; //$salem; - Getting an unbound variable error (then something about rgb) @TODO - no token
+    color: #10aa52; //$salem; - Getting an unbound variable error (then something about rgb) @TODO - no token
     text-align: center;
     border-left: 1px solid $color-border; // Used to extend the column border without going through the headings - may be a better solution
   }
@@ -141,7 +141,7 @@
   }
 
   &__closing {
-    color: #686C70;
+    color: #686c70;
     font-size: $font-size-small;
   }
 }

@@ -49,17 +49,19 @@
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;
   @for $currentLevel from 1 through $max-nesting-depth {
-    [aria-level="#{$currentLevel}"] > &__item
-     {
+    [aria-level="#{$currentLevel}"] > &__item {
         padding-left: ((($spacing-medium * $currentLevel) + ($spacing-x-small * $currentLevel)));
     }
   }
 
-  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon {
+  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
     transition: $duration-promptly transform ease-in-out;
     transform: rotate(0deg);
   }
-  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon {
+
+  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
     transition: $duration-promptly transform ease-in-out;
     transform: rotate(90deg);
   }

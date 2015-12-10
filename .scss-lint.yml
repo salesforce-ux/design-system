@@ -32,6 +32,9 @@ linters:
     enabled: false # Already checked by another task
   HexNotation:
     enabled: false
+  HexLength:
+    enabled: true
+    style: short
   IdSelector:
     enabled: true
     severity: error

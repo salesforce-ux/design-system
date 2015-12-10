@@ -44,7 +44,7 @@ class ModalExample extends React.Component {
           <Modal.Header
             closeButton={false}
           >
-            <span className={pf('icon__container p-around--x-small icon-action-share-thanks m-bottom--x-small')}>
+            <span className={pf('icon_container p-around--x-small icon-action-share-thanks m-bottom--x-small')}>
               <SvgIcon className={pf('icon icon-action-share-thanks icon--medium')} sprite="action" symbol="share_thanks" />
               <span className={pf('assistive-text')}>Share Thanks</span>
             </span>

@@ -15,7 +15,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A tree is visualization a structure heiarchy. A branch can be expanded or collapsed.</p>
+    <p className="site-text-introduction">A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.</p>
 
     <p>A tree is composed of two core elements <CodeClass className="tree" /> and <CodeClass className="tree__item" />. The tree wrapper, the outer most parent <code>ul</code>, will receive the class <CodeClass className="tree" />. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.</p>
 

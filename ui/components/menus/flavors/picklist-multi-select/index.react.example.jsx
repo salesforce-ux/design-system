@@ -138,7 +138,7 @@ export default (
       </ul>
     </div>
   </PickList>
-  <div className={pf('pill__container--bare')}>
+  <div className={pf('pill_container--bare')}>
     <span className={pf('pill')}>
       <span className={pf('pill__label')}>Option B</span>
       <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Option B" />

@@ -1,7 +1,7 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: tree-container
+    class: tree_container
     description: Sets <code>min-</code> and <code>max-width</code> on tree
     required: true
     applied: <code>&lt;div&gt;</code>

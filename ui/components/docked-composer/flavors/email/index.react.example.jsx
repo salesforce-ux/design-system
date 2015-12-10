@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const headerIcon = (
-  <span className={pf('icon__container icon-standard-email')}>
+  <span className={pf('icon_container icon-standard-email')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
     <span className={pf('assistive-text')}>Email Icon</span>
   </span>
@@ -61,7 +61,7 @@ export default (
             <div className={pf('grid grow p-horizontal--small')}>
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
-              <div className={pf('pill__container--bare show')}>
+              <div className={pf('pill_container--bare show')}>
                 <a href="#void" className={pf('pill')}>
                   <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
                   <span className={pf('pill__label')}>Lei Chan</span>
@@ -77,12 +77,12 @@ export default (
           <div className={pf('grid p-horizontal--small')}>
             <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerCc">Cc</label>
             <input className={pf('input--bare input--height')} id="emailComposerCc" type="text" />
-            <div className={pf('pill__container--bare hide')}></div>
+            <div className={pf('pill_container--bare hide')}></div>
           </div>
           <div className={pf('grid p-horizontal--small hide')}>
             <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerBcc">Bcc</label>
             <input className={pf('input--bare input--height')} id="emailComposerBcc" type="text" />
-            <div className={pf('pill__container--bare hide')}></div>
+            <div className={pf('pill_container--bare hide')}></div>
           </div>
 
           {/* Subject Line */}
@@ -200,7 +200,7 @@ export default (
                   <label className={pf('assistive-text')} htmlFor="object-lookup-1">Add related object</label>
                   <input id="object-lookup-1" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Add Related Object" />
                 </div>
-                <div className={pf('pill-container hide')}></div>
+                <div className={pf('pill_container hide')}></div>
               </div>
             </div>
           </div>

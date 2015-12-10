@@ -355,7 +355,7 @@ export default React.createClass({
     level = level ? level : 0;
     items = items.filter(this.shouldShowNavItem, this).map(item => {
       let listItemClass = item.get('separator') ?
-        'list__item has-divider' :
+        'list__item has-divider--top-space' :
         'list__item';
       let className = classNames(listItemClass, {
         'is-open': item.get('isOpen'),

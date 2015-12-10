@@ -13,7 +13,7 @@ linters:
   DeclarationOrder:
     enabled: false
   DuplicateProperty:
-    enabled: false
+    enabled: true
   ElsePlacement:
     enabled: false
   EmptyLineBetweenBlocks:

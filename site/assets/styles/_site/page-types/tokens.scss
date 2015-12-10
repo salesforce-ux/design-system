@@ -90,7 +90,7 @@
     width: 2rem;
     height: 2rem;
     vertical-align: middle;
-    background-color: white;
+    background-color: #ffffff;
   }
 
   &-token {
@@ -180,7 +180,7 @@
     top: 0;
     right: -$spacing-medium;
     bottom: 0;
-    border-right: 1px solid yellow;
+    border-right: 1px solid #ffff00;
     content: ' ';
   }
 }
@@ -221,7 +221,7 @@
         font-style: italic;
         background: $color-background;
         color: $color-text-weak;
-        content: 'Same as Previous Form Factor';
+        content: "Same as Previous Form Factor";
       }
     }
   }

@@ -10,7 +10,7 @@
 code {
   white-space: nowrap;
   font-family: Consolas, Monaco, 'Andale Mono', monospace, monospace;
-  color: black;
+  color: #000000;
 
   th & {
     font-weight: $font-weight-regular;
@@ -43,7 +43,7 @@ pre[class*="language-"] {
 
 
 [data-key="design-tokens"] {
-  color: purple;
+  color: #800080;
 }
 
 

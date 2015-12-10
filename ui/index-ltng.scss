@@ -9,13 +9,17 @@
 
 // Lightning Design System - Lightning Platform
 
+$static-icon-path: "../icons";
+$static-image-path: "../images";
+$static-font-path: "../fonts/webfonts";
+
 // Non-Scoped
 @import
 
   // Dependencies
   "design-tokens",
-  "dependencies/namespace",
-  "dependencies/pathing-reset",
+  "config",
+  "vendor/deprecate",
   "dependencies/index",
   "core/font";
 

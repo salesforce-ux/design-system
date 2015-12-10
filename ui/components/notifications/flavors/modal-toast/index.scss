@@ -9,7 +9,8 @@
 
 .#{$css-prefix}modal__header {
 
-  .#{$css-prefix}notify-container {
+  .#{$css-prefix}notify-container,
+  .#{$css-prefix}notify_container {
     position: absolute;
   }
 

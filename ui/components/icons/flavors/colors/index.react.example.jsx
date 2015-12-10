@@ -16,24 +16,24 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
   <div className='demo-only'>
-    <span className={pf('icon__container m-right--small')}>
+    <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
 
     </span>
-    <span className={pf('icon__container m-right--small')}>
+    <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container m-right--small')}>
+    <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-case m-right--small')}>
+    <span className={pf('icon_container icon-standard-case m-right--small')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
       <span className={pf('assistive-text')}>Case icon </span>
     </span>
-    <span className={pf('icon__container icon-standard-log-a-call')}>
+    <span className={pf('icon_container icon-standard-log-a-call')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
       <span className={pf('assistive-text')}>Log a Call icon </span>
     </span>
@@ -41,23 +41,23 @@ export const preview = (
 );
 export const code = (
   <div className='demo-only'>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
       <span className={pf('assistive-text')}>Lock Icon</span>
     </span>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-case')}>
+    <span className={pf('icon_container icon-standard-case')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
       <span className={pf('assistive-text')}>Case icon </span>
     </span>
-    <span className={pf('icon__container icon-standard-log-a-call')}>
+    <span className={pf('icon_container icon-standard-log-a-call')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
       <span className={pf('assistive-text')}>Log a Call icon </span>
     </span>

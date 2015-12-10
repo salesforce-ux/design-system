@@ -16,19 +16,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
   <div className='demo-only'>
-    <span className={pf('icon__container m-right--small')}>
+    <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container m-right--small icon-standard-account')}>
+    <span className={pf('icon_container m-right--small icon-standard-account')}>
       <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
       <span className={pf('assistive-text')}>Standard Account Icon</span>
     </span>
-    <span className={pf('icon__container m-right--small icon-standard-case')}>
+    <span className={pf('icon_container m-right--small icon-standard-case')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
       <span className={pf('assistive-text')}>Small Case Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-solution')}>
+    <span className={pf('icon_container icon-standard-solution')}>
       <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="solution" />
       <span className={pf('assistive-text')}>Large Solution Icon</span>
     </span>
@@ -36,19 +36,19 @@ export const preview = (
 );
 export const code = (
   <div className='demo-only'>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-account')}>
+    <span className={pf('icon_container icon-standard-account')}>
       <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
       <span className={pf('assistive-text')}>Standard Account Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-case')}>
+    <span className={pf('icon_container icon-standard-case')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
       <span className={pf('assistive-text')}>Small Case Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-solution')}>
+    <span className={pf('icon_container icon-standard-solution')}>
       <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="solution" />
       <span className={pf('assistive-text')}>Large Solution Icon</span>
     </span>

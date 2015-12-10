@@ -19,7 +19,7 @@ import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const dialingIcon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon-text-call icon--small')} sprite="utility" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
@@ -30,7 +30,7 @@ const image = (
   </span>
 );
 const recordIcon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
@@ -78,7 +78,7 @@ export default (
               </MediaObject>
             </div>
             <div className={pf('docked-composer__contacts grid grid--align-spread')}>
-              <div className={pf('pill-container')}>
+              <div className={pf('pill_container')}>
                 <span className={pf('pill')}>
                   <a href="#" className={pf('pill__label')}>Lei Chan</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />

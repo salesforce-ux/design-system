@@ -27,7 +27,7 @@ export default (
       <p className={pf('tile__title truncate')}>
         <a href="#">The Trammel Crow Company</a>
       </p>
-      <span className={pf('label')}>Today</span>
+      <span className={pf('badge')}>Today</span>
     </div>
     <div className={pf('tile__detail text-body--small')}>
       <p className={pf('truncate')}>Assignee</p>

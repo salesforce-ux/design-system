@@ -18,19 +18,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const iconHeader = (
-  <span className={pf('icon__container icon-standard-account')}>
+  <span className={pf('icon_container icon-standard-account')}>
     <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="account" />
     <span className={pf('assistive-text')}>Tesla Motors</span>
   </span>
 );
 const iconOpportunity = (
-  <span className={pf('icon__container icon-standard-opportunity')}>
+  <span className={pf('icon_container icon-standard-opportunity')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="opportunity" />
     <span className={pf('assistive-text')}>Opportunities</span>
   </span>
 );
 const iconCases = (
-  <span className={pf('icon__container icon-standard-case')}>
+  <span className={pf('icon_container icon-standard-case')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="case" />
     <span className={pf('assistive-text')}>Cases</span>
   </span>

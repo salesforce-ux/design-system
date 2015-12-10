@@ -25,7 +25,7 @@ const image = (
   </div>
 );
 const icon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
     <span className={pf('assistive-text')}>Powerpoint</span>
   </span>

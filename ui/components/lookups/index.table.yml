@@ -27,4 +27,4 @@ classes:
     description: Initializes lookup form element
     required: true
     applied: <code>&lt;div&gt;</code>
-    notes: Wraps <code>&lt;input&gt;</code> and <code>.{{cssPrefix}}pill-container</code>
+    notes: Wraps <code>&lt;input&gt;</code> and <code>.{{cssPrefix}}pill_container</code>

@@ -19,7 +19,7 @@ export const preview = (
 <div className='demo-only'>
 
   {/* Single */}
-  <div className={pf('pill__container')}>
+  <div className={pf('pill_container')}>
     <a href="#void" className={pf('pill')}>
       <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
       <span className={pf('pill__label')}>Single Pill</span>
@@ -28,7 +28,7 @@ export const preview = (
   </div>
 
   {/* Multiple */}
-  <div className={pf('pill__container')} style={{marginTop: '1rem'}}>
+  <div className={pf('pill_container')} style={{marginTop: '1rem'}}>
     <a href="#void" className={pf('pill')}>
       <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
       <span className={pf('pill__label')}>Pill One</span>
@@ -52,7 +52,7 @@ export const code = (
 <div className='demo-only'>
 
   {/* Single */}
-  <div className={pf('pill__container')}>
+  <div className={pf('pill_container')}>
     <a href="#void" className={pf('pill')}>
       <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
       <span className={pf('pill__label')}>Single Pill</span>
@@ -61,7 +61,7 @@ export const code = (
   </div>
 
   {/* Multiple */}
-  <div className={pf('pill__container')}>
+  <div className={pf('pill_container')}>
     <a href="#void" className={pf('pill')}>
       <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
       <span className={pf('pill__label')}>Pill One</span>

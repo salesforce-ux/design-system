@@ -9,11 +9,7 @@
 
 
 
-.#{$css-prefix}grid--align-spread {
-  justify-content: space-between;
-
-  .#{$css-prefix}col,
-  .#{$css-prefix}col--padded {
-    flex-grow: 0;
-  }
+.#{$css-prefix}grid--vertical-stretch {
+  align-items: stretch; // Single Row Alignment
+  align-content: stretch; // Multi Row Alignment
 }

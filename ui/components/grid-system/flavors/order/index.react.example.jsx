@@ -13,12 +13,22 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export default (
+export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid wrap')}>
-    <nav className={pf('col small-order--2 medium-order--1 large-order--3')}>1</nav>
-    <main className={pf('col small-order--3 medium-order--2 large-order--2')}>2</main>
-    <aside className={pf('col small-order--1 medium-order--3 large-order--1')}>3</aside>
+    <div className={pf('col--padded small-order--2 medium-order--1 large-order--3')}><span>1</span></div>
+    <div className={pf('col--padded small-order--3 medium-order--2 large-order--2')}><span>2</span></div>
+    <div className={pf('col--padded small-order--1 medium-order--3 large-order--1')}><span>3</span></div>
+  </div>
+</div>
+);
+
+export const code = (
+<div className='demo-only demo-container'>
+  <div className={pf('grid wrap')}>
+    <div className={pf('small-order--2 medium-order--1 large-order--3')}>1</div>
+    <div className={pf('small-order--3 medium-order--2 large-order--2')}>2</div>
+    <div className={pf('small-order--1 medium-order--3 large-order--1')}>3</div>
   </div>
 </div>
 );

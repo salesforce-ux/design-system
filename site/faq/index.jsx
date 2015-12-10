@@ -57,14 +57,14 @@ class Page extends React.Component {
   createContent() {
     this.addContentItem(
       `What is the ${g.displayName}?`,
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         It is collection of design patterns, components, and guidelines
         for creating unified UI in the Salesforce ecosystem.
       </p>
     );
     this.addContentItem(
       `Is any JavaScript included as part of the framework?`,
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         No. The {g.displayName} is a pure CSS framework that you
         can use with any front-end development framework you’d like,
         including Salesforce-specific technologies such as Visualforce
@@ -103,7 +103,7 @@ class Page extends React.Component {
     );
     this.addContentItem(
       `How can I design responsively using the ${g.displayName}?`,
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         We recommend that you make good use of our flexible and
         powerful <CTALink href="/components/grid-system" ctaEventName='responsive-grid'>Grid System</CTALink>,
         which will help you construct responsive layouts that
@@ -112,13 +112,13 @@ class Page extends React.Component {
     );
     this.addContentItem(
       `Can I use the ${g.displayName} together with Bootstrap or any other CSS framework?`,
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         Yes, but you have to use the {g.moduleName}-scoped.css. All CSS selectors are uniquely scoped and prefixed to prevent any collisions.
       </p>
     );
     this.addContentItem(
       `Is the Salesforce Sans font full Unicode?`,
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         Salesforce Sans contains 492 Latin script characters, and supports
         a wide range of languages. It doesn’t contain non-Latin characters,
         so in that sense it’s not &ldquo;full&rdquo; Unicode.
@@ -126,7 +126,7 @@ class Page extends React.Component {
     );
     this.addContentItem(
       `What CSS syntax does the ${g.displayName} use? Why do you have double hyphenations and underscores in your CSS classes?`,
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>
           The {g.displayName} CSS uses a standard class naming
           convention called &ldquo;BEM&rdquo; (Block-Element-Modifier):
@@ -150,7 +150,7 @@ class Page extends React.Component {
     );
     this.addContentItem(
       `How do I display SVG icons with Lightning Components?`,
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>
           Please review <Link to="/getting-started/lightning">Getting Started with Lightning</Link>.
         </p>
@@ -161,7 +161,7 @@ class Page extends React.Component {
     this.addContentItem(
       `How do I link to Visualforce static resources like stylesheets and icons?`,
       <div>
-        <p className={pf('container--medium')}>
+        <p className={pf('container--large')}>
           Visualforce uses a special syntax to reference your static resources, and
           you need to edit the code you cut and paste from the {g.displayName}.
           If you want to load the master stylesheet and you uploaded the {g.displayName} as
@@ -174,7 +174,7 @@ class Page extends React.Component {
 <apex:stylesheet value="{!URLFOR($Resource.${compactVersion}, 'assets/styles/${g.moduleName}-vf.css')}" />
           `}</CodeBlock>
         </div>
-        <p className={pf('container--medium')}>
+        <p className={pf('container--large')}>
           This is similar for icons, for example this User one from the Standard Icons sprite:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
@@ -184,7 +184,7 @@ class Page extends React.Component {
 </svg>
           `}</CodeBlock>
         </div>
-        <p className={pf('container--medium')}>
+        <p className={pf('container--large')}>
           <em>Note: XML namespaces are required to be added to the <code>html</code> element:</em>
         </p>
         <div className={pf('site-code--content scrollable--x')}>
@@ -201,7 +201,7 @@ class Page extends React.Component {
     this.addContentItem(
       `How do I link to Lightning static resources like stylesheets and icons?`,
       <div>
-        <p className={pf('container--medium')}>
+        <p className={pf('container--large')}>
           Lightning Components also use a special syntax to reference your static resources, and
           you need edit the code you cut and paste from the {g.displayName}.
           If you want to load the master stylesheet and you uploaded the {g.displayName} as

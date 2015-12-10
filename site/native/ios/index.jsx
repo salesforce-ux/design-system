@@ -37,7 +37,7 @@ export default (
     </Sticky>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
 
         <p className="site-text-introduction">
           Use our iOS integration to style your native iOS applications
@@ -68,7 +68,7 @@ pod 'DesignSystem'
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>Then run:</p>
       </div>
 
@@ -80,7 +80,7 @@ pod install
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <Heading type="h2" id="usage" className={pf(`site-text-heading--large`)}>
           Usage
         </Heading>

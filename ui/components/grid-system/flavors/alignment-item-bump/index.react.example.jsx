@@ -12,32 +12,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
 export const preview = (
-  <div className='demo-only demo-container'>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>col</div>
-      <div className={pf('col')}>col</div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')} style={{marginTop: '2rem'}}>
-      <div className={pf('col--padded')}><span>col--padded</span></div>
-      <div className={pf('col--padded')}><span>col--padded</span></div>
-    </div>
+<div className='demo-only demo-container'>
+  <div className={pf('grid')}>
+    <div><span className={pf('box box--small theme--shade m-right--large')}>1</span></div>
+    <div><span className={pf('box box--small theme--shade m-right--large')}>2</span></div>
+    <div><span className={pf('box box--small theme--shade m-right--large')}>3</span></div>
+    <div><span className={pf('box box--small theme--shade m-right--large')}>4</span></div>
+    <div className={pf('col--bump-left')}><span className={pf('box box--small theme--shade m-right--large')}>5</span></div>
+    <div><span className={pf('box box--small theme--shade')}>6</span></div>
   </div>
+</div>
 );
 
 export const code = (
-  <div className='demo-only demo-container'>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>col</div>
-      <div className={pf('col')}>col</div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')}>
-      <div className={pf('col--padded')}>col--padded</div>
-      <div className={pf('col--padded')}>col--padded</div>
-    </div>
+<div className='demo-only demo-container'>
+  <div className={pf('grid')}>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div className={pf('col--bump-left')}>5</div>
+    <div>6</div>
   </div>
+</div>
 );
-

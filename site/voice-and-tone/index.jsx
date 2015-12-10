@@ -17,7 +17,7 @@ import globals from 'app_modules/global';
 import { Link } from 'react-router';
 
 export default (
-  <PageBody anchorTitle="Voice & Tone" contentClassName={pf('container--medium')}>
+  <PageBody anchorTitle="Voice & Tone" contentClassName={pf('container--large')}>
     <p className="site-text-introduction">
       Your custom applications shouldn’t just look and act like the Salesforce
       app – they should sound like it too.

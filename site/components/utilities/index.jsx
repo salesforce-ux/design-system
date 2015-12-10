@@ -29,7 +29,7 @@ const Utilities = React.createClass({
 });
 
 export default (
-  <PageBody anchorTitle="Utilities" contentClassName={pf('site-text-longform container--medium')}>
+  <PageBody anchorTitle="Utilities" contentClassName={pf('site-text-longform container--large')}>
     <Utilities />
   </PageBody>
 );

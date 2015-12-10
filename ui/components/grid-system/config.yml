@@ -6,7 +6,12 @@ flavors:
   - horizontal-alignment-center
   - horizontal-alignment-space
   - horizontal-alignment-spread
-  - vertical-alignment
+  - horizontal-alignment-end
+  - vertical-alignment-center
+  - vertical-alignment-end
+  - vertical-alignment-item
+  - vertical-stretch
+  - alignment-item-bump
   - order
 dependencies:
   - helpers/sizing

@@ -12,32 +12,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
 export const preview = (
-  <div className='demo-only demo-container'>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>col</div>
-      <div className={pf('col')}>col</div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')} style={{marginTop: '2rem'}}>
-      <div className={pf('col--padded')}><span>col--padded</span></div>
-      <div className={pf('col--padded')}><span>col--padded</span></div>
-    </div>
+<div className='demo-only demo-container'>
+  <div className={pf('grid grid--vertical-align-end')} style={{height: '250px'}}>
+    <div className={pf('col--padded')}><span>Content determines the width unless otherwise set</span></div>
+    <div className={pf('col--padded')}><span>1</span></div>
+    <div className={pf('col--padded')}><span>2</span></div>
+    <div className={pf('col--padded')}><span>3</span></div>
   </div>
+</div>
 );
 
 export const code = (
-  <div className='demo-only demo-container'>
-    <div className={pf('grid')}>
-      <div className={pf('col')}>col</div>
-      <div className={pf('col')}>col</div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')}>
-      <div className={pf('col--padded')}>col--padded</div>
-      <div className={pf('col--padded')}>col--padded</div>
-    </div>
+<div className='demo-only demo-container'>
+  <div className={pf('grid grid--vertical-align-end')}>
+    <div>Content determines the width unless otherwise set</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
   </div>
+</div>
 );
-

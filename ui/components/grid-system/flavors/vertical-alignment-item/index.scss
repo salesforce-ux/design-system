@@ -9,11 +9,25 @@
 
 
 
-.#{$css-prefix}grid--align-spread {
-  justify-content: space-between;
+.#{$css-prefix}align-top {
+  vertical-align: top;
+  align-self: flex-start;
+}
 
-  .#{$css-prefix}col,
-  .#{$css-prefix}col--padded {
-    flex-grow: 0;
+.#{$css-prefix}align-middle {
+  vertical-align: middle;
+  align-self: center;
+}
+
+.#{$css-prefix}align-bottom {
+  vertical-align: bottom;
+  align-self: flex-end;
+}
+
+.#{$css-prefix}align-content-center {
+  @include deprecate("2.0.0") {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
   }
 }

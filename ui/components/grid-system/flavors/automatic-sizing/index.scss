@@ -21,8 +21,14 @@
 
   &--vertical {
     flex-direction: column;
+
+    // New in 1.0.0
+    &.#{$css-prefix}grid--reverse {
+      flex-direction: column-reverse;
+    }
   }
 
+  // New in 1.0.0
   &--reverse {
     flex-direction: row-reverse;
   }
@@ -75,7 +81,30 @@
   }
 }
 
+// Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}col-rule {
+
+  @include deprecate("2.0.0") {
+    &--left {
+      border-left: 1px solid $color-border-separator;
+    }
+
+    &--right {
+      border-right: 1px solid $color-border-separator;
+    }
+
+    &--top {
+      border-top: 1px solid $color-border-separator;
+    }
+
+    &--bottom {
+      border-bottom: 1px solid $color-border-separator;
+    }
+  }
+}
+
+// New in 1.0.0
+.#{$css-prefix}col--rule {
 
   &--left {
     border-left: 1px solid $color-border-separator;
@@ -94,30 +123,11 @@
   }
 }
 
-.#{$css-prefix}col-bump {
-
-  &--left {
-    margin-left: auto;
-  }
-
-  &--right {
-    margin-right: auto;
-  }
-
-  &--top {
-    margin-top: auto;
-  }
-
-  &--bottom {
-    margin-right: auto;
-  }
-}
-
 .#{$css-prefix}wrap {
   @include flex-wrap(true);
 }
 
-// Deprecate
+// Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}nowrap {
   @include flex-item(expand);
   @include flex-wrap(false);

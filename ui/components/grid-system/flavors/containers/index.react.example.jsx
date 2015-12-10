@@ -20,25 +20,25 @@ export const preview = (
   <div className={pf('container--small grid')}>
     <div className={pf('col')}>Max Width: 480px</div>
   </div>
-  <div className={pf('container--medium')}>
+  <div className={pf('container--medium')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Max Width: 768px</div>
   </div>
-  <div className={pf('container--large')}>
+  <div className={pf('container--large')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Max Width: 1024px</div>
   </div>
-  <div className={pf('container--x-large')}>
+  <div className={pf('container--x-large')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Max Width: 1280px</div>
   </div>
-  <div className={pf('container--fluid')}>
+  <div className={pf('container--fluid')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Width 100%</div>
   </div>
-  <div className={pf('container--left container--small')}>
+  <div className={pf('container--left container--small')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Left Aligned</div>
   </div>
-  <div className={pf('container--center container--small')}>
+  <div className={pf('container--center container--small')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Center Aligned</div>
   </div>
-  <div className={pf('container--right container--small')}>
+  <div className={pf('container--right container--small')} style={{marginTop: '1rem'}}>
     <div className={pf('col')}>Right Aligned</div>
   </div>
   </div>

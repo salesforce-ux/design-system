@@ -9,8 +9,8 @@
 
 
 
-.#{$css-prefix}grid--align-spread {
-  justify-content: space-between;
+.#{$css-prefix}grid--align-end {
+  justify-content: flex-end;
 
   .#{$css-prefix}col,
   .#{$css-prefix}col--padded {

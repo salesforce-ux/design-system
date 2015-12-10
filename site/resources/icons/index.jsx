@@ -108,7 +108,7 @@ class Icons extends React.Component {
             </div>
           </Sticky>
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
-            <p className={pf('site-text-introduction m-bottom--reset container--medium')}>
+            <p className={pf('site-text-introduction m-bottom--reset container--large')}>
               Choose the icon you need from this page, then follow the implementation instructions on the <Link to="/components/icons/">icon component page</Link>. If you are building a Lightning Component, you may require an
               additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName='lightning-svg-icon-helper'>Lightning helper component</CTALink> to use&nbsp;SVGs.
             </p>
@@ -127,7 +127,7 @@ class Icons extends React.Component {
             {`${category.name} Icons`}
           </Heading>
           {/* This is only outputing text without a paragraph. Can we fix? */}
-          <div className={pf('container--medium')} dangerouslySetInnerHTML={{__html: category.description}} />
+          <div className={pf('container--large')} dangerouslySetInnerHTML={{__html: category.description}} />
           <ul className={pf(classNames(`${category.name}__icons`,'m-top--x-large grid wrap icon-grid'))}>
             {this.renderIcons(category)}
           </ul>

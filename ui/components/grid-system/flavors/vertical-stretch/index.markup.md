@@ -1,0 +1,1 @@
+By default, grid items don't stretch vertically, you can apply the class `.{{cssPrefix}}grid--vertical-stretch` to get this outcome. Note, to vertically align elements on a cross-axis of a `.{{cssPrefix}}grid`, the elements need available vertical white space. This is usually achieved by having a height applied to the `.{{cssPrefix}}grid`.

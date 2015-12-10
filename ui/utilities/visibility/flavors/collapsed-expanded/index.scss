@@ -14,7 +14,21 @@
   overflow: hidden;
 }
 
+.#{$css-prefix}collapsed {
+  @include deprecate("2.0.0") {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
 .#{$css-prefix}is-expanded {
   height: auto;
   overflow: visible;
+}
+
+.#{$css-prefix}expanded {
+  @include deprecate("2.0.0") {
+    height: auto;
+    overflow: visible;
+  }
 }

@@ -152,7 +152,7 @@
 
 
 // Striped Gradient
-@mixin gradient-striped($stripe-color: rgba(#000000, 0.035), $angle: 45deg, $color: null) {
+@mixin gradient-striped($stripe-color: rgba(#000, 0.035), $angle: 45deg, $color: null) {
 
   @if $color != null {
     background-color: $color;

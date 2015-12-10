@@ -147,7 +147,7 @@
     top: $border-width-thick;
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
-    border: $border-width-thick solid #ffffff;
+    border: $border-width-thick solid #fff;
     border-left: 0;
     border-bottom: 0;
     background-clip: padding-box;

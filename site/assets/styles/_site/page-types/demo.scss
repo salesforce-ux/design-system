@@ -45,14 +45,14 @@
     z-index: 1;
     // Theme
     background: $color-background-alt-inverse;
-    color: #ffffff;
+    color: #fff;
 
     .#{$css-prefix}list__item {
       margin: 0 $spacing-x-small;
     }
 
     a {
-      color: #ffffff;
+      color: #fff;
       display: block;
       padding: $spacing-x-small;
       text-decoration: none;

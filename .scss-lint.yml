@@ -8,7 +8,7 @@ linters:
   BorderZero:
     enabled: true
   ColorKeyword:
-    enabled: false
+    enabled: true
   ColorVariable:
     enabled: false
   Comment:

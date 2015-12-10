@@ -41,19 +41,6 @@
       @include tree-item-hover;
     }
   }
-  // Depth 1
-  &__group > &__item > a {
-    display: inline-block;
-    padding-left: ($spacing-medium + $spacing-x-small); // width of button + gutter
-  }
-  // Depth 2
-  .#{$css-prefix}nested &__branch > &__item {
-    padding-left: (($spacing-medium * 2) + $spacing-x-small);
-  }
-  // Depth 3
-  .#{$css-prefix}nested .#{$css-prefix}nested &__item > a {
-    padding-left: (($spacing-medium * 3) + ($spacing-x-small * 2));
-  }
 
   .#{$css-prefix}is-selected {
     @include tree-item-selected;
@@ -64,7 +51,23 @@
     @include tree-item-hover;
   }
 
-  .#{$css-prefix}is-open .#{$css-prefix}button__icon {
+  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+  $max-nesting-depth: 20 !default;
+  @for $currentLevel from 1 through $max-nesting-depth {
+    [aria-level="#{$currentLevel}"] > &__item {
+        padding-left: ((($spacing-medium * $currentLevel) + ($spacing-x-small * $currentLevel)));
+    }
+  }
+
+  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
+    transition: $duration-promptly transform ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
+    transition: $duration-promptly transform ease-in-out;
     transform: rotate(90deg);
   }
 
@@ -75,4 +78,5 @@
   .#{$css-prefix}pill {
     margin-left: $spacing-small;
   }
+
 }

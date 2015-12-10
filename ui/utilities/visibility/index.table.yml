@@ -36,14 +36,25 @@ classes:
     applied: the hidden element
     notes: This is toggled on the element. <code>.{{cssPrefix}}transition-hide</code> class is removed and <code>.{{cssPrefix}}transition-show</code> is added.
   -
-    class: collapsed
+    class: is-collapsed
     description: Hides elements inside a parent
     applied: Any containing element
     notes: This hides the elements contained inside the container by controlling the height and overflow properties.
   -
+    class: is-expanded
+    description: Shows the elements inside the parent
+    applied: the collapsed element
+  -
+    class: collapsed
+    description: Hides elements inside a parent
+    applied: Any containing element
+    notes: This hides the elements contained inside the container by controlling the height and overflow properties.
+    deprecated: true
+  -
     class: expanded
     description: Shows the elements inside the parent
     applied: the collapsed element
+    deprecated: true
   -
     class: assistive-text
     description: Hides an element yet enables a screen reader to read the element that is hidden

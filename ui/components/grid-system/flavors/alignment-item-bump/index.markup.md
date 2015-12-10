@@ -1,1 +1,1 @@
-If you want your columns to grow from the the center axis, apply the class `{{cssPrefix}}grid--align-center` to your main `{{cssPrefix}}grid` row.
+To "bump" a single grid item or a grid item plus the precedding grid items that follow, apply the class `.{{cssPrefix}}col--bump-{direction}`, with `{direction}` being either `left`, `right`, `top` or `bottom` to a grid item.

@@ -13,7 +13,7 @@
   justify-content: flex-end;
 
   .#{$css-prefix}col,
-  .#{$css-prefix}col--padded {
+  [class*="#{$css-prefix}col--padded"] {
     flex-grow: 0;
   }
 }

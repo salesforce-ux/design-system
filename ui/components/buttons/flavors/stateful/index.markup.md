@@ -1,6 +1,6 @@
 The stateful button requires the `.{{cssPrefix}}button--neutral` class in addition to the `.{{cssPrefix}}button` class.
 
-It uses the class `.{{cssPrefix}}not-selected` in its initial state. When the user activates the button, use JavaScript to toggle the class to `.{{cssPrefix}}is-selected`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The svg will have the `.{{cssPrefix}}button__icon--stateful` class as well as the `.{{cssPrefix}}button__icon--left` class setting the icon on the left.
+It uses the class `.{{cssPrefix}}not-selected` in its initial state. When the user activates the button, use JavaScript to toggle the class to `.{{cssPrefix}}is-selected`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `.{{cssPrefix}}button__icon--stateful` class as well as the `.{{cssPrefix}}button__icon--left` class setting the icon on the left.
 
 <h4 class="site-text-heading--label">Accessibility</h4>
 

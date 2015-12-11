@@ -62,7 +62,7 @@ $grid: (
 ///  $css-prefix: '';
 ///
 /// @example scss Use in a class name
-///  .#{$css-prefix}foo { É } // outputs .slds-foo { É }
+///  .#{$css-prefix}foo { ... } // outputs .slds-foo { ... }
 ///
 /// @type String
 $css-prefix: 'slds-' !default;
@@ -71,7 +71,7 @@ $css-prefix: 'slds-' !default;
 /// Wraps a version of normalize
 ///
 /// @example scss
-///  #{$reset-wrapping-class} .foo { É } // outputs .slds .foo { É }
+///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
 ///
 /// @type String
 $reset-wrapping-class: '.slds' !default;

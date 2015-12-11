@@ -161,7 +161,7 @@ export function getConfig (options) {
  * @param {function} callback
  */
 export function watch (options, callback) {
-  console.log('Compiling Webpack');
+  console.log('Watching webpack…');
   const config = getConfig();
   const compiler = webpack(config);
   compiler.watch(100, (err, stats) => {
@@ -176,7 +176,7 @@ export function watch (options, callback) {
  * @param {function} callback
  */
 export function compile (options, callback) {
-  console.log('Compiling Webpack');
+  console.log('Compiling webpack');
   const config = getConfig(options);
   const compiler = webpack(config);
   compiler.run((err, stats) => {

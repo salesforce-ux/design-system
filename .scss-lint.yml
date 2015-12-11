@@ -13,7 +13,7 @@ linters:
     enabled: false
   Comment:
     enabled: true
-    allowed: '\* Note\: '
+    allowed: '\* Note\: |Copyright'
   DeclarationOrder:
     enabled: false
   DuplicateProperty:

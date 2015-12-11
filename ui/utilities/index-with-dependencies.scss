@@ -11,6 +11,7 @@
 
 @import
   "../design-tokens",
-  "../dependencies/namespace",
+  "../config",
+  "../vendor/deprecate",
   "../dependencies/index",
   "./index";

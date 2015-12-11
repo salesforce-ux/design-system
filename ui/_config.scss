@@ -7,13 +7,74 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/// Version number
+/// Helps deprecating pieces of the codebase
+/// Note: update at each release
+///
+/// For internal use only
+///
+/// @type String
+/// @access private
+$app-version: '1.1.0';
 
 
-// Icon Path
-$static-icon-path: "../icons" !default;
+/// Icon Path
+///
+/// @type String
+$static-icon-path: "/assets/icons" !default;
 
-// Image Path
-$static-image-path: "../images" !default;
+/// Image Path
+///
+/// @type String
+$static-image-path: "/assets/images" !default;
 
-// Font Path
-$static-font-path: "../fonts/webfonts" !default;
+/// Font Path
+///
+/// @type String
+$static-font-path: "/assets/fonts/webfonts" !default;
+
+/// Grid
+///
+/// @type map
+$grid: (
+  "x-small": (
+    "breakpoint": $mq-x-small,
+    "columns": 4,
+  ),
+  "small": (
+    "breakpoint": $mq-small,
+    "columns": 8,
+  ),
+  "medium": (
+    "breakpoint": $mq-medium,
+    "columns": 12,
+  ),
+  "large": (
+    "breakpoint": $mq-large,
+    "columns": 12
+  )
+) !default;
+
+/// CSS Prefix
+/// Will prefix all CSS classes
+///
+/// @example scss Compile without prefix
+///  $css-prefix: null;
+///
+/// @example scss Use in a class name
+///  .#{$css-prefix}foo {…} // outputs .slds-foo {…}
+///
+/// @type String
+$css-prefix: "slds-" !default;
+
+/// Reset wrapping class
+/// Wraps a version of normalize
+///
+/// @example scss Compile without prefix
+///  $css-prefix: null;
+///
+/// @example scss Use in a class name
+///  .#{$css-prefix}foo {…} // outputs .slds-foo {…}
+///
+/// @type String
+$reset-wrapping-class: ".slds" !default;

@@ -18,6 +18,7 @@
     // Code style
     "indent": [2, 2],
     "quotes": [2, "single"],
+    "jsx-quotes": [2, "prefer-double"],
     "comma-spacing": [0],
     "consistent-return": [0],
     "curly": [2, "multi-line"],

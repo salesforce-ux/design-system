@@ -24,7 +24,7 @@
       position: relative;
       cursor: help;
 
-      & + figure {
+      + figure {
         font-size: $font-size-medium;
         line-height: $line-height-text;
       }

@@ -10,6 +10,8 @@
 
 .#{$css-prefix}popover--tooltip {
   background: $color-background-inverse;
+  width: auto;
+  max-width: $size-medium;
   border: none;
 
   .#{$css-prefix}popover__body {

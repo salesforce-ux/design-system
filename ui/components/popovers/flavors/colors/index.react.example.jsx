@@ -17,22 +17,22 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
   <div className={pf('demo-only')}>
-    <div className={pf('popover nubbin--left theme--info')} role="dialog">
+    <div className={pf('popover nubbin--left theme--info')} role="dialog" style={{ display: 'block' }}>
       <div className={pf('popover__body')}>
         Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
       </div>
     </div>
-    <div className={pf('popover nubbin--left theme--error')} role="dialog" style={{ marginTop: '1rem' }}>
+    <div className={pf('popover nubbin--left theme--error')} role="dialog" style={{ marginTop: '1rem', display: 'block' }}>
       <div className={pf('popover__body')}>
         Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
       </div>
     </div>
-    <div className={pf('popover nubbin--left theme--warning')} role="dialog" style={{ marginTop: '1rem' }}>
+    <div className={pf('popover nubbin--left theme--warning')} role="dialog" style={{ marginTop: '1rem', display: 'block' }}>
       <div className={pf('popover__body')}>
         Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
       </div>
     </div>
-    <div className={pf('popover nubbin--left theme--success')} role="dialog" style={{ marginTop: '1rem' }}>
+    <div className={pf('popover nubbin--left theme--success')} role="dialog" style={{ marginTop: '1rem', display: 'block' }}>
       <div className={pf('popover__body')}>
         Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
       </div>

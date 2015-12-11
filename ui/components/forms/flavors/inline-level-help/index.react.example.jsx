@@ -15,18 +15,45 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
+export const preview = (
 <div className={pf('demo-only demo-only--top grid grid--align-center')}>
   <div className={pf('form--inline')}>
+    <div className={pf('form-element__icon m-right--medium')}>
+      <a href="#void">
+        <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility" symbol="warning" />
+        <span className={pf('assistive-text')}>Review the Following Errors</span>
+      </a>
+      <div className={pf('popover nubbin--bottom theme--error')} role="alert" aria-live="polite" style={{position: 'absolute', bottom: '100%', left: '50%', transform: 'translateX(-50%)', marginBottom: '1rem'}}>
+        <div className={pf('popover__body text-longform')}>
+          <p><strong>Review the following errors</strong></p>
+          <ul>
+            <li>Zip code is invalid</li>
+            <li>No. of employees is invalid</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div className={pf('form-element')}>
-      <a href="#void" className={pf('button button--icon-bare theme--error m-right--xx-small')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility"
+      <Button type="button" flavor="neutral">Cancel</Button>
+    </div>
+    <div className={pf('form-element')}>
+      <Button type="button" flavor="brand">Save</Button>
+    </div>
+  </div>
+</div>
+);
+
+export const code = (
+<div className={pf('demo-only')}>
+  <div className={pf('form--inline')}>
+    <div className={pf('form-element')}>
+      <a href="#void">
+        <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
         symbol="warning" />
         <span className={pf('assistive-text')}>Review the Following Errors</span>
       </a>
-      <div className={pf('popover nubbin--left theme--error')} role="dialog">
-        <div className={pf('popover__body')}>
+      <div className={pf('popover nubbin--bottom theme--error')} role="alert" aria-live="polite" style={{position: 'absolute', bottom: '100%', left: '50%', transform: 'translateX(-50%)', marginBottom: '1rem'}}>
+        <div className={pf('popover__body text-longform')}>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
         </div>
       </div>

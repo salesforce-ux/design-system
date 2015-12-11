@@ -264,10 +264,11 @@
 @mixin popover($color: $color-background-alt, $shadow: null) {
   position: relative;
   border-radius: $border-radius-medium;
-  max-width: $size-medium;
+  width: $size-medium;
   min-height: ($square-tooltip-nubbin * 2);
   z-index: $z-index-dialog;
   background-color: $color;
+  display: inline-block;
 
   @if $shadow != null {
     box-shadow: $shadow;

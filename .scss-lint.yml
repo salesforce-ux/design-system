@@ -44,7 +44,7 @@ linters:
     enabled: true
     style: include_zero
   MergeableSelector:
-    enabled: false
+    enabled: true
   NameFormat:
     enabled: false
   NestingDepth:

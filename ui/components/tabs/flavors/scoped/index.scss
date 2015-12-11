@@ -24,10 +24,10 @@
     .#{$css-prefix}tabs__item {
       @include tabs-item;
       position: relative;
-      margin-bottom: -#{$border-width-thin};
+      margin-bottom: ($border-width-thin * -1);
 
       + .#{$css-prefix}tabs__item {
-        margin-left: -#{$border-width-thin};
+        margin-left: ($border-width-thin * -1);
       }
 
       &:first-child > a {
@@ -79,10 +79,10 @@
 .#{$css-prefix}tabs--scoped__item {
   @include tabs-item;
   position: relative;
-  margin-bottom: -#{$border-width-thin};
+  margin-bottom: ($border-width-thin * -1);
 
   + .#{$css-prefix}tabs--scoped__item {
-    margin-left: -#{$border-width-thin};
+    margin-left: ($border-width-thin * -1);
   }
 
   &:first-child .#{$css-prefix}tabs--scoped__link {

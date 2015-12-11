@@ -110,7 +110,7 @@
       }
 
       &.#{$css-prefix}dropdown--left {
-        left: -#{$spacing-medium};
+        left: ($spacing-medium * -1);
 
         &:before,
         &:after {
@@ -120,7 +120,7 @@
       }
 
       &.#{$css-prefix}dropdown--right {
-        right: -#{$spacing-medium};
+        right: ($spacing-medium * -1);
 
         &:before,
         &:after {
@@ -262,11 +262,11 @@
   > [class*="#{$css-prefix}button--icon"] {
 
     ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
-      left: -#{$spacing-medium};
+      left: ($spacing-medium * -1);
     }
 
     ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
-      right: -#{$spacing-medium};
+      right: ($spacing-medium * -1);
     }
   }
 }

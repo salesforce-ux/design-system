@@ -41,7 +41,7 @@
   }
 
   .#{$css-prefix}button {
-    border: none;
+    border: 0;
   }
 
   .site-text-heading--large,
@@ -163,7 +163,7 @@
 .hr {
   width: 50%;
   height: 1px;
-  border: none;
+  border: 0;
   margin: {
     left: auto;
     right: auto;

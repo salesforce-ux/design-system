@@ -29,7 +29,7 @@
 
 .#{$css-prefix}input--bare {
   background-color: transparent;
-  border: none;
+  border: 0;
   color: $color-text-default;
 
   &:focus,

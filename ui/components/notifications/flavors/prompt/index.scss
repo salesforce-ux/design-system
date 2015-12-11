@@ -10,7 +10,7 @@
 .#{$css-prefix}modal--prompt {
 
   .#{$css-prefix}modal__header {
-    border-bottom: none;
+    border-bottom: 0;
   }
 
   .#{$css-prefix}modal__content {
@@ -19,7 +19,7 @@
   }
 
   .#{$css-prefix}modal__footer {
-    border-top: none;
+    border-top: 0;
     text-align: center;
   }
 

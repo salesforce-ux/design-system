@@ -52,7 +52,7 @@
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
 
-    @include deprecate("2.0.0") {
+    @include deprecate('2.0.0') {
       fill: $color-text-icon-default;
     }
   }

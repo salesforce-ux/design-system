@@ -80,7 +80,8 @@ linters:
     enabled: true
     allow_single_line_padding: true
   StringQuotes:
-    enabled: false
+    enabled: true
+    style: single_quotes
   TrailingSemicolon:
     enabled: true
   UnnecessaryParentReference:

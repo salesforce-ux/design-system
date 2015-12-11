@@ -11,7 +11,7 @@
 // Deprecate in 0.15.0
 .#{$css-prefix}list--horizontal.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
 
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
     @include dot-separator;
   }
 }

@@ -10,7 +10,7 @@
 .#{$css-prefix}tree-container,
 .#{$css-prefix}tree_container {
 
-  @include deprecate("2.0.0");
+  @include deprecate('2.0.0');
   min-width: rem(120px);
   max-width: rem(400px);
 

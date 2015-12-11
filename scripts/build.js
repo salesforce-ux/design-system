@@ -12,12 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import './helpers/setup';
 
 import fs from 'fs';
-import rimraf from 'rimraf';
-import tasks from './tasks';
+import minimist from 'minimist';
+import runTasks from './tasks';
 
-rimraf.sync(__PATHS__.www);
-rimraf.sync(__PATHS__.generated);
-rimraf.sync(__PATHS__.tmp);
+const argv = minimist(process.argv.slice(2));
 
-fs.mkdirSync(__PATHS__.tmp);
-tasks.build();
+if (argv.clean === true) {
+  require('./clean');
+  fs.mkdirSync(__PATHS__.tmp);
+}
+
+runTasks(argv, err => {
+  if (err) throw err;
+});

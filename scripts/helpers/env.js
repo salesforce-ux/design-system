@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import packageJSON from '../../package.json';
 
-exports.getDefaultEnvVars = function () {
+export function getDefaultEnvVars () {
   return {
     'DEFAULT_USER_TYPE': 'external',
     'INTERNAL_RELEASE_ID': '',

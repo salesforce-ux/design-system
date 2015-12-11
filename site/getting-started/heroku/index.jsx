@@ -28,7 +28,7 @@ export default (
         <h3 className="site-text-heading--label">Steps</h3>
         <ul className={pf('list--vertical has-block-links')}>
           <li>
-            <a href='#step-1-initialize-project'> 
+            <a href='#step-1-initialize-project'>
               1. Initialize your project
             </a>
           </li>

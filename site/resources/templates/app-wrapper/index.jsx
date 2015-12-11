@@ -17,7 +17,3 @@ export default (
     <DatePicker />
   </div>
 );
-
-export let script = `
-  $('div').remove()
-`

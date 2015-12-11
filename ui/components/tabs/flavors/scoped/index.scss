@@ -19,15 +19,15 @@
     border-radius: $border-radius-medium $border-radius-medium 0 0;
   }
 
-  @include deprecate("0.20.0") {
+  @include deprecate("2.0.0") {
 
     .#{$css-prefix}tabs__item {
       @include tabs-item;
       position: relative;
-      margin-bottom: -#{$border-width-thin};
+      margin-bottom: ($border-width-thin * -1);
 
       + .#{$css-prefix}tabs__item {
-        margin-left: -#{$border-width-thin};
+        margin-left: ($border-width-thin * -1);
       }
 
       &:first-child > a {
@@ -79,10 +79,10 @@
 .#{$css-prefix}tabs--scoped__item {
   @include tabs-item;
   position: relative;
-  margin-bottom: -#{$border-width-thin};
+  margin-bottom: ($border-width-thin * -1);
 
   + .#{$css-prefix}tabs--scoped__item {
-    margin-left: -#{$border-width-thin};
+    margin-left: ($border-width-thin * -1);
   }
 
   &:first-child .#{$css-prefix}tabs--scoped__link {

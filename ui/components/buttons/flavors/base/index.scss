@@ -69,14 +69,15 @@
     margin-left: $spacing-xx-small;
   }
 
-  @include deprecate("0.20.0") {
+  & + .#{$css-prefix}button {
 
-    & + .#{$css-prefix}button {
+    @include deprecate("2.0.0") {
       margin-left: $spacing-xx-small;
     }
   }
 }
 
+// Deprecate
 .#{$css-prefix}button-space-left {
   margin-left: $spacing-xx-small;
 }

@@ -13,11 +13,12 @@ import createComponent from 'app_modules/site/util/component/create';
 import compilePages, {
   getPrefixedProps,
   tryRequire,
-  webpackConfig,
-  compiler
+  createPageCompiler
 } from 'scripts/tasks/site/compile';
 
 temp.track();
+
+const compiler = createPageCompiler();
 
 describe('scripts/tasks/site/compile.js', () => {
   describe('#getPrefixedProps', () => {

@@ -26,7 +26,7 @@ function protectFromUnmount() {
   const protect = (callback) => {
     return (...args) => {
       !hasUnmounted_ && callback(...args);
-    }
+    };
   };
   protect.unmount = () => hasUnmounted_ = true;
   return protect;

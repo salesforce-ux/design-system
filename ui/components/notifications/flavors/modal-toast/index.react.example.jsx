@@ -44,7 +44,7 @@ class ModalExample extends React.Component {
         >
 
           <Modal.Header>
-            <div className={pf('notify-container')}>
+            <div className={pf('notify_container')}>
               <div className={pf('notify notify--toast theme--error')} role="alert">
                 <span className={pf('assistive-text')}>Error</span>
                 <ButtonIcon
@@ -67,7 +67,7 @@ class ModalExample extends React.Component {
             </h2>
           </Modal.Header>
 
-          <Modal.Body>
+          <Modal.Body className={pf('p-around--medium')}>
             <Lorem count={2} paragraphLowerBound={5} />
           </Modal.Body>
 

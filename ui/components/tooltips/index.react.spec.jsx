@@ -65,7 +65,7 @@ xdescribe(`Tooltip`, () => {
       beforeEach(() => {
         control = scryRenderedDOMComponentsWithClass(cmp, 'clicky-mcduck')[0];
         Simulate.click(control, {});
-        popover = document.querySelectorAll('.popover')[1] // it clones the original;
+        popover = document.querySelectorAll('.popover')[1]; // it clones the original;
         wrapper = document.querySelectorAll('.popover-wrapper')[0];
       });
       it(`has the appropriate nubbin classname`, () => {

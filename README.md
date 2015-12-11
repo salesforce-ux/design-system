@@ -11,9 +11,16 @@ Your `npm` version must be at least 2.1.x. You can update your npm with: `sudo n
 
 ```bash
 npm install
-npm run dev
+npm run build
 ```
-Open [http://localhost:3000](http://localhost:3000)
+
+To run the site locally, note that `npm run dev` is now deprecated and has been split into several tasks:
+* `npm start` will spin up a server instance to serve the files in .www
+* `npm start -- --watch` will start the server and then recompile when files are saved
+* `npm start -- --watch sass` will start the server and only reload Sass files
+* `npm run build` will compile the entire site (jsx, sass, etc)
+
+When server is up, view at [http://localhost:3000](http://localhost:3000)
 
 ## Contributing to the code base
 

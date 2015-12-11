@@ -17,4 +17,4 @@ export default (
   <div className='demo-only'>
     <h3 className={pf('section-title--divider')}>Section Title</h3>
   </div>
-)
+);

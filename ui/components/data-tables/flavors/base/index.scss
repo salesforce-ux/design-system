@@ -18,14 +18,6 @@
     padding: $spacing-x-small;
     white-space: nowrap;
     position: relative;
-
-    &.#{$css-prefix}text-center {
-      text-align: center;
-    }
-
-    &.#{$css-prefix}text-right {
-      text-align: right;
-    }
   }
 
   // First and Last Cell of a row

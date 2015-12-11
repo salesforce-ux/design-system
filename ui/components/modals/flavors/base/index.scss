@@ -73,7 +73,6 @@
   }
 
   &__content {
-    padding: $spacing-medium;
     overflow: hidden {
       y: auto;
     }
@@ -132,7 +131,7 @@
 // old class
 .#{$css-prefix}modal-backdrop {
 
-  @include deprecate("0.20.0") {
+  @include deprecate("2.0.0") {
     @include backdrop;
   }
 }

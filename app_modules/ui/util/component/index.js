@@ -190,7 +190,7 @@ export const PropTypes = {
     return function(props, propName, componentName) {
       const flavor = props[propName];
       if (typeof flavor !== 'undefined' && typeof flavor !== 'string') {
-        return new Error(`"${propName}" must be a string"`);
+        return new Error(`"\"${propName}\" must be a string"`);
       }
       if (typeof flavor === 'string') {
         const flavors = flavor.split(',');

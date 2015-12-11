@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import Img from 'app_modules/ui/img';
 
 const dialingIcon = (
-  <span className={pf('icon__container icon-standard-call')}>
+  <span className={pf('icon_container icon-standard-call')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
@@ -90,7 +90,8 @@ export default (
               symbol="unmuted"
               assistiveText="Mute Yourself" />
           </div>
-          <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+          <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
+          <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
         </div>
 
         {/* Composer Footer */}

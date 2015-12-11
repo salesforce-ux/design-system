@@ -324,13 +324,13 @@ $grid: (
       }
 
       .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
-        #{$property}-top:    $size;
+        #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
 
       .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
-        #{$property}-left:  $size;
+        #{$property}-left: $size;
       }
 
       .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
@@ -348,7 +348,7 @@ $grid: (
 }
 
 
-@mixin visibility($class-name, $min:null, $max:null) {
+@mixin visibility($class-name, $min: null, $max: null) {
 
   .#{$css-prefix}#{$class-name} {
 

@@ -28,7 +28,7 @@ const image = (
 );
 
 const icon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
     <span className={pf('assistive-text')}>Powerpoint</span>
   </span>
@@ -45,7 +45,8 @@ export const preview = (
 
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
-      <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>
@@ -77,7 +78,8 @@ export const preview = (
   {/* Is Active */}
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active')}>
-      <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input2" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>
@@ -109,7 +111,8 @@ export const preview = (
   {/* Is Active, Has Focus */}
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment is-active has-focus')}>
-      <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input3" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>
@@ -186,7 +189,8 @@ export const preview = (
 export const code = (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
-      <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
       <div className={pf('attachments')}></div>
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>

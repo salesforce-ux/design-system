@@ -48,6 +48,11 @@ classes:
     applied: <code>.{{cssPrefix}}button</code>
     notes: This is 2.25rem&times;2.25rem like a button
   -
+    class: button--icon-inverse
+    description: Gives a white icon color on a dark background
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: When used alone it has a subtle hover. When used in a button-group it assumes the hover state of the buttons next to it.
+  -
     class: button--icon-small
     description: Creates an icon button at the smaller 2rem (32px) size
     applied: <code>.{{cssPrefix}}button</code>
@@ -214,10 +219,6 @@ classes:
   -
     class: button__icon--right
     description: Puts the icon on the right side of the button
-    applied: <code>.{{cssPrefix}}button__icon</code>
-  -
-    class: button__icon--inverse
-    description: Gives a white icon color on a dark background
     applied: <code>.{{cssPrefix}}button__icon</code>
   -
     class: button__icon--x-small

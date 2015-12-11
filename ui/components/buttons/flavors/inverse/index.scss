@@ -12,9 +12,21 @@
   @include button-base;
   background-color: $color-background-button-inverse;
 
+  &[disabled] {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+    color: $color-text-button-inverse-disabled;
+  }
+}
+
+.#{$css-prefix}button--inverse,
+.#{$css-prefix}button-group .#{$css-prefix}button--icon-inverse {
+
   &,
   &:link,
-  &:visited { color: $color-text-button-inverse; }
+  &:visited {
+    color: $color-text-button-inverse;
+  }
 
   &:hover,
   &:focus,
@@ -24,12 +36,6 @@
 
   &:focus {
     @include focus-inverse;
-  }
-
-  &[disabled] {
-    background-color: $color-background-button-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
-    color: $color-text-button-inverse-disabled;
   }
 }
 

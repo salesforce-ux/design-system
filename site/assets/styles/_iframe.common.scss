@@ -24,10 +24,8 @@ body {
     box-shadow: rgba(black, 0.1) 0 0 0 1px inset;
   }
 
-  .#{$css-prefix}grid--overflow
-
-    > .#{$css-prefix}col {
-      min-height: 150px;
+  .#{$css-prefix}grid--overflow > .#{$css-prefix}col {
+    min-height: 150px;
   }
 }
 
@@ -45,7 +43,7 @@ body {
   }
 }
 
-.demo-only--notification .#{$css-prefix}notify-container {
+.demo-only--notification .#{$css-prefix}notify_container {
     position: static;
 }
 .demo-only--dropdown .#{$css-prefix}dropdown-trigger .#{$css-prefix}dropdown {

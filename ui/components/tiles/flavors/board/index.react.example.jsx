@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 function image() {
   return (
-    <span className={pf('icon__container tile--board__icon')}>
+    <span className={pf('icon_container tile--board__icon')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>

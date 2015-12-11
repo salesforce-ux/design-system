@@ -7,7 +7,10 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.#{$css-prefix}docked_container,
 .#{$css-prefix}docked-container {
+
+  @include deprecate("2.0.0");
   display: flex;
   align-items: flex-end;
   position: fixed;
@@ -105,16 +108,6 @@
 
     .#{$css-prefix}icon-record .#{$css-prefix}button__icon {
       fill: $color-background-notification-badge;
-      @include animation(pulse 2s ease infinite);
     }
-  }
-}
-
-@include keyframes(pulse) {
-  0%, 100% {
-    filter: drop-shadow(0 0 4px rgba($color-background-notification-badge, 0));
-  }
-  50% {
-    filter: drop-shadow(0 0 4px rgba(darken($color-background-notification-badge, 10%), 1));
   }
 }

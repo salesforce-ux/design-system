@@ -17,7 +17,7 @@
     border-bottom: $border-width-thin solid $color-border;
   }
 
-  @include deprecate("0.20.0") {
+  @include deprecate("2.0.0") {
 
     .#{$css-prefix}tabs__item {
       @include tabs-item;
@@ -103,7 +103,7 @@
 
   &:focus {
     color: $color-text-tab-label-selected;
-    box-shadow: $color-text-tab-label-selected 0 -#{$border-width-thin} 0 inset;
+    box-shadow: $color-text-tab-label-selected 0 ($border-width-thin * -1) 0 inset;
   }
 }
 

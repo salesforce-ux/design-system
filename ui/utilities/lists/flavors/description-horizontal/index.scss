@@ -17,10 +17,22 @@
       width: 33%;
       float: left;
       clear: left;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     }
 
     &__detail {
-      margin-left: calc(33% + #{$spacing-small});
+      padding-left: $spacing-small;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     }
   }
 }

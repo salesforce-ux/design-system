@@ -49,7 +49,7 @@ describe(`Control`, () => {
             </div>
           );
         }
-      })
+      });
       cmp = ReactDOM.render(React.createElement(cls), document.body);
     });
     it(`renders the children`, () => {

@@ -27,7 +27,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-share-post m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
                       </SvgIcon>
                     </span>
@@ -38,7 +38,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-task m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
                       </SvgIcon>
                     </span>
@@ -49,7 +49,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-contact m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
                       </SvgIcon>
                     </span>
@@ -60,7 +60,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-opportunity m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
                       </SvgIcon>
                     </span>
@@ -71,7 +71,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-lead-convert m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
                       </SvgIcon>
                     </span>
@@ -82,7 +82,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-edit m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
                       </SvgIcon>
                     </span>
@@ -93,7 +93,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-share-post m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
                       </SvgIcon>
                     </span>
@@ -104,7 +104,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-task m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
                       </SvgIcon>
                     </span>
@@ -115,7 +115,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-contact m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
                       </SvgIcon>
                     </span>
@@ -126,7 +126,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-opportunity m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
                       </SvgIcon>
                     </span>
@@ -137,7 +137,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-lead-convert m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
                       </SvgIcon>
                     </span>
@@ -148,7 +148,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-edit m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
                       </SvgIcon>
                     </span>
@@ -159,7 +159,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-share-post m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
                       </SvgIcon>
                     </span>
@@ -170,7 +170,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-task m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
                       </SvgIcon>
                     </span>
@@ -181,7 +181,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-contact m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
                       </SvgIcon>
                     </span>
@@ -192,7 +192,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-new-opportunity m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
                       </SvgIcon>
                     </span>
@@ -203,7 +203,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-lead-convert m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
                       </SvgIcon>
                     </span>
@@ -214,7 +214,7 @@ export default (
               <li className={pf('list__item')}>
                 <a role="menuitem" href="javascript:void(0)">
                   <p className={pf('truncate')}>
-                    <span className={pf('icon__container icon__container--circle icon-action-edit m-right--medium')}>
+                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
                       <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
                       </SvgIcon>
                     </span>

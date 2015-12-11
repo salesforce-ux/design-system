@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const dialingIcon = (
-  <span className={pf('icon__container icon-standard-task')}>
+  <span className={pf('icon_container icon-standard-task')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
     <span className={pf('assistive-text')}>Task Icon</span>
   </span>
@@ -60,6 +60,7 @@ export default (
         <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap size--1-of-1')}>
 
           <fieldset className={pf('form--compound')}>
+            <legend className={pf('assistive-text')}>Log new task</legend>
             <div className={pf('form-element__group')}>
               <div className={pf('form-element__row')}>
                 <label className={pf('form-element__control size--1-of-1')}>
@@ -90,7 +91,7 @@ export default (
                       </div>
                       <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
                     </div>
-                    <div className={pf('pill-container hide')}></div>
+                    <div className={pf('pill_container hide')}></div>
                   </div>
                 </label>
                 <label className={pf('form-element__control size--1-of-2')}>
@@ -103,7 +104,7 @@ export default (
                       </div>
                       <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
                     </div>
-                    <div className={pf('pill-container hide')}></div>
+                    <div className={pf('pill_container hide')}></div>
                   </div>
                 </label>
               </div>

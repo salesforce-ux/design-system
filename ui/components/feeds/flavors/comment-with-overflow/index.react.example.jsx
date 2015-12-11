@@ -29,7 +29,7 @@ const image = (
 );
 
 const icon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
     <span className={pf('assistive-text')}>Powerpoint</span>
   </span>
@@ -50,7 +50,8 @@ export default (
     <li>
       <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
         <div className={pf('publisher publisher--comment')}>
-          <textarea className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+          <label htmlFor="comment-text-input" className={pf('assistive-text')}>Write a comment</label>
+          <textarea id="comment-text-input" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
           <div className={pf('attachments')}></div>
           <div className={pf('publisher__actions grid grid--align-spread')}>
             <ul className={pf('grid')}>

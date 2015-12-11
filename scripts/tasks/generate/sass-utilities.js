@@ -10,64 +10,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import path from 'path';
-
-import _ from 'lodash';
-import autoprefixer from 'autoprefixer';
-import css from 'css';
-import { diff } from 'deep-diff';
 import gulp from 'gulp';
-import minimist from 'minimist';
 import postcss from 'gulp-postcss';
-import sass from 'node-sass';
+import rename from 'gulp-rename';
+import sass from 'gulp-sass';
 import through from 'through2';
 
-import ignoreUnderscore from 'app_modules/util/ignore-underscore';
-
-const argv = minimist(process.argv.slice(2));
-const isDev = argv.dev === true;
-const isProd = argv.prod === true;
-
-function getIndexWithDependencies() { return path.resolve(path, __PATHS__.ui, 'utilities/index-with-dependencies.scss'); }
-
-/**
- * Sass
- */
-export default function (done) {
+export default function(done) {
   console.log('Compiling Sass utilities');
-  function handleError(err) {
-    done(err);
-  }
-  gulp.src(getIndexWithDependencies())
-  .pipe(ignoreUnderscore(getIndexWithDependencies()))
   // Sass
-  .pipe(through.obj((file, enc, next) => {
-    const newFile = file.clone();
-    let contents = file.contents.toString();
-    try {
-      contents = sass.renderSync({
-        data: contents,
-        file: newFile.path,
-        outputStyle: 'nested',
-        sourceComments: true,
-        includePaths: [
-          __PATHS__.root,
-          __PATHS__.node_modules,
-          __PATHS__.ui
-        ]
-      }).css;
-    } catch(error) {
-      console.log('Error processing file: ' + error.message + ' (' + error.file + ':' + error.line + ':' + error.column + ')');
-      return next(error);
-    }
-    newFile.contents = new Buffer(contents);
-    newFile.path = newFile.path.replace('index-with-dependencies', 'utilities').replace(/\.scss$/, '.css');
-    next(null, newFile);
-  }))
-  .on('error', handleError)
-  // Autoprefixer
-  .pipe(postcss([autoprefixer()]))
-  .on('error', handleError)
-  .pipe(gulp.dest(__PATHS__.generated))
-  .on('error', handleError)
-  .on('finish', done);
+  gulp.src(path.resolve(__PATHS__.ui, 'utilities/index-with-dependencies.scss'))
+    .pipe(sass({
+      outputStyle: 'nested',
+      includePaths: [
+        __PATHS__.root,
+        __PATHS__.ui,
+        __PATHS__.node_modules
+      ]
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rename(path => {
+      path.basename = 'utilities';
+      path.extname = '.css';
+    }))
+    .on('error', done)
+    .pipe(gulp.dest(__PATHS__.generated))
+    .on('error', done)
+    .on('finish', done);
 }

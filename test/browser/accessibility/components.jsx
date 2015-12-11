@@ -12,12 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {
-  isCompositeComponent,
-  renderIntoDocument,
-  Simulate,
-  scryRenderedDOMComponentsWithClass
-} from 'react-addons-test-utils';
+import { renderIntoDocument } from 'react-addons-test-utils';
 
 import ui from '.generated/ui';
 
@@ -30,10 +25,6 @@ const a11yTestsToRun = [
   'A11Y_DOM_06', 'A11Y_DOM_08', 'A11Y_DOM_09', 'A11Y_DOM_10',
   'A11Y_DOM_15'
 ];
-
-function getExample (p) {
-  return requireExample(`./${p}`);
-}
 
 describe(`Accessiblity`, () => {
   // iterate through all sections
@@ -51,7 +42,7 @@ describe(`Accessiblity`, () => {
               let a11yErrors = null;
               beforeEach(() => {
                 try {
-                  previewCmp = getExample(flavor.examplePath);
+                  previewCmp = requireExample(`./${flavor.examplePath}`);
                   // HACK: Mixing ES6 exports with CommonJS exports
                   if (previewCmp.default) {
                     previewCmp = previewCmp.default;
@@ -61,13 +52,13 @@ describe(`Accessiblity`, () => {
                   if (previewCmp.preview) {
                     previewCmp = previewCmp.preview;
                   }
-                  let cls = React.createClass({
+                  let Preview = React.createClass({
                     render: function() {
-                      return <div><previewCmp/></div>
+                      return previewCmp;
                     }
                   });
                   // render it and get its DOM node
-                  cmp = renderIntoDocument(React.createElement(cls));
+                  cmp = renderIntoDocument(<Preview/>);
                   $cmp = ReactDOM.findDOMNode(cmp);
                 } catch (e) {
                   console.log(`Had trouble rendering flavor "${flavor.title}" for "${component.title}"`);

@@ -1,6 +1,10 @@
 # Documentation:
 # https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
   BorderZero:
     enabled: false
   ColorKeyword:
@@ -19,12 +23,13 @@ linters:
   EmptyLineBetweenBlocks:
     enabled: false
   EmptyRule:
-    enabled: false
+    enabled: true
+    severity: error
   ExtendDirective:
     enabled: true
     severity: error
   FinalNewline:
-    enabled: false
+    enabled: false # Already checked by another task
   HexNotation:
     enabled: false
   IdSelector:
@@ -34,7 +39,7 @@ linters:
   ImportantRule:
     enabled: true
   Indentation:
-    enabled: false
+    enabled: false # Already checked by another task
   LeadingZero:
     enabled: true
     style: include_zero
@@ -57,12 +62,18 @@ linters:
     enabled: false
   Shorthand:
     enabled: false
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
   SpaceAfterComma:
     enabled: true
   SpaceAfterPropertyColon:
-    enabled: false
+    enabled: true
+    style: one_space_or_newline
+  SpaceAfterVariableName:
+    enabled: true
   SpaceAroundOperator:
     enabled: false
   SpaceBeforeBrace:

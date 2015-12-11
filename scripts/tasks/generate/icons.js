@@ -149,7 +149,7 @@ function getCategories () {
     });
 }
 
-module.exports = function(done) {
+export default function(done) {
   let categories;
   try {
     categories = JSON.stringify(getCategories(), null, 2);

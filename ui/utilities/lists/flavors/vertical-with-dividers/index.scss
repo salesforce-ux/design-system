@@ -11,7 +11,7 @@
 // Deprecate in 0.15.0
 .#{$css-prefix}list--vertical.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
 
-  @include deprecate("0.15.0") {
+  @include deprecate("2.0.0") {
     @include box($padding: $spacing-x-small, $border-radius: null, $borders: bottom);
     @include list-has-hovers;
     @include list-has-selections;

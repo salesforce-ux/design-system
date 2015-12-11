@@ -7,7 +7,7 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Applys to alerts and toasts
   -
-    class: notify-container
+    class: notify_container
     description: Initializes notification container
     required: true
     applied: <code>&lt;div&gt;</code>
@@ -34,3 +34,8 @@ classes:
     required: true
     applied: <code>.{{cssPrefix}}modal</code>
     notes: Themes can be added to the <code>.{{cssPrefix}}modal__header</code> to create the alert style required
+  -
+    class: notify-container
+    description: Initializes notification container
+    deprecated: true
+

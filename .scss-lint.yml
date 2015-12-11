@@ -75,7 +75,8 @@ linters:
   SpaceAfterVariableName:
     enabled: true
   SpaceAroundOperator:
-    enabled: false
+    enabled: true
+    style: one_space
   SpaceBeforeBrace:
     enabled: true
     allow_single_line_padding: true

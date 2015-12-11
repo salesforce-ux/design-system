@@ -85,7 +85,7 @@ linters:
   TrailingSemicolon:
     enabled: true
   UnnecessaryParentReference:
-    enabled: false
+    enabled: true
   UrlQuotes:
     enabled: false
   VendorPrefix:

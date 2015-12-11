@@ -10,7 +10,7 @@
 .#{$css-prefix}docked_container,
 .#{$css-prefix}docked-container {
 
-  @include deprecate("2.0.0");
+  @include deprecate('2.0.0');
   display: flex;
   align-items: flex-end;
   position: fixed;

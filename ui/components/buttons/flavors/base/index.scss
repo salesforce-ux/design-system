@@ -71,7 +71,7 @@
 
   & + .#{$css-prefix}button {
 
-    @include deprecate("2.0.0") {
+    @include deprecate('2.0.0') {
       margin-left: $spacing-xx-small;
     }
   }

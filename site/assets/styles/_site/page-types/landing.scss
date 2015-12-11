@@ -243,7 +243,7 @@
 }
 
 .site-button--social-counter {
-  @include nubbin($position: left, $location: "before", $color: $color-background-alt, $size: $square-icon-small-content);
+  @include nubbin($position: left, $location: 'before', $color: $color-background-alt, $size: $square-icon-small-content);
   display: none;
   opacity: 0;
   transition: opacity $duration-immediately ease;

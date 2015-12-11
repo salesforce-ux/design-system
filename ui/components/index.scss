@@ -12,183 +12,183 @@
 @import
 
   // Activity Timeline
-  "activity-timeline/flavors/base/index",
+  'activity-timeline/flavors/base/index',
 
   // Breadcrumbs
-  "breadcrumbs/flavors/base/index",
+  'breadcrumbs/flavors/base/index',
 
   // Button Groups
-  "button-groups/flavors/base/index",
-  "button-groups/flavors/inverse/index",
-  "button-groups/flavors/icon-group/index",
+  'button-groups/flavors/base/index',
+  'button-groups/flavors/inverse/index',
+  'button-groups/flavors/icon-group/index',
 
   // Button
-  "buttons/flavors/base/index",
-  "buttons/flavors/neutral/index",
-  "buttons/flavors/neutral-icon/index",
-  "buttons/flavors/brand/index",
-  "buttons/flavors/destructive/index",
-  "buttons/flavors/inverse/index",
-  "buttons/flavors/stateful/index",
-  "buttons/flavors/stateful-inverse/index",
-  "buttons/flavors/icon/index",
-  "buttons/flavors/hint/index",
-  "buttons/flavors/icon-more/index",
-  "buttons/flavors/icon-stateful/index",
-  "buttons/flavors/icon-inverse/index",
-  "buttons/flavors/stretch/index",
-  "buttons/flavors/horizontal/index",
+  'buttons/flavors/base/index',
+  'buttons/flavors/neutral/index',
+  'buttons/flavors/neutral-icon/index',
+  'buttons/flavors/brand/index',
+  'buttons/flavors/destructive/index',
+  'buttons/flavors/inverse/index',
+  'buttons/flavors/stateful/index',
+  'buttons/flavors/stateful-inverse/index',
+  'buttons/flavors/icon/index',
+  'buttons/flavors/hint/index',
+  'buttons/flavors/icon-more/index',
+  'buttons/flavors/icon-stateful/index',
+  'buttons/flavors/icon-inverse/index',
+  'buttons/flavors/stretch/index',
+  'buttons/flavors/horizontal/index',
 
   // Icons
-  "icons/flavors/base/index",
-  "icons/flavors/colors/index",
-  "icons/flavors/sizes/index",
+  'icons/flavors/base/index',
+  'icons/flavors/colors/index',
+  'icons/flavors/sizes/index',
 
   // Card
-  "cards/flavors/base/index",
-  "cards/flavors/empty/index",
+  'cards/flavors/base/index',
+  'cards/flavors/empty/index',
 
   // Forms
-  "forms/flavors/form-element/index",
-  "forms/flavors/input/index",
-  "forms/flavors/textarea/index",
-  "forms/flavors/radio/index",
-  "forms/flavors/checkbox/index",
-  "forms/flavors/select/index",
-  "forms/flavors/multi-select/index",
-  "forms/flavors/horizontal-form/index",
-  "forms/flavors/stacked-form/index",
-  "forms/flavors/inline-form/index",
-  "forms/flavors/compound-form/index",
-  "forms/flavors/read-only-state/index",
-  "forms/flavors/validation-state/index",
-  "forms/flavors/edit-dialog-for-touch/index",
+  'forms/flavors/form-element/index',
+  'forms/flavors/input/index',
+  'forms/flavors/textarea/index',
+  'forms/flavors/radio/index',
+  'forms/flavors/checkbox/index',
+  'forms/flavors/select/index',
+  'forms/flavors/multi-select/index',
+  'forms/flavors/horizontal-form/index',
+  'forms/flavors/stacked-form/index',
+  'forms/flavors/inline-form/index',
+  'forms/flavors/compound-form/index',
+  'forms/flavors/read-only-state/index',
+  'forms/flavors/validation-state/index',
+  'forms/flavors/edit-dialog-for-touch/index',
 
   // Grid
-  "grid-system/flavors/automatic-sizing/index",
-  "grid-system/flavors/containers/index",
-  "grid-system/flavors/manual-sizing/index",
-  "grid-system/flavors/horizontal-alignment-center/index",
-  "grid-system/flavors/horizontal-alignment-space/index",
-  "grid-system/flavors/horizontal-alignment-spread/index",
-  "grid-system/flavors/vertical-alignment/index",
-  "grid-system/flavors/order/index",
-  "grid-system/flavors/overflow/index",
+  'grid-system/flavors/automatic-sizing/index',
+  'grid-system/flavors/containers/index',
+  'grid-system/flavors/manual-sizing/index',
+  'grid-system/flavors/horizontal-alignment-center/index',
+  'grid-system/flavors/horizontal-alignment-space/index',
+  'grid-system/flavors/horizontal-alignment-spread/index',
+  'grid-system/flavors/vertical-alignment/index',
+  'grid-system/flavors/order/index',
+  'grid-system/flavors/overflow/index',
 
   // Tooltip
-  "tooltips/flavors/base/index",
+  'tooltips/flavors/base/index',
 
   // Page Headers
-  "page-headers/flavors/base/index",
-  "page-headers/flavors/record-home/index",
+  'page-headers/flavors/base/index',
+  'page-headers/flavors/record-home/index',
 
   // Popovers
-  "popovers/flavors/base/index",
-  "popovers/flavors/tooltips/index",
-  "popovers/flavors/panels/index",
-  "popovers/flavors/nubbins/index",
+  'popovers/flavors/base/index',
+  'popovers/flavors/tooltips/index',
+  'popovers/flavors/panels/index',
+  'popovers/flavors/nubbins/index',
 
   // Menus
-  "menus/flavors/dropdown/index",
-  "menus/flavors/dropdown-with-icons/index",
-  "menus/flavors/dropdown-positioning/index",
-  "menus/flavors/picklist/index",
-  "menus/flavors/action-overflow/index",
-  "menus/flavors/action-overflow-for-touch/index",
-  "menus/flavors/search-overflow/index",
+  'menus/flavors/dropdown/index',
+  'menus/flavors/dropdown-with-icons/index',
+  'menus/flavors/dropdown-positioning/index',
+  'menus/flavors/picklist/index',
+  'menus/flavors/action-overflow/index',
+  'menus/flavors/action-overflow-for-touch/index',
+  'menus/flavors/search-overflow/index',
 
   // Datepicker
-  "datepickers/flavors/base/index",
-  "datepickers/flavors/single-select/index",
-  "datepickers/flavors/multi-select/index",
-  "datepickers/flavors/time/index",
+  'datepickers/flavors/base/index',
+  'datepickers/flavors/single-select/index',
+  'datepickers/flavors/multi-select/index',
+  'datepickers/flavors/time/index',
 
   // Docked Composer
-  "docked-composer/flavors/base/index",
-  "docked-composer/flavors/email/index",
-  "docked-composer/flavors/email-modal/index",
-  "docked-composer/flavors/task/index",
-  "docked-composer/flavors/overflow-menu/index",
+  'docked-composer/flavors/base/index',
+  'docked-composer/flavors/email/index',
+  'docked-composer/flavors/email-modal/index',
+  'docked-composer/flavors/task/index',
+  'docked-composer/flavors/overflow-menu/index',
 
   // Publishers
-  "publishers/flavors/discussion-feed/index",
-  "publishers/flavors/comment/index",
+  'publishers/flavors/discussion-feed/index',
+  'publishers/flavors/comment/index',
 
   // Discussion Feed
-  "feeds/flavors/discussion-feed/index",
-  "feeds/flavors/comment-base/index",
-  "feeds/flavors/comment-minimal/index",
-  "feeds/flavors/comment-with-replies/index",
-  "feeds/flavors/comment-with-overflow/index",
-  "feeds/flavors/comment-with-attachments/index",
+  'feeds/flavors/discussion-feed/index',
+  'feeds/flavors/comment-base/index',
+  'feeds/flavors/comment-minimal/index',
+  'feeds/flavors/comment-with-replies/index',
+  'feeds/flavors/comment-with-overflow/index',
+  'feeds/flavors/comment-with-attachments/index',
 
   // Modal
-  "modals/flavors/base/index",
-  "modals/flavors/large/index",
-  "modals/flavors/directional/index",
-  "modals/flavors/taglines/index",
+  'modals/flavors/base/index',
+  'modals/flavors/large/index',
+  'modals/flavors/directional/index',
+  'modals/flavors/taglines/index',
 
   // Pills
-  "pills/flavors/base/index",
-  "pills/flavors/portrait/index",
+  'pills/flavors/base/index',
+  'pills/flavors/portrait/index',
 
   // Process
-  "process/flavors/wizard/index",
+  'process/flavors/wizard/index',
 
   // Spinners
-  "spinners/flavors/base/index",
-  "spinners/flavors/medium/index",
-  "spinners/flavors/large/index",
+  'spinners/flavors/base/index',
+  'spinners/flavors/medium/index',
+  'spinners/flavors/large/index',
 
   // Title
-  "tiles/flavors/base/index",
-  "tiles/flavors/with-icon/index",
-  "tiles/flavors/with-actions/index",
-  "tiles/flavors/with-badge/index",
-  "tiles/flavors/board/index",
-  "tiles/flavors/generic/index",
-  "tiles/flavors/author/index",
+  'tiles/flavors/base/index',
+  'tiles/flavors/with-icon/index',
+  'tiles/flavors/with-actions/index',
+  'tiles/flavors/with-badge/index',
+  'tiles/flavors/board/index',
+  'tiles/flavors/generic/index',
+  'tiles/flavors/author/index',
 
   // Tree
-  "trees/flavors/base/index",
+  'trees/flavors/base/index',
 
   // Tabs
-  "tabs/flavors/default/index",
-  "tabs/flavors/overflow/index",
-  "tabs/flavors/scoped/index",
-  "tabs/flavors/sales-path/index",
+  'tabs/flavors/default/index',
+  'tabs/flavors/overflow/index',
+  'tabs/flavors/scoped/index',
+  'tabs/flavors/sales-path/index',
 
   // Notifications -- Toasts & Alerts
-  "notifications/flavors/base/index",
-  "notifications/flavors/alert/index",
-  "notifications/flavors/toast/index",
-  "notifications/flavors/prompt/index",
-  "notifications/flavors/prompt-for-touch/index",
-  "notifications/flavors/modal-toast/index",
+  'notifications/flavors/base/index',
+  'notifications/flavors/alert/index',
+  'notifications/flavors/toast/index',
+  'notifications/flavors/prompt/index',
+  'notifications/flavors/prompt-for-touch/index',
+  'notifications/flavors/modal-toast/index',
 
   // Lookup
-  "lookups/flavors/base/index",
-  "lookups/flavors/single-select/index",
-  "lookups/flavors/multi-select/index",
-  "lookups/flavors/single-scope/index",
-  "lookups/flavors/multi-scope/index",
-  "lookups/flavors/advanced-modal/index",
+  'lookups/flavors/base/index',
+  'lookups/flavors/single-select/index',
+  'lookups/flavors/multi-select/index',
+  'lookups/flavors/single-scope/index',
+  'lookups/flavors/multi-scope/index',
+  'lookups/flavors/advanced-modal/index',
 
   // Objects
-  "media-objects/flavors/base/index",
-  "media-objects/flavors/center/index",
-  "media-objects/flavors/reverse/index",
-  "media-objects/flavors/double/index",
-  "media-objects/flavors/responsive/index",
+  'media-objects/flavors/base/index',
+  'media-objects/flavors/center/index',
+  'media-objects/flavors/reverse/index',
+  'media-objects/flavors/double/index',
+  'media-objects/flavors/responsive/index',
 
   // Images
-  "images/flavors/avatars/index",
+  'images/flavors/avatars/index',
 
   // Badges
-  "badges/flavors/base/index",
+  'badges/flavors/base/index',
 
   // Tables
-  "data-tables/flavors/base/index",
-  "data-tables/flavors/resizable-columns/index",
-  "data-tables/flavors/responsive-stacked/index",
-  "data-tables/flavors/responsive-stacked-horizontal/index";
+  'data-tables/flavors/base/index',
+  'data-tables/flavors/resizable-columns/index',
+  'data-tables/flavors/responsive-stacked/index',
+  'data-tables/flavors/responsive-stacked-horizontal/index';

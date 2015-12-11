@@ -140,7 +140,7 @@
   }
 
   &:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: calc((#{$sales-path} / 2 ) * -1); // -1em;

@@ -10,48 +10,48 @@
 @import
 
   // DEPENDENCIES
-  "ui/design-tokens",
-  "ui/config",
-  "ui/dependencies/index",
-  "_site/dependencies/typography",
-  "_site/dependencies/layout",
+  'ui/design-tokens',
+  'ui/config',
+  'ui/dependencies/index',
+  '_site/dependencies/typography',
+  '_site/dependencies/layout',
 
   // VENDOR
-  "_vendor/prism/prism",
+  '_vendor/prism/prism',
 
   // CORE
-  "_site/site-typography",
-  "_site/site-examples",
-  "_site/site-code",
+  '_site/site-typography',
+  '_site/site-examples',
+  '_site/site-code',
 
   // REGIONS
-  "_site/regions/page-container",
-  "_site/regions/banner",
-  "_site/regions/main",
-  "_site/regions/navigation",
-  "_site/regions/masthead",
-  "_site/regions/tools",
-  "_site/regions/content",
-  "_site/regions/contentinfo",
-  "_site/regions/settings",
+  '_site/regions/page-container',
+  '_site/regions/banner',
+  '_site/regions/main',
+  '_site/regions/navigation',
+  '_site/regions/masthead',
+  '_site/regions/tools',
+  '_site/regions/content',
+  '_site/regions/contentinfo',
+  '_site/regions/settings',
 
   // PAGE TYPES
-  "_site/page-types/demo",
-  "_site/page-types/landing",
-  "_site/page-types/examples",
-  "_site/page-types/tokens",
-  "_site/page-types/motion",
-  "_site/page-types/design",
-  "_site/page-types/loading",
-  "_site/page-types/tutorial",
-  "_site/page-types/404",
+  '_site/page-types/demo',
+  '_site/page-types/landing',
+  '_site/page-types/examples',
+  '_site/page-types/tokens',
+  '_site/page-types/motion',
+  '_site/page-types/design',
+  '_site/page-types/loading',
+  '_site/page-types/tutorial',
+  '_site/page-types/404',
 
   // COMPONENTS
-  "_site/components/grid-card",
-  "_site/components/video",
+  '_site/components/grid-card',
+  '_site/components/video',
 
   // UTILITIES
-  "_site/utilities/motion",
-  "_site/utilities/theme",
+  '_site/utilities/motion',
+  '_site/utilities/theme',
 
-  "_site/ui-icons";
+  '_site/ui-icons';

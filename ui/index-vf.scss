@@ -11,33 +11,33 @@
 
 // Lightning Design System - Visualforce
 
-$static-icon-path: "../icons";
-$static-image-path: "../images";
-$static-font-path: "../fonts/webfonts";
+$static-icon-path: '../icons';
+$static-image-path: '../images';
+$static-font-path: '../fonts/webfonts';
 
 
 // Non-Scoped
 @import
 
   // Dependencies
-  "design-tokens",
-  "config",
-  "vendor/deprecate",
-  "dependencies/index",
-  "core/font";
+  'design-tokens',
+  'config',
+  'vendor/deprecate',
+  'dependencies/index',
+  'core/font';
 
 // Scoped
 #{$reset-wrapping-class} {
   @import
 
     // Resets
-    "vendor/normalize-reset",
-    "core/core-vf",
+    'vendor/normalize-reset',
+    'core/core-vf',
 
     // Framework
-    "components/index",
-    "utilities/index",
+    'components/index',
+    'utilities/index',
 
     // Print
-    "vendor/html5boilerplate-print";
+    'vendor/html5boilerplate-print';
 }

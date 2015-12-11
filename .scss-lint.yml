@@ -2,7 +2,7 @@
 # https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
   BorderZero:
-    enabled: false
+    enabled: true
   ColorKeyword:
     enabled: false
   ColorVariable:

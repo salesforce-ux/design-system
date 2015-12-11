@@ -46,7 +46,11 @@ linters:
   MergeableSelector:
     enabled: false
   NameFormat:
-    enabled: false
+    enabled: true
+    allow_leading_underscore: true # For private variables, mixins and functions
+    convention: '^[a-z]|[a-z0-9\-]{2,}$'
+    convention_explanation: 'Valid names for variables, mixins and functions: i, foo, foo-bar, foo-1, _private-thing'
+    severity: error
   NestingDepth:
     enabled: true
     ignore_parent_selectors: true

@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
 
   <div className={pf('lookup has-selection')} data-select="single" data-scope="single" data-typeahead="false">
     <div className={pf('form-element')}>

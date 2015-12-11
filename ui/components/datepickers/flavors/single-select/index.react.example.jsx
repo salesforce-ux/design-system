@@ -17,8 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-only--dropdown' style={{height: '390px'}}>
-
+<div className="demo-only demo-only--dropdown" style={{height: '390px'}}>
   <div className={pf('form-element dropdown-trigger')}>
     <label className={pf('form-element__label')} htmlFor="date">Date Picker Label</label>
     <div className={pf('form-element__control')}>

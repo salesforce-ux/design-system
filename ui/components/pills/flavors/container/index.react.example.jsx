@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
 
   {/* Single */}
   <div className={pf('pill_container')}>
@@ -49,7 +49,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
 
   {/* Single */}
   <div className={pf('pill_container')}>

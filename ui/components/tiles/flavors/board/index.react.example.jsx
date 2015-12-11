@@ -25,7 +25,7 @@ function image() {
 }
 
 export const preview = (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <ul className={pf('list--vertical has-cards--space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
@@ -74,7 +74,7 @@ export const preview = (
 </div>
 );
 export const code = (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <ul className={pf('list--vertical has-cards--space has-selections')}>
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>

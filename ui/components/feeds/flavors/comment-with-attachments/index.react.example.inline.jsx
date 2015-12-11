@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jason Rodgers">
-      <Img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
+      <Img src={`/assets/images/avatar1.jpg`} alt="Jason Rodgers" />
     </a>
   </div>
 );
@@ -52,7 +52,7 @@ export default (
     <div className={pf('attachments')}>
       <figure className={pf('attachments__item')}>
         <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
-          <Img src={`/assets/images/feed/feed-image-example.png`} alt='Marketing Plan - Rollout Q1 2016'/>
+          <Img src={`/assets/images/feed/feed-image-example.png`} alt="Marketing Plan - Rollout Q1 2016" />
         </a>
       </figure>
     </div>

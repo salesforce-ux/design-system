@@ -14,7 +14,7 @@ import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <h3 className={pf('section-title--divider')}>Section Title</h3>
   </div>
 );

@@ -66,11 +66,11 @@ class GithubButton extends React.Component {
     return (
       <span className={classesButtonGroup}>
         <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
-          <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+          <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')}/>
             Star
         </CTALink>
         <a href={linkUrlGazer} className={classesBubbleButton}>
-          <span className='site-button--social-counter-bubble'>{countStr}</span>
+          <span className="site-button--social-counter-bubble">{countStr}</span>
         </a>
       </span>
     );

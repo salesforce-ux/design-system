@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('tree_container')} role="application">
     <h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
 

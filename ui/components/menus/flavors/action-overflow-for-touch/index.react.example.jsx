@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '640px'}}>
+<div className="demo-only" style={{height: '640px'}}>
   <div>
     <div aria-hidden="false" role="dialog" className={pf('action-overflow--touch')}>
       <div className={pf('action-overflow--touch__container')}>

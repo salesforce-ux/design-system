@@ -16,7 +16,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('tabs--path')} role="application tablist">
     <ul className={pf('tabs--path__nav')} role="presentation">
       <li className={pf('tabs--path__item is-complete')} role="presentation">

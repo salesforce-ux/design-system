@@ -41,10 +41,12 @@ const availableTasks = {
       path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
       path.resolve(__PATHS__.ui, '**/*.scss')
     ], event => {
+      console.time('Sass Duration');
       siteSass(error => {
         if (error) {
           console.log(error);
         } else {
+          console.timeEnd('Sass Duration');
           bs.reload();
         }
       });

@@ -38,7 +38,7 @@ export default function(done) {
         __PATHS__.node_modules
       ]
     }))
-    .pipe(sass().on('error', sass.logError))
+    .on('error', sass.logError)
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .on('error', done)
     .pipe(isProd ? minifycss({ advanced: false }) : gutil.noop())

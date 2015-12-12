@@ -89,6 +89,6 @@ linters:
   UrlQuotes:
     enabled: false
   VendorPrefix:
-    enabled: false
+    enabled: true
   ZeroUnit:
     enabled: true

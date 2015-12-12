@@ -87,7 +87,7 @@ linters:
   UnnecessaryParentReference:
     enabled: false
   UrlQuotes:
-    enabled: false
+    enabled: true
   VendorPrefix:
     enabled: false
   ZeroUnit:

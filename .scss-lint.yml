@@ -67,7 +67,8 @@ linters:
   QualifyingElement:
     enabled: false
   SelectorDepth:
-    enabled: false
+    enabled: true
+    max_depth: 3
   SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
     enabled: true
     convention: '^[a-z0-9_\-]+$'

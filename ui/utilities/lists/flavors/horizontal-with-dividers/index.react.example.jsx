@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
   <ul className={pf('list--horizontal has-dividers--right')}>
     <li className={pf('list__item')}>Horizontal List with dot dividers</li>
     <li className={pf('list__item')}>List Item</li>
@@ -39,7 +39,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <ul className={pf('list--horizontal has-dividers--right')}>
     <li className={pf('list__item')}>Horizontal List with dot dividers</li>
     <li className={pf('list__item')}>List Item</li>

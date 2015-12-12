@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('box theme--default m-bottom--x-small')}>
     <p>This is a <strong>default</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
@@ -48,7 +48,7 @@ export const preview = (
 </div>
 );
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('box theme--default')}>
     <p>This is a <strong>default</strong> theme and here is a <a href="#">link</a>.</p>
   </div>

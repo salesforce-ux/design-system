@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-container'>
+ <div className="demo-only demo-container">
   <div className={pf('grid grid--align-spread')} style={{height: '150px'}}>
     <div className={pf('align-top col--padded')}>Top Align</div>
     <div className={pf('align-middle col--padded')}>Middle Align</div>

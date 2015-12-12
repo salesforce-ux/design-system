@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <form className={pf('form--stacked')}>
     <div className={pf('form-element has-error is-required')}>
       <label className={pf('form-element__label')} htmlFor="email-0-1">Input Error</label>

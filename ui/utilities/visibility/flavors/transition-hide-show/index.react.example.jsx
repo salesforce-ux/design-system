@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <div className={pf('transition-hide')}>I have zero opacity</div>
     <div className={pf('transition-show')}>I have 100% opacity</div>
   </div>

@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <Input label="Text Input" placeholder="Placeholder Text" assistiveText="sample1" />
 </div>
 );

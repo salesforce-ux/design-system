@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-  <div className='demo-only'>
+  <div className="demo-only">
     <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
@@ -35,7 +35,7 @@ export const preview = (
   </div>
 );
 export const code = (
-  <div className='demo-only'>
+  <div className="demo-only">
     <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>

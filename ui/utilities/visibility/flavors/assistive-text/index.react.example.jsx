@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <div className={pf('assistive-text')}>I am hidden from sight</div>
     <div>I can be seen</div>
   </div>

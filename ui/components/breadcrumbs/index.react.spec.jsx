@@ -28,9 +28,9 @@ describe(`React`, () => {
     let cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
-        <BreadCrumbs id='bumblebees'>
-          <Crumb href='#'>Parent Entity</Crumb>
-          <Crumb href='#'>Parent Record Name</Crumb>
+        <BreadCrumbs id="bumblebees">
+          <Crumb href="#">Parent Entity</Crumb>
+          <Crumb href="#">Parent Record Name</Crumb>
         </BreadCrumbs>
       );
     });

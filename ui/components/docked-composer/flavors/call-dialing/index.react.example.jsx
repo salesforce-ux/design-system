@@ -26,13 +26,13 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--large')}>
-    <Img src={`/assets/images/avatar2.jpg`} alt='Lei Chan'/>
+    <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
   </span>
 );
 
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
       <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>

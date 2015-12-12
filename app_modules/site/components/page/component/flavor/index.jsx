@@ -299,7 +299,7 @@ class ComponentFlavor extends React.Component {
         aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
         <iframe
           src={`${getHistory().createHref('/')}components/preview-frame`}
-          height='100%'
+          height="100%"
           name={flavor.uid}
           ref="iframe"
           data-form-factor={this.state.previewTabActive.key}
@@ -352,7 +352,7 @@ class ComponentFlavor extends React.Component {
     const {flavor} = this.props;
     return this.state.codeTabs.map((tab, index) => {
       const content = (
-        <CTALink ctaEventName='component-code-tab-click' ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
+        <CTALink ctaEventName="component-code-tab-click" ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
           {tab.label}
         </CTALink>
       );

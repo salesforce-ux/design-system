@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-only--left demo-only--top'>
+<div className="demo-only demo-only--left demo-only--top">
   <form className={pf('form--stacked')}>
     <div className={pf('form-element')}>
       <div className={pf('form-element__label m-bottom--x-small')}>

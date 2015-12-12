@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('card card--empty')}>
     <div className={pf('card__header grid grid--flex-spread')}>
       <h2 className={pf('text-heading--small truncate')}>Card Header</h2>

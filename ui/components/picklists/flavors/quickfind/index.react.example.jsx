@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '360px'}}>
+<div className="demo-only" style={{height: '360px'}}>
   <div className={pf('form-element')}>
     <PickList flavor="quickfind" aria-expanded="true">
       <Menu className={pf('dropdown--left dropdown--small')}>

@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <Textarea label="Textarea Label" placeholder="Placeholder Text" assistiveText="sample2"></Textarea>
 </div>
 );

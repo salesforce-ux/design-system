@@ -35,7 +35,8 @@ linters:
   IdSelector:
     enabled: false
   ImportPath:
-    enabled: false
+    enabled: true
+    filename_extension: false
   ImportantRule:
     enabled: true
   Indentation:

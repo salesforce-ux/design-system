@@ -33,7 +33,8 @@ linters:
   HexNotation:
     enabled: false
   IdSelector:
-    enabled: false
+    enabled: true
+    severity: error
   ImportPath:
     enabled: false
   ImportantRule:

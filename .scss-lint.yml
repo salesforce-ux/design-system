@@ -54,6 +54,8 @@ linters:
     enabled: false
   PropertySortOrder:
     enabled: false
+  PropertySpelling:
+    enabled: true
   QualifyingElement:
     enabled: false
   SelectorDepth:

@@ -100,7 +100,7 @@
     }
 
     ~ .#{$css-prefix}is-current { // @TODO: This needs to work both directions in the path
-      // scss-lint:disable NestingDepth
+      // scss-lint:disable NestingDepth SelectorDepth
       background-color: $color-background-alt;
 
       .#{$css-prefix}tabs--path__link {

@@ -268,9 +268,8 @@
     }
 
     @include mq-medium-min {
-
+      // scss-lint:disable NestingDepth SelectorDepth
       td.token {
-        // scss-lint:disable NestingDepth
         vertical-align: top;
         padding: {
           top: $spacing-small;

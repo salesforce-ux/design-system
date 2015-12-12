@@ -10,6 +10,7 @@
 
 
 .#{$css-prefix}table {
+  // scss-lint:disable SelectorDepth
   background-color: $color-background-alt;
 
   // Cells
@@ -79,7 +80,7 @@
 
 // Add vertical borders to a table
 .#{$css-prefix}table--bordered {
-
+  // scss-lint:disable SelectorDepth
   border: {
     top: $border-width-thin solid $color-border;
     bottom: $border-width-thin solid $color-border;

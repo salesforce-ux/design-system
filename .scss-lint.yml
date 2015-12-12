@@ -99,6 +99,6 @@ linters:
   UrlQuotes:
     enabled: true
   VendorPrefix:
-    enabled: false
+    enabled: true
   ZeroUnit:
     enabled: true

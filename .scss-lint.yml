@@ -36,7 +36,9 @@ linters:
     enabled: true
     severity: error
   ImportPath:
-    enabled: false
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
   ImportantRule:
     enabled: true
   Indentation:

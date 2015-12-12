@@ -36,6 +36,7 @@ linters:
     enabled: false
   ImportPath:
     enabled: true
+    leading_underscore: false
     filename_extension: false
   ImportantRule:
     enabled: true

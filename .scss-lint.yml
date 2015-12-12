@@ -62,8 +62,11 @@ linters:
     enabled: false
   SelectorDepth:
     enabled: false
-  SelectorFormat:
-    enabled: false
+  SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
+    enabled: true
+    convention: '^[a-z0-9_\-]+$'
+    convention_explanation: 'Valid class names: block_container, block, block--modifier, block__element, block__element--modifier'
+    severity: error
   Shorthand:
     enabled: false
   SingleLinePerProperty:

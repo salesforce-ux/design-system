@@ -6,7 +6,7 @@ linters:
     space_before_bang: true
     space_after_bang: false
   BorderZero:
-    enabled: false
+    enabled: true
   ColorKeyword:
     enabled: false
   ColorVariable:

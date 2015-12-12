@@ -54,8 +54,8 @@
       width: 1.85rem;
       height: 1.85rem;
       border: 2px solid $color-border-inverse;
-      border-left: none;
-      border-bottom: none;
+      border-left: 0;
+      border-bottom: 0;
       transform: rotate(45deg);
     }
   }
@@ -104,8 +104,8 @@
       &:before {
         right: -$spacing-medium;
         border: 2px solid $color-border-inverse;
-        border-right: none;
-        border-top: none;
+        border-right: 0;
+        border-top: 0;
       }
     }
 

@@ -10,7 +10,7 @@
 
 .#{$css-prefix}popover--tooltip {
   background: $color-background-inverse;
-  border: none;
+  border: 0;
 
   .#{$css-prefix}popover__body {
     font-size: $font-size-small;

@@ -47,7 +47,11 @@ linters:
   MergeableSelector:
     enabled: false
   NameFormat:
-    enabled: false
+    enabled: true
+    allow_leading_underscore: true # For private variables, mixins and functions
+    convention: '^[a-z]|[a-z0-9\-]{2,}$'
+    convention_explanation: 'Valid names for variables, mixins and functions: i, foo, foo-bar, foo-1, _private-thing'
+    severity: error
   NestingDepth:
     enabled: true
     ignore_parent_selectors: true
@@ -61,8 +65,11 @@ linters:
     enabled: false
   SelectorDepth:
     enabled: false
-  SelectorFormat:
-    enabled: false
+  SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
+    enabled: true
+    convention: '^[a-z0-9_\-]+$'
+    convention_explanation: 'Valid class names: block_container, block, block--modifier, block__element, block__element--modifier'
+    severity: error
   Shorthand:
     enabled: false
   SingleLinePerProperty:

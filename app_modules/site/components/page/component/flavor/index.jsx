@@ -141,7 +141,7 @@ const renderHTML = function(element) {
     'indent_char': ' ',
     'unformatted': ['a']
   });
-}
+};
 
 /**
  * Return true if the current "role" preference can view a tab
@@ -177,7 +177,7 @@ function prepareCodeTabs(flavor, hasPreview) {
       return tab;
     }
     return tab;
-  })
+  });
 }
 
 /**
@@ -200,7 +200,7 @@ function renderElementState (element, actions) {
     if (_.has(action, 'className') && _.has(prevProps, 'className')) {
       return _.includes(prevProps.className, action.className);
     }
-  })
+  });
   let filterActions = type => elementActions.filter(action => _.has(action, type));
   // Exit early if the current element is being removed
   for (let action of elementActions) {
@@ -327,7 +327,7 @@ class ComponentFlavor extends React.Component {
       .filter(React.isValidElement)
       .first();
     // If we don't have a state yet, just return the raw ReactElement
-    if (!this.state) return element
+    if (!this.state) return element;
     const { previewState } = this.state;
     // If we have an element and should render it with a specific state
     if (element && options.renderState === true && _.isArray(previewState.actions)) {

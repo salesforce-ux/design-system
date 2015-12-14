@@ -1,1 +1,1 @@
-web: node server/heroku/src/server.js
+web: node server/heroku/dist/server.js

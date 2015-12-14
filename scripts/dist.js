@@ -391,6 +391,8 @@ async.series([
       .on('error', done)
       .pipe(gulp.dest(distPath()))
       .on('error', done)
+      .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')))
+      .on('error', done)
       .on('finish', done);
   }
 

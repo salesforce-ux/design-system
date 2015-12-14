@@ -20,7 +20,7 @@ import Img from 'app_modules/ui/img';
 const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jason Rodgers">
-      <Img src={`/assets/images/avatar1.jpg`} alt='Jason Rodgers'/>
+      <Img src={`/assets/images/avatar1.jpg`} alt="Jason Rodgers" />
     </a>
   </div>
 );

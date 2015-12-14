@@ -23,12 +23,14 @@ import gulpif from 'gulp-if';
 import gulpinsert from 'gulp-insert';
 import gulpzip from 'gulp-zip';
 import gulprename from 'gulp-rename';
-import { C_STYLE as license } from 'scripts/tasks/update-boilerplate';
 import minimist from 'minimist';
-import postcss from 'postcss';
+import postcss from 'gulp-postcss';
+import rem2px from 'gulp-rem2px';
 import rimraf from 'rimraf';
-import sass from 'node-sass';
+import sass from 'gulp-sass';
 import through from 'through2';
+import minifycss from 'gulp-minify-css';
+
 
 const argv = minimist(process.argv.slice(2));
 const isNpm = argv.npm === true;
@@ -36,7 +38,6 @@ const isNpm = argv.npm === true;
 const MODULE_NAME = globals.moduleName;
 const DESIGN_TOKENS_MODULE_NAME = '@salesforce-ux/design-tokens';
 const DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME;
-const PRESERVE_COMMENTS_CONTAINING = /(normalize|http|https|license|flag)/ig;
 
 const now = new Date();
 
@@ -45,10 +46,6 @@ const now = new Date();
 ///////////////////////////////////////////////////////////////
 
 const distPath = path.resolve.bind(path, __PATHS__.dist);
-
-function isNotVendorFile(file) {
-  return /vendor/.test(file.path) === false;
-}
 
 function commentBanner(messages) {
   messages = messages.map(function(message) {
@@ -61,72 +58,6 @@ function commentBanner(messages) {
   ].join('\n');
 }
 
-function copy(src, dest, options, done) {
-  gulp.src(src, options)
-    .pipe(gulp.dest(dest))
-    .on('error', done)
-    .on('finish', done);
-}
-
-function removeCSSComments (css) {
-  return postcss([function (root, result) {
-    root.walkComments(function (comment) {
-      if (!comment.text.match(PRESERVE_COMMENTS_CONTAINING)) {
-        comment.remove();
-      }
-    });
-  }]).process(css).css;
-}
-
-function convertRemToPx (css) {
-  return postcss([function (root, result) {
-    root.replaceValues(/\d*\.?\d+rem/g, function (string) {
-      return (16 * parseFloat(string, 10)) + 'px';
-    });
-  }]).process(css).css;
-}
-
-/**
- * Compile the Sass and output to /css
- *
- * @param {object} options
- * @param {function} done
- */
-function compileSass(opts, done) {
-  const dest = `assets/styles/${MODULE_NAME}${opts.target}.css`;
-  let css;
-  try {
-    css = sass.renderSync({
-      file: distPath('scss/' + opts.source),
-      outputStyle: 'nested',
-      sourceComments: false,
-      includePaths: [
-        __PATHS__.node_modules
-      ]
-    }).css.toString();
-    // Comments
-    css = removeCSSComments(css);
-    // Rem => Px
-    if (opts.isVF) {
-      css = convertRemToPx(css);
-    }
-    // Autoprefixer
-    css = postcss([autoprefixer]).process(css).css;
-  } catch (e) {
-    return done(e);
-  }
-  const stream = through.obj();
-  const file = new gutil.File({
-    path: dest,
-    contents: new Buffer(css)
-  });
-  stream.write(file);
-  stream.end();
-  stream
-  .pipe(gulp.dest(distPath()))
-  .on('error', done)
-  .on('finish', done);
-}
 
 ///////////////////////////////////////////////////////////////
 // Tasks
@@ -143,14 +74,13 @@ async.series([
    * Copy necessary root files to be included in the final module
    */
   (done) => {
-    const src = [
-      'README-dist.txt',
-      '.npmignore',
-      'package.json'
-    ].map(function(file) {
-      return path.resolve(__PATHS__.root, file);
-    });
-    copy(src, __PATHS__.dist, {}, done);
+    gulp.src([
+      './README-dist.txt',
+      './package.json'
+    ], { base: path.resolve(__PATHS__.root) })
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
@@ -177,12 +107,8 @@ async.series([
    * Move all the scss files to dist/scss
    */
   (done) => {
-    gulp.src([
-      path.resolve(__PATHS__.ui, '**/*.scss')
-    ], { base: __PATHS__.ui })
-      // Add the version
-      .pipe(gulpif(isNotVendorFile, gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`)))
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'scss')))
+    gulp.src(['**/*.scss'], { base: path.resolve(__PATHS__.ui), cwd: path.resolve(__PATHS__.ui) })
+      .pipe(gulp.dest(distPath('scss')))
       .on('error', done)
       .on('finish', done);
   },
@@ -304,7 +230,7 @@ async.series([
    */
   (done) => {
     if (isNpm) return done();
-    const pattern = /\"(.*?)\"(?=[,;])/g;
+    const pattern = /\'(.*?)\'(?=[,;])/g;
     gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
         const newFile = file.clone();
@@ -323,7 +249,7 @@ async.series([
         }).map(function(i) {
           return fs.readFileSync(i).toString();
         });
-        // Repalce @import "..", ".."; with the inlined tokens
+        // Replace @import '…', '…'; with the inlined tokens
         contents = contents.replace(/\@import[\s\S]*?;/, function() {
           return sassImports.join('\n');
         });
@@ -340,39 +266,77 @@ async.series([
    * Build design system and vf css from the scss files. The big one!
    */
   (done) => {
-    async.map([
-      { source: 'index.scss', target: '' },
-      { source: 'index-scoped.scss', target: '-scoped' },
-      { source: 'index-ltng.scss', target: '-ltng' },
-      { source: 'index-vf.scss', target: '-vf', isVF: true }
-    ], compileSass, done);
+    gulp.src(distPath('scss/index*.scss'))
+      .pipe(sass({
+        outputStyle: 'nested',
+        includePaths: [
+          __PATHS__.node_modules
+        ]
+      }))
+      .pipe(sass().on('error', sass.logError))
+      .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+      .pipe(gulprename(function(path) {
+        path.basename = MODULE_NAME + path.basename.substring('index'.length);
+        path.extname = '.css';
+        return path;
+      }))
+      .pipe(gulp.dest(distPath('assets/styles/')))
+      .on('error', done)
+      .on('finish', done);
+  },
+  (done) => {
+    gulp.src(distPath('assets/styles/*-vf.css'), { base: distPath() })
+      .pipe(rem2px(16))
+      .pipe(gulp.dest(distPath()))
+      .on('error', done)
+      .on('finish', done);
+  },
+  /**
+   * Minify CSS
+   */
+  (done) => {
+    gulp.src(distPath('assets/styles/*.css'), { base: distPath() })
+      .pipe(gulp.dest(distPath()))
+      .on('error', done)
+      .pipe(minifycss({
+        advanced: false
+      }))
+      .pipe(gulprename(function(path) {
+        path.basename += '.min';
+        return path;
+      }))
+      .on('error', done)
+      .pipe(gulp.dest(distPath()))
+      .on('error', done)
+      .on('finish', done);
   },
 
   /**
-   * Minify / License / Version
+   * Add version to relevant CSS and Sass files
    */
   (done) => {
-    gulp.src(distPath('assets/styles/**/*.css'), { base: distPath() })
-      .pipe(gulpinsert.prepend(license))
-      .pipe(gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
+    gulp.src(
+      [
+        '**/*.css',
+        'scss/index*'
+      ],
+      { base: distPath(), cwd: distPath() }
+    )
+      .pipe(gulpinsert.prepend(`/*! ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
       .pipe(gulp.dest(distPath()))
       .on('error', done)
-      .pipe(through.obj(function(file, enc, next) {
-        const newFile = file.clone();
-        sass.render({
-          data: newFile.contents.toString(),
-          outputStyle: 'compressed'
-        }, function (err, result) {
-          if (err) return next(err);
-          newFile.contents = result.css;
-          next(null, newFile);
-        });
-      }))
-      .on('error', done)
-      .pipe(gulprename({suffix: '.min'}))
-      .on('error', done)
-      .pipe(gulpinsert.prepend(license))
-      .pipe(gulpinsert.prepend(`/* ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
+      .on('finish', done);
+  },
+  (done) => {
+    gulp.src(
+      [
+        'scss/**/*.scss',
+        '!scss/index*.scss',
+        '!scss/vendor/**/*.*'
+      ],
+      { base: distPath(), cwd: distPath() }
+    )
+      .pipe(gulpinsert.prepend(`// ${globals.displayName} ${process.env.SLDS_VERSION}\n`))
       .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
@@ -412,7 +376,6 @@ async.series([
   (done) => {
     if (isNpm) return done();
     const src = [
-      '.npmignore',
       'package.json'
     ].map(file => distPath(file));
     async.each(src, rimraf, done);

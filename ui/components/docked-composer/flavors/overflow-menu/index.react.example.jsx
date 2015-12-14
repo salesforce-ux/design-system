@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only' style={{ height: '330px', paddingTop: '290px', paddingLeft: '1rem' }}>
+ <div className="demo-only" style={{ height: '330px', paddingTop: '290px', paddingLeft: '1rem' }}>
     <div className={pf('docked-composer docked-composer--overflow')}>
       <a href="javascript:void(0)" className={pf('docked-composer__overflow-pill theme--alt-inverse')}>
         <span className={pf('align-middle')}>

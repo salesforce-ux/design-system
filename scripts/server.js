@@ -17,8 +17,9 @@ import browserSync from 'browser-sync';
 import browserSyncConsole from 'app_modules/util/browser-sync-console';
 import minimist from 'minimist';
 import watch from 'glob-watcher';
+import gulp from 'gulp';
 
-import { compile as compileSass } from './tasks/site/sass';
+import siteSass from './tasks/site/sass';
 import { createPageCompiler } from './tasks/site/compile';
 import { watch as compileWebpack } from './tasks/site/webpack';
 
@@ -26,29 +27,40 @@ const argv = minimist(process.argv.slice(2));
 const bs = browserSync.create();
 const pageCompiler = createPageCompiler();
 
-let watchTasksDefalt = ['webpack', 'sass'];
-let watchTasks = [];
-
-let tasks = {
-  webpack: watchWebpack,
-  sass: watchSass
-};
+let watchTasks = argv.watch === true ? ['webpack', 'sass'] : [];
 
 if (_.isString(argv.watch)) {
   watchTasks = argv.watch.split(',').map(_.trim);
 }
 
-if (_.isBoolean(argv.watch)) {
-  watchTasks = watchTasksDefalt;
-}
+const availableTasks = {
+  webpack: function() { watchWebpack(); },
+  sass: function() {
+    console.log('Watching Sass…');
+    gulp.watch([
+      path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
+      path.resolve(__PATHS__.ui, '**/*.scss')
+    ], event => {
+      siteSass(error => {
+        if (error) {
+          console.log(error);
+        } else {
+          bs.reload();
+        }
+      });
+    });
+  }
+};
 
 /**
- * Start BrowserSync
+ * Start BrowserSync Server
+ * @param  {array} tasks
  */
-function startServer () {
-  watchTasks.forEach(task => {
-    tasks[task]();
+function startServer(tasks) {
+  tasks.forEach(function(task) {
+    availableTasks[task].call();
   });
+
   bs.use(browserSyncConsole);
   bs.init({
     injectChanges: false,
@@ -70,9 +82,9 @@ function startServer () {
 /**
  *
  */
-function watchComponents () {
-  console.log('Watching Webpack');
-  console.log('Watching Components');
+function watchComponents() {
+  console.log('Watching Components…');
+
   watch([
     path.resolve(__PATHS__.ui, '**/*.{md,yml}')
   ]).on('change', e => {
@@ -91,28 +103,11 @@ function watchComponents () {
 }
 
 /**
- *
- */
-function watchSass () {
-  console.log('Watching Sass');
-  watch([
-    path.resolve(__PATHS__.site, '**/*.scss'),
-    path.resolve(__PATHS__.ui, '**/*.scss')
-  ]).on('change', e => {
-    console.time('Sass Duration');
-    compileSass(err => {
-      console.timeEnd('Sass Duration');
-      if (!err) bs.reload();
-    });
-  });
-}
-
-/**
  * Compile and watch webpack
  *
  * @param {function} callback - called after the first compile
  */
-function watchWebpack (callback) {
+function watchWebpack(callback) {
   const done = _.once(() => {
     watchComponents();
     callback();
@@ -136,11 +131,11 @@ function watchWebpack (callback) {
 /**
  * If webpack was specified, let it compile once before starting the server
  */
-if (_.includes(watchTasks, 'webpack')) {
+if (watchTasks.includes('webpack')) {
   _.pull(watchTasks, 'webpack');
   watchWebpack(() => {
-    startServer();
+    startServer(watchTasks);
   });
 } else {
-  startServer();
+  startServer(watchTasks);
 }

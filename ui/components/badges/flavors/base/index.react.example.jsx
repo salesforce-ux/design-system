@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <span className={pf('badge')}>Label</span>
   <span className={pf('badge theme--default')}>Label</span>
   <span className={pf('badge theme--shade')}>Label</span>

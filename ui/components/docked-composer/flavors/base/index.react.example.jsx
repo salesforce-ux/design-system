@@ -32,7 +32,7 @@ const recordIcon = (
 );
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
       <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>

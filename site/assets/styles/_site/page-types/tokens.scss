@@ -24,7 +24,7 @@
       position: relative;
       cursor: help;
 
-      & + figure {
+      + figure {
         font-size: $font-size-medium;
         line-height: $line-height-text;
       }
@@ -113,7 +113,7 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          content: "";
+          content: '';
           border: {
             right: 0.5rem solid transparent;
             bottom: 0.5rem solid $color-text-inverse;
@@ -126,7 +126,7 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          content: "";
+          content: '';
           border: {
             top: 0.5rem solid $color-text-inverse;
             right: 0.5rem solid transparent;
@@ -194,7 +194,7 @@
     right: -$spacing-medium;
     bottom: 0;
     border-right: 1px solid yellow;
-    content: " ";
+    content: ' ';
   }
 }
 
@@ -228,7 +228,7 @@
         font-style: italic;
         background: $color-background;
         color: $color-text-weak;
-        content: "Same as Previous Form Factor";
+        content: 'Same as Previous Form Factor';
       }
     }
   }
@@ -268,9 +268,8 @@
     }
 
     @include mq-medium-min {
-
+      // scss-lint:disable NestingDepth SelectorDepth
       td.token {
-        // scss-lint:disable NestingDepth
         vertical-align: top;
         padding: {
           top: $spacing-small;

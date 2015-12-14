@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only demo-only--notification'>
+<div className="demo-only demo-only--notification">
   <div className={pf('notify_container')}>
 
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">

@@ -1,15 +1,19 @@
 # Documentation:
 # https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
   BorderZero:
-    enabled: false
+    enabled: true
   ColorKeyword:
     enabled: false
   ColorVariable:
     enabled: false
   Comment:
     enabled: true
-    allowed: '\* Note\: '
+    allowed: '\* Note\: |Copyright'
   DeclarationOrder:
     enabled: false
   DuplicateProperty:
@@ -29,9 +33,12 @@ linters:
   HexNotation:
     enabled: false
   IdSelector:
-    enabled: false
+    enabled: true
+    severity: error
   ImportPath:
-    enabled: false
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
   ImportantRule:
     enabled: true
   Indentation:
@@ -42,20 +49,31 @@ linters:
   MergeableSelector:
     enabled: false
   NameFormat:
-    enabled: false
+    enabled: true
+    allow_leading_underscore: true # For private variables, mixins and functions
+    convention: '^[a-z]|[a-z0-9\-]{2,}$'
+    convention_explanation: 'Valid names for variables, mixins and functions: i, foo, foo-bar, foo-1, _private-thing'
+    severity: error
   NestingDepth:
     enabled: true
+    max_depth: 3
     ignore_parent_selectors: true
   PlaceholderInExtend:
     enabled: false
   PropertySortOrder:
     enabled: false
+  PropertySpelling:
+    enabled: true
   QualifyingElement:
     enabled: false
   SelectorDepth:
-    enabled: false
-  SelectorFormat:
-    enabled: false
+    enabled: true
+    max_depth: 3
+  SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
+    enabled: true
+    convention: '^[a-z0-9_\-]+$'
+    convention_explanation: 'Valid class names: block_container, block, block--modifier, block__element, block__element--modifier'
+    severity: error
   Shorthand:
     enabled: false
   SingleLinePerProperty:
@@ -71,19 +89,21 @@ linters:
   SpaceAfterVariableName:
     enabled: true
   SpaceAroundOperator:
-    enabled: false
+    enabled: true
+    style: one_space
   SpaceBeforeBrace:
     enabled: true
     allow_single_line_padding: true
   StringQuotes:
-    enabled: false
+    enabled: true
+    style: single_quotes
   TrailingSemicolon:
     enabled: true
   UnnecessaryParentReference:
-    enabled: false
+    enabled: true
   UrlQuotes:
-    enabled: false
+    enabled: true
   VendorPrefix:
-    enabled: false
+    enabled: true
   ZeroUnit:
     enabled: true

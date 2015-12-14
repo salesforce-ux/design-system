@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <Tabs flavor="scoped">
     <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item One" id="tab-scoped-1">
       <h2>Item One Content</h2>

@@ -38,10 +38,10 @@ export default (
 
     <h2 className="site-text-heading--large" id="framework">Find us on GitHub</h2>
     <p>
-      Instead of downloading the Design System you can also <a href='https://github.com/salesforce-ux/design-system'>fork or clone it on GitHub</a>.
+      Instead of downloading the Design System you can also <a href="https://github.com/salesforce-ux/design-system">fork or clone it on GitHub</a>.
     </p>
-    <CTALink href='https://github.com/salesforce-ux/design-system' className={pf('button button--neutral')} ctaEventName='GitHub'>
-      <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
+    <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} ctaEventName="GitHub">
+      <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
       Design System on GitHub
     </CTALink>
 
@@ -73,7 +73,7 @@ bower install salesforce-lightning-design-system
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
       and icons to include in your project. See
-      the <CTALink href="/release-notes" ctaEventName='release-notes-top'>release notes</CTALink> for
+      the <CTALink href="/release-notes" ctaEventName="release-notes-top">release notes</CTALink> for
       details on the latest updates.
     </p>
     <p>
@@ -96,7 +96,7 @@ bower install salesforce-lightning-design-system
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
-      Download all <CTALink href="/resources/icons" ctaEventName='icons-link-click'>icon sets</CTALink>. Each icon is
+      Download all <CTALink href="/resources/icons" ctaEventName="icons-link-click">icon sets</CTALink>. Each icon is
       available as <abbr title="Scalable Vector Graphics">SVG</abbr> and in
       two different PNG sizes.
     </p>
@@ -111,11 +111,11 @@ bower install salesforce-lightning-design-system
 
     <h2 className="site-text-heading--large" id="design-tokens">Design Tokens</h2>
     <p>
-      <CTALink href="/resources/tokens" ctaEventName='design-tokens-link-click'>Design Tokens</CTALink> are available in multiple
+      <CTALink href="/resources/tokens" ctaEventName="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
       formats depending on which technology your application uses. For
       web-based applications, you can use our tokens
-      as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" ctaEventName='alistapart-link-click'>variables</CTALink> through
-      CSS preprocessors <CTALink href="http://sass-lang.com/" ctaEventName='sass-link-click'>Sass</CTALink>, <CTALink href="http://lesscss.org/" ctaEventName='lesscss-link-click'>Less</CTALink>, and <CTALink href="https://learnboost.github.io/stylus/" ctaEventName='stylus-link-click'>Stylus</CTALink>.
+      as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" ctaEventName="alistapart-link-click">variables</CTALink> through
+      CSS preprocessors <CTALink href="http://sass-lang.com/" ctaEventName="sass-link-click">Sass</CTALink>, <CTALink href="http://lesscss.org/" ctaEventName="lesscss-link-click">Less</CTALink>, and <CTALink href="https://learnboost.github.io/stylus/" ctaEventName="stylus-link-click">Stylus</CTALink>.
       We recommend Sass as we use it internally, it is well-documented, and
       is the industry standard.
     </p>

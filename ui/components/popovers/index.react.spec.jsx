@@ -69,13 +69,13 @@ xdescribe(`Dialog`, () => {
         render: function() {
           return (
             <div style={{height: '200px', width: '300px', margin: '20px'}}>
-              <Control trigger='click' placement='right' target='#real-dialog'>
-                <Button flavor='neutral' style={{padding: '10px'}}>Backstreets back</Button>
+              <Control trigger="click" placement="right" target="#real-dialog">
+                <Button flavor="neutral" style={{padding: '10px'}}>Backstreets back</Button>
               </Control>
 
-              <Dialog id='other-dialog'></Dialog>
+              <Dialog id="other-dialog"></Dialog>
 
-              <Dialog id='real-dialog' visible={false} style={{width: '10px', height: '20px'}}>
+              <Dialog id="real-dialog" visible={false} style={{width: '10px', height: '20px'}}>
                 <Dialog.Header>
                   <h2>Everybody</h2>
                 </Dialog.Header>
@@ -129,13 +129,13 @@ xdescribe(`Dialog`, () => {
         render: function() {
           return (
             <div style={{height: '200px', width: '500px', margin: '20px'}}>
-              <Control trigger='click' placement='top' target='#real-dialog'>
-                <Button flavor='base' style={{padding: '10px'}}>Harold Clickerton</Button>
+              <Control trigger="click" placement="top" target="#real-dialog">
+                <Button flavor="base" style={{padding: '10px'}}>Harold Clickerton</Button>
               </Control>
 
-              <Dialog id='other-dialog'></Dialog>
+              <Dialog id="other-dialog"></Dialog>
 
-              <Dialog id='real-dialog' visible={false} style={{width: '100px', height: '150px'}}>
+              <Dialog id="real-dialog" visible={false} style={{width: '100px', height: '150px'}}>
                 <Dialog.Body>
                   <h1>How embarassing, I'm neighbors with the backstreet boys</h1>
                 </Dialog.Body>

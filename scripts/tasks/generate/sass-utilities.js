@@ -13,41 +13,28 @@ import path from 'path';
 import gulp from 'gulp';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
-import sass from 'node-sass';
+import sass from 'gulp-sass';
 import through from 'through2';
 
-function getIndexWithDependencies() {
-  return path.resolve(__PATHS__.ui, 'utilities/index-with-dependencies.scss');
-}
-
-export default function (done) {
+export default function(done) {
   console.log('Compiling Sass utilities');
-  gulp.src(getIndexWithDependencies())
   // Sass
-  .pipe(through.obj((file, enc, next) => {
-    const newFile = file.clone();
-    sass.render({
-      data: file.contents.toString(),
-      file: newFile.path,
+  gulp.src(path.resolve(__PATHS__.ui, 'utilities/index-with-dependencies.scss'))
+    .pipe(sass({
       outputStyle: 'nested',
       includePaths: [
         __PATHS__.root,
-        __PATHS__.node_modules,
-        __PATHS__.ui
+        __PATHS__.ui,
+        __PATHS__.node_modules
       ]
-    }, (err, result) => {
-      if (err) return done(err);
-      newFile.contents = result.css;
-      next(null, newFile);
-    });
-  }))
-  .on('error', done)
-  .pipe(rename(path => {
-    path.basename = 'utilities';
-    path.extname = '.css';
-  }))
-  .on('error', done)
-  .pipe(gulp.dest(__PATHS__.generated))
-  .on('error', done)
-  .on('finish', done);
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rename(path => {
+      path.basename = 'utilities';
+      path.extname = '.css';
+    }))
+    .on('error', done)
+    .pipe(gulp.dest(__PATHS__.generated))
+    .on('error', done)
+    .on('finish', done);
 }

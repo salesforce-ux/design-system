@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <span className={pf('resizable__handle resizable__handle--indicator')} style={{transform: 'translate3d(318px,0,0)', height: '37px'}}>
     <span className={pf('resizable__divider')}></span>
   </span>

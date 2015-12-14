@@ -30,12 +30,12 @@ describe(`React`, () => {
     beforeEach(() => {
       cmp = renderIntoDocument(
         <Dropdown>
-          <Dropdown.Header id='theHeader'>
+          <Dropdown.Header id="theHeader">
             <Dropdown.Title>Filterless</Dropdown.Title>
           </Dropdown.Header>
           <Dropdown.List className={'bling'}>
-            <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
-            <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
+            <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
+            <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
           </Dropdown.List>
         </Dropdown>
       );
@@ -86,11 +86,11 @@ describe(`React`, () => {
           <Dropdown>
             <Dropdown.Header>
               <Dropdown.Title>Filterless</Dropdown.Title>
-              <Dropdown.Filter placeholder='tacos' />
+              <Dropdown.Filter placeholder="tacos" />
             </Dropdown.Header>
             <Dropdown.List>
-              <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
-              <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
+              <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
+              <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
             </Dropdown.List>
           </Dropdown>
       );
@@ -144,12 +144,12 @@ describe(`React`, () => {
     beforeEach(() => {
       cmp = renderIntoDocument(
           <Dropdown>
-            <Dropdown.Header id='theHeader'>
+            <Dropdown.Header id="theHeader">
               <Dropdown.Title>Filterless</Dropdown.Title>
             </Dropdown.Header>
             <Dropdown.List className={'bling'} isSelectable={false}>
-              <Dropdown.Item disabled={true} href='#one'>One</Dropdown.Item>
-              <Dropdown.Item disabled={false} href='#two'>Two</Dropdown.Item>
+              <Dropdown.Item disabled={true} href="#one">One</Dropdown.Item>
+              <Dropdown.Item disabled={false} href="#two">Two</Dropdown.Item>
             </Dropdown.List>
           </Dropdown>
       );

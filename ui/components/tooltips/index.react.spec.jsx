@@ -39,10 +39,10 @@ xdescribe(`Tooltip`, () => {
         render: function() {
           return (
             <div style={{height: '80px', width: '200px', margin: '20px'}}>
-              <Control trigger='click' placement='top' target='#tip1'>
+              <Control trigger="click" placement="top" target="#tip1">
                 <Button className={pf('clicky-mcduck')}>Click me</Button>
               </Control>
-              <Tooltip id='tip1' visible={false} style={{width: '10px', height: '20px'}}>
+              <Tooltip id="tip1" visible={false} style={{width: '10px', height: '20px'}}>
                 <h1>Tip the Toolman Taylor</h1>
               </Tooltip>
             </div>

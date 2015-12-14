@@ -1,0 +1,1 @@
+When `.{{cssPrefix}}grid--vertical-align-center` is used in conjunction with `.{{cssPrefix}}grid--align-center`, the outcome would horizontally and vertically center align your content in the center of the `.{{cssPrefix}}grid`.

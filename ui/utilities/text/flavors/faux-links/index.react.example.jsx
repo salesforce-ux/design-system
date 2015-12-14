@@ -14,5 +14,5 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only'><span className={pf('type-focus')}>Span with faux link interactions</span></div>
+  <div className="demo-only"><span className={pf('type-focus')}>Span with faux link interactions</span></div>
 );

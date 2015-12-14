@@ -55,11 +55,11 @@ class Overview extends React.Component {
         </h2>
         <IfPrefs userType="external">
           <p className={pf('site-cta-buttons m-bottom--medium')}>
-            <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName='downloads-top'>Get the Design System</CTALink>
+            <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName="downloads-top">Get the Design System</CTALink>
             <GithubButton></GithubButton>
           </p>
         </IfPrefs>
-        <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName='release-notes-top'>{version.sldsVersion}</CTALink></p>
+        <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName="release-notes-top">{version.sldsVersion}</CTALink></p>
       </header>
 
       <div className={pf('container--buffer container--x-large')}>
@@ -141,7 +141,7 @@ class Overview extends React.Component {
                 </div>
                 <hr className="hr hr--pink" />
                 <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
-                <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" ctaEventName='downloads-bottom'>Learn More</CTALink>
+                <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" ctaEventName="downloads-bottom">Learn More</CTALink>
               </div>
             </li>
             <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
@@ -152,7 +152,7 @@ class Overview extends React.Component {
                 </div>
                 <hr className="hr hr--orange" />
                 <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-                <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" ctaEventName='tutorials-bottom'>Learn More</CTALink>
+                <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" ctaEventName="tutorials-bottom">Learn More</CTALink>
               </div>
             </li>
           </ul>

@@ -42,7 +42,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-      <div className='demo-only' style={{height: '480px'}}>
+     <div className="demo-only" style={{height: '480px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}

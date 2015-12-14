@@ -20,7 +20,7 @@ const image = (
 );
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
   <ul className={pf('list--vertical has-dividers--bottom-space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>

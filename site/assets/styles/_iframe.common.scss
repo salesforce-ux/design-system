@@ -12,25 +12,25 @@ body {
 }
 
 // Grid Demo
-.demo-container {
+  // .demo-container {
 
-  .#{$css-prefix}col,
-  .#{$css-prefix}col--padded > span {
-    display: block;
-    text-align: center;
-    line-height: $line-height-button;
-    background-color: $color-background;
-    border-radius: $border-radius-medium;
-    box-shadow: $color-border 0 0 0 $border-width-thin inset;
-  }
+  //   .#{$css-prefix}col,
+  //   .#{$css-prefix}col--padded > span {
+  //     display: block;
+  //     text-align: center;
+  //     line-height: $line-height-button;
+  //     background-color: $color-background;
+  //     border-radius: $border-radius-medium;
+  //     box-shadow: $color-border 0 0 0 $border-width-thin inset;
+  //   }
 
-  .#{$css-prefix}col--padded > span {
-    padding: {
-      left: $spacing-medium;
-      right: $spacing-medium;
-    }
-  }
-}
+  //   .#{$css-prefix}col--padded > span {
+  //     padding: {
+  //       left: $spacing-medium;
+  //       right: $spacing-medium;
+  //     }
+  //   }
+  // }
 
 // For Absolutely Positioned Demos
 .demo-only {
@@ -143,7 +143,7 @@ body {
   }
 
   > div:after {
-    content: "." attr(class);
+    content: '.' attr(class);
     display: block;
     font-weight: normal;
   }

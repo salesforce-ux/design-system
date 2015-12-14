@@ -68,7 +68,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('form-element')}>
     <Checkbox label="Checkbox Label" assistiveText="checkboxSample1" />
   </div>

@@ -25,7 +25,7 @@ const image2 = (
 );
 
 export default (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <MediaObject figureLeft={image1} className={pf('tile')}>
     <p className={pf('tile__title truncate')}>
       <a href="#">Salesforce UX</a>

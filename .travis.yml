@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "4.2"
 before_install:
+  - mv scripts/travis/Gemfile* .
   - rvm install 2.2.2
   - scripts/travis/before_install.sh
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN

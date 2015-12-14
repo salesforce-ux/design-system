@@ -62,7 +62,7 @@ export default (
 // $color-text-default: red;
 
 // ${globals.displayName}
-@import "${moduleName}/scss/index.scss";
+@import '${moduleName}/scss/index.scss';
         `}</CodeBlock>
       </div>
 

@@ -13,7 +13,7 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid grid--vertical-align-center grid--pull-padded')} style={{height: '250px'}}>
     <div className={pf('col--padded')}>
       <div className={pf('box box--small theme--shade text-align--center')}>Content determines the width unless otherwise set</div>
@@ -32,7 +32,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid grid--vertical-align-center')}>
     <div>Content determines the width unless otherwise set</div>
     <div>1</div>

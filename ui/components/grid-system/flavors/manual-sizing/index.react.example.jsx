@@ -13,20 +13,52 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export default (
-<div className='demo-only demo-container'>
-  <div className={pf('grid wrap')}>
-    <nav className={pf('col size--1-of-1')}>1</nav>
-    <main className={pf('col size--1-of-2 medium-size--5-of-6 large-size--8-of-12')}>2</main>
-    <aside className={pf('col size--1-of-2 medium-size--1-of-6 large-size--4-of-12')}>3</aside>
-    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>4</section>
-    <section className={pf('col size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>5</section>
-    <footer className={pf('col size--1-of-1 large-size--1-of-3')}>
-      <div className={pf('grid wrap')}>
-        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>6</div>
-        <div className={pf('col size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>7</div>
+export const preview = (
+ <div className="demo-only demo-container">
+  <div className={pf('grid wrap grid--pull-padded')}>
+    <div className={pf('col--padded size--1-of-1 p-bottom--large')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>1</div>
+    </div>
+    <div className={pf('col--padded size--1-of-2 medium-size--5-of-6 large-size--8-of-12 p-bottom--large')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>2</div>
+    </div>
+    <div className={pf('col--padded size--1-of-2 medium-size--1-of-6 large-size--4-of-12 p-bottom--large')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>3</div>
+    </div>
+    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2 large-size--1-of-3 p-bottom--large')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>4</div>
+    </div>
+    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2 large-size--1-of-3 p-bottom--large')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>5</div>
+    </div>
+    <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+      <div className={pf('grid wrap grid--pull-padded')}>
+        <div className={pf('col--padded size--1-of-2 medium-size--1-of-1 large-size--1-of-2 p-bottom--large')}>
+          <div className={pf('box box--small theme--shade text-align--center')}>6</div>
+        </div>
+        <div className={pf('col--padded size--1-of-2 medium-size--1-of-1 large-size--1-of-2 p-bottom--large')}>
+          <div className={pf('box box--small theme--shade text-align--center')}>7</div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</div>
+);
+
+export const code = (
+ <div className="demo-only demo-container">
+  <div className={pf('grid wrap grid--pull-padded')}>
+    <div className={pf('col--padded size--1-of-1')}>1</div>
+    <div className={pf('col--padded size--1-of-2 medium-size--5-of-6 large-size--8-of-12')}>2</div>
+    <div className={pf('col--padded size--1-of-2 medium-size--1-of-6 large-size--4-of-12')}>3</div>
+    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>4</div>
+    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>5</div>
+    <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+      <div className={pf('grid wrap grid--pull-padded')}>
+        <div className={pf('col--padded size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>6</div>
+        <div className={pf('col--padded size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>7</div>
+      </div>
+    </div>
   </div>
 </div>
 );

@@ -10,19 +10,19 @@
 // New in 1.0.0
 .#{$css-prefix}col--bump {
 
-  &-left {
-    margin-left: auto;
+  &-top {
+    margin-top: auto;
   }
 
   &-right {
     margin-right: auto;
   }
 
-  &-top {
-    margin-top: auto;
-  }
-
   &-bottom {
     margin-right: auto;
+  }
+
+  &-left {
+    margin-left: auto;
   }
 }

@@ -10,8 +10,10 @@ flavors:
   - vertical-alignment-end
   - vertical-alignment-item
   - vertical-stretch
+  - alignment-item-center
   - alignment-item-bump
   - order
+  - container-frame
   - containers
 dependencies:
   - helpers/sizing

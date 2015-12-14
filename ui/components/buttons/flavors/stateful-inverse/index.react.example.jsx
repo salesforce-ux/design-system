@@ -17,13 +17,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only demo--inverse'>
-  <StatefulClass>
-    <Button flavor="inverse" className={pf('not-selected')} aria-live="assertive">
-      <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
-      <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
-      <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
-    </Button>
-  </StatefulClass>
+  <div className="demo-only demo--inverse">
+    <StatefulClass>
+      <Button flavor="inverse" className={pf('not-selected')} aria-live="assertive">
+        <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
+        <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
+        <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
+      </Button>
+    </StatefulClass>
   </div>
 );

@@ -100,7 +100,7 @@ export const preview = (
   </div>
 );
 export const code = (
-  <div className='demo-only'>
+  <div className="demo-only">
     <ButtonIcon
       flavor="icon-bare"
       sprite="utility"

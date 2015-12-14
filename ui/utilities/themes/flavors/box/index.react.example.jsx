@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('box m-bottom--medium')}>
     <p>This is a regular sized box.</p>
   </div>
@@ -27,7 +27,7 @@ export const preview = (
 </div>
 );
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('box')}>
     <p>This is a regular sized box.</p>
   </div>

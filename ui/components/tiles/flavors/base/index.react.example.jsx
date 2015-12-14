@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <div className={pf('tile')}>
     <p className={pf('tile__title truncate')}>
       <a href="#">Salesforce UX</a>

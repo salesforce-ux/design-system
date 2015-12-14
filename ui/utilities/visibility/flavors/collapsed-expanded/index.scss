@@ -15,7 +15,7 @@
 }
 
 .#{$css-prefix}collapsed {
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
     height: 0;
     overflow: hidden;
   }
@@ -27,7 +27,7 @@
 }
 
 .#{$css-prefix}expanded {
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
     height: auto;
     overflow: visible;
   }

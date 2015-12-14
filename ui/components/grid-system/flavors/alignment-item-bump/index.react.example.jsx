@@ -13,7 +13,7 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid')}>
     <div><div className={pf('box box--small theme--shade m-right--large')}>1</div></div>
     <div><div className={pf('box box--small theme--shade m-right--large')}>2</div></div>
@@ -26,7 +26,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid')}>
     <div>1</div>
     <div>2</div>

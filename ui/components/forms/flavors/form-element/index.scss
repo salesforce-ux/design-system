@@ -15,6 +15,12 @@
   &__helper {
     font-size: $font-size-small;
   }
+
+  &__icon {
+    display: inline-block;
+    position: relative; // Since this container can have a tooltip
+    margin-right: $spacing-x-small;
+  }
 }
 
 .#{$css-prefix}form-element__label {
@@ -35,3 +41,5 @@
   margin-top: $spacing-x-small;
   display: block;
 }
+
+

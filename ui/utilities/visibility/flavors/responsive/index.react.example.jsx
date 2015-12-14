@@ -15,8 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
-  <div className='demo-only demo-visibility'>
-
+  <div className="demo-only demo-visibility">
     <div className={pf('x-small-show')}>Show on 320px and up</div>
     <div className={pf('x-small-show-only')}>Show only between 320px and 479px</div>
     <div className={pf('max-x-small-hide')}>Hide on 319px and down</div>

@@ -23,7 +23,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
     </a>
   </div>
 );
@@ -36,7 +36,7 @@ const icon = (
 );
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   {Comment}
   {/* Comment Replies */}
   <ul className={pf('comment__replies')}>

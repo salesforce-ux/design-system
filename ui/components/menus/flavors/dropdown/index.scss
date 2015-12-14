@@ -92,10 +92,10 @@
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
 
     &--nubbin-top {
-      @include nubbin(top, "before");
+      @include nubbin(top, 'before');
       @include nubbin(top);
       margin-top: ($square-tooltip-nubbin / 2);
 
@@ -110,7 +110,7 @@
       }
 
       &.#{$css-prefix}dropdown--left {
-        left: -#{$spacing-medium};
+        left: ($spacing-medium * -1);
 
         &:before,
         &:after {
@@ -120,7 +120,7 @@
       }
 
       &.#{$css-prefix}dropdown--right {
-        right: -#{$spacing-medium};
+        right: ($spacing-medium * -1);
 
         &:before,
         &:after {
@@ -181,7 +181,7 @@
     }
   }
 
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
 
     .#{$css-prefix}has-icon {
       position: relative;
@@ -262,11 +262,11 @@
   > [class*="#{$css-prefix}button--icon"] {
 
     ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
-      left: -#{$spacing-medium};
+      left: ($spacing-medium * -1);
     }
 
     ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
-      right: -#{$spacing-medium};
+      right: ($spacing-medium * -1);
     }
   }
 }

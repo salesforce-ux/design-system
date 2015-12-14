@@ -14,8 +14,8 @@
   position: relative;
 
   &--frame {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
   }
 
@@ -35,6 +35,7 @@
 }
 
 .#{$css-prefix}col,
+// Catch all for col--padded variants
 [class*="#{$css-prefix}col--padded"] {
   @include flex-item(expand);
 }
@@ -85,20 +86,24 @@
 .#{$css-prefix}col-rule {
 
   @include deprecate("2.0.0") {
-    &--left {
-      border-left: 1px solid $color-border-separator;
-    }
 
-    &--right {
-      border-right: 1px solid $color-border-separator;
-    }
+    @include mq-large-min {
 
-    &--top {
-      border-top: 1px solid $color-border-separator;
-    }
+      &--top {
+        border-top: 1px solid $color-border-separator;
+      }
 
-    &--bottom {
-      border-bottom: 1px solid $color-border-separator;
+      &--right {
+        border-right: 1px solid $color-border-separator;
+      }
+
+      &--bottom {
+        border-bottom: 1px solid $color-border-separator;
+      }
+
+      &--left {
+        border-left: 1px solid $color-border-separator;
+      }
     }
   }
 }
@@ -106,20 +111,23 @@
 // New in 1.0.0
 .#{$css-prefix}col--rule {
 
-  &--left {
-    border-left: 1px solid $color-border-separator;
-  }
+  @include mq-large-min {
 
-  &--right {
-    border-right: 1px solid $color-border-separator;
-  }
+    &--top {
+      border-top: 1px solid $color-border-separator;
+    }
 
-  &--top {
-    border-top: 1px solid $color-border-separator;
-  }
+    &--right {
+      border-right: 1px solid $color-border-separator;
+    }
 
-  &--bottom {
-    border-bottom: 1px solid $color-border-separator;
+    &--bottom {
+      border-bottom: 1px solid $color-border-separator;
+    }
+
+    &--left {
+      border-left: 1px solid $color-border-separator;
+    }
   }
 }
 

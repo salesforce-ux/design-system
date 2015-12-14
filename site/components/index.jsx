@@ -42,10 +42,10 @@ class UILib extends React.Component {
         <p>Our CSS framework includes reusable UI elements from forms and lists, to modals and dropdowns. We also provide powerful global CSS scaffolding such as a modern responsive grid system to enable high quality development. <strong>Our CSS framework does not include JavaScript</strong>.</p>
         <ul>
           <IfPrefs role="regular">
-            <li>Review the <CTALink href="/getting-started" ctaEventName='tutorials-top'>Getting Started tutorials</CTALink></li>
+            <li>Review the <CTALink href="/getting-started" ctaEventName="tutorials-top">Getting Started tutorials</CTALink></li>
           </IfPrefs>
           <IfPrefs role="regular">
-            <li><CTALink href="/resources/downloads" ctaEventName='downloads-top'>Download the CSS framework</CTALink> and reference the CSS in your HTML file.</li>
+            <li><CTALink href="/resources/downloads" ctaEventName="downloads-top">Download the CSS framework</CTALink> and reference the CSS in your HTML file.</li>
           </IfPrefs>
           <li>Be sure to review the component status &mdash; look for the badge to the right of the heading on each flavor. You can also use the filter at the top right to see only the dev ready elements:</li>
           <ul>
@@ -61,8 +61,8 @@ class UILib extends React.Component {
         <section className="site-download--landing">
           <p className={pf('m-top--x-large')}>
             <CTALink href="/getting-started" className={pf('button button--brand')}
-                ctaEventName='tutorials-bottom'>Read Tutorials</CTALink> <CTALink href="/resources/downloads/"
-                className={pf('button button--brand button-space-left')} ctaEventName='downloads-bottom'>Get Design System</CTALink>
+                ctaEventName="tutorials-bottom">Read Tutorials</CTALink> <CTALink href="/resources/downloads/"
+                className={pf('button button--brand button-space-left')} ctaEventName="downloads-bottom">Get Design System</CTALink>
           </p>
         </section>
       </IfPrefs>

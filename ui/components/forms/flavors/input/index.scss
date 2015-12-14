@@ -29,7 +29,7 @@
 
 .#{$css-prefix}input--bare {
   background-color: transparent;
-  border: none;
+  border: 0;
   color: $color-text-default;
 
   &:focus,
@@ -52,7 +52,7 @@
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
 
-    @include deprecate("2.0.0") {
+    @include deprecate('2.0.0') {
       fill: $color-text-icon-default;
     }
   }

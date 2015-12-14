@@ -13,7 +13,7 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid grid--align-spread')} style={{height: '250px'}}>
     <div className={pf('align-top')}><div className={pf('box box--small theme--shade')}>Top Align</div></div>
     <div className={pf('align-middle')}><div className={pf('box box--small theme--shade')}>Middle Align</div></div>
@@ -23,7 +23,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only demo-container'>
+<div className="demo-only demo-container">
   <div className={pf('grid')}>
     <div className={pf('align-top')}>Top Align</div>
     <div className={pf('align-middle')}>Middle Align</div>

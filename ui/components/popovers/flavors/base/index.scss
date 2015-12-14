@@ -17,4 +17,8 @@
     position: relative;
     padding: $spacing-x-small $spacing-small;
   }
+
+  &[class*="theme--"] {
+    border: none;
+  }
 }

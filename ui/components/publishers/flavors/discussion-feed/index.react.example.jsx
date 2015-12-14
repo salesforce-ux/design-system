@@ -23,7 +23,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
     </a>
   </div>
 );
@@ -54,7 +54,7 @@ const commentReply = (
 );
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
 
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
@@ -171,7 +171,7 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small')}>To: </dt>

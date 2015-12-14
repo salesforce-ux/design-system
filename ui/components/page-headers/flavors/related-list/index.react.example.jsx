@@ -22,7 +22,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <Anchor flavor="object-home">
       <BreadCrumbs className={pf('m-bottom--xx-small')}>
         <Crumb href="javascript:void(0)">Accounts</Crumb>

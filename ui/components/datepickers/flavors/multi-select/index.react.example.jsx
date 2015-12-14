@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-only--dropdown' style={{height: '400px'}}>
+<div className="demo-only demo-only--dropdown" style={{height: '400px'}}>
   <fieldset className={pf('form--compound')}>
     <legend className={pf('form-element__label')}>Date Picker Label</legend>
     <div className={pf('form-element__group')}>

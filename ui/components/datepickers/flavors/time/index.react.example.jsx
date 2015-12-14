@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '225px'}}>
+<div className="demo-only" style={{height: '225px'}}>
   <div className={pf('dropdown dropdown--left datepicker--time')} aria-hidden="false" data-selection="time">
     <ul className={pf('datepicker--time__list')}>
       <li aria-selected="false">12:00am</li>

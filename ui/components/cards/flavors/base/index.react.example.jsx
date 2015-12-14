@@ -21,7 +21,7 @@ const image = (
 );
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <div className={pf('card')}>
       <div className={pf('card__header grid')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate')}>

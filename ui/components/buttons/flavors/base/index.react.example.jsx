@@ -13,7 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <Button>
       Button
     </Button>

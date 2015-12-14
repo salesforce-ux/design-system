@@ -19,7 +19,7 @@
     border-radius: $border-radius-medium $border-radius-medium 0 0;
   }
 
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
 
     .#{$css-prefix}tabs__item {
       @include tabs-item;
@@ -31,7 +31,7 @@
       }
 
       &:first-child > a {
-        border-left: none;
+        border-left: 0;
         border-radius: $border-radius-medium 0 0 0;
       }
 
@@ -69,7 +69,7 @@
     > .#{$css-prefix}tabs__content {
       background-color: $color-background-alt;
       border: $border-width-thin solid $color-border-button-default;
-      border-top: none;
+      border-top: 0;
       border-radius: 0 0 $border-radius-medium $border-radius-medium;
       padding: $spacing-medium;
     }
@@ -86,7 +86,7 @@
   }
 
   &:first-child .#{$css-prefix}tabs--scoped__link {
-    border-left: none;
+    border-left: 0;
     border-radius: $border-radius-medium 0 0 0;
   }
 }
@@ -94,7 +94,7 @@
 .#{$css-prefix}tabs--scoped__content {
   background-color: $color-background-alt;
   border: $border-width-thin solid $color-border-button-default;
-  border-top: none;
+  border-top: 0;
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
   padding: $spacing-medium;
 }

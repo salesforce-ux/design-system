@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
 export const preview = (
-<div className='demo-only demo-container'>
+ <div className="demo-only demo-container">
 <div>
   <div className={pf('container')}>
     Container
@@ -45,7 +45,7 @@ export const preview = (
 </div>
 );
 export const code = (
-<div className='demo-only demo-container'>
+ <div className="demo-only demo-container">
   <div className={pf('container')}>Contents go here.</div>
   <div className={pf('container--small')}>Contents go here.</div>
   <div className={pf('container--medium')}>Contents go here.</div>

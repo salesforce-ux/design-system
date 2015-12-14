@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-container'>
+ <div className="demo-only demo-container">
   <div className={pf('grid grid--align-spread')}>
     <div className={pf('col--padded')}>Start Line</div>
     <div className={pf('col--padded')}>In Between</div>

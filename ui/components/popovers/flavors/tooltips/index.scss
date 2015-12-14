@@ -12,7 +12,7 @@
   background: $color-background-inverse;
   width: auto;
   max-width: $size-medium;
-  border: none;
+  border: 0;
 
   .#{$css-prefix}popover__body {
     font-size: $font-size-small;

@@ -405,7 +405,7 @@ export default React.createClass({
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>. <CTALink href="http://salesforce.com/company/legal/intellectual.jsp" ctaEventName='copyright'>All rights reserved</CTALink>. {versionDateBuildString}
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>. <CTALink href="http://salesforce.com/company/legal/intellectual.jsp" ctaEventName="copyright">All rights reserved</CTALink>. {versionDateBuildString}
         </p>
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>

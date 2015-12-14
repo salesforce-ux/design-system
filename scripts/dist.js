@@ -230,7 +230,7 @@ async.series([
    */
   (done) => {
     if (isNpm) return done();
-    const pattern = /\"(.*?)\"(?=[,;])/g;
+    const pattern = /\'(.*?)\'(?=[,;])/g;
     gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
         const newFile = file.clone();
@@ -249,7 +249,7 @@ async.series([
         }).map(function(i) {
           return fs.readFileSync(i).toString();
         });
-        // Replace @import "..", ".."; with the inlined tokens
+        // Replace @import '…', '…'; with the inlined tokens
         contents = contents.replace(/\@import[\s\S]*?;/, function() {
           return sassImports.join('\n');
         });

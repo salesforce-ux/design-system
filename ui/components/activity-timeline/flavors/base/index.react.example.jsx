@@ -45,7 +45,7 @@ const form = (
 );
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <ul className={pf('timeline')}>
       <li className={pf('timeline__item')}>
         <span className={pf('assistive-text')}>Task</span>

@@ -16,7 +16,7 @@ import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
 
 export default (
-  <div className='demo-only demo-container'>
+   <div className="demo-only demo-container">
     <div>
     <div className={pf('size--1-of-1')}>.{cssPrefix}size--1-of-1</div>
     <div className={pf('size--1-of-2')}>.{cssPrefix}size--1-of-2</div>

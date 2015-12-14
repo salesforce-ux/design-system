@@ -140,7 +140,7 @@ body {
   }
 
   > div:after {
-    content: "." attr(class);
+    content: '.' attr(class);
     display: block;
     font-weight: normal;
   }

@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-container'>
+ <div className="demo-only demo-container">
   <div className={pf('grid grid--align-space')}>
     <div className={pf('col--padded')}>Content determines the width unless otherwise set</div>
     <div className={pf('col--padded')}>1</div>

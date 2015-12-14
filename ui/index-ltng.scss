@@ -11,27 +11,31 @@
 
 // Lightning Design System - Lightning Platform
 
+$static-icon-path: '../icons';
+$static-image-path: '../images';
+$static-font-path: '../fonts/webfonts';
+
 // Non-Scoped
 @import
 
   // Dependencies
-  "design-tokens",
-  "dependencies/namespace",
-  "dependencies/pathing-reset",
-  "dependencies/index",
-  "core/font";
+  'design-tokens',
+  'config',
+  'vendor/deprecate',
+  'dependencies/index',
+  'core/font';
 
 // Scoped
 #{$reset-wrapping-class} {
   @import
 
     // Resets
-    "core/core-ltng",
+    'core/core-ltng',
 
     // Framework
-    "components/index",
-    "utilities/index",
+    'components/index',
+    'utilities/index',
 
     // Print
-    "vendor/html5boilerplate-print";
+    'vendor/html5boilerplate-print';
 }

@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '285px'}}>
+<div className="demo-only" style={{height: '285px'}}>
 
   <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
 

@@ -10,7 +10,7 @@
 .#{$css-prefix}tree-container,
 .#{$css-prefix}tree_container {
 
-  @include deprecate("2.0.0");
+  @include deprecate('2.0.0');
   min-width: rem(120px);
   max-width: rem(400px);
 
@@ -53,9 +53,9 @@
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;
-  @for $currentLevel from 1 through $max-nesting-depth {
-    [aria-level="#{$currentLevel}"] > &__item {
-        padding-left: ((($spacing-medium * $currentLevel) + ($spacing-x-small * $currentLevel)));
+  @for $current-level from 1 through $max-nesting-depth {
+    [aria-level="#{$current-level}"] > &__item {
+        padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
 

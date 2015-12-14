@@ -9,9 +9,9 @@
 
 
 .#{$css-prefix}popover--tooltip {
-  background: $color-background-inverse;
   width: auto;
   max-width: $size-medium;
+  background: $color-background-alt-inverse;
   border: 0;
 
   .#{$css-prefix}popover__body {

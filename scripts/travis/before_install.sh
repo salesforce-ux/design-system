@@ -1,11 +1,9 @@
 #!/bin/bash
+
 set -e
-if [ X"$TRAVIS_SECURE_ENV_VARS" = X"true" ]; then
-npm login <<!
-${NPM_USERNAME}
-${NPM_PASSWORD}
-${NPM_EMAIL}
-!
-else
-  echo "TRAVIS: TRAVIS_SECURE_ENV_VARS env variable not set to true"
+
+if [ -n "$DEPLOY_SCRIPTS_REPO" ]; then
+  rm -rf scripts-internal
+  echo "TRAVIS: cloning deploy scripts: $DEPLOY_SCRIPTS_REPO"
+  git clone $DEPLOY_SCRIPTS_REPO -b $DEPLOY_SCRIPTS_BRANCH scripts-internal
 fi

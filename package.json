@@ -13,7 +13,7 @@
     "npm": ">=2.7.0"
   },
   "scripts": {
-    "postinstall": "gdm",
+    "postinstall": "scripts/npm/postinstall.sh",
     "test-before": "scripts/npm/test-before.sh",
     "test-after": "scripts/npm/test-after.sh",
     "dev": "babel-node scripts/build.js --dev",

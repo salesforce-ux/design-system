@@ -20,6 +20,6 @@ if [ X"$HEROKU_APP_NAME" != "X" ]; then
   npm run dist
   cd ../../
   # Design System Tasks
-  npm run build-prod
+  npm run prod
   npm run dist
 fi

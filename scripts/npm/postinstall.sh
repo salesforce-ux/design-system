@@ -17,6 +17,7 @@ if [ X"$HEROKU_APP_NAME" != "X" ]; then
   cd server/site
   npm install --production
   cd ../../
+  ./node_modules/.bin/babel server/heroku/src --out-dir server/heroku/src
   npm run build-prod
   npm run dist
 fi

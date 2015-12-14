@@ -1,1 +1,1 @@
-web: babel-node server/site/server.js
+web: node server/heroku/src/server.js

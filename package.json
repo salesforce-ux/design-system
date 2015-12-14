@@ -9,7 +9,7 @@
   },
   "author": "Salesforce",
   "engines": {
-    "node": ">=0.12",
+    "node": "0.12.9",
     "npm": ">=2.7.0"
   },
   "scripts": {

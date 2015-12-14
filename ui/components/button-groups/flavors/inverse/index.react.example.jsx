@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only demo--inverse'>
+  <div className="demo-only demo--inverse">
     <div className={pf('button-group')} role="group">
       <Button flavor="inverse">
       Refresh
@@ -29,8 +29,7 @@ export default (
         Save
       </Button>
       <ButtonIcon
-      flavor="icon-border"
-      iconFlavor="inverse"
+      flavor="icon-border,icon-inverse"
       className={pf('toggle-visibility')}
       sprite="utility"
       symbol="down"

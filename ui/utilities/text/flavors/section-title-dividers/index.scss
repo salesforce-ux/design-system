@@ -11,11 +11,6 @@
 
 .#{$css-prefix}section-title--divider {
   @include text-heading--label;
-  margin: 0 (-$spacing-medium) $spacing-medium;
   padding: $spacing-small $spacing-medium;
   background: $color-background;
-
-  &:first-child {
-    margin-top: -$spacing-medium;
-  }
 }

@@ -10,6 +10,7 @@
 
 
 .#{$css-prefix}table {
+  // scss-lint:disable SelectorDepth
   background-color: $color-background-alt;
 
   // Cells
@@ -18,14 +19,6 @@
     padding: $spacing-x-small;
     white-space: nowrap;
     position: relative;
-
-    &.#{$css-prefix}text-center {
-      text-align: center;
-    }
-
-    &.#{$css-prefix}text-right {
-      text-align: right;
-    }
   }
 
   // First and Last Cell of a row
@@ -87,7 +80,7 @@
 
 // Add vertical borders to a table
 .#{$css-prefix}table--bordered {
-
+  // scss-lint:disable SelectorDepth
   border: {
     top: $border-width-thin solid $color-border;
     bottom: $border-width-thin solid $color-border;
@@ -106,7 +99,7 @@
 
   // Default Table Row Hover
   &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > td,
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th  {
+  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
   }
 

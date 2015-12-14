@@ -8,29 +8,6 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
-// Grid
-$grid: (
-  "x-small": (
-    "breakpoint": $mq-x-small,
-    "columns": 4,
-  ),
-  "small": (
-    "breakpoint": $mq-small,
-    "columns": 8,
-  ),
-  "medium": (
-    "breakpoint": $mq-medium,
-    "columns": 12,
-  ),
-  "large": (
-    "breakpoint": $mq-large,
-    "columns": 12
-  )
-) !default;
-
-
-
 // Screen Only
 @mixin mq-screen {
 
@@ -223,7 +200,7 @@ $grid: (
 
 
 // Sizing Helper
-@mixin flex-size($span: 1,$spread: 12) {
+@mixin flex-size($span: 1, $spread: 12) {
 
   @if type-of($span) == number and unitless($span) == false {
     flex: 0 0 rem($span);
@@ -259,7 +236,7 @@ $grid: (
 @mixin flex-item($size: expand) {
 
   @if (type-of($size) == 'number') {
-    @include flex-size($size,$columns);
+    @include flex-size($size, $columns);
   }
 
   @if ($size == shrink) {
@@ -324,13 +301,13 @@ $grid: (
       }
 
       .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
-        #{$property}-top:    $size;
+        #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
 
       .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
-        #{$property}-left:  $size;
+        #{$property}-left: $size;
       }
 
       .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
@@ -348,7 +325,7 @@ $grid: (
 }
 
 
-@mixin visibility($class-name, $min:null, $max:null) {
+@mixin visibility($class-name, $min: null, $max: null) {
 
   .#{$css-prefix}#{$class-name} {
 

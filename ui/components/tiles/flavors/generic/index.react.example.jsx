@@ -21,7 +21,7 @@ const image = (
 );
 
 export default (
-<div className='demo-only' style={{width: '400px'}}>
+<div className="demo-only" style={{width: '400px'}}>
   <MediaObject figureLeft={image} className={pf('tile hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('tile__title truncate')}>

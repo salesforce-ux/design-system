@@ -16,9 +16,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className='demo-only demo-only--notification'>
+<div className="demo-only demo-only--notification">
 
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon
@@ -34,7 +34,7 @@ export const preview = (
     </div>
   </div>
 
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--success')} role="alert">
       <span className={pf('assistive-text')}>Success</span>
       <ButtonIcon
@@ -52,7 +52,7 @@ export const preview = (
       </div>
     </div>
   </div>
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--warning')} role="alert">
       <span className={pf('assistive-text')}>Warning</span>
       <ButtonIcon
@@ -66,7 +66,7 @@ export const preview = (
       </div>
     </div>
   </div>
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--error')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
@@ -84,7 +84,7 @@ export const preview = (
       </div>
     </div>
   </div>
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
@@ -107,7 +107,7 @@ export const preview = (
 );
 
 export const code = (
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon

@@ -86,4 +86,4 @@ ToggleExample.propTypes = {
   description: React.PropTypes.string
 };
 
-module.exports = ToggleExample;
+export default ToggleExample;

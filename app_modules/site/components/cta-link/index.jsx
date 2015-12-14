@@ -43,4 +43,4 @@ CTALink.propTypes = {
   ctaExtraValues: React.PropTypes.object
 };
 
-module.exports = CTALink;
+export default CTALink;

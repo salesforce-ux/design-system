@@ -15,9 +15,7 @@
     min-height: calc(100vh - 5.375rem);
   }
 
-
-
   @include mq-large-min {
-    min-height: calc(100vh - 3.125rem);
+    min-height: calc(100vh - 5rem);
   }
 }

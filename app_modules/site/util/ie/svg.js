@@ -5,7 +5,7 @@
 /**
  * IMPORTANT: This module is being shimmed so that a custom document can be passed in
  */
-module.exports = function (document, options) {
+export default function (document, options) {
 
   function embed(svg, g) {
     if (g) {

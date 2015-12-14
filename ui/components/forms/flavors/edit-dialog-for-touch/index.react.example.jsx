@@ -42,7 +42,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-      <div className='demo-only' style={{height: '800px'}}>
+     <div className="demo-only" style={{height: '800px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
@@ -61,7 +61,7 @@ class ModalExample extends React.Component {
 
           <Modal.Body>
             <h3 className={pf('section-title--divider')}>Section Information</h3>
-            <div className={pf('form--stacked m-bottom--large')}>
+            <div className={pf('form--stacked p-around--medium m-bottom--x-small')}>
               <Input label="Name Suffix" placeholder="Ms." assistiveText="inputNameSample1" />
               <Input label="First Name" placeholder="Esther" assistiveText="inputNameSample2" />
               <Input label="Last Name" placeholder="Lewis" assistiveText="inputNameSample3" />
@@ -84,7 +84,7 @@ class ModalExample extends React.Component {
               <Input label="Text Input" assistiveText="inputSample2" />
             </div>
             <h3 className={pf('section-title--divider')}>Section Information</h3>
-            <div className={pf('form--stacked m-bottom--large')}>
+            <div className={pf('form--stacked p-around--medium m-bottom--x-small')}>
               <Input label="Text Input" assistiveText="inputSample3" />
               <Input label="Text Input" assistiveText="inputSample4" />
               <Input label="Text Input" assistiveText="inputSample5" />
@@ -97,4 +97,4 @@ class ModalExample extends React.Component {
   }
 }
 
-module.exports = <ModalExample/>;
+export default <ModalExample/>;

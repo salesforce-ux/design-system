@@ -37,19 +37,19 @@ describe(`Control`, () => {
         render: function() {
           return (
             <div>
-              <Control target='#myDiv' trigger='click'>
-                <Button onClick={this.setTestVariable} className={pf('clique')} href='#'>Clickable</Button>
+              <Control target="#myDiv" trigger="click">
+                <Button onClick={this.setTestVariable} className={pf('clique')} href="#">Clickable</Button>
               </Control>
 
-              <Control target='#myDiv' trigger='hover'>
+              <Control target="#myDiv" trigger="hover">
                 <p>Hoverable</p>
               </Control>
 
-              <div className={pf('party-time hide')} id='myDiv'><h1>You found me</h1></div>
+              <div className={pf('party-time hide')} id="myDiv"><h1>You found me</h1></div>
             </div>
           );
         }
-      })
+      });
       cmp = ReactDOM.render(React.createElement(cls), document.body);
     });
     it(`renders the children`, () => {

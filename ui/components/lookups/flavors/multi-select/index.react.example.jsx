@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
 
   <div className={pf('lookup has-selection')} data-select="multi" data-scope="single" data-typeahead="true">
     <div className={pf('form-element')}>
@@ -27,7 +27,7 @@ export default (
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
         <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-activedescendant="" />
       </div>
-      <div className={pf('pill__container')}>
+      <div className={pf('pill_container')}>
         <a href="#void" className={pf('pill')}>
           <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
           <span className={pf('pill__label')}>Pied Piper</span>

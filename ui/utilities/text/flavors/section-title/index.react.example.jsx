@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <h3 className={pf('section-title section-group--is-open')}>
     <a href="#"><SvgIcon className={pf('icon')} sprite="utility" symbol="switch" /> Section Title</a>
   </h3>

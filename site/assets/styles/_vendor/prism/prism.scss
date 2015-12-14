@@ -1,5 +1,5 @@
-/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+css-extras+scss+yaml&plugins=line-highlight+line-numbers+autolinker+highlight-keywords */
-/**
+// http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+css-extras+scss+yaml&plugins=line-highlight+line-numbers+autolinker+highlight-keywords
+/*!
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
  * @author Tim  Shedor
@@ -26,7 +26,7 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-/* Code blocks */
+// Code blocks
 pre[class*="language-"] {
   position: relative;
   margin: .5em 0;
@@ -54,7 +54,7 @@ code[class*="language"] {
   overflow: auto;
 }
 
-/* Margin bottom to accomodate shadow */
+// Margin bottom to accomodate shadow
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background-color: #fdfdfd;
@@ -64,7 +64,7 @@ pre[class*="language-"] {
   margin-bottom: 1em;
 }
 
-/* Inline code */
+// Inline code
 :not(pre) > code[class*="language-"] {
   position: relative;
   padding: .2em;
@@ -196,14 +196,14 @@ pre[class*="language-"]:after {
   }
 }
 
-/* Plugin styles */
+// Plugin styles
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before {
   color: #e0d7d1;
 }
 
-/* Plugin styles: Line Numbers */
+// Plugin styles: Line Numbers
 pre[class*="language-"].line-numbers {
   padding-left: 0;
 }
@@ -216,7 +216,7 @@ pre[class*="language-"].line-numbers .line-numbers-rows {
   left: 0;
 }
 
-/* Plugin styles: Line Highlight */
+// Plugin styles: Line Highlight
 pre[class*="language-"][data-line] {
   padding-top: 0;
   padding-bottom: 0;
@@ -239,7 +239,7 @@ pre[data-line] {
   left: 0;
   right: 0;
   padding: inherit 0;
-  margin-top: 1em; /* Same as .prism’s padding-top */
+  margin-top: 1em; // Same as .prism’s padding-top
 
   background: hsla(24, 20%, 50%,.08);
   background: linear-gradient(to left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
@@ -289,7 +289,7 @@ pre.line-numbers > code {
   top: 0;
   font-size: 100%;
   left: -3.8em;
-  width: 3em; /* works for line-numbers below 1000 lines */
+  width: 3em; // works for line-numbers below 1000 lines
   letter-spacing: -1px;
   border-right: 1px solid #999;
 

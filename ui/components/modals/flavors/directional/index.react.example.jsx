@@ -57,7 +57,7 @@ class DirectionalExample extends React.Component {
 
   render() {
     return (
-      <div className='demo-only' style={{height: '640px'}}>
+     <div className="demo-only" style={{height: '640px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
@@ -68,7 +68,7 @@ class DirectionalExample extends React.Component {
             </h2>
           </Modal.Header>
 
-          <Modal.Body>
+          <Modal.Body className={pf('p-around--medium')}>
             { this.page(this.state.page) }
           </Modal.Body>
 

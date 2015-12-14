@@ -21,17 +21,17 @@
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: rgba($color-background, .5);
+      background-color: rgba($color-background, 0.5);
     }
 
     &:active {
-      background-color: rgba($color-background, .75);
+      background-color: rgba($color-background, 0.75);
     }
   }
 
   > a > span {
     display: inline-block;
-    white-space:  nowrap;
+    white-space: nowrap;
     vertical-align: middle;
     line-height: $line-height-reset;
     text-transform: lowercase;
@@ -62,7 +62,7 @@
 }
 
 .site-banner-badge {
-  @include gradient-striped(rgba(white,.2), -45deg, #FBBC05);
+  @include gradient-striped(rgba(white, 0.2), -45deg, #FBBC05);
   background-size: 12px 12px;
   color: #16325C;
   font-weight: $font-weight-bold;
@@ -75,7 +75,7 @@
   width: 3.9375rem;
   height: 2.75rem;
   text-indent: -9999em;
-  background: url(../images/logo.svg) no-repeat;
+  background: url('../images/logo.svg') no-repeat;
 }
 
 .site-skip-content a {

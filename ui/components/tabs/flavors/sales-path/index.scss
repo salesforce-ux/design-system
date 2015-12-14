@@ -100,6 +100,7 @@
     }
 
     ~ .#{$css-prefix}is-current { // @TODO: This needs to work both directions in the path
+      // scss-lint:disable NestingDepth SelectorDepth
       background-color: $color-background-alt;
 
       .#{$css-prefix}tabs--path__link {
@@ -113,7 +114,7 @@
   }
 }
 
-.#{$css-prefix}tabs--path__item{
+.#{$css-prefix}tabs--path__item {
   @include tabs-item;
   position: relative;
   flex: 1 1 auto;
@@ -131,7 +132,7 @@
 
   &:last-child {
     border-radius: 0 $border-radius-pill $border-radius-pill 0;
-    border-right: none;
+    border-right: 0;
   }
 
   &:hover {
@@ -139,7 +140,7 @@
   }
 
   &:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: calc((#{$sales-path} / 2 ) * -1); // -1em;
@@ -147,8 +148,8 @@
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     border: $border-width-thick solid white;
-    border-left: none;
-    border-bottom: none;
+    border-left: 0;
+    border-bottom: 0;
     background-clip: padding-box;
     transform: rotate(45deg);
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;

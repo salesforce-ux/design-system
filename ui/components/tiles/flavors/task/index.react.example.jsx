@@ -21,13 +21,13 @@ const form = (
 );
 
 export default (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <MediaObject figureLeft={form} className={pf('tile')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('tile__title truncate')}>
         <a href="#">The Trammel Crow Company</a>
       </p>
-      <span className={pf('label')}>Today</span>
+      <span className={pf('badge')}>Today</span>
     </div>
     <div className={pf('tile__detail text-body--small')}>
       <p className={pf('truncate')}>Assignee</p>

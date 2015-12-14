@@ -28,37 +28,37 @@ export default (
         <h3 className="site-text-heading--label">Steps</h3>
         <ul className={pf('list--vertical has-block-links')}>
           <li>
-            <a href='#step-1-initialize-project'> 
+            <a href="#step-1-initialize-project">
               1. Initialize your project
             </a>
           </li>
           <li>
-            <a href='#step-2-install-node-dependencies'>
+            <a href="#step-2-install-node-dependencies">
               2. Install node dependencies
             </a>
           </li>
           <li>
-            <a href='#step-3-create-index-html'>
+            <a href="#step-3-create-index-html">
               3. Create index.html
             </a>
           </li>
           <li>
-            <a href='#step-4-create-server-js'>
+            <a href="#step-4-create-server-js">
               4. Create server.js
             </a>
           </li>
           <li>
-            <a href='#step-5-download-slds-assets'>
+            <a href="#step-5-download-slds-assets">
               5. Download {g.displayName}
             </a>
           </li>
           <li>
-            <a href='#step-6-add-components'>
+            <a href="#step-6-add-components">
               6. Add components
             </a>
           </li>
           <li>
-            <a href='#step-7-deploy-to-heroku'>
+            <a href="#step-7-deploy-to-heroku">
               7. Deploy to Heroku
             </a>
           </li>

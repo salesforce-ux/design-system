@@ -13,6 +13,16 @@
 
   @include mq-medium-min {
     text-align: right;
+
+    .#{$css-prefix}form-element__legend {
+      float: left;
+      width: calc(33% + (#{$spacing-small} * 2)); // calculate available width left over from form control
+      text-align: right;
+
+      > .#{$css-prefix}form-element__label {
+        margin-right: 0;
+      }
+    }
   }
 
   .#{$css-prefix}form-element {

@@ -6,7 +6,7 @@ classes:
     notes: This is the base body font size and is rarely needed
   -
     class: text-body--small
-    description: Creates 12px copy
+    description: Creates a more pale-colored 12px copy
     notes: Typically used as supportive text
   -
     class: text-heading--large

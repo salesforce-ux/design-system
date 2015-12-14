@@ -41,7 +41,7 @@
   }
 
   .#{$css-prefix}button {
-    border: none;
+    border: 0;
   }
 
   .site-text-heading--large,
@@ -163,7 +163,7 @@
 .hr {
   width: 50%;
   height: 1px;
-  border: none;
+  border: 0;
   margin: {
     left: auto;
     right: auto;
@@ -243,7 +243,7 @@
 }
 
 .site-button--social-counter {
-  @include nubbin($position: left, $location: "before", $color: $color-background-alt, $size: $square-icon-small-content);
+  @include nubbin($position: left, $location: 'before', $color: $color-background-alt, $size: $square-icon-small-content);
   display: none;
   opacity: 0;
   transition: opacity $duration-immediately ease;
@@ -270,25 +270,55 @@
 
 // Floating Shapes
 @keyframes floater {
-  0% { transform: translate3d(0,0,0) rotate(0); }
-  25% { transform: translate3d(0,-10px,0) rotate(5deg); }
-  50% { transform: translate3d(0,0,0) rotate(0); }
-  75% { transform: translate3d(0,10px,0) rotate(-5deg); }
-  100% { transform: translate3d(0,0,0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, -10px, 0) rotate(5deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }
 
 @keyframes floater-1 {
-  0% { transform: translate3d(0,0,0) rotate(0); }
-  25% { transform: translate3d(0,10px,0) rotate(5deg); }
-  50% { transform: translate3d(0,0,0) rotate(0); }
-  75% { transform: translate3d(0,-10px,0) rotate(-5deg); }
-  100% { transform: translate3d(0,0,0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 10px, 0) rotate(5deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }
 
 @keyframes floater-2 {
-  0% { transform: translate3d(0,0,0) rotate(0); }
-  25% { transform: translate3d(0,15px,0) rotate(10deg); }
-  50% { transform: translate3d(0,0,0) rotate(0); }
-  75% { transform: translate3d(0,-15px,0) rotate(-5deg); }
-  100% { transform: translate3d(0,0,0) rotate(0); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 15px, 0) rotate(10deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  75% {
+    transform: translate3d(0, -15px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
 }

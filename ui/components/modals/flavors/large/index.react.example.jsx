@@ -35,7 +35,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-      <div className='demo-only' style={{height: '480px'}}>
+     <div className="demo-only" style={{height: '480px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
@@ -48,7 +48,7 @@ class ModalExample extends React.Component {
             </h2>
           </Modal.Header>
 
-          <Modal.Body>
+          <Modal.Body className={pf('p-around--medium')}>
             <Lorem count={2} paragraphLowerBound={5} />
           </Modal.Body>
 

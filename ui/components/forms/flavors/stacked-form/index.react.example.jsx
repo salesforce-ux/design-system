@@ -18,29 +18,33 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('form--stacked')}>
     <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
     <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
     <fieldset className={pf('form-element')}>
-      <span className={pf('form-element__label form-element__label--top')}><legend>Checkbox Group label</legend></span>
+      <legend className={pf('form-element__legend')}>
+        <span className={pf('form-element__label form-element__label--top')}>Checkbox Group label</span>
+      </legend>
       <div className={pf('form-element__control')}>
         <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
         <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
       </div>
     </fieldset>
     <fieldset className={pf('form-element')}>
-      <span className={pf('form-element__label form-element__label--top')}><legend>Radio Group label</legend></span>
+      <legend className={pf('form-element__legend')}>
+        <span className={pf('form-element__label form-element__label--top')}>Checkbox Group label</span>
+      </legend>
       <div className={pf('form-element__control')}>
         <Radio name="options" label="Lead Generation" assistiveText="lead" />
         <Radio name="options" label="Education Leads" assistiveText="education" />
       </div>
     </fieldset>
-    <fieldset className={pf('form-element')}>
+    <div className={pf('form-element')}>
       <div className={pf('form-element__control')}>
         <Checkbox name="default" label="I agree to the Terms & Service" assistiveText="agree" />
       </div>
-    </fieldset>
+    </div>
   </div>
 </div>
 );

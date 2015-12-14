@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '640px'}}>
+<div className="demo-only" style={{height: '640px'}}>
   <Modal
     isOpen={true}
     renderInline={true}
@@ -31,7 +31,7 @@ export default (
 
     <Modal.Body>
       <div className={pf('lookup')} data-select="multi" data-scope="single" data-typeahead="true">
-        <div className={pf('form-element m-bottom--small')}>
+        <div className={pf('form-element p-top--medium p-horizontal--medium m-bottom--small')}>
           <label className={pf('form-element__label')} htmlFor="lookup">Accounts</label>
           <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
             <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />

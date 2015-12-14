@@ -94,7 +94,7 @@ ol {
 }
 
 .site-text-introduction {
-  margin-bottom: ($spacing-x-large * 2) + $spacing-medium;
+  margin-bottom: $spacing-x-large + $spacing-medium;
   font: {
     size: $font-size-large;
     weight: $font-weight-light;
@@ -148,8 +148,8 @@ ol {
 
 .#{$css-prefix}no-row-hover:not(.#{$css-prefix}table--bordered) tr {
 
-  & > th,
-  & > td {
+  > th,
+  > td {
 
     &:first-child {
       padding-left: 0;

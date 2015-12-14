@@ -86,7 +86,7 @@ window.LIGHTNING_DESIGN_SYSTEM = {
           return pageElement.default;
         }
       });
-    }
+    };
     let routes = sitemap.getFlattenedRoutes().map(route => {
       let props = { path: route.path, name: route.uid };
       // If we're on the current page, we DON'T want to fetch the pageElement

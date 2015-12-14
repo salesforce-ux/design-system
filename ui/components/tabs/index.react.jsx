@@ -33,7 +33,7 @@ class TabContent extends React.Component {
     const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__content`, {'show': this.props.current, 'hide': !this.props.current})));
     const props = this.$propsWithoutKeys('className');
     return (
-      <div {...props} className={className} role="tabpanel">
+      <div {...props} className={className} role="tabpanel" aria-labelledby={`${this.props.id}__item`}>
         {this.props.children}
       </div>
     );
@@ -63,7 +63,7 @@ renderCustom(tabIndex) {
 
   renderDefault(tabIndex) {
     return (
-      <a className={pf(this.props.innerClass)} onClick={this.props.onClick.bind(this)} href="#" role="tab" tabIndex={tabIndex} aria-selected={this.props.current} aria-controls={this.props.id}>
+      <a className={pf(this.props.innerClass)} onClick={this.props.onClick.bind(this)} href="#void" role="tab" tabIndex={tabIndex} aria-selected={this.props.current} aria-controls={this.props.id} id={`${this.props.id}__item`}>
         {this.props.title}
       </a>
     );
@@ -75,7 +75,7 @@ renderCustom(tabIndex) {
     const tabIndex = this.props.current ? 0 : -1;
 
     return (
-      <li className={className} {...props} role='presentation'>
+      <li className={className} {...props} role="presentation">
         {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
       </li>
     );
@@ -86,7 +86,7 @@ class TabItemOverflow extends React.Component {
   static propTypes = {
     title: PT.string,
     content: PT.node,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   }
   constructor(props) {
     super(props);
@@ -102,7 +102,7 @@ class TabItemOverflow extends React.Component {
     });
 
     return (
-      <li className={className} {...props} role='presentation' onClick={null}>
+      <li className={className} {...props} role="presentation" onClick={null}>
         {contents}
       </li>
     );
@@ -112,7 +112,7 @@ class TabItemOverflow extends React.Component {
 class Tabs extends React.Component {
   static propTypes = {
     selectedIndex: PT.number,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
   static defaultProps = { selectedIndex: 0 };
   constructor(props) {
@@ -153,7 +153,7 @@ class Tabs extends React.Component {
 
     return (
       <div {...props} className={className}>
-        <AccessibleList selector='a' click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
+        <AccessibleList selector="a" click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
           { this.tabs() }
         </AccessibleList>
         { this.props.panel ? this.props.panel : this.currentPanel() }

@@ -9,7 +9,7 @@
 
 .#{$css-prefix}media--double {
 
-  @include deprecate("0.20.0") {
+  @include deprecate('2.0.0') {
 
     > .#{$css-prefix}media__figure {
       order: 1;
@@ -18,7 +18,7 @@
       order: 3;
       margin: 0 0 0 $spacing-medium;
     }
-    .#{$css-prefix}media__body  {
+    .#{$css-prefix}media__body {
       order: 2;
     }
   }

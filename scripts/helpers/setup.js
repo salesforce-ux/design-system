@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import paths from './paths';
 import appModulePath from 'app-module-path';
 import minimist from 'minimist';
-import _ from 'lodash'
+import _ from 'lodash';
 import { getDefaultEnvVars } from './env';
 import packageJSON from '../../package.json';
 

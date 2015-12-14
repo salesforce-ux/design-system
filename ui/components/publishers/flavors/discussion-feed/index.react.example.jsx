@@ -23,13 +23,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt='Jenna Davis'/>
+      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
     </a>
   </div>
 );
 
 const icon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
     <span className={pf('assistive-text')}>Powerpoint</span>
   </span>
@@ -54,14 +54,15 @@ const commentReply = (
 );
 
 export const preview = (
-<div className='demo-only'>
+<div className="demo-only">
 
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -95,7 +96,8 @@ export const preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>
         <li>
@@ -129,7 +131,8 @@ export const preview = (
       <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
+    <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input3" className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
     <div className={pf('attachments')}>
       <div className={pf('attachments__item box box--x-small theme--shade')}>
         <div className={pf('grid grid--align-spread')}>
@@ -168,13 +171,14 @@ export const preview = (
 );
 
 export const code = (
-<div className='demo-only'>
+<div className="demo-only">
   <div className={pf('publisher publisher--discussion')}>
     <dl className={pf('list--horizontal publisher__toggle-visibility')}>
       <dt className={pf('list__item text-body--small')}>To: </dt>
       <dd className={pf('list__item')}>My Followers</dd>
     </dl>
-    <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
     <div className={pf('attachments')}></div>
     <div className={pf('publisher__actions grid grid--align-spread')}>
       <ul className={pf('grid publisher__toggle-visibility')}>

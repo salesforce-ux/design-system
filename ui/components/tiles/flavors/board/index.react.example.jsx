@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 function image() {
   return (
-    <span className={pf('icon__container tile--board__icon')}>
+    <span className={pf('icon_container tile--board__icon')}>
       <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
       <span className={pf('assistive-text')}>Warning Icon</span>
     </span>
@@ -25,7 +25,7 @@ function image() {
 }
 
 export const preview = (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <ul className={pf('list--vertical has-cards--space has-list-interactions')}>
     <StatefulClass>
       <li className={pf('list__item')}>
@@ -74,7 +74,7 @@ export const preview = (
 </div>
 );
 export const code = (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   <ul className={pf('list--vertical has-cards--space has-selections')}>
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>

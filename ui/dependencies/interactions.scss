@@ -28,6 +28,7 @@
 
 
 @mixin placeholder($color: $color-text-placeholder, $weight: $font-weight-regular, $size: $font-size-medium) {
+  // scss-lint:disable VendorPrefix
 
   &::-webkit-input-placeholder {
     color: $color;
@@ -35,7 +36,7 @@
     font-size: $size;
   }
 
-  &:-moz-placeholder{
+  &:-moz-placeholder {
     color: $color;
     font-weight: $weight;
     font-size: $size;
@@ -164,10 +165,10 @@
 
 
 
-@mixin scrollbar($size: 10px,$thumb: $color-background-scrollbar,$track: $color-background-scrollbar-track) {
+@mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
 
   &::-webkit-scrollbar {
-    width:  $size;
+    width: $size;
     height: $size;
 
     &:window-inactive {

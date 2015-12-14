@@ -34,7 +34,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-      <div className='demo-only' style={{height: '800px'}}>
+     <div className="demo-only" style={{height: '800px'}}>
         <Modal
           isOpen={this.state.showing}
           renderInline={true}
@@ -51,4 +51,4 @@ class ModalExample extends React.Component {
   }
 }
 
-module.exports = <ModalExample/>;
+export default <ModalExample/>;

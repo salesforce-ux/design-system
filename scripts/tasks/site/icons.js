@@ -13,7 +13,7 @@ import path from 'path';
 import gulp from 'gulp';
 import async from 'async';
 
-module.exports = function(done) {
+export default function(done) {
 
   console.log('Processing Icons');
 

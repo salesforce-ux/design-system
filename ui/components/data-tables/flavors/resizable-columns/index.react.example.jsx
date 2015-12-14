@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <span className={pf('resizable__handle resizable__handle--indicator')} style={{transform: 'translate3d(318px,0,0)', height: '37px'}}>
     <span className={pf('resizable__divider')}></span>
   </span>
@@ -38,7 +38,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -57,7 +58,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-2">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-2" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -76,7 +78,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-3">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-3" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -95,7 +98,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-4">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-4" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -114,7 +118,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-5">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-5" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -133,7 +138,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-6">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-6" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -152,7 +158,8 @@ export default (
                 assistiveText="Sort" />
             </a>
             <div className={pf('shrink-none resizable resizable--vertical')}>
-              <input className={pf('assistive-text')} type="range" min="20" max="1000" />
+              <label className={pf('assistive-text')} htmlFor="cell-resize-handle-7">click and drag to resize</label>
+              <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-7" />
               <span className={pf('resizable__handle')}>
                 <span className={pf('resizable__divider')}></span>
               </span>
@@ -172,7 +179,7 @@ export default (
     <tbody>
       <tr className={pf('hint-parent')}>
         <td className={pf('row-select')}><Checkbox assistiveText="select row1" name="select-row1" /></td>
-        <th data-label="opportunity-name" role="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
+        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
         <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
         <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>

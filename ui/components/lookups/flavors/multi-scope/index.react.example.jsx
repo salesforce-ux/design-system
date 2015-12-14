@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only' style={{height: '285px'}}>
+<div className="demo-only" style={{height: '285px'}}>
 
   <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
 
@@ -33,7 +33,7 @@ export default (
         </div>
         <input id="lookup" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Search Contacts" />
       </div>
-      <div className={pf('pill__container hide')}></div>
+      <div className={pf('pill_container hide')}></div>
     </div>
 
     <div className={pf('lookup__menu')} role="listbox">

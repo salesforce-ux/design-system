@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     <StatefulClass>
     <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
       <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>

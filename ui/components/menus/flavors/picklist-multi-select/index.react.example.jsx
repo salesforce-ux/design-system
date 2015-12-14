@@ -17,7 +17,7 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-module.exports = (
+export default (
 <div className={pf('demo-only demo-only--dropdown')} style={{ height: '240px' }}>
 
   <PickList label="2 options selected" aria-expanded="true">
@@ -138,7 +138,7 @@ module.exports = (
       </ul>
     </div>
   </PickList>
-  <div className={pf('pill__container--bare')}>
+  <div className={pf('pill_container--bare')}>
     <span className={pf('pill')}>
       <span className={pf('pill__label')}>Option B</span>
       <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Option B" />
@@ -150,4 +150,3 @@ module.exports = (
   </div>
 </div>
 );
-

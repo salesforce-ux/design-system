@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<form className='demo-only'>
+<form className="demo-only">
   <div className={pf('form-element has-divider--bottom')}>
     <span className={pf('form-element__label')}>Amount</span>
     <div className={pf('form-element__control')}>

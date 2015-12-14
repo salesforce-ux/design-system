@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only'>
+<div className="demo-only">
   <PickList flavor="multi" label="First Category" label2="Second Category">
     <PickList.Options flavor="multi">
       <PickList.Item><span>Option One</span></PickList.Item>

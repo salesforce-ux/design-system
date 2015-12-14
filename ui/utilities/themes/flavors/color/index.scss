@@ -65,4 +65,20 @@
   &--inverse-text {
     @include inverse-links;
   }
+
+  &--default,
+  &--shade,
+  &--inverse,
+  &--alt-inverse,
+  &--success,
+  &--info,
+  &--warning,
+  &--error,
+  &--offline,
+  &--alert-texture,
+  &--inverse-text {
+    .#{$css-prefix}text-body--small {
+      color: inherit;
+    }
+  }
 }

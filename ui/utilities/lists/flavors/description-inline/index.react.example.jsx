@@ -14,17 +14,17 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-stack'>
-    <dl>
-      <dt>Basic Description List Label</dt>
-      <dd>First description</dd>
-      <dd>Second description</dd>
-    </dl>
-    <dl className={pf('dl--inline')}>
-      <dt className={pf('dl--inline__label')}>Inline Description List Label:</dt>
-      <dd className={pf('dl--inline__detail')}>First description</dd>
-      <dt className={pf('dl--inline__label')}>Second Label:</dt>
-      <dd className={pf('dl--inline__detail')}>Description for second label</dd>
-    </dl>
+<div className="demo-only demo-stack">
+  <dl>
+    <dt>Basic Description List Label</dt>
+    <dd>First description</dd>
+    <dd>Second description</dd>
+  </dl>
+  <dl className={pf('dl--inline')}>
+    <dt className={pf('dl--inline__label')}>Inline Description List Label:</dt>
+    <dd className={pf('dl--inline__detail')}>First description</dd>
+    <dt className={pf('dl--inline__label')}>Second Label:</dt>
+    <dd className={pf('dl--inline__detail')}>Description for second label</dd>
+  </dl>
 </div>
 );

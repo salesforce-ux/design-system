@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className='demo-only demo-only--notification'>
+<div className="demo-only demo-only--notification">
 
   <div className={pf('notify notify--alert theme--inverse-text theme--alert-texture')} role="alert">
     <span className={pf('assistive-text')}>Info</span>
@@ -31,7 +31,7 @@ export default (
     </h2>
   </div>
 
-  <div className={pf('notify-container')}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--inverse-text')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon

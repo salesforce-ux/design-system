@@ -27,13 +27,13 @@ class GithubButton extends React.Component {
   }
 
   getStars(cb) {
-    const req = new XMLHttpRequest()
+    const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
       if (req.readyState == 4 && req.responseText) {
         const json = JSON.parse(req.responseText);
         cb(json);
       }
-    }
+    };
     req.open('GET', 'https://api.github.com/repos/salesforce-ux/design-system', true);
     req.send();
     return req;
@@ -46,7 +46,7 @@ class GithubButton extends React.Component {
         stargazersCount: data.stargazers_count || 0,
         repoData: data
       });
-    }))
+    }));
   }
 
   componentWillUnmount() {
@@ -64,16 +64,16 @@ class GithubButton extends React.Component {
     );
 
     return (
-    <span className={classesButtonGroup}>
-      <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
-        <Img src='/assets/images/social-github-icon-only.svg' className={pf('button__icon--large button__icon--left')}/>
-          Star
-      </CTALink>
-      <a href={linkUrlGazer} className={classesBubbleButton}>
-        <span className='site-button--social-counter-bubble'>{countStr}</span>
-      </a>
-    </span>
-    )
+      <span className={classesButtonGroup}>
+        <CTALink href={linkUrlRepo} className={pf('button button--neutral')}>
+          <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')}/>
+            Star
+        </CTALink>
+        <a href={linkUrlGazer} className={classesBubbleButton}>
+          <span className="site-button--social-counter-bubble">{countStr}</span>
+        </a>
+      </span>
+    );
   }
 
 }

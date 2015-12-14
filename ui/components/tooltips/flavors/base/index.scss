@@ -10,7 +10,7 @@
 
 .#{$css-prefix}tooltip {
 
-  @include deprecate("0.20.0") {
+  @include deprecate('2.0.0') {
     @include popover($color: $color-background-inverse);
 
     &__body {

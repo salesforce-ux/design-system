@@ -24,7 +24,7 @@
       position: relative;
       cursor: help;
 
-      & + figure {
+      + figure {
         font-size: $font-size-medium;
         line-height: $line-height-text;
       }
@@ -113,11 +113,11 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          content: "";
+          content: '';
           border: {
-            right: .5rem solid transparent;
-            bottom: .5rem solid $color-text-inverse;
-            left: .5rem solid transparent;
+            right: 0.5rem solid transparent;
+            bottom: 0.5rem solid $color-text-inverse;
+            left: 0.5rem solid transparent;
           }
           transform: translate(-50%, -300%);
         }
@@ -126,11 +126,11 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          content: "";
+          content: '';
           border: {
-            top: .5rem solid $color-text-inverse;
-            right: .5rem solid transparent;
-            left: .5rem solid transparent;
+            top: 0.5rem solid $color-text-inverse;
+            right: 0.5rem solid transparent;
+            left: 0.5rem solid transparent;
           }
           transform: translate(-50%, 200%);
         }
@@ -194,14 +194,14 @@
     right: -$spacing-medium;
     bottom: 0;
     border-right: 1px solid yellow;
-    content: " ";
+    content: ' ';
   }
 }
 
 .site-tokens {
 
   thead th {
-      border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 
   tr > td:first-child {
@@ -218,6 +218,7 @@
     }
 
     &.token--empty {
+      // scss-lint:disable NestingDepth
 
       > div:before {
         margin: $spacing-xx-small 0;
@@ -227,7 +228,7 @@
         font-style: italic;
         background: $color-background;
         color: $color-text-weak;
-        content: "Same as Previous Form Factor";
+        content: 'Same as Previous Form Factor';
       }
     }
   }
@@ -237,7 +238,7 @@
     td.token > div {
       height: 2rem;
       box-shadow: $color-background-alt 0 1px 0 inset,
-                    $color-background-alt 0 -1px 0 inset;
+                  $color-background-alt 0 -1px 0 inset;
       border: {
         top: $border-width-thin solid $color-border;
         bottom: $border-width-thin solid $color-border;
@@ -248,6 +249,7 @@
     @include mq-small-max {
 
       td.token {
+        // scss-lint:disable NestingDepth
 
         > div {
           border: $border-width-thin solid $color-border;
@@ -266,7 +268,7 @@
     }
 
     @include mq-medium-min {
-
+      // scss-lint:disable NestingDepth SelectorDepth
       td.token {
         vertical-align: top;
         padding: {
@@ -283,16 +285,16 @@
 
       tr > td:first-child ~ td[data-label="small"] > div {
         box-shadow: $color-background-alt 0 1px 0 inset,
-                      $color-background-alt 0 -1px 0 inset,
-                      $color-background-alt 1px 0 0 inset;
+                    $color-background-alt 0 -1px 0 inset,
+                    $color-background-alt 1px 0 0 inset;
         border-left: $border-width-thin solid $color-border;
         border-radius: $border-radius-medium 0 0 $border-radius-medium;
       }
 
       tr > td:first-child ~ td:last-child > div {
         box-shadow: $color-background-alt 0 1px 0 inset,
-                      $color-background-alt 0 -1px 0 inset,
-                      $color-background-alt -1px 0 0 inset;
+                    $color-background-alt 0 -1px 0 inset,
+                    $color-background-alt -1px 0 0 inset;
         border-right: $border-width-thin solid $color-border;
         border-radius: 0 $border-radius-medium $border-radius-medium 0;
       }

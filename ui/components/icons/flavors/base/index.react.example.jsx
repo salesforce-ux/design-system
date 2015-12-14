@@ -15,40 +15,40 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-  <div className='demo-only'>
-    <span className={pf('m-right--small')}>
+  <div className="demo-only">
+    <span className={pf('icon_container m-right--small')}>
       <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
       <span className={pf('assistive-text')}>Announcement Icon</span>
     </span>
-    <span className={pf('icon__container icon__container--circle icon-action-description m-right--small')}>
+    <span className={pf('icon_container icon_container--circle icon-action-description m-right--small')}>
       <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
       <span className={pf('assistive-text')}>Description Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-account m-right--small')}>
+    <span className={pf('icon_container icon-standard-account m-right--small')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
       <span className={pf('assistive-text')}>Account Icon</span>
     </span>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
       <span className={pf('assistive-text')}>Doctype Icon</span>
     </span>
   </div>
 );
 export const code = (
-  <div className='demo-only'>
-    <span>
+  <div className="demo-only">
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
       <span className={pf('assistive-text')}>Announcement Icon</span>
     </span>
-    <span className={pf('icon__container icon__container--circle icon-action-description')}>
+    <span className={pf('icon_container icon_container--circle icon-action-description')}>
       <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
       <span className={pf('assistive-text')}>Description Icon</span>
     </span>
-    <span className={pf('icon__container icon-standard-account')}>
+    <span className={pf('icon_container icon-standard-account')}>
       <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
       <span className={pf('assistive-text')}>Account Icon</span>
     </span>
-    <span className={pf('icon__container')}>
+    <span className={pf('icon_container')}>
       <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
       <span className={pf('assistive-text')}>Doctype Icon</span>
     </span>

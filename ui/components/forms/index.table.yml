@@ -17,6 +17,10 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Control can contain an <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>
   -
+    class: form-element__icon
+    description: The icon wrapper for an icon within a form element, this icon is usually used to indicate an error or field level help
+    applied: <code>&lt;div&gt;</code>
+  -
     class: input
     description: Initializes text input
     required: true

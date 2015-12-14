@@ -19,20 +19,20 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const dialingIcon = (
-  <span className={pf('icon__container icon-standard-call')}>
+  <span className={pf('icon_container icon-standard-call')}>
     <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
 const recordIcon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
 
 export default (
-  <div className='demo-only'>
+  <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
       <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>

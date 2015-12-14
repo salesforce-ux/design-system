@@ -91,6 +91,7 @@
 
     a:hover,
     a:focus {
+      // scss-lint:disable NestingDepth SelectorDepth
 
       .#{$css-prefix}wizard__marker {
         background: rgb(0, 95, 178); // @TODO: Need a token for this

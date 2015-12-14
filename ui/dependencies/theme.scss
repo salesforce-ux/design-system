@@ -16,7 +16,7 @@
 
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
-    background-image: linear-gradient(to $direction, rgba($start,0), $end);
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
   }
 
   @else {
@@ -30,7 +30,7 @@
 
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
-    background-image: linear-gradient(to $direction, rgba($start,0), $end);
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
   }
 
   @else {
@@ -152,19 +152,19 @@
 
 
 // Striped Gradient
-@mixin gradient-striped($stripe_color: rgba(black, .035), $angle: 45deg, $color: null) {
+@mixin gradient-striped($stripe-color: rgba(black, 0.035), $angle: 45deg, $color: null) {
 
   @if $color != null {
     background-color: $color;
   }
 
-  background-image: linear-gradient($angle, $stripe_color 25%, transparent 25%, transparent 50%, $stripe_color 50%, $stripe_color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $stripe-color 25%, transparent 25%, transparent 50%, $stripe-color 50%, $stripe-color 75%, transparent 75%, transparent);
   background-size: 64px 64px;
 }
 
 // Page header
 @mixin page-header {
-  @include deprecate("0.20.0") {
+  @include deprecate('2.0.0') {
     padding: $spacing-large $spacing-large $spacing-small;
     border-bottom: $border-width-thin solid $color-border;
     background: $color-background;

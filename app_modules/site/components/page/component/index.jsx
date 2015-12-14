@@ -73,7 +73,7 @@ const ComponentBody = React.createClass({
     let info = this.props.component.info;
     if (info.table || info.tableYaml) {
       return (
-        <li className={pf('list__name has-divider')}>
+        <li className={pf('list__name has-divider--top-space')}>
           <a href="#overview">
             Component Overview
           </a>

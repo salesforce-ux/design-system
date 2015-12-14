@@ -37,8 +37,8 @@
       z-index: $z-index-default;
     }
 
-    &:only-child{
-      border-radius: .25rem;
+    &:only-child {
+      border-radius: 0.25rem;
     }
   }
 
@@ -54,7 +54,11 @@
     margin-left: $spacing-xx-small;
   }
 
-  .#{$css-prefix}button--last { /* This class should be placed on the wrapper of a button that's the final in a button-group */
+  /**
+   * Note: This class should be placed on the wrapper
+   * of a button that's the final one in a button-group
+   */
+  .#{$css-prefix}button--last {
 
     .#{$css-prefix}button {
       border-radius: 0 $border-radius-medium $border-radius-medium 0;

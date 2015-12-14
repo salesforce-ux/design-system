@@ -9,7 +9,7 @@
 
 .site-theme--checker {
   $checker-size: $spacing-small;
-  $checker-color: rgba($color-background, .5);
+  $checker-color: rgba($color-background, 0.5);
   background: {
     color: $color-background-alt;
     image:

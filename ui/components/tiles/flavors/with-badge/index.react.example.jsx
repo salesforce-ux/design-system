@@ -21,7 +21,7 @@ const image = (
 );
 
 export default (
-<div className='demo-only' style={{width: '300px'}}>
+<div className="demo-only" style={{width: '300px'}}>
   {/* Without Icon */}
   <div className={pf('tile')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>

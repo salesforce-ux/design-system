@@ -19,7 +19,7 @@ export default (
     <Button flavor="brand">
       Button Brand
     </Button>
-    <a href="#" className={pf('button button--brand')}>Anchor Button Brand</a>
+    <a href="#void" className={pf('button button--brand')}>Anchor Button Brand</a>
     <Button flavor="brand" disabled="true">
       Disabled
     </Button>

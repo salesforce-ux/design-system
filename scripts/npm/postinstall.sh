@@ -15,9 +15,11 @@ if [ X"$HEROKU_APP_NAME" != "X" ]; then
   rm -rf server/
   git clone https://$GITHUB_USER:$GITHUB_USER_ACCESS_TOKEN@$DEPLOY_REPO server
   cd server/heroku
+  # Server Tasks
   npm install --production
+  npm run dist
   cd ../../
-  ./node_modules/.bin/babel server/heroku/src --out-dir server/heroku/src
+  # Design System Tasks
   npm run build-prod
   npm run dist
 fi

@@ -15,9 +15,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid grid--align-spread')} style={{height: '250px'}}>
-    <div className={pf('align-top col--padded')}><span>Top Align</span></div>
-    <div className={pf('align-middle col--padded')}><span>Middle Align</span></div>
-    <div className={pf('align-bottom col--padded')}><span>Bottom Align</span></div>
+    <div className={pf('align-top')}><div className={pf('box box--small theme--shade')}>Top Align</div></div>
+    <div className={pf('align-middle')}><div className={pf('box box--small theme--shade')}>Middle Align</div></div>
+    <div className={pf('align-bottom')}><div className={pf('box box--small theme--shade')}>Bottom Align</div></div>
   </div>
 </div>
 );

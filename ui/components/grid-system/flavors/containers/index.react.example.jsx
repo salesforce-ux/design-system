@@ -16,31 +16,29 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const preview = (
 <div className='demo-only demo-container'>
-<div>
-  <div className={pf('container--small grid')}>
-    <div className={pf('col')}>Max Width: 480px</div>
+  <div className={pf('container--small')}>
+    <div className={pf('box box--small theme--shade')}>Max Width: 480px</div>
   </div>
   <div className={pf('container--medium')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Max Width: 768px</div>
+    <div className={pf('box box--small theme--shade')}>Max Width: 768px</div>
   </div>
   <div className={pf('container--large')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Max Width: 1024px</div>
+    <div className={pf('box box--small theme--shade')}>Max Width: 1024px</div>
   </div>
   <div className={pf('container--x-large')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Max Width: 1280px</div>
+    <div className={pf('box box--small theme--shade')}>Max Width: 1280px</div>
   </div>
   <div className={pf('container--fluid')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Width 100%</div>
+    <div className={pf('box box--small theme--shade')}>Width 100%</div>
   </div>
   <div className={pf('container--left container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Left Aligned</div>
+    <div className={pf('box box--small theme--shade')}>Left Aligned</div>
   </div>
   <div className={pf('container--center container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Center Aligned</div>
+    <div className={pf('box box--small theme--shade')}>Center Aligned</div>
   </div>
   <div className={pf('container--right container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('col')}>Right Aligned</div>
-  </div>
+    <div className={pf('box box--small theme--shade')}>Right Aligned</div>
   </div>
 </div>
 );

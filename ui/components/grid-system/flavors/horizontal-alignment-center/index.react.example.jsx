@@ -15,10 +15,18 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid grid--align-center')}>
-    <div className={pf('col--padded')}><span>Content determines the width unless otherwise set</span></div>
-    <div className={pf('col--padded')}><span>1</span></div>
-    <div className={pf('col--padded')}><span>2</span></div>
-    <div className={pf('col--padded')}><span>3</span></div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>Content determines the width unless otherwise set</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>1</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>2</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>3</div>
+    </div>
   </div>
 </div>
 );

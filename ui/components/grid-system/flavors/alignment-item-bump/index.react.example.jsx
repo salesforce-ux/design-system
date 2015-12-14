@@ -15,12 +15,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export const preview = (
 <div className='demo-only demo-container'>
   <div className={pf('grid')}>
-    <div><span className={pf('box box--small theme--shade m-right--large')}>1</span></div>
-    <div><span className={pf('box box--small theme--shade m-right--large')}>2</span></div>
-    <div><span className={pf('box box--small theme--shade m-right--large')}>3</span></div>
-    <div><span className={pf('box box--small theme--shade m-right--large')}>4</span></div>
-    <div className={pf('col--bump-left')}><span className={pf('box box--small theme--shade m-right--large')}>5</span></div>
-    <div><span className={pf('box box--small theme--shade')}>6</span></div>
+    <div><div className={pf('box box--small theme--shade m-right--large')}>1</div></div>
+    <div><div className={pf('box box--small theme--shade m-right--large')}>2</div></div>
+    <div><div className={pf('box box--small theme--shade m-right--large')}>3</div></div>
+    <div><div className={pf('box box--small theme--shade m-right--large')}>4</div></div>
+    <div className={pf('col--bump-left')}><div className={pf('box box--small theme--shade m-right--large')}>5</div></div>
+    <div><div className={pf('box box--small theme--shade')}>6</div></div>
   </div>
 </div>
 );

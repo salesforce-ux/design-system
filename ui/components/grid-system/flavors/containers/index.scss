@@ -24,7 +24,7 @@
   }
 
   &--x-large {
-    max-width: rem(1280px);
+    max-width: rem($mq-x-large);
   }
 
   &--fluid {

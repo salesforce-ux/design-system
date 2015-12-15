@@ -105,7 +105,6 @@
   "devDependencies": {
     "chai": "3.2.0",
     "imagemin-cli": "^2.0.0",
-    "imagemin-pngquant": "^4.2.0",
     "karma": "0.13.9",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "0.2.0",

@@ -1,26 +1,45 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.1 - December 8, 2015
+## Release 1.1.0 - December 16, 2015
+
+**SITE IA**
+- Move Page Header theme from Utilities to its top-level component category
+
+**BREAKING CHANGES**
+- Tree component markup and CSS has been updated to meet accessbility requirements
+
+**CHANGES**
+- Spacing in modal content (`.slds-modal__content`) have been removed by default, to allow for full-width items such as tables. To get spacing back, you now opt in via a spacing utility.
+- Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
+- Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
+- Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
+- Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
+- Horizontal DL - changed margin to padding, fixed clearing bug
+
+**NEW COMPONENTS**
+- Form > Inline Level Help added
+- Popover > Colors added
+- Process > Wizard component added
+- Menu > Picklist Multi-Select component added
+- Page Header > Base component added
+- `.slds-page-header__info` added to Page header for better responsive spacing.
+- Utility classes added to help with dropdown menu overflow length. `.slds-dropdown--length-5`, `.slds-dropdown--length-7` and `.slds-dropdown--length-10` for 5, 7 or 10 text only menu items. `.slds-dropdown--length-with-icon-5`, `.slds-dropdown--length-with-icon-7` and `.slds-dropdown--length-with-icon-10` for 5, 7 or 10 text with icon menu items.
+
+**Deprecated**
+- `.slds-dropdown--overflow` has been deprecated. Dropdown length utilities should be used instead.
+
+## Release 0.12.1 - December 16, 2015
 
 **SITE IA**
 - Improve status labels. Now associated with colors and contain more information
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Apply proper accessibility requirements (aria-labelledby) to tabs [https://github.com/salesforce-ux/design-system/issues/107](https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
-- Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
-- Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
+- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes [https://github.com/salesforce-ux/design-system/issues/107]). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
-
-**NEW COMPONENTS**
 - Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
-- Menu > Picklist Multi-Select component added
-- Page Header > Base component added
 - Revise horizontal dl for proper clearing. Change margin to padding. www.lightningdesignsystem.com/utilities/lists#description-horizontal
-- Utility classes added to help with dropdown menu overflow length. `.slds-dropdown--length-5`, `.slds-dropdown--length-7` and `.slds-dropdown--length-10` for 5, 7 or 10 text only menu items. `.slds-dropdown--length-with-icon-5`, `.slds-dropdown--length-with-icon-7` and `.slds-dropdown--length-with-icon-10` for 5, 7 or 10 text with icon menu items.
-
-**DEPRECATED**
 - Mark all list utilities "dev-ready" - www.lightningdesignsystem.com/utilities/lists
 
 ## Release 1.0.0 (internal only) - November 18, 2015

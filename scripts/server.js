@@ -18,6 +18,7 @@ import browserSyncConsole from 'app_modules/util/browser-sync-console';
 import minimist from 'minimist';
 import watch from 'glob-watcher';
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 
 import siteSass from './tasks/site/sass';
 import { createPageCompiler } from './tasks/site/compile';
@@ -44,7 +45,11 @@ const availableTasks = {
       console.time('Sass Duration');
       siteSass(error => {
         if (error) {
-          console.log(error);
+          if (error.messageFormatted) {
+            return gutil.log(error.messageFormatted);
+          } else {
+            return console.log('1', error);
+          }
         } else {
           console.timeEnd('Sass Duration');
           bs.reload();

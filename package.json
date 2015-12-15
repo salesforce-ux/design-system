@@ -92,6 +92,7 @@
     "react-lorem-component": "aputinski/react-lorem-component",
     "react-router": "1.0.0",
     "rimraf": "2.4.3",
+    "semver": "^5.1.0",
     "stampit": "2.1.0",
     "svgo": "^0.5.6",
     "temp": "^0.8.3",

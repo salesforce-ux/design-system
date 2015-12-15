@@ -30,7 +30,7 @@ export default function(done) {
 
   gulp.src(path.resolve(__PATHS__.site, 'assets/styles/*.scss'))
     .pipe(sass({
-      outputStyle: 'nested',
+      outputStyle: isProd ? 'compressed' : 'nested',
       sourceComments: isProd ? false : true,
       includePaths: [
         __PATHS__.root,
@@ -38,7 +38,7 @@ export default function(done) {
         __PATHS__.node_modules
       ]
     }))
-    .pipe(sass().on('error', sass.logError))
+    .on('error', done)
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .on('error', done)
     .pipe(isProd ? minifycss({ advanced: false }) : gutil.noop())

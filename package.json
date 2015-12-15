@@ -70,7 +70,7 @@
     "gulp-rem2px": "0.0.1",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^2.1.1",
     "gulp-scss-lint": "^0.3.8",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",

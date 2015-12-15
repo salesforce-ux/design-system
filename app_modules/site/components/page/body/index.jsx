@@ -272,7 +272,7 @@ export default React.createClass({
 
   renderBanner(banner) {
     let badge = process.env.DEFAULT_USER_TYPE === 'internal'
-      ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_ID})</div>
+      ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</div>
       : null;
     return (
       <header className={pf('site-banner')} role="banner">

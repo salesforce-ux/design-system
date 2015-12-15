@@ -15,28 +15,60 @@ import minimist from 'minimist';
 import _ from 'lodash';
 import { getDefaultEnvVars } from './env';
 import packageJSON from '../../package.json';
+import semver from 'semver';
+import moment from 'moment';
 
 paths.install();
 appModulePath.addPath(__PATHS__.root);
 
-const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH || '';
-const BUILD_NUMBER = process.env.TRAVIS_JOB_NUMBER;
 const ENV_DEFAULTS = getDefaultEnvVars();
+const INTERNAL_RELEASE_MODES = [
+  'dev', 'feature-freeze', 'release-freeze', 'internal-release'
+];
 
 const argv = minimist(process.argv.slice(2));
 
-try {
-  let deployments =  require('scripts-internal/deploy/config/deployments.json');
-  // Check to see if the current branch matches a known release
-  let release = _.find(deployments.releases, { sourceBranch: TRAVIS_BRANCH });
-  // Internal
-  if (release && _.includes(deployments.internal, release.id)) {
-    process.env.SLDS_VERSION = `${packageJSON.version}-dev.${BUILD_NUMBER}`;
-    process.env.DEFAULT_USER_TYPE = 'internal';
-    process.env.INTERNAL_RELEASE_ID = release.releaseInternalName;
-    process.argv.push('--internal');
+/**
+ * Return a modified version number based on the release
+ *
+ * @param {string} version
+ * @param {object} release
+ * @returns {string}
+ */
+function getVersion (version, release) {
+  let suffixMap = {
+    'dev': '-dev',
+    'feature-freeze': '-beta',
+    'release-freeze': '-rc',
+    'internal-release': '',
+    'external-release': ''
+  };
+  let suffix = suffixMap[release.mode];
+  if (suffix) {
+    let date = moment().format('YYMMDD-HHmm');
+    suffix += `#${date}`;
   }
-} catch (e) {}
+  return version + suffix;
+}
+
+if (process.env.HEROKU_APP_NAME) {
+  let deployments = require('server/config/deployments.json');
+  let release = _.find(deployments.releases, release => {
+    return semver.satisfies(packageJSON.version, release.semver);
+  });
+  if (!release) {
+    throw new Error(`
+      No release matched "${packageJSON.version}"
+      Please review deployments.json
+    `);
+  }
+  ENV_DEFAULTS.SLDS_VERSION = getVersion(packageJSON.version, release);
+  // Internal Production
+  if (process.env.HEROKU_APP_NAME.match(/internal-\d-stage$/)) {
+    ENV_DEFAULTS.DEFAULT_USER_TYPE = 'internal';
+    ENV_DEFAULTS.INTERNAL_RELEASE_NAME = release.name;
+  }
+}
 
 if (argv.internal === true) {
   ENV_DEFAULTS.DEFAULT_USER_TYPE = 'internal';

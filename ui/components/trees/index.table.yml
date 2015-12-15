@@ -15,4 +15,4 @@ classes:
     description: Initializes tree item
     required: true
     applied: <code>&lt;div&gt;</code>
-    notes: This is used within a <code>.{{cssPrefix}}tree__branch</code> and contains the toggle icon and nested <code>&lt;ul&gt;</code>
+    notes: Contains the icon and the action that toggles the nested branch

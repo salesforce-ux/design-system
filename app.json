@@ -24,6 +24,9 @@
     "GITHUB_USER_ACCESS_TOKEN": {
       "required": true
     },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
     "INTERNAL_PASSWORD": {
       "required": true
     },

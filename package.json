@@ -22,8 +22,7 @@
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "scripts/npm/lint.sh",
     "optimize": "scripts/npm/optimize.sh",
-    "update-boilerplate": "babel-node scripts/update-boilerplate.js",
-    "deploy": "babel-node scripts-internal/deploy/heroku-ci.js"
+    "update-boilerplate": "babel-node scripts/update-boilerplate.js"
   },
   "dependencies": {
     "@salesforce-ux/design-tokens": "1.3.1",

@@ -21,6 +21,7 @@ components:
   - page-headers
   - pills
   - process
+  - product-selector
   - popovers
   - publishers
   - spinners

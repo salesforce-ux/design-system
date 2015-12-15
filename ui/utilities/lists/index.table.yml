@@ -25,6 +25,32 @@ classes:
     applied: <code>li</code>
     notes: All lists use this class. Different CSS applies depending on the parent class.
   -
+    class: dl--inline
+    description: Causes description list to display horizontally with <code>dt</code> followed immediately by the <code>dd</code>.
+    applied: <code>dl</code>
+    notes: This lists stacks in a mobile context
+  -
+    class: dl--inline__label
+    description: Marks a term
+    applied: <code>dt</code>
+  -
+    class: dl--inline__detail
+    description: Marks a description
+    applied: <code>dd</code>
+  -
+    class: dl--horizontal
+    description: Causes description list to display horizontally with <code>dt</code> consuming 33% of the space and the <code>dd</code> taking up the rest.
+    applied: <code>dl</code>
+    notes: This lists stacks in a mobile context. It can also take different sizing utilities to change the widths (which must always total 100%).
+  -
+    class: dl--horizontal__label
+    description: Marks a term
+    applied: <code>dt</code>
+  -
+    class: dl--horizontal__detail
+    description: Marks a description
+    applied: <code>dd</code>
+  -
     class: has-block-links
     description: Gives the anchors within the list block styling
     applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>

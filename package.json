@@ -26,8 +26,7 @@
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "scripts/npm/lint.sh",
-    "optimize": "scripts/npm/optimize.sh",
-    "deploy": "babel-node scripts-internal/deploy/heroku-ci.js"
+    "optimize": "scripts/npm/optimize.sh"
   },
   "dependencies": {
     "@salesforce-ux/design-tokens": "1.3.1",
@@ -105,7 +104,6 @@
   "devDependencies": {
     "chai": "3.2.0",
     "imagemin-cli": "^2.0.0",
-    "imagemin-pngquant": "^4.2.0",
     "karma": "0.13.9",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "0.2.0",

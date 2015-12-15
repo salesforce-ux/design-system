@@ -16,7 +16,7 @@
     "GITHUB_USER": {
       "required": true
     },
-    "GITHUB_ACCESS_TOKEN": {
+    "GITHUB_USER_ACCESS_TOKEN": {
       "required": true
     },
     "INTERNAL_PASSWORD": {

@@ -22,7 +22,7 @@
     }
   }
   
-  &__container {
+  &_container {
     position: relative;
 
     .#{$css-prefix}select {
@@ -32,6 +32,10 @@
         left: $spacing-x-small;
         right: $spacing-large;
       }
+    }
+
+    &::-ms-expand {
+      display: none;
     }
 
     &:before,

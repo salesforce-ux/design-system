@@ -22,7 +22,7 @@ import globals from 'app_modules/global';
 export default (
   <ComponentDocs>
     <p className="site-text-introduction">Icons provide visual context and enhance usability.</p>
-    <p>Five separate SVG sprites are used to create icons — action, custom, doctype, standard and utility. Link to the icon svg sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <Link to="/resources/icons/">icon page</Link>.)</p>
+    <p>Five separate SVG sprites are used to create icons — action, custom, doctype, standard and utility. Link to the icon SVG sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <Link to="/resources/icons/">icon page</Link>.)</p>
     <p>When placing the icon code into your page, customize the path in the <code>use</code> attribute of the <code>svg</code> to the proper path and icon name for your specific icon. For example, the <i>case</i> icon in the <i>standard</i> sprite would have a path like this:</p>
     <CodeBlock language="markup">{`
     <svg aria-hidden="true" class="slds-icon">

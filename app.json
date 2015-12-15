@@ -1,5 +1,10 @@
 {
   "name": "Salesforce Lightning Design System",
+  "buildpacks": [
+   {
+     "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+   }
+  ],
   "env": {
     "APP_MODE": {
       "required": true

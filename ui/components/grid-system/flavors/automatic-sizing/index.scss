@@ -21,11 +21,11 @@
 
   &--vertical {
     flex-direction: column;
+  }
 
-    // New in 1.0.0
-    &.#{$css-prefix}grid--reverse {
-      flex-direction: column-reverse;
-    }
+  // New in 1.0.0
+  &--vertical-reverse {
+    flex-direction: column-reverse;
   }
 
   // New in 1.0.0

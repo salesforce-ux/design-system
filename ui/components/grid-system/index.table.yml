@@ -15,7 +15,11 @@ classes:
     applied: <code>.{{cssPrefix}}grid</code>
   -
     class: grid--reverse
-    description: Reverses the starting point in which your grid flows
+    description: Reverses the main axis starting point in which your grid flows
+    applied: <code>.{{cssPrefix}}grid</code>
+  -
+    class: grid--vertical-reverse
+    description: Reverses the cross axis starting point in which your grid flows
     applied: <code>.{{cssPrefix}}grid</code>
   -
     class: grid--align-center

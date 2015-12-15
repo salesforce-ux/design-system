@@ -21,10 +21,12 @@
       padding: $spacing-x-small;
     }
   }
-  
+
   &_container {
     position: relative;
 
+    // Normalize the <select> appearance in various browsers
+    // See https://github.com/salesforce-ux/design-system/issues/122
     .#{$css-prefix}select {
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -32,16 +34,16 @@
         left: $spacing-x-small;
         right: $spacing-large;
       }
-    }
 
-    &::-ms-expand {
-      display: none;
+      &::-ms-expand {
+        display: none;
+      }
     }
 
     &:before,
     &:after {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       right: $spacing-x-small;
       width: 0;
@@ -52,12 +54,12 @@
 
     &:before {
       border-bottom: 5px solid $color-background-inverse;
-      top: calc((#{$line-height-button} / 2) - 6px);
+      top: calc(($line-height-button / 2) - 6px);
     }
 
     &:after {
       border-top: 5px solid $color-background-inverse;
-      bottom: calc((#{$line-height-button} / 2) - 6px);
+      bottom: calc(($line-height-button / 2) - 6px);
     }
   }
 }

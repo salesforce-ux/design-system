@@ -22,8 +22,8 @@ module.exports = (
       Download
     </Button>
     <Button flavor="neutral">
-      Download
-      <SvgIcon className={pf('button__icon button__icon--right')} sprite="utility" symbol="download" />
+      Create
+      <SvgIcon className={pf('button__icon button__icon--right')} sprite="utility" symbol="down" />
     </Button>
   </div>
 );

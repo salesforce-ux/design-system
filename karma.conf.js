@@ -6,7 +6,7 @@ var webpack = require('webpack');
 var _ = require('lodash');
 
 module.exports = function(config) {
-  config.set({
+  var c = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: __dirname,
@@ -17,12 +17,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './scripts/helpers/phantom-polyfill.js',
-      './node_modules/sinon/pkg/sinon.js',
-      './ui/**/*.spec.+(js|jsx)',
-      './test/browser/site/**/*.+(js|jsx)',
-      './test/browser/accessibility/a11y.js',
-      './test/browser/accessibility/components.jsx'
+      'node_modules/sinon/pkg/sinon.js',
+      'ui/**/*.spec.+(js|jsx)',
+      'test/browser/site/**/*.+(js|jsx)',
+      'test/browser/accessibility/a11y.js',
+      'test/browser/accessibility/components.jsx'
     ],
 
     // list of files to exclude
@@ -31,15 +30,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './ui/**/*.+(js|jsx)': ['webpack'],
-      './test/browser/**/*.+(js|jsx)': ['webpack']
+      'ui/**/*.+(js|jsx)': ['webpack'],
+      'test/browser/**/*.+(js|jsx)': ['webpack']
     },
 
     plugins: [
       'karma-chai',
       'karma-chrome-launcher',
       'karma-mocha',
-      'karma-phantomjs-launcher',
       'karma-spec-reporter',
       'karma-webpack'
     ],
@@ -61,14 +59,21 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_ERROR,
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
+
+    customLaunchers: {
+      ChromeTravis: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -100,5 +105,12 @@ module.exports = function(config) {
       noInfo: true
     }
 
-  });
+  };
+
+  if (process.env.TRAVIS) {
+    c.browsers = ['ChromeTravis'];
+  }
+
+  config.set(c);
+
 };

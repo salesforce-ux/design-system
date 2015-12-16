@@ -5,6 +5,7 @@
 
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
+- Better Grid documentation
 
 **BREAKING CHANGES**
 - Tree component markup and CSS has been updated to meet accessbility requirements
@@ -16,18 +17,27 @@
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
 - Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Horizontal DL - changed margin to padding, fixed clearing bug
+- Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
 
 **NEW COMPONENTS**
 - Form > Inline Level Help added
-- Popover > Colors added
+- Popover > Colors added, popovers now accept themes
 - Process > Wizard component added
 - Menu > Picklist Multi-Select component added
 - Page Header > Base component added
+- `.slds-grid--align-end` was added for horizontal alignment on main axis
+- Grid item bump, elegant way to deal with margin: auto functionality in flexbox. `.slds-col--bump-left`, `.slds-col--bump-right`, `.slds-col--bump-top` and `.slds-col--bump-bottom`.
+-  `.slds-grid--vertical-align-end`, `.slds-grid--vertical-align-center` was added for vertical alignment on cross axis
+- `.slds-grid--stretch` was added for multi-row vertical stretch support
+- `.slds-grid--reverse` and `.slds-grid--vertical-reverse` was added to reverse direction of the grid
+- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes [https://github.com/salesforce-ux/design-system/issues/122])
 - `.slds-page-header__info` added to Page header for better responsive spacing.
 - Utility classes added to help with dropdown menu overflow length. `.slds-dropdown--length-5`, `.slds-dropdown--length-7` and `.slds-dropdown--length-10` for 5, 7 or 10 text only menu items. `.slds-dropdown--length-with-icon-5`, `.slds-dropdown--length-with-icon-7` and `.slds-dropdown--length-with-icon-10` for 5, 7 or 10 text with icon menu items.
 
 **Deprecated**
 - `.slds-dropdown--overflow` has been deprecated. Dropdown length utilities should be used instead.
+- Responsive `nowrap` classes due to inconsistent naming, now uses proper naming patterns
+- Column rule helpers due to inconsistent naming, now uses proper naming patterns
 
 ## Release 0.12.1 - December 16, 2015
 

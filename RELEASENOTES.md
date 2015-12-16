@@ -15,8 +15,6 @@
 - Spacing utility (`.slds-m-top--x-small`) on supporting small heading text in the page header has been replaced with a new class, `.slds-page-header__info`
 - Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
-- Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
-- Horizontal DL - changed margin to padding, fixed clearing bug
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
 
 **NEW COMPONENTS**
@@ -51,7 +49,6 @@
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Fix for inverse button-group icon bug
 - Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]

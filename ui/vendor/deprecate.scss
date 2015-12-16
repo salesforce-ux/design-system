@@ -11,6 +11,8 @@
 
 $app-version: '1.0.0' !default;
 
+$app-debug: false !default;
+
 /// Casts a string into a number (integer only)
 ///
 /// @param {String} $value - Value to be parsed
@@ -83,21 +85,25 @@ $app-version: '1.0.0' !default;
 /// and signal its deprecation to developers
 ///
 /// @require $app-version
+/// @require $app-debug
 /// @param {String} $version - Semver-like version (e.g. '0.200.0')
 /// @param {String} $message - Reason about why the code will be deprecated or possible workaround (e.g. 'Use .xxx instead')
-@mixin deprecate($version, $message: null) {
+/// @param {Boolean} $debug ($app-debug) - Output deprecation warnings to the console
+@mixin deprecate($version, $message: null, $debug: $app-debug) {
   @if type-of($version) != string {
     @error 'The parameter passed to deprecate() must be a String. Good: deprecate(\'0.1.0\') / Bad: deprecate(0.1.0).';
   }
 
   $throw-error: true;
 
-  @if & {
-    $parent: &;
-    @debug '#{$parent} will be deprecated in #{$version}. Current version: #{$app-version}.';
-  }
-  @if $message {
-    @warn $message;
+  @if $debug {
+    @if & {
+      $parent: &;
+      @debug '#{$parent} will be deprecated in #{$version}. Current version: #{$app-version}.';
+    }
+    @if $message {
+      @warn $message;
+    }
   }
 
   @if _d-version-major($version) > _d-version-major($app-version) {

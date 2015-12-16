@@ -34,7 +34,7 @@ export default (
     </Sticky>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p className="site-text-introduction">Currently, you will need to install a helper Lightning Component to render the {g.displayName} sprited icons. This is for several reasons:</p>
         <ul>
           <li>Sprited non-inline SVGs are not supported in Lightning yet</li>
@@ -73,7 +73,7 @@ export default (
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>Click on the <strong>HELPER</strong> tab, then paste:</p>
       </div>
 
@@ -114,7 +114,7 @@ export default (
         `}</CodeBlock>
         </div>
 
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         Click on the <strong>RENDERER</strong> tab, then paste:
       </p>
 
@@ -135,7 +135,7 @@ export default (
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
 
         <h2 id="step-3" className="site-text-heading--large">Step 3: Use the New Component</h2>
         <p>

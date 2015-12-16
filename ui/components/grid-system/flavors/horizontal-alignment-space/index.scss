@@ -13,7 +13,7 @@
   justify-content: space-around;
 
   .#{$css-prefix}col,
-  .#{$css-prefix}col--padded {
+  [class*="#{$css-prefix}col--padded"] {
     flex-grow: 0;
   }
 }

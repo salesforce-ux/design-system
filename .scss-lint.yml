@@ -8,7 +8,7 @@ linters:
   BorderZero:
     enabled: true
   ColorKeyword:
-    enabled: false
+    enabled: true
   ColorVariable:
     enabled: false
   Comment:
@@ -30,8 +30,14 @@ linters:
     severity: error
   FinalNewline:
     enabled: false # Already checked by another task
+  HexLength:
+    enabled: true
+    style: short
   HexNotation:
-    enabled: false
+    enabled: true
+    style: lowercase
+  HexValidation:
+    enabled: true
   IdSelector:
     enabled: true
     severity: error
@@ -47,7 +53,8 @@ linters:
     enabled: true
     style: include_zero
   MergeableSelector:
-    enabled: false
+    enabled: true
+    force_nesting: true
   NameFormat:
     enabled: true
     allow_leading_underscore: true # For private variables, mixins and functions

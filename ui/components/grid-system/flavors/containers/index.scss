@@ -12,15 +12,19 @@
 .#{$css-prefix}container {
 
   &--small {
-    max-width: rem(576px);
+    max-width: rem($mq-small);
   }
 
   &--medium {
-    max-width: rem(960px);
+    max-width: rem($mq-medium);
   }
 
   &--large {
-    max-width: rem(1280px);
+    max-width: rem($mq-large);
+  }
+
+  &--x-large {
+    max-width: rem($mq-x-large);
   }
 
   &--fluid {

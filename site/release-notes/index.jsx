@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 
-  <PageBody anchorTitle="Release Notes" contentClassName={pf('site-release-notes container--medium')}>
+  <PageBody anchorTitle="Release Notes" contentClassName={pf('site-release-notes container--large')}>
 
     <p className="site-text-introduction">Download the CSS Framework and other resources from the <Link to="/resources/downloads">Downloads page</Link></p>
 

@@ -30,7 +30,7 @@ export default {
   unmanagedPackageUrls: [
     { version: '0.12.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000Tji5' },
     { version: '0.11.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000T0UT' },
-    { version: '0.10.1', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000ShId' },    
+    { version: '0.10.1', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000ShId' },
     { version: '0.10.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000KQm3' },
     { version: '0.9.2', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000JvoY' },
     { version: '0.9.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000IrV0' },

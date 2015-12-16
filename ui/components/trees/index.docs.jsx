@@ -25,7 +25,7 @@ export default (
 
     <p>A <CodeClass className="tree__item" /> is any element of the tree that is a single node within a node with an ARIA attribute of <code>role="group"</code>. To achieve interactions demostrated in the demo, some helper classes are being added and removed based on actions to the list item node. To achieve the desired hover and focus states, applying the <CodeClass className="is-hovered" /> and <CodeClass className="is-focused" /> class helpers to the <code>li</code> on its respective interactions. If an item is selected and want to demostrate that state, applying the <CodeClass className="is-selected" /> helper class will give you this outcome.</p>
 
-    <p>In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the three branch will perform, whether disclosing or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute <code>aria-controls</code> to the button the icon is contained within. The value of the <code>aria-controls</code> attribute should be the ID of the group that clicking the button will effect.</p>
+    <p>In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute <code>aria-controls</code> to the button the icon is contained within. The value of the <code>aria-controls</code> attribute should be the ID of the group that clicking the button will affect.</p>
 
   </ComponentDocs>
 );

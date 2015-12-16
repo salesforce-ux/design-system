@@ -31,15 +31,10 @@ import sass from 'gulp-sass';
 import through from 'through2';
 import minifycss from 'gulp-minify-css';
 
-
 const argv = minimist(process.argv.slice(2));
 const isNpm = argv.npm === true;
 
 const MODULE_NAME = globals.moduleName;
-const DESIGN_TOKENS_MODULE_NAME = '@salesforce-ux/design-tokens';
-const DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME;
-
-const now = new Date();
 
 ///////////////////////////////////////////////////////////////
 // Helpers
@@ -57,7 +52,6 @@ function commentBanner(messages) {
     ' */\n'
   ].join('\n');
 }
-
 
 ///////////////////////////////////////////////////////////////
 // Tasks
@@ -77,7 +71,9 @@ async.series([
     gulp.src([
       './README-dist.txt',
       './package.json'
-    ], { base: path.resolve(__PATHS__.root) })
+    ], {
+      base: __PATHS__.root
+    })
     .pipe(gulp.dest(distPath()))
     .on('error', done)
     .on('finish', done);
@@ -90,6 +86,7 @@ async.series([
     let packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
     packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
+    delete packageJSON.dependencies;
     delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
     fs.writeFile(
@@ -107,20 +104,25 @@ async.series([
    * Move all the scss files to dist/scss
    */
   (done) => {
-    gulp.src(['**/*.scss'], { base: path.resolve(__PATHS__.ui), cwd: path.resolve(__PATHS__.ui) })
-      .pipe(gulp.dest(distPath('scss')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('**/*.scss', {
+      base: __PATHS__.ui,
+      cwd: __PATHS__.ui
+    })
+    .pipe(gulp.dest(distPath('scss')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
    * Copy the Sass license
    */
   (done) => {
-    gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-Sass.txt'))
-      .pipe(gulp.dest(distPath('scss')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('assets/licenses/License-for-Sass.txt', {
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('scss')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   ////////////////////////////////////
@@ -131,10 +133,12 @@ async.series([
    * Copy all the icons to assets/icons
    */
   (done) => {
-    gulp.src('node_modules/@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**')
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/icons')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**', {
+      cwd: __PATHS__.node_modules
+    })
+    .pipe(gulp.dest(distPath('assets/icons')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   ////////////////////////////////////
@@ -142,23 +146,27 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Copy all the fonts to assets/fonts if not npm
+   * Copy all the fonts to assets/fonts
    */
   (done) => {
-    gulp.src('site/assets/fonts/**/*')
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('assets/fonts/**/*', {
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('assets/fonts')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
    * Copy font license
    */
   (done) => {
-    gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-font.txt'))
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/fonts')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('assets/licenses/License-for-font.txt', {
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('assets/fonts')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   ////////////////////////////////////
@@ -169,20 +177,28 @@ async.series([
    * Copy select images directories
    */
   (done) => {
-    gulp.src(['site/assets/images/spinners/*','site/assets/images/avatar*'], {base: 'site/assets/images/'})
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/images')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src([
+      'assets/images/spinners/*',
+      'assets/images/avatar*'
+    ], {
+      base: 'site/assets/images',
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('assets/images')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
    * Copy images license
    */
   (done) => {
-    gulp.src(path.resolve(__PATHS__.root, 'site/assets/licenses/License-for-images.txt'))
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'assets/images')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('assets/licenses/License-for-images.txt', {
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('assets/images')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   ////////////////////////////////////
@@ -193,10 +209,12 @@ async.series([
    * Copy the swatches
    */
   (done) => {
-    gulp.src(path.resolve(__PATHS__.root, 'site/assets/downloads/swatches/**'))
-      .pipe(gulp.dest(path.resolve(__PATHS__.dist, 'swatches')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src('assets/downloads/swatches/**', {
+      cwd: __PATHS__.site
+    })
+    .pipe(gulp.dest(distPath('swatches')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   ////////////////////////////////////
@@ -204,62 +222,39 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Prefix the "design-tokens" @imports with the
-   * relative node_modules path
+   * Inline the design-tokens
    */
   (done) => {
-    gulp.src(distPath('scss/design-tokens.scss'))
-      .pipe(through.obj(function(file, enc, next) {
-        const newFile = file.clone();
-        // Add the relative node_modules paths to the @import statments
-        const template = newFile.contents.toString()
-          .replace(new RegExp(DESIGN_TOKENS_MODULE_NAME, 'g'), function() {
-            return DESIGN_TOKENS_IMPORT_NAME;
-          });
-        newFile.contents = new Buffer(template);
-        next(null, newFile);
-      }))
-      .on('error', done)
-      .pipe(gulp.dest(distPath('scss')))
-      .on('error', done)
-      .on('finish', done);
-  },
-
-  /**
-   * If we're not building for npm, inline the design-tokens
-   */
-  (done) => {
-    if (isNpm) return done();
     const pattern = /\'(.*?)\'(?=[,;])/g;
     gulp.src(distPath('scss/design-tokens.scss'))
-      .pipe(through.obj(function(file, enc, next) {
-        const newFile = file.clone();
-        let sassImports = [];
-        let contents = newFile.contents.toString();
-        let match;
-        // Collect the @import paths
-        while ((match = pattern.exec(contents)) !== null) {
-          sassImports.push(match[1]);
-        }
-        // Convert the array of paths to an array of file contents
-        sassImports = sassImports.map(function(i) {
-          return path.resolve(__dirname, i);
-        }).filter(function(i) {
-          return fs.existsSync(i);
-        }).map(function(i) {
-          return fs.readFileSync(i).toString();
-        });
-        // Replace @import '…', '…'; with the inlined tokens
-        contents = contents.replace(/\@import[\s\S]*?;/, function() {
-          return sassImports.join('\n');
-        });
-        newFile.contents = new Buffer(contents);
-        next(null, newFile);
-      }))
-      .on('error', done)
-      .pipe(gulp.dest(distPath('scss')))
-      .on('error', done)
-      .on('finish', done);
+    .pipe(through.obj(function(file, enc, next) {
+      const newFile = file.clone();
+      let sassImports = [];
+      let contents = newFile.contents.toString();
+      let match;
+      // Collect the @import paths
+      while ((match = pattern.exec(contents)) !== null) {
+        sassImports.push(match[1]);
+      }
+      // Convert the array of paths to an array of file contents
+      sassImports = sassImports.map(i => {
+        return path.resolve(__dirname, '../node_modules', i);
+      }).filter(i => {
+        return fs.existsSync(i);
+      }).map(i => {
+        return fs.readFileSync(i).toString();
+      });
+      // Replace @import "dep/a", "dep/b"; with the inlined tokens
+      contents = contents.replace(/\@import[\s\S]*?;/, () => {
+        return sassImports.join('\n');
+      });
+      newFile.contents = new Buffer(contents);
+      next(null, newFile);
+    }))
+    .on('error', done)
+    .pipe(gulp.dest(distPath('scss')))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
@@ -268,7 +263,7 @@ async.series([
   (done) => {
     gulp.src(distPath('scss/index*.scss'))
       .pipe(sass({
-        outputStyle: 'nested',
+        outputStyle: 'compressed',
         includePaths: [
           __PATHS__.node_modules
         ]
@@ -315,31 +310,31 @@ async.series([
    * Add version to relevant CSS and Sass files
    */
   (done) => {
-    gulp.src(
-      [
-        '**/*.css',
-        'scss/index*'
-      ],
-      { base: distPath(), cwd: distPath() }
-    )
-      .pipe(gulpinsert.prepend(`/*! ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
-      .pipe(gulp.dest(distPath()))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src([
+      '**/*.css',
+      'scss/index*'
+    ], {
+      base: distPath(),
+      cwd: distPath()
+    })
+    .pipe(gulpinsert.prepend(`/*! ${globals.displayName} ${process.env.SLDS_VERSION} */\n`))
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .on('finish', done);
   },
   (done) => {
-    gulp.src(
-      [
-        'scss/**/*.scss',
-        '!scss/index*.scss',
-        '!scss/vendor/**/*.*'
-      ],
-      { base: distPath(), cwd: distPath() }
-    )
-      .pipe(gulpinsert.prepend(`// ${globals.displayName} ${process.env.SLDS_VERSION}\n`))
-      .pipe(gulp.dest(distPath()))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src([
+      'scss/**/*.scss',
+      '!scss/index*.scss',
+      '!scss/vendor/**/*.*'
+    ], {
+      base: distPath(),
+      cwd: distPath()
+    })
+    .pipe(gulpinsert.prepend(`// ${globals.displayName} ${process.env.SLDS_VERSION}\n`))
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
@@ -347,13 +342,13 @@ async.series([
    */
   (done) => {
     gulp.src(distPath('README-dist.txt'))
-      .pipe(gulprename('README.md'))
-      .on('error', done)
-      .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${process.env.SLDS_VERSION} \n`))
-      .on('error', done)
-      .pipe(gulp.dest(distPath()))
-      .on('error', done)
-      .on('finish', done);
+    .pipe(gulprename('README.md'))
+    .on('error', done)
+    .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${process.env.SLDS_VERSION} \n`))
+    .on('error', done)
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .on('finish', done);
   },
 
   /**
@@ -361,13 +356,6 @@ async.series([
    */
   (done) => {
     rimraf(distPath('README-dist.txt'), done);
-  },
-
-  /**
-   * Remove .dist node_modules directory
-   */
-  (done) => {
-    rimraf(distPath('node_modules'), done);
   },
 
   /**
@@ -386,14 +374,14 @@ async.series([
    */
   (done) => {
     if (isNpm) return done();
-    return gulp.src(distPath('**/*'))
-      .pipe(gulpzip(globals.zipName(process.env.SLDS_VERSION)))
-      .on('error', done)
-      .pipe(gulp.dest(distPath()))
-      .on('error', done)
-      .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')))
-      .on('error', done)
-      .on('finish', done);
+    gulp.src(distPath('**/*'))
+    .pipe(gulpzip(globals.zipName(process.env.SLDS_VERSION)))
+    .on('error', done)
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')))
+    .on('error', done)
+    .on('finish', done);
   }
 
 ], err => {

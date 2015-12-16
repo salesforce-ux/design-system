@@ -8,6 +8,7 @@
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
+- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes [https://github.com/salesforce-ux/design-system/issues/107]). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
 - Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]

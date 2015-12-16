@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Layout" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">A layout is a structural template that supports consistency across applications by defining visual grids, spacing, and sections. </p>
       <p>Before selecting a layout, review these guidelines:</p>
       <ul>

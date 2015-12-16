@@ -31,6 +31,7 @@ $mq-x-small: 320px !default;
 $mq-small: 480px !default;
 $mq-medium: 768px !default;
 $mq-large: 1024px !default;
+$mq-x-large: 1280px !default;
 $sales-path: 2rem; // @TODO: Temp token till we align sizing
 
 $force-base-map: map-merge($force-base-map, (

@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Data Entry" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">Salesforce users need to add, change, and delete information frequently. A wide variety of text entry and selection options clearly and efficiently facilitates this experience.</p>
       <h2 className="site-text-heading--large">Basic Text Input</h2>
       <p><strong>The simplest method of freeform data entry, for single and multiple lines of text.</strong></p>

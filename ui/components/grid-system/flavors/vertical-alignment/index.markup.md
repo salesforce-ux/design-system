@@ -1,1 +1,0 @@
-The grids have some handy helpers that allow you to specify the vertical placement of content on the main axis. You can apply `.{{cssPrefix}}align-top`, `{{cssPrefix}}align-middle`, and `.{{cssPrefix}}align-bottom` to a column within a grid wrapper to change the alignment of the content within.

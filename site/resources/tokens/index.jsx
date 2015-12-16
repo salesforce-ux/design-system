@@ -172,7 +172,7 @@ const Tokens = React.createClass({
   renderInfo: function() {
     if (this.state.query) { return null; }
     return [
-      <div className={pf('container--medium')} key="info">
+      <div className={pf('container--large')} key="info">
         <p className="site-text-introduction">
           Design tokens are the visual design atoms of the design system &mdash;
           specifically, they are named entities that store visual design

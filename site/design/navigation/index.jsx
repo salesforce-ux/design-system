@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Navigation" contentClassName={pf('site-design site-design-navigation')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">Navigational patterns help users move between pages and situate themselves in the application.</p>
       <h2 className="site-text-heading--large">Tabs</h2>
       <p><strong>Use tabs to separate information into logical sections based on functionality or use case.</strong></p>

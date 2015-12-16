@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Displaying Data" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">Lists and feeds help users navigate data either by theme or chronology. These various ways of displaying data are optimized to help users locate, browse, and work together on records.</p>
 
       <h2 className={pf('site-text-heading--large')}>Record Lists</h2>

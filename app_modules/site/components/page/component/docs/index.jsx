@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 class ComponentDocs extends React.Component {
   render() {
     return (
-      <div className={pf('container--medium')}>
+      <div className={pf('container--x-large')}>
         {this.props.children}
       </div>
     );

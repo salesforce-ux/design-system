@@ -24,7 +24,7 @@ const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 
 export default (
-  <PageBody anchorTitle="Visualforce" contentClassName={pf('container--medium')}>
+  <PageBody anchorTitle="Visualforce" contentClassName={pf('container--large')}>
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Visualforce pages.
     </p>

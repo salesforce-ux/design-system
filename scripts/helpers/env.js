@@ -14,7 +14,7 @@ import packageJSON from '../../package.json';
 export function getDefaultEnvVars () {
   return {
     'DEFAULT_USER_TYPE': 'external',
-    'INTERNAL_RELEASE_ID': '',
+    'INTERNAL_RELEASE_NAME': '',
     'URL_PREFIX': '/',
     'SLDS_VERSION': packageJSON.version
   };

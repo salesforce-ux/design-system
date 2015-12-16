@@ -33,7 +33,7 @@ export default (
     </Sticky>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p className="site-text-introduction">You can customize the {globals.displayName} CSS framework to match the visual design of your brand.</p>
 
         <p>In this tutorial, you will learn how to override the provided design tokens using
@@ -66,7 +66,7 @@ export default (
         `}</CodeBlock>
       </div>
 
-      <p className={pf('container--medium')}>
+      <p className={pf('container--large')}>
         In the section marked &ldquo;Override tokens here&rdquo; add any tokens that you
         wish to change and then save the file.
       </p>
@@ -78,7 +78,7 @@ $color-text-default: red;
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <h2 id="step-3" className="site-text-heading--large">Step 3: Recompile the CSS</h2>
 
         <p>Once you have finished making your edits, you&rsquo;ll need to compile a new
@@ -92,7 +92,7 @@ node styles.js > www/assets/styles/${moduleName}-custom.css
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>If successful, you should now have a customized version of the {globals.displayName} CSS framework!</p>
 
         <p>To see the customizations, simply update the <code>link</code> tag in
@@ -106,7 +106,7 @@ node styles.js > www/assets/styles/${moduleName}-custom.css
       </div>
 
       <section className={pf('box theme--shade m-bottom--medium')}>
-        <p className={pf('container--medium')}>
+        <p className={pf('container--large')}>
           <strong>Note:</strong> If you plan to use your customized CSS inside a Visualforce page
           you will need to modify the <code>url()</code> paths. Below is a unix command that will update the
           paths and create a file called <code>salesforce-design-system-custom-vf.css</code>
@@ -119,7 +119,7 @@ sed 's/url("\\/assets/url("..\/g' < ${moduleName}-custom.css > ${moduleName}-cus
         </div>
       </section>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>If you are using Windows, here is a discussion about some <a target="_blank" href="http://stackoverflow.com/questions/60034/how-can-you-find-and-replace-text-in-a-file-using-the-windows-command-line-envir?lq=1">sed alternatives</a>.</p>
 
         <h2 id="step-4" className="site-text-heading--large">Step 4: Advanced &mdash; Customize Your Brand Colors</h2>

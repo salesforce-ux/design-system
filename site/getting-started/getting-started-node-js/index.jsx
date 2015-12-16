@@ -41,7 +41,7 @@ export default (
     </Sticky>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
 
         <p className="site-text-introduction">The following tutorial will set you up with the tools you need to work with the {globals.displayName} in your local development environment.</p>
 
@@ -84,7 +84,7 @@ cp -R ${moduleName}-${version.sldsVersion}/assets getting-started-node-js/www
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>You should now have a directory structure like this:</p>
 
         <ul>
@@ -129,7 +129,7 @@ npm install && npm start
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>You should see the following message on your console:</p>
       </div>
 
@@ -139,7 +139,7 @@ Express: listening on 5000
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
         <p>Open a new window in your browser and enter <a href="http://localhost:5000">http://localhost:5000</a> in the address bar.</p>
 
         <p>A sample page using the {globals.displayName} should be displayed!</p>

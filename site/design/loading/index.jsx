@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Loading" contentClassName={pf('site-design site-design-loading site-text-longform')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">Loading indicators help to reassure the user that the system is actively retrieving data.</p>
 
       {/* Spinners */}

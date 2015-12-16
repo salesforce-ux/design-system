@@ -11,24 +11,6 @@ body {
   padding: $spacing-medium;
 }
 
-// Grid Demo
-.demo-container {
-
-  .#{$css-prefix}col,
-  .#{$css-prefix}col--padded,
-  > div > div {
-    text-align: center;
-    line-height: 2rem;
-    background-color: $color-brand;
-    color: $color-text-inverse;
-    box-shadow: rgba(black, 0.1) 0 0 0 1px inset;
-  }
-
-  .#{$css-prefix}grid--overflow > .#{$css-prefix}col {
-    min-height: 150px;
-  }
-}
-
 // For Absolutely Positioned Demos
 .demo-only {
   @include clearfix;
@@ -158,7 +140,7 @@ body {
 .demo-only--margin-theme > div:before {
   content: '';
   position: absolute;
-  background: rgba(black, 0.1);
+  background: rgba(#000, 0.1);
   width: 100%;
   height: 1px;
   left: 0;
@@ -166,7 +148,7 @@ body {
 }
 
 .demo-only--padding-theme > div {
-  border-bottom: 1px solid rgba(black, 0.1);
+  border-bottom: 1px solid rgba(#000, 0.1);
 }
 
 .demo-only--padding-theme > div:before {

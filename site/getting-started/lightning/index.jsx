@@ -26,7 +26,7 @@ const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 const lightningTutorialUrl = 'https://developer.salesforce.com/trailhead/project/slds-lightning-components-workshop';
 
 export default (
-  <PageBody anchorTitle="Lightning Apps and Components" contentClassName={pf('container--medium')}>
+  <PageBody anchorTitle="Lightning Apps and Components" contentClassName={pf('container--large')}>
 
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Lightning apps and components.

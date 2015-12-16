@@ -18,7 +18,7 @@ import { Link } from 'react-router';
 
 export default (
   <PageBody anchorTitle="Links" contentClassName={pf('text-longform')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p>Interested in learning more about the Design System, how we built it, and how you can use it? Check out the links below, and check back often - we&#39;re always writing articles and gathering community-generated content.</p>
       <h2 className={pf('site-text-heading--large')}>Articles</h2>
       <ul>

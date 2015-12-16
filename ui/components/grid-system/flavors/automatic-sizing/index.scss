@@ -14,8 +14,8 @@
   position: relative;
 
   &--frame {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
   }
 
@@ -23,24 +23,21 @@
     flex-direction: column;
   }
 
-  .#{$css-prefix}text-longform & {
-    padding-left: 0;
+  // New in 1.0.0
+  &--vertical-reverse {
+    flex-direction: column-reverse;
   }
-}
 
-// Resets spacing/bullets for when grids are used on unordered lists
-ul.#{$css-prefix}grid {
-  margin-left: 0;
-  list-style: none;
+  // New in 1.0.0
+  &--reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .#{$css-prefix}col,
-.#{$css-prefix}col--padded {
+// Catch all for col--padded variants
+[class*="#{$css-prefix}col--padded"] {
   @include flex-item(expand);
-
-  .#{$css-prefix}text-longform & {
-    list-style: none;
-  }
 }
 
 .#{$css-prefix}col--padded {
@@ -48,17 +45,19 @@ ul.#{$css-prefix}grid {
     right: $spacing-small;
     left: $spacing-small;
   }
-}
-.#{$css-prefix}col--padded-medium {
-  padding: {
-    right: $spacing-medium;
-    left: $spacing-medium;
+
+  &-medium {
+    padding: {
+      right: $spacing-medium;
+      left: $spacing-medium;
+    }
   }
-}
-.#{$css-prefix}col--padded-large {
-  padding: {
-    right: $spacing-large;
-    left: $spacing-large;
+
+  &-large {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
   }
 }
 
@@ -67,40 +66,67 @@ ul.#{$css-prefix}grid {
     right: ($spacing-small * -1);
     left: ($spacing-small * -1);
   }
-}
 
-.#{$css-prefix}grid--pull-padded-medium {
-  margin: {
-    right: ($spacing-medium * -1);
-    left: ($spacing-medium * -1);
+  &-medium {
+    margin: {
+      right: ($spacing-medium * -1);
+      left: ($spacing-medium * -1);
+    }
+  }
+
+  &-large {
+    margin: {
+      right: ($spacing-large * -1);
+      left: ($spacing-large * -1);
+    }
   }
 }
 
-.#{$css-prefix}grid--pull-padded-large {
-  margin: {
-    right: ($spacing-large * -1);
-    left: ($spacing-large * -1);
-  }
-}
-
+// Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}col-rule {
+
+  @include deprecate("2.0.0") {
+
+    @include mq-large-min {
+
+      &--top {
+        border-top: 1px solid $color-border-separator;
+      }
+
+      &--right {
+        border-right: 1px solid $color-border-separator;
+      }
+
+      &--bottom {
+        border-bottom: 1px solid $color-border-separator;
+      }
+
+      &--left {
+        border-left: 1px solid $color-border-separator;
+      }
+    }
+  }
+}
+
+// New in 1.0.0
+.#{$css-prefix}col--rule {
 
   @include mq-large-min {
 
-    &--left {
-      border-left: 1px solid $color-border-separator;
+    &--top {
+      border-top: 1px solid $color-border-separator;
     }
 
     &--right {
       border-right: 1px solid $color-border-separator;
     }
 
-    &--top {
-      border-top: 1px solid $color-border-separator;
-    }
-
     &--bottom {
       border-bottom: 1px solid $color-border-separator;
+    }
+
+    &--left {
+      border-left: 1px solid $color-border-separator;
     }
   }
 }
@@ -109,29 +135,45 @@ ul.#{$css-prefix}grid {
   @include flex-wrap(true);
 }
 
-// Deprecate
+// Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}nowrap {
-  @include flex-item(expand);
-  @include flex-wrap(false);
+  @include deprecate("2.0.0") {
+    @include flex-item(expand);
+    @include flex-wrap(false);
 
-  &--small {
-    @include mq-small-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
+    &--small {
+      @include mq-small-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
+    }
+
+    &--medium {
+      @include mq-medium-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
+    }
+
+    &--large {
+      @include mq-large-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
     }
   }
+}
 
-  &--medium {
-    @include mq-medium-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
-    }
-  }
-
-  &--large {
-    @include mq-large-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
+// New in 1.0.0
+// .slds-{size}-nowrap used for responsive design
+@each $size in map-keys($grid) {
+  $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
+  @each $key in $size {
+    @media (min-width: #{pem($breakpoint)}) {
+      .#{$css-prefix}#{$size}-nowrap {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
     }
   }
 }
@@ -163,4 +205,10 @@ ul.#{$css-prefix}grid {
 
 .#{$css-prefix}shrink-none {
   flex-shrink: 0;
+}
+
+// Resets spacing/bullets for when grids are used on unordered lists
+.#{$css-prefix}text-longform ul.#{$css-prefix}grid {
+  margin-left: 0;
+  list-style: none;
 }

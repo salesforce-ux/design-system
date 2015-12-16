@@ -62,7 +62,7 @@ class Overview extends React.Component {
         <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" ctaEventName="release-notes-top">{version.sldsVersion}</CTALink></p>
       </header>
 
-      <div className={pf('container--buffer container--large')}>
+      <div className={pf('container--buffer container--x-large')}>
       {/* Grid */}
       <section className={pf('site-grid--landing p-vertical--xx-large site-text-longform')}>
         <div className="site-video-container">

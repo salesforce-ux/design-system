@@ -30,7 +30,7 @@ function unmanagedPackageUrls() {
 }
 
 export default (
-  <PageBody anchorTitle="Downloads" contentClassName={pf('container--medium')}>
+  <PageBody anchorTitle="Downloads" contentClassName={pf('container--large')}>
 
     <p className="site-text-introduction">
       We provide multiple options for downloading the Design System, as well as specific downloads for icons, design tokens and swatches.

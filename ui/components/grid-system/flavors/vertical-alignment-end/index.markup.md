@@ -1,0 +1,1 @@
+To align a single row or multi-line rows to the end of the cross axis, apply the class `.{{cssPrefix}}grid--vertical-align-center`. Note, to vertically align elements on a cross-axis of a `.{{cssPrefix}}grid`, the elements need available vertical white space. This is usually achieved by having a height applied to the `.{{cssPrefix}}grid`.

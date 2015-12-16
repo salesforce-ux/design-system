@@ -67,7 +67,7 @@ export default (
     </Sticky>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--medium')}>
+      <div className={pf('container--large')}>
 
         <p className="site-text-introduction">
           The following tutorial will set you up with the tools you need to

@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Messaging" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--medium')}>
+    <div className={pf('container--large')}>
       <p className="site-text-introduction">When the user or system takes action, various messaging patterns are used to show the result or impact.</p>
       <h2 className={pf('site-text-heading--large')}>Icons</h2>
       <p>Icons are used in all the various messaging patterns. Follow these guidelines when deciding which icon to use in your messages.</p>

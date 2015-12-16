@@ -27,6 +27,42 @@ body {
   .#{$css-prefix}grid--overflow > .#{$css-prefix}col {
     min-height: 150px;
   }
+
+  // For MASS demos
+  &-with-squares > div {
+    @include square(60px);
+    display: inline-block;
+    margin: 30px;
+    padding-top: 1.3rem;
+    border-radius: $border-radius-small;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+
+  &__color-examples > div {
+    border: $border-width-thin solid $color-border;
+    margin-bottom: $spacing-large;
+    background-color: $color-background-button-default;
+  }
+
+  &__position-examples {
+    margin-bottom: $spacing-large;
+    padding-bottom: 40px;
+
+    > div {
+      position: relative;
+      top: 0;
+      background-color: #ccc;
+    }
+  }
+
+  &__examples--on &__color-examples > div {
+    background-color: $color-background-button-brand;
+  }
+
+  &__examples--on &__position-examples > div {
+    top: 40px;
+  }
 }
 
 // For Absolutely Positioned Demos
@@ -66,43 +102,6 @@ body {
   background-color: $color-background-alt-inverse;
 }
 
-// For MASS demos
-.demo-container {
-  &-with-squares > div {
-    @include square(60px);
-    display: inline-block;
-    margin: 30px;
-    padding-top: 1.3rem;
-    border-radius: $border-radius-small;
-    text-align: center;
-    background-color: #f8f8f8;
-  }
-
-  &__color-examples > div {
-    border: $border-width-thin solid $color-border;
-    margin-bottom: $spacing-large;
-    background-color: $color-background-button-default;
-  }
-
-  &__position-examples {
-    margin-bottom: $spacing-large;
-    padding-bottom: 40px;
-
-    > div {
-      position: relative;
-      top: 0;
-      background-color: #ccc;
-    }
-  }
-
-  &__examples--on &__color-examples > div {
-    background-color: $color-background-button-brand;
-  }
-
-  &__examples--on &__position-examples > div {
-    top: 40px;
-  }
-}
 
 // For the .button--hint demo - parent needs to have some space
 .hint-parent-demo {
@@ -148,21 +147,21 @@ body {
 
 .demo-only--margin-theme {
   background: $color-background-browser;
-}
 
-.demo-only--margin-theme > div {
-  height: 1.5rem;
-  background: $color-background;
-}
+  > div {
+    height: 1.5rem;
+    background: $color-background;
+  }
 
-.demo-only--margin-theme > div:before {
-  content: '';
-  position: absolute;
-  background: rgba(black, 0.1);
-  width: 100%;
-  height: 1px;
-  left: 0;
-  top: 0;
+  > div:before {
+    content: '';
+    position: absolute;
+    background: rgba(black, 0.1);
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+  }
 }
 
 .demo-only--padding-theme > div {

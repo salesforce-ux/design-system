@@ -15,7 +15,7 @@ const CodeClass = require('app_modules/site/components/code-class');
 
 module.exports = (
   <ComponentDocs>
-    <p className="site-text-introduction">A tree is visualization a structure heiarchy. A branch can be expanded or collapsed.</p>
+    <p className="site-text-introduction">A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.</p>
     <p>A tree is composed of three core elements, <CodeClass className="tree" />, <CodeClass className="tree__item" />, and <CodeClass className="tree__branch" />. The tree wrapper, the outer most parent <code>ul</code>, will receive the class <CodeClass className="tree" />. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.</p>
 
     <p>Whenever the tree has a nested group, the <code>li</code> element should receive the class <CodeClass className="tree__branch" />. This class will add appropiate styling to decendent <CodeClass className="tree__item" /> elements. A helper class of <CodeClass className="is-open" /> and <CodeClass className="is-closed" /> will need to be toggled on the list item node if the decendent groups are visible or not visible.</p>

@@ -8,7 +8,6 @@
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Fix for inverse button-group icon bug
 - Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
 - Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]

@@ -24,9 +24,11 @@ class Component extends React.Component {
       <div className={pf('form-element')}>
         <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
         <div className={pf('form-element__control')}>
-          <select id={this.props.assistiveText.replace(' ','-')} className={className}>
-            {this.props.children}
-          </select>
+          <div className={pf('select_container')}>
+            <select id={this.props.assistiveText.replace(' ','-')} className={className}>
+              {this.props.children}
+            </select>
+          </div>
           {this.renderHelp(this.props.help)}
         </div>
       </div>

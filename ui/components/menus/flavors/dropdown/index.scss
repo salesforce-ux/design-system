@@ -224,7 +224,7 @@
       display: none;
     }
 
-    &.#{$css-prefix}is-open {
+    &.#{$css-prefix}is-open .#{$css-prefix}dropdown {
       display: block;
       visibility: visible;
       opacity: 1;

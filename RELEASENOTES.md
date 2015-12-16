@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 1.1.0 - December 16, 2015
+## Release 1.1.0 (internal only) - December 16, 2015
 
 **SITE IA**
 - Move Page Header theme from Utilities to its top-level component category
@@ -39,6 +39,11 @@
 - Responsive `nowrap` classes due to inconsistent naming, now uses proper naming patterns
 - Column rule helpers due to inconsistent naming, now uses proper naming patterns
 
+## Release 1.0.0 (internal only) - November 18, 2015
+
+**NEW COMPONENTS**
+- Added the Docked Composer
+
 ## Release 0.12.1 - December 16, 2015
 
 **SITE IA**
@@ -46,16 +51,18 @@
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes [https://github.com/salesforce-ux/design-system/issues/107]). Updated documentation to reflect previous refactoring.
-- Fix for inverse button-group icon bug
 - Make text-body--small inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
-- Revise horizontal dl for proper clearing. Change margin to padding. www.lightningdesignsystem.com/utilities/lists#description-horizontal
-- Mark all list utilities "dev-ready" - www.lightningdesignsystem.com/utilities/lists
-
-## Release 1.0.0 (internal only) - November 18, 2015
+- Fix for inverse button-group icon bug
+- Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
+- Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]
+- Field-level help popover background color token update
+- Fix truncation on Sales Path (fixes [https://github.com/salesforce-ux/design-system/issues/135])
+- Fix chevron alignment on Sales Path - [www.lightningdesignsystem.com/components/tabs#sales-path]
+- Updated demo on buttons > neutral icon to demonstrate "mutton" - [www.lightningdesignsystem.com/components/buttons#neutral-icon]
+- Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding.
 
 **NEW COMPONENTS**
-- Added the Docked Composer
+- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes [https://github.com/salesforce-ux/design-system/issues/122])
 
 ## Release 0.12.0 - November 18, 2015
 

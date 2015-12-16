@@ -79,14 +79,14 @@
     left: 0;
     top: 0;
     height: 100%;
-    background: #0076DE; // @TODO: Need a token for this
+    background: #0076de; // @TODO: Need a token for this
     transition: width $duration-promptly ease;
   }
 
   .#{$css-prefix}is-active {
 
     .#{$css-prefix}wizard__marker {
-      background: #0076DE; // @TODO: Need a token for this
+      background: #0076de; // @TODO: Need a token for this
     }
 
     a:hover,

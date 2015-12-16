@@ -41,14 +41,14 @@
   }
 
   .#{$css-prefix}is-current {
-    background-color: #0076DE; // @TODO: Need a token for this
+    background-color: #0076de; // @TODO: Need a token for this
 
     &:hover {
       background-color: rgb(0, 95, 178); // @TODO: Need a token for this blue
     }
 
     + .#{$css-prefix}is-incomplete:before {
-      background-color: #0076DE; // @TODO: Need a token for this
+      background-color: #0076de; // @TODO: Need a token for this
     }
 
     &:hover + .#{$css-prefix}is-incomplete:before {
@@ -147,7 +147,7 @@
     top: $border-width-thick;
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
-    border: $border-width-thick solid white;
+    border: $border-width-thick solid #fff;
     border-left: 0;
     border-bottom: 0;
     background-clip: padding-box;

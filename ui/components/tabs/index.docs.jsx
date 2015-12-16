@@ -19,7 +19,7 @@ export default (
   <ComponentDocs>
     <p className="site-text-introduction">A tab keeps related content in a single container that is shown and hidden through navigation.</p>
     <p>Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.</p>
-    <h4 className="site-text-heading--label">Javascript Needs</h4>
+    <h4 className="site-text-heading--label">JavaScript Needs</h4>
     <p>The active tab has two markup requirements:</p>
     <ul>
       <li>The <CodeClass className="active"/> class should be placed on the <code>li</code> with <CodeClass className="tabs--{variant}__item"/>.</li>

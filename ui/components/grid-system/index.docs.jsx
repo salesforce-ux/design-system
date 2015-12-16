@@ -24,16 +24,15 @@ export default (
 <p className="site-text-introduction">The {globals.displayName} grid, based on Flexbox, provides a flexible, mobile-first, device-agnostic scaffolding system. It includes helper classes that you can use to alter the look and behavior of your grid, such as alignment, order, flow, and padding helpers.</p>
 
 <h2 className={pf('site-text-heading--label')}>Grid Wrapper</h2>
-<p>To use the grid system, add the class <CodeClass className="grid"/> to an element, component, or page layout. Each grid is independent of other nested grids. You can limit attributes of each grid to specific regions in the app. A grid style is <em>not</em> an all or nothing solution.</p>
-<p>Adding the class <CodeClass className="wrap"/> causes the flow of your <CodeClass className="col"/> elements to wrap when they exceed 100% of their parent’s width.</p>
-<p>You can easily change the flow direction of your grid by adding a modifier class to the <CodeClass className="grid"/> element. To stack your columns vertically instead of their default row behavior, use <CodeClass className="grid--vertical"/>. You can also reverse the left to right or top to bottom behavior by adding <CodeClass className="grid--reverse"/>.</p>
-<p>If you want your application to fill 100% of the width and height of the viewport and nest other grids inside, use the top-level app helper class <CodeClass className="grid--frame"/>. An assortment of <CodeClass className="container"/> classes are available to contain your grids.</p>
+<p>To use the grid system, add the class <CodeClass className="grid" /> to an element, component, or page layout. Each grid is independent of other nested grids. You can limit attributes of each grid to specific regions in the app. A grid style is <em>not</em> an all or nothing solution.</p>
+<p>Adding the class <CodeClass className="wrap" /> causes the flow of your <CodeClass className="col" /> elements to wrap when they exceed 100% of their parent’s width.</p>
+<p>You can easily change the flow direction of your grid by adding a modifier class to the <CodeClass className="grid" /> element. To stack your columns vertically instead of their default row behavior, use <CodeClass className="grid--vertical" />. You can also reverse the left to right behavior by adding <CodeClass className="grid--reverse" /> or top to bottom by adding <CodeClass className="grid--vertical-reverse" />.</p>
+<p>If you want your application to fill 100% of the width and height of the viewport and nest other grids inside, use the top-level app helper class <CodeClass className="grid--frame" />. An assortment of <CodeClass className="container"/> classes are available to contain your grids.</p>
 
 <h2 className={pf('site-text-heading--label')}>Grid Items (Regions/Colums)</h2>
-<p>When you add the class <CodeClass className="col"/> to the grid items, no padding or gutters are added. They are simply divisions of their parent. If you want gutters, remove the class <CodeClass className="col"/> and replace it with one of the <CodeClass className="col--padded"/> classes. These will add different sized gutters to the left and right side of your column.</p>
+<p>When you add the class <CodeClass className="col" /> to the grid items, no padding or gutters are added. They are simply divisions of their parent. If you want gutters, remove the class <CodeClass className="col" /> and replace it with one of the <CodeClass className="col--padded" /> classes. These will add different sized gutters to the left and right side of your column.</p>
 <p>By default, the width of each column within a grid row is determined by the content within. Though this automatic sizing allows you to achieve most desired outcomes, you can add manual <Link to="/components/utilities/sizing/">sizing classes</Link> to the columns if you need specific column widths.</p>
 <p>Using the manual sizing class helpers, you can specify a column span across the following grids &ndash;2, 3, 4, 5, 6, and 12. The grid supports up to 12 columns.</p>
-<p>See <Link to="/components/utilities/sizing/">sizing utilities</Link> for more information and examples.</p>
 
 <h2 className={pf('site-text-heading--label')}>Visual Glossary of Terminology</h2>
 <Img className={pf('image')} src="/assets/images/grid/grid-flex-diagram.svg" alt="" />

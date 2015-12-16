@@ -82,7 +82,7 @@ export default (
         <h2 className="site-text-heading--large">Breadcrumbs</h2>
         <p><strong>Breadcrumbs help users navigate back up a hierarchy of pages.</strong></p>
         <Img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs.svg" alt="Wireframe image of tabs design" />
-        <p>A breadcrumb indicates the hierarchy path (parent­child relationships) of the page a user is on, rather than the order of the user’s browsing history. Breadcrumbs are especially useful when a user links directly to a page that is nested in a hierarchy but needs to go to a parent page. They also helps users situate themselves in the application.</p>
+        <p>A breadcrumb indicates the hierarchy path (parent­-child relationships) of the page a user is on, rather than the order of the user’s browsing history. Breadcrumbs are especially useful when a user links directly to a page that is nested in a hierarchy but needs to go to a parent page. They also helps users situate themselves in the application.</p>
         <p>Breadcrumbs are commonly used in conjunction with a tree for navigating between nested pages. The full hierarchy path is listed on a second or third level page. When the user is on a page deeper than three levels, the breadcrumb displays only the last two links. The rest of the hierarchy path is truncated, as shown in the following figure.</p>
         <Img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs-truncate.svg" alt="Wireframe image of tabs design" />
       </div>

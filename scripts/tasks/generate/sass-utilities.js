@@ -21,14 +21,14 @@ export default function(done) {
   // Sass
   gulp.src(path.resolve(__PATHS__.ui, 'utilities/index-with-dependencies.scss'))
     .pipe(sass({
-      outputStyle: 'nested',
+      outputStyle: 'compressed',
       includePaths: [
         __PATHS__.root,
         __PATHS__.ui,
         __PATHS__.node_modules
       ]
     }))
-    .pipe(sass().on('error', sass.logError))
+    .on('error', done)
     .pipe(rename(path => {
       path.basename = 'utilities';
       path.extname = '.css';

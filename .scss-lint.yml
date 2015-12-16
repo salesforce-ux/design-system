@@ -17,7 +17,7 @@ linters:
   DeclarationOrder:
     enabled: false
   DuplicateProperty:
-    enabled: false
+    enabled: true
   ElsePlacement:
     enabled: false
   EmptyLineBetweenBlocks:
@@ -47,7 +47,8 @@ linters:
     enabled: true
     style: include_zero
   MergeableSelector:
-    enabled: false
+    enabled: true
+    force_nesting: true
   NameFormat:
     enabled: true
     allow_leading_underscore: true # For private variables, mixins and functions

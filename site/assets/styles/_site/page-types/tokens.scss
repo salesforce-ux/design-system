@@ -7,12 +7,6 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-tokens code {
-  padding: 0;
-  background: none;
-  white-space: normal;
-}
-
 .site {
 
   &-example-color-text {
@@ -36,6 +30,7 @@
   &-example-color-background         { background-color: $color-background; }
   &-example-color-background-alt     { background-color: $color-background-alt; }
   &-example-color-background-inverse { background-color: $color-background-inverse; }
+  &-example-color-text-inverse       { background-color: $color-background-inverse; }
 
   &-indicator {
     &-pass,
@@ -137,6 +132,24 @@
       }
     }
   }
+
+  &-spec-legend {
+    dt {
+      width: $spacing-medium;
+      text-align: center;
+    }
+
+    dt,
+    dd {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    dd {
+      padding-left: $spacing-x-small;
+      margin: 0 0 0 -4px;
+    }
+  }
 }
 
 @include mq-medium-min {
@@ -158,32 +171,6 @@
   }
 }
 
-.site {
-
-  &-example-color-text-inverse {
-    background: $color-background-inverse;
-  }
-
-  &-spec-legend {
-    dt {
-      width: $spacing-medium;
-      text-align: center;
-    }
-
-    dt,
-    dd {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    dd {
-      padding-left: $spacing-x-small;
-      margin: 0 0 0 -4px;
-    }
-  }
-
-}
-
 .ruled .site-example-spec-container.#{$css-prefix}cell:first-child {
   position: relative;
   margin-right: $spacing-medium * 2;
@@ -199,6 +186,12 @@
 }
 
 .site-tokens {
+
+  code {
+    padding: 0;
+    background: none;
+    white-space: normal;
+  }
 
   thead th {
     border-bottom: 1px solid $color-border;

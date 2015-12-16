@@ -35,4 +35,17 @@
   &--circle {
     border-radius: $border-radius-circle;
   }
+
+  // New in 2.0.0
+  &--empty {
+    border: $border-width-thin dashed $color-border;
+  }
+}
+
+// @todo move this
+.align--center-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }

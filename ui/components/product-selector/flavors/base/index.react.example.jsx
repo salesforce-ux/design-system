@@ -20,10 +20,20 @@ import Lorem from 'react-lorem-component';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <span className={pf('avatar avatar--small')}>
-    <Img src={`/assets/images/company1.jpg`} alt="company name" />
-  </span>
+const imageEmpty = (
+  <span className={pf('avatar avatar--small avatar--empty')}></span>
+);
+const image1 = (
+  <span className={pf('avatar avatar--small icon-custom-10 align--center-center')}>AC</span>
+);
+const image2 = (
+  <span className={pf('avatar avatar--small icon-custom-20 align--center-center')}>BP</span>
+);
+const image3 = (
+  <span className={pf('avatar avatar--small icon-custom-30 align--center-center')}>MS</span>
+);
+const image4 = (
+  <span className={pf('avatar avatar--small icon-custom-40 align--center-center')}>MS</span>
 );
 
 class ModalExample extends React.Component {
@@ -42,75 +52,134 @@ class ModalExample extends React.Component {
           </Modal.Header>
 
           <Modal.Body className={pf('grid nowrap')}>
-            <div className={pf('col size--8-of-12 scrollable--y')}>
-              <div className={pf('p-around--x-small theme--shade grid')}>
+            <div className={pf('col grid grid--vertical nowrap size--8-of-12')}>
+              <div className={pf('p-vertical--x-small p-horizontal--large grid shrink-none')}>
                 <div className={pf('grow input-has-icon input-has-icon--left m-right--small')}>
                   <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
                   <input id="search-text-input-product" className={pf('input')} type="text" placeholder="Search Products" />
                 </div>
                 <ButtonIcon
                   flavor="icon-border-filled"
-                  iconFlavor="small"
                   sprite="utility"
                   symbol="filterList"
                   assistiveText="Filter Products" />
               </div>
               {/* Product List */}
-              <table className={pf('table table--bordered')}>
-                <thead>
-                  <tr className={pf('text-heading--label')} >
-                    <th className={pf('is-sortable')} scope="col">
-                      <span className={pf('truncate')}>Name</span>
-                      <ButtonIcon
-                        flavor="icon-bare"
-                        iconFlavor="small"
-                        sprite="utility"
-                        symbol="arrowdown"
-                        assistiveText="Sort" />
-                    </th>
-                    <th scope="col"><span className={pf('truncate')}>List Price</span></th>
-                    <th scope="col"><span className={pf('truncate')}>Product Code</span></th>
-                    <th scope="col"><span className={pf('truncate')}>Product Family</span></th>
-                    <th scope="col" className={pf('cell-shrink')}>
-                      <ButtonIcon
-                        flavor="icon-border-filled,icon-x-small"
-                        iconFlavor="small"
-                        sprite="utility"
-                        symbol="add"
-                        assistiveText="Add all Products" />
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className={pf('hint-parent')}>
-                    <th data-label="name" scope="row">
-                      <a href="#void" className={pf('truncate')}>
-                        <MediaObject figureLeft={image} flavor="center">
-                          Analytics Cloud
+              <div className={pf('grow')}>
+                <table className={pf('table table--bordered no-row-hover')}>
+                  <thead>
+                    <tr className={pf('text-heading--label')} >
+                      <th className={pf('is-sortable')} scope="col">
+                        <span className={pf('truncate')}>Name</span>
+                        <ButtonIcon
+                          flavor="icon-bare"
+                          sprite="utility"
+                          symbol="arrowdown"
+                          assistiveText="Sort" />
+                      </th>
+                      <th scope="col"><span className={pf('truncate')}>Product Code</span></th>
+                      <th scope="col"><span className={pf('truncate')}>List Price</span></th>
+                      <th scope="col"><span className={pf('truncate')}>Product Family</span></th>
+                      <th scope="col" className={pf('cell-shrink')}>
+                        <ButtonIcon
+                          flavor="icon-border-filled,icon-small"
+                          sprite="utility"
+                          symbol="add"
+                          assistiveText="Add all Products" />
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className={pf('hint-parent')}>
+                      <th data-label="name" scope="row">
+                        <MediaObject figureLeft={image1} flavor="center">
+                          <a href="#void" className={pf('truncate')}>
+                            Analytics Cloud
+                          </a>
                         </MediaObject>
-                      </a>
-                    </th>
-                    <td data-label="account"><span className={pf('truncate')}>2750.00</span></td>
-                    <td data-label="activity"><span className={pf('truncate')}>ANLTY</span></td>
-                    <td data-label="stage"><span className={pf('truncate')}>Analytics Products</span></td>
-                    <td className={pf('row-action')}>
-                      <ButtonIcon
-                        flavor="icon-border-filled,icon-x-small"
-                        iconFlavor="hint,small"
-                        sprite="utility"
-                        symbol="add"
-                        assistiveText="Add Product" />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      </th>
+                      <td data-label="Product Code"><span className={pf('truncate')}>ANLTY</span></td>
+                      <td data-label="List Price"><span className={pf('truncate')}>2750.00</span></td>
+                      <td data-label="Product Family"><span className={pf('truncate')}>Family A</span></td>
+                      <td className={pf('row-action')}>
+                        <ButtonIcon
+                          flavor="icon-border-filled,icon-small"
+                          iconFlavor="hint"
+                          sprite="utility"
+                          symbol="add"
+                          assistiveText="Add Product" />
+                      </td>
+                    </tr>
+                    <tr className={pf('hint-parent')}>
+                      <th data-label="name" scope="row">
+                        <MediaObject figureLeft={image2} flavor="center">
+                          <a href="#void" className={pf('truncate')}>
+                            Beta Product
+                          </a>
+                        </MediaObject>
+                      </th>
+                      <td data-label="Product Code"><span className={pf('truncate')}>MRKT</span></td>
+                      <td data-label="List Price"><span className={pf('truncate')}>3460.00</span></td>
+                      <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
+                      <td className={pf('row-action')}>
+                        <ButtonIcon
+                          flavor="icon-border-filled,icon-small"
+                          iconFlavor="hint"
+                          sprite="utility"
+                          symbol="add"
+                          assistiveText="Add Product" />
+                      </td>
+                    </tr>
+                    <tr className={pf('hint-parent')}>
+                      <th data-label="name" scope="row">
+                        <MediaObject figureLeft={image3} flavor="center">
+                          <a href="#void" className={pf('truncate')}>
+                            Mobile Suite
+                          </a>
+                        </MediaObject>
+                      </th>
+                      <td data-label="Product Code"><span className={pf('truncate')}>SRVC</span></td>
+                      <td data-label="List Price"><span className={pf('truncate')}>2230.00</span></td>
+                      <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
+                      <td className={pf('row-action')}>
+                        <ButtonIcon
+                          flavor="icon-border-filled,icon-small"
+                          iconFlavor="hint"
+                          sprite="utility"
+                          symbol="add"
+                          assistiveText="Add Product" />
+                      </td>
+                    </tr>
+                    <tr className={pf('hint-parent')}>
+                      <th data-label="name" scope="row">
+                        <MediaObject figureLeft={image4} flavor="center">
+                          <a href="#void" className={pf('truncate')}>
+                            Connectors
+                          </a>
+                        </MediaObject>
+                      </th>
+                      <td data-label="Product Code"><span className={pf('truncate')}>CLASS</span></td>
+                      <td data-label="List Price"><span className={pf('truncate')}>750.00</span></td>
+                      <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
+                      <td className={pf('row-action')}>
+                        <ButtonIcon
+                          flavor="icon-border-filled,icon-small"
+                          iconFlavor="hint"
+                          sprite="utility"
+                          symbol="add"
+                          assistiveText="Add Product" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
-            <div className={pf('col col-rule--left size--4-of-12 theme--shade scrollable--y')}>
-              <h4 className={pf('p-around--medium theme--default')}>Selected Products (0)</h4>
-              <ul className={pf('list--vertical has-dividers--top-space')}>
-                <li className={pf('list__item')}>
-                  <MediaObject figureLeft={image} flavor="center">
+            <div className={pf('col col-rule--left size--4-of-12 theme--shade p-around--medium has-divider--left scrollable--y')}>
+              <h4 className={pf('m-bottom--medium text-heading--small')}>Selected Products (0)</h4>
+              <ul className={pf('list--vertical has-cards--space')}>
+                <li className={pf('list__item theme--default')}>
+                  <MediaObject figureLeft={imageEmpty} flavor="center">
                     Click + to add a product
                   </MediaObject>
                 </li>

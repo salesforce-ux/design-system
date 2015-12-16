@@ -244,7 +244,7 @@ async.series([
       }).map(i => {
         return fs.readFileSync(i).toString();
       });
-      // Repalce @import "dep/a", "dep/b"; with the inlined tokens
+      // Replace @import "dep/a", "dep/b"; with the inlined tokens
       contents = contents.replace(/\@import[\s\S]*?;/, () => {
         return sassImports.join('\n');
       });

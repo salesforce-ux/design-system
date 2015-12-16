@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.1 - December 8, 2015
+## Release 0.12.1 - December 16, 2015
 
 **SITE IA**
 - Improve status labels. Now associated with colors and contain more information

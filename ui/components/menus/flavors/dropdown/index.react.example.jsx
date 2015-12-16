@@ -24,7 +24,7 @@ module.exports = (
         <Menu.Item>Menu Item One</Menu.Item>
         <Menu.Item>Menu Item Two</Menu.Item>
         <Menu.Item>Menu Item Three</Menu.Item>
-        <Menu.Item className={pf('has-divider')}>Menu Item Four</Menu.Item>
+        <Menu.Item className={pf('has-divider--top-space')}>Menu Item Four</Menu.Item>
       </Menu.List>
     </Menu>
   </div>

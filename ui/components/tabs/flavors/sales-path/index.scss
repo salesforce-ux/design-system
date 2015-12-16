@@ -143,7 +143,7 @@
     content: '';
     display: block;
     position: absolute;
-    left: calc((#{$sales-path} / 2 ) * -1); // -1em;
+    left: calc(((#{$sales-path} - #{$border-width-thick}) / 2 ) * -1); // -14em;
     top: $border-width-thick;
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
@@ -198,9 +198,16 @@
   transform: rotateX(-180deg);
 }
 
-.#{$css-prefix}tabs--path__link {
+.#{$css-prefix}tabs--path__title {
   @include tabs-link;
+  padding-left: $spacing-xx-small;
+}
+
+.#{$css-prefix}tabs--path__link {
   position: relative;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
   padding: $spacing-xx-small $spacing-x-small $spacing-xx-small $spacing-medium;
   line-height: calc(#{$line-height-tab} / 2);
 }

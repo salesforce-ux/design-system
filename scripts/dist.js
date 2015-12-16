@@ -34,8 +34,6 @@ const argv = minimist(process.argv.slice(2));
 const isNpm = argv.npm === true;
 
 const MODULE_NAME = globals.moduleName;
-const DESIGN_TOKENS_MODULE_NAME = '@salesforce-ux/design-tokens';
-const DESIGN_TOKENS_IMPORT_NAME = '../node_modules/' + DESIGN_TOKENS_MODULE_NAME;
 const PRESERVE_COMMENTS_CONTAINING = /(normalize|http|https|license|flag)/ig;
 
 const now = new Date();
@@ -159,6 +157,10 @@ async.series([
   (done) => {
     let packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
     packageJSON.name = '@salesforce-ux/design-system';
+    packageJSON.dependencies = _.pick(packageJSON.dependencies, [
+      '@salesforce-ux/design-tokens',
+      '@salesforce-ux/icons'
+    ]);
     delete packageJSON.scripts;
     delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
@@ -278,32 +280,9 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Prefix the "design-tokens" @imports with the
-   * relative node_modules path
+   * Inline the design-tokens
    */
   (done) => {
-    gulp.src(distPath('scss/design-tokens.scss'))
-      .pipe(through.obj(function(file, enc, next) {
-        const newFile = file.clone();
-        // Add the relative node_modules paths to the @import statments
-        const template = newFile.contents.toString()
-          .replace(new RegExp(DESIGN_TOKENS_MODULE_NAME, 'g'), function() {
-            return DESIGN_TOKENS_IMPORT_NAME;
-          });
-        newFile.contents = new Buffer(template);
-        next(null, newFile);
-      }))
-      .on('error', done)
-      .pipe(gulp.dest(distPath('scss')))
-      .on('error', done)
-      .on('finish', done);
-  },
-
-  /**
-   * If we're not building for npm, inline the design-tokens
-   */
-  (done) => {
-    if (isNpm) return done();
     const pattern = /\"(.*?)\"(?=[,;])/g;
     gulp.src(distPath('scss/design-tokens.scss'))
       .pipe(through.obj(function(file, enc, next) {
@@ -316,15 +295,15 @@ async.series([
           sassImports.push(match[1]);
         }
         // Convert the array of paths to an array of file contents
-        sassImports = sassImports.map(function(i) {
-          return path.resolve(__dirname, i + '.scss');
-        }).filter(function(i) {
+        sassImports = sassImports.map(i => {
+          return path.resolve(__dirname, '../node_modules', `${i}.scss`);
+        }).filter(i => {
           return fs.existsSync(i);
-        }).map(function(i) {
+        }).map(i => {
           return fs.readFileSync(i).toString();
         });
         // Repalce @import "..", ".."; with the inlined tokens
-        contents = contents.replace(/\@import[\s\S]*?;/, function() {
+        contents = contents.replace(/\@import[\s\S]*?;/, () => {
           return sassImports.join('\n');
         });
         newFile.contents = new Buffer(contents);
@@ -397,13 +376,6 @@ async.series([
    */
   (done) => {
     rimraf(distPath('README-dist.txt'), done);
-  },
-
-  /**
-   * Remove .dist node_modules directory
-   */
-  (done) => {
-    rimraf(distPath('node_modules'), done);
   },
 
   /**

@@ -9,10 +9,10 @@
 
 
 .#{$css-prefix}dl--horizontal {
-  @include flex-wrap(true);
-  display: flex;
 
-   @include mq-medium-min {
+  @include mq-medium-min {
+    @include flex-wrap(true);
+    display: flex;
 
     &__label {
       width: 33%;

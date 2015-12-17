@@ -16,6 +16,7 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import Img from 'app_modules/ui/img';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import StatefulClass from 'ui/components/lib/stateful.react';
 import Lorem from 'react-lorem-component';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -102,12 +103,14 @@ class ModalExample extends React.Component {
                       <td data-label="List Price"><span className={pf('truncate')}>2750.00</span></td>
                       <td data-label="Product Family"><span className={pf('truncate')}>Family A</span></td>
                       <td className={pf('row-action')}>
-                        <ButtonIcon
-                          flavor="icon-border-filled,icon-small"
-                          iconFlavor="hint"
-                          sprite="utility"
-                          symbol="add"
-                          assistiveText="Add Product" />
+                        <StatefulClass>
+                          <ButtonIcon
+                            flavor="icon-border,icon-small"
+                            iconFlavor="hint"
+                            sprite="utility"
+                            symbol="add"
+                            assistiveText="Add Product" />
+                        </StatefulClass>
                       </td>
                     </tr>
                     <tr className={pf('hint-parent')}>
@@ -122,12 +125,14 @@ class ModalExample extends React.Component {
                       <td data-label="List Price"><span className={pf('truncate')}>3460.00</span></td>
                       <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
                       <td className={pf('row-action')}>
-                        <ButtonIcon
-                          flavor="icon-border-filled,icon-small"
-                          iconFlavor="hint"
-                          sprite="utility"
-                          symbol="add"
-                          assistiveText="Add Product" />
+                        <StatefulClass>
+                          <ButtonIcon
+                            flavor="icon-border,icon-small"
+                            iconFlavor="hint"
+                            sprite="utility"
+                            symbol="add"
+                            assistiveText="Add Product" />
+                        </StatefulClass>
                       </td>
                     </tr>
                     <tr className={pf('hint-parent')}>
@@ -142,12 +147,14 @@ class ModalExample extends React.Component {
                       <td data-label="List Price"><span className={pf('truncate')}>2230.00</span></td>
                       <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
                       <td className={pf('row-action')}>
-                        <ButtonIcon
-                          flavor="icon-border-filled,icon-small"
-                          iconFlavor="hint"
-                          sprite="utility"
-                          symbol="add"
-                          assistiveText="Add Product" />
+                        <StatefulClass>
+                          <ButtonIcon
+                            flavor="icon-border,icon-small"
+                            iconFlavor="hint"
+                            sprite="utility"
+                            symbol="add"
+                            assistiveText="Add Product" />
+                        </StatefulClass>
                       </td>
                     </tr>
                     <tr className={pf('hint-parent')}>
@@ -162,12 +169,14 @@ class ModalExample extends React.Component {
                       <td data-label="List Price"><span className={pf('truncate')}>750.00</span></td>
                       <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
                       <td className={pf('row-action')}>
-                        <ButtonIcon
-                          flavor="icon-border-filled,icon-small"
-                          iconFlavor="hint"
-                          sprite="utility"
-                          symbol="add"
-                          assistiveText="Add Product" />
+                        <StatefulClass>
+                          <ButtonIcon
+                            flavor="icon-border,icon-small"
+                            iconFlavor="hint"
+                            sprite="utility"
+                            symbol="add"
+                            assistiveText="Add Product" />
+                        </StatefulClass>
                       </td>
                     </tr>
                   </tbody>

@@ -10,12 +10,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
+import Lorem from 'react-lorem-component';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-  <ComponentDocs>
-    <p className="site-text-introduction">The Product Selector is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.</p>
-    <p>The Product Selector relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
-  </ComponentDocs>
+
+export const preview = (
+<div className="demo-only" style={{height: '240px'}}>
+  <div className={pf('scrollable')}>
+    <div className={pf('grid grid--overflow')}>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+      <div className={pf('col')}><Lorem count={1} /></div>
+    </div>
+  </div>
+</div>
+);
+
+export const code = (
+<div className={pf('scrollable')}>
+  Scrollable Content Here
+</div>
 );

@@ -63,8 +63,9 @@
 
   // Deal with truncation
   .#{$css-prefix}truncate {
-    min-width: rem(52px);
-    max-width: rem(240px);
+    max-width: $size-x-small;
+    display: inline-block; // Force truncation on table content
+    vertical-align: middle;
   }
 
   // By default, nowrap is applied

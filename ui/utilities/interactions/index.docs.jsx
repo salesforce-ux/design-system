@@ -11,11 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
-  <ComponentDocs>
-    <p className="site-text-introduction">The Product Selector is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.</p>
-    <p>The Product Selector relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
-  </ComponentDocs>
+<ComponentDocs>
+  <p className="site-text-introduction"></p>
+</ComponentDocs>
 );

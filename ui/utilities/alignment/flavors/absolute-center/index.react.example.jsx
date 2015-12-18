@@ -9,13 +9,23 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
 
-export default (
-  <ComponentDocs>
-    <p className="site-text-introduction">The Product Selector is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.</p>
-    <p>The Product Selector relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
-  </ComponentDocs>
+import React from 'react';
+import { prefix as pf } from 'app_modules/ui/util/component';
+
+
+export const preview = (
+<div className="demo-only">
+  <div className={pf('align--absolute-center')} style={{height: '150px'}}>
+    This content will be positioned in the absolute center of its' container
+  </div>
+</div>
+);
+
+export const code = (
+<div className="demo-only">
+  <div className={pf('align--absolute-center')}>
+    This content will be positioned in the absolute center of its' container
+  </div>
+</div>
 );

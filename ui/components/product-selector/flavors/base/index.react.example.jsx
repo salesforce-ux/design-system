@@ -25,16 +25,24 @@ const imageEmpty = (
   <span className={pf('avatar avatar--small avatar--empty')}></span>
 );
 const image1 = (
-  <span className={pf('avatar avatar--small icon-custom-10 align--center-center')}>AC</span>
+  <span className={pf('avatar avatar--small icon-custom-10 align--absolute-center')}>AC</span>
 );
 const image2 = (
-  <span className={pf('avatar avatar--small icon-custom-20 align--center-center')}>BP</span>
+  <span className={pf('avatar avatar--small icon-custom-20 align--absolute-center')}>BP</span>
 );
 const image3 = (
-  <span className={pf('avatar avatar--small icon-custom-30 align--center-center')}>MS</span>
+  <span className={pf('avatar avatar--small icon-custom-30 align--absolute-center')}>MS</span>
 );
 const image4 = (
-  <span className={pf('avatar avatar--small icon-custom-40 align--center-center')}>MS</span>
+  <span className={pf('avatar avatar--small icon-custom-40 align--absolute-center')}>MS</span>
+);
+const removeButton = (
+  <ButtonIcon
+    flavor="icon-bare,icon-small"
+    iconFlavor="hint"
+    sprite="utility"
+    symbol="close"
+    assistiveText="Remove" />
 );
 
 class ModalExample extends React.Component {
@@ -66,7 +74,7 @@ class ModalExample extends React.Component {
                   assistiveText="Filter Products" />
               </div>
               {/* Product List */}
-              <div className={pf('grow')}>
+              <div className={pf('scrollable grow')}>
                 <table className={pf('table table--bordered no-row-hover')}>
                   <thead>
                     <tr className={pf('text-heading--label')} >
@@ -95,7 +103,7 @@ class ModalExample extends React.Component {
                       <th data-label="name" scope="row">
                         <MediaObject figureLeft={image1} flavor="center">
                           <a href="#void" className={pf('truncate')}>
-                            Analytics Cloud
+                            Aplha Product
                           </a>
                         </MediaObject>
                       </th>
@@ -185,14 +193,57 @@ class ModalExample extends React.Component {
             </div>
 
             <div className={pf('col col-rule--left size--4-of-12 theme--shade p-around--medium has-divider--left scrollable--y')}>
-              <h4 className={pf('m-bottom--medium text-heading--small')}>Selected Products (0)</h4>
+              {/* Product Listing State */}
+              {/*<h4 className={pf('m-bottom--medium text-heading--small')}>Selected Products (0)</h4>
               <ul className={pf('list--vertical has-cards--space')}>
                 <li className={pf('list__item theme--default')}>
                   <MediaObject figureLeft={imageEmpty} flavor="center">
                     Click + to add a product
                   </MediaObject>
                 </li>
+                {/* Products Added State */}
+                {/*<li className={pf('list__item theme--default')}>
+                  <MediaObject figureLeft={image1} figureRight={removeButton} flavor="center">
+                    <a href="#void">Alpha Product</a>
+                  </MediaObject>
+                </li>
+                <li className={pf('list__item theme--default')}>
+                  <MediaObject figureLeft={image3} figureRight={removeButton} flavor="center">
+                    <a href="#void">Mobile Suite</a>
+                  </MediaObject>
+                </li>
+              </ul>*/}
+              {/* Filter State */}
+              <div className={pf('grid has-divider--bottom-space')}>
+                <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
+                <ButtonIcon
+                  flavor="icon-bare,icon-small"
+                  className="col--bump-left"
+                  sprite="utility"
+                  symbol="forward"
+                  assistiveText="Close Filter Panel" />
+              </div>
+              <p className={pf('text-body--small m-bottom--x-small')}>All of these filters</p>
+              <ul className={pf('list--vertical has-cards--space')}>
+                <li className={pf('list__item theme--default grid')}>
+                  <a href="#void" className={pf('grow has-blur-focus')}>
+                    <p className={pf('text-body--small')}>Show me</p>
+                    <p>All Products</p>
+                  </a>
+                  {removeButton}
+                </li>
+                <li className={pf('list__item theme--default grid')}>
+                  <a href="#void" className={pf('grow has-blur-focus')}>
+                    <p className={pf('text-body--small')}>List Price</p>
+                    <p>greater than "500"</p>
+                  </a>
+                  {removeButton}
+                </li>
               </ul>
+              <div className={pf('grid p-vertical--x-small')}>
+                <a href="#void">Add Filter</a>
+                <a href="#void" className={pf('col--bump-left')}>Remove All</a>
+              </div>
             </div>
           </Modal.Body>
 

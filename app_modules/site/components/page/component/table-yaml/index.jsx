@@ -17,42 +17,24 @@ import g from 'app_modules/global';
 
 class TableYAML extends React.Component {
 
-  getRows() {
-    const { data } = this.props;
-
-    return (data.classes || []).map((d, dIndex) => {
+  renderRows() {
+    let classes = this.props.data.classes || [];
+    return classes.map((d, index) => {
       let sanitizedClass = d.class.replace(/\W/g, '');
-      let required = null;
-      let notes = null;
-      let deprecated = null;
-
-      if (d.required) {
-        required = [
-          <p>
-            <SvgIcon key={`required-${dIndex}-icon`} className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="check" />
-            <span key={`required-${dIndex}-asst`} className={pf('assistive-text')}>Required</span>
+      let required = d.required
+        ? <p>
+            <SvgIcon key={`required-${index}-icon`} className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="check" />
+            <span key={`required-${index}-asst`} className={pf('assistive-text')}>Required</span>
           </p>
-        ];
-      } else {
-        required = [
-          <p>No, optional element or modifier</p>
-        ];
-      }
-      if (d.notes) {
-        notes = [
-          <p dangerouslySetInnerHTML={{__html: d.notes}} />
-        ];
-      } else {
-        notes = [
-          <p>--</p>
-        ];
-      }
-      if (d.deprecated) {
-        deprecated = [
-          <span className={pf('badge shrink-none align-middle badge--deprecated')}>Deprecated</span>
-        ];
-      }
-      return <tr key={`tableyaml-${sanitizedClass}-${dIndex}`}>
+        : <p>No, optional element or modifier</p>;
+      let notes = d.notes
+        ? <p dangerouslySetInnerHTML={{__html: d.notes}} />
+        : <p>--</p>;
+      let deprecated = d.deprecated
+        ? <span className={pf('badge shrink-none align-middle badge--deprecated')}>Deprecated</span>
+        : null;
+      return (
+        <tr key={`tableyaml-${sanitizedClass}-${index}`}>
           <th className={pf('cell-shrink align-top')} scope="row">
             <CodeClass className={d.class} />
             <div>
@@ -71,7 +53,8 @@ class TableYAML extends React.Component {
             <strong>Comments:</strong>
             {notes}
           </td>
-        </tr>;
+        </tr>
+      );
     });
   }
 
@@ -91,7 +74,7 @@ class TableYAML extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.getRows()}
+            {this.renderRows()}
           </tbody>
         </table>
       </div>

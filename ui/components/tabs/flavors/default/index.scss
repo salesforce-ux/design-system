@@ -107,7 +107,7 @@
   }
 }
 
-&.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
+.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
   border-color: $color-text-tab-label-selected;
   color: $color-text-action-label-active;
 

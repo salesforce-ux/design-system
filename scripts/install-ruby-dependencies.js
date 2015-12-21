@@ -53,7 +53,6 @@ const bundlerCheck = rubyCheck.then(function(res) {
   return isInstalled('bundler', 'Please install Bundler by running "gem install bundler"');
 }, function(reason) {
   console.error(reason);
-  process.exit(1);
 });
 
 const bundleInstall = bundlerCheck.then(function(res) {
@@ -88,9 +87,7 @@ const bundleInstall = bundlerCheck.then(function(res) {
     });
   } catch(e) {
     console.error(totalFail(colors.bold.red('Gems could not be installed.')));
-    process.exit(1);
   }
 }, function(reason) {
   console.error(reason);
-  process.exit(1);
 });

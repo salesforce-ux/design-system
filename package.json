@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "babel-node scripts/clean.js",
-    "preinstall": "babel-node scripts/npm/preinstall.js",
+    "preinstall": "npm install babel-node && babel-node scripts/npm/preinstall.js",
     "postinstall": "scripts/npm/postinstall.sh",
     "pretest": "babel-node scripts/build.js --generate",
     "test": "npm run test-unit && npm run test-browser",

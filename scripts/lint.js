@@ -24,7 +24,7 @@ import minimist from 'minimist';
 const argv = minimist(process.argv.slice(2));
 
 // Set default linters
-const defaultLinters = 'spaces,js';
+const defaultLinters = 'spaces,js,sass';
 // Did the user override linters?
 // e.g. `npm run lint -- --linters sass,js`
 const linters = argv.linters || defaultLinters;

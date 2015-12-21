@@ -14,7 +14,6 @@
   },
   "scripts": {
     "clean": "babel-node scripts/clean.js",
-    "preinstall": "npm install babel-node && babel-node scripts/npm/preinstall.js",
     "postinstall": "scripts/npm/postinstall.sh",
     "pretest": "babel-node scripts/build.js --generate",
     "test": "npm run test-unit && npm run test-browser",
@@ -26,6 +25,7 @@
     "build-prod": "babel-node scripts/build.js --clean --generate --site --prod",
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
+    "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
     "lint": "scripts/npm/lint.sh",
     "optimize": "scripts/npm/optimize.sh"
   },

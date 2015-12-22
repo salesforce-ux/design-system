@@ -62,7 +62,7 @@ exports.preview = (
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content')}>
-        <h2 className={pf('text-heading--small')}>Oops, you've missed some required form inputs.</h2>
+        <h2 className={pf('text-heading--small')}>Make sure you fill out all the required fields.</h2>
       </div>
     </div>
   </div>

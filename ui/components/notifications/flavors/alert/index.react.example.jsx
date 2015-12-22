@@ -54,7 +54,7 @@ exports.preview = (
       <span className={pf('assistive-text')}>Error</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="ban" />
-        Your browser is currently not supported. Your Salesforce may be degraded. <a href="#">More Information</a>
+        Your browser is not currently supported. Your Salesforce experience may be degraded. <a href="#">More Information</a>
       </h2>
     </div>
 

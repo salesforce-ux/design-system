@@ -19,38 +19,16 @@ import eslint from 'gulp-eslint';
 import eslintPathFormatter from 'eslint-path-formatter';
 eslintPathFormatter.editor('sublime');
 import scsslint from 'gulp-scss-lint';
-import minimist from 'minimist';
 
-const argv = minimist(process.argv.slice(2));
-
-// Set default linters
-const defaultLinters = 'spaces,js,sass';
-// Did the user override linters?
-// e.g. `npm run lint -- --linters sass,js`
-const linters = argv.linters || defaultLinters;
-
-// Assign linters to gulp tasks
-const isLinterActive = linter => linters.indexOf(linter) > -1;
-const tasks = ['sass', 'js', 'spaces'].filter(isLinterActive);
-
-const rootPath = p => path.resolve(__PATHS__.root, p);
-
-gulp.task('sass', () =>
-  gulp.src([
-    'ui/**/*.scss',
-    '!ui/vendor/**/*',
-    'site/assets/styles/**/*.scss',
-    '!site/assets/styles/_vendor/**/*'
-  ], { cwd: __PATHS__.root })
-  .pipe(
-    scsslint({
-      'config': rootPath('.scss-lint.yml'),
-      'bundleExec': true
-    })
-  )
+gulp.task('lint:sass', () =>
+  scsslint({
+    shell: 'bash',
+    src: '**/*.scss',
+    bundleExec: true
+  })
 );
 
-gulp.task('spaces', () =>
+gulp.task('lint:spaces', () =>
   gulp.src([
     '*.{js,json,md,yml,txt}',
     '.*',
@@ -60,7 +38,7 @@ gulp.task('spaces', () =>
     'scripts/**/*.{js,sh,jsx}'
   ], { cwd: __PATHS__.root })
   .pipe(lintspaces({
-    editorconfig: rootPath('.editorconfig'),
+    editorconfig: '.editorconfig',
     ignores: [
       /\/\*[\s\S]*?\*\//g // Ignore comments
     ]
@@ -68,7 +46,7 @@ gulp.task('spaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-gulp.task('js', () =>
+gulp.task('lint:js', () =>
   gulp.src([
     '*.{js}',
     'app_modules/**/*.{js,jsx}',
@@ -80,15 +58,15 @@ gulp.task('js', () =>
   // of the file object so it can be used by other modules.
   .pipe(eslint({
     options: {
-      configFile: rootPath('.eslintrc')
+      configFile: '.eslintrc'
     }
   }))
   // eslint.format() outputs the lint results to the console.
   // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format(rootPath('node_modules/eslint-path-formatter')))
+  .pipe(eslint.format('node_modules/eslint-path-formatter'))
   // To have the process exit with an error code (1) on
   // lint error, return the stream and pipe to failAfterError last.
   .pipe(eslint.failAfterError())
 );
 
-gulp.task('default', tasks);
+gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js']);

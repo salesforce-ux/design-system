@@ -16,7 +16,6 @@ import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 
-
 import path from 'path';
 import './scripts/helpers/setup';
 import './scripts/lint';
@@ -50,7 +49,6 @@ gulp.task('site:sass', () => {
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .pipe(gulp.dest('./.www/assets/styles'));
 });
-
 
 gulp.task('watch:webpack', () => {
   gulp.watch([

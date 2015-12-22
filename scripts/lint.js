@@ -13,12 +13,15 @@ import './helpers/setup';
 
 import path from 'path';
 import gulp from 'gulp';
+import gulpif from 'gulp-if';
 import gutil from 'gulp-util';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import eslintPathFormatter from 'eslint-path-formatter';
 eslintPathFormatter.editor('sublime');
 import scsslint from 'gulp-scss-lint';
+import browserSync from 'browser-sync';
+const reload = browserSync.reload;
 
 gulp.task('lint:sass', () =>
   scsslint({
@@ -46,23 +49,29 @@ gulp.task('lint:spaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-gulp.task('lint:js', () =>
-  gulp.src([
-    '*.js',
-    'app_modules/**/*.{js,jsx}',
-    'scripts/**/*.{js,jsx}',
-    'site/**/*.{js,jsx}',
-    'ui/**/*.{js,jsx}'
-  ])
-  // eslint() attaches the lint output to the "eslint" property
-  // of the file object so it can be used by other modules.
-  .pipe(eslint())
-  // eslint.format() outputs the lint results to the console.
-  // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format(eslintPathFormatter))
-  // To have the process exit with an error code (1) on
-  // lint error, return the stream and pipe to failAfterError last.
-  .pipe(eslint.failAfterError())
-);
+function lint(files, options) {
+  return () => {
+    return gulp.src(files)
+      .pipe(reload({stream: true, once: true}))
+      .pipe(eslint(options))
+      .pipe(eslint.format(eslintPathFormatter))
+      .pipe(gulpif(!browserSync.active, eslint.failAfterError()));
+  };
+}
+
+gulp.task('lint:js', lint([
+  '*.js',
+  'app_modules/**/*.{js,jsx}',
+  'scripts/**/*.{js,jsx}',
+  'site/**/*.{js,jsx}',
+  'ui/**/*.{js,jsx}',
+  '!**/*.spec.js'
+]));
+
+gulp.task('lint:js:test', lint([
+  'test/**/*.{js,jsx}',
+  '**/*.spec.js'],
+  {env: {mocha: true}}
+));
 
 gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js']);

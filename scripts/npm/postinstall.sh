@@ -11,7 +11,9 @@
 
 ./node_modules/.bin/gdm
 
-if [ X"$HEROKU_APP_NAME" != "X" ]; then
+
+if [ -n "$HEROKU_APP_NAME" ]
+then
   rm -rf server/
   git clone https://$GITHUB_USER:$GITHUB_USER_ACCESS_TOKEN@$DEPLOY_REPO server
   cd server/heroku
@@ -22,4 +24,8 @@ if [ X"$HEROKU_APP_NAME" != "X" ]; then
   # Design System Tasks
   npm run build-prod
   npm run dist
+else
+# When not on Heroku,
+# Verify & install ruby dependencies using our script
+  npm run install-ruby-dependencies
 fi

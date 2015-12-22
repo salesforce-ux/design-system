@@ -70,4 +70,3 @@ gulp.task('watch:sass', () => {
 gulp.task('watch', ['watch:sass', 'watch:webpack']);
 
 gulp.task('default', ['lint']);
-

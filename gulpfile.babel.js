@@ -27,13 +27,13 @@ const webpackCompiler = webpack(webpackConfig());
 gulp.task('site:webpack', (callback) => {
   webpackCompiler.run(function(err, stats) {
     if (err) {
-      throw new gutil.PluginError("webpack:build-dev", err);
+      throw new gutil.PluginError('webpack:build-dev', err);
     }
-    gutil.log("[site:webpack]", stats.toString({
+    gutil.log('[site:webpack]', stats.toString({
       colors: true
     }));
     callback();
-  })
+  });
 });
 
 gulp.task('site:sass', () => {
@@ -57,14 +57,14 @@ gulp.task('watch:webpack', () => {
     'app_modules/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     'site/**/*.{js,jsx}'
-  ], ['site:webpack'])
+  ], ['site:webpack']);
 });
 
 gulp.task('watch:sass', () => {
   gulp.watch([
     path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
     path.resolve(__PATHS__.ui, '**/*.scss')
-  ], ['site:sass'])
+  ], ['site:sass']);
 });
 
 gulp.task('watch', ['watch:sass', 'watch:webpack']);

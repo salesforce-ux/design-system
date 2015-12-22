@@ -26,7 +26,7 @@
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
     "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
-    "lint": "scripts/npm/lint.sh",
+    "lint": "babel-node ./node_modules/.bin/gulp --gulpfile scripts/lint.js",
     "optimize": "scripts/npm/optimize.sh"
   },
   "dependencies": {

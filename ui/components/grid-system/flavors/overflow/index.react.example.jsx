@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
- <div className="demo-only demo-container">
+<div className="demo-only demo-container">
   <div className={pf('scrollable--x')}>
     <div className={pf('grid grid--overflow')}>
       <div className={pf('col')}>Contents go here.</div>

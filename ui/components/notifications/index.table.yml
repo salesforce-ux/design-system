@@ -38,4 +38,3 @@ classes:
     class: notify-container
     description: Initializes notification container
     deprecated: true
-

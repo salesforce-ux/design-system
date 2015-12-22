@@ -14,7 +14,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-   <div className="demo-only demo-container">
+  <div className="demo-only demo-container">
     <div className={pf('grid')}>
       <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
       <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
@@ -40,4 +40,3 @@ export const code = (
     </div>
   </div>
 );
-

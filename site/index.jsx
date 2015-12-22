@@ -101,7 +101,7 @@ class Overview extends React.Component {
         <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <img src="" alt="Trustworthy Image" />
+              <img src={`/assets/images/landing/icon-trust.svg`} alt="Trustworthy Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Trustworthy</dt>
                 <dd><hr className="hr hr--orange" />We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports.</dd>

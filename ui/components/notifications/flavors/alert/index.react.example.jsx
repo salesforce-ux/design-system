@@ -68,7 +68,7 @@ exports.preview = (
       <span className={pf('assistive-text')}>Offline</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="offline" />
-        You are in offline mode. <a href="#">More Information</a>
+        You’re working in Offline mode. <a href="#">More Information</a>
       </h2>
     </div>
 

@@ -13,7 +13,6 @@ import path from 'path';
 import fs from 'fs';
 
 import _ from 'lodash';
-import minimist from 'minimist';
 import webpack from 'webpack';
 
 import { getDefaultEnvVars } from 'scripts/helpers/env';

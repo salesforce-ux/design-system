@@ -13,7 +13,6 @@ import path from 'path';
 import fs from 'fs-extra';
 
 import _ from 'lodash';
-import async from 'async';
 import autoprefixer from 'autoprefixer';
 import gulp from 'gulp';
 import sass from 'gulp-sass';

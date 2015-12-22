@@ -56,14 +56,10 @@ gulp.task('lint:js', () =>
   ], { cwd: __PATHS__.root })
   // eslint() attaches the lint output to the "eslint" property
   // of the file object so it can be used by other modules.
-  .pipe(eslint({
-    options: {
-      configFile: '.eslintrc'
-    }
-  }))
+  .pipe(eslint())
   // eslint.format() outputs the lint results to the console.
   // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format('node_modules/eslint-path-formatter'))
+  .pipe(eslint.format(eslintPathFormatter))
   // To have the process exit with an error code (1) on
   // lint error, return the stream and pipe to failAfterError last.
   .pipe(eslint.failAfterError())

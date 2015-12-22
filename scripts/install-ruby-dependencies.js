@@ -14,8 +14,7 @@ import { exec } from 'child_process';
 import { colors } from 'gulp-util';
 
 function totalFail(message = null) {
-  return
-    message +
+  return message +
     '\nThis could be a problem with the Lightning Design System.' +
     '\nTo get some help, please report the issue at:' +
     '\nhttps://github.com/salesforce-ux/design-system/issues';

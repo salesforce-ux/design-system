@@ -79,7 +79,7 @@ exports.preview = (
       <div className={pf('notify__content grid')}>
         <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
         <div className={pf('col align-middle')}>
-          <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
+          <h2 className={pf('text-heading--small')}>We couldn’t save your edits to Samuel Smith.</h2>
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+engines:
+  bundler-audit:
+    enabled: true
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+  - Gemfile.lock
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+  - test/**/*

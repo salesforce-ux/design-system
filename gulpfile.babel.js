@@ -35,15 +35,27 @@ const webpackCompiler = webpack(webpackConfig());
 const pageCompiler = createPageCompiler();
 const reload = browserSync.reload;
 
+const watchPaths = {
+  sass: [
+    path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
+    path.resolve(__PATHS__.ui, '**/*.scss')
+  ],
+  pages: [
+    path.resolve(__PATHS__.ui, '**/*.{md,yml}')
+  ],
+  js: [
+    'app_modules/**/*.{js,jsx}',
+    path.resolve(__PATHS__.ui, '**/*.{js,jsx}'),
+    path.resolve(__PATHS__.site, '**/*.{js,jsx}')
+  ]
+};
+
 gulp.task('js', (callback) => {
   webpackCompiler.run(function(err, stats) {
     if (err) {
       throw new gutil.PluginError('webpack:build-dev', err);
     }
 
-    gutil.log('[js]', stats.toString({
-      colors: true
-    }));
     callback();
   });
 });
@@ -67,6 +79,25 @@ gulp.task('styles', () => {
   .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
+function pages(event, callback) {
+  let sitemap = require('app_modules/site/navigation/sitemap').default;
+  let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
+  routes.forEach(route => {
+    if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
+      // Recreate the component module which will cause webpack
+      // to recompile and reload the browser
+      pageCompiler.createComponentPage(route, route.component, err => {
+        if (err) {
+          return gutil.log(err);
+        }
+        gutil.log('[pages]', 'Generating component pages...');
+      });
+    }
+  });
+  reload();
+  callback();
+}
+
 // TODO: replace /scripts/clean.js with this task and include it before
 // but first, `gulp build` needs to work without having to run `npm run build` before
 gulp.task('clean', del.bind(null, [
@@ -76,21 +107,6 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.dist
 ]));
 
-const watchPaths = {
-  sass: [
-    path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
-    path.resolve(__PATHS__.ui, '**/*.scss')
-  ],
-  pages: [
-    path.resolve(__PATHS__.ui, '**/*.{md,yml}')
-  ],
-  js: [
-    'app_modules/**/*.{js,jsx}',
-    path.resolve(__PATHS__.ui, '**/*.{js,jsx}'),
-    path.resolve(__PATHS__.site, '**/*.{js,jsx}')
-  ]
-};
-
 gulp.task('serve', ['styles'], function() {
   browserSync.use(browserSyncConsole);
   browserSync(null, {
@@ -99,31 +115,22 @@ gulp.task('serve', ['styles'], function() {
     port: 3000
   });
 
-  gulp.watch(watchPaths.pages)
-  .on('change', e => {
-    let sitemap = require('app_modules/site/navigation/sitemap').default;
-    let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
-    routes.forEach(route => {
-      if (new RegExp(_.escapeRegExp(route.component.path)).test(e.path)) {
-        // Recreate the component module which will cause webpack
-        // to recompile and reload the browser
-        pageCompiler.createComponentPage(route, route.component, err => {
-          if (err) return console.log(err);
-        });
-      }
-    });
-    reload();
-  });
+  gulp.watch([watchPaths.pages])
+    .on('change', (event) => pages(event, reload));
+  gulp.watch([watchPaths.pages], ['js'], gutil.noop);
 
-  gulp.watch(watchPaths.js, ['js'], reload);
+  gulp.watch([watchPaths.js])
+    .on('change', (event) => pages(event, gutil.noop));
+  gulp.watch([watchPaths.js], ['js', 'lint:js'], reload);
 
-  gulp.watch(watchPaths.sass, ['styles']);
+  gulp.watch(watchPaths.sass, ['styles', 'lint:sass']);
+  gulp.watch([watchPaths.sass, watchPaths.js, watchPaths.pages], ['lint:spaces']);
 });
 
-gulp.task('default', function(cb) {
+gulp.task('default', function(callback) {
   runSequence(
     // FIXME: Cleaning won't work: a full `npm run build` is needed
     // 'clean',
     ['lint', 'styles', 'js'],
-  cb);
+  callback);
 });

@@ -11,60 +11,119 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import runSequence from 'run-sequence';
+import _ from 'lodash';
 import webpack from 'webpack';
+import del from 'del';
+import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
+import autoprefixer from 'gulp-autoprefixer';
+import minifycss from 'gulp-minify-css';
+import sourcemaps from 'gulp-sourcemaps';
+import browserSync from 'browser-sync';
+import browserSyncConsole from './app_modules/util/browser-sync-console';
 
 import path from 'path';
 import './scripts/helpers/setup';
 import './scripts/lint';
 import { getConfig as webpackConfig } from './scripts/tasks/site/webpack';
+import { createPageCompiler } from './scripts/tasks/site/compile';
+
 
 const webpackCompiler = webpack(webpackConfig());
+const pageCompiler = createPageCompiler();
+const reload = browserSync.reload;
 
-gulp.task('site:webpack', (callback) => {
+gulp.task('js', (callback) => {
   webpackCompiler.run(function(err, stats) {
     if (err) {
       throw new gutil.PluginError('webpack:build-dev', err);
     }
-    gutil.log('[site:webpack]', stats.toString({
+
+    gutil.log('[js]', stats.toString({
       colors: true
     }));
     callback();
   });
 });
 
-gulp.task('site:sass', () => {
-  gulp.src(path.resolve(__PATHS__.site, 'assets/styles/*.scss'))
-    .pipe(sass({
-      outputStyle: 'compressed',
-      sourceComments: true,
-      includePaths: [
-        __PATHS__.root,
-        __PATHS__.ui,
-        __PATHS__.node_modules
-      ]
-    }).on('error', sass.logError))
-    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-    .pipe(gulp.dest('./.www/assets/styles'));
+gulp.task('styles', () => {
+  gulp.src('site/assets/styles/*.scss')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(sass.sync({
+    outputStyle: 'compressed',
+    precision: 10,
+    includePaths: [
+      __PATHS__.root,
+      __PATHS__.ui,
+      __PATHS__.node_modules
+    ]
+  }).on('error', sass.logError))
+  .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('.www/assets/styles'))
+  .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
-gulp.task('watch:webpack', () => {
-  gulp.watch([
-    'app_modules/**/*.{js,jsx}',
-    'ui/**/*.{js,jsx}',
-    'site/**/*.{js,jsx}'
-  ], ['site:webpack']);
-});
+// TODO: replace /scripts/clean.js with this task and include it before
+// but first, `gulp build` needs to work without having to run `npm run build` before
+gulp.task('clean', del.bind(null, [
+  __PATHS__.www,
+  __PATHS__.generated,
+  __PATHS__.tmp,
+  __PATHS__.dist
+]));
 
-gulp.task('watch:sass', () => {
-  gulp.watch([
+const watchPaths = {
+  sass: [
     path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
     path.resolve(__PATHS__.ui, '**/*.scss')
-  ], ['site:sass']);
+  ],
+  pages: [
+    path.resolve(__PATHS__.ui, '**/*.{md,yml}')
+  ],
+  js: [
+    'app_modules/**/*.{js,jsx}',
+    path.resolve(__PATHS__.ui, '**/*.{js,jsx}'),
+    path.resolve(__PATHS__.site, '**/*.{js,jsx}')
+  ]
+};
+
+gulp.task('serve', ['styles'], function() {
+  browserSync.use(browserSyncConsole);
+  browserSync(null, {
+    notify: false,
+    server: '.www',
+    port: 3000
+  });
+
+  gulp.watch(watchPaths.pages)
+  .on('change', e => {
+    let sitemap = require('app_modules/site/navigation/sitemap').default;
+    let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
+    routes.forEach(route => {
+      if (new RegExp(_.escapeRegExp(route.component.path)).test(e.path)) {
+        // Recreate the component module which will cause webpack
+        // to recompile and reload the browser
+        pageCompiler.createComponentPage(route, route.component, err => {
+          if (err) return console.log(err);
+        });
+      }
+    });
+    reload();
+  });
+
+  gulp.watch(watchPaths.js, ['js'], reload);
+
+  gulp.watch(watchPaths.sass, ['styles']);
 });
 
-gulp.task('watch', ['watch:sass', 'watch:webpack']);
-
-gulp.task('default', ['lint']);
+gulp.task('default', function(cb) {
+  runSequence(
+    // FIXME: Cleaning won't work: a full `npm run build` is needed
+    // 'clean',
+    ['lint', 'styles', 'js'],
+  cb);
+});

@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import './helpers/setup';
 import rimraf from 'rimraf';
 
+// @TODO: use `gulp clean` instead
 rimraf.sync(__PATHS__.www);
 rimraf.sync(__PATHS__.generated);
 rimraf.sync(__PATHS__.tmp);

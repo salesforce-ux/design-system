@@ -59,6 +59,7 @@
     "glob": "5.0.14",
     "glob-watcher": "2.0.0",
     "gulp": "3.9.0",
+    "gulp-cached": "^1.1.0",
     "gulp-eslint": "^1.1.1",
     "gulp-filter": "3.0.1",
     "gulp-if": "1.2.5",

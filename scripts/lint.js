@@ -13,6 +13,7 @@ import './helpers/setup';
 
 import path from 'path';
 import gulp from 'gulp';
+import cache from 'gulp-cached';
 import gulpif from 'gulp-if';
 import gutil from 'gulp-util';
 import lintspaces from 'gulp-lintspaces';
@@ -24,11 +25,14 @@ import browserSync from 'browser-sync';
 const reload = browserSync.reload;
 
 gulp.task('lint:sass', () =>
-  scsslint({
-    shell: 'bash',
-    src: '**/*.scss',
+  gulp.src([
+    'site/assets/styles/**/*.scss',
+    'ui/**/*.scss'
+  ])
+  .pipe(cache('linting'))
+  .pipe(scsslint({
     bundleExec: true
-  })
+  }))
 );
 
 gulp.task('lint:spaces', () =>
@@ -40,6 +44,7 @@ gulp.task('lint:spaces', () =>
     'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
     'scripts/**/*.{js,sh,jsx}'
   ])
+  .pipe(cache('linting'))
   .pipe(lintspaces({
     editorconfig: '.editorconfig',
     ignores: [
@@ -49,9 +54,10 @@ gulp.task('lint:spaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-function lint(files, options) {
+function lintjs(files, options) {
   return () => {
     return gulp.src(files)
+      .pipe(cache('linting'))
       .pipe(reload({stream: true, once: true}))
       .pipe(eslint(options))
       .pipe(eslint.format(eslintPathFormatter))
@@ -59,7 +65,7 @@ function lint(files, options) {
   };
 }
 
-gulp.task('lint:js', lint([
+gulp.task('lint:js', lintjs([
   '*.js',
   'app_modules/**/*.{js,jsx}',
   'scripts/**/*.{js,jsx}',
@@ -68,7 +74,7 @@ gulp.task('lint:js', lint([
   '!**/*.spec.js'
 ]));
 
-gulp.task('lint:js:test', lint([
+gulp.task('lint:js:test', lintjs([
   'test/**/*.{js,jsx}',
   '**/*.spec.js'],
   {env: {mocha: true}}

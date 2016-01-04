@@ -5,6 +5,7 @@
 /.www
 /scripts/deploy
 /scripts-internal
+/server
 /git_modules
 /node_modules
 /public

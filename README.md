@@ -18,7 +18,7 @@ To run the site locally, note that `npm run dev` is now deprecated and has been 
 * `npm start` will spin up a server instance to serve the files in .www
 * `npm start -- --watch` will start the server and then recompile when files are saved
 * `npm start -- --watch sass` will start the server and only reload Sass files
-* `npm run build` will compile the entire site (jsx, sass, etc)
+* `npm run build` will compile the entire site (jsx, Sass, etc)
 
 When server is up, view at [http://localhost:3000](http://localhost:3000)
 

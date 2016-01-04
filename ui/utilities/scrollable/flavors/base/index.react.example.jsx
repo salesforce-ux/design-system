@@ -15,8 +15,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className="demo-only" style={{height: '240px'}}>
-  <div className={pf('scrollable')}>
+<div className="demo-only">
+  <div className={pf('scrollable')} style={{height: '240px', padding: '1rem'}}>
     <div className={pf('grid grid--overflow')}>
       <div className={pf('col')}><Lorem count={1} /></div>
       <div className={pf('col')}><Lorem count={1} /></div>

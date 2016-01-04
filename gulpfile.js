@@ -31,9 +31,6 @@ import runSiteTasks from './scripts/tasks';
 import { watch as watchWebpack } from './scripts/tasks/site/webpack';
 import { createPageCompiler } from './scripts/tasks/site/compile';
 
-const argv = minimist(process.argv.slice(2));
-const isProd = argv.prod === true;
-
 const pageCompiler = createPageCompiler();
 
 const watchPaths = {

@@ -13,13 +13,6 @@ import path from 'path';
 import _ from 'lodash';
 import async from 'async';
 
-import siteCopyAssets from './site/assets';
-import { createPageCompiler } from './site/compile';
-import siteIcons from './site/icons';
-import siteLinks from './site/links';
-import siteSass from './site/sass';
-import { compile as siteWebpack } from './site/webpack';
-
 import generateIcons from './generate/icons';
 import generateReleaseNotes from './generate/release-notes';
 import generateSassUtilities from './generate/sass-utilities';
@@ -29,6 +22,13 @@ import generateVersion from './generate/version';
 import generateWhitelist from './generate/whitelist';
 import generateWhitelistUtilities from './generate/whitelist-utilities';
 import generateTokensZip from './generate/zip-tokens';
+
+import siteCopyAssets from './site/assets';
+import { createPageCompiler } from './site/compile';
+import siteCopyIcons from './site/icons';
+import siteLinks from './site/links';
+import siteSass from './site/sass';
+import { compile as siteWebpack } from './site/webpack';
 
 const sitePages = createPageCompiler();
 
@@ -62,23 +62,22 @@ function generate (callback) {
 
 export default function (options, callback) {
 
-  const tasks = [];
-
-  if (options.generate === true) {
-    tasks.push(generate);
-  }
-
-  if (options.site === true) {
-    tasks.push(
+  const registry = {
+    generate,
+    pages: sitePages.compile,
+    assets: [
       siteCopyAssets,
-      siteIcons,
-      sitePages.compile,
+      siteCopyIcons
+    ],
+    site: [
       siteLinks,
       async.apply(siteWebpack, {
         prod: options.prod === true
       })
-    );
-  }
+    ]
+  };
+
+  let tasks = _.flatten(options.tasks.map(name => registry[name]));
 
   async.series(tasks, callback);
 

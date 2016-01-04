@@ -19,15 +19,16 @@
     "test-unit": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js'",
     "test-browser": "karma start",
     "test-integration": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/integration/**/*.js'",
-    "start": "gulp serve",
+    "start": "npm run gulp -- serve",
     "build": "babel-node scripts/build.js --dev",
     "build-test": "babel-node scripts/build.js --tasks generate,pages,assets",
     "build-prod": "babel-node scripts/build.js --prod",
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
-    "lint": "gulp lint",
+    "lint": "npm run gulp -- lint",
     "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
-    "optimize": "scripts/npm/optimize.sh"
+    "optimize": "scripts/npm/optimize.sh",
+    "gulp": "babel-node ./node_modules/.bin/gulp"
   },
   "dependencies": {
     "@salesforce-ux/design-tokens": "1.3.1",

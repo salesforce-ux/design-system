@@ -62,6 +62,15 @@ function generate (callback) {
 
 export default function (options, callback) {
 
+  if (_.isFunction(options)) {
+    callback = options;
+    options = {};
+  }
+
+  options = _.defaults({}, options, {
+    tasks: ['generate', 'pages', 'assets', 'site']
+  });
+
   const registry = {
     generate,
     pages: sitePages.compile,

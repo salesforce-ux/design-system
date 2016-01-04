@@ -9,6 +9,9 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import './scripts/helpers/setup';
+
+import path from 'path';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import runSequence from 'run-sequence';
@@ -17,23 +20,20 @@ import webpack from 'webpack';
 import del from 'del';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
-import postcss from 'gulp-postcss';
 import autoprefixer from 'gulp-autoprefixer';
-import minifycss from 'gulp-minify-css';
 import sourcemaps from 'gulp-sourcemaps';
-import browserSync from 'browser-sync';
+import browserSync, { reload } from 'browser-sync';
 import browserSyncConsole from './app_modules/util/browser-sync-console';
 
-import path from 'path';
-import './scripts/helpers/setup';
 import './scripts/lint';
-import { getConfig as webpackConfig } from './scripts/tasks/site/webpack';
+import runSiteTasks from './scripts/tasks';
+import { watch as watchWebpack } from './scripts/tasks/site/webpack';
 import { createPageCompiler } from './scripts/tasks/site/compile';
 
+const argv = minimist(process.argv.slice(2));
+const isProd = argv.prod === true;
 
-const webpackCompiler = webpack(webpackConfig());
 const pageCompiler = createPageCompiler();
-const reload = browserSync.reload;
 
 const watchPaths = {
   sass: [
@@ -50,15 +50,29 @@ const watchPaths = {
   ]
 };
 
-gulp.task('js', (callback) => {
-  webpackCompiler.run(function(err, stats) {
-    if (err) {
-      throw new gutil.PluginError('webpack:build-dev', err);
-    }
-
-    callback();
-  });
+gulp.task('pages', callback => {
+  runSiteTasks({
+    tasks: ['generate', 'pages', 'assets']
+  }, callback);
 });
+
+function rebuildPage(event) {
+  let sitemap = require('./app_modules/site/navigation/sitemap').default;
+  let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
+  routes.forEach(route => {
+    if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
+      // Recreate the component module which will cause webpack
+      // to recompile and reload the browser
+      pageCompiler.createComponentPage(route, route.component, err => {
+        if (err) {
+          return gutil.log(err);
+        }
+        gutil.log('[pages]', `Reloading ${e.path}`);
+        reload();
+      });
+    }
+  });
+}
 
 gulp.task('styles', () => {
   gulp.src('site/assets/styles/*.scss')
@@ -79,27 +93,6 @@ gulp.task('styles', () => {
   .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
-function pages(event, callback) {
-  let sitemap = require('app_modules/site/navigation/sitemap').default;
-  let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
-  routes.forEach(route => {
-    if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
-      // Recreate the component module which will cause webpack
-      // to recompile and reload the browser
-      pageCompiler.createComponentPage(route, route.component, err => {
-        if (err) {
-          return gutil.log(err);
-        }
-        gutil.log('[pages]', 'Generating component pages...');
-      });
-    }
-  });
-  reload();
-  callback();
-}
-
-// TODO: replace /scripts/clean.js with this task and include it before
-// but first, `gulp build` needs to work without having to run `npm run build` before
 gulp.task('clean', del.bind(null, [
   __PATHS__.www,
   __PATHS__.generated,
@@ -107,30 +100,37 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.dist
 ]));
 
-gulp.task('serve', ['styles'], function() {
+gulp.task('serve', ['styles', 'pages'], () => {
   browserSync.use(browserSyncConsole);
   browserSync(null, {
+    injectChanges: false,
+    scrollProportionally: false,
+    ghostMode: false,
+    files: false,
     notify: false,
-    server: '.www',
-    port: 3000
+    open: false,
+    port: 3000,
+    server: {
+      baseDir: __PATHS__.www
+    },
+    snippetOptions: {
+      blacklist: ['/components/preview-frame']
+    }
   });
 
-  gulp.watch([watchPaths.pages])
-    .on('change', (event) => pages(event, reload));
-  gulp.watch([watchPaths.pages], ['js'], gutil.noop);
+  gulp.watch(watchPaths.pages).on('change', rebuildPage);
 
-  gulp.watch([watchPaths.js])
-    .on('change', (event) => pages(event, gutil.noop));
-  gulp.watch([watchPaths.js], ['js', 'lint:js'], reload);
+  // Use webpack.watch instead of gulp.watch because webpack can figure out
+  // when dependencies have changed and then rebuild
+  watchWebpack(null, reload);
 
   gulp.watch(watchPaths.sass, ['styles', 'lint:sass']);
   gulp.watch([watchPaths.sass, watchPaths.js, watchPaths.pages], ['lint:spaces']);
+  gulp.watch([watchPaths.js], ['lint:js']);
 });
 
-gulp.task('default', function(callback) {
+gulp.task('default', callback => {
   runSequence(
-    // FIXME: Cleaning won't work: a full `npm run build` is needed
-    // 'clean',
-    ['lint', 'styles', 'js'],
+    'clean', ['lint', 'styles'], 'pages',
   callback);
 });

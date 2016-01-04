@@ -16,10 +16,7 @@ import minimist from 'minimist';
 import runTasks from './tasks';
 
 const argv = minimist(process.argv.slice(2));
-
-const tasks = _.isString(argv.tasks)
-  ? argv.tasks.split(',').map(_.trim)
-  : ['generate', 'pages', 'assets', 'site'];
+const tasks = _.isString(argv.tasks) ? argv.tasks.split(',').map(_.trim) : undefined;
 
 runTasks(_.assign({}, argv, { tasks }), err => {
   if (err) throw err;

@@ -11,17 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import path from 'path';
 import fs from 'fs';
-
 import _ from 'lodash';
 import webpack from 'webpack';
 
 import { getDefaultEnvVars } from 'scripts/helpers/env';
-
-const eslintExclude = new RegExp([
-  __PATHS__.node_modules,
-  __PATHS__.generated,
-  __PATHS__.tmp
-].map(_.escapeRegExp).join('|'));
 
 /**
  * Cleanup webpack error messages and then log them to the console
@@ -103,11 +96,6 @@ export function getConfig (options) {
           test: /\.jsx?$/,
           loader: path.resolve('app_modules/util/license-loader/index.js'),
           exclude: /node_modules/
-        },
-        {
-          test: /\.jsx?$/,
-          exclude: eslintExclude,
-          loader: 'eslint-loader'
         }
       ],
       noParse: [
@@ -135,10 +123,7 @@ export function getConfig (options) {
           .value()
       })
     ],
-    cache: {},
-    eslint: {
-      configFile: path.resolve(__PATHS__.root, '.eslintrc')
-    }
+    cache: {}
   };
   // Common chunks
   config.plugins.push(

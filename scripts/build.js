@@ -11,17 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import './helpers/setup';
 
-import fs from 'fs';
+import _ from 'lodash';
 import minimist from 'minimist';
 import runTasks from './tasks';
 
 const argv = minimist(process.argv.slice(2));
 
-if (argv.clean === true) {
-  require('./clean');
-  fs.mkdirSync(__PATHS__.tmp);
-}
+const tasks = _.isString(argv.tasks)
+  ? argv.tasks.split(',').map(_.trim)
+  : ['generate', 'pages', 'assets', 'site'];
 
-runTasks(argv, err => {
+runTasks(_.assign({}, argv, { tasks }), err => {
   if (err) throw err;
 });

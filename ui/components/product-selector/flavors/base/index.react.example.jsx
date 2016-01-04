@@ -63,6 +63,7 @@ class ModalExample extends React.Component {
           <Modal.Body className={pf('grid nowrap')}>
             <div className={pf('col grid grid--vertical nowrap size--8-of-12')}>
               <div className={pf('p-vertical--x-small p-horizontal--large grid shrink-none')}>
+                <label className={pf('assistive-text')} htmlFor="search-text-input-product">Search Products</label>
                 <div className={pf('grow input-has-icon input-has-icon--left m-right--small')}>
                   <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
                   <input id="search-text-input-product" className={pf('input')} type="text" placeholder="Search Products" />

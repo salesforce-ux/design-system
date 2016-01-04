@@ -25,7 +25,7 @@
 }
 
 .#{$css-prefix}align-content-center {
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
     flex: 1;
     align-self: center;
     justify-content: center;

@@ -85,7 +85,7 @@
 // Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}col-rule {
 
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
 
     @include mq-large-min {
 
@@ -137,7 +137,7 @@
 
 // Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}nowrap {
-  @include deprecate("2.0.0") {
+  @include deprecate('2.0.0') {
     @include flex-item(expand);
     @include flex-wrap(false);
 

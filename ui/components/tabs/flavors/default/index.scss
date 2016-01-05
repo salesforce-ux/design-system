@@ -76,6 +76,15 @@
       margin-left: $spacing-large;
     }
   }
+
+  &.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
+    border-color: $color-text-tab-label-selected;
+    color: $color-text-action-label-active;
+
+    &:focus {
+      color: $color-text-tab-label-selected;
+    }
+  }
 }
 
 .#{$css-prefix}tabs--default__content {
@@ -104,14 +113,5 @@
   &:focus {
     color: $color-text-tab-label-selected;
     box-shadow: $color-text-tab-label-selected 0 ($border-width-thin * -1) 0 inset;
-  }
-}
-
-.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
-  border-color: $color-text-tab-label-selected;
-  color: $color-text-action-label-active;
-
-  &:focus {
-    color: $color-text-tab-label-selected;
   }
 }

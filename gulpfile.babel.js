@@ -97,7 +97,7 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.dist
 ]));
 
-gulp.task('serve', ['styles', 'pages'], () => {
+gulp.task('serve', ['styles'], () => {
   browserSync(null, {
     notify: false,
     server: __PATHS__.www,
@@ -125,6 +125,6 @@ gulp.task('serve', ['styles', 'pages'], () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', ['lint', 'styles'], 'pages',
+    'clean', ['styles'], 'pages', 'serve',
   callback);
 });

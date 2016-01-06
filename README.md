@@ -8,9 +8,12 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ## Quick start
 
 ```bash
+gem install bundler
 npm install
 npm run gulp
 ```
+
+Having trouble getting these steps to work on your machine? Follow the troubleshooting guide below.
 
 ## Tasks
 
@@ -53,13 +56,23 @@ gulp lint:spaces
 
 ### `gulp clean`
 
-Deletes temporary build and local files.
+Delete temporary build and local files.
 
 ### Tests
 
 `npm run test`: run all tests
 
 ## Troubleshooting
+
+### npm and Node.js
+
+The Salesforce Lightning Design System uses `npm` to manage dependencies. Please [install Node.js](https://nodejs.org), and try running `npm install` again.
+
+### Ruby dependencies
+
+Ruby comes pre-installed on Mac OS X. For other systems, check <https://www.ruby-lang.org>.
+
+If `gem install bundler` fails, run `sudo gem install bundler` and try running `npm install` again.
 
 ### JavaScript and compilation issues
 

@@ -5,22 +5,67 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 * Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.
 * Continuously updated: As long as you’re using the latest version of the Lightning Design System, your pages are always up to date with Salesforce UI changes.
 
-## Setup
-
-Your `npm` version must be at least 2.1.x. You can update your npm with: `sudo npm install npm -g`
+## Quick start
 
 ```bash
 npm install
-npm run build
+npm run gulp
 ```
 
-To run the site locally, note that `npm run dev` is now deprecated and has been split into several tasks:
-* `npm start` will spin up a server instance to serve the files in .www
-* `npm start -- --watch` will start the server and then recompile when files are saved
-* `npm start -- --watch sass` will start the server and only reload Sass files
-* `npm run build` will compile the entire site (jsx, Sass, etc)
+## Tasks
 
-When server is up, view at [http://localhost:3000](http://localhost:3000)
+Install [gulp](http://gulpjs.com/) globally:
+
+```bash
+npm install --global gulp
+```
+
+### `gulp`
+
+Generate and run the Lightning Design System.
+
+### `gulp serve`
+
+Run the lightning design system.
+
+Faster than `gulp`, as it won't re-generate the whole site before starting the server. Useful when mainly working on styles.
+
+### `gulp lint`
+
+Lint the code base for syntax and stylistic errors.
+
+```bash
+# Lint indentation, Sass, JavaScript files
+gulp lint
+
+# Lint languages independently
+gulp lint:sass
+gulp lint:js
+gulp lint:js:test
+gulp lint:spaces
+```
+
+### Compilation
+
+`gulp pages`: generate the site’s pages.
+
+`gulp styles`: compile Sass to CSS.
+
+### `gulp clean`
+
+Deletes temporary build and local files.
+
+## Troubleshooting
+
+### JavaScript and compilation issues
+
+JavaScript dependencies sometimes get out of sync and inexplicable bugs start to happen. Follow these steps to give a fresh start to your development environment:
+
+1. The installed `npm` version must be at least 2.1.x. You can update your npm with: `sudo npm install npm -g`.
+2. Re-install dependencies: `rm -Rf node_modules && npm install`
+3. `npm run gulp`
+
+If this did not work, try running `npm clean` and repeat the above steps.
 
 ## Contributing to the code base
 
@@ -34,4 +79,4 @@ See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
 
 ## Got feedback?
 
-Please create a <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>
+Please open a new <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>.

@@ -109,8 +109,8 @@ class AnchorDetail extends React.Component {
 }
 
 class Anchor extends React.Component {
-  static propTypes = { flavor: componentUtil.PropTypes.flavor('home', 'object-home') }
-  static flavorClasses = {'home': 'page-header--rec-home', 'object-home': 'page-header--obj-home'}
+  static propTypes = { flavor: componentUtil.PropTypes.flavor('home', 'object-home') };
+  static flavorClasses = {'home': 'page-header--rec-home', 'object-home': 'page-header--obj-home'};
   constructor(props) {
     super(props);
     componentUtil.install(this);

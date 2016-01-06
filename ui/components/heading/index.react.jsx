@@ -50,7 +50,7 @@ class Heading extends React.Component {
     flavor: componentUtil.PropTypes.flavor('label', 'medium'),
     truncate: PT.number
   };
-  static defaultProps = { flavor: 'label' }
+  static defaultProps = { flavor: 'label' };
 
   constructor(props) {
     super(props);

@@ -110,9 +110,17 @@ gulp.task('serve', ['styles', 'pages'], () => {
   // when dependencies have changed and then rebuild
   watchWebpack(null, reload);
 
-  gulp.watch(watchPaths.sass, ['styles', 'lint:sass']);
-  gulp.watch([watchPaths.sass, watchPaths.js, watchPaths.pages], ['lint:spaces']);
-  gulp.watch([watchPaths.js], ['lint:js']);
+  gulp.watch(watchPaths.sass, ['styles']);
+
+  // Only lint every 10s
+  // so they don't take CPU time away from compilation tasks
+  gulp.watch(watchPaths.js, { debounceDelay: 10000 }, ['lint:js']);
+  gulp.watch(watchPaths.sass, { debounceDelay: 10000 }, ['lint:sass']);
+  gulp.watch(
+    [watchPaths.sass, watchPaths.js, watchPaths.pages],
+    { debounceDelay: 10000 },
+    ['lint:spaces']
+  );
 });
 
 gulp.task('default', callback => {

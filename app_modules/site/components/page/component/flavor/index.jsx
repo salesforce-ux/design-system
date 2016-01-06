@@ -36,7 +36,7 @@ import whitelistUtilities from '.generated/whitelist-utilities.js';
 Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
   .map(c => c.replace(/^\./, ''))
   .map(c => `${globals.cssPrefix}${c}`)
-  .map(c => new RegExp(_.escapeRegExp(c)))
+  .map(c => new RegExp(_.escapeRegExp(c)));
 
 /**
  * Return the value for a keypath
@@ -262,7 +262,11 @@ class ComponentFlavor extends React.Component {
       role,
       previewTabs,
       // Just use the last tab as the initial tab
-      previewTabActive: _.last(previewTabs),
+      previewTabActive: previewTabs.length > 1
+        ? (flavor.showFormFactorsDefault
+          ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })
+          : _.last(previewTabs))
+        : null,
       // If the component example has states, set the initial previewState
       previewState: _.has(this.getExample(), 'states')
         ? _.first(this.getExample().states) : false,
@@ -347,9 +351,10 @@ class ComponentFlavor extends React.Component {
   onPreviewFrameLoad(caller) {
     if(!this.refs.iframe) return;
     this.mountPreview();
-    this.updatePreviewStyle(this.state.previewTabActive, () => {
+    this.updatePreviewHeight();
+    /*this.updatePreviewStyle(this.state.previewTabActive, () => {
       this.updatePreviewHeight();
-    });
+    });*/
   }
 
   /**
@@ -400,7 +405,7 @@ class ComponentFlavor extends React.Component {
    * @param {object} tab
    * @param {function} [afterLoad]
    */
-  updatePreviewStyle(tab, afterLoad = _.noop) {
+  /*updatePreviewStyle(tab, afterLoad = _.noop) {
     const { idocument } = this.getPreviewWindow();
     const link = document.createElement('link');
     link.type = 'text/css';
@@ -416,7 +421,7 @@ class ComponentFlavor extends React.Component {
       afterLoad();
     };
     idocument.head.appendChild(link);
-  }
+  }*/
 
   /**
    * When a preview tab is clicked, update the style, resize it (with setState),
@@ -427,13 +432,19 @@ class ComponentFlavor extends React.Component {
    */
   onPreviewTabClick(tab, event) {
     event.preventDefault();
-    this.updatePreviewStyle(tab, () => {
+    /*this.updatePreviewStyle(tab, () => {
       this.setState({
         initialView: false,
         previewTabActive: tab
       }, () => {
         this.updatePreviewHeight();
       });
+    });*/
+    this.setState({
+      initialView: false,
+      previewTabActive: tab
+    }, () => {
+      this.updatePreviewHeight();
     });
   }
 
@@ -480,12 +491,12 @@ class ComponentFlavor extends React.Component {
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        {this.renderInfo()}
         <h3 className={pf('assistive-text')}>Preview</h3>
         {this.renderPreviewStates()}
         {this.renderPreview()}
         <h3 className={pf('assistive-text')}>Code</h3>
         {this.renderCode()}
+        {this.renderInfo()}
       </section>
     );
   }
@@ -524,30 +535,39 @@ class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.getExampleElement()) return null;
     const { flavor } = this.props;
-    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView})
+    const { previewTabActive, previewTabs } = this.state;
+    const className = classNames(pf('site-example--tabs'), {
+      'site-example--tabs-initial-view': this.state.initialView
+    });
+    const iframe = (
+      <iframe
+        src={`${getHistory().createHref('/')}components/preview-frame`}
+        height="100%"
+        name={flavor.uid}
+        ref="iframe"
+        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}
+        scrolling="no" />
+    );
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
-        aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
-        <iframe
-          src={`${getHistory().createHref('/')}components/preview-frame`}
-          height='100%'
-          name={flavor.uid}
-          ref="iframe"
-          data-form-factor={this.state.previewTabActive.key}
-          scrolling="no" />
+        aria-labelledby={previewTabActive ? `${flavor.uid}__preview-tab-${previewTabActive.key}` : null}>
+        {iframe}
       </Tabs.Content>
     );
-    return (
-      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
+    return previewTabActive ? (
+      <Tabs
+        className={className}
+        flavor="default"
+        panel={previewPanel}
+        selectedIndex={previewTabs.indexOf(previewTabActive)}>
         {this.renderPreviewTabs()}
       </Tabs>
-    );
+    ) : iframe;
   }
 
   renderPreviewTabs() {
-    if (!this.getExampleElement()) return null;
     const { flavor } = this.props;
     return this.state.previewTabs.map((tab, index) => {
       const content = (
@@ -585,7 +605,7 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     return this.state.codeTabsFiltered.map((tab, index) => {
       const content = (
-        <CTALink ctaEventName='component-code-tab-click' ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
+        <CTALink ctaEventName="component-code-tab-click" ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
           {tab.label}
         </CTALink>
       );

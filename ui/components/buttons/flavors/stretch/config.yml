@@ -4,3 +4,4 @@ dependencies:
 showFormFactors:
   - small
   - large
+showFormFactorsDefault: 'small'

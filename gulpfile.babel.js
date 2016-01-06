@@ -20,6 +20,7 @@ import webpack from 'webpack';
 import del from 'del';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
+import minifycss from 'gulp-minify-css';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync, { reload } from 'browser-sync';
@@ -85,6 +86,7 @@ gulp.task('styles', () => {
     ]
   }).on('error', sass.logError))
   .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+  .pipe(minifycss({ advanced: false }))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('.www/assets/styles'))
   .pipe(browserSync.stream({ match: '**/*.css' }));

@@ -44,7 +44,7 @@ function hasClass(element, className) {
 // This does a similar thing with classnames, but no removal/insertion is necessary. It's based
 // on lifecycle.
 class ClassNameTransitionGroup extends React.Component {
-  static propTypes = { transitionName: PT.string, timeout: PT.number }
+  static propTypes = { transitionName: PT.string, timeout: PT.number };
   constructor(props) {
     super(props);
     componentUtil.install(this);

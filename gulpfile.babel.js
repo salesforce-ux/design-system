@@ -23,7 +23,6 @@ import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync, { reload } from 'browser-sync';
-import browserSyncConsole from './app_modules/util/browser-sync-console';
 import minimist from 'minimist';
 
 import './scripts/lint';

@@ -98,21 +98,10 @@ gulp.task('clean', del.bind(null, [
 ]));
 
 gulp.task('serve', ['styles', 'pages'], () => {
-  browserSync.use(browserSyncConsole);
   browserSync(null, {
-    injectChanges: false,
-    scrollProportionally: false,
-    ghostMode: false,
-    files: false,
     notify: false,
-    open: false,
-    port: 3000,
-    server: {
-      baseDir: __PATHS__.www
-    },
-    snippetOptions: {
-      blacklist: ['/components/preview-frame']
-    }
+    server: __PATHS__.www,
+    port: 3000
   });
 
   gulp.watch(watchPaths.pages).on('change', rebuildPage);

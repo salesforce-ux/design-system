@@ -10,13 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import CodeClass from 'app_modules/site/components/code-class';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.</p>
     <p>Default modals are used in the vast majority of cases. They are as wide as 50% of the viewport, but include a minimum and maximum width to avoid going too narrow or too wide.</p>
     <p>Modals always have an equal amount of space at the top and bottom to account for the height of the close button.</p>
     <p>Modals grow according to how much content is within, but once the modal reaches full height (including the previously mentioned space on top and bottom), the content area will begin to scroll.</p>

@@ -30,8 +30,9 @@ const ComponentBody = React.createClass({
         <div className={pf('site-content p-around--xx-large grid wrap')}>
           {this.renderFlavorsDropDown()}
           <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
-            {this.renderDocs()}
+            {this.renderIntro()}
             {this.renderFlavors()}
+            {this.renderDocs()}
             {this.renderInfoTable()}
           </div>
         </div>
@@ -63,10 +64,14 @@ const ComponentBody = React.createClass({
     );
   },
 
+  renderIntro() {
+    let { docs } = this.props.elements;
+    return docs && docs.intro ? docs.intro : null;
+  },
+
   renderDocs() {
-    return this.props.elements.docs
-      ? this.props.elements.docs.default
-      : null;
+    let { docs } = this.props.elements;
+    return docs ? this.props.elements.docs.default : null;
   },
 
   renderComponentOverviewLink() {

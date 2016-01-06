@@ -55,6 +55,10 @@ gulp lint:spaces
 
 Deletes temporary build and local files.
 
+### Tests
+
+`npm run test`: run all tests
+
 ## Troubleshooting
 
 ### JavaScript and compilation issues

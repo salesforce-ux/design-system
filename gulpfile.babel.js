@@ -64,7 +64,7 @@ function rebuildPage(event) {
         if (err) {
           return gutil.log(err);
         }
-        gutil.log('[pages]', `Reloading ${e.path}`);
+        gutil.log('[pages]', `Reloading ${event.path}`);
         reload();
       });
     }

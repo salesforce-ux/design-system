@@ -11,7 +11,8 @@ install:
   - bundle install --path vendor/bundle
   - npm install
 script:
-  - scripts/travis/script.sh
+  - npm run lint
+  - npm run test
 cache:
   directories:
     - node_modules

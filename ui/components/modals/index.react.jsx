@@ -155,7 +155,7 @@ class ModalWrapper extends React.Component {
     onRequestClose: React.PropTypes.func,
     renderInline: React.PropTypes.bool
   };
-  static defaultProps = { renderInline: false }
+  static defaultProps = { renderInline: false };
 
   constructor(props) {
     super(props);

@@ -16,7 +16,7 @@ import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
 
 export const preview = (
-   <div className="demo-only demo-container">
+  <div className="demo-only demo-container">
     <div className={pf('size--1-of-1')}>
         <div className={pf('box box--x-small theme--shade text-align--center')}>.{cssPrefix}size--1-of-1</div>
     </div>
@@ -102,7 +102,7 @@ export const preview = (
 );
 
 export const code = (
-   <div className="demo-only demo-container">
+  <div className="demo-only demo-container">
     <div className={pf('size--1-of-1')}>.{cssPrefix}size--1-of-1</div>
     <div className={pf('size--1-of-2')}>.{cssPrefix}size--1-of-2</div>
     <div className={pf('size--1-of-3')}>.{cssPrefix}size--1-of-3</div>

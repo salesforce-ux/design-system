@@ -46,7 +46,7 @@ class TabItem extends React.Component {
     title: PT.string,
     content: PT.node,
     flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
-  }
+  };
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -87,7 +87,7 @@ class TabItemOverflow extends React.Component {
     title: PT.string,
     content: PT.node,
     flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
-  }
+  };
   constructor(props) {
     super(props);
     componentUtil.install(this);

@@ -13,7 +13,7 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
- <div className="demo-only">
+  <div className="demo-only">
     <div className={pf('wizard')} role="navigation">
       <ol className={pf('wizard__list')}>
         <li className={pf('wizard__item is-active')}>

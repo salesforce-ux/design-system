@@ -75,8 +75,8 @@ class PickListItem extends React.Component {
 
 class PickListOptions extends React.Component {
   static contextTypes = { itemSelected: PT.func, itemFocused: PT.func };
-  static propTypes = { flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi'), direction: PT.string, currentSelection: PT.array, showCheck: PT.bool, hidden: PT.bool }
-  static defaultProps = { direction: 'left', currentSelection: [], showCheck: true, hidden: false }
+  static propTypes = { flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi'), direction: PT.string, currentSelection: PT.array, showCheck: PT.bool, hidden: PT.bool };
+  static defaultProps = { direction: 'left', currentSelection: [], showCheck: true, hidden: false };
 
   constructor(props) {
     super(props);
@@ -138,8 +138,8 @@ class PickListArrows extends React.Component {
 
 class PickList extends React.Component {
   static childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };
-  static propTypes = { label: PT.string, flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi', 'quickfind') }
-  static defaultProps = { label: 'Select an option' }
+  static propTypes = { label: PT.string, flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi', 'quickfind') };
+  static defaultProps = { label: 'Select an option' };
 
   constructor(props) {
     super(props);

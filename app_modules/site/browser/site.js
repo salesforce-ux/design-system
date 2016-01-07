@@ -78,32 +78,28 @@ window.LIGHTNING_DESIGN_SYSTEM = {
    * @returns {ReactElement}
    */
   buildRouter(modulePath, pageElement) {
-    // react-router requires route components to be a class so this
-    // is a simple wrapper class which renders an element
-    let createClass = pageElement => {
-      return React.createClass({
-        render() {
-          return pageElement.default;
-        }
-      });
-    };
-    let routes = sitemap.getFlattenedRoutes().map(route => {
-      let props = { path: route.path, name: route.uid };
+    let App = props => props.route.page;
+    let routes = sitemap.getFlattenedRoutes().map(r => {
+      let route = { path: r.path, name: r.uid };
       // If we're on the current page, we DON'T want to fetch the pageElement
       // async because ReactRouter will render a temporary <noscript>
-      if (route.modulePath === modulePath) {
-        props.component = createClass(pageElement);
+      if (r.modulePath === modulePath) {
+        route.page = pageElement.default;
+        route.component = App;
       } else {
         // Fetch the page async
         // TODO: Not sure how webpack signals an error
         // TODO: Spinner if the load takes longer than X milliseconds
-        props.getComponent = function(location, callback) {
-          requirePage(`./${route.modulePath}`)(pageElement => {
-            callback(null, createClass(pageElement));
+        route.getComponent = function(location, callback) {
+          requirePage(`./${r.modulePath}`)(pageElement => {
+            // HACK: ReactRouter requires a component, so we inject
+            // the pageElement into the route
+            route.page = pageElement.default;
+            callback(null, App);
           });
         };
       }
-      return React.createElement(Route, props);
+      return route;
     });
     let history = createHistory();
     let versionPattern = /^\/(\d+|\d+\.\d+\.\d)\//;

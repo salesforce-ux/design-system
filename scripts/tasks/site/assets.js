@@ -13,19 +13,17 @@ import path from 'path';
 
 import _ from 'lodash';
 import gulp from 'gulp';
-import through from 'through2';
 
-const getSitePath = path.resolve.bind(path, __PATHS__.site);
-export const ignore = ['.jsx', '.scss'];
+export const ignore = 'jsx,scss';
 
 export default function(done) {
   console.log('Copying Assets');
-  gulp.src(getSitePath('**/*.*'), { base: getSitePath() })
-  .pipe(through.obj((file, enc, next) => {
-    const ext = path.extname(file.path);
-    if (_.includes(ignore, ext)) return next(null, null);
-    next(null, file);
-  }))
+  gulp.src([
+    '**/*.*',
+    `!**/*.{${ignore}}`
+  ], {
+    cwd: __PATHS__.site
+  })
   .on('error', done)
   // Send the files to the public directory
   .pipe(gulp.dest(__PATHS__.www))

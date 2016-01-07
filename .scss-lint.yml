@@ -1,5 +1,13 @@
 # Documentation:
 # https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+scss_files: '{ui,site/assets/styles}/**/*.scss'
+exclude:
+  - node_modules
+  - git_modules
+  - app_modules
+  - ui/vendor/**
+  - site/assets/styles/_vendor/**
 linters:
   BangFormat:
     enabled: true

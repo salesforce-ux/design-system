@@ -13,10 +13,7 @@ import _ from 'lodash';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
-import { ignore } from 'scripts/tasks/site/assets'
-
-// extensions which assets.js should not copy
-let ignoreExtensions = ignore.map(e => e.replace(/^\./, '')).join(',');
+import { ignore as ignoreExtensions } from 'scripts/tasks/site/assets';
 
 describe('scripts/tasks/site/assets.js', () => {
 
@@ -29,11 +26,11 @@ describe('scripts/tasks/site/assets.js', () => {
 
     // build list of source site file paths which should be copied
     let siteFiles = (function () {
-      let path = __PATHS__.site;
-      let all = glob.sync(`${path}/**/*.*`);
-      let ignore = glob.sync(`${path}/**/*.{${ignoreExtensions}}`);
+      let all = glob.sync(`${__PATHS__.site}/**/*.*`);
+      let ignore = glob.sync(`${__PATHS__.site}/**/*.{${ignoreExtensions}}`);
       return _.difference(all, ignore);
     })();
+
     let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f));
 
     // build list of www file paths

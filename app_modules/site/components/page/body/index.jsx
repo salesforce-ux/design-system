@@ -44,7 +44,8 @@ function transformNavItems(items, activeItems, keyPath=[]) {
     // Prevent stack overflow from circular dependency
     delete item.parent;
     item.keyPath = keyPath.concat(index);
-    item.hasChildren = item.children && item.children.length;
+    item.hasChildren = _.isArray(item.children) && item.children.length;
+    item.hasChildrenAnchors = item.hasChildren && _.every(item.children, item => item.hash);
     item.isSelected = _.includes(activeItems, item);
     item.isOpen = item.hasChildren && item.isSelected;
     item.isActive = item === _.last(activeItems);
@@ -164,12 +165,19 @@ export default React.createClass({
     return navItems;
   },
 
-  onToggleNavItem(item, e) {
-    e.preventDefault();
+  onToggleNavItem(item) {
     let isOpen = item.get('isOpen');
-    let keyPath = item.get('keyPath').push('isOpen');
+    let isOpenKeyPath = item.get('keyPath').push('isOpen');
+    let { navItems } = this.state;
+    /*if (item.has('collapseSiblings')) {
+      let siblingsKeyPath = item.get('keyPath').butLast();
+      let siblings = navItems.getIn(siblingsKeyPath).map(sibling =>
+        sibling.set('isOpen', false)
+      );
+      navItems = navItems.setIn(siblingsKeyPath, siblings);
+    }*/
     this.setState({
-      navItems: this.state.navItems.setIn(keyPath, !isOpen)
+      navItems: navItems.setIn(isOpenKeyPath, !isOpen)
     });
   },
 
@@ -299,11 +307,22 @@ export default React.createClass({
   renderLink(item) {
     let label = this.renderLinkLabel(item);
     let handler = this.getNavItemHandler(item);
-    if (!item.has('url') && !item.has('path')) {
-      return <a href="#" onClick={handler}>{label}</a>;
+    let renderAnchor = (props, content = label) =>
+      <a href="#" onClick={handler} {...props}>{content}</a>;
+    let renderLink = (props, content) =>
+      <Link onClick={handler} {...props}>{content}</Link>;
+    if (_.every(['url', 'path', 'hash'], key => !item.has(key))) {
+      return renderAnchor();
     }
     if (item.has('url')) {
-      return <a href={item.get('url')} onClick={handler}>{label}</a>;
+      return renderAnchor({
+        href: item.get('url')
+      });
+    }
+    if (item.has('hash')) {
+      return renderAnchor({
+        href: `${item.get('path')}#${item.get('hash')}`
+      });
     }
     let content = (
       <span className={pf('media media--center')}>
@@ -313,16 +332,13 @@ export default React.createClass({
         {this.renderNavItemIcons(item)}
       </span>
     );
-    if (item.has('children')) {
-      return (
-        <a href="#" onClick={handler}>{content}</a>
-      );
+    if (item.get('hasChildren')) {
+      if (item.get('hasChildrenAnchors')) {
+        return renderLink({ to: item.get('path') }, content);
+      }
+      return renderAnchor({}, content);
     }
-    return (
-      <Link to={item.get('path')} onClick={handler}>
-        {content}
-      </Link>
-    );
+    return renderLink({ to: item.get('path') }, content);
   },
 
   renderLinkLabel(item) {
@@ -342,9 +358,22 @@ export default React.createClass({
       return this.showSettings;
     }
     if (item.get('hasChildren')) {
-      return this.onToggleNavItem.bind(this, item);
+      // If hasChildrenAnchors is true, onToggleNavItem() won't preventDefault(),
+      // causing the page to change
+      // Othewise, it's just a normal toggle and we don't want to scroll
+      // to the top of the page
+      if (item.get('hasChildrenAnchors')) {
+        return event => {
+          window.scrollTo(0, 0);
+          this.onToggleNavItem(item);
+        };
+      }
+      return event => {
+        event.preventDefault();
+        this.onToggleNavItem(item);
+      };
     }
-    return function() {
+    return event => {
       // Scroll to top after a page change
       // This will be handled by React Router in the future
       window.scrollTo(0, 0);

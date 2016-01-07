@@ -88,7 +88,7 @@ pre[class*="language-"] {
     color: $color-text-inverse;
 
     &:after {
-      content: ' : In Progress';
+      content: ': In Progress';
     }
   }
 
@@ -97,7 +97,7 @@ pre[class*="language-"] {
     color: $color-text-inverse;
 
     &:after {
-      content: ' : Stable';
+      content: ': Stable';
     }
   }
 }

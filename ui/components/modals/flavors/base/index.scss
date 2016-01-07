@@ -103,7 +103,7 @@
     @include square($square-icon-large-boundary);
     position: absolute;
     top: -$square-icon-large-boundary;
-    right: -(($square-icon-large-boundary - $square-icon-large-content) / 2);
+    right: ((($square-icon-large-boundary - $square-icon-large-content) / 2) * -1);
   }
 }
 

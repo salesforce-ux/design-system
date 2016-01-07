@@ -77,7 +77,6 @@ gulp.task('styles', () => {
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass.sync({
-    outputStyle: 'compressed',
     precision: 10,
     includePaths: [
       __PATHS__.root,
@@ -87,7 +86,7 @@ gulp.task('styles', () => {
   }).on('error', sass.logError))
   .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
   .pipe(minifycss({ advanced: false }))
-  .pipe(sourcemaps.write('./'))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('.www/assets/styles'))
   .pipe(browserSync.stream({ match: '**/*.css' }));
 });
@@ -100,10 +99,9 @@ gulp.task('clean', del.bind(null, [
 ]));
 
 gulp.task('serve', ['styles'], () => {
-  browserSync(null, {
-    notify: false,
+  browserSync({
     server: __PATHS__.www,
-    port: 3000
+    notify: false
   });
 
   gulp.watch(watchPaths.pages).on('change', rebuildPage);

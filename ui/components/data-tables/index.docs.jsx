@@ -15,9 +15,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Data tables are an enhanced version of an HTML table and are used to display tabular data.
+  </p>
+);
+
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">Data tables are an enhanced version of an HTML table and are used to display tabular data.</p>
   <p>To initialize a data table, apply the <CodeClass className="table"/> class to the <code>table</code> element. This class creates a <code>table</code> with formatted cells and allows you to use data table utilities.</p>
   <h4 className="site-text-heading--label">Accessibility</h4>
   <p>To create an accessible table, the top row of column headers (<code>th</code>) are placed in a <code>thead</code>. Each one receives the <code>scope="col"</code> attribute. The first non-actionable (meaning that doesn't contain a checkbox or menu) column in each row should be marked as a <code>th</code> with a <code>scope="row"</code> attribute.</p>

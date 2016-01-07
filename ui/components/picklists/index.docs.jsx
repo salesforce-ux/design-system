@@ -13,9 +13,13 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A picklist is a customized HTML select. They allow for various functionality, such as multi selection options, optiongroups and searchable results.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A picklist is a customized HTML select. They allow for various functionality, such as multi selection options, optiongroups and searchable results.</p>
   </ComponentDocs>
 );

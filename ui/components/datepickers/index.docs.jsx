@@ -15,8 +15,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A datepicker is a non text input form element. You can select a single date or date range from a popup or inline&nbsp;calendar.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A datepicker is a non text input form element. You can select a single date or date range from a popup or inline&nbsp;calendar.</p>
   </ComponentDocs>
 );

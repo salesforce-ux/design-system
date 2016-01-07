@@ -15,11 +15,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Create a button with a <code>button</code> or <code>a</code> element to retain the native click function. Use a disabled attribute when a button can’t be clicked.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">
-      Create a button with a <code>button</code> or <code>a</code> element to retain the native click function. Use a disabled attribute when a button can’t be clicked.
-    </p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>
     If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.

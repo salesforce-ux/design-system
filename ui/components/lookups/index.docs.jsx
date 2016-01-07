@@ -13,10 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Lookup is an advanced inline search form.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Lookup is an advanced inline search form.</p>
     <p>The lookup can parse through single or multi scoped datasets. The parsed dataset can be filtered by single or multi option selects.</p>
     <p>You can find the lookup component throughout most data fields that allow inline inputs. Most commonly used on <strong>record home</strong> and <strong>object home</strong>.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>

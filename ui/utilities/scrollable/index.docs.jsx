@@ -14,9 +14,14 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Make a containing box scrollable when scrolling is available.
+  </p>
+);
+
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">Make a containing box scrollable when scrolling is available.</p>
   <p>Use the scrollable utility when you need to provide scrolling within a section of a page. For example, when the content within an element exceeds either the width or height of the element, applying <CodeClass className="scrollable--y" /> provides a vertical scrollbar, while <CodeClass className="scrollable--x" /> adds a horizontal scrollbar.</p>
 </ComponentDocs>
 );

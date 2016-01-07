@@ -21,9 +21,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    An HTML form contains interactive controls to submit information to a web server.
+  </p>
+);
+
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">An HTML form contains interactive controls to submit information to a web server.</p>
   <p>For optimum spacing and layout, wrap each element in <CodeClass className="form-element" />. Layout helper classes are available through the following class names, <CodeClass className="form--stacked" />, <CodeClass className="form--horizontal" /> and <CodeClass className="form--inline" />.</p>
   <p>Every form field requires an associated, non-empty text <code>&lt;label&gt;</code> element, which is linked to the form field either by wrapping the <code>&lt;label&gt;</code> tag around the field or by giving the <code>&lt;label&gt;</code> a <code>for</code> attribute whose value is that input field&rsquo;s id. This association ensures that assistive technology users can tell what information to enter where.</p>
   <h3 className={pf('text-heading--small')}>Form Example</h3>

@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="neutral">
-      Button neutral
+      Button Neutral
     </Button>
     <a href="#" className={pf('button button--neutral')}>
       Anchor Button Neutral

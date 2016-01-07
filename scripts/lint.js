@@ -29,7 +29,7 @@ gulp.task('lint:sass', () =>
     'site/assets/styles/**/*.scss',
     'ui/**/*.scss'
   ])
-  .pipe(cache('linting'))
+  .pipe(cache('lintsass'))
   .pipe(scsslint({
     bundleExec: true
   }))
@@ -44,7 +44,7 @@ gulp.task('lint:spaces', () =>
     'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
     'scripts/**/*.{js,sh,jsx}'
   ])
-  .pipe(cache('linting'))
+  .pipe(cache('lintspaces'))
   .pipe(lintspaces({
     editorconfig: '.editorconfig',
     ignores: [
@@ -57,7 +57,7 @@ gulp.task('lint:spaces', () =>
 function lintjs(files, options) {
   return () => {
     return gulp.src(files)
-      .pipe(cache('linting'))
+      .pipe(cache('lintjs'))
       .pipe(reload({stream: true, once: true}))
       .pipe(eslint(options))
       .pipe(eslint.format(eslintPathFormatter))

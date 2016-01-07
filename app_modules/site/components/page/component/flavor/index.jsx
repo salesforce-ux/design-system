@@ -455,18 +455,13 @@ class ComponentFlavor extends React.Component {
    * @param {object} tab
    * @param {object} event
    */
-  onPreviewStateChange(event) {
-    let state = _.find(this.getExample().states, {
-      label: event.target.value
+  onPreviewStateChange(state) {
+    this.setState({
+      previewState: state
+    }, () => {
+      this.mountPreview();
+      this.updatePreviewHeight();
     });
-    if (state) {
-      this.setState({
-        previewState: state
-      }, () => {
-        this.mountPreview();
-        this.updatePreviewHeight();
-      });
-    }
   }
 
   handleCodeMouseUp(tabKey) {
@@ -491,8 +486,8 @@ class ComponentFlavor extends React.Component {
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        <h3 className={pf('assistive-text')}>Preview</h3>
         {this.renderPreviewStates()}
+        <h3 className={pf('assistive-text')}>Preview</h3>
         {this.renderPreview()}
         <h3 className={pf('assistive-text')}>Code</h3>
         {this.renderCode()}
@@ -522,13 +517,17 @@ class ComponentFlavor extends React.Component {
   renderPreviewStates() {
     if (!this.state.previewState) return null;
     return (
-      <select
-        value={this.state.previewState.label}
-        onChange={this.onPreviewStateChange.bind(this)}>
+      <ul>
         {this.getExample().states.map(state =>
-          <option key={state.label} value={state.label}>{state.label}</option>
+          <li key={state.label}>
+            <button
+              className={pf('button')}
+              onClick={this.onPreviewStateChange.bind(this, state)}>
+              {state.label}
+            </button>
+          </li>
         )}
-      </select>
+      </ul>
     );
   }
 

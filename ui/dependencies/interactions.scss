@@ -146,7 +146,7 @@
   top: 0;
   left: -50%;
   height: 100%;
-  width: $square-icon-medium-boundary + $spacing-x-small;
+  width: ($square-icon-medium-boundary + $spacing-x-small);
   transform: translateX($spacing-x-small * -1);
   z-index: -1;
 }

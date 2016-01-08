@@ -103,7 +103,7 @@ export function createPageCompiler () {
      * @param {function} done
      */
     createPages (done) {
-      console.time('createPages');
+      console.time('Creating pages');
       assert.ok(_.isFunction(done), 'callback must be a function');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
       let routes = sitemap.getFlattenedRoutes()
@@ -113,7 +113,7 @@ export function createPageCompiler () {
           async.map(routes, this.createPage, callback),
         writeFiles(this.getSitePathTmp())
       ], err => {
-        console.timeEnd('createPages');
+        console.timeEnd('Creating pages');
         done(err);
       });
     },
@@ -153,7 +153,7 @@ export function createPageCompiler () {
      * @param {function} callback
      */
     createComponentPages (done) {
-      console.time('createComponentPages');
+      console.time('Creating component pages');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
       let routes = sitemap.getFlattenedRoutes()
         .filter(route => route.component);
@@ -162,7 +162,7 @@ export function createPageCompiler () {
           async.map(routes, this.createComponentPage, callback),
         writeFiles(this.getSitePathTmp())
       ], err => {
-        console.timeEnd('createComponentPages');
+        console.timeEnd('Creating component pages');
         done(err);
       });
     },
@@ -260,7 +260,7 @@ export function createPageCompiler () {
      * @param {function} done
      */
     renderPages (done) {
-      console.time('renderPages');
+      console.time('Rendering pages');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
       let sitemapRoutes = sitemap.getFlattenedRoutes();
       async.waterfall([
@@ -291,7 +291,7 @@ export function createPageCompiler () {
           pipes: [grename(path => path.extname = '.html')]
         })
       ], err => {
-        console.timeEnd('renderPages');
+        console.timeEnd('Rendering pages');
         done(err);
       });
     },
@@ -302,7 +302,7 @@ export function createPageCompiler () {
      * @param {function} done
      */
     compile (done) {
-      console.time('compile');
+      console.time('Compiling pages');
       async.series([
         done => {
           async.parallel([
@@ -313,7 +313,7 @@ export function createPageCompiler () {
         this.renderPages
       ], err => {
         done(err);
-        console.timeEnd('compile');
+        console.timeEnd('Compiling pages');
       });
     }
 

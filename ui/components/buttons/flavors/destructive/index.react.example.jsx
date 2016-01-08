@@ -16,9 +16,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className={pf('demo-only x-small-buttons--horizontal')}>
     <Button flavor="destructive">
-      Button destructive
+      Button Destructive
     </Button>
-    <a href="#void" className={pf('button button--destructive')}>Anchor Button destructive</a>
+    <a href="#void" className={pf('button button--destructive')}>Anchor Button Destructive</a>
     <Button flavor="destructive" disabled="true">
       Disabled
     </Button>

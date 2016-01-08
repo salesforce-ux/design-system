@@ -71,7 +71,7 @@ export default (
         </a>
       </li>
       <li className={pf('list__item')}>
-        2 tasks
+        2 Tasks
       </li>
     </ul>
   </MediaObject>

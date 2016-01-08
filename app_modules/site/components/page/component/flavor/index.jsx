@@ -520,14 +520,14 @@ class ComponentFlavor extends React.Component {
     return (
       <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
         <h3 className={pf('site-text-heading--label')}>States</h3>
-        <ul>
+        <ul className={pf('list--vertical has-block-links--space')}>
           {this.getExample().states.map(state =>
             <li key={state.label}>
-              <button
-                className={pf('button')}
+              <a
+                role="button"
                 onClick={this.onPreviewStateChange.bind(this, state)}>
                 {state.label}
-              </button>
+              </a>
             </li>
           )}
         </ul>

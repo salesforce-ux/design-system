@@ -519,6 +519,7 @@ class ComponentFlavor extends React.Component {
     if (!this.state.previewState) return null;
     return (
       <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
+        <h3 className={pf('site-text-heading--label')}>States</h3>
         <ul>
           {this.getExample().states.map(state =>
             <li key={state.label}>

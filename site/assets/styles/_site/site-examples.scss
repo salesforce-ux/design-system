@@ -21,10 +21,7 @@
 
 .site-states {
   @include mq-large-min {
-    padding: {
-      top: $spacing-xx-large;
-      left: $spacing-xx-large;
-    }
+    padding-left: $spacing-xx-large;
   }
 }
 

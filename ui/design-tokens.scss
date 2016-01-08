@@ -40,6 +40,14 @@ $sales-path: 2rem !default; // @TODO: Temp token till we align sizing
 $square-icon-medium-content-alt: 0.875rem !default;
 $color-background-page-header: #f7f9fb !default;
 $color-border-inverse: $color-background-inverse;
+$height-context-bar: 2.25rem !default;
+$color-background-context-bar: $color-background-alt-inverse !default;
+$color-text-context-bar: $color-text-inverse !default;
+$color-context-bar-alt: #fff !default;
+$color-context-bar-shadow: #000 !default;
+$color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
+$color-background-context-bar-highlight: rgba($color-context-bar-alt, 0.2) !default;
+$color-text-context-nav-trigger: rgba($color-context-bar-alt, 0.4) !default;
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large

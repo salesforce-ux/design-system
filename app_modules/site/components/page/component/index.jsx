@@ -26,13 +26,11 @@ const ComponentBody = React.createClass({
     return (
       <div>
         <Anchor title={component.title} />
-        <div className={pf('site-content p-around--xx-large grid wrap')}>
-          <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
-            {this.renderIntro()}
-            {this.renderFlavors()}
-            {this.renderDocs()}
-            {this.renderInfoTable()}
-          </div>
+        <div className={pf('site-content p-around--xx-large')}>
+          {this.renderIntro()}
+          {this.renderFlavors()}
+          {this.renderDocs()}
+          {this.renderInfoTable()}
         </div>
       </div>
     );

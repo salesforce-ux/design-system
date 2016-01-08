@@ -74,21 +74,18 @@ function getPreviewTabs() {
     icon: 'phone_portrait',
     iconClass: 'phone-portrait',
     label: 'Small',
-    stylesheet: 'iframe',
     formFactor: 'small'
   },{
     key: 'tablet',
     icon: 'tablet_portrait',
     iconClass: 'tablet-portrait',
     label: 'Medium',
-    stylesheet: 'iframe.medium',
     formFactor: 'medium'
   },{
     key: 'desktop',
     icon: 'desktop',
     iconClass: 'desktop',
     label: 'Large',
-    stylesheet: 'iframe.large',
     formFactor: 'large'
   }];
 }
@@ -410,7 +407,7 @@ class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/demo.css`;
     link.onload = () => {
       // Don't remove the old stylesheet until the new one has loaded
       _(idocument.head.querySelectorAll('link'))
@@ -481,14 +478,18 @@ class ComponentFlavor extends React.Component {
   render() {
     const { flavor } = this.props;
     return (
-      <section className={pf('m-bottom--xx-large p-bottom--xx-large')}>
+      <section className={pf('m-bottom--xx-large')}>
         <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        {this.renderPreviewStates()}
-        <h3 className={pf('assistive-text')}>Preview</h3>
-        {this.renderPreview()}
+        <div className={pf('grid wrap')}>
+          {this.renderPreviewStates()}
+          <h3 className={pf('assistive-text')}>Preview</h3>
+          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1')}>
+            {this.renderPreview()}
+          </div>
+        </div>
         <h3 className={pf('assistive-text')}>Code</h3>
         {this.renderCode()}
         {this.renderInfo()}
@@ -517,17 +518,19 @@ class ComponentFlavor extends React.Component {
   renderPreviewStates() {
     if (!this.state.previewState) return null;
     return (
-      <ul>
-        {this.getExample().states.map(state =>
-          <li key={state.label}>
-            <button
-              className={pf('button')}
-              onClick={this.onPreviewStateChange.bind(this, state)}>
-              {state.label}
-            </button>
-          </li>
-        )}
-      </ul>
+      <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
+        <ul>
+          {this.getExample().states.map(state =>
+            <li key={state.label}>
+              <button
+                className={pf('button')}
+                onClick={this.onPreviewStateChange.bind(this, state)}>
+                {state.label}
+              </button>
+            </li>
+          )}
+        </ul>
+      </div>
     );
   }
 
@@ -563,7 +566,7 @@ class ComponentFlavor extends React.Component {
         selectedIndex={previewTabs.indexOf(previewTabActive)}>
         {this.renderPreviewTabs()}
       </Tabs>
-    ) : iframe;
+    ) : (<div className="site-bleed">{iframe}</div>);
   }
 
   renderPreviewTabs() {

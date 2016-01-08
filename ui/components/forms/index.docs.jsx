@@ -47,9 +47,9 @@ export default (
       <fieldset className={pf('form-element is-required')}>
         <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
         <div className={pf('form-element__control')}>
-          <Radio name="options" label="Lead Generation" assistiveText="lead" />
-          <Radio name="options" label="Education Leads" assistiveText="education" />
-          <Radio name="options" label="Pass to Partner" assistiveText="partner" />
+          <Radio name="options" label="Lead generation" assistiveText="lead" />
+          <Radio name="options" label="Education leads" assistiveText="education" />
+          <Radio name="options" label="Pass to partner" assistiveText="partner" />
         </div>
       </fieldset>
       <fieldset className={pf('form-element')}>

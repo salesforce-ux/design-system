@@ -125,7 +125,6 @@ export function createPageCompiler () {
      * @param {function} done
      */
     createPage (route, done) {
-      //console.time(`createPage: ${route.path}`);
       // Props
       const pageBodyProps = {
         url: route.path
@@ -143,7 +142,6 @@ export function createPageCompiler () {
         path: route.getIndexPath(route.path),
         contents: new Buffer(contents)
       });
-      //console.timeEnd(`createPage: ${route.path}`);
       done(null, file);
     },
 
@@ -174,7 +172,6 @@ export function createPageCompiler () {
      * @param {function} done
      */
     createComponentPage (route, done) {
-      //console.time(`createComponentPage: ${route.path}`);
       let component = createComponent(route.component);
       // Imports
       let requireDocs = tryRequire('elements', 'docs', `ui/${component.path}/index.docs.jsx`);
@@ -205,7 +202,6 @@ export function createPageCompiler () {
         path: route.getIndexPath(route.path),
         contents: new Buffer(contents)
       });
-      //console.timeEnd(`createComponentPage: ${route.path}`);
       done(null, file);
     },
 
@@ -217,7 +213,6 @@ export function createPageCompiler () {
      * @param {function} done
      */
     renderPage (routes, route, done) {
-      //console.time(`renderPage: ${route.path}`);
       try {
         let newFile = new gutil.File({
           path: route.getIndexPath(route.path)
@@ -250,7 +245,6 @@ export function createPageCompiler () {
       } catch (e) {
         done(e);
       }
-      //console.timeEnd(`renderPage: ${route.path}`);
     },
 
     /**

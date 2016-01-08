@@ -79,7 +79,7 @@ function writeFiles (dest, options = {}) {
     .pipe(gulp.dest(dest))
     .on('error', done)
     .on('finish', done);
-  }
+  };
 }
 
 /**

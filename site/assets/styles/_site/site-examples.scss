@@ -27,6 +27,13 @@
 
   @include mq-large-min {
     padding-left: $spacing-x-large;
+    border-left: $border-width-thin solid $color-border;
+  }
+
+  ~ .site-component-example {
+    @include mq-large-min {
+      padding-right: $spacing-xx-large;
+    }
   }
 }
 

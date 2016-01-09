@@ -5,3 +5,5 @@ dependencies:
   - components/buttons
 showFormFactors:
   - small
+  - large
+showFormFactorsDefault: 'small'

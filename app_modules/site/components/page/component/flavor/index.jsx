@@ -478,21 +478,22 @@ class ComponentFlavor extends React.Component {
   render() {
     const { flavor } = this.props;
     return (
-      <section className={pf('m-bottom--xx-large')}>
+      <section className={pf('m-bottom--xx-large p-top--x-large')}>
         <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        <div className={pf('grid wrap')}>
+        <div className={pf('grid wrap grid--vertical-stretch')}>
           {this.renderPreviewStates()}
           <h3 className={pf('assistive-text')}>Preview</h3>
-          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1')}>
+          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
             {this.renderPreview()}
+            <h3 className={pf('assistive-text')}>Code</h3>
+            {this.renderCode()}
+            {this.renderInfo()}
           </div>
         </div>
-        <h3 className={pf('assistive-text')}>Code</h3>
-        {this.renderCode()}
-        {this.renderInfo()}
+
       </section>
     );
   }
@@ -598,7 +599,7 @@ class ComponentFlavor extends React.Component {
     if (!this.state.codeTabsFiltered.length) return null;
     const { flavor } = this.props;
     return (
-      <Tabs className={{ 'site-example--tabs-initial-view': this.state.initialView, [pf('m-vertical--x-large')]: true }} flavor="default">
+      <Tabs className={{ 'site-example--code site-example--tabs-initial-view': this.state.initialView, [pf('m-vertical--x-large')]: true }} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );

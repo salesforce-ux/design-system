@@ -25,10 +25,11 @@ const ComponentBody = React.createClass({
     const { component } = this.props;
     return (
       <div>
-        <Anchor title={component.title} />
+        <Anchor title={component.title} actions={this.renderComponentOverviewLink()} />
         <div className={pf('site-content p-around--xx-large')}>
           {this.renderIntro()}
           {this.renderFlavors()}
+          <h3 className={pf('site-text-heading--large')}>Component Overview</h3>
           {this.renderDocs()}
           {this.renderInfoTable()}
         </div>
@@ -50,11 +51,9 @@ const ComponentBody = React.createClass({
     let info = this.props.component.info;
     if (info.table || info.tableYaml) {
       return (
-        <li className={pf('list__name has-divider--top-space')}>
-          <a href="#overview">
-            Component Overview
-          </a>
-        </li>
+        <div className={pf('align-middle')}>
+          <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
+        </div>
       );
     } else {
       return null;

@@ -94,15 +94,15 @@ export default [
         // Specifically for the components
         navItem.collapseSiblings = true;
         // Inject the flavors into the nav
-        if (route.component.flavors && route.component.flavors.length > 1) {
-          navItem.children = route.component.flavors.map(flavor => {
-            return {
-              route: route.uid, // parent route
-              label: flavor.title,
-              hash: flavor.id
-            };
-          });
-        }
+        // if (route.component.flavors && route.component.flavors.length > 1) {
+        //   navItem.children = route.component.flavors.map(flavor => {
+        //     return {
+        //       route: route.uid, // parent route
+        //       label: flavor.title,
+        //       hash: flavor.id
+        //     };
+        //   });
+        // }
         return navItem;
       })
       .concat([

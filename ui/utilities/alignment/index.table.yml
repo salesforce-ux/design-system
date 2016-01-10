@@ -2,4 +2,4 @@ description: This table gives you a quick overview of the {{abbreviatedName}} CS
 classes:
   -
     class: align--absolute-center
-    description:
+    description: Class will absolutely center children content

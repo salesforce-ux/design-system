@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export const preview = (
 <div className="demo-only">
   <div className={pf('align--absolute-center')} style={{height: '150px'}}>
-    This content will be positioned in the absolute center of its' container
+    This content will be positioned in the absolute center of its container
   </div>
 </div>
 );
@@ -25,7 +25,7 @@ export const preview = (
 export const code = (
 <div className="demo-only">
   <div className={pf('align--absolute-center')}>
-    This content will be positioned in the absolute center of its' container
+    This content will be positioned in the absolute center of its container
   </div>
 </div>
 );

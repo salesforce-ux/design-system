@@ -53,7 +53,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-     <div className="demo-only" style={{height: '720px'}}>
+      <div className="demo-only" style={{height: '720px'}}>
         <Modal isOpen={this.state.showing} renderInline={true} flavor="large" >
           <Modal.Header>
             <h2 className={pf('text-heading--medium')}>Add Products</h2>

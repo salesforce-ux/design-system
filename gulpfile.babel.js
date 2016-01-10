@@ -101,7 +101,8 @@ gulp.task('clean', del.bind(null, [
 gulp.task('serve', ['styles'], () => {
   browserSync({
     server: __PATHS__.www,
-    notify: false
+    notify: false,
+    open: false
   });
 
   gulp.watch(watchPaths.pages).on('change', rebuildPage);

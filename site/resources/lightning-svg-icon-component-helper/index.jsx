@@ -86,17 +86,18 @@ export default (
     var size = component.get("v.size");
     var name = component.get("v.name");
     var classname = component.get("v.class");
+    var containerclass = component.get("v.containerClass");
     var category = component.get("v.category");
 
     var containerClassName = [
         prefix+"icon__container",
         prefix+"icon-"+category+"-"+name,
-        classname
+        containerclass
         ].join(' ');
-    var iconClassName = prefix+"icon "+prefix+"icon--" + size;
     component.set("v.containerClass", containerClassName);
 
     var svgroot = document.createElementNS(svgns, "svg");
+    var iconClassName = prefix+"icon "+prefix+"icon--" + size+" "+classname;
     svgroot.setAttribute("aria-hidden", "true");
     svgroot.setAttribute("class", iconClassName);
     svgroot.setAttribute("name", name);

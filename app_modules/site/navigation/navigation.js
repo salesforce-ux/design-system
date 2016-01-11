@@ -34,6 +34,10 @@ export default [
       {
         route: 'getting-started:heroku',
         label: 'Heroku'
+      },
+      {
+        route: 'getting-started:markup-and-style',
+        label: 'Markup and Style'
       }
     ]
   },

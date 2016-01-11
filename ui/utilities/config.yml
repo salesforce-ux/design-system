@@ -1,5 +1,7 @@
 components:
+  - alignment
   - floats
+  - interactions
   - lists
   - scrollable
   - sizing

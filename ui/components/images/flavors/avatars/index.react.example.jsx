@@ -23,6 +23,10 @@ const avatar2 = (
 
 export const preview = (
   <div className="demo-only">
+    <span className={pf('avatar avatar--empty avatar--x-small m-right--x-small')}></span>
+    <span className={pf('avatar avatar--empty avatar--small m-right--x-small')}></span>
+    <span className={pf('avatar avatar--empty avatar--medium m-right--x-small')}></span>
+    <span className={pf('avatar avatar--empty avatar--large m-right--x-small')}></span>
     <span className={pf('avatar avatar--x-small m-right--x-small')}>{avatar}</span>
     <span className={pf('avatar avatar--small m-right--x-small')}>{avatar}</span>
     <span className={pf('avatar avatar--medium m-right--x-small')}>{avatar}</span>
@@ -36,6 +40,10 @@ export const preview = (
 
 export const code = (
   <div className="demo-only">
+    <span className={pf('avatar avatar--empty avatar--x-small')}></span>
+    <span className={pf('avatar avatar--empty avatar--small')}></span>
+    <span className={pf('avatar avatar--empty avatar--medium')}></span>
+    <span className={pf('avatar avatar--empty avatar--large')}></span>
     <span className={pf('avatar avatar--x-small')}>{avatar}</span>
     <span className={pf('avatar avatar--small')}>{avatar}</span>
     <span className={pf('avatar avatar--medium')}>{avatar}</span>

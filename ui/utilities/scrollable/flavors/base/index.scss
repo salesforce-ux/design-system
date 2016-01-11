@@ -9,51 +9,8 @@
 
 
 
-.#{$css-prefix}has-divider {
-
-  @include deprecate('2.0.0') {
-    margin-top: $spacing-x-small;
-    padding-top: $spacing-x-small;
-    border-top: $border-width-thin solid $color-border;
-  }
-
-  &--top {
-    @include border(top);
-
-    &-space {
-      @include border(top);
-      margin-top: $spacing-x-small;
-      padding-top: $spacing-x-small;
-    }
-  }
-
-  &--right {
-    @include border(right);
-
-    &-space {
-      @include border(right);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
-  }
-
-  &--bottom {
-    @include border(bottom);
-
-    &-space {
-      @include border(bottom);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
-  }
-
-  &--left {
-    @include border(left);
-
-    &-space {
-      @include border(left);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
-  }
+.#{$css-prefix}scrollable {
+  @include scrollbar;
+  @include enable-ios-momentum-scrolling;
+  overflow: auto;
 }

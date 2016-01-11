@@ -8,52 +8,18 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+.#{$css-prefix}has-blur-focus {
+  color: currentColor;
+  border-radius: $border-radius-small;
 
-.#{$css-prefix}has-divider {
-
-  @include deprecate('2.0.0') {
-    margin-top: $spacing-x-small;
-    padding-top: $spacing-x-small;
-    border-top: $border-width-thin solid $color-border;
+  &:hover,
+  &:focus,
+  &:active {
+    color: currentColor;
+    text-decoration: none;
   }
 
-  &--top {
-    @include border(top);
-
-    &-space {
-      @include border(top);
-      margin-top: $spacing-x-small;
-      padding-top: $spacing-x-small;
-    }
-  }
-
-  &--right {
-    @include border(right);
-
-    &-space {
-      @include border(right);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
-  }
-
-  &--bottom {
-    @include border(bottom);
-
-    &-space {
-      @include border(bottom);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
-  }
-
-  &--left {
-    @include border(left);
-
-    &-space {
-      @include border(left);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
+  &:focus {
+    @include focus-button;
   }
 }

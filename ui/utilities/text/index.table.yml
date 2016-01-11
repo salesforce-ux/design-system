@@ -53,8 +53,3 @@ classes:
     class: section-title--divider
     description: Titles that also act as a divider
     notes: These are typically on a form
-  -
-    class: type-focus
-    description: Creates a faux link with interactions
-    applied: container
-    notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline

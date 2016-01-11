@@ -51,6 +51,38 @@ classes:
     description: Marks a description
     applied: <code>dd</code>
   -
+    class: has-divider--top
+    description: Adds 1px border divider above an HTML element
+    applied: any element
+  -
+    class: has-divider--top-space
+    description: Adds 1px border divider above an HTML element with a 0.5rem separation between the item above it
+    applied: any element
+  -
+    class: has-divider--bottom
+    description: Adds 1px border divider below an HTML element
+    applied: any element
+  -
+    class: has-divider--bottom-space
+    description: Adds 1px border divider below an HTML element with a 0.5rem separation between the item below it
+    applied: any element
+  -
+    class: has-divider--right
+    description: Adds 1px border divider to the right of an HTML element
+    applied: any element
+  -
+    class: has-divider--right-space
+    description: Adds 1px border divider to the right of an HTML element with a 0.5rem separation between the item to the right
+    applied: any element
+  -
+    class: has-divider--left
+    description: Adds 1px border divider to the left of an HTML element
+    applied: any element
+  -
+    class: has-divider--left-space
+    description: Adds 1px border divider to the left of an HTML element with a 0.5rem separation between the item to the left
+    applied: any element
+  -
     class: has-block-links
     description: Gives the anchors within the list block styling
     applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>

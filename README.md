@@ -10,10 +10,10 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ```bash
 gem install bundler
 npm install
-npm run gulp
+npm start
 ```
 
-Having trouble getting these steps to work on your machine? Follow the troubleshooting guide below.
+Having trouble getting these steps to work on your machine? Follow the [troubleshooting](#troubleshooting) guide below.
 
 ## Tasks
 

@@ -74,21 +74,18 @@ function getPreviewTabs() {
     icon: 'phone_portrait',
     iconClass: 'phone-portrait',
     label: 'Small',
-    stylesheet: 'iframe',
     formFactor: 'small'
   },{
     key: 'tablet',
     icon: 'tablet_portrait',
     iconClass: 'tablet-portrait',
     label: 'Medium',
-    stylesheet: 'iframe.medium',
     formFactor: 'medium'
   },{
     key: 'desktop',
     icon: 'desktop',
     iconClass: 'desktop',
     label: 'Large',
-    stylesheet: 'iframe.large',
     formFactor: 'large'
   }];
 }
@@ -253,7 +250,7 @@ class ComponentFlavor extends React.Component {
       const { showFormFactors: factors } = flavor;
       return _.isArray(factors) && !_.isEmpty(factors)
         ? _.includes(factors, tab.formFactor)
-        : true;
+        : false;
     });
     // Prep the codeTabs by updating the "code" property with appropriate
     // formatting / highlighting
@@ -261,10 +258,12 @@ class ComponentFlavor extends React.Component {
     this.state = {
       role,
       previewTabs,
-      // Just use the last tab as the initial tab
-      previewTabActive: previewTabs.length > 1
+      // Only set an active tab if there are more than 1
+      previewTabActive: previewTabs.length > 0
+        // If there is a default specified, use that
         ? (flavor.showFormFactorsDefault
           ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })
+          // Otherwise, just use the last tab
           : _.last(previewTabs))
         : null,
       // If the component example has states, set the initial previewState
@@ -410,7 +409,7 @@ class ComponentFlavor extends React.Component {
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
+    link.href = `${getHistory().createHref('/')}assets/styles/demo.css`;
     link.onload = () => {
       // Don't remove the old stylesheet until the new one has loaded
       _(idocument.head.querySelectorAll('link'))
@@ -455,18 +454,13 @@ class ComponentFlavor extends React.Component {
    * @param {object} tab
    * @param {object} event
    */
-  onPreviewStateChange(event) {
-    let state = _.find(this.getExample().states, {
-      label: event.target.value
+  onPreviewStateChange(state) {
+    this.setState({
+      previewState: state
+    }, () => {
+      this.mountPreview();
+      this.updatePreviewHeight();
     });
-    if (state) {
-      this.setState({
-        previewState: state
-      }, () => {
-        this.mountPreview();
-        this.updatePreviewHeight();
-      });
-    }
   }
 
   handleCodeMouseUp(tabKey) {
@@ -486,17 +480,22 @@ class ComponentFlavor extends React.Component {
   render() {
     const { flavor } = this.props;
     return (
-      <section>
-        <Heading type="h2" id={flavor.id} className="p-top--xx-large site-text-heading--large site-text-heading--callout">
+      <section className={pf('m-bottom--xx-large p-top--x-large')}>
+        <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        <h3 className={pf('assistive-text')}>Preview</h3>
-        {this.renderPreviewStates()}
-        {this.renderPreview()}
-        <h3 className={pf('assistive-text')}>Code</h3>
-        {this.renderCode()}
-        {this.renderInfo()}
+        <div className={pf('grid wrap grid--vertical-stretch')}>
+          {this.renderPreviewStates()}
+          <h3 className={pf('assistive-text')}>Preview</h3>
+          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
+            {this.renderPreview()}
+            <h3 className={pf('assistive-text')}>Code</h3>
+            {this.renderCode()}
+            {this.renderInfo()}
+          </div>
+        </div>
+
       </section>
     );
   }
@@ -522,13 +521,22 @@ class ComponentFlavor extends React.Component {
   renderPreviewStates() {
     if (!this.state.previewState) return null;
     return (
-      <select
-        value={this.state.previewState.label}
-        onChange={this.onPreviewStateChange.bind(this)}>
-        {this.getExample().states.map(state =>
-          <option key={state.label} value={state.label}>{state.label}</option>
-        )}
-      </select>
+      <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
+        <h3 className={pf('site-text-heading--label')}>States</h3>
+        <ul className={pf('list--vertical has-block-links--space')}>
+          {this.getExample().states.map(state =>
+            <li
+              className={state === this.state.previewState ? 'is-active' : null}
+              key={state.label}>
+              <a
+                role="button"
+                onClick={this.onPreviewStateChange.bind(this, state)}>
+                {state.label}
+              </a>
+            </li>
+          )}
+        </ul>
+      </div>
     );
   }
 
@@ -556,15 +564,18 @@ class ComponentFlavor extends React.Component {
         {iframe}
       </Tabs.Content>
     );
-    return previewTabActive ? (
-      <Tabs
-        className={className}
-        flavor="default"
-        panel={previewPanel}
-        selectedIndex={previewTabs.indexOf(previewTabActive)}>
-        {this.renderPreviewTabs()}
-      </Tabs>
-    ) : iframe;
+    // Only use tabs if there are more than 1
+    return this.state.previewTabs.length > 1
+      ? (
+        <Tabs
+          className={className}
+          flavor="default"
+          panel={previewPanel}
+          selectedIndex={previewTabs.indexOf(previewTabActive)}>
+          {this.renderPreviewTabs()}
+        </Tabs>
+      )
+      : <div className={pf('site-bleed scrollable--x')}>{iframe}</div>;
   }
 
   renderPreviewTabs() {
@@ -595,7 +606,7 @@ class ComponentFlavor extends React.Component {
     if (!this.state.codeTabsFiltered.length) return null;
     const { flavor } = this.props;
     return (
-      <Tabs className={{'site-example--tabs-initial-view': this.state.initialView}} flavor="default">
+      <Tabs className={{ 'site-example--code site-example--tabs-initial-view': this.state.initialView, [pf('m-vertical--x-large')]: true }} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );

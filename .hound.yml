@@ -1,2 +1,4 @@
 javascript:
   enabled: false
+jscs:
+  enabled: false

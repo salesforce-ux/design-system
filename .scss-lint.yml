@@ -79,6 +79,8 @@ linters:
     enabled: false
   PropertySpelling:
     enabled: true
+  PseudoElement:
+    enabled: false
   QualifyingElement:
     enabled: false
   SelectorDepth:

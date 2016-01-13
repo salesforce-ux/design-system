@@ -16,13 +16,3 @@ The **GitHub pull requests** should meet the following criteria:
   - add helpful GitHub comments on lines that you have questions / concerns about
 
 We'll review your code, suggest any needed changes, and merge it in. Thank you.
-
-## Adding and modifying images?
-
-Web performance matters a lot to us.
-
-Whenever modifying images (SVG, PNG, JPG), please run this script that will optimize the project's images for the web:
-
-```sh
-$ npm run optimize
-```

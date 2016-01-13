@@ -27,7 +27,6 @@
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "npm run gulp -- lint",
     "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
-    "optimize": "scripts/npm/optimize.sh",
     "gulp": "babel-node ./node_modules/.bin/gulp"
   },
   "dependencies": {
@@ -96,7 +95,6 @@
     "rimraf": "2.4.3",
     "semver": "^5.1.0",
     "stampit": "2.1.0",
-    "svgo": "^0.5.6",
     "temp": "^0.8.3",
     "theo": "4.0.1",
     "through2": "2.0.0",
@@ -111,7 +109,6 @@
     "gulp-debug": "^2.1.2",
     "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
-    "imagemin-cli": "^2.0.0",
     "karma": "0.13.19",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "0.2.2",

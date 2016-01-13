@@ -45,12 +45,20 @@ class Component extends React.Component {
 Component.displayName = 'ButtonIcon';
 Component.propTypes = {
   flavor: componentUtil.PropTypes.flavor(
-    'icon-container', 'icon-border', 'icon-small',
-    'icon-bare', 'icon-inverse', 'icon-x-small',
-    'icon-border-filled', 'icon-inverse'
+    'icon-container',
+    'icon-bare',
+    'icon-border',
+    'icon-border-filled',
+    'icon-x-small',
+    'icon-small',
+    'icon-inverse'
   ),
   iconFlavor: componentUtil.PropTypes.flavor(
-    'inverse', 'hint', 'small', 'x-small', 'large'
+    'hint',
+    'x-small',
+    'small',
+    'large',
+    'inverse'
   ),
   sprite: React.PropTypes.string.isRequired,
   symbol: React.PropTypes.string.isRequired,

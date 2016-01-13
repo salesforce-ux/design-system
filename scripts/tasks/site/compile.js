@@ -16,7 +16,7 @@ import _ from 'lodash';
 import async from 'async';
 import cheerio from 'cheerio';
 import gulp from 'gulp';
-import rename from 'gulp-rename';
+import grename from 'gulp-rename';
 import gutil from 'gulp-util';
 import { createLocation } from 'history';
 import React from 'react';
@@ -25,7 +25,6 @@ import { Router, Route, Link, match as RouterMatch, RoutingContext } from 'react
 import through from 'through2';
 
 import createComponent from 'app_modules/site/util/component/create';
-import { getDefaultEnvVars } from 'scripts/helpers/env';
 
 /**
  * Return a props object with only props prefixed
@@ -63,46 +62,69 @@ export function tryRequire(cache, cacheKey, modulePath) {
 /**
  *
  */
+function writeFiles (dest, options = {}) {
+  _.defaults(options, {
+    pipes: []
+  });
+  return (files, done) => {
+    let stream = through.obj();
+    files.forEach(stream.write, stream);
+    stream.end();
+    stream = options.pipes.reduce((stream, pipe) => {
+      stream = stream.pipe(pipe);
+      stream.on('error', done);
+      return stream;
+    }, stream);
+    stream
+    .pipe(gulp.dest(dest))
+    .on('error', done)
+    .on('finish', done);
+  };
+}
+
+/**
+ *
+ */
 export function createPageCompiler () {
 
   const compiler = {
 
-    getSitePath() {
+    getSitePath () {
       return path.resolve(__PATHS__.site, ...arguments);
     },
 
-    getSitePathTmp() {
+    getSitePathTmp () {
       return path.resolve(__PATHS__.tmp, 'site', ...arguments);
     },
 
     /**
      * Create a module for each page in the site
      *
-     * @param {function} callback
+     * @param {function} done
      */
-    createPages(callback) {
-      assert.ok(_.isFunction(callback), 'callback must be a function');
-      console.log('Creating Pages');
+    createPages (done) {
+      console.time('Creating pages');
+      assert.ok(_.isFunction(done), 'callback must be a function');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
-      let routes = sitemap.getFlattenedRoutes().filter(route => !route.component);
-      let stream = through.obj();
-      routes.forEach(stream.write, stream);
-      stream.end();
-      stream
-      .pipe(through.obj(this.createPage))
-      .pipe(gulp.dest(this.getSitePathTmp()))
-      .on('error', callback)
-      .on('finish', callback);
+      let routes = sitemap.getFlattenedRoutes()
+        .filter(route => !route.component);
+      async.waterfall([
+        (callback) =>
+          async.map(routes, this.createPage, callback),
+        writeFiles(this.getSitePathTmp())
+      ], err => {
+        console.timeEnd('Creating pages');
+        done(err);
+      });
     },
 
     /**
      * Create a module that exports a page with extra props
      *
      * @param {object} route
-     * @param {string} enc
-     * @param {function} next
+     * @param {function} done
      */
-    createPage(route, enc, next) {
+    createPage (route, done) {
       // Props
       const pageBodyProps = {
         url: route.path
@@ -120,7 +142,7 @@ export function createPageCompiler () {
         path: route.getIndexPath(route.path),
         contents: new Buffer(contents)
       });
-      next(null, file);
+      done(null, file);
     },
 
     /**
@@ -128,30 +150,28 @@ export function createPageCompiler () {
      *
      * @param {function} callback
      */
-    createComponentPages(callback) {
-      console.log('Creating Component Pages');
+    createComponentPages (done) {
+      console.time('Creating component pages');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
-      let routes = sitemap.getFlattenedRoutes().filter(route => {
-        return route.component;
+      let routes = sitemap.getFlattenedRoutes()
+        .filter(route => route.component);
+      async.waterfall([
+        (callback) =>
+          async.map(routes, this.createComponentPage, callback),
+        writeFiles(this.getSitePathTmp())
+      ], err => {
+        console.timeEnd('Creating component pages');
+        done(err);
       });
-      let stream = through.obj();
-      routes.forEach(stream.write, stream);
-      stream.end();
-      stream
-        .pipe(through.obj(this.createComponentPage))
-        .pipe(gulp.dest(this.getSitePathTmp()))
-        .on('error', callback)
-        .on('finish', callback);
     },
 
     /**
      * Create a module for a component
      *
      * @param {object} route
-     * @param {string} enc
-     * @param {function} next
+     * @param {function} done
      */
-    createComponentPage(route, enc, next) {
+    createComponentPage (route, done) {
       let component = createComponent(route.component);
       // Imports
       let requireDocs = tryRequire('elements', 'docs', `ui/${component.path}/index.docs.jsx`);
@@ -182,7 +202,7 @@ export function createPageCompiler () {
         path: route.getIndexPath(route.path),
         contents: new Buffer(contents)
       });
-      next(null, file);
+      done(null, file);
     },
 
     /**
@@ -190,12 +210,10 @@ export function createPageCompiler () {
      *
      * @param {array} routes
      * @param {object} route
-     * @param {string} enc
-     * @param {function} next
+     * @param {function} done
      */
-    renderPage(routes, route, enc, next) {
+    renderPage (routes, route, done) {
       try {
-        console.log('Rendering page ' + route.path);
         let newFile = new gutil.File({
           path: route.getIndexPath(route.path)
         });
@@ -215,20 +233,17 @@ export function createPageCompiler () {
         // Router
         let location = createLocation(route.path);
         RouterMatch({ routes, location }, (error, redirectLocation, renderProps) => {
-          if (error) {
-            throw error;
-          }
+          if (error) throw error;
           let html = ReactDOMServer.renderToString(
-            React.createElement(RoutingContext, renderProps)
-          );
+            React.createElement(RoutingContext, renderProps));
           $('#app').append(html);
           $('body').append(`<script>LIGHTNING_DESIGN_SYSTEM.init('${route.modulePath}')</script>`);
           $('html').before('<!DOCTYPE html>');
           newFile.contents = new Buffer($.html());
-          next(null, newFile);
+          done(null, newFile);
         });
       } catch (e) {
-        next(e);
+        done(e);
       }
     },
 
@@ -236,52 +251,52 @@ export function createPageCompiler () {
      * Create the routes needed to render the pages statically
      * and then stream the metadata through the renderPage() function
      *
-     * @param {function} callback
+     * @param {function} done
      */
-    renderPages(callback) {
-      console.log('Rendering Pages');
+    renderPages (done) {
+      console.time('Rendering pages');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
-      // Needed for ReactRouter
-      let Root = React.createClass({
-        render() { return this.props.children; }
+      let sitemapRoutes = sitemap.getFlattenedRoutes();
+      async.waterfall([
+        (callback) => async.map(
+          sitemapRoutes,
+          (route, callback) => {
+            try {
+              let pagePath = this.getSitePathTmp(route.getIndexPath(route.path));
+              let page = require(pagePath).default;
+              let Page = props => page;
+              callback(null, {
+                name: route.uid,
+                path: route.path,
+                component: Page
+              });
+            } catch (err) {
+              callback(err);
+            }
+          },
+          callback
+        ),
+        (routes, callback) => async.map(
+          sitemapRoutes,
+          async.apply(this.renderPage, routes),
+          callback
+        ),
+        writeFiles(__PATHS__.www, {
+          pipes: [grename(path => path.extname = '.html')]
+        })
+      ], err => {
+        console.timeEnd('Rendering pages');
+        done(err);
       });
-      // Create the routes
-      let routes = sitemap.getFlattenedRoutes().map(route => {
-        let page = require(this.getSitePathTmp(route.getIndexPath(route.path))).default;
-        let Page = React.createClass({
-          render() {
-            return page;
-          }
-        });
-        return React.createElement(Route, {
-          name: route.uid,
-          path: route.path,
-          component: Page
-        });
-      });
-      routes = React.createElement(Route, {
-        component: Root
-      }, ...routes);
-      // Render each page
-      let stream = through.obj();
-      sitemap.getFlattenedRoutes().forEach(stream.write, stream);
-      stream.end();
-      stream
-      .pipe(through.obj(this.renderPage.bind(this, routes)))
-      .on('error', callback)
-      .pipe(rename(path => path.extname = '.html'))
-      .on('error', callback)
-      .pipe(gulp.dest(__PATHS__.www))
-      .on('error', callback)
-      .on('finish', callback);
     },
 
     /**
      * Create the pages
      *
-     * @param {function} callback
+     * @param {function} done
      */
-    compile(callback) {
+    compile (done) {
+      console.time('Compiling pages');
       async.series([
         done => {
           async.parallel([
@@ -290,7 +305,10 @@ export function createPageCompiler () {
           ], done);
         },
         this.renderPages
-      ], callback);
+      ], err => {
+        done(err);
+        console.timeEnd('Compiling pages');
+      });
     }
 
   };

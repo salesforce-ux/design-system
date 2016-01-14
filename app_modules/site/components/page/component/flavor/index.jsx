@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import classNames from 'classnames';
-import _ from 'lodash';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
@@ -21,64 +20,85 @@ import svgFix from 'app_modules/site/util/ie/svg';
 import { html as prettyHTML } from 'js-beautify';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { getHistory } from 'app_modules/site/navigation/history';
+import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 import CTALink from 'app_modules/site/components/cta-link';
 
-import { cssPrefix } from 'app_modules/global';
+import globals from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
 
+/**
+ * Custom Prism addition to the markup syntax that adds a "utility-class" class
+ * to any attribute value tokens that are contained in whitelistUtilities
+ */
 Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
   .map(c => c.replace(/^\./, ''))
-  .map(c => `${cssPrefix}${c}`)
+  .map(c => `${globals.cssPrefix}${c}`)
   .map(c => new RegExp(_.escapeRegExp(c)));
 
+/**
+ * Return the value for a keypath
+ *
+ * @example
+ * getValueAtKeyPath(myObject, "foo.bar.baz")
+ *
+ * @param {object} obj
+ * @param {string} keyPath
+ * @returns {any}
+ */
 function getValueAtKeyPath(obj, keyPath) {
   return _.reduce(keyPath.split('.'), (obj, key) => {
     if (obj) { return obj[key]; } else { return obj; }
   }, obj);
 }
 
+/**
+ * Hight a string of text based on the language
+ *
+ * @param {string} code
+ * @param {string} language
+ * @returns {string}
+ */
 function highlight(code, language) {
   return Prism.highlight(code, Prism.languages[language]);
 }
 
-function getAvailablePreviewTabs(flavor) {
+/**
+ * Return a list of tab objects for the "preview" section
+ */
+function getPreviewTabs() {
   return [{
     key: 'mobile',
     icon: 'phone_portrait',
     iconClass: 'phone-portrait',
     label: 'Small',
-    stylesheet: 'iframe',
     formFactor: 'small'
   },{
     key: 'tablet',
     icon: 'tablet_portrait',
     iconClass: 'tablet-portrait',
     label: 'Medium',
-    stylesheet: 'iframe.medium',
     formFactor: 'medium'
   },{
     key: 'desktop',
     icon: 'desktop',
     iconClass: 'desktop',
     label: 'Large',
-    stylesheet: 'iframe.large',
     formFactor: 'large'
-  }].filter(tab => {
-    const factors = flavor.showFormFactors;
-    if (!factors.length) { return true; }
-    return _.includes(factors, tab.formFactor);
-  });
+  }];
 }
 
-function allCodeTabs() {
+/**
+ * Return a list of tab objects for the "code" section
+ */
+function getCodeTabs() {
   return [{
     key: 'html',
     label: 'HTML',
     language: 'markup',
-    code: 'example.html',
+    code: '',
     info: 'info.markup',
     roles: Prefs.roles
   },{
@@ -103,169 +123,379 @@ function allCodeTabs() {
   }];
 }
 
-const renderHTML = _.memoize(function(uid, previewComponent) {
-  if (previewComponent.code) previewComponent = previewComponent.code;
-  if (previewComponent.default) previewComponent = previewComponent.default;
-  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
-  let html = ReactDOMServer.renderToStaticMarkup(previewComponent);
+/**
+ * Return a string of
+ */
+const renderHTML = function(element) {
+  let html = ReactDOMServer.renderToStaticMarkup(element);
   // Remove wrapping tag if it has the ".demo-only" class in it
   // Note: this will also remove other classes too on that tag! :)
+  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
   html = html.replace(pattern, (match, tag, content) => content);
   // Format
-  html = prettyHTML(html, {
+  return prettyHTML(html, {
     'indent_size': 2,
     'indent_char': ' ',
     'unformatted': ['a']
   });
-  // Highlight
-  return highlight(html, 'markup');
-});
+};
 
-function userTypeShouldSeeTab(tab) {
+/**
+ * Return true if the current "role" preference can view a tab
+ *
+ * @param {object} tab
+ * @returns {boolean}
+ */
+function filterTabByRole(tab) {
   return _.contains(tab.roles, Prefs.get('role'));
 }
 
-function getCodeTabs(flavor, previewComponent, role) {
-  return _(allCodeTabs())
-    // Make sure code for this tab exists
-    .filter(tab => {
-      const val = getValueAtKeyPath(flavor, tab.code); // multiple return types, [] is truthy.
-      return userTypeShouldSeeTab(tab) && ((val && val.length) || (tab.key === 'html' && previewComponent));
-    })
-    // Get the code and highlight it
-    .forEach(tab => {
-      tab.code = getValueAtKeyPath(flavor, tab.code);
-      if (_.isArray(tab.code)) {
-        tab.code = tab.code.join('\n');
-      }
-      else if (_.isString(tab.code)) {
-        tab.code = highlight(tab.code, tab.language);
-      }
-      else if (tab.key === 'html') {
-        let shouldHighlightUtilityClasses = role === Prefs.roles.aura;
-        tab.code = renderHTML(flavor.uid, previewComponent);
-      }
-    })
-    .value();
+/**
+ * Return an array of code tabs that can be used for the current flavor
+ *
+ * @param {object} flavor
+ * @param {boolean} hasPreview
+ * @returns {object[]}
+ */
+function prepareCodeTabs(flavor, hasPreview) {
+  return getCodeTabs()
+  // Make sure code for this tab exists
+  .filter(tab => !_.isEmpty(getValueAtKeyPath(flavor, tab.code)) ||
+    tab.key === 'html' && hasPreview)
+  // Get the code and highlight it
+  // HTML is rendered/highlighted dynamically in "renderCodeBlock"
+  .map(tab => {
+    let code = getValueAtKeyPath(flavor, tab.code);
+    if (_.isArray(code)) {
+      tab.code = code.join('\n');
+      return tab;
+    } else if (_.isString(code)) {
+      tab.code = highlight(code, tab.language);
+      return tab;
+    }
+    return tab;
+  });
+}
+
+/**
+ * Return a cloned ReactElement that has been mutated based on the provided actions
+ *
+ * @param {ReactElement} element
+ * @param {object[]} actions
+ * @returns {ReactElement}
+ */
+function renderElementState (element, actions) {
+  let prevProps = _.assign({}, element.props);
+  let nextProps = _.defaults({}, _.cloneDeep(prevProps), {
+    className: ''
+  });
+  // Get a filtered list of actions that apply to the current element
+  let elementActions = actions.filter(action => {
+    if (_.has(action, 'ref') && _.has(prevProps, 'iref')) {
+      return action.ref === prevProps.iref;
+    }
+    if (_.has(action, 'className') && _.has(prevProps, 'className')) {
+      return _.includes(prevProps.className, action.className);
+    }
+  });
+  let filterActions = type => elementActions.filter(action => _.has(action, type));
+  // Exit early if the current element is being removed
+  for (let action of elementActions) {
+    if (action.remove === true) {
+      return null;
+    }
+  }
+  // Add classes
+  filterActions('addClass').forEach(action => {
+    let classNames = nextProps.className.split(' ');
+    let classNamesAdd = pf(action.addClass).split(' ');
+    nextProps.className = _.uniq(classNames.concat(classNamesAdd)).join(' ');
+  });
+  // Remove classes
+  filterActions('removeClass').forEach(action => {
+    let classNames = nextProps.className.split(' ');
+    let classNamesRemove = pf(action.removeClass).split(' ');
+    nextProps.className = _.xor(classNames, classNamesRemove).join(' ');
+  });
+  // If the className is empty, remove it
+  nextProps.className = _.trim(nextProps.className);
+  if (_.isEmpty(nextProps.className)) nextProps.className = null;
+  // Attributes
+  filterActions('attributes').forEach(action =>
+    _.assign(nextProps, action.attributes)
+  );
+  // Children
+  if (nextProps.children) {
+    // Text
+    filterActions('text').forEach(action =>
+      nextProps.children = [action.text]
+    );
+    // Recursivley update the children
+    nextProps.children = React.Children.map(nextProps.children, child =>
+      React.isValidElement(child) ? renderElementState(child, actions) : child
+    );
+  }
+  return React.cloneElement(element, nextProps);
 }
 
 class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
-    const {flavor, elements} = props;
-    const previewComponent = elements[`example/flavor/${flavor.id}`];
-    const previewTabs = getAvailablePreviewTabs(flavor);
+    const { flavor, elements } = props;
+    const role = Prefs.get('role');
+    // Get a list of preview tabs that should be displayed based
+    // on the list provided by flavor.showFormFactors
+    const previewTabs = getPreviewTabs().filter(tab => {
+      const { showFormFactors: factors } = flavor;
+      return _.isArray(factors) && !_.isEmpty(factors)
+        ? _.includes(factors, tab.formFactor)
+        : false;
+    });
+    // Prep the codeTabs by updating the "code" property with appropriate
+    // formatting / highlighting
+    const codeTabs = prepareCodeTabs(flavor, this.getExampleElement());
     this.state = {
-      previewComponent,
+      role,
       previewTabs,
-      previewTabActive: _.last(previewTabs),
-      codeTabs: [],
-      role: Prefs.roles.aura,
+      // Only set an active tab if there are more than 1
+      previewTabActive: previewTabs.length > 0
+        // If there is a default specified, use that
+        ? (flavor.showFormFactorsDefault
+          ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })
+          // Otherwise, just use the last tab
+          : _.last(previewTabs))
+        : null,
+      // If the component example has states, set the initial previewState
+      previewState: _.has(this.getExample(), 'states')
+        ? _.first(this.getExample().states) : false,
+      codeTabs,
+      // Show tabs appropriate for the current role
+      codeTabsFiltered: codeTabs.filter(filterTabByRole),
+      // Used for accessibility
       initialView: true
     };
     // Listen for the iframe to load
     if (typeof window !== 'undefined') {
-      window.__events.once(`iframe:load:${flavor.uid}`, this.onFrameLoad.bind(this, 'event'));
+      window.__events.on(
+        `iframe:load:${flavor.uid}`,
+        this.onPreviewFrameLoad.bind(this, 'event')
+      );
     }
+    // Called by Prefs.listen()
     this.prefsChanged = this.updateCodeTabs.bind(this);
   }
 
   componentDidMount() {
-    this.setState({role: Prefs.get('role')});
     Prefs.listen(this.prefsChanged);
-    this.updateCodeTabs();
   }
 
   componentWillUnmount() {
     Prefs.unlisten(this.prefsChanged);
+    window.__events.removeListener(
+      `iframe:load:${this.props.flavor.uid}`,
+      this.onPreviewFrameLoad.bind(this, 'event')
+    );
   }
 
-  isRegularUser() {
-    return this.state.role === Prefs.roles.regular;
+  /**
+   * Return the example for the current flavor
+   *
+   * @returns {object}
+   */
+  getExample() {
+    return this.props.elements[`example/flavor/${this.props.flavor.id}`];
   }
 
-  updateCodeTabs() {
+  /**
+   * Return the example element for the current flavor
+   *
+   * @param {object} options
+   * @returns {ReactElement|null}
+   */
+  getExampleElement(options) {
+    options = _.defaults({}, options, {
+      // The keys (in order) that will be checked for a ReactElement
+      keys: ['preview', 'default'],
+      // If true, the element will be passed to renderElementState
+      renderState: false,
+      // If true, previewActions will be concated with actions during renderElementState
+      preview: true
+    });
+    const example = this.getExample();
+    // Get the first valid ReactElement
+    const element = _(options.keys)
+      .filter(key => _.has(example, key))
+      .map(key => example[key])
+      .filter(React.isValidElement)
+      .first();
+    // If we don't have a state yet, just return the raw ReactElement
+    if (!this.state) return element;
+    const { previewState } = this.state;
+    // If we have an element and should render it with a specific state
+    if (element && options.renderState === true && _.isArray(previewState.actions)) {
+      let { actions, previewActions } = previewState;
+      // Optionally concat "previewActions" to the primary actions
+      if (options.preview === true && _.isArray(previewActions)) {
+        actions = actions.concat(previewActions);
+      }
+      return renderElementState(element, actions);
+    }
+    return element;
+  }
+
+  /**
+   * The preview can only be mounted once the iFrame has loaded
+   */
+  onPreviewFrameLoad(caller) {
+    if(!this.refs.iframe) return;
+    this.mountPreview();
+    this.updatePreviewHeight();
+    /*this.updatePreviewStyle(this.state.previewTabActive, () => {
+      this.updatePreviewHeight();
+    });*/
+  }
+
+  /**
+   * Get the window/document object for the iFrame
+   *
+   * @returns {object}
+   */
+  getPreviewWindow() {
+    const iframe = this.refs.iframe;
+    const iwindow = iframe.contentWindow
+      ? iframe.contentWindow
+      : iframe.contentDocument.defaultView;
+    const idocument = iwindow.document;
+    return { iframe, iwindow, idocument };
+  }
+
+  /**
+   * Mount the example element in the preview area
+   */
+  mountPreview() {
+    const { idocument } = this.getPreviewWindow();
+    const $preview = idocument.getElementById('preview');
+    if (!$preview) return;
+    const element = this.getExampleElement({ renderState: true });
+    ReactDOM.render(element, $preview);
+    svgFix(idocument);
+  }
+
+  /**
+   * Update the iFrame height to fit the content
+   */
+  updatePreviewHeight() {
+    const { iframe, iwindow, idocument } = this.getPreviewWindow();
+    iwindow.requestAnimationFrame(() => {
+      const style = iwindow.getComputedStyle(idocument.body);
+      const padding = _.reduce(['padding-top', 'padding-bottom'], (total, key) => {
+        return total + parseFloat(style[key], 10);
+      }, 0);
+      iframe.height = _.reduce(idocument.getElementById('preview').childNodes, (height, node) => {
+        return height + node.offsetHeight;
+      }, padding);
+    });
+  }
+
+  /**
+   * Update the preview iFrame with the correct style sheet based on the tab
+   *
+   * @param {object} tab
+   * @param {function} [afterLoad]
+   */
+  /*updatePreviewStyle(tab, afterLoad = _.noop) {
+    const { idocument } = this.getPreviewWindow();
+    const link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = `${getHistory().createHref('/')}assets/styles/demo.css`;
+    link.onload = () => {
+      // Don't remove the old stylesheet until the new one has loaded
+      _(idocument.head.querySelectorAll('link'))
+        .filter(tag => tag !== link)
+        .forEach(tag => {
+          tag.parentNode.removeChild(tag);
+        }).value();
+      afterLoad();
+    };
+    idocument.head.appendChild(link);
+  }*/
+
+  /**
+   * When a preview tab is clicked, update the style, resize it (with setState),
+   * and then update the height
+   *
+   * @param {object} tab
+   * @param {object} event
+   */
+  onPreviewTabClick(tab, event) {
+    event.preventDefault();
+    /*this.updatePreviewStyle(tab, () => {
+      this.setState({
+        initialView: false,
+        previewTabActive: tab
+      }, () => {
+        this.updatePreviewHeight();
+      });
+    });*/
     this.setState({
-      codeTabs: getCodeTabs(this.props.flavor, this.state.previewComponent, Prefs.get('role')),
-      role: Prefs.get('role')
+      initialView: false,
+      previewTabActive: tab
+    }, () => {
+      this.updatePreviewHeight();
+    });
+  }
+
+  /**
+   * When a preview state is changed, set it to the component state
+   * and then remount the preview
+   *
+   * @param {object} tab
+   * @param {object} event
+   */
+  onPreviewStateChange(state) {
+    this.setState({
+      previewState: state
+    }, () => {
+      this.mountPreview();
+      this.updatePreviewHeight();
     });
   }
 
   handleCodeMouseUp(tabKey) {
-    let sel = window.getSelection && window.getSelection();
+    const sel = window.getSelection && window.getSelection();
   }
 
-  onFrameLoad(caller) {
-    if(!this.refs.iframe) return;
-    this.mountPreview();
-    this.updatePreview();
-  }
-
-  mountPreview() {
-    let {previewComponent, previewTabActive: tab} = this.state;
-    // If the module exported a different "preview" element
-    if (previewComponent.preview) previewComponent = previewComponent.preview;
-    if (previewComponent.default) previewComponent = previewComponent.default;
-    const doc = this.refs.iframe.contentWindow.document;
-    ReactDOM.render(previewComponent, doc.getElementById('preview'));
-    svgFix(doc);
-  }
-
-  updatePreview() {
-    const {previewComponent, previewTabActive: tab} = this.state;
-    const node = this.refs.iframe;
-    const doc = node.contentWindow.document;
-    // Adjust the height after the stylesheet loads
-    function adjustHeight() {
-      node.contentWindow.requestAnimationFrame(() => {
-        const style = window.getComputedStyle(doc.body);
-        const padding = _.reduce(['padding-top', 'padding-bottom'], (total, key) => {
-          return total + parseFloat(style[key], 10);
-        }, 0);
-        node.height = _.reduce(doc.getElementById('preview').childNodes, (height, node) => {
-          return height + node.offsetHeight;
-        }, padding);
-      });
-    }
-    // Update the stylehsheet
-    const link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = `${getHistory().createHref('/')}assets/styles/${tab.stylesheet}.css`;
-    link.onload = function() {
-      // Don't remove the old stylesheet until the new one has loaded
-      _.filter(doc.head.querySelectorAll('link'), tag => {
-        return tag !== link;
-      }).forEach(tag => {
-        tag.parentNode.removeChild(tag);
-      });
-      adjustHeight();
-    };
-    doc.head.appendChild(link);
-  }
-
-  onPreviewTabClick(tab, event) {
-    event.preventDefault();
+  /**
+   * Called when user preferences are changed
+   */
+  updateCodeTabs() {
     this.setState({
-      initialView: false,
-      previewTabActive: tab
-    }, this.updatePreview);
+      role: Prefs.get('role'),
+      codeTabsFiltered: this.state.codeTabs.filter(filterTabByRole),
+    });
   }
 
   render() {
-    const {flavor} = this.props;
+    const { flavor } = this.props;
     return (
-      <section>
-        <Heading type="h2" id={flavor.id} className="p-top--xx-large site-text-heading--large site-text-heading--callout">
+      <section className={pf('m-bottom--xx-large p-top--x-large')}>
+        <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
         </Heading>
-        {this.renderInfo()}
-        <h3 className={pf('assistive-text')}>Preview</h3>
-        {this.renderPreview()}
-        <h3 className={pf('assistive-text')}>Code</h3>
-        {this.renderCode()}
+        <div className={pf('grid wrap grid--vertical-stretch')}>
+          {this.renderPreviewStates()}
+          <h3 className={pf('assistive-text')}>Preview</h3>
+          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
+            {this.renderPreview()}
+            <h3 className={pf('assistive-text')}>Code</h3>
+            {this.renderCode()}
+            {this.renderInfo()}
+          </div>
+        </div>
+
       </section>
     );
   }
@@ -281,41 +511,75 @@ class ComponentFlavor extends React.Component {
   }
 
   renderInfo() {
-    const {flavor} = this.props;
+    const { flavor } = this.props;
     if (!flavor.info.markup) return null;
     return (
       <div dangerouslySetInnerHTML={flavor.info.markup}/>
     );
   }
 
+  renderPreviewStates() {
+    if (!this.state.previewState) return null;
+    return (
+      <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
+        <h3 className={pf('site-text-heading--label')}>States</h3>
+        <ul className={pf('list--vertical has-block-links--space')}>
+          {this.getExample().states.map(state =>
+            <li
+              className={state === this.state.previewState ? 'is-active' : null}
+              key={state.label}>
+              <a
+                role="button"
+                onClick={this.onPreviewStateChange.bind(this, state)}>
+                {state.label}
+              </a>
+            </li>
+          )}
+        </ul>
+      </div>
+    );
+  }
+
   renderPreview() {
-    if (!this.state.previewComponent) return null;
-    const {flavor} = this.props;
-    const className = classNames(pf('site-example--tabs'), {'site-example--tabs-initial-view': this.state.initialView});
+    if (!this.getExampleElement()) return null;
+    const { flavor } = this.props;
+    const { previewTabActive, previewTabs } = this.state;
+    const className = classNames(pf('site-example--tabs'), {
+      'site-example--tabs-initial-view': this.state.initialView
+    });
+    const iframe = (
+      <iframe
+        src={`${getHistory().createHref('/')}components/preview-frame`}
+        height="100%"
+        name={flavor.uid}
+        ref="iframe"
+        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}
+        scrolling="no" />
+    );
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
-        aria-labelledby={`${flavor.uid}__preview-tab-${this.state.previewTabActive.key}`}>
-        <iframe
-          src={`${getHistory().createHref('/')}components/preview-frame`}
-          height="100%"
-          name={flavor.uid}
-          ref="iframe"
-          data-form-factor={this.state.previewTabActive.key}
-          scrolling="no" />
+        aria-labelledby={previewTabActive ? `${flavor.uid}__preview-tab-${previewTabActive.key}` : null}>
+        {iframe}
       </Tabs.Content>
     );
-    return (
-      <Tabs className={className} flavor="default" panel={previewPanel} selectedIndex={this.state.previewTabs.length-1}>
-        {this.renderPreviewTabs()}
-      </Tabs>
-    );
+    // Only use tabs if there are more than 1
+    return this.state.previewTabs.length > 1
+      ? (
+        <Tabs
+          className={className}
+          flavor="default"
+          panel={previewPanel}
+          selectedIndex={previewTabs.indexOf(previewTabActive)}>
+          {this.renderPreviewTabs()}
+        </Tabs>
+      )
+      : <div className={pf('site-bleed scrollable--x')}>{iframe}</div>;
   }
 
   renderPreviewTabs() {
-    if (!this.state.previewComponent) return null;
-    const {flavor} = this.props;
+    const { flavor } = this.props;
     return this.state.previewTabs.map((tab, index) => {
       const content = (
         <span>
@@ -339,18 +603,18 @@ class ComponentFlavor extends React.Component {
   }
 
   renderCode() {
-    if (!this.state.codeTabs.length) return null;
-    const {flavor} = this.props;
+    if (!this.state.codeTabsFiltered.length) return null;
+    const { flavor } = this.props;
     return (
-      <Tabs className={{'site-example--tabs-initial-view': this.state.initialView}} flavor="default">
+      <Tabs className={{ 'site-example--code site-example--tabs-initial-view': this.state.initialView, [pf('m-vertical--x-large')]: true }} flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );
   }
 
   renderCodeTabs() {
-    const {flavor} = this.props;
-    return this.state.codeTabs.map((tab, index) => {
+    const { flavor } = this.props;
+    return this.state.codeTabsFiltered.map((tab, index) => {
       const content = (
         <CTALink ctaEventName="component-code-tab-click" ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
           {tab.label}
@@ -372,8 +636,22 @@ class ComponentFlavor extends React.Component {
   }
 
   renderCodeBlock(tab) {
-    const {flavor} = this.props;
+    const { flavor } = this.props;
     const className = classNames(`language-${tab.language}`);
+    if (tab.key === 'html') {
+      const codeElement = this.getExampleElement({
+        keys: ['code']
+      });
+      const previewElement = this.getExampleElement({
+        renderState: true,
+        preview: false
+      });
+      if (codeElement) {
+        tab.code = highlight(renderHTML(codeElement), tab.language);
+      } else if (previewElement) {
+        tab.code = highlight(renderHTML(previewElement), tab.language);
+      }
+    }
     return (
       <pre
         key={tab.key}

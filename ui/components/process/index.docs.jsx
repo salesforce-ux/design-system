@@ -14,8 +14,13 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A process component communicates to the user the progress of a particular process.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A process component communicates to the user the progress of a particular process.</p>
   </ComponentDocs>
 );

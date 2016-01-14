@@ -16,9 +16,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A list groups related content together.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A list groups related content together.</p>
     <p>This CSS framework is built to create enterprise applications, so lists rarely need their default styling. All lists start by having their defaults reset to <code>margin: 0</code> and <code>padding: 0</code> with no list markers. When using a screen reader, a list is announced along with the number of items it contains.</p>
     <p>When creating a basic page rather than application style, surround the group of headings, paragraphs, and lists with the <CodeClass className="text-longform"/> class to retain their default spacing. </p>
     <p>By default, a list is vertical, but you can change it to horizontal using these utility classes.</p>

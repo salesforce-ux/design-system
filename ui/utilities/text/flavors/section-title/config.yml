@@ -1,5 +1,1 @@
 status: 'prototype'
-dependencies:
-  - core/icons
-showFormFactors:
-  - large

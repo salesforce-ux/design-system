@@ -14,10 +14,16 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    When applying truncation, place the full text in a title attribute so that it’s accessible on&nbsp;hover.
+  </p>
+);
 
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">When applying truncation, place the full text in a title attribute so that it’s accessible on&nbsp;hover.</p>
-  <p>If problems occur when using truncation with elements that use flexbox, you might need to add the <CodeClass className="has-flexi-truncate" /> class on the flexbox child node ( <CodeClass className="col" /> or <CodeClass className="col--padded" /> elements) that contains the truncated text.</p>
+  <p>
+    If problems occur when using truncation with elements that use flexbox, you might need to add the <CodeClass className="has-flexi-truncate" /> class on the flexbox child node ( <CodeClass className="col" /> or <CodeClass className="col--padded" /> elements) that contains the truncated text.
+  </p>
 </ComponentDocs>
 );

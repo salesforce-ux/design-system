@@ -1,4 +1,1 @@
 status: 'dev-ready'
-classBase: 'tabs--scoped'
-showFormFactors:
-  - large

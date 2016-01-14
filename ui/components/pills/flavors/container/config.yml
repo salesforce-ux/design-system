@@ -1,5 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - core/icons
-showFormFactors:
-  - large

@@ -13,10 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Images are used to provide a visual representation of context. When an avatar isn&rsquo;t available for an object, the object icon will always be displayed in it&rsquo;s place.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Images are used to provide a visual representation of context. When an avatar isn&rsquo;t available for an object, the object icon will always be displayed in it&rsquo;s place.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Every <code>&lt;img&gt;</code> you add to your site needs to have an <code>alt</code> attribute. If the image is informational, set the <code>alt</code> equal to a descriptive alternative for that image. If the image is decorative or redundant to adjacent text, set <code>alt=""</code>, which conveys to assistive technology users that the image isn&rsquo;t necessary for understanding the page. Avoid using generic strings like <strong>photo</strong>, <strong>image</strong>, or <strong>icon</strong> as alt values, as they don&rsquo;t communicate valuable content to the user.</p>
   </ComponentDocs>

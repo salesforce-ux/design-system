@@ -15,9 +15,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Page level toasts are universally visible and are fixed to the top of the page even as the user scrolls. This ensures that the message is always delivered to the user.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Page level toasts are universally visible and are fixed to the top of the page even as the user scrolls. This ensures that the message is always delivered to the user.</p>
     <p>Toasts accept two parameters: duration and dismissible. Duration controls how long the toast is visible, with a minimum time of 5 seconds. Dismissible controls whether the X is visible on the toast to let the user close the toast.</p>
     <p>Toasts should provide a link to the relevant record in the case of creates. Or a primary action- like undo. In the case of toast for items added to a feed or related list, the link should scroll the user down the page until the item is visible.</p>
     <p>All toasts other than success toasts should also provide an icon to distinguish the kind of message that it is. For example error toasts include the error icon.</p>

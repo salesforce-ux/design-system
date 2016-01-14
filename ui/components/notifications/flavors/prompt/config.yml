@@ -1,7 +1,3 @@
-status: 'prototype'
-dependencies:
-  - components/modals
-  - core/icons
-  - components/buttons
+status: 'dev-ready'
 showFormFactors:
   - large

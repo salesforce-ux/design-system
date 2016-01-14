@@ -88,7 +88,23 @@ export default [
     label: 'Components',
     children: sitemap.getRoute('components').routes
       .filter(route => route.component)
-      .map(createNavItem)
+      // This is a special case bacause these children won't have routes (.html pages)
+      .map(route => {
+        let navItem = createNavItem(route);
+        // Specifically for the components
+        navItem.collapseSiblings = true;
+        // Inject the flavors into the nav
+        // if (route.component.flavors && route.component.flavors.length > 1) {
+        //   navItem.children = route.component.flavors.map(flavor => {
+        //     return {
+        //       route: route.uid, // parent route
+        //       label: flavor.title,
+        //       hash: flavor.id
+        //     };
+        //   });
+        // }
+        return navItem;
+      })
       .concat([
         {
           route: 'components:utilities',

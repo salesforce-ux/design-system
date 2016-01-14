@@ -1,4 +1,2 @@
 status: 'prototype'
 classBase: 'spinner--small'
-showFormFactors:
-  - large

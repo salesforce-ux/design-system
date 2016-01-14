@@ -1,16 +1,3 @@
 status: 'prototype'
-dependencies:
-  - components/buttons
-  - components/buttons/flavors/neutral
-  - components/buttons/flavors/icon
-  - components/buttons/flavors/icon-more
-  - core/media-objects
-  - core/icons
-  - components/button-group
-  - components/button-group/flavors/icon-group
-  - components/dropdowns/flavors/base
-  - components/dropdowns/flavors/menu-with-icons
-  - components/dropdowns/flavors/menu-with-search
-  - utilities/truncation
 showFormFactors:
   - large

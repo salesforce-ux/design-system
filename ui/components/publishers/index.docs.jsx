@@ -15,9 +15,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A publisher is an advanced longform text input form element.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A publisher is an advanced longform text input form element.</p>
     <p>To initialize the publisher, apply the <CodeClass className="publisher"/> class to a containing <code>&lt;div&gt;</code>. The publisher consists of, but not limited to, a text input form element that is either a plain text or rich text editor. A row of actionable interactions, such as attaching additional content, adding followers and a submit button.</p>
     <p>The variants of the publishers have different use cases, so please pay attention to the markup structure of each.</p>
     <p>For available classes and options, see the <a href="#overview">publisher overview legend</a> below.</p>

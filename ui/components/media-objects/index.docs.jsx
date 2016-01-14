@@ -13,10 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    When you need text and a figure next to each other, use a media object.
+  </p>
+);
 
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">When you need text and a figure next to each other, use a media object.</p>
   <p>Placing text next to an image, icon, figure, or video is common for many applications. The figure can be either on the right, left, or both. The text can start at the top of the image or be centered next to it. The width of the media object is controlled either by the parent container or a secondary module class.</p>
 </ComponentDocs>
 );

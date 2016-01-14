@@ -15,8 +15,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion or activity timeline.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion or activity timeline.</p>
   </ComponentDocs>
 );

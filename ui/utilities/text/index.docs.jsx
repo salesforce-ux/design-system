@@ -13,13 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    For consistent typography throughout the application, we created text helper classes for headings and body&nbsp;text.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">
-      For consistent typography throughout the application, we created text
-      helper classes for headings and body&nbsp;text.
-    </p>
     <p>
       In our framework, all headings (<code>h1</code>&ndash;<code>h6</code>)
       are reset to the base (body text) size, with margins and padding reset

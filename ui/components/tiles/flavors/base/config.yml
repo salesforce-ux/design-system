@@ -1,6 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - utilities/truncation
-  - utilities/text
-showFormFactors:
-  - large

@@ -13,12 +13,13 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Themes apply a set of styles to elements or areas. They apply a combination of colors for backgrounds, text, and borders.
+  </p>
+);
 
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">
-    Themes apply a set of styles to elements or areas. They apply a
-    combination of colors for backgrounds, text, and borders.
-  </p>
 </ComponentDocs>
 );

@@ -15,8 +15,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Page headers are used at the top of several page types. They use the <CodeClass className="page-header"/> class as a base and are comprised of multiple components.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Page headers are used at the top of several page types. They use the <CodeClass className="page-header"/> class as a base and are comprised of multiple components.</p>
   </ComponentDocs>
 );

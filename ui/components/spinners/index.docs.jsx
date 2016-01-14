@@ -13,11 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Spinners are animated GIFs that should be shown when retrieving data or performing slow computations.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Spinners are animated GIFs that should be shown when retrieving data or performing slow computations.</p>
-
     <p>In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.</p>
   </ComponentDocs>
 );

@@ -1,4 +1,2 @@
 status: 'dev-ready'
 className: 'textarea'
-showFormFactors:
-  - large

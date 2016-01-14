@@ -17,10 +17,14 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Control from 'ui/components/lib/control/flavors/popover';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Tooltips provide additional information about a particular input field or element on the page.
+  </p>
+);
 
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Tooltips provide additional information about a particular input field or element on the page.</p>
     <p>The popup text appears when the user hovers or tabs into the “info” icon and disappears when the user hovers off or tabs away.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Showing the tooltip on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.

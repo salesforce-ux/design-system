@@ -14,9 +14,13 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    You can specify how to show and hide elements.
+  </p>
+);
 
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">You can specify how to show and hide elements.</p>
 </ComponentDocs>
 );

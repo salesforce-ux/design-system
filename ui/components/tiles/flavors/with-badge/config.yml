@@ -1,11 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - components/buttons
-  - components/labels
-  - components/media-objects
-  - components/icons
-  - components/images
-  - utilities/truncation
-  - utilities/text
-showFormFactors:
-  - large

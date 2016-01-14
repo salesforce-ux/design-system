@@ -1,9 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - core/text
-  - core/grid-system/index
-  - core/grid-system/index/flex-spread
-  - components/button-group
-  - components/tables
-showFormFactors:
-  - large

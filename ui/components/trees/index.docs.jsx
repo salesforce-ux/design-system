@@ -13,10 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.</p>
-
     <p>A tree is composed of two core elements <CodeClass className="tree" /> and <CodeClass className="tree__item" />. The tree wrapper, the outer most parent <code>ul</code>, will receive the class <CodeClass className="tree" />. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.</p>
 
     <p>A tree will need helper classes added and removed to help structure the layout. Each child node list needs an <code>aria-level</code> attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.</p>

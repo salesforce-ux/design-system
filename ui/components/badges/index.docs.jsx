@@ -14,10 +14,14 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Badges add information.
+  </p>
+);
 
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">Badges add information.</p>
   <p>To render a badge, add the <CodeClass className="badge" /> class to a <code>span</code> element.</p>
 </ComponentDocs>
 );

@@ -1,7 +1,6 @@
 import path from 'path';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import through from 'through2';
 import temp from 'temp';
 import glob from 'glob';
 
@@ -117,18 +116,11 @@ describe('scripts/tasks/site/compile.js', () => {
     let route, resultFile, result;
     beforeEach((done) => {
       route = new Route('my-route');
-      let stream = through.obj();
-      stream.write(route);
-      stream.end();
-      stream
-        .pipe(through.obj(compiler.createPage))
-        .pipe(through.obj((file, enc, next) => {
-          resultFile = file;
-          result = file.contents.toString();
-          next(null, file);
-        }))
-        .on('error', function(err) { throw err })
-        .on('finish', done);
+      compiler.createPage(route, (err, file) => {
+        resultFile = file;
+        result = file.contents.toString();
+        done();
+      });
     });
     it('imports React', () => {
       expect(result).to.have.string(`import React from 'react';`)
@@ -179,18 +171,11 @@ describe('scripts/tasks/site/compile.js', () => {
     beforeEach((done) => {
       route = new Route('my-route');
       route.component = createComponent(ui[0].components[0]);
-      let stream = through.obj();
-      stream.write(route);
-      stream.end();
-      stream
-        .pipe(through.obj(compiler.createComponentPage))
-        .pipe(through.obj((file, enc, next) => {
-          resultFile = file;
-          result = file.contents.toString();
-          next(null, file);
-        }))
-        .on('error', function(err) { throw err })
-        .on('finish', done);
+      compiler.createComponentPage(route, (err, file) => {
+        resultFile = file;
+        result = file.contents.toString();
+        done();
+      });
     });
     it('imports React', () => {
       expect(result).to.have.string(`import React from 'react';`)

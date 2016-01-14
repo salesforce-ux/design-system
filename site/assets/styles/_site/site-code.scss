@@ -26,7 +26,7 @@ pre[class*="language-"] {
   margin: 0;
   border: 0;
   padding: 0;
-  background: $color-background-alt;
+  background: $color-background;
   max-height: none;
   box-shadow: none;
 
@@ -49,9 +49,8 @@ pre[class*="language-"] {
 
 .site-code--content {
   margin-bottom: $spacing-medium;
-  border: 1px solid $color-border;
   padding: 0 $spacing-medium;
-  background: $color-background-alt;
+  background: $color-background;
 
   &.#{$css-prefix}scrollable--x {
     @include scrollbar;
@@ -88,7 +87,7 @@ pre[class*="language-"] {
     color: $color-text-inverse;
 
     &:after {
-      content: ': In Progress';
+      content: ' : In Progress';
     }
   }
 
@@ -97,7 +96,7 @@ pre[class*="language-"] {
     color: $color-text-inverse;
 
     &:after {
-      content: ': Stable';
+      content: ' : Stable';
     }
   }
 }

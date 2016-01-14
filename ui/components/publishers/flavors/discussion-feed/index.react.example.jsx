@@ -55,18 +55,15 @@ const commentReply = (
 
 export const states = [
   {
-    label: 'State A',
+    label: 'Default',
     actions: [
       { ref: 'publisher-contact-list', remove: true },
       { ref: 'publisher-attachments', remove: true },
       { ref: 'publisher-actions-list', remove: true }
-    ],
-    previewActions: [
-      { ref: 'root', addClass: 'this-is-a-demo' }
     ]
   },
   {
-    label: 'State B',
+    label: 'User has interacted with text input',
     actions: [
       { ref: 'root', addClass: 'is-active' },
       { ref: 'publisher-attachments', remove: true },
@@ -74,14 +71,14 @@ export const states = [
     ]
   },
   {
-    label: 'State C',
+    label: 'User begins typing in text input',
     actions: [
       { ref: 'root', addClass: 'is-active' },
       { ref: 'publisher-attachments', remove: true }
     ]
   },
   {
-    label: 'State D',
+    label: 'Publisher has attachment',
     actions: [
       { ref: 'root', addClass: 'is-active' }
     ]
@@ -96,7 +93,8 @@ export default (
         <dt className={pf('list__item text-body--small')}>To: </dt>
         <dd className={pf('list__item')}>My Followers</dd>
       </dl>
-      <textarea className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+      <label htmlFor="comment-text-input-1" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input-1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
       <div className={pf('attachments')} iref="publisher-attachments">
         <div className={pf('attachments__item box box--x-small theme--shade')}>
           <div className={pf('grid grid--align-spread')}>

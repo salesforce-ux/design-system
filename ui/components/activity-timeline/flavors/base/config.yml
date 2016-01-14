@@ -1,14 +1,2 @@
 status: 'prototype'
-dependencies:
-  - core/grid-system
-  - core/forms/checkbox
-  - core/media-objects
-  - core/icons
-  - utilities/layout
-  - utilities/themes
-  - utilities/truncation
-  - utilities/sizing
-showFormFactors:
-  - large
-  - medium
-  - small
+

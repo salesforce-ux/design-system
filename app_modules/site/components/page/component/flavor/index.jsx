@@ -250,7 +250,7 @@ class ComponentFlavor extends React.Component {
       const { showFormFactors: factors } = flavor;
       return _.isArray(factors) && !_.isEmpty(factors)
         ? _.includes(factors, tab.formFactor)
-        : true;
+        : false;
     });
     // Prep the codeTabs by updating the "code" property with appropriate
     // formatting / highlighting
@@ -258,10 +258,12 @@ class ComponentFlavor extends React.Component {
     this.state = {
       role,
       previewTabs,
-      // Just use the last tab as the initial tab
-      previewTabActive: previewTabs.length > 1
+      // Only set an active tab if there are more than 1
+      previewTabActive: previewTabs.length > 0
+        // If there is a default specified, use that
         ? (flavor.showFormFactorsDefault
           ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })
+          // Otherwise, just use the last tab
           : _.last(previewTabs))
         : null,
       // If the component example has states, set the initial previewState
@@ -523,7 +525,9 @@ class ComponentFlavor extends React.Component {
         <h3 className={pf('site-text-heading--label')}>States</h3>
         <ul className={pf('list--vertical has-block-links--space')}>
           {this.getExample().states.map(state =>
-            <li key={state.label}>
+            <li
+              className={state === this.state.previewState ? 'is-active' : null}
+              key={state.label}>
               <a
                 role="button"
                 onClick={this.onPreviewStateChange.bind(this, state)}>
@@ -560,15 +564,18 @@ class ComponentFlavor extends React.Component {
         {iframe}
       </Tabs.Content>
     );
-    return previewTabActive ? (
-      <Tabs
-        className={className}
-        flavor="default"
-        panel={previewPanel}
-        selectedIndex={previewTabs.indexOf(previewTabActive)}>
-        {this.renderPreviewTabs()}
-      </Tabs>
-    ) : (<div className="site-bleed">{iframe}</div>);
+    // Only use tabs if there are more than 1
+    return this.state.previewTabs.length > 1
+      ? (
+        <Tabs
+          className={className}
+          flavor="default"
+          panel={previewPanel}
+          selectedIndex={previewTabs.indexOf(previewTabActive)}>
+          {this.renderPreviewTabs()}
+        </Tabs>
+      )
+      : <div className={pf('site-bleed scrollable--x')}>{iframe}</div>;
   }
 
   renderPreviewTabs() {

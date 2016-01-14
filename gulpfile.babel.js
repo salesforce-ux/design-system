@@ -102,7 +102,11 @@ gulp.task('serve', ['styles'], () => {
   browserSync({
     server: __PATHS__.www,
     notify: false,
-    open: false
+    open: false,
+    // Disable ghost mode as it creates unexpected cross-iframe interactions
+    // Fixes an issue where clicking a label in component A
+    // scrolls down to component B
+    ghostMode: false
   });
 
   gulp.watch(watchPaths.pages).on('change', rebuildPage);

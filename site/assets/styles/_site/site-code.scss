@@ -43,4 +43,12 @@ pre[class*="language-"] {
   .always-show pre {
     display: block;
   }
+
+  .#{$css-prefix}container--medium + & {
+    margin-top: $spacing-medium;
+  }
+
+  & + .#{$css-prefix}container--medium p:first-child {
+    padding-top: $spacing-medium;
+  }
 }

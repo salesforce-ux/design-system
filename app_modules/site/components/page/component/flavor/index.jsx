@@ -147,7 +147,7 @@ const renderHTML = function(element) {
  * @returns {boolean}
  */
 function filterTabByRole(tab) {
-  return _.contains(tab.roles, Prefs.get('role'));
+  return _.includes(tab.roles, Prefs.get('role'));
 }
 
 /**

@@ -1,6 +1,6 @@
 status: 'prototype'
 flavors:
-  - base
+  - small
   - medium
   - large
   - brand-small

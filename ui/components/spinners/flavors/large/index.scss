@@ -10,5 +10,86 @@
 
 
 .#{$css-prefix}spinner--large {
-  @include square(68px);
+  width: 44px
+
+  .spinner:before,
+  .spinner:after,
+  .spinner__dot-a:before,
+  .spinner__dot-b:before,
+  .spinner__dot-a:after,
+  .spinner__dot-b:after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .spinner:before,
+  .spinner__dot-a:before,
+  .spinner__dot-b:before {
+    animation-name: dotsBounceBefore-medium;
+    top: -5px;
+    left: -5px
+  }
+
+  .spinner:after,
+  .spinner__dot-a:after,
+  .spinner__dot-b:after {
+    animation-name: dotsBounceAfter-medium;
+    top: -5px;
+    right: -5px
+  }
 }
+
+@-webkit-keyframes dotsBounceBefore-large {
+  60% {
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    transform: translateX(0);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+    transform: translateX(-12px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes dotsBounceBefore-large {
+  60% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+    transform: translateX(-12px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@-webkit-keyframes dotsBounceAfter-large {
+  60% {
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transform: translateX(0)
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+    transform: translateX(12px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes dotsBounceAfter-large {
+  60% {
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transform: translateX(0)
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+    transform: translateX(12px)
+  }
+  100% {
+    transform: translateX(0)
+  }

@@ -38,7 +38,7 @@ export function getPrefixedProps(props, prefix) {
   assert.ok(_.isObject(props), 'props must be an object');
   assert.ok(_.isString(prefix), 'prefix must be a string');
   const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
-  const prefixedProps = _.pick(props, (value, key) => pattern.test(key));
+  const prefixedProps = _.pick(props, _.keys(props).filter(key => pattern.test(key)));
   return _.mapKeys(prefixedProps, (value, key) => {
     return _.camelCase(key.replace(pattern, ''));
   });

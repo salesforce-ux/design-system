@@ -101,7 +101,6 @@ export function getConfig (options) {
       noParse: [
         /\.generated/,
         /immutable\/immutable\.js/,
-        /lodash\/index\.js/,
         /react\/dist\/react\.js/
       ]
     },

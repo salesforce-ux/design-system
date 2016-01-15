@@ -76,10 +76,6 @@ export default function (done) {
       }
       console.log(`${itemIdx + 1}. To: ${item.url.replace(__PATHS__.www, '')}`);
       console.log(`${indent}In: ${item.filePath}`);
-    })
-    .thru(allItems => {
-      return allItems;
-    })
-    .value();
+    });
   done();
 }

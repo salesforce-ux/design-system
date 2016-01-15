@@ -113,14 +113,14 @@ export class Route {
    */
   static getPath (routePath, parent) {
     // Remove trailing "/"
-    routePath = _.trimRight(routePath, '/');
+    routePath = _.trimEnd(routePath, '/');
     // If the path begins with "/", return the path
     if (/^\//.test(routePath)) {
       return routePath;
     }
     // If route has a parent, concat the paths
     if (parent) {
-      let parentPath = _.trimRight(parent.path, '/');
+      let parentPath = _.trimEnd(parent.path, '/');
       return `${parentPath}/${routePath}`;
     }
     // Otherwise just return a root path

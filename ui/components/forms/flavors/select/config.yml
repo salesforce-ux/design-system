@@ -1,4 +1,2 @@
 status: 'dev-ready'
 className: 'select'
-showFormFactors:
-  - large

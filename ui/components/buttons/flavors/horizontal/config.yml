@@ -1,5 +1,1 @@
-status: 'prototype'
-dependencies:
-  - components/buttons
-showFormFactors:
-  - large
+status: 'dev-ready'

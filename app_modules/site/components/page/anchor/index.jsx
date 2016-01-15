@@ -24,7 +24,7 @@ class Anchor extends React.Component {
 
   render() {
     return (
-      <header className={pf('site-masthead grid')}>
+      <header className={pf('site-masthead grid wrap')}>
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>

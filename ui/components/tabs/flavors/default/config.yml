@@ -1,4 +1,1 @@
 status: 'dev-ready'
-classBase: 'tabs--default'
-showFormFactors:
-  - large

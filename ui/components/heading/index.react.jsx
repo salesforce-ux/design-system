@@ -42,7 +42,7 @@ class MediumHeading extends React.Component {
         {this.props.children}
       </h1>
     );
-  }
+  };
 }
 
 class Heading extends React.Component {

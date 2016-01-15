@@ -7,26 +7,43 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-example--tabs-initial-view {
-  [class*='__item'].#{$css-prefix}active > a {
-    @include tab-focus;
-  }
+.site-example--tabs-initial-view [class*='__item'].#{$css-prefix}active > a {
+  @include tab-focus;
+}
+
+.site-example--tabs .#{$css-prefix}tabs--default__nav {
+  border-bottom: 0;
 }
 
 .site-example--content {
-  outline: 1px solid $color-border;
-  background: $color-background;
+    border: 1px solid $color-border;
+}
 
-  &.#{$css-prefix}tabs--default__content {
-    padding: 0;
+.site-bleed {
+  margin: 0 #{-$spacing-medium};
+}
+
+.site-states {
+
+  a {
+    cursor: pointer;
+  }
+
+  @include mq-large-min {
+    padding-left: $spacing-x-large;
+    border-left: $border-width-thin solid $color-border;
+  }
+
+  ~ .site-component-example {
+    @include mq-large-min {
+      padding-right: $spacing-xx-large;
+    }
   }
 }
 
 iframe {
   border: 0;
   width: 100%;
-  background: $color-background-alt;
-  outline: 1px solid $color-border;
 
   &[data-form-factor="mobile"] {
     width: 30rem;
@@ -41,10 +58,35 @@ iframe {
   }
 }
 
-.site-definition,
 .token.utility-class {
   background-color: $color-background-definition-highlight;
   border-bottom: $border-width-thick dotted $color-text-warning;
   text-decoration: none;
   font-style: normal;
+}
+
+.badge {
+
+  &--deprecated {
+    background: $color-background-error;
+    color: $color-text-inverse;
+  }
+
+  &--prototype {
+    background: $site-color-text-heading-callout;
+    color: $color-text-inverse;
+
+    &:after {
+      content: ': In Progress';
+    }
+  }
+
+  &--dev-ready {
+    background: $color-background-success;
+    color: $color-text-inverse;
+
+    &:after {
+      content: ': Stable';
+    }
+  }
 }

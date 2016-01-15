@@ -1,6 +1,3 @@
-status: 'prototype'
-dependencies:
-  - core/forms
-  - core/icons
+status: 'dev-ready'
 showFormFactors:
   - large

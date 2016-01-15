@@ -1,14 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - core/grid-system
-  - core/forms/checkbox
-  - core/media-objects
-  - core/media-objects/center
-  - core/labels
-  - core/icons
-  - utilities/layout
-  - utilities/themes
-  - utilities/truncation
-  - utilities/sizing
-showFormFactors:
-  - large

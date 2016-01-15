@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
-import Sticky from 'app_modules/site/components/sticky';
 import ComponentFlavor from './flavor';
 import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
@@ -26,58 +25,35 @@ const ComponentBody = React.createClass({
     const { component } = this.props;
     return (
       <div>
-        <Anchor title={component.title} />
-        <div className={pf('site-content p-around--xx-large grid wrap')}>
-          {this.renderFlavorsDropDown()}
-          <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
-            {this.renderDocs()}
-            {this.renderFlavors()}
-            {this.renderInfoTable()}
-          </div>
+        <Anchor title={component.title} actions={this.renderComponentOverviewLink()} />
+        <div className={pf('site-content p-around--xx-large')}>
+          {this.renderIntro()}
+          {this.renderFlavors()}
+          <h3 className={pf('site-text-heading--large')}>Component Overview</h3>
+          {this.renderDocs()}
+          {this.renderInfoTable()}
         </div>
       </div>
     );
   },
 
-  renderFlavorsDropDown() {
-    const flavors = this.props.component.flavors.filter(this.shouldDisplayFlavor, this).map(flavor => {
-      return (
-        <li className={pf('list__name')} key={flavor.uid}>
-          <a href={`#${flavor.id}`}>
-            {flavor.title}
-          </a>
-        </li>
-      );
-    });
-    return (
-
-      <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}>
-        <div className={pf('site-menu--jump-links')}>
-          <h3 className="site-text-heading--label">Variants</h3>
-          <ul className={pf('list--vertical has-block-links')}>
-            {flavors}
-            {this.renderComponentOverviewLink()}
-          </ul>
-        </div>
-      </Sticky>
-    );
+  renderIntro() {
+    let { docs } = this.props.elements;
+    return docs && docs.intro ? docs.intro : null;
   },
 
   renderDocs() {
-    return this.props.elements.docs
-      ? this.props.elements.docs.default
-      : null;
+    let { docs } = this.props.elements;
+    return docs ? this.props.elements.docs.default : null;
   },
 
   renderComponentOverviewLink() {
     let info = this.props.component.info;
     if (info.table || info.tableYaml) {
       return (
-        <li className={pf('list__name has-divider--top-space')}>
-          <a href="#overview">
-            Component Overview
-          </a>
-        </li>
+        <div className={pf('align-middle')}>
+          <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
+        </div>
       );
     } else {
       return null;

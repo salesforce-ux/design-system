@@ -16,9 +16,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Cards are used to apply a container around a related grouping of information.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Cards are used to apply a container around a related grouping of information.</p>
     <p>To initialize a card, apply the <CodeClass className="card"/> class to a containing <code>&lt;div&gt;</code>. A card is made up of three sections, a header, a body, and a footer. The card header will get the <CodeClass className="card__header"/> class. The card body will get the <CodeClass className="card__body"/> class. The card footer will get the <CodeClass className="card__footer"/> class.</p>
     <p>The card body can consume either a <Link to="/components/data-tables">Data Table</Link> or a <Link to="/components/tiles">Tile</Link>.</p>
     <p>For available classes and options, see the <a href="#overview">card overview legend</a> below.</p>

@@ -15,9 +15,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Use breadcrumbs to note the path of a record and help the user to navigate back to the parent.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">Use breadcrumbs to note the path of a record and help the user to navigate back to the parent.</p>
     <p>Breadcrumbs are typically constructed with an <code>ol</code> because their order matters. You mark up breadcrumbs with classes from the horizontal list utility. When you add  the <CodeClass className="breadcrumb" /> class, the separators are automatically generated.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Place the breadcrumb in a nav element with <code>role="navigation"</code>. The first element inside is a paragraph element with the words “You are here.” Mark up the paragraph element with the <CodeClass className="assistive-text" /> class to visually hide it. It also requires an <code>id</code> to associate it to the <code>ol</code> containing the <code>aria-labelledby</code> attribute.</p>

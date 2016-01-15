@@ -19,10 +19,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 import globals from 'app_modules/global';
 
+export const intro = (
+  <p className="site-text-introduction">
+    The {globals.displayName} grid, based on Flexbox, provides a flexible, mobile-first, device-agnostic scaffolding system. It includes helper classes that you can use to alter the look and behavior of your grid, such as alignment, order, flow, and padding helpers.
+  </p>
+);
+
 export default (
 <ComponentDocs>
-<p className="site-text-introduction">The {globals.displayName} grid, based on Flexbox, provides a flexible, mobile-first, device-agnostic scaffolding system. It includes helper classes that you can use to alter the look and behavior of your grid, such as alignment, order, flow, and padding helpers.</p>
-
 <h2 className={pf('site-text-heading--label')}>Grid Wrapper</h2>
 <p>To use the grid system, add the class <CodeClass className="grid" /> to an element, component, or page layout. Each grid is independent of other nested grids. You can limit attributes of each grid to specific regions in the app. A grid style is <em>not</em> an all or nothing solution.</p>
 <p>Adding the class <CodeClass className="wrap" /> causes the flow of your <CodeClass className="col" /> elements to wrap when they exceed 100% of their parent’s width.</p>

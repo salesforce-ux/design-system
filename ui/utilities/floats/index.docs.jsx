@@ -14,9 +14,14 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.
+  </p>
+);
+
 export default (
 <ComponentDocs>
-  <p className="site-text-introduction">Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.</p>
   <p>To float an element on the left, add the <CodeClass className="float--left" /> class to the element. To float it on the right, add the <CodeClass className="float--right" /> class.</p>
   <p>Note: The floated element must be first in the document flow, even if it renders on the right.</p>
   <p>If you want the parent of the floated element to contain the floats, add the <CodeClass className="clearfix" /> class to the parent.</p>

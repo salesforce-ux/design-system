@@ -14,8 +14,6 @@
   @return $number / ($number * 0 + 1);
 }
 
-
-
 // Calculate PX into EM
 // Use - width: pem(600px);
 // Output - width: 37.5em;
@@ -24,8 +22,6 @@
   @return #{$em-size}em;
 }
 
-
-
 // Calculate PX into REM
 // Use - width: rem(600px);
 // Output - width: 37.5rem;
@@ -33,16 +29,6 @@
   $rem-size: (strip-units($pixels) / 16);
   @return #{$rem-size}rem;
 }
-
-
-
-// Converts value to string
-// @author Hugo Giraudel
-@function _proof-quote($value) {
-  @return '"' + $value + '"';
-}
-
-
 
 // Replace `$search` with `$replace` in `$string`
 // @author Hugo Giraudel
@@ -55,74 +41,4 @@
   }
 
   @return $string;
-}
-
-
-
-/// Casts a string into a number (integer only)
-///
-/// @param {String} $value - Value to be parsed
-///
-/// @return {Number}
-/// @author @HugoGiraudel - Simplified by @kaelig to only convert unsigned integers
-/// @see http://hugogiraudel.com/2014/01/15/sass-string-to-number/
-/// @access private
-@function _d-to-number($value) {
-  $result: 0;
-  $digits: 0;
-  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-
-  @for $i from 1 through str-length($value) {
-    $character: str-slice($value, $i, $i);
-
-    @if $digits == 0 {
-      $result: $result * 10 + map-get($numbers, $character);
-    } @else {
-      $digits: $digits * 10;
-      $result: $result + map-get($numbers, $character) / $digits;
-    }
-  }
-
-  @return $result;
-}
-
-/// Major revision of a version
-///
-/// @param {String} $version - Semver version (e.g. '1.0.0')
-/// @return {Number} Major revision
-///
-/// @example scss
-///  _d-version-major('1.0.0') // 1
-///
-/// @access private
-@function _d-version-major($version) {
-  @return _d-to-number(str-slice($version, 0, str-index($version, '.') - 1));
-}
-
-/// Minor revision of a version
-///
-/// @param {String} $version - Semver version (e.g. '1.50.0')
-/// @return {Number} Minor revision
-///
-/// @example scss
-///  _d-version-minor('1.50.0') // 50
-///
-/// @access private
-@function _d-version-minor($version) {
-  $minor-patch: str-slice($version, str-index($version, '.') + 1, str-length($version));
-  @return _d-to-number(str-slice($minor-patch, 0, str-index($minor-patch, '.') - 1));
-}
-
-/// Patch revision of a version
-///
-/// @param {String} $version - Semver version (e.g. '1.50.25')
-/// @return {Number} Patch revision
-///
-/// @example scss
-///  _d-version-patch('1.50.25') // 25
-///
-/// @access private
-@function _d-version-patch($version) {
-  $minor-patch: str-slice($version, str-index($version, '.') + 1, str-length($version));
-  @return _d-to-number(str-slice($minor-patch, str-index($minor-patch, '.') + 1, str-length($minor-patch)));
 }

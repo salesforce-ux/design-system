@@ -30,15 +30,15 @@
   }
 
   .is-active {
-    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-medium);
+    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
     position: relative;
 
     &:before {
       border: {
-        right: $spacing-medium solid $color-background-shade;
-        bottom: $spacing-medium solid transparent;
+        right: $spacing-x-small solid $color-background-shade;
+        bottom: $spacing-x-small solid transparent;
       }
-      margin-left: ($spacing-medium * -1);
+      margin-left: ($spacing-x-small * -1);
 
       @include mq-large-min {
         margin-left: ($spacing-x-large * -1);

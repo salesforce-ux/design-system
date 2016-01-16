@@ -29,6 +29,23 @@
     cursor: pointer;
   }
 
+  .is-active {
+    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-medium);
+    position: relative;
+
+    &:before {
+      border: {
+        right: $spacing-medium solid $color-background-shade;
+        bottom: $spacing-medium solid transparent;
+      }
+      margin-left: ($spacing-medium * -1);
+
+      @include mq-large-min {
+        margin-left: ($spacing-x-large * -1);
+      }
+    }
+  }
+
   @include mq-large-min {
     padding-left: $spacing-x-large;
     border-left: $border-width-thin solid $color-border;

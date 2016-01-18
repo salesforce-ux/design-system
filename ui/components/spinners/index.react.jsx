@@ -13,14 +13,8 @@ import React from 'react';
 import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import globals from 'app_modules/global';
-import Img from 'app_modules/ui/img';
-
-const imageNameForColor = {
-  'base': 'slds_spinner.gif', // 9FAAB5
-  'brand': 'slds_spinner_brand.gif', // 1589EE
-  'inverse': 'slds_spinner_inverse.gif' // FFFFFF
-};
 const cssPrefix = globals.cssPrefix;
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Spinner extends React.Component {
   static propTypes = {
@@ -37,33 +31,21 @@ class Spinner extends React.Component {
     this.state = {};
   };
 
-  getSpinnerImage(flavor) {
-    let imageFileName;
-
-    flavor = flavor || '';
-    if (flavor.indexOf('brand') >= 0) {
-      imageFileName = imageNameForColor.brand;
-    } else if (flavor.indexOf('inverse') >= 0) {
-      imageFileName = imageNameForColor.inverse;
-    } else {
-      imageFileName = imageNameForColor.base;
-    }
-
-    return `/assets/images/spinners/${imageFileName}`;
-  };
-
   render() {
     var { className, flavor, children } = this.props;
     const classnames = classNames(className, {
+      [`${cssPrefix}spinner`]: true,
       [`${cssPrefix}spinner--small`]: !flavor || flavor === '' || flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
       [`${cssPrefix}spinner--medium`]: flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
       [`${cssPrefix}spinner--large`]: flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
     });
-    const spinnerImage = this.getSpinnerImage(flavor);
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
-      <div className={classnames} {...props}>
-        <Img src={spinnerImage} alt="Loading..." />
+      <div className={pf('spinner_container')}>
+        <div className={classnames} {...props} aria-hidden="false" role="alert">
+          <div className={pf('spinner__dot-a')}></div>
+          <div className={pf('spinner__dot-b')}></div>
+        </div>
         {children}
       </div>
     );

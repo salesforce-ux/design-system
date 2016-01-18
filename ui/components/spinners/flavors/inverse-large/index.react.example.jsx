@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only demo--inverse">
-  <Spinner flavor="inverse-large" />
+<div className="demo-only demo--inverse" style={{height: '100px'}}>
+  <Spinner flavor="inverse-large" className={pf('spinner--inverse')} />
 </div>
 );

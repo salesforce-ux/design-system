@@ -9,88 +9,14 @@
 
 
 
-.#{$css-prefix}spinner--medium {
-  width: 32px;
-
+.#{$css-prefix}spinner--inverse {
+  
   &.#{$css-prefix}spinner:before,
   &.#{$css-prefix}spinner:after,
   .#{$css-prefix}spinner__dot-a:before,
   .#{$css-prefix}spinner__dot-b:before,
   .#{$css-prefix}spinner__dot-a:after,
   .#{$css-prefix}spinner__dot-b:after {
-    width: 8px;
-    height: 8px;
-  }
-
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
-    animation-name: dotsBounceBefore-medium;
-    top: -4px;
-    left: -4px;
-  }
-
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
-    animation-name: dotsBounceAfter-medium;
-    top: -4px;
-    right: -4px;
-  }
-}
-
-@-webkit-keyframes dotsBounceBefore-medium {
-  60% {
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-8px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes dotsBounceBefore-medium {
-  60% {
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-8px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes dotsBounceAfter-medium {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(8px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes dotsBounceAfter-medium {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(8px);
-  }
-  100% {
-    transform: translateX(0);
+    background-color: $color-background-alt;
   }
 }

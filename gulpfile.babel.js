@@ -24,7 +24,7 @@ import minifycss from 'gulp-minify-css';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync, { reload } from 'browser-sync';
-import minimist from 'minimist';
+import StyleStats from 'stylestats';
 
 import './scripts/lint';
 import runSiteTasks from './scripts/tasks';
@@ -52,6 +52,29 @@ gulp.task('pages', callback => {
   runSiteTasks({
     tasks: ['generate', 'pages', 'assets']
   }, callback);
+});
+
+gulp.task('stylestats', () => {
+  const file = '.www/assets/styles/slds.css';
+  const c = gutil.colors;
+  const logPrefix = `[${c.cyan(path.basename(file))}] `;
+  const stats = new StyleStats(file);
+
+  stats.parse((error, result) => {
+    let sizeColor = 'green';
+
+    switch (true) {
+    case (result.size > 200 * 1024):
+      sizeColor = 'bgred';
+      break;
+    case (result.size > 160 * 1024 && result.size <= 200 * 1024):
+      sizeColor = 'yellow';
+      break;
+    }
+
+    gutil.log(logPrefix + c[sizeColor](`Size: ${(result.size / 1024).toFixed(2)}KB (${(result.gzippedSize / 1024).toFixed(2)}KB gzipped)`));
+    gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
+  });
 });
 
 function rebuildPage(event) {
@@ -126,6 +149,8 @@ gulp.task('serve', ['styles'], () => {
     { debounceDelay: 10000 },
     ['lint:spaces']
   );
+
+  gulp.watch('.www/assets/styles/slds.css', { debounceDelay: 10000 }, ['stylestats']);
 });
 
 gulp.task('default', callback => {

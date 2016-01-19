@@ -53,49 +53,17 @@ const commentReply = (
   </div>
 );
 
-export const states = [
-  {
-    label: 'Default',
-    actions: [
-      { ref: 'publisher-contact-list', remove: true },
-      { ref: 'publisher-attachments', remove: true },
-      { ref: 'publisher-actions-list', remove: true }
-    ]
-  },
-  {
-    label: 'User has interacted with text input',
-    actions: [
-      { ref: 'root', addClass: 'is-active' },
-      { ref: 'publisher-attachments', remove: true },
-      { ref: 'publisher-submit-button', attributes: { disabled: true } }
-    ]
-  },
-  {
-    label: 'User begins typing in text input',
-    actions: [
-      { ref: 'root', addClass: 'is-active' },
-      { ref: 'publisher-attachments', remove: true }
-    ]
-  },
-  {
-    label: 'Publisher has attachment',
-    actions: [
-      { ref: 'root', addClass: 'is-active' }
-    ]
-  }
-];
-
 export default (
   <div className="demo-only">
 
-    <div className={pf('publisher publisher--discussion')} iref="root">
-      <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')} iref="publisher-contact-list">
+    <div className={pf('publisher publisher--discussion')}>
+      <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
         <dt className={pf('list__item text-body--small')}>To: </dt>
         <dd className={pf('list__item')}>My Followers</dd>
       </dl>
       <label htmlFor="comment-text-input-1" className={pf('assistive-text')}>Write a comment</label>
       <textarea id="comment-text-input-1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-      <div className={pf('attachments')} iref="publisher-attachments">
+      <div className={pf('attachments')}>
         <div className={pf('attachments__item box box--x-small theme--shade')}>
           <div className={pf('grid grid--align-spread')}>
             <MediaObject figureLeft={icon}>
@@ -110,7 +78,7 @@ export default (
         </div>
       </div>
       <div className={pf('publisher__actions grid grid--align-spread')}>
-        <ul className={pf('grid publisher__toggle-visibility')} iref="publisher-actions-list">
+        <ul className={pf('grid publisher__toggle-visibility')}>
           <li>
             <ButtonIcon
               flavor="icon-container"
@@ -126,7 +94,7 @@ export default (
               assistiveText="Attach a file" />
           </li>
         </ul>
-        <Button flavor="brand" iref="publisher-submit-button">Share</Button>
+        <Button flavor="brand">Share</Button>
       </div>
     </div>
 

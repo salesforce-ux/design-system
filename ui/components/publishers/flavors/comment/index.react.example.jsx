@@ -40,43 +40,12 @@ const commentReply = (
   </div>
 );
 
-export const states = [
-  {
-    label: 'Default',
-    actions: [
-      { ref: 'publisher-attachments', remove: true },
-      { ref: 'publisher-actions-list', remove: true }
-    ]
-  },
-  {
-    label: 'User has interacted with text input',
-    actions: [
-      { ref: 'root', addClass: 'is-active has-focus' },
-      { ref: 'publisher-attachments', remove: true },
-      { ref: 'publisher-submit-button', attributes: { disabled: true } }
-    ]
-  },
-  {
-    label: 'User begins typing in text input',
-    actions: [
-      { ref: 'root', addClass: 'is-active has-focus' },
-      { ref: 'publisher-attachments', remove: true }
-    ]
-  },
-  {
-    label: 'Publisher has attachment',
-    actions: [
-      { ref: 'root', addClass: 'is-active' }
-    ]
-  }
-];
-
 export default (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-    <div className={pf('publisher publisher--comment')} iref="root">
+    <div className={pf('publisher publisher--comment')}>
       <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
       <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-      <div className={pf('attachments')} iref="publisher-attachments">
+      <div className={pf('attachments')}>
         <div className={pf('attachments__item box box--x-small theme--shade')}>
           <div className={pf('grid grid--align-spread')}>
             <MediaObject figureLeft={icon}>
@@ -90,7 +59,7 @@ export default (
           </div>
         </div>
       </div>
-      <div className={pf('publisher__actions grid grid--align-spread')} iref="publisher-actions-list">
+      <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>
             <ButtonIcon
@@ -107,7 +76,7 @@ export default (
               assistiveText="Attach a file" />
           </li>
         </ul>
-        <Button flavor="brand" iref="publisher-submit-button">Comment</Button>
+        <Button flavor="brand">Comment</Button>
       </div>
     </div>
   </MediaObject>

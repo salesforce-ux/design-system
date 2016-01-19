@@ -12,8 +12,6 @@
   position: relative;
   min-height: calc(#{$line-height-button} + 2px);
   max-height: calc(#{$line-height-button} + 2px);
-  transition: min-height $duration-slowly ease,
-              max-height $duration-slowly ease;
 
   &.#{$css-prefix}is-active {
     min-height: $size-xx-small;

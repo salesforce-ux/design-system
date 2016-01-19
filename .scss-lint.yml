@@ -75,6 +75,8 @@ linters:
     ignore_parent_selectors: true
   PlaceholderInExtend:
     enabled: false
+  PropertyCount:
+    enabled: false
   PropertySortOrder:
     enabled: false
   PropertySpelling:

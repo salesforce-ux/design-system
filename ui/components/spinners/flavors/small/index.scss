@@ -38,7 +38,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  //width: 1.25rem;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -64,8 +63,6 @@
 .#{$css-prefix}spinner__dot-b:after {
   position: absolute;
   content: '';
-  // width: 0.25rem;
-  // height: 0.25rem;
   background: $color-background-indicator-dot;
   border-radius: $border-radius-circle;
   animation-duration: 1000ms;

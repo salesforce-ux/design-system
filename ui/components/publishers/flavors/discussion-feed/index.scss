@@ -34,8 +34,6 @@
     min-height: calc(#{$line-height-button} + 2px);
     max-height: calc(#{$line-height-button} + 2px);
     width: 100%;
-    transition: min-height $duration-slowly ease,
-                max-height $duration-slowly ease;
   }
 
   &__actions > .#{$css-prefix}button {

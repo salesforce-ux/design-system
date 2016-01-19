@@ -9,25 +9,18 @@
 
 
 
-// Strip Units for integer value
-@function strip-units($number) {
-  @return $number / ($number * 0 + 1);
-}
-
 // Calculate PX into EM
 // Use - width: pem(600px);
 // Output - width: 37.5em;
 @function pem($pixels) {
-  $em-size: (strip-units($pixels) / 16);
-  @return #{$em-size}em;
+  @return ($pixels / 16px * 1em);
 }
 
 // Calculate PX into REM
 // Use - width: rem(600px);
 // Output - width: 37.5rem;
 @function rem($pixels) {
-  $rem-size: (strip-units($pixels) / 16);
-  @return #{$rem-size}rem;
+  @return ($pixels / 16px * 1rem);
 }
 
 // Replace `$search` with `$replace` in `$string`

@@ -35,4 +35,3 @@ classes:
     description: This creates two of the circles
     required: true
     applied: <code>&lt;div&gt;</code>
-    

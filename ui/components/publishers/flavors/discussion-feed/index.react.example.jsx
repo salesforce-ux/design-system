@@ -29,7 +29,7 @@ const image = (
 );
 
 const icon = (
-  <span className={pf('icon__container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
     <span className={pf('assistive-text')}>Powerpoint</span>
   </span>
@@ -53,50 +53,152 @@ const commentReply = (
   </div>
 );
 
-export default (
-  <div className="demo-only">
+export const preview = (
+<div className="demo-only">
 
-    <div className={pf('publisher publisher--discussion')}>
-      <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-        <dt className={pf('list__item text-body--small')}>To: </dt>
-        <dd className={pf('list__item')}>My Followers</dd>
-      </dl>
-      <label htmlFor="comment-text-input-1" className={pf('assistive-text')}>Write a comment</label>
-      <textarea id="comment-text-input-1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-      <div className={pf('attachments')}>
-        <div className={pf('attachments__item box box--x-small theme--shade')}>
-          <div className={pf('grid grid--align-spread')}>
-            <MediaObject figureLeft={icon}>
-              <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
-            </MediaObject>
-            <ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="close"
-              assistiveText="Remove this attachment" />
-          </div>
+  <div className={pf('publisher publisher--discussion')}>
+    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
+    </dl>
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <div className={pf('publisher__actions grid grid--align-spread')}>
+      <ul className={pf('grid publisher__toggle-visibility')}>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="adduser"
+            assistiveText="Add User" />
+        </li>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="attach"
+            assistiveText="Attach a file" />
+        </li>
+      </ul>
+      <Button flavor="brand">Share</Button>
+    </div>
+  </div>
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>
+    </p>
+  </div>
+
+  {/* Is Active */}
+  <div className={pf('publisher publisher--discussion is-active')}>
+    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
+    </dl>
+    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <div className={pf('publisher__actions grid grid--align-spread')}>
+      <ul className={pf('grid publisher__toggle-visibility')}>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="adduser"
+            assistiveText="Add User" />
+        </li>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="attach"
+            assistiveText="Attach a file" />
+        </li>
+      </ul>
+      <Button flavor="brand" disabled>Share</Button>
+    </div>
+  </div>
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code> with text input
+    </p>
+  </div>
+
+  {/* Is Active with Content */}
+  <div className={pf('publisher publisher--discussion is-active')}>
+    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
+    </dl>
+    <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input3" className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
+    <div className={pf('attachments')}>
+      <div className={pf('attachments__item box box--x-small theme--shade')}>
+        <div className={pf('grid grid--align-spread')}>
+          <MediaObject figureLeft={icon}>
+            <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
+          </MediaObject>
+          <ButtonIcon
+            flavor="icon-bare"
+            sprite="utility"
+            symbol="close"
+            assistiveText="Remove this attachment" />
         </div>
       </div>
-      <div className={pf('publisher__actions grid grid--align-spread')}>
-        <ul className={pf('grid publisher__toggle-visibility')}>
-          <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="adduser"
-              assistiveText="Add User" />
-          </li>
-          <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="attach"
-              assistiveText="Attach a file" />
-          </li>
-        </ul>
-        <Button flavor="brand">Share</Button>
-      </div>
     </div>
-
+    <div className={pf('publisher__actions grid grid--align-spread')}>
+      <ul className={pf('grid publisher__toggle-visibility')}>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="adduser"
+            assistiveText="Add User" />
+        </li>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="attach"
+            assistiveText="Attach a file" />
+        </li>
+      </ul>
+      <Button flavor="brand">Share</Button>
+    </div>
   </div>
+</div>
+);
+
+export const code = (
+<div className="demo-only">
+  <div className={pf('publisher publisher--discussion')}>
+    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
+    </dl>
+    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <div className={pf('attachments')}></div>
+    <div className={pf('publisher__actions grid grid--align-spread')}>
+      <ul className={pf('grid publisher__toggle-visibility')}>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="adduser"
+            assistiveText="Add User" />
+        </li>
+        <li>
+          <ButtonIcon
+            flavor="icon-container"
+            sprite="utility"
+            symbol="attach"
+            assistiveText="Attach a file" />
+        </li>
+      </ul>
+      <Button flavor="brand">Share</Button>
+    </div>
+  </div>
+</div>
 );

@@ -40,11 +40,113 @@ const commentReply = (
   </div>
 );
 
-export default (
+export const preview = (
+<div className="demo-only">
+
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('publisher publisher--comment')}>
       <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
       <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>
+    </p>
+  </div>
+
+  {/* Is Active */}
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active')}>
+      <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input2" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand" disabled="true">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code>, <code>.{pf('has-focus')}</code>
+    </p>
+  </div>
+
+  {/* Is Active, Has Focus */}
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active has-focus')}>
+      <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input3" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand" disabled="true">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+
+  <div className={pf('demo-class-pill')}>
+    <p className={pf('demo-class-pill__content')}>
+      <code>.{pf('is-active')}</code> with text input
+    </p>
+  </div>
+
+  {/* Is Active with Content */}
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment is-active')}>
+      <div className={pf('publisher__input input--bare text-longform')}>
+        <p><a href="javascript:void(0)" title="Sue Jenkins">@sjenkins</a> here is an updated version of that <a href="javascript:void(0)" title="View all presentation tags">#presentation</a> file</p>
+      </div>
       <div className={pf('attachments')}>
         <div className={pf('attachments__item box box--x-small theme--shade')}>
           <div className={pf('grid grid--align-spread')}>
@@ -59,6 +161,37 @@ export default (
           </div>
         </div>
       </div>
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
+    </div>
+  </MediaObject>
+
+</div>
+);
+
+export const code = (
+  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
+    <div className={pf('publisher publisher--comment')}>
+      <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
+      <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
+      <div className={pf('attachments')}></div>
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>

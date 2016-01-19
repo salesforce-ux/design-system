@@ -29,6 +29,14 @@ export const preview = (
     </label>
   </div>
 
+  <div className={pf('form-element')}>
+    <label className={pf('checkbox')} htmlFor="checkboxSample2-01">
+      <input name="checkboxSample2" type="checkbox" id="checkboxSample2-01" className={pf('checked--intermediate')} defaultChecked />
+      <span className={pf('checkbox--faux')}></span>
+      <span className={pf('form-element__label')}>Checkbox Intermediate Checked</span>
+    </label>
+  </div>
+
   <div className={pf('form-element is-required')}>
     <Checkbox label="Checkbox Required" assistiveText="checkboxSample3" />
   </div>

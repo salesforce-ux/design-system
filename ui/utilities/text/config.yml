@@ -8,5 +8,6 @@ flavors:
   - heading-label
   - alignment
   - longform
+  - link-reset
   - section-title
   - section-title-dividers

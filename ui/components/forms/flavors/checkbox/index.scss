@@ -55,6 +55,17 @@
       }
     }
 
+    &.#{$css-prefix}checked--intermediate:checked > .#{$css-prefix}checkbox--faux,
+    &.#{$css-prefix}checked--intermediate:checked ~ .#{$css-prefix}checkbox--faux {
+
+      &:after {
+        height: $border-width-thick;
+        background: $color-brand;
+        border: 0;
+        transform: translate3d(-50%, -50%, 0);
+      }
+    }
+
     &:focus {
 
       > .#{$css-prefix}checkbox--faux,
@@ -109,7 +120,9 @@
 }
 
 .#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before {
+.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before,
+.#{$css-prefix}is-required > .#{$css-prefix}form-element__legend:before,
+.#{$css-prefix}is-required ~ .#{$css-prefix}form-element__legend:before {
   content: '*';
   color: $color-text-error;
   position: absolute;

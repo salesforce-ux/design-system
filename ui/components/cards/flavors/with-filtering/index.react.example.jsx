@@ -78,8 +78,8 @@ export default (
             </tr>
             <tr className={pf('hint-parent')}>
               <td className={pf('cell-shrink')}>
-                <label className={pf('checkbox')} htmlFor="select-row-01">
-                  <input type="checkbox" name="options" id="select-row-01" defaultChecked />
+                <label className={pf('checkbox')} htmlFor="select-row-02">
+                  <input type="checkbox" name="options" id="select-row-02" defaultChecked />
                   <span className={pf('checkbox--faux')}></span>
                   <span className={pf('assistive-text')}>Select Row</span>
                 </label>

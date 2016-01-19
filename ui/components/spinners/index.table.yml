@@ -1,0 +1,37 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different scroller looks.
+classes:
+  -
+    class: spinner
+    description: This is the gray base, small spinner
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: spinner_container
+    description: This container creates a full overlay to dim the page when needed
+    applied: outer <code>&lt;div&gt;</code>
+  -
+    class: spinner--medium
+    description: This is the medium spinner
+    applied: <code>.{{cssPrefix}}spinner</code>
+  -
+    class: spinner--large
+    description: This is the large spinner
+    applied: <code>.{{cssPrefix}}spinner</code>
+  -
+    class: spinner--brand
+    description: This creates the blue brand spinner
+    applied: <code>.{{cssPrefix}}spinner</code>
+  -
+    class: spinner--inverse
+    description: This is the inverse spinner
+    applied: <code>.{{cssPrefix}}spinner</code>
+  -
+    class: spinner__dot-a
+    description: This creates two of the circles
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: spinner__dot-b
+    description: This creates two of the circles
+    required: true
+    applied: <code>&lt;div&gt;</code>

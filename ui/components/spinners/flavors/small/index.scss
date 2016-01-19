@@ -9,7 +9,7 @@
 
 
 .#{$css-prefix}spinner_container {
-  position: fixed; //was absolute
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -40,6 +40,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 20px;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -63,12 +64,30 @@
 .#{$css-prefix}spinner__dot-b:before,
 .#{$css-prefix}spinner__dot-a:after,
 .#{$css-prefix}spinner__dot-b:after {
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
+  position: absolute;
   content: "";
+  width: 4px;
+  height: 4px;
   background: $color-background-indicator-dot;
   border-radius: 100%;
-  position: absolute;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+
+.#{$css-prefix}spinner:before,
+.#{$css-prefix}spinner__dot-a:before,
+.#{$css-prefix}spinner__dot-b:before {
+  animation-name: dotsBounceBefore-extraSmall;
+  top: -2px;
+  left: -2px;
+}
+
+.#{$css-prefix}spinner:after,
+.#{$css-prefix}spinner__dot-a:after,
+.#{$css-prefix}spinner__dot-b:after {
+  animation-name: dotsBounceAfter-extraSmall;
+  top: -2px;
+  right: -2px;
 }
 
 .#{$css-prefix}spinner__dot-a {
@@ -103,35 +122,9 @@
   animation-delay: 750.0ms;
 }
 
-.#{$css-prefix}spinner--small {
-  width: 20px;
-
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
-    width: 4px;
-    height: 4px;
-  }
-
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
-    animation-name: dotsBounceBefore-extraSmall;
-    top: -2px;
-    left: -2px;
-  }
-
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
-    animation-name: dotsBounceAfter-extraSmall;
-    top: -2px;
-    right: -2px;
-  }
-}
+// .#{$css-prefix}spinner--small {
+  
+// }
 
 @-webkit-keyframes dotsBounceBefore-extraSmall {
   60% {

@@ -14,5 +14,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <a className={pf('text-link--reset')}>Link</a>
+  <div className={pf('demo-only')}>
+    <a className={pf('text-link--reset')}>Link</a>
+    <hr />
+    <button className={pf('button text-link--reset')}>Button</button>
+  </div>
 );

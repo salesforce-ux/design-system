@@ -10,7 +10,7 @@
 
 
 .#{$css-prefix}spinner--large {
-  width: 44px; // tokenize
+  width: 2.75rem;
 
   &.#{$css-prefix}spinner:before,
   &.#{$css-prefix}spinner:after,
@@ -18,24 +18,24 @@
   .#{$css-prefix}spinner__dot-b:before,
   .#{$css-prefix}spinner__dot-a:after,
   .#{$css-prefix}spinner__dot-b:after {
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
   }
 
   &.#{$css-prefix}spinner:before,
   .#{$css-prefix}spinner__dot-a:before,
   .#{$css-prefix}spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
-    top: -5px;
-    left: -5px;
+    top: -0.3125rem;
+    left: -0.3125rem;
   }
 
   &.#{$css-prefix}spinner:after,
   .#{$css-prefix}spinner__dot-a:after,
   .#{$css-prefix}spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
-    top: -5px;
-    right: -5px;
+    top: -0.3125rem;
+    right: -0.3125rem;
   }
 }
 
@@ -46,7 +46,7 @@
   }
   80% {
     animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-12px);
+    transform: translateX(-0.75rem);
   }
   100% {
     transform: translateX(0);
@@ -60,7 +60,7 @@
   }
   80% {
     animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(12px);
+    transform: translateX(0.75rem);
   }
   100% {
     transform: translateX(0);

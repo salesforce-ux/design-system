@@ -2,7 +2,7 @@ description: This table gives you a quick overview of the {{abbreviatedName}} CS
 classes:
   -
     class: spinner
-    description: This is the gray base, small spinner
+    description: This is the gray base, small-sized spinner
     required: true
     applied: <code>&lt;div&gt;</code>
   -

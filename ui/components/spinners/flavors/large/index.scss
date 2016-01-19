@@ -10,7 +10,7 @@
 
 
 .#{$css-prefix}spinner--large {
-  width: 44px;
+  width: 44px; // tokenize
 
   &.#{$css-prefix}spinner:before,
   &.#{$css-prefix}spinner:after,
@@ -39,20 +39,6 @@
   }
 }
 
-@-webkit-keyframes dotsBounceBefore-large {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-12px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes dotsBounceBefore-large {
   60% {
     transform: translateX(0);
@@ -61,20 +47,6 @@
   80% {
     animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
     transform: translateX(-12px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes dotsBounceAfter-large {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(12px);
   }
   100% {
     transform: translateX(0);

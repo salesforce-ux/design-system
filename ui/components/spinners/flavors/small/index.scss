@@ -8,31 +8,29 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+
 .#{$css-prefix}spinner_container {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.75);
-  z-index: 8000;
-  opacity: 1;
+  z-index: calc(#{$z-index-modal} + 2);
+  background-color: $color-background-temp-modal-tint-alt;
   visibility: visible;
-  transition: opacity .2s ease, visibility 0s;
-  transition-delay: 0s, .3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  opacity: 1;
+  transition: opacity 0.2s ease, visibility 0s;
+  transition-delay: 0s, 0.3s;
 }
 
-.#{$css-prefix}spinner_container.hideSpinner {
-  opacity: 0;
-  transition: opacity .2s ease, visibility 0s;
-  transition-delay: 0s, 0s;
+.#{$css-prefix}spinner_container.is-hidden {
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0s;
+  transition-delay: 0s, 0s;
 }
 
-.#{$css-prefix}spinner_container.hideEl {
+.#{$css-prefix}spinner_container.hide {
   display: none;
 }
 
@@ -40,7 +38,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 20px;
+  width: 20px; // tokenize?
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -65,11 +63,11 @@
 .#{$css-prefix}spinner__dot-a:after,
 .#{$css-prefix}spinner__dot-b:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 4px;
   height: 4px;
   background: $color-background-indicator-dot;
-  border-radius: 100%;
+  border-radius: $border-radius-circle;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
 }
@@ -77,17 +75,17 @@
 .#{$css-prefix}spinner:before,
 .#{$css-prefix}spinner__dot-a:before,
 .#{$css-prefix}spinner__dot-b:before {
-  animation-name: dotsBounceBefore-extraSmall;
   top: -2px;
   left: -2px;
+  animation-name: dotsBounceBefore-extraSmall;
 }
 
 .#{$css-prefix}spinner:after,
 .#{$css-prefix}spinner__dot-a:after,
 .#{$css-prefix}spinner__dot-b:after {
-  animation-name: dotsBounceAfter-extraSmall;
   top: -2px;
   right: -2px;
+  animation-name: dotsBounceAfter-extraSmall;
 }
 
 .#{$css-prefix}spinner__dot-a {
@@ -119,25 +117,7 @@
 }
 
 .#{$css-prefix}spinner__dot-b:after {
-  animation-delay: 750.0ms;
-}
-
-// .#{$css-prefix}spinner--small {
-  
-// }
-
-@-webkit-keyframes dotsBounceBefore-extraSmall {
-  60% {
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-4px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  animation-delay: 750ms;
 }
 
 @keyframes dotsBounceBefore-extraSmall {
@@ -148,20 +128,6 @@
   80% {
     animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
     transform: translateX(-4px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes dotsBounceAfter-extraSmall {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(4px);
   }
   100% {
     transform: translateX(0);
@@ -182,20 +148,6 @@
   }
 }
 
-@-webkit-keyframes dotsBounceBefore-small {
-  60% {
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes dotsBounceBefore-small {
   60% {
     transform: translateX(0);
@@ -204,20 +156,6 @@
   80% {
     animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
     transform: translateX(-6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes dotsBounceAfter-small {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(6px);
   }
   100% {
     transform: translateX(0);

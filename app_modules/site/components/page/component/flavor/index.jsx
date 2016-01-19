@@ -111,7 +111,6 @@ function getCodeTabs() {
  * Return a string of
  */
 const renderHTML = _.memoize(function(key, element) {
-  console.log('renderHTML', key)
   let html = ReactDOMServer.renderToStaticMarkup(element);
   // Remove wrapping tag if it has the ".demo-only" class in it
   // Note: this will also remove other classes too on that tag! :)

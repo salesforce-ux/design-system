@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only">
-  <Spinner flavor="brand-small" />
+<div className="demo-only" style={{height: '3.75rem'}}>
+  <Spinner className={pf('spinner--brand')} />
 </div>
 );

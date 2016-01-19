@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Spinners are animated GIFs that should be shown when retrieving data or performing slow computations.
+    Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations.
   </p>
 );
 

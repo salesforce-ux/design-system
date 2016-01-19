@@ -21,43 +21,47 @@ import {
 
 describe(`React`, () => {
   describe(`Spinner`, () => {
-    console.log('!!! window.location', window.location);
-
     var tests = [
-      { flavor: 'small', expectedClass: `${cssPrefix}spinner--small`, expectedImage: 'images/spinners/slds_spinner.gif' },
-      { flavor: 'medium', expectedClass: `${cssPrefix}spinner--medium`, expectedImage: 'images/spinners/slds_spinner.gif' },
-      { flavor: 'large', expectedClass: `${cssPrefix}spinner--large`, expectedImage: 'images/spinners/slds_spinner.gif' },
-      { flavor: 'brand-small', expectedClass: `${cssPrefix}spinner--small`, expectedImage: 'images/spinners/slds_spinner_brand.gif' },
-      { flavor: 'inverse-medium', expectedClass: `${cssPrefix}spinner--medium`, expectedImage: 'images/spinners/slds_spinner_inverse.gif' }
+      { flavor: 'small', expectedClass: `${cssPrefix}spinner`},
+      { flavor: 'medium', expectedClass: `${cssPrefix}spinner--medium`},
+      { flavor: 'large', expectedClass: `${cssPrefix}spinner--large`},
+      { flavor: 'brand-small', expectedClass: `${cssPrefix}spinner`},
+      { flavor: 'inverse-medium', expectedClass: `${cssPrefix}spinner--medium`}
     ];
 
     tests.forEach( (test) => {
+      let cmp, $cmp;
       const flavorName = test.flavor;
 
-      it(`${flavorName} has the correct class`, () => {
-        const cmp = renderIntoDocument(React.createElement(Spinner, {flavor: test.flavor}));
-        const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.className).to.equal(test.expectedClass);
+      beforeEach(() => {
+        cmp = renderIntoDocument(React.createElement(Spinner, {flavor: test.flavor}));
+        $cmp = ReactDOM.findDOMNode(cmp);
       });
 
-      it(`${flavorName} has the correct image`, () => {
-        const cmp = renderIntoDocument(React.createElement(Spinner, {flavor: test.flavor}));
-        const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.innerHTML).to.include(test.expectedImage);
+      it(`${flavorName} has the correct container class`, () => {
+        expect($cmp.className).to.equal('slds-spinner_container');
+      });
+
+      it(`${flavorName} has the correct container class`, () => {
+        expect($cmp.firstChild.className).to.include(test.expectedClass);
+      });
+
+      it(`${flavorName} has the correct inner divs`, () => {
+        expect($cmp.querySelector('.slds-spinner__dot-a')).to.not.be.null;
+        expect($cmp.querySelector('.slds-spinner__dot-b')).to.not.be.null;
       });
     });
 
     describe('without a flavor', () => {
-      it(`should be a small size`, () => {
-        const cmp = renderIntoDocument(React.createElement(Spinner));
-        const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.className).to.equal(`${cssPrefix}spinner--small`);
+      let cmp, $cmp;
+
+      beforeEach(() => {
+        cmp = renderIntoDocument(React.createElement(Spinner, {}));
+        $cmp = ReactDOM.findDOMNode(cmp);
       });
 
-      it(`should default to base image`, () => {
-        const cmp = renderIntoDocument(React.createElement(Spinner));
-        const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.innerHTML).to.include('images/spinners/slds_spinner.gif');
+      it(`should be a small size`, () => {
+        expect($cmp.firstChild.className).to.include(`${cssPrefix}spinner`);
       });
     });
 
@@ -65,7 +69,7 @@ describe(`React`, () => {
       it(`should be a small size`, () => {
         const cmp = renderIntoDocument(React.createElement(Spinner, { className: 'foo bar' }));
         const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.className).to.equal(`foo bar ${cssPrefix}spinner--small`);
+        expect($cmp.firstChild.className).to.include(`foo bar ${cssPrefix}spinner`);
       });
     });
   });

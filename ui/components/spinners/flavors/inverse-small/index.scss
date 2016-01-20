@@ -8,9 +8,7 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
-.#{$css-prefix}spinner--medium {
-  width: 2rem;
+.#{$css-prefix}spinner--inverse {
 
   &.#{$css-prefix}spinner:before,
   &.#{$css-prefix}spinner:after,
@@ -18,51 +16,6 @@
   .#{$css-prefix}spinner__dot-b:before,
   .#{$css-prefix}spinner__dot-a:after,
   .#{$css-prefix}spinner__dot-b:after {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
-
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
-    animation-name: dotsBounceBefore-medium;
-    top: -0.25rem;
-    left: -0.25rem;
-  }
-
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
-    animation-name: dotsBounceAfter-medium;
-    top: -0.25rem;
-    right: -0.25rem;
-  }
-}
-
-@keyframes dotsBounceBefore-medium {
-  60% {
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(-0.5rem);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes dotsBounceAfter-medium {
-  60% {
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transform: translateX(0);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
-    transform: translateX(0.5rem);
-  }
-  100% {
-    transform: translateX(0);
+    background-color: $color-background-alt;
   }
 }

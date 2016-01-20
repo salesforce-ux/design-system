@@ -9,6 +9,14 @@
 
 
 
-.#{$css-prefix}spinner--small {
-  @include square(32px);
+.#{$css-prefix}spinner--brand {
+
+  &.#{$css-prefix}spinner:before,
+  &.#{$css-prefix}spinner:after,
+  .#{$css-prefix}spinner__dot-a:before,
+  .#{$css-prefix}spinner__dot-b:before,
+  .#{$css-prefix}spinner__dot-a:after,
+  .#{$css-prefix}spinner__dot-b:after {
+    background-color: $color-brand;
+  }
 }

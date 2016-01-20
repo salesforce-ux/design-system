@@ -1,5 +1,7 @@
 # Salesforce Lightning Design System
 
+[![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=winter-16)](https://travis-ci.org/salesforce-ux/design-system)
+
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 
 * Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.

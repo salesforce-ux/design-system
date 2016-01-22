@@ -35,6 +35,7 @@ class Spinner extends React.Component {
     var { className, flavor, children } = this.props;
     const classnames = classNames(className, {
       [`${cssPrefix}spinner`]: true,
+      [`${cssPrefix}spinner--small`]: flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
       [`${cssPrefix}spinner--medium`]: flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
       [`${cssPrefix}spinner--large`]: flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
     });

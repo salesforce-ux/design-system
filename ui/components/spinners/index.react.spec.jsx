@@ -22,10 +22,10 @@ import {
 describe(`React`, () => {
   describe(`Spinner`, () => {
     var tests = [
-      { flavor: 'small', expectedClass: `${cssPrefix}spinner`},
+      { flavor: 'small', expectedClass: `${cssPrefix}spinner--small`},
       { flavor: 'medium', expectedClass: `${cssPrefix}spinner--medium`},
       { flavor: 'large', expectedClass: `${cssPrefix}spinner--large`},
-      { flavor: 'brand-small', expectedClass: `${cssPrefix}spinner`},
+      { flavor: 'brand-small', expectedClass: `${cssPrefix}spinner--small`},
       { flavor: 'inverse-medium', expectedClass: `${cssPrefix}spinner--medium`}
     ];
 

@@ -39,22 +39,6 @@ Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitel
   .map(c => new RegExp(_.escapeRegExp(c)));
 
 /**
- * Return the value for a keypath
- *
- * @example
- * getValueAtKeyPath(myObject, "foo.bar.baz")
- *
- * @param {object} obj
- * @param {string} keyPath
- * @returns {any}
- */
-function getValueAtKeyPath(obj, keyPath) {
-  return _.reduce(keyPath.split('.'), (obj, key) => {
-    if (obj) { return obj[key]; } else { return obj; }
-  }, obj);
-}
-
-/**
  * Hight a string of text based on the language
  *
  * @param {string} code
@@ -126,7 +110,7 @@ function getCodeTabs() {
 /**
  * Return a string of
  */
-const renderHTML = function(element) {
+const renderHTML = _.memoize(function(key, element) {
   let html = ReactDOMServer.renderToStaticMarkup(element);
   // Remove wrapping tag if it has the ".demo-only" class in it
   // Note: this will also remove other classes too on that tag! :)
@@ -138,7 +122,7 @@ const renderHTML = function(element) {
     'indent_char': ' ',
     'unformatted': ['a']
   });
-};
+});
 
 /**
  * Return true if the current "role" preference can view a tab
@@ -160,12 +144,12 @@ function filterTabByRole(tab) {
 function prepareCodeTabs(flavor, hasPreview) {
   return getCodeTabs()
   // Make sure code for this tab exists
-  .filter(tab => !_.isEmpty(getValueAtKeyPath(flavor, tab.code)) ||
+  .filter(tab => !_.isEmpty(_.get(flavor, tab.code)) ||
     tab.key === 'html' && hasPreview)
   // Get the code and highlight it
   // HTML is rendered/highlighted dynamically in "renderCodeBlock"
   .map(tab => {
-    let code = getValueAtKeyPath(flavor, tab.code);
+    let code = _.get(flavor, tab.code);
     if (_.isArray(code)) {
       tab.code = code.join('\n');
       return tab;
@@ -175,67 +159,6 @@ function prepareCodeTabs(flavor, hasPreview) {
     }
     return tab;
   });
-}
-
-/**
- * Return a cloned ReactElement that has been mutated based on the provided actions
- *
- * @param {ReactElement} element
- * @param {object[]} actions
- * @returns {ReactElement}
- */
-function renderElementState (element, actions) {
-  let prevProps = _.assign({}, element.props);
-  let nextProps = _.defaults({}, _.cloneDeep(prevProps), {
-    className: ''
-  });
-  // Get a filtered list of actions that apply to the current element
-  let elementActions = actions.filter(action => {
-    if (_.has(action, 'ref') && _.has(prevProps, 'iref')) {
-      return action.ref === prevProps.iref;
-    }
-    if (_.has(action, 'className') && _.has(prevProps, 'className')) {
-      return _.includes(prevProps.className, action.className);
-    }
-  });
-  let filterActions = type => elementActions.filter(action => _.has(action, type));
-  // Exit early if the current element is being removed
-  for (let action of elementActions) {
-    if (action.remove === true) {
-      return null;
-    }
-  }
-  // Add classes
-  filterActions('addClass').forEach(action => {
-    let classNames = nextProps.className.split(' ');
-    let classNamesAdd = pf(action.addClass).split(' ');
-    nextProps.className = _.uniq(classNames.concat(classNamesAdd)).join(' ');
-  });
-  // Remove classes
-  filterActions('removeClass').forEach(action => {
-    let classNames = nextProps.className.split(' ');
-    let classNamesRemove = pf(action.removeClass).split(' ');
-    nextProps.className = _.xor(classNames, classNamesRemove).join(' ');
-  });
-  // If the className is empty, remove it
-  nextProps.className = _.trim(nextProps.className);
-  if (_.isEmpty(nextProps.className)) nextProps.className = null;
-  // Attributes
-  filterActions('attributes').forEach(action =>
-    _.assign(nextProps, action.attributes)
-  );
-  // Children
-  if (nextProps.children) {
-    // Text
-    filterActions('text').forEach(action =>
-      nextProps.children = [action.text]
-    );
-    // Recursivley update the children
-    nextProps.children = React.Children.map(nextProps.children, child =>
-      React.isValidElement(child) ? renderElementState(child, actions) : child
-    );
-  }
-  return React.cloneElement(element, nextProps);
 }
 
 class ComponentFlavor extends React.Component {
@@ -318,30 +241,30 @@ class ComponentFlavor extends React.Component {
       // The keys (in order) that will be checked for a ReactElement
       keys: ['preview', 'default'],
       // If true, the element will be passed to renderElementState
-      renderState: false,
-      // If true, previewActions will be concated with actions during renderElementState
-      preview: true
+      renderState: true
     });
     const example = this.getExample();
     // Get the first valid ReactElement
-    const element = _(options.keys)
+    let defaultElement = _(options.keys)
       .filter(key => _.has(example, key))
       .map(key => example[key])
       .filter(React.isValidElement)
       .first();
-    // If we don't have a state yet, just return the raw ReactElement
-    if (!this.state) return element;
-    const { previewState } = this.state;
-    // If we have an element and should render it with a specific state
-    if (element && options.renderState === true && _.isArray(previewState.actions)) {
-      let { actions, previewActions } = previewState;
-      // Optionally concat "previewActions" to the primary actions
-      if (options.preview === true && _.isArray(previewActions)) {
-        actions = actions.concat(previewActions);
+    // Exit early if no state is needed
+    if (options.renderState === false) return defaultElement;
+    // If no element was found, check to see if states exist
+    if (!defaultElement && _.isArray(example.states) && example.states.length) {
+      if (React.isValidElement(example.states[0].element)) {
+        defaultElement = example.states[0].element;
       }
-      return renderElementState(element, actions);
     }
-    return element;
+    if (!defaultElement) return null;
+    if (!this.state) return defaultElement;
+    if (!this.state.previewState) return defaultElement;
+    if (React.isValidElement(this.state.previewState.element)) {
+      return this.state.previewState.element;
+    }
+    return defaultElement;
   }
 
   /**
@@ -351,9 +274,6 @@ class ComponentFlavor extends React.Component {
     if(!this.refs.iframe) return;
     this.mountPreview();
     this.updatePreviewHeight();
-    /*this.updatePreviewStyle(this.state.previewTabActive, () => {
-      this.updatePreviewHeight();
-    });*/
   }
 
   /**
@@ -377,7 +297,7 @@ class ComponentFlavor extends React.Component {
     const { idocument } = this.getPreviewWindow();
     const $preview = idocument.getElementById('preview');
     if (!$preview) return;
-    const element = this.getExampleElement({ renderState: true });
+    const element = this.getExampleElement();
     ReactDOM.render(element, $preview);
     svgFix(idocument);
   }
@@ -399,30 +319,6 @@ class ComponentFlavor extends React.Component {
   }
 
   /**
-   * Update the preview iFrame with the correct style sheet based on the tab
-   *
-   * @param {object} tab
-   * @param {function} [afterLoad]
-   */
-  /*updatePreviewStyle(tab, afterLoad = _.noop) {
-    const { idocument } = this.getPreviewWindow();
-    const link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = `${getHistory().createHref('/')}assets/styles/demo.css`;
-    link.onload = () => {
-      // Don't remove the old stylesheet until the new one has loaded
-      _(idocument.head.querySelectorAll('link'))
-        .filter(tag => tag !== link)
-        .forEach(tag => {
-          tag.parentNode.removeChild(tag);
-        }).value();
-      afterLoad();
-    };
-    idocument.head.appendChild(link);
-  }*/
-
-  /**
    * When a preview tab is clicked, update the style, resize it (with setState),
    * and then update the height
    *
@@ -431,14 +327,6 @@ class ComponentFlavor extends React.Component {
    */
   onPreviewTabClick(tab, event) {
     event.preventDefault();
-    /*this.updatePreviewStyle(tab, () => {
-      this.setState({
-        initialView: false,
-        previewTabActive: tab
-      }, () => {
-        this.updatePreviewHeight();
-      });
-    });*/
     this.setState({
       initialView: false,
       previewTabActive: tab
@@ -640,16 +528,18 @@ class ComponentFlavor extends React.Component {
     const className = classNames(`language-${tab.language}`);
     if (tab.key === 'html') {
       const codeElement = this.getExampleElement({
-        keys: ['code']
+        keys: ['code'],
+        renderState: false
       });
       const previewElement = this.getExampleElement({
-        renderState: true,
         preview: false
       });
       if (codeElement) {
-        tab.code = highlight(renderHTML(codeElement), tab.language);
+        const key = flavor.uid + 'code';
+        tab.code = highlight(renderHTML(key, codeElement), tab.language);
       } else if (previewElement) {
-        tab.code = highlight(renderHTML(previewElement), tab.language);
+        const key = flavor.uid + _.result(this.state, 'previewState.label', 'default');
+        tab.code = highlight(renderHTML(key, previewElement), tab.language);
       }
     }
     return (

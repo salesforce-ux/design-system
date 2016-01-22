@@ -117,7 +117,8 @@
     "mocha": "2.3.0",
     "run-sequence": "^1.1.5",
     "sinon": "1.17.2",
-    "stylestats": "^6.2.0"
+    "stylestats": "^6.2.0",
+    "webpack-dev-middleware": "^1.5.1"
   },
   "gitDependencies": {
     "design-tokens-winter-16": "https://github.com/salesforce-ux/design-tokens.git#winter-16",

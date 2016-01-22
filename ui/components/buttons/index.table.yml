@@ -8,7 +8,8 @@ classes:
     notes: This neutralizes all the base styles making it look like a text link
   -
     class: button--small
-    description: Creates a smaller 2rem (32px) button
+    deprecated: true
+    description: Deprecated.
     applied: <code>.{{cssPrefix}}button</code>
   -
     class: button--neutral
@@ -54,6 +55,7 @@ classes:
     notes: When used alone it has a subtle hover. When used in a button-group it assumes the hover state of the buttons next to it.
   -
     class: button--icon-small
+    deprecated: true
     description: Creates an icon button at the smaller 2rem (32px) size
     applied: <code>.{{cssPrefix}}button</code>
     notes: Be aware that this sizes the button, not the icon

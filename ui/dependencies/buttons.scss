@@ -3,8 +3,6 @@
     left: $spacing-medium;
     right: $spacing-medium;
   }
-  text-align: center;
-  vertical-align: middle;
 }
 
 @mixin button-base {
@@ -83,6 +81,11 @@
       &-buttons--horizontal .#{$css-prefix}button + .#{$css-prefix}button {
         margin-left: $spacing-x-small;
       }
+
+      &-buttons--horizontal {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -100,6 +103,11 @@
       &-button--horizontal + .#{$css-prefix}#{$max-delimiter}#{$size-modifier}-button--horizontal,
       &-buttons--horizontal .#{$css-prefix}button + .#{$css-prefix}button {
         margin-left: $spacing-x-small;
+      }
+
+      &-buttons--horizontal {
+        display: flex;
+        align-items: center;
       }
     }
   }

@@ -41,7 +41,11 @@
   &__close {
     float: right;
     margin-left: $spacing-xx-small;
-    line-height: $line-height-reset;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+    min-height: 0;
   }
 
   &--alert {

@@ -27,10 +27,10 @@
 }
 
 .#{$css-prefix}picklist__label {
+  justify-content: flex-start;
   padding-right: $spacing-x-large;
   width: $size-small;
   color: $color-text-default;
-  text-align: left;
 
   .#{$css-prefix}icon {
     @include square($square-icon-small-content);

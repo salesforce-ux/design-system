@@ -19,7 +19,7 @@ export const preview = (
     <Button flavor="neutral" className={pf('max-small-button--stretch')}>
       Button
     </Button>
-    <div className={pf('max-small-buttons--stretch max-small-buttons--stacked small-buttons--horizontal')} style={{marginTop: '1rem'}}>
+    <div className={pf('max-small-buttons--stretch max-small-buttons--stacked medium-buttons--horizontal')} style={{marginTop: '1rem'}}>
       <Button flavor="neutral">
         Button
       </Button>

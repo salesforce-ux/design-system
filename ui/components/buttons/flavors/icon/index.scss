@@ -19,7 +19,11 @@
 }
 
 .#{$css-prefix}button--icon-bare {
-  line-height: $line-height-reset;
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
+  min-height: 0;
 }
 
 .#{$css-prefix}button--icon-border[disabled] {
@@ -35,20 +39,19 @@
   @include button-base;
 }
 
-
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
-  @include square($square-icon-medium-boundary-alt);
+  @include square($square-icon-medium-boundary);
 }
 
 .#{$css-prefix}button--icon-small {
   @include square($square-icon-medium-boundary);
-  line-height: $line-height-button-small;
 }
 
 .#{$css-prefix}button--icon-x-small {
   @include square($square-icon-x-small-boundary);
+  min-height: 0;
   border-radius: $border-radius-small;
   line-height: $line-height-reset;
 }
@@ -63,7 +66,7 @@
 }
 
 .#{$css-prefix}button__icon { // This is the icon inside the button--icon button
-  @include square($square-icon-medium-content);
+  @include square($square-icon-medium-content-alt);
   fill: currentColor;
 
   &--large { // Usually used for the large close button

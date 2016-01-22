@@ -178,12 +178,12 @@ export const PropTypes = {
    * @example
    * Component.propTypes = {
    *   flavor: componentUtil.PropTypes.flavor(
-   *      'brand', 'inverse', 'stateful', 'hint', 'small'
+   *      'brand', 'inverse', 'stateful', 'hint'
    *   )
    * };
    *
    * <Button flavor="brand" />
-   * <Button flavor="brand,small" />
+   * <Button flavor="brand,inverse" />
    */
   flavor() {
     const validFlavors = Array.prototype.slice.call(arguments);

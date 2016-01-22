@@ -11,18 +11,19 @@
 
 .#{$css-prefix}button {
   position: relative;
-  display: inline-block;
-  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xx-small 0;
   background: transparent {
     clip: padding-box;
   };
   border: 0 {
     radius: $border-radius-medium;
   };
+  min-height: $height-button;
   color: $color-text-link;
-  font-size: inherit;
-
-  line-height: $line-height-button;
+  font-size: $font-size-small;
   text-decoration: none;
   -webkit-appearance: none;
   white-space: normal;
@@ -82,20 +83,6 @@
   margin-left: $spacing-xx-small;
 }
 
-a.#{$css-prefix}button {
-  text-align: center;
-
-  &:focus {
-    @include focus-button;
-  }
-}
-
-.#{$css-prefix}button--small {
-  line-height: $line-height-button-small;
-  /**
-   * Note: Force icon-only buttons to be the same
-   * height as small buttons since they're SVG
-   * and line-height has no effect on them
-   */
-  min-height: $square-icon-medium-boundary;
+a.#{$css-prefix}button:focus {
+  @include focus-button;
 }

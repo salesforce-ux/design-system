@@ -77,19 +77,18 @@ gulp.task('stylestats', () => {
   });
 });
 
-function rebuildPage(event) {
+function rebuildPage(event, done = _.noop) {
   let sitemap = require('./app_modules/site/navigation/sitemap').default;
   let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
   routes.forEach(route => {
     if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
       // Recreate the component module which will cause webpack
       // to recompile and reload the browser
-      pageCompiler.createComponentPage(route, route.component, err => {
-        if (err) {
-          return gutil.log(err);
-        }
-        gutil.log('[pages]', `Reloading ${event.path}`);
-        reload();
+      console.time(`rebuild "${route.uid}"`)
+      pageCompiler.createComponentPages([route], err => {
+        console.timeEnd(`rebuild "${route.uid}"`)
+        if (err) return gutil.log(err);
+        done(err);
       });
     }
   });

@@ -2,4 +2,4 @@ A Sales Path is an interactive way to show the progress of a lead. Each stage re
 
 Inside the `.{{cssPrefix}}tabs--path__link`, two spans are placed. One with `.{{cssPrefix}}tabs--path__stage` (containing the checkmark icon), and the other with `.{{cssPrefix}}tabs--path__title` containing the description of the stage.
 
-Coming soon — the additional sales coach section.
+This view is the entire sales path without coaching content. A user would click on the "Mark Stage as Complete" button to move the prospect to the next stage.

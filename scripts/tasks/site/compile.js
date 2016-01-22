@@ -296,7 +296,7 @@ export function createPageCompiler () {
       console.time('Compiling pages');
       let sitemap = require('app_modules/site/navigation/sitemap').default;
       let componentRoutes = sitemap.getFlattenedRoutes()
-        .filter(route => route.component)
+        .filter(route => route.component);
       async.series([
         done => {
           async.parallel([

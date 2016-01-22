@@ -85,9 +85,9 @@ function rebuildPage(event, done = _.noop) {
     if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
       // Recreate the component module which will cause webpack
       // to recompile and reload the browser
-      console.time(`rebuild "${route.uid}"`)
+      console.time(`rebuild "${route.uid}"`);
       pageCompiler.createComponentPages([route], err => {
-        console.timeEnd(`rebuild "${route.uid}"`)
+        console.timeEnd(`rebuild "${route.uid}"`);
         if (err) return gutil.log(err);
         done(err);
       });

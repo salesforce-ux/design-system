@@ -18,7 +18,7 @@ export const DefaultsStrategy = props => {
     },
     load () {},
     update (prefs) {}
-  }, props)
+  }, props);
 };
 
 

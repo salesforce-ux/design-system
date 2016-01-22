@@ -54,7 +54,7 @@ class Overview extends React.Component {
           Create the world’s best enterprise app experiences.
         </h2>
         <IfPrefs userType="external">
-          <p className={pf('site-cta-buttons m-bottom--medium')}>
+          <p className={pf('x-small-buttons--horizontal site-cta-buttons')}>
             <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} ctaEventName="downloads-top">Get the Design System</CTALink>
             <GithubButton></GithubButton>
           </p>

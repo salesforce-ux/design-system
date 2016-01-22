@@ -42,7 +42,7 @@ export default (
     </p>
     <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} ctaEventName="GitHub">
       <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
-      <span>Design System on GitHub</span>
+      Design System on GitHub
     </CTALink>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>

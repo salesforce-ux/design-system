@@ -27,7 +27,7 @@ import StyleStats from 'stylestats';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
-import './scripts/lint';
+import './scripts/gulp/lint';
 import runSiteTasks from './scripts/tasks';
 import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
 import { createPageCompiler } from './scripts/tasks/site/compile';

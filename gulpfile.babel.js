@@ -16,7 +16,6 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import runSequence from 'run-sequence';
 import _ from 'lodash';
-import webpack from 'webpack';
 import del from 'del';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
@@ -25,10 +24,12 @@ import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync, { reload } from 'browser-sync';
 import StyleStats from 'stylestats';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import './scripts/lint';
 import runSiteTasks from './scripts/tasks';
-import { watch as watchWebpack } from './scripts/tasks/site/webpack';
+import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
 import { createPageCompiler } from './scripts/tasks/site/compile';
 
 const pageCompiler = createPageCompiler();
@@ -77,19 +78,18 @@ gulp.task('stylestats', () => {
   });
 });
 
-function rebuildPage(event) {
+function rebuildPage(event, done = _.noop) {
   let sitemap = require('./app_modules/site/navigation/sitemap').default;
   let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
   routes.forEach(route => {
     if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
       // Recreate the component module which will cause webpack
       // to recompile and reload the browser
-      pageCompiler.createComponentPage(route, route.component, err => {
-        if (err) {
-          return gutil.log(err);
-        }
-        gutil.log('[pages]', `Reloading ${event.path}`);
-        reload();
+      console.time(`rebuild "${route.uid}"`);
+      pageCompiler.createComponentPages([route], err => {
+        console.timeEnd(`rebuild "${route.uid}"`);
+        if (err) return gutil.log(err);
+        done(err);
       });
     }
   });
@@ -122,8 +122,20 @@ gulp.task('clean', del.bind(null, [
 ]));
 
 gulp.task('serve', ['styles'], () => {
+  let webpackConfig = getWebpackConfig();
+  let webpackCompiler = webpack(webpackConfig);
+
   browserSync({
-    server: __PATHS__.www,
+    server: {
+      baseDir: __PATHS__.www,
+      middleware: [
+        // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
+        // when dependencies have changed and then rebuild
+        webpackDevMiddleware(webpackCompiler, {
+          publicPath: webpackConfig.output.publicPath
+        })
+      ]
+    },
     notify: false,
     open: false,
     // Disable ghost mode as it creates unexpected cross-iframe interactions
@@ -132,11 +144,12 @@ gulp.task('serve', ['styles'], () => {
     ghostMode: false
   });
 
-  gulp.watch(watchPaths.pages).on('change', rebuildPage);
+  // Reload after each rebuild
+  webpackCompiler.plugin('done', stats => {
+    reload();
+  });
 
-  // Use webpack.watch instead of gulp.watch because webpack can figure out
-  // when dependencies have changed and then rebuild
-  watchWebpack(null, reload);
+  gulp.watch(watchPaths.pages).on('change', rebuildPage);
 
   gulp.watch(watchPaths.sass, ['styles']);
 

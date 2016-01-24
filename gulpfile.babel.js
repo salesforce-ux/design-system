@@ -17,19 +17,14 @@ import gutil from 'gulp-util';
 import runSequence from 'run-sequence';
 import _ from 'lodash';
 import del from 'del';
-import plumber from 'gulp-plumber';
-import sass from 'gulp-sass';
-import minifycss from 'gulp-minify-css';
-import autoprefixer from 'gulp-autoprefixer';
-import sourcemaps from 'gulp-sourcemaps';
 import browserSync, { reload } from 'browser-sync';
-import StyleStats from 'stylestats';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import './scripts/gulp/assets';
 import './scripts/gulp/lint';
 import './scripts/gulp/pages';
+import './scripts/gulp/styles';
 
 import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
 
@@ -47,48 +42,6 @@ const watchPaths = {
     path.resolve(__PATHS__.site, '**/*.{js,jsx}')
   ]
 };
-
-gulp.task('stylestats', () => {
-  const file = '.www/assets/styles/slds.css';
-  const c = gutil.colors;
-  const logPrefix = `[${c.cyan(path.basename(file))}] `;
-  const stats = new StyleStats(file);
-
-  stats.parse((error, result) => {
-    let sizeColor = 'green';
-
-    switch (true) {
-    case (result.size > 200 * 1024):
-      sizeColor = 'bgred';
-      break;
-    case (result.size > 160 * 1024 && result.size <= 200 * 1024):
-      sizeColor = 'yellow';
-      break;
-    }
-
-    gutil.log(logPrefix + c[sizeColor](`Size: ${(result.size / 1024).toFixed(2)}KB (${(result.gzippedSize / 1024).toFixed(2)}KB gzipped)`));
-    gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
-  });
-});
-
-gulp.task('styles', () => {
-  gulp.src('site/assets/styles/*.scss')
-  .pipe(plumber())
-  .pipe(sourcemaps.init())
-  .pipe(sass.sync({
-    precision: 10,
-    includePaths: [
-      __PATHS__.root,
-      __PATHS__.ui,
-      __PATHS__.node_modules
-    ]
-  }).on('error', sass.logError))
-  .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-  .pipe(minifycss({ advanced: false }))
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('.www/assets/styles'))
-  .pipe(browserSync.stream({ match: '**/*.css' }));
-});
 
 gulp.task('clean', del.bind(null, [
   __PATHS__.www,

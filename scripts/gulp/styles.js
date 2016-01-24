@@ -9,25 +9,67 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import path from 'path';
-import fs from 'fs-extra';
+import '../helpers/setup';
 
-import _ from 'lodash';
-import autoprefixer from 'autoprefixer';
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
 import gulp from 'gulp';
-import sass from 'gulp-sass';
 import gutil from 'gulp-util';
-import minimist from 'minimist';
-import postcss from 'gulp-postcss';
 import minifycss from 'gulp-minify-css';
+import minimist from 'minimist';
+import path from 'path';
+import plumber from 'gulp-plumber';
+import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
+import StyleStats from 'stylestats';
 
 const argv = minimist(process.argv.slice(2));
 const isProd = argv.prod === true;
 
-export default function(done) {
-  console.log('Compiling Sass');
+gulp.task('stylestats', done => {
+  const file = '.www/assets/styles/slds.css';
+  const c = gutil.colors;
+  const logPrefix = `[${c.cyan(path.basename(file))}] `;
+  const stats = new StyleStats(file);
+  stats.parse((error, result) => {
+    let sizeColor = 'green';
+    switch (true) {
+    case (result.size > 200 * 1024):
+      sizeColor = 'bgred';
+      break;
+    case (result.size > 160 * 1024 && result.size <= 200 * 1024):
+      sizeColor = 'yellow';
+      break;
+    }
+    gutil.log(logPrefix + c[sizeColor](`Size: ${(result.size / 1024).toFixed(2)}KB (${(result.gzippedSize / 1024).toFixed(2)}KB gzipped)`));
+    gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
+    done(err, result);
+  });
+});
 
-  gulp.src(path.resolve(__PATHS__.site, 'assets/styles/*.scss'))
+gulp.task('styles', () =>
+  gulp
+    .src('site/assets/styles/*.scss')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass.sync({
+      precision: 10,
+      includePaths: [
+        __PATHS__.root,
+        __PATHS__.ui,
+        __PATHS__.node_modules
+      ]
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+    .pipe(minifycss({ advanced: false }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('.www/assets/styles'))
+    .pipe(browserSync.stream({ match: '**/*.css' }))
+);
+
+gulp.task('styles:prod', () =>
+  gulp
+    .src('site/assets/styles/*.scss')
     .pipe(sass({
       outputStyle: isProd ? 'compressed' : 'nested',
       sourceComments: isProd ? false : true,
@@ -37,12 +79,7 @@ export default function(done) {
         __PATHS__.node_modules
       ]
     }))
-    .on('error', done)
-    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-    .on('error', done)
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(isProd ? minifycss({ advanced: false }) : gutil.noop())
-    .on('error', done)
     .pipe(gulp.dest('./.www/assets/styles'))
-    .on('error', done)
-    .on('finish', done);
-}
+);

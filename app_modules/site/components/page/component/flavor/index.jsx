@@ -244,6 +244,8 @@ class ComponentFlavor extends React.Component {
       renderState: true
     });
     const example = this.getExample();
+    // No example for the current flavor
+    if (!example) return null;
     // Get the first valid ReactElement
     let defaultElement = _(options.keys)
       .filter(key => _.has(example, key))

@@ -108,33 +108,6 @@ function getCodeTabs() {
 }
 
 /**
- * Return a string of
- */
-const renderHTML = _.memoize(function(key, element) {
-  let html = ReactDOMServer.renderToStaticMarkup(element);
-  // Remove wrapping tag if it has the ".demo-only" class in it
-  // Note: this will also remove other classes too on that tag! :)
-  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
-  html = html.replace(pattern, (match, tag, content) => content);
-  // Format
-  return prettyHTML(html, {
-    'indent_size': 2,
-    'indent_char': ' ',
-    'unformatted': ['a']
-  });
-});
-
-/**
- * Return true if the current "role" preference can view a tab
- *
- * @param {object} tab
- * @returns {boolean}
- */
-function filterTabByRole(tab) {
-  return _.includes(tab.roles, Prefs.get('role'));
-}
-
-/**
  * Return an array of code tabs that can be used for the current flavor
  *
  * @param {object} flavor
@@ -165,8 +138,7 @@ class ComponentFlavor extends React.Component {
 
   constructor(props) {
     super(props);
-    const { flavor, elements } = props;
-    const role = Prefs.get('role');
+    const { flavor } = props;
     // Get a list of preview tabs that should be displayed based
     // on the list provided by flavor.showFormFactors
     const previewTabs = getPreviewTabs().filter(tab => {
@@ -177,9 +149,8 @@ class ComponentFlavor extends React.Component {
     });
     // Prep the codeTabs by updating the "code" property with appropriate
     // formatting / highlighting
-    const codeTabs = prepareCodeTabs(flavor, this.getExampleElement());
+    const codeTabs = prepareCodeTabs(flavor, flavor.example);
     this.state = {
-      role,
       previewTabs,
       // Only set an active tab if there are more than 1
       previewTabActive: previewTabs.length > 0
@@ -190,181 +161,21 @@ class ComponentFlavor extends React.Component {
           : _.last(previewTabs))
         : null,
       // If the component example has states, set the initial previewState
-      previewState: _.has(this.getExample(), 'states')
-        ? _.first(this.getExample().states) : false,
+      previewState: _.has(flavor.example, 'states')
+        ? _.first(flavor.example.states) : false,
       codeTabs,
       // Show tabs appropriate for the current role
-      codeTabsFiltered: codeTabs.filter(filterTabByRole),
+      codeTabsFiltered: codeTabs,
       // Used for accessibility
       initialView: true
     };
     // Listen for the iframe to load
-    if (typeof window !== 'undefined') {
+    /*if (typeof window !== 'undefined') {
       window.__events.on(
         `iframe:load:${flavor.uid}`,
         this.onPreviewFrameLoad.bind(this, 'event')
       );
-    }
-    // Called by Prefs.listen()
-    this.prefsChanged = this.updateCodeTabs.bind(this);
-  }
-
-  componentDidMount() {
-    Prefs.listen(this.prefsChanged);
-  }
-
-  componentWillUnmount() {
-    Prefs.unlisten(this.prefsChanged);
-    window.__events.removeListener(
-      `iframe:load:${this.props.flavor.uid}`,
-      this.onPreviewFrameLoad.bind(this, 'event')
-    );
-  }
-
-  /**
-   * Return the example for the current flavor
-   *
-   * @returns {object}
-   */
-  getExample() {
-    return this.props.elements[`example/flavor/${this.props.flavor.id}`];
-  }
-
-  /**
-   * Return the example element for the current flavor
-   *
-   * @param {object} options
-   * @returns {ReactElement|null}
-   */
-  getExampleElement(options) {
-    options = _.defaults({}, options, {
-      // The keys (in order) that will be checked for a ReactElement
-      keys: ['preview', 'default'],
-      // If true, the element will be passed to renderElementState
-      renderState: true
-    });
-    const example = this.getExample();
-    // No example for the current flavor
-    if (!example) return null;
-    // Get the first valid ReactElement
-    let defaultElement = _(options.keys)
-      .filter(key => _.has(example, key))
-      .map(key => example[key])
-      .filter(React.isValidElement)
-      .first();
-    // Exit early if no state is needed
-    if (options.renderState === false) return defaultElement;
-    // If no element was found, check to see if states exist
-    if (!defaultElement && _.isArray(example.states) && example.states.length) {
-      if (React.isValidElement(example.states[0].element)) {
-        defaultElement = example.states[0].element;
-      }
-    }
-    if (!defaultElement) return null;
-    if (!this.state) return defaultElement;
-    if (!this.state.previewState) return defaultElement;
-    if (React.isValidElement(this.state.previewState.element)) {
-      return this.state.previewState.element;
-    }
-    return defaultElement;
-  }
-
-  /**
-   * The preview can only be mounted once the iFrame has loaded
-   */
-  onPreviewFrameLoad(caller) {
-    if(!this.refs.iframe) return;
-    this.mountPreview();
-    this.updatePreviewHeight();
-  }
-
-  /**
-   * Get the window/document object for the iFrame
-   *
-   * @returns {object}
-   */
-  getPreviewWindow() {
-    const iframe = this.refs.iframe;
-    const iwindow = iframe.contentWindow
-      ? iframe.contentWindow
-      : iframe.contentDocument.defaultView;
-    const idocument = iwindow.document;
-    return { iframe, iwindow, idocument };
-  }
-
-  /**
-   * Mount the example element in the preview area
-   */
-  mountPreview() {
-    const { idocument } = this.getPreviewWindow();
-    const $preview = idocument.getElementById('preview');
-    if (!$preview) return;
-    const element = this.getExampleElement();
-    ReactDOM.render(element, $preview);
-    svgFix(idocument);
-  }
-
-  /**
-   * Update the iFrame height to fit the content
-   */
-  updatePreviewHeight() {
-    const { iframe, iwindow, idocument } = this.getPreviewWindow();
-    iwindow.requestAnimationFrame(() => {
-      const style = iwindow.getComputedStyle(idocument.body);
-      const padding = _.reduce(['padding-top', 'padding-bottom'], (total, key) => {
-        return total + parseFloat(style[key], 10);
-      }, 0);
-      iframe.height = _.reduce(idocument.getElementById('preview').childNodes, (height, node) => {
-        return height + node.offsetHeight;
-      }, padding);
-    });
-  }
-
-  /**
-   * When a preview tab is clicked, update the style, resize it (with setState),
-   * and then update the height
-   *
-   * @param {object} tab
-   * @param {object} event
-   */
-  onPreviewTabClick(tab, event) {
-    event.preventDefault();
-    this.setState({
-      initialView: false,
-      previewTabActive: tab
-    }, () => {
-      this.updatePreviewHeight();
-    });
-  }
-
-  /**
-   * When a preview state is changed, set it to the component state
-   * and then remount the preview
-   *
-   * @param {object} tab
-   * @param {object} event
-   */
-  onPreviewStateChange(state) {
-    this.setState({
-      previewState: state
-    }, () => {
-      this.mountPreview();
-      this.updatePreviewHeight();
-    });
-  }
-
-  handleCodeMouseUp(tabKey) {
-    const sel = window.getSelection && window.getSelection();
-  }
-
-  /**
-   * Called when user preferences are changed
-   */
-  updateCodeTabs() {
-    this.setState({
-      role: Prefs.get('role'),
-      codeTabsFiltered: this.state.codeTabs.filter(filterTabByRole),
-    });
+    }*/
   }
 
   render() {
@@ -402,25 +213,23 @@ class ComponentFlavor extends React.Component {
 
   renderInfo() {
     const { flavor } = this.props;
-    if (!flavor.info.markup) return null;
-    return (
-      <div dangerouslySetInnerHTML={flavor.info.markup}/>
-    );
+    return flavor.info.markup ? (
+      <div dangerouslySetInnerHTML={flavor.info.markup} />
+    ) : null;
   }
 
   renderPreviewStates() {
-    if (!this.state.previewState) return null;
-    return (
+    const { flavor } = this.props;
+    const { previewState } = this.state;
+    return !previewState ? null : (
       <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
         <h3 className={pf('site-text-heading--label')}>States</h3>
         <ul className={pf('list--vertical has-block-links--space')}>
-          {this.getExample().states.map(state =>
+          {flavor.example.states.map(state =>
             <li
-              className={state === this.state.previewState ? 'is-active' : null}
+              className={state === previewState ? 'is-active' : null}
               key={state.label}>
-              <a
-                role="button"
-                onClick={this.onPreviewStateChange.bind(this, state)}>
+              <a role="button">
                 {state.label}
               </a>
             </li>
@@ -431,7 +240,7 @@ class ComponentFlavor extends React.Component {
   }
 
   renderPreview() {
-    if (!this.getExampleElement()) return null;
+    if (!this.props.flavor.example) return null;
     const { flavor } = this.props;
     const { previewTabActive, previewTabs } = this.state;
     const className = classNames(pf('site-example--tabs'), {
@@ -485,9 +294,7 @@ class ComponentFlavor extends React.Component {
           innerClass={pf('tabs--default__link')}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
           content={content}
-          onClick={this.onPreviewTabClick.bind(this, tab)}
-          initialView={this.state.initialView}>
-        </Tabs.Item>
+          initialView={this.state.initialView} />
       );
     });
   }
@@ -529,20 +336,8 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const className = classNames(`language-${tab.language}`);
     if (tab.key === 'html') {
-      const codeElement = this.getExampleElement({
-        keys: ['code'],
-        renderState: false
-      });
-      const previewElement = this.getExampleElement({
-        preview: false
-      });
-      if (codeElement) {
-        const key = flavor.uid + 'code';
-        tab.code = highlight(renderHTML(key, codeElement), tab.language);
-      } else if (previewElement) {
-        const key = flavor.uid + _.result(this.state, 'previewState.label', 'default');
-        tab.code = highlight(renderHTML(key, previewElement), tab.language);
-      }
+      tab.code = flavor.exampleMarkup
+        ? highlight(flavor.exampleMarkup, 'markup') : null;
     }
     return (
       <pre
@@ -551,7 +346,7 @@ class ComponentFlavor extends React.Component {
         className={pf(className)}
         aria-labelledby={`${flavor.uid}__code-tab--${tab.key}`}>
         <code className={pf(className)} data-key={tab.key}
-          dangerouslySetInnerHTML={{__html: tab.code}} onMouseUp={this.handleCodeMouseUp.bind(this, tab.key)} />
+          dangerouslySetInnerHTML={{__html: tab.code}} />
       </pre>
     );
   }

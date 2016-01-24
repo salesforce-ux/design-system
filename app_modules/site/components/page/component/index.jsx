@@ -17,7 +17,7 @@ import TableYAML from './table-yaml';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const ComponentBody = React.createClass({
+export default React.createClass({
 
   mixins: [PrefsMixin],
 
@@ -38,13 +38,11 @@ const ComponentBody = React.createClass({
   },
 
   renderIntro() {
-    let { docs } = this.props.elements;
-    return docs && docs.intro ? docs.intro : null;
+    return this.props.docs && this.props.docs.intro ? this.props.docs.intro : null;
   },
 
   renderDocs() {
-    let { docs } = this.props.elements;
-    return docs ? this.props.elements.docs.default : null;
+    return this.props.docs ? this.props.docs.default : null;
   },
 
   renderComponentOverviewLink() {
@@ -69,8 +67,7 @@ const ComponentBody = React.createClass({
   },
 
   renderInfoTable() {
-    const {component} = this.props;
-
+    const { component } = this.props;
     if (component.info.tableYaml) {
       return <TableYAML data={component.info.tableYaml} />;
     } else if (component.info.table) {
@@ -85,5 +82,3 @@ const ComponentBody = React.createClass({
   }
 
 });
-
-export default ComponentBody;

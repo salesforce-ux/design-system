@@ -13,8 +13,10 @@ import gulp from 'gulp';
 
 import './generate-icons';
 import './generate-release-notes';
+import './generate-sass-utilities';
 
 gulp.task('generate', [
   'generate:icons',
-  'generate:release-notes'
+  'generate:release-notes',
+  'generate:sass-utilities'
 ]);

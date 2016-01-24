@@ -28,11 +28,9 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import './scripts/gulp/lint';
-import runSiteTasks from './scripts/tasks';
-import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
-import { createPageCompiler } from './scripts/tasks/site/compile';
+import './scripts/gulp/pages';
 
-const pageCompiler = createPageCompiler();
+import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
 
 const watchPaths = {
   sass: [
@@ -48,12 +46,6 @@ const watchPaths = {
     path.resolve(__PATHS__.site, '**/*.{js,jsx}')
   ]
 };
-
-gulp.task('pages', callback => {
-  runSiteTasks({
-    tasks: ['generate', 'pages', 'assets']
-  }, callback);
-});
 
 gulp.task('stylestats', () => {
   const file = '.www/assets/styles/slds.css';
@@ -77,23 +69,6 @@ gulp.task('stylestats', () => {
     gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
   });
 });
-
-function rebuildPage(event, done = _.noop) {
-  let sitemap = require('./app_modules/site/navigation/sitemap').default;
-  let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
-  routes.forEach(route => {
-    if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
-      // Recreate the component module which will cause webpack
-      // to recompile and reload the browser
-      console.time(`rebuild "${route.uid}"`);
-      pageCompiler.createComponentPages([route], err => {
-        console.timeEnd(`rebuild "${route.uid}"`);
-        if (err) return gutil.log(err);
-        done(err);
-      });
-    }
-  });
-}
 
 gulp.task('styles', () => {
   gulp.src('site/assets/styles/*.scss')

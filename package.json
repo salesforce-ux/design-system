@@ -106,6 +106,7 @@
     "del": "^2.2.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-debug": "^2.1.2",
+    "gulp-ignore": "^2.0.1",
     "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "karma": "0.13.19",

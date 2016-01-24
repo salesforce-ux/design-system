@@ -10,12 +10,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import globals from 'app_modules/global';
 
 const LOCALYTICS_ID = '2a6dc90c85e5991e50f752a-f8539a44-1e85-11e5-44ef-006918dcf667';
 const GOOGLE_ANALYTICS_ID = 'UA-45076517-7';
-import globals from 'app_modules/global';
 
-class Page extends React.Component {
+export default React.createClass({
+
+  propTypes: {
+    title: React.PropTypes.string,
+    styles: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        href: React.PropTypes.string,
+        content: React.PropTypes.string
+      })
+    ),
+    siteStyles: React.PropTypes.bool,
+    scripts: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        src: React.PropTypes.string,
+        content: React.PropTypes.string
+      })
+    )
+  },
+
+  getDefaultProps() {
+    return {
+      title: globals.displayName,
+      styles: [],
+      scripts: [],
+      siteStyles: true
+    }
+  },
 
   render() {
     return (
@@ -24,7 +50,7 @@ class Page extends React.Component {
         {this.renderBody()}
       </html>
     );
-  }
+  },
 
   renderHead() {
     return (
@@ -57,29 +83,27 @@ class Page extends React.Component {
         {this.renderAnalytics()}
       </head>
     );
-  }
+  },
 
   renderAnalytics() {
     return <script dangerouslySetInnerHTML={{__html: `
       +function(l,y,t,i,c,s) {
-              l['LocalyticsGlobal'] = i;
-              l[i] = function() { (l[i].q = l[i].q || []).push(arguments) };
-              l[i].t = +new Date;
-              (s = y.createElement(t)).type = 'text/javascript';
-              s.src = '//web.localytics.com/v3/localytics.min.js';
-              (c = y.getElementsByTagName(t)[0]).parentNode.insertBefore(s, c);
-              ll('init', '${LOCALYTICS_ID}', {} /* Options */);
-          }(window, document, 'script', 'll');
+        l['LocalyticsGlobal'] = i;
+        l[i] = function() { (l[i].q = l[i].q || []).push(arguments) };
+        l[i].t = +new Date;
+        (s = y.createElement(t)).type = 'text/javascript';
+        s.src = '//web.localytics.com/v3/localytics.min.js';
+        (c = y.getElementsByTagName(t)[0]).parentNode.insertBefore(s, c);
+        ll('init', '${LOCALYTICS_ID}', {} /* Options */);
+      }(window, document, 'script', 'll');
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-              ga('create', '${GOOGLE_ANALYTICS_ID}', 'auto');
-              ga('send', 'pageview');
-      `
-    }} />;
-  }
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '${GOOGLE_ANALYTICS_ID}', 'auto');
+      ga('send', 'pageview');
+    `}} />;
+  },
 
   renderStyles() {
     let styles = [
@@ -96,7 +120,7 @@ class Page extends React.Component {
         return <style dangerouslySetInnerHTML={{__html: style.content}} />;
       }
     });
-  }
+  },
 
   renderBody() {
     return (
@@ -105,12 +129,10 @@ class Page extends React.Component {
         {this.renderScripts()}
       </body>
     );
-  }
+  },
 
   renderScripts() {
     const scripts = [
-      { src: '/assets/scripts/vendor.js' },
-      { src: '/assets/scripts/common.js' },
       { src: '/assets/scripts/site.js' }
     ];
     return scripts.concat(this.props.scripts).map((script, index) => {
@@ -121,30 +143,4 @@ class Page extends React.Component {
     });
   }
 
-}
-
-Page.defaultProps = {
-  title: globals.displayName,
-  styles: [],
-  scripts: [],
-  siteStyles: true
-};
-
-Page.propTypes = {
-  title: React.PropTypes.string,
-  styles: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      href: React.PropTypes.string,
-      content: React.PropTypes.string
-    })
-  ),
-  siteStyles: React.PropTypes.bool,
-  scripts: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      src: React.PropTypes.string,
-      content: React.PropTypes.string
-    })
-  )
-};
-
-export default Page;
+});

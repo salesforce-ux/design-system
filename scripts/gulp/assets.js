@@ -9,13 +9,28 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import path from 'path';
 import gulp from 'gulp';
 
 export const ignore = 'jsx,scss';
+export const getPath = (a, b = '') => path.resolve(__PATHS__[a], b);
 
-gulp.task('assets', () =>
-  gulp.src(['**/*.*', `!**/*.{${ignore}}`], {
-    cwd: __PATHS__.site
-  })
-  .pipe(gulp.dest(__PATHS__.www))
+gulp.task('assets:icons', () =>
+  gulp
+    .src(getPath('icons', '**/*.{svg,png}'), {
+      base: __PATHS__.icons
+    })
+    .pipe(gulp.dest(getPath('www', 'assets/icons')))
+);
+
+gulp.task('assets:icons:zip', () =>
+  gulp
+    .src(getPath('icons', '../*.zip'))
+    .pipe(gulp.dest(getPath('www', 'assets/downloads')))
+);
+
+gulp.task('assets', ['assets:icons', 'assets:icons:zip'], () =>
+  gulp
+    .src(['site/**/*.*', `!site/**/*.{${ignore}}`])
+    .pipe(gulp.dest(__PATHS__.www))
 );

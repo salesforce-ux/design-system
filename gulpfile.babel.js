@@ -22,6 +22,7 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import './scripts/gulp/assets';
+import './scripts/gulp/generate';
 import './scripts/gulp/lint';
 import './scripts/gulp/pages';
 import './scripts/gulp/styles';

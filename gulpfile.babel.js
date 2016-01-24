@@ -11,13 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import './scripts/helpers/setup';
 
-import path from 'path';
+import _ from 'lodash';
+import browserSync, { reload } from 'browser-sync';
+import del from 'del';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import path from 'path';
 import runSequence from 'run-sequence';
-import _ from 'lodash';
-import del from 'del';
-import browserSync, { reload } from 'browser-sync';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
@@ -26,8 +26,7 @@ import './scripts/gulp/generate';
 import './scripts/gulp/lint';
 import './scripts/gulp/pages';
 import './scripts/gulp/styles';
-
-import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
+import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 
 const watchPaths = {
   sass: [
@@ -51,9 +50,9 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.dist
 ]));
 
-gulp.task('serve', ['styles'], () => {
-  let webpackConfig = getWebpackConfig();
-  let webpackCompiler = webpack(webpackConfig);
+gulp.task('serve', () => {
+  const webpackConfig = getWebpackConfig();
+  const webpackCompiler = webpack(webpackConfig);
 
   browserSync({
     server: {
@@ -75,11 +74,7 @@ gulp.task('serve', ['styles'], () => {
   });
 
   // Reload after each rebuild
-  webpackCompiler.plugin('done', stats => {
-    reload();
-  });
-
-  gulp.watch(watchPaths.pages).on('change', rebuildPage);
+  webpackCompiler.plugin('done', stats => reload());
 
   gulp.watch(watchPaths.sass, ['styles']);
 
@@ -104,6 +99,6 @@ gulp.task('default', callback => {
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles:prod', ['assets', 'generate'], 'pages',
+    'clean', 'styles:prod', ['assets', 'generate'], ['pages', 'webpack'],
   callback);
 });

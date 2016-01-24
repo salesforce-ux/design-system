@@ -9,9 +9,10 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import path from 'path';
-import fs from 'fs';
 import _ from 'lodash';
+import fs from 'fs';
+import gulp from 'gulp';
+import path from 'path';
 import webpack from 'webpack';
 
 import { getDefaultEnvVars } from 'scripts/helpers/env';
@@ -47,37 +48,9 @@ export function getConfig (options) {
     prod: false
   });
   const config = {
-    context: __dirname,
+    context: __PATHS__.root,
     entry: {
-      // Should not be directly imported
-      site: path.resolve('app_modules/site/browser/site'),
-      // TODO: Figure out how to use CommonsChunkPlugin and bundle-loader together
-      common: [
-        'app_modules/site/components/cta-link',
-        'app_modules/site/components/page/anchor',
-        'app_modules/site/components/page/body',
-        'app_modules/site/components/page/component',
-        'app_modules/site/components/sticky',
-        'app_modules/site/navigation/navigation',
-        'app_modules/site/navigation/navigation-utils',
-        'app_modules/site/navigation/sitemap',
-        'app_modules/site/navigation/sitemap-utils',
-        'app_modules/site/shared',
-        'app_modules/site/util/analytics'
-      ],
-      vendor: [
-        'app_modules/site/vendor/prism',
-        'classnames',
-        'immutable',
-        'js-beautify',
-        'lodash',
-        'react',
-        'react-dom',
-        'react-dom/server',
-        'react-lorem-component',
-        'react-router',
-        'tinycolor2'
-      ]
+      site: './site/assets/scripts/site.js'
     },
     output: {
       filename: '[name].js',
@@ -99,20 +72,12 @@ export function getConfig (options) {
         }
       ],
       noParse: [
-        /\.generated/,
-        /immutable\/immutable\.js/,
-        /react\/dist\/react\.js/
+        /\.generated/
       ]
     },
     resolve: {
       extensions: ['', '.js', '.jsx'],
-      root: __PATHS__.root,
-      alias: {
-        'immutable$': path.resolve(__PATHS__.node_modules, 'immutable/dist/immutable.js'),
-        'react$': path.resolve(__PATHS__.node_modules, 'react/dist/react.js'),
-        'react-dom$': path.resolve(__PATHS__.node_modules, 'react-dom/dist/react-dom.js'),
-        'react-dom/server$': path.resolve(__PATHS__.node_modules, 'react-dom/dist/react-dom-server.js')
-      }
+      root: __PATHS__.root
     },
     plugins: [
       new webpack.DefinePlugin({
@@ -125,12 +90,12 @@ export function getConfig (options) {
     cache: {}
   };
   // Common chunks
-  config.plugins.push(
+  /*config.plugins.push(
     new webpack.optimize.CommonsChunkPlugin({
       names: ['common', 'vendor'],
       minChunks: Infinity
     })
-  );
+  );*/
   // Uglify
   if (options.prod) {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin());
@@ -138,34 +103,13 @@ export function getConfig (options) {
   return config;
 }
 
-/**
- * Compile/watch webpack
- *
- * @param {function} callback
- */
-export function watch (options, callback) {
-  console.log('Watching webpack…');
-  const config = getConfig();
-  const compiler = webpack(config);
-  compiler.watch({
-    aggregateTimeout: 300
-  }, (err, stats) => {
-    stats = logStats(stats);
-    callback(err, stats);
+gulp.task('webpack', done => {
+  const config = getConfig({
+    prod: true
   });
-}
-
-/**
- * Compile webpack
- *
- * @param {function} callback
- */
-export function compile (options, callback) {
-  console.log('Compiling webpack');
-  const config = getConfig(options);
   const compiler = webpack(config);
   compiler.run((err, stats) => {
     logStats(stats);
-    callback(err, stats);
+    done(err, stats);
   });
-}
+});

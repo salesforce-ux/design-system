@@ -27,6 +27,7 @@ import StyleStats from 'stylestats';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
+import './scripts/gulp/assets';
 import './scripts/gulp/lint';
 import './scripts/gulp/pages';
 
@@ -143,6 +144,6 @@ gulp.task('serve', ['styles'], () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', ['styles'], 'pages', 'serve',
+    'clean', ['styles'], ['assets', 'pages'], 'serve',
   callback);
 });

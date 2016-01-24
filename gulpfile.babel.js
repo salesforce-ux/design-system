@@ -98,6 +98,12 @@ gulp.task('serve', ['styles'], () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', ['styles'], ['assets', 'pages'], 'serve',
+    'clean', 'styles', ['assets', 'generate'], 'pages', 'serve',
+  callback);
+});
+
+gulp.task('build', callback => {
+  runSequence(
+    'clean', 'styles:prod', ['assets', 'generate'], 'pages',
   callback);
 });

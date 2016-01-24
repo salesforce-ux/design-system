@@ -9,37 +9,32 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import path from 'path';
-import fs from 'fs';
-
+import _ from 'lodash';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
-import through from 'through2';
+import path from 'path';
 import theo from 'theo';
-
-import _ from 'lodash';
+import through from 'through2';
 
 import {
   addContrastRatios,
   addPxValue
 } from 'app_modules/util/tokens';
 
-/**
- * Compile the design tokens to be displayed on the site
- *
- * @param {function} done
- */
-export default function(done) {
+gulp.task('generate:tokens', done => {
 
-  console.log('Compiling Design Tokens');
+  const releaseGroups = [{
+    name: 'salesforce-1-lightning',
+    label: 'Salesforce1 Lightning',
+    sets: [
+      'force-base',
+      'force-mq-commons',
+      's1-base',
+      's1-base-medium',
+      's1-base-large'
+    ]
+  }];
 
-  const releaseGroups = [
-    {
-      name: 'salesforce-1-lightning',
-      label: 'Salesforce1 Lightning',
-      sets: ['force-base', 'force-mq-commons', 's1-base', 's1-base-medium', 's1-base-large']
-    }
-  ];
   const releaseNames = ['winter-16'];
   const releases = [];
   const releaseStream = through.obj();
@@ -73,9 +68,9 @@ export default function(done) {
           addPxValue(prop);
         }
       });
-      return next(null, set);
+      next(null, set);
     } catch(err) {
-      return next(err);
+      next(err);
     }
   }
 
@@ -139,4 +134,4 @@ export default function(done) {
         .on('finish', done);
     });
 
-}
+});

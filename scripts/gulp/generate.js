@@ -10,6 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
-import './generate.icons';
 
-gulp.task('generate', ['generate:icons']);
+import './generate-icons';
+import './generate-release-notes';
+
+gulp.task('generate', [
+  'generate:icons',
+  'generate:release-notes'
+]);

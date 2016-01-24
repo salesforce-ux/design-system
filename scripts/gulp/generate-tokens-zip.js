@@ -10,20 +10,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import gulpIgnore from 'gulp-ignore';
+import gutil from 'gulp-util';
+import path from 'path';
+import zip from 'gulp-zip';
 
-import './generate-icons';
-import './generate-release-notes';
-import './generate-tokens-zip';
-import './generate-ui';
-import './generate-version';
-import './generate-whitelist';
+const zipTokens = (ext, name = ext) =>
+  gulp
+    .src(path.resolve(__PATHS__.node_modules, `@salesforce-ux/design-tokens/dist/*.${ext}`))
+    .pipe(gulpIgnore.exclude(/analytics|marketing/))
+    .pipe(zip(`salesforce_design_tokens_${name}.zip`))
+    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads/design-tokens')));
 
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:tokens:zip',
-  'generate:ui',
-  'generate:version',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
+gulp.task('generate:tokens:zip:ios', () =>
+  zipTokens('ios.json', 'ios')
+);
+
+gulp.task('generate:tokens:zip:android', () =>
+  zipTokens('android.xml', 'android')
+);
+
+gulp.task('generate:tokens:zip:styl', () =>
+  zipTokens('styl')
+);
+
+gulp.task('generate:tokens:zip:less', () =>
+  zipTokens('less')
+);
+
+gulp.task('generate:tokens:zip:scss', () =>
+  zipTokens('scss')
+);
+
+gulp.task('generate:tokens:zip', [
+  'generate:tokens:zip:ios',
+  'generate:tokens:zip:android',
+  'generate:tokens:zip:styl',
+  'generate:tokens:zip:less',
+  'generate:tokens:zip:scss'
 ]);

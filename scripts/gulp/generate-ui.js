@@ -9,50 +9,53 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import path from 'path';
+import _ from 'lodash';
 import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import path from 'path';
 import through from 'through2';
+
 import Status from 'app_modules/site/util/component/status';
 import Scheme from 'app_modules/ui/util/scheme';
 
-export default function(done) {
-  console.log('Compiling UI');
+export const eachComponent = (scheme, callback) =>
+  scheme.forEach(category => {
+    category.components.forEach(callback);
+  });
 
-  try {
-    let scheme = Scheme({
-      path: __PATHS__.ui
-    }).generate();
+export const addStatus = scheme =>
+  eachComponent(scheme, component =>
+    component.status = Status.or(component.flavors.map(x => x.status))
+  );
 
-    scheme.forEach(category => {
-      category.components.forEach(component => {
-        component.status = Status.or(component.flavors.map(x => x.status));
-        component.flavors.forEach(flavor => {
-          let examplePath = `${flavor.path}/index.react.example.jsx`;
-          try {
-            fs.accessSync(path.resolve(__PATHS__.ui, examplePath));
-            flavor.examplePath = examplePath;
-          } catch(error) { // eslint-disable-line no-empty
-          }
-        });
-      });
+export const addExamplePath = scheme =>
+  eachComponent(scheme, component => {
+    component.flavors.forEach(flavor => {
+      const examplePath = `${flavor.path}/index.react.example.jsx`;
+      try {
+        fs.accessSync(path.resolve(__PATHS__.ui, examplePath));
+        flavor.examplePath = examplePath;
+      } catch(error) { // eslint-disable-line no-empty
+      }
     });
+  });
 
-    let ui = JSON.stringify(scheme, null, 2);
-    let stream = through.obj();
-
-    stream.write(new gutil.File({
-      path: 'ui.js',
-      contents: new Buffer(`module.exports = ${ui};`)
-    }));
-    stream.end();
-    stream
-      .pipe(gulp.dest(__PATHS__.generated))
-      .on('error', done)
-      .on('finish', done);
-  }
-  catch(error) {
-    return done(error);
-  }
+export const generateUI = () => {
+  const scheme = Scheme({ path: __PATHS__.ui }).generate();
+  addStatus(scheme);
+  addExamplePath(scheme);
+  return scheme;
 };
+
+gulp.task('generate:ui', () => {
+  const stream = through.obj();
+  const ui = JSON.stringify(generateUI(), null, 2);
+  stream.write(new gutil.File({
+    path: 'ui.js',
+    contents: new Buffer(`export default ${ui};`)
+  }));
+  stream.end();
+  return stream
+    .pipe(gulp.dest(__PATHS__.generated));
+})

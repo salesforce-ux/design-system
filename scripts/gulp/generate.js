@@ -14,9 +14,11 @@ import gulp from 'gulp';
 import './generate-icons';
 import './generate-release-notes';
 import './generate-sass-utilities';
+import './generate-ui';
 
 gulp.task('generate', [
   'generate:icons',
   'generate:release-notes',
-  'generate:sass-utilities'
+  'generate:sass-utilities',
+  'generate:ui'
 ]);

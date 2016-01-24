@@ -13,12 +13,13 @@ import gulp from 'gulp';
 
 import './generate-icons';
 import './generate-release-notes';
-import './generate-sass-utilities';
 import './generate-ui';
+import './generate-whitelist';
 
 gulp.task('generate', [
   'generate:icons',
   'generate:release-notes',
-  'generate:sass-utilities',
-  'generate:ui'
+  'generate:ui',
+  'generate:whitelist',
+  'generate:whitelist-utilities'
 ]);

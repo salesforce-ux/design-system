@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import classNames from 'classnames';
 import { createChainedFunction } from 'app_modules/ui/util/component';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { logCTAEvent } from 'app_modules/site/analytics';
 import { Link } from 'react-router';
 import { find } from 'lodash';
 import sitemap from 'app_modules/site/navigation/sitemap';

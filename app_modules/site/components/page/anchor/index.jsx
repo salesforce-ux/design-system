@@ -14,7 +14,7 @@ import _ from 'lodash';
 import shared from 'app_modules/site/shared';
 import classNames from 'classnames';
 import { Link } from 'react-router';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { logCTAEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';

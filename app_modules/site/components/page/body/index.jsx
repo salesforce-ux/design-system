@@ -26,7 +26,7 @@ import PrefsMixin from 'app_modules/site/preferences/mixin';
 import Status from 'app_modules/site/util/component/status';
 import { Link } from 'react-router';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { logCTAEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation from 'app_modules/site/navigation/navigation';
 import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';

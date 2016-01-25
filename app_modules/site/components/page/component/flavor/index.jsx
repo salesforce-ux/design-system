@@ -10,14 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ReactDOMServer from 'react-dom/server';
 import classNames from 'classnames';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
-import svgFix from 'app_modules/site/util/ie/svg';
-import { html as prettyHTML } from 'js-beautify';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { getHistory } from 'app_modules/site/navigation/history';
 import _ from 'lodash';

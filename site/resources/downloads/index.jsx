@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import version from '.generated/site.version';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logDownloadEvent } from 'app_modules/site/util/analytics';
+import { logDownloadEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 import { Link } from 'react-router';

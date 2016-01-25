@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
+import { logCTAEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const TIMING_MAP_SECS = {

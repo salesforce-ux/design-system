@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import { logDownloadEvent } from 'app_modules/site/util/analytics';
+import { logDownloadEvent } from 'app_modules/site/analytics';
 import globals from 'app_modules/global';
 import { Link } from 'react-router';
 

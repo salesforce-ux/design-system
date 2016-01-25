@@ -303,7 +303,12 @@ class ComponentFlavor extends React.Component {
     if (!this.state.codeTabsFiltered.length) return null;
     const { flavor } = this.props;
     return (
-      <Tabs className={{ 'site-example--code site-example--tabs-initial-view': this.state.initialView, [pf('m-vertical--x-large')]: true }} flavor="default">
+      <Tabs
+        className={{
+          'site-example--code site-example--tabs-initial-view': this.state.initialView,
+          [pf('m-vertical--x-large')]: true
+        }}
+        flavor="default">
         {this.renderCodeTabs()}
       </Tabs>
     );
@@ -319,12 +324,14 @@ class ComponentFlavor extends React.Component {
       );
       return (
         <Tabs.Item
+          id={`${flavor.uid}__code-block--${tab.key}`}
           key={tab.key}
           aria-controls={`${flavor.uid}__code-block--${tab.key}`}
           innerClass={pf('tabs--default__link')}
           content={content}
           aria-describedby={flavor.uid}>
-          <Tabs.Content className={pf('site-code--content scrollable--x')}>
+          <Tabs.Content
+            className={pf('site-code--content scrollable--x')}>
             {this.renderCodeBlock(tab)}
           </Tabs.Content>
         </Tabs.Item>

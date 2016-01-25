@@ -18,52 +18,74 @@ import AccessibleList from 'ui/components/lib/accessible-list.react';
 import classNames from 'classnames';
 
 class TabContent extends React.Component {
+
   static propTypes = {
     current: PT.bool,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
+
   static defaultProps = { current: true };
 
   constructor(props) {
     super(props);
     componentUtil.install(this);
-  };
+  }
 
   render() {
-    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__content`, {'show': this.props.current, 'hide': !this.props.current})));
+    const className = classNames(
+      this.props.className,
+      pf(classNames(`tabs--${this.props.flavor}__content`, {
+        show: this.props.current,
+        hide: !this.props.current
+      }))
+    );
     const props = this.$propsWithoutKeys('className');
     return (
-      <div {...props} className={className} role="tabpanel" aria-labelledby={`${this.props.id}__item`}>
+      <div
+        {...props}
+        className={className}
+        role="tabpanel"
+        aria-labelledby={`${this.props.id}__item`}>
         {this.props.children}
       </div>
     );
-  };
+  }
+
 }
 
 
 class TabItem extends React.Component {
+
   static propTypes = {
     title: PT.string,
     content: PT.node,
-    flavor: componentUtil.PropTypes.flavor( 'scoped', 'default', 'path')
+    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
+
   constructor(props) {
     super(props);
     componentUtil.install(this);
-  };
+  }
 
-renderCustom(tabIndex) {
-  return React.cloneElement(this.props.content, {
-    onClick: this.props.onClick.bind(this),
-    tabIndex: tabIndex,
-    className: pf(this.props.innerClass),
-    'aria-selected': this.props.current
-  });
-}
+  renderCustom(tabIndex) {
+    return React.cloneElement(this.props.content, {
+      onClick: this.props.onClick.bind(this),
+      tabIndex: tabIndex,
+      className: pf(this.props.innerClass),
+      'aria-selected': this.props.current
+    });
+  }
 
   renderDefault(tabIndex) {
     return (
-      <a className={pf(this.props.innerClass)} onClick={this.props.onClick.bind(this)} href="#void" role="tab" tabIndex={tabIndex} aria-selected={this.props.current} aria-controls={this.props.id} id={`${this.props.id}__item`}>
+      <a
+        className={pf(this.props.innerClass)}
+        onClick={this.props.onClick.bind(this)}
+        href="#void" role="tab"
+        tabIndex={tabIndex}
+        aria-selected={this.props.current}
+        aria-controls={this.props.id}
+        id={`${this.props.id}__item`}>
         {this.props.title}
       </a>
     );
@@ -71,55 +93,70 @@ renderCustom(tabIndex) {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {active: this.props.current})));
+    const className = classNames(
+      this.props.className,
+      pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {
+        active: this.props.current
+      }))
+    );
     const tabIndex = this.props.current ? 0 : -1;
-
     return (
       <li className={className} {...props} role="presentation">
         {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
       </li>
     );
-  };
+  }
+
 }
 
 class TabItemOverflow extends React.Component {
+
   static propTypes = {
     title: PT.string,
     content: PT.node,
     flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
+
   constructor(props) {
     super(props);
     componentUtil.install(this);
-  };
+  }
 
   render() {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
-    const className = classNames(this.props.className, pf(classNames('tabs__item--overflow text-heading--label', {active: this.props.current})));
+    const className = classNames(
+      this.props.className,
+      pf(classNames('tabs__item--overflow text-heading--label', {
+        active: this.props.current
+      }))
+    );
     const tabIndex = this.props.current ? 0 : -1;
     const contents = React.Children.map(this.props.children, function(c,i) {
       return React.cloneElement(c);
     });
-
     return (
       <li className={className} {...props} role="presentation" onClick={null}>
         {contents}
       </li>
     );
-  };
+  }
+
 }
 
 class Tabs extends React.Component {
+
   static propTypes = {
     selectedIndex: PT.number,
     flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
+
   static defaultProps = { selectedIndex: 0 };
+
   constructor(props) {
     super(props);
     componentUtil.install(this);
     this.state = {currentTab: this.props.selectedIndex};
-  };
+  }
 
   onClick(index, e) {
     this.setState({currentTab: index});
@@ -129,19 +166,34 @@ class Tabs extends React.Component {
 
   tabs() {
     return React.Children.map(this.props.children, (c, i) => {
-      return React.cloneElement(c, {current: this.state.currentTab === i, flavor: this.props.flavor, onClick: createChainedFunction(c.props.onClick, this.onClick.bind(this, i))});
+      return React.cloneElement(c, {
+        current: this.state.currentTab === i,
+        flavor: this.props.flavor,
+        onClick: createChainedFunction(
+          c.props.onClick, this.onClick.bind(this, i)
+        )
+      });
     });
   }
 
   currentPanel() {
     return React.Children.map(this.props.children, (c, i) => {
-      if(c.type === TabItemOverflow) {
+      if (c.type === TabItemOverflow) {
         return null;
       } else {
-        if(c.props.children.type === TabContent) {
-          return React.cloneElement(c.props.children, {current: this.state.currentTab === i, id: c.props.id, flavor: this.props.flavor});
+        if (c.props.children.type === TabContent) {
+          return React.cloneElement(c.props.children, {
+            id: c.props.id,
+            current: this.state.currentTab === i,
+            flavor: this.props.flavor
+          });
         } else {
-          return <TabContent current={this.state.currentTab === i} id={c.props.id} flavor={this.props.flavor}>{c.props.children}</TabContent>;
+          return <TabContent
+            current={this.state.currentTab === i}
+            id={c.props.id}
+            flavor={this.props.flavor}>
+            {c.props.children}
+          </TabContent>;
         }
       }
     });
@@ -149,17 +201,25 @@ class Tabs extends React.Component {
 
   render() {
     const props = this.$propsWithoutKeys('className', 'flavor');
-    const className = classNames(this.props.className, pf(`tabs--${this.props.flavor}`));
-
+    const className = classNames(
+      this.props.className,
+      pf(`tabs--${this.props.flavor}`)
+    );
     return (
       <div {...props} className={className}>
-        <AccessibleList selector="a" click={true} className={pf(`tabs--${this.props.flavor}__nav`)} role="tablist" selectedIndex={this.props.selectedIndex}>
-          { this.tabs() }
+        <AccessibleList
+          selector="a"
+          click={true}
+          className={pf(`tabs--${this.props.flavor}__nav`)}
+          role="tablist"
+          selectedIndex={this.props.selectedIndex}>
+        {this.tabs()}
         </AccessibleList>
         { this.props.panel ? this.props.panel : this.currentPanel() }
       </div>
     );
   }
+
 }
 
 Tabs.Item = TabItem;

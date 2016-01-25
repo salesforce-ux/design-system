@@ -95,8 +95,11 @@
     }
     padding: $spacing-small $spacing-medium;
     background-color: $color-background;
-    text-align: right;
     box-shadow: $shadow-drop-down;
+
+    .#{$css-prefix}x-small-buttons--horizontal {
+      justify-content: flex-end;
+    }
   }
 
   &__close {

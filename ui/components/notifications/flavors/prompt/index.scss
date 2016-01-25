@@ -20,7 +20,10 @@
 
   .#{$css-prefix}modal__footer {
     border-top: 0;
-    text-align: center;
+
+    .#{$css-prefix}x-small-buttons--horizontal {
+      justify-content: center;
+    }
   }
 
   .#{$css-prefix}modal__close {

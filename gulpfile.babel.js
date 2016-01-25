@@ -61,6 +61,19 @@ const SLDSLog = (hrtime = process.hrtime()) => function () {
 };
 
 /**
+ * Return a debounced function that will start a task every wait seconds
+ *
+ * @param {string} task
+ * @param {nuber} [wait]
+ * @returns functions
+ */
+const debounceTask = (task, wait = 10000) =>
+  _.debounce(() => gulp.start(task), wait, {
+    leading: true,
+    trailing: false
+  });
+
+/**
  * A middleware that will rebuild pages on demand
  */
 const siteMiddleware = (req, res, next) => {
@@ -155,17 +168,23 @@ gulp.task('serve', () => {
 
   gulp.watch(watchPaths.sass, ['styles']);
 
-  // Only lint every 10s
-  // so they don't take CPU time away from compilation tasks
-  gulp.watch(watchPaths.js, { debounceDelay: 10000 }, ['lint:js']);
-  gulp.watch(watchPaths.sass, { debounceDelay: 10000 }, ['lint:sass']);
+  // Only lint every 10s so they don't take CPU time away from compilation tasks
+  gulp.watch(
+    watchPaths.js,
+    debounceTask('lint:js')
+  );
+  gulp.watch(
+    watchPaths.sass,
+    debounceTask('lint:sass')
+  );
   gulp.watch(
     [watchPaths.sass, watchPaths.js, watchPaths.pages],
-    { debounceDelay: 10000 },
-    ['lint:spaces']
+    debounceTask('lint:spaces')
   );
-
-  gulp.watch('.www/assets/styles/slds.css', { debounceDelay: 10000 }, ['stylestats']);
+  gulp.watch(
+    '.www/assets/styles/slds.css',
+    debounceTask('stylestats')
+  );
 });
 
 gulp.task('default', callback => {

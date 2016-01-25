@@ -145,7 +145,7 @@ describe('scripts/tasks/site/compile.js', () => {
         return path.resolve(tempPath, ...arguments);
       });
       createComponentPage = sinon.spy(compiler, 'createComponentPage');
-      compiler.createComponentPages(done);
+      compiler.createComponentPages(routes, done);
     });
     after(() => {
       getSitePathTmp.restore();

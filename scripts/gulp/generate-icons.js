@@ -134,7 +134,7 @@ const generate = () => {
   function flush (done) {
     try {
       // Natural sorting for only the custom section of icons
-       _.find(sprites, { name: 'custom' }).icons.sort((a, b) => {
+      _.find(sprites, { name: 'custom' }).icons.sort((a, b) => {
         a = parseInt(a.symbol.replace(/^[^\d]*/, ''), 10);
         b = parseInt(b.symbol.replace(/^[^\d]*/, ''), 10);
         return a > b ? 1 : -1;
@@ -160,4 +160,4 @@ gulp.task('generate:icons', () =>
     .pipe(gulpIgnore.exclude(/\-sprite/))
     .pipe(generate())
     .pipe(gulp.dest(__PATHS__.generated))
-)
+);

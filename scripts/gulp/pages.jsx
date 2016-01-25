@@ -73,7 +73,7 @@ export const tryRequire = (path, obj, key) => {
     if (obj) { obj[key] = m; }
     return m;
   } catch (e) {
-    return null
+    return null;
   }
 };
 
@@ -100,7 +100,7 @@ export const renderPage = pageBody => {
  */
 export const renderExample = element => {
   if (!element) return null;
-  let html = renderToStaticMarkup(element)
+  let html = renderToStaticMarkup(element);
   const $ = cheerio.load(html);
   // Remove a ".demo-only" wrapping <div>
   $.root().contents().each(function (i, el) {
@@ -110,7 +110,7 @@ export const renderExample = element => {
     }
   });
   // Format
-  return prettyHTML(html, {
+  return prettyHTML($.html(), {
     'indent_size': 2,
     'indent_char': ' ',
     'unformatted': ['a']
@@ -249,18 +249,25 @@ export const gulpRenderComponentPage = () =>
  * @param {object[]} components
  * @returns {Stream}
  */
-export const generateComponentPages = components => {
+export const generateComponentPages = (components, callback = _.noop) => {
   const stream = through.obj();
   components.forEach(c => stream.write(c));
   stream.end();
   return stream
     .pipe(gulpRenderComponentPage())
-    .pipe(gulp.dest(__PATHS__.www));
+    .on('error', callback)
+    .pipe(gulp.dest(__PATHS__.www))
+    .on('finish', callback);
 };
 
 gulp.task('pages:components', () =>
   generateComponentPages(
     _.find(generateUI(), { id: 'components' }).components
+  ));
+
+gulp.task('pages:components:utilities', () =>
+  generateComponentPages(
+    _.find(generateUI(), { id: 'utilities' }).components
   ));
 
 /**
@@ -270,12 +277,15 @@ gulp.task('pages:components', () =>
  * @param {string} src - a glob of .jsx files that export <PageBody/> elements
  * @returns {Stream}
  */
-export const generatePages = src =>
-  gulp.src(src)
+export const generatePages = (src, callback = _.noop) =>
+  gulp
+    .src(src, { base: __PATHS__.site })
     .pipe(gulpIgnore.exclude(excludeUnderscore))
     .pipe(gulpRenderPage())
+    .on('error', callback)
     .pipe(gulpRename({ extname: '.html' }))
-    .pipe(gulp.dest(__PATHS__.www));
+    .pipe(gulp.dest(__PATHS__.www))
+    .on('finish', callback);
 
-gulp.task('pages', ['pages:components'], () =>
+gulp.task('pages', ['pages:components', 'pages:components:utilities'], () =>
   generatePages('./site/**/index.jsx'));

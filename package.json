@@ -116,6 +116,7 @@
     "karma-spec-reporter": "0.0.23",
     "karma-webpack": "1.7.0",
     "mocha": "2.3.0",
+    "pretty-time": "^0.2.0",
     "run-sequence": "^1.1.5",
     "sinon": "1.17.2",
     "stylestats": "^6.2.0",

@@ -40,7 +40,7 @@ export default React.createClass({
       styles: [],
       scripts: [],
       siteStyles: true
-    }
+    };
   },
 
   render() {

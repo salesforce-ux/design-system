@@ -14,33 +14,96 @@ import './scripts/helpers/setup';
 import _ from 'lodash';
 import browserSync, { reload } from 'browser-sync';
 import del from 'del';
+import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
+import prettyTime from 'pretty-time';
 import runSequence from 'run-sequence';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import './scripts/gulp/assets';
 import './scripts/gulp/generate';
+import { generateUI } from './scripts/gulp/generate-ui';
 import './scripts/gulp/lint';
-import './scripts/gulp/pages';
+import { generatePages, generateComponentPages } from './scripts/gulp/pages';
 import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 
 const watchPaths = {
   sass: [
-    path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
-    path.resolve(__PATHS__.ui, '**/*.scss')
+    'site/assets/styles/**/*.scss',
+    'ui/**/*.scss'
   ],
   pages: [
-    path.resolve(__PATHS__.ui, '**/*.{md,yml}')
+    'ui/**/*.{md,yml}'
   ],
   js: [
     'app_modules/**/*.{js,jsx}',
-    path.resolve(__PATHS__.ui, '**/*.{js,jsx}'),
-    path.resolve(__PATHS__.site, '**/*.{js,jsx}')
+    'ui/**/*.{js,jsx}',
+    'site/**/*.{js,jsx}'
   ]
+};
+
+/**
+ * Create function that logs a prefixed message with the process time
+ *
+ * @param {array} [hrtime]
+ * @returns {function}
+ */
+const SLDSLog = (hrtime = process.hrtime()) => function () {
+  console.log([
+    `[${gutil.colors.red('♥')}${gutil.colors.yellow('⚡')}]`,
+    ...arguments,
+    `after ${gutil.colors.magenta(prettyTime(process.hrtime(hrtime)))}`
+  ].join(' '));
+};
+
+/**
+ * A middleware that will rebuild pages on demand
+ */
+const siteMiddleware = (req, res, next) => {
+  // Check for pages "/some/page/", "some/page/index.html"
+  if (/\/$|\.html$/.test(req.url) && !/preview-frame/.test(req.url)) {
+    // Clean the URL
+    const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
+    // First, check for /components/*
+    if (/components/.test(url)) {
+      const ui = generateUI();
+      const log = SLDSLog();
+      for (const category of ui) {
+        for (const component of category.components) {
+          const pattern = new RegExp(_.escapeRegExp(component.path));
+          if (pattern.test(url)) {
+            return generateComponentPages([component], err => {
+              log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
+              next();
+            });
+          }
+        }
+      }
+      // No component was found
+      return next();
+    }
+    // Create a path to the source file
+    const indexPath = path.join(__PATHS__.site, url, 'index.jsx');
+    // Make sure the source file actually exists
+    fs.access(indexPath, err => {
+      // No page was found
+      if (err) return next();
+      // Remove it from the cache
+      delete require.cache[indexPath];
+      // Rebuild
+      const log = SLDSLog();
+      generatePages([indexPath], err => {
+        log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
+        next();
+      });
+    });
+  } else {
+    next();
+  }
 };
 
 gulp.task('clean', del.bind(null, [
@@ -58,6 +121,8 @@ gulp.task('serve', () => {
     server: {
       baseDir: __PATHS__.www,
       middleware: [
+        // Serve /site pages on demand
+        siteMiddleware,
         // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
@@ -75,6 +140,18 @@ gulp.task('serve', () => {
 
   // Reload after each rebuild
   webpackCompiler.plugin('done', stats => reload());
+
+  // When module files change, delete them from the cache
+  // and then reload the browser which will trigger the middleware
+  // to rebuild the page
+  gulp.watch([
+    ...watchPaths.js,
+    ...watchPaths.pages
+  ], event => {
+    SLDSLog()(`File Changed ${event.path}`);
+    delete require.cache[event.path];
+    reload();
+  });
 
   gulp.watch(watchPaths.sass, ['styles']);
 

@@ -28,7 +28,7 @@ import { generateUI } from './generate-ui';
  * @returns {string[]}
  */
 export const getClasses = (css, options) => {
-  assert(_.isString(css), 'argument "css" must be a string')
+  assert(_.isString(css), 'argument "css" must be a string');
   const selectors = [];
   options = _.defaults({}, options);
   options.removePrefix = _.isString(options.removePrefix)
@@ -43,7 +43,7 @@ export const getClasses = (css, options) => {
     .flatten().compact()
     .map(s => options.removePrefix ? s.replace(options.removePrefix, '$1') : s)
     .uniq().sortBy().value();
-}
+};
 
 /**
  * Return a map of classNames related to components from a UI object

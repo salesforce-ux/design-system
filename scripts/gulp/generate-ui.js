@@ -58,4 +58,4 @@ gulp.task('generate:ui', () => {
   stream.end();
   return stream
     .pipe(gulp.dest(__PATHS__.generated));
-})
+});

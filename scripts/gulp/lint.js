@@ -16,7 +16,7 @@ import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import eslintPathFormatter from 'eslint-path-formatter';
 import scsslint from 'gulp-scss-lint';
-import browserSync, { reload } from 'browser-sync';
+import browserSync from 'browser-sync';
 
 eslintPathFormatter.editor('sublime');
 
@@ -54,7 +54,6 @@ function lintjs(files, options) {
   return () => {
     return gulp.src(files)
       .pipe(cache('lintjs'))
-      .pipe(reload({stream: true, once: true}))
       .pipe(eslint(options))
       .pipe(eslint.format(eslintPathFormatter))
       .pipe(gulpif(!browserSync.active, eslint.failAfterError()));

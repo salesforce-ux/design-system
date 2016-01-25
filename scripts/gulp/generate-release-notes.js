@@ -47,8 +47,8 @@ gulp.task('generate:release-notes', () =>
           contents: new Buffer(`export default ${releaseNotes}`)
         }));
       } catch (err) {
-        next(err)
+        next(err);
       }
     }))
     .pipe(gulp.dest(__PATHS__.generated))
-)
+);

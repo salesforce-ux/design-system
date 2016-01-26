@@ -16,7 +16,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import g from 'app_modules/global';
-import { Link } from 'react-router';
 
 const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;

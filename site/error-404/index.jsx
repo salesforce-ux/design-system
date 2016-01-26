@@ -15,7 +15,6 @@ import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { logDownloadEvent } from 'app_modules/site/analytics';
 import globals from 'app_modules/global';
-import { Link } from 'react-router';
 
 export default (
   <PageBody contentClassName={pf('site-404 grid grid--vertical')}>

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
 import Img from 'app_modules/ui/img';

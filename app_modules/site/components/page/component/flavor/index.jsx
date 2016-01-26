@@ -15,7 +15,6 @@ import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Prefs from 'app_modules/site/preferences';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import { getHistory } from 'app_modules/site/navigation/history';
 import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
@@ -244,7 +243,7 @@ class ComponentFlavor extends React.Component {
     });
     const iframe = (
       <iframe
-        src={`${getHistory().createHref('/')}components/preview-frame`}
+        src={`/components/preview-frame`}
         height="100%"
         name={flavor.uid}
         ref="iframe"

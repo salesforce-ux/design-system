@@ -11,36 +11,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { createChainedFunction } from 'app_modules/ui/util/component';
-import { logCTAEvent } from 'app_modules/site/analytics';
-import { Link } from 'react-router';
-import { find } from 'lodash';
-import sitemap from 'app_modules/site/navigation/sitemap';
 import _ from 'lodash';
 
-class CTALink extends React.Component {
-
-  onClick() {
-    logCTAEvent(this.props.ctaEventName, this.props.ctaExtraValues);
+export default React.createClass({
+  displayName: 'CTALink',
+  propTypes: {
+    ctaEventName: React.PropTypes.string,
+    ctaExtraValues: React.PropTypes.object
+  },
+  render () {
+    const { ctaEventName } = this.props;
+    const ctaExtraValues = _.isPlainObject(this.props.ctaExtraValues)
+      ? JSON.stringify(this.props.ctaExtraValues)
+      : null;
+    return (
+      <a
+        {...this.props}
+        data-slds-cta-event-name={ctaEventName}
+        data-slds-cta-extra-values={ctaExtraValues}>
+      {this.props.children}
+      </a>
+    );
   }
-
-  render() {
-    let click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    let props = _.assign({}, this.props, {onClick: click});
-    let hasRoute = sitemap.getRouteByPath(props.href);
-    if (hasRoute) {
-      return <Link to={props.href} {...props}>{this.props.children}</Link>;
-    } else {
-      return <a {...props}>{this.props.children}</a>;
-    }
-  }
-
-}
-
-CTALink.displayName = 'CTALink';
-CTALink.propTypes = {
-  ctaEventName: React.PropTypes.string,
-  ctaExtraValues: React.PropTypes.object
-};
-
-export default CTALink;
+});

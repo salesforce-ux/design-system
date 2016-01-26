@@ -81,6 +81,8 @@ const siteMiddleware = (req, res, next) => {
   if (/\/$|\.html$/.test(req.url) && !/preview-frame/.test(req.url)) {
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
+    // Remove <PageBody> from the cache since every page uses it
+    delete require.cache[require.resolve('app_modules/site/components/page/body')];
     // First, check for /components/*
     if (/components/.test(url)) {
       const ui = generateUI();
@@ -89,6 +91,9 @@ const siteMiddleware = (req, res, next) => {
         for (const component of category.components) {
           const pattern = new RegExp(_.escapeRegExp(component.path));
           if (pattern.test(url)) {
+            ['page/body', 'page/component', 'page/component/flavor'].forEach(p => {
+              delete require.cache[require.resolve(`app_modules/site/components/${p}`)];
+            });
             return generateComponentPages([component], err => {
               log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
               next();

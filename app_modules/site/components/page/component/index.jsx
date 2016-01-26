@@ -25,7 +25,10 @@ export default React.createClass({
     const { component } = this.props;
     return (
       <div>
-        <Anchor title={component.title} actions={this.renderComponentOverviewLink()} />
+        <Anchor
+          title={component.title}
+          actions={this.renderComponentOverviewLink()}
+          url="/" />
         <div className={pf('site-content p-around--xx-large')}>
           {this.renderIntro()}
           {this.renderFlavors()}

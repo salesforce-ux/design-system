@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import ToggleExample from 'app_modules/site/components/motion-and-animation/toggle-example';
@@ -208,7 +207,7 @@ export default (
       </div>
 
       <div className={pf('p-vertical--xx-large')}>
-        To implement the shadows in code there are <Link to="/resources/tokens/#category-atmosphere">Design Tokens</Link> you
+        To implement the shadows in code there are <a href="/resources/tokens/#category-atmosphere">Design Tokens</a> you
         can include in the CSS <code>box-shadow</code> attribute.
       </div>
       <div className={pf('p-bottom--xx-large')}>

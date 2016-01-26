@@ -22,11 +22,6 @@ import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
 
-import Page from 'app_modules/site/components/page';
-import PageBody from 'app_modules/site/components/page/body';
-import Component from 'app_modules/site/components/page/component';
-import ComponentFlavor from 'app_modules/site/components/page/component';
-
 import decorateComponent from 'app_modules/site/util/component/create';
 import { generateUI } from './generate-ui';
 
@@ -84,6 +79,7 @@ export const tryRequire = (path, obj, key) => {
  * @returns {string}
  */
 export const renderPage = pageBody => {
+  let Page = require('app_modules/site/components/page').default;
   // Get any "page" specific props from the pageBody
   let pageProps = getPrefixedProps(pageBody.props, 'page');
   // Create page element
@@ -169,6 +165,7 @@ export const gulpRenderPage = () =>
       newFile.contents = new Buffer(html);
       next(null, newFile);
     } catch (err) {
+      console.log(err);
       next(err);
     }
   });
@@ -180,6 +177,10 @@ export const gulpRenderPage = () =>
  */
 export const gulpRenderComponentPage = () =>
   through.obj(function (component, enc, next) {
+    // Require locally for live reloading
+    let [ PageBody, Component, ComponentFlavor ] = [
+      'page/body', 'page/component', 'page/component/flavor'
+    ].map(p => require(`app_modules/site/components/${p}`).default);
     try {
       // Get examples / markup for each flavor
       component.flavors.forEach(flavor => {

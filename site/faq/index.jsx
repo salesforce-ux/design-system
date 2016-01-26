@@ -18,7 +18,6 @@ import CTALink from 'app_modules/site/components/cta-link';
 import version from '.generated/site.version';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import { Link } from 'react-router';
 import g from 'app_modules/global';
 
 class Page extends React.Component {
@@ -152,7 +151,7 @@ class Page extends React.Component {
       `How do I display SVG icons with Lightning Components?`,
       <div className={pf('container--large')}>
         <p>
-          Please review <Link to="/getting-started/lightning">Getting Started with Lightning</Link>.
+          Please review <a href="/getting-started/lightning">Getting Started with Lightning</a>.
         </p>
       </div>
     );

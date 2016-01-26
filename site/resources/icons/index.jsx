@@ -9,19 +9,18 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
+import classNames from 'classnames';
 import React from 'react';
+
+import CTALink from 'app_modules/site/components/cta-link';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
-import Anchor from 'app_modules/site/components/page/anchor';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import categories from '.generated/ui.icons';
-import { Link } from 'react-router';
-import CTALink from 'app_modules/site/components/cta-link';
-import classNames from 'classnames';
 import Sticky from 'app_modules/site/components/sticky';
-import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
+import SvgIcon from 'app_modules/ui/svg-icon';
 
+import categories from '.generated/ui.icons';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Icons extends React.Component {
 
@@ -96,7 +95,6 @@ class Icons extends React.Component {
   render() {
     return (
       <div>
-        <Anchor title="Icons" />
         {this.renderHeader()}
         <div className={pf('p-around--xx-large grid wrap site-content')}>
           <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')} fixedElements=".site-tools">
@@ -109,7 +107,7 @@ class Icons extends React.Component {
           </Sticky>
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             <p className={pf('site-text-introduction m-bottom--reset container--large')}>
-              Choose the icon you need from this page, then follow the implementation instructions on the <Link to="/components/icons/">icon component page</Link>. If you are building a Lightning Component, you may require an
+              Choose the icon you need from this page, then follow the implementation instructions on the <a href="/components/icons/">icon component page</a>. If you are building a Lightning Component, you may require an
               additional <CTALink href="/resources/lightning-svg-icon-component-helper" ctaEventName="lightning-svg-icon-helper">Lightning helper component</CTALink> to use&nbsp;SVGs.
             </p>
             {this.renderCategories()}
@@ -170,7 +168,7 @@ class Icons extends React.Component {
 }
 
 export default (
-  <PageBody contentClassName={false}>
+  <PageBody anchorTitle="Icons" contentClassName={false}>
     <Icons />
   </PageBody>
 );

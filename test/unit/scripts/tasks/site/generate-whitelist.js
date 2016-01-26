@@ -4,7 +4,7 @@ import {
   getClasses,
 } from 'scripts/gulp/generate-whitelist';
 
-describe.only('scripts/gulp/generate-whitelist.js', () => {
+describe('scripts/gulp/generate-whitelist.js', () => {
   describe('#getClasses', () => {
     it(`throws an error if the first argument isn't a string`, () => {
       expect(() => {

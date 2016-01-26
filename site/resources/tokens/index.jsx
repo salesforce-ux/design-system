@@ -9,13 +9,11 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import Anchor from 'app_modules/site/components/page/anchor';
 import Sticky from 'app_modules/site/components/sticky';
-import _ from 'lodash';
 import classNames from 'classnames';
-import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import Prefs from 'app_modules/site/preferences';
 import IfPref from 'app_modules/site/preferences/component';
@@ -105,7 +103,6 @@ const Tokens = React.createClass({
   render: function() {
     return (
       <div>
-        {this.renderAnchor()}
         {this.renderHeader()}
         <div className={pf('p-around--xx-large grid wrap site-content')}>
           <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')} fixedElements=".site-tools">
@@ -122,12 +119,6 @@ const Tokens = React.createClass({
           </div>
         </div>
       </div>
-    );
-  },
-
-  renderAnchor: function() {
-    return (
-      <Anchor title="Design Tokens" />
     );
   },
 
@@ -216,7 +207,7 @@ const Tokens = React.createClass({
 });
 
 export default (
-  <PageBody contentClassName={false}>
+  <PageBody anchorTitle="Design Tokens" contentClassName={false}>
     <Tokens />
   </PageBody>
 );

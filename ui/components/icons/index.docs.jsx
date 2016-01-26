@@ -15,7 +15,6 @@ import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
-import { Link } from 'react-router';
 import CodeBlock from 'app_modules/ui/code-block';
 import globals from 'app_modules/global';
 
@@ -27,7 +26,7 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <p>Five separate SVG sprites are used to create icons — action, custom, doctype, standard and utility. Link to the icon SVG sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <Link to="/resources/icons/">icon page</Link>.)</p>
+    <p>Five separate SVG sprites are used to create icons — action, custom, doctype, standard and utility. Link to the icon SVG sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <a href="/resources/icons/">icon page</a>.)</p>
     <p>When placing the icon code into your page, customize the path in the <code>use</code> attribute of the <code>svg</code> to the proper path and icon name for your specific icon. For example, the <i>case</i> icon in the <i>standard</i> sprite would have a path like this:</p>
     <CodeBlock language="markup">{`
     <svg aria-hidden="true" class="slds-icon">
@@ -37,8 +36,8 @@ export default (
     <p className={pf('m-top--small')}><strong>Note:</strong> If an icon has more than one word in the name, it should be included in the <code>use</code> attribute with the underscore separator as shown on the icon page. For example: log_a_call.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>If an icon has visible descriptive text, nothing more is required. If the icon has no descriptive text, add a <code>span</code> with the <CodeClass className="icon_container"/> class. Place both the <code>svg</code> with the base <CodeClass className="icon"/> class and the description for assistive screen readers inside a <code>span</code> with the <CodeClass className="assistive-text"/> class.</p>
-    <p><strong>Note:</strong> You must include the SVG sprites to link to them. If you&rsquo;re using Visualforce, see <Link to="/getting-started/visualforce">the Visualforce tutorial</Link>. If you’re using <Link to="/resources/lightning-svg-icon-component-helper">Lightning components, see tutorial</Link>.</p>
-    <p>You can access the SVG sprites by downloading the entire <Link to="/resources/downloads">CSS Framework or just the icons</Link>. To include a sprite in your application, the recommended method is to place it into the page as the first element inside the <code>body</code> element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny <Link to="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</Link> script for Internet Explorer.</p>
+    <p><strong>Note:</strong> You must include the SVG sprites to link to them. If you&rsquo;re using Visualforce, see <a href="/getting-started/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/resources/lightning-svg-icon-component-helper">Lightning components, see tutorial</a>.</p>
+    <p>You can access the SVG sprites by downloading the entire <a href="/resources/downloads">CSS Framework or just the icons</a>. To include a sprite in your application, the recommended method is to place it into the page as the first element inside the <code>body</code> element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> script for Internet Explorer.</p>
     <p>When placed into the <code>body</code>, the SVG sprite takes up space in the page. Use either <code>display:none</code> or <code>position:absolute</code> and set both the width and height to zero.</p>
     <div className={pf('site-code--content scrollable--x')}>
       <CodeBlock language="markup">{`

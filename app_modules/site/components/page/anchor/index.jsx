@@ -9,18 +9,32 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
 import _ from 'lodash';
-import shared from 'app_modules/site/shared';
+import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router';
-import { logCTAEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import navigation from 'app_modules/site/navigation/navigation';
-import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
+import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
 import Img from 'app_modules/ui/img';
 
-class Anchor extends React.Component {
+export default React.createClass({
+
+  propTypes: {
+    title: React.PropTypes.string,
+    badge: React.PropTypes.string,
+    actions: React.PropTypes.node,
+    url: React.PropTypes.string
+  },
+
+  getNavItems() {
+    return _.drop(getActiveNavItems(navigation(), this.props.url));
+  },
+
+  rootNavName() {
+    // pick a fallback that will hopefully stay around
+    const fallback = 'resources';
+    return this.getNavItems().map(item => item.id)[0] || fallback;
+  },
 
   render() {
     return (
@@ -41,17 +55,7 @@ class Anchor extends React.Component {
         {this.props.actions}
       </header>
     );
-  }
-
-  getNavItems() {
-    let url = shared.store.get('url');
-    if (!url) return [];
-    return getActiveNavItems(navigation, url);
-  }
-
-  rootNavName() {
-    return this.getNavItems().map(item => item.id)[0] || 'resources'; // pick a fallback that will hopefully stay around.
-  }
+  },
 
   renderBreadcrumbs() {
     let childNavItems = _.dropRight(this.getNavItems());
@@ -60,7 +64,7 @@ class Anchor extends React.Component {
     let breadcrumbs = childNavItems.map(item => {
       return (
         <li className={pf('list__item')} key={item.id}>
-          <Link to={item.route}>{item.label}</Link>
+          <a href={item.path}>{item.label}</a>
         </li>
       );
     });
@@ -76,7 +80,7 @@ class Anchor extends React.Component {
         </ol>
       </nav>
     );
-  }
+  },
 
   renderBadge() {
     if (!this.props.badge) return null;
@@ -87,12 +91,4 @@ class Anchor extends React.Component {
     );
   }
 
-}
-
-Anchor.propTypes = {
-  title: React.PropTypes.string,
-  badge: React.PropTypes.string,
-  actions: React.PropTypes.node
-};
-
-export default Anchor;
+});

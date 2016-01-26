@@ -3,6 +3,8 @@
     left: $spacing-medium;
     right: $spacing-medium;
   }
+  text-align: center;
+  vertical-align: middle;
 }
 
 @mixin button-base {
@@ -40,7 +42,8 @@
   }
 }
 
-@mixin button-destructive { // @TODO - update when new tokens hit the repo
+@mixin button-destructive {
+  // @TODO - update when new tokens hit the repo
   background-color: #c23934; //$color-background-destructive;
   border: $border-width-thin solid #c23934; //$color-border-destructive;
   color: $color-text-inverse;
@@ -81,11 +84,6 @@
       &-buttons--horizontal .#{$css-prefix}button + .#{$css-prefix}button {
         margin-left: $spacing-x-small;
       }
-
-      &-buttons--horizontal {
-        display: flex;
-        align-items: center;
-      }
     }
   }
 
@@ -103,11 +101,6 @@
       &-button--horizontal + .#{$css-prefix}#{$max-delimiter}#{$size-modifier}-button--horizontal,
       &-buttons--horizontal .#{$css-prefix}button + .#{$css-prefix}button {
         margin-left: $spacing-x-small;
-      }
-
-      &-buttons--horizontal {
-        display: flex;
-        align-items: center;
       }
     }
   }

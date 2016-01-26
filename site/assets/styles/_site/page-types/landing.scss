@@ -235,7 +235,7 @@
 
 // Social Counter Button Pair
 .site-button-group--social-counter {
-  display: inline-flex;
+  display: inline-block;
   margin-left: $spacing-medium;
 
   .#{$css-prefix}button + .#{$css-prefix}button {

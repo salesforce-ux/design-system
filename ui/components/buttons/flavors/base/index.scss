@@ -11,20 +11,18 @@
 
 .#{$css-prefix}button {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: $spacing-xx-small 0;
+  display: inline-block;
+  padding: 0;
   background: transparent {
-    clip: padding-box;
+    clip: border-box;
   };
-  border: 0 {
+  border: $border-width-thin solid transparent {
     radius: $border-radius-medium;
   };
-  min-height: $height-button;
-  color: $color-text-link;
   font-size: $font-size-small;
+  line-height: $line-height-button;
   text-decoration: none;
+  color: $color-text-link;
   -webkit-appearance: none;
   white-space: normal;
   user-select: none;
@@ -76,6 +74,11 @@
       margin-left: $spacing-xx-small;
     }
   }
+
+  svg {
+    position: relative;
+    top: -1px;
+  }
 }
 
 // Deprecate
@@ -83,6 +86,10 @@
   margin-left: $spacing-xx-small;
 }
 
-a.#{$css-prefix}button:focus {
-  @include focus-button;
+a.#{$css-prefix}button {
+  text-align: center;
+
+  &:focus {
+    @include focus-button;
+  }
 }

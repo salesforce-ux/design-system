@@ -33,7 +33,7 @@ $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 $sales-path: 2rem !default; // @TODO: Temp token till we align sizing
-$height-button: 2rem !default;
+$line-height-button: 1.875rem; // This is an override. can't use default
 $square-icon-medium-content-alt: 0.875rem !default;
 
 $force-base-map: map-merge($force-base-map, (

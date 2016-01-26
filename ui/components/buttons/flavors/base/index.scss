@@ -75,7 +75,7 @@
     }
   }
 
-  svg {
+  &:not(.#{$css-prefix}pill__remove) svg {
     position: relative;
     top: -1px;
   }

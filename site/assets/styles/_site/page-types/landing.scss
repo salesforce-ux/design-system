@@ -250,7 +250,7 @@
   transition: opacity $duration-immediately ease;
 
   @include mq-small-min {
-    display: inline-flex;
+    display: inline-block;
   }
 
   &.is-loaded {

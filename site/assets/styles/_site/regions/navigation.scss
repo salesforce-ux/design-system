@@ -43,7 +43,7 @@
     }
   }
 
-  .is-active > a {
+  .#{$css-prefix}is-active > a {
     color: $color-text-tab-label-selected;
   }
 

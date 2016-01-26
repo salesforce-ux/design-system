@@ -29,7 +29,7 @@ export default (
         </MediaObject>
         <div className={pf('no-flex')}>
           <div className={pf('button-group')}>
-            <Button flavor="neutral,small">Button</Button>
+            <Button flavor="neutral">Button</Button>
             <ButtonIcon
               flavor="icon-border-filled"
               className={pf('toggle-visibility')}

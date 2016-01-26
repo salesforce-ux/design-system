@@ -22,7 +22,7 @@ export default (
     </div>
     <div className={pf('card__body p-horizontal--small')}>
       <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
-      <Button flavor="neutral,small" className={pf('m-bottom--x-large')}>Add Contact</Button>
+      <Button flavor="neutral" className={pf('m-bottom--x-large')}>Add Contact</Button>
     </div>
   </div>
 </div>

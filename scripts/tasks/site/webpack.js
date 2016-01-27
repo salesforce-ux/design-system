@@ -147,7 +147,9 @@ export function watch (options, callback) {
   console.log('Watching webpack…');
   const config = getConfig();
   const compiler = webpack(config);
-  compiler.watch(100, (err, stats) => {
+  compiler.watch({
+    aggregateTimeout: 300
+  }, (err, stats) => {
     stats = logStats(stats);
     callback(err, stats);
   });

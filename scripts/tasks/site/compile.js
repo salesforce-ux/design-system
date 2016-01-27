@@ -150,11 +150,8 @@ export function createPageCompiler () {
      *
      * @param {function} callback
      */
-    createComponentPages (done) {
+    createComponentPages (routes, done) {
       console.time('Creating component pages');
-      let sitemap = require('app_modules/site/navigation/sitemap').default;
-      let routes = sitemap.getFlattenedRoutes()
-        .filter(route => route.component);
       async.waterfall([
         (callback) =>
           async.map(routes, this.createComponentPage, callback),
@@ -297,11 +294,14 @@ export function createPageCompiler () {
      */
     compile (done) {
       console.time('Compiling pages');
+      let sitemap = require('app_modules/site/navigation/sitemap').default;
+      let componentRoutes = sitemap.getFlattenedRoutes()
+        .filter(route => route.component);
       async.series([
         done => {
           async.parallel([
             this.createPages,
-            this.createComponentPages
+            async.apply(this.createComponentPages, componentRoutes)
           ], done);
         },
         this.renderPages

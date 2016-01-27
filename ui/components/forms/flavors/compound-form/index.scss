@@ -22,6 +22,9 @@
   .#{$css-prefix}form-element__control {
     display: inline-block;
     position: relative;
-    padding: 0 $spacing-x-small;
+
+    + .#{$css-prefix}form-element__control {
+      padding-left: $spacing-x-small;
+    }
   }
 }

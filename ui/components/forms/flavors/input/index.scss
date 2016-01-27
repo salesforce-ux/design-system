@@ -21,7 +21,12 @@
   &--bare {
     background-color: transparent;
     border: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
     color: $color-text-default;
+    line-height: $line-height-button-small;
 
     &:focus,
     &:active {

@@ -24,12 +24,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Something that never changes
 
-const complete = (
-  <Button flavor="brand" className={pf('path__complete button--small no-flex m-left--small')}>
-    <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
-    Mark Status as Complete
-  </Button>
-);
+// const complete = (
+//   <Button flavor="brand" className={pf('path__complete button--small no-flex m-left--small')}>
+//     <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+//     Mark Status as Complete
+//   </Button>
+// );
 
 // Something that can change
 
@@ -51,13 +51,18 @@ let Path = props =>
 let Trigger = props =>
   <ButtonIcon
     flavor="icon-small"
-    className="path__trigger no-flex"
+    className="path__trigger no-flex m-right--small"
     sprite="utility"
     symbol="chevrondown"
     assistiveText="Open" />;
 
+let Action = props =>
+  <Button flavor="brand" className={pf('path__complete button--small no-flex m-left--small')}>
+    {props.children}
+  </Button>;
+
 let Tabsmain = props =>
-  <div className={pf('tabs--path m-left--small')} role="application">
+  <div className={pf('tabs--path')} role="application">
     <ul className={pf('tabs--path__nav')}  role="tablist">
       {props.children}
     </ul>
@@ -197,7 +202,8 @@ let StateB = props =>
         <span className={pf('tabs--path__title')}>Closed</span>
       </Tab>
     </Tabsmain>
-    {complete}
+    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    Mark Status as Complete</Action>
   </Path>;
 
 let StateC = props =>
@@ -220,13 +226,103 @@ let StateC = props =>
             </span>
             <span className={pf('tabs--path__title')}>Open</span>
           </Tab>
-          <Tab className={pf('is-complete')}>
+          <Tab className={pf('is-current')}>
             <span className={pf('tabs--path__stage')}>
               <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
             </span>
             <span className={pf('tabs--path__title')}>Unqualified</span>
           </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Nurturing</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Closed</span>
+          </Tab>
+        </Tabsmain>
+        <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+          Mark Status as Complete</Action>
+      </Path>
+    </Coach>
+  </Demo>;
+
+let StateD = props =>
+  <Demo>
+    <Coach>
+      <Path>
+        <Trigger />
+        <Tabsmain>
           <Tab className={pf('is-complete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Contacted</span>
+          </Tab>
+          <Tab className={pf('is-complete is-active')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Open</span>
+          </Tab>
+          <Tab className={pf('is-current')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Unqualified</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Nurturing</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Closed</span>
+          </Tab>
+        </Tabsmain>
+        <Action>
+          Mark as Current Stage</Action>
+      </Path>
+    </Coach>
+  </Demo>;
+
+let StateE = props =>
+  <Demo>
+    <Coach>
+      <Path>
+        <Trigger />
+        <Tabsmain>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Contacted</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Open</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Unqualified</span>
+          </Tab>
+          <Tab className={pf('is-incomplete')}>
             <span className={pf('tabs--path__stage')}>
               <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
             </span>
@@ -239,11 +335,10 @@ let StateC = props =>
             <span className={pf('tabs--path__title')}>Closed</span>
           </Tab>
         </Tabsmain>
-        {complete}
+        <Action>Change Closed State</Action>
       </Path>
     </Coach>
   </Demo>;
-
 
 
 ///////////////////////////////////////////////
@@ -253,20 +348,28 @@ let StateC = props =>
 
 export let states = [
   {
-    label: 'Default',
+    label: 'Default without Coaching',
     element: <StateA />
   }
   ,{
-    label: 'Sales Path with Coaching',
+    label: 'Sales Path with Coaching Included',
     element: <StateB />
   },
   {
-    label: 'Sales Path with Coaching Selected',
+    label: 'Sales Path with Current Stage Coaching',
     element: <StateC />
+  },
+  {
+    label: 'Sales Path with Other Stage Selected',
+    element: <StateD />
+  },
+  {
+    label: 'Sales Path — Lost',
+    element: <StateE />
   }
   //,
   // {
-  //   label: 'Completed Sales Path with Lost Sale',
-  //   element: <StateD />
+  //   label: 'Sales Path — Won',
+  //   element: <StateE />
   // }
 ];

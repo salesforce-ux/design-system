@@ -104,21 +104,6 @@
     + .#{$css-prefix}tabs--path__item:before {
       background-color: $color-background-inverse;
     }
-
-    ~ .#{$css-prefix}is-current { // @TODO: This needs to work both directions in the path
-      // scss-lint:disable NestingDepth
-      background-color: $color-background-alt;
-
-      .#{$css-prefix}tabs--path__link {
-        // scss-lint:disable NestingDepth
-        color: $color-text-default;
-      }
-
-      + .#{$css-prefix}tabs--path__item:before {
-        // scss-lint:disable NestingDepth
-        background-color: $color-background-alt;
-      }
-    }
   }
 }
 

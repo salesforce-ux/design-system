@@ -22,7 +22,7 @@ import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
 
-import decorateComponent from 'app_modules/site/util/component/create';
+import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
 
 /**
@@ -162,6 +162,7 @@ export const gulpRenderPage = () =>
       const html = renderPage(pageBody);
       // Create the new file
       let newFile = file.clone();
+      newFile.base = __PATHS__.site;
       newFile.contents = new Buffer(html);
       next(null, newFile);
     } catch (err) {
@@ -177,11 +178,11 @@ export const gulpRenderPage = () =>
  */
 export const gulpRenderComponentPage = () =>
   through.obj(function (component, enc, next) {
-    // Require locally for live reloading
-    let [ PageBody, Component, ComponentFlavor ] = [
-      'page/body', 'page/component', 'page/component/flavor'
-    ].map(p => require(`app_modules/site/components/${p}`).default);
     try {
+      // Require locally for live reloading
+      let [ PageBody, Component, ComponentFlavor ] = [
+        'page/body', 'page/component', 'page/component/flavor'
+      ].map(p => require(`app_modules/site/components/${p}`).default);
       // Get examples / markup for each flavor
       component.flavors.forEach(flavor => {
         let example = tryRequire(`ui/${flavor.path}/index.react.example.jsx`);
@@ -209,8 +210,9 @@ export const gulpRenderComponentPage = () =>
               const element = getExampleElement(f.example, { state });
               const id = state.id || _.kebabCase(state.label);
               this.push(new gutil.File({
-                path: path.join(f.path, `_${id}.html`),
-                contents: new Buffer(renderExample(element))
+                path: path.resolve(__PATHS__.site, f.path, `_${id}.html`),
+                contents: new Buffer(renderExample(element)),
+                base: __PATHS__.site
               }));
             });
           } else {
@@ -219,8 +221,9 @@ export const gulpRenderComponentPage = () =>
             if (element) {
               // Push a new file for the single example
               this.push(new gutil.File({
-                path: path.join(f.path, '_default.html'),
-                contents: new Buffer(renderExample(element))
+                path: path.resolve(__PATHS__.site, f.path, '_default.html'),
+                contents: new Buffer(renderExample(element)),
+                base: __PATHS__.site
               }));
             }
           }
@@ -235,10 +238,12 @@ export const gulpRenderComponentPage = () =>
       );
       // Push a new HTML page
       next(null, new gutil.File({
-        path: path.join(component.path, 'index.html'),
-        contents: new Buffer(renderPage(pageBody))
+        path: path.resolve(__PATHS__.site, component.path, 'index.html'),
+        contents: new Buffer(renderPage(pageBody)),
+        base: __PATHS__.site
       }));
     } catch (err) {
+      console.log(err);
       next(err);
     }
   });
@@ -280,7 +285,7 @@ gulp.task('pages:components:utilities', () =>
  */
 export const generatePages = (src, callback = _.noop) =>
   gulp
-    .src(src, { base: __PATHS__.site })
+    .src(src)
     .pipe(gulpIgnore.exclude(excludeUnderscore))
     .pipe(gulpRenderPage())
     .on('error', callback)

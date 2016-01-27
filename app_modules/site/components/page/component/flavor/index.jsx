@@ -69,66 +69,6 @@ function getPreviewTabs() {
   }];
 }
 
-/**
- * Return a list of tab objects for the "code" section
- */
-function getCodeTabs() {
-  return [{
-    key: 'html',
-    label: 'HTML',
-    language: 'markup',
-    code: '',
-    info: 'info.markup',
-    roles: Prefs.roles
-  },{
-    key: 'scss',
-    label: 'SCSS',
-    language: 'scss',
-    code: 'styles.scss',
-    info: 'info.styles',
-    roles: [Prefs.roles.regular]
-  },{
-    key: 'design-tokens',
-    label: 'Design Tokens',
-    language: 'scss',
-    code: 'properties',
-    roles: Prefs.roles
-  },{
-    key: 'dependencies',
-    label: 'Dependencies',
-    language: 'markup',
-    code: 'dependencies',
-    roles: [Prefs.roles.aura]
-  }];
-}
-
-/**
- * Return an array of code tabs that can be used for the current flavor
- *
- * @param {object} flavor
- * @param {boolean} hasPreview
- * @returns {object[]}
- */
-function prepareCodeTabs(flavor, hasPreview) {
-  return getCodeTabs()
-  // Make sure code for this tab exists
-  .filter(tab => !_.isEmpty(_.get(flavor, tab.code)) ||
-    tab.key === 'html' && hasPreview)
-  // Get the code and highlight it
-  // HTML is rendered/highlighted dynamically in "renderCodeBlock"
-  .map(tab => {
-    let code = _.get(flavor, tab.code);
-    if (_.isArray(code)) {
-      tab.code = code.join('\n');
-      return tab;
-    } else if (_.isString(code)) {
-      tab.code = highlight(code, tab.language);
-      return tab;
-    }
-    return tab;
-  });
-}
-
 class ComponentFlavor extends React.Component {
 
   constructor(props) {
@@ -142,9 +82,6 @@ class ComponentFlavor extends React.Component {
         ? _.includes(factors, tab.formFactor)
         : false;
     });
-    // Prep the codeTabs by updating the "code" property with appropriate
-    // formatting / highlighting
-    const codeTabs = prepareCodeTabs(flavor, flavor.example);
     this.state = {
       previewTabs,
       // Only set an active tab if there are more than 1
@@ -158,19 +95,9 @@ class ComponentFlavor extends React.Component {
       // If the component example has states, set the initial previewState
       previewState: _.has(flavor.example, 'states')
         ? _.first(flavor.example.states) : false,
-      codeTabs,
-      // Show tabs appropriate for the current role
-      codeTabsFiltered: codeTabs,
       // Used for accessibility
       initialView: true
     };
-    // Listen for the iframe to load
-    /*if (typeof window !== 'undefined') {
-      window.__events.on(
-        `iframe:load:${flavor.uid}`,
-        this.onPreviewFrameLoad.bind(this, 'event')
-      );
-    }*/
   }
 
   render() {
@@ -295,60 +222,17 @@ class ComponentFlavor extends React.Component {
   }
 
   renderCode() {
-    if (!this.state.codeTabsFiltered.length) return null;
     const { flavor } = this.props;
-    return (
-      <Tabs
-        className={{
-          'site-example--code site-example--tabs-initial-view': this.state.initialView,
-          [pf('m-vertical--x-large')]: true
-        }}
-        flavor="default">
-        {this.renderCodeTabs()}
-      </Tabs>
-    );
-  }
-
-  renderCodeTabs() {
-    const { flavor } = this.props;
-    return this.state.codeTabsFiltered.map((tab, index) => {
-      const content = (
-        <CTALink ctaEventName="component-code-tab-click" ctaExtraValues={{ flavor: flavor.id, tab: tab.key }}>
-          {tab.label}
-        </CTALink>
-      );
-      return (
-        <Tabs.Item
-          id={`${flavor.uid}__code-block--${tab.key}`}
-          key={tab.key}
-          aria-controls={`${flavor.uid}__code-block--${tab.key}`}
-          innerClass={pf('tabs--default__link')}
-          content={content}
-          aria-describedby={flavor.uid}>
-          <Tabs.Content
-            className={pf('site-code--content scrollable--x')}>
-            {this.renderCodeBlock(tab)}
-          </Tabs.Content>
-        </Tabs.Item>
-      );
-    });
-  }
-
-  renderCodeBlock(tab) {
-    const { flavor } = this.props;
-    const className = classNames(`language-${tab.language}`);
-    if (tab.key === 'html') {
-      tab.code = flavor.exampleMarkup
-        ? highlight(flavor.exampleMarkup, 'markup') : null;
-    }
+    const className = 'language-markup';
+    const code = flavor.exampleMarkup
+      ? highlight(flavor.exampleMarkup, 'markup') : null;
     return (
       <pre
-        key={tab.key}
-        id={`${flavor.uid}__code-block--${tab.key}`}
-        className={pf(className)}
-        aria-labelledby={`${flavor.uid}__code-tab--${tab.key}`}>
-        <code className={pf(className)} data-key={tab.key}
-          dangerouslySetInnerHTML={{__html: tab.code}} />
+        id={`${flavor.uid}__code-block--markup`}
+        className={className}>
+        <code
+          className={className}
+          dangerouslySetInnerHTML={{__html: code}} />
       </pre>
     );
   }

@@ -9,32 +9,18 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import path from 'path';
-import fs from 'fs';
 import _ from 'lodash';
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import { cloneDeep, defaults } from 'lodash';
-import globals from 'app_modules/global';
+import fs from 'fs';
 import jsYaml from 'js-yaml';
-
+import path from 'path';
 import markdown from 'markdown-it';
+
+import globals from 'app_modules/global';
+
 const md = markdown({
   html: true,
   linkify: true
 });
-
-/**
- * Parse a scss file for $variables
- * This method is very basic and doesn't actually know if the
- * variable is a design property
- *
- * @param {string} scss
- * @return {array}
- */
-function getDesignTokens(scss) {
-  return [];
-}
 
 /**
  * Check of a directory has a file of a specified type
@@ -44,7 +30,7 @@ function getDesignTokens(scss) {
  * @param {function} success - called if an index of the specified extension is found
  * @param {function} error - opposite of success :)
  */
-function getFile(dir, name, success, error) {
+const getFile = (dir, name, success, error) => {
   const file = path.resolve(__PATHS__.ui, dir, name);
   if (fs.existsSync(file) && _.isFunction(success)) {
     success(file, fs.readFileSync(file));
@@ -52,7 +38,7 @@ function getFile(dir, name, success, error) {
   else if (_.isFunction(error)) {
     error();
   }
-}
+};
 
 /**
  * Check of a directory has an index of a specified type
@@ -62,9 +48,8 @@ function getFile(dir, name, success, error) {
  * @param {function} success - called if an index of the specified extension is found
  * @param {function} error - opposite of success :)
  */
-function getIndex(dir, ext, success, error) {
+const getIndex = (dir, ext, success, error) =>
   getFile(dir, `index.${ext}`, success, error);
-}
 
 /**
  * Add a parsed markdown if a component has an "index.md". Globals
@@ -72,55 +57,36 @@ function getIndex(dir, ext, success, error) {
  *
  * @param {object} component
  */
-function addInfo(component) {
+const addInfo = component => {
   component.info = {};
 
-  function replaceGlobals(string) {
-    return string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
+  const replaceGlobals = string =>
+    string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
       return globals[p1] || p1;
     });
-  }
-  function getMarkdown(indexPath) {
-    const contents = fs.readFileSync(indexPath).toString();
-    return md.render(replaceGlobals(contents));
-  }
-  function getYaml(indexPath) {
-    const contents = fs.readFileSync(indexPath).toString();
-    return jsYaml.safeLoad(replaceGlobals(contents));
-  }
+
+  const getMarkdown = indexPath =>
+    md.render(replaceGlobals(fs.readFileSync(indexPath).toString()));
+
+  const getYaml = indexPath =>
+    jsYaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
 
   getIndex(component.path, 'markup.md', indexPath => {
     component.info.markup = {
       __html: getMarkdown(indexPath)
     };
   });
+
   getIndex(component.path, 'table.md', indexPath => {
     component.info.table = {
       __html: getMarkdown(indexPath)
     };
   });
+
   getIndex(component.path, 'table.yml', indexPath => {
     component.info.tableYaml = getYaml(indexPath);
   });
-}
-
-/**
- * Add the scss if a component has an "index.scss"
- *
- * @param {object} component
- */
-function addStyles(component) {
-  component.styles = {};
-  getIndex(component.path, 'scss', indexPath => {
-    component.styles.scss = _.trim(fs.readFileSync(indexPath).toString()
-      // Remove Salesforce license comments
-      .replace(/\/\*[\s\S]+?salesforce[\s\S]+?\*\//m, '')
-      // Replace #{$css-prefix} with global prefix
-      .replace(/#\{\$css-prefix\}/g, globals.cssPrefix)
-      // Remove single line comments
-      .replace(/\/\/[\s\S]*?(?=\n)/g, ''));
-  });
-}
+};
 
 /**
  * Create a new component definition
@@ -128,16 +94,14 @@ function addStyles(component) {
  * @param {object} component
  * @returns {object}
  */
-export default function(component) {
-  component = cloneDeep(component);
+export default component => {
   addInfo(component);
   component.flavors.forEach(flavor => {
-    defaults(flavor, {
+    _.defaults(flavor, {
       showFormFactors: [],
       dependencies: []
     });
     addInfo(flavor);
-    addStyles(flavor);
   });
   return component;
-}
+};

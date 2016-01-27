@@ -49,6 +49,10 @@
     }
   }
 
+  & + .#{$css-prefix}button-group,
+  & + .#{$css-prefix}button {
+    margin-left: $spacing-xx-small;
+  }
   /**
    * Note: This class should be placed on the wrapper
    * of a button that's the final one in a button-group

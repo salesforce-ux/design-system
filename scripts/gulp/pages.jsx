@@ -17,7 +17,7 @@ import gulpIgnore from 'gulp-ignore';
 import gulpRename from 'gulp-rename';
 import gutil from 'gulp-util';
 import path from 'path';
-import { html as prettyHTML } from 'js-beautify';
+import beautify from 'js-beautify';
 import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
@@ -73,19 +73,39 @@ export const tryRequire = (path, obj, key) => {
 };
 
 /**
+ * Return a string of formatted HTML
+ *
+ * @param {string} html
+ * @returns {string}
+ */
+const prettyHTML = _.memoize(html => beautify.html(html, {
+  'indent_size': 2,
+  'indent_char': ' ',
+  'unformatted': ['a']
+}));
+
+/**
+ * Return a cheerio object
+ *
+ * @param {string} html
+ * @returns {object}
+ */
+const loadHTML = html => cheerio.load(html);
+
+/**
  * Render a <PageBody /> inside a <Page /> and render as HTML
  *
  * @param {ReactElement} pageBody
  * @returns {string}
  */
 export const renderPage = pageBody => {
-  let Page = require('app_modules/site/components/page').default;
+  const Page = require('app_modules/site/components/page').default;
   // Get any "page" specific props from the pageBody
-  let pageProps = getPrefixedProps(pageBody.props, 'page');
+  const pageProps = getPrefixedProps(pageBody.props, 'page');
   // Create page element
-  let page = React.createElement(Page, pageProps);
+  const page = React.createElement(Page, pageProps);
   // Construct the HTML
-  let $ = cheerio.load(renderToStaticMarkup(page));
+  const $ = loadHTML(renderToStaticMarkup(page));
   $('#app').append(renderToStaticMarkup(pageBody));
   $('html').before('<!DOCTYPE html>');
   return $.html();
@@ -96,8 +116,9 @@ export const renderPage = pageBody => {
  */
 export const renderExample = element => {
   if (!element) return null;
-  let html = renderToStaticMarkup(element);
-  const $ = cheerio.load(html);
+  // TODO: Figure out how to memoize this
+  const html = renderToStaticMarkup(element);
+  const $ = loadHTML(html);
   // Remove a ".demo-only" wrapping <div>
   $.root().contents().each(function (i, el) {
     const $el = $(el);
@@ -106,11 +127,7 @@ export const renderExample = element => {
     }
   });
   // Format
-  return prettyHTML($.html(), {
-    'indent_size': 2,
-    'indent_char': ' ',
-    'unformatted': ['a']
-  });
+  return prettyHTML($.html());
 };
 
 /**

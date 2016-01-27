@@ -30,6 +30,12 @@
     "HEROKU_APP_NAME": {
       "required": true
     },
+    "INTERNAL_USERNAME": {
+      "required": true
+    },
+    "INTERNAL_PASSWORD": {
+      "required": true
+    },
     "REDIS_URL": {
       "required": true
     }

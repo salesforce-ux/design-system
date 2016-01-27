@@ -43,7 +43,7 @@
     }
   }
 
-  .is-active > a {
+  .#{$css-prefix}is-active > a {
     color: $color-text-tab-label-selected;
   }
 
@@ -60,6 +60,10 @@
 
     .#{$css-prefix}is-nested a {
       padding-left: $spacing-x-large + ($spacing-large * 2);
+    }
+
+    .#{$css-prefix}is-active > a {
+      background-color: $color-background-alt-2;
     }
   }
 
@@ -80,7 +84,7 @@
 
   @include mq-medium-min {
     // TODO: refactor to use scrollable when theme is separated
-    @include scrollbar;
+    @include scrollbar($track: $color-background-alt);
     position: fixed;
     top: $height-banner;
     bottom: 0;
@@ -90,5 +94,9 @@
     overflow: hidden {
       y: auto;
     };
+
+    &.site-navigation--internal {
+      top: ($height-banner + $height-banner-badge);
+    }
   }
 }

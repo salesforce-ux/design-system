@@ -12,67 +12,68 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import path from 'path';
 import fs from 'fs';
 import glob from 'glob';
-import stampit from 'stampit';
 import yaml from 'js-yaml';
 import _ from 'lodash';
 
 const createTitle = str => _.map(_.words(str), w => _.capitalize(w)).join(' ');
 
-export default stampit().methods({
-  generate () {
-    return glob.sync(path.resolve(this.path, '*/config.yml'))
-      .map(this.getConfig, this)
-      .map(config => {
-        config = _.defaults(config, {
-          components: []
+export default props => {
+  return _.assign({
+    generate () {
+      return glob.sync(path.resolve(this.path, '*/config.yml'))
+        .map(this.getConfig, this)
+        .map(config => {
+          config = _.defaults(config, {
+            components: []
+          });
+          return _.merge(config, {
+            components: this.getComponents(config)
+          });
         });
-        return _.merge(config, {
-          components: this.getComponents(config)
+    },
+    getConfig (configPath) {
+      let id = path.basename(path.dirname(configPath));
+      let title = createTitle(id);
+      let config = yaml.safeLoad(fs.readFileSync(configPath).toString());
+      let localPath = path.dirname(configPath)
+        .replace(this.path, '')
+        .replace(/^\//, '');
+      return _.merge({}, {
+        id,
+        title,
+        path: localPath
+      }, config);
+    },
+    getComponents (categoryConfig) {
+      return categoryConfig.components
+        .map(name => path.resolve(
+          this.path, categoryConfig.path, name, 'config.yml'
+        ))
+        .map(this.getConfig, this)
+        .map(config => {
+          config = _.defaults(config, {
+            uid: `${categoryConfig.id}-${config.id}`,
+            flavors: [],
+            classBase: config.id
+          });
+          return _.merge(config, {
+            flavors: this.getFlavors(config)
+          });
         });
-      });
-  },
-  getConfig (configPath) {
-    let id = path.basename(path.dirname(configPath));
-    let title = createTitle(id);
-    let config = yaml.safeLoad(fs.readFileSync(configPath).toString());
-    let localPath = path.dirname(configPath)
-      .replace(this.path, '')
-      .replace(/^\//, '');
-    return _.merge({}, {
-      id,
-      title,
-      path: localPath
-    }, config);
-  },
-  getComponents (categoryConfig) {
-    return categoryConfig.components
-      .map(name => path.resolve(
-        this.path, categoryConfig.path, name, 'config.yml'
-      ))
-      .map(this.getConfig, this)
-      .map(config => {
-        config = _.defaults(config, {
-          uid: `${categoryConfig.id}-${config.id}`,
-          flavors: [],
-          classBase: config.id
+    },
+    getFlavors (componentConfig) {
+      return componentConfig.flavors
+        .map(name => path.resolve(
+          this.path, componentConfig.path, 'flavors', name, 'config.yml'
+        ))
+        .map(this.getConfig, this)
+        .map(config => {
+          config = _.defaults(config, {
+            uid: `${componentConfig.uid}-${config.id}`,
+            classBase: componentConfig.classBase
+          });
+          return config;
         });
-        return _.merge(config, {
-          flavors: this.getFlavors(config)
-        });
-      });
-  },
-  getFlavors (componentConfig) {
-    return componentConfig.flavors
-      .map(name => path.resolve(
-        this.path, componentConfig.path, 'flavors', name, 'config.yml'
-      ))
-      .map(this.getConfig, this)
-      .map(config => {
-        config = _.defaults(config, {
-          uid: `${componentConfig.uid}-${config.id}`,
-          classBase: componentConfig.classBase
-        });
-        return config;
-      });
-  }
-});
+    }
+  }, props);
+};

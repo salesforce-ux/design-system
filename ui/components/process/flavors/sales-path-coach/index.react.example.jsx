@@ -15,190 +15,258 @@ import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Input from 'ui/components/forms/flavors/input/index.react';
-import Img from 'app_modules/ui/img';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+// Something that never changes
+
+const complete = (
+  <Button flavor="brand" className={pf('path__complete button--small no-flex m-left--small')}>
+    <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    Mark Status as Complete
+  </Button>
+);
+
+// Something that can change
+
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let Coach = props =>
+  <div className={pf('path-coach')}>
+    {props.children}
+  </div>;
+
+let Path = props =>
+  <div className={pf('path__row grid')}>
+    {props.children}
+  </div>;
+
+let Trigger = props =>
+  <ButtonIcon
+    flavor="icon-small"
+    className="path__trigger no-flex"
+    sprite="utility"
+    symbol="chevrondown"
+    assistiveText="Open" />;
+
+let Tabsmain = props =>
+  <div className={pf('tabs--path m-left--small')} role="application">
+    <ul className={pf('tabs--path__nav')}  role="tablist">
+      {props.children}
+    </ul>
+  </div>;
+
+let Tab = props =>
+  <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
+    <a className={pf('tabs--path__link')} id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
+      {props.children}
     </a>
-  </div>
-);
+  </li>;
 
-const icon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
-    <span className={pf('assistive-text')}>Powerpoint</span>
-  </span>
-);
+let Coachcontent1 = props =>
+  <div id="content-path-1" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-1">
+    <h2>Item One Content</h2>
+  </div>;
 
-const commentReply = (
-  <div>
-    <p><a href="javascript:void(0)" title="Sue Jenkins">@sjenkins</a> here is an updated version of that <a href="javascript:void(0)" title="View all presentation tags">#presentation</a> file</p>
-    <div className={pf('comment__content-attachment box box--x-small theme--shade')}>
-      <div className={pf('grid grid--align-spread')}>
-        <MediaObject figureLeft={icon}>
-          <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
-        </MediaObject>
-        <ButtonIcon
-          flavor="icon-bare"
-          sprite="utility"
-          symbol="close"
-          assistiveText="Remove this attachment" />
-      </div>
-    </div>
-  </div>
-);
+let Coachcontent2 = props =>
+  <div id="content-path-2" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-2">
+    <h2>Item Two Content</h2>
+  </div>;
 
-export const preview = (
-<div className="demo-only">
-
-  <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
-
-  <div className={pf('demo-class-pill')}>
-    <p className={pf('demo-class-pill__content')}>
-      <code>.{pf('is-active')}</code>
-    </p>
-  </div>
-
-  {/* Is Active */}
-  <div className={pf('publisher publisher--discussion is-active')}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand" disabled>Share</Button>
-    </div>
-  </div>
-
-  <div className={pf('demo-class-pill')}>
-    <p className={pf('demo-class-pill__content')}>
-      <code>.{pf('is-active')}</code> with text input
-    </p>
-  </div>
-
-  {/* Is Active with Content */}
-  <div className={pf('publisher publisher--discussion is-active')}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input3" className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
-    <div className={pf('attachments')}>
-      <div className={pf('attachments__item box box--x-small theme--shade')}>
+let Coachcontent3 = props =>
+  <div id="content-path-3" className={pf('tabs--path__content slds-show')} role="tabpanel" aria-labelledby="tab-path-3">
+    <div className={pf('grid grid--align-spread')}>
+      <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
-          <MediaObject figureLeft={icon}>
-            <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
-          </MediaObject>
-          <ButtonIcon
-            flavor="icon-bare"
-            sprite="utility"
-            symbol="close"
-            assistiveText="Remove this attachment" />
+          <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
+          <span className={pf('text-body--small')}><a href="#void">Edit</a></span>
+        </div>
+        <dl className={pf('coach__list dl--horizontal')}>
+          <dt className={pf('coach__item dl--horizontal__label')}>Expected Budget</dt>
+          <dd className={pf('coach__value dl--horizontal__detail')}>$10,000</dd>
+          <dt className={pf('coach__item dl--horizontal__label')}>Lead Source</dt>
+          <dd className={pf('coach__value dl--horizontal__detail')}>Marketing and Web Referral</dd>
+          <dt className={pf('coach__item dl--horizontal__label')}>Support Engineer</dt>
+          <dd className={pf('coach__value dl--horizontal__detail')}><a href="#void">Jack Arthur</a></dd>
+        </dl>
+      </div>
+      <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
+        <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
+        <div className={pf('text-longform p-top--medium')}>
+          <p>Regularly cross-sell related products using <a href="#void">cross-sell tactics and principles</a>.</p>
+          <p>Prepare demo deck using the <a href="#void">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
+          <p>Look up <a href="#void">needs analysis principles</a> and review selling plan with Sales Engineer.</p>
         </div>
       </div>
     </div>
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
-</div>
-);
+  </div>;
 
-export const code = (
-<div className="demo-only">
-  <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('attachments')}></div>
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
-</div>
-);
+let Coachcontent4 = props =>
+  <div id="content-path-4" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-4">
+    <h2>Item Four Content</h2>
+  </div>;
+
+let Coachcontent5 = props =>
+  <div id="content-path-5" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-5">
+    <h2>Item Five Content</h2>
+  </div>;
+
+///////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let StateA = props =>
+  <Path>
+    <Tabsmain>
+      <Tab className={pf('is-complete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <span className={pf('assistive-text')}>Stage Complete</span>
+        </span>
+        <span className={pf('tabs--path__title')}>Contacted</span>
+      </Tab>
+      <Tab className={pf('is-complete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <span className={pf('assistive-text')}>Stage Complete</span>
+        </span>
+        <span className={pf('tabs--path__title')}>Open</span>
+      </Tab>
+      <Tab className={pf('is-current')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Unqualified</span>
+      </Tab>
+      <Tab className={pf('is-incomplete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Nurturing</span>
+      </Tab>
+      <Tab className={pf('is-incomplete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Closed</span>
+      </Tab>
+    </Tabsmain>
+  </Path>;
+
+let StateB = props =>
+  <Path>
+    <Trigger />
+    <Tabsmain>
+      <Tab className={pf('is-complete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <span className={pf('assistive-text')}>Stage Complete</span>
+        </span>
+        <span className={pf('tabs--path__title')}>Contacted</span>
+      </Tab>
+      <Tab className={pf('is-complete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <span className={pf('assistive-text')}>Stage Complete</span>
+        </span>
+        <span className={pf('tabs--path__title')}>Open</span>
+      </Tab>
+      <Tab className={pf('is-current')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Unqualified</span>
+      </Tab>
+      <Tab className={pf('is-incomplete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Nurturing</span>
+      </Tab>
+      <Tab className={pf('is-incomplete')}>
+        <span className={pf('tabs--path__stage')}>
+          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        </span>
+        <span className={pf('tabs--path__title')}>Closed</span>
+      </Tab>
+    </Tabsmain>
+    {complete}
+  </Path>;
+
+let StateC = props =>
+  <Demo>
+    <Coach>
+      <Path>
+        <Trigger />
+        <Tabsmain>
+          <Tab className={pf('is-complete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Contacted</span>
+          </Tab>
+          <Tab className={pf('is-complete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+              <span className={pf('assistive-text')}>Stage Complete</span>
+            </span>
+            <span className={pf('tabs--path__title')}>Open</span>
+          </Tab>
+          <Tab className={pf('is-complete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Unqualified</span>
+          </Tab>
+          <Tab className={pf('is-complete')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Nurturing</span>
+          </Tab>
+          <Tab className={pf('is-lost')}>
+            <span className={pf('tabs--path__stage')}>
+              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+            </span>
+            <span className={pf('tabs--path__title')}>Closed</span>
+          </Tab>
+        </Tabsmain>
+        {complete}
+      </Path>
+    </Coach>
+  </Demo>;
+
+
+
+///////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+
+export let states = [
+  {
+    label: 'Default',
+    element: <StateA />
+  }
+  ,{
+    label: 'Sales Path with Coaching',
+    element: <StateB />
+  },
+  {
+    label: 'Sales Path with Coaching Selected',
+    element: <StateC />
+  }
+  //,
+  // {
+  //   label: 'Completed Sales Path with Lost Sale',
+  //   element: <StateD />
+  // }
+];

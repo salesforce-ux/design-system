@@ -55,8 +55,12 @@
         top: 0;
         bottom: 0;
       }
-      height: $height-banner - $height-banner-badge;
-      line-height: $height-banner - $height-banner-badge;
+      height: $height-banner;
+      line-height: $height-banner;
+    }
+
+    &.site-banner--internal {
+      height: ($height-banner + $height-banner-badge);
     }
   }
 }

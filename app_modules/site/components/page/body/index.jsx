@@ -172,17 +172,21 @@ export default React.createClass({
 
   renderNavItems(items, level = 0) {
     items = items.filter(item => this.shouldShowNavItem(item)).map(item => {
-      let listItemClass = item.separator ?
+      const listItemClass = item.separator ?
         'list__item has-divider--top-space' :
         'list__item';
-      let className = classNames(listItemClass, {
+      const className = classNames(listItemClass, {
         'is-open': item.isOpen,
         'is-selected': item.isSelected,
         'is-active': item.isActive,
         'is-closed': !item.isOpen && item.hasChildren
       });
+      const dataProps = {};
+      if (item.hasChildren) {
+        dataProps['data-slds-nav-children'] = true;
+      }
       return (
-        <li className={pf(className)} key={item.uid}>
+        <li className={pf(className)} key={item.uid} {...dataProps}>
           {this.renderLink(item)}
           {item.hasChildren
             ? this.renderNavItems(item.children, level + 1)
@@ -250,7 +254,12 @@ export default React.createClass({
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>. <CTALink href="http://salesforce.com/company/legal/intellectual.jsp" ctaEventName="copyright">All rights reserved</CTALink>. {versionDateBuildString}
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>.
+          <CTALink
+            href="http://salesforce.com/company/legal/intellectual.jsp"
+            eventType="copyright">
+            All rights reserved
+          </CTALink>. {versionDateBuildString}
         </p>
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>

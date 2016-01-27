@@ -71,7 +71,7 @@ export default (
       </ul>
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="add" />
+          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="add" />
           Add Account
         </button>
       </div>

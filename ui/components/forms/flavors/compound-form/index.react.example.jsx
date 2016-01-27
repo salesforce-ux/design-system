@@ -14,17 +14,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only" style={{width: '440px'}}>
+<div className="demo-only" style={{width: '400px'}}>
   <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label')}>Location</legend>
+    <legend className={pf('form-element__legend')}>
+      <span className={pf('form-element__label')}>Location</span>
+    </legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
         <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>Latitude</span>
+          <span className={pf('form-element__label')}>Latitude</span>
           <input className={pf('input')} type="text" />
         </label>
         <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>Longitude</span>
+          <span className={pf('form-element__label')}>Longitude</span>
           <input className={pf('input')} type="text" />
         </label>
       </div>
@@ -32,27 +34,29 @@ export default (
   </fieldset>
 
   <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label')}>Address</legend>
+    <legend className={pf('form-element__legend')}>
+      <span className={pf('form-element__label')}>Address</span>
+    </legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
         <label className={pf('form-element__control size--1-of-1')}>
-          <span className={pf('form-element__helper')}>Street</span>
+          <span className={pf('form-element__label')}>Street</span>
           <input className={pf('input')} type="text" />
         </label>
       </div>
       <div className={pf('form-element__row')}>
         <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>City</span>
+          <span className={pf('form-element__label')}>City</span>
           <input className={pf('input')} type="text" />
         </label>
         <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>State</span>
+          <span className={pf('form-element__label')}>State</span>
           <input className={pf('input')} type="text" />
         </label>
       </div>
       <div className={pf('form-element__row')}>
         <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>ZIP Code</span>
+          <span className={pf('form-element__label')}>ZIP Code</span>
           <input className={pf('input')} type="text" />
         </label>
       </div>

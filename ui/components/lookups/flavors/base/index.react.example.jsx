@@ -31,7 +31,7 @@ export default (
     <div className={pf('lookup__menu')} role="listbox">
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="search" />
+          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="search" />
           "ac" in Accounts
         </button>
       </div>
@@ -75,7 +75,7 @@ export default (
       </ul>
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="add" />
+          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="add" />
           Add Account
         </button>
       </div>

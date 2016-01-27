@@ -18,19 +18,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image1 = (
-  <SvgIcon className={pf('icon icon-standard-task timeline__icon')} sprite="standard" symbol="task" />
+  <SvgIcon className={pf('icon icon--small icon-standard-task timeline__icon')} sprite="standard" symbol="task" />
 );
 
 const image2 = (
-  <SvgIcon className={pf('icon icon-standard-event timeline__icon')} sprite="standard" symbol="event" />
+  <SvgIcon className={pf('icon icon--small icon-standard-event timeline__icon')} sprite="standard" symbol="event" />
 );
 
 const image3 = (
-  <SvgIcon className={pf('icon icon-standard-log-a-call timeline__icon')} sprite="standard" symbol="log_a_call" />
+  <SvgIcon className={pf('icon icon--small icon-standard-log-a-call timeline__icon')} sprite="standard" symbol="log_a_call" />
 );
 
 const image4 = (
-  <SvgIcon className={pf('icon icon-standard-email timeline__icon')} sprite="standard" symbol="email" />
+  <SvgIcon className={pf('icon icon--small icon-standard-email timeline__icon')} sprite="standard" symbol="email" />
 );
 
 const content = (
@@ -55,9 +55,19 @@ export default (
             <p className={pf('tile__title truncate')}>
               <a href="#">Review proposals for EBC deck with larger team and have marketing review this</a>
             </p>
-            <ul className={pf('tile__detail list--horizontal text-body--small')}>
-              <li className={pf('list__item m-right--large')}><span>Contact:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
-              <li className={pf('list__item')}><span>Assigned to:</span><span className={pf('m-left--xx-small')}><a href="#">Betty Mason</a></span></li>
+            <ul className={pf('tile__detail list--horizontal')}>
+              <li className={pf('list__item m-right--large')}>
+                <dl>
+                  <span className={pf('text-heading--label-normal')}>Contact:</span>
+                  <span className={pf('text-body--small')}><a href="#">Lei Chan</a></span>
+                </dl>
+              </li>
+              <li className={pf('list__item')}>
+                <dl>
+                  <span className={pf('text-heading--label-normal')}>Assigned to:</span>
+                  <span className={pf('text-body--small')}><a href="#">Betty Mason</a></span>
+                </dl>
+              </li>
             </ul>
           </MediaObject>
         </MediaObject>

@@ -1,5 +1,5 @@
 // Copyright (c) 2015, salesforce.com, inc. All rights reserved.
-//
+
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 // Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 // Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -9,32 +9,6 @@
 
 
 
-@mixin font-face($font-face-setting: Regular, $font-style-setting: null, $font-weight-setting: null) {
-  $font-file: 'SalesforceSans';
-  $font-path: '#{$static-font-path}/';
-
-  @font-face {
-    font-family: 'Salesforce Sans';
-
-    src: url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff2') format('woff2'),
-    url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff') format('woff');
-
-    font: {
-      style: $font-style-setting;
-      weight: $font-weight-setting;
-    }
-  }
-}
-
-
-@mixin text-heading--label-normal {
-  font-size: $font-size-small;
-  line-height: $line-height-heading;
-  letter-spacing: 0.0625em;
-  color: $color-text-weak;
-}
-
-@mixin text-heading--label {
+.#{$css-prefix}text-heading--label-normal {
   @include text-heading--label-normal;
-  text-transform: uppercase;
 }

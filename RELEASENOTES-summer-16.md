@@ -2,9 +2,16 @@
 # Release notes
 
 ## Release X.X.X
+**BREAKING CHANGES**
+- Activity timeline markup structure has changed slightly:
+  `slds-text-body--small` has moved from the `ul` to the second `li`, and the
+  first `li` now has `slds-text-heading--label-normal`.
+
 **CHANGES**
-- All buttons are visually smaller.
+- Buttons are visually smaller.
 - Form Elements are visually smaller.
+- Reduced data table row heights.
+- Activity timeline sizing & spacing is reduced.
 - `slds-button--small` is deprecated (since buttons are now the same size as
   it was).
 - `slds-input--small` is deprecated (since inputs are now the same size as it was).

@@ -31,7 +31,7 @@ export const formatNavItem = (item, parent) => {
     _.isPlainObject(parent) && _.isString(parent.path) || _.isString(item.path),
     'root item must have a path'
   );
-  item.uid = uuid.v4();
+  item.uid = item.uid || uuid.v4();
   item.id = item.id || _.kebabCase(item.label);
   item.path = item.path || `${parent.path}${item.id}/`;
   if (item.children) {

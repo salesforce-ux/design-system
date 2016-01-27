@@ -17,7 +17,7 @@ import navigation, {
   getActiveNavItems
 } from 'app_modules/site/navigation';
 
-describe.only('app_modules/site/navigation', () => {
+describe('app_modules/site/navigation', () => {
   describe('#formatNavItem', () => {
     let getRoot = () => ({ label: 'My Root', path: '/' });
     it('throws an error if the root item is missing a "path" property', () => {
@@ -47,32 +47,38 @@ describe.only('app_modules/site/navigation', () => {
       expect(expected.path).to.equal('/my-item/');
     });
     it('maps the item "children" property over formatNavItem()', () => {
-      let actual = {
+      let actual = formatNavItem({
         label: 'Root',
+        uid: '1',
         path: '/',
         children: [{
           label: 'Foo',
+          uid: '2',
           children: [{
-            label: 'Bar'
+            label: 'Bar',
+            uid: '3'
           }]
         }]
-      };
+      });
       let expected = {
         id: 'root',
+        uid: '1',
         label: 'Root',
         path: '/',
         children: [{
           id: 'foo',
+          uid: '2',
           label: 'Foo',
           path: '/foo/',
           children: [{
             id: 'bar',
+            uid: '3',
             label: 'Bar',
             path: '/foo/bar/'
           }]
         }]
       };
-      expect(formatNavItem(actual)).to.eql(expected);
+      expect(actual).to.eql(expected);
     });
   });
   describe('#hasNavItem', () => {

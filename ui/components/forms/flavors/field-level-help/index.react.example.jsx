@@ -10,8 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Tooltip from 'ui/components/tooltips/index.react';
-import Control from 'ui/components/lib/control/flavors/popover';
 import Lorem from 'react-lorem-component';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';

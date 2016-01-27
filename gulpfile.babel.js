@@ -203,3 +203,9 @@ gulp.task('build', callback => {
     'clean', 'styles:prod', ['assets', 'generate'], ['pages', 'webpack'],
   callback);
 });
+
+gulp.task('build:test', callback => {
+  runSequence(
+    'clean', 'styles:prod', ['assets', 'generate'], ['pages'],
+  callback);
+});

@@ -21,6 +21,11 @@ export default React.createClass({
 
   mixins: [PrefsMixin],
 
+  defaultProps: {
+    component: React.PropTypes.object,
+    docs: React.PropTypes.node
+  },
+
   render() {
     const { component } = this.props;
     return (
@@ -28,7 +33,7 @@ export default React.createClass({
         <Anchor
           title={component.title}
           actions={this.renderComponentOverviewLink()}
-          url="/" />
+          path={`/${component.path}`} />
         <div className={pf('site-content p-around--xx-large')}>
           {this.renderIntro()}
           {this.renderFlavors()}

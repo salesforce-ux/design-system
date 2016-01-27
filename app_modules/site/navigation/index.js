@@ -11,8 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import assert from 'assert';
-import { generateUI } from 'scripts/gulp/generate-ui';
+import path from 'path';
 import uuid from 'uuid';
+
+import { generateUI } from 'scripts/gulp/generate-ui';
 
 /**
  * Find a specific id in the UI array
@@ -33,7 +35,7 @@ export const formatNavItem = (item, parent) => {
   );
   item.uid = item.uid || uuid.v4();
   item.id = item.id || _.kebabCase(item.label);
-  item.path = item.path || `${parent.path}${item.id}/`;
+  item.path = item.path || path.join(parent.path, item.id);
   if (item.children) {
     item.children = item.children.map(i => formatNavItem(i, item));
   }

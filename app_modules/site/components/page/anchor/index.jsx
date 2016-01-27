@@ -22,11 +22,11 @@ export default React.createClass({
     title: React.PropTypes.string,
     badge: React.PropTypes.string,
     actions: React.PropTypes.node,
-    url: React.PropTypes.string
+    path: React.PropTypes.string
   },
 
   getNavItems() {
-    return _.drop(getActiveNavItems(navigation(), this.props.url));
+    return _.drop(getActiveNavItems(navigation(), this.props.path));
   },
 
   rootNavName() {

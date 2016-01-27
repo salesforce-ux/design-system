@@ -32,11 +32,12 @@ import version from '.generated/site.version';
  * @param {array} activeItems
  * @returns {object}
  */
-const mapNav = (item, activeItems) => {
+const mapNav = (item, activeItems = []) => {
   const hasChildren = _.isArray(item.children) && item.children.length;
   const isSelected = _.includes(activeItems.map(i => i.path), item.path);
   const isOpen = hasChildren && isSelected;
-  const isActive = item.path === _.last(activeItems).path;
+  const isActive = activeItems.length
+    ? item.path === _.last(activeItems).path : false;
   const children = hasChildren
     ? { children: item.children.map(i => mapNav(i, activeItems)) }
     : null;
@@ -50,7 +51,7 @@ export default React.createClass({
   mixins: [PrefsMixin],
 
   propTypes: {
-    url: React.PropTypes.string,
+    path: React.PropTypes.string,
     anchor: React.PropTypes.node,
     anchorTitle: React.PropTypes.string,
     header: React.PropTypes.node,
@@ -63,7 +64,7 @@ export default React.createClass({
   getInitialState() {
     let nav = mapNav(
       navigation(),
-      getActiveNavItems(navigation(), '/') // TODO: get url from props
+      getActiveNavItems(navigation(), this.props.path)
     );
     return {
       navItems: nav.children,
@@ -138,7 +139,7 @@ export default React.createClass({
     // TODO: get url from props
     if (this.props.anchor) return this.props.anchor;
     if (this.props.anchorTitle) {
-      return <Anchor title={this.props.anchorTitle} url="/" />;
+      return <Anchor title={this.props.anchorTitle} path={this.props.path} />;
     }
     return null;
   },

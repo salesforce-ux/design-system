@@ -95,15 +95,19 @@ const loadHTML = html => cheerio.load(html);
 /**
  * Render a <PageBody /> inside a <Page /> and render as HTML
  *
- * @param {ReactElement} pageBody
+ * @param {ReactElement} pageElement
+ * @param {object} props
  * @returns {string}
  */
-export const renderPage = pageBody => {
+export const renderPage = (element, props) => {
   const Page = require('app_modules/site/components/page').default;
-  // Get any "page" specific props from the pageBody
-  const pageProps = getPrefixedProps(pageBody.props, 'page');
+  // Clone the pageBody with additional props
+  const pageBody = React.cloneElement(element, _.assign({}, props));
   // Create page element
-  const page = React.createElement(Page, pageProps);
+  const page = React.createElement(Page,
+    // Get any "page" specific props from the pageBody
+    getPrefixedProps(pageBody.props, 'page')
+  );
   // Construct the HTML
   const $ = loadHTML(renderToStaticMarkup(page));
   $('#app').append(renderToStaticMarkup(pageBody));
@@ -176,14 +180,16 @@ export const gulpRenderPage = () =>
   through.obj((file, enc, next) => {
     try {
       const pageBody = React.cloneElement(require(file.path).default, {});
-      const html = renderPage(pageBody);
+      const html = renderPage(pageBody, {
+        path: path.dirname(file.path).replace(__PATHS__.site, '')
+      });
       // Create the new file
       let newFile = file.clone();
       newFile.base = __PATHS__.site;
       newFile.contents = new Buffer(html);
       next(null, newFile);
     } catch (err) {
-      console.log(err);
+      console.log(err.stack);
       next(err);
     }
   });
@@ -247,7 +253,7 @@ export const gulpRenderComponentPage = () =>
         });
       // Create the <PageBody> for the component
       const pageBody = (
-        <PageBody contentClassName={false}>
+        <PageBody contentClassName={false} path={`/${component.path}`}>
           <Component
             component={decorateComponent(component)}
             docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
@@ -260,7 +266,7 @@ export const gulpRenderComponentPage = () =>
         base: __PATHS__.site
       }));
     } catch (err) {
-      console.log(err);
+      console.log(err.stack);
       next(err);
     }
   });

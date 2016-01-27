@@ -50,12 +50,10 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    border-color: $color-text-tab-label-selected;
-    color: $color-text-action-label-active;
+    color: $color-text-tab-label-selected;
   }
 
   &:focus {
-    color: $color-text-tab-label-selected;
     box-shadow: $color-text-tab-label-selected 0 ($border-width-thin * -1) 0 inset;
   }
 }

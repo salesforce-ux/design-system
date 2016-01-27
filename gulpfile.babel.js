@@ -78,7 +78,8 @@ const debounceTask = (task, wait = 10000) =>
  */
 const siteMiddleware = (req, res, next) => {
   // Check for pages "/some/page/", "some/page/index.html"
-  if (/\/$|\.html$/.test(req.url) && !/preview-frame/.test(req.url)) {
+  const ext = path.extname(req.url);
+  if (!ext || ext === '.html' && !/preview-frame/.test(req.url)) {
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
     // Remove <PageBody> from the cache since every page uses it

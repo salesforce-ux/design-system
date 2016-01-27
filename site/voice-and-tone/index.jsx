@@ -11,9 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
+import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import { logDownloadEvent } from 'app_modules/site/analytics';
-import globals from 'app_modules/global';
 
 export default (
   <PageBody anchorTitle="Voice & Tone" contentClassName={pf('container--large')}>
@@ -38,9 +37,11 @@ export default (
     </p>
 
     <form className={pf('p-bottom--medium')} action="/assets/downloads/salesforce-voice-and-tone.pdf">
-      <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('voice-and-tone'); }}>
-        Download Voice and Tone Guidelines
-      </button>
+      <CTALink eventName="Download" eventType="voice-and-tone">
+        <button className={pf('button button--neutral')}>
+          Download Voice and Tone Guidelines
+        </button>
+      </CTALink>
     </form>
 
     <p>

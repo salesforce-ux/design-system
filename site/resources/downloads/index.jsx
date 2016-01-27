@@ -14,7 +14,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import version from '.generated/site.version';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logDownloadEvent } from 'app_modules/site/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 import Img from 'app_modules/ui/img';
@@ -22,7 +21,12 @@ import Img from 'app_modules/ui/img';
 function unmanagedPackageUrls() {
   return g.unmanagedPackageUrls.map((item, idx) => {
     return <li key={`package-v${item.version}`}>
-      <CTALink href={item.url} ctaExtraValues={{ type: `unmanagedPackage ${item.version}` }}>Version {item.version}</CTALink>
+      <CTALink
+        href={item.url}
+        eventType="unmanaged-package"
+        eventValues={{ type: `unmanagedPackage ${item.version}` }}>
+        Version {item.version}
+      </CTALink>
     </li>;
   });
 }
@@ -38,7 +42,7 @@ export default (
     <p>
       Instead of downloading the Design System you can also <a href="https://github.com/salesforce-ux/design-system">fork or clone it on GitHub</a>.
     </p>
-    <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} ctaEventName="GitHub">
+    <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} eventType="GitHub">
       <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
       Design System on GitHub
     </CTALink>
@@ -71,16 +75,18 @@ bower install salesforce-lightning-design-system
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
       and icons to include in your project. See
-      the <CTALink href="/release-notes" ctaEventName="release-notes-top">release notes</CTALink> for
+      the <CTALink href="/release-notes" eventType="release-notes-top">release notes</CTALink> for
       details on the latest updates.
     </p>
     <p>
       All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
     </p>
     <form action={`/${g.downloadPath(version.sldsVersion)}`}>
-      <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('css'); }}>
-        Download Design System ({version.sldsVersion})
-      </button>
+      <CTALink eventName="Download" eventType="css">
+        <button className={pf('button button--neutral')}>
+          Download Design System ({version.sldsVersion})
+        </button>
+      </CTALink>
     </form>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
@@ -94,7 +100,7 @@ bower install salesforce-lightning-design-system
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
-      Download all <CTALink href="/resources/icons" ctaEventName="icons-link-click">icon sets</CTALink>. Each icon is
+      Download all <CTALink href="/resources/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is
       available as <abbr title="Scalable Vector Graphics">SVG</abbr> and in
       two different PNG sizes.
     </p>
@@ -102,18 +108,20 @@ bower install salesforce-lightning-design-system
       All icons are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>.
     </p>
     <form action="/assets/downloads/salesforce-lightning-design-system-icons.zip">
-      <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('icons'); }}>
-        Download Icons
-      </button>
+      <CTALink eventName="Download" eventType="icons">
+        <button className={pf('button button--neutral')}>
+          Download Icons
+        </button>
+      </CTALink>
     </form>
 
     <h2 className="site-text-heading--large" id="design-tokens">Design Tokens</h2>
     <p>
-      <CTALink href="/resources/tokens" ctaEventName="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
+      <CTALink href="/resources/tokens" eventType="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
       formats depending on which technology your application uses. For
       web-based applications, you can use our tokens
-      as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" ctaEventName="alistapart-link-click">variables</CTALink> through
-      CSS preprocessors <CTALink href="http://sass-lang.com/" ctaEventName="sass-link-click">Sass</CTALink>, <CTALink href="http://lesscss.org/" ctaEventName="lesscss-link-click">Less</CTALink>, and <CTALink href="https://learnboost.github.io/stylus/" ctaEventName="stylus-link-click">Stylus</CTALink>.
+      as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" eventType="alistapart-link-click">variables</CTALink> through
+      CSS preprocessors <CTALink href="http://sass-lang.com/" eventType="sass-link-click">Sass</CTALink>, <CTALink href="http://lesscss.org/" eventType="lesscss-link-click">Less</CTALink>, and <CTALink href="https://learnboost.github.io/stylus/" eventType="stylus-link-click">Stylus</CTALink>.
       We recommend Sass as we use it internally, it is well-documented, and
       is the industry standard.
     </p>
@@ -126,45 +134,55 @@ bower install salesforce-lightning-design-system
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="sass-design-tokens">Sass</h3>
         <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_scss.zip`}>
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-scss'); }}>
-            Download Sass Tokens
-          </button>
+          <CTALink eventName="Download" eventType="design-token-scss">
+            <button className={pf('button button--neutral')}>
+              Download Sass Tokens
+            </button>
+          </CTALink>
         </form>
       </div>
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="less-design-tokens">Less</h3>
         <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_less.zip`}>
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-less'); }}>
-            Download Less Tokens
-          </button>
+          <CTALink eventName="Download" eventType="design-token-less">
+            <button className={pf('button button--neutral')}>
+              Download Less Tokens
+            </button>
+          </CTALink>
         </form>
       </div>
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="stylus-design-tokens">Stylus</h3>
         <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_styl.zip`}>
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-stylus'); }}>
-            Download Stylus Tokens
-          </button>
+          <CTALink eventName="Download" eventType="design-token-stylus">
+            <button className={pf('button button--neutral')}>
+              Download Stylus Tokens
+            </button>
+          </CTALink>
         </form>
       </div>
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="android-design-tokens">Android</h3>
         <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_android.zip`}>
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-android'); }}>
-            Download Android Tokens
-          </button>
+          <CTALink eventName="Download" eventType="design-token-android">
+            <button className={pf('button button--neutral')}>
+              Download Android Tokens
+            </button>
+          </CTALink>
         </form>
       </div>
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="ios-design-tokens">iOS</h3>
         <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_ios.zip`}>
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('design-token-ios'); }}>
-            Download iOS Tokens
-          </button>
+          <CTALink eventName="Download" eventType="design-token-ios">
+            <button className={pf('button button--neutral')}>
+              Download iOS Tokens
+            </button>
+          </CTALink>
         </form>
       </div>
 
@@ -182,18 +200,22 @@ bower install salesforce-lightning-design-system
       <div className={pf('col size--1-of-1 medium-size--1-of-2 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="ase-swatches">ASE (Adobe)</h3>
         <form action="/assets/downloads/swatches/salesforce-lightning-design-system.ase">
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('swatch-ase'); }}>
-            Download ASE Swatch
-          </button>
+          <CTALink eventName="Download" eventType="swatch-ase">
+            <button className={pf('button button--neutral')}>
+              Download ASE Swatch
+            </button>
+          </CTALink>
         </form>
       </div>
 
       <div className={pf('col size--1-of-1 medium-size--1-of-2 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="clr-swatches">CLR (iOS)</h3>
         <form action="/assets/downloads/swatches/salesforce-lightning-design-system.clr">
-          <button className={pf('button button--neutral')} onClick={()=>{logDownloadEvent('swatch-clr'); }}>
-            Download CLR Swatch
-          </button>
+          <CTALink eventName="Download" eventType="swatch-clr">
+            <button className={pf('button button--neutral')}>
+              Download CLR Swatch
+            </button>
+          </CTALink>
         </form>
       </div>
     </div>

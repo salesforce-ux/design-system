@@ -10,27 +10,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import classNames from 'classnames';
 import _ from 'lodash';
 
 export default React.createClass({
   displayName: 'CTALink',
   propTypes: {
-    ctaEventName: React.PropTypes.string,
-    ctaExtraValues: React.PropTypes.object
+    eventName: React.PropTypes.string,
+    eventType: React.PropTypes.string.isRequired,
+    eventValues: React.PropTypes.object
+  },
+  getDefaultProps() {
+    return {
+      eventName: 'CTA'
+    };
   },
   render () {
-    const { ctaEventName } = this.props;
-    const ctaExtraValues = _.isPlainObject(this.props.ctaExtraValues)
-      ? JSON.stringify(this.props.ctaExtraValues)
-      : null;
-    return (
-      <a
-        {...this.props}
-        data-slds-cta-event-name={ctaEventName}
-        data-slds-cta-extra-values={ctaExtraValues}>
-      {this.props.children}
-      </a>
-    );
+    const { eventName, eventType, eventValues } = this.props;
+    const props = {
+      'data-slds-cta-event': true,
+      'data-slds-cta-event-name': eventName,
+      'data-slds-cta-event-type': eventType,
+      'data-slds-cta-extra-values': _.isPlainObject(eventValues)
+        ? JSON.stringify(eventValues) : null
+    };
+    return this.props.href
+      ? <a {...this.props} {...props}>{this.props.children}</a>
+      : React.cloneElement(React.Children.only(this.props.children), props);
   }
 });

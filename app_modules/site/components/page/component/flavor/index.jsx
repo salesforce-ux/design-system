@@ -19,7 +19,6 @@ import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
-import CTALink from 'app_modules/site/components/cta-link';
 
 import globals from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';

@@ -14,7 +14,7 @@ import globals from 'app_modules/global';
 /**
  * Only allows production-level logging.
  */
-export function logEvent(tagEvent, type, extraValues = {}) {
+export const logEvent = (tagEvent, type, extraValues = {}) => {
   let { analyticsHostWhitelist } = globals;
   let canLogEvent = window.location && analyticsHostWhitelist.indexOf(window.location.host) !== -1;
   extraValues.path = extraValues.path || window.location.path;
@@ -23,46 +23,32 @@ export function logEvent(tagEvent, type, extraValues = {}) {
     if (window.ll) window.ll(tagEvent, type, extraValues);
     if (window.ga) window.ga('send', 'event', type, extraValues.type);
   }
-}
+};
 
 /**
  * Normalizes pathname
  */
-export function normalizedLocationPathname() {
-  return (window.location.pathname || '').replace(/\/$/, '');
-}
+export const normalizedLocationPathname = () =>
+  (window.location.pathname || '').replace(/\/$/, '');
 
 /**
  * Records a page visit + screen flow.
  */
-export function logCurrentPageVisit() {
+export const logCurrentPageVisit = () =>
   logEvent('tagScreen', normalizedLocationPathname());
-}
 
 /**
  * Records a CTA event.
  *
- * @param {string} type - Which CTA was interacted with?
+ * @param {string} name - Usually "CTA"
+ * @param {string} type - What type of a event
  * @param {object} extraValues - Optional extra tracking parameters
  */
-export function logCTAEvent(type, extraValues) {
-  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
-  logEvent('tagEvent', 'CTA', values);
-}
-
-/**
- * Records a download event.
- *
- * @param {string} type - Which file was downloaded?
- * @param {object} extraValues - Optional extra tracking parameters
- */
-export function logDownloadEvent(type, extraValues) {
-  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
-  logEvent('tagEvent', 'Download', values);
-}
-
-export default {
-  logCurrentPageVisit,
-  logCTAEvent,
-  logDownloadEvent
+export const logCTAEvent = (name, type, extraValues) => {
+  let values = Object.assign({
+    path: normalizedLocationPathname(),
+    type: type,
+    usertype: process.env.DEFAULT_USER_TYPE
+  }, extraValues);
+  logEvent('tagEvent', name, values);
 };

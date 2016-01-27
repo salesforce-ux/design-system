@@ -2,7 +2,12 @@
 # Release notes
 
 ## Release X.X.X
+**BREAKING CHANGES**
+- Page Header markup structure is refactored for new design.
+
 **CHANGES**
+- Page Headers are visually smaller.
+- Page Header details are now on white and align to the left.
 - All buttons are visually smaller.
 - `slds-button--small` is deprecated (since buttons are now the same size as
   it was).

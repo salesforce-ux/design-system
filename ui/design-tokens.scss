@@ -35,6 +35,7 @@ $mq-x-large: 1280px !default;
 $sales-path: 2rem !default; // @TODO: Temp token till we align sizing
 $line-height-button: 1.875rem; // This is an override. can't use default
 $square-icon-medium-content-alt: 0.875rem !default;
+$color-background-page-header: #f7f9fb !default;
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large

@@ -27,7 +27,12 @@ classes:
     class: text-heading--label
     description: All caps 12px heading
     applied: Any heading
-    notes: Usually labels small content areas like table columns and list sections
+    notes: Usually labels small content areas like tabs and page header titles
+  -
+    class: text-heading--label-normal
+    description: 12px heading that is not all caps
+    applied: Any heading
+    notes: Usually labels small content areas like list sections.
   -
     class: text-longform
     description: Adds default spacing and list styling within a wrapper

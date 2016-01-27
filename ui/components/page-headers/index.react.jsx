@@ -61,7 +61,7 @@ class AnchorDetailItem extends React.Component {
     );
   }
   render() {
-    const gridClass = pf('col--padded size--1-of-4');
+    const gridClass = pf('page-header__detail-block');
     const manuallyAssembled = !this.props.label;
     return (
       <div className={gridClass}>

@@ -35,7 +35,7 @@ export default (
           <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
         </MediaObject>
       </div>
-      <div className={pf('col no-flex align-bottom p-right--medium')}>
+      <div className={pf('col no-flex grid align-bottom')}>
         <StatefulClass>
           <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
             <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
@@ -43,8 +43,6 @@ export default (
             <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
           </Button>
         </StatefulClass>
-      </div>
-      <div className={pf('col no-flex align-bottom')}>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
             Edit

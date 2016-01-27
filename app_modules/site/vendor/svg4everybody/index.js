@@ -1,138 +1,55 @@
 /*eslint-disable */
 
-/*! svg4everybody v2.0.0 | github.com/jonathantneal/svg4everybody */
-
 /**
  * IMPORTANT: This module is being shimmed so that a custom document can be passed in
  */
-export default function (document, options) {
+export default function (document, opts) {
 
-  function embed(svg, g) {
-    if (g) {
-      var viewBox = !svg.getAttribute('viewBox') && g.getAttribute('viewBox');
-      var fragment = document.createDocumentFragment();
-      var clone = g.cloneNode(true);
-
-      if (viewBox) {
-        svg.setAttribute('viewBox', viewBox);
-      }
-
-      while (clone.childNodes.length) {
-        fragment.appendChild(clone.firstChild);
-      }
-
-      svg.appendChild(fragment);
-    }
-  }
-
-  function loadreadystatechange(xhr) {
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        var x = document.createElement('x');
-
-        x.innerHTML = xhr.responseText;
-
-        xhr.s.splice(0).map(function(array) {
-          embed(array[0], x.querySelector('#' + array[1].replace(/(\W)/g, '\\$1')));
-        });
-      }
-    };
-
-    xhr.onreadystatechange();
-  }
-
-  function svg4everybody(opts) {
-    opts = opts || {};
-
-    var uses = document.getElementsByTagName('use');
-    var nosvg;
-
-    if (window.LEGACY_SUPPORT) {
-      var fallback = opts.fallback || function(src) {
-        return src.replace(/\?[^#]+/, '').replace('#', '.').replace(/^\./, '') + '.png' + (/\?[^#]+/.exec(src) || [''])[0];
-      };
-
-      nosvg = 'nosvg' in opts ? opts.nosvg : /\bMSIE [1-8]\b/.test(navigator.userAgent);
-
-      if (nosvg) {
-        document.createElement('svg');
-        document.createElement('use');
-      }
-    }
-
-    var polyfill = 'polyfill' in opts ? opts.polyfill : window.LEGACY_SUPPORT ? (
-      nosvg || /\bEdge\/12\b|\bMSIE [1-8]\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537
-    ) : (
-      /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537
-    );
-
-    var validate = opts.validate;
-    var requestAnimationFrame = window.requestAnimationFrame || setTimeout;
-    var svgCache = {};
-
-    function oninterval() {
-      var use;
-
-      while (use = uses[0]) {
-        var svg = use.parentNode;
-
-        if (svg && /svg/i.test(svg.nodeName)) {
-          var src = use.getAttribute('xlink:href');
-
-          if (window.LEGACY_SUPPORT && nosvg) {
-            var img = new Image();
-            var width = svg.getAttribute('width');
-            var height = svg.getAttribute('height');
-
-            img.src = fallback(src, svg, use);
-
-            if (width) {
-              img.setAttribute('width', width);
+    /*! svg4everybody v2.0.0 | github.com/jonathantneal/svg4everybody */
+    function embed(svg, g) {
+        if (g) {
+            var viewBox = !svg.getAttribute("viewBox") && g.getAttribute("viewBox"), fragment = document.createDocumentFragment(), clone = g.cloneNode(!0);
+            for (viewBox && svg.setAttribute("viewBox", viewBox); clone.childNodes.length; ) {
+                fragment.appendChild(clone.firstChild);
             }
-
-            if (height) {
-              img.setAttribute('height', height);
-            }
-
-            svg.replaceChild(img, use);
-          } else if (polyfill) {
-            if (!validate || validate(src, svg, use)) {
-              var url = src.split('#');
-              var url_root = url[0];
-              var url_hash = url[1];
-
-              svg.removeChild(use);
-
-              if (url_root.length) {
-                var xhr = svgCache[url_root] = svgCache[url_root] || new XMLHttpRequest();
-
-                if (!xhr.s) {
-                  xhr.s = [];
-
-                  xhr.open('GET', url_root);
-
-                  xhr.send();
-                }
-
-                xhr.s.push([svg, url_hash]);
-
-                loadreadystatechange(xhr);
-              } else {
-                embed(svg, document.getElementById(url_hash));
-              }
-            }
-          }
+            svg.appendChild(fragment);
         }
-      }
-
-      requestAnimationFrame(oninterval, 17);
+    }
+    function loadreadystatechange(xhr) {
+        xhr.onreadystatechange = function() {
+            if (4 === xhr.readyState) {
+                var x = document.createElement("x");
+                x.innerHTML = xhr.responseText, xhr.s.splice(0).map(function(array) {
+                    embed(array[0], x.querySelector("#" + array[1].replace(/(\W)/g, "\\$1")));
+                });
+            }
+        }, xhr.onreadystatechange();
+    }
+    function svg4everybody(opts) {
+        function oninterval() {
+            for (var use, svg, i = 0; i < uses.length; ) {
+                if (use = uses[i], svg = use.parentNode, svg && /svg/i.test(svg.nodeName)) {
+                    var src = use.getAttribute("xlink:href");
+                    if (polyfill && (!validate || validate(src, svg, use))) {
+                        var url = src.split("#"), url_root = url[0], url_hash = url[1];
+                        if (svg.removeChild(use), url_root.length) {
+                            var xhr = svgCache[url_root] = svgCache[url_root] || new XMLHttpRequest();
+                            xhr.s || (xhr.s = [], xhr.open("GET", url_root), xhr.send()), xhr.s.push([ svg, url_hash ]), 
+                            loadreadystatechange(xhr);
+                        } else {
+                            embed(svg, document.getElementById(url_hash));
+                        }
+                    }
+                } else {
+                    i += 1;
+                }
+            }
+            requestAnimationFrame(oninterval, 17);
+        }
+        opts = opts || {};
+        var uses = document.getElementsByTagName("use"), polyfill = "polyfill" in opts ? opts.polyfill : /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537, validate = opts.validate, requestAnimationFrame = window.requestAnimationFrame || setTimeout, svgCache = {};
+        polyfill && oninterval();
     }
 
-    if (polyfill) {
-      oninterval();
-    }
-  }
-
-  svg4everybody(options);
-
+    svg4everybody(opts);
 }

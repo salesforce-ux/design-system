@@ -200,5 +200,10 @@ bower install salesforce-lightning-design-system
       </div>
     </div>
 
+    <h2 className="site-text-heading--large" id="Archives">Archived SLDS Versions</h2>
+    <p>
+      If you are still using a previous version of SLDS, you can access <CTALink href="http://design-system-v-0-12-1.herokuapp.com/" ctaEventName="SLDS-Archives">SLDS v.0.12.1</CTALink> as a reference.
+    </p>
+
   </PageBody>
 );

@@ -39,7 +39,7 @@
   // Used to apply an <input> size to another element thats a non <input>
   // Because sometimes I need elements the same height as inputs
   &--height {
-    min-height: calc(#{$line-height-button-small} + 2px); /* Note: for IE */
+    min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); /* Note: for IE */
   }
 }
 

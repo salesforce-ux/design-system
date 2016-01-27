@@ -31,11 +31,16 @@
       }
     }
 
+    // Reset margin coming from global labels
+    .#{$css-prefix}form-element__label {
+      margin-bottom: 0;
+    }
+
     .#{$css-prefix}form-element,
     .#{$css-prefix}form-element__label,
     .#{$css-prefix}form-element__control {
-      display: inline-block;
-      vertical-align: middle;
+      display: inline-flex;
+      align-items: center;
     }
   }
 }

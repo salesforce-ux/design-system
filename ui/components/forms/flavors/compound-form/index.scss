@@ -27,28 +27,4 @@
       padding-left: $spacing-x-small;
     }
   }
-
-  .#{$css-prefix}form-element__label {
-
-    @include mq-medium-min {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &--horizontal {
-
-    .#{$css-prefix}form-element__label {
-
-      @include mq-medium-min {
-        float: left;
-        text-align: right;
-        position: relative;
-        top: $spacing-x-small;
-        min-width: 5rem;
-        max-width: 33%;
-      }
-    }
-  }
 }

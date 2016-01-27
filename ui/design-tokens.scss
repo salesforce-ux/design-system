@@ -10,6 +10,9 @@
 // The Sass importer needs the extension to be explicit when multiple files have the same name
 // scss-lint:disable ImportPath
 
+// Lightning Tightening overrides
+$line-height-button: 1.875rem;
+
 @import
   '@salesforce-ux/design-tokens/dist/s1-base-large.default.scss',
   '@salesforce-ux/design-tokens/dist/s1-base.default.scss',
@@ -33,7 +36,6 @@ $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 $sales-path: 2rem !default; // @TODO: Temp token till we align sizing
-$line-height-button: 1.875rem; // This is an override. can't use default
 $square-icon-medium-content-alt: 0.875rem !default;
 
 $force-base-map: map-merge($force-base-map, (

@@ -10,17 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import globals from 'app_modules/global';
-import _ from 'lodash';
 
 /**
  * Only allows production-level logging.
  */
 export function logEvent(tagEvent, type, extraValues = {}) {
-  let canLogEvent = window.location && _.includes(globals.analyticsHostWhitelist, window.location.host);
-  _.defaults(extraValues, {
-    path: window.location.path,
-    type: ''
-  });
+  let { analyticsHostWhitelist } = globals;
+  let canLogEvent = window.location && analyticsHostWhitelist.indexOf(window.location.host) !== -1;
+  extraValues.path = extraValues.path || window.location.path;
+  extraValues.type = extraValues.type || '';
   if (canLogEvent) {
     if (window.ll) window.ll(tagEvent, type, extraValues);
     if (window.ga) window.ga('send', 'event', type, extraValues.type);
@@ -48,7 +46,7 @@ export function logCurrentPageVisit() {
  * @param {object} extraValues - Optional extra tracking parameters
  */
 export function logCTAEvent(type, extraValues) {
-  let values = _.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
+  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
   logEvent('tagEvent', 'CTA', values);
 }
 
@@ -59,7 +57,7 @@ export function logCTAEvent(type, extraValues) {
  * @param {object} extraValues - Optional extra tracking parameters
  */
 export function logDownloadEvent(type, extraValues) {
-  let values = _.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
+  let values = Object.assign({'path': normalizedLocationPathname(), 'type': type, 'usertype': process.env.DEFAULT_USER_TPE}, extraValues);
   logEvent('tagEvent', 'Download', values);
 }
 

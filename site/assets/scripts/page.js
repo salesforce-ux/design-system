@@ -14,6 +14,7 @@ import svg4everybody from 'app_modules/site/vendor/svg4everybody';
 import { logPageVisit } from './analytics';
 import { drainEventQueue } from './events';
 import { $, delegate, globals, setClassName } from './helpers';
+import Sticky from './Sticky';
 
 // Log the current page as an event in GA/LL
 logPageVisit();
@@ -31,6 +32,9 @@ delegate('click', '[data-slds-nav-children] > a', (event, node) => {
     'is-closed': isOpen
   });
 });
+
+// Fixed navigation
+$('[data-slds-sticky').forEach(node => Sticky(node));
 
 // Analytics
 delegate('click', '[data-slds-cta-event]', (event, node) => {

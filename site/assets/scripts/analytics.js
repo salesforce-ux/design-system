@@ -34,7 +34,7 @@ export const normalizedLocationPathname = () =>
 /**
  * Records a page visit + screen flow.
  */
-export const logCurrentPageVisit = () =>
+export const logPageVisit = () =>
   logEvent('tagScreen', normalizedLocationPathname());
 
 /**

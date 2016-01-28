@@ -50,7 +50,7 @@ export function getConfig (options) {
   const config = {
     context: __PATHS__.root,
     entry: {
-      site: './site/assets/scripts/site.js'
+      site: './site/assets/scripts/main.js'
     },
     output: {
       filename: '[name].js',

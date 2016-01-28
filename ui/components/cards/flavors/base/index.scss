@@ -16,16 +16,21 @@
     margin-top: $spacing-medium;
   }
 
+  &__header,
+  &__footer {
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+  }
   &__header {
-    padding: $spacing-small $spacing-small $spacing-xx-small;
+    padding-top: $spacing-small;
+    padding-bottom: $spacing-xx-small;
+  }
+  &__footer {
+    padding-bottom: $spacing-x-small;
   }
 
   &__body {
     padding: $spacing-x-small 0;
-  }
-
-  &__footer {
-    padding: $spacing-xx-small $spacing-medium $spacing-x-small;
   }
 
   .#{$css-prefix}tile {

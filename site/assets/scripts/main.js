@@ -16,5 +16,6 @@ import { drainEventQueue } from './events';
 import './page';
 import './page-home';
 import './page-components';
+import './page-motion';
 
 drainEventQueue(window);

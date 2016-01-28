@@ -9,52 +9,59 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
-import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
+import fastdom from 'fastdom';
+import { $, delegate, setClassName } from './helpers';
 
-export default React.createClass({
+const ATTRIBUTE = 'data-slds-motion-toggle-example';
 
-  displayName: 'ToggleExample',
+const TIMING_MAP_SECS = {
+  instantly: 0,
+  quickly: 0.1,
+  promptly: 0.2,
+  slowly: 0.4,
+  paused: 3.2
+};
 
-  propTypes: {
-    which: React.PropTypes.string,
-    toggle: React.PropTypes.bool,
-    title: React.PropTypes.string,
-    description: React.PropTypes.string
-  },
+const TIMING_MAP_FRAMES = {
+  instantly: 0,
+  quickly: 6,
+  promptly: 12,
+  slowly: 24,
+  paused: 192
+};
 
-  render() {
-    const { which, title, description } = this.props;
-    const className = classNames('site-example-tile__object', {
-      [`${which}-example`]: which
+delegate('click', `[${ATTRIBUTE}]`, (event, node) => {
+  event.stopPropagation();
+  let state = JSON.parse(node.getAttribute(ATTRIBUTE));
+  const target = node.querySelector(`[${ATTRIBUTE}-target]`);
+  const after = (delay, callback) => setTimeout(callback, delay);
+  const setState = nextState => {
+    state = Object.assign({}, state, nextState);
+    fastdom.mutate(() => {
+      setClassName(target, {
+        [`${state.which}-example--on`]: state.isOn === true
+      });
+      node.setAttribute(ATTRIBUTE, JSON.stringify(state));
     });
-    const state = JSON.stringify({
-      which: this.props.which,
-      toggle: this.props.toggle,
-      isAnimating: false,
-      isOn: false
+  };
+  if (state.isAnimating) return;
+  if (state.toggle) {
+    setState({
+      isAnimating: true,
+      isOn: !state.isOn
     });
-    return (
-      <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-3 m-bottom--xx-large')}>
-        <div
-          className={pf('site-example-tile__frame text-align--center')}
-          data-slds-motion-toggle-example={state}>
-          <div
-            className={className}
-            data-slds-motion-toggle-example-target>
-            <span>Abc</span>
-          </div>
-          <div className="site-example-tile__title">
-            {title}
-          </div>
-          <hr className={pf('hr hr--dark-blue')} />
-          <div className="site-example-tile__description">
-            {description}
-          </div>
-        </div>
-      </li>
+    after(TIMING_MAP_SECS.promptly * 1000, () =>
+      setState({ isAnimating: false })
+    );
+  } else {
+    setState({
+      isOn: true
+    });
+    after(TIMING_MAP_SECS.promptly * 1000, () =>
+      setState({ isAnimating: true, isOn: false })
+    );
+    after(TIMING_MAP_SECS.promptly * 1000 * 2, () =>
+      setState({ isAnimating: false })
     );
   }
-
 });

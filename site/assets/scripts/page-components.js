@@ -80,10 +80,10 @@ delegate('click', '[data-slds-flavor-states]', (event, element) => {
   fastdom.measure(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
-      setClassName(node.parentNode, { 'is-active': false });
+      setClassName(node.parentElement, { 'is-active': false });
     });
     // Add "is-active" to the selected state
-    setClassName(element.parentNode, { 'is-active': true });
+    setClassName(element.parentElement, { 'is-active': true });
   });
   fastdom.mutate(() => {
     // Update the iframe src

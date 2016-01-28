@@ -16,13 +16,15 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className="demo-only">
-  <div className={pf('card card--empty')}>
+  <div className={pf('card')}>
     <div className={pf('card__header grid grid--flex-spread')}>
       <h2 className={pf('text-heading--small truncate')}>Card Header</h2>
     </div>
     <div className={pf('card__body p-horizontal--small')}>
-      <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
-      <Button flavor="neutral,small" className={pf('m-bottom--x-large')}>Add Contact</Button>
+      <div className={pf('text-align--center')}>
+        <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
+        <Button flavor="neutral,small" className={pf('m-bottom--x-large')}>Add Contact</Button>
+      </div>
     </div>
   </div>
 </div>

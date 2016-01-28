@@ -17,52 +17,27 @@ import Img from 'app_modules/ui/img';
 import PageBody from 'app_modules/site/components/page/body';
 import version from '.generated/site.version';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
-import IfPrefs from 'app_modules/site/preferences/component';
 import globals from 'app_modules/global';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import g from 'app_modules/global';
 
-let SHAPES_X = 1170;
-let SHAPES_Y = 330;
+export default (
+  <PageBody contentClassName="site-landing-page">
+    {/* Hero */}
+    <header className={pf('site-masthead--landing p-around--xx-large container--buffer')}>
+      <h1 className={pf('site-text-heading--large')}>
+        Lightning <span className="text-no-wrap">Design System</span>
+      </h1>
+      <h2 className={pf('site-text-heading--medium m-bottom--xx-large')}>
+        Create the world’s best enterprise app experiences.
+      </h2>
+      <p className={pf('site-cta-buttons m-bottom--medium')}>
+        <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
+        <GithubButton></GithubButton>
+      </p>
+      <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{version.sldsVersion}</CTALink></p>
+    </header>
 
-class Overview extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      mouse: { x: 500, y: 10 }
-    };
-  }
-
-  onMouseMove(e) {
-    if (e && e.pageX && e.pageY) {
-      this.setState({
-        mouse: { x: e.pageX, y: e.pageY }
-      });
-    }
-  }
-
-  render() {
-    return (<div onMouseMove={this.onMouseMove.bind(this)}>
-      {/* Hero */}
-      <header className={pf('site-masthead--landing p-around--xx-large container--buffer')}>
-        <h1 className={pf('site-text-heading--large')}>
-          Lightning <span className="text-no-wrap">Design System</span>
-        </h1>
-        <h2 className={pf('site-text-heading--medium m-bottom--xx-large')}>
-          Create the world’s best enterprise app experiences.
-        </h2>
-        <IfPrefs userType="external">
-          <p className={pf('site-cta-buttons m-bottom--medium')}>
-            <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
-            <GithubButton></GithubButton>
-          </p>
-        </IfPrefs>
-        <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{version.sldsVersion}</CTALink></p>
-      </header>
-
-      <div className={pf('container--buffer container--x-large')}>
+    <div className={pf('container--buffer container--x-large')}>
       {/* Grid */}
       <section className={pf('site-grid--landing p-vertical--xx-large site-text-longform')}>
         <div className="site-video-container">
@@ -77,7 +52,7 @@ class Overview extends React.Component {
             </p>
             <dl className={pf('medium-size--1-of-2')}>
               <dt className="site-text-heading--large">Style with Ease</dt>
-              <dd>With the {g.displayName} you can build custom applications with a look and feel that is consistent with Salesforce core features &mdash; without reverse engineering our styles! Simply download our platform-agnostic CSS framework and get started today.</dd>
+              <dd>With the {globals.displayName} you can build custom applications with a look and feel that is consistent with Salesforce core features &mdash; without reverse engineering our styles! Simply download our platform-agnostic CSS framework and get started today.</dd>
             </dl>
           </li>
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
@@ -130,44 +105,34 @@ class Overview extends React.Component {
         </ul>
       </section>
       {/* Resources */}
-      <IfPrefs userType="external">
-        <footer className={pf('site-resources--landing p-vertical--xx-large')}>
-          <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
-            <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
-              <div className="grid-card">
-                <div className={pf('grid grid--align-spread')}>
-                  <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="downloads-header">Downloads</h3>
-                  <Img src={`/assets/images/landing/icon-download.svg`} alt="" />
-                </div>
-                <hr className="hr hr--pink" />
-                <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
-                <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" eventType="downloads-bottom">Learn More</CTALink>
+      <footer className={pf('site-resources--landing p-vertical--xx-large')}>
+        <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
+          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
+            <div className="grid-card">
+              <div className={pf('grid grid--align-spread')}>
+                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="downloads-header">Downloads</h3>
+                <Img src={`/assets/images/landing/icon-download.svg`} alt="" />
               </div>
-            </li>
-            <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
-              <div className="grid-card">
-                <div className={pf('grid grid--align-spread')}>
-                  <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="tutorials-header">Tutorials</h3>
-                  <Img src={`/assets/images/landing/icon-tutorial.svg`} alt="" />
-                </div>
-                <hr className="hr hr--orange" />
-                <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-                <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="tutorials-bottom">Learn More</CTALink>
+              <hr className="hr hr--pink" />
+              <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
+              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" eventType="downloads-bottom">Learn More</CTALink>
+            </div>
+          </li>
+          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
+            <div className="grid-card">
+              <div className={pf('grid grid--align-spread')}>
+                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="tutorials-header">Tutorials</h3>
+                <Img src={`/assets/images/landing/icon-tutorial.svg`} alt="" />
               </div>
-            </li>
-          </ul>
-        </footer>
-      </IfPrefs>
-      </div>
-      {/* Shapes */}
-      <DynamicShapes x={SHAPES_X} y={SHAPES_Y} mouseX={this.state.mouse.x} mouseY={this.state.mouse.y} />
+              <hr className="hr hr--orange" />
+              <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
+              <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="tutorials-bottom">Learn More</CTALink>
+            </div>
+          </li>
+        </ul>
+      </footer>
     </div>
-  );
-  }
-}
-
-export default (
-  <PageBody contentClassName="site-landing-page">
-    <Overview />
+    {/* Shapes */}
+    <DynamicShapes x={1170} y={330} />
   </PageBody>
 );

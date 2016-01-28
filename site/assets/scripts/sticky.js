@@ -17,6 +17,7 @@ import throttle from 'lodash/throttle';
 import { $, setClassName } from './helpers';
 
 class Sticky {
+
   constructor(node) {
     this.node = node;
     this.refs = {
@@ -34,18 +35,22 @@ class Sticky {
     window.addEventListener('resize', this.onResize, false);
     window.addEventListener('scroll', this.onScroll, false);
   }
+
+  destroy() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
   setState(nextState) {
     fastdom.clear(this.layoutId);
     this.state = Object.assign({}, this.state, nextState);
     this.layoutId = fastdom.mutate(() => this.layout());
   }
-  destroy() {
-    window.removeEventListener('resize', this.onResize);
-    window.removeEventListener('scroll', this.onScroll);
-  }
+
   getPaddingTop(element) {
     return parseFloat(window.getComputedStyle(element)['padding-top'], 10) || 0;
   }
+
   calculate() {
     fastdom.measure(() => {
       this.refs.content.style.width = '';
@@ -68,9 +73,11 @@ class Sticky {
       });
     });
   }
+
   onResize() {
     this.calculate();
   }
+
   onScroll() {
     // The page has scrolled past the top of the nav
     // Attempt to stick it to the top
@@ -92,6 +99,7 @@ class Sticky {
       }
     }
   }
+
   layout() {
     const { isFixed, contentRect, contentTop } = this.state;
     // Content
@@ -109,6 +117,7 @@ class Sticky {
       'sticky--fixed': isFixed
     });
   }
+
 }
 
 export default node => new Sticky(node);

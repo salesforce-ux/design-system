@@ -9,6 +9,7 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'app_modules/site/components/page/heading';
@@ -20,37 +21,29 @@ import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
-class Page extends React.Component {
+class FAQ extends React.Component {
+
   constructor(props) {
     super(props);
-
-    this.state = {
-      jumpLinks: [],
-      content: []
-    };
-  }
-
-  componentDidMount() {
+    this.jumpLinks = [];
+    this.content = [];
     this.createContent();
   }
 
-  addContentItem(titleString, contentDom) {
-    let kTitle = this.kebabTitle(titleString);
-
-    this.state.jumpLinks.push(<li key={`${kTitle}-jumplink`}>
-      <a href={`#${kTitle}`}>{titleString}</a>
-    </li>);
-    this.state.content.push(
-      <Heading type="h2" id={kTitle} className="site-text-heading--large" key={`${kTitle}-h2`}>
-        {titleString}
-      </Heading>
+  addContentItem(title, content) {
+    const id = _.kebabCase(title);
+    this.jumpLinks.push(
+      <li key={`${id}-jumplink`}>
+        <a href={`#${id}`}>{title}</a>
+      </li>
     );
-    this.state.content.push(<div key={`${kTitle}-content`}>{contentDom}</div>);
-
-    this.setState({
-      jumpLinks: this.state.jumpLinks,
-      content: this.state.content
-    });
+    this.content.push(
+      <Heading type="h2" id={id} key={`${id}-h2`}
+        className="site-text-heading--large">
+        {title}
+      </Heading>,
+      <div key={`${id}-content`}>{content}</div>
+    );
   }
 
   createContent() {
@@ -232,28 +225,24 @@ class Page extends React.Component {
     );
   }
 
-  kebabTitle(title) {
-    return title.
-        split(/\s+/).
-        map(x => x.toLowerCase().replace(/\W/g, '')).
-        join('-');
+  render () {
+    return (
+      <PageBody anchorTitle="Frequently Asked Questions" contentClassName={pf('grid wrap')}>
+        <Sticky className={pf('site-sidebar-content col size--1-of-1 large-size--2-of-6 large-order--2')}>
+          <div className={pf('site-menu--jump-links')}>
+            <h3 className="site-text-heading--label">Questions</h3>
+            <ul className={pf('list--vertical has-block-links')}>
+              {this.jumpLinks}
+            </ul>
+          </div>
+        </Sticky>
+        <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
+          {this.content}
+        </div>
+      </PageBody>
+    );
   }
 
-  render () {
-    return <PageBody anchorTitle="Frequently Asked Questions" contentClassName={pf('grid wrap')}>
-      <Sticky key="sticky-menu" className={pf('site-sidebar-content col size--1-of-1 large-size--2-of-6 large-order--2')}>
-        <div className={pf('site-menu--jump-links')}>
-          <h3 className="site-text-heading--label">Questions</h3>
-          <ul className={pf('list--vertical has-block-links')}>
-            {this.state.jumpLinks}
-          </ul>
-        </div>
-      </Sticky>
-      <div key="main-content" className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-        {this.state.content}
-      </div>
-    </PageBody>;
-  }
 }
 
-export default (<Page />);
+export default <FAQ />;

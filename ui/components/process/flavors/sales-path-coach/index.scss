@@ -85,14 +85,6 @@
       color: $color-text-inverse;
     }
 
-    .#{$css-prefix}tabs--path__stage {
-      transform: rotateX(-180deg);
-    }
-
-    .#{$css-prefix}tabs--path__title {
-      transform: rotateX(0deg);
-    }
-
     &:hover {
       background-color: $color-background-alt-inverse;
 
@@ -103,6 +95,18 @@
 
     + .#{$css-prefix}tabs--path__item:before {
       background-color: $color-background-inverse;
+    }
+  }
+
+  .#{$css-prefix}is-active,
+  .#{$css-prefix}is-won {
+
+    .#{$css-prefix}tabs--path__title {
+      transform: rotateX(0deg);
+    }
+
+    .#{$css-prefix}tabs--path__stage {
+      transform: rotateX(-180deg);
     }
   }
 }
@@ -144,7 +148,7 @@
     border-left: 0;
     border-bottom: 0;
     background-clip: padding-box;
-    transform: rotate(45deg);
+    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;
   }
 
@@ -219,8 +223,13 @@
   background-color: $color-background-alt;
 }
 
-.#{$css-prefix}path__complete {
+.#{$css-prefix}path__mark-complete {
   border-radius: $border-radius-pill;
+}
+
+.#{$css-prefix}path__mark-current {
+  border-color: $color-background-inverse; // @TODO: need to make a new token
+  background-color: $color-border-inverse;
 }
 
 .#{$css-prefix}tabs--path__content {

@@ -67,10 +67,10 @@ export default (
         <Button flavor="icon-more" aria-haspopup="true">
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
           <span className={pf('assistive-text')}>Settings</span>
-          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+          <SvgIcon className={pf('button__icon button__icon--xx-small')} sprite="utility" symbol="down" />
         </Button>
-        <Button className={pf('button-space-left hide')} flavor="brand" aria-hidden="true">Save</Button>
-        <Button flavor="icon-more" aria-haspopup="true">
+        <Button className={pf('m-left--x-small hide')} flavor="brand" aria-hidden="true">Save</Button>
+        <Button flavor="icon-more" className={pf('m-left--xx-small')} aria-haspopup="true">
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
           <span className={pf('assistive-text')}>Table</span>
           <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />

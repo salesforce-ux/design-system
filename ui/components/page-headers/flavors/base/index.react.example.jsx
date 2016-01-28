@@ -19,12 +19,12 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <SvgIcon className={pf('icon icon--large icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+  <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
 );
 
 export default (
   <Anchor>
-    <MediaObject figureLeft={image}>
+    <MediaObject flavor="center" figureLeft={image}>
       <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>

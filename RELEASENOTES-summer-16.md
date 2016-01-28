@@ -6,9 +6,12 @@
 - Activity timeline markup structure has changed slightly:
   `slds-text-body--small` has moved from the `ul` to the second `li`, and the
   first `li` now has `slds-text-heading--label-normal`.
+- Page Header markup structure is refactored for new design.
 
 **CHANGES**
-- Buttons are visually smaller.
+- Page Headers are visually smaller.
+- Page Header details are now on white and align to the left.
+- All buttons are visually smaller.
 - Form Elements are visually smaller.
 - Reduced data table row heights.
 - Activity timeline sizing & spacing is reduced.

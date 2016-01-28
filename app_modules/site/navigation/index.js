@@ -167,20 +167,17 @@ export default () => formatNavItem({
       label: 'Resources',
       children: [
         {
-          route: 'resources:downloads',
           label: 'Downloads',
           internal: false
         },
         {
-          route: 'resources:icons',
           label: 'Icons'
         },
         {
-          route: 'resources:tokens',
+          id: 'tokens',
           label: 'Design Tokens'
         },
         {
-          route: 'resources:links',
           label: 'Links'
         }
       ]

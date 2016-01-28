@@ -22,6 +22,8 @@ import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
 
+import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
+
 import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
 
@@ -130,9 +132,42 @@ export const renderExample = element => {
       $el.replaceWith($el.contents());
     }
   });
-  // Format
   return prettyHTML($.html());
 };
+
+/**
+ * Wrap example markup with additonal boilerplate to be properly
+ * displayed in an iframe
+ *
+ * @param {object} flavor
+ * @param {string} html
+ * @returns {string}
+ */
+export const wrapExample = (flavor, html) => `
+  <!doctype html>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${flavor.title}</title>
+  <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
+  <style>
+    body { padding: ${ForceBase.spacingMedium}; }
+  </style>
+  <div id="preview">${html}</div>
+  <script>
+    (function() {
+      function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
+      if (!iframe()) return;
+      var $preview = document.getElementById('preview');
+      parent.APPLICATION_DELEGATE.updateComponentPreviewMarkup('${flavor.uid}', $preview.innerHTML);
+      // Adjust the height of the iframe
+      var $frame = parent.document.getElementById('iframe-${flavor.uid}');
+      var frameHeight = document.body.getBoundingClientRect().height;
+      parent.APPLICATION_DELEGATE.updateComponentPreviewHeight('${flavor.uid}', frameHeight);
+      // Fix SVG
+      parent.APPLICATION_DELEGATE.updateComponentPreviewSVG(document);
+    })();
+  </script>`;
 
 /**
  * Return the example element for the current flavor
@@ -224,28 +259,32 @@ export const gulpRenderComponentPage = () =>
       // file into the stream
       component.flavors
         // Only get flavors with an example
-        .filter(f => f.example)
-        .forEach(f => {
+        .filter(flavor => flavor.example)
+        .forEach(flavor => {
           // First, check if the example has states
-          if (f.example.states) {
+          if (flavor.example.states) {
             // Push a new file for each state
-            f.example.states.forEach(state => {
-              const element = getExampleElement(f.example, { state });
-              const id = state.id || _.kebabCase(state.label);
+            flavor.example.states.forEach(state => {
+              const element = getExampleElement(flavor.example, { state });
+              state.id = state.id || _.kebabCase(state.label);
               this.push(new gutil.File({
-                path: path.resolve(__PATHS__.site, f.path, `_${id}.html`),
-                contents: new Buffer(renderExample(element)),
+                path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
+                contents: new Buffer(
+                  wrapExample(flavor, renderExample(element))
+                ),
                 base: __PATHS__.site
               }));
             });
           } else {
             // No states were found, just get the single example
-            const element = getExampleElement(f.example);
+            const element = getExampleElement(flavor.example);
             if (element) {
               // Push a new file for the single example
               this.push(new gutil.File({
-                path: path.resolve(__PATHS__.site, f.path, '_default.html'),
-                contents: new Buffer(renderExample(element)),
+                path: path.resolve(__PATHS__.site, flavor.path, '_default.html'),
+                contents: new Buffer(
+                  wrapExample(flavor, renderExample(element))
+                ),
                 base: __PATHS__.site
               }));
             }

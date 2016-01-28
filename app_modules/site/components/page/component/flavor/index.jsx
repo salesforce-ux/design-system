@@ -146,11 +146,11 @@ class ComponentFlavor extends React.Component {
       <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
         <h3 className={pf('site-text-heading--label')}>States</h3>
         <ul className={pf('list--vertical has-block-links--space')}>
-          {flavor.example.states.map(state =>
-            <li
-              className={state === previewState ? 'is-active' : null}
-              key={state.label}>
-              <a role="button">
+          {flavor.example.states.map((state, index) =>
+            <li className={index === 0 ? 'is-active' : null} key={state.id}>
+              <a role="button"
+                data-slds-flavor-states={flavor.uid}
+                data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
                 {state.label}
               </a>
             </li>
@@ -163,14 +163,16 @@ class ComponentFlavor extends React.Component {
   renderPreview() {
     if (!this.props.flavor.example) return null;
     const { flavor } = this.props;
-    const { previewTabActive, previewTabs } = this.state;
+    const { previewTabActive, previewTabs, previewState } = this.state;
     const className = classNames(pf('site-example--tabs'), {
       'site-example--tabs-initial-view': this.state.initialView
     });
+    const src = previewState ? previewState.id : 'default';
     const iframe = (
       <iframe
-        src={`/components/preview-frame`}
+        src={`/${flavor.path}/_${src}.html?iframe`}
         height="100%"
+        id={`iframe-${flavor.uid}`}
         name={flavor.uid}
         ref="iframe"
         data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}
@@ -226,10 +228,9 @@ class ComponentFlavor extends React.Component {
     const code = flavor.exampleMarkup
       ? highlight(flavor.exampleMarkup, 'markup') : null;
     return (
-      <pre
-        id={`${flavor.uid}__code-block--markup`}
-        className={className}>
+      <pre className={className}>
         <code
+          id={`code-${flavor.uid}`}
           className={className}
           dangerouslySetInnerHTML={{__html: code}} />
       </pre>

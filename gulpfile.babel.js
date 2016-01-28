@@ -20,6 +20,7 @@ import gutil from 'gulp-util';
 import path from 'path';
 import prettyTime from 'pretty-time';
 import runSequence from 'run-sequence';
+import url from 'url';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
@@ -78,8 +79,9 @@ const debounceTask = (task, wait = 10000) =>
  */
 const siteMiddleware = (req, res, next) => {
   // Check for pages "/some/page/", "some/page/index.html"
+  const query = req.query || {};
   const ext = path.extname(req.url);
-  if (!ext || ext === '.html' && !/preview-frame/.test(req.url)) {
+  if (!ext || ext === '.html' && !query.iframe) {
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
     // Remove <PageBody> from the cache since every page uses it

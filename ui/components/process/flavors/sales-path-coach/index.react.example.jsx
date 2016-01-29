@@ -22,17 +22,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-// Something that never changes
-
-// const complete = (
-//   <Button flavor="brand" className={pf('path__complete no-flex m-left--small')}>
-//     <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
-//     Mark Status as Complete
-//   </Button>
-// );
-
-// Something that can change
-
 let Demo = props =>
   <div className={pf('demo-only')} {...props}>
     {props.children}
@@ -489,14 +478,15 @@ export let states = [
   {
     label: 'Default without Coaching',
     element: <StateA />
-  }
-  ,{
+  },
+  {
     label: 'Sales Path with Coaching Available',
     element: <StateB />
-  },{
-    label: 'Sales Path Showing Truncation',
-    element: <StateC />
   },
+  // {
+  //   label: 'Sales Path Showing Truncation',
+  //   element: <StateC />
+  // },
   {
     label: 'Sales Path with Current Stage Coaching Visible',
     element: <StateD />

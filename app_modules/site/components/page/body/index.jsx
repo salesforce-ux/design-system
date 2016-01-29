@@ -14,7 +14,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import Anchor from 'app_modules/site/components/page/anchor';
-import Settings from 'app_modules/site/components/page/settings';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';

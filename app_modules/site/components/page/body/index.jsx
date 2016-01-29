@@ -18,7 +18,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
-import { isMobile } from 'app_modules/site/browser/util';
 import Prefs from 'app_modules/site/preferences';
 import PrefsMixin from 'app_modules/site/preferences/mixin';
 import Status from 'app_modules/site/util/component/status';
@@ -69,12 +68,6 @@ export default React.createClass({
       navItems: nav.children,
       showingSettings: false
     };
-  },
-
-  componentDidMount() {
-    this.setState({
-      showingSettings: !(Prefs.hasBeenViewed() || isMobile()) && process.env.DEFAULT_USER_TYPE === 'internal'
-    });
   },
 
   shouldShowNavItem(item) {

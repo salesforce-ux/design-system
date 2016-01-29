@@ -11,14 +11,16 @@
 
 .#{$css-prefix}media--timeline {
   padding-bottom: $spacing-x-large;
-  @include feed-vertical-rule($square-icon-medium-boundary-alt, $border-width-thick);
+  @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
 
   &:before {
-    margin-left: -3px;
+    margin-left: 1px;
   }
 
-  .#{$css-prefix}timeline__icon {
-    border: $border-width-thick solid #fff;
+  .#{$css-prefix}media__figure {
+    border: $border-width-thick solid #fff {
+      bottom-width: $spacing-small;
+    };
   }
 }
 
@@ -55,5 +57,20 @@
   &__item {
     padding-left: $spacing-small;
     padding-right: $spacing-small;
+  }
+
+  .#{$css-prefix}tile__detail {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }

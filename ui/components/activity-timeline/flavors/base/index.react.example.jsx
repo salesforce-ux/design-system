@@ -51,24 +51,24 @@ export default (
       <span className={pf('assistive-text')}>Task</span>
       <MediaObject figureRight={content}>
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1}>
-          <MediaObject figureLeft={form} className={pf('tile media--small')}>
+          <MediaObject figureLeft={form} className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
               <a href="#">Review proposals for EBC deck with larger team and have marketing review this</a>
             </p>
-            <ul className={pf('tile__detail list--horizontal')}>
-              <li className={pf('list__item m-right--large')}>
+            <div className={pf('grid')}>
+              <div className={pf('tile__detail')}>
                 <dl>
-                  <span className={pf('text-heading--label-normal')}>Contact:</span>
-                  <span className={pf('text-body--small')}><a href="#">Lei Chan</a></span>
+                  <dt className={pf('text-heading--label-normal')}>Contact:</dt>
+                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
                 </dl>
-              </li>
-              <li className={pf('list__item')}>
+              </div>
+              <div className={pf('tile__detail')}>
                 <dl>
-                  <span className={pf('text-heading--label-normal')}>Assigned to:</span>
-                  <span className={pf('text-body--small')}><a href="#">Betty Mason</a></span>
+                  <dt className={pf('text-heading--label-normal')}>Assigned to:</dt>
+                  <dd className={pf('text-body--small')}><a href="#">Betty Mason</a></dd>
                 </dl>
-              </li>
-            </ul>
+              </div>
+            </div>
           </MediaObject>
         </MediaObject>
       </MediaObject>
@@ -78,14 +78,27 @@ export default (
       <MediaObject figureRight={content}>
         <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2}>
           <p><a href="#">Company One — EBC Meeting</a></p>
-          <p className={pf('truncate')}>Let's get together to review the theater's layout and facilities. We'll also discuss potential things that truncate at a certain width.</p>
-          <ul className={pf('list--horizontal text-body--small')}>
-            <li className={pf('list__item m-right--large')}><span>Time:</span><span className={pf('m-left--xx-small')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></span></li>
-            <li className={pf('list__item')}><span>Location:</span><span className={pf('m-left--xx-small')}><a href="#">300 Pike St, San Francisco CA</a></span></li>
-          </ul>
-          <span className={pf('text-body--small')}>
-            <span>Name:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></span>
-          </span>
+          <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
+          <div className={pf('grid')}>
+            <div className={pf('tile__detail')}>
+              <dl>
+                <dt className={pf('text-heading--label-normal')}>Time:</dt>
+                <dd className={pf('text-body--small')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></dd>
+              </dl>
+            </div>
+            <div className={pf('tile__detail')}>
+              <dl>
+                <dt className={pf('text-heading--label-normal')}>Location:</dt>
+                <dd className={pf('text-body--small')}><a href="#">300 Pike St, San Francisco CA</a></dd>
+              </dl>
+            </div>
+            <div className={pf('tile__detail')}>
+              <dl>
+                <dt className={pf('text-heading--label-normal')}>Name:</dt>
+                <dd className={pf('text-body--small')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></dd>
+              </dl>
+            </div>
+          </div>
         </MediaObject>
       </MediaObject>
     </li>
@@ -94,11 +107,21 @@ export default (
       <MediaObject figureRight={content}>
         <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3}>
           <p><a href="#">Mobile conversation on Monday</a></p>
-          <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let's move move.</p>
-          <ul className={pf('list--horizontal text-body--small')}>
-            <li className={pf('list__item m-right--large')}><span>Name:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
-            <li className={pf('list__item')}><span>Assigned to:</span><span className={pf('m-left--xx-small')}><a href="#">Betty Mason</a></span></li>
-          </ul>
+          <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
+          <div className={pf('grid')}>
+            <div className={pf('tile__detail')}>
+              <dl>
+                <dt className={pf('text-heading--label-normal')}>Name:</dt>
+                <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
+              </dl>
+            </div>
+            <div className={pf('tile__detail')}>
+              <dl>
+                <dt className={pf('text-heading--label-normal')}>Assigned to:</dt>
+                <dd className={pf('text-body--small')}><a href="#">Betty Mason</a></dd>
+              </dl>
+            </div>
+          </div>
         </MediaObject>
       </MediaObject>
     </li>
@@ -110,12 +133,20 @@ export default (
             <p className={pf('tile__title truncate')}>
               <a href="#">Updated Proposals</a>
             </p>
-            <div className={pf('tile__detail')}>
-              <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it's truncated.</p>
-              <ul className={pf('list--horizontal text-body--small')}>
-                <li className={pf('list__item m-right--large')}><span>To:</span><span className={pf('m-left--xx-small')}><a href="#">Lei Chan</a></span></li>
-                <li className={pf('list__item')}><span>From:</span><span className={pf('m-left--xx-small')}><a href="#">Jason Dewar</a></span></li>
-              </ul>
+            <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
+            <div className={pf('grid')}>
+              <div className={pf('tile__detail')}>
+                <dl>
+                  <dt className={pf('text-heading--label-normal')}>To:</dt>
+                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
+                </dl>
+              </div>
+              <div className={pf('tile__detail')}>
+                <dl>
+                  <dt className={pf('text-heading--label-normal')}>From:</dt>
+                  <dd className={pf('text-body--small')}><a href="#">Jason Dewar</a></dd>
+                </dl>
+              </div>
             </div>
           </div>
         </MediaObject>

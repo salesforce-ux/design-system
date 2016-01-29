@@ -114,7 +114,7 @@
 .#{$css-prefix}tabs--path__item {
   @include tabs-item;
   position: relative;
-  flex: 1 1 auto;
+  flex: 1 1 0%;
   min-width: 5rem;
   max-height: $sales-path;
   text-align: center;
@@ -188,24 +188,35 @@
   backface-visibility: hidden;
 }
 
+.#{$css-prefix}tabs--path__title {
+  @include truncate;
+}
+
 .#{$css-prefix}tabs--path__stage {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: calc(#{$square-icon-medium-content} / 2);
   width: 100%;
   margin-top: calc((#{$square-icon-medium-content} - #{$spacing-xx-small}) * -1);
   transform: rotateX(-180deg);
 }
 
 .#{$css-prefix}tabs--path__link {
-  @include tabs-link;
+  display: flex;
+  justify-content: center;
   position: relative;
-  padding: $spacing-xx-small $spacing-x-small $spacing-xx-small $spacing-medium;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 1.25rem; // @TODO: tokenize this - or special snowflake
   line-height: calc(#{$line-height-tab} / 2);
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -214,13 +225,23 @@
 .#{$css-prefix}path-coach {
   border: $color-border $border-width-thin solid;
   border-top: 0;
-  padding: 0 $spacing-medium $spacing-medium $spacing-medium;
+  padding-bottom: $spacing-medium;
 }
 
 .#{$css-prefix}path__trigger {
   border-radius: $border-radius-circle;
   border: $border-width-thin solid $color-border;
   background-color: $color-background-alt;
+  transition: $duration-quickly transform ease-in-out;
+}
+
+// @TODO: Move to global utility?
+.#{$css-prefix}flip--vertical {
+  transform: rotateX(180deg);
+}
+
+.#{$css-prefix}flip--horizontal {
+  transform: rotateY(180deg);
 }
 
 .#{$css-prefix}path__mark-complete {

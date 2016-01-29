@@ -65,8 +65,7 @@ export default React.createClass({
       getActiveNavItems(navigation(), this.props.path)
     );
     return {
-      navItems: nav.children,
-      showingSettings: false
+      navItems: nav.children
     };
   },
 
@@ -80,22 +79,6 @@ export default React.createClass({
   shouldShowNavItemToUserType(item) {
     return !item.userType
       ? true : item.userType === process.env.DEFAULT_USER_TYPE;
-  },
-
-  showSettings(e) {
-    e.preventDefault();
-    if (process.env.DEFAULT_USER_TYPE === 'internal') {
-      this.setState({
-        showingSettings: true
-      });
-    }
-  },
-
-  closeSettings() {
-    this.setState({
-      showingSettings: false
-    });
-    Prefs.storeViewed();
   },
 
   render() {
@@ -120,9 +103,6 @@ export default React.createClass({
         </main>
         {this.renderNav()}
         {this.renderFooter()}
-        <Settings
-          isOpen={this.state.showingSettings}
-          onClose={this.closeSettings} />
       </div>
     );
   },

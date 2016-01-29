@@ -96,7 +96,7 @@
     "run-sequence": "^1.1.5",
     "semver": "^5.1.0",
     "temp": "^0.8.3",
-    "theo": "4.0.1",
+    "theo": "4.2.0",
     "through2": "2.0.0",
     "tinycolor2": "1.1.2",
     "uuid": "^2.0.1",
@@ -117,7 +117,8 @@
     "webpack-dev-middleware": "^1.5.1"
   },
   "gitDependencies": {
-    "design-tokens-winter-16": "https://github.com/salesforce-ux/design-tokens.git#winter-16",
-    "design-tokens": "https://github.com/salesforce-ux/design-tokens.git#winter-16"
+    "design-tokens-winter-16": "git@github.com:salesforce-ux/design-tokens.git#winter-16",
+    "design-tokens-spring-16": "git@github.com:salesforce-ux/design-tokens-internal.git#spring-16",
+    "design-tokens": "git@github.com:salesforce-ux/design-tokens-internal.git#spring-16"
   }
 }

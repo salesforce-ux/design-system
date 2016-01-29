@@ -10,48 +10,69 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import _ from 'lodash';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
+import ExampleCell from './cell-example';
+import ValueCell from './cell-value';
 
-class ValueCell extends React.Component {
+class Row extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.value !== nextProps.value;
+  getName() {
+    const { token, nameFormat } = this.props;
+    return nameFormat.formatter(token.name);
   }
 
   render() {
-    const className = classNames('', this.props.className);
+    const { token, options } = this.props;
+    const data = {
+      'data-slds-token': token.name,
+      'data-slds-token-value': token.value
+    };
+    if (token.rawValue !== token.value) {
+      data['data-slds-token-value-raw'] = token['.rawValue'];
+    }
     return (
-      <td className={className} data-label={this.props.formFactor}>
-        {this.props.example}
+      <tr
+        className={this.props.className}
+        {...data}>
+        <td>
+          <code>{this.getName()}</code>
+        </td>
         {this.renderValue()}
-      </td>
+      </tr>
     );
   }
 
   renderValue() {
-    const {value} = this.props;
-    if (!value) return null;
-
-    const className = classNames('cell-wrap', 'site-property-value');
-    return (
-      <code className={pf(className)}>
-        {value}
-      </code>
-    );
+    const { category, token, valueFormat, formFactors } = this.props;
+    const example = token
+      ? category.renderExample(token)
+      : <ExampleCell />;
+    const isSizeToken = token.name.toString().match(/^SIZE_/);
+    const className = classNames({
+      'token': token,
+      'token--empty': _.isUndefined(token),
+      'site-token__generic-size': isSizeToken
+    });
+    const value = valueFormat
+      ? valueFormat.formatter(token.value, token) : token.value;
+    return <ValueCell
+      value={value}
+      example={example}
+      className={className} />;
   }
 
 }
 
-ValueCell.propTypes = {
-  value: React.PropTypes.string,
-  example: React.PropTypes.node,
-  formFactor: React.PropTypes.string
+Row.propTypes = {
+  category: React.PropTypes.object.isRequired,
+  token: React.PropTypes.shape({
+    name: React.PropTypes.string.isRequired,
+    value: React.PropTypes.any.isRequired
+  }),
+  nameFormat: React.PropTypes.object.isRequired,
+  valueFormat: React.PropTypes.object
 };
 
-export default ValueCell;
+export default Row;

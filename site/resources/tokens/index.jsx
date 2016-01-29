@@ -16,91 +16,49 @@ import Sticky from 'app_modules/site/components/sticky';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import Prefs from 'app_modules/site/preferences';
-import IfPref from 'app_modules/site/preferences/component';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
 
 import releases from '.generated/ui.tokens';
 import categories from './_categories';
 
 const nameFormats = [
-  { role: Prefs.roles.regular, name: 'Sass', formatter: (name) => `$${_.kebabCase(name)}` },
-  { role: Prefs.roles.aura, name: 'Lightning', formatter: (name) => `t(${_.camelCase(name)})` }
+  {
+    role: Prefs.roles.regular,
+    name: 'Sass',
+    formatter: name => `$${_.kebabCase(name)}`
+  },
+  {
+    role: Prefs.roles.aura,
+    name: 'Lightning',
+    formatter: name => `t(${_.camelCase(name)})`
+  }
 ];
 
-const nameSegments = _.memoize(_.words);
-
 const Tokens = React.createClass({
-  mixins: [PrefsMixin],
 
-  getInitialState: function() {
+  getInitialState() {
     const release = releases[0];
     const group = release.groups[0];
     const tokensByCategory = this.getTokensByCategory(group);
     return {
-      release, group,
-      tokensByCategory,
-      tokensByCategoryFiltered: tokensByCategory
+      role: 'regular',
+      release,
+      group,
+      tokensByCategory
     };
   },
 
-  format: function() {
+  format() {
     return _.find(nameFormats, { role: this.state.role });
   },
 
-  getTokensByCategory: function(group) {
-    const overrides = ['small', 'medium', 'large'];
-    const categories = {};
-    group.sets.forEach(set => {
-      set.contents.propKeys.forEach(tokenName => {
-        const token = set.contents.props[tokenName];
-        const category = categories[token.category] = categories[token.category] || [];
-        const existingToken = _.find(category, { name: tokenName });
-        if (existingToken) {
-          const size = _.last(set.name.split('-'));
-          if (_.includes(overrides, size)) {
-            const tokenOverrides = existingToken.overrides = existingToken.overrides || {};
-            tokenOverrides[size] = token;
-          }
-        } else {
-          category.push(token);
-        }
-      });
-    });
-    return categories;
+  getTokensByCategory(group) {
+    const tokens = group.sets.reduce((tokens, set) =>
+      tokens.concat(set.contents.propKeys.map(key => set.contents.props[key]))
+    , []);
+    return _.groupBy(tokens, 'category');
   },
 
-  onSearchChange: function(e) {
-    let {tokensByCategory} = this.state;
-    const target = event.target || event.currentTarget;
-    const query = target.value;
-    const querySegments = _.words(query);
-    if (query) {
-      tokensByCategory = _.mapValues(tokensByCategory, tokens => {
-        return tokens.filter(token => {
-          const tokenSegments = nameSegments(token.name);
-          let matches = 0;
-          for (let q of querySegments) {
-            for (let t of tokenSegments) {
-              if (new RegExp(q, 'i').test(t)) {
-                matches++;
-                break;
-              }
-            }
-          }
-          return matches === querySegments.length;
-        });
-      });
-      tokensByCategory = _.pick(tokensByCategory, tokens => {
-        return tokens.length > 0;
-      });
-    }
-    this.setState({
-      query,
-      tokensByCategoryFiltered: tokensByCategory
-    });
-  },
-
-  render: function() {
+  render() {
     return (
       <div>
         {this.renderHeader()}
@@ -122,7 +80,7 @@ const Tokens = React.createClass({
     );
   },
 
-  renderHeader: function() {
+  renderHeader() {
     const {release} = this.state;
     const options = release.groups.map(group => {
       return <option key={group.name} value={group.name}>{group.label}</option>;
@@ -137,30 +95,27 @@ const Tokens = React.createClass({
               id="find-token-input"
               type="search"
               arial-label="text-input"
-              placeholder="Find Token"
-              onChange={this.onSearchChange} />
+              placeholder="Find Token" />
           </div>
         </div>
       </Sticky>
     );
   },
 
-  renderCategories: function() {
-    const {tokensByCategoryFiltered} = this.state;
-    return categories.filter(category => {
-      return tokensByCategoryFiltered[category.key];
-    }).map(category => {
-      return (
+  renderCategories() {
+    const { tokensByCategory } = this.state;
+    return categories
+      .filter(category => tokensByCategory[category.key])
+      .map(category =>
         <li className={pf('list__item')} key={category.key}>
           <a href={`#category-${category.key}`}>
             {category.label}
           </a>
         </li>
       );
-    });
   },
 
-  renderInfo: function() {
+  renderInfo() {
     if (this.state.query) { return null; }
     return [
       <div className={pf('container--large')} key="info">
@@ -172,38 +127,25 @@ const Tokens = React.createClass({
           maintain a scalable and consistent visual system
           for <abbr title="User Interface">UI</abbr> development.
         </p>
-        <IfPref role="aura" userType="internal">
-          <div>
-            <h3 className={pf('site-text-heading--label')}>Form Factor Overrides</h3>
-            <p>
-              Design tokens default to the <strong>Small</strong> form
-              factor, usually viewed on mobile devices. The form factors
-              for <strong>Medium</strong> (usually viewed on tablets)
-              and <strong>Large</strong> (desktop browsers) use their
-              overridden values; if no override exists, it will default to
-              the Small form factor token.
-            </p>
-          </div>
-        </IfPref>
       </div>
     ];
   },
 
   renderTokens() {
-    const {tokensByCategoryFiltered} = this.state;
+    const { tokensByCategory } = this.state;
     const nameFormat = this.format();
-    return categories.filter(category => {
-      return tokensByCategoryFiltered[category.key];
-    }).map(category => {
-      const tokens = (tokensByCategoryFiltered[category.key] || []).filter(token => {
-        return token.deprecated !== true;
+    return categories
+      .filter(category => tokensByCategory[category.key])
+      .map(category => {
+        const tokens = tokensByCategory[category.key]
+          .filter(token => token.deprecated !== true);
+        return category.render(tokens, {
+          nameFormat,
+          role: this.state.role
+        });
       });
-      return category.render(tokens, {
-        nameFormat,
-        role: this.state.role
-      });
-    });
   }
+
 });
 
 export default (

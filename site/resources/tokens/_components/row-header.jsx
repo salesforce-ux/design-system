@@ -10,19 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-class ExampleCell extends React.Component {
-  render() {
-    const className = classNames('cell-wrap', this.props.className);
-    return (
-      <div {...this.props} className={pf(className)}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
-
-export default ExampleCell;
+export default props =>
+  <thead>
+    <tr className="site-text-heading--label-weak">
+      <th scope="col">
+        <span>Token</span>
+      </th>
+      <th scope="col">
+        Example
+      </th>
+    </tr>
+  </thead>;

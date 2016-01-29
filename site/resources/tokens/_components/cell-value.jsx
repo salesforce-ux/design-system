@@ -10,44 +10,37 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-class RowHeader extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+class ValueCell extends React.Component {
+
   render() {
+    const className = classNames('', this.props.className);
     return (
-      <thead>
-        <tr className="site-text-heading--label-weak">
-          <th scope="col">
-            <span>Token</span>
-          </th>
-          {this.renderFormFactors()}
-        </tr>
-      </thead>
+      <td className={className}>
+        {this.props.example}
+        {this.renderValue()}
+      </td>
     );
   }
-  renderFormFactors() {
-    return this.props.formFactors.map(factor => {
-      let label = this.props.formFactors.length === 1 ? 'Example' : (
-        <span className={pf('media media--center')}>
-          <span className={pf('media__figure')}>
-            <SvgIcon sprite="utility" symbol={factor.symbol} className={pf(`icon icon__svg icon--x-small icon-text-default ${factor.className}`)} />
-          </span>
-          <span className={pf('media__body')}>
-            {factor.label}
-          </span>
-        </span>
-      );
-      return (
-        <th scope="col" key={factor.label}>
-          {label}
-        </th>
-      );
-    });
+
+  renderValue() {
+    const { value } = this.props;
+    if (!value) return null;
+    const className = classNames('cell-wrap', 'site-property-value');
+    return (
+      <code className={pf(className)}>
+        {value}
+      </code>
+    );
   }
+
 }
 
-export default RowHeader;
+ValueCell.propTypes = {
+  value: React.PropTypes.string,
+  example: React.PropTypes.node
+};
+
+export default ValueCell;

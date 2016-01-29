@@ -29,13 +29,11 @@ gulp.task('generate:tokens', done => {
     sets: [
       'force-base',
       'force-mq-commons',
-      's1-base',
-      's1-base-medium',
-      's1-base-large'
+      's1-base'
     ]
   }];
 
-  const releaseNames = ['winter-16'];
+  const releaseNames = ['spring-16', 'winter-16'];
   const releases = [];
   const releaseStream = through.obj();
 

@@ -483,10 +483,6 @@ export let states = [
     label: 'Sales Path with Coaching Available',
     element: <StateB />
   },
-  // {
-  //   label: 'Sales Path Showing Truncation',
-  //   element: <StateC />
-  // },
   {
     label: 'Sales Path with Current Stage Coaching Visible',
     element: <StateD />

@@ -29,9 +29,9 @@ const emitter = new EventEmitter();
  * @param {any} event.data
  */
 const pushEvent = event => {
-  invariant(!isPlainObject(event),
+  invariant(isPlainObject(event),
     'events pushed into __eventQueue must be objects');
-  invariant(!isString(event.name),
+  invariant(isString(event.name),
     'events pushed into __eventQueue must have a "name" property');
   emitter.emit(event.name, event.data);
 };

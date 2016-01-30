@@ -16,15 +16,11 @@ import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import minifycss from 'gulp-minify-css';
-import minimist from 'minimist';
 import path from 'path';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
-
-const argv = minimist(process.argv.slice(2));
-const isProd = argv.prod === true;
 
 gulp.task('stylestats', done => {
   const file = '.www/assets/styles/slds.css';
@@ -65,21 +61,4 @@ gulp.task('styles', () =>
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.www/assets/styles'))
     .pipe(browserSync.stream({ match: '**/*.css' }))
-);
-
-gulp.task('styles:prod', () =>
-  gulp
-    .src('site/assets/styles/*.scss')
-    .pipe(sass({
-      outputStyle: isProd ? 'compressed' : 'nested',
-      sourceComments: isProd ? false : true,
-      includePaths: [
-        __PATHS__.root,
-        __PATHS__.ui,
-        __PATHS__.node_modules
-      ]
-    }))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-    .pipe(isProd ? minifycss({ advanced: false }) : gutil.noop())
-    .pipe(gulp.dest('./.www/assets/styles'))
 );

@@ -197,18 +197,18 @@ gulp.task('serve', () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], 'pages', 'serve',
+    'clean', 'styles', ['assets', 'generate'], 'serve',
   callback);
 });
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles:prod', ['assets', 'generate'], ['pages', 'webpack'],
+    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'],
   callback);
 });
 
 gulp.task('build:test', callback => {
   runSequence(
-    'clean', 'styles:prod', ['assets', 'generate'], ['pages'],
+    'clean', 'styles', ['assets', 'generate'], ['pages'],
   callback);
 });

@@ -140,7 +140,7 @@
     content: '';
     display: block;
     position: absolute;
-    left: calc((#{$sales-path} / 2 ) * -1); // -1em;
+    left: (($sales-path / 2) * -1);
     top: $border-width-thick;
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
@@ -162,10 +162,7 @@
     background-color: $color-background-success; //@TODO: this token should be updated/aliased
   }
 
-  &:hover + .#{$css-prefix}is-complete:before {
-    background-color: $color-background-toast-success; //@TODO: this token should be updated/aliased
-  }
-
+  &:hover + .#{$css-prefix}is-complete:before,
   &:hover + .#{$css-prefix}is-current:before {
     background-color: $color-background-toast-success; //@TODO: this token should be updated/aliased
   }
@@ -195,9 +192,9 @@
 .#{$css-prefix}tabs--path__stage {
   position: absolute;
   top: 50%;
-  left: calc(#{$square-icon-medium-content} / 2);
+  left: ($square-icon-medium-content / 2);
   width: 100%;
-  margin-top: calc((#{$square-icon-medium-content} - #{$spacing-xx-small}) * -1);
+  margin-top: (($square-icon-medium-content - $spacing-xx-small) * -1);
   transform: rotateX(-180deg);
 }
 
@@ -206,7 +203,7 @@
   justify-content: center;
   position: relative;
   padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 1.25rem; // @TODO: tokenize this - or special snowflake
-  line-height: calc(#{$line-height-tab} / 2);
+  line-height: $line-height-tab / 2;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
 
@@ -256,6 +253,7 @@
 .#{$css-prefix}tabs--path__content {
   position: relative;
   padding-left: $spacing-large;
+  padding-right: $spacing-medium;
 }
 
 .#{$css-prefix}coach__keys,
@@ -267,7 +265,6 @@
 
 .#{$css-prefix}coach__keys {
   padding-left: $spacing-small;
-
 }
 
 .#{$css-prefix}coach__guidance {

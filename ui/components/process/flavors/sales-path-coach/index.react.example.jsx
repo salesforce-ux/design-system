@@ -33,7 +33,7 @@ let Coach = props =>
   </div>;
 
 let Path = props =>
-  <div className={pf('path__row grid')}>
+  <div className={pf('grid')}>
     {props.children}
   </div>;
 
@@ -44,7 +44,7 @@ let Triggerup = props =>
   <ButtonIcon flavor="icon-small" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button flavor="brand" className={className(pf('button--small path__mark-complete no-flex m-left--small'), props.className)}>
+  <Button flavor="brand" className={className(pf('button--small path__mark-complete no-flex m-horizontal--small'), props.className)}>
     {props.children}
   </Button>;
 

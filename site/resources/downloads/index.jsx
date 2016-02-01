@@ -41,31 +41,31 @@ export default (
       Instead of downloading the Design System you can also <a href="https://github.com/salesforce-ux/design-system">fork or clone it on GitHub</a>.
     </p>
     <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} ctaEventName="GitHub">
-      <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
+      <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} alt="" />
       Design System on GitHub
     </CTALink>
 
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Npm Module</h2>
+    <h2 className="site-text-heading--large" id="npm-package">Design System npm Package</h2>
 
     <p>
-      If you use npm in your local development environment, it can be installed with the folllowing command:
+      If you use <a href="https://www.npmjs.com/">npm</a> in your local development environment, it can be installed with the following command:
     </p>
 
     <div className={pf('site-code--content scrollable--x')}>
       <CodeBlock language="bash">{`
-npm install @salesforce-ux/design-system
+npm install @salesforce-ux/design-system --save
       `}</CodeBlock>
     </div>
 
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Bower Package</h2>
+    <h2 className="site-text-heading--large" id="bower-package">Design System Bower Package</h2>
 
     <p>
-      If you use bower in your local development environment, it can be installed with the folllowing command:
+      If you use <a href="http://bower.io/">Bower</a> in your local development environment, it can be installed with the following command:
     </p>
 
     <div className={pf('site-code--content scrollable--x')}>
       <CodeBlock language="bash">{`
-bower install salesforce-lightning-design-system
+bower install salesforce-lightning-design-system --save
       `}</CodeBlock>
     </div>
 
@@ -199,6 +199,11 @@ bower install salesforce-lightning-design-system
         </form>
       </div>
     </div>
+
+    <h2 className="site-text-heading--large" id="archives">Archives</h2>
+    <p>
+      <CTALink href="http://design-system-v-0-12-1.herokuapp.com/" ctaEventName="SLDS-Archives">0.12.1</CTALink>
+    </p>
 
   </PageBody>
 );

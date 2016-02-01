@@ -15,7 +15,7 @@ import Menu from 'ui/components/menus/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className="demo-only demo-only--dropdown" style={{height: '18rem'}}>
+  <div className="demo-only demo-only--dropdown" style={{height: '16rem'}}>
     <div className={pf('context-bar grid')}>
       <div className={pf('context-bar__shadow')}></div>
       <div className={pf('context-bar__primary context-bar-action grid grid--vertical-align-stretch')}>

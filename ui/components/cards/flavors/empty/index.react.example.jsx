@@ -23,7 +23,6 @@ export default (
     <div className={pf('text-align--center')}>
       <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
       <Button flavor="neutral" className={pf('m-bottom--x-large')}>Add Contact</Button>
-      </div>
     </div>
   </div>
 </div>

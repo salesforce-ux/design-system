@@ -17,13 +17,13 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
+  <SvgIcon className={pf('icon icon-standard-contact')} sprite="standard" symbol="contact" />
 );
 
 export default (
   <div className="demo-only">
     <div className={pf('card')}>
-      <div className={pf('card__header grid grid--align-spread')}>
+      <div className={pf('card__header grid grid--content-center grid--align-spread')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate size--1-of-3')}>
           <h2 className={pf('text-heading--small truncate')}>Card Header (2)</h2>
         </MediaObject>
@@ -101,7 +101,7 @@ export default (
         </table>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#" className={pf('card__footer-action')}>View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

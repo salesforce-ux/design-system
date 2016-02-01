@@ -5,9 +5,3 @@ flavors:
   - with-filtering
   - compact
   - empty
-dependencies:
-  - core/text
-  - core/grid-system/index
-  - core/grid-system/index/flex-spread
-  - components/button-group
-  - components/tables

@@ -23,17 +23,23 @@ const image = (
 export default (
   <div className="demo-only" style={{maxWidth: '300px'}}>
     <div className={pf('card')}>
-      <div className={pf('card__header grid')}>
+      <div className={pf('card__header grid grid--content-center')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate')}>
           <h2 className={pf('text-heading--small truncate')}>Card Header (2)</h2>
         </MediaObject>
         <div className={pf('no-flex')}>
-          <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Useful alt text"/>
+          <ButtonIcon
+            className={pf('shrink-none')}
+            flavor="icon-border-filled,icon-x-small"
+            iconFlavor="small"
+            sprite="utility"
+            symbol="down"
+            assistiveText="Show More" />
         </div>
       </div>
       <div className={pf('card__body')}>
         <ul>
-          <li className={pf('tile hint-parent')}>
+          <li className={pf('tile card__inner hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
                 <a href="#">Adam Choi</a>
@@ -63,7 +69,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('tile hint-parent')}>
+          <li className={pf('tile card__inner hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
                 <a href="#">Adam Choi</a>
@@ -93,7 +99,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('tile hint-parent')}>
+          <li className={pf('tile card__inner hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
                 <a href="#">Adam Choi</a>
@@ -126,7 +132,7 @@ export default (
         </ul>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#" className={pf('card__footer-action')}>View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

@@ -18,23 +18,41 @@
 
   &__header,
   &__footer {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-left: $spacing-large;
+    padding-right: $spacing-large;
   }
+
   &__header {
-    padding-top: $spacing-small;
-    padding-bottom: $spacing-xx-small;
-  }
-  &__footer {
-    padding-bottom: $spacing-x-small;
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-large;
   }
 
   &__body {
-    padding: $spacing-x-small 0;
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-medium;
   }
 
-  .#{$css-prefix}tile {
-    margin: $spacing-x-small;
-    padding: $spacing-xx-small;
+  &__footer {
+    text-align: right;
+    margin-top: $spacing-medium;
+    padding-bottom: $spacing-medium;
   }
+
+  &__footer-action {
+    // Increase the action's hit box
+    display: inline-block;
+    margin: ($spacing-small * -1);
+    padding: $spacing-small;
+  }
+
+  @include deprecate('2.0.0', 'Use .slds-card__inner instead.') {
+    .#{$css-prefix}tile {
+      margin: $spacing-small $spacing-large;
+    }
+  }
+
+  &__inner {
+    margin: $spacing-small $spacing-large;
+  }
+
 }

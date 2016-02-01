@@ -19,9 +19,11 @@ classes:
     class: card__footer
     description: Initializes card footer
     applied: <code>&lt;div&gt;</code>
-    required: true
   -
-    class: grid
-    description: Horizontally aligns text and actions on separate ends of card header
-    applied: <code>.{{cssPrefix}}card__header</code>
-    notes: Only required if you have actions
+    class: card__footer-action
+    description: Give actions a large enough hit box to make it more easily clickable
+    applied: <code>&lt;a&gt;</code>
+  -
+    class: card__inner
+    description: Add spacing around inner elements of a card (e.g. a tile)
+    applied: Any element

@@ -36,69 +36,68 @@ export default (
             <h1 className={pf('page-header__title truncate')} title="My Leads (truncates)">My Leads (truncates)</h1>
             <ButtonIcon className={pf('shrink-none align-middle m-left--x-small')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="View More" />
           </div>
-          <Button className={pf('shrink-none m-left--large')} flavor="icon-more" aria-haspopup="true">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-            <span className={pf('assistive-text')}>Settings</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-          </Button>
-          <Button className={pf('button-space-left m-right--medium shrink-none align-middle hide')} flavor="brand" aria-hidden="true">Save</Button>
         </div>
         {/* Close Grid */}
       </div>
       {/* Close Col */}
       {/* Open Right Aligned Icon Grouping */}
-      <div className={pf('col no-flex align-bottom')}>
-        <div className={pf('grid')}>
-          <div className={pf('button-space-left')}>
-            <Button flavor="icon-more" aria-haspopup="true">
-              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-              <span className={pf('assistive-text')}>Table</span>
-              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-            </Button>
-          </div>
-          {/* Close Button */}
-          <div className={pf('button-group button-space-left')} role="group">
-            <StatefulClass>
-              <ButtonIcon
-                flavor="icon-border"
-                sprite="utility"
-                symbol="chart"
-                assistiveText="Chart" />
-            </StatefulClass>
-            <StatefulClass>
+      <div className={pf('col no-flex grid align-top')}>
+        <div className={pf('button-group')} role="group">
+          <Button flavor="neutral">
+            New Lead
+          </Button>
+          <div className={pf('button--last')}>
             <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="filterList"
-              assistiveText="Filter List" />
-            </StatefulClass>
-            <Button flavor="icon-more">
-              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-              <span className={pf('assistive-text')}>Sort</span>
-              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-              <span className={pf('assistive-text')}>More</span>
-            </Button>
+            flavor="icon-border-filled"
+            sprite="utility"
+            symbol="down"
+            assistiveText="More Actions" />
           </div>
-          {/* Close Button Group */}
-          <div className={pf('button-group')} role="group">
-            <Button flavor="neutral">
-              New Lead
-            </Button>
-            <div className={pf('button--last')}>
-              <ButtonIcon
-              flavor="icon-border-filled"
-              sprite="utility"
-              symbol="down"
-              assistiveText="More Actions" />
-            </div>
-          </div>
-          {/* Close Button Group */}
         </div>
-        {/* Close Grid */}
+        {/* Close Button Group */}
       </div>
       {/* Close Col */}
     </div>
     {/* Close Grid */}
-    <Anchor.Detail>10 items • Sorted by Name</Anchor.Detail>
+    <div className={pf('grid')}>
+      <div className={pf('col align-bottom')}>
+        <Anchor.Detail>10 items • Sorted by Name</Anchor.Detail>
+      </div>
+      <div className={pf('col no-flex grid align-bottom')}>
+        <Button flavor="icon-more" aria-haspopup="true">
+          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+          <span className={pf('assistive-text')}>Settings</span>
+          <SvgIcon className={pf('button__icon button__icon--xx-small')} sprite="utility" symbol="down" />
+        </Button>
+        <Button className={pf('m-left--x-small hide')} flavor="brand" aria-hidden="true">Save</Button>
+        <Button flavor="icon-more" className={pf('m-left--xx-small')} aria-haspopup="true">
+          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
+          <span className={pf('assistive-text')}>Table</span>
+          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+        </Button>
+        <div className={pf('button-group')} role="group">
+          <StatefulClass>
+            <ButtonIcon
+              flavor="icon-border"
+              sprite="utility"
+              symbol="chart"
+              assistiveText="Chart" />
+          </StatefulClass>
+          <StatefulClass>
+          <ButtonIcon
+            flavor="icon-border"
+            sprite="utility"
+            symbol="filterList"
+            assistiveText="Filter List" />
+          </StatefulClass>
+          <Button flavor="icon-more">
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
+            <span className={pf('assistive-text')}>Sort</span>
+            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+            <span className={pf('assistive-text')}>More</span>
+          </Button>
+        </div>
+      </div>
+    </div>
   </Anchor>
 );

@@ -23,30 +23,26 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image = (
-  <SvgIcon className={pf('icon icon--large icon-standard-user')} sprite="standard" symbol="user" />
+  <SvgIcon className={pf('icon icon-standard-user')} sprite="standard" symbol="user" />
 );
 
 export default (
   <Anchor flavor="home">
     <div className={pf('grid')}>
       <div className={pf('col has-flexi-truncate')}>
-        <MediaObject figureLeft={image}>
+        <MediaObject flavor="center" figureLeft={image}>
           <Heading flavor="label">Record Type</Heading>
-          <div className={pf('grid')}>
-            <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
-            <div className={pf('col shrink-none')}>
-              <StatefulClass>
-                <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
-                  <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
-                  <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
-                  <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
-                </Button>
-              </StatefulClass>
-            </div>
-          </div>
+          <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
         </MediaObject>
       </div>
-      <div className={pf('col no-flex align-bottom')}>
+      <div className={pf('col no-flex grid align-bottom')}>
+        <StatefulClass>
+          <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
+            <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
+            <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
+            <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
+          </Button>
+        </StatefulClass>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
             Edit
@@ -70,7 +66,7 @@ export default (
     <Anchor.DetailRow>
       <Anchor.DetailItem>
         <Anchor.DetailLabel>
-          <p className={pf('text-heading--label truncate')} title="Field 1">Field 1</p>
+          <p className={pf('text-heading--label-normal truncate')} title="Field 1">Field 1</p>
         </Anchor.DetailLabel>
         <Anchor.DetailBody>
           <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
@@ -80,7 +76,7 @@ export default (
       </Anchor.DetailItem>
       <Anchor.DetailItem>
         <Anchor.DetailLabel>
-          <p className={pf('text-heading--label truncate')} title="Field2 (3)">Field 2 (3)
+          <p className={pf('text-heading--label-normal truncate')} title="Field2 (3)">Field 2 (3)
           <ButtonIcon
             flavor="icon-bare"
             iconFlavor="small"
@@ -95,7 +91,7 @@ export default (
       </Anchor.DetailItem>
       <Anchor.DetailItem>
         <Anchor.DetailLabel>
-          <p className={pf('text-heading--label truncate')} title="Field 3">Field 3</p>
+          <p className={pf('text-heading--label-normal truncate')} title="Field 3">Field 3</p>
         </Anchor.DetailLabel>
         <Anchor.DetailBody>
           <a href="javascript:void(0)">Hyperlink</a>
@@ -103,7 +99,7 @@ export default (
       </Anchor.DetailItem>
       <Anchor.DetailItem>
         <Anchor.DetailLabel>
-          <p className={pf('text-heading--label truncate')} title="Field 4">Field 4</p>
+          <p className={pf('text-heading--label-normal truncate')} title="Field 4">Field 4</p>
         </Anchor.DetailLabel>
         <Anchor.DetailBody>
           <p>

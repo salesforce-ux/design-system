@@ -28,7 +28,9 @@ classes:
   -
     class: input--small
     description: Applies styles for a smaller text input
+    deprecated: true
     applied: <code>.{{cssPrefix}}input</code>
+    notes: Removed in version 2.0.0
   -
     class: input--bare
     description: Removes background and border from text input
@@ -111,4 +113,5 @@ classes:
     class: form--compound--horizontal
     description: Layout modifier for compound forms
     applied: <code>.{{cssPrefix}}form--compound</code>
-    notes: Positions form labels to the left of the form control
+    deprecated: true
+    notes: Use <code>.{{cssPrefix}}form--horizontal</code> instead, sizing of fields will become 100% of parent width

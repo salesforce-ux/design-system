@@ -18,7 +18,6 @@
       right: 0;
       bottom: 0;
     }
-    // font-size: $font-size-medium;
     max-width: $size-x-small;
     justify-content: flex-end;
   }
@@ -26,7 +25,6 @@
   .#{$css-prefix}lookup__menu {
     max-width: calc(100% - #{$size-xx-small});
     right: 0;
-    top: calc(#{$line-height-button} + 2px);
   }
 
   .#{$css-prefix}lookup__list {
@@ -34,11 +32,7 @@
   }
 
   .#{$css-prefix}dropdown-trigger {
-    margin-left: $spacing-x-small;
-  }
-
-  .#{$css-prefix}input {
-    padding-left: $size-x-small;
+    margin-left: $spacing-xx-small;
   }
 
   .#{$css-prefix}form-element__control {
@@ -49,7 +43,6 @@
       flex: 1;
       align-self: center;
       margin-left: $spacing-x-small;
-      line-height: $line-height-button;
     }
   }
 }

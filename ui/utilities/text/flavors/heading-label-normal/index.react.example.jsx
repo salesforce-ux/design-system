@@ -10,18 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className={pf('demo-only x-small-buttons--horizontal')}>
-    <Button flavor="brand">
-      Button Brand
-    </Button>
-    <a href="#void" className={pf('button button--brand')}>Anchor Button Brand</a>
-    <Button flavor="brand" disabled="true">
-      Disabled
-    </Button>
+  <div className={pf('text-heading--label-normal')}>
+    The quick brown fox jumps over the lazy dog.
   </div>
 );

@@ -10,31 +10,25 @@
 .#{$css-prefix}page-header {
   padding: $spacing-medium $spacing-small;
   border-bottom: $border-width-thin solid $color-border;
-  background: $color-background;
+  background: $color-background-page-header;
 
   &__title {
-    margin-top: $spacing-xxx-small;
     font: {
-      weight: $font-weight-light;
-      size: $font-size-large;
+      weight: $font-weight-regular;
+      size: $font-size-medium;
     }
     line-height: $line-height-heading;
   }
 
-  &__info {
-    margin-top: $spacing-xx-small;
+  .#{$css-prefix}text-body--small {
+    line-height: $line-height-reset;
   }
 
   @include mq-medium-min {
-    padding: $spacing-large $spacing-large $spacing-small;
+    padding: $spacing-large;
 
     &__title {
-      margin-top: 0;
-      font-size: $font-size-x-large;
-    }
-
-    &__info {
-      margin-top: $spacing-x-small;
+      font-size: $font-size-large;
     }
   }
 }

@@ -110,3 +110,27 @@ export const sequence = (a = a => a, b = b => b) => function () {
 export const hook = (obj, name, ...args) => ['before_', '', 'after_']
   .map(prefix => `${prefix}${name}`)
   .map(name => method(`hooks.${name}`, ...args)(obj));
+
+/**
+ * Return a function that will return true if all term segments matche all
+ * query segments
+ *
+ * @param {string} query
+ * @returns {function}
+ */
+export const search = query => {
+  const querySegments = query.split(/\W/);
+  return term => {
+    const termSegments = term.split(/\W/);
+    let matches = 0;
+    for (let q of querySegments) {
+      for (let t of termSegments) {
+        if (new RegExp(q, 'i').test(t)) {
+          matches++;
+          break;
+        }
+      }
+    }
+    return matches === querySegments.length;
+  };
+};

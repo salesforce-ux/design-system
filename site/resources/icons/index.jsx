@@ -43,55 +43,10 @@ class Icons extends React.Component {
       category.icons = icons.concat(customIcons);
     });
     this.state = {
-      categories,
-      categoriesFiltered: categories
+      categories
     };
   }
 
-  onSearchChange(e) {
-    const query = e.currentTarget.value;
-    const {categories} = this.state;
-    let categoriesFiltered = categories;
-    if (query) {
-      categoriesFiltered = categories
-        .map(category => {
-          return _.assign({}, category, {
-            icons: category.icons.filter(icon => {
-              return new RegExp(query, 'i').test(icon.symbol);
-            })
-          });
-        })
-        .filter(category => category.icons.length > 0);
-    }
-    this.setState({
-      query,
-      categoriesFiltered
-    });
-  }
-
-  renderHeader() {
-    return (
-      <Sticky>
-        <div className={pf('site-tools grid grid--align-spread')}>
-          <div className={pf('col align-middle shrink p-vertical--medium')}>
-            <label className={pf('assistive-text')} htmlFor="find-icon-input">Find Icon</label>
-            <input
-              className={pf('input')}
-              id="find-icon-input"
-              type="search"
-              arial-label="text-input"
-              placeholder="Find Icon"
-              onChange={this.onSearchChange.bind(this)} />
-          </div>
-          <div className={pf('col align-middle shrink')}>
-            <div className={pf('tabs tabs--default')} role="tablist">
-              <ul className={pf('tabs__nav')} role="presentation"></ul>
-            </div>
-          </div>
-        </div>
-      </Sticky>
-    );
-  }
   render() {
     return (
       <div>
@@ -117,10 +72,33 @@ class Icons extends React.Component {
     );
   }
 
+  renderHeader() {
+    return (
+      <Sticky>
+        <div className={pf('site-tools grid grid--align-spread')}>
+          <div className={pf('col align-middle shrink p-vertical--medium')}>
+            <label className={pf('assistive-text')} htmlFor="find-icon-input">Find Icon</label>
+            <input
+              className={pf('input')}
+              id="find-icon-input"
+              type="search"
+              arial-label="text-input"
+              placeholder="Find Icon" />
+          </div>
+          <div className={pf('col align-middle shrink')}>
+            <div className={pf('tabs tabs--default')} role="tablist">
+              <ul className={pf('tabs__nav')} role="presentation"></ul>
+            </div>
+          </div>
+        </div>
+      </Sticky>
+    );
+  }
+
   renderCategories() {
-    return this.state.categoriesFiltered.map(category => {
+    return this.state.categories.map(category => {
       return (
-        <div key={category.name}>
+        <div key={category.name} data-slds-icons-section>
           <Heading type="h2" id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
             {`${category.name} Icons`}
           </Heading>
@@ -135,9 +113,9 @@ class Icons extends React.Component {
   }
 
   renderCategoryNav() {
-    const {categoriesFiltered} = this.state;
+    const { categories } = this.state;
     let capitalize = (e) => { return e.charAt(0).toUpperCase() + e.slice(1); };
-    return categoriesFiltered.map(category => {
+    return categories.map(category => {
       const modCategory = capitalize(category.name);
       return (
         <li className={pf('list__item')} key={category.name}>
@@ -153,11 +131,14 @@ class Icons extends React.Component {
     let isAction = category.name === 'action';
     let wrapperClassName = (icon) => isAction ? icon.className : null;
     return category.icons.map(icon => {
+      const svgClassName = classNames('icon icon__svg', icon.className, {
+        'icon--large': !isAction
+      });
       return (
-        <li className={pf('col--padded m-bottom--x-large')} key={icon.symbol}>
+        <li className={pf('col--padded m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
           <figure>
             <span className={pf(classNames('icon__container', wrapperClassName(icon)))}>
-              <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(classNames(`icon icon__svg ${icon.className}`, {'icon--large': !isAction}))} />
+              <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(svgClassName)} />
             </span>
             <figcaption className={pf('p-top--x-small text-body--small')}>{icon.symbol}</figcaption>
           </figure>
@@ -165,6 +146,7 @@ class Icons extends React.Component {
       );
     });
   }
+
 }
 
 export default (

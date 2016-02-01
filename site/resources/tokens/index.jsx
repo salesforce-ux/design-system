@@ -15,19 +15,18 @@ import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import Prefs from 'app_modules/site/preferences';
 
 import releases from '.generated/ui.tokens';
 import categories from './_categories';
 
 const nameFormats = [
   {
-    role: Prefs.roles.regular,
+    role: 'regular',
     name: 'Sass',
     formatter: name => `$${_.kebabCase(name)}`
   },
   {
-    role: Prefs.roles.aura,
+    role: 'aura',
     name: 'Lightning',
     formatter: name => `t(${_.camelCase(name)})`
   }

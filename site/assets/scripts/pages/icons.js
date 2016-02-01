@@ -17,24 +17,24 @@ const hide = (node, hide) =>
 
 const handleInputChange = (sections, event, node) => {
   const { value } = node;
-  // No value, show all sections/tokens
+  // No value, show all sections/icons
   if (!value) {
     sections.forEach(section => {
       hide(section.node, false);
-      section.tokens.forEach(node => hide(node, false));
+      section.icons.forEach(node => hide(node, false));
     });
     return;
   };
   const isMatch = search(value);
   sections.forEach(section => {
     // Filter the tokens that match the query
-    const matches = section.tokens.filter(tokenNode => {
+    const matches = section.icons.filter(iconNode => {
       // Hide/show matches
-      if (isMatch(tokenNode.dataset.sldsToken)) {
-        hide(tokenNode, false);
+      if (isMatch(iconNode.dataset.sldsIcon)) {
+        hide(iconNode, false);
         return true;
       } else {
-        hide(tokenNode, true);
+        hide(iconNode, true);
         return false;
       }
     });
@@ -46,11 +46,11 @@ const handleInputChange = (sections, event, node) => {
 export default () => ({
   hooks: {
     listen_dom: delegate => {
-      const sections = $('[data-slds-tokens-section]').map(node => ({
+      const sections = $('[data-slds-icons-section]').map(node => ({
         node,
-        tokens: $(['[data-slds-token]'], node)
+        icons: $(['[data-slds-icon]'], node)
       }));
-      delegate('input', '#find-token-input',
+      delegate('input', '#find-icon-input',
         handleInputChange.bind(null, sections));
     }
   }

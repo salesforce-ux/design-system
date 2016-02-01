@@ -141,7 +141,6 @@
     display: block;
     position: absolute;
     left: (($sales-path / 2) * -1);
-    top: $border-width-thick;
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     border: $border-width-thick solid #fff; // needs token?

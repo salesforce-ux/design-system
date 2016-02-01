@@ -45,6 +45,9 @@ export const preview = (
   <div className={pf('box theme--shade theme--alert-texture m-bottom--medium')}>
     <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
   </div>
+  <div className={pf('box theme--default theme--alert-texture m-bottom--medium')}>
+    <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
+  </div>
 </div>
 );
 export const code = (
@@ -77,6 +80,9 @@ export const code = (
     <p>This is an <strong>offline</strong> theme and here is a <a href="#">link</a>.</p>
   </div>
   <div className={pf('box box theme--shade theme--alert-texture')}>
+    <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
+  </div>
+  <div className={pf('box theme--default theme--alert-texture')}>
     <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
   </div>
 </div>

@@ -200,5 +200,10 @@ bower install salesforce-lightning-design-system
       </div>
     </div>
 
+    <h2 className="site-text-heading--large" id="Archives">Archives</h2>
+    <p>
+      <CTALink href="http://design-system-v-0-12-1.herokuapp.com/" ctaEventName="SLDS-Archives">0.12.1</CTALink>
+    </p>
+
   </PageBody>
 );

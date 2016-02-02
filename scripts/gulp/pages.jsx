@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import assert from 'assert';
 import cheerio from 'cheerio';
+import fs from 'fs';
 import gulp from 'gulp';
 import gulpIgnore from 'gulp-ignore';
 import gulpRename from 'gulp-rename';
@@ -57,21 +58,15 @@ export const getPrefixedProps = (props, prefix) => {
 };
 
 /**
- * Try to requre a module and store the result in the provided object
+ * Try to requre a module
  *
  * @param {object} obj
- * @param {string} key
- * @param {string} path
  */
-export const tryRequire = (path, obj, key) => {
-  try {
-    delete require.cache[require.resolve(path)];
-    let m = require(path);
-    if (obj) { obj[key] = m; }
-    return m;
-  } catch (e) {
-    return null;
-  }
+export const tryRequire = path => {
+  const resolvedPath = require.resolve(path);
+  try { fs.accessSync(resolvedPath); } catch (e) { return null; }
+  delete require.cache[resolvedPath];
+  return require(path);
 };
 
 /**

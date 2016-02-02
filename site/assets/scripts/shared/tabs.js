@@ -13,35 +13,45 @@ import classNames from 'classnames';
 import fastdom from 'fastdom';
 
 import { $, setClassName, forEach } from '../framework/helpers';
+import emitter from '../framework/events';
 
-const getPanel = tabLabel =>
-  $(`#${tabLabel.getAttribute('aria-controls')}`);
+const KEYS = {38: 'up', 40: 'down', 37: 'left', 39: 'right'};
+const NEXT = ['down', 'right'];
+const PREV = ['up', 'left'];
 
-const showPanel = tabLabel =>
-  getPanel(tabLabel).forEach(p => setClassName(p, { 'slds-hide': false, 'slds-show': true }));
+const getPanelId = tab =>
+  tab.firstChild.getAttribute('aria-controls');
 
-const hidePanel = tabLabel =>
-  getPanel(tabLabel).forEach(p => setClassName(p, { 'slds-hide': true, 'slds-show': false }));
+const getPanel = tab =>
+  $(`#${getPanelId(tab)}`);
+
+const showPanel = tab =>
+  getPanel(tab).forEach(p => setClassName(p, { 'slds-hide': false, 'slds-show': true }));
+
+const hidePanel = tab =>
+  getPanel(tab).forEach(p => setClassName(p, { 'slds-hide': true, 'slds-show': false }));
+
+const setAria = (tab, bool) =>
+  tab.firstChild.setAttribute('aria-selected', bool);
 
 const addActive = tab => {
-  const tabLabel = tab.firstChild;
   setClassName(tab, 'slds-active');
-  tabLabel.setAttribute('aria-selected', true);
-  tabLabel.focus();
-  showPanel(tabLabel);
+  setAria(tab, true);
+  tab.firstChild.focus();
+  showPanel(tab);
 };
 
 const removeActive = tab => {
-  const tabLabel = tab.firstChild;
   setClassName(tab, {'slds-active': false});
-  tabLabel.setAttribute('aria-selected', false);
-  hidePanel(tabLabel);
+  setAria(tab, false);
+  hidePanel(tab);
 };
 
 const runTabClick = (tab, otherTabs) => {
   fastdom.mutate(() => {
     forEach(otherTabs, removeActive);
     addActive(tab);
+    emitter.emit('tab:select', { tab, panel: getPanel(tab) });
   });
 };
 
@@ -56,8 +66,14 @@ const handleTabClick = li => {
 
 const handleKeydown = (event, ul) => {
   const active = activeTab(ul);
-  const li = active.nextElementSibling ? active.nextElementSibling : active.previousElementSibling;
-  handleTabClick(li);
+
+  if (!KEYS[event.keyCode]) return true;
+
+  if (NEXT.indexOf(KEYS[event.keyCode]) >= 0) {
+    if (active.nextElementSibling) handleTabClick(active.nextElementSibling);
+  } else {
+    if (active.previousElementSibling) handleTabClick(active.previousElementSibling);
+  }
 };
 
 /**

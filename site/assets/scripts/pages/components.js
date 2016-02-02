@@ -84,6 +84,15 @@ const handleFlavorStateNavClick = (event, element) => {
   });
 };
 
+const updateFormFactor = ({tab, panel}) => {
+  if (tab.dataset.formFactor) {
+    panel.forEach(p => {
+      const iframe = p.firstChild;
+      iframe.dataset.formFactor = tab.dataset.formFactor;
+    });
+  }
+};
+
 export default () => ({
   hooks: {
     listen_event: emitter => {
@@ -93,6 +102,8 @@ export default () => ({
         updateComponentPreviewHeight);
       emitter.on('component:iframe:updatePreviewSVG',
         updateComponentPreviewSVG);
+      emitter.on('tab:select',
+        updateFormFactor);
     },
     listen_dom: delegate => {
       delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);

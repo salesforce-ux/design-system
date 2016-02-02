@@ -72,7 +72,8 @@ class TabItem extends React.Component {
       onClick: this.props.onClick.bind(this),
       tabIndex: tabIndex,
       className: pf(this.props.innerClass),
-      'aria-selected': this.props.current
+      'aria-selected': this.props.current,
+      'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
 

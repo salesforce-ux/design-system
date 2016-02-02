@@ -14,7 +14,6 @@ import fastdom from 'fastdom';
 import { $, setClassName, hide } from '../framework/dom';
 import { globals } from '../framework/helpers';
 
-import Status from 'app_modules/site/util/component/status';
 
 /**
  * Expand/collapse the left nav
@@ -28,15 +27,6 @@ const handleNavClick = (event, node) => {
   });
 };
 
-/**
- * Updates nav and flavor visibilty based on pref
- */
-const updateStatusVisibility = event => {
-  $('[data-slds-status]').forEach(node => {
-    const shouldShow = Status.shouldDisplay(event.status, node.dataset.sldsStatus);
-    hide(node, !shouldShow);
-  });
-};
 
 /**
  * Initialize a scroll spy nav that matches `.site-jump-anchor` with corresponding
@@ -91,9 +81,6 @@ export const updateScrollSpy = (() => {
 
 export default () => ({
   hooks: {
-    listen_event: emitter => {
-      emitter.on('preferences:updated', updateStatusVisibility);
-    },
     listen_dom: delegate => {
       delegate('click', '[data-slds-nav-children] > a', handleNavClick);
       updateScrollSpy();

@@ -65,7 +65,7 @@ export const LocalStorageStrategy = props => {
 /**
  * Default strategy before the browser loads
  */
-let strategies = [DefaultsStrategy(), LocalStorageStrategy()];
+let strategies = [];
 
 /**
  * Update the storage strategy
@@ -126,14 +126,22 @@ const get = key => prefs[key];
 
 const handleStatusChange = event => set('status', event.target.value);
 
+const init = () => {
+  setStrategies([DefaultsStrategy(), LocalStorageStrategy()])
+}
+
 /**
  * Preferences
  * Sets up a listener and emitts events for when the dropdown changes.
  */
-export default () => ({
-  hooks: {
-    listen_dom: delegate =>  {
-      delegate('change', '#status-dropdown', handleStatusChange);
+export default () => {
+  setTimeout(init, 400)
+
+  return {
+    hooks: {
+      listen_dom: delegate =>  {
+        delegate('change', '#status-dropdown', handleStatusChange);
+      }
     }
   }
-});
+};

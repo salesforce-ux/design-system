@@ -23,12 +23,7 @@ export default class CategorySection extends React.Component {
 
   constructor(props) {
     super(props);
-    const valueFormats = props.category.getValueFormats();
     this.key = '';
-    this.state = {
-      valueFormats,
-      valueFormat: valueFormats[0] || null
-    };
   }
 
   render() {
@@ -37,7 +32,7 @@ export default class CategorySection extends React.Component {
     return (
       <section
         className={pf(`site-tokens ${category.key}`)}
-        data-slds-tokens-section>
+        data-slds-tokens-section={category.key}>
         <Heading
           type="h2"
             id={`category-${category.key}`}
@@ -61,17 +56,8 @@ export default class CategorySection extends React.Component {
 
   renderValueFormatSelect() {
     const { category } = this.props;
-    const { valueFormats } = this.state;
-    if (!valueFormats.length) return null;
-    const options = valueFormats.map(format => {
-      return (
-        <option
-          key={format.value}
-          value={format.value}>
-          {format.label}
-        </option>
-      );
-    });
+    const { valueFormat } = category;
+    if (!valueFormat) return null;
     return (
       <span className={pf('col shrink-none align-bottom')}>
         <label
@@ -82,9 +68,8 @@ export default class CategorySection extends React.Component {
         <select
           id={`select-format-${category.key}`}
           className={pf('select')}
-          aria-label="select">
-          {options}
-        </select>
+          aria-label="select"
+          data-slds-tokens-value-format={valueFormat} />
       </span>
     );
   }
@@ -92,15 +77,13 @@ export default class CategorySection extends React.Component {
   renderRows() {
     const { category, tokens, options } = this.props;
     const { nameFormat } = options;
-    const { valueFormat } = this.state;
     return tokens.map(token => {
       return (
         <Row
           key={`${token.name}-row`}
           category={category}
           token={token}
-          nameFormat={nameFormat}
-          valueFormat={valueFormat} />
+          nameFormat={nameFormat} />
       );
     });
   }

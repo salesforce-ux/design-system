@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import fastdom from 'fastdom';
-import { $, delegate, setClassName } from '../framework/helpers';
+import { $, delegate, setClassName } from '../framework/dom';
 
 const TIMING_MAP_SECS = {
   instantly: 0,

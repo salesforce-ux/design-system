@@ -27,12 +27,6 @@ class Category {
     });
   }
   /**
-   * Return a list of formats that a value for this category can be displayed as
-   */
-  getValueFormats() {
-    return [];
-  }
-  /**
    * Render a <RowHeader /> and <Row /> only if tokens is not empty
    *
    * @param {array} tokens
@@ -69,33 +63,7 @@ class Category {
   }
 }
 
-const toRgbString = _.memoize(value => tinyColor(value).toRgbString());
-const toHexString = _.memoize(value => tinyColor(value).toHexString());
-const toAliasString = _.memoize((value, token) => {
-  value = token['.rawValue'] || value;
-  return value.replace(/^\{\!/, '').replace(/\}$/, '');
-});
 
-/**
- * Array of formatters used for sections that represent colors
- */
-const colorValueFormats = [
-  {
-    label: 'RGB',
-    value: 'rgb',
-    formatter: toRgbString
-  },
-  {
-    label: 'Hex',
-    value: 'hex',
-    formatter: toHexString
-  },
-  {
-    label: 'Color Name',
-    value: 'alias',
-    formatter: toAliasString
-  }
-];
 
 /**
  * When displaying the a releaseSet, "props" will be grouped by category
@@ -105,9 +73,7 @@ const categories = {
 
   'background-color': new Category({
     label: 'Background Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       return (
         <ExampleCell style={{backgroundColor: token.value}} />
@@ -117,9 +83,7 @@ const categories = {
 
   'text-color': new Category({
     label: 'Text Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       const className = classNames('site-example', 'site-example-color-text', {
         'site-example-color-text-inverse': tinyColor.readability('#FFF', token.value) < 3
@@ -134,9 +98,7 @@ const categories = {
 
   'border-color': new Category({
     label: 'Border Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       return (
         <ExampleCell className="site-example site-example-color-border">

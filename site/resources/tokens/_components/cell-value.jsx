@@ -26,12 +26,11 @@ class ValueCell extends React.Component {
   }
 
   renderValue() {
-    const { value } = this.props;
-    if (!value) return null;
+    if (!this.props.value) return null;
     const className = classNames('cell-wrap', 'site-property-value');
     return (
-      <code className={pf(className)}>
-        {value}
+      <code className={pf(className)} data-slds-token-value>
+        {this.props.value}
       </code>
     );
   }

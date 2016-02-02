@@ -29,7 +29,6 @@ let prefs = process.env.DEFAULT_USER_TYPE === 'internal'
   ? PrefsDefaults.internal
   : PrefsDefaults.external;
 
-
 export const DefaultsStrategy = props => {
   return Object.assign({
     getInitialPrefs(currentPrefs) {
@@ -39,7 +38,6 @@ export const DefaultsStrategy = props => {
     update (prefs) {}
   }, props);
 };
-
 
 export const LocalStorageStrategy = props => {
   return Object.assign({
@@ -64,7 +62,6 @@ export const LocalStorageStrategy = props => {
   }, props);
 };
 
-
 /**
  * Default strategy before the browser loads
  */
@@ -75,40 +72,39 @@ let strategies = [DefaultsStrategy(), LocalStorageStrategy()];
  *
  * @param {PrefsStrategy} newStrategy
  */
-function setStrategies (newStrategies) {
+const setStrategies = newStrategies => {
   strategies = newStrategies;
-  setAll(strategies.reduce((ps, s) => Object.assign(ps, s.getInitialPrefs(ps)), prefs));
-}
+  setAll(strategies.reduce((ps, s) =>
+    Object.assign(ps, s.getInitialPrefs(ps)), prefs));
+};
 
 /**
  * Force the strategy to update and emit an event
  */
-function sync (emit=true) {
+const sync = (emit = true) => {
   const newPrefs = all();
   strategies.forEach(s => s.update(newPrefs));
-  if(emit) {
+  if (emit) {
     emitter.emit(EVENT_KEY, newPrefs);
   }
-}
+};
 
 /**
  * Return a copy of the current prefs
  *
  * @returns {object}
  */
-function all () {
-  return Object.assign({}, prefs);
-}
+const all = () => Object.assign({}, prefs);
 
 /**
  * Overwrite the prefs and sync
  *
  * @param {object} newPrefs
  */
-function setAll (newPrefs, emit=true) {
+const setAll = (newPrefs, emit = true) => {
   prefs = newPrefs;
   sync(emit);
-}
+};
 
 /**
  * Update a single key/value in the prefs and sync
@@ -116,23 +112,19 @@ function setAll (newPrefs, emit=true) {
  * @param {string} key
  * @param {any} value
  */
-function set (key, value) {
+const set = (key, value) => {
   prefs[key] = value;
   sync();
-}
+};
 
 /**
  * Return a single value from the prefs
  *
  * @param {string} key
  */
-function get (key) {
-  return prefs[key];
-}
+const get = key => prefs[key];
 
-function handleStatusChange (e) {
-  return set('status', e.target.value);
-}
+const handleStatusChange = event => set('status', event.target.value);
 
 /**
  * Preferences

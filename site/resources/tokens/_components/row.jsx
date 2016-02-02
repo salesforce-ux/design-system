@@ -25,17 +25,15 @@ class Row extends React.Component {
 
   render() {
     const { token, options } = this.props;
-    const data = {
-      'data-slds-token': token.name,
-      'data-slds-token-value': token.value
-    };
-    if (token.rawValue !== token.value) {
-      data['data-slds-token-value-raw'] = token['.rawValue'];
-    }
+    const tokenData = JSON.stringify({
+      name: token.name,
+      value: token.value,
+      valueRaw: token['.rawValue']
+    });
     return (
       <tr
         className={this.props.className}
-        {...data}>
+        data-slds-token={tokenData}>
         <td>
           <code>{this.getName()}</code>
         </td>
@@ -45,7 +43,7 @@ class Row extends React.Component {
   }
 
   renderValue() {
-    const { category, token, valueFormat, formFactors } = this.props;
+    const { category, token, formFactors } = this.props;
     const example = token
       ? category.renderExample(token)
       : <ExampleCell />;
@@ -55,10 +53,9 @@ class Row extends React.Component {
       'token--empty': _.isUndefined(token),
       'site-token__generic-size': isSizeToken
     });
-    const value = valueFormat
-      ? valueFormat.formatter(token.value, token) : token.value;
+    const value = token.value;
     return <ValueCell
-      value={value}
+      value={token.value}
       example={example}
       className={className} />;
   }
@@ -71,8 +68,7 @@ Row.propTypes = {
     name: React.PropTypes.string.isRequired,
     value: React.PropTypes.any.isRequired
   }),
-  nameFormat: React.PropTypes.object.isRequired,
-  valueFormat: React.PropTypes.object
+  nameFormat: React.PropTypes.object.isRequired
 };
 
 export default Row;

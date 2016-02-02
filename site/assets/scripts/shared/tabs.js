@@ -12,8 +12,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import classNames from 'classnames';
 import fastdom from 'fastdom';
 
-import { $, setClassName, forEach } from '../framework/helpers';
 import emitter from '../framework/events';
+import { $, setClassName } from '../framework/dom';
+import { forEach } from '../framework/helpers';
 
 const KEYS = {38: 'up', 40: 'down', 37: 'left', 39: 'right'};
 const NEXT = ['down', 'right'];

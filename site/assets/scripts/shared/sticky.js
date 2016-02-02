@@ -14,7 +14,7 @@ import fastdom from 'fastdom';
 
 import throttle from 'lodash/throttle';
 
-import { $, setClassName } from '../framework/helpers';
+import { $, setClassName } from '../framework/dom';
 
 class Sticky {
 

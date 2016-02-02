@@ -11,7 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import fastdom from 'fastdom';
 import Gator from 'gator';
-import { $, forEach, setClassName } from '../framework/helpers';
+import { $, setClassName } from '../framework/dom';
+import { forEach } from '../framework/helpers';
 
 const HALF_PI = Math.PI / 2.0;
 const TAU = Math.PI * 2.0;

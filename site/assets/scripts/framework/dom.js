@@ -9,47 +9,63 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import emitter from '../framework/events';
-import { $, setClassName, hide } from '../framework/dom';
-import { search } from '../framework/helpers';
+import classNames from 'classnames/dedupe';
+import fastdom from 'fastdom';
+import Gator from 'gator';
 
-const handleInputChange = (sections, event, node) => {
-  const { value } = node;
-  // No value, show all sections/icons
-  if (!value) {
-    sections.forEach(section => {
-      hide(section.node, false);
-      section.icons.forEach(node => hide(node, false));
-    });
-    return;
-  };
-  const isMatch = search(value);
-  sections.forEach(section => {
-    // Filter the tokens that match the query
-    const matches = section.icons.filter(iconNode => {
-      // Hide/show matches
-      if (isMatch(iconNode.dataset.sldsIcon)) {
-        hide(iconNode, false);
-        return true;
-      } else {
-        hide(iconNode, true);
-        return false;
-      }
-    });
-    // Don't show sections without matches
-    hide(section.node, !matches.length);
+import { forEach, map } from './helpers';
+
+/**
+ * Event delegation helper
+ *
+ * @param {string} event
+ * @param {string} selector
+ * @param {function} listener
+ */
+export const delegate = (event, selector, listener) =>
+  Gator(document).on(event, selector, function (event) {
+    listener(event, this);
   });
+
+/**
+ * Alias for document.querySelectorAll
+ */
+export const $ = (selector, scope = document) =>
+  map(scope.querySelectorAll(selector), node => node);
+
+/**
+ * Set the className using "classnames" inside a fastdom.mutate
+ *
+ * @param {Node} node
+ * @param {...string|object}
+ */
+export const setClassName = (node, ...args) =>
+  fastdom.mutate(() =>
+    node.className = classNames(node.className, ...args));
+
+/**
+ * Return the closest parent matching the selector
+ *
+ * @param {Node} node
+ * @param {string} selector
+ * @returns {Node|null}
+ */
+export const closest = (node, selector) => {
+  const selection = $(selector);
+  let parent = node.parentElement;
+  while (parent) {
+    if (selection.indexOf(parent) > -1) {
+      return parent;
+    }
+    parent = parent.parentElement;
+  }
 };
 
-export default () => ({
-  hooks: {
-    listen_dom: delegate => {
-      const sections = $('[data-slds-icons-section]').map(node => ({
-        node,
-        icons: $(['[data-slds-icon]'], node)
-      }));
-      delegate('input', '#find-icon-input',
-        handleInputChange.bind(null, sections));
-    }
-  }
-});
+/**
+ * Add "slds-hide" to a node
+ *
+ * @param {Node} node
+ * @param {boolean} hide
+ */
+export const hide = (node, hide) =>
+  setClassName(node, { 'slds-hide': hide });

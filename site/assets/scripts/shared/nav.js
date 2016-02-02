@@ -9,10 +9,10 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import { $, globals, setClassName } from '../framework/helpers';
+import { $, setClassName, hide } from '../framework/dom';
+import { globals } from '../framework/helpers';
 
 import Status from 'app_modules/site/util/component/status';
-
 
 /**
  * Expand/collapse the left nav
@@ -29,10 +29,10 @@ const handleNavClick = (event, node) => {
 /**
  * Updates nav and flavor visibilty based on pref
  */
-const updateStatusVisibility = (e) => {
-  $('[data-slds-status]').forEach(item => {
-    const shouldShow = Status.shouldDisplay(e.status, item.dataset.sldsStatus);
-    setClassName(item, {'slds-hide': !shouldShow});
+const updateStatusVisibility = event => {
+  $('[data-slds-status]').forEach(node => {
+    const shouldShow = Status.shouldDisplay(event.status, node.dataset.sldsStatus);
+    hide(node, !shouldShow);
   });
 };
 

@@ -14,7 +14,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import invariant from 'invariant';
 
 import emitter, { drainEventQueue } from './framework/events';
-import { delegate, sequence, filterUniq, hook } from './framework/helpers';
+import { delegate } from './framework/dom';
+import { sequence, filterUniq, hook } from './framework/helpers';
 
 import isFunction from 'lodash/isFunction';
 import isPlainObject from 'lodash/isPlainObject';

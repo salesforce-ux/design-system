@@ -48,6 +48,16 @@
     display: flex;
   }
 
+  // Add a hoverable zone below the action so that the dropdown doesn't disappear
+  // when the mouse is between the action and the dropdown
+  &:hover:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: $square-tooltip-nubbin * 0.7; // About the same as the diagonal of the nubbin / 2
+  }
+
   &__label,
   &__trigger {
     transition: background-color $duration-immediately linear;
@@ -58,6 +68,7 @@
       background-color: $color-background-context-bar-highlight;
     }
   }
+
   &__label {
     padding: {
       left: $spacing-small;

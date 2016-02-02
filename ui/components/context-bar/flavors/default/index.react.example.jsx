@@ -35,7 +35,7 @@ export default (
               <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
-            <Menu className={pf('dropdown--left nubbin--top')}>
+            <Menu className={pf('nubbin--top')}>
               <Menu.List isSelectable={false}>
                 <Menu.Item>
                   <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="add" />

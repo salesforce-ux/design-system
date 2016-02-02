@@ -51,12 +51,12 @@ export default React.createClass({
     const flavors = this.props.component.flavors
       .map(flavor => {
         let states = null;
-        if (_.isArray(flavor.example.states)) {
+        if (flavor.example && _.isArray(flavor.example.states)) {
           states = (
             <ul className={pf('list--vertical has-block-links is-nested')}>
               {flavor.example.states.map((state, index) => {
-                const className = className('list__name', {
-                  'is-active': index === 0
+                const className = classNames('list__name', {
+                  [pf('is-active')]: index === 0
                 });
                 return (
                   <li className={pf('list__name')} key={state.id}>

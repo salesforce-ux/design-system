@@ -118,7 +118,7 @@ export const renderPage = (element, props) => {
 export const renderExample = element => {
   if (!element) return null;
   // TODO: Figure out how to memoize this
-  const html = renderToStaticMarkup(element)
+  const html = renderToStaticMarkup(element);
   return prettyHTML(html);
 };
 

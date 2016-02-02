@@ -163,7 +163,8 @@ gulp.task('serve', () => {
         // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
-          publicPath: webpackConfig.output.publicPath
+          publicPath: webpackConfig.output.publicPath,
+          quiet: true
         })
       ]
     },

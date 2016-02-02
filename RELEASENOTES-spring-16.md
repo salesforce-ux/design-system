@@ -1,6 +1,12 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 1.x.x - February xx, 2016
+
+**CHANGES**
+
+- Deprecated `.slds-card--empty`. Center elements inside empty cards instead, using `.slds-text-align--center`. Full markup in the [card component page](/components/cards/#empty).
+
 ## Release 1.1.0 - December 16, 2015
 
 **SITE IA**

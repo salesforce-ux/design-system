@@ -1,3 +1,4 @@
 status: 'prototype'
 flavors:
+  - sales-path-coach
   - wizard

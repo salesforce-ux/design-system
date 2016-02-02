@@ -123,12 +123,16 @@ export default React.createClass({
   },
 
   renderBanner(banner) {
-    let badge = process.env.DEFAULT_USER_TYPE === 'internal'
+    let isInternal = process.env.DEFAULT_USER_TYPE === 'internal';
+    let internalClass = classNames('site-banner', {
+      'site-banner--internal': isInternal
+    });
+    let badge = isInternal
       ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</div>
       : null;
     return (
-      <header className={pf('site-banner')} role="banner">
-        <a href="/">
+      <header className={internalClass} role="banner">
+        <a to="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </a>
@@ -140,9 +144,13 @@ export default React.createClass({
     );
   },
 
-  renderNav() {
+  renderNav(nav) {
+    let isInternal = process.env.DEFAULT_USER_TYPE === 'internal';
+    let internalClass = classNames('site-navigation', {
+      'site-navigation--internal': isInternal
+    });
     return (
-      <nav id="navigation" className={pf('site-navigation')} role="navigation">
+      <nav id="navigation" className={internalClass} role="navigation">
         {this.renderNavItems(this.state.navItems)}
       </nav>
     );

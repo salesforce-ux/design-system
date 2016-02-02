@@ -21,11 +21,17 @@ import { updateScrollSpy } from '../shared/nav';
  * Return a string of highlighed HTML
  */
 const highlight = (() => {
+  // Remove wrapping tag if it has the ".demo-only" class in it
+  // Note: this will also remove other classes too on that tag! :)
+  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
   const cache = {};
   return html => {
     let cached = cache[html];
     if (cached) return cached;
-    cached = cache[html] = Prism.highlight(html, Prism.languages['markup']);
+    cached = cache[html] = Prism.highlight(
+      html.replace(pattern, (match, tag, content) => content),
+      Prism.languages['markup']
+    );
     return cached;
   };
 })();

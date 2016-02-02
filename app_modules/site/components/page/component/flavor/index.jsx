@@ -31,6 +31,10 @@ Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitel
   .map(c => `${globals.cssPrefix}${c}`)
   .map(c => new RegExp(_.escapeRegExp(c)));
 
+// Remove wrapping tag if it has the ".demo-only" class in it
+// Note: this will also remove other classes too on that tag! :)
+const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
+
 /**
  * Hight a string of text based on the language
  *
@@ -39,7 +43,10 @@ Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitel
  * @returns {string}
  */
 function highlight(code, language) {
-  return Prism.highlight(code, Prism.languages[language]);
+  return Prism.highlight(
+    code.replace(demoPattern, (match, tag, content) => content),
+    Prism.languages[language]
+  );
 }
 
 /**
@@ -83,7 +90,7 @@ class ComponentFlavor extends React.Component {
     this.state = {
       previewTabs,
       // Only set an active tab if there are more than 1
-      previewTabActive: previewTabs.length > 0
+      previewTabActive: previewTabs.length > 1
         // If there is a default specified, use that
         ? (flavor.showFormFactorsDefault
           ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })

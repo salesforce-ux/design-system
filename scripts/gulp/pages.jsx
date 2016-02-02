@@ -62,11 +62,11 @@ export const getPrefixedProps = (props, prefix) => {
  *
  * @param {object} obj
  */
-export const tryRequire = path => {
-  const resolvedPath = require.resolve(path);
+export const tryRequire = p => {
+  const resolvedPath = path.resolve(__PATHS__.root, p);
   try { fs.accessSync(resolvedPath); } catch (e) { return null; }
   delete require.cache[resolvedPath];
-  return require(path);
+  return require(resolvedPath);
 };
 
 /**
@@ -118,16 +118,8 @@ export const renderPage = (element, props) => {
 export const renderExample = element => {
   if (!element) return null;
   // TODO: Figure out how to memoize this
-  const html = renderToStaticMarkup(element);
-  const $ = loadHTML(html);
-  // Remove a ".demo-only" wrapping <div>
-  $.root().contents().each(function (i, el) {
-    const $el = $(el);
-    if ($el.hasClass('demo-only')) {
-      $el.replaceWith($el.contents());
-    }
-  });
-  return prettyHTML($.html());
+  const html = renderToStaticMarkup(element)
+  return prettyHTML(html);
 };
 
 /**

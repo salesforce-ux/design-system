@@ -94,12 +94,14 @@
     "rimraf": "2.4.3",
     "run-sequence": "^1.1.5",
     "semver": "^5.1.0",
+    "stylestats": "^6.2.0",
     "temp": "^0.8.3",
     "theo": "4.2.0",
     "through2": "2.0.0",
     "tinycolor2": "1.1.2",
     "uuid": "^2.0.1",
-    "webpack": "1.12.10"
+    "webpack": "1.12.10",
+    "webpack-dev-middleware": "^1.5.1"
   },
   "devDependencies": {
     "chai": "3.2.0",
@@ -111,9 +113,7 @@
     "karma-spec-reporter": "0.0.23",
     "karma-webpack": "1.7.0",
     "mocha": "2.3.0",
-    "sinon": "1.17.2",
-    "stylestats": "^6.2.0",
-    "webpack-dev-middleware": "^1.5.1"
+    "sinon": "1.17.2"
   },
   "gitDependencies": {
     "design-tokens-winter-16": "git@github.com:salesforce-ux/design-tokens.git#winter-16",

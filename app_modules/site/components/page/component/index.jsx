@@ -12,14 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
 import ComponentFlavor from './flavor';
-import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default React.createClass({
-
-  mixins: [PrefsMixin],
 
   defaultProps: {
     component: React.PropTypes.object,
@@ -67,7 +63,7 @@ export default React.createClass({
   },
 
   renderFlavors() {
-    return this.props.component.flavors.filter(this.shouldDisplayFlavor, this).map(flavor => {
+    return this.props.component.flavors.map(flavor => {
       return (
         <ComponentFlavor {...this.props} key={flavor.uid} flavor={flavor} />
       );
@@ -83,10 +79,6 @@ export default React.createClass({
     } else {
       return null;
     }
-  },
-
-  shouldDisplayFlavor(flavor) {
-    return Status.shouldDisplay(this.state.status, flavor.status);
   }
 
 });

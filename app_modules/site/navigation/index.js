@@ -142,7 +142,8 @@ export default () => formatNavItem({
       route: 'components',
       label: 'Components',
       children: getUI('components').map(component => ({
-        label: component.title
+        label: component.title,
+        status: component.status
       })).concat({
         label: 'Utilities',
         separator: true,

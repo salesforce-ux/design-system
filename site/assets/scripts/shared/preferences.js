@@ -9,10 +9,29 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import _ from 'lodash';
+import emitter from '../framework/events';
+
+const EVENT_KEY = 'preferences:updated';
+
+const defaults = {
+  userType: process.env.DEFAULT_USER_TYPE
+};
+
+const PrefsDefaults = {
+  internal: Object.assign({}, defaults, { status: 'dev-ready'}),
+  external: Object.assign({}, defaults, { status: 'prototype' })
+};
+
+/**
+ * Default set of preferences before the browser loads
+ */
+let prefs = process.env.DEFAULT_USER_TYPE === 'internal'
+  ? PrefsDefaults.internal
+  : PrefsDefaults.external;
+
 
 export const DefaultsStrategy = props => {
-  return _.assign({
+  return Object.assign({
     getInitialPrefs(currentPrefs) {
       return currentPrefs;
     },
@@ -23,7 +42,7 @@ export const DefaultsStrategy = props => {
 
 
 export const LocalStorageStrategy = props => {
-  return _.assign({
+  return Object.assign({
     getInitialPrefs(currentPrefs) {
       return this.load() || currentPrefs;
     },
@@ -45,45 +64,84 @@ export const LocalStorageStrategy = props => {
   }, props);
 };
 
-export const UrlPrefsStrategy = props => {
-  return _.assign({
-    /**
-     * Called from Prefs.setStrategy()
-     *
-     * @param {object} currentPrefs
-     * @returns {object}
-     */
-    getInitialPrefs (currentPrefs) {
-      return this.load() || currentPrefs;
-    },
-    /**
-     * Get preferences from window.location.hash
-     *
-     * @private
-     * @returns {object}
-     */
-    load () {
-      let hash = window.location.hash.slice(1);
-      if (hash === '') return false;
-      return hash.split('&').reduce((acc, xs) => {
-        let [key, val] = xs.split('=');
-        if (!val) return acc;
-        return _.extend(acc, {
-          [decodeURIComponent(key)]: decodeURIComponent(val)
-        });
-      }, {});
-    },
-    /**
-     * Called whenever preferences are updated
-     *
-     * @param {object} prefs - the updated prefs
-     */
-    update (prefs) {
-      const hash = window.location.hash.replace(/(&)?\w+=\S+/ig, '').replace('#', '');
-      // unshift current hash onto the full preferences url: e.g. #button&status=dev-ready
-      const prefHash = _.compact([hash].concat(Object.keys(prefs).filter(x => prefs[x]).map(x => `${x}=${encodeURIComponent(prefs[x])}` ))).join('&');
-      window.history.replaceState({}, '', `#${prefHash}`);
-      window.location.hash = prefHash;
+
+/**
+ * Default strategy before the browser loads
+ */
+let strategies = [DefaultsStrategy(), LocalStorageStrategy()];
+
+/**
+ * Update the storage strategy
+ *
+ * @param {PrefsStrategy} newStrategy
+ */
+function setStrategies (newStrategies) {
+  strategies = newStrategies;
+  setAll(strategies.reduce((ps, s) => Object.assign(ps, s.getInitialPrefs(ps)), prefs));
+}
+
+/**
+ * Force the strategy to update and emit an event
+ */
+function sync (emit=true) {
+  const newPrefs = all();
+  strategies.forEach(s => s.update(newPrefs));
+  if(emit) {
+    emitter.emit(EVENT_KEY, newPrefs);
+  }
+}
+
+/**
+ * Return a copy of the current prefs
+ *
+ * @returns {object}
+ */
+function all () {
+  return Object.assign({}, prefs);
+}
+
+/**
+ * Overwrite the prefs and sync
+ *
+ * @param {object} newPrefs
+ */
+function setAll (newPrefs, emit=true) {
+  prefs = newPrefs;
+  sync(emit);
+}
+
+/**
+ * Update a single key/value in the prefs and sync
+ *
+ * @param {string} key
+ * @param {any} value
+ */
+function set (key, value) {
+  prefs[key] = value;
+  sync();
+}
+
+/**
+ * Return a single value from the prefs
+ *
+ * @param {string} key
+ */
+function get (key) {
+  return prefs[key];
+}
+
+function handleStatusChange (e) {
+  return set('status', e.target.value);
+}
+
+/**
+ * Preferences
+ * Sets up a listener and emitts events for when the dropdown changes.
+ */
+export default () => ({
+  hooks: {
+    listen_dom: delegate =>  {
+      delegate('change', '#status-dropdown', handleStatusChange);
     }
-  }, props);
-};
+  }
+});

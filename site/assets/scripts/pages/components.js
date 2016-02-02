@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import fastdom from 'fastdom';
+import Status from 'app_modules/site/util/component/status';
 import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
 

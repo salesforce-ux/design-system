@@ -25,19 +25,6 @@ const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 
 export default (
   <PageBody anchorTitle="Visualforce" contentClassName={pf('container--large')}>
-
-  <Tabs flavor="default">
-    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item One" id="tab-default-1">
-      <h2>Item One Content</h2>
-    </Tabs.Item>
-    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Two" id="tab-default-2">
-      <h2>Item Two Content</h2>
-    </Tabs.Item>
-    <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Three" id="tab-default-3">
-      <h2>Item Three Content</h2>
-    </Tabs.Item>
-  </Tabs>
-
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Visualforce pages.
     </p>

@@ -18,8 +18,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
-import Prefs from 'app_modules/site/preferences';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
 import Status from 'app_modules/site/util/component/status';
 import version from '.generated/site.version';
 
@@ -46,8 +44,6 @@ const mapNav = (item, activeItems = []) => {
 
 export default React.createClass({
 
-  mixins: [PrefsMixin],
-
   propTypes: {
     path: React.PropTypes.string,
     anchor: React.PropTypes.node,
@@ -70,10 +66,7 @@ export default React.createClass({
   },
 
   shouldShowNavItem(item) {
-    return _.every([
-      this.shouldShowNavItemToUserType(item),
-      Status.shouldDisplay(this.state.status, item.status)
-    ]);
+    return this.shouldShowNavItemToUserType(item);
   },
 
   shouldShowNavItemToUserType(item) {
@@ -95,6 +88,7 @@ export default React.createClass({
       <div>
         {this.renderBanner()}
         <main className={pf('site-main')} role="main">
+          {this.renderPrefBanner()}
           {this.renderAnchor()}
           {this.props.header}
           <div className={contentClassName}>
@@ -103,6 +97,18 @@ export default React.createClass({
         </main>
         {this.renderNav()}
         {this.renderFooter()}
+      </div>
+    );
+  },
+
+  renderPrefBanner() {
+    if (process.env.DEFAULT_USER_TYPE === 'external') return;
+    const options = Object.keys(Status.states).map(s =>
+      <option value={Status.states[s]}>{Status.states[s]}</option>
+    );
+    return (
+      <div style={{height: '50px', backgroundColor: 'white'}}>
+        <select id="status-dropdown">{ options }</select>
       </div>
     );
   },
@@ -153,7 +159,7 @@ export default React.createClass({
         'is-active': item.isActive,
         'is-closed': !item.isOpen && item.hasChildren
       });
-      const dataProps = {};
+      const dataProps = {'data-slds-status': item.status};
       if (item.hasChildren) {
         dataProps['data-slds-nav-children'] = true;
       }

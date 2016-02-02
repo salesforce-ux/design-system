@@ -13,7 +13,6 @@ import React from 'react';
 import classNames from 'classnames';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Prefs from 'app_modules/site/preferences';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import _ from 'lodash';
 
@@ -102,7 +101,7 @@ class ComponentFlavor extends React.Component {
   render() {
     const { flavor } = this.props;
     return (
-      <section className={pf('m-bottom--xx-large p-top--x-large')}>
+      <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
         <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}

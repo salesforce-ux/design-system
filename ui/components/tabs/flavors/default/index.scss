@@ -26,6 +26,7 @@
     color: $color-text-action-label-active;
 
     &:focus {
+      border-bottom-width: ($border-width-thick + 1px);
       color: $color-text-tab-label-selected;
     }
   }
@@ -54,6 +55,7 @@
   }
 
   &:focus {
-    box-shadow: $color-text-tab-label-selected 0 ($border-width-thin * -1) 0 inset;
+    border-bottom-width: ($border-width-thick + 1px);
+    border-color: $color-text-tab-label-selected;
   }
 }

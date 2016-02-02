@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Navigation represents a list of links that either take you to another page or parts of the page the user is in.
+    Navigation represents a list of links that either take the user to another page or parts of the page the user is in.
   </p>
 );
 

@@ -23,8 +23,8 @@
     top: 100%;
     right: 0;
     left: 0;
-    height: rem(3px);
-    background: linear-gradient(to bottom, rgba($color-context-bar-shadow, 0.2) 0%, rgba($color-context-bar-shadow, 0) 100%);
+    height: rem(4px);
+    background: linear-gradient(to bottom, rgba($color-context-bar-shadow, 0.25) 0, rgba($color-context-bar-shadow, 0) 100%);
   }
 
   &__vertical-divider {

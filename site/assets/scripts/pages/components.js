@@ -13,8 +13,7 @@ import fastdom from 'fastdom';
 import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
 
-import emitter from './events';
-import { $, delegate, setClassName } from './helpers';
+import { $, setClassName } from '../framework/helpers';
 
 /**
  * Return a string of highlighed HTML
@@ -43,9 +42,6 @@ const updateComponentPreviewMarkup = ({ flavor, html }) => {
   });
 };
 
-emitter.on('component:iframe:updatePreviewMarkup',
-  updateComponentPreviewMarkup);
-
 /**
  * Update a flavor's markup
  *
@@ -58,9 +54,6 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
   });
 };
 
-emitter.on('component:iframe:updatePreviewHeight',
-  updateComponentPreviewHeight);
-
 /**
  * Fix SVG elements in a flavor's preview
  *
@@ -68,12 +61,11 @@ emitter.on('component:iframe:updatePreviewHeight',
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
-emitter.on('component:iframe:updatePreviewSVG',
-  updateComponentPreviewSVG);
-
-// Listen for flavor state buttons to be clicked
-// and then update the src of the <iframe>
-delegate('click', '[data-slds-flavor-states]', (event, element) => {
+/**
+ * Listen for flavor state buttons to be clicked
+ * and then update the src of the <iframe>
+ */
+const handleFlavorStateNavClick = (event, element) => {
   event.preventDefault();
   const [ flavor, src ] = ['', '-src'].map(key =>
     element.getAttribute(`data-slds-flavor-states${key}`));
@@ -90,4 +82,20 @@ delegate('click', '[data-slds-flavor-states]', (event, element) => {
     // The code will be updated by the <iframe> using the delegate
     document.getElementById(`iframe-${flavor}`).setAttribute('src', src);
   });
+};
+
+export default () => ({
+  hooks: {
+    listen_event: emitter => {
+      emitter.on('component:iframe:updatePreviewMarkup',
+        updateComponentPreviewMarkup);
+      emitter.on('component:iframe:updatePreviewHeight',
+        updateComponentPreviewHeight);
+      emitter.on('component:iframe:updatePreviewSVG',
+        updateComponentPreviewSVG);
+    },
+    listen_dom: delegate => {
+      delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);
+    }
+  }
 });

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import fastdom from 'fastdom';
 import Gator from 'gator';
-import { $, forEach, setClassName } from './helpers';
+import { $, forEach, setClassName } from '../framework/helpers';
 
 const HALF_PI = Math.PI / 2.0;
 const TAU = Math.PI * 2.0;
@@ -185,4 +185,13 @@ class DynamicShapes {
 
 }
 
-export default (node, props) => new DynamicShapes(node, props);
+export default () => ({
+  hooks: {
+    listen_dom: delegate => {
+      $('[data-slds-shapes]').forEach(node => {
+        const props = JSON.parse(node.getAttribute('data-slds-shapes'));
+        const shapes = new DynamicShapes(node, props);
+      });
+    }
+  }
+});

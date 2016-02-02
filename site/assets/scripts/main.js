@@ -11,11 +11,71 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 // This is the main webpack entry point
 
-import { drainEventQueue } from './events';
+import invariant from 'invariant';
 
-import './page';
-import './page-home';
-import './page-components';
-import './page-motion';
+import emitter, { drainEventQueue } from './framework/events';
+import { delegate, sequence, filterUniq, hook } from './framework/helpers';
 
+import isFunction from 'lodash/isFunction';
+import isPlainObject from 'lodash/isPlainObject';
+
+/**
+ * Require everything in ./pages and ./shares
+ */
+const requireScript = require.context('./', true, /\/(pages|shared).*\.js$/);
+
+/**
+ * A function that returns an empty script
+ */
+const Script = () => ({
+  hooks: {}
+});
+
+/**
+ * @param {object} a
+ * @param {object} b
+ * @returns {object} b
+ */
+const combineHooks = (a, b) => Object.keys(a).concat(Object.keys(b))
+  .filter(filterUniq)
+  .reduce((hooks, key) => Object.assign(hooks, {
+    [key]: sequence(a[key], b[key])
+  }), {});
+
+/**
+ * @param {object} a
+ * @param {object} b
+ * @returns {object} b
+ */
+const combineScripts = (a, b) => {
+  a = Object.assign(Script(), a);
+  b = Object.assign(Script(), b);
+  return {
+    hooks: combineHooks(a.hooks, b.hooks)
+  };
+};
+
+/**
+ * The final application script
+ */
+const app = requireScript.keys().reduce((app, path) => {
+  const assertMessage = `
+    Script "${path}" must export a function that returns an object:
+
+    export default () => ({
+      hooks: {}
+    });
+  `;
+  const loader = requireScript(path).default;
+  invariant(isFunction(loader), assertMessage);
+  const script = loader();
+  invariant(isPlainObject(script), assertMessage);
+  return combineScripts(app, script);
+}, Script());
+
+// Call
+hook(app, 'listen_event', emitter);
+hook(app, 'listen_dom', delegate);
+
+// After all hooks have been called, emit any queued events
 drainEventQueue(window);

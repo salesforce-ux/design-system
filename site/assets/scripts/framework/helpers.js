@@ -15,6 +15,7 @@ import Gator from 'gator';
 import Prism from 'app_modules/site/vendor/prism';
 
 import escapeRegExp from 'lodash/escapeRegExp';
+import method from 'lodash/method';
 
 import globals from 'app_modules/global';
 import whitelistUtilities from '.generated/whitelist-utilities.js';
@@ -80,5 +81,32 @@ export const map = (array, callback) => {
 /**
  * Alias for document.querySelectorAll
  */
-export const $ = selector =>
-  map(document.querySelectorAll(selector), node => node);
+export const $ = (selector, scope = document) =>
+  map(scope.querySelectorAll(selector), node => node);
+
+/**
+ * A function that can be used to filter an array down to unique values
+ */
+export const filterUniq = (a, b, c) => c.indexOf(a) === b;
+
+/**
+ * Returns function that invokes a and then b
+ *
+ * @param {function} a
+ * @param {function} b
+ * @returns {function}
+ */
+export const sequence = (a = a => a, b = b => b) => function () {
+  return [a(...arguments), b(...arguments)];
+};
+
+/**
+ * Call a method on a object with the provided arguments
+ *
+ * @param {object} obj
+ * @param {string} name
+ * @param {...} args
+ */
+export const hook = (obj, name, ...args) => ['before_', '', 'after_']
+  .map(prefix => `${prefix}${name}`)
+  .map(name => method(`hooks.${name}`, ...args)(obj));

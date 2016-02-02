@@ -9,7 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import globals from 'app_modules/global';
+import { globals } from '../framework/helpers';
+
+/**
+ * Normalizes pathname
+ */
+const normalizedLocationPathname = () =>
+  (window.location.pathname || '').replace(/\/$/, '');
 
 /**
  * Only allows production-level logging.
@@ -24,12 +30,6 @@ export const logEvent = (tagEvent, type, extraValues = {}) => {
     if (window.ga) window.ga('send', 'event', type, extraValues.type);
   }
 };
-
-/**
- * Normalizes pathname
- */
-export const normalizedLocationPathname = () =>
-  (window.location.pathname || '').replace(/\/$/, '');
 
 /**
  * Records a page visit + screen flow.
@@ -52,3 +52,29 @@ export const logCTAEvent = (name, type, extraValues) => {
   }, extraValues);
   logEvent('tagEvent', name, values);
 };
+
+/**
+ * Handle CTA link/button clicks
+ */
+const handleCTA = (event, node) => {
+  let values = {};
+  try {
+    values = JSON.parse(node.getAttribute('data-slds-cta-event-values'));
+  } catch (e) {}
+  logCTAEvent(
+    node.getAttribute('data-slds-cta-event-name'),
+    node.getAttribute('data-slds-cta-event-type'),
+    values
+  );
+};
+
+export default () => ({
+  hooks: {
+    listen_dom: delegate => {
+      // Log the current page as an event in GA/LL
+      logPageVisit();
+      // CTA links/buttons
+      delegate('click', '[data-slds-cta-event]', handleCTA);
+    }
+  }
+});

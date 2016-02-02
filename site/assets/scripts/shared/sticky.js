@@ -14,7 +14,7 @@ import fastdom from 'fastdom';
 
 import throttle from 'lodash/throttle';
 
-import { $, setClassName } from './helpers';
+import { $, setClassName } from '../framework/helpers';
 
 class Sticky {
 
@@ -120,4 +120,10 @@ class Sticky {
 
 }
 
-export default node => new Sticky(node);
+export default () => ({
+  hooks: {
+    listen_dom: delegate => {
+      $('[data-slds-sticky').forEach(node => new Sticky(node));
+    }
+  }
+});

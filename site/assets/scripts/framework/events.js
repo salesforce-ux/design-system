@@ -9,59 +9,52 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import fastdom from 'fastdom';
-import { $, delegate, setClassName } from './helpers';
+import { EventEmitter } from 'events';
+import invariant from 'invariant';
 
-const ATTRIBUTE = 'data-slds-motion-toggle-example';
+import isArray from 'lodash/isArray';
+import isPlainObject from 'lodash/isPlainObject';
+import isString from 'lodash/isString';
 
-const TIMING_MAP_SECS = {
-  instantly: 0,
-  quickly: 0.1,
-  promptly: 0.2,
-  slowly: 0.4,
-  paused: 3.2
+/**
+ * Shared EventEmitter
+ */
+const emitter = new EventEmitter();
+
+/**
+ * Emit an event using an event object
+ *
+ * @param {object} event
+ * @param {string} event.name
+ * @param {any} event.data
+ */
+const pushEvent = event => {
+  invariant(!isPlainObject(event),
+    'events pushed into __eventQueue must be objects');
+  invariant(!isString(event.name),
+    'events pushed into __eventQueue must have a "name" property');
+  emitter.emit(event.name, event.data);
 };
 
-const TIMING_MAP_FRAMES = {
-  instantly: 0,
-  quickly: 6,
-  promptly: 12,
-  slowly: 24,
-  paused: 192
-};
-
-delegate('click', `[${ATTRIBUTE}]`, (event, node) => {
-  event.stopPropagation();
-  let state = JSON.parse(node.getAttribute(ATTRIBUTE));
-  const target = node.querySelector(`[${ATTRIBUTE}-target]`);
-  const after = (delay, callback) => setTimeout(callback, delay);
-  const setState = nextState => {
-    state = Object.assign({}, state, nextState);
-    fastdom.mutate(() => {
-      setClassName(target, {
-        [`${state.which}-example--on`]: state.isOn === true
-      });
-      node.setAttribute(ATTRIBUTE, JSON.stringify(state));
-    });
-  };
-  if (state.isAnimating) return;
-  if (state.toggle) {
-    setState({
-      isAnimating: true,
-      isOn: !state.isOn
-    });
-    after(TIMING_MAP_SECS.promptly * 1000, () =>
-      setState({ isAnimating: false })
-    );
-  } else {
-    setState({
-      isOn: true
-    });
-    after(TIMING_MAP_SECS.promptly * 1000, () =>
-      setState({ isAnimating: true, isOn: false })
-    );
-    after(TIMING_MAP_SECS.promptly * 1000 * 2, () =>
-      setState({ isAnimating: false })
-    );
+/**
+ * Pages that need to emit events before this script loads will push
+ * event objects into window.__eventsQueue which will be an array.
+ *
+ * Once this script loads, the queue is drained, the __eventQueue is overwritten
+ * with an object containing a push() method that will emit events
+ *
+ * @param {object} window
+ */
+export const drainEventQueue = window => {
+  // Drain the queue
+  if (isArray(window.__eventQueue)) {
+    window.__eventQueue.forEach(pushEvent);
+    window.__eventQueue.length = 0;
   }
-});
+  // Enable the queue to emit events
+  window.__eventQueue = {
+    push: pushEvent
+  };
+};
+
+export default emitter;

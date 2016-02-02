@@ -78,6 +78,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "3.0.6",
     "gulp-zip": "3.0.2",
+    "invariant": "^2.2.0",
     "js-beautify": "1.5.10",
     "js-yaml": "3.4.0",
     "lodash": "4.0.0",

@@ -15,6 +15,7 @@ import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
 
 import { $, setClassName } from '../framework/dom';
+import { updateScrollSpy } from '../shared/nav';
 
 /**
  * Return a string of highlighed HTML
@@ -40,6 +41,7 @@ const updateComponentPreviewMarkup = ({ flavor, html }) => {
   // rendered by the server
   fastdom.mutate(() => {
     document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
+    updateScrollSpy();
   });
 };
 
@@ -52,6 +54,7 @@ const updateComponentPreviewMarkup = ({ flavor, html }) => {
 const updateComponentPreviewHeight = ({ flavor, height }) => {
   fastdom.mutate(() => {
     document.getElementById(`iframe-${flavor}`).height = height;
+    updateScrollSpy();
   });
 };
 
@@ -70,21 +73,22 @@ const handleFlavorStateNavClick = (event, element) => {
   event.preventDefault();
   const [ flavor, src ] = ['', '-src'].map(key =>
     element.getAttribute(`data-slds-flavor-states${key}`));
-  fastdom.measure(() => {
+  fastdom.mutate(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
-      setClassName(node.parentElement, { 'is-active': false });
+      setClassName(node.parentElement, { 'slds-is-active': false });
     });
     // Add "is-active" to the selected state
-    setClassName(element.parentElement, { 'is-active': true });
-  });
-  fastdom.mutate(() => {
+    setClassName(element.parentElement, { 'slds-is-active': true });
     // Update the iframe src
     // The code will be updated by the <iframe> using the delegate
     document.getElementById(`iframe-${flavor}`).setAttribute('src', src);
   });
 };
 
+/**
+ * Called when a form factor tab is selected
+ */
 const updateFormFactor = ({tab, panel}) => {
   if (tab.dataset.formFactor) {
     panel.forEach(p => {
@@ -107,6 +111,7 @@ export default () => ({
         updateFormFactor);
     },
     listen_dom: delegate => {
+      // States
       delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);
     }
   }

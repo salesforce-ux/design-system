@@ -107,7 +107,6 @@ class ComponentFlavor extends React.Component {
           {this.renderBadge(flavor.status)}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
-          {this.renderPreviewStates()}
           <h3 className={pf('assistive-text')}>Preview</h3>
           <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
             {this.renderPreview()}
@@ -136,27 +135,6 @@ class ComponentFlavor extends React.Component {
     return flavor.info.markup ? (
       <div dangerouslySetInnerHTML={flavor.info.markup} />
     ) : null;
-  }
-
-  renderPreviewStates() {
-    const { flavor } = this.props;
-    const { previewState } = this.state;
-    return !previewState ? null : (
-      <div className={pf('site-states col size--1-of-1 large-size--1-of-6 large-order--2')}>
-        <h3 className={pf('site-text-heading--label')}>States</h3>
-        <ul className={pf('list--vertical has-block-links--space')}>
-          {flavor.example.states.map((state, index) =>
-            <li className={index === 0 ? 'is-active' : null} key={state.id}>
-              <a role="button"
-                data-slds-flavor-states={flavor.uid}
-                data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
-                {state.label}
-              </a>
-            </li>
-          )}
-        </ul>
-      </div>
-    );
   }
 
   renderPreview() {
@@ -229,12 +207,14 @@ class ComponentFlavor extends React.Component {
     const code = flavor.exampleMarkup
       ? highlight(flavor.exampleMarkup, 'markup') : null;
     return (
-      <pre className={className}>
-        <code
-          id={`code-${flavor.uid}`}
-          className={className}
-          dangerouslySetInnerHTML={{__html: code}} />
-      </pre>
+      <div className={pf('site-code--content scrollable--x')}>
+        <pre className={className}>
+          <code
+            id={`code-${flavor.uid}`}
+            className={className}
+            dangerouslySetInnerHTML={{__html: code}} />
+        </pre>
+      </div>
     );
   }
 

@@ -21,6 +21,7 @@
     "test-integration": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/integration/**/*.js'",
     "start": "npm run gulp",
     "build": "npm run gulp -- build",
+    "build-prod": "npm run gulp -- build",
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "npm run gulp -- lint",

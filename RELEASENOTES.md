@@ -1,6 +1,14 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release 0.12.2 - February 2, 2015
+
+**SITE IA**
+- Add Markup and Style guidelines to Getting Started
+- Copy updates on components to represent Voice & Tone Guidelines
+- Some tokens that were unable to be overridden by not having a !default flag has been resolved
+- Fix for [#106](https://github.com/salesforce-ux/design-system/issues/106)
+
 ## Release 0.12.1 - December 16, 2015
 
 **SITE IA**

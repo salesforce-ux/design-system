@@ -126,22 +126,19 @@ const get = key => prefs[key];
 
 const handleStatusChange = event => set('status', event.target.value);
 
-const init = () => {
-  setStrategies([DefaultsStrategy(), LocalStorageStrategy()])
-}
-
 /**
  * Preferences
  * Sets up a listener and emitts events for when the dropdown changes.
  */
 export default () => {
-  setTimeout(init, 400)
-
   return {
     hooks: {
+      after_listen_dom: delegate =>  {
+        setStrategies([DefaultsStrategy(), LocalStorageStrategy()]);
+      },
       listen_dom: delegate =>  {
         delegate('change', '#status-dropdown', handleStatusChange);
       }
     }
-  }
+  };
 };

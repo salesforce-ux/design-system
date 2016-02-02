@@ -25,9 +25,9 @@ const updateStatusVisibility = event => {
   //ensure correct option is selected
   $('#status-dropdown').forEach(d => {
     $('option', d).forEach(o => {
-      if(event.status == o.value) o.setAttribute('selected', true)
-    })
-  })
+      if(event.status == o.value) o.setAttribute('selected', true);
+    });
+  });
 };
 
 export default () => ({

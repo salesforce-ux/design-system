@@ -17,6 +17,7 @@ components:
   - media-objects
   - menus
   - modals
+  - navigation
   - notifications
   - page-headers
   - pills

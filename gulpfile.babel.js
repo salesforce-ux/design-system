@@ -75,6 +75,29 @@ const debounceTask = (task, wait = 10000) =>
   });
 
 /**
+ * Remove a module from the cache
+ *
+ * @param {string} id
+ */
+const removeFromCache = (() => {
+  const patterns = ['app_modules', 'site'].map(k =>
+    new RegExp(_.escapeRegExp(k)));
+  const shouldRemove = id =>
+      patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
+  return id => {
+    const m = require.cache[id];
+    if (m) {
+      delete require.cache[id];
+      let parent = m.parent;
+      while (parent && shouldRemove(parent.id)) {
+        delete require.cache[parent.id];
+        parent = parent.parent;
+      }
+    }
+  };
+})();
+
+/**
  * A middleware that will rebuild pages on demand
  */
 const siteMiddleware = (req, res, next) => {
@@ -84,8 +107,6 @@ const siteMiddleware = (req, res, next) => {
   if (!ext || ext === '.html' && !query.iframe) {
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
-    // Remove <PageBody> from the cache since every page uses it
-    delete require.cache[require.resolve('app_modules/site/components/page/body')];
     // First, check for /components/*
     if (/components/.test(url)) {
       const ui = generateUI();
@@ -94,9 +115,6 @@ const siteMiddleware = (req, res, next) => {
         for (const component of category.components) {
           const pattern = new RegExp(_.escapeRegExp(component.path));
           if (pattern.test(url)) {
-            ['page/body', 'page/component', 'page/component/flavor'].forEach(p => {
-              delete require.cache[require.resolve(`app_modules/site/components/${p}`)];
-            });
             return generateComponentPages([component], err => {
               log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
               next();
@@ -113,8 +131,6 @@ const siteMiddleware = (req, res, next) => {
     fs.access(indexPath, err => {
       // No page was found
       if (err) return next();
-      // Remove it from the cache
-      delete require.cache[indexPath];
       // Rebuild
       const log = SLDSLog();
       generatePages([indexPath], err => {
@@ -170,7 +186,7 @@ gulp.task('serve', () => {
     ...watchPaths.pages
   ], event => {
     SLDSLog()(`File Changed ${event.path}`);
-    delete require.cache[event.path];
+    removeFromCache(require.resolve(event.path));
     reload();
   });
 

@@ -12,8 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import Img from 'app_modules/ui/img';
-import { Link } from 'react-router';
-import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
@@ -35,7 +33,7 @@ export default (
 
 <h2 className={pf('site-text-heading--label')}>Grid Items (Regions/Colums)</h2>
 <p>When you add the class <CodeClass className="col" /> to the grid items, no padding or gutters are added. They are simply divisions of their parent. If you want gutters, remove the class <CodeClass className="col" /> and replace it with one of the <CodeClass className="col--padded" /> classes. These will add different sized gutters to the left and right side of your column.</p>
-<p>By default, the width of each column within a grid row is determined by the content within. Though this automatic sizing allows you to achieve most desired outcomes, you can add manual <Link to="/components/utilities/sizing/">sizing classes</Link> to the columns if you need specific column widths.</p>
+<p>By default, the width of each column within a grid row is determined by the content within. Though this automatic sizing allows you to achieve most desired outcomes, you can add manual <a href="/components/utilities/sizing/">sizing classes</a> to the columns if you need specific column widths.</p>
 <p>Using the manual sizing class helpers, you can specify a column span across the following grids &ndash;2, 3, 4, 5, 6, and 12. The grid supports up to 12 columns.</p>
 
 <h2 className={pf('site-text-heading--label')}>Visual Glossary of Terminology</h2>

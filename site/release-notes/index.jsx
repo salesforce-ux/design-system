@@ -12,19 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import releaseNotes from '.generated/site.release-notes';
-import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
 export default (
-
   <PageBody anchorTitle="Release Notes" contentClassName={pf('site-release-notes container--large')}>
-
-    <p className="site-text-introduction">Download the CSS Framework and other resources from the <Link to="/resources/downloads">Downloads page</Link></p>
-
+    <p className="site-text-introduction">
+      Download the CSS Framework and other resources from
+      the <a href="/resources/downloads">Downloads page</a>
+    </p>
     <div className={pf('releasenotes')}
       dangerouslySetInnerHTML={{__html: releaseNotes.html}} >
     </div>
   </PageBody>
-
 );

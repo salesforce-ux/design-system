@@ -16,7 +16,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import globals from 'app_modules/global';
-import { Link } from 'react-router';
+
 const moduleName = globals.moduleName;
 
 export default (
@@ -39,7 +39,7 @@ export default (
         <p>In this tutorial, you will learn how to override the provided design tokens using
         the popular CSS preprocessor <a href="http://sass-lang.com/community">Sass</a>.</p>
 
-        <p>Before proceeding, first complete the <Link to="/getting-started/getting-started-node-js">Getting Started with Node JS</Link> tutorial.</p>
+        <p>Before proceeding, first complete the <a href="/getting-started/getting-started-node-js">Getting Started with Node JS</a> tutorial.</p>
 
         <p>Note: these changes will not affect the global header and container of the Salesforce app, but will affect your apps and components inside the Salesforce container.</p>
 

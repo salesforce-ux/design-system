@@ -16,9 +16,6 @@ import classNames from 'classnames';
 import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import { Link } from 'react-router';
-
-
 class Demo extends React.Component {
 
   render() {
@@ -57,7 +54,7 @@ class Demo extends React.Component {
       <div className={pf('has-flexi-truncate align-middle')}>
         <div className={pf('grid')}>
           <span className={pf('site-logo shrink-none')}></span>
-          <Link className={pf('truncate align-middle')} to="home">Back to Salesforce Design</Link>
+          <a className={pf('truncate align-middle')} href="/">Back to Salesforce Design</a>
         </div>
       </div>
     );

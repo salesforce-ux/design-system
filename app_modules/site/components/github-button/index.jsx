@@ -69,7 +69,7 @@ class GithubButton extends React.Component {
           href={linkUrlRepo}
           className={pf('button button--neutral')}
           eventType="github-start">
-          <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')}/>
+          <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} alt="" />
             Star
         </CTALink>
         <a href={linkUrlGazer} className={classesBubbleButton}>

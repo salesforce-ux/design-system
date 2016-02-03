@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import emitter from '../framework/events';
 
-const STORAGE_KEY = `slds-${process.env.DEFAULT_USER_TYPE}-prefs`
+const STORAGE_KEY = `slds-${process.env.DEFAULT_USER_TYPE}-prefs`;
 const EVENT_KEY = 'preferences:updated';
 
 const defaults = {

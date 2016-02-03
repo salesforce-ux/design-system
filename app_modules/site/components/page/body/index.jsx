@@ -240,7 +240,7 @@ export default React.createClass({
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>.
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span> 
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
             eventType="copyright">

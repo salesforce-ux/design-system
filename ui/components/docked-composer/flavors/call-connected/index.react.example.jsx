@@ -74,7 +74,7 @@ export default (
           <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
             <MediaObject figureLeft={image}>
               <p className={pf('text-heading--medium')}>Lei Chan</p>
-              <ul className={pf('list--horizontal grid--align-center has-dividers text-body--small')}>
+              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
                 <li className={pf('list__item')}>VP of Sales</li>
                 <li className={pf('list__item ')}>Acme Corporation</li>
               </ul>

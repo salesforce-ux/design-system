@@ -62,11 +62,11 @@ export default (
         </div>
 
       {/* Composer Body */}
-        <div className={pf('docked-composer__body grow grid grid--vertical nowrap size--1-of-1 align-content-center')}>
+        <div className={pf('docked-composer__body grow grid grid--vertical slds-grid--align-center nowrap size--1-of-1')}>
           <div className={pf('text-align--center')}>
             {image}
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers text-body--small')}>
+            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
               <li className={pf('list__item')}>VP of Sales</li>
               <li className={pf('list__item ')}>Acme Corporation</li>
             </ul>

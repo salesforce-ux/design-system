@@ -45,7 +45,7 @@
     padding: $spacing-small;
   }
 
-  @include deprecate('2.0.0', 'Use .slds-card__inner instead.') {
+  @include deprecate('3.0.0', 'Use .slds-card__inner instead.') {
     .#{$css-prefix}tile {
       margin: $spacing-small $spacing-large;
     }

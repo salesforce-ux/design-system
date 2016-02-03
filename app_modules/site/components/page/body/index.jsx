@@ -132,7 +132,7 @@ export default React.createClass({
       : null;
     return (
       <header className={internalClass} role="banner">
-        <a to="/">
+        <a href="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </a>

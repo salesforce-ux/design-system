@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import emitter from '../framework/events';
 
+const STORAGE_KEY = `slds-${process.env.DEFAULT_USER_TYPE}-prefs`;
 const EVENT_KEY = 'preferences:updated';
 
 const defaults = {
@@ -46,7 +47,7 @@ export const LocalStorageStrategy = props => {
     },
     load () {
       if (!window.localStorage) { return {}; }
-      const prefs = localStorage.getItem('prefs');
+      const prefs = localStorage.getItem(STORAGE_KEY);
       try {
         return JSON.parse(prefs);
       } catch (e) {
@@ -56,7 +57,7 @@ export const LocalStorageStrategy = props => {
     update (prefs) {
       if (!window.localStorage) { return; }
       try {
-        localStorage.setItem('prefs', JSON.stringify(prefs));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
       } catch (e) {}
     }
   }, props);

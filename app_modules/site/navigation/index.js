@@ -160,7 +160,8 @@ export default () => formatNavItem({
       internal: false,
       children: [
         {
-          label: 'iOS'
+          id: 'ios',
+          label: 'iOS',
         }
       ]
     },

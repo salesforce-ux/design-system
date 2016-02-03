@@ -302,9 +302,13 @@ export const gulpRenderComponentPage = () =>
             docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
         </PageBody>
       );
-      // Push a new HTML page
+      // HACK: Move "utilities" under "components"
+      const componentPath = /^utilities/.test(component.path)
+        ? `components/${component.path}`
+        : component.path;
+      // Push a new HTML pagea
       next(null, new gutil.File({
-        path: path.resolve(__PATHS__.site, component.path, 'index.html'),
+        path: path.resolve(__PATHS__.site, componentPath, 'index.html'),
         contents: new Buffer(renderPage(pageBody)),
         base: __PATHS__.site
       }));

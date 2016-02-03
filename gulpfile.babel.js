@@ -31,6 +31,7 @@ import './scripts/gulp/lint';
 import { generatePages, generateComponentPages } from './scripts/gulp/pages';
 import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
+import './scripts/gulp/links';
 
 const watchPaths = {
   sass: [
@@ -220,12 +221,12 @@ gulp.task('default', callback => {
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'],
+    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });
 
 gulp.task('build:test', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages'],
+    'clean', 'styles', ['assets', 'generate'], ['pages'], ['links'],
   callback);
 });

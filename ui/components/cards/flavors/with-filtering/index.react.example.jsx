@@ -101,7 +101,7 @@ export default (
         </table>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#" className={pf('card__footer-action')}>View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

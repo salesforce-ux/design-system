@@ -38,13 +38,6 @@
     padding-bottom: $spacing-medium;
   }
 
-  &__footer-action {
-    // Increase the action's hit box
-    display: inline-block;
-    margin: ($spacing-small * -1);
-    padding: $spacing-small;
-  }
-
   @include deprecate('3.0.0', 'Use .slds-card__inner instead.') {
     .#{$css-prefix}tile {
       margin: $spacing-small $spacing-large;

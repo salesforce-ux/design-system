@@ -20,10 +20,6 @@ classes:
     description: Initializes card footer
     applied: <code>&lt;div&gt;</code>
   -
-    class: card__footer-action
-    description: Give actions a large enough hit box to make it more easily clickable
-    applied: <code>&lt;a&gt;</code>
-  -
     class: card__inner
     description: Add spacing around inner elements of a card (e.g. a tile)
     applied: Any element

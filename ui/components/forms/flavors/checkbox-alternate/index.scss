@@ -66,12 +66,13 @@
     // Checked State with Interactions
     &:checked > .#{$css-prefix}checkbox--faux,
     &:checked ~ .#{$css-prefix}checkbox--faux {
-      background-color: $color-background-button-default-active;
+      background-color: $color-background-button-brand;
+      color: $color-text-button-brand;
 
       // Need something stronger when the input is checked
       &:hover,
       &:focus {
-        background-color: $color-background-button-default-hover;
+        background-color: $color-background-button-brand;
       }
     }
 
@@ -79,7 +80,6 @@
     &:focus > .#{$css-prefix}checkbox--faux,
     &:focus ~ .#{$css-prefix}checkbox--faux {
       @include focus-button;
-      background-color: $color-background-button-default-hover;
       z-index: $z-index-default; // Raises box shadow above adjacent buttons
     }
 

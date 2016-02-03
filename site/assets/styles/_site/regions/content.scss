@@ -16,24 +16,24 @@
   }
 }
 
-.site-menu--jump-links {
-  line-height: $line-height-heading;
+// .site-menu--jump-links {
+//   line-height: $line-height-heading;
 
-  .site-text-heading--label {
-    padding-bottom: $spacing-x-small;
-  }
+//   .site-text-heading--label {
+//     padding-bottom: $spacing-x-small;
+//   }
 
-  a {
-    margin: 0 #{-$spacing-medium};
-    padding: $spacing-x-small $spacing-medium;
-  }
+//   a {
+//     margin: 0 #{-$spacing-medium};
+//     padding: $spacing-x-small $spacing-medium;
+//   }
 
-  @include mq-large-max {
-    margin-bottom: $spacing-xx-large;
-    border-bottom: $border-width-thin solid $color-border-separator;
-    padding-bottom: $spacing-xx-large;
-  }
-}
+//   @include mq-large-max {
+//     margin-bottom: $spacing-xx-large;
+//     border-bottom: $border-width-thin solid $color-border-separator;
+//     padding-bottom: $spacing-xx-large;
+//   }
+// }
 
 .sticky {
   position: static;
@@ -87,8 +87,7 @@
 
 @include mq-large-min {
 
-  .site-main-content,
-  .site-menu--jump-links {
+  .site-main-content {
     margin: {
       top: -$spacing-xx-large;
       bottom: -$spacing-xx-large;
@@ -97,11 +96,21 @@
   }
 
   .site-menu--jump-links {
-    margin-right: -$spacing-xx-large;
-    padding-right: $spacing-xx-large;
     padding: {
-      bottom: $spacing-xx-large;
-      left: $spacing-xx-large;
+      top: $spacing-medium;
+      left: $spacing-large;
+    }
+
+    a {
+      cursor: pointer;
+      margin: {
+        left: ($spacing-large * -1);
+        right: ($spacing-medium * -1);
+      }
+      padding: {
+        left: $spacing-large;
+        right: $spacing-medium;
+      }
     }
   }
 
@@ -109,6 +118,31 @@
     padding: {
       right: $spacing-xx-large;
       bottom: $spacing-xx-large * 2;
+    }
+  }
+}
+
+.site-states {
+  padding-left: $spacing-x-large;
+
+  .#{$css-prefix}is-active {
+    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
+    position: relative;
+
+    &:before {
+      border: {
+        right: $spacing-x-small solid $color-background-shade;
+        bottom: $spacing-x-small solid transparent;
+      }
+      margin-left: ($spacing-x-small * -1);
+
+      @include mq-large-min {
+        margin-left: ((($spacing-large * 2) + $spacing-x-small) * -1);
+      }
+    }
+
+    a {
+      color: $color-text-default;
     }
   }
 }

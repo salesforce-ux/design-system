@@ -53,16 +53,16 @@ export default React.createClass({
         let states = null;
         if (flavor.example && _.isArray(flavor.example.states)) {
           states = (
-            <ul className={pf('list--vertical has-block-links is-nested')}>
+            <ul className={pf('site-states list--vertical')}>
               {flavor.example.states.map((state, index) => {
                 const className = classNames('list__name', {
                   [pf('is-active')]: index === 0
                 });
                 return (
-                  <li className={pf('list__name')} key={state.id}>
+                  <li className={className} key={state.id}>
                     <a
                       role="button"
-                      className={className}
+                      // className={className}
                       data-slds-flavor-states={flavor.uid}
                       data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
                       {state.label}
@@ -86,7 +86,7 @@ export default React.createClass({
       <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}>
         <div className={pf('site-menu--jump-links')}>
           <h3 className="site-text-heading--label">Variants</h3>
-          <ul className={pf('list--vertical has-block-links')}>
+          <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
           </ul>
         </div>

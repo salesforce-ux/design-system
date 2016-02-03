@@ -15,7 +15,7 @@ import _ from 'lodash';
 export default React.createClass({
   displayName: 'CTALink',
   propTypes: {
-    eventName: React.PropTypes.string,
+    eventName: React.PropTypes.oneOf(['CTA', 'Download']),
     eventType: React.PropTypes.string.isRequired,
     eventValues: React.PropTypes.object
   },

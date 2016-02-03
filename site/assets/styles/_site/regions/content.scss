@@ -95,6 +95,24 @@
     }
   }
 
+  .site-states {
+
+    .#{$css-prefix}is-active {
+      @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
+      position: relative;
+
+      &:before {
+        top: calc(((((#{$font-size-medium} * #{$line-height-text}) / 2) - #{$spacing-x-small}) + #{$spacing-medium}));
+        border: {
+          right: $spacing-x-small solid $color-background-shade;
+          bottom: $spacing-x-small solid transparent;
+        }
+        margin-left: ((($spacing-large * 2) + $spacing-x-small) * -1);
+      }
+    }
+  }
+
+
   .site-main-content {
     padding: {
       right: $spacing-xx-large;
@@ -106,24 +124,7 @@
 .site-states {
   padding-left: $spacing-x-large;
 
-  .#{$css-prefix}is-active {
-    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
-    position: relative;
-
-    &:before {
-      border: {
-        right: $spacing-x-small solid $color-background-shade;
-        bottom: $spacing-x-small solid transparent;
-      }
-      margin-left: ($spacing-x-small * -1);
-
-      @include mq-large-min {
-        margin-left: ((($spacing-large * 2) + $spacing-x-small) * -1);
-      }
-    }
-
-    a {
-      color: $color-text-link-active;
-    }
+  .#{$css-prefix}is-active a {
+    color: $color-text-link-active;
   }
 }

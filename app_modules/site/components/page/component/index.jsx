@@ -62,7 +62,6 @@ export default React.createClass({
                   <li className={className} key={state.id}>
                     <a
                       role="button"
-                      // className={className}
                       data-slds-flavor-states={flavor.uid}
                       data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
                       {state.label}
@@ -85,7 +84,7 @@ export default React.createClass({
     return (
       <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}>
         <div className={pf('site-menu--jump-links')}>
-          <h3 className="site-text-heading--label">Variants</h3>
+          <h3 className="site-text-heading--label">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
           </ul>

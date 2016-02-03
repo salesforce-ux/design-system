@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
-import { getHistory } from 'app_modules/site/navigation/history';
 
 class SvgIcon extends React.Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class SvgIcon extends React.Component {
   }
   getUse() {
     const { sprite, symbol } = this.props;
-    const href = getHistory().createHref('/' ) + `assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
+    const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
     return `<use xlink:href="${href}"></use>`;
   }
 }

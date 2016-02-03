@@ -17,8 +17,6 @@ import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import g from 'app_modules/global';
-import { Link } from 'react-router';
-import CTALink from 'app_modules/site/components/cta-link';
 
 const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;

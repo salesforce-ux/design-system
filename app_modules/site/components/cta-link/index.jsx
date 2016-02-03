@@ -10,37 +10,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import classNames from 'classnames';
-import { createChainedFunction } from 'app_modules/ui/util/component';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
-import { Link } from 'react-router';
-import { find } from 'lodash';
-import sitemap from 'app_modules/site/navigation/sitemap';
 import _ from 'lodash';
 
-class CTALink extends React.Component {
-
-  onClick() {
-    logCTAEvent(this.props.ctaEventName, this.props.ctaExtraValues);
+export default React.createClass({
+  displayName: 'CTALink',
+  propTypes: {
+    eventName: React.PropTypes.oneOf(['CTA', 'Download']),
+    eventType: React.PropTypes.string.isRequired,
+    eventValues: React.PropTypes.object
+  },
+  getDefaultProps() {
+    return {
+      eventName: 'CTA'
+    };
+  },
+  render () {
+    const { eventName, eventType, eventValues } = this.props;
+    const props = {
+      'data-slds-cta-event': true,
+      'data-slds-cta-event-name': eventName,
+      'data-slds-cta-event-type': eventType,
+      'data-slds-cta-extra-values': _.isPlainObject(eventValues)
+        ? JSON.stringify(eventValues) : null
+    };
+    return this.props.href
+      ? <a {...this.props} {...props}>{this.props.children}</a>
+      : React.cloneElement(React.Children.only(this.props.children), props);
   }
-
-  render() {
-    let click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    let props = _.assign({}, this.props, {onClick: click});
-    let hasRoute = sitemap.getRouteByPath(props.href);
-    if (hasRoute) {
-      return <Link to={props.href} {...props}>{this.props.children}</Link>;
-    } else {
-      return <a {...props}>{this.props.children}</a>;
-    }
-  }
-
-}
-
-CTALink.displayName = 'CTALink';
-CTALink.propTypes = {
-  ctaEventName: React.PropTypes.string,
-  ctaExtraValues: React.PropTypes.object
-};
-
-export default CTALink;
+});

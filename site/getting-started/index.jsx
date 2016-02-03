@@ -12,27 +12,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import globals from 'app_modules/global';
-import { Link } from 'react-router';
 
 export default (
   <PageBody anchorTitle="Getting Started">
 
     <h2 className="site-text-heading--large">
-      <Link to="/getting-started/visualforce">Visualforce</Link>
+      <a href="/getting-started/visualforce">Visualforce</a>
     </h2>
     <p>
       How to use the {globals.displayName} within a Visualforce page.
     </p>
 
     <h2 className="site-text-heading--large">
-      <Link to="/getting-started/lightning">Lightning Components</Link>
+      <a href="/getting-started/lightning">Lightning Components</a>
     </h2>
     <p>
       How to use the {globals.displayName} with Lighting apps and components.
     </p>
 
     <h2 className="site-text-heading--large">
-      <Link to="/getting-started/heroku">Heroku</Link>
+      <a href="/getting-started/heroku">Heroku</a>
     </h2>
     <p>
       How to use the {globals.displayName} within a static Heroku application.

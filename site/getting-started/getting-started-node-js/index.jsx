@@ -16,8 +16,8 @@ import CodeBlock from 'app_modules/ui/code-block';
 import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import { Link } from 'react-router';
 import globals from 'app_modules/global';
+
 const moduleName = globals.moduleName;
 
 const links = {
@@ -64,7 +64,7 @@ export default (
 
         <h2 id="step-3" className="site-text-heading--large">Step 3: Download the {globals.displayName}</h2>
 
-        <p>Download the <Link to="/resources/downloads">Design System</Link> zip file
+        <p>Download the <a href="/resources/downloads">Design System</a> zip file
           and extract the contents to your <code>DEV_DIRECTORY</code>.</p>
 
         <p>You should now have a folder called <code>{moduleName}-{version.sldsVersion}</code></p>

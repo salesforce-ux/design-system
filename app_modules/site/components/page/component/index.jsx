@@ -9,42 +9,97 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
 import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
+import Sticky from 'app_modules/site/components/sticky';
 import ComponentFlavor from './flavor';
-import Status from 'app_modules/site/util/component/status';
 import TableYAML from './table-yaml';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import classNames from 'classnames';
 
-const ComponentBody = React.createClass({
+export default React.createClass({
 
-  mixins: [PrefsMixin],
+  defaultProps: {
+    component: React.PropTypes.object,
+    docs: React.PropTypes.node
+  },
 
   render() {
     const { component } = this.props;
     return (
       <div>
-        <Anchor title={component.title} actions={this.renderComponentOverviewLink()} />
-        <div className={pf('site-content p-around--xx-large')}>
-          {this.renderIntro()}
-          {this.renderFlavors()}
-          <h3 className={pf('site-text-heading--large')}>Component Overview</h3>
-          {this.renderDocs()}
-          {this.renderInfoTable()}
+        <Anchor
+          title={component.title}
+          actions={this.renderComponentOverviewLink()}
+          path={`/${component.path}`} />
+        <div className={pf('site-content p-around--xx-large grid wrap')}>
+          {this.renderFlavorsNav()}
+          <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
+            {this.renderIntro()}
+            {this.renderFlavors()}
+            <h3 className={pf('site-text-heading--large')}>Component Overview</h3>
+            {this.renderDocs()}
+            {this.renderInfoTable()}
+          </div>
         </div>
       </div>
     );
   },
 
+  renderFlavorsNav() {
+    const flavors = this.props.component.flavors
+      .map(flavor => {
+        let states = null;
+        if (flavor.example && _.isArray(flavor.example.states)) {
+          states = (
+            <ul className={pf('list--vertical has-block-links is-nested')}>
+              {flavor.example.states.map((state, index) => {
+                const className = classNames('list__name', {
+                  [pf('is-active')]: index === 0
+                });
+                return (
+                  <li className={pf('list__name')} key={state.id}>
+                    <a
+                      role="button"
+                      className={className}
+                      data-slds-flavor-states={flavor.uid}
+                      data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
+                      {state.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          );
+        }
+        return (
+          <li className={pf('list__name')} key={flavor.uid} data-slds-status={flavor.status}>
+            <a href={`#${flavor.id}`}>
+              {flavor.title}
+            </a>
+            {states}
+          </li>
+        );
+      });
+    return (
+      <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}>
+        <div className={pf('site-menu--jump-links')}>
+          <h3 className="site-text-heading--label">Variants</h3>
+          <ul className={pf('list--vertical has-block-links')}>
+            {flavors}
+          </ul>
+        </div>
+      </Sticky>
+    );
+  },
+
   renderIntro() {
-    let { docs } = this.props.elements;
-    return docs && docs.intro ? docs.intro : null;
+    return this.props.docs && this.props.docs.intro ? this.props.docs.intro : null;
   },
 
   renderDocs() {
-    let { docs } = this.props.elements;
-    return docs ? this.props.elements.docs.default : null;
+    return this.props.docs ? this.props.docs.default : null;
   },
 
   renderComponentOverviewLink() {
@@ -61,7 +116,7 @@ const ComponentBody = React.createClass({
   },
 
   renderFlavors() {
-    return this.props.component.flavors.filter(this.shouldDisplayFlavor, this).map(flavor => {
+    return this.props.component.flavors.map(flavor => {
       return (
         <ComponentFlavor {...this.props} key={flavor.uid} flavor={flavor} />
       );
@@ -69,8 +124,7 @@ const ComponentBody = React.createClass({
   },
 
   renderInfoTable() {
-    const {component} = this.props;
-
+    const { component } = this.props;
     if (component.info.tableYaml) {
       return <TableYAML data={component.info.tableYaml} />;
     } else if (component.info.table) {
@@ -78,12 +132,6 @@ const ComponentBody = React.createClass({
     } else {
       return null;
     }
-  },
-
-  shouldDisplayFlavor(flavor) {
-    return Status.shouldDisplay(this.state.status, flavor.status);
   }
 
 });
-
-export default ComponentBody;

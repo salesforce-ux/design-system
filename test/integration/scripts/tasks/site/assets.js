@@ -13,7 +13,7 @@ import _ from 'lodash';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
-import { ignore as ignoreExtensions } from 'scripts/tasks/site/assets';
+import { ignore as ignoreExtensions } from 'scripts/gulp/assets';
 
 describe('scripts/tasks/site/assets.js', () => {
 

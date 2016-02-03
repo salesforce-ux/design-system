@@ -11,108 +11,138 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import './scripts/helpers/setup';
 
-import path from 'path';
+import _ from 'lodash';
+import browserSync, { reload } from 'browser-sync';
+import del from 'del';
+import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import path from 'path';
+import prettyTime from 'pretty-time';
 import runSequence from 'run-sequence';
-import _ from 'lodash';
-import del from 'del';
-import plumber from 'gulp-plumber';
-import sass from 'gulp-sass';
-import minifycss from 'gulp-minify-css';
-import autoprefixer from 'gulp-autoprefixer';
-import sourcemaps from 'gulp-sourcemaps';
-import browserSync, { reload } from 'browser-sync';
-import StyleStats from 'stylestats';
+import url from 'url';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
-import './scripts/lint';
-import runSiteTasks from './scripts/tasks';
-import { getConfig as getWebpackConfig } from './scripts/tasks/site/webpack';
-import { createPageCompiler } from './scripts/tasks/site/compile';
-
-const pageCompiler = createPageCompiler();
+import './scripts/gulp/assets';
+import './scripts/gulp/generate';
+import { generateUI } from './scripts/gulp/generate-ui';
+import './scripts/gulp/lint';
+import { generatePages, generateComponentPages } from './scripts/gulp/pages';
+import './scripts/gulp/styles';
+import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
+import './scripts/gulp/links';
 
 const watchPaths = {
   sass: [
-    path.resolve(__PATHS__.site, 'assets/styles/**/*.scss'),
-    path.resolve(__PATHS__.ui, '**/*.scss')
+    'site/assets/styles/**/*.scss',
+    'ui/**/*.scss'
   ],
   pages: [
-    path.resolve(__PATHS__.ui, '**/*.{md,yml}')
+    'ui/**/*.{md,yml}'
   ],
   js: [
     'app_modules/**/*.{js,jsx}',
-    path.resolve(__PATHS__.ui, '**/*.{js,jsx}'),
-    path.resolve(__PATHS__.site, '**/*.{js,jsx}')
+    'ui/**/*.{js,jsx}',
+    'site/**/*.{js,jsx}'
   ]
 };
 
-gulp.task('pages', callback => {
-  runSiteTasks({
-    tasks: ['generate', 'pages', 'assets']
-  }, callback);
-});
+/**
+ * Create function that logs a prefixed message with the process time
+ *
+ * @param {array} [hrtime]
+ * @returns {function}
+ */
+const SLDSLog = (hrtime = process.hrtime()) => function () {
+  console.log([
+    `[${gutil.colors.red('♥')}${gutil.colors.yellow('⚡')}]`,
+    ...arguments,
+    `after ${gutil.colors.magenta(prettyTime(process.hrtime(hrtime)))}`
+  ].join(' '));
+};
 
-gulp.task('stylestats', () => {
-  const file = '.www/assets/styles/slds.css';
-  const c = gutil.colors;
-  const logPrefix = `[${c.cyan(path.basename(file))}] `;
-  const stats = new StyleStats(file);
-
-  stats.parse((error, result) => {
-    let sizeColor = 'green';
-
-    switch (true) {
-    case (result.size > 200 * 1024):
-      sizeColor = 'bgred';
-      break;
-    case (result.size > 160 * 1024 && result.size <= 200 * 1024):
-      sizeColor = 'yellow';
-      break;
-    }
-
-    gutil.log(logPrefix + c[sizeColor](`Size: ${(result.size / 1024).toFixed(2)}KB (${(result.gzippedSize / 1024).toFixed(2)}KB gzipped)`));
-    gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
+/**
+ * Return a debounced function that will start a task every wait seconds
+ *
+ * @param {string} task
+ * @param {nuber} [wait]
+ * @returns functions
+ */
+const debounceTask = (task, wait = 10000) =>
+  _.debounce(() => gulp.start(task), wait, {
+    leading: true,
+    trailing: false
   });
-});
 
-function rebuildPage(event, done = _.noop) {
-  let sitemap = require('./app_modules/site/navigation/sitemap').default;
-  let routes = sitemap.getFlattenedRoutes().filter(route => route.component);
-  routes.forEach(route => {
-    if (new RegExp(_.escapeRegExp(route.component.path)).test(event.path)) {
-      // Recreate the component module which will cause webpack
-      // to recompile and reload the browser
-      console.time(`rebuild "${route.uid}"`);
-      pageCompiler.createComponentPages([route], err => {
-        console.timeEnd(`rebuild "${route.uid}"`);
-        if (err) return gutil.log(err);
-        done(err);
+/**
+ * Remove a module from the cache
+ *
+ * @param {string} id
+ */
+const removeFromCache = (() => {
+  const patterns = ['app_modules', 'site'].map(k =>
+    new RegExp(_.escapeRegExp(k)));
+  const shouldRemove = id =>
+      patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
+  return id => {
+    const m = require.cache[id];
+    if (m) {
+      delete require.cache[id];
+      let parent = m.parent;
+      while (parent && shouldRemove(parent.id)) {
+        delete require.cache[parent.id];
+        parent = parent.parent;
+      }
+    }
+  };
+})();
+
+/**
+ * A middleware that will rebuild pages on demand
+ */
+const siteMiddleware = (req, res, next) => {
+  // Check for pages "/some/page/", "some/page/index.html"
+  const query = req.query || {};
+  const ext = path.extname(req.url);
+  if (!ext || ext === '.html' && !query.iframe) {
+    // Clean the URL
+    const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
+    // First, check for /components/*
+    if (/components/.test(url)) {
+      const ui = generateUI();
+      const log = SLDSLog();
+      for (const category of ui) {
+        for (const component of category.components) {
+          const pattern = new RegExp(_.escapeRegExp(component.path));
+          if (pattern.test(url)) {
+            return generateComponentPages([component], err => {
+              log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
+              next();
+            });
+          }
+        }
+      }
+      // No component was found
+      return next();
+    }
+    // Create a path to the source file
+    const indexPath = path.join(__PATHS__.site, url, 'index.jsx');
+    // Make sure the source file actually exists
+    fs.access(indexPath, err => {
+      // No page was found
+      if (err) return next();
+      // Rebuild
+      const log = SLDSLog();
+      generatePages([indexPath], err => {
+        log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
+        next();
       });
-    }
-  });
-}
-
-gulp.task('styles', () => {
-  gulp.src('site/assets/styles/*.scss')
-  .pipe(plumber())
-  .pipe(sourcemaps.init())
-  .pipe(sass.sync({
-    precision: 10,
-    includePaths: [
-      __PATHS__.root,
-      __PATHS__.ui,
-      __PATHS__.node_modules
-    ]
-  }).on('error', sass.logError))
-  .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-  .pipe(minifycss({ advanced: false }))
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('.www/assets/styles'))
-  .pipe(browserSync.stream({ match: '**/*.css' }));
-});
+    });
+  } else {
+    next();
+  }
+};
 
 gulp.task('clean', del.bind(null, [
   __PATHS__.www,
@@ -121,14 +151,16 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.dist
 ]));
 
-gulp.task('serve', ['styles'], () => {
-  let webpackConfig = getWebpackConfig();
-  let webpackCompiler = webpack(webpackConfig);
+gulp.task('serve', () => {
+  const webpackConfig = getWebpackConfig();
+  const webpackCompiler = webpack(webpackConfig);
 
   browserSync({
     server: {
       baseDir: __PATHS__.www,
       middleware: [
+        // Serve /site pages on demand
+        siteMiddleware,
         // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
@@ -146,29 +178,55 @@ gulp.task('serve', ['styles'], () => {
   });
 
   // Reload after each rebuild
-  webpackCompiler.plugin('done', stats => {
+  webpackCompiler.plugin('done', stats => reload());
+
+  // When module files change, delete them from the cache
+  // and then reload the browser which will trigger the middleware
+  // to rebuild the page
+  gulp.watch([
+    ...watchPaths.js,
+    ...watchPaths.pages
+  ], event => {
+    SLDSLog()(`File Changed ${event.path}`);
+    removeFromCache(require.resolve(event.path));
     reload();
   });
 
-  gulp.watch(watchPaths.pages).on('change', rebuildPage);
-
   gulp.watch(watchPaths.sass, ['styles']);
 
-  // Only lint every 10s
-  // so they don't take CPU time away from compilation tasks
-  gulp.watch(watchPaths.js, { debounceDelay: 10000 }, ['lint:js']);
-  gulp.watch(watchPaths.sass, { debounceDelay: 10000 }, ['lint:sass']);
+  // Only lint every 10s so they don't take CPU time away from compilation tasks
+  gulp.watch(
+    watchPaths.js,
+    debounceTask('lint:js')
+  );
+  gulp.watch(
+    watchPaths.sass,
+    debounceTask('lint:sass')
+  );
   gulp.watch(
     [watchPaths.sass, watchPaths.js, watchPaths.pages],
-    { debounceDelay: 10000 },
-    ['lint:spaces']
+    debounceTask('lint:spaces')
   );
-
-  gulp.watch('.www/assets/styles/slds.css', { debounceDelay: 10000 }, ['stylestats']);
+  gulp.watch(
+    '.www/assets/styles/slds.css',
+    debounceTask('stylestats')
+  );
 });
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', ['styles'], 'pages', 'serve',
+    'clean', 'styles', ['assets', 'generate'], 'serve',
+  callback);
+});
+
+gulp.task('build', callback => {
+  runSequence(
+    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
+  callback);
+});
+
+gulp.task('build:test', callback => {
+  runSequence(
+    'clean', 'styles', ['assets', 'generate'], ['pages'], ['links'],
   callback);
 });

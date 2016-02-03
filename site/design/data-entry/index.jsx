@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Link } from 'react-router';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import Img from 'app_modules/ui/img';

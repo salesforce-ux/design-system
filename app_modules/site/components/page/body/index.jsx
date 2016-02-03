@@ -9,89 +9,43 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
 import _ from 'lodash';
-import Anchor from 'app_modules/site/components/page/anchor';
-import Settings from 'app_modules/site/components/page/settings';
-import BodyContent from './content';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import React from 'react';
 import classNames from 'classnames';
-import shared from 'app_modules/site/shared';
-import version from '.generated/site.version';
-import Immutable from 'immutable';
-import { EventEmitter } from 'events';
-import Prefs from 'app_modules/site/preferences';
-import IfPrefs from 'app_modules/site/preferences/component';
-import PrefsMixin from 'app_modules/site/preferences/mixin';
-import Status from 'app_modules/site/util/component/status';
-import { Link } from 'react-router';
+
+import Anchor from 'app_modules/site/components/page/anchor';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import navigation from 'app_modules/site/navigation/navigation';
-import { getActiveNavItems } from 'app_modules/site/navigation/navigation-utils';
-import { isMobile } from 'app_modules/site/browser/util';
+import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
+import Status from 'app_modules/site/util/component/status';
+import version from '.generated/site.version';
 
 /**
  * Add extra meta data to the nav items
  *
- * @param {array} items
+ * @param {object} item
  * @param {array} activeItems
- * @param {array} keyPath
+ * @returns {object}
  */
-function transformNavItems(items, activeItems, keyPath=[]) {
-  items.forEach((item, index) => {
-    // Prevent stack overflow from circular dependency
-    delete item.parent;
-    item.keyPath = keyPath.concat(index);
-    item.hasChildren = _.isArray(item.children) && item.children.length;
-    item.hasChildrenAnchors = item.hasChildren && _.every(item.children, item => item.hash);
-    item.isSelected = _.includes(activeItems, item);
-    item.isOpen = item.hasChildren && item.isSelected;
-    item.isActive = item === _.last(activeItems);
-    if (item.hasChildren) {
-      transformNavItems(item.children, activeItems, item.keyPath.concat('children'));
-    } else {
-      delete item.children;
-    }
+const mapNav = (item, activeItems = []) => {
+  const hasChildren = _.isArray(item.children) && item.children.length;
+  const isSelected = _.includes(activeItems.map(i => i.path), item.path);
+  const isOpen = hasChildren && isSelected;
+  const isActive = activeItems.length
+    ? item.path === _.last(activeItems).path : false;
+  const children = hasChildren
+    ? { children: item.children.map(i => mapNav(i, activeItems)) }
+    : null;
+  return _.assign({}, item, children, {
+    hasChildren, isSelected, isOpen, isActive
   });
-}
-
-/**
- * Recursively iterate over each navItem
- *
- * @param {Immutable.List} items
- * @param {function} fn
- */
-function eachNavItem(items, fn) {
-  items.forEach(item => {
-    fn(item);
-    if (item.has('children')) {
-      eachNavItem(item.get('children'), fn);
-    }
-  });
-}
-
-/**
- * Recursively flatten the nav items
- *
- * @param {Immutable.List} items
- * @returns {Immutable.List}
- */
-function flattenNavItems(items) {
-  let flattenedItems = Immutable.List();
-  eachNavItem(items, item => {
-    flattenedItems = flattenedItems.push(item);
-  });
-  return flattenedItems;
-}
+};
 
 export default React.createClass({
 
-  mixins: [PrefsMixin],
-
   propTypes: {
-    url: React.PropTypes.string,
+    path: React.PropTypes.string,
     anchor: React.PropTypes.node,
     anchorTitle: React.PropTypes.string,
     header: React.PropTypes.node,
@@ -102,178 +56,68 @@ export default React.createClass({
   },
 
   getInitialState() {
-    // Store
-    shared.store = shared.store.set('url', this.props.url);
-    // Nav
-    let navItems = _.cloneDeep(navigation);
-    let navItemsActive = getActiveNavItems(navItems, this.props.url);
-    transformNavItems(navItems, navItemsActive);
+    let nav = mapNav(
+      navigation(),
+      getActiveNavItems(navigation(), this.props.path)
+    );
     return {
-      navItems: Immutable.fromJS(navItems),
-      showingSettings: false,
-      isExternal: process.env.DEFAULT_USER_TYPE === 'external'
+      navItems: nav.children
     };
   },
 
-  componentWillMount() {
-    // Events
-    if (typeof window !== 'undefined') {
-      window.__events = new EventEmitter();
-    }
-  },
-
-  componentDidMount() {
-    // Some events (from iframes) might have been triggered before
-    // the EventEmitter was created — so emit events for queued items
-    // and then drain the queue
-    if (_.isArray(window.__eventsQueue)) {
-      window.__eventsQueue.filter(event => {
-        return _.isObject(event) && _.has(event, 'name');
-      }).forEach(event => {
-        const args = _.isArray(event.args) ? event.args : [];
-        window.__events.emit(event.name, ...args);
-      });
-      window.__eventsQueue.length = 0;
-    }
-    this.setState({
-      showingSettings: !(Prefs.hasBeenViewed() || isMobile()) && process.env.DEFAULT_USER_TYPE === 'internal'
-    });
-  },
-
-  componentWillReceiveProps(nextProps) {
-    // Store
-    shared.store = shared.store.set('url', nextProps.url);
-    // Nav
-    let nextNavItem = flattenNavItems(this.state.navItems).find(item => {
-      return item.get('path') === nextProps.url;
-    });
-    if (nextNavItem) {
-      this.onSelectNavItem(nextNavItem);
-    } else {
-      this.setState({
-        navItems: this.resetNavItems(this.state.navItems)
-      });
-    }
-  },
-
-  resetNavItems(navItems) {
-    eachNavItem(navItems, item => {
-      let keyPath = item.get('keyPath');
-      navItems = navItems.setIn(keyPath.push('isActive'), false);
-      navItems = navItems.setIn(keyPath.push('isSelected'), false);
-    });
-    return navItems;
-  },
-
-  onToggleNavItem(item) {
-    let isOpen = item.get('isOpen');
-    let isOpenKeyPath = item.get('keyPath').push('isOpen');
-    let { navItems } = this.state;
-    /*if (item.has('collapseSiblings')) {
-      let siblingsKeyPath = item.get('keyPath').butLast();
-      let siblings = navItems.getIn(siblingsKeyPath).map(sibling =>
-        sibling.set('isOpen', false)
-      );
-      navItems = navItems.setIn(siblingsKeyPath, siblings);
-    }*/
-    this.setState({
-      navItems: navItems.setIn(isOpenKeyPath, !isOpen)
-    });
-  },
-
-  onSelectNavItem(item) {
-    let keyPath = item.get('keyPath');
-    let navItems = this.resetNavItems(this.state.navItems);
-    // Active
-    navItems = navItems.setIn(keyPath.push('isActive'), true);
-    // Selected
-    while (keyPath.size > 0) {
-      // If the last key is a number, we have a nav item
-      if (_.isNumber(keyPath.last())) {
-        // If the nav item has children, open it
-        if (navItems.hasIn(keyPath.push('children'))) {
-          navItems = navItems.setIn(keyPath.push('isOpen'), true);
-        }
-        // Select the item
-        navItems = navItems.setIn(keyPath.push('isSelected'), true);
-      }
-      // Keep selecting/opening the ancestors
-      keyPath = keyPath.pop();
-    }
-    this.setState({
-      navItems
-    });
-  },
-
-  shouldShowToUserType(item) {
-    if (!item.has('internal')) return true;
-    let isExternal = this.state.isExternal;
-    let isInternal = !isExternal;
-    return _.some([
-      isExternal && !item.get('internal'),
-      isInternal && item.get('internal')
-    ]);
-  },
-
-  shouldShowToRole(item) {
-    if (!item.has('aura')) return true;
-    let hasRegular = this.hasPreference('role', 'regular');
-    let hasAura = this.hasPreference('role', 'aura');
-    return _.some([
-      hasRegular && !item.get('aura'),
-      hasAura && item.get('aura')
-    ]);
-  },
-
   shouldShowNavItem(item) {
-    return _.every([
-      this.shouldShowToRole(item),
-      this.shouldShowToUserType(item),
-      Status.shouldDisplay(this.state.status, item.get('status'))
-    ]);
+    return this.shouldShowNavItemToUserType(item);
   },
 
-  showSettings(e) {
-    e.preventDefault();
-    if (this.state.isExternal) {
-      return;
-    }
-    this.setState({showingSettings: true});
-  },
-
-  closeSettings() {
-    this.setState({showingSettings: false});
-    Prefs.storeViewed();
+  shouldShowNavItemToUserType(item) {
+    return !item.userType
+      ? true : item.userType === process.env.DEFAULT_USER_TYPE;
   },
 
   render() {
-    let {contentClassName} = this.props;
+    let { contentClassName } = this.props;
     if (contentClassName === false) {
       contentClassName = '';
     } else {
-      contentClassName = classNames(pf('site-content p-around--xx-large'), contentClassName);
+      contentClassName = classNames(
+        pf('site-content p-around--xx-large'),
+        contentClassName
+      );
     }
     return (
       <div>
-        { this.renderBanner() }
+        {this.renderBanner()}
         <main className={pf('site-main')} role="main">
-          { this.renderAnchor() }
-          { this.props.header }
-          <BodyContent role={this.state.role} className={contentClassName}>
+          {this.renderPrefBanner()}
+          {this.renderAnchor()}
+          {this.props.header}
+          <div className={contentClassName}>
             {this.props.children}
-          </BodyContent>
+          </div>
         </main>
-        { this.renderNav() }
-        { this.renderFooter() }
-        <Settings isOpen={this.state.showingSettings} onClose={this.closeSettings} />
+        {this.renderNav()}
+        {this.renderFooter()}
+      </div>
+    );
+  },
+
+  renderPrefBanner() {
+    if (process.env.DEFAULT_USER_TYPE === 'external') return;
+    const options = Object.keys(Status.states).map(s =>
+      <option value={Status.states[s]}>{Status.states[s]}</option>
+    );
+    return (
+      <div style={{height: '50px', backgroundColor: 'white'}}>
+        <select id="status-dropdown">{ options }</select>
       </div>
     );
   },
 
   renderAnchor() {
+    // TODO: get url from props
     if (this.props.anchor) return this.props.anchor;
     if (this.props.anchorTitle) {
-      return <Anchor title={this.props.anchorTitle} />;
+      return <Anchor title={this.props.anchorTitle} path={this.props.path} />;
     }
     return null;
   },
@@ -288,10 +132,10 @@ export default React.createClass({
       : null;
     return (
       <header className={internalClass} role="banner">
-        <Link to="/">
+        <a href="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
-        </Link>
+        </a>
         {badge}
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
@@ -312,99 +156,26 @@ export default React.createClass({
     );
   },
 
-  renderLink(item) {
-    let label = this.renderLinkLabel(item);
-    let handler = this.getNavItemHandler(item);
-    let renderAnchor = (props, content = label) =>
-      <a href="#" onClick={handler} {...props}>{content}</a>;
-    let renderLink = (props, content) =>
-      <Link onClick={handler} {...props}>{content}</Link>;
-    if (_.every(['url', 'path', 'hash'], key => !item.has(key))) {
-      return renderAnchor();
-    }
-    if (item.has('url')) {
-      return renderAnchor({
-        href: item.get('url')
-      });
-    }
-    if (item.has('hash')) {
-      return renderAnchor({
-        href: `${item.get('path')}#${item.get('hash')}`
-      });
-    }
-    let content = (
-      <span className={pf('media media--center')}>
-        <span className={pf('media__body')}>
-          {label}
-        </span>
-        {this.renderNavItemIcons(item)}
-      </span>
-    );
-    if (item.get('hasChildren')) {
-      if (item.get('hasChildrenAnchors')) {
-        return renderLink({ to: item.get('path') }, content);
-      }
-      return renderAnchor({}, content);
-    }
-    return renderLink({ to: item.get('path') }, content);
-  },
-
-  renderLinkLabel(item) {
-    if (item.get('abbrTitle')) {
-      return (
-        <abbr title={item.get('abbrTitle')}>
-          {item.get('label')}
-        </abbr>
-      );
-    }
-    return item.get('label');
-  },
-
-  getNavItemHandler(item) {
-    switch (item.get('id')) {
-    case 'settings':
-      return this.showSettings;
-    }
-    if (item.get('hasChildren')) {
-      // If hasChildrenAnchors is true, onToggleNavItem() won't preventDefault(),
-      // causing the page to change
-      // Othewise, it's just a normal toggle and we don't want to scroll
-      // to the top of the page
-      if (item.get('hasChildrenAnchors')) {
-        return event => {
-          window.scrollTo(0, 0);
-          this.onToggleNavItem(item);
-        };
-      }
-      return event => {
-        event.preventDefault();
-        this.onToggleNavItem(item);
-      };
-    }
-    return event => {
-      // Scroll to top after a page change
-      // This will be handled by React Router in the future
-      window.scrollTo(0, 0);
-    };
-  },
-
-  renderNavItems(items, level) {
-    level = level ? level : 0;
-    items = items.filter(this.shouldShowNavItem, this).map(item => {
-      let listItemClass = item.get('separator') ?
+  renderNavItems(items, level = 0) {
+    items = items.filter(item => this.shouldShowNavItem(item)).map(item => {
+      const listItemClass = item.separator ?
         'list__item has-divider--top-space' :
         'list__item';
-      let className = classNames(listItemClass, {
-        'is-open': item.get('isOpen'),
-        'is-selected': item.get('isSelected'),
-        'is-active': item.get('isActive'),
-        'is-closed': !item.get('isOpen') && item.get('hasChildren')
+      const className = classNames(listItemClass, {
+        'is-open': item.isOpen,
+        'is-selected': item.isSelected,
+        'is-active': item.isActive,
+        'is-closed': !item.isOpen && item.hasChildren
       });
+      const dataProps = {'data-slds-status': item.status};
+      if (item.hasChildren) {
+        dataProps['data-slds-nav-children'] = true;
+      }
       return (
-        <li className={pf(className)} key={item.get('id')}>
+        <li className={pf(className)} key={item.uid} {...dataProps}>
           {this.renderLink(item)}
-          {item.get('hasChildren') && item.get('isOpen')
-            ? this.renderNavItems(item.get('children'), level + 1)
+          {item.hasChildren
+            ? this.renderNavItems(item.children, level + 1)
             : null
           }
         </li>
@@ -415,14 +186,43 @@ export default React.createClass({
     });
     return (
       <ul className={pf(classnames)}>
-        {items.toArray()}
+        {items}
       </ul>
     );
   },
 
+  renderLink(item) {
+    let label = this.renderLinkLabel(item);
+    let renderAnchor = (props, content = label) =>
+      <a href="#" {...props}>{content}</a>;
+    if (_.every(['url', 'path', 'hash'], key => !item[key])) {
+      return renderAnchor();
+    }
+    if (item.url) return renderAnchor({ href: item.url });
+    let content = (
+      <span className={pf('media media--center')}>
+        <span className={pf('media__body')}>
+          {label}
+        </span>
+        {this.renderNavItemIcons(item)}
+      </span>
+    );
+    if (item.hasChildren) {
+      return renderAnchor({}, content);
+    }
+    return renderAnchor({ href: item.path }, content);
+  },
+
+  renderLinkLabel(item) {
+    let { label, abbrTitle } = item;
+    return abbrTitle
+      ? <abbr title={abbrTitle}>{label}</abbr>
+      : label;
+  },
+
   renderNavItemIcons(item) {
-    if (!item.get('hasChildren')) return null;
-    let direction = item.get('isOpen') ? 'down' : 'right';
+    if (!item.hasChildren) return null;
+    let direction = item.isOpen ? 'down' : 'right';
     return (
       <span className={pf('media__figure--reverse')}>
         <SvgIcon sprite="utility" symbol={direction} className={`icon icon__svg icon-utility-${direction} icon--small icon-text-default`} />
@@ -434,15 +234,18 @@ export default React.createClass({
     let versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
     if (version.travisJobNumber && version.travisJobNumber !== 'NOT_SET') {
       if (process.env.DEFAULT_USER_TYPE === 'external') {
-        // external travis build
         versionDateBuildString = `Version ${version.sldsVersion} (build ${version.travisJobNumber}). Last Updated on ${version.dateNow}.`;
       }
     }
-
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce</span>. <CTALink href="http://salesforce.com/company/legal/intellectual.jsp" ctaEventName="copyright">All rights reserved</CTALink>. {versionDateBuildString}
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span> 
+          <CTALink
+            href="http://salesforce.com/company/legal/intellectual.jsp"
+            eventType="copyright">
+            All rights reserved
+          </CTALink>. {versionDateBuildString}
         </p>
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>

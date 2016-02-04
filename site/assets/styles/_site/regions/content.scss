@@ -96,6 +96,10 @@
   }
 
   .site-states {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all $duration-promptly $duration-promptly;
 
     .#{$css-prefix}is-active {
       @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
@@ -107,11 +111,16 @@
           right: $spacing-x-small solid $color-background-shade;
           bottom: $spacing-x-small solid transparent;
         }
-        margin-left: ((($spacing-large * 2) + $spacing-x-small) * -1);
+        margin-left: ((($spacing-medium * 2) + $spacing-x-small) * -1);
       }
     }
   }
 
+  .#{$css-prefix}is-open .site-states {
+    max-height: 100vw;
+    overflow: visible;
+    opacity: 1;
+  }
 
   .site-main-content {
     padding: {
@@ -122,7 +131,7 @@
 }
 
 .site-states {
-  padding-left: $spacing-x-large;
+  padding-left: $spacing-medium;
 
   .#{$css-prefix}is-active a {
     color: $color-text-link-active;

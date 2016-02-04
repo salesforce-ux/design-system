@@ -16,10 +16,10 @@ classes:
     applied: <code>&lt;div&gt;</code>
     required: true
   -
+    class: card__body--inner
+    description: Add spacing around inner elements of a card (e.g. a tile)
+    applied: Any element
+  -
     class: card__footer
     description: Initializes card footer
     applied: <code>&lt;div&gt;</code>
-  -
-    class: card__inner
-    description: Add spacing around inner elements of a card (e.g. a tile)
-    applied: Any element

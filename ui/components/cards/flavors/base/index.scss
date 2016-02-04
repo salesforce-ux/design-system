@@ -18,34 +18,37 @@
 
   &__header,
   &__footer {
-    padding-left: $spacing-large;
-    padding-right: $spacing-large;
+    padding: $spacing-small $spacing-large;
   }
 
-  &__header {
-    padding-top: $spacing-large;
-    margin-bottom: $spacing-large;
-  }
-
-  &__body {
-    margin-top: $spacing-large;
-    margin-bottom: $spacing-medium;
+  // Option wrapper if something like tiles exist
+  &__body--inner {
+    padding: 0 $spacing-large;
   }
 
   &__footer {
     text-align: right;
-    margin-top: $spacing-medium;
-    padding-bottom: $spacing-medium;
   }
 
-  @include deprecate('3.0.0', 'Use .slds-card__inner instead.') {
-    .#{$css-prefix}tile {
-      margin: $spacing-small $spacing-large;
+  &--narrow {
+
+    .#{$css-prefix}card__header,
+    .#{$css-prefix}card__footer {
+      padding: $spacing-large;
     }
   }
 
-  &__inner {
-    margin: $spacing-small $spacing-large;
-  }
+  @include deprecate('3.0.0', 'Use spacing helpers instead.') {
+    .#{$css-prefix}tile {
+      margin: $spacing-small $spacing-large;
+    }
 
+    &__body--inner .#{$css-prefix}tile {
+      margin: {
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
 }

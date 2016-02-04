@@ -3,5 +3,5 @@ classBase: 'card'
 flavors:
   - base
   - with-filtering
-  - compact
+  - narrow
   - empty

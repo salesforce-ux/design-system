@@ -189,12 +189,6 @@ export default () => formatNavItem({
       abbrTitle: 'Frequently Asked Questions'
     },
     {
-      label: 'Settings',
-      settings: true,
-      separator: true,
-      userType: 'internal'
-    },
-    {
       label: 'Give Feedback',
       path: 'https://github.com/salesforce-ux/design-system/issues',
       userType: 'external'

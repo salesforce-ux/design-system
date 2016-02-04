@@ -82,9 +82,9 @@ const debounceTask = (task, wait = 10000) =>
  */
 const removeFromCache = (() => {
   const patterns = ['app_modules', 'site'].map(k =>
-    new RegExp(_.escapeRegExp(k)));
+    new RegExp(_.escapeRegExp(path.resolve(__dirname, k))));
   const shouldRemove = id =>
-      patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
+    patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
   return id => {
     const m = require.cache[id];
     if (m) {
@@ -106,6 +106,8 @@ const siteMiddleware = (req, res, next) => {
   const query = req.query || {};
   const ext = path.extname(req.url);
   if (!ext || ext === '.html' && !query.iframe) {
+    // Remov <PageBody> from cache
+    removeFromCache(require.resolve('app_modules/site/components/page/body'));
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
     // First, check for /components/*

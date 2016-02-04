@@ -179,6 +179,8 @@ let StateA = props =>
         <span className={pf('tabs--path__title')}>Closed</span>
       </Tab>
     </Tabsmain>
+    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    Mark Status as Complete</Action>
   </Path>;
 
 let StateB = props =>
@@ -476,27 +478,33 @@ let StateG = props =>
 
 export let states = [
   {
-    label: 'Default without Coaching',
+    id: 'without-coaching',
+    label: 'Without Coaching',
     element: <StateA />
   },
   {
-    label: 'Sales Path with Coaching Available',
+    id: 'with-coaching',
+    label: 'With Coaching Available',
     element: <StateB />
   },
   {
-    label: 'Sales Path with Current Stage Coaching Visible',
+    id: 'current-coaching',
+    label: 'Current Stage Coaching Visible',
     element: <StateD />
   },
   {
-    label: 'Sales Path with Other Stage Selected',
+    id: 'different-coaching',
+    label: 'With Different Stage Selected',
     element: <StateE />
   },
   {
-    label: 'Sales Path — Lost',
+    id: 'Lost',
+    label: 'Lost',
     element: <StateF />
   },
   {
-    label: 'Sales Path — Won',
+    id: 'Won',
+    label: 'Won',
     element: <StateG />
   }
 ];

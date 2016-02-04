@@ -18,9 +18,7 @@ import { execSync } from 'child_process';
 
 gdm.run();
 
-const ENV = {
-  DEFAULT_USER_TYPE: 'internal'
-};
+const ENV = {};
 
 const local = path.resolve.bind(path, process.cwd());
 
@@ -44,7 +42,10 @@ if (process.env.HEROKU_APP_NAME) {
     const release = _.find(config.releases, release =>
       semver.satisfies(packageJSON.version, release.semver));
     // Set the ENV (used for the banner)
-    ENV.INTERNAL_RELEASE_NAME = release.id;
+    if (release.mode !== 'external-release') {
+      ENV.DEFAULT_USER_TYPE = 'internal';
+      ENV.INTERNAL_RELEASE_NAME = release.id;
+    }
   } catch (err) {
     console.log(`Version "${packageJSON.version}" could not be mapped to a release`);
     console.log(err.stack);

@@ -35,7 +35,7 @@ export default React.createClass({
           path={`/${component.path}`} />
         <div className={pf('site-content p-around--xx-large grid wrap')}>
           {this.renderFlavorsNav()}
-          <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
+          <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>
             {this.renderIntro()}
             {this.renderFlavors()}
             <h3 className={pf('site-text-heading--large')}>Component Overview</h3>

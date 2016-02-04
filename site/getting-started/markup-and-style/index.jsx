@@ -33,7 +33,7 @@ export default (
     <h2 className="site-text-heading--large">BEM Naming</h2>
     <p><a href="https://en.bem.info/">BEM</a> is a well-known method of naming components — block, element, modifier. If you&rsquo;re comfortable with BEM, move down to the “Where we diverge from BEM” section. For those unfamiliar or who need a quick refresh, let&rsquo;s briefly look at how BEM works. As an example, we’ll build a house component.
     </p>
-    <img src={`/assets/images/red-house.jpg`} alt="red house with white door and gray steps" className={pf('float--left')} />
+    <img src={`/assets/images/house.png`} width="400" height="371" alt="gray house with pink door and gray steps" className={pf('float--left')} />
     <h3 className="site-text-heading--medium">Block</h3>
     <p>A block represents the main component name. If you were building a house component, the class name would be <code>.house</code>. All of the properties you want included for all houses would be included in the base <code>.house</code> class.
     </p>
@@ -43,8 +43,8 @@ export default (
     <p>Be careful to look for smaller component possibilities within a larger component. Especially if it&rsquo;s a pattern that might be repeated in an unrelated component. Avoid using a class like <code>.house__stair__step</code>. Instead, either use <code>.house__stair-step</code> (a single dash does not indicate anything in BEM and can simply be used for compound naming). Or if the stair portion of the component might be used inside another component, make the <code>.stair</code> a smaller component within the larger component and use <code>.stair__step</code> as an element of it.</p>
     <h3 className="site-text-heading--medium">Modifier</h3>
     <p>A modifier is a component or element variation and is separated by two dashes. The variation can apply to the overall component or it can be applied to an element within the component.</p>
-    <p>Since the properties that should apply to every house are placed on the main <code>.house</code> class, all houses receive the <code>.house</code> class as the base. If there is a variation of a house — perhaps it is red — the <code>.house--red</code> class would be added to the component in addition to the <code>.house</code> class.</p>
-    <p>If the house has a white door, a variation can be placed on the door element itself — <code>.house__door--white</code>.</p>
+    <p>Since the properties that should apply to every house are placed on the main <code>.house</code> class, all houses receive the <code>.house</code> class as the base. If there is a variation of a house — perhaps it is gray — the <code>.house--gray</code> class would be added to the component in addition to the <code>.house</code> class.</p>
+    <p>If the house has a pink door, a variation can be placed on the door element itself — <code>.house__door--pink</code>.</p>
     <h2 className="site-text-heading--large">Where we diverge from BEM</h2>
     <p>In some cases, for reasons of brevity and comprehension, we&rsquo;ve added to, or deviated from, typical BEM naming conventions. These changes are outlined below.
     </p>

@@ -64,7 +64,7 @@ class PickListItem extends React.Component {
     return (
       <li {...props} id={this.id} className={className} onFocus={this.itemFocused.bind(this)} onClick={this.itemSelected.bind(this)} onMouseDown={this.itemSelected.bind(this)} aria-selected={this.isSelected()} tabIndex={tabIndex} role="option">
         <span className={pf('truncate')}>
-          {this.children()};
+          {this.children()}
         </span>
       </li>
     );

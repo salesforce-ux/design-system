@@ -142,6 +142,7 @@ export const wrapExample = (flavor, html) => `
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${flavor.title}</title>
   <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
+  <link type="text/css" rel="stylesheet" href="/assets/styles/demo.css" />
   <style>
     body { padding: ${ForceBase.spacingMedium}; }
   </style>

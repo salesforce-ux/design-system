@@ -498,12 +498,12 @@ export let states = [
     element: <StateE />
   },
   {
-    id: 'Lost',
+    id: 'lost',
     label: 'Lost',
     element: <StateF />
   },
   {
-    id: 'Won',
+    id: 'won',
     label: 'Won',
     element: <StateG />
   }

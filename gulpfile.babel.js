@@ -82,9 +82,9 @@ const debounceTask = (task, wait = 10000) =>
  */
 const removeFromCache = (() => {
   const patterns = ['app_modules', 'site'].map(k =>
-    new RegExp(_.escapeRegExp(k)));
+    new RegExp(_.escapeRegExp(path.resolve(__dirname, k))));
   const shouldRemove = id =>
-      patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
+    patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
   return id => {
     const m = require.cache[id];
     if (m) {

@@ -120,7 +120,7 @@ classes:
     description: Allows columns to stretch and fill 100% of the parent&rsquo;s width and height when viewport width is wider than 1024px.
     applied: <code>.{{cssPrefix}}grid</code>
   -
-    class: col-rule--right
+    class: col--rule-right
     description: Adds border to right side of column
     applied: <code>.{{cssPrefix}}col</code>
   -

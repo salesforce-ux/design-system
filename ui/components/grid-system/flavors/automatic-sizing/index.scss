@@ -113,19 +113,19 @@
 
   @include mq-large-min {
 
-    &--top {
+    &-top {
       border-top: 1px solid $color-border-separator;
     }
 
-    &--right {
+    &-right {
       border-right: 1px solid $color-border-separator;
     }
 
-    &--bottom {
+    &-bottom {
       border-bottom: 1px solid $color-border-separator;
     }
 
-    &--left {
+    &-left {
       border-left: 1px solid $color-border-separator;
     }
   }

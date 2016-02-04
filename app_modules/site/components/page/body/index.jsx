@@ -87,8 +87,8 @@ export default React.createClass({
     return (
       <div>
         {this.renderBanner()}
-        <main className={pf('site-main')} role="main">
-          {this.renderPrefBanner()}
+        <main className="site-main" role="main">
+          {this.renderInternalBanner()}
           {this.renderAnchor()}
           {this.props.header}
           <div className={contentClassName}>
@@ -101,20 +101,26 @@ export default React.createClass({
     );
   },
 
-  renderPrefBanner() {
+  renderInternalBanner() {
     if (process.env.DEFAULT_USER_TYPE === 'external') return;
     const options = Object.keys(Status.states).map(s =>
       <option value={Status.states[s]}>{Status.states[s]}</option>
     );
     return (
-      <div style={{height: '50px', backgroundColor: 'white'}}>
-        <select id="status-dropdown">{ options }</select>
+      <div className={pf('site-banner-badge grid')}>
+        <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
+        <div className={pf('select_container col--bump-left align-middle')}>
+          <select
+            id="status-dropdown"
+            className={pf('select')}>
+            {options}
+          </select>
+        </div>
       </div>
     );
   },
 
   renderAnchor() {
-    // TODO: get url from props
     if (this.props.anchor) return this.props.anchor;
     if (this.props.anchorTitle) {
       return <Anchor title={this.props.anchorTitle} path={this.props.path} />;
@@ -122,21 +128,13 @@ export default React.createClass({
     return null;
   },
 
-  renderBanner(banner) {
-    let isInternal = process.env.DEFAULT_USER_TYPE === 'internal';
-    let internalClass = classNames('site-banner', {
-      'site-banner--internal': isInternal
-    });
-    let badge = isInternal
-      ? <div className={pf('site-banner-badge')}>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</div>
-      : null;
+  renderBanner() {
     return (
-      <header className={internalClass} role="banner">
+      <header className="site-banner" role="banner">
         <a href="/">
           <span className={pf('site-logo')}>Salesforce</span>
           Design System
         </a>
-        {badge}
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
         </div>
@@ -144,13 +142,9 @@ export default React.createClass({
     );
   },
 
-  renderNav(nav) {
-    let isInternal = process.env.DEFAULT_USER_TYPE === 'internal';
-    let internalClass = classNames('site-navigation', {
-      'site-navigation--internal': isInternal
-    });
+  renderNav() {
     return (
-      <nav id="navigation" className={internalClass} role="navigation">
+      <nav id="navigation" className="site-navigation" role="navigation">
         {this.renderNavItems(this.state.navItems)}
       </nav>
     );
@@ -240,7 +234,7 @@ export default React.createClass({
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span> 
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span>
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
             eventType="copyright">

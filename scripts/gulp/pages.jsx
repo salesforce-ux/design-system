@@ -134,7 +134,9 @@ export const renderExample = element => {
  * @returns {string}
  */
 export const wrapExample = (flavor, html) => `
-  <!doctype html>
+<!DOCTYPE html>
+<html lang="en>
+<head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -143,38 +145,44 @@ export const wrapExample = (flavor, html) => `
   <style>
     body { padding: ${ForceBase.spacingMedium}; }
   </style>
-  <div id="preview">${html}</div>
-  <script>
-    (function() {
-      function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
-      if (!iframe()) return;
-      // Add a queue that will be drained by the parent
-      parent.window.__eventQueue = parent.window.__eventQueue || [];
-      // Update the markup
-      parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewMarkup',
-        data: {
-          flavor: '${flavor.uid}',
-          html: document.getElementById('preview').innerHTML
-        }
-      });
-      // Adjust the height of the iframe
-      var $frame = parent.document.getElementById('iframe-${flavor.uid}');
-      var frameHeight = document.body.getBoundingClientRect().height;
-      parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewHeight',
-        data: {
-          flavor: '${flavor.uid}',
-          height: frameHeight
-        }
-      });
-      // Fix SVG
-      parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewSVG',
-        data: document
-      });
-    })();
-  </script>`;
+</head>
+<body>
+<div id="preview">
+${html}
+</div>
+<script>
+  (function() {
+    function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
+    if (!iframe()) return;
+    // Add a queue that will be drained by the parent
+    parent.window.__eventQueue = parent.window.__eventQueue || [];
+    // Update the markup
+    parent.__eventQueue.push({
+      name: 'component:iframe:updatePreviewMarkup',
+      data: {
+        flavor: '${flavor.uid}',
+        html: document.getElementById('preview').innerHTML
+      }
+    });
+    // Adjust the height of the iframe
+    var $frame = parent.document.getElementById('iframe-${flavor.uid}');
+    var frameHeight = document.body.getBoundingClientRect().height;
+    parent.__eventQueue.push({
+      name: 'component:iframe:updatePreviewHeight',
+      data: {
+        flavor: '${flavor.uid}',
+        height: frameHeight
+      }
+    });
+    // Fix SVG
+    parent.__eventQueue.push({
+      name: 'component:iframe:updatePreviewSVG',
+      data: document
+    });
+  })();
+</script>
+</body>
+</html>`.trim();
 
 /**
  * Return the example element for the current flavor

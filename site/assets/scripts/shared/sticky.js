@@ -120,7 +120,7 @@ class Sticky {
 export default () => ({
   hooks: {
     listen_dom: delegate => {
-      $('[data-slds-sticky').forEach(node => new Sticky(node));
+      $('[data-slds-sticky]').forEach(node => new Sticky(node));
     }
   }
 });

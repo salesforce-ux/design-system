@@ -95,14 +95,17 @@ let StateC = props =>
 
 export let states = [
   {
+    id: 'checkbox-alt',
     label: 'Default',
     element: <StateA />
   },
   {
+    id: 'checkbox-alt-has-error',
     label: 'Checkbox group has error',
     element: <StateB />
   },
   {
+    id: 'checkbox-alt-disabled',
     label: 'Disabled checkbox group',
     element: <StateC />
   }

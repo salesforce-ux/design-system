@@ -1,0 +1,12 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
+classes:
+  -
+    class: navigation-list--vertical
+    description: Initializes Vertical Navigation
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: navigation-list--vertical__action
+    description: Hyperlink inside navigation's list items
+    required: true
+    applied: <code>&lt;a&gt;</code>

@@ -7,65 +7,30 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-example--tabs .#{$css-prefix}tabs--default__nav {
-  border-bottom: 0;
-}
+.#{$css-prefix}navigation-list--vertical {
 
-.site-example--content {
-    border: 1px solid $color-border;
-}
+  &__action {
+    border-left: $spacing-xx-small solid transparent;
 
-.site-bleed {
-  margin: 0 #{-$spacing-medium};
-  max-width: initial;
-}
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: $color-background-row-hover;
+    }
 
-iframe {
-  border: 0;
-  width: 100%;
-
-  &[data-form-factor="mobile"] {
-    width: 30rem;
-  }
-
-  &[data-form-factor="tablet"] {
-    width: 48rem;
-  }
-
-  &[data-form-factor="desktop"] {
-    min-width: 64rem;
-  }
-}
-
-.token.utility-class {
-  background-color: $color-background-definition-highlight;
-  border-bottom: $border-width-thick dotted $color-text-warning;
-  text-decoration: none;
-  font-style: normal;
-}
-
-.badge {
-
-  &--deprecated {
-    background: $color-background-error;
-    color: $color-text-inverse;
-  }
-
-  &--prototype {
-    background: $site-color-text-heading-callout;
-    color: $color-text-inverse;
-
-    &:after {
-      content: ': In Progress';
+    &:active {
+      background-color: $color-background-row-active;
     }
   }
 
-  &--dev-ready {
-    background: $color-background-success;
-    color: $color-text-inverse;
+  .#{$css-prefix}is-active .#{$css-prefix}navigation-list--vertical__action {
+    background-color: $color-background-row-selected;
+    border-left-color: $color-background-button-brand-hover;
+    color: $color-text-link;
 
-    &:after {
-      content: ': Stable';
+    &:focus {
+      border-left-width: $spacing-x-small;
+      color: $color-text-link-focus;
     }
   }
 }

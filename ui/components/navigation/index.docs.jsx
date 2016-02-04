@@ -10,45 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
-    </a>
-  </div>
+export const intro = (
+  <p className="site-text-introduction">
+    Navigation represents a list of links that either take the user to another page or parts of the page the user is in.
+  </p>
 );
 
 export default (
-  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
-    </div>
-    <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
-    </div>
-    <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-      <li className={pf('list__item')}>
-        <a href="javascript:void(0)" title="Like this item">Like</a>
-      </li>
-      <li className={pf('list__item')}>
-        13 Likes
-      </li>
-    </ul>
-  </MediaObject>
+  <ComponentDocs>
+
+  </ComponentDocs>
 );

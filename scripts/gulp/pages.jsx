@@ -17,6 +17,7 @@ import gulp from 'gulp';
 import gulpIgnore from 'gulp-ignore';
 import gulpRename from 'gulp-rename';
 import gutil from 'gulp-util';
+import invariant from 'invariant';
 import path from 'path';
 import beautify from 'js-beautify';
 import React from 'react';
@@ -270,9 +271,14 @@ export const gulpRenderComponentPage = () =>
           // First, check if the example has states
           if (flavor.example.states) {
             // Push a new file for each state
-            flavor.example.states.forEach(state => {
+            flavor.example.states.forEach((state, index) => {
               const element = getExampleElement(flavor.example, { state });
-              state.id = state.id || _.kebabCase(state.label);
+              ['id', 'label'].forEach(key => {
+                invariant(
+                  _.isString(state[key]),
+                  `state ${index} of "${flavor.uid}" is missing property "${key}"`
+                );
+              });
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(

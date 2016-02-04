@@ -89,8 +89,7 @@ class ComponentFlavor extends React.Component {
     });
     this.state = {
       previewTabs,
-      // Only set an active tab if there are more than 1
-      previewTabActive: previewTabs.length > 1
+      previewTabActive: previewTabs.length
         // If there is a default specified, use that
         ? (flavor.showFormFactorsDefault
           ? _.find(previewTabs, { formFactor: flavor.showFormFactorsDefault })

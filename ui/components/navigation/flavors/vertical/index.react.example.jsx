@@ -48,7 +48,7 @@ let Item = props =>
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let StateA = props =>
+export default (
   <Demo>
     <Navigation>
       <SectionTitle id="entity-header">Reports</SectionTitle>
@@ -66,15 +66,9 @@ let StateA = props =>
         <Item id="folder-header">All Reports</Item>
       </List>
     </Navigation>
-  </Demo>;
+  </Demo>
+);
 
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
-
-export let states = [
-  {
-    label: 'Default',
-    element: <StateA />
-  }
-];

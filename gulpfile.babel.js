@@ -106,6 +106,8 @@ const siteMiddleware = (req, res, next) => {
   const query = req.query || {};
   const ext = path.extname(req.url);
   if (!ext || ext === '.html' && !query.iframe) {
+    // Remov <PageBody> from cache
+    removeFromCache(require.resolve('app_modules/site/components/page/body'));
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
     // First, check for /components/*

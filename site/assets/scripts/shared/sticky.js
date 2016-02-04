@@ -54,9 +54,6 @@ class Sticky {
   calculate() {
     fastdom.measure(() => {
       this.refs.content.style.width = '';
-      // Calculate any padding on the top of the page (banners, etc)
-      const page = document.querySelector('main.site-main');
-      const pagePadding = this.getPaddingTop(page);
       // Content
       const content = this.refs.content;
       const contentRect = content.getBoundingClientRect();
@@ -68,8 +65,8 @@ class Sticky {
       }, 0);
       this.setState({
         contentRect,
-        contentTop: pagePadding + contentPadding + fixedOffset,
-        scrollOffset: contentRect.top + window.pageYOffset - pagePadding - fixedOffset
+        contentTop: contentPadding + fixedOffset,
+        scrollOffset: contentRect.top + window.pageYOffset - fixedOffset - contentPadding
       });
     });
   }

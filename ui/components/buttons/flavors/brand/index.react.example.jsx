@@ -23,8 +23,5 @@ export default (
     <Button flavor="brand" disabled="true">
       Disabled
     </Button>
-    <Button flavor="brand,small">
-      Button Small
-    </Button>
   </div>
 );

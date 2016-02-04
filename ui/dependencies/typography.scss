@@ -27,10 +27,14 @@
 }
 
 
-@mixin text-heading--label {
+@mixin text-heading--label-normal {
   font-size: $font-size-small;
   line-height: $line-height-heading;
-  text-transform: uppercase;
   letter-spacing: 0.0625em;
   color: $color-text-weak;
+}
+
+@mixin text-heading--label {
+  @include text-heading--label-normal;
+  text-transform: uppercase;
 }

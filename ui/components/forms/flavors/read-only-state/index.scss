@@ -10,6 +10,12 @@
 
 .#{$css-prefix}form-element__static {
   display: inline-block;
-  line-height: $line-height-button;
-  min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
+  line-height: $line-height-button-small;
+  min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); /* Note: for IE */
+
+  // If read only state is longform
+  // Apply text line height
+  &.#{$css-prefix}text-longform {
+    line-height: $line-height-text;
+  }
 }

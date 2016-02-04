@@ -12,107 +12,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
-import {reduce, throttle} from 'lodash';
 
-class Sticky extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isFixed: false
-    };
-  }
-  componentDidMount() {
-    this.calculate();
-    this.onResize = throttle(this.onResize, 1000).bind(this);
-    this.onScroll = this.onScroll.bind(this);
-    window.addEventListener('resize', this.onResize, false);
-    window.addEventListener('scroll', this.onScroll, false);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
-    window.removeEventListener('scroll', this.onScroll);
-  }
-  calculate() {
-    this.refs.content.style.width = '';
-    // Calculate any padding on the top of the page (banners, etc)
-    const page = document.querySelector('main.site-main');
-    const pagePadding = this.getPaddingTop(page);
-    // Content
-    const content = this.refs.content;
-    const contentRect = content.getBoundingClientRect();
-    const contentPadding = this.getPaddingTop(content);
-    // Calculate the extra offset added by any other fixed elements above this one
-    const fixedElements = this.props.fixedElements
-      ? document.querySelectorAll(this.props.fixedElements)
-      : [];
-    const fixedOffset = reduce(fixedElements, (offset, el) => {
-      return offset + el.getBoundingClientRect().height;
-    }, 0);
-    this.setState({
-      contentRect,
-      contentTop: pagePadding + contentPadding + fixedOffset,
-      scrollOffset: contentRect.top + window.pageYOffset - pagePadding - fixedOffset
-    });
-  }
-  getPaddingTop(element) {
-    return parseFloat(window.getComputedStyle(element)['padding-top'], 10) || 0;
-  }
-  onResize() {
-    this.calculate();
-  }
-  onScroll() {
-    // The page has scrolled past the top of the nav
-    // Attempt to stick it to the top
-    if (window.pageYOffset > this.state.scrollOffset) {
-      // It only needs to be adjusted once
-      if (!this.state.isFixed) {
-        this.setState({
-          isFixed: true
-        });
-      }
-    }
-    // The page has scrolled up past the original top of the nav
-    // Attemp to unstick it
-    else {
-      if (this.state.isFixed) {
-        this.setState({
-          isFixed: false
-        });
-      }
-    }
-  }
+export default React.createClass({
+  propTypes: {
+    fixedElements: React.PropTypes.string
+  },
   render() {
-    const {isFixed, contentRect, contentTop} = this.state;
-    let content = React.Children.only(this.props.children);
-    const className = classNames(content.props.className, {
+    const content = React.Children.only(this.props.children);
+    const contentClassName = classNames(content.props.className, {
       'sticky': true,
-      'sticky--fixed': isFixed
-    });
-    const style = {
-      top: contentTop ? `${contentTop}px` : '',
-      width: contentRect ? `${contentRect.width}px` : ''
-    };
-    const placeholderClassName = classNames({
-      'sticky__placeholder': true,
-      'sticky__placeholder--on': isFixed
-    });
-    const placeholderStyle = {
-      height: contentRect ? `${contentRect.height}px` : ''
-    };
-    content = React.cloneElement(content, {
-      style, className, ref: 'content'
     });
     return (
-      <div className={this.props.className}>
-        {content}
-        <div className={placeholderClassName} style={placeholderStyle} ref="placeholder" />
+      <div className={this.props.className} data-slds-sticky>
+        {React.cloneElement(content, {
+          contentClassName,
+          'data-slds-sticky-content': true,
+          'data-slds-sticky-fixed-elements': this.props.fixedElements
+        })}
+        <div
+          className={'sticky__placeholder'}
+          data-slds-sticky-placeholder />
       </div>
     );
   }
-}
-
-Sticky.propTypes = {
-  fixedElements: React.PropTypes.string
-};
-
-export default Sticky;
+});

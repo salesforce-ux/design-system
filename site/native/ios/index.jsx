@@ -15,7 +15,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import CTALink from 'app_modules/site/components/cta-link';
 import g from 'app_modules/global';
 
 export default (

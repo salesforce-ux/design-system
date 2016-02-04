@@ -28,7 +28,9 @@ classes:
   -
     class: input--small
     description: Applies styles for a smaller text input
+    deprecated: true
     applied: <code>.{{cssPrefix}}input</code>
+    notes: Removed in version 2.0.0
   -
     class: input--bare
     description: Removes background and border from text input
@@ -73,6 +75,14 @@ classes:
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
   -
+    class: checkbox--button-group
+    description: Container for a group of checkbox that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: checkbox--button
+    description: Customizes your checkbox to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+  -
     class: radio
     description: Initializes radio button
     required: true
@@ -111,4 +121,5 @@ classes:
     class: form--compound--horizontal
     description: Layout modifier for compound forms
     applied: <code>.{{cssPrefix}}form--compound</code>
-    notes: Positions form labels to the left of the form control
+    deprecated: true
+    notes: Use <code>.{{cssPrefix}}form--horizontal</code> instead, sizing of fields will become 100% of parent width

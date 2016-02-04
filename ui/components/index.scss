@@ -46,7 +46,6 @@
 
   // Card
   'cards/flavors/base/index',
-  'cards/flavors/empty/index',
 
   // Forms
   'forms/flavors/form-element/index',
@@ -55,6 +54,7 @@
   'forms/flavors/radio/index',
   'forms/flavors/checkbox/index',
   'forms/flavors/select/index',
+  'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
@@ -65,22 +65,19 @@
   'forms/flavors/edit-dialog-for-touch/index',
 
   // Grid
-  "grid-system/flavors/automatic-sizing/index",
-  "grid-system/flavors/manual-sizing/index",
-  "grid-system/flavors/horizontal-alignment-center/index",
-  "grid-system/flavors/horizontal-alignment-space/index",
-  "grid-system/flavors/horizontal-alignment-spread/index",
-  "grid-system/flavors/horizontal-alignment-end/index",
-  "grid-system/flavors/vertical-alignment-center/index",
-  "grid-system/flavors/vertical-alignment-end/index",
-  "grid-system/flavors/vertical-alignment-item/index",
-  "grid-system/flavors/vertical-stretch/index",
-  "grid-system/flavors/alignment-item-bump/index",
-  "grid-system/flavors/alignment-item-center/index",
-  "grid-system/flavors/container-frame/index",
-  "grid-system/flavors/containers/index",
-  "grid-system/flavors/order/index",
-  "grid-system/flavors/overflow/index",
+  'grid-system/flavors/automatic-sizing/index',
+  'grid-system/flavors/horizontal-alignment-center/index',
+  'grid-system/flavors/horizontal-alignment-space/index',
+  'grid-system/flavors/horizontal-alignment-spread/index',
+  'grid-system/flavors/horizontal-alignment-end/index',
+  'grid-system/flavors/vertical-alignment-center/index',
+  'grid-system/flavors/vertical-alignment-end/index',
+  'grid-system/flavors/vertical-alignment-item/index',
+  'grid-system/flavors/vertical-stretch/index',
+  'grid-system/flavors/alignment-item-bump/index',
+  'grid-system/flavors/container-frame/index',
+  'grid-system/flavors/containers/index',
+  'grid-system/flavors/overflow/index',
 
   // Tooltip
   'tooltips/flavors/base/index',
@@ -97,17 +94,12 @@
 
   // Menus
   'menus/flavors/dropdown/index',
-  'menus/flavors/dropdown-with-icons/index',
-  'menus/flavors/dropdown-positioning/index',
   'menus/flavors/picklist/index',
   'menus/flavors/action-overflow/index',
   'menus/flavors/action-overflow-for-touch/index',
-  'menus/flavors/search-overflow/index',
 
   // Datepicker
   'datepickers/flavors/base/index',
-  'datepickers/flavors/single-select/index',
-  'datepickers/flavors/multi-select/index',
   'datepickers/flavors/time/index',
 
   // Docked Composer
@@ -141,6 +133,7 @@
 
   // Process
   'process/flavors/wizard/index',
+  'process/flavors/sales-path-coach/index',
 
   // Product Selector
   'product-selector/flavors/base/index',
@@ -154,11 +147,7 @@
 
   // Title
   'tiles/flavors/base/index',
-  'tiles/flavors/with-icon/index',
-  'tiles/flavors/with-actions/index',
-  'tiles/flavors/with-badge/index',
   'tiles/flavors/board/index',
-  'tiles/flavors/generic/index',
   'tiles/flavors/author/index',
 
   // Tree
@@ -169,12 +158,12 @@
   'tabs/flavors/default/index',
   'tabs/flavors/overflow/index',
   'tabs/flavors/scoped/index',
-  'tabs/flavors/sales-path/index',
+
+  // Navigation
+  'navigation/flavors/vertical/index',
 
   // Notifications -- Toasts & Alerts
   'notifications/flavors/base/index',
-  'notifications/flavors/alert/index',
-  'notifications/flavors/toast/index',
   'notifications/flavors/prompt/index',
   'notifications/flavors/prompt-for-touch/index',
   'notifications/flavors/modal-toast/index',
@@ -183,7 +172,6 @@
   'lookups/flavors/base/index',
   'lookups/flavors/single-select/index',
   'lookups/flavors/multi-select/index',
-  'lookups/flavors/single-scope/index',
   'lookups/flavors/multi-scope/index',
   'lookups/flavors/advanced-modal/index',
 
@@ -199,6 +187,9 @@
 
   // Badges
   'badges/flavors/base/index',
+
+  // Context bar
+  'context-bar/flavors/default/index',
 
   // Tables
   'data-tables/flavors/base/index',

@@ -3,6 +3,7 @@ flavors:
   - textarea
   - radio
   - checkbox
+  - checkbox-alternate
   - select
   - multi-select
   - horizontal-form
@@ -11,7 +12,6 @@ flavors:
   - compound-form
   - read-only-state
   - validation-state
-  - sizing
   - field-level-help
   - inline-level-help
   - edit-dialog-for-touch

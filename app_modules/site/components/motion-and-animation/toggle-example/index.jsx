@@ -11,79 +11,50 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { logCTAEvent } from 'app_modules/site/util/analytics';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const TIMING_MAP_SECS = {
-  'instantly': 0,
-  'quickly': 0.1,
-  'promptly': 0.2,
-  'slowly': 0.4,
-  'paused': 3.2
-};
-const TIMING_MAP_FRAMES = {
-  'instantly': 0,
-  'quickly': 6,
-  'promptly': 12,
-  'slowly': 24,
-  'paused': 192
-};
+export default React.createClass({
 
-class ToggleExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {isOn: false};
-  }
+  displayName: 'ToggleExample',
 
-  onClick(e) {
-    e.stopPropagation();
-
-    const {toggle, title} = this.props;
-
-    if (this._isAnimating) return;
-
-    if (toggle) {
-      this._isAnimating = true;
-      this.setState({ isOn: !this.state.isOn });
-      setTimeout(() => {
-        this._isAnimating = null;
-      }, TIMING_MAP_SECS.promptly * 1000);
-    } else {
-      this._isAnimating = true;
-      this.setState({ isOn: true });
-      setTimeout(() => {
-        this.setState({ isOn: false });
-      }, TIMING_MAP_SECS.promptly * 1000);
-      setTimeout(() => {
-        this._isAnimating = null;
-      }, TIMING_MAP_SECS.promptly * 1000 * 2);
-    }
-  }
+  propTypes: {
+    which: React.PropTypes.string,
+    toggle: React.PropTypes.bool,
+    title: React.PropTypes.string,
+    description: React.PropTypes.string
+  },
 
   render() {
-    const {which, title, description} = this.props;
+    const { which, title, description } = this.props;
     const className = classNames('site-example-tile__object', {
-      [`${which}-example`]: which,
-      [`${which}-example--on`]: this.state.isOn === true
+      [`${which}-example`]: which
     });
-
-    return <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-3 m-bottom--xx-large')}>
-      <div className={pf('site-example-tile__frame text-align--center')} onClick={this.onClick.bind(this)}>
-        <div className={className}>
-          <span>Abc</span>
+    const state = JSON.stringify({
+      which: this.props.which,
+      toggle: this.props.toggle,
+      isAnimating: false,
+      isOn: false
+    });
+    return (
+      <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-3 m-bottom--xx-large')}>
+        <div
+          className={pf('site-example-tile__frame text-align--center')}
+          data-slds-motion-toggle-example={state}>
+          <div
+            className={className}
+            data-slds-motion-toggle-example-target>
+            <span>Abc</span>
+          </div>
+          <div className="site-example-tile__title">
+            {title}
+          </div>
+          <hr className={pf('hr hr--dark-blue')} />
+          <div className="site-example-tile__description">
+            {description}
+          </div>
         </div>
-        <div className="site-example-tile__title">{title}</div>
-        <hr className={pf('hr hr--dark-blue')} />
-        <div className="site-example-tile__description">{description}</div>
-      </div>
-    </li>;
+      </li>
+    );
   }
-}
-ToggleExample.displayName = 'ToggleExample';
-ToggleExample.propTypes = {
-  which: React.PropTypes.string,
-  title: React.PropTypes.string,
-  description: React.PropTypes.string
-};
 
-export default ToggleExample;
+});

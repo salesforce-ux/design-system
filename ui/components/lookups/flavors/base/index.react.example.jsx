@@ -24,14 +24,14 @@ export default (
     <div className={pf('form-element')}>
       <label className={pf('form-element__label')} htmlFor="lookup">Accounts</label>
       <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
-        <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
       </div>
     </div>
     <div className={pf('lookup__menu')} role="listbox">
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="search" />
+          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="search" />
           "ac" in Accounts
         </button>
       </div>
@@ -75,7 +75,7 @@ export default (
       </ul>
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="add" />
+          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="add" />
           Add Account
         </button>
       </div>

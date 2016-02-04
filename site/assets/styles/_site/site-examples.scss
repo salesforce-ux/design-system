@@ -7,10 +7,6 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-example--tabs-initial-view [class*='__item'].#{$css-prefix}active > a {
-  @include tab-focus;
-}
-
 .site-example--tabs .#{$css-prefix}tabs--default__nav {
   border-bottom: 0;
 }
@@ -21,41 +17,7 @@
 
 .site-bleed {
   margin: 0 #{-$spacing-medium};
-}
-
-.site-states {
-
-  a {
-    cursor: pointer;
-  }
-
-  .is-active {
-    @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
-    position: relative;
-
-    &:before {
-      border: {
-        right: $spacing-x-small solid $color-background-shade;
-        bottom: $spacing-x-small solid transparent;
-      }
-      margin-left: ($spacing-x-small * -1);
-
-      @include mq-large-min {
-        margin-left: ($spacing-x-large * -1);
-      }
-    }
-  }
-
-  @include mq-large-min {
-    padding-left: $spacing-x-large;
-    border-left: $border-width-thin solid $color-border;
-  }
-
-  ~ .site-component-example {
-    @include mq-large-min {
-      padding-right: $spacing-xx-large;
-    }
-  }
+  max-width: initial;
 }
 
 iframe {

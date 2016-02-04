@@ -46,7 +46,7 @@ export default () => ({
     listen_dom: delegate => {
       const sections = $('[data-slds-icons-section]').map(node => ({
         node,
-        icons: $(['[data-slds-icon]'], node)
+        icons: $('[data-slds-icon]', node)
       }));
       delegate('input', '#find-icon-input',
         handleInputChange.bind(null, sections));

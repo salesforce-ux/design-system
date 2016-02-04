@@ -109,7 +109,7 @@ export default React.createClass({
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
-        <div className={pf('select-container col--bump-left align-middle')}>
+        <div className={pf('select_container col--bump-left align-middle')}>
           <select
             id="status-dropdown"
             className={pf('select')}>
@@ -234,7 +234,7 @@ export default React.createClass({
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span> 
+          Copyright &copy; 2015 <span className={pf('site-name')}>Sales<i>f</i>orce. </span>
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
             eventType="copyright">

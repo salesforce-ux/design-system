@@ -134,16 +134,22 @@ export const renderExample = element => {
  * @returns {string}
  */
 export const wrapExample = (flavor, html) => `
-<!doctype html>
-<meta charset="utf-8" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${flavor.title}</title>
-<link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
-<style>
-  body { padding: ${ForceBase.spacingMedium}; }
-</style>
-<div id="preview">${html}</div>
+<!DOCTYPE html>
+<html lang="en>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${flavor.title}</title>
+  <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
+  <style>
+    body { padding: ${ForceBase.spacingMedium}; }
+  </style>
+</head>
+<body>
+<div id="preview">
+${html}
+</div>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -174,7 +180,9 @@ export const wrapExample = (flavor, html) => `
       data: document
     });
   })();
-</script>`.trim();
+</script>
+</body>
+</html>`.trim();
 
 /**
  * Return the example element for the current flavor

@@ -158,13 +158,15 @@ ${html}
     // Add a queue that will be drained by the parent
     parent.window.__eventQueue = parent.window.__eventQueue || [];
     // Update the markup
-    parent.__eventQueue.push({
-      name: 'component:iframe:updatePreviewMarkup',
-      data: {
-        flavor: '${flavor.uid}',
-        html: document.getElementById('preview').innerHTML
-      }
-    });
+    if (!/initial/.test(window.location.search)) {
+      parent.__eventQueue.push({
+        name: 'component:iframe:updatePreviewMarkup',
+        data: {
+          flavor: '${flavor.uid}',
+          html: document.getElementById('preview').innerHTML
+        }
+      });
+    }
     // Adjust the height of the iframe
     var $frame = parent.document.getElementById('iframe-${flavor.uid}');
     var frameHeight = document.body.getBoundingClientRect().height;

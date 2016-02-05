@@ -44,8 +44,6 @@ const highlight = (() => {
  * @param {string} code
  */
 const updateComponentPreviewMarkup = ({ flavor, html }) => {
-  // TODO: Ignore this on first load since it was already
-  // rendered by the server
   fastdom.mutate(() => {
     document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
     updateScrollSpy();

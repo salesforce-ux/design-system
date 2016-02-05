@@ -153,7 +153,7 @@ class ComponentFlavor extends React.Component {
     const src = previewState ? previewState.id : 'default';
     const iframe = (
       <iframe
-        src={`/${flavor.path}/_${src}.html?iframe`}
+        src={`/${flavor.path}/_${src}.html?iframe&initial`}
         height="100%"
         id={`iframe-${flavor.uid}`}
         name={flavor.uid}

@@ -61,4 +61,4 @@ class ModalExample extends React.Component {
   }
 }
 
-module.exports = <ModalExample/>;
+export default <ModalExample/>;

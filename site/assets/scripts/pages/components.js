@@ -26,6 +26,7 @@ const highlight = (() => {
   const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
   const cache = {};
   return html => {
+    html = html.trim();
     let cached = cache[html];
     if (cached) return cached;
     cached = cache[html] = Prism.highlight(
@@ -43,8 +44,6 @@ const highlight = (() => {
  * @param {string} code
  */
 const updateComponentPreviewMarkup = ({ flavor, html }) => {
-  // TODO: Ignore this on first load since it was already
-  // rendered by the server
   fastdom.mutate(() => {
     document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
     updateScrollSpy();

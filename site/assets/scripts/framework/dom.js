@@ -67,5 +67,7 @@ export const closest = (node, selector) => {
  * @param {Node} node
  * @param {boolean} hide
  */
-export const hide = (node, hide) =>
+export const hide = (node, hide) => {
   setClassName(node, { 'slds-hide': hide });
+  fastdom.mutate(() => node.style.display = hide ? 'none' : '');
+};

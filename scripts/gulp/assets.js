@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import path from 'path';
 import gulp from 'gulp';
 
-export const ignore = 'jsx,scss';
+export const ignore = 'jsx,js,scss';
 export const getPath = (a, b = '') => path.resolve(__PATHS__[a], b);
 
 gulp.task('assets:icons', () =>

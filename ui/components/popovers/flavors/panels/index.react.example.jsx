@@ -36,6 +36,9 @@ const iconCases = (
   </span>
 );
 
+const ViewAll = () =>
+  <dd className={pf('m-top--small text-align--right')}><a href="#void" title="View all Opportunities">View All</a></dd>;
+
 export default (
   <div className={pf('popover popover--panel nubbin--left-top')} role="dialog">
 
@@ -132,9 +135,8 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="javascript:void(0)" title="View all Opportunities">View All</a></dd>
+        <ViewAll />
       </dl>
-
 
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
@@ -164,7 +166,7 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="javascript:void(0)" title="View all Cases">View All</a></dd>
+        <ViewAll />
       </dl>
 
 

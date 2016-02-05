@@ -167,7 +167,7 @@ gulp.task('serve', () => {
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
           publicPath: webpackConfig.output.publicPath,
-          quiet: true
+          quiet: false
         })
       ]
     },

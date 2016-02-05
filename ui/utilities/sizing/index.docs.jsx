@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeBlock from 'app_modules/ui/code-block';
-import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import globals from 'app_modules/global';
@@ -93,6 +92,6 @@ export default (
 }
     `}</CodeBlock>
   </div>
-  <p>See <Link to="/components/grid-system">Grid System</Link> for more information and examples.</p>
+  <p>See <a href="/components/grid-system">Grid System</a> for more information and examples.</p>
 </ComponentDocs>
 );

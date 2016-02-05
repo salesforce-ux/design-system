@@ -12,6 +12,7 @@
 .#{$css-prefix}dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
+  top: 100%;
   left: 50%;
   float: left;
   min-width: $size-xx-small;
@@ -37,6 +38,7 @@
   }
 
   &--bottom {
+    top: auto;
     bottom: 100%;
   }
 

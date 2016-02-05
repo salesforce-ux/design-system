@@ -35,6 +35,9 @@ pre[class*="language-"] {
 
 .site-code--content {
 
+  padding: $spacing-medium 0;
+  margin: $spacing-medium 0;
+
   &.#{$css-prefix}scrollable--x {
     @include scrollbar;
   }

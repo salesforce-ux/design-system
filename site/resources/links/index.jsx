@@ -14,7 +14,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import Heading from 'app_modules/site/components/page/heading';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
-import { Link } from 'react-router';
 
 export default (
   <PageBody anchorTitle="Links" contentClassName={pf('text-longform')}>

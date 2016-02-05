@@ -10,21 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { getHistory } from 'app_modules/site/navigation/history';
 
 export default React.createClass({
   propTypes: {
     src: React.PropTypes.string
   },
-  getDefaultProps() {
-    return {
-      src: ''
-    };
-  },
   render() {
-    const src = getHistory().createHref('/') + this.props.src.replace(/^\//, '');
     return (
-      <img {...this.props} src={src} />
+      <img {...this.props} />
     );
   }
 });

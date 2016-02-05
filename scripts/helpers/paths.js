@@ -34,7 +34,6 @@ const paths = {
   site: path.resolve(root, 'site'),
   ui: path.resolve(root, 'ui'),
 
-  design_tokens: path.resolve(git_modules, 'design-tokens/tokens'),
   icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
 
   dist: path.resolve(root, '.dist'),

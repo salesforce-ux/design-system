@@ -20,16 +20,18 @@
   $scoped-root:     'html' !default;
   $scoped-body:     'body' !default;
 
-
-
-  #{$scoped-selector} * {
-    &,
-    &:before,
-    &:after {
+  #{$scoped-selector} {
+    *,
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
 
-    @include placeholder;
+    ::placeholder {
+      color: $color-text-placeholder;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-medium;
+    }
   }
 
   @if $globals != null {
@@ -114,7 +116,10 @@
     }
   }
 
-
+  a,
+  button {
+    cursor: pointer;
+  }
 
   b,
   strong,

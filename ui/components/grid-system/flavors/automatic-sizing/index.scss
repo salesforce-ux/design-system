@@ -113,19 +113,19 @@
 
   @include mq-large-min {
 
-    &--top {
+    &-top {
       border-top: 1px solid $color-border-separator;
     }
 
-    &--right {
+    &-right {
       border-right: 1px solid $color-border-separator;
     }
 
-    &--bottom {
+    &-bottom {
       border-bottom: 1px solid $color-border-separator;
     }
 
-    &--left {
+    &-left {
       border-left: 1px solid $color-border-separator;
     }
   }
@@ -137,10 +137,10 @@
 
 // Deprecate for 2.0.0 - Incorrect Naming Convention
 .#{$css-prefix}nowrap {
-  @include deprecate('2.0.0') {
-    @include flex-item(expand);
-    @include flex-wrap(false);
+  @include flex-item(expand);
+  @include flex-wrap(false);
 
+  @include deprecate('2.0.0') {
     &--small {
       @include mq-small-min {
         @include flex-item(expand);

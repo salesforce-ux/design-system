@@ -313,18 +313,18 @@ export const gulpRenderComponentPage = () =>
             }
           }
         });
+      // HACK: Move "utilities" under "components"
+      const componentPath = /^utilities/.test(component.path)
+        ? `components/${component.path}`
+        : component.path;
       // Create the <PageBody> for the component
       const pageBody = (
-        <PageBody contentClassName={false} path={`/${component.path}`}>
+        <PageBody contentClassName={false} path={`/${componentPath}`}>
           <Component
             component={decorateComponent(component)}
             docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
         </PageBody>
       );
-      // HACK: Move "utilities" under "components"
-      const componentPath = /^utilities/.test(component.path)
-        ? `components/${component.path}`
-        : component.path;
       // Push a new HTML page
       next(null, new gutil.File({
         path: path.resolve(__PATHS__.site, componentPath, 'index.html'),

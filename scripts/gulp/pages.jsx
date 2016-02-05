@@ -135,7 +135,7 @@ export const renderExample = element => {
  */
 export const wrapExample = (flavor, html) => `
 <!DOCTYPE html>
-<html lang="en>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />

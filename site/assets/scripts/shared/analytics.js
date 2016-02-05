@@ -48,7 +48,7 @@ export const logCTAEvent = (name, type, extraValues) => {
   let values = Object.assign({
     path: normalizedLocationPathname(),
     type: type,
-    usertype: process.env.DEFAULT_USER_TYPE
+    usertype: process.env.INTERNAL ? 'internal' : 'external'
   }, extraValues);
   logEvent('tagEvent', name, values);
 };

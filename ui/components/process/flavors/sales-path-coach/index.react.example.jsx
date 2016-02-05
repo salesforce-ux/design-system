@@ -38,13 +38,13 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon flavor="icon-small" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon flavor="icon-small" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button flavor="brand" className={className(pf('button--small path__mark-complete no-flex m-horizontal--small'), props.className)}>
+  <Button flavor="brand,small" className={className(pf('button--border-filled path__mark-complete no-flex m-horizontal--small'), props.className)}>
     {props.children}
   </Button>;
 

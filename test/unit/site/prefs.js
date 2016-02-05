@@ -8,47 +8,40 @@ describe('Preferences', () => {
   const store = {};
 
   const fakeDelegate = (listener, selector, fn) => {
-    trigger = (val) => fn({target: {value: val}})
-  }
+    trigger = (val) => fn({ target: { value: val } })
+  };
 
   const fakeStorage = {
     getItem: (key) => store[key],
     setItem: (key, val) => store[key] = val
-  }
+  };
 
   before(() => {
-    global.window = {localStorage: fakeStorage}
-  })
+    global.window = { localStorage: fakeStorage }
+  });
+
   after(() => {
     global.window = null
-  })
+  });
 
   beforeEach(() => {
-    Prefs().hooks.listen_dom(fakeDelegate)
-  })
+    Prefs().hooks.listen_dom(fakeDelegate);
+  });
 
   it('emits an event on listen_dom change', (done) => {
     emitter.once('preferences:updated', (prefs) => {
-      expect(prefs.status).to.equal('dev-ready')
-      done()
+      expect(prefs.status).to.equal('dev-ready');
+      done();
     })
-    trigger('dev-ready')
-  })
+    trigger('dev-ready');
+  });
 
   it('updates to prototype', (done) => {
     emitter.once('preferences:updated', (prefs) => {
-      expect(prefs.status).to.equal('prototype')
-      done()
+      expect(prefs.status).to.equal('prototype');
+      done();
     })
-    trigger('prototype')
-  })
-
-  it('uses defaults', (done) => {
-    emitter.once('preferences:updated', (prefs) => {
-      expect(prefs.userType).to.equal('external')
-      done()
-    })
-    trigger('dev-ready')
-  })
+    trigger('prototype');
+  });
 
 });

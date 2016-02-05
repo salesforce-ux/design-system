@@ -191,17 +191,17 @@ export default () => formatNavItem({
     {
       label: 'Give Feedback',
       path: 'https://github.com/salesforce-ux/design-system/issues',
-      userType: 'external'
+      internal: false
     },
     {
       label: 'Give Feedback',
       path: '/feedback',
-      userType: 'internal'
+      internal: true
     },
     {
       label: 'Log a bug',
       path: '/bugs',
-      userType: 'internal'
+      internal: true
     }
   ]
 });

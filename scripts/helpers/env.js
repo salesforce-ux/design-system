@@ -11,11 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import packageJSON from '../../package.json';
 
-export function getDefaultEnvVars () {
-  return {
-    'DEFAULT_USER_TYPE': 'external',
-    'INTERNAL_RELEASE_NAME': '',
-    'URL_PREFIX': '/',
-    'SLDS_VERSION': packageJSON.version
-  };
-}
+export const WebpackDefineKeys = [
+  'INTERNAL',
+  'INTERNAL_RELEASE_NAME',
+  'SLDS_VERSION'
+];
+
+// NOTE: scripts/npm/postinstall.js modifies process.env if running on Heroku
+process.env = Object.assign({
+  SLDS_VERSION: packageJSON.version
+}, process.env);

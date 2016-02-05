@@ -16,7 +16,6 @@ import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CTALink from 'app_modules/site/components/cta-link';
-import version from '.generated/site.version';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
@@ -149,7 +148,7 @@ class FAQ extends React.Component {
       </div>
     );
 
-    let compactVersion = `${g.abbreviatedName.toLowerCase()}${version.sldsVersion.replace(/\D/g, '')}`;
+    let compactVersion = `${g.abbreviatedName.toLowerCase()}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
     this.addContentItem(
       `How do I link to Visualforce static resources like stylesheets and icons?`,
       <div>

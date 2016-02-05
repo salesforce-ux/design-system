@@ -15,7 +15,7 @@ import gulp from 'gulp';
 import path from 'path';
 import webpack from 'webpack';
 
-import { getDefaultEnvVars } from 'scripts/helpers/env';
+import { WebpackDefineKeys } from 'scripts/helpers/env';
 
 /**
  * Cleanup webpack error messages and then log them to the console
@@ -82,7 +82,7 @@ export function getConfig (options) {
     plugins: [
       new webpack.DefinePlugin({
         'process.env': _(process.env)
-          .pick(_.keys(getDefaultEnvVars()))
+          .pick(WebpackDefineKeys)
           .mapValues(value => `"${value}"`)
           .value()
       })

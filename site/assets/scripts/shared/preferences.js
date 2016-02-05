@@ -11,22 +11,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import emitter from '../framework/events';
 
-const STORAGE_KEY = `slds-${process.env.DEFAULT_USER_TYPE}-prefs`;
+const USER_KEY = process.env.INTERNAL ? 'internal' : 'external';
+const STORAGE_KEY = `slds-${USER_KEY}-prefs`;
 const EVENT_KEY = 'preferences:updated';
 
-const defaults = {
-  userType: process.env.DEFAULT_USER_TYPE
-};
-
 const PrefsDefaults = {
-  internal: Object.assign({}, defaults, { status: 'dev-ready'}),
-  external: Object.assign({}, defaults, { status: 'prototype' })
+  internal: Object.assign({}, { status: 'dev-ready'}),
+  external: Object.assign({}, { status: 'prototype' })
 };
 
 /**
  * Default set of preferences before the browser loads
  */
-let prefs = process.env.DEFAULT_USER_TYPE === 'internal'
+let prefs = process.env.INTERNAL
   ? PrefsDefaults.internal
   : PrefsDefaults.external;
 

@@ -11,14 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import g from 'app_modules/global';
 import Tabs from 'ui/components/tabs/index.react';
 
-const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
+const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;

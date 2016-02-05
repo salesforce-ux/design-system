@@ -62,13 +62,12 @@ const watchPaths = {
  * @param {array} [hrtime]
  * @returns {function}
  */
-const SLDSLog = (hrtime = process.hrtime()) => function () {
+const SLDSLog = (hrtime = process.hrtime()) => message =>
   console.log([
     `[${gutil.colors.red('♥')}${gutil.colors.yellow('⚡')}]`,
-    ...arguments,
+    message,
     `after ${gutil.colors.magenta(prettyTime(process.hrtime(hrtime)))}`
   ].join(' '));
-};
 
 /**
  * Return a debounced function that will start a task every wait seconds

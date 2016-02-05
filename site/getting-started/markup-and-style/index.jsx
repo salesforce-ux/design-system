@@ -55,7 +55,7 @@ export default (
     <p>Though generic .container classes exist, sometimes a component has an optional container — but it is specific to that component alone. Those containers should be indicated by a class using a single underscore. For example, when a <code>.pill</code> has an optional container applied, that class is written as <code>.pill_container</code>.
     </p>
     <h3 className="site-text-heading--medium">Namespacing</h3>
-    <p>In order to make this framework easy to use with other frameworks, we’ve added the .slds- namespace. Rather than using <code>.button</code>, our framework uses <code>.slds-button</code>. This allows you to integrate the Lightning Design System (SLDS) with your own bespoke CSS or to integrate it with an application that uses the modified Salesforce Bootstrap framework previously used as you wean your application away from it.
+    <p>In order to make this framework easy to use with other frameworks, we’ve added the <code>.slds-</code> namespace. Rather than using <code>.button</code>, our framework uses <code>.slds-button</code>. This allows you to integrate the Lightning Design System (SLDS) with your own bespoke CSS or to integrate it with an application that uses the modified Salesforce Bootstrap framework previously used as you wean your application away from it.
     </p>
     <h3 className="site-text-heading--medium">Scoping</h3>
     <p>In some cases, when you don&rsquo;t have full control of the DOM (for example, when integrating with Visualforce, Lightning Components or another framework), you may need to scope components built with SLDS. In this case, three different versions of the CSS framework are available in the download.</p>

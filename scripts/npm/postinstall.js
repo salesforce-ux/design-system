@@ -42,13 +42,11 @@ const getVersion = (version, release) => {
     'internal-release': '',
     'external-release': ''
   };
-  const suffix = suffixMap[release.mode];
-  if (suffix) {
-    const date = moment().format('YYMMDD-HHmm');
-    suffix += `#${date}`;
-  }
+  const suffix = suffixMap[release.mode]
+    ? suffixMap[release.mode] + '#' + moment().format('YYMMDD-HHmm')
+    : '';
   return version + suffix;
-}
+};
 
 if (process.env.HEROKU_APP_NAME) {
   exec(`rm -rf server/`);

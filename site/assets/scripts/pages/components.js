@@ -26,6 +26,7 @@ const highlight = (() => {
   const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
   const cache = {};
   return html => {
+    html = html.trim();
     let cached = cache[html];
     if (cached) return cached;
     cached = cache[html] = Prism.highlight(

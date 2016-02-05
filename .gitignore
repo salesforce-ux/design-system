@@ -11,3 +11,4 @@
 /public
 /site/assets/downloads/design-tokens
 *.log
+.sldsconfig

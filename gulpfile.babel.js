@@ -17,6 +17,7 @@ import del from 'del';
 import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import nconf from 'nconf';
 import path from 'path';
 import prettyTime from 'pretty-time';
 import runSequence from 'run-sequence';
@@ -32,6 +33,13 @@ import { generatePages, generateComponentPages } from './scripts/gulp/pages';
 import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 import './scripts/gulp/links';
+
+nconf.argv().file({
+  file: './.sldsconfig'
+}).defaults({
+  'webpack-quiet': true,
+  'browser-sync-open': false
+});
 
 const watchPaths = {
   sass: [
@@ -54,13 +62,12 @@ const watchPaths = {
  * @param {array} [hrtime]
  * @returns {function}
  */
-const SLDSLog = (hrtime = process.hrtime()) => function () {
+const SLDSLog = (hrtime = process.hrtime()) => message =>
   console.log([
     `[${gutil.colors.red('♥')}${gutil.colors.yellow('⚡')}]`,
-    ...arguments,
+    message,
     `after ${gutil.colors.magenta(prettyTime(process.hrtime(hrtime)))}`
   ].join(' '));
-};
 
 /**
  * Return a debounced function that will start a task every wait seconds
@@ -167,12 +174,12 @@ gulp.task('serve', () => {
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
           publicPath: webpackConfig.output.publicPath,
-          quiet: false
+          quiet: nconf.get('webpack-quiet')
         })
       ]
     },
     notify: false,
-    open: false,
+    open: nconf.get('browser-sync-open'),
     // Disable ghost mode as it creates unexpected cross-iframe interactions
     // Fixes an issue where clicking a label in component A
     // scrolls down to component B

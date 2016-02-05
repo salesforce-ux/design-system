@@ -12,6 +12,7 @@
 .#{$css-prefix}form--compound {
 
   .#{$css-prefix}form-element__row {
+    display: flex;
     margin-bottom: $spacing-x-small;
 
     + .#{$css-prefix}form-element__row {
@@ -20,7 +21,6 @@
   }
 
   .#{$css-prefix}form-element__control {
-    display: inline-block;
     position: relative;
 
     + .#{$css-prefix}form-element__control {

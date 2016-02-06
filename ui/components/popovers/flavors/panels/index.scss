@@ -13,7 +13,7 @@
 
   .#{$css-prefix}popover__header {
     background: $color-background;
-    padding: $spacing-medium;
+    padding: $spacing-large $spacing-large $spacing-small;
     border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
     border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
   }
@@ -23,7 +23,7 @@
   }
 
   .#{$css-prefix}popover__body-list {
-    padding: $spacing-medium;
+    padding: $spacing-medium $spacing-large;
     border-top: $border-width-thin solid $color-border;
   }
 
@@ -36,6 +36,16 @@
     &:before,
     &:after {
       background: $color-background;
+    }
+  }
+
+  // Align nubbin to the icon
+  &.#{$css-prefix}nubbin--left-top,
+  &.#{$css-prefix}nubbin--right-top {
+
+    &:before,
+    &:after {
+      top: $spacing-large + $spacing-small;
     }
   }
 }

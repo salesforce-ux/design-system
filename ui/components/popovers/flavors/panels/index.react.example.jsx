@@ -37,14 +37,14 @@ const iconCases = (
 );
 
 const ViewAll = () =>
-  <dd className={pf('m-top--small text-align--right')}><a href="#void" title="View all Opportunities">View All</a></dd>;
+  <dd className={pf('m-top--x-small text-align--right')}><a href="#void" title="View all Opportunities">View All</a></dd>;
 
 export default (
   <div className={pf('popover popover--panel nubbin--left-top')} role="dialog">
 
     <div className={pf('popover__header')}>
 
-      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
+      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--medium')}>
         <a href="#void" className={pf('text-heading--medium')}>Tesla Motors</a>
       </MediaObject>
 

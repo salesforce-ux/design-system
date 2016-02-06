@@ -13,6 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -23,7 +24,7 @@ export default (
     <table className={pf('table table--bordered')}>
       <thead>
         <tr className={pf('text-heading--label')} >
-          <th className={pf('cell-shrink')} scope="col"><Checkbox assistiveText="select all" /></th>
+          <th className={pf('cell-shrink')} scope="col"><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /></th>
           <th className={pf('is-sortable')} scope="col">
             <span className={pf('truncate')}>Account Name</span>
             <ButtonIcon
@@ -49,7 +50,7 @@ export default (
       </thead>
       <tbody>
       <tr className={pf('hint-parent')}>
-        <td className={pf('row-select')}><Checkbox assistiveText="select row1" name="select-row1" /></td>
+        <td className={pf('row-select')}><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /></td>
         <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
         <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
         <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
@@ -62,6 +63,56 @@ export default (
             sprite="utility"
             symbol="down"
             assistiveText="Show More" />
+        </td>
+      </tr>
+      <tr>
+        <td colSpan="7">
+          <table className={pf('table table--bordered')}>
+            <thead>
+              <tr className={pf('text-heading--label')} >
+                <th className={pf('cell-shrink')} scope="col"><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /></th>
+                <th className={pf('is-sortable')} scope="col">
+                  <span className={pf('truncate')}>Account Name</span>
+                  <ButtonIcon
+                    flavor="icon-bare"
+                    iconFlavor="small"
+                    sprite="utility"
+                    symbol="arrowdown"
+                    assistiveText="Sort" />
+                </th>
+                <th scope="col"><span className={pf('truncate')}>Employees</span></th>
+                <th scope="col"><span className={pf('truncate')}>Phone Number</span></th>
+                <th scope="col"><span className={pf('truncate')}>Account Owner</span></th>
+                <th scope="col"><span className={pf('truncate')}>Billing City</span></th>
+                <th className={pf('row-action')} scope="col">
+                  <ButtonIcon
+                    flavor="icon-border-filled,icon-x-small"
+                    iconFlavor="hint,small"
+                    sprite="utility"
+                    symbol="down"
+                    assistiveText="Show More" />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr className={pf('hint-parent')}>
+              <td className={pf('row-select')}><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /></td>
+              <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
+              <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
+              <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
+              <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>
+              <td data-label="confidence"><span className={pf('truncate')}>20%</span></td>
+              <td className={pf('row-action')}>
+                <ButtonIcon
+                  flavor="icon-border-filled,icon-x-small"
+                  iconFlavor="hint,small"
+                  sprite="utility"
+                  symbol="down"
+                  assistiveText="Show More" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
         </td>
       </tr>
     </tbody>

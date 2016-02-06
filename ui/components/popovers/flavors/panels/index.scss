@@ -14,7 +14,8 @@
   .#{$css-prefix}popover__header {
     background: $color-background;
     padding: $spacing-medium;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
+    border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
   }
 
   .#{$css-prefix}popover__body {

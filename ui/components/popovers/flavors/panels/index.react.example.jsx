@@ -45,7 +45,7 @@ export default (
     <div className={pf('popover__header')}>
 
       <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <a href="javascript:void(0)" className={pf('text-heading--medium')}>Tesla Motors</a>
+        <a href="#void" className={pf('text-heading--medium')}>Tesla Motors</a>
       </MediaObject>
 
       {/* Additional Info */}
@@ -64,21 +64,21 @@ export default (
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Phone</p></dt>
-            <dd><a href="javascript:void(0)">212-345-3485</a></dd>
+            <dd><a href="#void">212-345-3485</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Website</p></dt>
-            <dd><a href="javascript:void(0)">teslamotors.com</a></dd>
+            <dd><a href="#void">teslamotors.com</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Account Owner</p></dt>
-            <dd><a href="javascript:void(0)">Jeff Maguire</a></dd>
+            <dd><a href="#void">Jeff Maguire</a></dd>
           </dl>
         </div>
 
@@ -94,7 +94,7 @@ export default (
         {/* Opportunity One */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Mule ESB</a>
+            <a href="#void">Tesla - Mule ESB</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -116,7 +116,7 @@ export default (
         {/* Opportunity Two */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Anypoint Studios</a>
+            <a href="#void">Tesla - Anypoint Studios</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -147,7 +147,7 @@ export default (
         {/* Case One */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="javascript:void(0)">Tesla - Anypoint Studios</a>
+            <a href="#void">Tesla - Anypoint Studios</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -168,9 +168,6 @@ export default (
         </dd>
         <ViewAll />
       </dl>
-
-
     </div>
-
   </div>
 );

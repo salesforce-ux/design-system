@@ -112,8 +112,13 @@ const categories = {
     label: 'Font',
     renderExample(token) {
       return (
-        <ExampleCell style={{fontFamily: token.value}}>
-          Aa
+        // if the token value isn't a number, it's a font-family
+        // if it's a number, it is a font-weight
+        <ExampleCell style={
+          (isNaN(token.value)) ? { fontFamily: token.value } : { fontWeight: token.value }
+        }>
+          {/* Making the text larger to make weights more obvious */}
+          <span style={{fontSize: '2rem'}}>Aa</span>
         </ExampleCell>
       );
     }

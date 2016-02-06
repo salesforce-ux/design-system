@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 const iconHeader = (
   <span className={pf('icon_container icon-standard-account')}>
-    <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="account" />
+    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
     <span className={pf('assistive-text')}>Tesla Motors</span>
   </span>
 );

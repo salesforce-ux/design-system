@@ -15,7 +15,6 @@ import GithubButton from 'app_modules/site/components/github-button';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Img from 'app_modules/ui/img';
 import PageBody from 'app_modules/site/components/page/body';
-import version from '.generated/site.version';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -34,7 +33,7 @@ export default (
         <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
         <GithubButton></GithubButton>
       </p>
-      <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{version.sldsVersion}</CTALink></p>
+      <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink></p>
     </header>
 
     <div className={pf('container--buffer container--x-large')}>

@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.2 - February 5, 2015
+## Release 0.12.2 - February 8, 2015
 
 **SITE IA**
 - Add Getting Started > Markup and Style guidelines with BEM information

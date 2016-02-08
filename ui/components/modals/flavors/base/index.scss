@@ -73,7 +73,6 @@
   }
 
   &__content {
-    flex-shrink: 0;
     overflow: hidden {
       y: auto;
     }
@@ -84,7 +83,6 @@
     border-radius: $border-radius-medium;
     padding: $spacing-medium;
     background-color: $color-background;
-    flex-shrink: 0;
   }
 
   &__footer {

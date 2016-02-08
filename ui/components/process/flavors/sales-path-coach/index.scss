@@ -202,7 +202,7 @@
   justify-content: center;
   position: relative;
   padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 1.25rem; // @TODO: tokenize this - or special snowflake
-  line-height: 1.5rem; // @TODO: should we tokenize this? (It's diverged from the other tabs due to the button heights, so it can't be a formula anymore.)
+  line-height: $line-height-salespath;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
 

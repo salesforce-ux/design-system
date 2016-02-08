@@ -23,9 +23,9 @@ const image = (
 export default (
   <div className="demo-only">
     <div className={pf('card')}>
-      <div className={pf('card__header grid grid--align-spread')}>
+      <div className={pf('card__header grid grid--content-center grid--align-spread')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate size--1-of-3')}>
-          <h2 className={pf('text-heading--small truncate')}>Card Header (2)</h2>
+          <h2 className={pf('truncate')}>Card Header (2)</h2>
         </MediaObject>
         <div className={pf('input-has-icon input-has-icon--left size--1-of-3')}>
           <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
@@ -101,7 +101,7 @@ export default (
         </table>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

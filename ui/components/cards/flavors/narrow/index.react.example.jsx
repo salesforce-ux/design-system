@@ -22,21 +22,27 @@ const image = (
 
 export default (
   <div className="demo-only" style={{maxWidth: '300px'}}>
-    <div className={pf('card')}>
-      <div className={pf('card__header grid')}>
+    <div className={pf('card card--narrow')}>
+      <div className={pf('card__header grid grid--content-center')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate')}>
-          <h2 className={pf('text-heading--small truncate')}>Card Header (2)</h2>
+          <h2 className={pf(' truncate')}>Card Header (2)</h2>
         </MediaObject>
         <div className={pf('no-flex')}>
-          <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Useful alt text"/>
+          <ButtonIcon
+            className={pf('shrink-none')}
+            flavor="icon-border-filled,icon-x-small"
+            iconFlavor="small"
+            sprite="utility"
+            symbol="down"
+            assistiveText="Show More" />
         </div>
       </div>
       <div className={pf('card__body')}>
-        <ul>
+        <ul className={pf('card__body--inner')}>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#">Adam Choi</a>
+                <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -66,7 +72,7 @@ export default (
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#">Adam Choi</a>
+                <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -96,7 +102,7 @@ export default (
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#">Adam Choi</a>
+                <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -126,7 +132,7 @@ export default (
         </ul>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

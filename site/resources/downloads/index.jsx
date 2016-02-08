@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import version from '.generated/site.version';
 import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
@@ -81,10 +80,10 @@ bower install salesforce-lightning-design-system --save
     <p>
       All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
     </p>
-    <form action={`/${g.downloadPath(version.sldsVersion)}`}>
+    <form action={`/${g.downloadPath(process.env.SLDS_VERSION)}`}>
       <CTALink eventName="Download" eventType="css">
         <button className={pf('button button--neutral')}>
-          Download Design System ({version.sldsVersion})
+          Download Design System ({process.env.SLDS_VERSION})
         </button>
       </CTALink>
     </form>

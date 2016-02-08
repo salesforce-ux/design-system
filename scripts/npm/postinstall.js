@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import _ from 'lodash';
-import fs from 'fs';
 import gdm from 'gdm';
 import path from 'path';
 import semver from 'semver';
@@ -18,33 +17,60 @@ import { execSync } from 'child_process';
 
 gdm.run();
 
-const ENV = {};
-
 const local = path.resolve.bind(path, process.cwd());
 
 const exec = (command, cwd = '') => {
   execSync(command, {
     cwd: local(cwd),
     stdio: 'inherit',
-    env: Object.assign({}, process.env, ENV)
+    env: Object.assign({}, process.env)
   });
+};
+
+/**
+ * Return a modified version number based on the release
+ *
+ * @param {string} version
+ * @param {object} release
+ * @returns {string}
+ */
+const getVersion = (version, release) => {
+  const suffixMap = {
+    'dev': '-dev',
+    'feature-freeze': '-beta',
+    'release-freeze': '-rc',
+    'internal-release': '',
+    'external-release': ''
+  };
+  const suffix = suffixMap[release.mode]
+    ? suffixMap[release.mode] + '#' + moment().format('YYMMDD-HHmm')
+    : '';
+  return version + suffix;
 };
 
 if (process.env.HEROKU_APP_NAME) {
   exec(`rm -rf server/`);
   exec(`git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO} server`);
   // Server tasks
+  const packageJSON = require(local('package.json'));
   try {
-    const packageJSON = require(local('package.json'));
     // Get the deployments config
     const config = require(local('./server/config/deployments.json'));
     // Find the first release that packageJSON.version statisfies
     const release = _.find(config.releases, release =>
       semver.satisfies(packageJSON.version, release.semver));
+    // Throw if
+    if (!release) {
+      throw new Error(`
+        No release matched "${packageJSON.version}"
+        Please review deployments.json
+      `);
+    }
     // Set the ENV (used for the banner)
     if (release.mode !== 'external-release') {
-      ENV.DEFAULT_USER_TYPE = 'internal';
-      ENV.INTERNAL_RELEASE_NAME = release.id;
+      process.env.INTERNAL = 'true';
+      process.env.INTERNAL_RELEASE_NAME = release.id;
+      process.env.SLDS_VERSION = getVersion(packageJSON.version, release);
     }
   } catch (err) {
     console.log(`Version "${packageJSON.version}" could not be mapped to a release`);

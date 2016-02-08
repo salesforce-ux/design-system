@@ -16,7 +16,6 @@ import './generate-release-notes';
 import './generate-tokens-zip';
 import './generate-tokens';
 import './generate-ui';
-import './generate-version';
 import './generate-whitelist';
 
 gulp.task('generate', [
@@ -25,7 +24,6 @@ gulp.task('generate', [
   'generate:tokens:zip',
   'generate:tokens',
   'generate:ui',
-  'generate:version',
   'generate:whitelist',
   'generate:whitelist-utilities'
 ]);

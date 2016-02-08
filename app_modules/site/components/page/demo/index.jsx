@@ -13,7 +13,6 @@ import React from 'react';
 import _ from 'lodash';
 import Heading from 'ui/components/heading/index.react';
 import classNames from 'classnames';
-import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Demo extends React.Component {
@@ -61,15 +60,9 @@ class Demo extends React.Component {
   }
 
   renderBannerRight() {
-    let versionDateBuildString;
-    if (version.travisJobNumber && version.travisJobNumber !== 'NOT_SET') {
-      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${ version.dateNow}. Travis build ${version.travisJobNumber}.`;
-    } else {
-      versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
-    }
     return (
       <span className={pf('no-flex align-middle version-number')}>
-        <span className={pf('truncate site-text-heading--label')}>{versionDateBuildString}</span>
+        <span className={pf('truncate site-text-heading--label')}>Banner Right</span>
       </span>
     );
   }

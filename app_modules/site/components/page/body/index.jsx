@@ -19,7 +19,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
 import Status from 'app_modules/site/util/component/status';
-import version from '.generated/site.version';
+import moment from 'moment';
 
 /**
  * Add extra meta data to the nav items
@@ -70,8 +70,8 @@ export default React.createClass({
   },
 
   shouldShowNavItemToUserType(item) {
-    return !item.userType
-      ? true : item.userType === process.env.DEFAULT_USER_TYPE;
+    if (typeof item.internal === 'undefined') return true;
+    return !!process.env.INTERNAL === item.internal;
   },
 
   render() {
@@ -102,7 +102,7 @@ export default React.createClass({
   },
 
   renderInternalBanner() {
-    if (process.env.DEFAULT_USER_TYPE === 'external') return;
+    if (!process.env.INTERNAL) return;
     const options = Object.keys(Status.states).map(s =>
       <option value={Status.states[s]}>{Status.states[s]}</option>
     );
@@ -225,12 +225,8 @@ export default React.createClass({
   },
 
   renderFooter(footer) {
-    let versionDateBuildString = `Version ${version.sldsVersion}. Last Updated on ${version.dateNow}.`;
-    if (version.travisJobNumber && version.travisJobNumber !== 'NOT_SET') {
-      if (process.env.DEFAULT_USER_TYPE === 'external') {
-        versionDateBuildString = `Version ${version.sldsVersion} (build ${version.travisJobNumber}). Last Updated on ${version.dateNow}.`;
-      }
-    }
+    const updated = moment().format('MMMM Do YYYY, h:mm a');
+    const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
         <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>

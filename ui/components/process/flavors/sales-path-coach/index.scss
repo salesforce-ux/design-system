@@ -226,8 +226,6 @@
 
 .#{$css-prefix}path__trigger {
   border-radius: $border-radius-circle;
-  border: $border-width-thin solid $color-border;
-  background-color: $color-background-alt;
   transition: $duration-quickly transform ease-in-out;
 }
 

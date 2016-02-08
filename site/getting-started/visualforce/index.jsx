@@ -11,14 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import g from 'app_modules/global';
-import { Link } from 'react-router';
+import Tabs from 'ui/components/tabs/index.react';
 
-const versionNumber = version.sldsVersion.replace(/(v|\.)/g, '');
+const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
@@ -38,7 +37,7 @@ export default (
       <li>As an alternative to downloading the {g.displayName}, you can install it directly in your development org using an <a href="/resources/downloads">unmanaged package</a>.</li>
       <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-visualforce-static-resources-like-stylesheets-and-icons">FAQ</a>.</li>
       <li>All your Design System markup needs to be contained, or scoped, within a <code>&lt;div class="slds"&gt;</code> outer wrapper.</li>
-      <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the <Link to="/components">component examples</Link>, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
+      <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the component examples, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
       <li>To use the SVG spritemap icons, add the attributes <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> to the <code>&lt;html&gt;</code> element as documented in the <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>. Do not add the attributes to individual <code>&lt;svg&gt;</code> elements as can cause a page rendering bug.</li>
       <li>To use SVG spritemap image icons with Internet Explorer, use the <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a> script.</li>
       <li>Currently, if you need to use the Salesforce header or sidebar, you can not specify the <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> on the <code>&lt;html&gt;</code> element. In this case, the SVG icons are not supported.</li>

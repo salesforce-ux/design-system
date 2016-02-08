@@ -14,134 +14,10 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import tinyColor from 'tinycolor2';
 
-import Heading from 'app_modules/site/components/page/heading';
-import RowHeader from './_components/row-header';
-import Row from './_components/row';
-import ValueCell from './_components/cell-value';
+import CategorySection from './_components/category-section';
 import ExampleCell from './_components/cell-example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const MAX_EXAMPLE_WIDTH_REMS = 10;
-
-const FORM_FACTORS = [
-  {
-    id: 'small',
-    label: 'Small',
-    symbol: 'phone_portrait',
-    className: 'icon-utility-phone-portrait',
-    roles: ['aura']
-  },
-  {
-    id: 'medium',
-    label: 'Medium',
-    symbol: 'tablet_portrait',
-    className: 'icon-utility-tablet-portrait',
-    roles: ['aura']
-  },
-  {
-    id: 'large',
-    label: 'Large',
-    symbol: 'desktop',
-    className: 'icon-utility-desktop',
-    roles: ['aura', 'regular']
-  }
-];
-
-class CategorySection extends React.Component {
-
-  constructor(props) {
-    super(props);
-    const valueFormats = props.category.getValueFormats();
-    this.state = {
-      valueFormats,
-      valueFormat: valueFormats[0] || null
-    };
-  }
-
-  onChangeValueFormat(e) {
-    this.setState({
-      valueFormat: _.find(this.state.valueFormats, { value: e.currentTarget.value })
-    });
-  }
-
-  getFormFactors() {
-    let { options } = this.props;
-    return FORM_FACTORS.filter(factor => {
-      return _.includes(factor.roles, options.role);
-    });
-  }
-
-  render() {
-    const {category, tokens} = this.props;
-    if (!tokens.length) return null;
-    return (
-      <section className={pf(`site-tokens ${category.key}`)}>
-        <Heading type="h2" id={`category-${category.key}`} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
-          <span className={pf('grid grid--align-spread wrap')}>
-            <span className={pf('col align-bottom')}>{category.label}</span>
-            {this.renderValueFormatSelect()}
-          </span>
-        </Heading>
-
-        <div className={pf('scrollable--x')}>
-          <table className={pf('table max-medium-table--stacked')}>
-            <RowHeader
-              key={`${category.key}-header`}
-              formFactors={this.getFormFactors()} />
-            <tbody>
-              {this.renderRows()}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    );
-  }
-
-  renderValueFormatSelect() {
-    const {valueFormats, valueFormat} = this.state;
-    if (!valueFormats.length) return null;
-    const options = valueFormats.map(format => {
-      return (
-        <option
-          key={format.value}
-          value={format.value}>
-          {format.label}
-        </option>
-      );
-    });
-    return (
-      <span className={pf('col shrink-none align-bottom')}>
-        <label className={pf('assistive-text')} htmlFor="select">Select Output</label>
-        <select
-          id="select"
-          className={pf('select')}
-          aria-label="select"
-          value={valueFormat.value}
-          onChange={this.onChangeValueFormat.bind(this)}>
-          {options}
-        </select>
-      </span>
-    );
-  }
-
-  renderRows() {
-    const {category, tokens, options} = this.props;
-    const {nameFormat} = options;
-    const {valueFormat} = this.state;
-    return tokens.map(token => {
-      return (
-        <Row
-          key={`${token.name}-row`}
-          category={category}
-          token={token}
-          nameFormat={nameFormat}
-          valueFormat={valueFormat}
-          formFactors={this.getFormFactors()} />
-      );
-    });
-  }
-
-}
 
 class Category {
   constructor(options) {
@@ -149,12 +25,6 @@ class Category {
     _.forEach(options, (value, key) => {
       this[key] = value;
     });
-  }
-  /**
-   * Return a list of formats that a value for this category can be displayed as
-   */
-  getValueFormats() {
-    return [];
   }
   /**
    * Render a <RowHeader /> and <Row /> only if tokens is not empty
@@ -193,33 +63,7 @@ class Category {
   }
 }
 
-const toRgbString = _.memoize(value => tinyColor(value).toRgbString());
-const toHexString = _.memoize(value => tinyColor(value).toHexString());
-const toAliasString = _.memoize((value, token) => {
-  value = token['.rawValue'] || value;
-  return value.replace(/^\{\!/, '').replace(/\}$/, '');
-});
 
-/**
- * Array of formatters used for sections that represent colors
- */
-const colorValueFormats = [
-  {
-    label: 'RGB',
-    value: 'rgb',
-    formatter: toRgbString
-  },
-  {
-    label: 'Hex',
-    value: 'hex',
-    formatter: toHexString
-  },
-  {
-    label: 'Color Name',
-    value: 'alias',
-    formatter: toAliasString
-  }
-];
 
 /**
  * When displaying the a releaseSet, "props" will be grouped by category
@@ -229,9 +73,7 @@ const categories = {
 
   'background-color': new Category({
     label: 'Background Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       return (
         <ExampleCell style={{backgroundColor: token.value}} />
@@ -241,9 +83,7 @@ const categories = {
 
   'text-color': new Category({
     label: 'Text Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       const className = classNames('site-example', 'site-example-color-text', {
         'site-example-color-text-inverse': tinyColor.readability('#FFF', token.value) < 3
@@ -253,76 +93,12 @@ const categories = {
           <span style={{color: token.value}}>Aa</span>
         </ExampleCell>
       );
-    },
-    renderExampleText(token) {
-      /*if (this.options.showAccessibility === true) {
-        return (
-          <table>
-            <tbody>
-              <tr>
-                {this.renderExampleContrastRatios(token)}
-              </tr>
-            </tbody>
-          </table>
-        );
-      }*/
     }
-    /*renderExampleContrastRatios(token) {
-      return token['.contrastRatios'].map((ratio, index) => {
-        const className = `site-example-${_.kebabCase(ratio.backgroundColor.name)}`;
-        return (
-          <td className={className} key={index}>
-            {this.renderExampleLarge(token, ratio)}
-            {this.renderExampleNormal(token, ratio)}
-          </td>
-        );
-      });
-    },
-    renderExampleLarge(token, ratio) {
-      let passes = ratio.large === true;
-      let title = passes
-        ? `This text color "${token.name}" (${token.value}) is okay to use on
-          "${ratio.backgroundColor.name}" (${ratio.backgroundColor.value}) at sizes greater than 19px.`
-        : `This text color "${token.name}" (${token.value}) must not be used on
-          "${ratio.backgroundColor.name}" (${ratio.backgroundColor.value}) at sizes greater than 19px.`;
-      let className = classNames({
-        'site-indicator-pass': passes,
-        'site-indicator-fail': !passes
-      });
-      let text = passes ? 'PASSES' : 'FAILS';
-      return (
-        <figure title={title}>
-          <span style={{color: token.value}}>Aa</span>
-          <figcaption className={className}>{text}</figcaption>
-        </figure>
-      );
-    },
-    renderExampleNormal(token, ratio) {
-      let passes = ratio.normal === true;
-      let title = passes
-        ? `This text color "${token.name}" (${token.value}) is okay to use on
-          "${ratio.backgroundColor.name}" (${ratio.backgroundColor.value}) at any size.`
-        : `This text color "${token.name}" (${token.value}) must not be used on
-          "${ratio.backgroundColor.name}" (${ratio.backgroundColor.value}) at sizes smaller than 20px.`;
-      let className = classNames({
-        'site-indicator-pass': passes,
-        'site-indicator-fail': !passes
-      });
-      let text = passes ? 'PASSES' : 'FAILS';
-      return (
-        <figure title={title}>
-          <span style={{color: token.value}}>Aa</span>
-          <figcaption className={className}>{text}</figcaption>
-        </figure>
-      );
-    }*/
   }),
 
   'border-color': new Category({
     label: 'Border Color',
-    getValueFormats() {
-      return colorValueFormats;
-    },
+    valueFormat: 'color',
     renderExample(token) {
       return (
         <ExampleCell className="site-example site-example-color-border">
@@ -336,8 +112,13 @@ const categories = {
     label: 'Font',
     renderExample(token) {
       return (
-        <ExampleCell style={{fontFamily: token.value}}>
-          Aa
+        // if the token value isn't a number, it's a font-family
+        // if it's a number, it is a font-weight
+        <ExampleCell style={
+          (isNaN(token.value)) ? { fontFamily: token.value } : { fontWeight: token.value }
+        }>
+          {/* Making the text larger to make weights more obvious */}
+          <span style={{fontSize: '2rem'}}>Aa</span>
         </ExampleCell>
       );
     }

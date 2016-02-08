@@ -38,13 +38,13 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon flavor="icon-small" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon flavor="icon-small" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button flavor="brand" className={className(pf('button--small path__mark-complete no-flex m-horizontal--small'), props.className)}>
+  <Button flavor="brand,small" className={className(pf('button--border-filled path__mark-complete no-flex m-horizontal--small'), props.className)}>
     {props.children}
   </Button>;
 
@@ -179,6 +179,8 @@ let StateA = props =>
         <span className={pf('tabs--path__title')}>Closed</span>
       </Tab>
     </Tabsmain>
+    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    Mark Status as Complete</Action>
   </Path>;
 
 let StateB = props =>
@@ -476,27 +478,33 @@ let StateG = props =>
 
 export let states = [
   {
-    label: 'Default without Coaching',
+    id: 'without-coaching',
+    label: 'Without Coaching',
     element: <StateA />
   },
   {
-    label: 'Sales Path with Coaching Available',
+    id: 'with-coaching',
+    label: 'With Coaching Available',
     element: <StateB />
   },
   {
-    label: 'Sales Path with Current Stage Coaching Visible',
+    id: 'current-coaching',
+    label: 'Current Stage Coaching Visible',
     element: <StateD />
   },
   {
-    label: 'Sales Path with Other Stage Selected',
+    id: 'different-coaching',
+    label: 'With Different Stage Selected',
     element: <StateE />
   },
   {
-    label: 'Sales Path — Lost',
+    id: 'lost',
+    label: 'Lost',
     element: <StateF />
   },
   {
-    label: 'Sales Path — Won',
+    id: 'won',
+    label: 'Won',
     element: <StateG />
   }
 ];

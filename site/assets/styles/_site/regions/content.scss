@@ -9,29 +9,10 @@
 
 .site-jump-anchor {
   position: absolute;
-  top: ($size-xx-small * -1);
+  top: ($spacing-x-large * -1);
 
   &__container {
     position: relative;
-  }
-}
-
-.site-menu--jump-links {
-  line-height: $line-height-heading;
-
-  .site-text-heading--label {
-    padding-bottom: $spacing-x-small;
-  }
-
-  a {
-    margin: 0 #{-$spacing-medium};
-    padding: $spacing-x-small $spacing-medium;
-  }
-
-  @include mq-large-max {
-    margin-bottom: $spacing-xx-large;
-    border-bottom: $border-width-thin solid $color-border-separator;
-    padding-bottom: $spacing-xx-large;
   }
 }
 
@@ -87,8 +68,7 @@
 
 @include mq-large-min {
 
-  .site-main-content,
-  .site-menu--jump-links {
+  .site-main-content {
     margin: {
       top: -$spacing-xx-large;
       bottom: -$spacing-xx-large;
@@ -97,12 +77,49 @@
   }
 
   .site-menu--jump-links {
-    margin-right: -$spacing-xx-large;
-    padding-right: $spacing-xx-large;
     padding: {
-      bottom: $spacing-xx-large;
-      left: $spacing-xx-large;
+      top: $spacing-medium;
+      left: $spacing-large;
     }
+
+    a {
+      cursor: pointer;
+      margin: {
+        left: ($spacing-large * -1);
+        right: ($spacing-medium * -1);
+      }
+      padding: {
+        left: $spacing-large;
+        right: $spacing-medium;
+      }
+    }
+  }
+
+  .site-states {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all $duration-promptly $duration-promptly;
+
+    .#{$css-prefix}is-active {
+      @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
+      position: relative;
+
+      &:before {
+        top: calc(((((#{$font-size-medium} * #{$line-height-text}) / 2) - #{$spacing-x-small}) + #{$spacing-medium}));
+        border: {
+          right: $spacing-x-small solid $color-background-shade;
+          bottom: $spacing-x-small solid transparent;
+        }
+        margin-left: ((($spacing-medium * 2) + $spacing-x-small) * -1);
+      }
+    }
+  }
+
+  .#{$css-prefix}is-open .site-states {
+    max-height: 100vh;
+    overflow: visible;
+    opacity: 1;
   }
 
   .site-main-content {
@@ -110,5 +127,13 @@
       right: $spacing-xx-large;
       bottom: $spacing-xx-large * 2;
     }
+  }
+}
+
+.site-states {
+  padding-left: $spacing-medium;
+
+  .#{$css-prefix}is-active a {
+    color: $color-text-link-active;
   }
 }

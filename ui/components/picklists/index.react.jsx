@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import componentUtil, { prefix as pf, textContent } from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-import Popover from 'ui/components/lib/popover/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import AccessibleList from 'ui/components/lib/accessible-list.react';
@@ -65,7 +64,7 @@ class PickListItem extends React.Component {
     return (
       <li {...props} id={this.id} className={className} onFocus={this.itemFocused.bind(this)} onClick={this.itemSelected.bind(this)} onMouseDown={this.itemSelected.bind(this)} aria-selected={this.isSelected()} tabIndex={tabIndex} role="option">
         <span className={pf('truncate')}>
-          {this.children()};
+          {this.children()}
         </span>
       </li>
     );

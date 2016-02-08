@@ -13,11 +13,10 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
-import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import { Link } from 'react-router';
 import globals from 'app_modules/global';
+
 const moduleName = globals.moduleName;
 
 const links = {
@@ -64,10 +63,10 @@ export default (
 
         <h2 id="step-3" className="site-text-heading--large">Step 3: Download the {globals.displayName}</h2>
 
-        <p>Download the <Link to="/resources/downloads">Design System</Link> zip file
+        <p>Download the <a href="/resources/downloads">Design System</a> zip file
           and extract the contents to your <code>DEV_DIRECTORY</code>.</p>
 
-        <p>You should now have a folder called <code>{moduleName}-{version.sldsVersion}</code></p>
+        <p>You should now have a folder called <code>{moduleName}-{process.env.SLDS_VERSION}</code></p>
 
         <p>Once you have unzipped the CSS framework, you need to move a few things into the correct location :</p>
       </div>
@@ -78,9 +77,9 @@ export default (
 cd DEV_DIRECTORY
 
 # Copy ${globals.abbreviatedName} into the Node tutorial
-cp -R ${moduleName}-${version.sldsVersion} getting-started-node-js/salesforce-design-system
+cp -R ${moduleName}-${process.env.SLDS_VERSION} getting-started-node-js/salesforce-design-system
 # Copy ${globals.abbreviatedName} assets over too
-cp -R ${moduleName}-${version.sldsVersion}/assets getting-started-node-js/www
+cp -R ${moduleName}-${process.env.SLDS_VERSION}/assets getting-started-node-js/www
         `}</CodeBlock>
       </div>
 

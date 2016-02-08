@@ -14,11 +14,8 @@ import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
-import version from '.generated/site.version';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import { Link } from 'react-router';
 import g from 'app_modules/global';
-import CTALink from 'app_modules/site/components/cta-link';
 import Img from 'app_modules/ui/img';
 
 export default (
@@ -227,7 +224,7 @@ app.listen(port);
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
-        <p><Link to="/resources/downloads/">Download the {g.displayName} CSS framework</Link></p>
+        <p><a href="/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`

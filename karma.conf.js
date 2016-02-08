@@ -19,7 +19,6 @@ module.exports = function(config) {
     files: [
       'node_modules/sinon/pkg/sinon.js',
       'ui/**/*.spec.+(js|jsx)',
-      'test/browser/site/**/*.+(js|jsx)',
       'test/browser/accessibility/a11y.js',
       'test/browser/accessibility/components.jsx'
     ],
@@ -95,7 +94,7 @@ module.exports = function(config) {
       plugins: [
         new webpack.DefinePlugin({
           'process.env': _({
-            'DEFAULT_USER_TYPE': 'external'
+            'INTERNAL': ''
           }).mapValues(function (value) { return '"' + value + '"'; }).value()
         })
       ]

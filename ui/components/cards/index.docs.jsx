@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import { Link } from 'react-router';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
@@ -25,7 +24,7 @@ export const intro = (
 export default (
   <ComponentDocs>
     <p>To initialize a card, apply the <CodeClass className="card"/> class to a containing <code>&lt;div&gt;</code>. A card is made up of three sections, a header, a body, and a footer. The card header will get the <CodeClass className="card__header"/> class. The card body will get the <CodeClass className="card__body"/> class. The card footer will get the <CodeClass className="card__footer"/> class.</p>
-    <p>The card body can consume either a <Link to="/components/data-tables">Data Table</Link> or a <Link to="/components/tiles">Tile</Link>.</p>
+    <p>The card body can consume either a <a href="/components/data-tables">Data Table</a> or a <a href="/components/tiles">Tile</a>.</p>
     <p>For available classes and options, see the <a href="#overview">card overview legend</a> below.</p>
   </ComponentDocs>
 );

@@ -42,7 +42,7 @@ export default (
     <div className={pf('comment__content text-longform')}>
       <p><a href="javascript:void(0)" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
     </div>
-    <ul className={pf('list--horizontal has-dividers text-body--small')}>
+    <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
       <li className={pf('list__item')}>
         <a href="javascript:void(0)" title="Like this item">Like</a>
       </li>

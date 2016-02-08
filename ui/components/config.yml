@@ -5,6 +5,7 @@ components:
   - buttons
   - button-groups
   - cards
+  - context-bar
   - data-tables
   - datepickers
   - docked-composer
@@ -17,6 +18,7 @@ components:
   - media-objects
   - menus
   - modals
+  - navigation
   - notifications
   - page-headers
   - pills

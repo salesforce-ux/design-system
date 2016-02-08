@@ -56,5 +56,9 @@ classes:
     notes: These are typically on a form
   -
     class: section-title--divider
-    description: Titles that also act as a divider
+    description: Titles that also act as a divider with a grey background
     notes: These are typically on a form
+  -
+    class: section-title--divider-line
+    description: Titles that also act as a divider with a rule
+    notes: These are typically on a activity timeline

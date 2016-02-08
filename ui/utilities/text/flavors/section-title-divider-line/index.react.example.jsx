@@ -10,21 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
-
-export const intro = (
-  <p className="site-text-introduction">
-    The activity timeline displays each of the user&rsquo;s upcoming, current, and past activities.
-  </p>
-);
-
 export default (
-  <ComponentDocs>
-    <p>Each Activity timeline item receives its width from the parent list. It can consume the full width of the main page area or be placed in the smaller right sidebar.</p>
-    <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Text describing the type of timeline item is placed in a <code>span</code>. It is the first element in the timeline item and should be hidden with the <CodeClass className="assistive-text"/> class. The <code>SVG</code> image does not need the <CodeClass className="assistive-text"/> class.</p>
-  </ComponentDocs>
+  <div className="demo-only">
+    <h3 className={pf('section-title--divider-line')}>Section Title</h3>
+  </div>
 );

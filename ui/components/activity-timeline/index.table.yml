@@ -8,8 +8,8 @@ classes:
     notes: By default icons have a white fill color
   -
     class: timeline__item
-    description: Defines each item on the timeline
-    required: true
+    deprecated: true
+    description: Deprecated. Defines each item on the timeline
     applied: <code>li</code>
   -
     class: media--timeline

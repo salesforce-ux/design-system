@@ -32,11 +32,6 @@
 }
 
 th.#{$css-prefix}table--tree__toggle-cell {
-    width: 20px;
+    width: $square-icon-x-small-boundary;
     padding-right: 0;
-}
-
-.#{$css-prefix}table--tree__toggle {
-  padding: $spacing-xxx-small;
-  border-color: $color-border;
 }

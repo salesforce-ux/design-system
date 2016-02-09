@@ -10,13 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Lorem from 'react-lorem-component';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let Demo = props =>
+  <div className={pf('demo-only')} {...props} style={{ height: '500px' }}>
+    {props.children}
+  </div>;
 
 const dialingIcon = (
   <span className={pf('icon_container icon-standard-call')}>
@@ -24,81 +33,214 @@ const dialingIcon = (
     <span className={pf('assistive-text')}>Call Icon</span>
   </span>
 );
-const recordIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
-);
 
-export default (
-  <div className="demo-only">
-    {/*<div className={pf('docked-container')}>*/}
+let DockedComposer = props =>
+  <div className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+    {props.children}
+  </div>;
 
-      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+let ComposerHeader = props =>
+  <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+    <MediaObject figureLeft={dialingIcon} flavor="center">
+      Header
+    </MediaObject>
+    <div className={pf('docked-composer__actions')}>
+      <ButtonIcon
+        flavor="icon-bare,icon-inverse"
+        sprite="utility"
+        symbol="minimize_window"
+        assistiveText="Minimize window" />
+      <ButtonIcon
+        flavor="icon-bare,icon-inverse"
+        sprite="utility"
+        symbol="expand_alt"
+        assistiveText="Expand Composer" />
+      <ButtonIcon
+        flavor="icon-bare,icon-inverse"
+        sprite="utility"
+        symbol="close"
+        assistiveText="Close" />
+    </div>
+  </div>;
 
-        {/* Composer Header */}
-        <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
-          <MediaObject figureLeft={dialingIcon} flavor="center">
-            Header
-          </MediaObject>
-          <div className={pf('docked-composer__actions')}>
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="minimize_window"
-              assistiveText="Minimize window" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="expand_alt"
-              assistiveText="Expand Composer" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="close"
-              assistiveText="Close" />
-          </div>
-        </div>
+let ComposerBody = props =>
+  <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
+    {props.children}
+  </div>;
 
-        {/* Composer Body */}
-        <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
+let ComposerFooter = props =>
+  <div className={pf('docked-composer__footer shrink-none')}>
+    <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
+      <Button flavor="brand">Action</Button>
+    </div>
+  </div>;
 
-        </div>
+let ComposerOverflowMenu = props =>
+  <div className={pf('docked-composer docked-composer--overflow')}>
+    <a href="javascript:void(0)" className={pf('docked-composer__overflow-pill theme--alt-inverse')}>
+      <span className={pf('align-middle')}>
+        <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
+        <span className={pf('assistive-text')}>View other docked windows</span>
+      </span>
+      <span className={pf('text-body--small align-middle')}>99 +</span>
+    </a>
+    <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
+      <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+            <span className={pf('assistive-text')}>Email Icon</span>
+          </span>
+          Agenda for next week
+        </Menu.Item>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+            <span className={pf('assistive-text')}>Call Icon</span>
+          </span>
+          Lei Chan
+        </Menu.Item>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-task m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
+            <span className={pf('assistive-text')}>Task Icon</span>
+          </span>
+          August 14 Meeting Notes
+        </Menu.Item>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+            <span className={pf('assistive-text')}>Email Icon</span>
+          </span>
+          New Email
+        </Menu.Item>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+            <span className={pf('assistive-text')}>Call Icon</span>
+          </span>
+          Janet Fitzpatrick
+        </Menu.Item>
+        <Menu.Item>
+          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
+            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+            <span className={pf('assistive-text')}>Call Icon</span>
+          </span>
+          Call with Adam Fraser
+        </Menu.Item>
+      </Menu.List>
+    </Menu>
+  </div>;
 
-        {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none')}>
-
-          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="delete"
-              assistiveText="Delete" />
-            <Button flavor="brand">Action</Button>
-          </div>
-
-          <div className={pf('float--left size--1-of-2')}>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="unmuted"
-              assistiveText="Mute Yourself" />
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="volume_high"
-              assistiveText="Volume" />
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="apps"
-              assistiveText="Volume" />
-          </div>
-
-        </div>
+let Modal = props =>
+  <div aria-hidden="false" role="dialog" className={pf('modal fade-in-open docked-composer-modal')}>
+    <div className={pf('modal__container')}>
+      <div className={pf('modal__content')}>
+        {props.children}
       </div>
+    </div>
+  </div>;
 
-    {/*</div>*/}
-  </div>
-);
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let StateA = props =>
+  <Demo>
+    <div className={pf('docked_container')}>
+      <DockedComposer className={pf('is-open')}>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+    </div>
+  </Demo>;
+
+let StateB = props =>
+  <Demo>
+    <div className={pf('docked_container')}>
+      <DockedComposer>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+    </div>
+  </Demo>;
+
+let StateC = props =>
+  <Demo>
+    <Modal>
+      <DockedComposer>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+    </Modal>
+    <div className={pf('backdrop backdrop--open')}></div>
+  </Demo>;
+
+let StateD = props =>
+  <Demo>
+    <div className={pf('docked_container')}>
+      <DockedComposer className={pf('is-open')}>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+      <DockedComposer className={pf('is-open')}>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+    </div>
+  </Demo>;
+
+let StateE = props =>
+  <Demo>
+    <div className={pf('docked_container')}>
+      <ComposerOverflowMenu />
+      <DockedComposer className={pf('is-open')}>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+      <DockedComposer className={pf('is-open')}>
+        <ComposerHeader />
+        <ComposerBody />
+        <ComposerFooter />
+      </DockedComposer>
+    </div>
+  </Demo>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'single-composer-open',
+    label: 'Open',
+    element: <StateA />
+  },
+  {
+    id: 'single-composer-closed',
+    label: 'Closed',
+    element: <StateB />
+  },
+  {
+    id: 'single-composer-popout',
+    label: 'Popout',
+    element: <StateC />
+  },
+  {
+    id: 'multiple-composer',
+    label: 'Multiple Composers',
+    element: <StateD />
+  },
+  {
+    id: 'multiple-composer-overflow',
+    label: 'Multiple Composers with Overflow Menu',
+    element: <StateE />
+  }
+];

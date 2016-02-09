@@ -22,7 +22,7 @@ export default (
   <span className={pf('resizable__handle resizable__handle--indicator')} style={{transform: 'translate3d(318px,0,0)', height: '37px'}}>
     <span className={pf('resizable__divider')}></span>
   </span>
-  <table className={pf('table table--bordered table--resizable')}>
+  <table className={pf('table table--bordered table--resizable table--cell-buffer')}>
     <thead>
       <tr className={pf('text-heading--label')} >
         <th className={pf('cell-shrink')} scope="col"><Checkbox assistiveText="select all" /></th>

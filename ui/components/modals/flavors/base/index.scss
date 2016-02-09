@@ -61,7 +61,7 @@
       }
       bottom: $border-width-thick solid $color-border;
     }
-    padding: $spacing-large $spacing-medium;
+    padding: $spacing-medium;
     text-align: center;
 
     + .#{$css-prefix}modal__menu {

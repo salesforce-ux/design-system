@@ -81,8 +81,16 @@
 
 // Add left and right padding to the first and last cells of a table
 .#{$css-prefix}table--cell-buffer {
-  padding-right: $spacing-large;
-  padding-left: $spacing-large;
+
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $spacing-large;
+  }
+
+  tr > th:last-child,
+  tr > td:last-child {
+    padding-right: $spacing-large;
+  }
 }
 
 // Add vertical borders to a table

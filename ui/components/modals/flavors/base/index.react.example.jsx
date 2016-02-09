@@ -60,7 +60,7 @@ class ModalExample extends React.Component {
             </h2>
           </Modal.Header>
 
-          <Modal.Body className={pf('p-around--medium')}>
+          <Modal.Body className={pf('p-vertical--large p-horizontal--x-large')}>
             <Lorem count={2} paragraphLowerBound={5} />
           </Modal.Body>
 

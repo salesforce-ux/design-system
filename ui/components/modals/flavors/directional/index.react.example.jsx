@@ -68,7 +68,7 @@ class DirectionalExample extends React.Component {
             </h2>
           </Modal.Header>
 
-          <Modal.Body className={pf('p-around--medium')}>
+          <Modal.Body className={pf('p-vertical--large p-horizontal--x-large')}>
             { this.page(this.state.page) }
           </Modal.Body>
 

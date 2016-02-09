@@ -26,57 +26,58 @@ const a11yTestsToRun = [
   'A11Y_DOM_15'
 ];
 
+const getStates = (component, flavor) => {
+  try {
+    const example = requireExample(`./${flavor.examplePath}`);
+    let states = [];
+    if (example.states) {
+      states = states.concat(example.states);
+    }
+    if (React.isValidElement(example.default)) {
+      states = states.concat({
+        label: 'Default',
+        element: example.default
+      });
+    }
+    if (React.isValidElement(example.preview)) {
+      states = states.concat({
+        label: 'Preview',
+        element: example.preview
+      });
+    }
+    return states.map(({ label, element }) => {
+      let renderedComponent = renderIntoDocument(element);
+      return {
+        label,
+        renderedComponent,
+        node: ReactDOM.findDOMNode(renderedComponent)
+      };
+    });
+  } catch (e) {
+    console.log(`Had trouble rendering flavor "${flavor.title}" for "${component.title}"`);
+    console.log(e.message);
+  }
+};
+
 describe(`Accessiblity`, () => {
-  // iterate through all sections
-  ui.map((group, index) => {
-    describe(`section ${group.title},`, () => {
-      // iterate through all components
-      group.components.map((component, index) => {
-        describe(`${component.title}`, () => {
-          // iterate through flavors
-          component.flavors.map((flavor, index) => {
-            describe(`${flavor.title}`, () => {
-              let previewCmp = null;
-              let cmp = null;
-              let $cmp = null;
-              let a11yErrors = null;
-              beforeEach(() => {
-                try {
-                  previewCmp = requireExample(`./${flavor.examplePath}`);
-                  // HACK: Mixing ES6 exports with CommonJS exports
-                  if (previewCmp.default) {
-                    previewCmp = previewCmp.default;
-                  }
-                  // Some components export a default (above)
-                  // and others have separate preview/code
-                  if (previewCmp.preview) {
-                    previewCmp = previewCmp.preview;
-                  }
-                  let Preview = React.createClass({
-                    render: function() {
-                      return previewCmp;
-                    }
+  ui.forEach(group => {
+    describe(`Section "${group.title}",`, () => {
+      group.components.forEach(component => {
+        describe(`Component: "${component.title}"`, () => {
+          component.flavors.forEach(flavor => {
+            describe(`Flavor: "${flavor.title}"`, () => {
+              getStates(component, flavor).forEach(state => {
+                describe(`State: "${state.label}"`, () => {
+                  a11yTestsToRun.forEach(a11yTest => {
+                    it(`passes accessibility test ${a11yTest}`, () => {
+                      const a11yErrors = window.$A11y.checkA11y(state.node, [a11yTest], true);
+                      const message = a11yErrors.reduce((msg, err) => msg
+                        .concat(`Got error ${err.errorTag} (${err.errorMsg}) for the following DOM elements:`)
+                        .concat(err.errorEls.map(element => element.outerHTML))
+                      , []).join('\n');
+                      expect(a11yErrors).length.to.be(0, message);
+                    });
                   });
-                  // render it and get its DOM node
-                  cmp = renderIntoDocument(<Preview/>);
-                  $cmp = ReactDOM.findDOMNode(cmp);
-                } catch (e) {
-                  console.log(`Had trouble rendering flavor "${flavor.title}" for "${component.title}"`);
-                  console.log(e.message);
-                }
-              });
-              // run each accessibility test on this flavor
-              a11yTestsToRun.map((a11yTest, index) => {
-                it(`passes accessibility test ${a11yTest} (${window.$A11y.errorMessages[a11yTest]})`, () => {
-                  let a11yErrors = window.$A11y.checkA11y($cmp, [a11yTest], true);
-                  for(var i = 0; i < a11yErrors.length; i++) {
-                    var error = a11yErrors[i];
-                    console.log(`Got error ${error.errorTag} (${error.errorMsg}) for the following DOM elements:`);
-                    for(var j = 0; j < error.errorEls.length; j++) {
-                      console.log(error.errorEls[j].outerHTML);
-                    }
-                  }
-                  expect(a11yErrors).length.to.be(0);
                 });
               });
             });

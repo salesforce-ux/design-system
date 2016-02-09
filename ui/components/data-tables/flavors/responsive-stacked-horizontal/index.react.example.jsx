@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<table className={pf('table table--bordered max-medium-table--stacked-horizontal')}>
+<table className={pf('table table--bordered max-medium-table--stacked-horizontal table--cell-buffer')}>
   <thead>
     <tr className={pf('text-heading--label')} >
       <th className={pf('row-select')} scope="col"><Checkbox assistiveText="select all" /></th>

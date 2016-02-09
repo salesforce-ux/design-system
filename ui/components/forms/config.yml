@@ -10,6 +10,7 @@ flavors:
   - stacked-form
   - inline-form
   - compound-form
+  - panel
   - read-only-state
   - validation-state
   - field-level-help

@@ -402,7 +402,7 @@ let StateJ = props =>
                       <SvgIcon className={pf('icon icon-standard-contact icon--small shrink-none')} sprite="standard" symbol="contact" />
                       <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
                     </div>
-                    <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
+                    <input id="lookup-related-01" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
                   </div>
                   <div className={pf('pill_container hide')}></div>
                 </div>
@@ -415,7 +415,7 @@ let StateJ = props =>
                       <SvgIcon className={pf('icon icon-standard-account icon--small shrink-none')} sprite="standard" symbol="account" />
                       <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
                     </div>
-                    <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
+                    <input id="lookup-related-02" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
                   </div>
                   <div className={pf('pill_container hide')}></div>
                 </div>

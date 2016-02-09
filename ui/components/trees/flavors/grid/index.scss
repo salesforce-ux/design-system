@@ -22,3 +22,7 @@
     }
   }
 }
+
+.#{$css-prefix}table--tree__toggle {
+  margin-left: ($spacing-xx-small * -1);
+}

@@ -8,35 +8,17 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-// .#{$css-prefix}table--tree {
+.#{$css-prefix}table--tree {
 
-//   .#{$css-prefix}tree__item {
-//     line-height: $line-height-text;
-//   }
-// }
+  .#{$css-prefix}tree__item {
+    line-height: ($line-height-text * 1rem);
 
-  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
-  // $max-nesting-depth: 20 !default;
-  // @for $current-level from 1 through $max-nesting-depth {
-  //   & [aria-level="#{$current-level}"] > &__item {
-  //       padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
-  //   }
-  // }
+  a {
+      color: $color-text-link;
 
-  // [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
-  // [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
-  //   transition: $duration-promptly transform ease-in-out;
-  //   transform: rotate(0deg);
-  // }
-
-  // [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
-  // [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
-  //   transition: $duration-promptly transform ease-in-out;
-  //   transform: rotate(90deg);
-  // }
-// }
-
-// th.#{$css-prefix}table--tree__toggle-cell {
-//     width: $square-icon-x-small-boundary;
-//     padding-right: 0;
-// }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -7,10 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}docked_container,
-.#{$css-prefix}docked-container {
-
-  @include deprecate('2.0.0');
+.#{$css-prefix}docked_container {
   display: flex;
   align-items: flex-end;
   position: fixed;
@@ -27,6 +24,9 @@
   height: 40px;
   float: left;
   box-shadow: $elevation-inverse-shadow-2;
+  border: $border-width-thin solid $color-border {
+    bottom: none;
+  }
 
   &.#{$css-prefix}is-open {
     height: 480px;
@@ -61,13 +61,6 @@
 
   &__body {
     background: $color-background-alt;
-    min-height: 259px;
-    max-height: 380px;
-    border: $border-width-thin solid $color-border {
-      top: none;
-      bottom: none;
-    }
-    overflow-y: auto;
   }
 
   &__lead {
@@ -99,8 +92,35 @@
   &__footer {
     background: $color-background;
     padding: $spacing-small $spacing-x-small;
-    border: $border-width-thin solid $color-border {
-      bottom: none;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Overflow Pills
+  &--overflow {
+    width: auto;
+  }
+
+  &--overflow__pill {
+    display: flex;
+    padding: 0 $spacing-small;
+    height: inherit;
+    white-space: nowrap;
+    border: {
+      top: {
+        left-radius: $border-radius-medium;
+        right-radius: $border-radius-medium;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-inverse;
+      text-decoration: none;
+    }
+
+    .#{$css-prefix}text-body--small {
+      color: $color-text-inverse;
+      margin-left: $spacing-x-small;
     }
   }
 
@@ -110,5 +130,23 @@
     .#{$css-prefix}icon-record .#{$css-prefix}button__icon {
       fill: $color-background-notification-badge;
     }
+  }
+}
+
+// Composer Modal
+.#{$css-prefix}docked-composer-modal .#{$css-prefix}docked-composer {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  float: none;
+  border-radius: 0;
+  border: 0;
+
+  &__header {
+    border-radius: 0;
+  }
+
+  &__body {
+    min-height: 260px;
   }
 }

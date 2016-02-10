@@ -23,7 +23,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props} style={{ height: '500px' }}>
+  <div className={pf('demo-only')} {...props} style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
     {props.children}
   </div>;
 
@@ -77,7 +77,7 @@ let ComposerFooter = props =>
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <a href="javascript:void(0)" className={pf('docked-composer__overflow-pill theme--alt-inverse')}>
+    <a href="#void" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
       <span className={pf('align-middle')}>
         <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
         <span className={pf('assistive-text')}>View other docked windows</span>
@@ -188,11 +188,6 @@ let StateD = props =>
         <ComposerBody />
         <ComposerFooter />
       </DockedComposer>
-      <DockedComposer className={pf('is-open')}>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
     </div>
   </Demo>;
 
@@ -200,11 +195,6 @@ let StateE = props =>
   <Demo>
     <div className={pf('docked_container')}>
       <ComposerOverflowMenu />
-      <DockedComposer className={pf('is-open')}>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
       <DockedComposer className={pf('is-open')}>
         <ComposerHeader />
         <ComposerBody />
@@ -234,13 +224,8 @@ export let states = [
     element: <StateC />
   },
   {
-    id: 'multiple-composer',
-    label: 'Multiple Composers',
-    element: <StateD />
-  },
-  {
     id: 'multiple-composer-overflow',
-    label: 'Multiple Composers with Overflow Menu',
+    label: 'Composers with Overflow Menu',
     element: <StateE />
   }
 ];

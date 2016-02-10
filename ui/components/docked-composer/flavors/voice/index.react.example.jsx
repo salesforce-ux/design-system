@@ -100,7 +100,7 @@ let StateA = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Connecting...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -125,7 +125,7 @@ let StateB = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Dialing...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -150,7 +150,7 @@ let StateC = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call in Progress</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
+        <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -183,7 +183,7 @@ let StateD = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Cancelling...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -205,7 +205,7 @@ let StateE = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Busy</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -233,7 +233,7 @@ let StateF = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Failed</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -261,7 +261,7 @@ let StateG = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -289,7 +289,7 @@ let StateH = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Finished</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
+        <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -321,7 +321,7 @@ let StateI = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
-        <div className={pf('text-align--center')}>
+        <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
             <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
           </span>
@@ -378,7 +378,7 @@ let StateJ = props =>
     <DockedComposer className={pf('is-open')}>
       <ComposerHeader>Lei Chan</ComposerHeader>
       <ComposerBody className={pf('docked-composer__body--form')}>
-        <fieldset className={pf('form--compound')}>
+        <fieldset className={pf('form--compound scrollable--y')}>
           <legend className={pf('assistive-text')}>Log a call</legend>
           <div className={pf('form-element__group')}>
             <div className={pf('form-element__row')}>

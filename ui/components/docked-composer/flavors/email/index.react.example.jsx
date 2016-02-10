@@ -56,7 +56,7 @@ export default (
         </div>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap size--1-of-1')}>
+        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap')}>
           <div className={pf('grid grid--align-spread')}>
             <div className={pf('grid grow p-horizontal--small')}>
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>

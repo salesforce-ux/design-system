@@ -22,7 +22,7 @@ export default (
     <label className={pf('form-element__label')} htmlFor="date">Date Picker Label</label>
     <div className={pf('form-element__control')}>
       <div className={pf('input-has-icon input-has-icon--right')}>
-        <SvgIcon className={pf('input__icon input-text-default')} sprite="utility" symbol="event" />
+        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
         <input className={pf('input')} id="date" type="text" placeholder="Pick a Date" />
       </div>
     </div>

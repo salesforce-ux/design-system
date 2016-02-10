@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className="demo-only">
-  <table className={pf('table table--bordered')}>
+  <table className={pf('table table--bordered table--cell-buffer')}>
     <thead>
       <tr className={pf('text-heading--label')} >
         <th className={pf('cell-shrink')} scope="col"><Checkbox assistiveText="select all" /></th>

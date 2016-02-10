@@ -38,7 +38,7 @@ export const updateScrollSpy = (() => {
     const y = window.pageYOffset;
     instances.forEach(instance => {
       const anchor = instance.anchors.reduce((currentAnchor, anchor) =>
-        y >= anchor.top ? anchor : currentAnchor, instance.anchors[0]);
+        y >= anchor.top - 20 ? anchor : currentAnchor, instance.anchors[0]);
       if (anchor !== instance.currentAnchor) {
         instance.currentAnchor = anchor;
         instance.anchors.forEach(anchor => {
@@ -59,7 +59,8 @@ export const updateScrollSpy = (() => {
   // the "instances" variable
   return () => {
     fastdom.measure(() => {
-      const anchors = $('.site-jump-anchor').map(node => ({
+      const isVisible = node => node.offsetParent;
+      const anchors = $('.site-jump-anchor').filter(isVisible).map(node => ({
         id: node.id,
         top: node.getBoundingClientRect().top + window.pageYOffset
       }));

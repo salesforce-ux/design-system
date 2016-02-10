@@ -17,6 +17,7 @@
   border-radius: $border-radius-medium;
   vertical-align: middle;
   line-height: $line-height-text; // Retain height if nested within a flexbox container
+  position: relative;
 
   + .#{$css-prefix}pill {
     margin-left: $spacing-xx-small;

@@ -87,7 +87,7 @@ const handleSelectChange = (sections, event, node) => {
         section.refs.format.selectedIndex = formatList.indexOf(format);
         section.tokens.forEach(token => {
           const value = format.formatter(token);
-          section.lookups.values.get(token).innerText = value;
+          section.lookups.values.get(token).innerHTML = value;
         });
       });
     });
@@ -100,7 +100,7 @@ const setupFormatSelect = node => {
   valueFormats[format].forEach(format => {
     const option = document.createElement('option');
     option.setAttribute('value', format.value);
-    option.innerText = format.label;
+    option.innerHTML = format.label;
     fastdom.mutate(() => {
       node.appendChild(option);
     });

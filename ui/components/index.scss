@@ -106,9 +106,7 @@
   // Docked Composer
   'docked-composer/flavors/base/index',
   'docked-composer/flavors/email/index',
-  'docked-composer/flavors/email-modal/index',
   'docked-composer/flavors/task/index',
-  'docked-composer/flavors/overflow-menu/index',
 
   // Publishers
   'publishers/flavors/discussion-feed/index',
@@ -151,9 +149,6 @@
   'tiles/flavors/board/index',
   'tiles/flavors/author/index',
 
-  // Tree
-  'trees/flavors/base/index',
-
   // Tabs
   'tabs/flavors/default/index',
   'tabs/flavors/overflow/index',
@@ -195,4 +190,8 @@
   'data-tables/flavors/base/index',
   'data-tables/flavors/resizable-columns/index',
   'data-tables/flavors/responsive-stacked/index',
-  'data-tables/flavors/responsive-stacked-horizontal/index';
+  'data-tables/flavors/responsive-stacked-horizontal/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

@@ -21,17 +21,6 @@
     position: relative;
   }
 
-  // First and Last Cell of a row
-  tr > th:first-child,
-  tr > td:first-child {
-    padding-left: $spacing-large;
-  }
-
-  tr > th:last-child,
-  tr > td:last-child {
-    padding-right: $spacing-large;
-  }
-
   // Table Heading Cells
   th {
     font-weight: $font-weight-regular;
@@ -78,6 +67,29 @@
   // Reduce cell to the width of its content, if space is available
   .#{$css-prefix}cell-shrink {
     width: 1%;
+  }
+
+  // Use to add a left padding buffer to cells, @todo will need to reset for responsive
+  .#{$css-prefix}cell-buffer--left {
+    padding-left: $spacing-large;
+  }
+
+  .#{$css-prefix}cell-buffer--right {
+    padding-right: $spacing-large;
+  }
+}
+
+// Add left and right padding to the first and last cells of a table
+.#{$css-prefix}table--cell-buffer {
+
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $spacing-large;
+  }
+
+  tr > th:last-child,
+  tr > td:last-child {
+    padding-right: $spacing-large;
   }
 }
 

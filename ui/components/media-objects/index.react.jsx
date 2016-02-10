@@ -23,12 +23,21 @@ class Component extends React.Component {
     const className = this.$getClassNameWithFlavor(pf('media'));
     return (
       <div className={className}>
-        {this.renderFigure(this.props.figureCenter, 'media__figure--stacked')}
-        {this.renderFigure(this.props.figureLeft)}
+        {this.renderFigure(
+          this.props.figureCenter,
+          classNames('media__figure--stacked', this.props.figureCenterClassName)
+        )}
+        {this.renderFigure(
+          this.props.figureLeft,
+          this.props.figureLeftClassName
+        )}
         <div className={pf('media__body')}>
           {this.props.children}
         </div>
-        {this.renderFigure(this.props.figureRight, 'media__figure--reverse')}
+        {this.renderFigure(
+          this.props.figureRight,
+          classNames('media__figure--reverse', this.props.figureRightClassName)
+        )}
       </div>
     );
   }
@@ -46,8 +55,11 @@ class Component extends React.Component {
 Component.displayName = 'MediaObject';
 Component.PropTypes = {
   figureLeft: React.PropTypes.node,
+  figureLeftClassName: React.PropTypes.string,
   figureRight: React.PropTypes.node,
+  figureRightClassName: React.PropTypes.string,
   figureCenter: React.PropTypes.node,
+  figureCenterClassName: React.PropTypes.string,
   flavor: React.PropTypes.oneOf(['center', 'small', 'stacked'])
 };
 

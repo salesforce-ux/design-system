@@ -40,8 +40,12 @@ const compile = () => {
     next(null, null);
   };
   function flush (next) {
+    const current = _.find(files, { relative: 'RELEASENOTES.md' });
+    const future = _(files)
+      .filter(file => file !== current)
+      .orderBy(['relative'], ['desc']);
     try {
-      const html = files.reduce((html, file) => {
+      const html = future.concat(current).reduce((html, file) => {
         return html + md.render(file.contents.toString());
       }, '');
       const releaseNotes = JSON.stringify({

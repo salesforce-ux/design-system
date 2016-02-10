@@ -12,7 +12,6 @@
 .#{$css-prefix}dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
-  top: 100%;
   left: 50%;
   float: left;
   min-width: $size-xx-small;
@@ -38,7 +37,6 @@
   }
 
   &--bottom {
-    top: auto;
     bottom: 100%;
   }
 
@@ -231,9 +229,14 @@
   display: inline-block;
 
   .#{$css-prefix}dropdown {
+    top: 100%;
     visibility: hidden;
     opacity: 0;
     transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+  }
+
+  .#{$css-prefix}dropdown--bottom {
+    top: auto;
   }
 
   &:hover,

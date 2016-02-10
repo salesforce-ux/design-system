@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only" style={{height: '330px'}}>
+<div className="demo-only demo-only--dropdown" style={{ height: '330px' }}>
   <div className={pf('dropdown dropdown--left datepicker')} aria-hidden="false" data-selection="single">
     <div className={pf('datepicker__filter grid')}>
       <div className={pf('datepicker__filter--month grid grid--align-spread size--3-of-4')}>

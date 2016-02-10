@@ -103,9 +103,11 @@ export default React.createClass({
 
   renderInternalBanner() {
     if (!process.env.INTERNAL) return;
-    const options = Object.keys(Status.states).map(s =>
-      <option value={Status.states[s]}>{Status.states[s]}</option>
-    );
+    const options = Object.keys(Status.states).map(s => {
+      const status = Status.states[s];
+      const label = _.words(status).map(_.upperFirst).join(' ');
+      return <option value={status}>Component Status: {label}</option>;
+    });
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>

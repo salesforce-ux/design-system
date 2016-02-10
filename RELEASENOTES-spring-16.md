@@ -24,14 +24,14 @@
 - Deprecated `page-header` mixin (styles moved directly to `.slds-page-header` class)
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
-- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes [https://github.com/salesforce-ux/design-system/issues/107]). Updated documentation to reflect previous refactoring.
+- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
-- Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
-- Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]
+- Make `.slds-text-body--small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
+- Mark all list utilities "dev-ready" - www.lightningdesignsystem.com/utilities/lists
 - Field-level help popover background color token update
-- Fix truncation on Sales Path (fixes [https://github.com/salesforce-ux/design-system/issues/135])
-- Fix chevron alignment on Sales Path - [www.lightningdesignsystem.com/components/tabs#sales-path]
-- Updated demo on buttons > neutral icon to demonstrate "mutton" - [www.lightningdesignsystem.com/components/buttons#neutral-icon]
+- Fix truncation on Sales Path (fixes https://github.com/salesforce-ux/design-system/issues/135)
+- Fix chevron alignment on Sales Path - www.lightningdesignsystem.com/components/tabs#sales-path
+- Updated demo on buttons > neutral icon to demonstrate "mutton" - www.lightningdesignsystem.com/components/buttons#neutral-icon
 - Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding.
 
 **NEW COMPONENTS**
@@ -45,10 +45,10 @@
 -  `.slds-grid--vertical-align-end`, `.slds-grid--vertical-align-center` was added for vertical alignment on cross axis
 - `.slds-grid--stretch` was added for multi-row vertical stretch support
 - `.slds-grid--reverse` and `.slds-grid--vertical-reverse` was added to reverse direction of the grid
-- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes [https://github.com/salesforce-ux/design-system/issues/122])
+- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes https://github.com/salesforce-ux/design-system/issues/122)
 - `.slds-page-header__info` added to Page header for better responsive spacing.
 - Utility classes added to help with dropdown menu overflow length. `.slds-dropdown--length-5`, `.slds-dropdown--length-7` and `.slds-dropdown--length-10` for 5, 7 or 10 text only menu items. `.slds-dropdown--length-with-icon-5`, `.slds-dropdown--length-with-icon-7` and `.slds-dropdown--length-with-icon-10` for 5, 7 or 10 text with icon menu items.
-- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes [https://github.com/salesforce-ux/design-system/issues/122])
+- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes https://github.com/salesforce-ux/design-system/issues/122)
 
 **Deprecated**
 - `.slds-dropdown--overflow` deprecated in version 2.0.0. Dropdown length utilities should be used instead.

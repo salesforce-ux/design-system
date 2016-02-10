@@ -18,19 +18,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image1 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-task timeline__icon')} sprite="standard" symbol="task" />
+  <SvgIcon className={pf('icon icon--small icon-standard-task')} sprite="standard" symbol="task" />
 );
 
 const image2 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-event timeline__icon')} sprite="standard" symbol="event" />
+  <SvgIcon className={pf('icon icon--small icon-standard-event')} sprite="standard" symbol="event" />
 );
 
 const image3 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-log-a-call timeline__icon')} sprite="standard" symbol="log_a_call" />
+  <SvgIcon className={pf('icon icon--small icon-standard-log-a-call')} sprite="standard" symbol="log_a_call" />
 );
 
 const image4 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-email timeline__icon')} sprite="standard" symbol="email" />
+  <SvgIcon className={pf('icon icon--small icon-standard-email')} sprite="standard" symbol="email" />
 );
 
 const content = (
@@ -50,7 +50,7 @@ export default (
     <li>
       <span className={pf('assistive-text')}>Task</span>
       <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1}>
+        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1} figureLeftClassName={pf('timeline__icon')}>
           <MediaObject figureLeft={form} className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
               <span className={pf('tile__title-content')}>
@@ -74,7 +74,7 @@ export default (
     <li>
       <span className={pf('assistive-text')}>Event</span>
       <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2}>
+        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
               <span className={pf('tile__title-content')}>
@@ -103,7 +103,7 @@ export default (
     <li>
       <span className={pf('assistive-text')}>Call</span>
       <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3}>
+        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
               <span className={pf('tile__title-content')}>
@@ -128,7 +128,7 @@ export default (
     <li>
       <span className={pf('assistive-text')}>Email</span>
       <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4}>
+        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
               <span className={pf('tile__title-content')}>

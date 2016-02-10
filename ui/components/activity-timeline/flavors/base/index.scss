@@ -17,14 +17,6 @@
     margin-left: $border-width-thin;
   }
 
-  > .#{$css-prefix}media__figure {
-    margin-top: -$spacing-small;
-    border: $border-width-thick solid #fff {
-      top-width: $spacing-small;
-      bottom-width: $spacing-small;
-    };
-  }
-
   .#{$css-prefix}tile__title {
 
     &-content {
@@ -52,6 +44,14 @@
 }
 
 .#{$css-prefix}timeline {
+
+  &__icon {
+    margin-top: -$spacing-small;
+    border: $border-width-thick solid #fff {
+      top-width: $spacing-small;
+      bottom-width: $spacing-small;
+    };
+  }
 
   &__actions {
     display: flex;

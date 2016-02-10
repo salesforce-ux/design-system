@@ -45,7 +45,7 @@ classes:
     applied: <code>p</code>
   -
     class: timeline__icon
-    description: Adds the 2px white border around the icon
+    description: Adds the thick white border around the icon which is used to cover the timeline rules.
     required: true
     applied: <code>svg</code>
     notes: This is added to the icon inside the <code>.{{cssPrefix}}media__figure</code> in

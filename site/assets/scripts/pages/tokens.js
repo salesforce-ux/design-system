@@ -73,18 +73,24 @@ const handleInputChange = (sections, event, node) => {
 };
 
 const handleSelectChange = (sections, event, node) => {
-  const section = sections
-    .filter(section => section.refs.format === node)[0];
-  if (section) {
-    const formatList = valueFormats[node.dataset.sldsTokensValueFormat];
-    const format = formatList.filter(f => f.value === node.value)[0];
-    section.tokens.forEach(token => {
-      const value = format.formatter(token);
+  const { sldsTokensValueFormat: formatKey } = node.dataset;
+  const formatList = valueFormats[formatKey];
+  const format = formatList.filter(f => f.value === node.value)[0];
+  sections
+    .filter(section => section.refs.format)
+    .filter(section => {
+      const { sldsTokensValueFormat: key } = section.refs.format.dataset;
+      return formatKey === key;
+    })
+    .forEach(section => {
       fastdom.mutate(() => {
-        section.lookups.values.get(token).innerText = value;
+        section.refs.format.selectedIndex = formatList.indexOf(format);
+        section.tokens.forEach(token => {
+          const value = format.formatter(token);
+          section.lookups.values.get(token).innerText = value;
+        });
       });
     });
-  }
 };
 
 const setupFormatSelect = node => {

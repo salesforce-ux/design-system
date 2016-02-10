@@ -1,0 +1,14 @@
+description: This table gives you a quick overview of the unique {{abbreviatedName}} CSS classes that can be applied to create page headers.
+classes:
+  -
+    class: panel
+    description: Container for slide out panels
+    required: true
+  -
+    class: panel__section
+    description: Contains sub sections of a panel
+    required: true
+  -
+    class: panel__actions
+    description: Contains form actions at the bottom of a panel
+    required: true

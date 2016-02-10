@@ -21,6 +21,7 @@ export default new SitemapRouter().map(function () {
     this.route('visualforce');
     this.route('lightning');
     this.route('heroku');
+    this.route('markup-and-style');
     this.route('getting-started-node-js');
   });
 

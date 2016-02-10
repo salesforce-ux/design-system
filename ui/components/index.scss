@@ -150,9 +150,6 @@
   'tiles/flavors/board/index',
   'tiles/flavors/author/index',
 
-  // Tree
-  'trees/flavors/base/index',
-
   // Tabs
   'tabs/flavors/default/index',
   'tabs/flavors/overflow/index',
@@ -194,4 +191,8 @@
   'data-tables/flavors/base/index',
   'data-tables/flavors/resizable-columns/index',
   'data-tables/flavors/responsive-stacked/index',
-  'data-tables/flavors/responsive-stacked-horizontal/index';
+  'data-tables/flavors/responsive-stacked-horizontal/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

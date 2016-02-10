@@ -53,22 +53,20 @@ export default (
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1}>
           <MediaObject figureLeft={form} className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
-              <a href="#">Review proposals for EBC deck with larger team and have marketing review this</a>
+              <span className={pf('tile__title-content')}>
+                <a href="#">Review proposals for EBC deck with larger team and have marketing review this</a>
+              </span>
             </p>
-            <div className={pf('grid')}>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Contact:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
-                </dl>
-              </div>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Assigned to:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Betty Mason</a></dd>
-                </dl>
-              </div>
-            </div>
+            <ul className={pf('grid')}>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Contact:</span>
+                <span className={pf('text-body--small')}><a href="#">Lei Chan</a></span>
+              </li>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
+                <span className={pf('text-body--small')}><a href="#">Betty Mason</a></span>
+              </li>
+            </ul>
           </MediaObject>
         </MediaObject>
       </MediaObject>
@@ -79,29 +77,25 @@ export default (
         <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
-              <a href="#">Company One — EBC Meeting</a>
+              <span className={pf('tile__title-content')}>
+                <a href="#">Company One — EBC Meeting</a>
+              </span>
             </p>
             <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
-            <div className={pf('grid')}>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Time:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></dd>
-                </dl>
-              </div>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Location:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">300 Pike St, San Francisco CA</a></dd>
-                </dl>
-              </div>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Name:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></dd>
-                </dl>
-              </div>
-            </div>
+            <ul className={pf('grid')}>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Time:</span>
+                <span className={pf('text-body--small')}><a href="#">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
+              </li>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Location:</span>
+                <span className={pf('text-body--small')}><a href="#">300 Pike St, San Francisco CA</a></span>
+              </li>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
+                <span className={pf('text-body--small')}><a href="#">Lei Chan</a>, <a href="#">Jason Dewar</a>, <a href="#">Gwen Jones</a> and <a href="#">Pete Schaffer</a></span>
+              </li>
+            </ul>
           </div>
         </MediaObject>
       </MediaObject>
@@ -112,23 +106,21 @@ export default (
         <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
-              <a href="#">Mobile conversation on Monday</a>
+              <span className={pf('tile__title-content')}>
+                <a href="#">Mobile conversation on Monday</a>
+              </span>
             </p>
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
-            <div className={pf('grid')}>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Name:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
-                </dl>
-              </div>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>Assigned to:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Betty Mason</a></dd>
-                </dl>
-              </div>
-            </div>
+            <ul className={pf('grid')}>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
+                <span className={pf('text-body--small')}><a href="#">Lei Chan</a></span>
+              </li>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
+                <span className={pf('text-body--small')}><a href="#">Betty Mason</a></span>
+              </li>
+            </ul>
           </div>
         </MediaObject>
       </MediaObject>
@@ -139,23 +131,21 @@ export default (
         <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4}>
           <div className={pf('tile')}>
             <p className={pf('tile__title truncate')}>
-              <a href="#">Updated Proposals</a>
+              <span className={pf('tile__title-content')}>
+                <a href="#">Updated Proposals</a>
+              </span>
             </p>
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
-            <div className={pf('grid')}>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>To:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Lei Chan</a></dd>
-                </dl>
-              </div>
-              <div className={pf('tile__detail')}>
-                <dl>
-                  <dt className={pf('text-heading--label-normal')}>From:</dt>
-                  <dd className={pf('text-body--small')}><a href="#">Jason Dewar</a></dd>
-                </dl>
-              </div>
-            </div>
+            <ul className={pf('grid')}>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>To:</span>
+                <span className={pf('text-body--small')}><a href="#">Lei Chan</a></span>
+              </li>
+              <li className={pf('tile__detail')}>
+                <span className={pf('tile__label text-heading--label-normal')}>From:</span>
+                <span className={pf('text-body--small')}><a href="#">Jason Dewar</a></span>
+              </li>
+            </ul>
           </div>
         </MediaObject>
       </MediaObject>

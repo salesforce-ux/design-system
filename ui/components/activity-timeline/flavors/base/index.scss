@@ -26,9 +26,8 @@
   }
 
   .#{$css-prefix}tile__title {
-    position: relative;
 
-    > a:first-child {
+    &-content {
       position: relative;
       top: -1px;
       padding-right: $spacing-medium;
@@ -45,6 +44,10 @@
       content: ' ';
       z-index: 1;
     }
+  }
+
+  .#{$css-prefix}tile__label {
+    display: block;
   }
 }
 

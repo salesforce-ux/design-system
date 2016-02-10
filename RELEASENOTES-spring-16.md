@@ -6,7 +6,7 @@
 
 **SITE IA**
 - Add Getting Started > Markup and Style guidelines with BEM information
-- Updated documentation and accessibility information for tabs 
+- Updated documentation and accessibility information for tabs
 - Copy updates on components to represent Voice & Tone Guidelines
 - Components can now be built with states and will show up in the component variant & states navigation if available
 
@@ -43,13 +43,13 @@
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
 - Updated demo on buttons > neutral icon to demonstrate "mutton" - [button neutral](components/buttons#neutral-icon)
 - Mark all list utilities "dev-ready" - [list utilities](/utilities/lists)
-- Field-level help popover background color token update [popover colors](/components/popovers/#colors)
+- Field-level help popover background color token update - [popover colors](/components/popovers/#colors)
 - Apply proper accessibility requirements (aria-labelledby) to tabs - Fixes [#107](https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
 - Make `.slds-text-body--small` inherit theme color - Fixes [#123](https://github.com/salesforce-ux/design-system/issues/123)
 - Fix truncation on Sales Path - Fixes [#35](https://github.com/salesforce-ux/design-system/issues/135)
 - Fix chevron alignment on Sales Path
-- Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding. Fixes [#61](https://github.com/salesforce-ux/design-system/issues/61) - Fixes [#51](https://github.com/salesforce-ux/design-system/issues/51)
+- Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding - Fixes [#61](https://github.com/salesforce-ux/design-system/issues/61) - Fixes [#51](https://github.com/salesforce-ux/design-system/issues/51)
 - Custom Select container added, normalizes the `<select>` appearance in various browsers - Fixes [#122](https://github.com/salesforce-ux/design-system/issues/122)
 
 **NEW COMPONENTS**
@@ -92,13 +92,13 @@
 
 **NEW COMPONENTS**
 - Added initial state of tabs > sales path
-- Added max-width sizing utilities [max width sizing](utilities/sizing)
-- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) [button stacking modifiers](components/buttons/#stacked)
-- Added stretched button utilities for full-width buttons on small form factors [button stretch modifier](components/buttons/#stretch)
+- Added max-width sizing utilities - [max width sizing](utilities/sizing)
+- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) - [button stacking modifiers](components/buttons/#stacked)
+- Added stretched button utilities for full-width buttons on small form factors - [button stretch modifier](components/buttons/#stretch)
 - Dialog Menus for small form factor (prompts for touch)[components/notifications/#prompt-for-touch]
-- Action overflow for touch [action overlfow component](components/menus#action-overflow-for-touch)
-- Added Edit dialog form for touch devices [edit dialog for touch component](components/forms#edit-dialog-for-touch)
-- Added the Docked Composer [docked composer component](/components/docked-composer/)
+- Action overflow for touch - [action overlfow component](components/menus#action-overflow-for-touch)
+- Added Edit dialog form for touch devices - [edit dialog for touch component](components/forms#edit-dialog-for-touch)
+- Added the Docked Composer - [docked composer component](/components/docked-composer/)
 
 **DEPRECATED**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
@@ -112,5 +112,3 @@
   - `slds-tabs--scoped > slds-tabs__content` deprecates in version 2.0.0, use `slds-tabs--scoped__content` instead
   - `slds-tabs--scoped > a` deprecates in version 2.0.0, use `slds-tabs--scoped__link` instead
 - Descendent selector on `.slds-input__icon` fill color deprecates in version 2.0.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
-
-

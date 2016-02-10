@@ -168,15 +168,18 @@ ${html}
       });
     }
     // Adjust the height of the iframe
-    var $frame = parent.document.getElementById('iframe-${flavor.uid}');
-    var frameHeight = document.body.getBoundingClientRect().height;
-    parent.__eventQueue.push({
-      name: 'component:iframe:updatePreviewHeight',
-      data: {
-        flavor: '${flavor.uid}',
-        height: frameHeight
-      }
-    });
+    function updatePreviewHeight () {
+      var frameHeight = document.body.getBoundingClientRect().height;
+      parent.__eventQueue.push({
+        name: 'component:iframe:updatePreviewHeight',
+        data: {
+          flavor: '${flavor.uid}',
+          height: frameHeight
+        }
+      });
+    }
+    updatePreviewHeight();
+    window.addEventListener('resize', updatePreviewHeight);
     // Fix SVG
     parent.__eventQueue.push({
       name: 'component:iframe:updatePreviewSVG',

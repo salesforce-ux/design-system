@@ -37,7 +37,7 @@ export default (
         </div>
       </div>
       <div className={pf('card__body')}>
-        <table className={pf('table table--bordered max-medium-table--stacked-horizontal no-row-hover')}>
+        <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
           <thead>
             <tr>
               <th className={pf('cell-shrink')} scope="col">

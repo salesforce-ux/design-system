@@ -114,6 +114,9 @@ export default () => ({
         updateComponentPreviewSVG);
       emitter.on('tab:select',
         updateFormFactor);
+      emitter.on('preferences:updated', () => {
+        fastdom.mutate(updateScrollSpy);
+      });
     },
     listen_dom: delegate => {
       // States

@@ -33,22 +33,42 @@ const replace = (str, map) => {
   );
 };
 
+const compile = () => {
+  const files = [];
+  function transform (file, enc, next) {
+    files.push(file);
+    next(null, null);
+  };
+  function flush (next) {
+    const current = _.find(files, { relative: 'RELEASENOTES.md' });
+    const future = _(files)
+      .filter(file => file !== current)
+      .orderBy(['relative'], ['desc']);
+    try {
+      const html = future.concat(current).reduce((html, file) => {
+        return html + md.render(file.contents.toString());
+      }, '');
+      const releaseNotes = JSON.stringify({
+        html: replace(html, headingsMap)
+      }, null, 2);
+      this.push(new gutil.File({
+        path: 'site.release-notes.js',
+        contents: new Buffer(`export default ${releaseNotes}`)
+      }));
+      next(null);
+    } catch (err) {
+      next(err);
+    }
+  }
+  return through.obj(transform, flush);
+};
+
 gulp.task('generate:release-notes', () =>
   gulp
-    .src('./RELEASENOTES.md')
-    .pipe(through.obj((file, enc, next) => {
-      try {
-        const html = md.render(file.contents.toString());
-        const releaseNotes = JSON.stringify({
-          html: replace(html, headingsMap)
-        }, null, 2);
-        next(null, new gutil.File({
-          path: 'site.release-notes.js',
-          contents: new Buffer(`export default ${releaseNotes}`)
-        }));
-      } catch (err) {
-        next(err);
-      }
-    }))
+    .src([
+      './RELEASENOTES-*.md',
+      './RELEASENOTES.md'
+    ])
+    .pipe(compile())
     .pipe(gulp.dest(__PATHS__.generated))
 );

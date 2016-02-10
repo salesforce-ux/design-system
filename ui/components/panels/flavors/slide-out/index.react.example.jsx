@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only grid')} {...props} style={{ height: '800px', width: '420px' }}>
+  <div className={pf('demo-only grid')} {...props} style={{ height: '800px', maxWidth: '420px' }}>
     {props.children}
   </div>;
 

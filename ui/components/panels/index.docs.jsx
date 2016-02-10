@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Introduction
+    A panel provides contextual and detailed information based on an click or hover interaction of data by a user.
   </p>
 );
 

@@ -319,7 +319,7 @@ let StateH = props =>
 let StateI = props =>
   <Demo>
     <DockedComposer className={pf('is-open')}>
-      <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
+      <ComposerHeader>Lei Chan - Incoming Call...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>

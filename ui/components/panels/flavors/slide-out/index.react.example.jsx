@@ -60,9 +60,9 @@ let Tile = props =>
       <div className={pf('tile__detail text-body--small')}>
         <p className={pf('truncate')}>Jun 18</p>
         <div className={pf('button-group m-top--small')} role="group">
-          <Button flavor="neutral">Edit</Button>
-          <Button flavor="neutral">Follow Up</Button>
-          <Button flavor="neutral">Delete</Button>
+          <Button flavor="neutral" className={pf('grow')}>Edit</Button>
+          <Button flavor="neutral" className={pf('grow')}>Follow Up</Button>
+          <Button flavor="neutral" className={pf('grow')}>Delete</Button>
           <ButtonIcon
             flavor="icon-border-filled"
             className={pf('toggle-visibility')}
@@ -78,13 +78,21 @@ let FormElementStatic = props =>
   <div className={pf('form-element hint-parent has-divider--bottom')}>
     <span className={pf('form-element__label')}>{props.label}</span>
     <div className={pf('form-element__control')}>
-      <ButtonIcon
-        flavor="icon-bare"
-        className={pf('float--right')}
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="edit"
-        assistiveText="Edit this Field"/>
+      <span className={pf('form-element__static')}>{props.text}</span>
+    </div>
+  </div>;
+
+let FormElementStaticInline = props =>
+  <div className={pf('form-element hint-parent has-divider--bottom')}>
+    <ButtonIcon
+      flavor="icon-bare"
+      className={pf('float--right')}
+      iconFlavor="hint,small"
+      sprite="utility"
+      symbol="edit"
+      assistiveText="Edit this Field"/>
+    <span className={pf('form-element__label')}>{props.label}</span>
+    <div className={pf('form-element__control')}>
       <span className={pf('form-element__static')}>{props.text}</span>
     </div>
   </div>;
@@ -93,13 +101,21 @@ let FormElementStaticLonform = props =>
   <div className={pf('form-element hint-parent has-divider--bottom')}>
     <span className={pf('form-element__label')}>{props.label}</span>
     <div className={pf('form-element__control')}>
-      <ButtonIcon
-        flavor="icon-bare"
-        className={pf('float--right')}
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="edit"
-        assistiveText="Edit this Field"/>
+      <span className={pf('form-element__static text-longform')}>{props.text}</span>
+    </div>
+  </div>;
+
+let FormElementStaticLonformInline = props =>
+  <div className={pf('form-element hint-parent has-divider--bottom')}>
+    <ButtonIcon
+      flavor="icon-bare"
+      className={pf('float--right')}
+      iconFlavor="hint,small"
+      sprite="utility"
+      symbol="edit"
+      assistiveText="Edit this Field"/>
+    <span className={pf('form-element__label')}>{props.label}</span>
+    <div className={pf('form-element__control')}>
       <span className={pf('form-element__static text-longform')}>{props.text}</span>
     </div>
   </div>;
@@ -150,6 +166,31 @@ let StateA = props =>
   </Demo>;
 
 let StateB = props =>
+  <Demo>
+    <Panel>
+      <PanelBody>
+        <PanelSection className={pf('has-divider--bottom')}>
+          <Tile />
+        </PanelSection>
+        <PanelSection>
+          <h3 className={pf('text-heading--small m-bottom--medium')}>Task Information</h3>
+          <FormElementStaticInline label="Subject" text="Follow up on '15 Contract" />
+          <FormElementStaticInline label="Due Date" text="6/18/16" />
+          <FormElementStaticInline label="Assigned TO" text="Jason Dewar" />
+          <FormElementStaticInline label="Name" text="Adam Choi" />
+          <FormElementStaticInline label="Related To" text="Tesla Cloudhub + Anypoint Connectors" />
+          <FormElementStaticLonformInline label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+        </PanelSection>
+        <PanelSection>
+          <h3 className={pf('text-heading--small m-bottom--medium')}>Additional Information</h3>
+          <FormElementStaticInline label="Status" text="Not Started" />
+          <FormElementStaticInline label="Priority" text="Normal" />
+        </PanelSection>
+      </PanelBody>
+    </Panel>
+  </Demo>;
+
+let StateC = props =>
   <Demo>
     <Panel>
       <PanelBody>
@@ -234,7 +275,12 @@ export let states = [
   },
   {
     id: 'panel-form-edit-mode',
-    label: 'Edit Mode',
+    label: 'Form with Inline Edit',
     element: <StateB />
+  },
+  {
+    id: 'panel-form-edit-mode-active',
+    label: 'Form with Inline Edit Active',
+    element: <StateC />
   }
 ];

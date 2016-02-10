@@ -21,6 +21,7 @@ components:
   - navigation
   - notifications
   - page-headers
+  - panels
   - pills
   - process
   - product-selector

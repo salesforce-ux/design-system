@@ -57,7 +57,7 @@ export default (
         </div>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap size--1-of-1')}>
+        <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap')}>
 
           <fieldset className={pf('form--compound')}>
             <legend className={pf('assistive-text')}>Log new task</legend>

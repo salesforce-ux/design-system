@@ -23,5 +23,7 @@ export const intro = (
 export default (
   <ComponentDocs>
     <p>The docked composer relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
+    <p>The overflow menu for docked composer, <CodeClass className="docked-composer--overflow" />, displays when the number of docked composers exceeds the width of the viewport. The overflow pill displays with a number indicator for all hidden docked composers. A user can invoke a popover with all available docked composers and replace the furthest left docked composer with the one being selected.</p>
+    <p>When a user clicks on the "pop out" icon in the <CodeClass className="docked-composer__header" />, a modal displays and contains the task that was currently in the docked composer.</p>
   </ComponentDocs>
 );

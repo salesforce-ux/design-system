@@ -116,7 +116,6 @@
   position: relative;
   flex: 1 1 0%;
   min-width: 5rem;
-  max-height: $sales-path;
   text-align: center;
   perspective: 500;
   transition:
@@ -140,6 +139,7 @@
     content: '';
     display: block;
     position: absolute;
+    top: $border-width-thick;
     left: (($sales-path / 2) * -1);
     width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
@@ -202,7 +202,7 @@
   justify-content: center;
   position: relative;
   padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 1.25rem; // @TODO: tokenize this - or special snowflake
-  line-height: $line-height-tab / 2;
+  line-height: $line-height-salespath;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
 

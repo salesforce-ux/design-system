@@ -52,8 +52,8 @@ if (process.env.HEROKU_APP_NAME) {
   exec(`rm -rf server/`);
   exec(`git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO} server`);
   // Server tasks
+  const packageJSON = require(local('package.json'));
   try {
-    const packageJSON = require(local('package.json'));
     // Get the deployments config
     const config = require(local('./server/config/deployments.json'));
     // Find the first release that packageJSON.version statisfies

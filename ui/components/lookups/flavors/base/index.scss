@@ -148,20 +148,20 @@
     // Stretch pill 100% of container
     .#{$css-prefix}pill {
       display: flex;
-
-      // Send close button to the end of the pill
-      .#{$css-prefix}button {
-        margin-left: auto;
-      }
     }
 
-    @include deprecate('3.0.0', '.slds-has-selection now removes the selector .slds-lookup__search-input, please add to the HTML input') {
-      &.#{$css-prefix}has-selection {
+    // Send close button to the end of the pill
+    .#{$css-prefix}pill__remove {
+      margin-left: auto;
+    }
+  }
 
-        .#{$css-prefix}input,
-        .#{$css-prefix}input__icon {
-          display: none;
-        }
+  @include deprecate('3.0.0', '.slds-has-selection now removes the selector .slds-lookup__search-input, please add to the HTML input') {
+    &.#{$css-prefix}has-selection {
+
+      .#{$css-prefix}input,
+      .#{$css-prefix}input__icon {
+        display: none;
       }
     }
   }

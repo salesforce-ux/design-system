@@ -252,6 +252,7 @@
 
   // If someone is using javascript for click to toggle - this modifier will help
   &--click {
+    cursor: pointer;
 
     .#{$css-prefix}dropdown {
       display: none;

@@ -22,14 +22,15 @@ class Sticky {
     this.node = node;
     this.refs = {
       content: node.querySelector('[data-slds-sticky-content]'),
-      placeholder: node.querySelector('[data-slds-sticky-placeholder]')
+      placeholder: node.querySelector('[data-slds-sticky-placeholder]'),
+      footer: document.querySelector('footer')
     };
     this.fixedElements = this.refs.content
       .getAttribute('data-slds-sticky-fixed-elements');
     this.state = {
       isFixed: false
     };
-    this.calculate();
+    this.calculate(true);
     this.onResize = throttle(this.onResize, 1000).bind(this);
     this.onScroll = this.onScroll.bind(this);
     window.addEventListener('resize', this.onResize, false);
@@ -51,7 +52,7 @@ class Sticky {
     return parseFloat(window.getComputedStyle(element)['padding-top'], 10) || 0;
   }
 
-  calculate() {
+  calculate(first) {
     fastdom.measure(() => {
       this.refs.content.style.width = '';
       // Content
@@ -66,8 +67,13 @@ class Sticky {
       this.setState({
         contentRect,
         contentTop: contentPadding + fixedOffset,
-        scrollOffset: contentRect.top + window.pageYOffset - fixedOffset - contentPadding
+        contentBottom: this.refs.footer.getBoundingClientRect().height
       });
+      if (first) {
+        this.setState({
+          scrollOffset: contentRect.top + window.pageYOffset - fixedOffset - contentPadding
+        });
+      }
     });
   }
 
@@ -98,12 +104,18 @@ class Sticky {
   }
 
   layout() {
-    const { isFixed, contentRect, contentTop } = this.state;
+    const { isFixed, contentRect, contentTop, contentBottom } = this.state;
     // Content
-    this.refs.content.style.top = contentTop
+    this.refs.content.style.top = isFixed && contentTop
       ? `${contentTop}px` : '';
-    this.refs.content.style.width = contentRect
+    this.refs.content.style.bottom = isFixed && contentBottom
+      ? `${contentBottom}px` : '';
+    this.refs.content.style.width = isFixed && contentRect
       ? `${contentRect.width}px` : '';
+    this.refs.content.style.overflowY = isFixed
+      ? 'auto' : '';
+    this.refs.content.scrollTop = 0;
+    this.refs.content.scrollLeft = 0;
     // Placeholder
     setClassName(this.refs.placeholder, {
       'sticky__placeholder--on': isFixed

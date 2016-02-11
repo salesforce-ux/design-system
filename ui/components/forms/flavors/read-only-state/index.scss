@@ -12,4 +12,11 @@
   display: inline-block;
   line-height: $line-height-button;
   min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
+
+  // If read only state is longform
+  // Apply text line height
+  &.#{$css-prefix}text-longform {
+    line-height: $line-height-text;
+    padding-bottom: calc((#{$line-height-text} * #{$font-size-medium}) - #{$font-size-medium}); // Re-establish vertical baseline
+  }
 }

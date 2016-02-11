@@ -10,12 +10,117 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Textarea from 'ui/components/forms/flavors/textarea/index.react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
-  <Textarea label="Textarea Label" placeholder="Placeholder Text" assistiveText="sample2"></Textarea>
-</div>
-);
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let FormElement = props =>
+  <div className={className(pf('form-element'), props.className)}>
+    {props.children}
+  </div>;
+
+let FormElementLabel = props =>
+  <label className={pf('form-element__label')} htmlFor="textarea-input-01">Textarea Label</label>;
+
+let FormElementControl = props =>
+  <div className={className(pf('form-element__control'), props.className)}>
+    {props.children}
+  </div>;
+
+let Textarea = props =>
+  <textarea id="textarea-input-02" className={className(pf('textarea'), props.className)} type="text" placeholder="Placeholder Text" {...props} />;
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel />
+      <FormElementControl>
+        <Textarea />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Required = props =>
+  <Demo>
+    <FormElement className={pf('is-required')}>
+      <FormElementLabel />
+      <FormElementControl>
+        <Textarea required />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Error = props =>
+  <Demo>
+    <FormElement className={pf('is-required has-error')}>
+      <FormElementLabel />
+      <FormElementControl>
+        <Textarea required />
+      </FormElementControl>
+      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+    </FormElement>
+  </Demo>;
+
+let Disabled = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel />
+      <FormElementControl>
+        <Textarea disabled />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let ReadOnly = props =>
+  <Demo>
+    <FormElement>
+      <span className={pf('form-element__label')}>Textarea Label</span>
+      <FormElementControl className={pf('has-divider--bottom')}>
+        <span className={pf('form-element__static text-longform')}>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</span>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'textarea',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'textarea-required',
+    label: 'Required',
+    element: <Required />
+  },
+  {
+    id: 'textarea-error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'textarea-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  },
+  {
+    id: 'textarea-read-only',
+    label: 'Read only',
+    element: <ReadOnly />
+  }
+];

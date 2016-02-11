@@ -224,28 +224,54 @@
 }
 
 .#{$css-prefix}dropdown-trigger {
-  position: relative;
-  display: inline-block;
-
-  .#{$css-prefix}dropdown {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
-  }
-
-  &:hover,
-  &:focus {
-    outline: 0;
+    @include deprecate('2.0.0', 'Use .slds-dropdown-trigger--hover instead') {
+    position: relative;
+    display: inline-block;
 
     .#{$css-prefix}dropdown {
-      visibility: visible;
-      opacity: 1;
+      visibility: hidden;
+      opacity: 0;
       transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  &--hover {
+    position: relative;
+    display: inline-block;
+
+    .#{$css-prefix}dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
     }
   }
 
   // If someone is using javascript for click to toggle - this modifier will help
   &--click {
+    position: relative;
+    display: inline-block;
 
     .#{$css-prefix}dropdown {
       display: none;

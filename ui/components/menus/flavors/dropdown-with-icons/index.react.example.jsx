@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className={pf('demo-only demo-only--dropdown grid grid--align-spread')}>
+<div className={pf('demo-only grid grid--align-spread')}>
 
   <div className={pf('dropdown dropdown--left dropdown--small')} style={{position: 'relative'}}>
     <div className={pf('dropdown__header')}>

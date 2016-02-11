@@ -18,7 +18,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-<div className={pf('demo-only demo-only--dropdown')} style={{ height: '240px' }}>
+<div className={pf('demo-only')} style={{ height: '240px' }}>
 
   <PickList label="2 options selected" aria-expanded="true" className={pf('dropdown-trigger--click is-open')}>
     <div className={pf('dropdown dropdown--left')}>

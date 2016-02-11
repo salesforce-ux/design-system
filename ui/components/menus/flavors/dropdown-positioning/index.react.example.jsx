@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '400px'}}>
+<div className={pf('demo-only')} style={{height: '400px'}}>
   <div className={pf('grid grid--vertical grid--align-spread')} style={{height: '100%'}}>
     <div className={pf('grid grid--align-spread p-horizontal--medium')}>
       <div className={pf('dropdown-trigger--click is-open')}>

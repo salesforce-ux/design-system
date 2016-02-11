@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only demo-only--dropdown" style={{height: '240px'}}>
+<div className="demo-only" style={{height: '240px'}}>
   <PickList label="Select an Option" aria-expanded="true" className={pf('dropdown-trigger--click is-open')}>
     <Menu className={pf('dropdown--left')}>
       <Menu.List className={pf('dropdown--length-5')}>

@@ -18,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only demo-only--dropdown" style={{height: '30rem'}}>
+<div className="demo-only" style={{height: '30rem'}}>
   <Tabs flavor="default">
     <Tabs.Item innerClass={pf('tabs--default__link')} title="Item One" id="tab-default-1">
       <h2>Item One Content</h2>

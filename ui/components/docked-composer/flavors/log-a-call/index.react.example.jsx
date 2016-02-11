@@ -20,9 +20,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const dialingIcon = (
-  <span className={pf('icon_container icon-standard-task')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
-    <span className={pf('assistive-text')}>Task Icon</span>
+  <span className={pf('icon_container icon-standard-log-a-call')}>
+    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="log_a_call" />
+    <span className={pf('assistive-text')}>Log a Call Icon</span>
   </span>
 );
 
@@ -35,7 +35,7 @@ export default (
         {/* Composer Header */}
         <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon} flavor="center">
-            New Task
+            Log a Call
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -57,10 +57,10 @@ export default (
         </div>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap')}>
+        <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap size--1-of-1')}>
 
           <fieldset className={pf('form--compound')}>
-            <legend className={pf('assistive-text')}>Log new task</legend>
+            <legend className={pf('assistive-text')}>Log a call</legend>
             <div className={pf('form-element__group')}>
               <div className={pf('form-element__row')}>
                 <label className={pf('form-element__control size--1-of-1')}>
@@ -68,18 +68,12 @@ export default (
                   <input className={pf('input')} type="text" />
                 </label>
               </div>
-
               <div className={pf('form-element__row')}>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Assigned To</span>
-                  <input className={pf('input')} placeholder="Search..." type="text" />
-                </label>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Due Date</span>
-                  <input className={pf('input')} type="text" />
+                <label className={pf('form-element__control size--1-of-1')}>
+                  <span className={pf('form-element__helper')}>Comments</span>
+                  <textarea className={pf('textarea')} type="text" />
                 </label>
               </div>
-
               <div className={pf('form-element__row')}>
                 <label className={pf('form-element__control size--1-of-2')}>
                   <span className={pf('form-element__helper')}>Name</span>

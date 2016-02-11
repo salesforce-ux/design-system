@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className={pf('demo-only demo-only--dropdown')} style={{ height: '240px' }}>
 
-  <PickList label="2 options selected" aria-expanded="true">
+  <PickList label="2 options selected" aria-expanded="true" className={pf('dropdown-trigger--click is-open')}>
     <div className={pf('dropdown dropdown--left')}>
       <ul className={pf('dropdown__list dropdown--length-5')} role="menu">
         <li className={pf('dropdown__item')}>
@@ -68,70 +68,6 @@ export default (
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option E
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option F
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option G
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option H
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option I
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option J
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option K
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option L
-            </p>
-          </a>
-        </li>
-        <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
-            <p className={pf('truncate')}>
-              <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
-              Option MNOPQRSTUVWXYZ 123456
             </p>
           </a>
         </li>

@@ -21,7 +21,7 @@ export const preview = (
 <div className={pf('demo-only demo-only--dropdown')} style={{height: '400px'}}>
   <div className={pf('grid grid--vertical grid--align-spread')} style={{height: '100%'}}>
     <div className={pf('grid grid--align-spread p-horizontal--medium')}>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('dropdown--left nubbin--top-left')}>
           <Menu.List isSelectable={false}>
@@ -31,7 +31,7 @@ export const preview = (
           </Menu.List>
         </Menu>
       </div>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('nubbin--top')}>
           <Menu.List isSelectable={false}>
@@ -41,7 +41,7 @@ export const preview = (
           </Menu.List>
         </Menu>
       </div>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('dropdown--right nubbin--top-right')}>
           <Menu.List isSelectable={false}>
@@ -54,7 +54,7 @@ export const preview = (
     </div>
     <hr />
     <div className={pf('grid grid--align-spread p-horizontal--medium')}>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('dropdown--bottom dropdown--left nubbin--bottom-left')}>
           <Menu.List isSelectable={false}>
@@ -64,7 +64,7 @@ export const preview = (
           </Menu.List>
         </Menu>
       </div>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('dropdown--bottom nubbin--bottom')}>
           <Menu.List isSelectable={false}>
@@ -74,7 +74,7 @@ export const preview = (
           </Menu.List>
         </Menu>
       </div>
-      <div className={pf('dropdown-trigger')}>
+      <div className={pf('dropdown-trigger--click is-open')}>
         <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
         <Menu className={pf('dropdown--bottom dropdown--right nubbin--bottom-right')}>
           <Menu.List isSelectable={false}>

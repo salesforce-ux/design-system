@@ -23,7 +23,7 @@ let Demo = props =>
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('form--element form--stacked'), props.className)}>
+  <fieldset className={className(pf('form--element'), props.className)}>
     <legend className={pf('form-element__legend')}>
       <span className={pf('form-element__label form-element__label--top')}>Share email with</span>
     </legend>
@@ -33,12 +33,12 @@ let Fieldset = props =>
   </fieldset>;
 
 let LabelWrapper = props =>
-  <div className={className(pf('form-element grid grid--vertical-align-center'), props.className)}>
+  <div className={className(pf('form-element'), props.className)}>
     {props.children}
   </div>;
 
 let Label = props =>
-  <label className={className(pf('checkbox--toggle'), props.className)} htmlFor={props.id}>
+  <label className={className(pf('checkbox--toggle grid grid--vertical-align-center'), props.className)} htmlFor={props.id}>
     {props.children}
   </label>;
 
@@ -54,7 +54,7 @@ let Toggle = props =>
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
-let StateA = props ==
+let StateA = props =>
   <Demo>
     <LabelWrapper>
       <Label>
@@ -80,28 +80,28 @@ let StateC = props =>
   <Demo>
     <Fieldset>
       <LabelWrapper>
-        <Label className={pf('has-divider--bottom')}>
+        <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>North East Sales Team</FauxLabel>
           <Checkbox />
           <Toggle className={pf('col--bump-left')} />
         </Label>
       </LabelWrapper>
       <LabelWrapper>
-        <Label className={pf('has-divider--bottom')}>
+        <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>Another Team</FauxLabel>
           <Checkbox />
           <Toggle className={pf('col--bump-left')} />
         </Label>
       </LabelWrapper>
       <LabelWrapper>
-        <Label className={pf('has-divider--bottom')}>
+        <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>Another Team</FauxLabel>
           <Checkbox />
           <Toggle className={pf('col--bump-left')} />
         </Label>
       </LabelWrapper>
       <LabelWrapper>
-        <Label className={pf('has-divider--bottom')}>
+        <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>Another Team</FauxLabel>
           <Checkbox />
           <Toggle className={pf('col--bump-left')} />

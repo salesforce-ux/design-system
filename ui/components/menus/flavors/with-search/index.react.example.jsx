@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className={pf('demo-only demo-only--dropdown')} style={{height: '325px'}}>
+<div className={pf('demo-only')} style={{height: '325px'}}>
   <Menu className={pf('dropdown--left dropdown--small')}>
     <Menu.Header>
       <Menu.Filter placeholder="Find in list..." />

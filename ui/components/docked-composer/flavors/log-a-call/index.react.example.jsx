@@ -79,7 +79,7 @@ export default (
                   <span className={pf('form-element__helper')}>Name</span>
                   <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
                     <div className={pf('grid form-element__control box--border')}>
-                      <div className={pf('dropdown-trigger--click align-middle')}>
+                      <div className={pf('dropdown-trigger dropdown-trigger--click align-middle')}>
                         <SvgIcon className={pf('icon icon-standard-contact icon--small shrink-none')} sprite="standard" symbol="contact" />
                         <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
                       </div>
@@ -92,7 +92,7 @@ export default (
                   <span className={pf('form-element__helper')}>Related To</span>
                   <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
                     <div className={pf('grid form-element__control box--border')}>
-                      <div className={pf('dropdown-trigger--click is-open align-middle')}>
+                      <div className={pf('dropdown-trigger dropdown-trigger--click is-open align-middle')}>
                         <SvgIcon className={pf('icon icon-standard-account icon--small shrink-none')} sprite="standard" symbol="account" />
                         <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
                       </div>

@@ -87,6 +87,10 @@
     }
   }
 
+  &__search-input {
+    width: 100%;
+  }
+
   // Primary Text in results, truncate mixin used so class wouldn't need to be repeated in DOM
   &__result-text {
     @include truncate;

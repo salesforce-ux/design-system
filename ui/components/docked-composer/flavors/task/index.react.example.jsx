@@ -16,6 +16,7 @@ import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Lorem from 'react-lorem-component';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -25,6 +26,21 @@ const dialingIcon = (
     <span className={pf('assistive-text')}>Task Icon</span>
   </span>
 );
+
+let LookupMulti = props =>
+  <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
+    <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
+    <div className={pf('form-element__control lookup__search-control grid box--border')}>
+      <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
+        <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
+        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
+      </div>
+      <div className={pf('grid grow')}>
+        <input id={props.id} className={pf('lookup__search-input input--bare grow')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder={props.placeholder} defaultValue={props.value} />
+      </div>
+    </div>
+    {props.children}
+  </div>;
 
 export default (
   <div className="demo-only">
@@ -63,51 +79,34 @@ export default (
             <legend className={pf('assistive-text')}>Log new task</legend>
             <div className={pf('form-element__group')}>
               <div className={pf('form-element__row')}>
-                <label className={pf('form-element__control size--1-of-1')}>
-                  <span className={pf('form-element__helper')}>Subject</span>
-                  <input className={pf('input')} type="text" />
-                </label>
+                <div className={pf('form-element')}>
+                  <label className={pf('form-element__label')} htmlFor="text-input-01">Subject</label>
+                  <div className={pf('form-element__control')}>
+                    <input className={pf('input')} type="text" id="text-input-01" />
+                  </div>
+                </div>
               </div>
 
               <div className={pf('form-element__row')}>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Assigned To</span>
-                  <input className={pf('input')} placeholder="Search..." type="text" />
-                </label>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Due Date</span>
-                  <input className={pf('input')} type="text" />
-                </label>
+                <div className={pf('form-element size--1-of-2')}>
+                  <label className={pf('form-element__label')} htmlFor="text-input-01">Assigned To</label>
+                  <div className={pf('form-element__control')}>
+                    <input className={pf('input')} type="text" id="text-input-01" />
+                  </div>
+                </div>
+                <div className={pf('form-element size--1-of-2')}>
+                  <label className={pf('form-element__label')} htmlFor="text-input-01">Due Dates</label>
+                  <div className={pf('form-element__control')}>
+                    <input className={pf('input')} type="text" id="text-input-01" />
+                  </div>
+                </div>
               </div>
 
               <div className={pf('form-element__row')}>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Name</span>
-                  <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
-                    <div className={pf('grid form-element__control box--border')}>
-                      <div className={pf('dropdown-trigger align-middle')}>
-                        <SvgIcon className={pf('icon icon-standard-contact icon--small shrink-none')} sprite="standard" symbol="contact" />
-                        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
-                      </div>
-                      <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
-                    </div>
-                    <div className={pf('pill_container hide')}></div>
-                  </div>
-                </label>
-                <label className={pf('form-element__control size--1-of-2')}>
-                  <span className={pf('form-element__helper')}>Related To</span>
-                  <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="false">
-                    <div className={pf('grid form-element__control box--border')}>
-                      <div className={pf('dropdown-trigger align-middle')}>
-                        <SvgIcon className={pf('icon icon-standard-account icon--small shrink-none')} sprite="standard" symbol="account" />
-                        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Search Related" />
-                      </div>
-                      <input id="lookupRelated" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Select or Search" />
-                    </div>
-                    <div className={pf('pill_container hide')}></div>
-                  </div>
-                </label>
+                <LookupMulti label="Name" placeholder="Search Leads" id="lookup-01" className={pf('size--1-of-2')} />
+                <LookupMulti label="Related To" placeholder="Search Accounts" id="lookup-02" className={pf('size--1-of-2')} />
               </div>
+
             </div>
           </fieldset>
 

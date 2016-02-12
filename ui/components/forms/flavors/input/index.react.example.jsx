@@ -104,7 +104,7 @@ let ErrorIcon = props =>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
         <Input required />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 

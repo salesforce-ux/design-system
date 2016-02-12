@@ -87,7 +87,6 @@ export default () => formatNavItem({
   children: [
     {
       label: 'Getting Started',
-      internal: false,
       children: [
         {
           label: 'Visualforce'
@@ -157,7 +156,6 @@ export default () => formatNavItem({
     },
     {
       label: 'Native',
-      internal: false,
       children: [
         {
           id: 'ios',
@@ -169,8 +167,7 @@ export default () => formatNavItem({
       label: 'Resources',
       children: [
         {
-          label: 'Downloads',
-          internal: false
+          label: 'Downloads'
         },
         {
           label: 'Icons'

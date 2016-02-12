@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 0.12.2 - February 8, 2015
+## Release 0.12.2 - February 8, 2016
 
 **SITE IA**
 - Add Getting Started > Markup and Style guidelines with BEM information
@@ -20,18 +20,18 @@
 - Improve Component Overview tables for more narrow readability
 
 **CHANGES**
-- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes [https://github.com/salesforce-ux/design-system/issues/107]). Updated documentation to reflect previous refactoring.
+- Apply proper accessibility requirements (aria-labelledby) to tabs (fixes https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
-- Make `.slds-text-body--small` inherit theme color (fixes [https://github.com/salesforce-ux/design-system/issues/123])
+- Make `.slds-text-body--small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
 - Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]
 - Field-level help popover background color token update
-- Fix truncation on Sales Path (fixes [https://github.com/salesforce-ux/design-system/issues/135])
+- Fix truncation on Sales Path (fixes https://github.com/salesforce-ux/design-system/issues/135)
 - Fix chevron alignment on Sales Path - [www.lightningdesignsystem.com/components/tabs#sales-path]
 - Updated demo on buttons > neutral icon to demonstrate "mutton" - [www.lightningdesignsystem.com/components/buttons#neutral-icon]
 - Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding.
 
 **NEW COMPONENTS**
-- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes [https://github.com/salesforce-ux/design-system/issues/122])
+- Custom Select container added, normalizes the `<select>` appearance in various browsers (fixes https://github.com/salesforce-ux/design-system/issues/122)
 
 ## Release 0.12.0 - November 18, 2015
 

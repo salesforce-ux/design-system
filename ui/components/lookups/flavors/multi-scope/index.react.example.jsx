@@ -27,7 +27,7 @@ export default (
         <label className={pf('form-element__label text-align--right')} htmlFor="lookup">
           <p className={pf('truncate align-middle')}>Contacts</p>
         </label>
-        <div className={pf('dropdown-trigger align-middle')}>
+        <div className={pf('dropdown-trigger dropdown-trigger--click align-middle')}>
           <SvgIcon className={pf('icon icon-standard-user icon--small shrink-none')} sprite="standard" symbol="user" />
           <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
         </div>
@@ -71,7 +71,7 @@ export default (
       </ul>
       <div className={pf('lookup__item')}>
         <button className={pf('button')}>
-          <SvgIcon className={pf('icon icon-text-default icon--x-small')} sprite="utility" symbol="add" />
+          <SvgIcon className={pf('icon icon-text-default icon--small')} sprite="utility" symbol="add" />
           Add Account
         </button>
       </div>

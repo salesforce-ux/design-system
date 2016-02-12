@@ -10,31 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import PickList from 'ui/components/picklists/index.react';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    A panel provides contextual and detailed information based on an click or hover interaction of data by a user.
+  </p>
+);
 
 export default (
-<div className="demo-only" style={{height: '240px'}}>
-  <PickList label="Select an Option" aria-expanded="true">
-    <Menu className={pf('dropdown--left')}>
-      <Menu.List>
-        <Menu.Item href="#">Option A</Menu.Item>
-        <Menu.Item href="#">Option B</Menu.Item>
-        <Menu.Item href="#">Option C</Menu.Item>
-        <Menu.Item href="#">Option D</Menu.Item>
-        <Menu.Item href="#">Option E</Menu.Item>
-        <Menu.Item href="#">Option F</Menu.Item>
-        <Menu.Item href="#">Option G</Menu.Item>
-        <Menu.Item href="#">Option H</Menu.Item>
-        <Menu.Item href="#">Option I</Menu.Item>
-        <Menu.Item href="#">Option J</Menu.Item>
-        <Menu.Item href="#">Option K</Menu.Item>
-        <Menu.Item href="#">Option L</Menu.Item>
-        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </PickList>
-</div>
+  <ComponentDocs>
+  </ComponentDocs>
 );

@@ -9,13 +9,13 @@ classes:
   -
     class: dropdown-trigger
     description: Enables dropdown to show on hover
-    required: true
+    deprecated: true
     applied: <code>&lt;div&gt;</code>
     notes: The target HTML element and dropdown need to be wrapped in this class
   -
     class: dropdown-trigger--click
     description: Modifier that enables dropdown to show on click
-    applied: <code>.{{cssPrefix}}dropdown-trigger</code>
+    applied: any element
     notes: Forces <code>display:none</code> on dropdown, applying <code>.{{cssPrefix}}is-open</code> to <code>.{{cssPrefix}}dropdown-trigger</code> will show the dropdown
   -
     class: dropdown__item

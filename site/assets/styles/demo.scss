@@ -34,15 +34,7 @@ body {
 .demo-only--notification .#{$css-prefix}notify_container {
     position: static;
 }
-.demo-only--dropdown .#{$css-prefix}dropdown-trigger .#{$css-prefix}dropdown {
-  visibility: visible;
-  opacity: 1;
-}
 
-// Added for demos with pseudo-elements on the left that aren't accounted for
-.demo-only--left {
-  padding-left: 9rem;
-}
 
 .demo-only--top {
   padding-top: 9rem;

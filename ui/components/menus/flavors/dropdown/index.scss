@@ -12,7 +12,6 @@
 .#{$css-prefix}dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
-  top: 100%;
   left: 50%;
   float: left;
   min-width: $size-xx-small;
@@ -38,7 +37,6 @@
   }
 
   &--bottom {
-    top: auto;
     bottom: 100%;
   }
 
@@ -231,19 +229,50 @@
   display: inline-block;
 
   .#{$css-prefix}dropdown {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    top: 100%;
   }
 
-  &:hover,
-  &:focus {
-    outline: 0;
+  .#{$css-prefix}dropdown--bottom {
+    top: auto;
+  }
+
+  @include deprecate('2.0.0', 'Use .slds-dropdown-trigger--hover instead') {
 
     .#{$css-prefix}dropdown {
-      visibility: visible;
-      opacity: 1;
+      visibility: hidden;
+      opacity: 0;
       transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  &--hover {
+
+    .#{$css-prefix}dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
     }
   }
 

@@ -17,12 +17,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only demo-only--dropdown" style={{height: '400px'}}>
+<div className="demo-only" style={{height: '400px'}}>
   <fieldset className={pf('form--compound')}>
     <legend className={pf('form-element__label')}>Date Picker Label</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
-        <div className={pf('form-element__control dropdown-trigger')}>
+        <div className={pf('form-element__control dropdown-trigger--click is-open')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
             <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
             <input id="start-date" className={pf('input')} type="text" defaultValue="6/23/15" />
@@ -111,7 +111,7 @@ export default (
           </div>
           <label className={pf('form-element__helper')} htmlFor="start-date">Start Date</label>
         </div>
-        <div className={pf('form-element__control dropdown-trigger')}>
+        <div className={pf('form-element__control dropdown-trigger--click is-open')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
             <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
             <input id="end-date" className={pf('input')} type="text" defaultValue="6/29/15" />

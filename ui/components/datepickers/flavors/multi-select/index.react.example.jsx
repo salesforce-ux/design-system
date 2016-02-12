@@ -22,9 +22,9 @@ export default (
     <legend className={pf('form-element__label')}>Date Picker Label</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
-        <div className={pf('form-element__control dropdown-trigger--click is-open')}>
+        <div className={pf('form-element__control dropdown-trigger dropdown-trigger--click is-open')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
-            <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
+            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="event" />
             <input id="start-date" className={pf('input')} type="text" defaultValue="6/23/15" />
           </div>
           <div className={pf('dropdown dropdown--left datepicker')} aria-hidden="false" data-selection="multi">
@@ -111,9 +111,9 @@ export default (
           </div>
           <label className={pf('form-element__helper')} htmlFor="start-date">Start Date</label>
         </div>
-        <div className={pf('form-element__control dropdown-trigger--click is-open')}>
+        <div className={pf('form-element__control dropdown-trigger dropdown-trigger--click is-open')}>
           <div className={pf('input-has-icon input-has-icon--right')}>
-            <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
+            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="event" />
             <input id="end-date" className={pf('input')} type="text" defaultValue="6/29/15" />
           </div>
           <label className={pf('form-element__helper')} htmlFor="end-date">End Date</label>

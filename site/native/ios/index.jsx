@@ -12,14 +12,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
-import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 export default (
   <PageBody anchorTitle="iOS" contentClassName={pf('grid wrap')}>
-    <Sticky className={pf('site-sidebar-content col size--1-of-1 large-size--1-of-6 large-order--2')}>
+    <StickyNav>
       <div className={pf('site-menu--jump-links')}>
         <ul className={pf('list--vertical has-block-links')}>
           <li><a href="#setup">Setup</a></li>
@@ -33,7 +33,7 @@ export default (
           </li>
         </ul>
       </div>
-    </Sticky>
+    </StickyNav>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
       <div className={pf('container--large')}>

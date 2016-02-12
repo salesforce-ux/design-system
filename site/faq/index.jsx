@@ -14,7 +14,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
-import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import CTALink from 'app_modules/site/components/cta-link';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -227,14 +227,14 @@ class FAQ extends React.Component {
   render () {
     return (
       <PageBody {...this.props} anchorTitle="Frequently Asked Questions" contentClassName={pf('grid wrap')}>
-        <Sticky className={pf('site-sidebar-content col size--1-of-1 large-size--2-of-6 large-order--2')}>
+        <StickyNav>
           <div className={pf('site-menu--jump-links')}>
             <h3 className="site-text-heading--label">Questions</h3>
             <ul className={pf('list--vertical has-block-links')}>
               {this.jumpLinks}
             </ul>
           </div>
-        </Sticky>
+        </StickyNav>
         <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
           {this.content}
         </div>

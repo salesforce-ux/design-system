@@ -16,6 +16,14 @@ import throttle from 'lodash/throttle';
 
 import { $, setClassName } from '../framework/dom';
 
+const TRBL = ['top', 'right', 'bottom', 'left'];
+
+const PADDING_IDENTITY = (value = 0) => TRBL.reduce((padding, prop) =>
+  Object.assign({}, padding, {
+    [prop]: value
+  })
+, {});
+
 class Sticky {
 
   constructor(node) {
@@ -25,11 +33,21 @@ class Sticky {
       placeholder: node.querySelector('[data-slds-sticky-placeholder]'),
       footer: document.querySelector('footer')
     };
-    this.fixedElements = this.refs.content
-      .getAttribute('data-slds-sticky-fixed-elements');
-    this.state = {
-      isFixed: false
+    this.props = {
+      fixedElementsAbove: this.refs.content.dataset.sldsStickyFixedElementsAbove,
+      fixedElementsBelow: this.refs.content.dataset.sldsStickyFixedElementsBelow,
+      fixedContentPadding: JSON.parse(
+        this.refs.content.dataset.sldsStickyFixedContentPadding
+      ),
+      pinBottom: this.refs.content.dataset.sldsStickyPinBottom ? true : false
     };
+    this.state = {
+      isFixed: false,
+      origin: {},
+      size: {},
+      contentPaddingFixed: {}
+    };
+    this.scheduledLayouts = [];
     this.calculate(true);
     this.onResize = throttle(this.onResize, 1000).bind(this);
     this.onScroll = this.onScroll.bind(this);
@@ -43,37 +61,101 @@ class Sticky {
   }
 
   setState(nextState) {
-    fastdom.clear(this.layoutId);
+    this.scheduledLayouts.forEach(job => fastdom.clear(job));
     this.state = Object.assign({}, this.state, nextState);
-    this.layoutId = fastdom.mutate(() => this.layout());
+    this.scheduledLayouts.push(fastdom.mutate(() => {
+      this.scheduledLayouts.length = 0;
+      this.layout();
+    }));
   }
 
-  getPaddingTop(element) {
-    return parseFloat(window.getComputedStyle(element)['padding-top'], 10) || 0;
+  getPadding(node, padding) {
+    return TRBL
+      .filter(prop => padding.hasOwnProperty(prop))
+      .reduce((padding, side) =>
+        Object.assign({}, padding, {
+          [side]: parseFloat(window.getComputedStyle(node)[`padding-${side}`], 10) || 0
+        })
+      , {});
+  }
+
+  setPadding(node, padding, includesUnits = false) {
+    TRBL
+      .filter(prop => padding.hasOwnProperty(prop))
+      .forEach(prop => {
+        const styleProp = `padding-${prop}`;
+        if (padding[prop]) {
+          node.style.setProperty(styleProp, padding[prop] + (includesUnits ? '' : 'px'));
+        } else {
+          node.style.removeProperty(styleProp);
+        }
+      });
+  }
+
+  setStyleProperty(node, prop, value) {
+    if (value) {
+      node.style.setProperty(prop, value);
+    } else {
+      node.style.removeProperty(prop);
+    }
+  }
+
+  convertPadding(padding) {
+    const node = document.createElement('div');
+    this.setPadding(node, padding, true);
+    document.body.appendChild(node);
+    const calculatedPadding = this.getPadding(node, padding);
+    node.parentElement.removeChild(node);
+    return calculatedPadding;
   }
 
   calculate(first) {
-    fastdom.measure(() => {
-      this.refs.content.style.width = '';
-      // Content
-      const content = this.refs.content;
-      const contentRect = content.getBoundingClientRect();
-      const contentPadding = this.getPaddingTop(content);
-      // Calculate the extra offset added by any other fixed elements above this one
-      const fixedElements = this.fixedElements ? $(this.fixedElements) : [];
-      const fixedOffset = fixedElements.reduce((offset, el) => {
-        return offset + el.getBoundingClientRect().height;
-      }, 0);
-      this.setState({
-        contentRect,
-        contentTop: contentPadding + fixedOffset,
-        contentBottom: this.refs.footer.getBoundingClientRect().height
-      });
+    fastdom.mutate(() => {
       if (first) {
         this.setState({
-          scrollOffset: contentRect.top + window.pageYOffset - fixedOffset - contentPadding
+          contentPaddingFixed: this.convertPadding(this.props.fixedContentPadding)
         });
       }
+      fastdom.measure(() => {
+        // Calculate the extra offset added by any other fixed elements above this one
+        const fixedElementsAbove = this.props.fixedElementsAbove
+          ? $(this.props.fixedElementsAbove) : [];
+        const fixedOffsetAbove = fixedElementsAbove.reduce((offset, el) =>
+          offset + el.getBoundingClientRect().height
+        , 0);
+        const fixedElementsBelow = this.props.fixedElementsBelow
+          ? $(this.props.fixedElementsBelow) : [];
+        const fixedOffsetBelow = fixedElementsBelow.reduce((offset, el) =>
+          offset + el.getBoundingClientRect().height
+        , 0);
+        // Content
+        const content = this.refs.content;
+        const contentRect = content.getBoundingClientRect();
+        const contentPadding = this.getPadding(content, PADDING_IDENTITY());
+        const contentPaddingFixed = Object.assign({}, PADDING_IDENTITY(), this.state.contentPaddingFixed);
+        if (fixedOffsetBelow) {
+          this.setState({
+            contentPaddingFixed: Object.assign({}, this.state.contentPaddingFixed, {
+              bottom: fixedOffsetBelow
+            })
+          });
+        }
+        this.setState({
+          origin: {
+            top: contentPadding.top + fixedOffsetAbove,
+            left: this.node.getBoundingClientRect().left
+          },
+          size: {
+            width: contentRect.width + contentPadding.left + contentPadding.right,
+            height: contentRect.height + contentPadding.top
+          }
+        });
+        if (first) {
+          this.setState({
+            scrollOffset: contentRect.top - fixedOffsetAbove - contentPadding.top - contentPaddingFixed.top + window.pageYOffset
+          });
+        }
+      });
     });
   }
 
@@ -104,27 +186,33 @@ class Sticky {
   }
 
   layout() {
-    const { isFixed, contentRect, contentTop, contentBottom } = this.state;
+    const { isFixed, origin, size, contentPaddingFixed } = this.state;
     // Content
-    this.refs.content.style.top = isFixed && contentTop
-      ? `${contentTop}px` : '';
-    this.refs.content.style.bottom = isFixed && contentBottom
-      ? `${contentBottom}px` : '';
-    this.refs.content.style.width = isFixed && contentRect
-      ? `${contentRect.width}px` : '';
-    this.refs.content.style.overflowY = isFixed
-      ? 'auto' : '';
-    this.refs.content.scrollTop = 0;
-    this.refs.content.scrollLeft = 0;
+    this.setStyleProperty(this.refs.content, 'top',
+      isFixed && origin.top ? `${origin.top}px` : null);
+    this.setStyleProperty(this.refs.content, 'left',
+      isFixed && origin.left ? `${origin.left}px` : null);
+    this.setPadding(
+      this.refs.content,
+      isFixed ? this.state.contentPaddingFixed : PADDING_IDENTITY(null)
+    );
+    if (this.props.pinBottom) {
+      this.setStyleProperty(this.refs.content, 'bottom',
+        isFixed ? '0px' : null);
+      this.setStyleProperty(this.refs.content, 'overflow-y',
+        isFixed ? 'auto' : null);
+      this.refs.content.scrollTop = 0;
+      this.refs.content.scrollLeft = 0;
+    }
+    setClassName(this.refs.content, {
+      'sticky--fixed': isFixed
+    });
     // Placeholder
     setClassName(this.refs.placeholder, {
       'sticky__placeholder--on': isFixed
     });
-    this.refs.placeholder.style.height = contentRect
-      ? `${contentRect.height}px` : '';
-    setClassName(this.refs.content, {
-      'sticky--fixed': isFixed
-    });
+    this.setStyleProperty(this.refs.placeholder, 'height',
+      isFixed && size.height ? `${size.height}px` : '');
   }
 
 }

@@ -93,7 +93,7 @@ class Sticky {
       }
     }
     // The page has scrolled up past the original top of the nav
-    // Attemp to unstick it
+    // Attempt to unstick it
     else {
       if (this.state.isFixed) {
         this.setState({

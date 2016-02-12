@@ -22,6 +22,11 @@
   &--fixed {
     position: fixed;
     top: 0;
+    right: 0;
+    padding: {
+      top: $spacing-large;
+      right: $spacing-xx-large;
+    }
     z-index: $z-index-dropdown;
   }
 }
@@ -77,10 +82,7 @@
   }
 
   .site-menu--jump-links {
-    padding: {
-      top: $spacing-medium;
-      left: $spacing-large;
-    }
+    padding-left: $spacing-large;
 
     a {
       cursor: pointer;

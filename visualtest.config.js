@@ -4,7 +4,7 @@ module.exports = function() {
   return {
     setup: hooks.setup,
     teardown: hooks.teardown,
-    src_folder: ['test/visual/components'],
+    src_folders: ['test/visual/components'],
     test_settings: {
       chrome: {
         selenium_port: 80,

@@ -193,7 +193,7 @@ export default (
             <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="true">
               <div className={pf('form-element')}>
                 <div className={pf('grid form-element__control')}>
-                  <div className={pf('dropdown-trigger--click align-middle')}>
+                  <div className={pf('dropdown-trigger dropdown-trigger--click align-middle')}>
                     <SvgIcon className={pf('icon icon-standard-user icon--small shrink-none')} sprite="standard" symbol="user" />
                     <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="down" assistiveText="Filter" />
                   </div>

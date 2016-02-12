@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className={pf('demo-only p-horizontal--medium')} style={{height: '320px'}}>
-  <div className={pf('dropdown-trigger--click is-open')}>
+  <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
     <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
     <Menu className={pf('dropdown--left dropdown--nubbin-top')}>
       <Menu.Header>

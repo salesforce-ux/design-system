@@ -15,7 +15,7 @@ import Menu from 'ui/components/menus/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className="demo-only demo-only--dropdown" style={{height: '16rem'}}>
+  <div className="demo-only" style={{height: '16rem'}}>
     <div className={pf('context-bar grid')}>
       <div className={pf('context-bar__shadow')}></div>
       <div className={pf('context-bar__primary context-bar-action grid grid--vertical-align-stretch')}>
@@ -29,7 +29,7 @@ export default (
           <li className={pf('context-bar-action grid')}>
             <a href="#void" className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')}>Home</a>
           </li>
-          <li className={pf('context-bar-action grid dropdown-trigger')}>
+          <li className={pf('context-bar-action grid dropdown-trigger--click is-open')}>
             <a href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 1</a>
             <button aria-haspopup="true" className={pf('context-bar-action__trigger button button--icon-bare')}>
               <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />

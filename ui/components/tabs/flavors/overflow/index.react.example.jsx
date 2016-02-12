@@ -41,7 +41,7 @@ export default (
     <Tabs.Item innerClass={pf('tabs--default__link')} title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger--click is-open tabs--default__item')}>
+    <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
       <a className={pf('tabs--default__link')} href="#" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>

@@ -18,11 +18,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className="demo-only" style={{height: '390px'}}>
-  <div className={pf('form-element dropdown-trigger--click is-open')}>
+  <div className={pf('form-element dropdown-trigger dropdown-trigger--click is-open')}>
     <label className={pf('form-element__label')} htmlFor="date">Date Picker Label</label>
     <div className={pf('form-element__control')}>
       <div className={pf('input-has-icon input-has-icon--right')}>
-        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="event" />
+        <SvgIcon className={pf('input__icon input-text-default')} sprite="utility" symbol="event" />
         <input className={pf('input')} id="date" type="text" placeholder="Pick a Date" />
       </div>
     </div>

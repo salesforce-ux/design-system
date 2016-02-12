@@ -18,69 +18,95 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className={pf('demo-only size--1-of-2')} {...props}>
     {props.children}
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('size--1-of-2'), props.className)}>
-    {props.children}
+  <fieldset className={className(pf('form--element form--stacked'), props.className)}>
+    <legend className={pf('form-element__legend')}>
+      <span className={pf('form-element__label form-element__label--top')}>Share email with</span>
+    </legend>
+    <div className={pf('form-element__control')}>
+      {props.children}
+    </div>
   </fieldset>;
 
-let Legend = props =>
-  <legend>
+let LabelWrapper = props =>
+  <div className={className(pf('form-element grid grid--vertical-align-center'), props.className)}>
     {props.children}
-  </legend>;
+  </div>;
 
-let Checkbox = props =>
+let Label = props =>
   <label className={className(pf('checkbox--toggle'), props.className)} htmlFor={props.id}>
-    <span className={pf('form-element__label')}>{props.children}</span>
-    <input name="checkbox" type="checkbox" disabled={props.disabled} />
-      <span className={pf('checkbox--faux')} data-check-on="On" data-check-off="Off"></span>
+    {props.children}
   </label>;
 
-let List = props =>
-  <ul>
-    {props.children}
-  </ul>;
+let FauxLabel = props =>
+  <span className={pf('form-element__label')}>{props.children}</span>;
 
-let ListItem = props =>
-  <li>
-    {props.children}
-  </li>;
+let Checkbox = props =>
+  <input name="checkbox" type="checkbox" disabled={props.disabled} />;
+
+let Toggle = props =>
+  <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
-
-let StateA = props =>
-  <Demo className={pf('form--horizontal')}>
-    <Checkbox className={pf('grid grid--vertical-align-center')}>Toggle Label</Checkbox>
+let StateA = props ==
+  <Demo>
+    <LabelWrapper>
+      <Label>
+        <FauxLabel>Toggle Label</FauxLabel>
+        <Checkbox />
+        <Toggle />
+      </Label>
+    </LabelWrapper>
   </Demo>;
 
 let StateB = props =>
   <Demo>
-    <Checkbox disabled className={pf('grid grid--vertical-align-center')}>Toggle Label</Checkbox>
+    <LabelWrapper>
+      <Label>
+        <FauxLabel>Toggle Label</FauxLabel>
+        <Checkbox disabled />
+        <Toggle />
+      </Label>
+    </LabelWrapper>
   </Demo>;
 
 let StateC = props =>
   <Demo>
     <Fieldset>
-      <Legend>Share email with</Legend>
-      <List>
-        <ListItem>
-          <Checkbox>North East Sales Team</Checkbox>
-         </ListItem>     
-        <ListItem>
-          <Checkbox>Another Team</Checkbox>
-        </ListItem>
-        <ListItem>
-          <Checkbox>Another Team</Checkbox>
-        </ListItem>
-        <ListItem>
-          <Checkbox>Another Team</Checkbox>
-        </ListItem>
-      </List>
+      <LabelWrapper>
+        <Label className={pf('has-divider--bottom')}>
+          <FauxLabel>North East Sales Team</FauxLabel>
+          <Checkbox />
+          <Toggle className={pf('col--bump-left')} />
+        </Label>
+      </LabelWrapper>
+      <LabelWrapper>
+        <Label className={pf('has-divider--bottom')}>
+          <FauxLabel>Another Team</FauxLabel>
+          <Checkbox />
+          <Toggle className={pf('col--bump-left')} />
+        </Label>
+      </LabelWrapper>
+      <LabelWrapper>
+        <Label className={pf('has-divider--bottom')}>
+          <FauxLabel>Another Team</FauxLabel>
+          <Checkbox />
+          <Toggle className={pf('col--bump-left')} />
+        </Label>
+      </LabelWrapper>
+      <LabelWrapper>
+        <Label className={pf('has-divider--bottom')}>
+          <FauxLabel>Another Team</FauxLabel>
+          <Checkbox />
+          <Toggle className={pf('col--bump-left')} />
+        </Label>
+      </LabelWrapper>
     </Fieldset>
   </Demo>;
 

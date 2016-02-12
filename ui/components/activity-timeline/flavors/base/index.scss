@@ -10,19 +10,48 @@
 
 
 .#{$css-prefix}media--timeline {
-  padding-bottom: $spacing-x-large;
-  @include feed-vertical-rule($square-icon-medium-boundary-alt, $border-width-thick);
+  padding-bottom: $spacing-large;
+  @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
 
   &:before {
-    margin-left: -3px;
+    margin-left: $border-width-thin;
   }
 
-  .#{$css-prefix}timeline__icon {
-    border: $border-width-thick solid #fff;
+  .#{$css-prefix}tile__title {
+
+    &-content {
+      position: relative;
+      top: -1px;
+      padding-right: $spacing-medium;
+      background: $color-background-alt;
+      z-index: 2;
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: $spacing-x-small;
+      left: 0;
+      border-bottom: $border-width-thin dashed $color-border;
+      content: ' ';
+      z-index: 1;
+    }
+  }
+
+  .#{$css-prefix}tile__label {
+    display: block;
   }
 }
 
 .#{$css-prefix}timeline {
+
+  &__icon {
+    margin-top: -$spacing-small;
+    border: $border-width-thick solid #fff {
+      top-width: $spacing-small;
+      bottom-width: $spacing-small;
+    };
+  }
 
   &__actions {
     display: flex;
@@ -52,8 +81,18 @@
     background: $task;
   }
 
-  &__item {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+  .#{$css-prefix}tile__detail {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }

@@ -8,8 +8,8 @@ classes:
     notes: By default icons have a white fill color
   -
     class: timeline__item
-    description: Defines each item on the timeline
-    required: true
+    deprecated: true
+    description: Deprecated. Defines each item on the timeline
     applied: <code>li</code>
   -
     class: media--timeline
@@ -45,7 +45,7 @@ classes:
     applied: <code>p</code>
   -
     class: timeline__icon
-    description: Adds the 2px white border around the icon
+    description: Adds the thick white border around the icon which is used to cover the timeline rules.
     required: true
     applied: <code>svg</code>
     notes: This is added to the icon inside the <code>.{{cssPrefix}}media__figure</code> in

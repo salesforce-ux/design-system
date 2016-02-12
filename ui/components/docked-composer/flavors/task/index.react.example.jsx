@@ -31,7 +31,7 @@ let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
     <div className={pf('form-element__control lookup__search-control grid box--border')}>
-      <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
+      <div className={pf('dropdown-trigger dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
         <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
         <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
       </div>

@@ -1,2 +1,2 @@
-require('babel-register')
-require("./main.babel")
+require('babel-register');
+require('../main.babel');

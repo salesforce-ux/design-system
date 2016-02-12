@@ -8,20 +8,20 @@ var server;
 
 const setup = done => {
   exec('npm install', {cwd: path.join(__dirname, '../'), stdio: [0, 1, 2]}, (err, stdout, stderr) => {
-    if(err) throw(err)
+    if(err) throw(err);
 
     exec('npm run build', {cwd: path.join(__dirname, '../'), stdio: [0, 1, 2]}, (err, stdout, stderr) => {
-      if(err) throw(err)
+      if(err) throw(err);
 
-      server = app.listen(8000)
-      done()
+      server = app.listen(8000);
+      done();
     })
   })
 }
 
 const teardown = done => {
-  server.close()
-  done()
+  server.close();
+  done();
 }
 
-module.exports = {setup, teardown}
+module.exports = {setup, teardown};

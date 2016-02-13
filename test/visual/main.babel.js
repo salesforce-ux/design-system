@@ -12,7 +12,7 @@ describe('All components', function() {
 
         it('takes a screenshot', client => {
           client
-            .url('http://localhost:8000/'+path)
+            .url(process.env.HOST + path)
             .waitForElementVisible('body', 5000)
             .resizeWindow(800, 600)
             .saveScreenshot(client.screenshotPath(component.id+'_'+flavor.id))

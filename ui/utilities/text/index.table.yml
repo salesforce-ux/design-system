@@ -10,17 +10,17 @@ classes:
     notes: Typically used as supportive text
   -
     class: text-heading--large
-    description: Very large 32px heading
+    description: Very large 28px heading
     applied: Any heading
     notes: These are rarely used in the app and are reserved for extremely large text to showcase data (such as totals or stats).
   -
     class: text-heading--medium
-    description: Large 24px heading
+    description: Large 20px heading
     applied: Any heading
     notes: Typically the largest heading on a page
   -
     class: text-heading--small
-    description: Smaller 18px heading
+    description: Smaller 16px heading
     applied: Any heading
     notes: Used for smaller content areas such as list sections or card titles
   -

@@ -8,6 +8,7 @@
 - Page Header markup structure is refactored for new design.
 
 **CHANGES**
+- Font sizes have been reduced.
 - `.slds-timeline__item` is deprecated.
 - Page Headers are visually smaller.
 - Page Header details are now on white and align to the left.

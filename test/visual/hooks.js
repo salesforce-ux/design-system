@@ -3,7 +3,7 @@ const app = express();
 const exec = require('child_process').exec;
 const path = require('path');
 
-app.use(express.static(__dirname + '/../.www'));
+app.use(express.static(__dirname + '/../../.www'));
 var server;
 
 const setup = done => {

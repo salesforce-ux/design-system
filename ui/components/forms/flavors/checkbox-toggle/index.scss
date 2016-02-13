@@ -13,28 +13,28 @@
   .#{$css-prefix}checkbox--faux {
     display: inline-block;
     position: relative;
-    width: 3.375rem; // @TODO: do we tokenize these?
-    height: 1.5rem;
+    width: $width-toggle; // @TODO: do we tokenize these?
+    height: $height-toggle;
     padding: $spacing-xxx-small;
-    background-color: $color-background-indicator-dot;
+    background-color: $color-background-toggle;
     border-radius: $border-radius-pill;
     transition: background-color 0.2s cubic-bezier(0.75, 0, 0.08, 1);
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: $color-background-temp-modal;
+      background-color: $color-background-toggle-hover;
     }
 
     &:before {
       content: attr(data-check-off);
       position: absolute;
-      right: $spacing-x-small; //Can I use spacing tokens for absolute positioning values?
-      font-size: 10px; //@Jina - what do we do about this? :)
+      right: $spacing-x-small;
+      font-size: $font-size-x-small;
       font-weight: $font-weight-bold;
       text-transform: uppercase;
       color: $color-text-inverse;
-      line-height: 2; // Do we need tokens here? Is this a special snowflake?
+      line-height: $line-height-toggle;
       transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
     }
 
@@ -42,8 +42,8 @@
       content: '';
       position: absolute;
       left: $spacing-xxx-small;
-      width: $square-icon-utility-medium; // I'm not sure this is the one
-      height: $square-icon-utility-medium; // I'm not sure this is the one
+      width: $square-toggle-slider;
+      height: $square-toggle-slider; // I'm not sure this is the one
       background-color: $color-background-alt;
       border-radius: $border-radius-pill;
       transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
@@ -66,20 +66,20 @@
 
       & + .#{$css-prefix}checkbox--faux,
       & ~ .#{$css-prefix}checkbox--faux {
-        background-color: $color-background-button-brand;
-        color: $color-text-button-brand;
+        background-color: $color-background-toggle-active;
+        color: $color-text-inverse;
 
         &:hover,
         &:focus {
-          background-color: $color-background-button-brand-hover;
+          background-color: $color-background-toggle-active-hover;
         }
 
         &:before {
           content: '';
           position: absolute;
           right: 2px;
-          width: $square-icon-utility-medium; // I'm not sure this is the one
-          height: $square-icon-utility-medium; // I'm not sure this is the one
+          width: $square-toggle-slider;
+          height: $square-toggle-slider;
           background-color: $color-background-alt;
           border-radius: $border-radius-pill;
           transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
@@ -90,33 +90,40 @@
           position: absolute;
           left: $spacing-x-small;
           background-color: transparent;
-          font-size: 10px;
+          color: $color-text-inverse;
+          font-size: $font-size-x-small;
           font-weight: $font-weight-bold;
           text-transform: uppercase;
-          color: $color-text-inverse;
-          line-height: 2;
+          line-height: $line-height-toggle;
         }
       }
     }
 
     &[disabled] {
+    // scss-lint:disable NestingDepth
 
       & + .#{$css-prefix}checkbox--faux,
       & ~ .#{$css-prefix}checkbox--faux {
-        background-color: $color-background-indicator-dot;
+        // scss-lint:disable NestingDepth
+        background-color: $color-background-toggle-disabled;
         pointer-events: none;
 
         &:before,
         &:after {
-          color: $color-text-input-disabled;
+          color: $color-text-toggle-disabled;
         }
 
         &:hover,
         &:focus {
-          background-color: $color-background-indicator-dot;
+          background-color: $color-background-toggle-disabled;
           cursor: default;
         }
       }
     }
   }
+}
+
+.#{$css-prefix}email-control {
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-small;
 }

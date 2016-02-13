@@ -35,7 +35,7 @@ export default (
         <ul>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
+              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
                 <a href="#">Adam Choi</a>
               </p>
               <ButtonIcon
@@ -65,7 +65,7 @@ export default (
           </li>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
+              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
                 <a href="#">Adam Choi</a>
               </p>
               <ButtonIcon
@@ -95,7 +95,7 @@ export default (
           </li>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
+              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
                 <a href="#">Adam Choi</a>
               </p>
               <ButtonIcon

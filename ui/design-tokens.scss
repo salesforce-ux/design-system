@@ -13,7 +13,10 @@
 // Lightning Tightening overrides
 $line-height-button: 1.875rem;
 $line-height-tab: 2.5rem;
-$font-size-medium: .8125rem;
+$font-size-medium: 0.8125rem;
+$font-size-large: 1rem;
+$font-size-x-large: 1.25rem;
+$font-size-xx-large: 1.75rem;
 
 @import
   '@salesforce-ux/design-tokens/dist/s1-base-large.default.scss',
@@ -51,6 +54,7 @@ $color-context-bar-shadow: #000 !default;
 $color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
 $color-background-context-bar-highlight: rgba($color-context-bar-alt, 0.2) !default;
 $color-text-context-nav-trigger: rgba($color-context-bar-alt, 0.4) !default;
+$font-size-medium-a: 0.875rem !default;
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large

@@ -2,7 +2,7 @@ description: This table gives you a quick overview of the {{abbreviatedName}} CS
 classes:
   -
     class: text-body--regular
-    description: Creates the 14px regular body copy
+    description: Creates the 13px regular body copy
     notes: This is the base body font size and is rarely needed
   -
     class: text-body--small
@@ -23,6 +23,11 @@ classes:
     description: Smaller 18px heading
     applied: Any heading
     notes: Used for smaller content areas such as list sections or card titles
+  -
+    class: text-heading--x-small-bold
+    description: Smaller bolded 14px heading
+    applied: Any heading or paragraph
+    notes: Use for titles in card items, feed items, and activity timeline items.
   -
     class: text-heading--label
     description: All caps 12px heading

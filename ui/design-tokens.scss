@@ -50,6 +50,16 @@ $color-context-bar-shadow: #000 !default;
 $color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
 $color-background-context-bar-highlight: rgba($color-context-bar-alt, 0.2) !default;
 $color-text-context-nav-trigger: rgba($color-context-bar-alt, 0.4) !default;
+$width-toggle: 3.375rem !default;
+$height-toggle: 1.5rem !default;
+$color-background-toggle: #9faab5 !default;
+$color-background-toggle-disabled: #9faab5 !default;
+$color-background-toggle-hover: #7e8c99 !default;
+$square-toggle-slider: 1.25rem !default;
+$line-height-toggle: 1.3rem !default;
+$color-background-toggle-active: #0070d2 !default;
+$color-background-toggle-active-hover: #005fb2 !default;
+$color-text-toggle-disabled: rgb(216, 221, 230) !default;
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large

@@ -27,7 +27,7 @@ let Fieldset = props =>
     <legend className={pf('form-element__legend')}>
       <span className={pf('form-element__label form-element__label--top')}>Share email with</span>
     </legend>
-    <div className={pf('form-element__control')}>
+    <div className={pf('form-element__control email-control')}>
       {props.children}
     </div>
   </fieldset>;
@@ -46,7 +46,7 @@ let FauxLabel = props =>
   <span className={pf('form-element__label')}>{props.children}</span>;
 
 let Checkbox = props =>
-  <input name="checkbox" type="checkbox" disabled={props.disabled} />;
+  <input name="checkbox" type="checkbox" disabled={props.disabled} checked={props.checked} />;
 
 let Toggle = props =>
   <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;
@@ -66,6 +66,17 @@ let StateA = props =>
   </Demo>;
 
 let StateB = props =>
+<Demo>
+  <LabelWrapper>
+    <Label>
+      <FauxLabel>Toggle Label</FauxLabel>
+      <Checkbox checked />
+      <Toggle />
+    </Label>
+  </LabelWrapper>
+</Demo>;
+
+let StateC = props =>
   <Demo>
     <LabelWrapper>
       <Label>
@@ -76,7 +87,7 @@ let StateB = props =>
     </LabelWrapper>
   </Demo>;
 
-let StateC = props =>
+let StateD = props =>
   <Demo>
     <Fieldset>
       <LabelWrapper>
@@ -89,19 +100,19 @@ let StateC = props =>
       <LabelWrapper>
         <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>Another Team</FauxLabel>
-          <Checkbox />
+          <Checkbox checked />
           <Toggle className={pf('col--bump-left')} />
         </Label>
       </LabelWrapper>
       <LabelWrapper>
         <Label className={pf('p-around--x-small has-divider--bottom')}>
           <FauxLabel>Another Team</FauxLabel>
-          <Checkbox />
+          <Checkbox checked />
           <Toggle className={pf('col--bump-left')} />
         </Label>
       </LabelWrapper>
       <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
+        <Label className={pf('p-around--x-small')}>
           <FauxLabel>Another Team</FauxLabel>
           <Checkbox />
           <Toggle className={pf('col--bump-left')} />
@@ -121,13 +132,18 @@ export let states = [
     element: <StateA />
   },
   {
-    id: 'checkbox-toggle-disabled',
-    label: 'Disabled Toggle ',
+    id: 'checkbox-toggle-checked',
+    label: 'Checked Toggle ',
     element: <StateB />
   },
   {
-    id: 'checkbox-toggle-group',
-    label: 'Group of toggles',
+    id: 'checkbox-toggle-disabled',
+    label: 'Disabled Toggle ',
     element: <StateC />
+  },
+  {
+    id: 'checkbox-toggle-group',
+    label: 'Grouped Email Permissions',
+    element: <StateD />
   }
 ];

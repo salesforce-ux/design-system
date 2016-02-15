@@ -24,3 +24,6 @@
   `slds-button--small`. Since these are now the same height, leaving those
   classes in will no longer have any visual difference.
 - `slds-modal--content` should use the additive class of `slds-p-vertical--large` and `slds-p-horizontal--x-large`, instead of `slds-p-around--medium`.
+
+**NEW COMPONENTS**
+- [Context bar](/components/context-bar/)

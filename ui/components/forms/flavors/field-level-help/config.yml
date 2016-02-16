@@ -1,4 +1,4 @@
-status: 'prototype'
+status: 'dev-ready'
 dependencies:
   - core/icons
   - components/buttons/icon

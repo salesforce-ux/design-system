@@ -51,10 +51,34 @@ classes:
     description: Aligns text right
     applied: Any text
   -
+    class: section
+    description: Container for a collapsable sub section through interaction with the section title
+    required: true
+    notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__body</code>
+  -
+    class: section__title
+    description: Title of a section, can contain an interactive button icon to expand/collapse sub section(s)
+    required: true
+  -
+    class: section__title-action
+    description: Interactive titles with icons that open and close sections
+    required: true
+  -
+    class: section__content
+    description: Content of a section that can be expanded/collapse through interaction with the <code>.{{cssPrefix}}section__title-action</code>
+    required: true
+  -
     class: section-title
     description: Interactive titles with icons that open and close sections
     notes: These are typically on a form
+    deprecated: true
   -
     class: section-title--divider
     description: Titles that also act as a divider with a grey background
     notes: These are typically on a form
+    deprecated: true
+  -
+    class: type-focus
+    description: Creates a faux link with interactions
+    applied: container
+    notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline

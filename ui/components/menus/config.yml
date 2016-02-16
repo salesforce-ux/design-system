@@ -1,5 +1,5 @@
 classBase: 'dropdown'
-status: 'prototype'
+status: 'dev-ready'
 flavors:
   - dropdown
   - dropdown-with-icons

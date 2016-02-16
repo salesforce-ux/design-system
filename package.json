@@ -51,6 +51,7 @@
     "classnames": "2.2.3",
     "colors": "1.1.2",
     "eslint-path-formatter": "git://github.com/kaelig/eslint-path-formatter.git#master",
+    "express": "^4.13.4",
     "fastdom": "^1.0.0",
     "fs-extra": "^0.24.0",
     "gator": "^1.2.4",

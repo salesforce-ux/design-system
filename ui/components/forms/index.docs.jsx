@@ -30,6 +30,8 @@ export const intro = (
 export default (
 <ComponentDocs>
   <p>For optimum spacing and layout, wrap each element in <CodeClass className="form-element" />. Layout helper classes are available through the following class names, <CodeClass className="form--stacked" />, <CodeClass className="form--horizontal" /> and <CodeClass className="form--inline" />.</p>
+  <p>The read-only state is for form elements that can’t be modified. It is used for small, non-editable form fields that sit next to inputs and allows the size and height to align. It is not meant for large paragraphs of text.</p>
+  <p>Because the read-only field state has no <code>&lt;input&gt;</code>, don’t use a <code>&lt;label&gt;</code> to provide better accessibility for screen readers and keyboard navigators. Instead, use a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__label" /> class. Instead of an <code>&lt;input&gt;</code>, use the <CodeClass className="form-element__static" /> class inside the <CodeClass className="form-element__control" /> wrapper.</p>
   <p>Every form field requires an associated, non-empty text <code>&lt;label&gt;</code> element, which is linked to the form field either by wrapping the <code>&lt;label&gt;</code> tag around the field or by giving the <code>&lt;label&gt;</code> a <code>for</code> attribute whose value is that input field&rsquo;s id. This association ensures that assistive technology users can tell what information to enter where.</p>
   <h3 className={pf('text-heading--small')}>Form Example</h3>
   <form role="form" className={pf('form--stacked grid wrap grid--pull-padded-large m-top--large')}>

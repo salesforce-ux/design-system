@@ -51,6 +51,14 @@ classes:
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
+    class: input-has-fixed-addon
+    description: Use on input container to let it know there is fixed text to the left or right of the input
+    applied: The <code>&lt;div&gt;</code> contains both the <code>.{{cssPrefix}}form-element__addon</code> and the <code>&lt;input&gt;</code>
+  -
+    class: form-element__addon
+    description: Class for fixed text that sits to the left or right of an <code>&lt;input&gt;</code>
+    applied: any element
+  -
     class: textarea
     description: Initializes textarea
     required: true

@@ -27,7 +27,7 @@ let Fieldset = props =>
     <legend className={pf('form-element__legend')}>
       <span className={pf('form-element__label form-element__label--top')}>Share email with</span>
     </legend>
-    <div className={pf('form-element__control email-control')}>
+    <div className={pf('form-element__control box--border')}>
       {props.children}
     </div>
   </fieldset>;
@@ -133,17 +133,17 @@ export let states = [
   },
   {
     id: 'checkbox-toggle-checked',
-    label: 'Checked Toggle ',
+    label: 'Checked',
     element: <StateB />
   },
   {
     id: 'checkbox-toggle-disabled',
-    label: 'Disabled Toggle ',
+    label: 'Disabled',
     element: <StateC />
   },
   {
     id: 'checkbox-toggle-group',
-    label: 'Grouped Email Permissions',
+    label: 'Grouped',
     element: <StateD />
   }
 ];

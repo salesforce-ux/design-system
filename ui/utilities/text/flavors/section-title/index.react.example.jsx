@@ -11,17 +11,91 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
-  <h3 className={pf('section-title section-group--is-open')}>
-    <a href="#"><SvgIcon className={pf('icon')} sprite="utility" symbol="switch" /> Section Title</a>
-  </h3>
-  <hr />
-  <h3 className={pf('section-title section-group--is-closed')}>
-    <a href="#"><SvgIcon className={pf('icon')} sprite="utility" symbol="switch" /> Section Title</a>
-  </h3>
-</div>
-);
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let Section = props =>
+  <div className={className(pf('section'), props.className)}>
+    {props.children}
+  </div>;
+
+let SectionContent = props =>
+  <div className={className(pf('section__content'), props.className)}>
+    {props.children}
+  </div>;
+
+let SectionTitle = props =>
+  <div className={className(pf('section__title'), props.className)}>
+    {props.children}
+  </div>;
+
+let SectionTitleAction = props =>
+  <h3 href="#void" className={className(pf('section__title-action'), props.children)}>
+    <button className={pf('button button--icon-container')}>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
+    </button>
+    {props.children}
+  </h3>;
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <SectionTitle>Section Title</SectionTitle>
+  </Demo>;
+
+let Closed = props =>
+  <Demo>
+    <Section>
+      <SectionTitle>
+        <SectionTitleAction>Section Title</SectionTitleAction>
+      </SectionTitle>
+      <SectionContent />
+    </Section>
+  </Demo>;
+
+let Open = props =>
+  <Demo>
+    <Section className={pf('is-open')}>
+      <SectionTitle>
+        <SectionTitleAction>Section Title</SectionTitleAction>
+      </SectionTitle>
+      <SectionContent>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
+      </SectionContent>
+    </Section>
+  </Demo>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'section-title',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'section-title-closed',
+    label: 'Closed',
+    element: <Closed />
+  },
+  {
+    id: 'section-title-open',
+    label: 'Open',
+    element: <Open />
+  }
+];

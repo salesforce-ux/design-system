@@ -17,6 +17,9 @@
 - Form Elements are visually smaller.
 - Reduced data table row heights.
 - Activity timeline sizing & spacing is reduced.
+- Visual density changes in cards.
+- Visual density changes in popovers.
+- "View all" links in cards and popover panels are now aligned to the right.
 - `slds-button--small` is deprecated (since buttons are now the same size as
   it was).
 - `slds-input--small` is deprecated (since inputs are now the same size as it
@@ -25,3 +28,6 @@
   `slds-button--small`. Since these are now the same height, leaving those
   classes in will no longer have any visual difference.
 - `slds-modal--content` should use the additive class of `slds-p-vertical--large` and `slds-p-horizontal--x-large`, instead of `slds-p-around--medium`.
+
+**NEW COMPONENTS**
+- [Context bar](/components/context-bar/)

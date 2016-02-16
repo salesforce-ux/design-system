@@ -20,11 +20,21 @@
     }
   }
 
-  .#{$css-prefix}form-element__control {
-    position: relative;
+  .#{$css-prefix}form-element {
+    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
 
-    + .#{$css-prefix}form-element__control {
+    + .#{$css-prefix}form-element {
       padding-left: $spacing-x-small;
+    }
+  }
+
+  @include deprecate('3.0.0') {
+    .#{$css-prefix}form-element__control {
+      position: relative;
+
+      + .#{$css-prefix}form-element__control {
+        padding-left: $spacing-x-small;
+      }
     }
   }
 }

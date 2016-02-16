@@ -3,6 +3,7 @@ flavors:
   - textarea
   - radio
   - checkbox
+  - checkbox-toggle
   - checkbox-alternate
   - select
   - multi-select

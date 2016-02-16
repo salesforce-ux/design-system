@@ -53,6 +53,7 @@
   'forms/flavors/textarea/index',
   'forms/flavors/radio/index',
   'forms/flavors/checkbox/index',
+  'forms/flavors/checkbox-toggle/index',
   'forms/flavors/select/index',
   'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
@@ -167,9 +168,6 @@
 
   // Lookup
   'lookups/flavors/base/index',
-  'lookups/flavors/single-select/index',
-  'lookups/flavors/multi-select/index',
-  'lookups/flavors/multi-scope/index',
   'lookups/flavors/advanced-modal/index',
 
   // Objects

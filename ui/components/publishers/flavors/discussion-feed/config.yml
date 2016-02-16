@@ -1,5 +1,1 @@
-status: 'prototype'
-showFormFactors:
-  - small
-  - medium
-  - large
+status: 'dev-ready'

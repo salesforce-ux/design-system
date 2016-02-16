@@ -43,10 +43,10 @@ let Label = props =>
   </label>;
 
 let FauxLabel = props =>
-  <span className={pf('form-element__label')}>{props.children}</span>;
+  <span className={pf('form-element__label m-bottom--')}>{props.children}</span>;
 
 let Checkbox = props =>
-  <input name="checkbox" type="checkbox" disabled={props.disabled} checked={props.checked} />;
+  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
 
 let Toggle = props =>
   <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;

@@ -24,7 +24,6 @@
   }
 
   .#{$css-prefix}form-element__label {
-    position: relative;
     display: inline;
     vertical-align: middle;
     font-size: $font-size-medium;
@@ -109,9 +108,8 @@
   }
 }
 
-.#{$css-prefix}is-required .#{$css-prefix}checkbox > .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required .#{$css-prefix}checkbox ~ .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}form-element__legend > .#{$css-prefix}form-element__label:before {
+.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}form-element__label:before,
+.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before {
   content: '*';
   color: $color-text-error;
   position: absolute;

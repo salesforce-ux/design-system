@@ -10,6 +10,7 @@
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 
 **CHANGES**
+- Font sizes have been reduced.
 - `.slds-timeline__item` is deprecated.
 - Page Headers are visually smaller.
 - Page Header details are now on white and align to the left.
@@ -18,6 +19,9 @@
 - Form Elements are visually smaller.
 - Reduced data table row heights.
 - Activity timeline sizing & spacing is reduced.
+- Visual density changes in cards.
+- Visual density changes in popovers.
+- "View all" links in cards and popover panels are now aligned to the right.
 - `slds-button--small` is deprecated (since buttons are now the same size as
   it was).
 - `slds-input--small` is deprecated (since inputs are now the same size as it

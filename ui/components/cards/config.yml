@@ -3,11 +3,5 @@ classBase: 'card'
 flavors:
   - base
   - with-filtering
-  - compact
+  - narrow
   - empty
-dependencies:
-  - core/text
-  - core/grid-system/index
-  - core/grid-system/index/flex-spread
-  - components/button-group
-  - components/tables

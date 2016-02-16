@@ -104,7 +104,7 @@ class ModalExample extends React.Component {
                       <th data-label="name" scope="row">
                         <MediaObject figureLeft={image1} flavor="center">
                           <a href="#void" className={pf('truncate')}>
-                            Aplha Product
+                            Alpha Product
                           </a>
                         </MediaObject>
                       </th>

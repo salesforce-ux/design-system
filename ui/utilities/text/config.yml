@@ -5,6 +5,7 @@ flavors:
   - heading-large
   - heading-medium
   - heading-small
+  - heading-x-small-bold
   - heading-label
   - heading-label-normal
   - alignment

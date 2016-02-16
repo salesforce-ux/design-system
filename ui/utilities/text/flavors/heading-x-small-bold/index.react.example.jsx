@@ -10,22 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-<div className="demo-only">
-  <div className={pf('card')}>
-    <div className={pf('card__header grid grid--content-center grid--flex-spread')}>
-      <h2 className={pf('text-heading--small truncate')}>Card Header</h2>
-    </div>
-    <div className={pf('card__body p-horizontal--small')}>
-      <div className={pf('text-align--center')}>
-        <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
-        <Button flavor="neutral" className={pf('m-bottom--x-large')}>Add Contact</Button>
-      </div>
-    </div>
+  <div className={pf('text-heading--x-small-bold')}>
+    The quick brown fox jumps over the lazy dog.
   </div>
-</div>
 );

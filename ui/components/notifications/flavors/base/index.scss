@@ -54,7 +54,7 @@
 
     // needed for left-hand icons
     .#{$css-prefix}icon {
-      margin-top: -$spacing-xx-small;
+      margin-top: ($spacing-xx-small * -1);
     }
   }
 }

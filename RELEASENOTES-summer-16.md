@@ -6,7 +6,7 @@
 - Activity timeline markup structure has changed. Detail areas for the items
   now use tiles and description lists for consistency.
 - Page Header markup structure is refactored for new design.
-- Removed first and last cell padding from Data Tables to allow nesting. New 
+- Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 
 **CHANGES**

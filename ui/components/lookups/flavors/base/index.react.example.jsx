@@ -342,7 +342,7 @@ export let states = [
     element: <StateC />
   },
   {
-    id: 'lookup-single-scope-section',
+    id: 'lookup-single-scope-selection',
     label: 'Single scope with selection',
     element: <StateD />
   },

@@ -66,4 +66,42 @@
     margin-top: $spacing-x-small;
     display: block;
   }
+
+  // Read Only
+  &__static {
+    display: inline-block;
+    line-height: $line-height-button;
+    min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
+
+    // If read only state is longform
+    // Apply text line height
+    &.#{$css-prefix}text-longform {
+      line-height: $line-height-text;
+      padding-bottom: calc((#{$line-height-text} * #{$font-size-medium}) - #{$font-size-medium}); // Re-establish vertical baseline
+    }
+  }
+}
+
+// Required Star
+.#{$css-prefix}required {
+  color: $color-text-error;
+  margin: 0 $spacing-xxx-small;
+}
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}input');
+  @include form-input-error('.#{$css-prefix}textarea');
+  @include form-input-error('.#{$css-prefix}select');
+
+  .#{$css-prefix}form-element__help {
+    color: $color-text-error;
+  }
+
+  @include deprecate('2.0.0') {
+
+    .#{$css-prefix}input__icon {
+      fill: $color-text-error;
+    }
+  }
 }

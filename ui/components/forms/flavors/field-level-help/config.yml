@@ -1,7 +1,1 @@
 status: 'dev-ready'
-dependencies:
-  - core/icons
-  - components/buttons/icon
-  - components/tooltips
-showFormFactors:
-  - large

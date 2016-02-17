@@ -10,6 +10,9 @@
 - Copy updates on components to represent Voice & Tone Guidelines
 - Components can now be built with states and will show up in the component variant & states navigation if available
 
+**NEW**
+- Fixed text can now be used with inputs [input component page - fixed text state](/components/forms/#input)
+
 **CHANGES**
 - Some tokens that were unable to be overridden by not having a `!default` flag has been resolved
 - Reordered tokens so large form factor has priority
@@ -19,6 +22,8 @@
 - Moved Sales Path to Process section - added coaching portion - (/components/process/#sales-path-coach)
 - Removed Spinner gifs and refactored as CSS - [spinner component page](/components/spinners/)
 - Fix for scoping issue with tabs and active state - bug. Increased active tab state specificity - Fixes [#106](https://github.com/salesforce-ux/design-system/issues/106)
+- Compound fields markup has been updated that was causing display issues [compound fields](/components/forms/#compound-form)
+- Fixed a11y bug with required form elements
 
 **DEPRECATED**
 - Deprecated `.slds-card--empty`. Center elements inside empty cards instead, using `.slds-text-align--center`. Full markup in the [card component page](/components/cards/#empty).

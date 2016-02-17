@@ -13,7 +13,8 @@
   @include form-states;
   height: $line-height-button-small;
 
-  &[size] {
+  &[size],
+  &[multiple] {
     min-height: $line-height-button-small;
     height: inherit;
 

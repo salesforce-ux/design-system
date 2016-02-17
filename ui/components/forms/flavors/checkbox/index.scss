@@ -55,17 +55,6 @@
       }
     }
 
-    &.#{$css-prefix}checked--intermediate:checked > .#{$css-prefix}checkbox--faux,
-    &.#{$css-prefix}checked--intermediate:checked ~ .#{$css-prefix}checkbox--faux {
-
-      &:after {
-        height: $border-width-thick;
-        background: $color-brand;
-        border: 0;
-        transform: translate3d(-50%, -50%, 0);
-      }
-    }
-
     &:focus {
 
       > .#{$css-prefix}checkbox--faux,
@@ -117,16 +106,6 @@
   &:checked ~ .#{$css-prefix}checkbox--faux:after {
     border-color: $color-background-error;
   }
-}
-
-.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}form-element__legend:before,
-.#{$css-prefix}is-required ~ .#{$css-prefix}form-element__legend:before {
-  content: '*';
-  color: $color-text-error;
-  position: absolute;
-  left: ($spacing-x-small * -1);
 }
 
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}checkbox--faux,

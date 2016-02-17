@@ -23,18 +23,14 @@ export default (
     <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
     <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
     <fieldset className={pf('form-element')}>
-      <legend className={pf('form-element__legend')}>
-        <span className={pf('form-element__label form-element__label--top')}>Checkbox Group label</span>
-      </legend>
+      <legend className={pf('form-element__legend form-element__label')}>Checkbox Group label</legend>
       <div className={pf('form-element__control')}>
         <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
         <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
       </div>
     </fieldset>
     <fieldset className={pf('form-element')}>
-      <legend className={pf('form-element__legend')}>
-        <span className={pf('form-element__label form-element__label--top')}>Checkbox Group label</span>
-      </legend>
+      <legend className={pf('form-element__legend form-element__label')}>Checkbox Group label</legend>
       <div className={pf('form-element__control')}>
         <Radio name="options" label="Lead Generation" assistiveText="lead" />
         <Radio name="options" label="Education Leads" assistiveText="education" />

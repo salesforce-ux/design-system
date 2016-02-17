@@ -18,8 +18,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className="demo-only">
   <form className={pf('form--inline')}>
-    <Input label="Name" placeholder="John Smith" assistiveText="name" />
-    <Input label="Email" placeholder="jsmith@salesforce.com" assistiveText="email" />
+    <Input label="Name" assistiveText="name" />
+    <Input label="Email" assistiveText="email" />
     <div className={pf('form-element')}>
       <Button type="button" flavor="brand">Send</Button>
     </div>

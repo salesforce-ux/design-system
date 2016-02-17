@@ -108,14 +108,6 @@
   }
 }
 
-.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}form-element__label:before {
-  content: '*';
-  color: $color-text-error;
-  position: absolute;
-  left: ($spacing-x-small * -1);
-}
-
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] > .#{$css-prefix}checkbox--faux,
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux {
   margin-right: $spacing-x-small;

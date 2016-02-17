@@ -20,34 +20,20 @@
     }
   }
 
-  .#{$css-prefix}form-element__control {
-    position: relative;
+  .#{$css-prefix}form-element {
+    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
 
-    + .#{$css-prefix}form-element__control {
+    + .#{$css-prefix}form-element {
       padding-left: $spacing-x-small;
     }
   }
 
-  .#{$css-prefix}form-element__label {
+  @include deprecate('3.0.0') {
+    .#{$css-prefix}form-element__control {
+      position: relative;
 
-    @include mq-medium-min {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &--horizontal {
-
-    .#{$css-prefix}form-element__label {
-
-      @include mq-medium-min {
-        float: left;
-        text-align: right;
-        position: relative;
-        top: $spacing-x-small;
-        min-width: 5rem;
-        max-width: 33%;
+      + .#{$css-prefix}form-element__control {
+        padding-left: $spacing-x-small;
       }
     }
   }

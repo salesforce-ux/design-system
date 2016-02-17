@@ -82,7 +82,26 @@
   }
 }
 
+// Required Star
 .#{$css-prefix}required {
   color: $color-text-error;
   margin: 0 $spacing-xxx-small;
+}
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}input');
+  @include form-input-error('.#{$css-prefix}textarea');
+  @include form-input-error('.#{$css-prefix}select');
+
+  .#{$css-prefix}form-element__help {
+    color: $color-text-error;
+  }
+
+  @include deprecate('2.0.0') {
+
+    .#{$css-prefix}input__icon {
+      fill: $color-text-error;
+    }
+  }
 }

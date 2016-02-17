@@ -33,6 +33,9 @@ export default (
   <p>The read-only state is for form elements that can’t be modified. It is used for small, non-editable form fields that sit next to inputs and allows the size and height to align. It is not meant for large paragraphs of text.</p>
   <p>Because the read-only field state has no <code>&lt;input&gt;</code>, don’t use a <code>&lt;label&gt;</code> to provide better accessibility for screen readers and keyboard navigators. Instead, use a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__label" /> class. Instead of an <code>&lt;input&gt;</code>, use the <CodeClass className="form-element__static" /> class inside the <CodeClass className="form-element__control" /> wrapper.</p>
   <p>Every form field requires an associated, non-empty text <code>&lt;label&gt;</code> element, which is linked to the form field either by wrapping the <code>&lt;label&gt;</code> tag around the field or by giving the <code>&lt;label&gt;</code> a <code>for</code> attribute whose value is that input field&rsquo;s id. This association ensures that assistive technology users can tell what information to enter where.</p>
+  <p>Error states alert the user when content in the form is invalid. The <CodeClass className="has-error" /> class is placed on the <code>&lt;div class=".slds-form-element"&gt;</code>. Place the error message for the user in a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__help" /> class. The <code>&lt;input&gt;</code> with the error receives an `aria-describedby` attribute that references the ID attribute of the error message in the <code>&lt;span&gt;</code>. This configuration allows screen readers to properly associate the error message with the field.</p>
+  <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute required to it. Additionally, add the <CodeClass className="is-required" /> class on the <CodeClass className="form-element" /> wrapper.</p>
+  <p>The native form elements, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;input type='checkbox'&gt;</code>, and <code>&lt;input type='radio'&gt;</code>, receive validation styling for <code>disabled</code>, <code>checked</code>, and <code>checked disabled</code>, if applicable.</p>
   <h3 className={pf('text-heading--small')}>Form Example</h3>
   <form role="form" className={pf('form--stacked grid wrap grid--pull-padded-large m-top--large')}>
     <div className={pf('col--padded size--1-of-1 medium-size--1-of-2')}>
@@ -52,7 +55,7 @@ export default (
       <Input label="Amount" assistiveText="Amount" />
       <Input label="Probability" placeholder="100" assistiveText="Probability" />
       <fieldset className={pf('form-element is-required')}>
-        <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
+        <legend className={pf('form-element__legend form-element__label')}>Options</legend>
         <div className={pf('form-element__control')}>
           <Radio name="options" label="Lead generation" assistiveText="lead" />
           <Radio name="options" label="Education leads" assistiveText="education" />
@@ -60,7 +63,7 @@ export default (
         </div>
       </fieldset>
       <fieldset className={pf('form-element')}>
-        <legend className={pf('form-element__label form-element__label--top')}>Default</legend>
+        <legend className={pf('form-element__legend form-element__label')}>Default</legend>
         <div className={pf('form-element__control')}>
           <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
           <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />

@@ -19,14 +19,14 @@ export default (
     <legend className={pf('form-element__label')}>Location</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
-        <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>Latitude</span>
-          <input className={pf('input')} type="text" />
-        </label>
-        <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>Longitude</span>
-          <input className={pf('input')} type="text" />
-        </label>
+        <div className={pf('form-element size--1-of-2')}>
+          <label className={pf('form-element__label')} htmlFor="input-01">Latitude</label>
+          <input id="input-01" className={pf('input')} type="text" />
+        </div>
+        <div className={pf('form-element size--1-of-2')}>
+          <label className={pf('form-element__label')} htmlFor="input-02">Longitude</label>
+          <input id="input-02" className={pf('input')} type="text" />
+        </div>
       </div>
     </div>
   </fieldset>
@@ -35,26 +35,26 @@ export default (
     <legend className={pf('form-element__label')}>Address</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
-        <label className={pf('form-element__control size--1-of-1')}>
-          <span className={pf('form-element__helper')}>Street</span>
-          <input className={pf('input')} type="text" />
-        </label>
+        <div className={pf('form-element size--1-of-1')}>
+          <label className={pf('form-element__label')} htmlFor="input-03">Street</label>
+          <input id="input-03" className={pf('input')} type="text" />
+        </div>
       </div>
       <div className={pf('form-element__row')}>
-        <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>City</span>
-          <input className={pf('input')} type="text" />
-        </label>
-        <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>State</span>
-          <input className={pf('input')} type="text" />
-        </label>
+        <div className={pf('form-element size--1-of-2')}>
+          <label className={pf('form-element__label')} htmlFor="input-04">City</label>
+          <input id="input-04" className={pf('input')} type="text" />
+        </div>
+        <div className={pf('form-element size--1-of-2')}>
+          <label className={pf('form-element__label')} htmlFor="input-05">State</label>
+          <input id="input-05" className={pf('input')} type="text" />
+        </div>
       </div>
       <div className={pf('form-element__row')}>
-        <label className={pf('form-element__control size--1-of-2')}>
-          <span className={pf('form-element__helper')}>ZIP Code</span>
-          <input className={pf('input')} type="text" />
-        </label>
+        <div className={pf('form-element size--1-of-2')}>
+          <label className={pf('form-element__label')} htmlFor="input-06">ZIP Code</label>
+          <input id="input-06" className={pf('input')} type="text" />
+        </div>
       </div>
     </div>
   </fieldset>

@@ -23,19 +23,15 @@ export default (
   <div className={pf('form--horizontal')}>
     <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
     <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
-    <fieldset className={pf('form-element')}>
-      <legend className={pf('form-element__legend')}>
-        <span className={pf('form-element__label form-element__label--top')}>Checkbox Group label</span>
-      </legend>
+    <fieldset className={pf('form-element is-required')}>
+      <legend className={pf('form-element__legend form-element__label')}>Checkbox Group label</legend>
       <div className={pf('form-element__control')}>
         <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
         <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
       </div>
     </fieldset>
-    <fieldset className={pf('form-element')}>
-      <legend className={pf('form-element__legend')}>
-        <span className={pf('form-element__label form-element__label--top')}>Radio Group label</span>
-      </legend>
+    <fieldset className={pf('form-element is-required')}>
+      <legend className={pf('form-element__legend form-element__label')}>Radio Group label</legend>
       <div className={pf('form-element__control')}>
         <Radio name="options" label="Lead Generation" assistiveText="lead" />
         <Radio name="options" label="Education Leads" assistiveText="education" />

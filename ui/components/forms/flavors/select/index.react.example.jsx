@@ -10,18 +10,141 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Select from 'ui/components/forms/flavors/select/index.react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
 
-  <Select label="Select Label" assistiveText="selectSample1">
-    <option>Option One</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </Select>
+let FormElement = props =>
+  <div className={className(pf('form-element'), props.className)}>
+    {props.children}
+  </div>;
 
-</div>
-);
+let FormElementLabel = props =>
+  <label className={pf('form-element__label')} htmlFor="select-01">{props.children}</label>;
+
+let FormElementControl = props =>
+  <div className={className(pf('form-element__control'), props.className)}>
+    {props.children}
+  </div>;
+
+let Select = props =>
+  <div className={pf('select_container')}>
+    <select id="select-01" className={className(pf('select'), props.className)} disabled={props.disabled} multiple={props.multiple}>
+      {props.children}
+    </select>
+  </div>;
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Select Label</FormElementLabel>
+      <FormElementControl>
+        <Select>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </Select>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Required = props =>
+  <Demo>
+    <FormElement className={pf('is-required')}>
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
+      <FormElementControl>
+        <Select>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </Select>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Error = props =>
+  <Demo>
+    <FormElement className={pf('is-required has-error')}>
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
+      <FormElementControl>
+        <Select>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </Select>
+      </FormElementControl>
+      <div className={pf('form-element__help')}>This field is required</div>
+    </FormElement>
+  </Demo>;
+
+let Disabled = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Select Label</FormElementLabel>
+      <FormElementControl>
+        <Select disabled>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </Select>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Multiple = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Select Label</FormElementLabel>
+      <FormElementControl>
+        <select id="select-01" className={pf('select')} multiple>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </select>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'select',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'select-required',
+    label: 'Required',
+    element: <Required />
+  },
+  {
+    id: 'select-error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'select-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  },
+  {
+    id: 'select-multiple',
+    label: 'Multiple Selection',
+    element: <Multiple />
+  }
+];

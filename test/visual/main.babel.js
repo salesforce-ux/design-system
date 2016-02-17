@@ -15,7 +15,7 @@ describe('All components', function() {
             .url(process.env.HOST + path)
             .waitForElementVisible('body', 5000)
             .resizeWindow(800, 600)
-            .saveScreenshot(client.screenshotPath(component.id+'_'+flavor.id))
+            .screenCapture(component.id+'_'+flavor.id)
             .end();
         });
       });

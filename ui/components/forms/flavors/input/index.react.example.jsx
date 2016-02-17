@@ -152,16 +152,6 @@ let ReadOnlyFixedText = props =>
     </FormElement>
   </Demo>;
 
-let Small = props =>
-  <Demo>
-    <FormElement>
-      <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl>
-        <Input className={pf('input input--small')} />
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
-
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -216,10 +206,5 @@ export let states = [
     id: 'input-read-only-fixed-text',
     label: 'Read only With fixed text',
     element: <ReadOnlyFixedText />
-  },
-  {
-    id: 'input-small',
-    label: 'Small Input',
-    element: <Small />
   }
 ];

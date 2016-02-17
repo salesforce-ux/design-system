@@ -24,11 +24,11 @@ let Demo = props =>
 
 let Fieldset = props =>
   <fieldset className={className(pf('form-element'), props.className)}>
-    <legend className={pf('form-element__legend')}>
-      <span className={pf('form-element__label form-element__label--top')}>Checkbox Group Label</span>
-    </legend>
     {props.children}
   </fieldset>;
+
+let Legend = props =>
+  <legend className={pf('form-element__legend form-element__label')}>{props.children}</legend>;
 
 let FormElement = props =>
   <div className={className(pf('form-element'), props.className)}>
@@ -45,9 +45,10 @@ let FormElementControl = props =>
 
 let Checkbox = props =>
   <label className={pf('checkbox')}>
+    {props.children}
     <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
     <span className={pf('checkbox--faux')}></span>
-    <span className={pf('form-element__label')}>{props.children}</span>
+    <span className={pf('form-element__label')}>{props.label}</span>
   </label>;
 
 //////////////////////////////////////////////
@@ -58,7 +59,7 @@ let Default = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -67,7 +68,7 @@ let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -76,7 +77,7 @@ let Error = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </FormElement>
@@ -86,7 +87,7 @@ let Disabled = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-01" disabled>Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" disabled />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -94,9 +95,10 @@ let Disabled = props =>
 let Group = props =>
   <Demo>
     <Fieldset>
+      <Legend>Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
-        <Checkbox id="checkbox-02">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
   </Demo>;
@@ -104,9 +106,10 @@ let Group = props =>
 let GroupRequired = props =>
   <Demo>
     <Fieldset className={pf('is-required')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
-        <Checkbox id="checkbox-02">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
   </Demo>;
@@ -114,9 +117,10 @@ let GroupRequired = props =>
 let GroupError = props =>
   <Demo>
     <Fieldset className={pf('is-required has-error')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01">Checkbox Label</Checkbox>
-        <Checkbox id="checkbox-02">Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>
@@ -125,9 +129,10 @@ let GroupError = props =>
 let GroupDisabled = props =>
   <Demo>
     <Fieldset>
+      <Legend>Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" disabled>Checkbox Label</Checkbox>
-        <Checkbox id="checkbox-02" disabled>Checkbox Label</Checkbox>
+        <Checkbox id="checkbox-01" label="Checkbox Label" disabled></Checkbox>
+        <Checkbox id="checkbox-02" label="Checkbox Label" disabled></Checkbox>
       </FormElementControl>
     </Fieldset>
   </Demo>;

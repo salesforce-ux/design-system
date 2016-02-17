@@ -28,7 +28,7 @@ let FormElement = props =>
   </div>;
 
 let FormElementLabel = props =>
-  <label className={pf('form-element__label')} htmlFor="textarea-input-01">Textarea Label</label>;
+  <label className={pf('form-element__label')} htmlFor="textarea-input-01">{props.children}</label>;
 
 let FormElementControl = props =>
   <div className={className(pf('form-element__control'), props.className)}>
@@ -45,7 +45,7 @@ let Textarea = props =>
 let Default = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea />
       </FormElementControl>
@@ -55,7 +55,7 @@ let Default = props =>
 let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
-      <FormElementLabel />
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required />
       </FormElementControl>
@@ -65,7 +65,7 @@ let Required = props =>
 let Error = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel />
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required />
       </FormElementControl>
@@ -76,7 +76,7 @@ let Error = props =>
 let Disabled = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea disabled />
       </FormElementControl>

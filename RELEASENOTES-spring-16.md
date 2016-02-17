@@ -23,6 +23,7 @@
 - Removed Spinner gifs and refactored as CSS - [spinner component page](/components/spinners/)
 - Fix for scoping issue with tabs and active state - bug. Increased active tab state specificity - Fixes [#106](https://github.com/salesforce-ux/design-system/issues/106)
 - Compound fields markup has been updated that was causing display issues [compound fields](/components/forms/#compound-form)
+- Fixed a11y bug with required form elements
 
 **DEPRECATED**
 - Deprecated `.slds-card--empty`. Center elements inside empty cards instead, using `.slds-text-align--center`. Full markup in the [card component page](/components/cards/#empty).

@@ -9,7 +9,6 @@ flavors:
   - stacked-form
   - inline-form
   - compound-form
-  - validation-state
   - field-level-help
   - inline-level-help
   - edit-dialog-for-touch

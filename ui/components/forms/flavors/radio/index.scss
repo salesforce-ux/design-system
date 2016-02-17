@@ -92,18 +92,6 @@
   }
 }
 
-.#{$css-prefix}is-required > .#{$css-prefix}radio [type="radio"] > .#{$css-prefix}form-element__label:before,
-.#{$css-prefix}is-required > .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}form-element__label:before {
-  content: '*';
-  color: $color-text-error;
-  position: absolute;
-  left: ($spacing-x-small * -1);
-}
-
-.#{$css-prefix}form-element__control .#{$css-prefix}radio {
-  display: block;
-}
-
 .#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] > .#{$css-prefix}radio--faux,
 .#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}radio--faux {
   margin-right: $spacing-x-small;

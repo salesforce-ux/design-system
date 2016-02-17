@@ -29,7 +29,7 @@ let FormElement = props =>
   </div>;
 
 let FormElementLabel = props =>
-  <label className={pf('form-element__label')} htmlFor="text-input-01">Input Label</label>;
+  <label className={pf('form-element__label')} htmlFor="text-input-01">{props.children}</label>;
 
 let FormElementControl = props =>
   <div className={className(pf('form-element__control'), props.className)}>
@@ -46,7 +46,7 @@ let Input = props =>
 let Default = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl>
         <Input />
       </FormElementControl>
@@ -56,7 +56,7 @@ let Default = props =>
 let IconLeft = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <Input />
@@ -67,7 +67,7 @@ let IconLeft = props =>
 let IconRight = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--right')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <Input />
@@ -78,7 +78,7 @@ let IconRight = props =>
 let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
-      <FormElementLabel />
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required />
       </FormElementControl>
@@ -88,18 +88,18 @@ let Required = props =>
 let Error = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel />
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 
 let ErrorIcon = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel />
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
         <Input required />
@@ -111,7 +111,7 @@ let ErrorIcon = props =>
 let Disabled = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl>
         <Input disabled />
       </FormElementControl>
@@ -121,7 +121,7 @@ let Disabled = props =>
 let ReadOnly = props =>
   <Demo>
     <FormElement>
-      <span className={pf('form-element__label')} htmlFor="text-input-01">Input Label</span>
+      <span className={pf('form-element__label')}>Input Label</span>
       <FormElementControl className={pf('has-divider--bottom')}>
         <span className={pf('form-element__static')}>Read Only</span>
       </FormElementControl>
@@ -131,7 +131,7 @@ let ReadOnly = props =>
 let FixedText = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-fixed-addon')}>
         <span className={pf('form-element__addon')}>$</span>
         <Input />
@@ -155,7 +155,7 @@ let ReadOnlyFixedText = props =>
 let Small = props =>
   <Demo>
     <FormElement>
-      <FormElementLabel />
+      <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl>
         <Input className={pf('input input--small')} />
       </FormElementControl>

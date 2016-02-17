@@ -32,7 +32,7 @@ export default (
   </fieldset>
 
   <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__div')}>Address</legend>
+    <legend className={pf('form-element__label')}>Address</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
         <div className={pf('form-element size--1-of-1')}>

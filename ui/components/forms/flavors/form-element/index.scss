@@ -81,3 +81,8 @@
     }
   }
 }
+
+.#{$css-prefix}required {
+  color: $color-text-error;
+  margin: 0 $spacing-xxx-small;
+}

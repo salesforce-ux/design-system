@@ -24,11 +24,11 @@ let Demo = props =>
 
 let Fieldset = props =>
   <fieldset className={className(pf('form-element'), props.className)}>
-    <legend className={pf('form-element__legend')}>
-      <span className={pf('form-element__label form-element__label--top')}>Radio Group Label</span>
-    </legend>
     {props.children}
   </fieldset>;
+
+let Legend = props =>
+  <legend className={pf('form-element__legend form-element__label')}>{props.children}</legend>;
 
 let FormElementControl = props =>
   <div className={className(pf('form-element__control'), props.className)}>
@@ -49,6 +49,7 @@ let Radio = props =>
 let Default = props =>
   <Demo>
     <Fieldset>
+      <Legend>Radio Group Label</Legend>
       <FormElementControl>
         <Radio>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
@@ -59,6 +60,7 @@ let Default = props =>
 let Required = props =>
   <Demo>
     <Fieldset className={pf('is-required')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
         <Radio>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
@@ -69,6 +71,7 @@ let Required = props =>
 let Error = props =>
   <Demo>
     <Fieldset className={pf('is-required has-error')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
         <Radio>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
@@ -80,6 +83,7 @@ let Error = props =>
 let Disabled = props =>
   <Demo>
     <Fieldset>
+      <Legend>Radio Group Label</Legend>
       <FormElementControl>
         <Radio disabled>Radio Label One</Radio>
         <Radio disabled>Radio Label Two</Radio>

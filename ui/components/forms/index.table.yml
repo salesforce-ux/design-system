@@ -103,7 +103,7 @@ classes:
     notes: This is the default
   -
     class: form--inline
-    description: horizontally align multiple form elements on the same axis
+    description: Horizontally align multiple form elements on the same axis
     applied: <code>&lt;form&gt;</code>
   -
     class: form--compound
@@ -116,7 +116,17 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Wrap form elements in this class
   -
-    class: form--compound--horizontal
-    description: Layout modifier for compound forms
-    applied: <code>.{{cssPrefix}}form--compound</code>
-    notes: Positions form labels to the left of the form control
+    class: is-required
+    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element is required
+    applied: <code>.{{cssPrefix}}form-element</code>
+    required: true
+  -
+    class: required
+    description: Class used on required asterick
+    applied: <code>&lt;attr&gt;</code>
+    required: true
+  -
+    class: has-error
+    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element has errors
+    applied: <code>.{{cssPrefix}}form-element</code>
+    required: true

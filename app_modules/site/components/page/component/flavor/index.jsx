@@ -180,7 +180,12 @@ class ComponentFlavor extends React.Component {
           {this.renderPreviewTabs()}
         </Tabs>
       )
-      : <div className={pf('site-bleed scrollable--x')}>{iframe}</div>;
+      : this.state.previewTabActive
+        // If previewTabActive is defined (meaning at least one form factor
+        // was specified), wrap the <iframe>
+        ? <div className={pf('site-bleed scrollable--x')}>{iframe}</div>
+        // Otherwise just use the <iframe>
+        : iframe;
   }
 
   renderPreviewTabs() {

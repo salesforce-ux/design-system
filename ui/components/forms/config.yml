@@ -2,6 +2,7 @@ flavors:
   - input
   - textarea
   - radio
+  - radio-group-alternate
   - checkbox
   - checkbox-toggle
   - checkbox-alternate

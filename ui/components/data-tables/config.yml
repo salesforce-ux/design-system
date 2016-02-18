@@ -1,11 +1,5 @@
-status: 'prototype'
-classBase: 'table'
+status: 'dev-ready'
 flavors:
   - base
-  - resizable-columns
-  - responsive-overflow
   - responsive-stacked
   - responsive-stacked-horizontal
-dependencies:
-  - helpers/sizing
-  - components/tables

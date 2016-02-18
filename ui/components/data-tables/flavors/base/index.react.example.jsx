@@ -12,98 +12,495 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import StatefulClass from 'ui/components/lib/stateful.react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
-  <table className={pf('table table--bordered')}>
-    <thead>
-      <tr className={pf('text-heading--label')} >
-        <th className={pf('cell-shrink')} scope="col"><Checkbox assistiveText="select all" /></th>
-        <th className={pf('is-sortable')} scope="col">
-          <span className={pf('truncate')}>Opportunity Name</span>
-          <ButtonIcon
-            flavor="icon-bare"
-            iconFlavor="small"
-            sprite="utility"
-            symbol="arrowdown"
-            assistiveText="Sort" />
-        </th>
-        <th scope="col"><span className={pf('truncate')}>Account Name</span></th>
-        <th scope="col"><span className={pf('truncate')}>Close Date</span></th>
-        <th scope="col"><span className={pf('truncate')}>Stage</span></th>
-        <th scope="col"><span className={pf('truncate')}>Confidence</span></th>
-        <th scope="col"><span className={pf('truncate')}>Amount</span></th>
-        <th scope="col"><span className={pf('truncate')}>Contact</span></th>
-        <th className={pf('row-action')} scope="col">
-          <ButtonIcon
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className={pf('hint-parent')}>
-        <td className={pf('row-select')}><Checkbox assistiveText="select row1" name="select-row1" /></td>
-        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Acme 25</a></th>
-        <td data-label="account"><a href="#" className={pf('truncate')}>Acme</a></td>
-        <td data-label="activity"><span className={pf('truncate')}>4/14/2015</span></td>
-        <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>
-        <td data-label="confidence"><span className={pf('truncate')}>20%</span></td>
-        <td data-label="amount"><span className={pf('truncate')}>$25k</span></td>
-        <td data-label="contact"><span className={pf('truncate')}>--</span></td>
-        <td className={pf('row-action')}>
-          <ButtonIcon
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </td>
-      </tr>
-      <tr className={pf('hint-parent')}>
-        <td className={pf('row-select')}><Checkbox assistiveText="select row2" name="select-row2" /></td>
-        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Cloudhub + Anypoint Connectors</a></th>
-        <td data-label="account"><a href="#" className={pf('truncate')}>Cloudhub</a></td>
-        <td data-label="activity"><span className={pf('truncate')}>9/30/2015</span></td>
-        <td data-label="stage"><span className={pf('truncate')}>Closing</span></td>
-        <td data-label="confidence"><span className={pf('truncate')}>90%</span></td>
-        <td data-label="amount"><span className={pf('truncate')}>$40k</span></td>
-        <td data-label="contact"><a href="#" className={pf('truncate')}>jrogers@cloudhub.com</a></td>
-        <td className={pf('row-action')}>
-          <ButtonIcon
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </td>
-      </tr>
-      <tr className={pf('hint-parent')}>
-        <td className={pf('row-select')}><Checkbox assistiveText="select row3" name="select-row3" /></td>
-        <th data-label="opportunity-name" scope="row"><a href="#" className={pf('truncate')}>Rohde Corp 30</a></th>
-        <td data-label="account"><a href="#" className={pf('truncate')}>Rohde Corp</a></td>
-        <td data-label="activity"><span className={pf('truncate')}>6/18/2015</span></td>
-        <td data-label="stage"><span className={pf('truncate')}>Prospecting</span></td>
-        <td data-label="confidence"><span className={pf('truncate')}>40%</span></td>
-        <td data-label="amount"><span className={pf('truncate')}>$30k</span></td>
-        <td data-label="contact"><a href="#" className={pf('truncate')}>achoi@rohdecorp.com</a></td>
-        <td className={pf('row-action')}>
-          <ButtonIcon
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-);
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let Table = props =>
+  <div className={pf('scrollable--x')}>
+    <table className={className(pf('table table--bordered'), props.className)}>
+      {props.children}
+    </table>
+  </div>;
+
+let Thead = props =>
+  <thead {...props}>
+    {props.children}
+  </thead>;
+
+let Tbody = props =>
+  <tbody>
+    {props.children}
+  </tbody>;
+
+let Tr = props =>
+  <tr {...props}>
+    {props.children}
+  </tr>;
+
+let Th = props =>
+  <th {...props}>
+    {props.children}
+  </th>;
+
+let Td = props =>
+  <td {...props}>
+    <span className={pf('truncate')}>{props.children}</span>
+  </td>;
+
+let Checkbox = props =>
+  <label className={pf('checkbox')}>
+    <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} />
+    <span className={pf('checkbox--faux')}></span>
+    <span className={pf('assistive-text')}>{props.label}</span>
+  </label>;
+
+let Resize = props =>
+  <div className={pf('shrink-none resizable resizable--vertical')}>
+    <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
+    <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
+    <span className={pf('resizable__handle')}>
+      <span className={pf('resizable__divider')}></span>
+    </span>
+  </div>;
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <Table>
+      <Thead>
+        <Tr className={pf('text-heading--label')}>
+          <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Opportunity Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Account Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Close Date
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Stage
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Confidence
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Amount
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Contact
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('cell-shrink')}></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Td>Acme</Td>
+          <Td>4/14/2015</Td>
+          <Td>Prospecting</Td>
+          <Td>20%</Td>
+          <Td>$25k</Td>
+          <Td>--</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Td>Cloudhub</Td>
+          <Td>9/30/2015</Td>
+          <Td>Closing</Td>
+          <Td>90%%</Td>
+          <Td>$40k</Td>
+          <Td>jrogers@cloudhub.com</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Demo>;
+
+let NoHover = props =>
+  <Demo>
+    <Table className={pf('no-row-hover')}>
+      <Thead>
+        <Tr className={pf('text-heading--label')}>
+          <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Opportunity Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Account Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Close Date
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Stage
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Confidence
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Amount
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Contact
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('cell-shrink')}></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Td>Acme</Td>
+          <Td>4/14/2015</Td>
+          <Td>Prospecting</Td>
+          <Td>20%</Td>
+          <Td>$25k</Td>
+          <Td>--</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Td>Cloudhub</Td>
+          <Td>9/30/2015</Td>
+          <Td>Closing</Td>
+          <Td>90%%</Td>
+          <Td>$40k</Td>
+          <Td>jrogers@cloudhub.com</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Demo>;
+
+let RowSelected = props =>
+  <Demo>
+    <Table>
+      <Thead>
+        <Tr className={pf('text-heading--label')}>
+          <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Opportunity Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Account Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Close Date
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Stage
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Confidence
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Amount
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Contact
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('cell-shrink')}></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr className={pf('hint-parent is-selected')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Td>Acme</Td>
+          <Td>4/14/2015</Td>
+          <Td>Prospecting</Td>
+          <Td>20%</Td>
+          <Td>$25k</Td>
+          <Td>--</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Td>Cloudhub</Td>
+          <Td>9/30/2015</Td>
+          <Td>Closing</Td>
+          <Td>90%%</Td>
+          <Td>$40k</Td>
+          <Td>jrogers@cloudhub.com</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Demo>;
+
+let MassSelected = props =>
+  <Demo>
+    <Table>
+      <Thead>
+        <Tr className={pf('text-heading--label')}>
+          <Th className={pf('cell-shrink')}><Checkbox label="Select All" checked /></Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Opportunity Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Account Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Close Date
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Stage
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Confidence
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Amount
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('is-sortable')} scope="col">
+            Contact
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+          </Th>
+          <Th className={pf('cell-shrink')}></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr className={pf('hint-parent is-selected')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Td>Acme</Td>
+          <Td>4/14/2015</Td>
+          <Td>Prospecting</Td>
+          <Td>20%</Td>
+          <Td>$25k</Td>
+          <Td>--</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+        <Tr className={pf('hint-parent is-selected')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Td>Cloudhub</Td>
+          <Td>9/30/2015</Td>
+          <Td>Closing</Td>
+          <Td>90%%</Td>
+          <Td>$40k</Td>
+          <Td>jrogers@cloudhub.com</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Demo>;
+
+let Resizeable = props =>
+  <Demo>
+    <Table className={pf('table--resizable')}>
+      <Thead>
+        <Tr className={pf('text-heading--label')}>
+          <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Opportunity Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Account Name
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Close Date
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Stage
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Confidence
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Amount
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('is-sortable is-resizable')} scope="col">
+            Contact
+            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+            <Resize />
+          </Th>
+          <Th className={pf('cell-shrink')}></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Td>Acme</Td>
+          <Td>4/14/2015</Td>
+          <Td>Prospecting</Td>
+          <Td>20%</Td>
+          <Td>$25k</Td>
+          <Td>--</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+        <Tr className={pf('hint-parent')}>
+          <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
+          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Td>Cloudhub</Td>
+          <Td>9/30/2015</Td>
+          <Td>Closing</Td>
+          <Td>90%%</Td>
+          <Td>$40k</Td>
+          <Td>jrogers@cloudhub.com</Td>
+          <Td className={pf('cell-shrink')}>
+            <ButtonIcon
+              flavor="icon-border-filled,icon-x-small"
+              iconFlavor="hint,small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="Show More" />
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'data-table',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'data-table-no-hover',
+    label: 'With no row hovers',
+    element: <NoHover />
+  },
+  {
+    id: 'data-table-row-selected',
+    label: 'With row selected',
+    element: <RowSelected />
+  },
+  {
+    id: 'data-table-all-row-selected',
+    label: 'With all rows selected',
+    element: <MassSelected />
+  },
+  {
+    id: 'data-table-resizable-columns',
+    label: 'With resizeable columns',
+    element: <Resizeable />
+  }
+];

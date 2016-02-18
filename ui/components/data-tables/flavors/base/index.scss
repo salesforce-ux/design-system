@@ -145,3 +145,51 @@
     }
   }
 }
+
+// Resizable data table columns
+.#{$css-prefix}table--resizable {
+  position: relative;
+
+  .#{$css-prefix}cell-content {
+    position: static;
+  }
+
+  .#{$css-prefix}is-resizable:hover {
+    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+  }
+}
+
+// Resizable handle
+.#{$css-prefix}resizable {
+  max-width: 100%;
+
+  &__handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $spacing-xx-small;
+    height: 100%;
+    background: $color-background-button-brand;
+    display: block;
+    cursor: col-resize;
+    opacity: 0;
+    z-index: $z-index-popup;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+
+    &--indicator {
+      right: auto;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    width: 1px;
+    background: $color-background-button-brand;
+  }
+}

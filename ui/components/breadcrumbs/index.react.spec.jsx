@@ -23,8 +23,8 @@ import {
   Simulate
 } from 'react-addons-test-utils';
 
-describe(`React`, () => {
-  describe(`BreadCrumbs`, () => {
+describe('React', () => {
+  describe('BreadCrumbs', () => {
     let cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
@@ -34,19 +34,19 @@ describe(`React`, () => {
         </BreadCrumbs>
       );
     });
-    it(`renders its nav`, () => {
+    it('renders its nav', () => {
       const node = scryRenderedDOMComponentsWithTag(cmp, 'nav');
       expect(node).length.to.be(1);
     });
-    it(`renders its items`, () => {
+    it('renders its items', () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}list__item`);
       expect(node).length.to.be(2);
     });
-    it(`renders the assistive text`, () => {
+    it('renders the assistive text', () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}assistive-text`);
       expect(node).length.to.be(1);
     });
-    it(`mixes in the props`, () => {
+    it('mixes in the props', () => {
       const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
       expect(node.props.id).to.equal('bumblebees');
     });

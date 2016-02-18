@@ -54,7 +54,7 @@ class FAQ extends React.Component {
       </p>
     );
     this.addContentItem(
-      `Is any JavaScript included as part of the framework?`,
+      'Is any JavaScript included as part of the framework?',
       <p className={pf('container--large')}>
         No. The {g.displayName} is a pure CSS framework that you
         can use with any front-end development framework you’d like,
@@ -64,7 +64,7 @@ class FAQ extends React.Component {
       </p>
     );
     this.addContentItem(
-      `What browsers are supported?`,
+      'What browsers are supported?',
       <table className={pf('table max-medium-table--stacked-horizontal no-row-hover')}>
         <thead>
           <tr className="site-text-heading--label">
@@ -108,7 +108,7 @@ class FAQ extends React.Component {
       </p>
     );
     this.addContentItem(
-      `Is the Salesforce Sans font full Unicode?`,
+      'Is the Salesforce Sans font full Unicode?',
       <p className={pf('container--large')}>
         Salesforce Sans contains 492 Latin script characters, and supports
         a wide range of languages. It doesn’t contain non-Latin characters,
@@ -140,7 +140,7 @@ class FAQ extends React.Component {
       </div>
     );
     this.addContentItem(
-      `How do I display SVG icons with Lightning Components?`,
+      'How do I display SVG icons with Lightning Components?',
       <div className={pf('container--large')}>
         <p>
           Please review <a href="/getting-started/lightning">Getting Started with Lightning</a>.
@@ -150,14 +150,14 @@ class FAQ extends React.Component {
 
     let compactVersion = `${g.abbreviatedName.toLowerCase()}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
     this.addContentItem(
-      `How do I link to Visualforce static resources like stylesheets and icons?`,
+      'How do I link to Visualforce static resources like stylesheets and icons?',
       <div>
         <p className={pf('container--large')}>
           Visualforce uses a special syntax to reference your static resources, and
           you need to edit the code you cut and paste from the {g.displayName}.
           If you want to load the master stylesheet and you uploaded the {g.displayName} as
           a static resource named <code>{compactVersion}</code> then you should
-          change the <code>{`<apex:stylesheet />`}</code> value to:
+          change the <code>{'<apex:stylesheet />'}</code> value to:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="javascript">
@@ -190,7 +190,7 @@ class FAQ extends React.Component {
       </div>
     );
     this.addContentItem(
-      `How do I link to Lightning static resources like stylesheets and icons?`,
+      'How do I link to Lightning static resources like stylesheets and icons?',
       <div>
         <p className={pf('container--large')}>
           Lightning Components also use a special syntax to reference your static resources, and
@@ -207,7 +207,7 @@ class FAQ extends React.Component {
       </div>
     );
     this.addContentItem(
-      `I am seeing Visualforce errors like: The prefix xlink for attribute xlink:href associated with an element ... is not bound`,
+      'I am seeing Visualforce errors like: The prefix xlink for attribute xlink:href associated with an element ... is not bound',
       <div>
         <p>
           This is likely because the namespace needs to be added to the HTML element:

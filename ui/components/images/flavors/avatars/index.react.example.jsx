@@ -14,11 +14,11 @@ import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const avatar = (
-  <Img src={`/assets/images/company1.jpg`} alt="company name" />
+  <Img src="/assets/images/company1.jpg" alt="company name" />
 );
 
 const avatar2 = (
-  <Img src={`/assets/images/avatar2.jpg`} alt="person name" />
+  <Img src="/assets/images/avatar2.jpg" alt="person name" />
 );
 
 export const preview = (

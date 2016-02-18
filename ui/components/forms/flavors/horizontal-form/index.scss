@@ -17,6 +17,7 @@
 
   .#{$css-prefix}form-element {
 
+    > .#{$css-prefix}form-element__legend,
     > .#{$css-prefix}form-element__label {
 
       @include mq-medium-min {

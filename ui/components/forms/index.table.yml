@@ -103,6 +103,14 @@ classes:
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
   -
+    class: radio--button-group
+    description: Container for a group of radio that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: radio--button
+    description: Customizes your radio to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+  -
     class: form--horizontal
     description: Horizontally aligns a single form label and control on the same line
     applied: <code>&lt;form&gt;</code>

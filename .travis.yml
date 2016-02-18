@@ -15,7 +15,7 @@ script:
   - npm run test
 after_success:
   - export SHA=`git rev-parse --short HEAD`
-  - curl https://design-system-regression-test.herokuapp.com/ci/$SHA
+  - curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA
 cache:
   directories:
     - node_modules

@@ -66,12 +66,12 @@ gulp.task('lint:js', lintjs([
   'scripts/**/*.{js,jsx}',
   'site/**/*.{js,jsx}',
   'ui/**/*.{js,jsx}',
-  '!**/*.spec.js'
+  '!**/*.spec.{js,jsx}'
 ]));
 
 gulp.task('lint:js:test', lintjs([
   'test/**/*.{js,jsx}',
-  '**/*.spec.js'],
+  '**/*.spec.{js,jsx}'],
   {env: {mocha: true}}
 ));
 

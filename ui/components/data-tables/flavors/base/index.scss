@@ -149,9 +149,28 @@
 // Resizable data table columns
 .#{$css-prefix}table--resizable {
   position: relative;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
 
   .#{$css-prefix}cell-content {
     position: static;
+  }
+
+  .#{$css-prefix}cell-shrink {
+    width: $square-icon-small-boundary;
+    box-sizing: content-box;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  th.#{$css-prefix}primary {
+    width: 20%;
   }
 
   .#{$css-prefix}is-resizable:hover {

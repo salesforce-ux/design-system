@@ -53,7 +53,7 @@ let Th = props =>
 
 let Td = props =>
   <td {...props}>
-    <span className={pf('truncate')}>{props.children}</span>
+    {props.children}
   </td>;
 
 let Checkbox = props =>
@@ -116,7 +116,7 @@ let Default = props =>
       <Tbody>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Th scope="row">Acme 25</Th>
           <Td>Acme</Td>
           <Td>4/14/2015</Td>
           <Td>Prospecting</Td>
@@ -134,7 +134,7 @@ let Default = props =>
         </Tr>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Th scope="row">Cloudhub + Anypoint Connectors</Th>
           <Td>Cloudhub</Td>
           <Td>9/30/2015</Td>
           <Td>Closing</Td>
@@ -194,7 +194,7 @@ let NoHover = props =>
       <Tbody>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Th scope="row">Acme 25</Th>
           <Td>Acme</Td>
           <Td>4/14/2015</Td>
           <Td>Prospecting</Td>
@@ -212,7 +212,7 @@ let NoHover = props =>
         </Tr>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Th scope="row">Cloudhub + Anypoint Connectors</Th>
           <Td>Cloudhub</Td>
           <Td>9/30/2015</Td>
           <Td>Closing</Td>
@@ -272,7 +272,7 @@ let RowSelected = props =>
       <Tbody>
         <Tr className={pf('hint-parent is-selected')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Th scope="row">Acme 25</Th>
           <Td>Acme</Td>
           <Td>4/14/2015</Td>
           <Td>Prospecting</Td>
@@ -290,7 +290,7 @@ let RowSelected = props =>
         </Tr>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Th scope="row">Cloudhub + Anypoint Connectors</Th>
           <Td>Cloudhub</Td>
           <Td>9/30/2015</Td>
           <Td>Closing</Td>
@@ -350,7 +350,7 @@ let MassSelected = props =>
       <Tbody>
         <Tr className={pf('hint-parent is-selected')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Th scope="row">Acme 25</Th>
           <Td>Acme</Td>
           <Td>4/14/2015</Td>
           <Td>Prospecting</Td>
@@ -368,7 +368,7 @@ let MassSelected = props =>
         </Tr>
         <Tr className={pf('hint-parent is-selected')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" checked /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Th scope="row">Cloudhub + Anypoint Connectors</Th>
           <Td>Cloudhub</Td>
           <Td>9/30/2015</Td>
           <Td>Closing</Td>
@@ -394,7 +394,7 @@ let Resizeable = props =>
       <Thead>
         <Tr className={pf('text-heading--label')}>
           <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
+          <Th className={pf('is-sortable is-resizable primary')} scope="col">
             Opportunity Name
             <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
             <Resize />
@@ -435,7 +435,7 @@ let Resizeable = props =>
       <Tbody>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Acme 25</span></Th>
+          <Th scope="row">Acme 25</Th>
           <Td>Acme</Td>
           <Td>4/14/2015</Td>
           <Td>Prospecting</Td>
@@ -453,7 +453,7 @@ let Resizeable = props =>
         </Tr>
         <Tr className={pf('hint-parent')}>
           <Td className={pf('cell-shrink')}><Checkbox label="Select Row" /></Td>
-          <Th scope="row"><span className={pf('truncate')}>Cloudhub + Anypoint Connectors</span></Th>
+          <Th scope="row">Cloudhub + Anypoint Connectors</Th>
           <Td>Cloudhub</Td>
           <Td>9/30/2015</Td>
           <Td>Closing</Td>

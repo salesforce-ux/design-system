@@ -75,23 +75,6 @@ module.exports = function() {
           acceptSslCerts: true
         }
       },
-      mac_safari: {
-        selenium_port: 80,
-        selenium_host: 'ondemand.saucelabs.com',
-        selenium_start_process: false,
-        silent: true,
-        test_runner: 'mocha',
-        screenshots: {
-          enabled: true,
-          path: ''
-        },
-        desiredCapabilities: {
-          platform: 'mac',
-          browserName: 'safari',
-          javascriptEnabled: true,
-          acceptSslCerts: true
-        }
-      },
       ie: {
         selenium_port: 80,
         selenium_host: 'ondemand.saucelabs.com',

@@ -160,4 +160,4 @@ export let states = [
     label: 'Directional',
     element: <Directional />
   }
-]
+];

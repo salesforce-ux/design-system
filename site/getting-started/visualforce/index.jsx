@@ -15,7 +15,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import g from 'app_modules/global';
-import Tabs from 'ui/components/tabs/index.react';
 
 const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;

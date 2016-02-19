@@ -197,7 +197,6 @@ class ComponentFlavor extends React.Component {
           key={tab.key}
           aria-controls={`${flavor.uid}__preview-content`}
           aria-describedby={flavor.uid}
-          innerClass={pf('tabs--default__link')}
           data-form-factor={tab.key}
           data-controls={tab.key}
           id={`${flavor.uid}__preview-tab--${tab.key}`}

@@ -66,6 +66,10 @@
       @include tabs-content;
     }
   }
+
+  .#{$css-prefix}tabs__item--overflow {
+    overflow: visible;
+  }
 }
 
 .#{$css-prefix}tabs--default__item {

@@ -15,63 +15,149 @@ import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Lorem from 'react-lorem-component';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// Partial(s)
+//////////////////////////////////////////////
 
-class ModalExample extends React.Component {
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+    <div className={pf('backdrop backdrop--open')} />
+  </div>;
 
-  constructor(props) {
-    super(props);
-    this.state = { showing: true, saving: false, edit: false};
+let Modal2 = props =>
+  <div className={className(pf('modal fade-in-open'), props.className)}
+    aria-hidden="false"
+    role="dialog">
+
+    <div className={pf('modal__container')}>
+      {props.children}
+    </div>
+  </div>;
+
+let Modal2Header = props =>
+  <div className={pf('modal__header')} {...props}>
+
+    <ButtonIcon className={pf('modal__close')}
+      flavor="icon-inverse"
+      iconFlavor="large"
+      sprite="action"
+      symbol="close"
+      assistiveText="Close"
+      {...props}>
+    </ButtonIcon>
+
+    <h2 className={pf('text-heading--medium')} {...props}>Modal Header</h2>
+
+    {props.children}
+  </div>;
+
+let Modal2Content = props =>
+  <div className={pf('modal__content p-around--medium')} {...props}>
+    <Lorem count={2} paragraphLowerBound={5} />
+  </div>;
+
+let Modal2Footer = props =>
+  <div className={className(pf('modal__footer'), props.className)}>
+    {props.children}
+  </div>;
+
+let Modal2SaveCancel = props =>
+  <div className={pf('x-small-buttons--horizontal')} {...props}>
+      <Button flavor="neutral">Cancel</Button>
+      <Button flavor="neutral,brand">Save</Button>
+  </div>;
+
+let Modal2SkipSave = props =>
+  <div className={pf('x-small-buttons--horizontal')} {...props}>
+      <Button flavor="neutral">Skip This Step</Button>
+      <Button flavor="neutral,brand">Save &#38; Next</Button>
+  </div>;
+
+
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal2>
+      <Modal2Header />
+      <Modal2Content />
+      <Modal2Footer>
+        <Modal2SaveCancel />
+      </Modal2Footer>
+    </Modal2>
+  </Demo>;
+
+let Taglines = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal2>
+      <Modal2Header>
+        <p className={pf('m-top--x-small')}>
+          Here&rsquo;s a tagline if you need it. It is allowed to extend
+          across mulitple lines, so I&rsquo;m making up content to show that
+          to you. It is allowed to <a href="#">contain links or be a link</a>.
+        </p>
+      </Modal2Header>
+      <Modal2Content />
+      <Modal2Footer>
+        <Modal2SaveCancel />
+      </Modal2Footer>
+    </Modal2>
+  </Demo>;
+
+let Large = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal2 className={pf('modal--large')}>
+      <Modal2Header />
+      <Modal2Content />
+      <Modal2Footer>
+        <Modal2SaveCancel />
+      </Modal2Footer>
+    </Modal2>
+  </Demo>;
+
+let Directional = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal2>
+      <Modal2Header />
+      <Modal2Content />
+      <Modal2Footer className={pf('modal__footer--directional')}>
+        <Modal2SaveCancel />
+      </Modal2Footer>
+    </Modal2>
+  </Demo>;
+
+
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'taglines',
+    label: 'Taglines',
+    element: <Taglines />
+  },
+  {
+    id: 'large',
+    label: 'Large',
+    element: <Large />
+  },
+  {
+    id: 'Directional',
+    label: 'Directional',
+    element: <Directional />
   }
-
-  openCreateModal() {
-    this.setState({showing: true, saving: false, edit: false});
-  }
-
-  openEditModal() {
-    this.setState({showing: true, saving: false, edit: true});
-  }
-
-  closeModal() {
-    this.refs.opener.focus();
-    this.setState({showing: false, saving: false});
-    setTimeout(()=> this.setState({edit: false}), 500);
-  }
-
-  saveModal() {
-    this.setState({showing: false, saving: true});
-    setTimeout(()=> this.setState({saving: false}), 500);
-  }
-
-  render() {
-    return (
-      <div className="demo-only" style={{height: '640px'}}>
-        <Modal
-          isOpen={this.state.showing}
-          renderInline={true}
-          saving={this.state.saving}
-          edit={this.state.edit}
-        >
-
-          <Modal.Header>
-            <h2 className={pf('text-heading--medium')}>
-              Modal Header
-            </h2>
-          </Modal.Header>
-
-          <Modal.Body className={pf('p-around--medium')}>
-            <Lorem count={2} paragraphLowerBound={5} />
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Save</Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  }
-}
-
-export default <ModalExample/>;
+]

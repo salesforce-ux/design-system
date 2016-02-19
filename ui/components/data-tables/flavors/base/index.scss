@@ -169,7 +169,10 @@
     width: $square-icon-large-boundary;
 
     &:nth-child(n) {
-      padding: 0;
+      padding: {
+        left: 0;
+        right: 0;
+      }
     }
 
     &:first-child {

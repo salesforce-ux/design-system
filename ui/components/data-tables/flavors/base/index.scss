@@ -147,35 +147,35 @@
 }
 
 // Resizable data table columns
-.#{$css-prefix}table--resizable {
+//
+// Set table to use fixed layout for width and truncation purposes
+.#{$css-prefix}table--fixed-layout {
   position: relative;
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
 
-  .#{$css-prefix}cell-content {
-    position: static;
-  }
-
   .#{$css-prefix}cell-shrink {
-    width: $square-icon-small-boundary;
-    box-sizing: content-box;
-  }
+    width: $square-icon-large-boundary;
 
-  th,
-  td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+    &:nth-child(n) {
+      padding: 0;
+    }
 
-  th.#{$css-prefix}primary {
-    width: 20%;
-  }
+    &:first-child {
+      text-align: right;
+      padding-right: $spacing-x-small;
+    }
 
-  .#{$css-prefix}is-resizable:hover {
-    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+    &:last-child {
+      text-align: left;
+      padding-left: $spacing-x-small;
+    }
   }
+}
+
+.#{$css-prefix}is-resizable:hover {
+  box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
 }
 
 // Resizable handle

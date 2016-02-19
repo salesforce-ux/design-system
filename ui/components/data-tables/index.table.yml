@@ -14,7 +14,7 @@ classes:
     description: Adds stripes to alternating rows
     applied: <code>.{{cssPrefix}}table</code>
   -
-    class: table--resizeable
+    class: table--fixed-layout
     description: Styles for resizeable columns
     applied: <code>.{{cssPrefix}}table</code>
   -
@@ -26,7 +26,7 @@ classes:
     description: Enables user interactions for sorting a column
     applied: <code>&lt;th&gt;</code>
   -
-    class: is-resizeable
+    class: is-resizable
     description: Enables table cell to be resized
     applied: <code>&lt;th&gt;</code>
   -

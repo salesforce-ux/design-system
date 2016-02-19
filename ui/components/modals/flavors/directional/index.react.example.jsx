@@ -17,11 +17,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 class DirectionalExample extends React.Component {
-  static pages = [
-    <Lorem count={2} paragraphLowerBound={5} />,
-    <Lorem count={4} paragraphLowerBound={9} />
-  ];
-
   constructor(props) {
     super(props);
     this.state = { showing: true, page: 0 };
@@ -82,5 +77,10 @@ class DirectionalExample extends React.Component {
     );
   }
 }
+DirectionalExample.pages = [
+  <Lorem count={2} paragraphLowerBound={5} />,
+  <Lorem count={4} paragraphLowerBound={9} />
+];
+
 
 export default <DirectionalExample/>;

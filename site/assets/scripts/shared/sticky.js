@@ -123,6 +123,7 @@ class Sticky {
         const fixedOffsetAbove = fixedElementsAbove.reduce((offset, el) =>
           offset + el.getBoundingClientRect().height
         , 0);
+        // Calculate the extra offset added by any other fixed elements below this one
         const fixedElementsBelow = this.props.fixedElementsBelow
           ? $(this.props.fixedElementsBelow) : [];
         const fixedOffsetBelow = fixedElementsBelow.reduce((offset, el) =>
@@ -133,10 +134,11 @@ class Sticky {
         const contentRect = content.getBoundingClientRect();
         const contentPadding = this.getPadding(content, PADDING_IDENTITY());
         const contentPaddingFixed = Object.assign({}, PADDING_IDENTITY(), this.state.contentPaddingFixed);
+        // If there are fixed elements below, add that offset to the padding
         if (fixedOffsetBelow) {
           this.setState({
             contentPaddingFixed: Object.assign({}, this.state.contentPaddingFixed, {
-              bottom: fixedOffsetBelow
+              bottom: fixedOffsetBelow + (this.state.contentPaddingFixed.bottom ? this.state.contentPaddingFixed.bottom : 0)
             })
           });
         }

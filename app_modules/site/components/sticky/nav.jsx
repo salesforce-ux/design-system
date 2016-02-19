@@ -21,6 +21,9 @@ export default props =>
   <Sticky
     className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}
     fixedElementsBelow="footer.site-contentinfo"
-    fixedContentPadding={{ top: forceBase.spacingLarge }}
+    fixedContentPadding={{
+      top: forceBase.spacingLarge,
+      bottom: forceBase.spacingMedium
+    }}
     pinBottom={true}
     {...props} />;

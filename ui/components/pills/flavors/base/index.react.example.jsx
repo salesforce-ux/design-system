@@ -12,14 +12,101 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import Img from 'app_modules/ui/img';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let Pill = props =>
   <a href="#void" className={pf('pill')}>
-    <span className={pf('pill__label')}>Pill Label</span>
+    {props.children}
+    <span className={pf('pill__label')}>{props.label || 'Pill Label'}</span>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </a>
-</div>
-);
+  </a>;
+
+let PillContainer = props =>
+  <div className={pf('pill_container')}>
+    {props.children}
+  </div>;
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <Pill />
+  </Demo>;
+
+let Icon = props =>
+  <Demo>
+    <Pill>
+      <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+    </Pill>
+  </Demo>;
+
+let Portrait = props =>
+  <Demo>
+    <Pill>
+      <span className={pf('pill__icon avatar avatar--circle')}>
+        <Img src={`/assets/images/avatar2.jpg`} alt="" />
+      </span>
+    </Pill>
+  </Demo>;
+
+let Unlinked = props =>
+  <Demo>
+    <span className={pf('pill')}>
+      <span className={pf('pill__label')}>Pill Label</span>
+      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+    </span>
+  </Demo>;
+
+let Container = props =>
+  <Demo>
+    <PillContainer>
+      <Pill />
+      <Pill />
+      <Pill />
+    </PillContainer>
+  </Demo>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'pill',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'pill-with-icon',
+    label: 'With icon',
+    element: <Icon />
+  },
+  {
+    id: 'pill-with-portrait',
+    label: 'With portrait',
+    element: <Portrait />
+  },
+  {
+    id: 'pill-unlinked',
+    label: 'Unlinked',
+    element: <Unlinked />
+  },
+  {
+    id: 'pill-container',
+    label: 'Pill with Container',
+    element: <Container />
+  }
+];

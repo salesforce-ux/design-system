@@ -10,8 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Lorem from 'react-lorem-component';
@@ -28,7 +26,7 @@ let Demo = props =>
     <div className={pf('backdrop backdrop--open')} />
   </div>;
 
-let Modal2 = props =>
+let Modal = props =>
   <div className={className(pf('modal fade-in-open'), props.className)}
     aria-hidden="false"
     role="dialog">
@@ -38,7 +36,7 @@ let Modal2 = props =>
     </div>
   </div>;
 
-let Modal2Header = props =>
+let ModalHeader = props =>
   <div className={pf('modal__header')} {...props}>
 
     <ButtonIcon className={pf('modal__close')}
@@ -46,32 +44,31 @@ let Modal2Header = props =>
       iconFlavor="large"
       sprite="action"
       symbol="close"
-      assistiveText="Close"
-      {...props}>
+      assistiveText="Close">
     </ButtonIcon>
 
-    <h2 className={pf('text-heading--medium')} {...props}>Modal Header</h2>
+    <h2 className={pf('text-heading--medium')}>Modal Header</h2>
 
     {props.children}
   </div>;
 
-let Modal2Content = props =>
+let ModalContent = props =>
   <div className={pf('modal__content p-around--medium')} {...props}>
     <Lorem count={2} paragraphLowerBound={5} />
   </div>;
 
-let Modal2Footer = props =>
+let ModalFooter = props =>
   <div className={className(pf('modal__footer'), props.className)}>
     {props.children}
   </div>;
 
-let Modal2SaveCancel = props =>
+let ModalSaveCancel = props =>
   <div className={pf('x-small-buttons--horizontal')} {...props}>
       <Button flavor="neutral">Cancel</Button>
       <Button flavor="neutral,brand">Save</Button>
   </div>;
 
-let Modal2SkipSave = props =>
+let ModalSkipSave = props =>
   <div className={pf('x-small-buttons--horizontal')} {...props}>
       <Button flavor="neutral">Skip This Step</Button>
       <Button flavor="neutral,brand">Save &#38; Next</Button>
@@ -85,52 +82,52 @@ let Modal2SkipSave = props =>
 
 let Default = props =>
   <Demo style={{height: '640px'}}>
-    <Modal2>
-      <Modal2Header />
-      <Modal2Content />
-      <Modal2Footer>
-        <Modal2SaveCancel />
-      </Modal2Footer>
-    </Modal2>
+    <Modal>
+      <ModalHeader />
+      <ModalContent />
+      <ModalFooter>
+        <ModalSaveCancel />
+      </ModalFooter>
+    </Modal>
   </Demo>;
 
 let Taglines = props =>
   <Demo style={{height: '640px'}}>
-    <Modal2>
-      <Modal2Header>
+    <Modal>
+      <ModalHeader>
         <p className={pf('m-top--x-small')}>
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
           to you. It is allowed to <a href="#">contain links or be a link</a>.
         </p>
-      </Modal2Header>
-      <Modal2Content />
-      <Modal2Footer>
-        <Modal2SaveCancel />
-      </Modal2Footer>
-    </Modal2>
+      </ModalHeader>
+      <ModalContent />
+      <ModalFooter>
+        <ModalSaveCancel />
+      </ModalFooter>
+    </Modal>
   </Demo>;
 
 let Large = props =>
   <Demo style={{height: '640px'}}>
-    <Modal2 className={pf('modal--large')}>
-      <Modal2Header />
-      <Modal2Content />
-      <Modal2Footer>
-        <Modal2SaveCancel />
-      </Modal2Footer>
-    </Modal2>
+    <Modal className={pf('modal--large')}>
+      <ModalHeader />
+      <ModalContent />
+      <ModalFooter>
+        <ModalSaveCancel />
+      </ModalFooter>
+    </Modal>
   </Demo>;
 
 let Directional = props =>
   <Demo style={{height: '640px'}}>
-    <Modal2>
-      <Modal2Header />
-      <Modal2Content />
-      <Modal2Footer className={pf('modal__footer--directional')}>
-        <Modal2SaveCancel />
-      </Modal2Footer>
-    </Modal2>
+    <Modal>
+      <ModalHeader />
+      <ModalContent />
+      <ModalFooter className={pf('modal__footer--directional')}>
+        <ModalSaveCancel />
+      </ModalFooter>
+    </Modal>
   </Demo>;
 
 

@@ -36,6 +36,7 @@
       min-width: $square-icon-medium-boundary;
       line-height: $square-icon-medium-boundary;
       border-radius: $border-radius-circle;
+      margin: auto;
     }
 
     &:hover:not(.#{$css-prefix}disabled-text) > .#{$css-prefix}day,

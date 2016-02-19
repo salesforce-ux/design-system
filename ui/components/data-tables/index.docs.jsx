@@ -26,6 +26,5 @@ export default (
   <p>To initialize a data table, apply the <CodeClass className="table"/> class to the <code>table</code> element. This class creates a <code>table</code> with formatted cells and allows you to use data table utilities.</p>
   <h4 className="site-text-heading--label">Accessibility</h4>
   <p>To create an accessible table, the top row of column headers (<code>th</code>) are placed in a <code>thead</code>. Each one receives the <code>scope="col"</code> attribute. The first non-actionable (meaning that doesn't contain a checkbox or menu) column in each row should be marked as a <code>th</code> with a <code>scope="row"</code> attribute.</p>
-  <p>For available classes and options, see the <a href="#overview">data table overview legend</a> below.</p>
 </ComponentDocs>
 );

@@ -14,12 +14,20 @@ classes:
     description: Adds stripes to alternating rows
     applied: <code>.{{cssPrefix}}table</code>
   -
+    class: table--fixed-layout
+    description: Styles for resizeable columns
+    applied: <code>.{{cssPrefix}}table</code>
+  -
     class: is-selected
     description: Changes row to selected state
     applied: <code>&lt;tr&gt;</code>
   -
     class: is-sortable
     description: Enables user interactions for sorting a column
+    applied: <code>&lt;th&gt;</code>
+  -
+    class: is-resizable
+    description: Enables table cell to be resized
     applied: <code>&lt;th&gt;</code>
   -
     class: cell-wrap

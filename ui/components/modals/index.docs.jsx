@@ -27,6 +27,9 @@ export default (
     <p>Modals grow according to how much content is within, but once the modal reaches full height (including the previously mentioned space on top and bottom), the content area will begin to scroll.</p>
     <p>Modals can have a tagline in the header, simply by adding a paragraph after the heading.</p>
     <p>By default, the content area of the modal does not have spacing. This allows for content such as Tables to be full-width to the modal. To get spacing when you need it, apply a padding utility (<CodeClass className="p-around--medium" />).</p>
+    <p>Modal headers can also have taglines, if you need to provide additional context. This tagline can also contain links, or the whole thing could be a link in and of itself.</p>
+    <p>Large modals call for large amounts of content. The height follows the same behavior and styles of other modals. The width changes to 90% of the viewport, and uses a wider minimum width and no maximum width.</p>
+    <p>These are modals that require a linearly directional paradigm of navigation (&ldquo;Next&rdquo; and &ldquo;Back&rdquo;, etc.) &mdash; the actionable buttons in the modal footer live on the left and right, rather than all on the right. These can either be within a large or default modal, depending on the use case.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn&rsquo;t return to the underlying page until the user presses the Esc key, presses an explicit &ldquo;Cancel&rdquo; or &ldquo;Close&rdquo; button in the modal, or performs another action that closes the modal.</p>
     <p>Expected markup:</p>

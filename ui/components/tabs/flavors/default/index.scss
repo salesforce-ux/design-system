@@ -19,7 +19,6 @@
 }
 
 .#{$css-prefix}tabs--default__item {
-  @include tabs-item;
 
   &.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
     border-color: $color-text-tab-label-selected;

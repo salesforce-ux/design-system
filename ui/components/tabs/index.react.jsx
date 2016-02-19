@@ -71,7 +71,7 @@ class TabItem extends React.Component {
     return React.cloneElement(this.props.content, {
       onClick: this.props.onClick.bind(this),
       tabIndex: tabIndex,
-      className: pf(this.props.innerClass),
+      className: pf(`tabs--${this.props.flavor}__link`),
       'aria-selected': this.props.current,
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
@@ -80,7 +80,7 @@ class TabItem extends React.Component {
   renderDefault(tabIndex) {
     return (
       <a
-        className={pf(this.props.innerClass)}
+        className={pf(`tabs--${this.props.flavor}__link`)}
         onClick={this.props.onClick.bind(this)}
         href="#void" role="tab"
         tabIndex={tabIndex}
@@ -151,7 +151,10 @@ class Tabs extends React.Component {
     flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
   };
 
-  static defaultProps = { selectedIndex: 0 };
+  static defaultProps = {
+    selectedIndex: 0,
+    flavor: 'default'
+  };
 
   constructor(props) {
     super(props);

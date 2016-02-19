@@ -110,7 +110,7 @@ const setAll = (newPrefs, emit = true) => {
  * @param {string} key
  * @param {any} value
  */
-const set = (key, value) => {
+export const set = (key, value) => {
   prefs[key] = value;
   sync();
 };
@@ -120,7 +120,7 @@ const set = (key, value) => {
  *
  * @param {string} key
  */
-const get = key => prefs[key];
+export const get = key => prefs[key];
 
 const handleStatusChange = event => set('status', event.target.value);
 
@@ -131,11 +131,14 @@ const handleStatusChange = event => set('status', event.target.value);
 export default () => {
   return {
     hooks: {
-      after_listen_dom: delegate =>  {
+      before_listen_dom() {
         setStrategies([DefaultsStrategy(), LocalStorageStrategy()]);
       },
       listen_dom: delegate =>  {
         delegate('change', '#status-dropdown', handleStatusChange);
+      },
+      after_listen_dom: delegate =>  {
+        sync();
       }
     }
   };

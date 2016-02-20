@@ -30,7 +30,7 @@ let Demo = props =>
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="#void" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
+      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );

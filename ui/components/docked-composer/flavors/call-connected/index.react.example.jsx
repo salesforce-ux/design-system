@@ -26,7 +26,7 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--medium')}>
-    <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 const recordIcon = (

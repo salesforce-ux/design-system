@@ -27,10 +27,6 @@ const defaultFilter = (term, item) => {
 };
 
 class DropdownFilter extends React.Component {
-  static contextTypes = { termChanged: PT.func };
-  static propTypes = { placeholder: PT.string };
-  static defaultProps = { placeholder: 'Search...' };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -47,6 +43,10 @@ class DropdownFilter extends React.Component {
   }
 }
 
+DropdownFilter.contextTypes = { termChanged: PT.func };
+DropdownFilter.propTypes = { placeholder: PT.string };
+DropdownFilter.defaultProps = { placeholder: 'Search...' };
+
 
 class DropdownTitle extends React.Component {
   constructor(props) {
@@ -62,7 +62,6 @@ class DropdownTitle extends React.Component {
 }
 
 class DropdownHeader extends React.Component {
-  static contextTypes = { termChanged: PT.func };
 
   constructor(props) {
     super(props);
@@ -78,11 +77,10 @@ class DropdownHeader extends React.Component {
   }
 }
 
+DropdownHeader.contextTypes = { termChanged: PT.func };
+
 
 class DropdownItem extends React.Component {
-  static contextTypes = { searchTerm: PT.string, filterWith: PT.func, hasFilter: PT.bool, selectedItem: PT.func, isSelectable: PT.bool, initialFocus: PT.bool, itemFocused: PT.func, itemSelected: PT.func };
-  static propTypes = { disabled: PT.bool, href: PT.string };
-  static globalIdx = 0;
 
   constructor(props) {
     super(props);
@@ -147,11 +145,11 @@ class DropdownItem extends React.Component {
   }
 }
 
+DropdownItem.contextTypes = { searchTerm: PT.string, filterWith: PT.func, hasFilter: PT.bool, selectedItem: PT.func, isSelectable: PT.bool, initialFocus: PT.bool, itemFocused: PT.func, itemSelected: PT.func };
+DropdownItem.propTypes = { disabled: PT.bool, href: PT.string };
+DropdownItem.globalIdx = 0;
 
 class DropdownList extends React.Component {
-  static contextTypes = { searchTerm: PT.string, filterWith: PT.func, hasFilter: PT.bool, selectedItem: PT.func, isSelectable: PT.bool };
-  static childContextTypes = { selectedItem: PT.func, isSelectable: PT.bool };
-  static defaultProps = { isSelectable: true };
 
   constructor(props) {
     super(props);
@@ -191,12 +189,11 @@ class DropdownList extends React.Component {
   }
 }
 
+DropdownList.contextTypes = { searchTerm: PT.string, filterWith: PT.func, hasFilter: PT.bool, selectedItem: PT.func, isSelectable: PT.bool };
+DropdownList.childContextTypes = { selectedItem: PT.func, isSelectable: PT.bool };
+DropdownList.defaultProps = { isSelectable: true };
 
 class Dropdown extends React.Component {
-  static childContextTypes = { searchTerm: PT.string, termChanged: PT.func, filterWith: PT.func, hasFilter: PT.bool, initialFocus: PT.bool, itemFocused: PT.func };
-  static propTypes = {filterWith: PT.func, initialFocus: PT.bool };
-  static defaultProps = { filterWith: defaultFilter, initialFocus: false, itemFocused: function(){} };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -230,6 +227,11 @@ class Dropdown extends React.Component {
     );
   }
 }
+
+Dropdown.childContextTypes = { searchTerm: PT.string, termChanged: PT.func, filterWith: PT.func, hasFilter: PT.bool, initialFocus: PT.bool, itemFocused: PT.func };
+Dropdown.propTypes = {filterWith: PT.func, initialFocus: PT.bool };
+Dropdown.defaultProps = { filterWith: defaultFilter, initialFocus: false, itemFocused: function(){} };
+
 
 Dropdown.Header = DropdownHeader;
 Dropdown.Filter = DropdownFilter;

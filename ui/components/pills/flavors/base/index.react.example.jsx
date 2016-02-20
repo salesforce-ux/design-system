@@ -57,7 +57,7 @@ let Portrait = props =>
   <Demo>
     <Pill>
       <span className={pf('pill__icon avatar avatar--circle')}>
-        <Img src={`/assets/images/avatar2.jpg`} alt="" />
+        <Img src="/assets/images/avatar2.jpg" alt="" />
       </span>
     </Pill>
   </Demo>;

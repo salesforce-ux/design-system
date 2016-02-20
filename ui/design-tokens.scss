@@ -31,8 +31,6 @@ $mq-small: 480px !default;
 $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
-$sales-path: 2rem; // @TODO: Temp token till we align sizing
-$color-border-inverse: $color-background-inverse;
 
 // Tokens with PR request - remove when merged
 $spacing-none: 0 !default; // Needed for the margin/padding zero
@@ -45,7 +43,8 @@ $color-background-path-incomplete-hover: $color-background-input-checkbox-disabl
 $color-background-path-lost: $color-background-notification-badge;
 $color-background-guidance: #fafafb;
 $color-border-path-divider: $color-border-input-checkbox-selected-checkmark;
-$sales-path: 2rem !default; // @TODO: Temp token till we align sizing
+$color-border-inverse: $color-background-inverse;
+$height-sales-path: 2rem !default;
 $line-height-salespath: 1.5rem !default;
 
 $force-base-map: map-merge($force-base-map, (

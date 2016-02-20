@@ -140,9 +140,9 @@
     display: block;
     position: absolute;
     top: $border-width-thick;
-    left: (($sales-path / 2) * -1);
-    width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
-    height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
+    left: (($height-sales-path / 2) * -1);
+    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
     border: $border-width-thick solid $color-border-path-divider;
     border-left: 0;
     border-bottom: 0;

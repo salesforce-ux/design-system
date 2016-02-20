@@ -10,45 +10,110 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Radio from 'ui/components/forms/flavors/radio/index.react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export const preview = (
-<div className={pf('demo-only form--stacked')}>
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
 
-  <fieldset className={pf('form-element')}>
-    <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
-    <div className={pf('form-element__control')}>
-      <Radio name="options" label="Lead generation" assistiveText="lead" />
-      <Radio name="options" label="Education leads" assistiveText="education" />
-    </div>
-  </fieldset>
+let Fieldset = props =>
+  <fieldset className={className(pf('form-element'), props.className)}>
+    {props.children}
+  </fieldset>;
 
-  <fieldset className={pf('form-element is-required')}>
-    <legend className={pf('form-element__label form-element__label--top')}>Options Required</legend>
-    <div className={pf('form-element__control')}>
-      <Radio name="options" label="Lead generation" assistiveText="lead1" />
-      <Radio name="options" label="Education leads" assistiveText="education1" />
-    </div>
-  </fieldset>
+let Legend = props =>
+  <legend className={pf('form-element__legend form-element__label')}>{props.children}</legend>;
 
-  <fieldset className={pf('form-element is-required has-error')}>
-    <legend className={pf('form-element__label form-element__label--top')}>Options Required Error</legend>
-    <div className={pf('form-element__control')}>
-      <Radio name="options" label="Lead generation" assistiveText="lead2" />
-      <Radio name="options" label="Education leads" assistiveText="education2" />
-    </div>
-  </fieldset>
-</div>
-);
+let FormElementControl = props =>
+  <div className={className(pf('form-element__control'), props.className)}>
+    {props.children}
+  </div>;
 
-export const code = (
-  <fieldset className={pf('form-element')}>
-    <legend className={pf('form-element__label form-element__label--top')}>Options</legend>
-    <div className={pf('form-element__control')}>
-      <Radio name="options" label="Lead generation" assistiveText="lead" />
-      <Radio name="options" label="Education leads" assistiveText="education" />
-    </div>
-  </fieldset>
-);
+let Radio = props =>
+  <label className={pf('radio')}>
+    <input type="radio" name="options" disabled={props.disabled} />
+    <span className={pf('radio--faux')}></span>
+    <span className={pf('form-element__label')}>{props.children}</span>
+  </label>;
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <Fieldset>
+      <Legend>Radio Group Label</Legend>
+      <FormElementControl>
+        <Radio>Radio Label One</Radio>
+        <Radio>Radio Label Two</Radio>
+      </FormElementControl>
+    </Fieldset>
+  </Demo>;
+
+let Required = props =>
+  <Demo>
+    <Fieldset className={pf('is-required')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
+      <FormElementControl>
+        <Radio>Radio Label One</Radio>
+        <Radio>Radio Label Two</Radio>
+      </FormElementControl>
+    </Fieldset>
+  </Demo>;
+
+let Error = props =>
+  <Demo>
+    <Fieldset className={pf('is-required has-error')}>
+      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
+      <FormElementControl>
+        <Radio>Radio Label One</Radio>
+        <Radio>Radio Label Two</Radio>
+      </FormElementControl>
+      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+    </Fieldset>
+  </Demo>;
+
+let Disabled = props =>
+  <Demo>
+    <Fieldset>
+      <Legend>Radio Group Label</Legend>
+      <FormElementControl>
+        <Radio disabled>Radio Label One</Radio>
+        <Radio disabled>Radio Label Two</Radio>
+      </FormElementControl>
+    </Fieldset>
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'radio-group',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'radio-group-required',
+    label: 'Required',
+    element: <Required />
+  },
+  {
+    id: 'radio-group-error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'radio-group-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  }
+];

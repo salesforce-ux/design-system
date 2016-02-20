@@ -15,7 +15,6 @@ const PT = React.PropTypes;
 import componentUtil from 'app_modules/ui/util/component';
 
 class Truncate extends React.Component {
-  static propTypes = { truncate: PT.number };
 
   constructor(props) {
     super(props);
@@ -28,5 +27,7 @@ class Truncate extends React.Component {
     return <span>{amount ? _.truncate(children, amount) : children}</span>;
   }
 }
+
+Truncate.propTypes = { truncate: PT.number };
 
 export default Truncate;

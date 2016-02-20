@@ -55,8 +55,6 @@
   // Deal with truncation
   .#{$css-prefix}truncate {
     max-width: $size-small;
-    display: inline-block; // Force truncation on table content
-    vertical-align: middle;
   }
 
   // By default, nowrap is applied
@@ -155,5 +153,75 @@
     .#{$css-prefix}button {
       visibility: visible;
     }
+  }
+}
+
+// Resizable data table columns
+//
+// Set table to use fixed layout for width and truncation purposes
+.#{$css-prefix}table--fixed-layout {
+  position: relative;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+
+  .#{$css-prefix}cell-shrink {
+    width: $square-icon-large-boundary;
+
+    &:nth-child(n) {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &:first-child {
+      text-align: right;
+      padding-right: $spacing-x-small;
+    }
+
+    &:last-child {
+      text-align: left;
+      padding-left: $spacing-x-small;
+    }
+  }
+}
+
+.#{$css-prefix}is-resizable:hover {
+  box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+}
+
+// Resizable handle
+.#{$css-prefix}resizable {
+  max-width: 100%;
+
+  &__handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $spacing-xx-small;
+    height: 100%;
+    background: $color-background-button-brand;
+    display: block;
+    cursor: col-resize;
+    opacity: 0;
+    z-index: $z-index-popup;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+
+    &--indicator {
+      right: auto;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    width: 1px;
+    background: $color-background-button-brand;
   }
 }

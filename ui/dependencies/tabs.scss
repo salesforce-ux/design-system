@@ -24,10 +24,6 @@
   padding: $spacing-medium 0;
 }
 
-@mixin tabs-item {
-  overflow: hidden;
-}
-
 @mixin tabs-link {
   @include truncate;
   display: block;

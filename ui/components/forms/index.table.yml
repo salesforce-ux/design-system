@@ -53,6 +53,14 @@ classes:
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
+    class: input-has-fixed-addon
+    description: Use on input container to let it know there is fixed text to the left or right of the input
+    applied: The <code>&lt;div&gt;</code> contains both the <code>.{{cssPrefix}}form-element__addon</code> and the <code>&lt;input&gt;</code>
+  -
+    class: form-element__addon
+    description: Class for fixed text that sits to the left or right of an <code>&lt;input&gt;</code>
+    applied: any element
+  -
     class: textarea
     description: Initializes textarea
     required: true
@@ -95,6 +103,14 @@ classes:
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
   -
+    class: radio--button-group
+    description: Container for a group of radio that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: radio--button
+    description: Customizes your radio to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+  -
     class: form--horizontal
     description: Horizontally aligns a single form label and control on the same line
     applied: <code>&lt;form&gt;</code>
@@ -105,7 +121,7 @@ classes:
     notes: This is the default
   -
     class: form--inline
-    description: horizontally align multiple form elements on the same axis
+    description: Horizontally align multiple form elements on the same axis
     applied: <code>&lt;form&gt;</code>
   -
     class: form--compound
@@ -118,8 +134,17 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Wrap form elements in this class
   -
-    class: form--compound--horizontal
-    description: Layout modifier for compound forms
-    applied: <code>.{{cssPrefix}}form--compound</code>
-    deprecated: true
-    notes: Use <code>.{{cssPrefix}}form--horizontal</code> instead, sizing of fields will become 100% of parent width
+    class: is-required
+    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element is required
+    applied: <code>.{{cssPrefix}}form-element</code>
+    required: true
+  -
+    class: required
+    description: Class used on required asterick
+    applied: <code>&lt;attr&gt;</code>
+    required: true
+  -
+    class: has-error
+    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element has errors
+    applied: <code>.{{cssPrefix}}form-element</code>
+    required: true

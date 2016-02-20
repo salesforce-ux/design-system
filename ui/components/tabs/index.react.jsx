@@ -19,13 +19,6 @@ import classNames from 'classnames';
 
 class TabContent extends React.Component {
 
-  static propTypes = {
-    current: PT.bool,
-    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
-  };
-
-  static defaultProps = { current: true };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -52,15 +45,16 @@ class TabContent extends React.Component {
   }
 
 }
+TabContent.propTypes = {
+  current: PT.bool,
+  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+};
+
+TabContent.defaultProps = { current: true };
+
 
 
 class TabItem extends React.Component {
-
-  static propTypes = {
-    title: PT.string,
-    content: PT.node,
-    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
-  };
 
   constructor(props) {
     super(props);
@@ -71,7 +65,7 @@ class TabItem extends React.Component {
     return React.cloneElement(this.props.content, {
       onClick: this.props.onClick.bind(this),
       tabIndex: tabIndex,
-      className: pf(this.props.innerClass),
+      className: pf(`tabs--${this.props.flavor}__link`),
       'aria-selected': this.props.current,
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
@@ -80,7 +74,7 @@ class TabItem extends React.Component {
   renderDefault(tabIndex) {
     return (
       <a
-        className={pf(this.props.innerClass)}
+        className={pf(`tabs--${this.props.flavor}__link`)}
         onClick={this.props.onClick.bind(this)}
         href="#void" role="tab"
         tabIndex={tabIndex}
@@ -110,13 +104,13 @@ class TabItem extends React.Component {
 
 }
 
-class TabItemOverflow extends React.Component {
+TabItem.propTypes = {
+  title: PT.string,
+  content: PT.node,
+  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+};
 
-  static propTypes = {
-    title: PT.string,
-    content: PT.node,
-    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
-  };
+class TabItemOverflow extends React.Component {
 
   constructor(props) {
     super(props);
@@ -143,15 +137,14 @@ class TabItemOverflow extends React.Component {
   }
 
 }
+TabItemOverflow.propTypes = {
+  title: PT.string,
+  content: PT.node,
+  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+};
+
 
 class Tabs extends React.Component {
-
-  static propTypes = {
-    selectedIndex: PT.number,
-    flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
-  };
-
-  static defaultProps = { selectedIndex: 0 };
 
   constructor(props) {
     super(props);
@@ -222,6 +215,16 @@ class Tabs extends React.Component {
   }
 
 }
+Tabs.propTypes = {
+  selectedIndex: PT.number,
+  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+};
+
+Tabs.defaultProps = {
+  selectedIndex: 0,
+  flavor: 'default'
+};
+
 
 Tabs.Item = TabItem;
 Tabs.ItemOverflow = TabItemOverflow;

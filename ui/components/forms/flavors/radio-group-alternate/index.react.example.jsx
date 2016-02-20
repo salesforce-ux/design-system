@@ -30,15 +30,15 @@ let Fieldset = props =>
     </div>
   </fieldset>;
 
-let CheckboxGroup = props =>
-  <div className={pf('checkbox--button-group')}>
+let RadioGroup = props =>
+  <div className={pf('radio--button-group')}>
     {props.children}
   </div>;
 
-let Checkbox = props =>
-  <label className={className(pf('button checkbox--button'), props.className)} htmlFor={props.id}>
-    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}>
+let Radio = props =>
+  <label className={className(pf('button radio--button'), props.className)} htmlFor={props.id}>
+    <input name="radio" type="radio" id={props.id} disabled={props.disabled} />
+    <span className={pf('radio--faux')}>
       {props.children}
     </span>
   </label>;
@@ -50,26 +50,26 @@ let Checkbox = props =>
 let StateA = props =>
   <Demo>
     <Fieldset>
-      <CheckboxGroup>
-        <Checkbox id="monday">Mon</Checkbox>
-        <Checkbox id="tuesday">Tue</Checkbox>
-        <Checkbox id="wednesday">Wed</Checkbox>
-        <Checkbox id="thursday">Thu</Checkbox>
-        <Checkbox id="friday">Fri</Checkbox>
-      </CheckboxGroup>
+      <RadioGroup>
+        <Radio id="monday">Mon</Radio>
+        <Radio id="tuesday">Tue</Radio>
+        <Radio id="wednesday">Wed</Radio>
+        <Radio id="thursday">Thu</Radio>
+        <Radio id="friday">Fri</Radio>
+      </RadioGroup>
     </Fieldset>
   </Demo>;
 
 let StateB = props =>
   <Demo>
     <Fieldset className={pf('has-error')}>
-      <CheckboxGroup>
-        <Checkbox id="monday">Mon</Checkbox>
-        <Checkbox id="tuesday">Tue</Checkbox>
-        <Checkbox id="wednesday">Wed</Checkbox>
-        <Checkbox id="thursday">Thu</Checkbox>
-        <Checkbox id="friday">Fri</Checkbox>
-      </CheckboxGroup>
+      <RadioGroup>
+        <Radio id="monday">Mon</Radio>
+        <Radio id="tuesday">Tue</Radio>
+        <Radio id="wednesday">Wed</Radio>
+        <Radio id="thursday">Thu</Radio>
+        <Radio id="friday">Fri</Radio>
+      </RadioGroup>
       <div className={pf('form-element__help')}>This field is required</div>
     </Fieldset>
   </Demo>;
@@ -77,13 +77,13 @@ let StateB = props =>
 let StateC = props =>
   <Demo>
     <Fieldset>
-      <CheckboxGroup>
-        <Checkbox id="monday" disabled="true">Mon</Checkbox>
-        <Checkbox id="tuesday" disabled="true">Tue</Checkbox>
-        <Checkbox id="wednesday" disabled="true">Wed</Checkbox>
-        <Checkbox id="thursday" disabled="true">Thu</Checkbox>
-        <Checkbox id="friday" disabled="true">Fri</Checkbox>
-      </CheckboxGroup>
+      <RadioGroup>
+        <Radio id="monday" disabled="true">Mon</Radio>
+        <Radio id="tuesday" disabled="true">Tue</Radio>
+        <Radio id="wednesday" disabled="true">Wed</Radio>
+        <Radio id="thursday" disabled="true">Thu</Radio>
+        <Radio id="friday" disabled="true">Fri</Radio>
+      </RadioGroup>
     </Fieldset>
   </Demo>;
 
@@ -93,17 +93,17 @@ let StateC = props =>
 
 export let states = [
   {
-    id: 'checkbox-alt',
+    id: 'radio-group-alt',
     label: 'Default',
     element: <StateA />
   },
   {
-    id: 'checkbox-alt-has-error',
+    id: 'radio-group-alt-has-error',
     label: 'Checkbox group has error',
     element: <StateB />
   },
   {
-    id: 'checkbox-alt-disabled',
+    id: 'radio-group-alt-disabled',
     label: 'Disabled checkbox group',
     element: <StateC />
   }

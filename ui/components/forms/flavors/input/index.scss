@@ -77,3 +77,13 @@
     }
   }
 }
+
+.#{$css-prefix}input-has-fixed-addon {
+  display: flex;
+}
+
+.#{$css-prefix}form-element__addon {
+  display: inline-block;
+  margin: 0 $spacing-x-small;
+  align-self: center;
+}

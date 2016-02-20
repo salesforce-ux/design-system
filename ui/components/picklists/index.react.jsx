@@ -21,9 +21,6 @@ import Helper from 'ui/components/lib/dom-helpers';
 const PT = React.PropTypes;
 
 class PickListItem extends React.Component {
-  static contextTypes = { itemSelected: PT.func, itemFocused: PT.func };
-  static globalIdx = 0;
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -71,12 +68,12 @@ class PickListItem extends React.Component {
   }
 }
 
+PickListItem.contextTypes = { itemSelected: PT.func, itemFocused: PT.func };
+PickListItem.globalIdx = 0;
+
+
 
 class PickListOptions extends React.Component {
-  static contextTypes = { itemSelected: PT.func, itemFocused: PT.func };
-  static propTypes = { flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi'), direction: PT.string, currentSelection: PT.array, showCheck: PT.bool, hidden: PT.bool };
-  static defaultProps = { direction: 'left', currentSelection: [], showCheck: true, hidden: false };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -110,11 +107,12 @@ class PickListOptions extends React.Component {
     );
   }
 }
+PickListOptions.contextTypes = { itemSelected: PT.func, itemFocused: PT.func };
+PickListOptions.propTypes = { flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi'), direction: PT.string, currentSelection: PT.array, showCheck: PT.bool, hidden: PT.bool };
+PickListOptions.defaultProps = { direction: 'left', currentSelection: [], showCheck: true, hidden: false };
+
 
 class PickListArrows extends React.Component {
-  static propTypes = { flavor: componentUtil.PropTypes.flavor('horizontal', 'vertical') };
-  static symbols = {'horizontal': ['left', 'right'], 'vertical': ['up', 'down'] };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -133,12 +131,12 @@ class PickListArrows extends React.Component {
     );
   }
 }
+PickListArrows.propTypes = { flavor: componentUtil.PropTypes.flavor('horizontal', 'vertical') };
+PickListArrows.symbols = {'horizontal': ['left', 'right'], 'vertical': ['up', 'down'] };
+
 // @TODO: assistive text needs to be unique for each icon
 
 class PickList extends React.Component {
-  static childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };
-  static propTypes = { label: PT.string, flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi', 'quickfind') };
-  static defaultProps = { label: 'Select an option' };
 
   constructor(props) {
     super(props);
@@ -205,6 +203,10 @@ class PickList extends React.Component {
     );
   }
 }
+
+PickList.childContextTypes = { itemSelected: PT.func, itemFocused: PT.func };
+PickList.propTypes = { label: PT.string, flavor: componentUtil.PropTypes.flavor('group', 'nested', 'multi', 'quickfind') };
+PickList.defaultProps = { label: 'Select an option' };
 
 class PickListMulti extends PickList {
 

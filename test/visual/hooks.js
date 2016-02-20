@@ -15,13 +15,13 @@ const setup = done => {
 
       server = app.listen(8000);
       done();
-    })
-  })
-}
+    });
+  });
+};
 
 const teardown = done => {
   server.close();
   done();
-}
+};
 
 module.exports = {setup, teardown};

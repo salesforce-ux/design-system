@@ -21,7 +21,6 @@
 }
 
 .#{$css-prefix}tabs--scoped__item {
-  @include tabs-item;
   position: relative;
   margin-bottom: ($border-width-thin * -1);
 

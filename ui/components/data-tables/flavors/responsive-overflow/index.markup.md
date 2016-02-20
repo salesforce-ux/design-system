@@ -1,1 +1,0 @@
-When a table exceeds the width of its container, one responsive option is to wrap the table in a `.{{cssPrefix}}scrollable--x` class so that the user can scroll horizontally. View the example small and medium form factor tabs to see the effect.

@@ -25,7 +25,7 @@ let Demo = props =>
   </div>;
 
 let Table = props =>
-  <table className={className(pf('table table--bordered table--cell-buffer'), props.className)}>
+  <table className={className(pf('table table--bordered'), props.className)}>
     {props.children}
   </table>;
 
@@ -60,15 +60,6 @@ let Checkbox = props =>
     <span className={pf('checkbox--faux')}></span>
     <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
-
-let Resize = props =>
-  <div className={pf('shrink-none resizable resizable--vertical')}>
-    <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
-    <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
-    <span className={pf('resizable__handle')}>
-      <span className={pf('resizable__divider')}></span>
-    </span>
-  </div>;
 
 let HeadRowData = props =>
   <Tr className={pf('text-heading--label')}>
@@ -142,9 +133,24 @@ let RowData = props =>
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let Default = props =>
+let Overflow = props =>
   <Demo>
-    <Table>
+    <div className={pf('scrollable--x')}>
+      <Table>
+        <Thead>
+          <HeadRowData />
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+        </Tbody>
+      </Table>
+    </div>
+  </Demo>;
+
+let Stacked = props =>
+  <Demo>
+    <Table className={pf('max-medium-table--stacked')}>
       <Thead>
         <HeadRowData />
       </Thead>
@@ -155,102 +161,11 @@ let Default = props =>
     </Table>
   </Demo>;
 
-let NoHover = props =>
+let Horizontal = props =>
   <Demo>
-    <Table className={pf('no-row-hover')}>
+    <Table className={pf('max-medium-table--stacked-horizontal')}>
       <Thead>
         <HeadRowData />
-      </Thead>
-      <Tbody>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" />
-      </Tbody>
-    </Table>
-  </Demo>;
-
-let RowSelected = props =>
-  <Demo>
-    <Table>
-      <Thead>
-        <HeadRowData />
-      </Thead>
-      <Tbody>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-      </Tbody>
-    </Table>
-  </Demo>;
-
-let MassSelected = props =>
-  <Demo>
-    <Table>
-      <Thead>
-        <HeadRowData checked />
-      </Thead>
-      <Tbody>
-        <RowData title="Cloudhub" className={pf('is-selected')} checked />
-        <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-      </Tbody>
-    </Table>
-  </Demo>;
-
-let Resizeable = props =>
-  <Demo>
-    <Table className={pf('table--fixed-layout')}>
-      <Thead>
-        <Tr className={pf('text-heading--label')}>
-          <Th className={pf('cell-shrink')}><Checkbox label="Select All" /></Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Opportunity Name
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Account Name
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Close Date
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Stage
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Confidence
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Amount
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('is-sortable is-resizable')} scope="col">
-            <div className={pf('truncate')}>
-              Contact
-              <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-              <Resize />
-            </div>
-          </Th>
-          <Th className={pf('cell-shrink')}></Th>
-        </Tr>
       </Thead>
       <Tbody>
         <RowData title="Cloudhub" />
@@ -265,28 +180,18 @@ let Resizeable = props =>
 
 export let states = [
   {
-    id: 'data-table',
-    label: 'Default',
-    element: <Default />
+    id: 'data-table-responsive-horizontal',
+    label: 'Stacked with Horizontal Cells',
+    element: <Horizontal />
   },
   {
-    id: 'data-table-no-hover',
-    label: 'With no row hovers',
-    element: <NoHover />
+    id: 'data-table-responsive-stacked',
+    label: 'Stacked',
+    element: <Stacked />
   },
   {
-    id: 'data-table-row-selected',
-    label: 'With row selected',
-    element: <RowSelected />
-  },
-  {
-    id: 'data-table-all-row-selected',
-    label: 'With all rows selected',
-    element: <MassSelected />
-  },
-  {
-    id: 'data-table-resizable-columns',
-    label: 'With resizeable columns',
-    element: <Resizeable />
+    id: 'data-table-responsive-overflow',
+    label: 'Overflow',
+    element: <Overflow />
   }
 ];

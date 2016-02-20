@@ -24,9 +24,7 @@ let Demo = props =>
 
 let Fieldset = props =>
   <fieldset className={className(pf('form--element'), props.className)}>
-    <legend className={pf('form-element__legend')}>
-      <span className={pf('form-element__label form-element__label--top')}>Share email with</span>
-    </legend>
+    <legend className={pf('form-element__legend form-element__label')}>Share email with</legend>
     <div className={pf('form-element__control box--border')}>
       {props.children}
     </div>

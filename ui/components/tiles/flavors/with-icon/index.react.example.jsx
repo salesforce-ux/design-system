@@ -20,7 +20,7 @@ const image1 = (
 );
 const image2 = (
   <span className={pf('avatar avatar--circle avatar--small')}>
-    <Img src={`/assets/images/avatar2.jpg`} alt="" />
+    <Img src="/assets/images/avatar2.jpg" alt="" />
   </span>
 );
 

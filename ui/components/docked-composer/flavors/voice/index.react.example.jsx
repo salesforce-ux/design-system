@@ -47,7 +47,7 @@ const RecordIcon = (
 
 const UserImage = (
   <span className={pf('avatar avatar--medium')}>
-    <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 
@@ -116,7 +116,7 @@ let StateA = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -141,7 +141,7 @@ let StateB = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -199,7 +199,7 @@ let StateD = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -221,7 +221,7 @@ let StateE = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -249,7 +249,7 @@ let StateF = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -277,7 +277,7 @@ let StateG = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -337,7 +337,7 @@ let StateI = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src={`/assets/images/avatar2.jpg`} alt="Lei Chan" />
+            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>

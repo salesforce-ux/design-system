@@ -35,7 +35,7 @@ class Row extends React.Component {
         className={this.props.className}
         data-slds-token={tokenData}>
         <td>
-          <code>{this.getName()}</code>
+          <code data-slds-token-name>{this.getName()}</code>
         </td>
         {this.renderValue()}
       </tr>

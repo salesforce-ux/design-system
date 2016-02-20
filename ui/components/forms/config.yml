@@ -2,6 +2,7 @@ flavors:
   - input
   - textarea
   - radio
+  - radio-group-alternate
   - checkbox
   - checkbox-toggle
   - checkbox-alternate
@@ -11,8 +12,6 @@ flavors:
   - stacked-form
   - inline-form
   - compound-form
-  - read-only-state
-  - validation-state
   - field-level-help
   - inline-level-help
   - edit-dialog-for-touch

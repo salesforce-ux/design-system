@@ -48,22 +48,21 @@
   'cards/flavors/base/index',
 
   // Forms
-  'forms/flavors/form-element/index',
   'forms/flavors/input/index',
   'forms/flavors/textarea/index',
   'forms/flavors/radio/index',
+  'forms/flavors/radio-group-alternate/index',
   'forms/flavors/checkbox/index',
   'forms/flavors/checkbox-toggle/index',
   'forms/flavors/select/index',
   'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
+  'forms/flavors/edit-dialog-for-touch/index',
+  'forms/flavors/form-element/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
   'forms/flavors/inline-form/index',
   'forms/flavors/compound-form/index',
-  'forms/flavors/read-only-state/index',
-  'forms/flavors/validation-state/index',
-  'forms/flavors/edit-dialog-for-touch/index',
 
   // Grid
   'grid-system/flavors/automatic-sizing/index',
@@ -125,9 +124,6 @@
 
   // Modal
   'modals/flavors/base/index',
-  'modals/flavors/large/index',
-  'modals/flavors/directional/index',
-  'modals/flavors/taglines/index',
 
   // Pills
   'pills/flavors/base/index',
@@ -154,7 +150,6 @@
 
   // Tabs
   'tabs/flavors/default/index',
-  'tabs/flavors/overflow/index',
   'tabs/flavors/scoped/index',
 
   // Navigation
@@ -188,9 +183,7 @@
 
   // Tables
   'data-tables/flavors/base/index',
-  'data-tables/flavors/resizable-columns/index',
-  'data-tables/flavors/responsive-stacked/index',
-  'data-tables/flavors/responsive-stacked-horizontal/index',
+  'data-tables/flavors/responsive/index',
 
   // Tree (Order matters)
   'trees/flavors/base/index',

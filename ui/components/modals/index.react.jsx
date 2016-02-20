@@ -24,10 +24,6 @@ import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 import ClassNameTransitionGroup from 'ui/components/lib/classname-transition-group.react';
 
 class ModalFooter extends React.Component {
-  static propTypes = {
-    flavor: componentUtil.PropTypes.flavor('directional')
-  };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -46,6 +42,10 @@ class ModalFooter extends React.Component {
   }
 }
 
+ModalFooter.propTypes = {
+  flavor: componentUtil.PropTypes.flavor('directional')
+};
+
 class ModalBody extends React.Component {
   constructor(props) {
     super(props);
@@ -62,10 +62,6 @@ class ModalBody extends React.Component {
 }
 
 class ModalHeader extends React.Component {
-  static propTypes = { closeButton: PT.bool };
-  static defaultProps = { closeButton: true };
-  static contextTypes = { onRequestClose: PT.func };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -91,8 +87,11 @@ class ModalHeader extends React.Component {
   }
 }
 
+ModalHeader.propTypes = { closeButton: PT.bool };
+ModalHeader.defaultProps = { closeButton: true };
+ModalHeader.contextTypes = { onRequestClose: PT.func };
+
 class Modal extends React.Component {
-  static childContextTypes = { onRequestClose: PT.func };
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -149,13 +148,9 @@ class Modal extends React.Component {
   }
 }
 
+Modal.childContextTypes = { onRequestClose: PT.func };
+
 class ModalWrapper extends React.Component {
-  static propTypes = {
-    isOpen: React.PropTypes.bool.isRequired,
-    onRequestClose: React.PropTypes.func,
-    renderInline: React.PropTypes.bool
-  };
-  static defaultProps = { renderInline: false };
 
   constructor(props) {
     super(props);
@@ -194,6 +189,13 @@ class ModalWrapper extends React.Component {
     }
   }
 }
+ModalWrapper.propTypes = {
+  isOpen: React.PropTypes.bool.isRequired,
+  onRequestClose: React.PropTypes.func,
+  renderInline: React.PropTypes.bool
+};
+
+ModalWrapper.defaultProps = { renderInline: false };
 
 ModalWrapper.displayName = 'Modal';
 

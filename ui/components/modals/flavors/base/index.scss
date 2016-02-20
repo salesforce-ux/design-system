@@ -97,6 +97,10 @@
     background-color: $color-background;
     text-align: right;
     box-shadow: $shadow-drop-down;
+
+    &--directional .#{$css-prefix}button:first-child {
+      float: left;
+    }
   }
 
   &__close {
@@ -125,6 +129,16 @@
     visibility: visible;
     opacity: 1;
     transition: opacity $duration-slowly linear;
+  }
+}
+
+.#{$css-prefix}modal--large .#{$css-prefix}modal__container {
+
+  // TODO: We'll want to readdress this to do the .99 thing
+  @include mq-medium-min {
+    width: 90%;
+    max-width: none;
+    min-width: 40rem; // TODO: Tokenize
   }
 }
 

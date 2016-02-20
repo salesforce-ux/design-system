@@ -26,9 +26,9 @@ describe('scripts/gulp/pages.js', () => {
       expect(b).to.have.all.keys(['title', 'scriptTag']);
     });
     it('throws errors for bad arguments', () => {
-      expect(() => { getPrefixedProps() }).to.throw();
-      expect(() => { getPrefixedProps(null) }).to.throw();
-      expect(() => { tryRequire({}, null) }).to.throw();
+      expect(() => { getPrefixedProps(); }).to.throw();
+      expect(() => { getPrefixedProps(null); }).to.throw();
+      expect(() => { tryRequire({}, null); }).to.throw();
     });
   });
 });

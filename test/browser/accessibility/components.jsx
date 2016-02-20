@@ -59,7 +59,7 @@ const getStates = (component, flavor) => {
   }
 };
 
-describe(`Accessiblity`, () => {
+describe('Accessiblity', () => {
   ui.forEach(group => {
     describe(`Section "${group.title}",`, () => {
       group.components.forEach(component => {

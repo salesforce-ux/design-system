@@ -14,7 +14,6 @@ import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
 
 
 class Crumb extends React.Component {
-  static propTypes = { href: React.PropTypes.string };
 
   render() {
     const text = this.props.children;
@@ -25,6 +24,8 @@ class Crumb extends React.Component {
     );
   }
 }
+
+Crumb.propTypes = { href: React.PropTypes.string };
 
 class BreadCrumbs extends React.Component {
   constructor(props) {

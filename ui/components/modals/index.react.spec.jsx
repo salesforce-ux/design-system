@@ -22,8 +22,8 @@ import {
   Simulate
 } from 'react-addons-test-utils';
 
-describe(`React`, () => {
-  describe(`ModalWrapper (renderInline=false)`, () => {
+describe('React', () => {
+  describe('ModalWrapper (renderInline=false)', () => {
     let cmp, $cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
@@ -31,21 +31,21 @@ describe(`React`, () => {
       );
       $cmp = ReactDOM.findDOMNode(cmp);
     });
-    it(`is a component`, () => {
+    it('is a component', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
-    it(`has a __node`, () => {
+    it('has a __node', () => {
       expect(cmp.__node).to.be.an.instanceof(HTMLElement);
     });
-    it(`has a __node in the DOM`, () => {
+    it('has a __node in the DOM', () => {
       expect(cmp.__node.parentElement).not.to.be.null;
       expect(cmp.__node.parentElement).to.equal(document.body);
     });
-    it(`doesn't have a DOMNode`, () => {
+    it('doesn’t have a DOMNode', () => {
       expect($cmp).to.be.null;
     });
   });
-  describe(`ModalWrapper (renderInline=true)`, () => {
+  describe('ModalWrapper (renderInline=true)', () => {
     let cmp, $cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
@@ -53,17 +53,17 @@ describe(`React`, () => {
       );
       $cmp = ReactDOM.findDOMNode(cmp);
     });
-    it(`is a component`, () => {
+    it('is a component', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
-    it(`doesn't have a __node`, () => {
+    it('doesn’t have a __node', () => {
       expect(cmp.__node).to.be.undefined;
     });
-    it(`has a DOMNode`, () => {
+    it('has a DOMNode', () => {
       expect($cmp).not.to.be.null;
     });
   });
-  describe(`Modal`, () => {
+  describe('Modal', () => {
     let cmp, $cmp, onRequestClose;
     beforeEach(() => {
       onRequestClose = sinon.spy();
@@ -85,18 +85,18 @@ describe(`React`, () => {
       ).__modal;
       $cmp = ReactDOM.findDOMNode(cmp);
     });
-    it(`is a component`, () => {
+    it('is a component', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
-    it(`contains the correct className`, () => {
+    it('contains the correct className', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal`);
       expect(nodes).to.have.length.above(0);
     });
-    it(`contains the correct className on the content`, () => {
+    it('contains the correct className on the content', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__container`);
       expect(nodes).to.have.length.above(0);
     });
-    it(`handles onClick`, () => {
+    it('handles onClick', () => {
       const spy = sinon.spy(cmp.onClick);
       Simulate.click($cmp);
       requestAnimationFrame(() => {
@@ -104,25 +104,25 @@ describe(`React`, () => {
         spy.restore();
       });
     });
-    it(`calles onRequestClose()`, () => {
+    it('calles onRequestClose()', () => {
       Simulate.click($cmp);
       requestAnimationFrame(() => {
         expect(onRequestClose.calledOnce).to.be.true;
       });
     });
-    it(`calls onRequestClose() if esc is clicked`, () => {
+    it('calls onRequestClose() if esc is clicked', () => {
       Simulate.keyUp($cmp, {keyCode: 27});
       requestAnimationFrame(() => {
         expect(onRequestClose.calledOnce).to.be.true;
       });
     });
-    it(`doesn't call onRequestClose() if any other key is clicked`, () => {
+    it('doesn’t call onRequestClose() if any other key is clicked', () => {
       Simulate.keyUp($cmp, {keyCode: 0});
       requestAnimationFrame(() => {
         expect(onRequestClose.calledOnce).to.be.false;
       });
     });
-    it(`stops event propagation when the content is clicked`, () => {
+    it('stops event propagation when the content is clicked', () => {
       const spyA = sinon.spy(cmp.onClick);
       const spyB = sinon.spy(cmp.onContentClick);
       const content = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__container`)[0];
@@ -132,19 +132,19 @@ describe(`React`, () => {
         expect(spyB.calledOnce).to.be.true;
       });
     });
-    it(`renders the header`, () => {
+    it('renders the header', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__header`);
       expect(nodes).length.to.be(1);
     });
-    it(`includes the close button`, () => {
+    it('includes the close button', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__close`);
       expect(nodes).length.to.be(1);
     });
-    it(`renders the body`, () => {
+    it('renders the body', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__content`);
       expect(nodes).length.to.be(1);
     });
-    it(`renders the footer with flavor`, () => {
+    it('renders the footer with flavor', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__footer--directional`);
       expect(nodes).length.to.be(1);
     });

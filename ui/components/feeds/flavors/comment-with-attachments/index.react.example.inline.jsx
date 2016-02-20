@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const image = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0)" title="Jason Rodgers">
-      <Img src={`/assets/images/avatar1.jpg`} alt="Jason Rodgers" />
+      <Img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
     </a>
   </div>
 );
@@ -47,12 +47,12 @@ export default (
     </div>
     <p className={pf('text-body--small')}><a href="javascript:void(0)" title="Click for single-item view of this post">18hr Ago</a></p>
     <div className={pf('comment__content text-longform')}>
-      <p><a href="javascript:void(0)" title="Garrett Lee">@Garrett Lee</a>, can you review and let me know what's missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
+      <p><a href="javascript:void(0)" title="Garrett Lee">@Garrett Lee</a>, can you review and let me know what’s missing? FYI <a href="javascript:void(0)" title="All Sales Group">@All Sales Group</a></p>
     </div>
     <div className={pf('attachments')}>
       <figure className={pf('attachments__item')}>
         <a href="javascript:void(0)" title="Marketing Plan - Rollout Q1 2016">
-          <Img src={`/assets/images/feed/feed-image-example.png`} alt="Marketing Plan - Rollout Q1 2016" />
+          <Img src="/assets/images/feed/feed-image-example.png" alt="Marketing Plan - Rollout Q1 2016" />
         </a>
       </figure>
     </div>

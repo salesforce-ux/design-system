@@ -60,7 +60,7 @@ const categories = {
       }
       return `icon-${sprinteName}-${symbolName}`;
     },
-    description: `Actions can be seen throughout the interface and represent actions a user can take on any given screen.`,
+    description: 'Actions can be seen throughout the interface and represent actions a user can take on any given screen.',
     props: require('@salesforce-ux/design-tokens/dist/bg-actions.common.js')
   }),
 
@@ -68,7 +68,7 @@ const categories = {
     getClassName(sprinteName, symbolName) {
       return `icon-${_.kebabCase(symbolName)}`;
     },
-    description: `Custom icons are available for the identity of user created objects.`,
+    description: 'Custom icons are available for the identity of user created objects.',
     props: require('@salesforce-ux/design-tokens/dist/bg-custom.common.js')
   }),
 
@@ -76,14 +76,14 @@ const categories = {
     getClassName(sprinteName, symbolName) {
       return `icon-${symbolName} icon__svg--no-background`;
     },
-    description: `Doctype icons represent a type of file when a preview or image is unavailable`
+    description: 'Doctype icons represent a type of file when a preview or image is unavailable'
   }),
 
   standard: () => _.assign(_category(), {
     getClassName(sprinteName, symbolName) {
       return `icon-${sprinteName}-${symbolName}`;
     },
-    description: `Standard icons represent entities and objects within Salesforce.`,
+    description: 'Standard icons represent entities and objects within Salesforce.',
     props: require('@salesforce-ux/design-tokens/dist/bg-standard.common.js')
   }),
 
@@ -91,7 +91,7 @@ const categories = {
     getClassName(sprinteName, symbolName) {
       return `icon-utility-${symbolName}`;
     },
-    description: `Utility icons are used throughout the interface and are SVG&rsquo;s for extensibility.`
+    description: 'Utility icons are used throughout the interface and are SVG&rsquo;s for extensibility.'
   })
 
 };

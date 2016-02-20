@@ -19,7 +19,7 @@ describe('scripts/tasks/site/icons.js', () => {
 
   it('does copy all icon files', () => {
 
-    // build list of icons file paths which should be copied 
+    // build list of icons file paths which should be copied
     let srcIconFiles = (function () {
       let srcIconPath = __PATHS__.icons;
       return glob.sync(`${srcIconPath}/**/*.{svg,png}`);
@@ -27,7 +27,7 @@ describe('scripts/tasks/site/icons.js', () => {
     let relativeSiteIconFiles = srcIconFiles.map(f => path.relative(__PATHS__.icons, f));
 
     // build list of icon file paths which have been copied to www
-    let wwwIconPath = path.resolve(__PATHS__.www, 'assets/icons')
+    let wwwIconPath = path.resolve(__PATHS__.www, 'assets/icons');
     let wwwIconFiles = glob.sync(`${wwwIconPath}/**/*.*`);
 
     let relativeWwwIconFiles = wwwIconFiles.map(f => path.relative(wwwIconPath, f));
@@ -40,7 +40,7 @@ describe('scripts/tasks/site/icons.js', () => {
 
     let wwwDownloadPath = path.resolve(__PATHS__.www, 'assets/downloads');
     let iconsZipFile = glob.sync(`${wwwDownloadPath}/salesforce-lightning-design-system-icons.zip`);
-    
+
     expect(iconsZipFile.length).to.eql(1);
   });
 

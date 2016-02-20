@@ -19,8 +19,8 @@ import {
   renderIntoDocument
 } from 'react-addons-test-utils';
 
-describe(`React`, () => {
-  describe(`Spinner`, () => {
+describe('React', () => {
+  describe('Spinner', () => {
     var tests = [
       { flavor: 'small', expectedClass: `${cssPrefix}spinner--small`},
       { flavor: 'medium', expectedClass: `${cssPrefix}spinner--medium`},
@@ -60,13 +60,13 @@ describe(`React`, () => {
         $cmp = ReactDOM.findDOMNode(cmp);
       });
 
-      it(`should be a small size`, () => {
+      it('should be a small size', () => {
         expect($cmp.firstChild.className).to.include(`${cssPrefix}spinner`);
       });
     });
 
     describe('with a custom className', () => {
-      it(`should be a small size`, () => {
+      it('should be a small size', () => {
         const cmp = renderIntoDocument(React.createElement(Spinner, { className: 'foo bar' }));
         const $cmp = ReactDOM.findDOMNode(cmp);
         expect($cmp.firstChild.className).to.include(`foo bar ${cssPrefix}spinner`);

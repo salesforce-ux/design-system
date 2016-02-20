@@ -46,11 +46,6 @@ class MediumHeading extends React.Component {
 }
 
 class Heading extends React.Component {
-  static propTypes = {
-    flavor: componentUtil.PropTypes.flavor('label', 'medium'),
-    truncate: PT.number
-  };
-  static defaultProps = { flavor: 'label' };
 
   constructor(props) {
     super(props);
@@ -68,5 +63,12 @@ class Heading extends React.Component {
     );
   }
 }
+
+Heading.propTypes = {
+  flavor: componentUtil.PropTypes.flavor('label', 'medium'),
+  truncate: PT.number
+};
+
+Heading.defaultProps = { flavor: 'label' };
 
 export default Heading;

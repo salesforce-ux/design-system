@@ -27,27 +27,27 @@ class Item extends React.Component {
 }
 
 // currently intermittent failures are killing ci. Pending these tests until we figure out the cause
-xdescribe(`Util`, () => {
-  describe(`Component`, () => {
+xdescribe('Util', () => {
+  describe('Component', () => {
     let cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(<Item />);
     });
-    describe(`#install`, () => {
-      it(`throws an error if "context" isn't an object`, () => {
+    describe('#install', () => {
+      it('throws an error if "context" isn’t an object', () => {
         expect(componentUtil.install).to.throw(/context/);
       });
-      it(`throws an error if "methods" isn't an array`, () => {
+      it('throws an error if "methods" isn’t an array', () => {
         expect(() => {
           componentUtil.install({}, true);
         }).to.throw(/methods/);
       });
-      it(`throws an error if an invalid method tries to be installed`, () => {
+      it('throws an error if an invalid method tries to be installed', () => {
         expect(() => {
           componentUtil.install({}, ['foobar']);
         }).to.throw(/"foobar" is not a valid/);
       });
-      it(`installs the methods`, () => {
+      it('installs the methods', () => {
         const context = {};
         componentUtil.install(context);
         expect(context.hasOwnProperty('$getClassName')).to.be.true;
@@ -55,55 +55,55 @@ xdescribe(`Util`, () => {
         expect(context.hasOwnProperty('$propsWithoutKeys')).to.be.true;
       });
     });
-    describe(`$getClassName`, () => {
-      it(`adds the specified classNames`, () => {
+    describe('$getClassName', () => {
+      it('adds the specified classNames', () => {
         const result = cmp.$getClassName('foo', 'bar', 'baz');
         expect(result).to.equal('foo bar baz');
       });
-      it(`adds the specified classNames along with this.props.className`, () => {
+      it('adds the specified classNames along with this.props.className', () => {
         cmp = renderIntoDocument(<Item className="hello" />);
         const result = cmp.$getClassName('foo', 'bar');
         expect(result).to.equal('foo bar hello');
       });
     });
-    describe(`$getClassNameWithFlavor`, () => {
-      it(`throws an error if an invalid classNameBase is provided`, () => {
+    describe('$getClassNameWithFlavor', () => {
+      it('throws an error if an invalid classNameBase is provided', () => {
         expect(cmp.$getClassNameWithFlavor).to.throw(/classNameBase/);
       });
-      it(`returns the correct className with no flavors`, () => {
+      it('returns the correct className with no flavors', () => {
         const result = cmp.$getClassNameWithFlavor('button');
         expect(result).to.equal('button');
       });
-      it(`appends this.props.className`, () => {
+      it('appends this.props.className', () => {
         cmp = renderIntoDocument(<Item className="hello" />);
         const result = cmp.$getClassNameWithFlavor('button');
         expect(result).to.equal('button hello');
       });
-      it(`adds the correct flavor classNames`, () => {
+      it('adds the correct flavor classNames', () => {
         cmp = renderIntoDocument(<Item className="hello" flavor="test" />);
         const result = cmp.$getClassNameWithFlavor('button');
         expect(result).to.equal('button button--test hello');
       });
-      it(`adds the correct flavor classNames if mulitple flavors are provided`, () => {
+      it('adds the correct flavor classNames if mulitple flavors are provided', () => {
         cmp = renderIntoDocument(<Item className="hello" flavor="a,b" />);
         const result = cmp.$getClassNameWithFlavor('button');
         expect(result).to.equal('button button--a button--b hello');
       });
-      it(`uses options.prop`, () => {
+      it('uses options.prop', () => {
         cmp = renderIntoDocument(<Item foo="bar" />);
         const result = cmp.$getClassNameWithFlavor('button', {
           prop: 'foo'
         });
         expect(result).to.equal('button button--bar');
       });
-      it(`only adds this.props.className if options.includeClassName=true`, () => {
+      it('only adds this.props.className if options.includeClassName=true', () => {
         cmp = renderIntoDocument(<Item flavor="a" className="baz" />);
         const result = cmp.$getClassNameWithFlavor('button', {
           includeClassName: false
         });
         expect(result).to.equal('button button--a');
       });
-      it(`appends options.additionalClassName`, () => {
+      it('appends options.additionalClassName', () => {
         cmp = renderIntoDocument(<Item flavor="hello" className="baz" />);
         const result = cmp.$getClassNameWithFlavor('button', {
           additionalClassName: 'world'
@@ -111,12 +111,12 @@ xdescribe(`Util`, () => {
         expect(result).to.equal('button button--hello baz world');
       });
     });
-    describe(`$propsWithoutKeys`, () => {
-      it(`returns a new object`, () => {
+    describe('$propsWithoutKeys', () => {
+      it('returns a new object', () => {
         const props = cmp.$propsWithoutKeys('foo', 'hello');
         expect(props).not.to.equal(cmp.props);
       });
-      it(`returns a new object without the specified keys`, () => {
+      it('returns a new object without the specified keys', () => {
         let props;
         cmp = renderIntoDocument(<Item foo="bar" hello="world" />);
         props = cmp.$propsWithoutKeys('foo');

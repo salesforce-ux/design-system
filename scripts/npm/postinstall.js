@@ -49,7 +49,7 @@ const getVersion = (version, release) => {
 };
 
 if (process.env.HEROKU_APP_NAME) {
-  exec(`rm -rf server/`);
+  exec('rm -rf server/');
   exec(`git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO} server`);
   // Server tasks
   const packageJSON = require(local('package.json'));
@@ -76,12 +76,12 @@ if (process.env.HEROKU_APP_NAME) {
     console.log(`Version "${packageJSON.version}" could not be mapped to a release`);
     console.log(err.stack);
   }
-  exec(`npm install --production`, 'server/heroku');
-  exec(`npm run dist`, 'server/heroku');
+  exec('npm install --production', 'server/heroku');
+  exec('npm run dist', 'server/heroku');
   // Design System Tasks
-  exec(`npm run build-prod`);
-  exec(`npm run dist`);
+  exec('npm run build-prod');
+  exec('npm run dist');
 } else {
   // Verify & install ruby dependencies using our script
-  exec(`npm run install-ruby-dependencies`);
+  exec('npm run install-ruby-dependencies');
 }

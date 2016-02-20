@@ -18,9 +18,6 @@ import _ from 'lodash';
 const PT = React.PropTypes;
 
 class AccessibleList extends React.Component {
-  static propTypes = { selector: PT.string, click: PT.bool, selectedIndex: PT.number };
-  static defaultProps = { selector: 'li', click: false, selectedIndex: 0 };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -78,5 +75,9 @@ class AccessibleList extends React.Component {
     return (<ul {...props} />);
   }
 }
+
+AccessibleList.propTypes = { selector: PT.string, click: PT.bool, selectedIndex: PT.number };
+AccessibleList.defaultProps = { selector: 'li', click: false, selectedIndex: 0 };
+
 
 export default AccessibleList;

@@ -24,7 +24,7 @@
 
 
 // TODO: Add to Design Tokens
-$color-border-inverse: #fff !default;
+//$color-border-inverse: #fff !default;
 $spacing-xx-large: 3rem !default;
 $square-tooltip-nubbin: $spacing-medium !default;
 $mq-x-small: 320px !default;
@@ -46,6 +46,8 @@ $color-background-path-incomplete-hover: $color-background-input-checkbox-disabl
 $color-background-path-lost: $color-background-notification-badge;
 $color-background-guidance: #fafafb;
 $color-border-path-divider: $color-border-input-checkbox-selected-checkmark;
+$sales-path: 2rem !default; // @TODO: Temp token till we align sizing
+$line-height-salespath: 1.5rem !default;
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large,

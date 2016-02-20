@@ -35,6 +35,19 @@ $mq-x-large: 1280px !default;
 $sales-path: 2rem; // @TODO: Temp token till we align sizing
 $color-border-inverse: $color-background-inverse;
 
+// Tokens with PR request - remove when merged
+$spacing-none: 0 !default; // Needed for the margin/padding zero
+$color-background-path-complete: $color-background-success;
+$color-background-path-complete-hover: $color-background-toast-success;
+$color-background-path-current: #0076de;
+$color-background-path-current-hover: rgb(0, 95, 178);
+$color-background-path-incomplete: $color-background-shade;
+$color-background-path-incomplete-hover: $color-background-input-checkbox-disabled;
+$color-background-path-lost: $color-background-notification-badge;
+$color-background-guidance: #fafafb;
+$color-border-path-divider: $color-border-input-checkbox-selected-checkmark;
+
 $force-base-map: map-merge($force-base-map, (
-  'spacing-xx-large': $spacing-xx-large
+  'spacing-xx-large': $spacing-xx-large,
+  'spacing-none': $spacing-none
 ));

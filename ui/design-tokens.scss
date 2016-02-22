@@ -33,19 +33,21 @@ $font-size-xx-large: 1.75rem;
 
 // TODO: Add to Design Tokens
 
-$line-height-salespath: 1.5rem !default;
-$color-border-inverse: #fff !default;
+// Globals
 $spacing-xx-large: 3rem !default;
 $square-tooltip-nubbin: $spacing-medium !default;
+
+// MQ
 $mq-x-small: 320px !default;
 $mq-small: 480px !default;
 $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
-$sales-path: 2rem !default; // @TODO: Temp token till we align sizing
-$square-icon-medium-content-alt: 0.875rem !default;
+
+// Page Header
 $color-background-page-header: #f7f9fb !default;
-$color-border-inverse: $color-background-inverse;
+
+// Context Bar
 $height-context-bar: 2.25rem !default;
 $color-background-context-bar: $color-background-alt-inverse !default;
 $color-text-context-bar: $color-text-inverse !default;
@@ -54,18 +56,39 @@ $color-context-bar-shadow: #000 !default;
 $color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
 $color-background-context-bar-highlight: rgba($color-context-bar-alt, 0.2) !default;
 $color-text-context-nav-trigger: rgba($color-context-bar-alt, 0.4) !default;
+
+// Lightning Tightening
 $font-size-medium-a: 0.875rem !default;
+$square-icon-medium-content-alt: 0.875rem !default;
+
+// Toggle
+$square-toggle-slider: 1.25rem !default;
+$line-height-toggle: 1.3rem !default;
 $width-toggle: 3.375rem !default;
 $height-toggle: 1.5rem !default;
 $color-background-toggle: #9faab5 !default;
 $color-background-toggle-disabled: #9faab5 !default;
 $color-background-toggle-hover: #7e8c99 !default;
-$square-toggle-slider: 1.25rem !default;
-$line-height-toggle: 1.3rem !default;
 $color-background-toggle-active: #0070d2 !default;
 $color-background-toggle-active-hover: #005fb2 !default;
 $color-text-toggle-disabled: rgb(216, 221, 230) !default;
 
+// Tokens with PR request - remove when merged
+$spacing-none: 0 !default; // Needed for the margin/padding zero
+$color-background-path-complete: $color-background-success;
+$color-background-path-complete-hover: $color-background-toast-success;
+$color-background-path-current: #0076de;
+$color-background-path-current-hover: rgb(0, 95, 178);
+$color-background-path-incomplete: $color-background-shade;
+$color-background-path-incomplete-hover: $color-background-input-checkbox-disabled;
+$color-background-path-lost: $color-background-notification-badge;
+$color-background-guidance: #fafafb;
+$color-border-path-divider: $color-border-input-checkbox-selected-checkmark;
+$color-border-inverse: $color-background-inverse;
+$height-sales-path: 2rem !default;
+$line-height-salespath: 1.5rem !default;
+
 $force-base-map: map-merge($force-base-map, (
-  'spacing-xx-large': $spacing-xx-large
+  'spacing-xx-large': $spacing-xx-large,
+  'spacing-none': $spacing-none
 ));

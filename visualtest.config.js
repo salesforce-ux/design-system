@@ -18,6 +18,7 @@ module.exports = function() {
           path: ''
         },
         desiredCapabilities: {
+          name: 'slds components',
           platform: 'mac',
           browserName: 'chrome',
           javascriptEnabled: true,
@@ -35,6 +36,7 @@ module.exports = function() {
           path: ''
         },
         desiredCapabilities: {
+          name: 'slds components',
           platform: 'windows',
           browserName: 'chrome',
           javascriptEnabled: true,
@@ -52,6 +54,7 @@ module.exports = function() {
           path: ''
         },
         desiredCapabilities: {
+          name: 'slds components',
           platform: 'mac',
           browserName: 'firefox',
           javascriptEnabled: true,
@@ -69,6 +72,7 @@ module.exports = function() {
           path: ''
         },
         desiredCapabilities: {
+          name: 'slds components',
           platform: 'windows',
           browserName: 'firefox',
           javascriptEnabled: true,
@@ -86,6 +90,7 @@ module.exports = function() {
           path: ''
         },
         desiredCapabilities: {
+          name: 'slds components',
           platform: 'windows',
           browserName: 'internet explorer',
           javascriptEnabled: true,

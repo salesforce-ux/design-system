@@ -147,9 +147,8 @@ class ComponentFlavor extends React.Component {
     if (!this.props.flavor.example) return null;
     const { flavor } = this.props;
     const { previewTabActive, previewTabs, previewState } = this.state;
-    const className = classNames(pf('site-example--tabs'), {
-      'site-example--tabs-initial-view': this.state.initialView
-    });
+    const formFactor = this.state.previewTabActive
+      ? this.state.previewTabActive.formFactor : '';
     const src = previewState ? previewState.id : 'default';
     const iframe = (
       <iframe
@@ -165,27 +164,36 @@ class ComponentFlavor extends React.Component {
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
         className={pf('site-example--content m-bottom--xx-large scrollable--x')}
-        aria-labelledby={previewTabActive ? `${flavor.uid}__preview-tab-${previewTabActive.key}` : null}>
+        aria-labelledby={previewTabActive ? `${flavor.uid}__preview-tab-${previewTabActive.key}` : null}
+        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}>
         {iframe}
       </Tabs.Content>
     );
     // Only use tabs if there are more than 1
+    const contentClassName = classNames('scrollable--x', {
+      'site-example--content': this.state.previewTabActive,
+      // No form factors were specified
+      'site-bleed': !this.state.previewTabActive
+    });
     return this.state.previewTabs.length > 1
       ? (
         <Tabs
-          className={className}
+          className={classNames(pf('site-example--tabs'), {
+            'site-example--tabs-initial-view': this.state.initialView
+          })}
           flavor="default"
           panel={previewPanel}
           selectedIndex={previewTabs.indexOf(previewTabActive)}>
           {this.renderPreviewTabs()}
         </Tabs>
       )
-      : this.state.previewTabActive
-        // If previewTabActive is defined (meaning at least one form factor
-        // was specified), wrap the <iframe>
-        ? <div className={pf('site-bleed scrollable--x')}>{iframe}</div>
-        // Otherwise just use the <iframe>
-        : iframe;
+      : (
+        <div
+          className={pf(contentClassName)}
+          data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}>
+          {iframe}
+        </div>
+      );
   }
 
   renderPreviewTabs() {

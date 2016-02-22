@@ -11,46 +11,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
+import Sticky from './';
 
-export default React.createClass({
-  propTypes: {
-    fixedElementsAbove: React.PropTypes.string,
-    fixedElementsBelow: React.PropTypes.string,
-    fixedContentPadding: React.PropTypes.shape({
-      top: React.PropTypes.string,
-      right: React.PropTypes.string,
-      bottom: React.PropTypes.string,
-      left: React.PropTypes.string
-    }),
-    pinBottom: React.PropTypes.bool
-  },
-  getDefaultProps() {
-    return {
-      pinBottom: false
-    };
-  },
-  render() {
-    const content = React.Children.only(this.props.children);
-    const contentClassName = classNames(content.props.className, {
-      'sticky': true,
-    });
-    return (
-      <div className={this.props.className} data-slds-sticky>
-        {React.cloneElement(content, {
-          contentClassName,
-          'data-slds-sticky-content': true,
-          'data-slds-sticky-fixed-elements-above': this.props.fixedElementsAbove,
-          'data-slds-sticky-fixed-elements-below': this.props.fixedElementsBelow,
-          'data-slds-sticky-fixed-content-padding': JSON.stringify(
-            Object.assign({}, this.props.fixedContentPadding)
-          ),
-          'data-slds-sticky-pin-bottom': this.props.pinBottom ? true : null
-        })}
-        <div
-          className={'sticky__placeholder'}
-          data-slds-sticky-placeholder />
-      </div>
-    );
-  }
-});
+import { prefix as pf } from 'app_modules/ui/util/component';
+
+import forceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
+
+export default props =>
+  <Sticky
+    className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}
+    fixedElementsBelow="footer.site-contentinfo"
+    fixedContentPadding={{
+      top: forceBase.spacingLarge,
+      bottom: forceBase.spacingMedium
+    }}
+    pinBottom={true}
+    {...props} />;

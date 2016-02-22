@@ -15,7 +15,7 @@ import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <Img src={`/assets/images/avatar2.jpg`} alt="" />
+  <Img src="/assets/images/avatar2.jpg" alt="" />
 );
 
 export default (

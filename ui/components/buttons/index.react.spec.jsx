@@ -22,8 +22,8 @@ import {
   scryRenderedDOMComponentsWithClass
 } from 'react-addons-test-utils';
 
-describe(`React`, () => {
-  describe(`Button`, () => {
+describe('React', () => {
+  describe('Button', () => {
     let cmp, $cmp;
     beforeEach(() => {
       cmp = renderIntoDocument(
@@ -31,14 +31,14 @@ describe(`React`, () => {
       );
       $cmp = ReactDOM.findDOMNode(cmp);
     });
-    it(`is a component`, () => {
+    it('is a component', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
-    it(`includes the flavor`, () => {
+    it('includes the flavor', () => {
       const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}button--brand`);
       expect(nodes).length.to.be(1);
     });
-    it(`contains the correct className`, () => {
+    it('contains the correct className', () => {
       const classNames = $cmp.className.split(' ').filter(name => {
         return new RegExp(`^${cssPrefix}button(--)?`).test(name);
       });

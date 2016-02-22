@@ -132,7 +132,7 @@ bower install salesforce-lightning-design-system --save
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="sass-design-tokens">Sass</h3>
-        <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_scss.zip`}>
+        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_scss.zip">
           <CTALink eventName="Download" eventType="design-token-scss">
             <button className={pf('button button--neutral')}>
               Download Sass Tokens
@@ -143,7 +143,7 @@ bower install salesforce-lightning-design-system --save
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="less-design-tokens">Less</h3>
-        <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_less.zip`}>
+        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_less.zip">
           <CTALink eventName="Download" eventType="design-token-less">
             <button className={pf('button button--neutral')}>
               Download Less Tokens
@@ -154,7 +154,7 @@ bower install salesforce-lightning-design-system --save
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="stylus-design-tokens">Stylus</h3>
-        <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_styl.zip`}>
+        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_styl.zip">
           <CTALink eventName="Download" eventType="design-token-stylus">
             <button className={pf('button button--neutral')}>
               Download Stylus Tokens
@@ -165,7 +165,7 @@ bower install salesforce-lightning-design-system --save
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="android-design-tokens">Android</h3>
-        <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_android.zip`}>
+        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_android.zip">
           <CTALink eventName="Download" eventType="design-token-android">
             <button className={pf('button button--neutral')}>
               Download Android Tokens
@@ -176,7 +176,7 @@ bower install salesforce-lightning-design-system --save
 
       <div className={pf('col size--1-of-1 medium-size--1-of-3 p-vertical--large')}>
         <h3 className="site-text-heading--label" id="ios-design-tokens">iOS</h3>
-        <form action={`/assets/downloads/design-tokens/salesforce_design_tokens_ios.zip`}>
+        <form action="/assets/downloads/design-tokens/salesforce_design_tokens_ios.zip">
           <CTALink eventName="Download" eventType="design-token-ios">
             <button className={pf('button button--neutral')}>
               Download iOS Tokens
@@ -192,7 +192,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="swatches">Swatches</h2>
     <p>
-      You can import color swatches for use in design applications like Photoshop and Sketch. Since the CLR format does not include the alpha value, we&rsquo;ve appended each color's name with it.
+      You can import color swatches for use in design applications like Photoshop and Sketch. Since the CLR format does not include the alpha value, we&rsquo;ve appended each color’s name with it.
     </p>
     <div className={pf('grid wrap')}>
 

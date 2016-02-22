@@ -9,38 +9,36 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const foldMap = (monoid) => (xs) => xs.reduce((acc, x) => acc.concat(monoid(x)), monoid.empty()).value;
+const foldMap = monoid => xs => xs.reduce((acc, x) => acc.concat(monoid.of(x)), monoid.empty()).value;
 
 const states = {devReady: 'dev-ready', prototype: 'prototype'};
 
-class _Or {
-  static of = (x) => new _Or(x);
-
+class Or {
   constructor(x) {
     this.value = x;
   }
+
   concat(other) {
-    return (this.value === states.devReady || other.value === states.devReady) ? _Or.of(states.devReady) : _Or.of(states.prototype);
+    return (this.value === states.devReady || other.value === states.devReady) ? Or.of(states.devReady) : Or.of(states.prototype);
   }
 }
 
-const Or = _Or.of;
-Or.empty = () => Or(states.prototype);
+Or.of = x => new Or(x);
+Or.empty = () => Or.of(states.prototype);
 
 
-class _And {
-  static of = (x) => new _And(x);
-
+class And {
   constructor(x) {
     this.value = x;
   }
+
   concat(other) {
-    return (other.value === states.devReady && this.value === states.devReady) ? _And.of(states.devReady) : _And.of(states.prototype);
+    return (other.value === states.devReady && this.value === states.devReady) ? And.of(states.devReady) : And.of(states.prototype);
   }
 }
 
-const And = _And.of;
-And.empty = () => And(states.devReady);
+And.of = x => new And(x);
+And.empty = () => And.of(states.devReady);
 
 const shouldDisplay = (pref, status) => {
   const showAll = !pref || pref === 'prototype';

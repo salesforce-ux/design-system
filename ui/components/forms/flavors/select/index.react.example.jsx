@@ -35,7 +35,7 @@ let FormElementControl = props =>
     {props.children}
   </div>;
 
-let Select = props =>
+export let Select = props =>
   <div className={pf('select_container')}>
     <select id="select-01" className={className(pf('select'), props.className)} disabled={props.disabled} multiple={props.multiple}>
       {props.children}

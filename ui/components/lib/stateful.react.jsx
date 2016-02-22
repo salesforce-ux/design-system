@@ -46,11 +46,6 @@ function hasClass(element, className) {
 
 // TODO: refactor to use with control
 class StateClass extends React.Component {
-  static events = [
-    {on: 'onMouseEnter', off: 'onMouseLeave', className: `${cssPrefix}is-hovered`},
-    {on: 'onFocus', off: 'onBlur', className: `${cssPrefix}is-focused`},
-    {toggle: 'onClick', className: `${cssPrefix}is-selected`, classNameOff: `${cssPrefix}not-selected`}
-  ];
 
   constructor(props) {
     super(props);
@@ -104,5 +99,11 @@ class StateClass extends React.Component {
     return React.cloneElement(child, props);
   }
 }
+
+StateClass.events = [
+  {on: 'onMouseEnter', off: 'onMouseLeave', className: `${cssPrefix}is-hovered`},
+  {on: 'onFocus', off: 'onBlur', className: `${cssPrefix}is-focused`},
+  {toggle: 'onClick', className: `${cssPrefix}is-selected`, classNameOff: `${cssPrefix}not-selected`}
+];
 
 export default StateClass;

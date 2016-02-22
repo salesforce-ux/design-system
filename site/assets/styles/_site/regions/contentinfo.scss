@@ -34,6 +34,7 @@
 
 
   @include mq-large-min {
+    z-index: $z-index-dropdown;
 
     p {
       margin-bottom: 0;

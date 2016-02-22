@@ -79,6 +79,8 @@
 
   .site-menu--jump-links {
     padding-left: $spacing-large;
+    overflow-x: hidden;
+    z-index: $z-index-default;
 
     a {
       cursor: pointer;

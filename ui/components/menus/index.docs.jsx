@@ -25,7 +25,7 @@ export default (
   <ComponentDocs>
     <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. The exception to this is the <strong>Action Overflow for Touch</strong>, which not a dropdown menu.</p>
 
-    <p>Since we are triggering the dropdown through CSS, the menu will show on hover. The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger"/>.</p>
+    <p>The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger dropdown-trigger--click"/>.</p>
 
     <p>By default, dropdown menus do not display a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin--top"/> to the <CodeClass className="dropdown"/> HTML element.</p>
     <p>See the <a href="#overview">Component Overview</a> table for further nubbin support.</p>

@@ -52,7 +52,7 @@ export default (
           <li>Helper Classes</li>
         </ul>
 
-        <Heading type="h2" id="setup" className={pf(`site-text-heading--large`)}>
+        <Heading type="h2" id="setup" className={pf('site-text-heading--large')}>
           Setup
         </Heading>
 
@@ -80,7 +80,7 @@ pod install
       </div>
 
       <div className={pf('container--large')}>
-        <Heading type="h2" id="usage" className={pf(`site-text-heading--large`)}>
+        <Heading type="h2" id="usage" className={pf('site-text-heading--large')}>
           Usage
         </Heading>
 
@@ -90,7 +90,7 @@ pod install
         of design tokens or icons.</p>
       </div>
 
-      <Heading type="h3" id="colors" className={pf(`site-text-heading--medium`)}>
+      <Heading type="h3" id="colors" className={pf('site-text-heading--medium')}>
         Colors
       </Heading>
 
@@ -167,7 +167,7 @@ UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
         `}</CodeBlock>
       </div>
 
-      <Heading type="h3" id="fonts" className={pf(`site-text-heading--medium`)}>
+      <Heading type="h3" id="fonts" className={pf('site-text-heading--medium')}>
         Fonts and Text Sizes
       </Heading>
 
@@ -185,7 +185,7 @@ UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
         `}</CodeBlock>
       </div>
 
-      <Heading type="h3" id="icons" className={pf(`site-text-heading--medium`)}>
+      <Heading type="h3" id="icons" className={pf('site-text-heading--medium')}>
         Icons
       </Heading>
 

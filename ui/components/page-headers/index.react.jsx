@@ -36,8 +36,6 @@ class AnchorDetailLabel extends React.Component {
 }
 
 class AnchorDetailItem extends React.Component {
-  static propTypes = { label: PT.string, truncate: PT.number };
-  // static contextTypes = { childLength: PT.number };
 
   constructor(props) {
     super(props);
@@ -70,9 +68,9 @@ class AnchorDetailItem extends React.Component {
     );
   }
 }
+AnchorDetailItem.propTypes = { label: PT.string, truncate: PT.number };
 
 class AnchorDetailRow extends React.Component {
-  static childContextTypes = { childLength: PT.number };
 
   constructor(props) {
     super(props);
@@ -92,6 +90,7 @@ class AnchorDetailRow extends React.Component {
     );
   }
 }
+AnchorDetailRow.childContextTypes = { childLength: PT.number };
 
 class AnchorDetail extends React.Component {
   constructor(props) {
@@ -109,8 +108,6 @@ class AnchorDetail extends React.Component {
 }
 
 class Anchor extends React.Component {
-  static propTypes = { flavor: componentUtil.PropTypes.flavor('home', 'object-home') };
-  static flavorClasses = {'home': 'page-header--rec-home', 'object-home': 'page-header--obj-home'};
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -124,6 +121,8 @@ class Anchor extends React.Component {
     );
   }
 }
+Anchor.propTypes = { flavor: componentUtil.PropTypes.flavor('home', 'object-home') };
+Anchor.flavorClasses = {'home': 'page-header--rec-home', 'object-home': 'page-header--obj-home'};
 
 Anchor.Detail = AnchorDetail;
 Anchor.DetailRow = AnchorDetailRow;

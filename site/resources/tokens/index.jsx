@@ -85,6 +85,11 @@ const Tokens = React.createClass({
     const options = release.groups.map(group => {
       return <option key={group.name} value={group.name}>{group.label}</option>;
     });
+    const formatSelect = !process.env.INTERNAL
+      ? null
+      : <div className={pf('col align-middle p-vertical--medium')}>
+          <select className={pf('select')} data-slds-tokens-name-format />
+        </div>;
     return (
       <Sticky>
         <div className={pf('site-tools grid grid--align-spread')}>
@@ -97,6 +102,7 @@ const Tokens = React.createClass({
               arial-label="text-input"
               placeholder="Find Token" />
           </div>
+          {formatSelect}
         </div>
       </Sticky>
     );

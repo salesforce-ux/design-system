@@ -10,22 +10,41 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Tabs from '../../index.react';
+import Tabs from 'ui/components/tabs/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export default (
+export let Default = props =>
 <div className="demo-only">
-  <Tabs flavor="scoped">
-    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item One" id="tab-scoped-1">
-      <h2>Item One Content</h2>
+  <Tabs flavor="scoped" selectedIndex={props.selectedIndex || 0}>
+    <Tabs.Item title="Item One" id="tab-scoped-1">
+      Item One Content
     </Tabs.Item>
-    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item Two" id="tab-scoped-2">
-      <h2>Item Two Content</h2>
+    <Tabs.Item title="Item Two" id="tab-scoped-2">
+      Item Two Content
     </Tabs.Item>
-    <Tabs.Item innerClass={pf('tabs--scoped__link')} title="Item Three" id="tab-scoped-3">
-      <h2>Item Three Content</h2>
+    <Tabs.Item title="Item Three" id="tab-scoped-3">
+      Item Three Content
     </Tabs.Item>
   </Tabs>
-</div>
-);
+</div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Item One Selected',
+    element: <Default />
+  },
+  {
+    id: 'selected',
+    label: 'Item Two Selected',
+    element: <Default selectedIndex={1} />
+  }
+];

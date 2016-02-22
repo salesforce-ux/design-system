@@ -12,9 +12,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import fastdom from 'fastdom';
 import tinyColor from 'tinycolor2';
 
+import camelCase from 'lodash/camelCase';
+import kebabCase from 'lodash/kebabCase';
+
 import emitter from '../framework/events';
 import { $, setClassName, hide } from '../framework/dom';
 import { search } from '../framework/helpers';
+import { set as setPreference, get as getPreference } from '../shared/preferences';
 
 const toRgbString = token => tinyColor(token.value).toRgbString();
 const toHexString = token => tinyColor(token.value).toHexString();
@@ -22,6 +26,19 @@ const toAliasString = token => {
   const value = token.valueRaw || token.value;
   return value.replace(/^\{\!/, '').replace(/\}$/, '');
 };
+
+const nameFormats = [
+  {
+    label: 'Sass',
+    value: 'sass',
+    formatter: token => `$${kebabCase(token.name)}`
+  },
+  {
+    label: 'Aura',
+    value: 'aura',
+    formatter: token => `t(${camelCase(token.name)})`
+  }
+];
 
 const valueFormats = {
   color: [
@@ -72,33 +89,56 @@ const handleInputChange = (sections, event, node) => {
   });
 };
 
-const handleSelectChange = (sections, event, node) => {
-  const section = sections
-    .filter(section => section.refs.format === node)[0];
-  if (section) {
-    const formatList = valueFormats[node.dataset.sldsTokensValueFormat];
-    const format = formatList.filter(f => f.value === node.value)[0];
-    section.tokens.forEach(token => {
-      const value = format.formatter(token);
-      fastdom.mutate(() => {
-        section.lookups.values.get(token).innerText = value;
+const handleNameSelectChange = (sections, event, node) => {
+  const format = nameFormats.filter(f => f.value === node.value)[0];
+  setPreference('tokens:nameFormat', format.value);
+  sections.forEach(section => {
+    fastdom.mutate(() => {
+      section.tokens.forEach(token => {
+        const name = format.formatter(token);
+        section.lookups.names.get(token).innerHTML = name;
       });
     });
-  }
+  });
 };
 
-const setupFormatSelect = node => {
-  const { sldsTokensValueFormat: format } = node.dataset;
-  if (!valueFormats[format]) return;
-  // Populate the select options
-  valueFormats[format].forEach(format => {
-    const option = document.createElement('option');
-    option.setAttribute('value', format.value);
-    option.innerText = format.label;
+const handleValueSelectChange = (sections, event, node) => {
+  const { sldsTokensValueFormat: formatKey } = node.dataset;
+  const formatList = valueFormats[formatKey];
+  const format = formatList.filter(f => f.value === node.value)[0];
+  setPreference(`tokens:valueFormat:${formatKey}`, format.value);
+  sections
+    .filter(section => section.refs.format)
+    .filter(section => {
+      const { sldsTokensValueFormat: key } = section.refs.format.dataset;
+      return formatKey === key;
+    })
+    .forEach(section => {
+      fastdom.mutate(() => {
+        section.refs.format.selectedIndex = formatList.indexOf(format);
+        section.tokens.forEach(token => {
+          const value = format.formatter(token);
+          section.lookups.values.get(token).innerHTML = value;
+        });
+      });
+    });
+};
+
+const setupSelect = (node, options) => {
+  options.forEach(option => {
+    const o = document.createElement('option');
+    o.setAttribute('value', option.value);
+    o.innerHTML = option.label;
     fastdom.mutate(() => {
-      node.appendChild(option);
+      node.appendChild(o);
     });
   });
+};
+
+const setupValueFormatSelect = node => {
+  const { sldsTokensValueFormat: format } = node.dataset;
+  if (!valueFormats[format]) return;
+  setupSelect(node, valueFormats[format]);
 };
 
 export default () => ({
@@ -112,12 +152,14 @@ export default () => ({
         };
         const lookups = {
           tokens: new Map(),
-          values: new Map()
+          values: new Map(),
+          names: new Map()
         };
         const tokens = refs.tokens.map(node => {
           const token = JSON.parse(node.dataset.sldsToken);
           lookups.tokens.set(token, node);
           lookups.values.set(token, node.querySelector('[data-slds-token-value]'));
+          lookups.names.set(token, node.querySelector('[data-slds-token-name]'));
           return token;
         });
         return {
@@ -129,15 +171,31 @@ export default () => ({
         'input', '#find-token-input',
         handleInputChange.bind(null, sections)
       );
+      // Name formats
+      $('[data-slds-tokens-name-format]').forEach(node => {
+        const key = getPreference('tokens:nameFormat');
+        const format = nameFormats.filter(f => f.value === key)[0];
+        setupSelect(node, nameFormats);
+        if (format) {
+          fastdom.mutate(() => {
+            node.selectedIndex = nameFormats.indexOf(format);
+            handleNameSelectChange(sections, {}, node);
+          });
+        }
+      });
+      delegate(
+        'change', '[data-slds-tokens-name-format]',
+        handleNameSelectChange.bind(null, sections)
+      );
       // Value Formats
       delegate(
         'change', '[data-slds-tokens-value-format]',
-        handleSelectChange.bind(null, sections)
+        handleValueSelectChange.bind(null, sections)
       );
       sections
         .filter(section => section.refs.format)
         .forEach(section => {
-          setupFormatSelect(section.refs.format);
+          setupValueFormatSelect(section.refs.format);
         });
     }
   }

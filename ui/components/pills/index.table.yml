@@ -36,8 +36,4 @@ classes:
   -
     class: pill-container
     description: Container to hold pills(s)
-    notes: Deprecated
-
-    class: pill__container
-    description: Container to hold pills(s)
-    notes: Deprecated
+    deprecated: true

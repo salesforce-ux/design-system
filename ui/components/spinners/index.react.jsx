@@ -17,14 +17,6 @@ const cssPrefix = globals.cssPrefix;
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Spinner extends React.Component {
-  static propTypes = {
-    flavor: componentUtil.PropTypes.flavor(
-      'small', 'medium', 'large',
-      'brand-small', 'brand-medium', 'brand-large',
-      'inverse-small', 'inverse-medium', 'inverse-large'
-    )
-  };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -51,5 +43,13 @@ class Spinner extends React.Component {
     );
   }
 }
+
+Spinner.propTypes = {
+  flavor: componentUtil.PropTypes.flavor(
+    'small', 'medium', 'large',
+    'brand-small', 'brand-medium', 'brand-large',
+    'inverse-small', 'inverse-medium', 'inverse-large'
+  )
+};
 
 export default Spinner;

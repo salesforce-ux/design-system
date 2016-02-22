@@ -10,12 +10,216 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Input from 'ui/components/forms/flavors/input/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only">
-  <Input label="Text Input" placeholder="Placeholder Text" assistiveText="sample1" />
-</div>
-);
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
+
+let FormElement = props =>
+  <div className={className(pf('form-element'), props.className)}>
+    {props.children}
+  </div>;
+
+let FormElementLabel = props =>
+  <label className={pf('form-element__label')} htmlFor="text-input-01">{props.children}</label>;
+
+let FormElementControl = props =>
+  <div className={className(pf('form-element__control'), props.className)}>
+    {props.children}
+  </div>;
+
+let Input = props =>
+  <input id="text-input-01" className={className(pf('input'), props.className)} type="text" placeholder="Placeholder Text" {...props} />;
+
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl>
+        <Input />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let IconLeft = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
+        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
+        <Input />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let IconRight = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-icon input-has-icon--right')}>
+        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
+        <Input />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Required = props =>
+  <Demo>
+    <FormElement className={pf('is-required')}>
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
+      <FormElementControl>
+        <Input required />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Error = props =>
+  <Demo>
+    <FormElement className={pf('is-required has-error')}>
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
+      <FormElementControl>
+        <Input required />
+      </FormElementControl>
+      <div className={pf('form-element__help')}>This field is required</div>
+    </FormElement>
+  </Demo>;
+
+let ErrorIcon = props =>
+  <Demo>
+    <FormElement className={pf('is-required has-error')}>
+      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
+        <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
+        <Input required />
+      </FormElementControl>
+      <div className={pf('form-element__help')}>This field is required</div>
+    </FormElement>
+  </Demo>;
+
+let Disabled = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl>
+        <Input disabled />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let ReadOnly = props =>
+  <Demo>
+    <FormElement>
+      <span className={pf('form-element__label')}>Input Label</span>
+      <FormElementControl className={pf('has-divider--bottom')}>
+        <span className={pf('form-element__static')}>Read Only</span>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let FixedText = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-fixed-addon')}>
+        <span className={pf('form-element__addon')}>$</span>
+        <Input />
+        <span className={pf('form-element__addon')}>%</span>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let ReadOnlyFixedText = props =>
+  <Demo>
+    <FormElement>
+      <span className={pf('form-element__label')}>Input Label</span>
+      <FormElementControl className={pf('has-divider--bottom')}>
+        <span className={pf('form-element__addon')}>$</span>
+        <span className={pf('form-element__static')}>Read Only</span>
+        <span className={pf('form-element__addon')}>%</span>
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Small = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl>
+        <Input className={pf('input input--small')} />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'input',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'input-icon-left',
+    label: 'With icon to the left',
+    element: <IconLeft />
+  },
+  {
+    id: 'input-icon-right',
+    label: 'With icon to the right',
+    element: <IconRight />
+  },
+  {
+    id: 'input-required',
+    label: 'Required',
+    element: <Required />
+  },
+  {
+    id: 'input-error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'input-error-icon',
+    label: 'Error with icon',
+    element: <ErrorIcon />
+  },
+  {
+    id: 'input-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  },
+  {
+    id: 'input-read-only',
+    label: 'Read only',
+    element: <ReadOnly />
+  },
+  {
+    id: 'input-fixed-text',
+    label: 'With fixed text',
+    element: <FixedText />
+  },
+  {
+    id: 'input-read-only-fixed-text',
+    label: 'Read only With fixed text',
+    element: <ReadOnlyFixedText />
+  },
+  {
+    id: 'input-small',
+    label: 'Small Input',
+    element: <Small />
+  }
+];

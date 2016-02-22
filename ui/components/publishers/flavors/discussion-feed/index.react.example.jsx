@@ -10,20 +10,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Tabs from 'ui/components/tabs/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
 import MediaObject from 'ui/components/media-objects/index.react';
-import Input from 'ui/components/forms/flavors/input/index.react';
 import Img from 'app_modules/ui/img';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src={`/assets/images/avatar2.jpg`} alt="Jenna Davis" />
+    <a href="#void" title="Jenna Davis">
+      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );
@@ -35,10 +42,41 @@ const icon = (
   </span>
 );
 
-const commentReply = (
-  <div>
-    <p><a href="javascript:void(0)" title="Sue Jenkins">@sjenkins</a> here is an updated version of that <a href="javascript:void(0)" title="View all presentation tags">#presentation</a> file</p>
-    <div className={pf('comment__content-attachment box box--x-small theme--shade')}>
+let Publisher = props =>
+  <div className={className(pf('publisher publisher--discussion'), props.className)}>
+    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
+      <dt className={pf('list__item text-body--small')}>To: </dt>
+      <dd className={pf('list__item')}>My Followers</dd>
+    </dl>
+    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
+    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    {props.children}
+  </div>;
+
+let PublisherActions = props =>
+  <div className={pf('publisher__actions grid grid--align-spread')}>
+    <ul className={pf('grid publisher__toggle-visibility')}>
+      <li>
+        <ButtonIcon
+          flavor="icon-container"
+          sprite="utility"
+          symbol="adduser"
+          assistiveText="Add User" />
+      </li>
+      <li>
+        <ButtonIcon
+          flavor="icon-container"
+          sprite="utility"
+          symbol="attach"
+          assistiveText="Attach a file" />
+      </li>
+    </ul>
+    <Button flavor="brand">Share</Button>
+  </div>;
+
+let PublisherAttachments = props =>
+  <div className={pf('attachments')}>
+    <div className={pf('attachments__item box box--x-small theme--shade')}>
       <div className={pf('grid grid--align-spread')}>
         <MediaObject figureLeft={icon}>
           <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
@@ -50,155 +88,52 @@ const commentReply = (
           assistiveText="Remove this attachment" />
       </div>
     </div>
-  </div>
-);
+  </div>;
 
-export const preview = (
-<div className="demo-only">
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
 
-  <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
+let Default = props =>
+  <Demo>
+    <Publisher>
+      <PublisherActions />
+    </Publisher>
+  </Demo>;
 
-  <div className={pf('demo-class-pill')}>
-    <p className={pf('demo-class-pill__content')}>
-      <code>.{pf('is-active')}</code>
-    </p>
-  </div>
+let Active = props =>
+  <Demo>
+    <Publisher className={pf('is-active')}>
+      <PublisherActions />
+    </Publisher>
+  </Demo>;
 
-  {/* Is Active */}
-  <div className={pf('publisher publisher--discussion is-active')}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand" disabled>Share</Button>
-    </div>
-  </div>
+let Attachment = props =>
+  <Demo>
+    <Publisher className={pf('is-active')}>
+      <PublisherAttachments />
+      <PublisherActions />
+    </Publisher>
+  </Demo>;
 
-  <div className={pf('demo-class-pill')}>
-    <p className={pf('demo-class-pill__content')}>
-      <code>.{pf('is-active')}</code> with text input
-    </p>
-  </div>
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
-  {/* Is Active with Content */}
-  <div className={pf('publisher publisher--discussion is-active')}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small m-right--x-small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input3" className={pf('publisher__input textarea text-longform')} defaultValue="I wrote a comment! Yay!" />
-    <div className={pf('attachments')}>
-      <div className={pf('attachments__item box box--x-small theme--shade')}>
-        <div className={pf('grid grid--align-spread')}>
-          <MediaObject figureLeft={icon}>
-            <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
-          </MediaObject>
-          <ButtonIcon
-            flavor="icon-bare"
-            sprite="utility"
-            symbol="close"
-            assistiveText="Remove this attachment" />
-        </div>
-      </div>
-    </div>
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
-</div>
-);
-
-export const code = (
-<div className="demo-only">
-  <div className={pf('publisher publisher--discussion')}>
-    <dl className={pf('list--horizontal publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input1" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
-    <div className={pf('attachments')}></div>
-    <div className={pf('publisher__actions grid grid--align-spread')}>
-      <ul className={pf('grid publisher__toggle-visibility')}>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="adduser"
-            assistiveText="Add User" />
-        </li>
-        <li>
-          <ButtonIcon
-            flavor="icon-container"
-            sprite="utility"
-            symbol="attach"
-            assistiveText="Attach a file" />
-        </li>
-      </ul>
-      <Button flavor="brand">Share</Button>
-    </div>
-  </div>
-</div>
-);
+export let states = [
+  {
+    id: 'publisher-feed-default',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'publisher-feed-active',
+    label: 'Active',
+    element: <Active />
+  },
+  {
+    id: 'publisher-feed-with-attachment',
+    label: 'With attachment(s)',
+    element: <Attachment />
+  }
+];

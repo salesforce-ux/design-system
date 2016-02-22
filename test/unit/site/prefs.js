@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 
 import emitter from 'site/assets/scripts/framework/events';
-import Prefs from 'site/assets/scripts/shared/preferences'
+import Prefs from 'site/assets/scripts/shared/preferences';
 
 describe('Preferences', () => {
   let trigger;
   const store = {};
 
   const fakeDelegate = (listener, selector, fn) => {
-    trigger = (val) => fn({ target: { value: val } })
+    trigger = (val) => fn({ target: { value: val } });
   };
 
   const fakeStorage = {
@@ -17,11 +17,11 @@ describe('Preferences', () => {
   };
 
   before(() => {
-    global.window = { localStorage: fakeStorage }
+    global.window = { localStorage: fakeStorage };
   });
 
   after(() => {
-    global.window = null
+    global.window = null;
   });
 
   beforeEach(() => {
@@ -32,7 +32,7 @@ describe('Preferences', () => {
     emitter.once('preferences:updated', (prefs) => {
       expect(prefs.status).to.equal('dev-ready');
       done();
-    })
+    });
     trigger('dev-ready');
   });
 
@@ -40,7 +40,7 @@ describe('Preferences', () => {
     emitter.once('preferences:updated', (prefs) => {
       expect(prefs.status).to.equal('prototype');
       done();
-    })
+    });
     trigger('prototype');
   });
 

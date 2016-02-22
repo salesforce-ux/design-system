@@ -13,16 +13,6 @@
 
   @include mq-medium-min {
     text-align: right;
-
-    .#{$css-prefix}form-element__legend {
-      float: left;
-      width: calc(33% + (#{$spacing-small} * 2)); // calculate available width left over from form control
-      text-align: right;
-
-      > .#{$css-prefix}form-element__label {
-        margin-right: 0;
-      }
-    }
   }
 
   .#{$css-prefix}form-element {
@@ -30,15 +20,16 @@
     > .#{$css-prefix}form-element__label {
 
       @include mq-medium-min {
+        float: left;
+        text-align: right;
         display: inline-block;
-        max-width: 33%;
+        width: 33%;
         vertical-align: top;
         position: relative;
         top: (($line-height-button / 2) - ($line-height-text / 2));
-        margin-bottom: 0;
-
-        &--top {
-          top: 0;
+        margin: {
+          right: 0;
+          bottom: 0;
         }
       }
     }
@@ -51,12 +42,8 @@
   .#{$css-prefix}form-element__control {
     width: 100%;
 
-    @include mq-large-max {
-      vertical-align: top;
-    }
-
     @include mq-medium-min {
-      width: calc(66% - (#{$spacing-small} * 2));
+      width: 66%;
       display: inline-block;
       text-align: left;
     }

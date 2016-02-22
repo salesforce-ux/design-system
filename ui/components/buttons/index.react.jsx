@@ -14,15 +14,6 @@ import componentUtil, { prefix as pf, createChainedFunction } from 'app_modules/
 import _ from 'lodash';
 
 class Button extends React.Component {
-  static propTypes = {
-    flavor: componentUtil.PropTypes.flavor(
-      'neutral', 'brand', 'inverse', 'destructive',
-      'neutral-selected', 'inverse-selected',
-      'hint', 'small',
-      'more', 'icon-more'
-    )
-  };
-
   constructor(props) {
     super(props);
     componentUtil.install(this);
@@ -44,5 +35,15 @@ class Button extends React.Component {
     );
   }
 }
+
+Button.propTypes = {
+  flavor: componentUtil.PropTypes.flavor(
+    'neutral', 'brand', 'inverse', 'destructive',
+    'neutral-selected', 'inverse-selected',
+    'hint', 'small',
+    'more', 'icon-more'
+  )
+};
+
 
 export default Button;

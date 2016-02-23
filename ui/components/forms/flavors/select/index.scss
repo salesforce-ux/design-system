@@ -11,11 +11,11 @@
 
 .#{$css-prefix}select {
   @include form-states;
-  height: $line-height-button;
+  height: $line-height-button-small;
 
   &[size],
   &[multiple] {
-    min-height: $line-height-button;
+    min-height: $line-height-button-small;
     height: inherit;
 
     option {
@@ -55,12 +55,12 @@
 
     &:before {
       border-bottom: 5px solid $color-background-inverse;
-      top: calc((#{$line-height-button} / 2) - 6px);
+      top: calc((#{$line-height-button-small} / 2) - 6px);
     }
 
     &:after {
       border-top: 5px solid $color-background-inverse;
-      bottom: calc((#{$line-height-button} / 2) - 6px);
+      bottom: calc((#{$line-height-button-small} / 2) - 6px);
     }
   }
 }

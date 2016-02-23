@@ -28,7 +28,9 @@ classes:
   -
     class: input--small
     description: Applies styles for a smaller text input
+    deprecated: true
     applied: <code>.{{cssPrefix}}input</code>
+    notes: Removed in version 2.0.0
   -
     class: input--bare
     description: Removes background and border from text input
@@ -81,6 +83,14 @@ classes:
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
   -
+    class: checkbox--button-group
+    description: Container for a group of checkbox that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: checkbox--button
+    description: Customizes your checkbox to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+  -
     class: radio
     description: Initializes radio button
     required: true
@@ -92,6 +102,14 @@ classes:
     required: true
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
+  -
+    class: radio--button-group
+    description: Container for a group of radio that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: radio--button
+    description: Customizes your radio to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
     class: form--horizontal
     description: Horizontally aligns a single form label and control on the same line

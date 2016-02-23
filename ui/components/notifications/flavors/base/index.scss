@@ -28,7 +28,7 @@
   &--toast {
     border-radius: $border-radius-medium;
     margin: $spacing-x-small;
-    padding: $spacing-medium $spacing-large;
+    padding: $spacing-small $spacing-large;
     min-width: rem(480px);
     display: inline-block;
     text-align: left;
@@ -47,5 +47,14 @@
   &--alert {
     padding: $spacing-x-small;
     text-align: center;
+  }
+
+  &__content {
+    padding-top: $spacing-xx-small;
+
+    // needed for left-hand icons
+    .#{$css-prefix}icon {
+      margin-top: ($spacing-xx-small * -1);
+    }
   }
 }

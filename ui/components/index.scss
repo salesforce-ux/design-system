@@ -46,14 +46,16 @@
 
   // Card
   'cards/flavors/base/index',
-  'cards/flavors/empty/index',
 
   // Forms
   'forms/flavors/input/index',
   'forms/flavors/textarea/index',
   'forms/flavors/radio/index',
+  'forms/flavors/radio-group-alternate/index',
   'forms/flavors/checkbox/index',
+  'forms/flavors/checkbox-toggle/index',
   'forms/flavors/select/index',
+  'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
   'forms/flavors/edit-dialog-for-touch/index',
   'forms/flavors/form-element/index',
@@ -84,6 +86,9 @@
   'page-headers/flavors/base/index',
   'page-headers/flavors/record-home/index',
 
+  // Panels
+  'panels/flavors/slide-out/index',
+
   // Popovers
   'popovers/flavors/base/index',
   'popovers/flavors/tooltips/index',
@@ -103,9 +108,7 @@
   // Docked Composer
   'docked-composer/flavors/base/index',
   'docked-composer/flavors/email/index',
-  'docked-composer/flavors/email-modal/index',
   'docked-composer/flavors/task/index',
-  'docked-composer/flavors/overflow-menu/index',
 
   // Publishers
   'publishers/flavors/discussion-feed/index',
@@ -130,6 +133,9 @@
   'process/flavors/wizard/index',
   'process/flavors/sales-path-coach/index',
 
+  // Product Selector
+  'product-selector/flavors/base/index',
+
   // Spinners
   'spinners/flavors/small/index',
   'spinners/flavors/medium/index',
@@ -142,12 +148,12 @@
   'tiles/flavors/board/index',
   'tiles/flavors/author/index',
 
-  // Tree
-  'trees/flavors/base/index',
-
   // Tabs
   'tabs/flavors/default/index',
   'tabs/flavors/scoped/index',
+
+  // Navigation
+  'navigation/flavors/vertical/index',
 
   // Notifications -- Toasts & Alerts
   'notifications/flavors/base/index',
@@ -157,9 +163,6 @@
 
   // Lookup
   'lookups/flavors/base/index',
-  'lookups/flavors/single-select/index',
-  'lookups/flavors/multi-select/index',
-  'lookups/flavors/multi-scope/index',
   'lookups/flavors/advanced-modal/index',
 
   // Objects
@@ -175,6 +178,13 @@
   // Badges
   'badges/flavors/base/index',
 
+  // Context bar
+  'context-bar/flavors/default/index',
+
   // Tables
   'data-tables/flavors/base/index',
-  'data-tables/flavors/responsive/index';
+  'data-tables/flavors/responsive/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

@@ -1,4 +1,5 @@
 status: 'dev-ready'
 flavors:
+  - base
   - vertical
   - horizontal

@@ -23,13 +23,13 @@ const image = (
 export default (
   <div className="demo-only">
     <div className={pf('card')}>
-      <div className={pf('card__header grid')}>
+      <div className={pf('card__header grid grid--content-center')}>
         <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate')}>
-          <h2 className={pf('text-heading--small truncate')}>Card Header (2)</h2>
+          <h2 className={pf('truncate')}>Card Header (2)</h2>
         </MediaObject>
         <div className={pf('no-flex')}>
           <div className={pf('button-group')}>
-            <Button flavor="neutral,small">Button</Button>
+            <Button flavor="neutral">Button</Button>
             <ButtonIcon
               flavor="icon-border-filled"
               className={pf('toggle-visibility')}
@@ -40,30 +40,23 @@ export default (
         </div>
       </div>
       <div className={pf('card__body')}>
-        <table className={pf('table table--bordered max-medium-table--stacked-horizontal no-row-hover')}>
+        <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
           <thead>
             <tr>
-              <th className={pf('text-heading--label size--1-of-4')} scope="col">Name</th>
-              <th className={pf('text-heading--label size--1-of-4')} scope="col">Company</th>
-              <th className={pf('text-heading--label size--1-of-4')} scope="col">Title</th>
-              <th className={pf('text-heading--label size--1-of-4')} scope="col">Email</th>
-              <th className={pf('row-action')} scope="col">
-                <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="Show More" />
-              </th>
+              <th className={pf('text-heading--label')} scope="col">Name</th>
+              <th className={pf('text-heading--label')} scope="col">Company</th>
+              <th className={pf('text-heading--label')} scope="col">Title</th>
+              <th className={pf('text-heading--label')} scope="col">Email</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
             <tr className={pf('hint-parent')}>
-              <td className={pf('size--1-of-4')} data-label="Name">Adam Choi</td>
-              <td className={pf('size--1-of-4')} data-label="Company">Company One</td>
-              <td className={pf('size--1-of-4')} data-label="Title">Director of Operations</td>
-              <td className={pf('size--1-of-4')} data-label="Email">adam@company.com</td>
-              <td>
+              <th scope="row" data-label="Name">Adam Choi</th>
+              <td data-label="Company">Company One</td>
+              <td data-label="Title">Director of Operations</td>
+              <td data-label="Email">adam@company.com</td>
+              <td className={pf('cell-shrink')}>
                 <ButtonIcon
                   flavor="icon-border-filled,icon-x-small"
                   iconFlavor="hint,small"
@@ -76,7 +69,7 @@ export default (
         </table>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="#voidvoid">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

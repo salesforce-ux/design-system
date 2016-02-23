@@ -34,7 +34,7 @@ const icon = (
 export default (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
+      <p className={pf('text-heading--x-small-bold truncate')}>
         <a href="javascript:void(0)" title="Design Systems">Design Systems</a> - <a href="javascript:void(0)" title="Jason Rodgers">Jason Rogers</a>
       </p>
       <ButtonIcon

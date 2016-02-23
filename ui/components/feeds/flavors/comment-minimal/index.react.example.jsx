@@ -28,7 +28,7 @@ const image = (
 export default (
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
+      <p className={pf('truncate text-heading--x-small-bold')}>
         <a href="javascript:void(0)" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
       </p>
       <ButtonIcon

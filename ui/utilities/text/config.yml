@@ -5,9 +5,10 @@ flavors:
   - heading-large
   - heading-medium
   - heading-small
+  - heading-x-small-bold
   - heading-label
+  - heading-label-normal
   - alignment
   - longform
   - section-title
   - section-title-dividers
-  - faux-links

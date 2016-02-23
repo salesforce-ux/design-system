@@ -24,8 +24,5 @@ export default (
     <Button flavor="neutral" disabled="true">
       Disabled
     </Button>
-    <Button flavor="neutral,small">
-      Button Small
-    </Button>
   </div>
 );

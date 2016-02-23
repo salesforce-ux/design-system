@@ -14,6 +14,10 @@
 //
 
 @import
+
+  // Alignment
+  'alignment/flavors/absolute-center/index',
+
   // Spacing
   'spacing/flavors/margin/index',
   'spacing/flavors/padding/index',
@@ -22,6 +26,11 @@
   'floats/flavors/float-left/index',
   'floats/flavors/float-right/index',
   'floats/flavors/clearfix/index',
+
+  // Interactions
+  'interactions/flavors/blur-focus/index',
+  'interactions/flavors/faux-links/index',
+  'interactions/flavors/link-reset/index',
 
   // Lists
   'lists/flavors/dotted/index',
@@ -45,18 +54,20 @@
 
   // Text
   'text/flavors/base/index',
-  'text/flavors/heading-small/index',
-  'text/flavors/heading-medium/index',
   'text/flavors/heading-large/index',
+  'text/flavors/heading-medium/index',
+  'text/flavors/heading-small/index',
+  'text/flavors/heading-x-small-bold/index',
   'text/flavors/heading-label/index',
+  'text/flavors/heading-label-normal/index',
   'text/flavors/body-small/index',
   'text/flavors/alignment/index',
   'text/flavors/longform/index',
   'text/flavors/section-title/index',
   'text/flavors/section-title-dividers/index',
-  'text/flavors/faux-links/index',
 
   // Interactions
+  'scrollable/flavors/base/index',
   'scrollable/flavors/vertical/index',
   'scrollable/flavors/horizontal/index',
 

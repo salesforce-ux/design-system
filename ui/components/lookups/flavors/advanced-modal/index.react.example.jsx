@@ -38,7 +38,7 @@ export default (
             <input id="lookup" className={pf('input')} type="text" aria-haspopup="true" aria-autocomplete="list" role="combobox" aria-activedescendant="" />
           </div>
         </div>
-        <table className={pf('table table--bordered no-row-hover')} role="listbox">
+        <table className={pf('table table--bordered table--cell-buffer no-row-hover')} role="listbox">
           <thead>
             <tr>
               <th colSpan="4" scope="col">

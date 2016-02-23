@@ -16,20 +16,46 @@
     margin-top: $spacing-medium;
   }
 
-  &__header {
-    padding: $spacing-small $spacing-small $spacing-xx-small;
+  &__header,
+  &__footer,
+  &__body--inner {
+    padding-left: $spacing-large;
+    padding-right: $spacing-large;
   }
 
-  &__body {
-    padding: $spacing-x-small 0;
+  &__header {
+    padding-top: $spacing-small;
+    margin-bottom: $spacing-small;
   }
 
   &__footer {
-    padding: $spacing-xx-small $spacing-medium $spacing-x-small;
+    margin-top: $spacing-small;
+    padding-bottom: $spacing-small;
+    text-align: right;
   }
 
-  .#{$css-prefix}tile {
-    margin: $spacing-x-small;
-    padding: $spacing-x-small;
+  &--narrow {
+
+    .#{$css-prefix}card__header {
+      padding-top: $spacing-large;
+      margin-bottom: $spacing-large;
+    }
+    .#{$css-prefix}card__footer {
+      padding-bottom: $spacing-medium;
+    }
+  }
+
+  @include deprecate('3.0.0', 'Use .card__body--inner instead.') {
+    .#{$css-prefix}tile {
+      margin: $spacing-small $spacing-large;
+    }
+
+    &__body--inner .#{$css-prefix}tile {
+      margin: {
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
   }
 }

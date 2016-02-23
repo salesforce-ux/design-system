@@ -52,8 +52,8 @@ class ModalExample extends React.Component {
           <Modal.Header
             closeButton={false}
           >
-            <Button flavor="neutral,small">Cancel</Button>
-            <Button flavor="neutral,small,brand">Save</Button>
+            <Button flavor="neutral">Cancel</Button>
+            <Button flavor="neutral,brand">Save</Button>
             <h2 className={pf('text-heading--medium')}>
               New Contact
             </h2>

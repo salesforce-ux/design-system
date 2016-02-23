@@ -18,66 +18,9 @@
     border: $border-width-thin solid $color-border-button-default;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
   }
-
-  @include deprecate('2.0.0') {
-
-    .#{$css-prefix}tabs__item {
-      @include tabs-item;
-      position: relative;
-      margin-bottom: ($border-width-thin * -1);
-
-      + .#{$css-prefix}tabs__item {
-        margin-left: ($border-width-thin * -1);
-      }
-
-      &:first-child > a {
-        border-left: 0;
-        border-radius: $border-radius-medium 0 0 0;
-      }
-
-      > a {
-        @include tabs-link;
-        height: $line-height-tab;
-        line-height: $line-height-tab;
-        padding: 0 $spacing-large;
-        color: $color-text-weak;
-        background-clip: padding-box;
-        border: {
-          left: $border-width-thin solid transparent;
-          right: $border-width-thin solid transparent;
-        }
-
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          color: $color-text-link-hover;
-          border-color: $color-border;
-        }
-      }
-
-      .#{$css-prefix}active > a {
-        background-color: $color-background-alt;
-        color: $color-text-link;
-        border-color: $color-border;
-
-        &:focus {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    > .#{$css-prefix}tabs__content {
-      background-color: $color-background-alt;
-      border: $border-width-thin solid $color-border-button-default;
-      border-top: 0;
-      border-radius: 0 0 $border-radius-medium $border-radius-medium;
-      padding: $spacing-medium;
-    }
-  }
 }
 
 .#{$css-prefix}tabs--scoped__item {
-  @include tabs-item;
   position: relative;
   margin-bottom: ($border-width-thin * -1);
 
@@ -103,7 +46,7 @@
   @include tabs-link;
   height: $line-height-tab;
   line-height: $line-height-tab;
-  padding: 0 $spacing-large;
+  padding: 0 $spacing-medium;
   color: $color-text-weak;
   background-clip: padding-box;
   border: {

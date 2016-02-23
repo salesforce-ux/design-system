@@ -25,7 +25,7 @@ let Demo = props =>
   </div>;
 
 let Table = props =>
-  <table className={className(pf('table table--bordered'), props.className)}>
+  <table className={className(pf('table table--bordered table--cell-buffer'), props.className)}>
     {props.children}
   </table>;
 

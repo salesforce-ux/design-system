@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 const iconHeader = (
   <span className={pf('icon_container icon-standard-account')}>
-    <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="account" />
+    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
     <span className={pf('assistive-text')}>Tesla Motors</span>
   </span>
 );
@@ -35,6 +35,9 @@ const iconCases = (
     <span className={pf('assistive-text')}>Cases</span>
   </span>
 );
+
+const ViewAll = () =>
+  <dd className={pf('m-top--x-small text-align--right')}><a href="#void" title="View all Opportunities">View All</a></dd>;
 
 export default (
   <div className={pf('popover popover--panel nubbin--left-top')} role="dialog">
@@ -132,9 +135,8 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="#void" title="View all Opportunities">View All</a></dd>
+        <ViewAll />
       </dl>
-
 
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
@@ -164,11 +166,8 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="#void" title="View all Cases">View All</a></dd>
+        <ViewAll />
       </dl>
-
-
     </div>
-
   </div>
 );

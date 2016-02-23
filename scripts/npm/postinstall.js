@@ -13,6 +13,7 @@ import _ from 'lodash';
 import gdm from 'gdm';
 import path from 'path';
 import semver from 'semver';
+import moment from 'moment';
 import { execSync } from 'child_process';
 
 gdm.run();

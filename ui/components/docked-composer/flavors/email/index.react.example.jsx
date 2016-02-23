@@ -56,7 +56,7 @@ export default (
         </div>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap size--1-of-1')}>
+        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap')}>
           <div className={pf('grid grid--align-spread')}>
             <div className={pf('grid grow p-horizontal--small')}>
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
@@ -187,22 +187,6 @@ export default (
                 symbol="delete"
                 assistiveText="Delete" />
             <Button flavor="brand">Send</Button>
-          </div>
-
-          <div className={pf('float--left size--1-of-2')}>
-            <div className={pf('lookup')} data-select="multi" data-scope="multi" data-typeahead="true">
-              <div className={pf('form-element')}>
-                <div className={pf('grid form-element__control')}>
-                  <div className={pf('dropdown-trigger dropdown-trigger--click align-middle')}>
-                    <SvgIcon className={pf('icon icon-standard-user icon--small shrink-none')} sprite="standard" symbol="user" />
-                    <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="down" assistiveText="Filter" />
-                  </div>
-                  <label className={pf('assistive-text')} htmlFor="object-lookup-1">Add related object</label>
-                  <input id="object-lookup-1" className={pf('input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Add Related Object" />
-                </div>
-                <div className={pf('pill_container hide')}></div>
-              </div>
-            </div>
           </div>
 
         </div>

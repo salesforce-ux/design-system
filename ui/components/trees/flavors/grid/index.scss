@@ -26,3 +26,7 @@
 .#{$css-prefix}table--tree__toggle {
   margin-left: ($spacing-xx-small * -1);
 }
+
+.#{$css-prefix}tree__button--disabled {
+  visibility: hidden;
+}

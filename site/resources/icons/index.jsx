@@ -17,6 +17,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 import categories from '.generated/ui.icons';
@@ -52,14 +53,14 @@ class Icons extends React.Component {
       <div>
         {this.renderHeader()}
         <div className={pf('p-around--xx-large grid wrap site-content')}>
-          <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')} fixedElements=".site-tools">
+          <StickyNav fixedElementsAbove=".site-tools">
             <div className={pf('site-menu--jump-links')}>
               <h3 className="site-text-heading--label">Categories</h3>
               <ul className={pf('list--vertical has-block-links')}>
                 {this.renderCategoryNav()}
               </ul>
             </div>
-          </Sticky>
+          </StickyNav>
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             <p className={pf('site-text-introduction m-bottom--reset container--large')}>
               Choose the icon you need from this page, then follow the implementation instructions on the <a href="/components/icons/">icon component page</a>. If you are building a Lightning Component, you may require an

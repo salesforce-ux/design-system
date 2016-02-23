@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
-import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import ComponentFlavor from './flavor';
 import TableYAML from './table-yaml';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -82,14 +82,14 @@ export default React.createClass({
         );
       });
     return (
-      <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}>
+      <StickyNav>
         <div className={pf('site-menu--jump-links')}>
           <h3 className="site-text-heading--label">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
           </ul>
         </div>
-      </Sticky>
+      </StickyNav>
     );
   },
 

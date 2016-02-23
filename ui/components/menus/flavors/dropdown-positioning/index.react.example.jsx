@@ -10,136 +10,136 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import Button from 'ui/components/buttons/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export const preview = (
-<div className={pf('demo-only')} style={{height: '400px'}}>
-  <div className={pf('grid grid--vertical grid--align-spread')} style={{height: '100%'}}>
-    <div className={pf('grid grid--align-spread p-horizontal--medium')}>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('dropdown--left nubbin--top-left')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('nubbin--top')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('dropdown--right nubbin--top-right')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-    </div>
-    <hr />
-    <div className={pf('grid grid--align-spread p-horizontal--medium')}>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('dropdown--bottom dropdown--left nubbin--bottom-left')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('dropdown--bottom nubbin--bottom')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-      <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-        <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-        <Menu className={pf('dropdown--bottom dropdown--right nubbin--bottom-right')}>
-          <Menu.List isSelectable={false}>
-            <Menu.Item>Menu Item One</Menu.Item>
-            <Menu.Item>Menu Item Two</Menu.Item>
-            <Menu.Item>Menu Item Three</Menu.Item>
-          </Menu.List>
-        </Menu>
-      </div>
-    </div>
-  </div>
-</div>
+const settingsIcon = (
+  <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
 );
 
-export const code = (
-<div className="demo-only">
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-  {/* Top Left */}
-  <Menu className={pf('dropdown--left nubbin--top-left')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let TopLeft = props =>
+  <div className={pf('demo-only')} style={{height: '185px', paddingLeft: '2rem'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('dropdown--left nubbin--top-left')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
-  {/* Top  */}
-  <Menu className={pf('nubbin--top')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let Top = props =>
+  <div className={pf('demo-only')} style={{height: '185px', textAlign: 'center'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('nubbin--top')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
-  {/* Top Right */}
-  <Menu className={pf('dropdown--right nubbin--top-right')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let TopRight = props =>
+  <div className={pf('demo-only')} style={{height: '185px', textAlign: 'right', paddingRight: '2rem'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('dropdown--right nubbin--top-right')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
-  {/* Bottom Left */}
-  <Menu className={pf('dropdown--left nubbin--bottom-left')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let BottomLeft = props =>
+  <div className={pf('demo-only grid grid--vertical-align-end')}  style={{height: '185px', paddingLeft: '2rem'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('dropdown--bottom dropdown--left nubbin--bottom-left')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
-  {/* Bottom  */}
-  <Menu className={pf('nubbin--top')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let Bottom = props =>
+  <div className={pf('demo-only grid grid--vertical-align-end grid--align-center')} style={{height: '185px'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('dropdown--bottom nubbin--bottom')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
-  {/* Bottom Right */}
-  <Menu className={pf('dropdown--right nubbin--bottom-right')}>
-    <Menu.List isSelectable={false}>
-      <Menu.Item>Menu Item One</Menu.Item>
-      <Menu.Item>Menu Item Two</Menu.Item>
-    </Menu.List>
-  </Menu>
+let BottomRight = props =>
+  <div className={pf('demo-only grid grid--vertical-align-end grid--align-end')} style={{height: '185px', paddingRight: '2rem'}}>
+    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
+      <Menu className={pf('dropdown--bottom dropdown--right nubbin--bottom-right')}>
+        <MenuList>
+          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </div>;
 
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-</div>
-);
+export let states = [
+  {
+    id: 'dropdown-menu-nubbin-top-left',
+    label: 'Top Left',
+    element: <TopLeft />
+  },
+  {
+    id: 'dropdown-menu-nubbin-top',
+    label: 'Top',
+    element: <Top />
+  },
+  {
+    id: 'dropdown-menu-nubbin-top-right',
+    label: 'Top Right',
+    element: <TopRight />
+  },
+  {
+    id: 'dropdown-menu-nubbin-bottom-left',
+    label: 'Bottom Left',
+    element: <BottomLeft />
+  },
+  {
+    id: 'dropdown-menu-nubbin-bottom',
+    label: 'Bottom',
+    element: <Bottom />
+  },
+  {
+    id: 'dropdown-menu-nubbin-bottom-right',
+    label: 'Bottom Right',
+    element: <BottomRight />
+  }
+];

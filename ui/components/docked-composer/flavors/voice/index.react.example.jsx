@@ -481,5 +481,4 @@ export let states = [
     label: 'Log a Call',
     element: <StateJ />
   }
-
 ];

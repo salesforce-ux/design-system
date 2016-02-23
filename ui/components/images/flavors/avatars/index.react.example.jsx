@@ -11,46 +11,150 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Img from 'app_modules/ui/img';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const avatar = (
-  <Img src="/assets/images/company1.jpg" alt="company name" />
-);
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-const avatar2 = (
-  <Img src="/assets/images/avatar2.jpg" alt="person name" />
-);
+let Demo = props =>
+  <div className={pf('demo-only')} {...props}>
+    {props.children}
+  </div>;
 
-export const preview = (
-  <div className="demo-only">
-    <span className={pf('avatar avatar--empty avatar--x-small m-right--x-small')}></span>
-    <span className={pf('avatar avatar--empty avatar--small m-right--x-small')}></span>
-    <span className={pf('avatar avatar--empty avatar--medium m-right--x-small')}></span>
-    <span className={pf('avatar avatar--empty avatar--large m-right--x-small')}></span>
-    <span className={pf('avatar avatar--x-small m-right--x-small')}>{avatar}</span>
-    <span className={pf('avatar avatar--small m-right--x-small')}>{avatar}</span>
-    <span className={pf('avatar avatar--medium m-right--x-small')}>{avatar}</span>
-    <span className={pf('avatar avatar--large m-right--x-small')}>{avatar}</span>
-    <span className={pf('avatar avatar--circle avatar--x-small m-right--x-small')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--small m-right--x-small')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--medium m-right--x-small')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--large m-right--x-small')}>{avatar2}</span>
-  </div>
-);
+let Avatar = props =>
+  <span className={className(pf('avatar'), props.className)}>
+    <Img src="/assets/images/avatar2.jpg" alt="person name" />
+  </span>;
 
-export const code = (
-  <div className="demo-only">
-    <span className={pf('avatar avatar--empty avatar--x-small')}></span>
-    <span className={pf('avatar avatar--empty avatar--small')}></span>
-    <span className={pf('avatar avatar--empty avatar--medium')}></span>
-    <span className={pf('avatar avatar--empty avatar--large')}></span>
-    <span className={pf('avatar avatar--x-small')}>{avatar}</span>
-    <span className={pf('avatar avatar--small')}>{avatar}</span>
-    <span className={pf('avatar avatar--medium')}>{avatar}</span>
-    <span className={pf('avatar avatar--large')}>{avatar}</span>
-    <span className={pf('avatar avatar--circle avatar--x-small')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--small')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--medium')}>{avatar2}</span>
-    <span className={pf('avatar avatar--circle avatar--large')}>{avatar2}</span>
-  </div>
-);
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let XSmall = props =>
+  <Demo>
+    <Avatar className={pf('avatar--x-small')} />
+  </Demo>;
+
+let Small = props =>
+  <Demo>
+    <Avatar className={pf('avatar--small')} />
+  </Demo>;
+
+let Medium = props =>
+  <Demo>
+    <Avatar className={pf('avatar--medium')} />
+  </Demo>;
+
+let Large = props =>
+  <Demo>
+    <Avatar className={pf('avatar--large')} />
+  </Demo>;
+
+let XSmallCircle = props =>
+  <Demo>
+    <Avatar className={pf('avatar--x-small avatar--circle')} />
+  </Demo>;
+
+let SmallCircle = props =>
+  <Demo>
+    <Avatar className={pf('avatar--small avatar--circle')} />
+  </Demo>;
+
+let MediumCircle = props =>
+  <Demo>
+    <Avatar className={pf('avatar--medium avatar--circle')} />
+  </Demo>;
+
+let LargeCircle = props =>
+  <Demo>
+    <Avatar className={pf('avatar--large avatar--circle')} />
+  </Demo>;
+
+let EmptyXSmall = props =>
+  <Demo>
+    <div className={pf('avatar avatar--empty avatar--x-small')} />
+  </Demo>;
+
+let EmptySmall = props =>
+  <Demo>
+    <div className={pf('avatar avatar--empty avatar--small')} />
+  </Demo>;
+
+let EmptyMedium = props =>
+  <Demo>
+    <div className={pf('avatar avatar--empty avatar--medium')} />
+  </Demo>;
+
+let EmptyLarge = props =>
+  <Demo>
+    <div className={pf('avatar avatar--empty avatar--large')} />
+  </Demo>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'avatar-default-x-small',
+    label: 'Default - X Small',
+    element: <XSmall />
+  },
+  {
+    id: 'avatar-default-small',
+    label: 'Default - Small',
+    element: <Small />
+  },
+  {
+    id: 'avatar-default-medium',
+    label: 'Default - Medium',
+    element: <Medium />
+  },
+  {
+    id: 'avatar-default-large',
+    label: 'Default - Large',
+    element: <Large />
+  },
+  {
+    id: 'avatar-circle-x-small',
+    label: 'Circle - X Small',
+    element: <XSmallCircle />
+  },
+  {
+    id: 'avatar-circle-small',
+    label: 'Circle - Small',
+    element: <SmallCircle />
+  },
+  {
+    id: 'avatar-circle-medium',
+    label: 'Circle - Medium',
+    element: <MediumCircle />
+  },
+  {
+    id: 'avatar-circle-large',
+    label: 'Circle - Large',
+    element: <LargeCircle />
+  },
+  {
+    id: 'avatar-empty-x-small',
+    label: 'Empty - X Small',
+    element: <EmptyXSmall />
+  },
+  {
+    id: 'avatar-empty-small',
+    label: 'Empty - Small',
+    element: <EmptySmall />
+  },
+  {
+    id: 'avatar-empty-medium',
+    label: 'Empty - Medium',
+    element: <EmptyMedium />
+  },
+  {
+    id: 'avatar-empty-large',
+    label: 'Empty - Large',
+    element: <EmptyLarge />
+  }
+];

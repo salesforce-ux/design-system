@@ -10,28 +10,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import ReactDOM from 'react-dom';
+import Sticky from './';
+
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+import forceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
-export default (
-<div className={pf('demo-only p-horizontal--medium')} style={{height: '320px'}}>
-  <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-    <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
-    <Menu className={pf('dropdown--left dropdown--nubbin-top')}>
-      <Menu.Header>
-        <Menu.Title>List View Controls</Menu.Title>
-      </Menu.Header>
-      <Menu.List isSelectable={false}>
-        <Menu.Item disabled={true}>Rename...</Menu.Item>
-        <Menu.Item disabled={true}>Share...</Menu.Item>
-        <Menu.Item disabled={true}>Delete</Menu.Item>
-        <Menu.Item disabled={true}>Save</Menu.Item>
-        <Menu.Item>Save As...</Menu.Item>
-        <Menu.Item>Discard Changes to List</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </div>
-</div>
-);
+export default props =>
+  <Sticky
+    className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}
+    fixedElementsBelow="footer.site-contentinfo"
+    fixedContentPadding={{
+      top: forceBase.spacingLarge,
+      bottom: forceBase.spacingMedium
+    }}
+    pinBottom={true}
+    {...props} />;

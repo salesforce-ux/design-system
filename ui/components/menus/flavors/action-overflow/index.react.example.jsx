@@ -10,22 +10,35 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+const moreIcon = (
+  <ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="hint,small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+);
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
 export default (
 <div className={pf('demo-only')} style={{height: '165px'}}>
-  <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+  <Trigger className={pf('is-open')} triggerIcon={moreIcon}>
     <Menu className={pf('dropdown--left dropdown--actions')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item>Action One</Menu.Item>
-        <Menu.Item>Action Two</Menu.Item>
-        <Menu.Item>Action Three</Menu.Item>
-      </Menu.List>
+      <MenuList>
+        <MenuItem>Action One</MenuItem>
+        <MenuItem>Action Two</MenuItem>
+        <MenuItem>Action Three</MenuItem>
+      </MenuList>
     </Menu>
-  </div>
+  </Trigger>
 </div>
 );

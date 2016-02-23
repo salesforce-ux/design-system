@@ -12,9 +12,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-<div className={pf('popover nubbin--left')} role="dialog">
+
+let Popover = props =>
+<div className={pf(`popover nubbin--left theme--${props.theme}`)} role="dialog">
   <div className={pf('popover__body')}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
   </div>
-</div>);
+</div>;
+
+export let states = [
+  {
+    id: 'info',
+    label: 'Info',
+    element: <Popover theme="info" />
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Popover theme="error" />
+  },
+  {
+    id: 'warning',
+    label: 'Warning',
+    element: <Popover theme="warning" />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Popover theme="success" />
+  }
+];

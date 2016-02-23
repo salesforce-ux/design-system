@@ -22,6 +22,7 @@
   &--fixed {
     position: fixed;
     top: 0;
+    right: 0;
     z-index: $z-index-dropdown;
   }
 }
@@ -77,10 +78,9 @@
   }
 
   .site-menu--jump-links {
-    padding: {
-      top: $spacing-medium;
-      left: $spacing-large;
-    }
+    padding-left: $spacing-large;
+    overflow-x: hidden;
+    z-index: $z-index-default;
 
     a {
       cursor: pointer;

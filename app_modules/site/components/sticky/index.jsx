@@ -15,7 +15,20 @@ import classNames from 'classnames';
 
 export default React.createClass({
   propTypes: {
-    fixedElements: React.PropTypes.string
+    fixedElementsAbove: React.PropTypes.string,
+    fixedElementsBelow: React.PropTypes.string,
+    fixedContentPadding: React.PropTypes.shape({
+      top: React.PropTypes.string,
+      right: React.PropTypes.string,
+      bottom: React.PropTypes.string,
+      left: React.PropTypes.string
+    }),
+    pinBottom: React.PropTypes.bool
+  },
+  getDefaultProps() {
+    return {
+      pinBottom: false
+    };
   },
   render() {
     const content = React.Children.only(this.props.children);
@@ -27,7 +40,12 @@ export default React.createClass({
         {React.cloneElement(content, {
           contentClassName,
           'data-slds-sticky-content': true,
-          'data-slds-sticky-fixed-elements': this.props.fixedElements
+          'data-slds-sticky-fixed-elements-above': this.props.fixedElementsAbove,
+          'data-slds-sticky-fixed-elements-below': this.props.fixedElementsBelow,
+          'data-slds-sticky-fixed-content-padding': JSON.stringify(
+            Object.assign({}, this.props.fixedContentPadding)
+          ),
+          'data-slds-sticky-pin-bottom': this.props.pinBottom ? true : null
         })}
         <div
           className={'sticky__placeholder'}

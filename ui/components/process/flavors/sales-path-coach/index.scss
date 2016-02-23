@@ -17,7 +17,7 @@
   }
 
   .#{$css-prefix}is-complete {
-    background-color: $color-background-success; // @TODO: need to change token name
+    background-color: $color-background-path-complete;
 
     .#{$css-prefix}tabs--path__stage {
       transform: rotateX(0deg);
@@ -28,7 +28,7 @@
     }
 
     &:hover {
-      background-color: $color-background-toast-success; // @TODO: need to change token name
+      background-color: $color-background-path-complete-hover;
 
       .#{$css-prefix}tabs--path__stage {
         transform: rotateX(-180deg);
@@ -41,23 +41,27 @@
   }
 
   .#{$css-prefix}is-current {
-    background-color: #0076de; // @TODO: Need a token for this
+    background-color: $color-background-path-current;
 
     &:hover {
-      background-color: rgb(0, 95, 178); // @TODO: Need a token for this blue
+      background-color: $color-background-path-current-hover;
     }
 
     + .#{$css-prefix}is-incomplete:before {
-      background-color: #0076de; // @TODO: Need a token for this
+      background-color: $color-background-path-current;
     }
 
     &:hover + .#{$css-prefix}is-incomplete:before {
-      background-color: rgb(0, 95, 178); // @TODO: Need a token for this
+      background-color: $color-background-path-current-hover;
     }
   }
 
   .#{$css-prefix}is-incomplete {
-    background-color: $color-background-shade;
+    background-color: $color-background-path-incomplete;
+
+    &:hover {
+      background-color: $color-background-path-incomplete-hover;
+    }
 
     .#{$css-prefix}tabs--path__link {
       color: $color-text-default;
@@ -66,7 +70,7 @@
   // This class must be added to the "closed" stage with JS when the Sales Path is over by losing the opportunity
   .#{$css-prefix}is-lost,
   .#{$css-prefix}is-lost:hover {
-    background-color: $color-background-notification-badge; // @TODO: Change token name
+    background-color: $color-background-path-lost;
   }
 
   .#{$css-prefix}is-current,
@@ -116,7 +120,6 @@
   position: relative;
   flex: 1 1 0%;
   min-width: 5rem;
-  max-height: $sales-path;
   text-align: center;
   perspective: 500;
   transition:
@@ -132,19 +135,15 @@
     border-right: 0;
   }
 
-  &:hover {
-    background-color: rgb(216, 221, 230); //@TODO - no matching token
-  }
-
   &:before {
     content: '';
     display: block;
     position: absolute;
-    left: (($sales-path / 2) * -1);
     top: $border-width-thick;
-    width: calc(#{$sales-path} - (#{$border-width-thick} * 2));
-    height: calc(#{$sales-path} - (#{$border-width-thick} * 2));
-    border: $border-width-thick solid #fff; // needs token?
+    left: (($height-sales-path / 2) * -1);
+    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    border: $border-width-thick solid $color-border-path-divider;
     border-left: 0;
     border-bottom: 0;
     background-clip: padding-box;
@@ -159,22 +158,22 @@
   // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
   + .#{$css-prefix}is-complete:before,
   + .#{$css-prefix}is-current:before {
-    background-color: $color-background-success; //@TODO: this token should be updated/aliased
+    background-color: $color-background-path-complete;
   }
 
   &:hover + .#{$css-prefix}is-complete:before,
   &:hover + .#{$css-prefix}is-current:before {
-    background-color: $color-background-toast-success; //@TODO: this token should be updated/aliased
+    background-color: $color-background-path-complete-hover;
   }
 
   + .#{$css-prefix}is-incomplete:before,
   + .#{$css-prefix}is-lost:before {
-    background-color: $color-background-shade;
+    background-color: $color-background-path-incomplete;
   }
 
   &:hover + .#{$css-prefix}is-incomplete:before,
   &:hover + .#{$css-prefix}is-lost:before {
-    background-color: rgb(216, 221, 230); //@TODO - no matching token
+    background-color: $color-background-path-incomplete-hover;
   }
 }
 
@@ -202,8 +201,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 1.25rem; // @TODO: tokenize this - or special snowflake
-  line-height: $line-height-tab / 2;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
+  line-height: $line-height-salespath;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
 
@@ -244,8 +243,13 @@
 }
 
 .#{$css-prefix}path__mark-current {
-  border-color: $color-background-inverse; // @TODO: need to make a new token
-  background-color: $color-border-inverse;
+  border-color: $color-border-inverse;
+  background-color: $color-background-inverse;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-alt-inverse;
+  }
 }
 
 .#{$css-prefix}tabs--path__content {
@@ -268,7 +272,7 @@
 .#{$css-prefix}coach__guidance {
   padding-left: $spacing-large;
   padding-bottom: $spacing-medium;
-  background-color: #fafafb; // @TODO: No token or alias for this
+  background-color: $color-background-guidance;
 }
 
 .#{$css-prefix}coach__item {

@@ -10,40 +10,44 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
 export default (
-<div className={pf('demo-only')} style={{height: '250px'}}>
-  <div className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-    <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+<div className={pf('demo-only')} style={{height: '260px'}}>
+  <Trigger className={pf('is-open')}>
     <Menu className={pf('dropdown--left text-heading--label')}>
-      <Menu.List isSelectable={false}>
-        <Menu.Item>
+      <MenuList>
+        <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
           Accounts
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
           Approvals
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
           Lead
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
           Opportunities
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
           Products
-        </Menu.Item>
-      </Menu.List>
+        </MenuItem>
+      </MenuList>
     </Menu>
-  </div>
+  </Trigger>
 </div>
 );

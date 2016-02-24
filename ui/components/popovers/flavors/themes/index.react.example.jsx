@@ -17,14 +17,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let Popover = props =>
-<div className={pf(`popover nubbin--${props.nubbinPosition}`)} role="dialog">
+<div className={pf(`popover nubbin--left theme--${props.theme}`)} role="dialog">
   <div className={pf('popover__body')}>
-    <code>
-      {pf('popover')}
-      <br />
-      {pf(`nubbin--${props.nubbinPosition}`)}
-    </code>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
   </div>
 </div>;
 
@@ -34,63 +29,23 @@ let Popover = props =>
 
 export let states = [
   {
-    id: 'left',
-    label: 'Left',
-    element: <Popover nubbinPosition="left" />
+    id: 'info',
+    label: 'Info',
+    element: <Popover theme="info" />
   },
   {
-    id: 'left-top',
-    label: 'Left (top)',
-    element: <Popover nubbinPosition="left-top" />
+    id: 'error',
+    label: 'Error',
+    element: <Popover theme="error" />
   },
   {
-    id: 'left-bottom',
-    label: 'Left (bottom)',
-    element: <Popover nubbinPosition="left-bottom" />
+    id: 'warning',
+    label: 'Warning',
+    element: <Popover theme="warning" />
   },
   {
-    id: 'top',
-    label: 'Top',
-    element: <Popover nubbinPosition="top" />
-  },
-  {
-    id: 'top-left',
-    label: 'Top (left)',
-    element: <Popover nubbinPosition="top-left" />
-  },
-  {
-    id: 'top-right',
-    label: 'Top (right)',
-    element: <Popover nubbinPosition="top-right" />
-  },
-  {
-    id: 'right',
-    label: 'Right',
-    element: <Popover nubbinPosition="right" />
-  },
-  {
-    id: 'right-top',
-    label: 'Right (top)',
-    element: <Popover nubbinPosition="right-top" />
-  },
-  {
-    id: 'right-bottom',
-    label: 'Right (bottom)',
-    element: <Popover nubbinPosition="right-bottom" />
-  },
-  {
-    id: 'bottom',
-    label: 'Bottom',
-    element: <Popover nubbinPosition="bottom" />
-  },
-  {
-    id: 'bottom-left',
-    label: 'Bottom (left)',
-    element: <Popover nubbinPosition="bottom-left" />
-  },
-  {
-    id: 'bottom-right',
-    label: 'Bottom (right)',
-    element: <Popover nubbinPosition="bottom-right" />
+    id: 'success',
+    label: 'Success',
+    element: <Popover theme="success" />
   }
 ];

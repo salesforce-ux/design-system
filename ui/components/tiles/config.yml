@@ -1,12 +1,5 @@
-status: 'prototype'
-classBase: 'tile'
+status: 'dev-ready'
 flavors:
   - base
-  - with-icon
-  - with-actions
-  - with-badge
   - list
   - board
-  - generic
-  - task
-  - author

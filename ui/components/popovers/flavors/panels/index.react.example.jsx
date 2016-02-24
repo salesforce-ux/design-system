@@ -44,7 +44,7 @@ export default (
 
     <div className={pf('popover__header')}>
 
-      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--medium')}>
+      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
         <a href="#void" className={pf('text-heading--medium')}>Tesla Motors</a>
       </MediaObject>
 

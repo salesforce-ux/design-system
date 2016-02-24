@@ -29,6 +29,7 @@
 - Deprecated `.slds-card--empty`. Center elements inside empty cards instead, using `.slds-text-align--center`. Full markup in the [card component page](/components/cards/#empty).
 - Remove deprecated classes from component examples, applied correct classes
 - Deprecated `.slds-section-title`. Use `.slds-section__title` instead. See [section title page](/components/utilities/text/#section-title) for full details
+- Deprecated `.slds-button--icon-bare`. Use `.slds-button--icon` instead. See [button icon page](/components/buttons/#icon)
 
 ## Release 1.1.0 - December 16, 2015
 

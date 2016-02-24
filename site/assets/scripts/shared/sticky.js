@@ -45,7 +45,8 @@ class Sticky {
       isFixed: false,
       origin: {},
       size: {},
-      contentPaddingFixed: {}
+      contentPaddingFixed: {},
+      contentPaddingFixedDeafult: this.convertPadding(this.props.fixedContentPadding)
     };
     this.scheduledLayouts = [];
     this.calculate(true);
@@ -110,54 +111,48 @@ class Sticky {
   }
 
   calculate(first) {
-    fastdom.mutate(() => {
-      if (first) {
+    fastdom.measure(() => {
+      // Calculate the extra offset added by any other fixed elements above this one
+      const fixedElementsAbove = this.props.fixedElementsAbove
+        ? $(this.props.fixedElementsAbove) : [];
+      const fixedOffsetAbove = fixedElementsAbove.reduce((offset, el) =>
+        offset + el.getBoundingClientRect().height
+      , 0);
+      // Calculate the extra offset added by any other fixed elements below this one
+      const fixedElementsBelow = this.props.fixedElementsBelow
+        ? $(this.props.fixedElementsBelow) : [];
+      const fixedOffsetBelow = fixedElementsBelow.reduce((offset, el) =>
+        offset + el.getBoundingClientRect().height
+      , 0);
+      // Content
+      const content = this.refs.content;
+      const contentRect = content.getBoundingClientRect();
+      const contentPadding = this.getPadding(content, PADDING_IDENTITY());
+      const contentPaddingFixed = Object.assign({}, PADDING_IDENTITY(), this.state.contentPaddingFixed);
+      // If there are fixed elements below, add that offset to the padding
+      if (fixedOffsetBelow) {
         this.setState({
-          contentPaddingFixed: this.convertPadding(this.props.fixedContentPadding)
+          contentPaddingFixed: Object.assign({}, this.state.contentPaddingFixedDeafult, {
+            bottom: fixedOffsetBelow +
+              (this.state.contentPaddingFixedDeafult.bottom? this.state.contentPaddingFixedDeafult.bottom : 0)
+          })
         });
       }
-      fastdom.measure(() => {
-        // Calculate the extra offset added by any other fixed elements above this one
-        const fixedElementsAbove = this.props.fixedElementsAbove
-          ? $(this.props.fixedElementsAbove) : [];
-        const fixedOffsetAbove = fixedElementsAbove.reduce((offset, el) =>
-          offset + el.getBoundingClientRect().height
-        , 0);
-        // Calculate the extra offset added by any other fixed elements below this one
-        const fixedElementsBelow = this.props.fixedElementsBelow
-          ? $(this.props.fixedElementsBelow) : [];
-        const fixedOffsetBelow = fixedElementsBelow.reduce((offset, el) =>
-          offset + el.getBoundingClientRect().height
-        , 0);
-        // Content
-        const content = this.refs.content;
-        const contentRect = content.getBoundingClientRect();
-        const contentPadding = this.getPadding(content, PADDING_IDENTITY());
-        const contentPaddingFixed = Object.assign({}, PADDING_IDENTITY(), this.state.contentPaddingFixed);
-        // If there are fixed elements below, add that offset to the padding
-        if (fixedOffsetBelow) {
-          this.setState({
-            contentPaddingFixed: Object.assign({}, this.state.contentPaddingFixed, {
-              bottom: fixedOffsetBelow + (this.state.contentPaddingFixed.bottom ? this.state.contentPaddingFixed.bottom : 0)
-            })
-          });
-        }
-        this.setState({
-          origin: {
-            top: contentPadding.top + fixedOffsetAbove,
-            left: this.node.getBoundingClientRect().left
-          },
-          size: {
-            width: contentRect.width + contentPadding.left + contentPadding.right,
-            height: contentRect.height + contentPadding.top
-          }
-        });
-        if (first) {
-          this.setState({
-            scrollOffset: contentRect.top - fixedOffsetAbove - contentPadding.top - contentPaddingFixed.top + window.pageYOffset
-          });
+      this.setState({
+        origin: {
+          top: contentPadding.top + fixedOffsetAbove,
+          left: this.node.getBoundingClientRect().left
+        },
+        size: {
+          width: contentRect.width + contentPadding.left + contentPadding.right,
+          height: contentRect.height + contentPadding.top
         }
       });
+      if (first) {
+        this.setState({
+          scrollOffset: contentRect.top - fixedOffsetAbove - contentPadding.top - contentPaddingFixed.top + window.pageYOffset
+        });
+      }
     });
   }
 

@@ -10,15 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-
 export default (
-  <div className={pf('popover nubbin--left')} role="dialog">
-    <div className={pf('popover__body')}>
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-    </div>
+<div className={pf('popover nubbin--left')} role="dialog">
+  <div className={pf('popover__body')}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
   </div>
-);
+</div>);

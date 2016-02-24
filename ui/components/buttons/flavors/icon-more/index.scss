@@ -10,6 +10,7 @@
 
 
 .#{$css-prefix}button--icon-more {
+  line-height: $line-height-button;
   padding: 0 $spacing-x-small;
   vertical-align: middle;
   border: $border-width-thin solid $color-border-button-default;

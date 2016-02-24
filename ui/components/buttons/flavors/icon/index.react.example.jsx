@@ -24,7 +24,7 @@ let Demo = props =>
   </div>;
 
 let Button = props =>
-  <button className={className(pf('button button--icon'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
     {props.children}
     <span className={pf('assistive-text')}>{props.assistiveText}</span>
   </button>;
@@ -35,14 +35,14 @@ let Button = props =>
 
 let Default = props =>
   <Demo>
-    <Button assistiveText="Settings">
+    <Button className={pf('button--icon')} assistiveText="Settings">
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
     </Button>
   </Demo>;
 
 let Disabled = props =>
   <Demo>
-    <Button assistiveText="Settings" disabled>
+    <Button className={pf('button--icon')} assistiveText="Settings" disabled>
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
     </Button>
   </Demo>;
@@ -84,28 +84,28 @@ let ContainerBorderXSmall = props =>
 
 let IconXSmall = props =>
   <Demo>
-    <Button assistiveText="More Options">
+    <Button className={pf('button--icon')} assistiveText="More Options">
       <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
     </Button>
   </Demo>;
 
 let IconSmall = props =>
   <Demo>
-    <Button assistiveText="More Options">
+    <Button className={pf('button--icon')} assistiveText="More Options">
       <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
     </Button>
   </Demo>;
 
 let IconDefault = props =>
   <Demo>
-    <Button assistiveText="Close">
+    <Button className={pf('button--icon')} assistiveText="Close">
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="close" />
     </Button>
   </Demo>;
 
 let IconLarge = props =>
   <Demo>
-    <Button assistiveText="Close">
+    <Button className={pf('button--icon')} assistiveText="Close">
       <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="close" />
     </Button>
   </Demo>;

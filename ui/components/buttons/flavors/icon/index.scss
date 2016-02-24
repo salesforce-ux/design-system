@@ -12,7 +12,6 @@
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled,
-.#{$css-prefix}button--icon-bare,
 .#{$css-prefix}button--icon-more {
   line-height: $line-height-reset;
   vertical-align: middle;
@@ -22,6 +21,8 @@
 @include deprecate('3.0.0', 'Use .slds-button--icon instead') {
   .#{$css-prefix}button--icon-bare {
     line-height: $line-height-reset;
+    vertical-align: middle;
+    color: $color-text-icon-default;
   }
 }
 

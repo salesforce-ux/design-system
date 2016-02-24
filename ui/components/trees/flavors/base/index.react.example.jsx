@@ -26,6 +26,7 @@ export default (
 
       <li id="tree0-node0" role="treeitem" aria-level="1">
         <div className={pf('tree__item')}>
+          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
         </div>
       </li>
@@ -41,6 +42,7 @@ export default (
 
           <li id="tree0-node1-0" role="treeitem" aria-level="2">
             <div className={pf('tree__item')}>
+              <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
               <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
             </div>
           </li>
@@ -56,12 +58,14 @@ export default (
 
               <li id="tree0-node1-1-0" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                 </div>
               </li>
 
               <li id="tree0-node1-1-1" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                   <span className={pf('pill shrink-none align-middle m-left--small')}>
                     <span className={pf('pill__label')}>Label</span>
@@ -80,12 +84,14 @@ export default (
 
                   <li id="tree0-node1-1-2-0" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                     </div>
                   </li>
 
                   <li id="tree0-node1-1-2-1" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                       <span className={pf('pill shrink-none align-middle m-left--small')}>
                         <span className={pf('pill__label')}>Label</span>
@@ -95,6 +101,7 @@ export default (
 
                   <li id="tree0-node1-1-2-2" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                     </div>
                   </li>
@@ -113,12 +120,14 @@ export default (
 
                   <li id="tree0-node1-1-3-1" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                     </div>
                   </li>
 
                   <li id="tree0-node1-1-3-2" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                       <span className={pf('pill shrink-none align-middle m-left--small')}>
                         <span className={pf('pill__label')}>Label</span>
@@ -128,6 +137,7 @@ export default (
 
                   <li id="tree0-node1-1-3-3" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                     </div>
                   </li>
@@ -143,12 +153,14 @@ export default (
 
                       <li id="tree0-node1-1-3-4-1" role="treeitem" aria-level="5">
                         <div className={pf('tree__item')}>
+                          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                         </div>
                       </li>
 
                       <li id="tree0-node1-1-3-4-2" role="treeitem" aria-level="5">
                         <div className={pf('tree__item')}>
+                          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                           <span className={pf('pill shrink-none align-middle m-left--small')}>
                             <span className={pf('pill__label')}>Label</span>
@@ -158,6 +170,7 @@ export default (
 
                       <li id="tree0-node1-1-3-4-3" role="treeitem" aria-level="5">
                         <div className={pf('tree__item')}>
+                          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                         </div>
                       </li>
@@ -167,6 +180,7 @@ export default (
 
                   <li id="tree0-node1-1-3-5" role="treeitem" aria-level="4">
                     <div className={pf('tree__item')}>
+                      <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                       <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                     </div>
                   </li>
@@ -175,6 +189,7 @@ export default (
 
               <li id="tree0-node1-1-4" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                 </div>
               </li>
@@ -184,12 +199,14 @@ export default (
 
           <li id="tree0-node1-2" role="treeitem" aria-level="2">
             <div className={pf('tree__item')}>
+              <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
               <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
             </div>
           </li>
 
           <li id="tree0-node1-3" role="treeitem" aria-level="2">
             <div className={pf('tree__item')}>
+              <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
               <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
             </div>
           </li>
@@ -205,12 +222,14 @@ export default (
 
               <li id="tree0-node1-4-1" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                 </div>
               </li>
 
               <li id="tree0-node1-4-2" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                   <span className={pf('pill shrink-none align-middle m-left--small')}>
                     <span className={pf('pill__label')}>Label</span>
@@ -220,6 +239,7 @@ export default (
 
               <li id="tree0-node1-4-3" role="treeitem" aria-level="3">
                 <div className={pf('tree__item')}>
+                  <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
                   <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
                 </div>
               </li>
@@ -231,12 +251,14 @@ export default (
 
       <li id="tree0-node2" role="treeitem" aria-level="1">
         <div className={pf('tree__item')}>
+          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
         </div>
       </li>
 
       <li id="tree0-node3" role="treeitem" aria-level="1">
         <div className={pf('tree__item')}>
+          <ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
           <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
         </div>
       </li>

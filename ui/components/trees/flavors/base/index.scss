@@ -78,5 +78,8 @@
   .#{$css-prefix}pill {
     margin-left: $spacing-small;
   }
+}
 
+.#{$css-prefix}tree__button--disabled {
+  visibility: hidden;
 }

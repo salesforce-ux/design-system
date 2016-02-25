@@ -15,7 +15,7 @@ script:
   - npm run test
 after_success:
   - export SHA=`git rev-parse --short HEAD`
-  - if $TRAVIS_PULL_REQUEST ; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi
+  - if [ -n $TRAVIS_PULL_REQUEST ] ; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi
 cache:
   directories:
     - node_modules

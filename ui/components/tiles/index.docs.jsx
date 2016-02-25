@@ -25,6 +25,5 @@ export default (
   <ComponentDocs>
     <p>Tiles can have different groupings of information based on its context. Pay close attention to the markup, as each tile layout is constructed differently.</p>
     <p>To initialize the base tile, apply the <CodeClass className="tile"/> class to a containing <code>&lt;div&gt;</code>that contains a tile title (<CodeClass className="tile__title"/>). Include other optional elements, such as images, icons, action overflows, and description lists, within the containing <code>&lt;div&gt;</code>.</p>
-    <p>For available classes and options, see the <a href="#overview">tile overview legend</a> below.</p>
   </ComponentDocs>
 );

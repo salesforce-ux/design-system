@@ -24,11 +24,18 @@
   }
 }
 
+// Icon modifier for stateful buttons
 .#{$css-prefix}button__icon--stateful {
   @include square($square-icon-small-content);
   fill: currentColor;
 }
 
+// Inverse Button
+.#{$css-prefix}button--inverse.#{$css-prefix}is-selected {
+  border-color: transparent;
+}
+
+// These styles show/hide text based on interaction
 .#{$css-prefix}text-not-selected,
 .#{$css-prefix}text-selected,
 .#{$css-prefix}text-selected-focus,

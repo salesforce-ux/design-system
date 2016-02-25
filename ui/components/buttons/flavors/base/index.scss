@@ -88,3 +88,121 @@ a.#{$css-prefix}button {
     @include focus-button;
   }
 }
+
+// Deal with button spacing
+.#{$css-prefix}button__icon--left {
+  margin-right: $spacing-x-small;
+}
+
+.#{$css-prefix}button__icon--right {
+  margin-left: $spacing-x-small;
+}
+
+.#{$css-prefix}button--small {
+  line-height: $line-height-button-small;
+  /**
+   * Note: Force icon-only buttons to be the same
+   * height as small buttons since they're SVG
+   * and line-height has no effect on them
+   */
+  min-height: $square-icon-medium-boundary;
+}
+
+// Neutral Button
+.#{$css-prefix}button--neutral {
+  @include button;
+  @include button-base;
+  background-color: $color-background-button-default;
+
+  &[disabled] {
+    background-color: $color-background-button-default-disabled;
+    cursor: default;
+  }
+}
+
+.#{$css-prefix}button--hint {
+  color: $color-text-button-default-hint;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+}
+
+/**
+ * Note: A parent class must be put on anything that contains
+ * a .#{$css-prefix}button--hint so that the child reacts
+ * when the parent is hovered.
+ */
+.#{$css-prefix}hint-parent {
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button--hint {
+      color: $color-text-button-default;
+    }
+  }
+}
+
+// Brand Buttons
+.#{$css-prefix}button--brand {
+  @include button;
+  @include button-brand;
+
+  &[disabled] {
+    background: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+// Inverse Buttons
+.#{$css-prefix}button--inverse {
+  @include button;
+  @include button-base;
+  background-color: $color-background-button-inverse;
+
+  &[disabled] {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+    color: $color-text-button-inverse-disabled;
+  }
+}
+
+.#{$css-prefix}button--inverse,
+.#{$css-prefix}button-group .#{$css-prefix}button--icon-inverse {
+
+  &,
+  &:link,
+  &:visited {
+    color: $color-text-button-inverse;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+
+  &:focus {
+    @include focus-inverse;
+  }
+}
+
+a.#{$css-prefix}button--inverse:focus {
+  @include focus-inverse;
+}
+
+// Destructive Button
+.#{$css-prefix}button--destructive {
+  @include button;
+  @include button-destructive;
+
+  &[disabled] {
+    background: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}

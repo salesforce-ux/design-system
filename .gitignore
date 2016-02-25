@@ -12,3 +12,4 @@
 /site/assets/downloads/design-tokens
 *.log
 .sldsconfig
+/.npmrc

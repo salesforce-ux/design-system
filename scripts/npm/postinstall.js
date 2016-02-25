@@ -33,13 +33,16 @@ const exec = (command, cwd = '') => {
 
 /**
  * Send npm ready zip to npm/bower app to publish
+ * @param {string} url
+ * @param {string|path} folder
+ * @returns void
  */
-const publishToNpmAndBower = () => {
-  const distPath = path.resolve.bind(path, __PATHS__.npm);
+const publish = (url, folder) => {
+  const distPath = path.resolve.bind(path, folder);
   const distFilePath = distPath(globals.zipName(process.env.SLDS_VERSION));
 
   request
-    .post(process.env.PUBLISH_HOST)
+    .post(path.join(process.env.PUBLISH_HOST, url))
     .attach('dist', distFilePath)
     .end(function(err, res){
       if(err) throw err;
@@ -100,8 +103,9 @@ if (process.env.HEROKU_APP_NAME) {
   // Design System Tasks
   exec('npm run build-prod');
   exec('npm run dist');
-  exec('npm run dist-npm');
-  publishToNpmAndBower();
+  exec('npm run dist --npm');
+  publish('npm', __PATHS__.npm)
+  publish('bower', __PATHS__.dist)
 } else {
   // Verify & install ruby dependencies using our script
   exec('npm run install-ruby-dependencies');

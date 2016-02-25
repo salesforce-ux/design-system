@@ -10,18 +10,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export default (
-  <div className={pf('demo-only x-small-buttons--horizontal')}>
-    <Button flavor="brand">
-      Button Brand
-    </Button>
-    <a href="#void" className={pf('button button--brand')}>Anchor Button Brand</a>
-    <Button flavor="brand" disabled="true">
-      Disabled
-    </Button>
+let Popover = props =>
+<div className={pf(`popover nubbin--left theme--${props.theme}`)} role="dialog">
+  <div className={pf('popover__body')}>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
   </div>
-);
+</div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'info',
+    label: 'Info',
+    element: <Popover theme="info" />
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Popover theme="error" />
+  },
+  {
+    id: 'warning',
+    label: 'Warning',
+    element: <Popover theme="warning" />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Popover theme="success" />
+  }
+];

@@ -10,169 +10,215 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export const preview = (
-  <div className={pf('demo-only x-small-buttons--horizontal')}>
-    <ol className={pf('list--ordered')}>
-      <li>
-        <ButtonIcon
-          flavor="icon-bare"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-        <a href="javascript:void(0);" className={pf('button button--icon-bare')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility"
-          symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-        </a>
-      </li>
-      <li className={pf('m-top--x-small')}>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-        <a href="javascript:void(0);" className={pf('button button--icon-container')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility"
-          symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-        </a>
-        <ButtonIcon
-          flavor="icon-container"
-          disabled="true"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-      </li>
-      <li className={pf('m-top--x-small')}>
-        <ButtonIcon
-          flavor="icon-border"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-        <a href="javascript:void(0);" className={pf('button button--icon-border')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility"
-          symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-        </a>
-        <ButtonIcon
-          flavor="icon-border"
-          disabled="true"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-      </li>
-      <li className={pf('m-top--x-small')}>
-        <ButtonIcon
-          flavor="icon-border-filled"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-        <a href="javascript:void(0);" className={pf('button button--icon-border-filled')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility"
-          symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-        </a>
-        <ButtonIcon
-          flavor="icon-border-filled"
-          disabled="true"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-      </li>
-      <li className={pf('m-top--x-small')}>
-        <ButtonIcon
-          flavor="icon-border-filled,icon-small"
-          sprite="utility"
-          symbol="settings"
-          assistiveText="Settings" />
-          <a href="javascript:void(0);" className={pf('button button--icon-border-filled button--icon-small')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility"
-          symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-        </a>
-      </li>
-    </ol>
-  </div>
-);
-export const code = (
-  <div className="demo-only">
-    <ButtonIcon
-      flavor="icon-bare"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
-    <a href="javascript:void(0);" className={pf('button button--icon-bare')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility"
-      symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </a>
+let Demo = props =>
+  <div className="demo-only" {...props}>
+    {props.children}
+  </div>;
 
-    <ButtonIcon
-      flavor="icon-container"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
-    <a href="javascript:void(0);" className={pf('button button--icon-container')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility"
-      symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </a>
-    <ButtonIcon
-      flavor="icon-container"
-      disabled="true"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
+let Button = props =>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    {props.children}
+    <span className={pf('assistive-text')}>{props.assistiveText}</span>
+  </button>;
 
-    <ButtonIcon
-      flavor="icon-border"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
-    <a href="javascript:void(0);" className={pf('button button--icon-border')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility"
-      symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </a>
-    <ButtonIcon
-      flavor="icon-border"
-      disabled="true"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
 
-    <ButtonIcon
-      flavor="icon-border-filled"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
-    <a href="javascript:void(0);" className={pf('button button--icon-border-filled')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility"
-      symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </a>
-    <ButtonIcon
-      flavor="icon-border-filled"
-      disabled="true"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
+let Default = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="Settings">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
 
-    <ButtonIcon
-      flavor="icon-border-filled,icon-small"
-      sprite="utility"
-      symbol="settings"
-      assistiveText="Settings" />
-      <a href="javascript:void(0);" className={pf('button button--icon-border-filled button--icon-small')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility"
-      symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </a>
-  </div>
+let Disabled = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="Settings" disabled>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
 
-);
+let Container = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-container')} assistiveText="Settings">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
+
+let ContainerBorder = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-border')} assistiveText="Settings">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
+
+let FilledContainerBorder = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-border-filled')} assistiveText="Settings">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
+
+let ContainerBorderSmall = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-border button--icon-small')} assistiveText="Settings">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    </Button>
+  </Demo>;
+
+let ContainerBorderXSmall = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-border button--icon-x-small')} assistiveText="More Options">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+    </Button>
+  </Demo>;
+
+let IconXSmall = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="More Options">
+      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    </Button>
+  </Demo>;
+
+let IconSmall = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="More Options">
+      <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
+    </Button>
+  </Demo>;
+
+let IconDefault = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="Close">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="close" />
+    </Button>
+  </Demo>;
+
+let IconLarge = props =>
+  <Demo>
+    <Button className={pf('button--icon')} assistiveText="Close">
+      <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="close" />
+    </Button>
+  </Demo>;
+
+let IconMore = props =>
+  <Demo>
+    <Button className={pf('button--icon-more')} assistiveText="Settings" hasPopup="true">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    </Button>
+  </Demo>;
+
+let Inverse = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <Button className={pf('button--icon-inverse')} assistiveText="Close">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="close" />
+    </Button>
+  </Demo>;
+
+let InverseDisabled = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <Button className={pf('button--icon-inverse')} assistiveText="Close" disabled>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="close" />
+    </Button>
+  </Demo>;
+
+let IconHint = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <div className={pf('hint-parent')}>
+      <Button className={pf('button--icon-border button--icon-x-small')} assistiveText="More Options">
+        <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
+      </Button>
+    </div>
+  </Demo>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'button-icon',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'button-icon-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  },
+  {
+    id: 'button-icon-inverse',
+    label: 'Icon inversed',
+    element: <Inverse />
+  },
+  {
+    id: 'button-icon-inverse-disabled',
+    label: 'Icon inversed disabled',
+    element: <InverseDisabled />
+  },
+  {
+    id: 'button-icon-container',
+    label: 'Container with no border',
+    element: <Container />
+  },
+  {
+    id: 'button-icon-border-filled',
+    label: 'Container filled',
+    element: <FilledContainerBorder />
+  },
+  {
+    id: 'button-icon-border',
+    label: 'Container transparent',
+    element: <ContainerBorder />
+  },
+  {
+    id: 'button-icon-border-small',
+    label: 'Container small',
+    element: <ContainerBorderSmall />
+  },
+  {
+    id: 'button-icon-border-x-small',
+    label: 'Container x-small',
+    element: <ContainerBorderXSmall />
+  },
+  {
+    id: 'button-icon-size-large',
+    label: 'Icon size large',
+    element: <IconLarge />
+  },
+  {
+    id: 'button-icon-size-default',
+    label: 'Icon size default',
+    element: <IconDefault />
+  },
+  {
+    id: 'button-icon-size-small',
+    label: 'Icon size small',
+    element: <IconSmall />
+  },
+  {
+    id: 'button-icon-size-x-small',
+    label: 'Icon size x-small',
+    element: <IconXSmall />
+  },
+  {
+    id: 'button-icon-more',
+    label: 'Icon with dropdown',
+    element: <IconMore />
+  },
+  {
+    id: 'button-icon-hint',
+    label: 'Icon with hint hover',
+    element: <IconHint />
+  }
+];

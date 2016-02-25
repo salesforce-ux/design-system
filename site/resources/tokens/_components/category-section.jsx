@@ -42,6 +42,9 @@ export default class CategorySection extends React.Component {
             {this.renderValueFormatSelect()}
           </span>
         </Heading>
+        {!category.description ? null : <p className="slds-m-bottom--x-large">
+          {category.description}
+        </p >}
         <div className={pf('scrollable--x')}>
           <table className={pf('table max-medium-table--stacked')}>
             <RowHeader key={`${category.key}-header`} />

@@ -20,7 +20,7 @@ let demoHeight = '2rem';
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let Base = props =>
+let Default = props =>
 <div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
@@ -55,7 +55,7 @@ let Success = props =>
   </div>
 </div>;
 
-let Error = props =>
+let ErrorAlert = props =>
 <div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--error theme--alert-texture')} role="alert">
@@ -99,9 +99,9 @@ let Offline = props =>
 
 export let states = [
   {
-    id: 'base',
-    label: 'Base',
-    element: <Base />
+    id: 'default',
+    label: 'Default',
+    element: <Default />
   },
   {
     id: 'success',
@@ -111,7 +111,7 @@ export let states = [
   {
     id: 'error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorAlert />
   },
   {
     id: 'offline',

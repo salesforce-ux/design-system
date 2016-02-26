@@ -17,7 +17,7 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Contains the icon and the action that toggles the nested branch
   -
-    class: tree__button--disabled
+    class: is-disabled
     description: Creates the indentation space to match rows with children
     required: true
     applied: <code>.slds-button</code>

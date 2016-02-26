@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 require('../helpers/setup');
 import _ from 'lodash';
 import gdm from 'gdm';
-import fs from 'fs';
 import path from 'path';
 import request from 'superagent';
 import semver from 'semver';

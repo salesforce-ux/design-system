@@ -13,53 +13,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export default (
+  <div className="demo-only" style={{height: '24rem'}}>
+    <Modal
+      isOpen={true}
+      renderInline={true}
+      className={pf('modal--prompt')}
+    >
 
-class ModalExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showing: true };
-  }
+      <Modal.Header className={pf('theme--error theme--alert-texture')}>
+        <h2 className={pf('text-heading--medium')}>
+          Service Unavailable
+        </h2>
+      </Modal.Header>
 
-  openModal() {
-    this.setState({showing: true});
-  }
+      <Modal.Body className={pf('p-around--medium')}>
+        <Lorem count={1} paragraphLowerBound={2} />
+      </Modal.Body>
 
-  closeModal() {
-    this.setState({showing: false});
-    ReactDOM.findDOMNode(this.refs.opener).focus();
-  }
-
-  render() {
-    return (
-      <div className="demo-only" style={{height: '480px'}}>
-        <Modal
-          isOpen={this.state.showing}
-          renderInline={true}
-          className={pf('modal--prompt')}
-        >
-
-          <Modal.Header className={pf('theme--error theme--alert-texture')}>
-            <h2 className={pf('text-heading--medium')}>
-              Service Unavailable
-            </h2>
-          </Modal.Header>
-
-          <Modal.Body className={pf('p-around--medium')}>
-            <Lorem count={1} paragraphLowerBound={2} />
-          </Modal.Body>
-
-          <Modal.Footer className={pf('theme--default')}>
-            <Button flavor="neutral">Okay</Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  }
-}
-
-export default <ModalExample/>;
+      <Modal.Footer className={pf('theme--default')}>
+        <Button flavor="neutral">Okay</Button>
+      </Modal.Footer>
+    </Modal>
+  </div>
+);

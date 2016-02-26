@@ -10,7 +10,7 @@
 .#{$css-prefix}notify-container,
 .#{$css-prefix}notify_container {
 
-  @include deprecate('2.0.0');
+  @include deprecate('2.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
   position: fixed;
   width: 100%;
   left: 0;
@@ -25,28 +25,10 @@
   background: $color-background-toast;
   font-weight: $font-weight-light;
 
-  &--toast {
-    border-radius: $border-radius-medium;
-    margin: $spacing-x-small;
-    padding: $spacing-small $spacing-large;
-    min-width: rem(480px);
-    display: inline-block;
-    text-align: left;
-
-    .#{$css-prefix}notify__close {
-      transform: translate3d($spacing-x-small, 0, 0);
-    }
-  }
-
   &__close {
     float: right;
     margin-left: $spacing-xx-small;
     line-height: $line-height-reset;
-  }
-
-  &--alert {
-    padding: $spacing-x-small;
-    text-align: center;
   }
 
   &__content {

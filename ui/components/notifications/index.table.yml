@@ -29,6 +29,11 @@ classes:
     required: true
     applied: <code>&lt;button&gt;</code>
   -
+    class: notify__content
+    description: Initializes notification content
+    required: false
+    applied: <code>&lt;div&gt;</code>
+  -
     class: modal--prompt
     description: Initializes Prompt style notification
     required: true

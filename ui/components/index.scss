@@ -24,18 +24,8 @@
 
   // Button
   'buttons/flavors/base/index',
-  'buttons/flavors/neutral/index',
-  'buttons/flavors/neutral-icon/index',
-  'buttons/flavors/brand/index',
-  'buttons/flavors/destructive/index',
-  'buttons/flavors/inverse/index',
   'buttons/flavors/stateful/index',
-  'buttons/flavors/stateful-inverse/index',
   'buttons/flavors/icon/index',
-  'buttons/flavors/hint/index',
-  'buttons/flavors/icon-more/index',
-  'buttons/flavors/icon-stateful/index',
-  'buttons/flavors/icon-inverse/index',
   'buttons/flavors/stretch/index',
   'buttons/flavors/horizontal/index',
 
@@ -103,9 +93,7 @@
   // Docked Composer
   'docked-composer/flavors/base/index',
   'docked-composer/flavors/email/index',
-  'docked-composer/flavors/email-modal/index',
   'docked-composer/flavors/task/index',
-  'docked-composer/flavors/overflow-menu/index',
 
   // Publishers
   'publishers/flavors/discussion-feed/index',
@@ -140,7 +128,6 @@
   // Title
   'tiles/flavors/base/index',
   'tiles/flavors/board/index',
-  'tiles/flavors/author/index',
 
   // Tree
   'trees/flavors/base/index',
@@ -150,9 +137,9 @@
   'tabs/flavors/scoped/index',
 
   // Notifications -- Toasts & Alerts
-  'notifications/flavors/base/index',
+  'notifications/index',
+  'notifications/flavors/alert/index',
   'notifications/flavors/prompt/index',
-  'notifications/flavors/prompt-for-touch/index',
   'notifications/flavors/modal-toast/index',
 
   // Lookup

@@ -13,6 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -62,14 +63,14 @@ const Tokens = React.createClass({
       <div>
         {this.renderHeader()}
         <div className={pf('p-around--xx-large grid wrap site-content')}>
-          <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')} fixedElements=".site-tools">
+          <StickyNav fixedElementsAbove=".site-tools">
             <div className="site-menu--jump-links">
               <h3 className="site-text-heading--label">Categories</h3>
               <ul className={pf('list--vertical has-block-links')}>
                 {this.renderCategories()}
               </ul>
             </div>
-          </Sticky>
+          </StickyNav>
           <div className={pf('col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             {this.renderInfo()}
             {this.renderTokens()}

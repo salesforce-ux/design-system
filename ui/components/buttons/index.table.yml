@@ -28,10 +28,16 @@ classes:
     description: Creates the inverse style for dark backgrounds
     applied: <code>.{{cssPrefix}}button</code>
   -
+    class: button--icon
+    description: Creates a button that looks like a plain icon
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: This is 1rem&times;1rem like an icon, not a regular button
+  -
     class: button--icon-bare
     description: Creates a button that looks like a plain icon
     applied: <code>.{{cssPrefix}}button</code>
     notes: This is 1rem&times;1rem like an icon, not a regular button
+    deprecated: true
   -
     class: button--icon-container
     description: Creates a button that looks like a plain icon

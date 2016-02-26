@@ -8,18 +8,22 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+.#{$css-prefix}button--icon,
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled,
-.#{$css-prefix}button--icon-bare,
 .#{$css-prefix}button--icon-more {
+  line-height: $line-height-reset;
   vertical-align: middle;
   color: $color-text-icon-default;
 }
 
-.#{$css-prefix}button--icon-bare {
-  line-height: $line-height-reset;
+@include deprecate('3.0.0', 'Use .slds-button--icon instead') {
+  .#{$css-prefix}button--icon-bare {
+    line-height: $line-height-reset;
+    vertical-align: middle;
+    color: $color-text-icon-default;
+  }
 }
 
 .#{$css-prefix}button--icon-border[disabled] {
@@ -35,24 +39,13 @@
   @include button-base;
 }
 
-
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
   @include square($square-icon-medium-boundary-alt);
 }
 
-.#{$css-prefix}button--icon-small {
-  @include square($square-icon-medium-boundary);
-  line-height: $line-height-button-small;
-}
-
-.#{$css-prefix}button--icon-x-small {
-  @include square($square-icon-x-small-boundary);
-  border-radius: $border-radius-small;
-  line-height: $line-height-reset;
-}
-
+// Button icon with background
 .#{$css-prefix}button--icon-border-filled {
   background-color: $color-background-button-default;
 
@@ -62,6 +55,87 @@
   }
 }
 
+// Button icon with dropdown
+.#{$css-prefix}button--icon-more {
+  line-height: $line-height-button;
+  padding: 0 $spacing-x-small;
+  vertical-align: middle;
+  border: $border-width-thin solid $color-border-button-default;
+
+  &:hover,
+  &:focus {
+    @include button-base;
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-icon-default-hover;
+    }
+  }
+
+  &:active .#{$css-prefix}button__icon {
+    fill: $color-text-icon-default-active;
+  }
+
+  &[disabled] {
+    cursor: default;
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-icon-default-disabled;
+    }
+  }
+}
+
+// Button icon on inversed background
+.#{$css-prefix}button--icon-inverse {
+  color: $color-text-link-inverse;
+
+  &:hover,
+  &:focus {
+    color: $color-text-link-inverse-hover;
+  }
+
+  &:active {
+    color: $color-text-link-inverse-active;
+  }
+
+  &[disabled] {
+    color: $color-text-link-inverse-disabled;
+  }
+}
+
+// Stateful Button Icon
+.#{$css-prefix}button--icon-border.#{$css-prefix}is-selected {
+  @include button-brand;
+
+  .#{$css-prefix}button__icon {
+    fill: $color-text-button-brand;
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-button-brand;
+    }
+  }
+}
+
+// Button icon container sizing
+.#{$css-prefix}button--icon-small {
+  @include square($square-icon-medium-boundary);
+  line-height: $line-height-button-small;
+}
+
+.#{$css-prefix}button--icon-x-small {
+  @include square($square-icon-x-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .#{$css-prefix}button__icon {
+    @include square($square-icon-small-content);
+  }
+}
+
+// Sizing for icon that sits inside button--icon
 .#{$css-prefix}button__icon { // This is the icon inside the button--icon button
   @include square($square-icon-medium-content);
   fill: currentColor;
@@ -76,10 +150,22 @@
 
   &--x-small { // This creates the x-small down icon that sits next to another icon
     @include square($square-icon-x-small-content);
-    margin-left: $spacing-xx-small;
   }
 }
 
-.#{$css-prefix}icon--small .#{$css-prefix}button__icon {
-  @include square($square-icon-small-boundary);
+// Button Icon Hint
+.#{$css-prefix}button__icon--hint {
+  fill: $color-text-icon-default-hint;
+}
+
+// Hint parent should be applied to the parent of the button
+.#{$css-prefix}hint-parent {
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button__icon--hint {
+      fill: $color-text-icon-default;
+    }
+  }
 }

@@ -2,22 +2,8 @@ status: 'dev-ready'
 classBase: 'button'
 flavors:
   - base
-  - neutral
-  - neutral-icon
-  - brand
-  - destructive
-  - inverse
   - stateful
-  - stateful-inverse
   - icon
-  - icon-sizing
-  - icon-more
-  - icon-stateful
-  - icon-inverse
-  - hint
   - stretch
   - stacked
   - horizontal
-dependencies:
-  - core/icons
-  - helpers/visibility

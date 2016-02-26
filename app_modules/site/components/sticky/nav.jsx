@@ -10,35 +10,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import ReactDOM from 'react-dom';
+import Sticky from './';
+
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
+import forceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
-const moreIcon = (
-  <ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="hint,small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-);
-
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
-
-export default (
-<div className={pf('demo-only')} style={{height: '165px'}}>
-  <Trigger className={pf('is-open')} triggerIcon={moreIcon}>
-    <Menu className={pf('dropdown--left dropdown--actions')}>
-      <MenuList>
-        <MenuItem>Action One</MenuItem>
-        <MenuItem>Action Two</MenuItem>
-        <MenuItem>Action Three</MenuItem>
-      </MenuList>
-    </Menu>
-  </Trigger>
-</div>
-);
+export default props =>
+  <Sticky
+    className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}
+    fixedElementsBelow="footer.site-contentinfo"
+    fixedContentPadding={{
+      top: forceBase.spacingLarge,
+      bottom: forceBase.spacingMedium
+    }}
+    pinBottom={true}
+    {...props} />;

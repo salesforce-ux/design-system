@@ -10,35 +10,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-const moreIcon = (
-  <ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="hint,small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
-);
+let Popover = props =>
+<div className={pf(`popover nubbin--left theme--${props.theme}`)} role="dialog">
+  <div className={pf('popover__body')}>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+  </div>
+</div>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
-export default (
-<div className={pf('demo-only')} style={{height: '165px'}}>
-  <Trigger className={pf('is-open')} triggerIcon={moreIcon}>
-    <Menu className={pf('dropdown--left dropdown--actions')}>
-      <MenuList>
-        <MenuItem>Action One</MenuItem>
-        <MenuItem>Action Two</MenuItem>
-        <MenuItem>Action Three</MenuItem>
-      </MenuList>
-    </Menu>
-  </Trigger>
-</div>
-);
+export let states = [
+  {
+    id: 'info',
+    label: 'Info',
+    element: <Popover theme="info" />
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Popover theme="error" />
+  },
+  {
+    id: 'warning',
+    label: 'Warning',
+    element: <Popover theme="warning" />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Popover theme="success" />
+  }
+];

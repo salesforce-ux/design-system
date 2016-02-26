@@ -7,74 +7,27 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-example--tabs-initial-view [class*='__item'].#{$css-prefix}active > a {
-  @include tab-focus;
-}
+.#{$css-prefix}notify-container,
+.#{$css-prefix}notify_container {
 
-.site-example--tabs .#{$css-prefix}tabs--default__nav {
-  border-bottom: 0;
-}
-
-.site-example--content {
-  display: inline-block;
-  border: 1px solid $color-border;
-
-  &[data-form-factor="desktop"] {
-    display: block;
-  }
-}
-
-.site-bleed {
-  margin: 0 #{-$spacing-medium};
-  max-width: initial;
-}
-
-iframe {
-  border: 0;
+  @include deprecate('2.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
+  position: fixed;
   width: 100%;
-
-  &[data-form-factor="mobile"] {
-    width: 30rem;
-  }
-
-  &[data-form-factor="tablet"] {
-    width: 48rem;
-  }
-
-  &[data-form-factor="desktop"] {
-    min-width: 64rem;
-  }
+  left: 0;
+  top: 0;
+  z-index: $z-index-toast;
+  text-align: center;
 }
 
-.token.utility-class {
-  background-color: $color-background-definition-highlight;
-  border-bottom: $border-width-thick dotted $color-text-warning;
-  text-decoration: none;
-  font-style: normal;
-}
+.#{$css-prefix}notify {
+  @include inverse-links;
+  position: relative;
+  background: $color-background-toast;
+  font-weight: $font-weight-light;
 
-.badge {
-
-  &--deprecated {
-    background: $color-background-error;
-    color: $color-text-inverse;
-  }
-
-  &--prototype {
-    background: $site-color-text-heading-callout;
-    color: $color-text-inverse;
-
-    &:after {
-      content: ': In Progress';
-    }
-  }
-
-  &--dev-ready {
-    background: $color-background-success;
-    color: $color-text-inverse;
-
-    &:after {
-      content: ': Stable';
-    }
+  &__close {
+    float: right;
+    margin-left: $spacing-xx-small;
+    line-height: $line-height-reset;
   }
 }

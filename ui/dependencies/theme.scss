@@ -164,7 +164,7 @@
 
 // Page header
 @mixin page-header {
-  @include deprecate('2.0.0') {
+  @include deprecate('4.0.0') {
     padding: $spacing-large $spacing-large $spacing-small;
     border-bottom: $border-width-thin solid $color-border;
     background: $color-background;

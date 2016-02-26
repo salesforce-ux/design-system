@@ -14,11 +14,15 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+let demoHeight = '2rem';
 
-export const preview = (
-<div className="demo-only demo-only--notification">
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
+
+let Base = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
-
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
@@ -29,7 +33,12 @@ export const preview = (
         <span className={pf('assistive-text')}>Info</span>
         <h2>Base System Alert</h2>
     </div>
+  </div>
+</div>;
 
+let Success = props =>
+<div className="demo-only" style={{height: demoHeight}}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--success theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
@@ -43,7 +52,12 @@ export const preview = (
         Scheduled Maintenance Notification: Sunday March 15, 8:00 AM&ndash;10:00 PST <a href="#">More Information</a>
       </h2>
     </div>
+  </div>
+</div>;
 
+let Error = props =>
+<div className="demo-only" style={{height: demoHeight}}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--error theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
@@ -57,7 +71,12 @@ export const preview = (
         Your browser is currently not supported. Your Salesforce may be degraded. <a href="#">More Information</a>
       </h2>
     </div>
+  </div>
+</div>;
 
+let Offline = props =>
+<div className="demo-only" style={{height: demoHeight}}>
+  <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--offline theme--alert-texture')} role="alert">
       <ButtonIcon
         className={pf('notify__close')}
@@ -68,26 +87,35 @@ export const preview = (
       <span className={pf('assistive-text')}>Offline</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="offline" />
-        You are in offline mode. <a href="#">More Information</a>
+        You are in offline mode. <a href="#void">More Information</a>
       </h2>
     </div>
-
   </div>
-</div>
-);
+</div>;
 
-export const code = (
-  <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
-    <span className={pf('assistive-text')}>Info</span>
-    <ButtonIcon
-      className={pf('close icon--small')}
-      flavor="icon-inverse"
-      sprite="action"
-      symbol="close"
-      assistiveText="Close" />
-    <h2>
-      <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="action" symbol="email" />
-      Base System Alert
-    </h2>
-  </div>
-);
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'base',
+    label: 'Base',
+    element: <Base />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Success />
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'offline',
+    label: 'Offline',
+    element: <Offline />
+  }
+];

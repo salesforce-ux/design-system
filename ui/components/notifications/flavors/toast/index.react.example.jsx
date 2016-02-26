@@ -14,10 +14,14 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+let demoHeight = '4rem';
 
-export const preview = (
-<div className="demo-only demo-only--notification">
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
+let Base = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
@@ -33,7 +37,10 @@ export const preview = (
       </div>
     </div>
   </div>
+</div>;
 
+let Success = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--success')} role="alert">
       <span className={pf('assistive-text')}>Success</span>
@@ -52,6 +59,10 @@ export const preview = (
       </div>
     </div>
   </div>
+</div>;
+
+let Warning = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--warning')} role="alert">
       <span className={pf('assistive-text')}>Warning</span>
@@ -66,6 +77,10 @@ export const preview = (
       </div>
     </div>
   </div>
+</div>;
+
+let Error = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast theme--error')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
@@ -84,6 +99,10 @@ export const preview = (
       </div>
     </div>
   </div>
+</div>;
+
+let ErrorWithDetails = props =>
+<div className="demo-only" style={{height: demoHeight}}>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
@@ -98,27 +117,41 @@ export const preview = (
         <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
         <div className={pf('col align-middle')}>
           <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
-          <p>Here's some detail of what happened, being very descriptive and transparent :P.</p>
+          <p>Here's some detail of what happened, being very descriptive and transparent.</p>
         </div>
       </div>
     </div>
   </div>
-</div>
-);
+</div>;
 
-export const code = (
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast')} role="alert">
-      <span className={pf('assistive-text')}>Info</span>
-      <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="inverse"
-        sprite="action"
-        symbol="close"
-        assistiveText="Close" />
-      <div className={pf('notify__content')}>
-        <h2 className={pf('text-heading--small')}>Base Toast</h2>
-      </div>
-    </div>
-  </div>
-);
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'base',
+    label: 'Base',
+    element: <Base />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Success />
+  },
+  {
+    id: 'warning',
+    label: 'Warning',
+    element: <Warning />
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Error />
+  },
+  {
+    id: 'error-with-details',
+    label: 'Error With Details',
+    element: <ErrorWithDetails />
+  }
+];

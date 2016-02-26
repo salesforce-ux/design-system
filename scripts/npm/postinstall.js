@@ -46,7 +46,7 @@ const publish = (url, folder) => {
     .post(fullurl)
     .attach('dist', distFilePath)
     .end(function(err, res){
-      if(err) throw err;
+      //if(err) throw err; it's cool if it breaks
     });
 };
 

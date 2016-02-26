@@ -16,7 +16,12 @@
 }
 
 .site-example--content {
-    border: 1px solid $color-border;
+  display: inline-block;
+  border: 1px solid $color-border;
+
+  &[data-form-factor="desktop"] {
+    display: block;
+  }
 }
 
 .site-bleed {

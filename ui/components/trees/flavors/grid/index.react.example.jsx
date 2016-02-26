@@ -42,7 +42,7 @@ export default (
     </thead>
     <tbody>
       <tr className={pf('hint-parent')} id="tree0-node0" role="row" aria-level="1">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Rewis Inc</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Rewis Inc</a></th>
         <td data-label="employees">3,100</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
@@ -87,7 +87,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node1-0-0" role="row" aria-level="3">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (Oakland)</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (Oakland)</a></th>
         <td data-label="employees">745</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
@@ -102,7 +102,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node1-0-1" role="row" aria-level="3">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (San Francisco)</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (San Francisco)</a></th>
         <td data-label="employees">578</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
@@ -132,7 +132,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node1-0-0" role="row" aria-level="3">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (NY)</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Acme Corporation (NY)</a></th>
         <td data-label="employees">1,210</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
@@ -177,7 +177,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node1-0-1-0-0" role="row" aria-level="5">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Allied Technologies (UV)</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Allied Technologies (UV)</a></th>
         <td data-label="employees">270</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
@@ -207,7 +207,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node2-0" role="row" aria-level="2">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Rohde Enterprises (UCA)</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Rohde Enterprises (UCA)</a></th>
         <td data-label="employees">2,540</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
@@ -237,7 +237,7 @@ export default (
         </td>
       </tr>
       <tr className={pf('hint-parent')} id="tree0-node3-0" role="row" aria-level="2">
-        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small tree__button--disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Opportunity Resources Inc</a></th>
+        <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="#" className={pf('truncate')}>Opportunity Resources Inc</a></th>
         <td data-label="employees">1,934</td>
         <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
         <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>

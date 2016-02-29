@@ -10,37 +10,56 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
+import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
+import { Button as ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
 
-export default (
-  <div className="demo-only">
-    <div className={pf('button-group')} role="group">
-      <StatefulClass>
-      <ButtonIcon
-      flavor="icon-border"
-      sprite="utility"
-      symbol="chart"
-      assistiveText="Chart" />
-      </StatefulClass>
-      <StatefulClass>
-      <ButtonIcon
-      flavor="icon-border"
-      className={pf('is-selected')}
-      sprite="utility"
-      symbol="filterList"
-      assistiveText="Filter List" />
-      </StatefulClass>
-      <Button flavor="icon-more">
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-        <span className={pf('assistive-text')}>Sort</span>
-        <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-        <span className={pf('assistive-text')}>More</span>
-      </Button>
-    </div>
-  </div>
-);
+let Default = props =>
+  <ButtonGroup>
+    <ButtonIcon className={pf('button--icon-border')} assistiveText="Charts">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
+    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
+    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
+      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    </ButtonIcon>
+  </ButtonGroup>;
+
+let Selected = props =>
+  <ButtonGroup>
+    <ButtonIcon className={pf('button--icon-border is-selected')} assistiveText="Charts">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
+    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
+    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
+      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    </ButtonIcon>
+  </ButtonGroup>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'button-group-icon',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'button-group-icon-selected',
+    label: 'Selected',
+    element: <Selected />
+  }
+];

@@ -10,58 +10,96 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
+import { Button as ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-  <div className="demo-only">
-    <div className={pf('button-group')} role="group">
-      <Button flavor="neutral">
-      Refresh
-      </Button>
-      <Button flavor="neutral">
-        Edit
-      </Button>
-      <Button flavor="neutral">
-        Save
-      </Button>
-      <ButtonIcon
-      flavor="icon-border-filled"
-      className={pf('toggle-visibility')}
-      sprite="utility"
-      symbol="down"
-      assistiveText="More Actions"/>
-    </div>
-    <div className={pf('button-group demo-space')} role="group">
-      <Button flavor="neutral">
-      New Lead
-      </Button>
-      <ButtonIcon
-      flavor="icon-border-filled"
-      className={pf('toggle-visibility')}
-      sprite="utility"
-      symbol="down"
-      assistiveText="More Actions" />
-    </div>
-    <div className={pf('button-group demo-space')} role="group">
-      <Button flavor="neutral" disabled="true">
-      Refresh
-      </Button>
-      <Button flavor="neutral">
-        Edit
-      </Button>
-      <Button flavor="neutral" className={pf('button--last')}>
-        Save
-      </Button>
-      <ButtonIcon
-      flavor="icon-border-filled"
-      className={pf('toggle-visibility')}
-      disabled="true"
-      sprite="utility"
-      symbol="down"
-      assistiveText="More Actions" />
-    </div>
-  </div>
-);
+let Demo = props =>
+  <div className="demo-only" {...props}>
+    {props.children}
+  </div>;
+
+export let ButtonGroup = props =>
+  <div className={pf('button-group')} role="group">
+    {props.children}
+  </div>;
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Default = props =>
+  <ButtonGroup>
+    <Button className={pf('button--neutral')}>Refresh</Button>
+    <Button className={pf('button--neutral')}>Edit</Button>
+    <Button className={pf('button--neutral')}>Save</Button>
+    <ButtonIcon className={pf('button--icon-border-filled')} assistiveText="More Actions" hasPopup>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+    </ButtonIcon>
+  </ButtonGroup>;
+
+let Disabled = props =>
+  <ButtonGroup>
+    <Button className={pf('button--neutral')}>Refresh</Button>
+    <Button className={pf('button--neutral')}>Edit</Button>
+    <Button className={pf('button--neutral button--last')} disabled>Save</Button>
+    <ButtonIcon className={pf('button--icon-border-filled toggle-visibility')} assistiveText="More Actions" hasPopup disabled>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+    </ButtonIcon>
+  </ButtonGroup>;
+
+let Inverse = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <ButtonGroup>
+      <Button className={pf('button--inverse')}>Refresh</Button>
+      <Button className={pf('button--inverse')}>Edit</Button>
+      <Button className={pf('button--inverse')}>Save</Button>
+      <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup>
+        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+      </ButtonIcon>
+    </ButtonGroup>
+  </Demo>;
+
+let InverseDisabled = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <ButtonGroup>
+      <Button className={pf('button--inverse')}>Refresh</Button>
+      <Button className={pf('button--inverse')}>Edit</Button>
+      <Button className={pf('button--inverse button--last')} disabled>Save</Button>
+      <ButtonIcon className={pf('button--icon-border button--icon-inverse toggle-visibility')} assistiveText="More Actions" hasPopup disabled>
+        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+      </ButtonIcon>
+    </ButtonGroup>
+  </Demo>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'button-group',
+    label: 'Default',
+    element: <Default />
+  },
+  {
+    id: 'button-group-disabled',
+    label: 'Disabled',
+    element: <Disabled />
+  },
+  {
+    id: 'button-group-inverse',
+    label: 'Inverse',
+    element: <Inverse />
+  },
+  {
+    id: 'button-group-inverse-disabled',
+    label: 'Inverse Disabled',
+    element: <InverseDisabled />
+  }
+];

@@ -263,7 +263,7 @@ async.series([
   (done) => {
     gulp.src(distPath('scss/index*.scss'))
       .pipe(sass({
-        outputStyle: 'compressed',
+        precision: 10,
         includePaths: [
           __PATHS__.node_modules
         ]

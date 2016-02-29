@@ -1,9 +1,4 @@
-classBase: 'feed'
 status: 'dev-ready'
 flavors:
+  - comment
   - discussion-feed
-  - comment-base
-  - comment-minimal
-  - comment-with-replies
-  - comment-with-overflow
-  - comment-with-attachments

@@ -93,7 +93,7 @@
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
-  @include deprecate('2.0.0') {
+  @include deprecate('4.0.0') {
 
     &--nubbin-top {
       @include nubbin(top, 'before');
@@ -182,7 +182,7 @@
     }
   }
 
-  @include deprecate('2.0.0') {
+  @include deprecate('4.0.0') {
 
     .#{$css-prefix}has-icon {
       position: relative;
@@ -236,7 +236,7 @@
     top: auto;
   }
 
-  @include deprecate('2.0.0', 'Use .slds-dropdown-trigger--hover instead') {
+  @include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
 
     .#{$css-prefix}dropdown {
       visibility: hidden;

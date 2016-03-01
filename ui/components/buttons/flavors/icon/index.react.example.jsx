@@ -23,7 +23,7 @@ let Demo = props =>
     {props.children}
   </div>;
 
-let Button = props =>
+export let Button = props =>
   <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
     {props.children}
     <span className={pf('assistive-text')}>{props.assistiveText}</span>

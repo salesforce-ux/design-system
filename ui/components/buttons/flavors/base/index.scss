@@ -70,15 +70,17 @@
 
   & + .#{$css-prefix}button {
 
-    @include deprecate('2.0.0') {
+    @include deprecate('4.0.0') {
       margin-left: $spacing-xx-small;
     }
   }
 }
 
-// Deprecate
 .#{$css-prefix}button-space-left {
-  margin-left: $spacing-xx-small;
+
+  @include deprecate('4.0.0') {
+    margin-left: $spacing-xx-small;
+  }
 }
 
 a.#{$css-prefix}button {

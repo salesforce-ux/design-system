@@ -58,18 +58,6 @@ export let ModalFooter = props =>
     {props.children}
   </div>;
 
-let ModalSaveCancel = props =>
-  <div className={pf('x-small-buttons--horizontal')} {...props}>
-      <Button flavor="neutral">Cancel</Button>
-      <Button flavor="neutral,brand">Save</Button>
-  </div>;
-
-let ModalSkipSave = props =>
-  <div className={pf('x-small-buttons--horizontal')} {...props}>
-      <Button flavor="neutral">Skip This Step</Button>
-      <Button flavor="neutral,brand">Save &#38; Next</Button>
-  </div>;
-
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
@@ -82,7 +70,8 @@ let Default = props =>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -100,7 +89,8 @@ let Taglines = props =>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -113,7 +103,8 @@ let Large = props =>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -126,7 +117,8 @@ let Directional = props =>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter className={pf('modal__footer--directional')}>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Skip This Step</Button>
+        <Button flavor="neutral,brand">Save &#38; Next</Button>
       </ModalFooter>
     </Modal>
   </Demo>;

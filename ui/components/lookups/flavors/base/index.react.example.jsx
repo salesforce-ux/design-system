@@ -91,19 +91,19 @@ let LookupResults = props =>
   </ul>;
 
 let LookupLabel = props =>
-  <div className={pf('lookup__item lookup__item--label text-body--small')}>
+  <div className={pf('lookup__item--label text-body--small')}>
     {props.children}
   </div>;
 
 let LookupAction = props =>
-  <div className={pf('lookup__item')}>
+  <div>
     <button className={pf('button lookup__item-action')}>
       {props.children}
     </button>
   </div>;
 
 let LookupResultsItem = props =>
-  <li className={pf('lookup__item')}>
+  <li>
     <a className={pf('lookup__item-action media media--center')} id={props.id} href="#void" role="option">
       <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
       <div className={pf('media__body')}>

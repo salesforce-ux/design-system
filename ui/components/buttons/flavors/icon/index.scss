@@ -18,7 +18,7 @@
   color: $color-text-icon-default;
 }
 
-@include deprecate('3.0.0', 'Use .slds-button--icon instead') {
+@include deprecate('4.0.0', 'Use .slds-button--icon instead') {
   .#{$css-prefix}button--icon-bare {
     line-height: $line-height-reset;
     vertical-align: middle;

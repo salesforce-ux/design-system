@@ -90,7 +90,7 @@ export default (
     var category = component.get("v.category");
 
     var containerClassName = [
-        prefix+"icon__container",
+        prefix+"icon_container",
         prefix+"icon-"+category+"-"+name,
         containerclass
         ].join(' ');

@@ -1,11 +1,4 @@
 status: 'dev-ready'
-classBase: 'button-group'
 flavors:
   - base
-  - inverse
   - icon-group
-dependencies:
-  - components/buttons
-  - components/buttons/flavors/neutral
-  - core/icons
-  - helpers/visibility

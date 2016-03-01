@@ -25,6 +25,16 @@
       border-left: $border-width-thin solid $color-border-button-default;
     }
 
+    // Inverse
+    &:first-child.#{$css-prefix}button--inverse[disabled] {
+      border-left-color: $color-border-button-inverse-disabled;
+    }
+
+    // Inverse
+    &--inverse:first-child[disabled] + .#{$css-prefix}button--inverse {
+      border-left: $border-width-thin solid $color-border-button-default;
+    }
+
     &:first-child:not(.#{$css-prefix}button--last .#{$css-prefix}button) {
       border-left: $border-width-thin solid $color-border-button-default;
     }

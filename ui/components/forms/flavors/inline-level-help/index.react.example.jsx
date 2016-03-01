@@ -17,15 +17,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '9rem' }}>
-  <div className={pf('x-small-buttons--horizontal')}>
-    <a href="#void" className={pf('button')}>
-      <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
-      symbol="warning" />
-      <span className={pf('assistive-text')}>Review the Following Errors</span>
-    </a>
-    <Button type="button" flavor="neutral">Cancel</Button>
-    <Button type="button" flavor="brand">Save</Button>
-  </div>
+  <a href="#void" className={pf('button')}>
+    <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
+    symbol="warning" />
+    <span className={pf('assistive-text')}>Review the Following Errors</span>
+  </a>
+  <Button type="button" flavor="neutral">Cancel</Button>
+  <Button type="button" flavor="brand">Save</Button>
   <div className={pf('popover nubbin--bottom-left theme--error')} role="alert" aria-live="polite" style={{position: 'absolute', top: '30px', left: '12px'}}>
     <div className={pf('popover__body text-longform')}>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.

@@ -4,6 +4,3 @@ flavors:
   - base
   - stateful
   - icon
-  - stretch
-  - stacked
-  - horizontal

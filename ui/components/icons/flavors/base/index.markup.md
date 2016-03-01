@@ -1,1 +1,3 @@
-Standard icons have a rounded square shape. Utility and doctype icons have no background color. For action icons, add the `.{{cssPrefix}}icon_container--circle` class to the container, which changes the background shape to a circle.
+- [Utility](/resources/icons/#utility) and [doctype](/resources/icons/#doctype) icons have no background color.
+- For [action](/resources/icons/#action) icons, add the `.{{cssPrefix}}icon_container--circle` class to the container (`.{{cssPrefix}}icon_container`), which changes the background shape to a circle.
+- [Standard](/resources/icons/#standard) icons have a rounded square shape.

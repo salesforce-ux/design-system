@@ -47,7 +47,18 @@ let Disabled = props =>
   <ButtonGroup>
     <Button className={pf('button--neutral')}>Refresh</Button>
     <Button className={pf('button--neutral')}>Edit</Button>
-    <Button className={pf('button--neutral button--last')} disabled>Save</Button>
+    <Button className={pf('button--neutral')} disabled>Save</Button>
+    <ButtonIcon className={pf('button--icon-border-filled toggle-visibility')} assistiveText="More Actions" hasPopup>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+    </ButtonIcon>
+  </ButtonGroup>;
+
+
+let IconDisabled = props =>
+  <ButtonGroup>
+    <Button className={pf('button--neutral')}>Refresh</Button>
+    <Button className={pf('button--neutral')}>Edit</Button>
+    <Button className={pf('button--neutral button--last')}>Save</Button>
     <ButtonIcon className={pf('button--icon-border-filled toggle-visibility')} assistiveText="More Actions" hasPopup disabled>
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
     </ButtonIcon>
@@ -68,9 +79,21 @@ let Inverse = props =>
 let InverseDisabled = props =>
   <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
     <ButtonGroup>
+      <Button className={pf('button--inverse')} disabled>Refresh</Button>
+      <Button className={pf('button--inverse')}>Edit</Button>
+      <Button className={pf('button--inverse')}>Save</Button>
+      <ButtonIcon className={pf('button--icon-border button--icon-inverse toggle-visibility')} assistiveText="More Actions" hasPopup>
+        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+      </ButtonIcon>
+    </ButtonGroup>
+  </Demo>;
+
+let InverseIconDisabled = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <ButtonGroup>
       <Button className={pf('button--inverse')}>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
-      <Button className={pf('button--inverse button--last')} disabled>Save</Button>
+      <Button className={pf('button--inverse button--last')}>Save</Button>
       <ButtonIcon className={pf('button--icon-border button--icon-inverse toggle-visibility')} assistiveText="More Actions" hasPopup disabled>
         <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
       </ButtonIcon>
@@ -93,6 +116,11 @@ export let states = [
     element: <Disabled />
   },
   {
+    id: 'button-group-icon-disabled',
+    label: 'More Icon Disabled',
+    element: <IconDisabled />
+  },
+  {
     id: 'button-group-inverse',
     label: 'Inverse',
     element: <Inverse />
@@ -101,5 +129,10 @@ export let states = [
     id: 'button-group-inverse-disabled',
     label: 'Inverse Disabled',
     element: <InverseDisabled />
+  },
+  {
+    id: 'button-group-icon-inverse-disabled',
+    label: 'More Icon Inverse Disabled',
+    element: <InverseIconDisabled />
   }
 ];

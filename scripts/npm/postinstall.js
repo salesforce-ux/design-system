@@ -94,7 +94,7 @@ glob.sync('node_modules/@salesforce-ux/*-internal', { cwd: local() }).forEach(di
     );
   } else {
     // the "*-internal" module is not a dependency, so remove it
-    rimraf.sync(directory, err => {});
+    rimraf.sync(directory);
   }
 });
 

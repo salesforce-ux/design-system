@@ -131,9 +131,9 @@ if (process.env.HEROKU_APP_NAME) {
   // Design System Tasks
   exec('npm run build-prod');
   exec('npm run dist');
-  exec('npm run dist --npm');
-  publish('npm', __PATHS__.npm);
-  publish('bower', __PATHS__.dist);
+  // exec('npm run dist --npm');
+  // publish('npm', __PATHS__.npm);
+  // publish('bower', __PATHS__.dist);
 } else {
   // Verify & install ruby dependencies using our script
   exec('npm run install-ruby-dependencies');

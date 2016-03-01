@@ -9,12 +9,15 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import '../helpers/setup';
 import _ from 'lodash';
 import fs from 'fs-extra';
 import glob from 'glob';
 import path from 'path';
-import rimraf from 'rimraf';
+import request from 'superagent';
 import semver from 'semver';
+import globals from '../../app_modules/global';
+import rimraf from 'rimraf';
 import moment from 'moment';
 import { execSync } from 'child_process';
 
@@ -26,6 +29,25 @@ const exec = (command, cwd = '') => {
     stdio: 'inherit',
     env: Object.assign({}, process.env)
   });
+};
+
+/**
+ * Send npm ready zip to npm/bower app to publish
+ * @param {string} url
+ * @param {string|path} folder
+ * @returns void
+ */
+const publish = (url, folder) => {
+  const distPath = path.resolve.bind(path, folder);
+  const distFilePath = distPath(globals.zipName(process.env.SLDS_VERSION));
+  const fullurl = `${process.env.PUBLISH_HOST}/${url}`;
+
+  request
+    .post(fullurl)
+    .attach('dist', distFilePath)
+    .end(function(err, res){
+      // it's cool if it breaks
+    });
 };
 
 /**
@@ -109,6 +131,9 @@ if (process.env.HEROKU_APP_NAME) {
   // Design System Tasks
   exec('npm run build-prod');
   exec('npm run dist');
+  exec('npm run dist --npm');
+  publish('npm', __PATHS__.npm);
+  publish('bower', __PATHS__.dist);
 } else {
   // Verify & install ruby dependencies using our script
   exec('npm run install-ruby-dependencies');

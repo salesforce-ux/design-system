@@ -40,7 +40,8 @@ const MODULE_NAME = globals.moduleName;
 // Helpers
 ///////////////////////////////////////////////////////////////
 
-const distPath = path.resolve.bind(path, __PATHS__.dist);
+const distdir = isNpm ? __PATHS__.npm : __PATHS__.dist;
+const distPath = path.resolve.bind(path, distdir);
 
 function commentBanner(messages) {
   messages = messages.map(function(message) {
@@ -373,7 +374,6 @@ async.series([
    * Zip everything up
    */
   (done) => {
-    if (isNpm) return done();
     gulp.src(distPath('**/*'))
     .pipe(gulpzip(globals.zipName(process.env.SLDS_VERSION)))
     .on('error', done)

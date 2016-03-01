@@ -35,6 +35,7 @@ const paths = {
   icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
 
   dist: path.resolve(root, '.dist'),
+  npm: path.resolve(root, '.npm'),
   generated: path.resolve(root, '.generated'),
   tmp: path.resolve(root, '.tmp'),
   test: path.resolve(root, '.test'),

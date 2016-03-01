@@ -10,7 +10,7 @@
 .#{$css-prefix}notify-container,
 .#{$css-prefix}notify_container {
 
-  @include deprecate('2.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
+  @include deprecate('4.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
   position: fixed;
   width: 100%;
   left: 0;

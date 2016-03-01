@@ -42,7 +42,7 @@
 
   &-container {
 
-    @include deprecate('2.0.0') {
+    @include deprecate('4.0.0') {
       padding: 1px;
       border: $border-width-thin solid $color-border;
       border-radius: $border-radius-medium;
@@ -53,7 +53,7 @@
   &__container,
   &_container {
 
-    @include deprecate('2.0.0');
+    @include deprecate('4.0.0');
     padding: $border-width-thin;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
@@ -63,7 +63,7 @@
   &__container--bare,
   &_container--bare {
 
-    @include deprecate('2.0.0');
+    @include deprecate('4.0.0');
     padding: ($border-width-thin * 2) $border-width-thin; // $border-width-thin * 2 to accomodate for missing borders
   }
 

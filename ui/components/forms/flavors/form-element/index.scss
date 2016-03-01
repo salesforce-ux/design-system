@@ -14,7 +14,7 @@
 
   // Deprecated, use .form-element__label instead
   &__helper {
-    @include deprecate('3.0.0') {
+    @include deprecate('4.0.0') {
       font-size: $font-size-small;
     }
   }
@@ -98,7 +98,7 @@
     color: $color-text-error;
   }
 
-  @include deprecate('2.0.0') {
+  @include deprecate('4.0.0') {
 
     .#{$css-prefix}input__icon {
       fill: $color-text-error;

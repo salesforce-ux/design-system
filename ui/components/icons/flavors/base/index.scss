@@ -11,7 +11,7 @@
 .#{$css-prefix}icon_container,
 .#{$css-prefix}icon__container {
 
-  @include deprecate('2.0.0');
+  @include deprecate('4.0.0', '#{$css-prefix}icon__container is deprecated. Use #{$css-prefix}icon_container instead.');
   display: inline-block;
   border-radius: $border-radius-medium;
 

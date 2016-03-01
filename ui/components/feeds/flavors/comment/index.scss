@@ -16,18 +16,42 @@
     }
   }
 
+  &__overflow {
+    margin-bottom: $spacing-medium;
+  }
+
   .#{$css-prefix}text-body--small a {
     color: inherit;
   }
 }
 
-.#{$css-prefix}comment__content {
-  padding: {
-    top: $spacing-x-small;
-    bottom: $spacing-x-small;
+
+// Comment with replies
+.#{$css-prefix}comment__replies {
+  padding-top: $spacing-medium;
+  margin-left: ($square-icon-large-boundary + $spacing-small);
+
+  > :last-child,
+  > :last-child .#{$css-prefix}comment {
+    padding-bottom: 0;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .#{$css-prefix}comment {
+    @include feed-vertical-rule($square-icon-medium-boundary-alt);
+    margin-bottom: 0;
+    padding-bottom: $spacing-medium;
+  }
+
+  .#{$css-prefix}avatar {
+    border: $border-width-thick solid $color-background-alt;
   }
 }
 
+// Comment entity tags
 .#{$css-prefix}tags {
   display: flex;
 
@@ -45,5 +69,18 @@
     &:last-child:after {
       content: none;
     }
+  }
+}
+
+// Comment + Publisher Attachments
+.#{$css-prefix}attachments {
+  padding: $spacing-x-small 0;
+
+  &:empty {
+    padding: 0;
+  }
+
+  &__item + &__item {
+    margin-top: $spacing-medium;
   }
 }

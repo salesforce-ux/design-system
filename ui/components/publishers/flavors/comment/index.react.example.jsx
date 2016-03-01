@@ -16,6 +16,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/components/media-objects/index.react';
 import Img from 'app_modules/ui/img';
 import className from 'classnames';
+import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -33,13 +34,6 @@ const image = (
       <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
-);
-
-const icon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
-    <span className={pf('assistive-text')}>Powerpoint</span>
-  </span>
 );
 
 let Publisher = props =>
@@ -72,32 +66,14 @@ let PublisherActions = props =>
     <Button flavor="brand">Comment</Button>
   </div>;
 
-let PublisherAttachments = props =>
-  <div className={pf('attachments')}>
-    <div className={pf('attachments__item box box--x-small theme--shade')}>
-      <div className={pf('grid grid--align-spread')}>
-        <MediaObject figureLeft={icon}>
-          <a href="javascript:void(0)" title="filename.ppt">filename.ppt</a>
-        </MediaObject>
-        <ButtonIcon
-          flavor="icon-bare"
-          sprite="utility"
-          symbol="close"
-          assistiveText="Remove this attachment" />
-      </div>
-    </div>
-  </div>;
-
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let Default = props =>
-  <Demo>
-    <Publisher>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
+export let Default = props =>
+  <Publisher>
+    <PublisherActions />
+  </Publisher>;
 
 let Active = props =>
   <Demo>
@@ -116,7 +92,7 @@ let ActiveFocus = props =>
 let Attachment = props =>
   <Demo>
     <Publisher className={pf('is-active')}>
-      <PublisherAttachments />
+      <Attachments />
       <PublisherActions />
     </Publisher>
   </Demo>;

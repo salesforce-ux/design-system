@@ -28,6 +28,11 @@ classes:
     required: true
     notes: <code>.{{cssPrefix}}comment__content</code> needs the <code>.{{cssPrefix}}text-longform</code> utility
   -
+    class: comment__replies
+    description: List of children comments
+    applied: <code>&lt;ul&gt;</code>
+    required: true
+  -
     class: tags
     description: Container for comment "tags" or "topics"
     applied: <code>&lt;div&gt;</code>
@@ -41,4 +46,14 @@ classes:
     class: tags__item
     description: Individual "tag" or "topic" item
     applied: <code>&lt;li&gt;</code>
+    required: true
+  -
+    class: attachments
+    description: Container for attachments to a comment
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: attachments__item
+    description: Individual attachment, can be more than one
+    applied: <code>&lt;div&gt;</code>
     required: true

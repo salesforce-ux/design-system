@@ -138,7 +138,7 @@ class Icons extends React.Component {
       return (
         <li className={pf('col--padded m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
           <figure>
-            <span className={pf(classNames('icon__container', wrapperClassName(icon)))}>
+            <span className={pf(classNames('icon_container', wrapperClassName(icon)))}>
               <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(svgClassName)} />
             </span>
             <figcaption className={pf('p-top--x-small text-body--small')}>{icon.symbol}</figcaption>

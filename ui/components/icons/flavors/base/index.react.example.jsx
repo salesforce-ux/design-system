@@ -13,44 +13,57 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export const preview = (
-  <div className="demo-only">
-    <span className={pf('icon_container m-right--small')}>
-      <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
-      <span className={pf('assistive-text')}>Announcement Icon</span>
-    </span>
-    <span className={pf('icon_container icon_container--circle icon-action-description m-right--small')}>
-      <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
-      <span className={pf('assistive-text')}>Description Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-account m-right--small')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-      <span className={pf('assistive-text')}>Account Icon</span>
-    </span>
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
-      <span className={pf('assistive-text')}>Doctype Icon</span>
-    </span>
-  </div>
-);
-export const code = (
-  <div className="demo-only">
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
-      <span className={pf('assistive-text')}>Announcement Icon</span>
-    </span>
-    <span className={pf('icon_container icon_container--circle icon-action-description')}>
-      <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
-      <span className={pf('assistive-text')}>Description Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-account')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-      <span className={pf('assistive-text')}>Account Icon</span>
-    </span>
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
-      <span className={pf('assistive-text')}>Doctype Icon</span>
-    </span>
-  </div>
-);
+let Action = props =>
+<span className={pf('icon_container icon_container--circle icon-action-description')}>
+  <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
+  <span className={pf('assistive-text')}>Description Icon</span>
+</span>;
+
+let Doctype = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
+  <span className={pf('assistive-text')}>Doctype Icon</span>
+</span>;
+
+let Standard = props =>
+<span className={pf('icon_container icon-standard-account')}>
+  <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+  <span className={pf('assistive-text')}>Account Icon</span>
+</span>;
+
+let Utility = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
+  <span className={pf('assistive-text')}>Announcement Icon</span>
+</span>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'action',
+    label: 'Action',
+    element: <Action />
+  },
+  {
+    id: 'doctype',
+    label: 'Doctype',
+    element: <Doctype />
+  },
+  {
+    id: 'standard',
+    label: 'Standard',
+    element: <Standard />
+  },
+  {
+    id: 'utility',
+    label: 'Utility',
+    element: <Utility />
+  }
+];

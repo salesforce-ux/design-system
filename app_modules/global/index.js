@@ -28,6 +28,7 @@ export default {
     {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
   ],
   unmanagedPackageUrls: [
+    { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' },
     { version: '0.12.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000Tji5' },
     { version: '0.11.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000T0UT' },
     { version: '0.10.1', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000ShId' },

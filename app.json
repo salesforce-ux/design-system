@@ -2,7 +2,7 @@
   "name": "Salesforce Lightning Design System",
   "buildpacks": [
     {
-      "url": "https://github.com/aputinski/heroku-buildpack-npmrc"
+      "url": "https://github.com/aputinski/heroku-buildpack-npm-github"
     },
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"

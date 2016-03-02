@@ -9,30 +9,18 @@
 
 // TODO: Can we do this programmatically instead of in CSS?
 
-.icon {
-  &-group-title {
-    text-transform: capitalize;
-  }
+.icon-grid {
 
-  &-grid {
-
-    .#{$css-prefix}col--padded {
-      flex: 0 0 7.5rem;
-      text-align: center;
-    }
-
-    [class*="icon-utility"] {
-      fill: $color-text-icon-default;
-      padding: $spacing-x-small;
-    }
-  }
-
-  &__svg--default {
-    background-color: $color-text-icon-default;
+  [class*="icon-utility"] {
+    fill: $color-text-icon-default;
   }
 }
 
-// For Action icons
-.action__icons .#{$css-prefix}icon_container {
-  padding: $spacing-x-small;
+.site-icon-width-container {
+  width: 50%;
+  text-align: center;
+
+  @include mq-medium-min {
+    width: 8rem;
+  }
 }

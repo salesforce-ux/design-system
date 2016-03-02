@@ -31,16 +31,16 @@ The following components are now available:
 
 Mobile:
 
-- Dialog Menus for small form factor [Prompts for Touch](components/notifications/#prompt-for-touch)
-- Action overflow for touch - [Action Overflow component](components/menus#action-overflow-for-touch)
-- Added Edit dialog form for touch devices - [Edit Dialog for Touch component](components/forms#edit-dialog-for-touch)
+- Dialog Menus for small form factor [Prompts for Touch](/components/notifications/#prompt-for-touch)
+- Action overflow for touch - [Action Overflow component](/components/menus#action-overflow-for-touch)
+- Added Edit dialog form for touch devices - [Edit Dialog for Touch component](/components/forms#edit-dialog-for-touch)
 - Page Header - [Page Header component](/components/page-headers/#base)
 
 **ADDED**
 
 The following classes are now available:
 
-- Added max-width sizing utilities - [Max Width sizing](utilities/sizing)
+- Added max-width sizing utilities - [Max Width sizing](/utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
   - Added `.slds-grid--align-end` for horizontal alignment on main grid axis

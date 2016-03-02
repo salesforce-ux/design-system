@@ -230,7 +230,7 @@ class FAQ extends React.Component {
         <StickyNav>
           <div className={pf('site-menu--jump-links')}>
             <h3 className="site-text-heading--label">Questions</h3>
-            <ul className={pf('list--vertical has-block-links')}>
+            <ul className={pf('list--vertical has-block-links--space')}>
               {this.jumpLinks}
             </ul>
           </div>

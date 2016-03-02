@@ -1,6 +1,6 @@
 # Salesforce Lightning Design System
 
-[![Build Status](https://travis-ci.com/salesforce-ux/design-system-internal.svg?token=BMXxPFKR5GZuYsqAFsEf&branch=spring-16)](https://travis-ci.com/salesforce-ux/design-system-internal)
+[![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 

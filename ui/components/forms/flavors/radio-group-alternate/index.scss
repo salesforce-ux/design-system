@@ -37,6 +37,7 @@
   + .#{$css-prefix}radio--button {
     border-left: $border-width-thin solid $color-border;
     border-radius: 0;
+    margin: 0;
   }
 
   // Dealing with box shadows on specific n children

@@ -29,7 +29,7 @@
     "gulp": "gulp"
   },
   "dependencies": {
-    "@salesforce-ux/design-tokens": "2.0.3",
+    "@salesforce-ux/design-tokens": "2.0.4",
     "@salesforce-ux/icons": "3.4.0",
     "app-module-path": "1.0.5",
     "async": "1.5.2",

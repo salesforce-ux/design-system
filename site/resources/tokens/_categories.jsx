@@ -73,6 +73,7 @@ const categories = {
 
   'background-color': new Category({
     label: 'Background Color',
+    description: ' Use these tokens for background colors only. Do not use these for border colors or text colors.',
     valueFormat: 'color',
     renderExample(token) {
       return (
@@ -83,6 +84,7 @@ const categories = {
 
   'text-color': new Category({
     label: 'Text Color',
+    description: 'Use these tokens for text colors only. Do not use these for border colors or background colors.',
     valueFormat: 'color',
     renderExample(token) {
       const className = classNames('site-example', 'site-example-color-text', {
@@ -98,6 +100,7 @@ const categories = {
 
   'border-color': new Category({
     label: 'Border Color',
+    description: 'Use these tokens for border colors only. Do not use these for background colors or text colors.',
     valueFormat: 'color',
     renderExample(token) {
       return (
@@ -110,6 +113,7 @@ const categories = {
 
   'font': new Category({
     label: 'Font',
+    description: 'Use these font weights to change how thin or heavy the weight is for our font.',
     renderExample(token) {
       return (
         // if the token value isn't a number, it's a font-family
@@ -126,6 +130,7 @@ const categories = {
 
   'font-size': new Category({
     label: 'Font Size',
+    description: 'Use these sizing tokens for font sizes.',
     renderExample(token) {
       return (
         <ExampleCell className="site-example-color-border" style={{fontSize: token.value}}>
@@ -137,6 +142,7 @@ const categories = {
 
   'line-height': new Category({
     label: 'Line Height',
+    description: 'Use these tokens for changing the line-height of elements. Usually, the line-height-text is already inherited by default. Only set it if you need to apply it again.',
     renderExample(token) {
       return (
         <ExampleCell style={{lineHeight: token.value}}>
@@ -148,6 +154,7 @@ const categories = {
 
   'spacing': new Category({
     label: 'Spacing',
+    description: 'Spacing tokens are used for padding, margins, and position coordinates. Border-width tokens are used for the border property.',
     renderExample(token) {
       return (
         <ExampleCell className="site-example-spacing">
@@ -159,6 +166,7 @@ const categories = {
 
   'radius': new Category({
     label: 'Radius',
+    description: 'Use radius tokens to change the border-radius size (rounded corners).',
     renderExample(token) {
       return (
         <ExampleCell className="site-example-radius">
@@ -170,6 +178,7 @@ const categories = {
 
   'sizing': new Category({
     label: 'Sizing',
+    description: 'Use sizing tokens to set elements to our sizing scale. Size tokens can be used for the width and height properties. Square tokens are used for both width and height.',
     renderExample(token) {
       const intWidth = parseInt(token.value);
       let width;
@@ -188,6 +197,7 @@ const categories = {
 
   'shadow': new Category({
     label: 'Shadow',
+    description: 'Use shadow tokens to set a box shadow.',
     renderExample(token) {
       return (
         <ExampleCell className="site-example site-example-shadow">
@@ -199,6 +209,7 @@ const categories = {
 
   'atmosphere': new Category({
     label: 'Atmosphere',
+    description: 'Use atmosphere tokens for box shadows to create the appearance of elevation.',
     renderExample(token) {
       if (token.type === 'box-shadow') {
         return (
@@ -214,6 +225,7 @@ const categories = {
 
   'time': new Category({
     label: 'Time',
+    description: 'Use timing tokens for animation durations.',
     renderExample(token) {
       return (
         <ExampleCell className="site-example site-example-time" />
@@ -223,6 +235,7 @@ const categories = {
 
   'media-query': new Category({
     label: 'Media Query',
+    description: 'Use media query tokens to set media query width ranges.',
     renderExample() {
       return (
         <ExampleCell />
@@ -232,6 +245,7 @@ const categories = {
 
   'z-index': new Category({
     label: 'Z-index',
+    description: 'Use z-index tokens to set the z order layering of elements.',
     renderExample() {
       return (
         <ExampleCell />
@@ -241,6 +255,7 @@ const categories = {
 
   'misc': new Category({
     label: 'Misc',
+    description: 'These sizing tokens will be moved to the sizing section. The width, height, max-height, max-width are tokens used for their respective CSS properties. Square tokens are used for both width and height. Flex tokens are used for flex box sizing.',
     renderExample() {
       return (
         <ExampleCell />

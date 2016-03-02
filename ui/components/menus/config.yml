@@ -3,6 +3,7 @@ status: 'dev-ready'
 flavors:
   - dropdown
   - dropdown-positioning
+  - dropdown-height
   - picklist
   - picklist-multi-select
   - search-overflow

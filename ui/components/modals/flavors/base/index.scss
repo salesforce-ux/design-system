@@ -83,6 +83,14 @@
     border-radius: $border-radius-medium;
     padding: $spacing-medium;
     background-color: $color-background;
+
+    @include mq-medium-max {
+
+      .#{$css-prefix}button {
+        width: 100%;
+        margin: $spacing-xxx-small 0;
+      }
+    }
   }
 
   &__footer {

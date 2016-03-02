@@ -134,7 +134,9 @@ class Icons extends React.Component {
     let wrapperClassName = (icon) => isAction ? icon.className : null;
     return category.icons.map(icon => {
       const svgClassName = classNames('icon', icon.className, {
-        'icon--large': !isUtility, 'p-around--x-small': isAction
+        'icon--large': !isUtility,
+        'p-around--x-small': isAction,
+        'icon-text-default': isUtility
       });
       return (
         <li className={pf('site-icon-width-container m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>

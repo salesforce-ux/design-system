@@ -106,7 +106,7 @@ if (process.env.HEROKU_APP_NAME) {
   try {
     // Get the deployments config
     const config = require(local('server/config/deployments.json'));
-    // Find the first release that packageJSON.version statisfies
+    // Find the first release that packageJSON.version satisfies
     const release = _.find(config.releases, release =>
       semver.satisfies(packageJSON.version, release.semver));
     // Throw if

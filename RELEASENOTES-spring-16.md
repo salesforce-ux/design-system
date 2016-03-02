@@ -41,13 +41,14 @@ Mobile:
 The following classes are now available:
 
 - Added max-width sizing utilities - [Max Width sizing](utilities/sizing)
-- Added `.slds-text-error` for use on icons for validation errors
-- Added color to user selection to force good contrast on dark backgrounds
+- Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
   - Added `.slds-grid--align-end` for horizontal alignment on main grid axis
   - Added `.slds-grid--vertical-align-end` and `.slds-grid--vertical-align-center` for vertical alignment on grid cross axis
   - Added `.slds-grid--stretch` for multi-row vertical stretch support
   - Added `.slds-grid--reverse` and `.slds-grid--vertical-reverse` to reverse the direction of the grid
+- Added `.slds-text-error` for use on icons for validation errors
+- Added color to user selection to force good contrast on dark backgrounds
 
 **CHANGES**
 
@@ -91,12 +92,12 @@ The following features are being marked as deprecated in this release and will b
 - Deprecated `.slds-section-title`. Use `.slds-section__title` instead - [Section Title](/components/utilities/text/#section-title) for full details
 - Deprecated `.slds-button--icon-bare`. Use `.slds-button--icon` instead - [Button Icon](/components/buttons/#icon)
 - Deprecated tabs descendant selectors [Tabs component](/components/tabs/):
-  - `.slds-tabs--default > slds-tabs__item` deprecates in version 2.0.0, use `.slds-tabs--default__item` instead
-  - `.slds-tabs--default > slds-tabs__content` deprecates in version 2.0.0, use `.slds-tabs--default__content` instead
-  - `.slds-tabs--default > a` deprecates in version 2.0.0, use `.slds-tabs--default__link` instead
-  - `.slds-tabs--scoped > slds-tabs__item` deprecates in version 2.0.0, use `.slds-tabs--scoped__item` instead
-  - `.slds-tabs--scoped > slds-tabs__content` deprecates in version 2.0.0, use `.slds-tabs--scoped__content` instead
-  - `.slds-tabs--scoped > a` deprecates in version 2.0.0, use `.slds-tabs--scoped__link` instead
+  - `.slds-tabs--default > slds-tabs__item` use `.slds-tabs--default__item` instead.
+  - `.slds-tabs--default > slds-tabs__content` use `.slds-tabs--default__content` instead.
+  - `.slds-tabs--default > a` use `.slds-tabs--default__link` instead.
+  - `.slds-tabs--scoped > slds-tabs__item` use `.slds-tabs--scoped__item` instead.
+  - `.slds-tabs--scoped > slds-tabs__content` use `.slds-tabs--scoped__content` instead.
+  - `.slds-tabs--scoped > a` use `.slds-tabs--scoped__link` instead.
 - Deprecated `.slds--tooltip`. Use `.slds-popover--tooltip` instead.
 - Deprecated responsive `.slds-nowrap--{size}` classes due to inconsistent naming. Use `.slds-{size}--nowrap` instead.
 - Deprecated `.slds-modal-backdrop` and `.slds-modal-backdrop--open` in favor of `.slds-backdrop` and `.slds-backdrop--open` to reuse in other components.

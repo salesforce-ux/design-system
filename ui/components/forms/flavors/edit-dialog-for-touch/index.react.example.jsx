@@ -78,8 +78,8 @@ class ModalExample extends React.Component {
               </div>
 
               <div className={pf('form-element m-top--medium large')}>
-                <span className={pf('form-element__label')}>Select</span>
-                <Select>
+                <label className={pf('form-element__label')} htmlFor="select-01">Select</label>
+                <Select id="select-01">
                   <option>Select an Option</option>
                 </Select>
               </div>

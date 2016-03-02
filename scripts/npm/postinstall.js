@@ -12,12 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import '../helpers/setup';
 import _ from 'lodash';
 import fs from 'fs-extra';
-import glob from 'glob';
 import path from 'path';
 import request from 'superagent';
 import semver from 'semver';
 import globals from '../../app_modules/global';
-import rimraf from 'rimraf';
 import moment from 'moment';
 import { execSync } from 'child_process';
 
@@ -70,33 +68,6 @@ const getVersion = (version, release) => {
     : '';
   return version + suffix;
 };
-
-// HACK: Copy "*-internal" modules so they can be required as normal
-glob.sync('node_modules/@salesforce-ux/*-internal', { cwd: local() }).forEach(directory => {
-  // Get the package.json for the design-system
-  const packageJSON = require(local('package.json'));
-  // Loop over each "*-internal" module
-  const moduleName = _.takeRight(directory.split(path.sep), 2).join(path.sep);
-  // See if the "*-internal" module is an actual dependency
-  if (packageJSON.dependencies[moduleName] || packageJSON.devDependencies[moduleName]) {
-    const moduleNameNew = moduleName.replace(/\-internal$/, '');
-    const directoryNew = directory.replace(/\-internal$/, '');
-    // Make a copy and remove the "-internal" suffix
-    fs.copySync(directory, directoryNew, {
-      clobber: true
-    }, err => {});
-    // Update the copy's package.json to the cleaned package name
-    fs.writeFileSync(
-      `./${directoryNew}/package.json`,
-      fs.readFileSync(`./${directoryNew}/package.json`)
-        .toString()
-        .replace(new RegExp(_.escapeRegExp(moduleName), 'g'), moduleNameNew)
-    );
-  } else {
-    // the "*-internal" module is not a dependency, so remove it
-    rimraf.sync(directory, err => {});
-  }
-});
 
 if (process.env.HEROKU_APP_NAME) {
   exec('rm -rf server/');

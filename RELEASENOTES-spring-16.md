@@ -28,6 +28,7 @@ The following components are now available:
 - Setup Wizard - [Wizard component](/components/process/#wizard)
 - Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/grid-system/#alignment-item-bump)
 - Popover color themes added - [Popover Theme Variant](/components/popovers/#themes)
+- Tree [Tree Base Component](/components/trees/) - Tree was completely rebuilt and is now a new component
 
 Mobile:
 
@@ -40,7 +41,7 @@ Mobile:
 
 The following classes are now available:
 
-- Added max-width sizing utilities - [Max Width sizing](utilities/sizing)
+- Added max-widt/components/trees/h sizing utilities - [Max Width sizing](utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
   - Added `.slds-grid--align-end` for horizontal alignment on main grid axis

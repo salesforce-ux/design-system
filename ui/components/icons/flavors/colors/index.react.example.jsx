@@ -13,53 +13,68 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export const preview = (
-  <div className="demo-only">
-    <span className={pf('icon_container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
-      <span className={pf('assistive-text')}>Lock Icon</span>
+let LockIcon = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
+  <span className={pf('assistive-text')}>Lock Icon</span>
+</span>;
 
-    </span>
-    <span className={pf('icon_container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-case m-right--small')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-      <span className={pf('assistive-text')}>Case icon </span>
-    </span>
-    <span className={pf('icon_container icon-standard-log-a-call')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
-      <span className={pf('assistive-text')}>Log a Call icon </span>
-    </span>
-  </div>
-);
-export const code = (
-  <div className="demo-only">
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
-      <span className={pf('assistive-text')}>Lock Icon</span>
-    </span>
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-case')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-      <span className={pf('assistive-text')}>Case icon </span>
-    </span>
-    <span className={pf('icon_container icon-standard-log-a-call')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
-      <span className={pf('assistive-text')}>Log a Call icon </span>
-    </span>
-  </div>
-);
+let WarningIcon = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+  <span className={pf('assistive-text')}>Warning Icon</span>
+</span>;
+
+let ErrorIcon = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
+  <span className={pf('assistive-text')}>Warning Icon</span>
+</span>;
+
+let CaseIcon = props =>
+<span className={pf('icon_container icon-standard-case')}>
+  <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
+  <span className={pf('assistive-text')}>Case icon</span>
+</span>;
+
+let LogACallIcon = props =>
+<span className={pf('icon_container icon-standard-log-a-call')}>
+  <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
+  <span className={pf('assistive-text')}>Log a Call icon</span>
+</span>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'lockicon',
+    label: 'Icon: Lock',
+    element: <LockIcon />
+  },
+  {
+    id: 'warningicon',
+    label: 'Icon: Warning',
+    element: <WarningIcon />
+  },
+  {
+    id: 'erroricon',
+    label: 'Icon: Error',
+    element: <ErrorIcon />
+  },
+  {
+    id: 'caseicon',
+    label: 'Background: Case',
+    element: <CaseIcon />
+  },
+  {
+    id: 'logacallicon',
+    label: 'Background: Log a Call',
+    element: <LogACallIcon />
+  }
+];

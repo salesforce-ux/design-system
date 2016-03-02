@@ -13,44 +13,45 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export const preview = (
-  <div className="demo-only">
-    <span className={pf('icon_container m-right--small')}>
-      <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container m-right--small icon-standard-account')}>
-      <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
-      <span className={pf('assistive-text')}>Standard Account Icon</span>
-    </span>
-    <span className={pf('icon_container m-right--small icon-standard-case')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-      <span className={pf('assistive-text')}>Small Case Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-solution')}>
-      <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="solution" />
-      <span className={pf('assistive-text')}>Large Solution Icon</span>
-    </span>
-  </div>
-);
-export const code = (
-  <div className="demo-only">
-    <span className={pf('icon_container')}>
-      <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-      <span className={pf('assistive-text')}>Warning Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-account')}>
-      <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
-      <span className={pf('assistive-text')}>Standard Account Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-case')}>
-      <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-      <span className={pf('assistive-text')}>Small Case Icon</span>
-    </span>
-    <span className={pf('icon_container icon-standard-solution')}>
-      <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="solution" />
-      <span className={pf('assistive-text')}>Large Solution Icon</span>
-    </span>
-  </div>
-);
+let Default = props =>
+<span className={pf('icon_container icon-standard-case')}>
+  <SvgIcon className={pf(`icon${props.size ? ' icon--' + props.size : ''}`)} sprite="standard" symbol="case" />
+  <span className={pf('assistive-text')}>Case icon</span>
+</span>;
+
+let XSmall = props =>
+<span className={pf('icon_container')}>
+  <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
+  <span className={pf('assistive-text')}>Warning Icon</span>
+</span>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'x-small',
+    label: 'Extra Small',
+    element: <XSmall />
+  },
+  {
+    id: 'small',
+    label: 'Small',
+    element: <Default size="small" />
+  },
+  {
+    id: 'medium',
+    label: 'Medium (default)',
+    element: <Default />
+  },
+  {
+    id: 'large',
+    label: 'Large',
+    element: <Default size="large" />
+  }
+];

@@ -1,5 +1,33 @@
-Icons are created with no background color. The base `.{{cssPrefix}}icon` class sets the fill color to white. You can change the color by changing the CSS fill property value. Use the `.{{cssPrefix}}icon-text-default` class to make a utility icon the same color as the default text. `.{{cssPrefix}}icon-text-warning` creates a yellow warning icon and `.{{cssPrefix}}icon-text-error` can be used to make a red icon.
+Icons (`.{{cssPrefix}}icon`) are white by default, and their container (`.{{cssPrefix}}icon_container`) has a transparent background.
 
-Note: Doctype icons have specific colors. You can’t change the color with the fill property.
+### Changing the color of an icon
 
-To give a Standard icon a background color, append the sprite name and the icon name to `.{{cssPrefix}}icon`. For example, for the account icon in the standard icon set, the class is `.{{cssPrefix}}icon-standard-account`. Place the class on the `.{{cssPrefix}}icon_container`. In the case of icon names with more than one word (separated by an underscore), use a dash in the class name. So `log_a_call` in the standard icon set becomes `.{{cssPrefix}}icon-action-log-a-call`.
+Icon color is changed using the `fill` CSS property.
+You may also use these helper classes:
+
+- `.{{cssPrefix}}icon-text-default`: same as default text
+- `.{{cssPrefix}}icon-text-warning`: yellow
+- `.{{cssPrefix}}icon-text-error`: red
+
+### Changing the background of an icon
+
+Change a background color using composed class names:
+
+```
+.{{cssPrefix}}icon-[sprite name]-[icon name]
+```
+
+Place the class on the `.{{cssPrefix}}icon_container`.
+
+```html
+<!-- "account" icon in the "standard" icon set -->
+<div class="{{cssPrefix}}icon_container {{cssPrefix}}icon-standard-account">
+  ...
+</div>
+```
+
+Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.{{cssPrefix}}icon-action-log-a-call`.
+
+### Note on “doctype” icons
+
+Note that [doctype icons](/resources/icons/#doctype) have specific colors that cannot be changed with the `fill` CSS property.

@@ -2,7 +2,4 @@ status: 'dev-ready'
 classBase: 'media'
 flavors:
   - base
-  - center
-  - reverse
-  - double
   - responsive

@@ -8,8 +8,13 @@ classes:
   -
     class: media__figure
     description: Defines the figure area
-    required: true
+    required: false
     notes: Apply this class to the first element inside the <code>.{{cssPrefix}}media</code> and contains the image, icon, svg or video
+  -
+    class: media__figure--reverse
+    description: Defines the figure area on the other side
+    required: false
+    notes: Apply this class to the last element inside the <code>.{{cssPrefix}}media</code> and contains the image, icon, svg or video
   -
     class: media__body
     description: Defines the body area
@@ -27,7 +32,8 @@ classes:
     class: media--double
     description: Allows you to add a figure on both the right and left sides
     applied: <code>.{{cssPrefix}}media</code>
-    notes: Both figures are added prior to the <code>.{{cssPrefix}}media__body</code>
+    notes: Use existing <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__figure--reverse</code> instead.
+    deprecated: true
   -
     class: media--responsive
     description: <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__body</code> stack on smaller screens

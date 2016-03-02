@@ -138,8 +138,15 @@ class ComponentFlavor extends React.Component {
 
   renderInfo() {
     const { flavor } = this.props;
+
+    if (flavor.info.markup) {
+      flavor.info.markup['__html'] = flavor.info.markup['__html'].replace(/<h3/g, '<h3 class="site-text-heading--medium"');
+    }
+
     return flavor.info.markup ? (
-      <div dangerouslySetInnerHTML={flavor.info.markup} />
+      <div
+        className="slds-text-longform"
+        dangerouslySetInnerHTML={flavor.info.markup} />
     ) : null;
   }
 

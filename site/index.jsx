@@ -120,12 +120,12 @@ export default (
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
             <div className="grid-card">
               <div className={pf('grid grid--align-spread')}>
-                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="tutorials-header">Tutorials</h3>
-                <Img src="/assets/images/landing/icon-tutorial.svg" alt="" />
+                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="getting-started-header">Getting started</h3>
+                <Img src="/assets/images/landing/icon-getting-started.svg" alt="" />
               </div>
               <hr className="hr hr--orange" />
               <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-              <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="tutorials-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="getting-started-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
             </div>
           </li>
         </ul>

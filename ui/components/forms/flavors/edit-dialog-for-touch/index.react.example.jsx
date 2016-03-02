@@ -22,6 +22,7 @@ import Menu from 'ui/components/menus/index.react';
 import PickList from 'ui/components/picklists/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
+import { Select } from 'ui/components/forms/flavors/select/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -77,8 +78,10 @@ class ModalExample extends React.Component {
               </div>
 
               <div className={pf('form-element m-top--medium large')}>
-                <span className={pf('form-element__label')}>Picklist</span>
-                <PickList aria-expanded="false" className={pf('max-small-buttons--stretch')} />
+                <label className={pf('form-element__label')} htmlFor="select-01">Select</label>
+                <Select id="select-01">
+                  <option>Select an Option</option>
+                </Select>
               </div>
 
               <Input label="Text Input" assistiveText="inputSample2" />

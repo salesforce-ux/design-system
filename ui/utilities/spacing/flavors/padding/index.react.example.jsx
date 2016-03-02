@@ -15,6 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only demo-only--spacing demo-only--padding-theme">
+    <div className={pf('p-top--none')}></div>
     <div className={pf('p-top--xxx-small')}></div>
     <div className={pf('p-top--xx-small')}></div>
     <div className={pf('p-top--x-small')}></div>
@@ -23,6 +24,8 @@ export default (
     <div className={pf('p-top--large')}></div>
     <div className={pf('p-top--x-large')}></div>
     <div className={pf('p-top--xx-large')}></div>
+
+    <div className={pf('p-right--none')}></div>
     <div className={pf('p-right--xxx-small')}></div>
     <div className={pf('p-right--xx-small')}></div>
     <div className={pf('p-right--x-small')}></div>
@@ -31,6 +34,8 @@ export default (
     <div className={pf('p-right--large')}></div>
     <div className={pf('p-right--x-large')}></div>
     <div className={pf('p-right--xx-large')}></div>
+
+    <div className={pf('p-bottom--none')}></div>
     <div className={pf('p-bottom--xxx-small')}></div>
     <div className={pf('p-bottom--xx-small')}></div>
     <div className={pf('p-bottom--x-small')}></div>
@@ -39,6 +44,8 @@ export default (
     <div className={pf('p-bottom--large')}></div>
     <div className={pf('p-bottom--x-large')}></div>
     <div className={pf('p-bottom--xx-large')}></div>
+
+    <div className={pf('p-left--none')}></div>
     <div className={pf('p-left--xxx-small')}></div>
     <div className={pf('p-left--xx-small')}></div>
     <div className={pf('p-left--x-small')}></div>
@@ -47,6 +54,8 @@ export default (
     <div className={pf('p-left--large')}></div>
     <div className={pf('p-left--x-large')}></div>
     <div className={pf('p-left--xx-large')}></div>
+
+    <div className={pf('p-vertical--none')}></div>
     <div className={pf('p-vertical--xxx-small')}></div>
     <div className={pf('p-vertical--xx-small')}></div>
     <div className={pf('p-vertical--x-small')}></div>
@@ -55,6 +64,8 @@ export default (
     <div className={pf('p-vertical--large')}></div>
     <div className={pf('p-vertical--x-large')}></div>
     <div className={pf('p-vertical--xx-large')}></div>
+
+    <div className={pf('p-horizontal--none')}></div>
     <div className={pf('p-horizontal--xxx-small')}></div>
     <div className={pf('p-horizontal--xx-small')}></div>
     <div className={pf('p-horizontal--x-small')}></div>
@@ -63,6 +74,8 @@ export default (
     <div className={pf('p-horizontal--large')}></div>
     <div className={pf('p-horizontal--x-large')}></div>
     <div className={pf('p-horizontal--xx-large')}></div>
+
+    <div className={pf('p-around--none')}></div>
     <div className={pf('p-around--xxx-small')}></div>
     <div className={pf('p-around--xx-small')}></div>
     <div className={pf('p-around--x-small')}></div>

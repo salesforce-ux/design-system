@@ -38,9 +38,12 @@
     }
   }
 
-  .#{$css-prefix}tile__label {
-    display: block;
+  .#{$css-prefix}plus-more {
+    width: 4.5rem;
   }
+  // .#{$css-prefix}tile__label {
+  //   display: block;
+  // }
 }
 
 .#{$css-prefix}timeline {
@@ -81,18 +84,18 @@
     background: $task;
   }
 
-  .#{$css-prefix}tile__detail {
-    padding: {
-      right: $spacing-large;
-      left: $spacing-large;
-    }
+  // .#{$css-prefix}tile__detail {
+  //   padding: {
+  //     right: $spacing-large;
+  //     left: $spacing-large;
+  //   }
 
-    &:first-child {
-      padding-left: 0;
-    }
+  //   &:first-child {
+  //     padding-left: 0;
+  //   }
 
-    &:last-child {
-      padding-right: 0;
-    }
-  }
+  //   &:last-child {
+  //     padding-right: 0;
+  //   }
+  // }
 }

@@ -115,7 +115,7 @@ const generate = () => {
       const symbolName = path.basename(file.path, '.svg');
       const className = category.getClassName(
         spriteName,
-        symbolName.replace(/_/g, '-')
+        _.kebabCase(symbolName.toLowerCase())
       );
       const icon = {
         sprite: spriteName,

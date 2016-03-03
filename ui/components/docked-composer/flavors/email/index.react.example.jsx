@@ -70,8 +70,8 @@ export default (
               </div>
             </div>
             <div className={pf('grid shrink-none p-horizontal--small')}>
-              <Button className={pf('x-small-button--horizontal')}>Cc</Button>
-              <Button className={pf('x-small-button--horizontal')}>Bcc</Button>
+              <Button>Cc</Button>
+              <Button>Bcc</Button>
             </div>
           </div>
           <div className={pf('grid p-horizontal--small')}>

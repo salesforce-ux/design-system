@@ -10,170 +10,87 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export const preview = (
-<div className={pf('demo-only demo-only--nubbin-example')}>
-  <div className={pf('grid grid--align-spread')}>
-    {/* Nubbin Left Top */}
-    <div className={pf('popover nubbin--top-left')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--top-left')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-
-    {/* Nubbin Left */}
-    <div className={pf('popover nubbin--top')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--top')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-
-    {/* Nubbin Left Bottom */}
-    <div className={pf('popover nubbin--top-right')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--top-right')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
+let Popover = props =>
+<div className={pf(`popover nubbin--${props.nubbinPosition}`)} role="dialog">
+  <div className={pf('popover__body')}>
+    <code>
+      {pf('popover')}
+      <br />
+      {pf(`nubbin--${props.nubbinPosition}`)}
+    </code>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
   </div>
-  <hr />
-  <div className={pf('grid grid--align-spread')}>
-    {/* Nubbin Left Top */}
-    <div className={pf('popover nubbin--left-top')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--left-top')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
+</div>;
 
-    {/* Nubbin Left Bottom */}
-    <div className={pf('popover nubbin--right-top')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--right-top')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-  </div>
-  <hr />
-  <div className={pf('grid grid--align-spread')}>
-    {/* Nubbin Left Top */}
-    <div className={pf('popover nubbin--left')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--left')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-    {/* Nubbin Left Bottom */}
-    <div className={pf('popover nubbin--right')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--right')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-  </div>
-  <hr />
-  <div className={pf('grid grid--align-spread')}>
-    {/* Nubbin Left Top */}
-    <div className={pf('popover nubbin--left-bottom')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--left-bottom')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-
-    {/* Nubbin Left Bottom */}
-    <div className={pf('popover nubbin--right-bottom')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--right-bottom')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-  </div>
-  <hr />
-  <div className={pf('grid grid--align-spread')}>
-    {/* Nubbin Left Top */}
-    <div className={pf('popover nubbin--bottom-left')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--bottom-left')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-
-    {/* Nubbin Left */}
-    <div className={pf('popover nubbin--bottom')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--bottom')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-
-    {/* Nubbin Left Bottom */}
-    <div className={pf('popover nubbin--bottom-right')} role="dialog">
-      <div className={pf('popover__body')}>
-        <code>.{pf('nubbin--bottom-right')}</code>
-        <Lorem count={1} paragraphLowerBound={2} />
-      </div>
-    </div>
-  </div>
-</div>
-);
-
-export const code = (
-<div className={pf('demo-only')}>
-
-  <div className={pf('popover nubbin--top-left')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--top')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--top-right')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--left-top')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--right-top')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--left')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--right')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--left-bottom')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--right-bottom')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--bottom-left')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--bottom')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-  <div className={pf('popover nubbin--bottom-right')} role="dialog">
-    <div className={pf('popover__body')}></div>
-  </div>
-
-</div>
-);
+export let states = [
+  {
+    id: 'left',
+    label: 'Left',
+    element: <Popover nubbinPosition="left" />
+  },
+  {
+    id: 'left-top',
+    label: 'Left (top)',
+    element: <Popover nubbinPosition="left-top" />
+  },
+  {
+    id: 'left-bottom',
+    label: 'Left (bottom)',
+    element: <Popover nubbinPosition="left-bottom" />
+  },
+  {
+    id: 'top',
+    label: 'Top',
+    element: <Popover nubbinPosition="top" />
+  },
+  {
+    id: 'top-left',
+    label: 'Top (left)',
+    element: <Popover nubbinPosition="top-left" />
+  },
+  {
+    id: 'top-right',
+    label: 'Top (right)',
+    element: <Popover nubbinPosition="top-right" />
+  },
+  {
+    id: 'right',
+    label: 'Right',
+    element: <Popover nubbinPosition="right" />
+  },
+  {
+    id: 'right-top',
+    label: 'Right (top)',
+    element: <Popover nubbinPosition="right-top" />
+  },
+  {
+    id: 'right-bottom',
+    label: 'Right (bottom)',
+    element: <Popover nubbinPosition="right-bottom" />
+  },
+  {
+    id: 'bottom',
+    label: 'Bottom',
+    element: <Popover nubbinPosition="bottom" />
+  },
+  {
+    id: 'bottom-left',
+    label: 'Bottom (left)',
+    element: <Popover nubbinPosition="bottom-left" />
+  },
+  {
+    id: 'bottom-right',
+    label: 'Bottom (right)',
+    element: <Popover nubbinPosition="bottom-right" />
+  }
+];

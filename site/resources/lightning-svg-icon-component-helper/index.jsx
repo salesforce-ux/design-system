@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -21,7 +21,7 @@ let compactVersion = `${g.abbreviatedName.toLowerCase()}${process.env.SLDS_VERSI
 
 export default (
   <PageBody anchorTitle="Lightning SVG Icon Component Helper" contentClassName={pf('grid wrap')}>
-    <Sticky className={pf('site-sidebar-content col size--1-of-1 large-size--2-of-6 large-order--2')}>
+    <StickyNav>
       <div className={pf('site-menu--jump-links')}>
         <h3 className="site-text-heading--label">Steps</h3>
         <ul className={pf('list--vertical has-block-links')}>
@@ -30,7 +30,7 @@ export default (
           <li><a href="#step-3">Use the New Component</a></li>
         </ul>
       </div>
-    </Sticky>
+    </StickyNav>
 
     <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
       <div className={pf('container--large')}>
@@ -86,17 +86,18 @@ export default (
     var size = component.get("v.size");
     var name = component.get("v.name");
     var classname = component.get("v.class");
+    var containerclass = component.get("v.containerClass");
     var category = component.get("v.category");
 
     var containerClassName = [
-        prefix+"icon__container",
+        prefix+"icon_container",
         prefix+"icon-"+category+"-"+name,
-        classname
+        containerclass
         ].join(' ');
-    var iconClassName = prefix+"icon "+prefix+"icon--" + size;
     component.set("v.containerClass", containerClassName);
 
     var svgroot = document.createElementNS(svgns, "svg");
+    var iconClassName = prefix+"icon "+prefix+"icon--" + size+" "+classname;
     svgroot.setAttribute("aria-hidden", "true");
     svgroot.setAttribute("class", iconClassName);
     svgroot.setAttribute("name", name);

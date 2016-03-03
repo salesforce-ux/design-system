@@ -2,6 +2,9 @@
   "name": "Salesforce Lightning Design System",
   "buildpacks": [
     {
+      "url": "https://github.com/aputinski/heroku-buildpack-npm-github"
+    },
+    {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
     }
   ],
@@ -34,6 +37,9 @@
       "required": true
     },
     "INTERNAL_PASSWORD": {
+      "required": true
+    },
+    "NPM_TOKEN": {
       "required": true
     },
     "REDIS_URL": {

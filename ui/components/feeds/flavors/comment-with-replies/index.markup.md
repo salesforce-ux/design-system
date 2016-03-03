@@ -1,1 +1,0 @@
-If a comment has replies, below the primary comment `.{{cssPrefix}}comment` should get a `<ul>` with the class `.{{cssPrefix}}comment__replies`. The `<li>` within the `<ul>` will then get the comment minimal variant.

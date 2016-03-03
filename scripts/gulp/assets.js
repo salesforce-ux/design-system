@@ -13,7 +13,7 @@ import path from 'path';
 import gulp from 'gulp';
 
 export const ignore = 'jsx,js,scss';
-export const getPath = (a, b = '') => path.resolve(__PATHS__[a], b);
+export const getPath = (a, b) => path.resolve(__PATHS__[a], (b || ''));
 
 gulp.task('assets:icons', () =>
   gulp

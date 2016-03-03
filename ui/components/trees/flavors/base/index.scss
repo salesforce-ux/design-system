@@ -10,7 +10,7 @@
 .#{$css-prefix}tree-container,
 .#{$css-prefix}tree_container {
 
-  @include deprecate('2.0.0');
+  @include deprecate('4.0.0');
   min-width: rem(120px);
   max-width: rem(400px);
 
@@ -25,6 +25,10 @@
     display: flex;
     line-height: $line-height-button;
     padding-left: $spacing-medium;
+
+    .#{$css-prefix}is-disabled {
+      visibility: hidden;
+    }
 
     a {
       color: $color-text-default;
@@ -78,5 +82,4 @@
   .#{$css-prefix}pill {
     margin-left: $spacing-small;
   }
-
 }

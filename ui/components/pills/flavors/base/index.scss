@@ -12,7 +12,7 @@
 .#{$css-prefix}pill {
   background-color: $color-background-pill;
   display: inline-block;
-  padding: $spacing-xx-small;
+  padding: $spacing-xxx-small $spacing-xx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   vertical-align: middle;
@@ -20,7 +20,7 @@
   position: relative;
 
   + .#{$css-prefix}pill {
-    margin-left: $spacing-xx-small;
+    margin-left: $spacing-xxx-small;
   }
 
   &:hover {
@@ -41,30 +41,21 @@
     }
   }
 
-  &-container {
-
-    @include deprecate('2.0.0') {
-      padding: 1px;
-      border: $border-width-thin solid $color-border;
-      border-radius: $border-radius-medium;
-      min-height: calc(#{$line-height-button} + 2px);
-    }
-  }
-
   &__container,
+  &-container,
   &_container {
 
-    @include deprecate('2.0.0');
+    @include deprecate('4.0.0', 'Use .slds-pill_container');
     padding: $border-width-thin;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
-    min-height: calc(#{$line-height-button} + 2px);
+    min-height: calc(#{$line-height-button-small} + 2px);
   }
 
   &__container--bare,
   &_container--bare {
 
-    @include deprecate('2.0.0');
+    @include deprecate('4.0.0');
     padding: ($border-width-thin * 2) $border-width-thin; // $border-width-thin * 2 to accomodate for missing borders
   }
 
@@ -79,11 +70,11 @@
 
   &__icon {
     @include square($square-icon-x-small-boundary);
-    margin-right: $spacing-x-small;
+    margin-right: $spacing-xx-small;
     border-radius: $border-radius-small;
   }
 
   &__remove {
-    margin-left: $spacing-x-small;
+    margin-left: $spacing-xx-small;
   }
 }

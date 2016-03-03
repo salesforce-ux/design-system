@@ -10,150 +10,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Comment from 'ui/components/feeds/flavors/comment-base/index.react.example';
-import CommentMinimal from 'ui/components/feeds/flavors/comment-minimal/index.react.example';
-import CommentAttachment from 'ui/components/feeds/flavors/comment-with-attachments/index.react.example';
-import CommentAttachmentInline from 'ui/components/feeds/flavors/comment-with-attachments/index.react.example.inline';
-import CommentPublisher from 'ui/components/publishers/flavors/comment/index.react.example';
-import Img from 'app_modules/ui/img';
+import { Comment } from 'ui/components/feeds/flavors/comment/index.react.example';
+import { CommentLongform } from 'ui/components/feeds/flavors/comment/index.react.example';
+import { CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
+import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
+import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0)" title="Jenna Davis">
-      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
-);
-
-const icon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
-    <span className={pf('assistive-text')}>Powerpoint</span>
-  </span>
-);
 
 export default (
 <div className="demo-only">
-
   <div className={pf('feed')}>
     <ul className={pf('feed__list')}>
-      {/* Feed Item */}
       <li className={pf('feed__item')}>
-        {Comment}
-        <ul className={pf('comment__replies')}>
-          <li className={pf('comment__overflow')}>
-            <Button flavor="neutral">3 more comments</Button>
-          </li>
-          <li>
-            {CommentMinimal}
-          </li>
-          <li>
-            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-              <div className={pf('publisher publisher--comment')}>
-                <label htmlFor="comment-text-input1" className={pf('assistive-text')}>Write a comment</label>
-                <textarea id="comment-text-input1" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-                <div className={pf('attachments')}></div>
-                <div className={pf('publisher__actions grid grid--align-spread')}>
-                  <ul className={pf('grid')}>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="adduser"
-                        assistiveText="Add User" />
-                    </li>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="attach"
-                        assistiveText="Attach a file" />
-                    </li>
-                  </ul>
-                  <Button flavor="brand">Comment</Button>
-                </div>
-              </div>
-            </MediaObject>
-          </li>
-        </ul>
+        <Comment>
+          <CommentLongform>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</CommentLongform>
+          <CommentFooter showLikeButton likes="21" />
+        </Comment>
       </li>
-
-      {/* Feed Item */}
       <li className={pf('feed__item')}>
-        {CommentAttachmentInline}
-        <ul className={pf('comment__replies')}>
-          <li>
-            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-              <div className={pf('publisher publisher--comment')}>
-                <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
-                <textarea id="comment-text-input2" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-                <div className={pf('attachments')}></div>
-                <div className={pf('publisher__actions grid grid--align-spread')}>
-                  <ul className={pf('grid')}>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="adduser"
-                        assistiveText="Add User" />
-                    </li>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="attach"
-                        assistiveText="Attach a file" />
-                    </li>
-                  </ul>
-                  <Button flavor="brand">Comment</Button>
-                </div>
-              </div>
-            </MediaObject>
-          </li>
-        </ul>
+        <Comment>
+          <CommentLongform>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</CommentLongform>
+          <CommentFooter showLikeButton likes="456" />
+        </Comment>
       </li>
-
-      {/* Feed Item */}
       <li className={pf('feed__item')}>
-        {CommentAttachment}
-        <ul className={pf('comment__replies')}>
-          <li>
-            <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-              <div className={pf('publisher publisher--comment')}>
-                <label htmlFor="comment-text-input3" className={pf('assistive-text')}>Write a comment</label>
-                <textarea id="comment-text-input3" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-                <div className={pf('attachments')}></div>
-                <div className={pf('publisher__actions grid grid--align-spread')}>
-                  <ul className={pf('grid')}>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="adduser"
-                        assistiveText="Add User" />
-                    </li>
-                    <li>
-                      <ButtonIcon
-                        flavor="icon-container"
-                        sprite="utility"
-                        symbol="attach"
-                        assistiveText="Attach a file" />
-                    </li>
-                  </ul>
-                  <Button flavor="brand">Comment</Button>
-                </div>
-              </div>
-            </MediaObject>
-          </li>
-        </ul>
+        <Comment>
+          <CommentLongform>Nullam quis risus eget urna mollis ornare vel eu leo.</CommentLongform>
+          <CommentFooter showLikeButton likes="62" />
+        </Comment>
       </li>
     </ul>
   </div>
-
 </div>
 );

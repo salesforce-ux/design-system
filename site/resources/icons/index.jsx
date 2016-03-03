@@ -17,6 +17,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
+import StickyNav from 'app_modules/site/components/sticky/nav';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 import categories from '.generated/ui.icons';
@@ -52,14 +53,14 @@ class Icons extends React.Component {
       <div>
         {this.renderHeader()}
         <div className={pf('p-around--xx-large grid wrap site-content')}>
-          <Sticky className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')} fixedElements=".site-tools">
+          <StickyNav fixedElementsAbove=".site-tools">
             <div className={pf('site-menu--jump-links')}>
               <h3 className="site-text-heading--label">Categories</h3>
               <ul className={pf('list--vertical has-block-links')}>
                 {this.renderCategoryNav()}
               </ul>
             </div>
-          </Sticky>
+          </StickyNav>
           <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
             <p className={pf('site-text-introduction m-bottom--reset container--large')}>
               Choose the icon you need from this page, then follow the implementation instructions on the <a href="/components/icons/">icon component page</a>. If you are building a Lightning Component, you may require an
@@ -129,15 +130,18 @@ class Icons extends React.Component {
 
   renderIcons(category) {
     let isAction = category.name === 'action';
+    let isUtility = category.name === 'utility';
     let wrapperClassName = (icon) => isAction ? icon.className : null;
     return category.icons.map(icon => {
-      const svgClassName = classNames('icon icon__svg', icon.className, {
-        'icon--large': !isAction
+      const svgClassName = classNames('icon', icon.className, {
+        'icon--large': !isUtility,
+        'p-around--x-small': isAction,
+        'icon-text-default': isUtility
       });
       return (
-        <li className={pf('col--padded m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
+        <li className={pf('site-icon-width-container m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
           <figure>
-            <span className={pf(classNames('icon__container', wrapperClassName(icon)))}>
+            <span className={pf(classNames('icon_container', wrapperClassName(icon)))}>
               <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(svgClassName)} />
             </span>
             <figcaption className={pf('p-top--x-small text-body--small')}>{icon.symbol}</figcaption>

@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import _ from 'lodash';
+import async from 'async';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
@@ -23,9 +24,9 @@ import {
 
 gulp.task('generate:tokens', done => {
 
-  const releaseGroups = [{
-    name: 'salesforce-1-lightning',
-    label: 'Salesforce1 Lightning',
+  const groups = [{
+    name: 'lightning-design-system',
+    label: 'Lightning Design System',
     sets: [
       'force-base',
       'force-mq-commons',
@@ -33,62 +34,58 @@ gulp.task('generate:tokens', done => {
     ]
   }];
 
-  const releaseNames = ['spring-16', 'winter-16'];
-  const releases = [];
-  const releaseStream = through.obj();
-
-  releaseNames.forEach(name => {
-    const release = {
-      name,
-      groups: releaseGroups.map(group => _.merge({}, group, { release: name }))
-    };
-    releases.push(release);
-    releaseStream.write(release);
-  });
-
-  releaseStream.end();
+  /**
+   * This currently only supports the current release of tokens
+   *
+   * To support multiple releases, we will need to create a temp directory
+   * with sub-directories containing a package.json for each additional
+   * version that is needed
+   */
+  const releases = ['spring-16'].map(name => ({
+    name,
+    groups: groups.map(_.cloneDeep)
+  }));
 
   /**
    * Convert a transformed design tokens file into a set object
    */
-  function transformSet(file, enc, next) {
-    try {
-      const setName = _.kebabCase(path.basename(file.path, '.json'));
-      const set = {
-        name: setName,
-        contents: JSON.parse(file.contents.toString())
-      };
-      // Accessibility
-      addContrastRatios(set.contents);
-      // Add px values as well as rem
-      _.forEach(set.contents.props, prop => {
-        if (/rem$/.test(prop.value)) {
-          addPxValue(prop);
-        }
-      });
-      next(null, set);
-    } catch(err) {
-      next(err);
-    }
+  function createSet () {
+    return through.obj(function (file, enc, next) {
+      try {
+        const set = {
+          name: path.basename(file.path, '.json'),
+          contents: JSON.parse(file.contents.toString())
+        };
+        // Accessibility
+        addContrastRatios(set.contents);
+        // Add px values as well as rem
+        _.forEach(set.contents.props, prop => {
+          if (/rem$/.test(prop.value)) {
+            addPxValue(prop);
+          }
+        });
+        next(null, set);
+      } catch(err) {
+        next(err);
+      }
+    });
   }
 
   /**
-   * Transform the token files for a given release and push them into the
-   * "sets" property of the release object
+   * Transform the release group sets
    */
-  function transformGroup(group, enc, next) {
+  function mapGroup (group, done) {
+    group = _.cloneDeep(group);
     const sets = [];
-    const src = group.sets.map(set => {
-      return path.resolve(__PATHS__.git_modules, `design-tokens-${group.release}`, `tokens/${set}.json`);
-    });
+    const src = group.sets.map(set =>
+        require.resolve(`@salesforce-ux/design-tokens/tokens/${set}.json`));
     gulp.src(src)
-      .on('error', next)
       .pipe(theo.plugins.transform('web', {
         includeMeta: true,
         includeRawValue: true
       }))
       .on('error', done)
-      .pipe(through.obj(transformSet))
+      .pipe(createSet())
       .on('error', done)
       .pipe(through.obj(
         function(set, enc, next) {
@@ -97,28 +94,30 @@ gulp.task('generate:tokens', done => {
         },
         function(next) {
           group.sets = sets;
-          delete group.release;
-          this.push(group);
           next();
         }
       ))
-      .on('error', next)
-      .on('finish', next);
+      .on('error', done)
+      .on('finish', () => {
+        done(null, group);
+      });
   }
 
   /**
-   * Transform all releases and output the result
+   * Transform the release groups
    */
-  releaseStream
-    .pipe(through.obj(function(release, enc, next) {
-      release.groups.forEach(group => {
-        this.push(group);
-      });
-      next();
-    }))
-    .pipe(through.obj(transformGroup))
-    .on('error', done)
-    .on('finish', () => {
+  function mapRelease (release, done) {
+    release = _.cloneDeep(release);
+    async.map(release.groups, mapGroup, (err, groups) => {
+      if (err) return done(err);
+      release.groups = groups;
+      done(null, release);
+    });
+  }
+
+  async.map(releases, mapRelease, (err, releases) => {
+    if (err) throw err;
+    try {
       const stream = through.obj();
       const module = `export default ${JSON.stringify(releases, null, 2)};`;
       stream.write(new gutil.File({
@@ -130,6 +129,9 @@ gulp.task('generate:tokens', done => {
         .pipe(gulp.dest(__PATHS__.generated))
         .on('error', done)
         .on('finish', done);
-    });
+    } catch (err) {
+      done(err);
+    }
+  });
 
 });

@@ -45,7 +45,7 @@
     }
   }
 
-  @include deprecate('3.0.0', 'Use .card__body--inner instead.') {
+  @include deprecate('4.0.0', 'Use .card__body--inner instead.') {
     .#{$css-prefix}tile {
       margin: $spacing-small $spacing-large;
     }
@@ -56,6 +56,12 @@
         right: 0;
         bottom: 0;
       }
+    }
+  }
+
+  @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
+    .#{$css-prefix}card--empty .#{$css-prefix}card__body {
+      text-align: center;
     }
   }
 }

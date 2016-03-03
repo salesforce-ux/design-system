@@ -7,32 +7,15 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// TODO: Can we do this programmatically instead of in CSS?
+.site-icon-width-container {
+  width: 50%;
+  text-align: center;
 
-.icon {
-  &-group-title {
-    text-transform: capitalize;
-  }
-
-  &-grid {
-
-    .#{$css-prefix}col--padded {
-      flex: 0 0 7.5rem;
-      text-align: center;
-    }
-
-    [class*="icon-utility"] {
-      fill: $color-text-icon-default;
-      padding: $spacing-x-small;
-    }
-  }
-
-  &__svg--default {
-    background-color: $color-text-icon-default;
+  @include mq-medium-min {
+    width: 8rem;
   }
 }
 
-// For Action icons
-.action__icons .#{$css-prefix}icon__container {
-  padding: $spacing-x-small;
+.icon-group-title {
+  text-transform: capitalize;
 }

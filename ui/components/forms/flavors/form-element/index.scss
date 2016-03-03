@@ -14,7 +14,7 @@
 
   // Deprecated, use .form-element__label instead
   &__helper {
-    @include deprecate('3.0.0') {
+    @include deprecate('4.0.0') {
       font-size: $font-size-small;
     }
   }

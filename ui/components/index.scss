@@ -19,25 +19,12 @@
 
   // Button Groups
   'button-groups/flavors/base/index',
-  'button-groups/flavors/inverse/index',
   'button-groups/flavors/icon-group/index',
 
   // Button
   'buttons/flavors/base/index',
-  'buttons/flavors/neutral/index',
-  'buttons/flavors/neutral-icon/index',
-  'buttons/flavors/brand/index',
-  'buttons/flavors/destructive/index',
-  'buttons/flavors/inverse/index',
   'buttons/flavors/stateful/index',
-  'buttons/flavors/stateful-inverse/index',
   'buttons/flavors/icon/index',
-  'buttons/flavors/hint/index',
-  'buttons/flavors/icon-more/index',
-  'buttons/flavors/icon-stateful/index',
-  'buttons/flavors/icon-inverse/index',
-  'buttons/flavors/stretch/index',
-  'buttons/flavors/horizontal/index',
 
   // Icons
   'icons/flavors/base/index',
@@ -116,11 +103,7 @@
 
   // Discussion Feed
   'feeds/flavors/discussion-feed/index',
-  'feeds/flavors/comment-base/index',
-  'feeds/flavors/comment-minimal/index',
-  'feeds/flavors/comment-with-replies/index',
-  'feeds/flavors/comment-with-overflow/index',
-  'feeds/flavors/comment-with-attachments/index',
+  'feeds/flavors/comment/index',
 
   // Modal
   'modals/flavors/base/index',
@@ -146,7 +129,6 @@
   // Title
   'tiles/flavors/base/index',
   'tiles/flavors/board/index',
-  'tiles/flavors/author/index',
 
   // Tabs
   'tabs/flavors/default/index',
@@ -156,9 +138,9 @@
   'navigation/flavors/vertical/index',
 
   // Notifications -- Toasts & Alerts
-  'notifications/flavors/base/index',
+  'notifications/index',
+  'notifications/flavors/alert/index',
   'notifications/flavors/prompt/index',
-  'notifications/flavors/prompt-for-touch/index',
   'notifications/flavors/modal-toast/index',
 
   // Lookup

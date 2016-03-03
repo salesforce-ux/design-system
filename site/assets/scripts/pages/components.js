@@ -98,7 +98,10 @@ const updateFormFactor = ({tab, panel}) => {
   if (tab.dataset.formFactor) {
     panel.forEach(p => {
       const iframe = p.firstChild;
-      iframe.dataset.formFactor = tab.dataset.formFactor;
+      fastdom.mutate(() => {
+        p.dataset.formFactor = tab.dataset.formFactor;
+        iframe.dataset.formFactor = tab.dataset.formFactor;
+      });
     });
   }
 };

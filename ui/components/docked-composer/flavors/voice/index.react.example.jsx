@@ -235,8 +235,8 @@ let StateE = props =>
       </ComposerBody>
       <ComposerFooter>
         <div className={pf('grid')}>
-          <Button flavor="neutral" className={pf('size--1-of-2 x-small-button--horizontal')}>Follow-Up Later</Button>
-          <Button flavor="brand" className={pf('size--1-of-2 x-small-button--horizontal')}>Call Again</Button>
+          <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
+          <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
         </div>
       </ComposerFooter>
     </DockedComposer>
@@ -263,8 +263,8 @@ let StateF = props =>
       </ComposerBody>
       <ComposerFooter>
         <div className={pf('grid')}>
-          <Button flavor="neutral" className={pf('size--1-of-2 x-small-button--horizontal')}>Edit Phone Number</Button>
-          <Button flavor="brand" className={pf('size--1-of-2 x-small-button--horizontal')}>Call Again</Button>
+          <Button flavor="neutral" className={pf('size--1-of-2')}>Edit Phone Number</Button>
+          <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
         </div>
       </ComposerFooter>
     </DockedComposer>
@@ -291,8 +291,8 @@ let StateG = props =>
       </ComposerBody>
       <ComposerFooter>
         <div className={pf('grid')}>
-          <Button flavor="neutral" className={pf('size--1-of-2 x-small-button--horizontal')}>Follow-Up Later</Button>
-          <Button flavor="brand" className={pf('size--1-of-2 x-small-button--horizontal')}>Call Again</Button>
+          <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
+          <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
         </div>
       </ComposerFooter>
     </DockedComposer>
@@ -380,8 +380,8 @@ let StateI = props =>
       </ComposerBody>
       <ComposerFooter>
         <div className={pf('grid')}>
-          <Button flavor="neutral" className={pf('size--1-of-2 x-small-button--horizontal')}>Dismiss</Button>
-          <Button flavor="brand" className={pf('size--1-of-2 x-small-button--horizontal')}>Answer</Button>
+          <Button flavor="neutral" className={pf('size--1-of-2')}>Dismiss</Button>
+          <Button flavor="brand" className={pf('size--1-of-2')}>Answer</Button>
         </div>
       </ComposerFooter>
     </DockedComposer>
@@ -481,5 +481,4 @@ export let states = [
     label: 'Log a Call',
     element: <StateJ />
   }
-
 ];

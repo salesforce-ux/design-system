@@ -19,7 +19,7 @@
 
 .#{$css-prefix}media--reverse {
 
-  @include deprecate('2.0.0') {
+  @include deprecate('4.0.0') {
 
     > .#{$css-prefix}media__figure {
       order: 1;

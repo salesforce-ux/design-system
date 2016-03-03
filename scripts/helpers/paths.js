@@ -21,13 +21,11 @@ const isProd = argv.prod === true;
 
 const root = path.resolve(__dirname, '../../');
 const app_modules = path.resolve(root, 'app_modules');
-const git_modules = path.resolve(root, 'git_modules');
 const node_modules = path.resolve(root, 'node_modules');
 
 const paths = {
   root,
   app_modules,
-  git_modules,
   node_modules,
 
   scripts: path.resolve(root, 'scripts'),
@@ -37,6 +35,7 @@ const paths = {
   icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
 
   dist: path.resolve(root, '.dist'),
+  npm: path.resolve(root, '.npm'),
   generated: path.resolve(root, '.generated'),
   tmp: path.resolve(root, '.tmp'),
   test: path.resolve(root, '.test'),

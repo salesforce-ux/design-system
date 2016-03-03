@@ -26,7 +26,7 @@ let Demo = props =>
     <div className={pf('backdrop backdrop--open')} />
   </div>;
 
-let Modal = props =>
+export let Modal = props =>
   <div className={className(pf('modal fade-in-open'), props.className)}
     aria-hidden="false"
     role="dialog">
@@ -36,9 +36,8 @@ let Modal = props =>
     </div>
   </div>;
 
-let ModalHeader = props =>
+export let ModalHeader = props =>
   <div className={pf('modal__header')} {...props}>
-
     <ButtonIcon className={pf('modal__close')}
       flavor="icon-inverse"
       iconFlavor="large"
@@ -46,35 +45,18 @@ let ModalHeader = props =>
       symbol="close"
       assistiveText="Close">
     </ButtonIcon>
-
-    <h2 className={pf('text-heading--medium')}>Modal Header</h2>
-
     {props.children}
   </div>;
 
-let ModalContent = props =>
-  <div className={pf('modal__content p-around--medium')} {...props}>
-    <Lorem count={2} paragraphLowerBound={5} />
+export let ModalContent = props =>
+  <div className={className(pf('modal__content'), props.className)}>
+    {props.children}
   </div>;
 
-let ModalFooter = props =>
+export let ModalFooter = props =>
   <div className={className(pf('modal__footer'), props.className)}>
     {props.children}
   </div>;
-
-let ModalSaveCancel = props =>
-  <div className={pf('x-small-buttons--horizontal')} {...props}>
-      <Button flavor="neutral">Cancel</Button>
-      <Button flavor="neutral,brand">Save</Button>
-  </div>;
-
-let ModalSkipSave = props =>
-  <div className={pf('x-small-buttons--horizontal')} {...props}>
-      <Button flavor="neutral">Skip This Step</Button>
-      <Button flavor="neutral,brand">Save &#38; Next</Button>
-  </div>;
-
-
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -83,10 +65,13 @@ let ModalSkipSave = props =>
 let Default = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
-      <ModalHeader />
-      <ModalContent />
+      <ModalHeader>
+        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+      </ModalHeader>
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -95,15 +80,17 @@ let Taglines = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
       <ModalHeader>
+        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
         <p className={pf('m-top--x-small')}>
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
           to you. It is allowed to <a href="#">contain links or be a link</a>.
         </p>
       </ModalHeader>
-      <ModalContent />
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -111,10 +98,13 @@ let Taglines = props =>
 let Large = props =>
   <Demo style={{height: '640px'}}>
     <Modal className={pf('modal--large')}>
-      <ModalHeader />
-      <ModalContent />
+      <ModalHeader>
+        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+      </ModalHeader>
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -122,15 +112,16 @@ let Large = props =>
 let Directional = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
-      <ModalHeader />
-      <ModalContent />
+      <ModalHeader>
+        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+      </ModalHeader>
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter className={pf('modal__footer--directional')}>
-        <ModalSaveCancel />
+        <Button flavor="neutral">Skip This Step</Button>
+        <Button flavor="neutral,brand">Save &#38; Next</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
-
-
 
 //////////////////////////////////////////////
 // Export

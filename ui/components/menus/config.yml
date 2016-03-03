@@ -2,8 +2,8 @@ classBase: 'dropdown'
 status: 'dev-ready'
 flavors:
   - dropdown
-  - dropdown-with-icons
   - dropdown-positioning
+  - dropdown-height
   - picklist
   - picklist-multi-select
   - search-overflow

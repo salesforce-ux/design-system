@@ -88,7 +88,7 @@ export let CommentFooter = props =>
   <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
     <li className={pf('list__item')}>
       <a href="#void" title="Like this item">
-        { props.showLikeButton ? LikeButton : null } Like
+        { props.showLikeButton ? LikeButton : null }Like
       </a>
     </li>
     <li className={pf('list__item')}>{props.likes} Likes</li>

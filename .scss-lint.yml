@@ -21,7 +21,7 @@ linters:
     enabled: false
   Comment:
     enabled: true
-    allowed: '\* Note\: |Copyright'
+    allowed: 'Copyright'
   DeclarationOrder:
     enabled: false
   DuplicateProperty:

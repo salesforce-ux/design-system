@@ -28,6 +28,7 @@ The following components are now available:
 - Setup Wizard - [Wizard component](/components/process/#wizard)
 - Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/grid-system/#alignment-item-bump)
 - Popover color themes added - [Popover Theme Variant](/components/popovers/#themes)
+- Tree [Tree Base Component](/components/trees/) - Tree was completely rebuilt and is now a new component
 
 Mobile:
 

@@ -38,7 +38,7 @@ export default React.createClass({
           <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>
             {this.renderIntro()}
             {this.renderFlavors()}
-            <h3 className={pf('site-text-heading--large')}>Component Overview</h3>
+            <h3 id="overview" className={pf('site-text-heading--large p-top--x-large')}>Component Overview</h3>
             {this.renderDocs()}
             {this.renderInfoTable()}
           </div>

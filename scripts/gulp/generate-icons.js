@@ -18,6 +18,13 @@ import through from 'through2';
 
 const _category = () => ({
   /**
+   * Return true if an icon should be included in a category
+   *
+   * @param {object} icon
+   * @returns {boolean}
+   */
+  filter(icon) { return true; },
+  /**
    * Return the corresponding prop name from the design properties
    *
    * @param {object} icon
@@ -49,23 +56,22 @@ const _category = () => ({
 const categories = {
 
   action: () => _.assign(_category(), {
+    filter(icon) {
+      return !/custom/.test(icon.symbol);
+    },
     getPropName(icon) {
       // Currently, actions look like: "actionSomeAction"
       return _.camelCase('action' + _.capitalize(icon.symbol));
     },
-    getClassName(sprinteName, symbolName) {
-      const custom = /^new\-custom/;
-      if (custom.test(symbolName)) {
-        return `icon-${_.kebabCase(symbolName.replace(custom, 'custom'))}`;
-      }
-      return `icon-${sprinteName}-${symbolName}`;
+    getClassName(spriteName, symbolName) {
+      return `icon-${spriteName}-${symbolName}`;
     },
     description: 'Actions can be seen throughout the interface and represent actions a user can take on any given screen.',
     props: require('@salesforce-ux/design-tokens/dist/bg-actions.common.js')
   }),
 
   custom: () => _.assign(_category(), {
-    getClassName(sprinteName, symbolName) {
+    getClassName(spriteName, symbolName) {
       return `icon-${_.kebabCase(symbolName)}`;
     },
     description: 'Custom icons are available for the identity of user created objects.',
@@ -73,22 +79,22 @@ const categories = {
   }),
 
   doctype: () => _.assign(_category(), {
-    getClassName(sprinteName, symbolName) {
+    getClassName(spriteName, symbolName) {
       return `icon-${symbolName} icon__svg--no-background`;
     },
     description: 'Doctype icons represent a type of file when a preview or image is unavailable'
   }),
 
   standard: () => _.assign(_category(), {
-    getClassName(sprinteName, symbolName) {
-      return `icon-${sprinteName}-${symbolName}`;
+    getClassName(spriteName, symbolName) {
+      return `icon-${spriteName}-${symbolName}`;
     },
     description: 'Standard icons represent entities and objects within Salesforce.',
     props: require('@salesforce-ux/design-tokens/dist/bg-standard.common.js')
   }),
 
   utility: () => _.assign(_category(), {
-    getClassName(sprinteName, symbolName) {
+    getClassName(spriteName, symbolName) {
       return `icon-utility-${symbolName}`;
     },
     description: 'Utility icons are used throughout the interface and are SVG&rsquo;s for extensibility.'
@@ -109,7 +115,7 @@ const generate = () => {
       const symbolName = path.basename(file.path, '.svg');
       const className = category.getClassName(
         spriteName,
-        symbolName.replace(/_/g, '-')
+        _.kebabCase(symbolName.toLowerCase())
       );
       const icon = {
         sprite: spriteName,
@@ -125,7 +131,9 @@ const generate = () => {
           icon.className += ' icon__svg--default';
         }
       }
-      _.find(sprites, { name: spriteName }).icons.push(icon);
+      if (category.filter(icon)) {
+        _.find(sprites, { name: spriteName }).icons.push(icon);
+      }
       next(null, null);
     } catch (err) {
       next(err);

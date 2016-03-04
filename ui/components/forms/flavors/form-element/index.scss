@@ -71,7 +71,7 @@
   &__static {
     display: inline-block;
     line-height: $line-height-button;
-    min-height: calc(#{$line-height-button} + 2px); /* Note: for IE */
+    min-height: calc(#{$line-height-button} + 2px); // For IE
 
     // If read only state is longform
     // Apply text line height

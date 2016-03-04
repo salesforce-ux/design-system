@@ -23,19 +23,19 @@ export default (
     <ul className={pf('feed__list')}>
       <li className={pf('feed__item')}>
         <Comment>
-          <CommentLongform>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</CommentLongform>
+          <CommentLongform><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p></CommentLongform>
           <CommentFooter showLikeButton likes="21" />
         </Comment>
       </li>
       <li className={pf('feed__item')}>
         <Comment>
-          <CommentLongform>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</CommentLongform>
+          <CommentLongform><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CommentLongform>
           <CommentFooter showLikeButton likes="456" />
         </Comment>
       </li>
       <li className={pf('feed__item')}>
         <Comment>
-          <CommentLongform>Nullam quis risus eget urna mollis ornare vel eu leo.</CommentLongform>
+          <CommentLongform><p>Nullam quis risus eget urna mollis ornare vel eu leo.</p></CommentLongform>
           <CommentFooter showLikeButton likes="62" />
         </Comment>
       </li>

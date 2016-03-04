@@ -46,7 +46,7 @@
     border-radius: $border-radius-medium 0 0 $border-radius-medium;
   }
 
-  &:last-child > .#{$css-prefix}radio--faux,,
+  &:last-child > .#{$css-prefix}radio--faux,
   .#{$css-prefix}button--last > .#{$css-prefix}radio--faux {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }

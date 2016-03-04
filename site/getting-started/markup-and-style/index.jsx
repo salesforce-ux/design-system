@@ -22,7 +22,7 @@ const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 export default (
   <PageBody anchorTitle="Markup and Style" contentClassName={pf('container--large')}>
     <p className="site-text-introduction">
-      The Salesforce Lightning Design System (SLDS) component library was developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
+      The Salesforce Lightning Design System (SLDS) component library is actively developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
     </p>
     <p>In order to accomplish this goal, we’ve chosen to use very specific naming techniques. These allow us to keep our code base flat, with low specificity, and keeps us from fighting specificity wars that start with frustration and end with <code>!important</code>. Though we base our naming on the BEM method, we have a few additions of our own outlined below.</p>
     <h2 className="site-text-heading--large">BEM Naming</h2>

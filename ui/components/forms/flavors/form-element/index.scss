@@ -77,7 +77,6 @@
     // Apply text line height
     &.#{$css-prefix}text-longform {
       line-height: $line-height-text;
-      padding-bottom: calc((#{$line-height-text} * #{$font-size-medium}) - #{$font-size-medium}); // Re-establish vertical baseline
     }
   }
 }

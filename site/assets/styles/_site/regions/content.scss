@@ -67,6 +67,19 @@
   }
 }
 
+// Nested ul
+.site-states {
+
+  a {
+    padding: {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
+      left: $spacing-x-large;
+    }
+  }
+}
+
+// Large Overrides
 @include mq-large-min {
 
   .site-main-content {
@@ -74,23 +87,39 @@
       top: -$spacing-xx-large;
       bottom: -$spacing-xx-large;
     }
-    padding-top: $spacing-xx-large;
+    padding: {
+      top: $spacing-xx-large;
+      right: $spacing-xx-large;
+      bottom: $spacing-xx-large * 2;
+    }
+  }
+
+  // Component nav container
+  .site-component-nav {
+    width: 320px;
+
+    .#{$css-prefix}is-selected {
+      background-color: $color-background;
+
+      a:hover {
+        background-color: darken($color-background, 2.5);
+      }
+    }
   }
 
   .site-menu--jump-links {
-    padding-left: $spacing-large;
+    @include scrollbar($track: $color-background-alt);
     overflow-x: hidden;
     z-index: $z-index-default;
 
     a {
-      cursor: pointer;
-      margin: {
-        left: ($spacing-large * -1);
-        right: ($spacing-medium * -1);
-      }
-      padding: {
-        left: $spacing-large;
-        right: $spacing-medium;
+      display: block;
+      padding: $spacing-small $spacing-small $spacing-small $spacing-x-large;
+      line-height: 1.28571428571429;
+      color: $color-text-default;
+
+      &:hover {
+        background-color: rgba($color-background, 0.5);
       }
     }
   }
@@ -101,18 +130,13 @@
     opacity: 0;
     transition: all $duration-promptly $duration-promptly;
 
-    .#{$css-prefix}is-active {
-      @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
-      position: relative;
+    a {
+      padding-left: $spacing-xx-large;
+    }
 
-      &:before {
-        top: calc(((((#{$font-size-medium} * #{$line-height-text}) / 2) - #{$spacing-x-small}) + #{$spacing-medium}));
-        border: {
-          right: $spacing-x-small solid $color-background-shade;
-          bottom: $spacing-x-small solid transparent;
-        }
-        margin-left: ((($spacing-medium * 2) + $spacing-x-small) * -1);
-      }
+    .#{$css-prefix}is-active a {
+      color: $color-text-tab-label-selected;
+      background-color: $color-background-alt-2;
     }
   }
 
@@ -120,20 +144,5 @@
     max-height: 100vh;
     overflow: visible;
     opacity: 1;
-  }
-
-  .site-main-content {
-    padding: {
-      right: $spacing-xx-large;
-      bottom: $spacing-xx-large * 2;
-    }
-  }
-}
-
-.site-states {
-  padding-left: $spacing-medium;
-
-  .#{$css-prefix}is-active a {
-    color: $color-text-link-active;
   }
 }

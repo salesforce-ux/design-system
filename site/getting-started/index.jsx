@@ -17,24 +17,31 @@ export default (
   <PageBody anchorTitle="Getting Started">
 
     <h2 className="site-text-heading--large">
-      <a href="/getting-started/visualforce">Visualforce</a>
+      <a href="/getting-started/visualforce/">Visualforce</a>
     </h2>
     <p>
       How to use the {globals.displayName} within a Visualforce page.
     </p>
 
     <h2 className="site-text-heading--large">
-      <a href="/getting-started/lightning">Lightning Components</a>
+      <a href="/getting-started/lightning/">Lightning Components</a>
     </h2>
     <p>
       How to use the {globals.displayName} with Lighting apps and components.
     </p>
 
     <h2 className="site-text-heading--large">
-      <a href="/getting-started/heroku">Heroku</a>
+      <a href="/getting-started/heroku/">Heroku</a>
     </h2>
     <p>
       How to use the {globals.displayName} within a static Heroku application.
+    </p>
+
+    <h2 className="site-text-heading--large">
+      <a href="/getting-started/markup-and-style/">Markup and Style</a>
+    </h2>
+    <p>
+      Discover the naming convention that power {globals.displayName}’s CSS and markup.'.
     </p>
 
   </PageBody>

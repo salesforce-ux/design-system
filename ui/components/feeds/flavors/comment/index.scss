@@ -12,7 +12,6 @@
   &__content {
     padding: {
       top: $spacing-x-small;
-      bottom: $spacing-x-small;
     }
   }
 
@@ -74,7 +73,7 @@
 
 // Comment + Publisher Attachments
 .#{$css-prefix}attachments {
-  padding: $spacing-x-small 0;
+  padding-bottom: $spacing-x-small;
 
   &:empty {
     padding: 0;

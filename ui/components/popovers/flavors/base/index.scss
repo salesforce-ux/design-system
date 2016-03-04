@@ -21,4 +21,8 @@
   &[class*="theme--"] {
     border: 0;
   }
+
+  *:last-child {
+    margin: 0;
+  }
 }

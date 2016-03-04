@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Anchor from 'ui/components/page-headers/index.react';
 import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
 import Button from 'ui/components/buttons/index.react';
@@ -22,64 +21,61 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className="demo-only">
-    <Anchor flavor="object-home">
-      <BreadCrumbs className={pf('m-bottom--xx-small')}>
-        <Crumb href="javascript:void(0)">Accounts</Crumb>
-        <Crumb href="javascript:void(0)">Company One</Crumb>
-      </BreadCrumbs>
-      <div className={pf('grid')}>
-        <div className={pf('col has-flexi-truncate')}>
-          <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)
-          </h1>
-        </div>
-        <div className={pf('col no-flex align-bottom')}>
-          <div className={pf('grid')}>
-            <div className={pf('button-space-left')} aria-haspopup="true">
-              <Button flavor="icon-more" aria-haspopup="true">
-                <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-                <span className={pf('assistive-text')}>Table</span>
-                <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-              </Button>
-            </div>
-            <div className={pf('button-group button-space-left')}>
-              <StatefulClass>
+  <div className="slds-page-header" role="banner">
+    <BreadCrumbs className={pf('m-bottom--xx-small')}>
+      <Crumb href="#void">Accounts</Crumb>
+      <Crumb href="#void">Company One</Crumb>
+    </BreadCrumbs>
+    <div className={pf('grid')}>
+      <div className={pf('col has-flexi-truncate')}>
+        <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)</h1>
+      </div>
+      <div className={pf('col no-flex align-bottom')}>
+        <div className={pf('grid')}>
+          <div className={pf('button-space-left')} aria-haspopup="true">
+            <Button flavor="icon-more" aria-haspopup="true">
+              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
+              <span className={pf('assistive-text')}>Table</span>
+              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+            </Button>
+          </div>
+          <div className={pf('button-group button-space-left')}>
+            <StatefulClass>
               <ButtonIcon
                 flavor="icon-border"
                 sprite="utility"
                 symbol="chart"
                 assistiveText="Chart" />
-              </StatefulClass>
-              <StatefulClass>
+            </StatefulClass>
+            <StatefulClass>
               <ButtonIcon
                 flavor="icon-border"
                 sprite="utility"
                 symbol="filterList"
                 assistiveText="Filter List" />
-              </StatefulClass>
-              <Button flavor="icon-more">
-                <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-                <span className={pf('assistive-text')}>Sort</span>
-                <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-                <span className={pf('assistive-text')}>More</span>
-              </Button>
-            </div>
-            <div className={pf('button-group')}>
-              <Button flavor="neutral">
-                Add Contact
-              </Button>
-              <div className={pf('button--last')}>
-                <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="More Actions" />
-              </div>
+            </StatefulClass>
+            <Button flavor="icon-more">
+              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
+              <span className={pf('assistive-text')}>Sort</span>
+              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+              <span className={pf('assistive-text')}>More</span>
+            </Button>
+          </div>
+          <div className={pf('button-group')}>
+            <Button flavor="neutral">
+              Add Contact
+            </Button>
+            <div className={pf('button--last')}>
+              <ButtonIcon
+                flavor="icon-border-filled"
+                sprite="utility"
+                symbol="down"
+                assistiveText="More Actions" />
             </div>
           </div>
         </div>
       </div>
-      <Anchor.Detail>10 items, sorted by name</Anchor.Detail>
-    </Anchor>
+    </div>
+    <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
   </div>
 );

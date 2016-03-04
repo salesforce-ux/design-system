@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Anchor from 'ui/components/page-headers/index.react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
@@ -26,7 +25,7 @@ const image = (
 );
 
 export default (
-  <Anchor flavor="object-home">
+  <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className={pf('col has-flexi-truncate')}>
@@ -66,11 +65,11 @@ export default (
                 assistiveText="Chart" />
             </StatefulClass>
             <StatefulClass>
-            <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="filterList"
-              assistiveText="Filter List" />
+              <ButtonIcon
+                flavor="icon-border"
+                sprite="utility"
+                symbol="filterList"
+                assistiveText="Filter List" />
             </StatefulClass>
             <Button flavor="icon-more">
               <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
@@ -99,6 +98,6 @@ export default (
       {/* Close Col */}
     </div>
     {/* Close Grid */}
-    <Anchor.Detail>10 items • Sorted by Name</Anchor.Detail>
-  </Anchor>
+    <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
+  </div>
 );

@@ -60,7 +60,7 @@ class TableYAML extends React.Component {
 
   render() {
     const { data } = this.props;
-    return <div id="overview" className={pf('site-table--overview')}>
+    return <div className={pf('site-table--overview')}>
       <div className={pf('site-text-longform m-bottom--medium')}>
         <h4 className={pf('p-top--xx-large site-text-heading--label')}>Usage</h4>
         <div dangerouslySetInnerHTML={{__html: data.description}} />

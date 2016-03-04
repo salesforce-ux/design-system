@@ -102,11 +102,9 @@ a.#{$css-prefix}button {
 
 .#{$css-prefix}button--small {
   line-height: $line-height-button-small;
-  /**
-   * Note: Force icon-only buttons to be the same
-   * height as small buttons since they're SVG
-   * and line-height has no effect on them
-   */
+  // Force icon-only buttons to be the same
+  // height as small buttons since they're SVG
+  // and line-height has no effect on them
   min-height: $square-icon-medium-boundary;
 }
 
@@ -132,11 +130,9 @@ a.#{$css-prefix}button {
   }
 }
 
-/**
- * Note: A parent class must be put on anything that contains
- * a .#{$css-prefix}button--hint so that the child reacts
- * when the parent is hovered.
- */
+// A parent class must be put on anything that contains
+// a .#{$css-prefix}button--hint so that the child reacts
+// when the parent is hovered.
 .#{$css-prefix}hint-parent {
 
   &:hover,

@@ -219,46 +219,22 @@
 
 
 // CTA Buttons
+// - centered / full-width on mobile
+// - horizontally aligned with space in between on larger screens
 .site-cta-buttons {
-  @include mq-x-small-max {
-    .#{$css-prefix}button {
-      width: 100%;
+  margin-left: -1 * ($spacing-medium / 2);
+  margin-right: -1 * ($spacing-medium / 2);
+
+  .#{$css-prefix}button {
+    margin-left: ($spacing-medium / 2);
+    margin-right: ($spacing-medium / 2);
+
+    @include mq-x-small-max {
+      display: block;
+      margin-bottom: $spacing-small;
     }
   }
-  @include mq-small-max {
-    .#{$css-prefix}button {
-      margin: 0 0 $spacing-small;
-    }
-  }
-
 }
-
-// Social Counter Button Pair
-.site-button-group--social-counter {
-  display: inline-block;
-  margin-left: $spacing-medium;
-
-  .#{$css-prefix}button + .#{$css-prefix}button {
-    margin-left: $spacing-small;
-  }
-}
-
-.site-button--social-counter {
-  @include nubbin($position: left, $location: 'before', $color: inherit, $size: $square-icon-small-content);
-  display: none;
-  opacity: 0;
-  transition: opacity $duration-immediately ease;
-
-  @include mq-small-min {
-    display: inline-block;
-  }
-
-  &.is-loaded {
-    opacity: 1;
-  }
-}
-
-
 
 
 // Keep "Design System" on same line

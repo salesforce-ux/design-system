@@ -39,7 +39,7 @@ let SectionTitle = props =>
   </div>;
 
 let SectionTitleAction = props =>
-  <h3 href="#void" className={className(pf('section__title-action'), props.children)}>
+  <h3 href="#void" className={className(pf('section__title-action'), props.className)}>
     <button className={pf('button button--icon-container')}>
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
     </button>

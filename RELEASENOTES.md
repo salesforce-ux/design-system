@@ -41,7 +41,7 @@ Mobile:
 
 The following classes are now available:
 
-- Added max-width sizing utilities - [Max Width sizing](/utilities/sizing)
+- Added max-width sizing utilities - [Max Width sizing](/components/utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
   - Added `.slds-grid--align-end` for horizontal alignment on main grid axis

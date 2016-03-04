@@ -52,7 +52,7 @@
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
 
-    @include deprecate('4.0.0') {
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
       fill: $color-text-icon-default;
     }
   }

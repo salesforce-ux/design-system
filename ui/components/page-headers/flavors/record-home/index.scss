@@ -11,7 +11,7 @@
 .#{$css-prefix}page-header__detail {
 
   &-row {
-    /* Note: This takes the width of the icon into account for alignment */
+    // Note: This takes the width of the icon into account for alignment
     margin: $spacing-large #{-$spacing-large} #{-$spacing-large};
     padding: $spacing-small $spacing-large;
     background-color: $color-background-alt;

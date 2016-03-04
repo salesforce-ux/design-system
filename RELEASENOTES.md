@@ -41,7 +41,7 @@ Mobile:
 
 The following classes are now available:
 
-- Added max-width sizing utilities - [Max Width sizing](/utilities/sizing)
+- Added max-width sizing utilities - [Max Width sizing](/components/utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
   - Added `.slds-grid--align-end` for horizontal alignment on main grid axis
@@ -66,6 +66,7 @@ The following changes have been made in this release:
 - Removed `.slds-m-top--x-small` in the page header and replaced with a new class `.slds-page-header__info`
 - Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
+- The last element inside `.slds-text-longform` now retains the bottom margin.
 
 **FIXED**
 

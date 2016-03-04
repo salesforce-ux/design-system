@@ -26,7 +26,7 @@ export default (
   <Button type="button" flavor="brand">Save</Button>
   <div className={pf('popover nubbin--bottom-left theme--error')} role="alert" aria-live="polite" style={{position: 'absolute', top: '30px', left: '12px'}}>
     <div className={pf('popover__body text-longform')}>
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+      <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
     </div>
   </div>
 </div>

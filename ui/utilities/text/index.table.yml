@@ -59,7 +59,7 @@ classes:
     class: section
     description: Container for a collapsable sub section through interaction with the section title
     required: true
-    notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__body</code>
+    notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__content</code>
   -
     class: section__title
     description: Title of a section, can contain an interactive button icon to expand/collapse sub section(s)

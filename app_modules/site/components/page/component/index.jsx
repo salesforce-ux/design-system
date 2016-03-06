@@ -13,6 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import Anchor from 'app_modules/site/components/page/anchor';
 import StickyNav from 'app_modules/site/components/sticky/nav';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import ComponentFlavor from './flavor';
 import TableYAML from './table-yaml';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -73,9 +74,10 @@ export default React.createClass({
           );
         }
         return (
-          <li className={pf('list__name')} key={flavor.uid} data-slds-status={flavor.status}>
+          <li className={pf('list__name site-states-parent')} key={flavor.uid} data-slds-status={flavor.status}>
             <a href={`#${flavor.id}`}>
               {flavor.title}
+              { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }
             </a>
             {states}
           </li>

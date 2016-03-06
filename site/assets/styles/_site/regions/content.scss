@@ -67,6 +67,28 @@
   }
 }
 
+.site-component-nav {
+
+  .icon__svg {
+    display: none;
+  }
+
+  // Deal with open states
+  .#{$css-prefix}is-open {
+
+    .site-states {
+      max-height: 100vh;
+      overflow: visible;
+      opacity: 1;
+    }
+
+    .icon__svg {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+}
+
 // Nested ul
 .site-states {
 
@@ -105,6 +127,17 @@
         background-color: darken($color-background, 2.5);
       }
     }
+
+    .site-text-heading--label {
+      padding-left: $spacing-x-large;
+    }
+
+    .icon__svg {
+      @include square($square-icon-x-small-content);
+      display: inline-block;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+    }
   }
 
   .site-menu--jump-links {
@@ -113,7 +146,7 @@
     z-index: $z-index-default;
 
     a {
-      display: block;
+      display: flex;
       padding: $spacing-small $spacing-small $spacing-small $spacing-x-large;
       line-height: 1.28571428571429;
       color: $color-text-default;
@@ -128,7 +161,6 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all $duration-promptly $duration-promptly;
 
     a {
       padding-left: $spacing-xx-large;
@@ -138,11 +170,5 @@
       color: $color-text-tab-label-selected;
       background-color: $color-background-alt-2;
     }
-  }
-
-  .#{$css-prefix}is-open .site-states {
-    max-height: 100vh;
-    overflow: visible;
-    opacity: 1;
   }
 }

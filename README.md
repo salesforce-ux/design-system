@@ -62,7 +62,7 @@ Delete temporary build and local files.
 
 ### Tests
 
-`npm run test`: run all tests
+`npm test`: run all tests
 
 ## Troubleshooting
 

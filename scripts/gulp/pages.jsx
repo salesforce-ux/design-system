@@ -79,7 +79,7 @@ export const tryRequire = p => {
 const prettyHTML = _.memoize(html => beautify.html(html, {
   'indent_size': 2,
   'indent_char': ' ',
-  'unformatted': [],
+  'unformatted': ['a'],
   'wrap_line_length ': 78,
   'indent_inner_html': true
 }));

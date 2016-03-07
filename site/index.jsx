@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import CTALink from 'app_modules/site/components/cta-link';
-import GithubButton from 'app_modules/site/components/github-button';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Img from 'app_modules/ui/img';
 import PageBody from 'app_modules/site/components/page/body';
@@ -31,7 +30,13 @@ export default (
       </h2>
       <p className={pf('site-cta-buttons m-bottom--medium')}>
         <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
-        <GithubButton></GithubButton>
+        <CTALink
+          href="https://github.com/salesforce-ux/design-system"
+          className={pf('button button--neutral')}
+          eventType="github-start">
+          <img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} alt="" />
+          Star
+        </CTALink>
       </p>
       <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink></p>
     </header>
@@ -120,12 +125,12 @@ export default (
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
             <div className="grid-card">
               <div className={pf('grid grid--align-spread')}>
-                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="tutorials-header">Tutorials</h3>
-                <Img src="/assets/images/landing/icon-tutorial.svg" alt="" />
+                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="getting-started-header">Getting started</h3>
+                <Img src="/assets/images/landing/icon-getting-started.svg" alt="" />
               </div>
               <hr className="hr hr--orange" />
               <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-              <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="tutorials-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="getting-started-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
             </div>
           </li>
         </ul>

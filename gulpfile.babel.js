@@ -216,10 +216,6 @@ gulp.task('serve', () => {
     [watchPaths.sass, watchPaths.js, watchPaths.pages],
     debounceTask('lint:spaces')
   );
-  gulp.watch(
-    '.www/assets/styles/slds.css',
-    debounceTask('stylestats')
-  );
 });
 
 gulp.task('default', callback => {

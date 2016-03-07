@@ -13,7 +13,7 @@
   display: inline-block;
   padding: 0 $spacing-medium 0 $spacing-small;
   line-height: $line-height-button-small;
-  min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); /* Note: for IE */
+  min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); // For IE
 
   // Input bare
   //
@@ -40,7 +40,7 @@
   // Used to apply an <input> size to another element thats a non <input>
   // Because sometimes I need elements the same height as inputs
   &--height {
-    min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); /* Note: for IE */
+    min-height: calc(#{$line-height-button-small} + (#{$border-width-thin} * 2)); // For IE
   }
 }
 
@@ -53,6 +53,10 @@
     position: absolute;
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
+
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+      fill: $color-text-icon-default;
+    }
   }
 
   &--left {

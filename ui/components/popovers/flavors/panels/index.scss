@@ -45,7 +45,7 @@
 
     &:before,
     &:after {
-      top: $spacing-large + $spacing-small;
+      top: ($spacing-large + $spacing-small);
     }
   }
 }

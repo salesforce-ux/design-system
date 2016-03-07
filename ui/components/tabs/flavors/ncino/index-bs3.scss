@@ -1,0 +1,94 @@
+// Secondary Navigation
+.navigation-items {
+  text-transform: capitalize;
+  background: $color-background-alt;
+
+  a {
+    @include tabs-link;
+    border-left: $border-width-thick solid transparent;
+    padding: $spacing-none $spacing-large;
+    height: $line-height-tab;
+    font-size: $font-size-small;
+    line-height: $line-height-tab;
+    color: $color-text-tab-label;
+
+    *[class*="icon"] {
+      display: none;
+    }
+  }
+
+  .active {
+    border-color: $color-text-tab-label-selected;
+    background: $color-background-row-selected;
+    color: $color-text-tab-label-selected;
+  }
+
+  .inactive {}
+
+  .disabled a {
+    color: $color-text-tab-label-disabled;
+    cursor: default;
+  }
+}
+
+// Tertiary Navigation
+.sub-navigation {
+  text-transform: uppercase;
+
+  span {
+    display: inline-block;
+  }
+
+  a {
+    @include tabs-link;
+    margin: $spacing-none $spacing-xx-small;
+    border-bottom: $border-width-thick solid transparent;
+    padding: $spacing-none $spacing-medium;
+    height: $line-height-tab;
+    font-size: $font-size-small;
+    line-height: $line-height-tab;
+    color: $color-text-tab-label;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-color: $color-text-tab-label-selected;
+      color: $color-text-action-label-active;
+    }
+
+    &:focus {
+      @include tab-focus;
+    }
+
+    *[class*="icon"] {
+      display: none;
+    }
+  }
+
+  .active {
+    border-color: $color-text-tab-label-selected;
+    color: $color-text-tab-label-active;
+
+    &:focus {
+      color: $color-text-tab-label-selected;
+    }
+  }
+
+  .inactive {}
+
+  .disabled {
+    @include truncate;
+    margin: $spacing-none $spacing-xx-small;
+    border-bottom: $border-width-thick solid transparent;
+    padding: $spacing-none $spacing-medium;
+    height: $line-height-tab;
+    font-size: $font-size-small;
+    line-height: $line-height-tab;
+    color: $color-text-tab-label-disabled;
+    cursor: default;
+  }
+
+  &-content {
+    background: $color-background;
+  }
+}

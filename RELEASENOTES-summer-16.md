@@ -7,7 +7,7 @@
 
 The following site enhancements are now available:
 
--
+- Added additional space between buttons in the modal footer
 
 **NEW COMPONENTS AND VARIANTS**
 

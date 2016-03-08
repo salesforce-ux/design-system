@@ -89,7 +89,7 @@ export const hook = (obj, name, ...args) => ['before_', '', 'after_']
  * @returns {function}
  */
 export const search = query => {
-  const querySegments = query.split(/\W/);
+  const querySegments = query.split(/\W|(?=[A-Z])/);
   return term => {
     const termSegments = term.split(/\W/);
     let matches = 0;

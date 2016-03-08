@@ -89,7 +89,6 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
-- Deprecated `.slds-dropdown--overflow`. Dropdown length utilities should be used instead. - [Dropdown component](/components/menus/#dropdown-height)
 - Deprecated `.slds-card--empty`. Use `.slds-text-align--center` instead. - [Card component](/components/cards/#empty)
 - Deprecated `.slds-section-title`. Use `.slds-section__title` instead - [Section Title](/components/utilities/text/#section-title) for full details
 - Deprecated `.slds-button--icon-bare`. Use `.slds-button--icon` instead - [Button Icon](/components/buttons/#icon)

@@ -109,6 +109,10 @@
     &--directional .#{$css-prefix}button:first-child {
       float: left;
     }
+
+    .#{$css-prefix}button + .#{$css-prefix}button {
+      margin-left: $spacing-x-small;
+    }
   }
 
   &__close {

@@ -165,7 +165,7 @@ a.#{$css-prefix}button {
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;
-    border-color: rgba($color-border-button-default, .5);
+    border-color: $color-border-button-inverse-disabled;
     color: $color-text-button-inverse-disabled;
   }
 }

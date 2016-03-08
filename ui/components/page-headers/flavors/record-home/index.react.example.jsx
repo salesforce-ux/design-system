@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 
-import Anchor from 'ui/components/page-headers/index.react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
@@ -27,7 +26,7 @@ const image = (
 );
 
 export default (
-  <Anchor flavor="home">
+  <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
       <div className={pf('col has-flexi-truncate')}>
         <MediaObject flavor="center" figureLeft={image}>
@@ -63,52 +62,37 @@ export default (
         </div>
       </div>
     </div>
-    <Anchor.DetailRow>
-      <Anchor.DetailItem>
-        <Anchor.DetailLabel>
-          <p className={pf('text-heading--label-normal truncate')} title="Field 1">Field 1</p>
-        </Anchor.DetailLabel>
-        <Anchor.DetailBody>
-          <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
-            Description that demonstrates truncation with a long text field
-          </p>
-        </Anchor.DetailBody>
-      </Anchor.DetailItem>
-      <Anchor.DetailItem>
-        <Anchor.DetailLabel>
-          <p className={pf('text-heading--label-normal truncate')} title="Field2 (3)">Field 2 (3)
+    <ul className={pf('grid page-header__detail-row')}>
+      <li className={pf('page-header__detail-block')}>
+        <p className={pf('text-heading--label-normal truncate')} title="Field 1">Field 1</p>
+        <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
+          Description that demonstrates truncation with a long text field.
+        </p>
+      </li>
+      <li className={pf('page-header__detail-block')}>
+        <p className={pf('text-heading--label-normal truncate')} title="Field2 (3)">
+          Field 2 (3)
           <ButtonIcon
             flavor="icon-bare"
             iconFlavor="small"
             sprite="utility"
             symbol="down"
             assistiveText="More Actions" />
-          </p>
-        </Anchor.DetailLabel>
-        <Anchor.DetailBody>
-          <p className={pf('text-body--regular')}>Multiple Values</p>
-        </Anchor.DetailBody>
-      </Anchor.DetailItem>
-      <Anchor.DetailItem>
-        <Anchor.DetailLabel>
-          <p className={pf('text-heading--label-normal truncate')} title="Field 3">Field 3</p>
-        </Anchor.DetailLabel>
-        <Anchor.DetailBody>
-          <a href="javascript:void(0)">Hyperlink</a>
-        </Anchor.DetailBody>
-      </Anchor.DetailItem>
-      <Anchor.DetailItem>
-        <Anchor.DetailLabel>
-          <p className={pf('text-heading--label-normal truncate')} title="Field 4">Field 4</p>
-        </Anchor.DetailLabel>
-        <Anchor.DetailBody>
-          <p>
-            <Truncate amount={50}>
-              Description (2-line truncation—must use JS to truncate.)
-            </Truncate>
-          </p>
-        </Anchor.DetailBody>
-      </Anchor.DetailItem>
-    </Anchor.DetailRow>
-  </Anchor>
+        </p>
+        <p className={pf('text-body--regular')}>Multiple Values</p>
+      </li>
+      <li className={pf('page-header__detail-block')}>
+        <p className={pf('text-heading--label-normal truncate')} title="Field 3">Field 3</p>
+        <a href="#void">Hyperlink</a>
+      </li>
+      <li className={pf('page-header__detail-block')}>
+        <p className={pf('text-heading--label-normal truncate')} title="Field 4">Field 4</p>
+        <p>
+          <Truncate amount={50}>
+            Description (2-line truncation—must use JS to truncate).
+          </Truncate>
+        </p>
+      </li>
+    </ul>
+  </div>
 );

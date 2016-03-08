@@ -61,12 +61,6 @@ classes:
     required: true
     applied: <code>.{{cssPrefix}}tabs--default__item--overflow</code>
   -
-    class: dropdown--overflow
-    description: Applies size settings on tab item menu
-    required: true
-    applied: <code>.{{cssPrefix}}dropdown</code>
-    notes: Only used within an overflow tab item.
-  -
     class: active
     description: Applies the active state to a tab list item
     required: true

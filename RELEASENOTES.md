@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## [Unreleased]
+## Release 1.X.X - [Unreleased]
 
 **SITE IA/ENHANCEMENTS**
 

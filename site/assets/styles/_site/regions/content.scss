@@ -67,7 +67,8 @@
   }
 }
 
-.site-component-nav {
+// Defaults for site menu jump links list
+.site-menu--jump-links {
 
   .icon__svg {
     display: none;
@@ -89,7 +90,7 @@
   }
 }
 
-// Nested ul
+// Nested list for variant states
 .site-states {
 
   a {
@@ -117,11 +118,20 @@
   }
 
   // Component nav container
-  .site-component-nav {
+  .site-menu--jump-links_container {
+    width: 16.667%;
+  }
+
+  // List of jump menu items
+  .site-menu--jump-links {
     @include scrollbar($track: $color-background-alt);
     overflow-x: hidden;
     z-index: $z-index-default;
-    width: 16.667%;
+
+    // Label at the top of jump menu items
+    .site-text-heading--label {
+      padding-left: $spacing-large;
+    }
 
     // Links
     a {
@@ -144,22 +154,12 @@
       }
     }
 
-    .site-text-heading--label {
-      padding-left: $spacing-large;
-    }
-
     .icon__svg {
       @include square($square-icon-x-small-content);
       display: inline-block;
       opacity: 0.5;
       transform: rotate(-90deg);
     }
-  }
-
-  .site-component-nav__list {
-    @include scrollbar($track: $color-background-alt);
-    overflow-x: hidden;
-    z-index: $z-index-default;
   }
 
   // Nested list for variant states

@@ -27,17 +27,17 @@ $app-version: '2.0.0';
 /// Icon Path
 ///
 /// @type String
-$static-icon-path: '/assets/icons' !default;
+$static-icon-path: '../icons' !default;
 
 /// Image Path
 ///
 /// @type String
-$static-image-path: '/assets/images' !default;
+$static-image-path: '../images' !default;
 
 /// Font Path
 ///
 /// @type String
-$static-font-path: '/assets/fonts/webfonts' !default;
+$static-font-path: '../fonts/webfonts' !default;
 
 /// Grid
 ///

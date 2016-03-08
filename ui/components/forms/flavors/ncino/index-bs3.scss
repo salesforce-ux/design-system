@@ -1,0 +1,34 @@
+.content-label {
+  width: 100%;
+  font-size: $font-size-small;
+  line-height: $line-height-reset;
+  white-space: nowrap;
+  color: $color-text-label;
+
+  .form-control-static {
+    margin: $spacing-xx-small $spacing-none;
+    padding: $spacing-none;
+  }
+
+  .input-sm {
+    height: $font-size-medium;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-reset;
+  }
+}
+
+.content-body {
+  font-size: $font-size-medium;
+
+  .form-control-static {
+    margin: $spacing-none;
+    padding: $spacing-none;
+  }
+
+  .input-sm {
+    height: $font-size-xx-large;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+  }
+}

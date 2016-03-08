@@ -1,0 +1,44 @@
+.body-content {
+  margin-bottom: $spacing-medium;
+
+  .content-heading {
+    @include border($borders: top left right);
+    border-bottom: none;
+    border-radius: $border-radius-medium $border-radius-medium $spacing-none $spacing-none;
+    padding: $spacing-large $spacing-large $spacing-x-small;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+    text-transform: capitalize;
+    background: $color-background-alt;
+  }
+
+  .view-container {
+    margin-bottom: $spacing-medium;
+    border-top: none;
+    @include border($borders: left right bottom);
+    border-radius: $spacing-none $spacing-none $border-radius-medium $border-radius-medium;
+    padding: $spacing-x-small $spacing-medium;
+    background: $color-background-alt;
+  }
+
+  .loading-panel {
+    border: none;
+
+    .panel-heading {
+      @include border($borders: top left right);
+      border-bottom: none;
+      border-radius: $border-radius-medium $border-radius-medium $spacing-none $spacing-none;
+      padding: $spacing-x-small;
+      background: $color-background-alt;
+    }
+
+    .panel-body {
+      margin-bottom: $spacing-medium;
+      border-top: none;
+      @include border($borders: left right bottom);
+      border-radius: $spacing-none $spacing-none $border-radius-medium $border-radius-medium;
+      padding: $spacing-medium;
+      background: $color-background-alt;
+    }
+  }
+}

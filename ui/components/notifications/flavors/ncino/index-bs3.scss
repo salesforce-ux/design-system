@@ -1,0 +1,44 @@
+.alert {
+  @include inverse-links;
+  position: relative;
+  background: $color-background-toast;
+  font-weight: $font-weight-light;
+  border: none;
+  border-radius: $border-radius-medium;
+  margin: $spacing-x-small;
+  padding: $spacing-medium $spacing-large;
+  display: inline-block;
+  text-align: left;
+
+  &-success {
+    @include inverse-links;
+    background-color: $color-background-toast-success;
+  }
+
+  &-info {}
+
+  &-warning {
+    background-color: $color-background-warning;
+    color: $color-text-default;
+
+    *[class*="icon"] {
+      fill: $color-text-icon-default;
+    }
+  }
+
+  &-danger {
+    @include inverse-links;
+    background-color: $color-background-toast-error;
+  }
+
+  ul {
+    list-style: none;
+    margin: $spacing-none;
+    padding: $spacing-none;
+
+    li {
+      margin: $spacing-none;
+      padding: $spacing-none;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// Container
+.top-bar {
+  //position: fixed;
+  z-index: $z-index-default + 1;
+  height: $size-xxx-small;
+  line-height: $size-xxx-small;
+  background: $color-background;
+  box-shadow: $elevation-shadow-1;
+
+  // Alerts
+  .alert {
+    padding: $spacing-x-small $spacing-large;
+    line-height: $line-height-reset;
+  }
+
+  // Controls
+  &-controls {
+
+    .alert {
+      position: relative;
+      top: $spacing-x-small;
+      float: left;
+      margin: $spacing-none;
+    }
+
+    .item {
+      display: inline-block;
+      margin-left: $spacing-small;
+    }
+  }
+
+  // Heading
+  &-heading a,
+  &-heading a:active,
+  &-heading a:hover,
+  &-heading a:link,
+  &-heading a:visited {
+    text-decoration: none;
+    color: $color-text-default;
+  }
+
+  &-heading .circle {
+    display: none;
+  }
+}

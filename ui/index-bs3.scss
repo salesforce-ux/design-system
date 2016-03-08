@@ -1,5 +1,6 @@
 // Lightning Design System - Bootstrap 3
 
+$reset-wrapping-class: '.force';
 $static-icon-path: '../icons';
 $static-image-path: '../images';
 $static-font-path: '../fonts/webfonts';
@@ -20,11 +21,12 @@ $static-font-path: '../fonts/webfonts';
 
     // Resets
     'vendor/normalize-reset',
-    'core/core-vf',
+    'core/core-vf', // based on VF version
+    'core/core-bs3',
 
     // Framework
-    'components/index',
-    'utilities/index',
+    'components/index-bs3',
+    'utilities/index-bs3',
 
     // Print
     'vendor/html5boilerplate-print';

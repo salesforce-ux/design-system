@@ -166,7 +166,6 @@ a.#{$css-prefix}button {
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;
     border-color: $color-border-button-inverse-disabled;
-    color: $color-text-button-inverse-disabled;
   }
 }
 
@@ -187,6 +186,11 @@ a.#{$css-prefix}button {
 
   &:focus {
     @include focus-inverse;
+  }
+
+  &[disabled] {
+    // Make sure disabled buttons don't inherit hover states
+    color: $color-text-button-inverse-disabled;
   }
 }
 

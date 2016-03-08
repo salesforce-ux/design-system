@@ -287,6 +287,13 @@ async.series([
       .on('error', done)
       .on('finish', done);
   },
+  (done) => {
+    gulp.src(distPath('assets/styles/*-bs3.css'), { base: distPath() })
+      .pipe(rem2px(16))
+      .pipe(gulp.dest(distPath()))
+      .on('error', done)
+      .on('finish', done);
+  },
   /**
    * Minify CSS
    */

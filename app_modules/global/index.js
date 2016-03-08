@@ -33,7 +33,7 @@ export default {
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',
   zipName: function(version) {
-    return this.moduleName + '-' + version + '.zip';
+    return this.moduleName + '.zip';
   },
   downloadPath: function(version) {
     return 'assets/downloads/' + this.zipName(version);

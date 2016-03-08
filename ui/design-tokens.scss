@@ -51,3 +51,7 @@ $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large,
   'spacing-none': $spacing-none
 ));
+
+// nCino Design Tokens
+$size-xxx-small: 3rem !default;
+$elevation-shadow-1: 0px 1px 1px 0px rgba(0,0,0,.16) !default;

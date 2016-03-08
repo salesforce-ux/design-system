@@ -1,0 +1,141 @@
+// Base
+.table {
+  // scss-lint:disable SelectorDepth
+  margin: $spacing-medium $spacing-none;
+  background-color: $color-background-alt;
+
+  .form-control-static,
+  .input-sm {
+    margin: $spacing-none;
+    border-radius: initial;
+    padding: $spacing-none;
+    height: auto;
+    font-size: $font-size-medium;
+    line-height: $line-height-text;
+  }
+
+  > thead,
+  > tbody,
+  > tfoot {
+
+    > tr {
+
+      > th,
+      > td {
+        @include border($borders: top bottom);
+        padding: $spacing-x-small;
+        white-space: nowrap;
+        position: relative;
+        font-size: $font-size-medium;
+        line-height: $line-height-text;
+        color: $color-text-default;
+      }
+
+      > th {
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-heading;
+        text-transform: uppercase;
+        color: $color-text-label;
+      }
+
+      // First and Last Cell of a row
+      > th:first-child,
+      > td:first-child {
+        padding-left: $spacing-large;
+      }
+
+      > th:last-child,
+      > td:last-child {
+        padding-right: $spacing-large;
+      }
+    }
+  }
+
+  > thead:first-child {
+
+    > tr:first-child {
+
+      th {
+        @include border($borders: top bottom);
+      }
+    }
+  }
+
+  // Bordered
+  &-bordered {
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      > tr {
+
+        > th,
+        > td {
+          @include border($borders: around);
+        }
+      }
+    }
+
+    > thead:first-child {
+
+      > tr:first-child {
+
+        th {
+          @include border($borders: around);
+        }
+      }
+    }
+  }
+
+  // Condensed (no actual difference)
+  &-condensed {
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      > tr {
+
+        // Cells
+        > th,
+        > td {
+          padding: $spacing-x-small;
+        }
+      }
+    }
+  }
+
+  // Hover
+  &-hover {
+
+    > tbody {
+
+      > tr:hover {
+
+        // Cells
+        > th,
+        > td {
+          background-color: $color-background-row-hover;
+        }
+      }
+    }
+  }
+
+  // Striped
+  &-striped {
+
+    > tbody {
+
+      > tr:nth-child(odd) {
+
+        // Cells
+        > th,
+        > td {
+          background-color: $color-background-row-selected;
+        }
+      }
+    }
+  }
+}

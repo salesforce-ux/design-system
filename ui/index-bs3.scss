@@ -1,0 +1,33 @@
+// Lightning Design System - Bootstrap 3
+
+$reset-wrapping-class: '.force';
+$static-icon-path: '../icons';
+$static-image-path: '../images';
+$static-font-path: '../fonts/webfonts';
+
+// Non-Scoped
+@import
+
+  // Dependencies
+  'design-tokens',
+  'config',
+  'vendor/deprecate',
+  'dependencies/index',
+  'core/font';
+
+// Scoped
+#{$reset-wrapping-class} {
+  @import
+
+    // Resets
+    'vendor/normalize-reset',
+    'core/core-vf', // based on VF version
+    'core/core-bs3',
+
+    // Framework
+    'components/index-bs3',
+    'utilities/index-bs3',
+
+    // Print
+    'vendor/html5boilerplate-print';
+}

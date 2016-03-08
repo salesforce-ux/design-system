@@ -25,6 +25,7 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
+- Improved accessibility in the record home variant of the page header component (remove multiple `<dl>` elements, and use a single `<ul>` instead) - [Page Headers](/components/page-headers/#record-home)
 
 
 **FIXED**

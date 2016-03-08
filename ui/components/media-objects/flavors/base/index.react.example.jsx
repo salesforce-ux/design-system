@@ -11,24 +11,55 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
-import Lorem from 'react-lorem-component';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+//////////////////////////////////////////////
+// Partial(s)
+//////////////////////////////////////////////
+
 const image = (
-    <Img src="/assets/images/avatar3.jpg" style={{height: '100px'}} alt="Placeholder" />
+  <img src="/assets/images/avatar3.jpg" className={pf('avatar--large')} alt="Placeholder" />
 );
 
-export const preview = (
-  <div className={pf('size--3-of-4')}>
-    <MediaObject figureLeft={image}>
-      <Lorem count={1} />
-    </MediaObject>
-  </div>
-);
+//////////////////////////////////////////////
+// State Constructor(s)
+//////////////////////////////////////////////
 
-export const code = (
-  <MediaObject figureLeft={image}>
-    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+let MediaExample = props =>
+<div className={`demo-only ${pf('size--3-of-4')}`}>
+  <MediaObject figureLeft={props.figureLeft} figureRight={props.figureRight} flavor={props.flavor}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.</p>
   </MediaObject>
-);
+</div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element: <MediaExample figureLeft={image} />
+  },
+  {
+    id: 'center',
+    label: 'Center',
+    element: <MediaExample figureLeft={image} flavor="center" />
+  },
+  {
+    id: 'reverse',
+    label: 'Reverse',
+    element: <MediaExample figureRight={image} />
+  },
+  {
+    id: 'reverse-center',
+    label: 'Reverse (centered)',
+    element: <MediaExample figureRight={image} flavor="center" />
+  },
+  {
+    id: 'double',
+    label: 'Double (One on each side)',
+    element: <MediaExample figureLeft={image} figureRight={image} />
+  }
+];

@@ -11,24 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
-import Lorem from 'react-lorem-component';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <Img src="/assets/images/avatar2.jpg" style={{height: '100px'}} alt="Placeholder" />
+  <img src="/assets/images/avatar2.jpg" className={pf('avatar--large')} alt="Placeholder" />
 );
 
-export const preview = (
-  <div className={pf('size--3-of-4')}>
+export default (
+  <div className={`demo-only ${pf('size--3-of-4')}`}>
     <MediaObject figureLeft={image} flavor="responsive">
-      <Lorem count={1} />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.</p>
     </MediaObject>
   </div>
-);
-
-export const code = (
-  <MediaObject figureLeft={image} flavor="responsive">
-    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
-  </MediaObject>
 );

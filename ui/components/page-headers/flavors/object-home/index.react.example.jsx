@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Anchor from 'ui/components/page-headers/index.react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
@@ -26,7 +25,7 @@ const image = (
 );
 
 export default (
-  <Anchor flavor="object-home">
+  <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className={pf('col has-flexi-truncate')}>
@@ -61,7 +60,7 @@ export default (
     {/* Close Grid */}
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <Anchor.Detail>10 items • Sorted by Name</Anchor.Detail>
+        <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <Button flavor="icon-more" aria-haspopup="true">
@@ -99,5 +98,5 @@ export default (
         </div>
       </div>
     </div>
-  </Anchor>
+  </div>
 );

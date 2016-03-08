@@ -118,8 +118,24 @@
 
   // Component nav container
   .site-component-nav {
-    width: 320px;
+    @include scrollbar($track: $color-background-alt);
+    overflow-x: hidden;
+    z-index: $z-index-default;
+    width: 16.667%;
 
+    // Links
+    a {
+      display: flex;
+      padding: $spacing-small $spacing-x-small $spacing-small $spacing-large;
+      line-height: 1.28571428571429;
+      color: $color-text-default;
+
+      &:hover {
+        background-color: rgba($color-background, 0.5);
+      }
+    }
+
+    // When component variant is selected
     .#{$css-prefix}is-selected {
       background-color: $color-background;
 
@@ -129,7 +145,7 @@
     }
 
     .site-text-heading--label {
-      padding-left: $spacing-x-large;
+      padding-left: $spacing-large;
     }
 
     .icon__svg {
@@ -140,30 +156,20 @@
     }
   }
 
-  .site-menu--jump-links {
+  .site-component-nav__list {
     @include scrollbar($track: $color-background-alt);
     overflow-x: hidden;
     z-index: $z-index-default;
-
-    a {
-      display: flex;
-      padding: $spacing-small $spacing-small $spacing-small $spacing-x-large;
-      line-height: 1.28571428571429;
-      color: $color-text-default;
-
-      &:hover {
-        background-color: rgba($color-background, 0.5);
-      }
-    }
   }
 
+  // Nested list for variant states
   .site-states {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
 
     a {
-      padding-left: $spacing-xx-large;
+      padding-left: $spacing-x-large;
     }
 
     .#{$css-prefix}is-active a {

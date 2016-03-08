@@ -85,7 +85,7 @@ export default React.createClass({
       });
     return (
       <StickyNav>
-        <div className={pf('site-menu--jump-links')}>
+        <div className={pf('site-component-nav__list site-menu--jump-links')}>
           <h3 className="site-text-heading--label">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}

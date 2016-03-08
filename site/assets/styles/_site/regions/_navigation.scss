@@ -88,9 +88,13 @@
     border-right: $border-width-thin solid $color-border-separator;
     padding-top: 0;
     width: $width-sidebar;
-    overflow: hidden {
-      y: auto;
-    };
+
+    nav {
+      height: 100%;
+      overflow: hidden {
+        y: auto;
+      };
+    }
 
     &.site-navigation--internal {
       top: ($height-banner + $height-banner-badge);

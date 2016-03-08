@@ -133,8 +133,21 @@ export default React.createClass({
   },
 
   renderScripts() {
+    const docSearch = `
+      docsearch({
+        apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
+        indexName: 'lightningdesignsystem',
+        inputSelector: '#docsearch',
+        autocompleteOptions: {
+          // See https://github.com/algolia/autocomplete.js#options
+          // For full list of options
+          // debug: true
+        }
+      });`;
     const scripts = [
-      { src: '/assets/scripts/site.js' }
+      { src: '/assets/scripts/site.js' },
+      { src: 'https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js' },
+      { content: docSearch }
     ];
     return scripts.concat(this.props.scripts).map((script, index) => {
       const props = { key: index };

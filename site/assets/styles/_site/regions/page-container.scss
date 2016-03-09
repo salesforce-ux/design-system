@@ -16,9 +16,11 @@
   }
 }
 
-@include mq-medium-max {
-  .site-content {
-    padding: $spacing-x-large;
+.site-content {
+  padding: $spacing-large;
+
+  @include mq-large-min {
+    padding: $spacing-xx-large 0 $spacing-xx-large $spacing-xx-large;
   }
 }
 

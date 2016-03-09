@@ -67,6 +67,42 @@
   }
 }
 
+// Defaults for site menu jump links list
+.site-menu--jump-links {
+
+  .icon__svg {
+    display: none;
+  }
+
+  // Deal with open states
+  .#{$css-prefix}is-open {
+
+    .site-states {
+      max-height: 100vh;
+      overflow: visible;
+      opacity: 1;
+    }
+
+    .icon__svg {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+// Nested list for variant states
+.site-states {
+
+  a {
+    padding: {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
+      left: $spacing-x-large;
+    }
+  }
+}
+
+// Large Overrides
 @include mq-large-min {
 
   .site-main-content {
@@ -74,66 +110,71 @@
       top: -$spacing-xx-large;
       bottom: -$spacing-xx-large;
     }
-    padding-top: $spacing-xx-large;
-  }
-
-  .site-menu--jump-links {
-    padding-left: $spacing-large;
-    overflow-x: hidden;
-    z-index: $z-index-default;
-
-    a {
-      cursor: pointer;
-      margin: {
-        left: ($spacing-large * -1);
-        right: ($spacing-medium * -1);
-      }
-      padding: {
-        left: $spacing-large;
-        right: $spacing-medium;
-      }
-    }
-  }
-
-  .site-states {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all $duration-promptly $duration-promptly;
-
-    .#{$css-prefix}is-active {
-      @include nubbin(left, $location: "before", $color: transparent, $size: $spacing-x-small);
-      position: relative;
-
-      &:before {
-        top: calc(((((#{$font-size-medium} * #{$line-height-text}) / 2) - #{$spacing-x-small}) + #{$spacing-medium}));
-        border: {
-          right: $spacing-x-small solid $color-background-shade;
-          bottom: $spacing-x-small solid transparent;
-        }
-        margin-left: ((($spacing-medium * 2) + $spacing-x-small) * -1);
-      }
-    }
-  }
-
-  .#{$css-prefix}is-open .site-states {
-    max-height: 100vh;
-    overflow: visible;
-    opacity: 1;
-  }
-
-  .site-main-content {
     padding: {
+      top: $spacing-xx-large;
       right: $spacing-xx-large;
       bottom: $spacing-xx-large * 2;
     }
   }
-}
 
-.site-states {
-  padding-left: $spacing-medium;
+  // Component nav container
+  .site-menu--jump-links_container {
+    width: 16.667%;
+  }
 
-  .#{$css-prefix}is-active a {
-    color: $color-text-link-active;
+  // List of jump menu items
+  .site-menu--jump-links {
+    @include scrollbar($track: $color-background-alt);
+    overflow-x: hidden;
+    z-index: $z-index-default;
+
+    // Label at the top of jump menu items
+    .site-text-heading--label {
+      padding-left: $spacing-large;
+    }
+
+    // Links
+    a {
+      display: flex;
+      padding: $spacing-small $spacing-x-small $spacing-small $spacing-large;
+      line-height: 1.28571428571429;
+      color: $color-text-default;
+
+      &:hover {
+        background-color: rgba($color-background, 0.5);
+      }
+    }
+
+    // When component variant is selected
+    .#{$css-prefix}is-selected {
+      background-color: $color-background;
+
+      a:hover {
+        background-color: darken($color-background, 2.5);
+      }
+    }
+
+    .icon__svg {
+      @include square($square-icon-x-small-content);
+      display: inline-block;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+    }
+  }
+
+  // Nested list for variant states
+  .site-states {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    a {
+      padding-left: $spacing-x-large;
+    }
+
+    .#{$css-prefix}is-active a {
+      color: $color-text-tab-label-selected;
+      background-color: $color-background-alt-2;
+    }
   }
 }

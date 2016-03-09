@@ -25,7 +25,7 @@ export default (
           <li><a href="#setup">Setup</a></li>
           <li>
             <a href="#usage">Usage</a>
-            <ul className={pf('is-nested m-top--medium')}>
+            <ul>
               <li><a href="#colors">Colors</a></li>
               <li><a href="#fonts">Fonts and Text Sizes</a></li>
               <li><a href="#icons">Icons</a></li>

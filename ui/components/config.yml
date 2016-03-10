@@ -5,7 +5,6 @@ components:
   - buttons
   - button-groups
   - cards
-  - context-bar
   - data-tables
   - datepickers
   - docked-composer

@@ -77,4 +77,13 @@ iframe {
       content: ': Stable';
     }
   }
+
+  &--desktop {
+    background: hsl(207, 100%, 73%);
+    color: $color-text-inverse;
+
+    &:after {
+      content: ' Only';
+    }
+  }
 }

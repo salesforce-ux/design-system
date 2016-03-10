@@ -111,6 +111,7 @@ class ComponentFlavor extends React.Component {
         <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
+          {this.renderBadge(flavor.formFactorStatus)}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>

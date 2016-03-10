@@ -1,23 +1,26 @@
 import ui from '../../.generated/ui';
+import fs from 'fs';
+import p from 'path';
 
-describe('All components', function() {
+describe('All components (except spinners)', function() {
 
   ui.forEach(group => {
     const components = group.components;
-
-    components.forEach(component => {
+    components.filter(x => x.id != 'spinners').forEach(component => {
       const flavors = component.flavors;
       flavors.forEach(flavor => {
-        const path = group.id+'/'+component.id+'/flavors/'+flavor.id+'/_default.html';
-
-        it('takes a screenshot', client => {
-          client
-            .url(process.env.HOST + path)
-            .waitForElementVisible('body', 5000)
-            .resizeWindow(800, 600)
-            .screenCapture(component.id+'_'+flavor.id)
-            .end();
-        });
+        const path = p.join(group.id, component.id, 'flavors', flavor.id)
+        const states = fs.readdirSync(p.join(__dirname, '../../', '.www', path))
+        states.forEach(state => {
+          it('takes a screenshot', client => {
+            client
+              .url(process.env.HOST + path+'/'+state)
+              .waitForElementVisible('body', 5000)
+              .resizeWindow(800, 600)
+              .screenCapture(component.id+'_'+flavor.id)
+              .end();
+          });
+        })
       });
     });
   });

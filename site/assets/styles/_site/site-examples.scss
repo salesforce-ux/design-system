@@ -34,7 +34,7 @@ iframe {
   width: 100%;
 
   &[data-form-factor="mobile"] {
-    width: 30rem;
+    width: calc(30rem - 1px); // Need this for preview to show what component looks like on < 480px, only important for mobile due to S1 needs
   }
 
   &[data-form-factor="tablet"] {

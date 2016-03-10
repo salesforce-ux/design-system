@@ -10,7 +10,7 @@
 .#{$css-prefix}tree-container,
 .#{$css-prefix}tree_container {
 
-  @include deprecate('4.0.0');
+  @include deprecate('4.0.0', '.slds-tree-container is deprecated, use .slds-tree_container instead.');
   min-width: rem(120px);
   max-width: rem(400px);
 
@@ -59,7 +59,7 @@
   $max-nesting-depth: 20 !default;
   @for $current-level from 1 through $max-nesting-depth {
     [aria-level="#{$current-level}"] > &__item {
-        padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
+      padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
 

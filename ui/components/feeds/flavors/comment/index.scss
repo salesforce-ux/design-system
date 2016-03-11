@@ -78,8 +78,8 @@
   &:empty {
     padding: 0;
   }
+}
 
-  &__item + &__item {
-    margin-top: $spacing-medium;
-  }
+.#{$css-prefix}attachments__item + .#{$css-prefix}attachments__item {
+  margin-top: $spacing-medium;
 }

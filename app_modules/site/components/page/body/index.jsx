@@ -231,7 +231,7 @@ export default React.createClass({
     const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
-        <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
+        <p className={pf('p-horizontal--x-large size--1-of-1 shrink-none large-size--2-of-3')}>
           Copyright &copy; 2015-2016 <span className={pf('site-name')}>Sales<i>f</i>orce. </span>
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
@@ -239,7 +239,7 @@ export default React.createClass({
             All rights reserved
           </CTALink>. {versionDateBuildString}
         </p>
-        <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
+        <p className={pf('p-horizontal--x-large text-align--right size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
           <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
           <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>

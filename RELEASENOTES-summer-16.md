@@ -13,7 +13,7 @@ The following site enhancements are now available:
 
 The following components are now available:
 
-- Context Bar - [Context bar component page](/components/context-bar/)
+- Context Bar - [Context bar component page](/components/navigation/#context-bar/)
 - Checkbox Toggle - [Checkbox toggle component](/components/forms/#checkbox-toggle)
 - Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Checkbox Alternate - [Checkbox alternate component](/components/forms/#checkbox-alternate)

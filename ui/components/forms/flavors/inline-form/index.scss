@@ -21,7 +21,7 @@
     margin-top: $spacing-small;
   }
 
-  @include mq-large-min {
+  @include mq-small-min {
 
     .#{$css-prefix}form-element {
       margin-right: $spacing-x-small;

@@ -7,6 +7,8 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+
 @mixin focus {
   // Firefox does not support the "auto" value
   // scss-lint:disable DuplicateProperty
@@ -24,6 +26,8 @@
   outline: none;
   box-shadow: $shadow-button-focus-inverse;
 }
+
+
 
 @mixin placeholder($color: $color-text-placeholder, $weight: $font-weight-regular, $size: $font-size-medium) {
   @include deprecate('4.0.0', 'Use ::placeholder instead, and prefix the output using autoprefixer') {
@@ -49,6 +53,7 @@
   }
 }
 
+
 @mixin calendar-selection-fill {
   content: '';
   position: absolute;
@@ -61,15 +66,21 @@
   z-index: -1;
 }
 
+
+
 @mixin tree-item-hover {
   background: $color-background-row-hover;
   cursor: pointer;
 }
 
+
+
 @mixin tree-item-selected {
   background: $color-background-row-selected;
   box-shadow: $color-background-button-brand 4px 0 0 inset;
 }
+
+
 
 @mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
 

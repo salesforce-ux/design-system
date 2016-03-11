@@ -14,29 +14,13 @@
 
   .#{$css-prefix}button {
     border-radius: 0;
-    border-left: 0;
 
     + .#{$css-prefix}button {
-      margin-left: 0;
+      margin-left: (-1 * $border-width-thin);
     }
 
     &:first-child {
       border-radius: $border-radius-medium 0 0 $border-radius-medium;
-      border-left: $border-width-thin solid $color-border-button-default;
-    }
-
-    // Inverse
-    &:first-child.#{$css-prefix}button--inverse[disabled] {
-      border-left-color: $color-border-button-inverse-disabled;
-    }
-
-    // Inverse
-    &--inverse:first-child[disabled] + .#{$css-prefix}button--inverse {
-      border-left: $border-width-thin solid $color-border-button-default;
-    }
-
-    &:first-child:not(.#{$css-prefix}button--last .#{$css-prefix}button) {
-      border-left: $border-width-thin solid $color-border-button-default;
     }
 
     &:last-child {
@@ -66,14 +50,7 @@
 
   // This class should be placed on the wrapper
   // of a button that's the final one in a button-group
-  .#{$css-prefix}button--last {
-
-    .#{$css-prefix}button {
-      border-radius: 0 $border-radius-medium $border-radius-medium 0;
-      border-left: 0;
-    }
-  }
-
+  .#{$css-prefix}button--last .#{$css-prefix}button,
   .#{$css-prefix}button.#{$css-prefix}button--last {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }

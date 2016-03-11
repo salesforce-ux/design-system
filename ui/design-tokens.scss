@@ -32,6 +32,9 @@ $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 
+// Temporary tokens
+$color-border-button-inverse-disabled: rgba($color-border-button-default, 0.15);
+
 // Tokens with PR request - remove when merged
 $spacing-none: 0 !default; // Needed for the margin/padding zero
 $color-background-path-complete: $color-background-success;

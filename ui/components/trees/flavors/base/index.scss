@@ -10,7 +10,7 @@
 .#{$css-prefix}tree-container,
 .#{$css-prefix}tree_container {
 
-  @include deprecate('4.0.0');
+  @include deprecate('4.0.0', '.slds-tree-container is deprecated, use .slds-tree_container instead.');
   min-width: rem(120px);
   max-width: rem(400px);
 
@@ -58,19 +58,19 @@
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;
   @for $current-level from 1 through $max-nesting-depth {
-    [aria-level="#{$current-level}"] > &__item {
-        padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
+    [aria-level="#{$current-level}"] > .#{$css-prefix}tree__item {
+      padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
 
-  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
-  [aria-expanded="false"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
+  [aria-expanded="false"] > .#{$css-prefix}tree__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="false"] > .#{$css-prefix}tree__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
     transition: $duration-promptly transform ease-in-out;
     transform: rotate(0deg);
   }
 
-  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
-  [aria-expanded="true"] > &__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
+  [aria-expanded="true"] > .#{$css-prefix}tree__item > .#{$css-prefix}button[aria-controls] > .#{$css-prefix}button__icon,
+  [aria-expanded="true"] > .#{$css-prefix}tree__item > .#{$css-prefix}button[aria-controls] > span > .#{$css-prefix}button__icon {
     transition: $duration-promptly transform ease-in-out;
     transform: rotate(90deg);
   }

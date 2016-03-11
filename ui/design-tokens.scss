@@ -73,6 +73,9 @@ $color-background-toggle-active: #0070d2 !default;
 $color-background-toggle-active-hover: #005fb2 !default;
 $color-text-toggle-disabled: rgb(216, 221, 230) !default;
 
+// Temporary tokens
+$color-border-button-inverse-disabled: rgba($color-border-button-default, 0.15);
+
 // Tokens with PR request - remove when merged
 $spacing-none: 0 !default; // Needed for the margin/padding zero
 $color-background-path-complete: $color-background-success;

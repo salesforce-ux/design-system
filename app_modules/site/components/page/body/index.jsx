@@ -239,7 +239,7 @@ export default React.createClass({
             All rights reserved
           </CTALink>. {versionDateBuildString}
         </p>
-        <p className={pf('p-horizontal--x-large slds-text-align--right size--1-of-1 shrink-none large-size--1-of-3')}>
+        <p className={pf('p-horizontal--x-large text-align--right size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
           <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
           <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>

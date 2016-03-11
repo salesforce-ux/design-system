@@ -81,7 +81,7 @@ let InverseDisabled = props =>
     <ButtonGroup>
       <Button className={pf('button--inverse')} disabled>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
-      <Button className={pf('button--inverse')}>Save</Button>
+      <Button className={pf('button--inverse')} disabled>Save</Button>
       <ButtonIcon className={pf('button--icon-border button--icon-inverse toggle-visibility')} assistiveText="More Actions" hasPopup>
         <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
       </ButtonIcon>

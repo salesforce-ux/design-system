@@ -38,7 +38,7 @@
 @mixin form-element-vertical-spacing {
   margin-top: $spacing-small;
 
-  @include mq-large-min {
+  @include mq-small-min {
     margin-top: $spacing-x-small;
   }
 }

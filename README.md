@@ -60,6 +60,10 @@ gulp lint:spaces
 
 Delete temporary build and local files.
 
+### Stats
+
+`npm run stats`: Useful stats about the project's deliverables.
+
 ### Tests
 
 `npm test`: run all tests

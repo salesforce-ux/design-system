@@ -26,7 +26,6 @@ let TreeItem = props =>
   <ButtonIcon
     disabled
     className={pf('m-right--x-small is-disabled')}
-    flavor="icon"
     iconFlavor="small"
     sprite="utility"
     symbol="chevronright"
@@ -40,7 +39,6 @@ let TreeBranch = props =>
   <ButtonIcon
     aria-controls={props.ariaControls}
     className={pf('m-right--x-small')}
-    flavor="icon"
     iconFlavor="small"
     sprite="utility"
     symbol="chevronright"

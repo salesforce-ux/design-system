@@ -42,7 +42,7 @@
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
-  @include square($square-icon-medium-boundary-alt);
+  @include square($square-icon-medium-boundary);
 }
 
 // Button icon with background

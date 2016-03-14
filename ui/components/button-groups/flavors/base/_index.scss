@@ -15,7 +15,8 @@
   .#{$css-prefix}button {
     border-radius: 0;
 
-    + .#{$css-prefix}button {
+    + .#{$css-prefix}button,
+    + .#{$css-prefix}button--last .#{$css-prefix}button {
       margin-left: (-1 * $border-width-thin);
     }
 

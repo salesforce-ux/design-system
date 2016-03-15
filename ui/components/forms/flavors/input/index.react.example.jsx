@@ -90,9 +90,9 @@ let Error = props =>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
-        <Input required />
+        <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -102,9 +102,9 @@ let ErrorIcon = props =>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
-        <Input required />
+        <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -190,12 +190,12 @@ export let states = [
   {
     id: 'input-error',
     label: 'Error',
-    element: <Error />
+    element: <Error errorId="errorMessage" />
   },
   {
     id: 'input-error-icon',
     label: 'Error with icon',
-    element: <ErrorIcon />
+    element: <ErrorIcon errorId="errorMessage" />
   },
   {
     id: 'input-disabled',

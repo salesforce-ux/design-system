@@ -51,6 +51,34 @@
 
   // This class should be placed on the wrapper
   // of a button that's the final one in a button-group
+  // 
+  // A bit of history:
+  // 
+  // Button-groups were originally built to have no wrappers in their midst.
+  // 
+  // And all buttons happily coexisted perfectly in the land of :last-child...
+  // but then along came the big bad, "Buttons in a group can come from all
+  // different teams and some are wrapped to contain a dropdown, etc.
+  // This code doesn't work now."
+  // 
+  // There was much booing and hissing and stamping of feet.
+  // 
+  // Then, Pragmatism reared its head and suggested, "Hey guys, maybe we have
+  // to supply a way for people to indicate when a button is the last one."
+  // 
+  // We had situations where various buttons were wrapped and everyone believed
+  // it was the :last-child, or no one did. So the last button had to raise its
+  // hand and shout loudly, "I am .button--last!".
+  // 
+  // Then there were issues where the last button could be wearing a wrap, thus
+  // the class actually needed to be placed on it's cute little sweater instead.
+  // 
+  // And the poor little button became warm indeed. And it got a little smelly.
+  // 
+  // Sometimes Pragmatism wins and sometimes she loses. This time she won.
+  // 
+  // The end of the story of button-groups.
+  
   .#{$css-prefix}button--last .#{$css-prefix}button,
   .#{$css-prefix}button.#{$css-prefix}button--last {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;

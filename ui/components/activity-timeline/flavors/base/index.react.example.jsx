@@ -52,8 +52,8 @@ export default (
       <MediaObject figureRight={content} className={pf('tile')}>
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1} figureLeftClassName={pf('timeline__icon')}>
           <MediaObject figureLeft={form} className={pf('tile')}>
-            <p className={pf('tile__title text-heading--x-small-bold truncate')}>
-              <span className={pf('tile__title-content')}>
+            <p className={pf('timeline__title text-heading--x-small-bold truncate')}>
+              <span className={pf('timeline__title-content')}>
                 <a href="#void">Review proposals for EBC deck with larger team and have marketing review this</a>
               </span>
             </p>
@@ -76,8 +76,8 @@ export default (
       <MediaObject figureRight={content} className={pf('tile')}>
         <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
-            <p className={pf('tile__title text-heading--x-small-bold truncate')}>
-              <span className={pf('tile__title-content')}>
+            <p className={pf('timeline__title text-heading--x-small-bold truncate')}>
+              <span className={pf('timeline__title-content')}>
                 <a href="#void">Company One — EBC Meeting</a>
               </span>
             </p>
@@ -105,8 +105,8 @@ export default (
       <MediaObject figureRight={content} className={pf('tile')}>
         <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
-            <p className={pf('tile__title text-heading--x-small-bold truncate')}>
-              <span className={pf('tile__title-content')}>
+            <p className={pf('timeline__title text-heading--x-small-bold truncate')}>
+              <span className={pf('timeline__title-content')}>
                 <a href="#void">Mobile conversation on Monday</a>
               </span>
             </p>
@@ -130,8 +130,8 @@ export default (
       <MediaObject figureRight={content} className={pf('tile')}>
         <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4} figureLeftClassName={pf('timeline__icon')}>
           <div className={pf('tile')}>
-            <p className={pf('tile__title text-heading--x-small-bold truncate')}>
-              <span className={pf('tile__title-content')}>
+            <p className={pf('timeline__title text-heading--x-small-bold truncate')}>
+              <span className={pf('timeline__title-content')}>
                 <a href="#void">Updated Proposals</a>
               </span>
             </p>

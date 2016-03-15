@@ -190,12 +190,12 @@ export let states = [
   {
     id: 'input-error',
     label: 'Error',
-    element: <Error errorId="errorMessage" />
+    element: <Error errorId="error-message" />
   },
   {
     id: 'input-error-icon',
     label: 'Error with icon',
-    element: <ErrorIcon errorId="errorMessage" />
+    element: <ErrorIcon errorId="error-message" />
   },
   {
     id: 'input-disabled',

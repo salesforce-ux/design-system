@@ -8,4 +8,4 @@ Custom checkboxes are created by applying the `.{{cssPrefix}}checkbox` class to 
 
 When a single checkbox is required, `<div class="slds-checkbox">` should get `<abbr class="required" title="required">*</abbr>` added to the DOM, directly before the `<input type="checkbox" />` for visual indication that the checkbox is required.
 
-When a checkbox group is required, the `<fieldset>` should receive the class `.{{.cssPrefix}}is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
+When a checkbox group is required, the `<fieldset>` should receive the class `.{{cssPrefix}}is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.

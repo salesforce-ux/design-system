@@ -33,17 +33,17 @@ let Checkbox = props =>
     </span>
   </label>;
 
-let Panel = props =>
+export let Panel = props =>
   <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
     {props.children}
   </div>;
 
-let PanelBody = props =>
-  <div className={pf('form--stacked grow scrollable--y')}>
+export let PanelBody = props =>
+  <div className={className(pf('form--stacked grow scrollable--y'), props.className)}>
     {props.children}
   </div>;
 
-let PanelSection = props =>
+export let PanelSection = props =>
   <div className={className(pf('panel__section'), props.className)}>
     {props.children}
   </div>;

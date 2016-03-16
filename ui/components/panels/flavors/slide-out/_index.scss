@@ -9,7 +9,7 @@
 
 
 .#{$css-prefix}panel {
-  @include box($padding: 0, $borders: around);
+  @include border($borders: around);
 
   &__section {
     padding: $spacing-medium;

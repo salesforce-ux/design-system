@@ -26,7 +26,8 @@
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "npm run gulp -- lint",
     "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "stats": "gulp stylestats"
   },
   "dependencies": {
     "@salesforce-ux/design-tokens": "2.0.5",

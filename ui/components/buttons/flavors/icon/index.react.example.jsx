@@ -182,11 +182,6 @@ export let states = [
     element: <ContainerBorder />
   },
   {
-    id: 'button-icon-border-small',
-    label: 'Container small',
-    element: <ContainerBorderSmall />
-  },
-  {
     id: 'button-icon-border-x-small',
     label: 'Container x-small',
     element: <ContainerBorderXSmall />

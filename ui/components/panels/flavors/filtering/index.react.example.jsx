@@ -14,37 +14,42 @@ import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { Panel } from 'ui/components/panels/flavors/slide-out/index.react.example';
-import { PanelBody } from 'ui/components/panels/flavors/slide-out/index.react.example';
-import { PanelSection } from 'ui/components/panels/flavors/slide-out/index.react.example';
+import { Panel } from 'ui/components/panels/flavors/detail/index.react.example';
+import { PanelBody } from 'ui/components/panels/flavors/detail/index.react.example';
+import { PanelSection } from 'ui/components/panels/flavors/detail/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Filters = props =>
+let Demo = props =>
+  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px', overflow: 'hidden' }}>
+    {props.children}
+  </div>;
+
+export let Filters = props =>
   <div className={className(pf('filters'), props.className)}>
     {props.children}
   </div>;
 
-let FiltersHeader = props =>
+export let FiltersHeader = props =>
   <div className={className(pf('filters__header grid has-divider--bottom-space'), props.className)}>
     { props.children }
   </div>;
 
-let FiltersBody = props =>
+export let FiltersBody = props =>
   <div className={pf('filters__body')}>
     {props.children}
   </div>;
 
-let FiltersFooter = props =>
+export let FiltersFooter = props =>
   <div className={pf('filters__footer grid shrink-none')}>
     <a href="#void">Add Filter</a>
     <a href="#void" className={pf('col--bump-left')}>Remove All</a>
   </div>;
 
-let FilterObject = props =>
+export let FilterObject = props =>
   <li className={pf('list__item')}>
     <div className={className(pf('filters__item grid grid--vertical-align-center'), props.className)}>
       <a href="#void" className={pf('grow has-blur-focus')}>
@@ -70,7 +75,7 @@ const removeButton = (
 ///////////////////////////////////////////
 
 let Default = props =>
-  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px' }}>
+  <Demo>
     <Panel className={pf('panel--filters')}>
       <PanelBody className={pf('grid grid--vertical')}>
         <Filters>
@@ -97,10 +102,10 @@ let Default = props =>
         </Filters>
       </PanelBody>
     </Panel>
-  </div>;
+  </Demo>;
 
 let NewFilter = props =>
-  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px' }}>
+  <Demo>
     <Panel className={pf('panel--filters')}>
       <PanelBody className={pf('grid grid--vertical')}>
         <Filters>
@@ -123,10 +128,10 @@ let NewFilter = props =>
         </Filters>
       </PanelBody>
     </Panel>
-  </div>;
+  </Demo>;
 
-let Error = props =>
-  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px' }}>
+let ErrorPanel = props =>
+  <Demo>
     <Panel className={pf('panel--filters')}>
       <PanelBody className={pf('grid grid--vertical')}>
         <Filters>
@@ -150,10 +155,10 @@ let Error = props =>
         </Filters>
       </PanelBody>
     </Panel>
-  </div>;
+  </Demo>;
 
 let Locked = props =>
-  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px' }}>
+  <Demo>
     <Panel className={pf('panel--filters')}>
       <PanelBody className={pf('grid grid--vertical')}>
         <Filters>
@@ -187,7 +192,7 @@ let Locked = props =>
         </Filters>
       </PanelBody>
     </Panel>
-  </div>;
+  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -207,7 +212,7 @@ export let states = [
   {
     id: 'filtering-error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorPanel />
   },
   {
     id: 'filtering-locked',

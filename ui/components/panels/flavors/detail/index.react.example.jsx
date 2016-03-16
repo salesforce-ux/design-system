@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only grid')} {...props} style={{ height: '800px', maxWidth: '420px' }}>
+  <div className={pf('demo-only grid')} {...props} style={{ height: '845px', maxWidth: '420px' }}>
     {props.children}
   </div>;
 
@@ -34,8 +34,10 @@ let Checkbox = props =>
   </label>;
 
 export let Panel = props =>
-  <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
-    {props.children}
+  <div className={className(pf('panel_container slds-grid slds-nowrap'), props.containerClassName)}>
+    <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
+      {props.children}
+    </div>
   </div>;
 
 export let PanelBody = props =>
@@ -140,9 +142,9 @@ let Lookup = props =>
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let StateA = props =>
+let Default = props =>
   <Demo>
-    <Panel>
+    <Panel containerClassName={pf('panel_container--space')}>
       <PanelBody>
         <PanelSection className={pf('has-divider--bottom')}>
           <Tile />
@@ -165,9 +167,9 @@ let StateA = props =>
     </Panel>
   </Demo>;
 
-let StateB = props =>
+let HasEditing = props =>
   <Demo>
-    <Panel>
+    <Panel containerClassName={pf('panel_container--space')}>
       <PanelBody>
         <PanelSection className={pf('has-divider--bottom')}>
           <Tile />
@@ -190,9 +192,9 @@ let StateB = props =>
     </Panel>
   </Demo>;
 
-let StateC = props =>
+let IsEditing = props =>
   <Demo>
-    <Panel>
+    <Panel containerClassName={pf('panel_container--space')} className={pf('is-editing')}>
       <PanelBody>
         <PanelSection className={pf('has-divider--bottom')}>
           <Tile />
@@ -271,16 +273,16 @@ export let states = [
   {
     id: 'panel-form',
     label: 'Default',
-    element: <StateA />
+    element: <Default />
   },
   {
     id: 'panel-form-edit-mode',
     label: 'Form with Inline Edit',
-    element: <StateB />
+    element: <HasEditing />
   },
   {
     id: 'panel-form-edit-mode-active',
     label: 'Form with Inline Edit Active',
-    element: <StateC />
+    element: <IsEditing />
   }
 ];

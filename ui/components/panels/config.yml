@@ -1,4 +1,4 @@
 status: 'dev-ready'
 flavors:
-  - slide-out
+  - detail
   - filtering

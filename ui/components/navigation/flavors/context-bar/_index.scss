@@ -14,7 +14,8 @@
   color: $color-text-context-bar;
 
   &__primary,
-  &__secondary {
+  &__secondary,
+  &__tertiary {
     flex: 0 0 auto;
   }
 
@@ -32,6 +33,16 @@
     overflow: hidden;
     border-left: $border-width-thin solid $color-border-context-bar-divider;
   }
+
+  &__app-switcher {
+    transition: color $duration-immediately linear;
+    color: $color-text-icon-inverse;
+
+    &:hover,
+    &:focus {
+      color: $color-text-context-bar-highlight;
+    }
+  }
 }
 
 // Mouse/Keyboard interaction
@@ -42,22 +53,55 @@
 .#{$css-prefix}context-bar-action {
   position: relative; // Needed to absolutely position the trigger
 
+  // Override the trigger's display value
+  // https://github.com/salesforce-ux/design-system-internal/pull/386
   &.#{$css-prefix}context-bar-action {
-    // Overriding the trigger's display value
-    // https://github.com/salesforce-ux/design-system-internal/pull/386
     display: flex;
   }
 
-  // Add a hoverable zone below the action so that the dropdown doesn't disappear
-  // when the mouse is between the action and the dropdown
+  // Add a hoverable zone below the action so that the dropdown doesn't
+  // disappear when the mouse is between the action and the dropdown
   &:hover:before {
     content: '';
     position: absolute;
     top: 100%;
     width: 100%;
-    height: $square-tooltip-nubbin * 0.7; // About the same as the diagonal of the nubbin / 2
+
+    // A nubbin is a rotated square where sides have a length
+    // of $square-tooltip-nubbin.
+    // The height of the nubbin is half the square's diagonal.
+    // height: ((1 / 2) * ($square-tooltip-nubbin * sqrt(2)));
+    //
+    // Sass doesn't have advanced math functions so this is as
+    // close as it gets to calculating it:
+    height: $square-tooltip-nubbin * 0.707;
   }
 
+  // text-label: text is highlighted on hover / focus
+  &__text-label {
+    transition: color $duration-immediately linear;
+    color: inherit;
+
+    &:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
+    &:hover,
+    &:focus:hover {
+      text-decoration: none;
+    }
+    &:hover,
+    &:focus {
+      color: $color-text-context-bar-highlight;
+    }
+    &:active {
+      color: rgba($color-text-context-bar-highlight, 0.6);
+      text-decoration: none;
+    }
+  }
+
+
+  // label: background is highlighted on hover / focus
   &__label,
   &__trigger {
     transition: background-color $duration-immediately linear;
@@ -77,6 +121,10 @@
 
     &--expand {
       padding-right: $spacing-large;
+    }
+
+    &.#{$css-prefix}is-selected {
+      background-color: $color-background-context-bar-highlight;
     }
   }
 

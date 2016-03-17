@@ -88,6 +88,10 @@ $color-border-inverse: $color-background-inverse;
 $height-sales-path: 2rem !default;
 $line-height-salespath: 1.5rem !default;
 
+
+$color-text-context-bar-highlight: rgba(255, 255, 255, 0.8) !default;
+
+
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large,
   'spacing-none': $spacing-none

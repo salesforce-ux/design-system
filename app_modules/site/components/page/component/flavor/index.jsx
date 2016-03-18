@@ -152,8 +152,8 @@ class ComponentFlavor extends React.Component {
     return _.keys(flavor.compatibility)
       .filter(key => labels[key])
       .reduce((badges, key) => {
-        let compatible = flavor.compatibility[key];
-        let label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
+        const compatible = flavor.compatibility[key];
+        const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
         const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
           'badge--compatible': compatible,
           'badge--not-compatible': !compatible

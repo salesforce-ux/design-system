@@ -112,6 +112,7 @@ class ComponentFlavor extends React.Component {
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}
+          {this.renderCompatiblityBadges()}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>
@@ -131,10 +132,38 @@ class ComponentFlavor extends React.Component {
     if (!status) return null;
     const words = _.words(status).join(' ');
     const statusBadgeType = _.words(status).join('-');
-    const classes = classNames(pf('badge m-left--medium shrink-none align-middle'), 'badge--' + statusBadgeType);
-    return (
-      <span className={classes}>{words}</span>
+    const className = classNames(
+      pf('badge m-left--medium shrink-none align-middle'),
+      `badge--${statusBadgeType}`
     );
+    return (
+      <span className={className}>{words}</span>
+    );
+  }
+
+  renderCompatiblityBadges() {
+    const { flavor } = this.props;
+    if (!flavor.compatibility) return null;
+    const labels = {
+      s1: 'S1 Mobile',
+      aura: 'Aura',
+      lightening: 'Lightening Out'
+    };
+    return _.keys(flavor.compatibility)
+      .filter(key => labels[key])
+      .reduce((badges, key) => {
+        const compatible = flavor.compatibility[key];
+        const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
+        const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
+          'badge--compatible': compatible,
+          'badge--not-compatible': !compatible
+        }));
+        return badges.concat((
+          <span className={className} key={`badge-${key}`}>
+            {label}
+          </span>
+        ));
+      }, []);
   }
 
   renderInfo() {

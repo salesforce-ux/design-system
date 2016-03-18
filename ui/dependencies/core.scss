@@ -20,22 +20,23 @@
   $scoped-root:     'html' !default;
   $scoped-body:     'body' !default;
 
-  #{$scoped-selector} {
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
+  @if $scoped-selector != '' {
+    #{$scoped-selector} {
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
 
-    ::placeholder {
-      color: $color-text-placeholder;
-      font-weight: $font-weight-regular;
-      font-size: $font-size-medium;
+      ::placeholder {
+        color: $color-text-placeholder;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-medium;
+      }
     }
   }
 
   @if $globals != null {
-
     @include root($scoped-root, $scoped-body);
   }
 

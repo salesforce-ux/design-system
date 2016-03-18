@@ -149,19 +149,21 @@ class ComponentFlavor extends React.Component {
       aura: 'Aura',
       lightening: 'Lightening Out'
     };
-    return _.keys(flavor.compatibility).reduce((badges, key) => {
-      let compatible = flavor.compatibility[key];
-      let label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
-      const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
-        'badge--compatible': compatible,
-        'badge--not-compatible': !compatible
-      }));
-      return badges.concat((
-        <span className={className} key={`badge-${key}`}>
-          {label}
-        </span>
-      ));
-    }, []);
+    return _.keys(flavor.compatibility)
+      .filter(key => labels[key])
+      .reduce((badges, key) => {
+        let compatible = flavor.compatibility[key];
+        let label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
+        const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
+          'badge--compatible': compatible,
+          'badge--not-compatible': !compatible
+        }));
+        return badges.concat((
+          <span className={className} key={`badge-${key}`}>
+            {label}
+          </span>
+        ));
+      }, []);
   }
 
   renderInfo() {

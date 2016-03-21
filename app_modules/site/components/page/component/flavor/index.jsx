@@ -147,7 +147,7 @@ class ComponentFlavor extends React.Component {
     const labels = {
       s1: 'S1 Mobile',
       aura: 'Aura',
-      lightening: 'Lightening Out'
+      lightning: 'Lightning Out'
     };
     return _.keys(flavor.compatibility)
       .filter(key => labels[key])

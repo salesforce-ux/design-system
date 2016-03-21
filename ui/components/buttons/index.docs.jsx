@@ -25,7 +25,7 @@ export default (
   <ComponentDocs>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>
-    If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
+      If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
     </p>
   </ComponentDocs>
 );

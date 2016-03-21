@@ -24,7 +24,7 @@ export default (
   <ComponentDocs>
     <p>Default modals are used in the vast majority of cases. They are as wide as 50% of the viewport, but include a minimum and maximum width to avoid going too narrow or too wide.</p>
     <p>Modals always have an equal amount of space at the top and bottom to account for the height of the close button.</p>
-    <p>Modals grow according to how much content is within, but once the modal reaches full height (including the previously mentioned space on top and bottom), the content area will begin to scroll.</p>
+    <p>Modals grow according to how much content is within, but once the modal reaches full height (including the previously mentioned space on top and bottom), the content area will begin to scroll. (This scrolling is currently not available in Salesforce1 Mobile.)</p>
     <p>Modals can have a tagline in the header, simply by adding a paragraph after the heading.</p>
     <p>By default, the content area of the modal does not have spacing. This allows for content such as Tables to be full-width to the modal. To get spacing when you need it, apply a padding utility (<CodeClass className="p-around--medium" />).</p>
     <p>Modal headers can also have taglines, if you need to provide additional context. This tagline can also contain links, or the whole thing could be a link in and of itself.</p>

@@ -5,3 +5,5 @@ dependencies:
   - forms/picklist/index
 showFormFactors:
   - large
+compatibility:
+  s1: false

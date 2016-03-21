@@ -7,36 +7,17 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-
-@mixin core($scoped: null, $globals: null) {
-  @if $scoped == 'scoped' {
-    $scoped-selector: '&';
-    $scoped-root:     $scoped-selector;
-    $scoped-body:     '&:not(html), body';
+@mixin core($scoped: false, $globals: false) {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
   }
 
-  $scoped-selector: '' !default;
-  $scoped-root:     'html' !default;
-  $scoped-body:     'body' !default;
-
-  #{$scoped-selector} {
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
-
-    ::placeholder {
-      color: $color-text-placeholder;
-      font-weight: $font-weight-regular;
-      font-size: $font-size-medium;
-    }
-  }
-
-  @if $globals != null {
-
-    @include root($scoped-root, $scoped-body);
+  ::placeholder {
+    color: $color-text-placeholder;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-medium;
   }
 
   ::selection {
@@ -45,6 +26,13 @@
     color: $color-text-default;
   }
 
+  @if $globals {
+    @if $scoped {
+      @include root($root: '&', $body: '&:not(html), body');
+    } @else {
+      @include root();
+    }
+  }
 
 
   h1,

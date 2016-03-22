@@ -156,7 +156,7 @@ class ComponentFlavor extends React.Component {
     return _.keys(flavor.compatibility)
       .filter(key => labels[key])
       .filter(key => {
-        const k = process.env.INTERNAL ? 'internal' : 'external'
+        const k = process.env.INTERNAL ? 'internal' : 'external';
         return _.includes(labelVisbility[k], key);
       })
       .reduce((badges, key) => {

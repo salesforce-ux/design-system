@@ -149,8 +149,16 @@ class ComponentFlavor extends React.Component {
       aura: 'Aura',
       lightning: 'Lightning Out'
     };
+    const labelVisbility = {
+      internal: ['aura'],
+      external: ['s1', 'lightning']
+    };
     return _.keys(flavor.compatibility)
       .filter(key => labels[key])
+      .filter(key => {
+        const k = process.env.INTERNAL ? 'internal' : 'external'
+        return _.includes(labelVisbility[k], key);
+      })
       .reduce((badges, key) => {
         const compatible = flavor.compatibility[key];
         const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;

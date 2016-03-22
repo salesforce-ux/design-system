@@ -8,7 +8,6 @@
     border-left: $border-width-thick solid transparent;
     padding: $spacing-none $spacing-large;
     height: $line-height-tab;
-    font-size: $font-size-small;
     line-height: $line-height-tab;
     color: $color-text-tab-label;
 
@@ -47,6 +46,7 @@
     border-bottom: $border-width-thick solid transparent;
     padding: $spacing-none $spacing-medium;
     height: $line-height-tab;
+    overflow: visible;
     font-size: $font-size-small;
     line-height: $line-height-tab;
     color: $color-text-tab-label;
@@ -86,6 +86,7 @@
     border-bottom: $border-width-thick solid transparent;
     padding: $spacing-none $spacing-medium;
     height: $line-height-tab;
+    overflow: visible;
     font-size: $font-size-small;
     line-height: $line-height-tab;
     color: $color-text-tab-label-disabled;
@@ -116,6 +117,7 @@
           border-bottom: $border-width-thick solid transparent;
           padding: $spacing-none $spacing-medium;
           height: $line-height-tab;
+          overflow: visible;
           font-size: $font-size-small;
           line-height: $line-height-tab;
           color: $color-text-tab-label;

@@ -5,6 +5,11 @@
   white-space: nowrap;
   color: $color-text-label;
 
+  .form-control {
+    z-index: $z-index-default;
+    max-width: 100%;
+  }
+
   .form-control-static {
     margin: $spacing-xx-small $spacing-none;
     padding: $spacing-none;
@@ -19,7 +24,13 @@
 }
 
 .content-body {
+  width: 100%;
   font-size: $font-size-medium;
+
+  .form-control {
+    z-index: $z-index-default;
+    max-width: 100%;
+  }
 
   .form-control-static {
     margin: $spacing-none;

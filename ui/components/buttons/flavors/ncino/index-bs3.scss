@@ -2,7 +2,8 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 0;
+  margin: $spacing-none $spacing-x-small;
+  padding: $spacing-none;
   background: transparent {
     clip: padding-box;
   };
@@ -20,6 +21,14 @@
   transition:
     color $duration-immediately linear,
     background-color $duration-immediately linear;
+
+  &:first-child {
+    margin-left: $spacing-none;
+  }
+
+  &:last-child {
+    margin-right: $spacing-none;
+  }
 
   &:hover,
   &:focus,
@@ -53,10 +62,6 @@
     .btn-icon {
       fill: currentColor;
     }
-  }
-
-  & + &-group {
-    margin-left: $spacing-xx-small;
   }
 
   @include deprecate('4.0.0') {

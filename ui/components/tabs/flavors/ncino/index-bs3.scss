@@ -27,8 +27,7 @@
   .inactive {}
 
   .disabled a {
-    color: $color-text-tab-label-disabled;
-    cursor: default;
+    @include disable;
   }
 }
 
@@ -89,8 +88,7 @@
     overflow: visible;
     font-size: $font-size-small;
     line-height: $line-height-tab;
-    color: $color-text-tab-label-disabled;
-    cursor: default;
+    @include disable;
   }
 
   .overflow {

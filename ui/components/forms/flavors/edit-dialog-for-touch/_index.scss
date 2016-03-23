@@ -20,6 +20,7 @@
   }
 
   .#{$css-prefix}modal__header .#{$css-prefix}text-heading--medium {
+    // Unfortunately necessary to line up text with buttons
     line-height: $line-height-text;
   }
 

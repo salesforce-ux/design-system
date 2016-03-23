@@ -23,18 +23,27 @@ let Demo = props =>
   </div>;
 
 let UnorderedList = props =>
-  <ul className={pf('list--horizontal wrap')}>
+  <ul>
     {props.children}
   </ul>;
 
 let ListItem = props =>
   <li className={className(pf('list__item m-right--large grid'), props.className)}>
     <span>To:</span>
-    <span className={pf('m-left--xx-small truncate')}>{props.children}</span><span className={pf('no-flex')}> + 44 more</span>
+    <span className={pf('m-left--xx-small truncate')}>{props.children}</span>
+    <span className={pf('m-left--xx-small no-flex')}> + 44 more</span>
   </li>;
 
 const longestName = (
   <a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
+  );
+
+const longName = (
+  <a href="#void">Lei Chan with Long Name</a>
+  );
+
+const shortName = (
+  <a href="#void">Lei Chan</a>
   );
 
 
@@ -44,11 +53,77 @@ const longestName = (
 
 let StateA = props =>
   <Demo>
-      <UnorderedList>
-        <ListItem  className={pf('truncate_container--25')}>
-          {longestName}
-        </ListItem>
-      </UnorderedList>
+    <UnorderedList>
+      <ListItem  className={pf('truncate_container--25')}>
+        {shortName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--25')}>
+        {longName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--25')}>
+        {longestName}
+      </ListItem>
+    </UnorderedList>
+  </Demo>;
+
+  let StateB = props =>
+  <Demo>
+    <UnorderedList>
+      <ListItem  className={pf('truncate_container--33')}>
+        {shortName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--33')}>
+        {longName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--33')}>
+        {longestName}
+      </ListItem>
+    </UnorderedList>
+  </Demo>;
+
+  let StateC = props =>
+  <Demo>
+    <UnorderedList>
+      <ListItem  className={pf('truncate_container--50')}>
+        {shortName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--50')}>
+        {longName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--50')}>
+        {longestName}
+      </ListItem>
+    </UnorderedList>
+  </Demo>;
+
+  let StateD = props =>
+  <Demo>
+    <UnorderedList>
+      <ListItem  className={pf('truncate_container--66')}>
+        {shortName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--66')}>
+        {longName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--66')}>
+        {longestName}
+      </ListItem>
+    </UnorderedList>
+  </Demo>;
+
+  let StateE = props =>
+  <Demo>
+    <UnorderedList>
+      <ListItem  className={pf('truncate_container--75')}>
+        {shortName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--75')}>
+        {longName}
+      </ListItem>
+      <ListItem  className={pf('truncate_container--75')}>
+        {longestName}
+      </ListItem>
+    </UnorderedList>
   </Demo>;
 
 
@@ -61,5 +136,25 @@ export let states = [
     id: 'max-width-25',
     label: '25%',
     element: <StateA />
+  },
+  {
+    id: 'max-width-33',
+    label: '33%',
+    element: <StateB />
+  },
+  {
+    id: 'max-width-50',
+    label: '50%',
+    element: <StateC />
+  },
+  {
+    id: 'max-width-66',
+    label: '66%',
+    element: <StateD />
+  },
+  {
+    id: 'max-width-75',
+    label: '75%',
+    element: <StateE />
   }
 ];

@@ -98,6 +98,10 @@
   }
 
   // Sizing
+  &-xs {
+    line-height: $line-height-button-xsmall;
+    min-height: $line-height-button-xsmall;
+  }
   &-sm {
     line-height: $line-height-button-small;
     min-height: $square-icon-medium-boundary; /* Forces icon-only buttons to be the same height as small buttons since they're svg and line-height has no effect on them */

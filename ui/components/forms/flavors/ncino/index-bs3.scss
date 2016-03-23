@@ -18,8 +18,11 @@
   .input-sm {
     height: $font-size-medium;
     font-size: $font-size-small;
-    font-weight: $font-weight-regular;
     line-height: $line-height-reset;
+  }
+
+  label {
+    font-weight: $font-weight-regular;
   }
 }
 
@@ -41,5 +44,19 @@
     height: $font-size-xx-large;
     font-size: $font-size-medium;
     font-weight: $font-weight-regular;
+  }
+
+  label {
+    display: inline;
+    margin: $spacing-none $spacing-x-small $spacing-x-small $spacing-xx-small;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+  }
+  label:first-child {
+    margin-left: $spacing-none;
+  }
+  label:last-child {
+    margin-right: $spacing-none;
   }
 }

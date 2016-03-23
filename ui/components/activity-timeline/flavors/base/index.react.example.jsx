@@ -137,10 +137,6 @@ export default (
             </p>
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('list__item m-right--large grid')}>
-                <span>To:</span>
-                <span className={pf('m-left--xx-small truncate')}><a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex plus-more')}> + 44 more</span>
-              </li>
               <li className={pf('list__item m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>To:</span>
                 <span className={pf('text-body--small')}><a href="#void">Lei Chan</a></span>

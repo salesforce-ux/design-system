@@ -19,7 +19,7 @@ The following components are now available:
 
 The following classes are now available:
 
--
+- Added Utilities > Truncation > Max-width for use on truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
 
 **CHANGES**
 

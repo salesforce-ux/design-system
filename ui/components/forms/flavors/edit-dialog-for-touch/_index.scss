@@ -19,25 +19,25 @@
     padding: 0;
   }
 
-  .#{$css-prefix}modal__header {
-    .#{$css-prefix}text-heading--medium {
-      line-height: $line-height-text;
-    }
+  .#{$css-prefix}modal__header .#{$css-prefix}text-heading--medium {
+    line-height: $line-height-text;
+  }
 
-    .#{$css-prefix}button {
-      display: inline-block;
-      width: auto;
 
-      &:first-child {
-        float: left;
-        margin-right: $spacing-x-small;
 
-        + .#{$css-prefix}button {
-          float: right;
-          margin: {
-            top: 0;
-            left: $spacing-x-small;
-          }
+  .#{$css-prefix}modal__header .#{$css-prefix}button {
+    display: inline-block;
+    width: auto;
+
+    &:first-child {
+      float: left;
+      margin-right: $spacing-x-small;
+
+      + .#{$css-prefix}button {
+        float: right;
+        margin: {
+          top: 0;
+          left: $spacing-x-small;
         }
       }
     }

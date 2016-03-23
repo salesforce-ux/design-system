@@ -389,11 +389,6 @@
   @if $children != null {
     > #{$children} {
       align-self: center;
-
-      @if $fallback != null {
-        display: inline-block;
-        vertical-align: middle;
-      }
     }
   }
 }

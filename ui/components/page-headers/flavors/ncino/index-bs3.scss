@@ -9,6 +9,7 @@
 
   // Alerts
   .alert {
+    margin: $spacing-x-small $spacing-none;
     padding: $spacing-x-small $spacing-large;
     line-height: $line-height-reset;
   }
@@ -17,15 +18,20 @@
   &-controls {
 
     .alert {
-      position: relative;
-      top: $spacing-x-small;
       float: left;
-      margin: $spacing-none;
     }
 
     .item {
       display: inline-block;
-      margin-left: $spacing-small;
+      margin: $spacing-none $spacing-x-small;
+
+      &:first-child {
+        margin-left: $spacing-none;
+      }
+
+      &:last-child {
+        margin-right: $spacing-none;
+      }
     }
   }
 

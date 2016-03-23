@@ -6,10 +6,17 @@
     border-bottom: none;
     border-radius: $border-radius-medium $border-radius-medium $spacing-none $spacing-none;
     padding: $spacing-large $spacing-large $spacing-x-small;
-    font-size: $font-size-large;
-    font-weight: $font-weight-light;
-    text-transform: capitalize;
     background: $color-background-alt;
+    color: $color-text-weak;
+
+    &-left *:first-child {
+      display: block;
+      margin-bottom: $spacing-x-small;
+      font-size: $font-size-large;
+      font-weight: $font-weight-light;
+      text-transform: capitalize;
+      color: $color-text-default;
+    }
   }
 
   .view-container {

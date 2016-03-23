@@ -9,4 +9,12 @@
     @include border($borders: left);
     background: $color-background;
   }
+
+  .message-container {
+    min-height: $spacing-none;
+
+    .alert {
+      margin-bottom: $spacing-medium;
+    }
+  }
 }

@@ -5,7 +5,7 @@
   font-weight: $font-weight-light;
   border: none;
   border-radius: $border-radius-medium;
-  margin: $spacing-x-small;
+  margin: $spacing-none;
   padding: $spacing-medium $spacing-large;
   display: inline-block;
   text-align: left;
@@ -21,7 +21,9 @@
     background-color: $color-background-warning;
     color: $color-text-default;
 
-    *[class*="icon"] {
+    *[class*="fa fa-"],
+    *[class*="glyphicon"],
+    *[class*="n-icon"] {
       fill: $color-text-icon-default;
     }
   }
@@ -30,6 +32,12 @@
     @include inverse-links;
     background-color: $color-background-toast-error;
   }
+
+  h4 {
+    font-size: $font-size-large;
+  }
+
+  p {}
 
   ul {
     list-style: none;

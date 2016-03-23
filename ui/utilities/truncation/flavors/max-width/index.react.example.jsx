@@ -18,14 +18,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className={pf('demo-only')}>
     {props.children}
   </div>;
-
-let UnorderedList = props =>
-  <ul>
-    {props.children}
-  </ul>;
 
 let ListItem = props =>
   <li className={className(pf('list__item m-right--large grid'), props.className)}>
@@ -36,15 +31,15 @@ let ListItem = props =>
 
 const longestName = (
   <a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
-  );
+);
 
 const longName = (
   <a href="#void">Lei Chan with Long Name</a>
-  );
+);
 
 const shortName = (
   <a href="#void">Lei Chan</a>
-  );
+);
 
 
 ///////////////////////////////////////////
@@ -53,7 +48,7 @@ const shortName = (
 
 let StateA = props =>
   <Demo>
-    <UnorderedList>
+    <ul>
       <ListItem  className={pf('truncate_container--25')}>
         {shortName}
       </ListItem>
@@ -63,12 +58,12 @@ let StateA = props =>
       <ListItem  className={pf('truncate_container--25')}>
         {longestName}
       </ListItem>
-    </UnorderedList>
+    </ul>
   </Demo>;
 
-  let StateB = props =>
+let StateB = props =>
   <Demo>
-    <UnorderedList>
+    <ul>
       <ListItem  className={pf('truncate_container--33')}>
         {shortName}
       </ListItem>
@@ -78,12 +73,12 @@ let StateA = props =>
       <ListItem  className={pf('truncate_container--33')}>
         {longestName}
       </ListItem>
-    </UnorderedList>
+    </ul>
   </Demo>;
 
-  let StateC = props =>
+let StateC = props =>
   <Demo>
-    <UnorderedList>
+    <ul>
       <ListItem  className={pf('truncate_container--50')}>
         {shortName}
       </ListItem>
@@ -93,12 +88,12 @@ let StateA = props =>
       <ListItem  className={pf('truncate_container--50')}>
         {longestName}
       </ListItem>
-    </UnorderedList>
+    </ul>
   </Demo>;
 
-  let StateD = props =>
+let StateD = props =>
   <Demo>
-    <UnorderedList>
+    <ul>
       <ListItem  className={pf('truncate_container--66')}>
         {shortName}
       </ListItem>
@@ -108,12 +103,12 @@ let StateA = props =>
       <ListItem  className={pf('truncate_container--66')}>
         {longestName}
       </ListItem>
-    </UnorderedList>
+    </ul>
   </Demo>;
 
-  let StateE = props =>
+let StateE = props =>
   <Demo>
-    <UnorderedList>
+    <ul>
       <ListItem  className={pf('truncate_container--75')}>
         {shortName}
       </ListItem>
@@ -123,7 +118,7 @@ let StateA = props =>
       <ListItem  className={pf('truncate_container--75')}>
         {longestName}
       </ListItem>
-    </UnorderedList>
+    </ul>
   </Demo>;
 
 

@@ -88,7 +88,7 @@ JavaScript dependencies sometimes get out of sync and inexplicable bugs start to
 2. Re-install dependencies: `rm -Rf node_modules && npm install`
 3. `npm run gulp`
 
-If this did not work, try running `npm clean` and repeat the above steps.
+If this did not work, try running `npm cache clean` and repeat the above steps.
 
 ## Contributing to the code base
 

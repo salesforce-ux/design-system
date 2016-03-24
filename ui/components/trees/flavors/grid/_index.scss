@@ -13,7 +13,7 @@
   .#{$css-prefix}tree__item {
     line-height: ($line-height-text * 1rem);
 
-  a {
+    a {
       color: $color-text-link;
 
       &:hover {

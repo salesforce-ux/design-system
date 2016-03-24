@@ -82,4 +82,14 @@ iframe {
       content: ' Only';
     }
   }
+
+  &--not-compatible {
+    background: $color-background-destructive;
+    color: $color-text-inverse;
+  }
+
+  &--compatible {
+    background: $color-background-info;
+    color: $color-text-inverse;
+  }
 }

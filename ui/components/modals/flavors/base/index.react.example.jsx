@@ -37,7 +37,7 @@ export let Modal = props =>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={pf('modal__header')} {...props}>
+  <div className={className(pf('modal__header'), props.className)} {...props}>
     <ButtonIcon className={pf('modal__close')}
       flavor="icon-inverse"
       iconFlavor="large"
@@ -123,6 +123,29 @@ let Directional = props =>
     </Modal>
   </Demo>;
 
+let Headless = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal>
+      <ModalHeader className={pf('modal__header--empty')}>
+      </ModalHeader>
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalFooter>
+        <Button flavor="neutral">Cancel</Button>
+        <Button flavor="neutral,brand">Save</Button>
+      </ModalFooter>
+    </Modal>
+  </Demo>;
+
+let Footless = props =>
+  <Demo style={{height: '640px'}}>
+    <Modal>
+      <ModalHeader>
+        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+      </ModalHeader>
+      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+    </Modal>
+  </Demo>;
+
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -147,5 +170,15 @@ export let states = [
     id: 'Directional',
     label: 'Directional',
     element: <Directional />
+  },
+  {
+    id: 'Headless',
+    label: 'Header empty',
+    element: <Headless />
+  },
+  {
+    id: 'Footless',
+    label: 'Footer removed',
+    element: <Footless />
   }
 ];

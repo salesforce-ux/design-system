@@ -19,6 +19,10 @@
     flex: 0 0 auto;
   }
 
+  &__primary--size-large {
+    width: $size-large;
+  }
+
   &__shadow {
     position: absolute;
     top: 100%;
@@ -45,13 +49,20 @@
   }
 }
 
+
 // Mouse/Keyboard interaction
 // 1. The whole block is hoverable
 // 2. The link is focusable and clickable
 // 3. The sub menu trigger is a discrete actionable button
 // 4. The sub menu trigger can't be clicked (only actionable via keyboard)
 .#{$css-prefix}context-bar-action {
-  position: relative; // Needed to absolutely position the trigger
+  // Needed to absolutely position the trigger
+  position: relative;
+
+  // Hovering an action adjacent to a selected action
+  // blends the backgrounds together and creates
+  // a 1px contrasted separation in between the two actions
+  margin-left: (-1 * $border-width-thin);
 
   // Override the trigger's display value
   // https://github.com/salesforce-ux/design-system-internal/pull/386
@@ -100,7 +111,6 @@
     }
   }
 
-
   // label: background is highlighted on hover / focus
   &__label,
   &__trigger {
@@ -115,16 +125,26 @@
 
   &__label {
     padding: {
-      left: $spacing-small;
+      left: calc(#{$spacing-small} + #{$border-width-thin}); // Restore lost 1px on the left
       right: $spacing-small;
     }
 
+    // Expand the label at the end to create space for the dropdown trigger (down arrow)
     &--expand {
       padding-right: $spacing-large;
     }
 
     &.#{$css-prefix}is-selected {
       background-color: $color-background-context-bar-highlight;
+    }
+
+    // Dividers can be used as borders around a label:
+    // We're stretching the box so that the dividers sit on top
+    // of the label's background, blending them together
+    // and making the separation clearer.
+    &--include-dividers {
+      margin-left: (-1 * $border-width-thin);
+      margin-right: (-1 * $border-width-thin);
     }
   }
 
@@ -135,7 +155,7 @@
     top: 0;
     pointer-events: none; // [4]
 
-    // Color of the arrow
+    // Color of the arrow icon
     &,
     &:focus {
       color: $color-text-context-bar-action-trigger;

@@ -27,7 +27,7 @@ let Default = props =>
 <div className="demo-only" style={{height: '16rem'}}>
   <div className={pf('context-bar grid')}>
     <div className={pf('context-bar__shadow')}></div>
-    <div className={pf('context-bar__primary grid')}>
+    <div className={pf('context-bar__primary size--large grid')}>
       <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__app-switcher button button--icon-bare grid grid--vertical-align-center p-left--large p-right--x-small')}>
         <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
       </a>
@@ -36,15 +36,32 @@ let Default = props =>
           Title
         </a>
       </div>
+
+      <div className={pf('grid col--bump-left size--2-of-5')}>
+        <div className={pf('context-bar-action size--1-of-1 grid grid--vertical-align-stretch')}>
+          <div className={pf('context-bar__vertical-divider')}></div>
+          <a href="#void" title="Context" className={pf('context-bar-action__label context-bar-action__label--include-dividers has-flexi-truncate text-link--reset grid grid--vertical-align-center grow')}>
+            <span className={pf('truncate')}>This is a very long label</span>
+          </a>
+        </div>
+      </div>
+
+      <div className={pf('context-bar-action grid')}>
+        <div className={pf('context-bar__vertical-divider')}></div>
+        <button aria-haspopup="true" className={pf('context-bar-action__label context-bar-action__label--include-dividers p-horizontal--x-small text-link--reset button button--icon-bare')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+          <span className={pf('assistive-text')}>Assistive text for submenu</span>
+        </button>
+      </div>
     </div>
     <nav className={pf('context-bar__secondary grid')} role="navigation">
       <div className={pf('context-bar__vertical-divider')}></div>
-      <ul className={pf('grid grid--vertical-stretch')} role="menubar">
-        <li role="presentation" className={pf('context-bar-action grid')}>
-          <a role="menuitem" aria-selected="true" href="#void" className={pf('context-bar-action__label is-selected text-link--reset grid grid--vertical-align-center')}>Home</a>
+      <ul className={pf('grid grid--vertical-stretch')}>
+        <li className={pf('context-bar-action grid')}>
+          <a href="#void" className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')}>Home</a>
         </li>
-        <li role="presentation" className={pf('context-bar-action grid dropdown-trigger dropdown-trigger--click is-open')}>
-          <a role="menuitem" aria-selected="false" href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 1</a>
+        <li className={pf('context-bar-action grid dropdown-trigger dropdown-trigger--click is-open')}>
+          <a href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 1</a>
           <button aria-haspopup="true" className={pf('context-bar-action__trigger button button--icon-bare')} id="context-bar-action-trigger-0">
             <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />
             <span className={pf('assistive-text')}>Assistive text for submenu</span>
@@ -67,8 +84,8 @@ let Default = props =>
             </Menu.List>
           </Menu>
         </li>
-        <li role="presentation" className={pf('context-bar-action grid')}>
-          <a role="menuitem" aria-selected="false" href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 2</a>
+        <li className={pf('context-bar-action grid')}>
+          <a href="#void" className={pf('context-bar-action__label context-bar-action__label--expand is-selected text-link--reset grid grid--vertical-align-center')}>Menu Item 2</a>
           <button aria-haspopup="true" className={pf('context-bar-action__trigger button button--icon-bare')}>
             <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />
             <span className={pf('assistive-text')}>Assistive text for submenu</span>
@@ -77,9 +94,9 @@ let Default = props =>
       </ul>
     </nav>
     <div className={pf('context-bar__tertiary grid col--bump-left')}>
-      <ul className={pf('grid grid--vertical-stretch')} role="menubar">
-        <li role="presentation" className={pf('context-bar-action grid')}>
-          <a role="menuitem" aria-selected="false" className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')} href="#void">Actions</a>
+      <ul className={pf('grid grid--vertical-stretch')}>
+        <li className={pf('context-bar-action grid')}>
+          <a className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')} href="#void">Actions</a>
         </li>
       </ul>
     </div>

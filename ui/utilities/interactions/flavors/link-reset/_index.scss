@@ -10,6 +10,7 @@
 .#{$css-prefix}text-link--reset {
   cursor: pointer;
   line-height: inherit;
+  border-radius: 0;
 
   &:active {
     outline: none;
@@ -21,5 +22,6 @@
   &:hover {
     color: inherit;
     text-decoration: inherit;
+    box-shadow: none;
   }
 }

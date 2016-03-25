@@ -52,6 +52,10 @@ classes:
     description: Action label (background is highlighted on hover)
     applied: <code>&lt;a&gt;</code>
   -
+    class: context-bar-action__label--include-dividers
+    description: Stretch the box of the label to get dividers to sit on top of its background
+    applied: <code>.{{cssPrefix}}context-bar-action__label</code>
+  -
     class: context-bar-action__label--expand
     description: Expand action label to leave space for the trigger
     applied: <code>.{{cssPrefix}}context-bar-action__label</code>

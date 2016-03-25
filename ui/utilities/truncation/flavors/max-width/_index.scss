@@ -8,21 +8,25 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}table--tree {
 
-  .#{$css-prefix}tree__item {
-    line-height: ($line-height-text * 1rem);
-
-    a {
-      color: $color-text-link;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+// The truncation width class can be used on the container of a
+// truncated element (or group containing a truncated element)
+.#{$css-prefix}truncate_container--25 {
+  max-width: 25%;
 }
 
-.#{$css-prefix}table--tree__toggle {
-  margin-left: ($spacing-xx-small * -1);
+.#{$css-prefix}truncate_container--50 {
+  max-width: 50%;
+}
+
+.#{$css-prefix}truncate_container--75 {
+  max-width: 75%;
+}
+
+.#{$css-prefix}truncate_container--33 {
+  max-width: 33%;
+}
+
+.#{$css-prefix}truncate_container--66 {
+  max-width: 66%;
 }

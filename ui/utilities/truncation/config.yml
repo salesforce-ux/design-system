@@ -1,3 +1,4 @@
 status: 'ga'
 flavors:
   - single-line
+  - max-width

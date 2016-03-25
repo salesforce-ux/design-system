@@ -15,89 +15,47 @@ import globals from 'app_modules/global';
 
 const cssPrefix = globals.cssPrefix;
 
+let SizePreviewExample = props =>
+<div className={pf(`size--${props.size}`)}>
+  <div className={pf('box box--x-small theme--shade text-align--center')}>.{cssPrefix}size--{props.size}</div>
+</div>;
+
+
 export const preview = (
   <div className="demo-only demo-container">
-    <div className={pf('size--1-of-1')}>
-        <div className={pf('box box--x-small theme--shade text-align--center')}>.{cssPrefix}size--1-of-1</div>
-    </div>
-    <div className={pf('size--1-of-2')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-2</div>
-    </div>
-    <div className={pf('size--1-of-3')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-3</div>
-    </div>
-    <div className={pf('size--2-of-3')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--2-of-3</div>
-    </div>
-    <div className={pf('size--1-of-4')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-4</div>
-    </div>
-    <div className={pf('size--2-of-4')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--2-of-4</div>
-    </div>
-    <div className={pf('size--3-of-4')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--3-of-4</div>
-    </div>
-    <div className={pf('size--1-of-5')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-5</div>
-    </div>
-    <div className={pf('size--2-of-5')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--2-of-5</div>
-    </div>
-    <div className={pf('size--3-of-5')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--3-of-5</div>
-    </div>
-    <div className={pf('size--4-of-5')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--4-of-5</div>
-    </div>
-    <div className={pf('size--1-of-6')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-6</div>
-    </div>
-    <div className={pf('size--2-of-6')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--2-of-6</div>
-    </div>
-    <div className={pf('size--3-of-6')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--3-of-6</div>
-    </div>
-    <div className={pf('size--4-of-6')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--4-of-6</div>
-    </div>
-    <div className={pf('size--5-of-6')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--5-of-6</div>
-    </div>
-    <div className={pf('size--1-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--1-of-12</div>
-    </div>
-    <div className={pf('size--2-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--2-of-12</div>
-    </div>
-    <div className={pf('size--3-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--3-of-12</div>
-    </div>
-    <div className={pf('size--4-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--4-of-12</div>
-    </div>
-    <div className={pf('size--5-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--5-of-12</div>
-    </div>
-    <div className={pf('size--6-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--6-of-12</div>
-    </div>
-    <div className={pf('size--7-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--7-of-12</div>
-    </div>
-    <div className={pf('size--8-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--8-of-12</div>
-    </div>
-    <div className={pf('size--9-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--9-of-12</div>
-    </div>
-    <div className={pf('size--10-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--10-of-12</div>
-    </div>
-    <div className={pf('size--11-of-12')}>
-        <div className={pf('box box--x-small theme--shade text-align--center m-top--medium')}>.{cssPrefix}size--11-of-12</div>
-    </div>
+    <SizePreviewExample size="1-of-2" />
+    <SizePreviewExample size="1-of-3" />
+    <SizePreviewExample size="2-of-3" />
+    <SizePreviewExample size="1-of-4" />
+    <SizePreviewExample size="2-of-4" />
+    <SizePreviewExample size="3-of-4" />
+    <SizePreviewExample size="1-of-5" />
+    <SizePreviewExample size="2-of-5" />
+    <SizePreviewExample size="3-of-5" />
+    <SizePreviewExample size="4-of-5" />
+    <SizePreviewExample size="1-of-6" />
+    <SizePreviewExample size="2-of-6" />
+    <SizePreviewExample size="3-of-6" />
+    <SizePreviewExample size="4-of-6" />
+    <SizePreviewExample size="5-of-6" />
+    <SizePreviewExample size="1-of-12" />
+    <SizePreviewExample size="2-of-12" />
+    <SizePreviewExample size="3-of-12" />
+    <SizePreviewExample size="4-of-12" />
+    <SizePreviewExample size="5-of-12" />
+    <SizePreviewExample size="6-of-12" />
+    <SizePreviewExample size="7-of-12" />
+    <SizePreviewExample size="8-of-12" />
+    <SizePreviewExample size="9-of-12" />
+    <SizePreviewExample size="10-of-12" />
+    <SizePreviewExample size="11-of-12" />
+    <SizePreviewExample size="xx-small" />
+    <SizePreviewExample size="x-small" />
+    <SizePreviewExample size="small" />
+    <SizePreviewExample size="medium" />
+    <SizePreviewExample size="large" />
+    <SizePreviewExample size="x-large" />
+    <SizePreviewExample size="xx-large" />
   </div>
 );
 
@@ -130,5 +88,12 @@ export const code = (
     <div className={pf('size--9-of-12')}>.{cssPrefix}size--9-of-12</div>
     <div className={pf('size--10-of-12')}>.{cssPrefix}size--10-of-12</div>
     <div className={pf('size--11-of-12')}>.{cssPrefix}size--11-of-12</div>
+    <div className={pf('size--xx-small')}>.{cssPrefix}size--xx-small</div>
+    <div className={pf('size--x-small')}>.{cssPrefix}size--x-small</div>
+    <div className={pf('size--small')}>.{cssPrefix}size--small</div>
+    <div className={pf('size--medium')}>.{cssPrefix}size--medium</div>
+    <div className={pf('size--large')}>.{cssPrefix}size--large</div>
+    <div className={pf('size--x-large')}>.{cssPrefix}size--x-large</div>
+    <div className={pf('size--xx-large')}>.{cssPrefix}size--xx-large</div>
   </div>
 );

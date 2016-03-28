@@ -1,0 +1,15 @@
+// Lightning Design System - Fonts only
+
+$static-icon-path: '../icons';
+$static-image-path: '../images';
+$static-font-path: '../fonts/webfonts';
+
+// Non-Scoped
+@import
+
+  // Dependencies
+  'design-tokens',
+  'config',
+  'vendor/deprecate',
+  'dependencies/index',
+  'core/font';

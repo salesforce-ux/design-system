@@ -23,8 +23,7 @@ $static-font-path: '../fonts/webfonts';
   'design-tokens',
   'config',
   'vendor/deprecate',
-  'dependencies/index',
-  'core/font';
+  'dependencies/index';
 
 // Scoped
 #{$reset-wrapping-class} {

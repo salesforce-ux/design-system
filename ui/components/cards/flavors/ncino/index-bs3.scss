@@ -9,7 +9,7 @@
     background: $color-background-alt;
     color: $color-text-weak;
 
-    &-left *:first-child {
+    &-left > *:first-child {
       display: block;
       margin-bottom: $spacing-x-small;
       font-size: $font-size-large;

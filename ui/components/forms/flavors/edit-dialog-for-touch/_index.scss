@@ -9,9 +9,10 @@
 
 .#{$css-prefix}modal--form {
 
-  .#{$css-prefix}modal__container,
-  .#{$css-prefix}modal__header {
+  .#{$css-prefix}modal__header,
+  .#{$css-prefix}modal__content:last-child {
     border-radius: 0;
+    box-shadow: none;
   }
 
   .#{$css-prefix}modal__container {

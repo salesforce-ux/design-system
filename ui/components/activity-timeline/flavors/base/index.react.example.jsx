@@ -36,7 +36,7 @@ const image4 = (
 const content = (
   <div className={pf('timeline__actions')}>
     <p className={pf('timeline__date')}>Feb 24</p>
-    <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="switch" assistiveText="Switch" />
+    <ButtonIcon flavor="icon-border-filled,icon-x-small" sprite="utility" symbol="switch" assistiveText="Switch" />
   </div>
 );
 

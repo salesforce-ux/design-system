@@ -124,15 +124,9 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Fixed [#106](https://github.com/salesforce-ux/design-system/issues/106) Fix for scoping issue with tabs and active state - bug. Increased active tab state specificity
-- Fixed [#91](https://github.com/salesforce-ux/design-system/issues/91) Tree component markup and CSS has been updated to meet accessibility requirements
-- Fixed [#107](https://github.com/salesforce-ux/design-system/issues/107) Apply proper accessibility requirements (aria-labelledby) to tabs
-- Fixed [#123](https://github.com/salesforce-ux/design-system/issues/123) Make `.slds-text-body--small` inherit theme color
-- Fixed [#35](https://github.com/salesforce-ux/design-system/issues/135) Fix truncation on Sales Path
 - Fixed [#61](https://github.com/salesforce-ux/design-system/issues/61) Fixed [#51](https://github.com/salesforce-ux/design-system/issues/51) Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding
-- Fixed [#122](https://github.com/salesforce-ux/design-system/issues/122) Custom Select container added, normalizes the `<select>` appearance in various browsers
 - Fixed accessibility bug with required form elements
 - Some tokens that were unable to be overridden by not having a `!default` flag have been resolved
-- Fixed [#106](https://github.com/salesforce-ux/design-system/issues/106) Scoping issue with tabs and active state. Increased active tab state specificity.
 - Compound fields markup has been updated that was causing display issues [Compound Fields](/components/forms/#compound-form)
 - Fixed inverse button-group icon bug
 

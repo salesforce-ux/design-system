@@ -41,7 +41,7 @@ export default (
         <ul className={pf('card__body--inner')}>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
+              <p className={pf('tile__title truncate')}>
                 <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon
@@ -71,7 +71,7 @@ export default (
           </li>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
+              <p className={pf('tile__title truncate')}>
                 <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon
@@ -101,7 +101,7 @@ export default (
           </li>
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title text-heading--x-small-bold truncate')}>
+              <p className={pf('tile__title truncate')}>
                 <a href="#void">Adam Choi</a>
               </p>
               <ButtonIcon

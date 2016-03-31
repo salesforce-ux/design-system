@@ -46,7 +46,7 @@
 .#{$css-prefix}timeline {
 
   &__icon {
-    margin-top: -$spacing-small;
+    margin-top: ($spacing-small * -1);
     border: $border-width-thick solid #fff {
       top-width: $spacing-small;
       bottom-width: $spacing-small;

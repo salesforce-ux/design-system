@@ -96,6 +96,7 @@ export default (
         <p>Keep stencils simple and lightweight, by using simple, subtle shapes to indicate content, but don’t include the placement of buttons and other UI elements. Keep the shape heights consistent to reduce visual noise. </p>
         <p>Stencils should be responsive and stretch to fill the container that they are in.</p>
         <p>Load stencils from the top left of the page to the bottom right. </p>
+        <p>If a component is only displayed when it has data, then don’t show a stencil.</p>
       </div>
 
       {/* Stencils */}

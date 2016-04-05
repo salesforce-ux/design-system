@@ -9,50 +9,55 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-/* eslint-disable camelcase */
-
-import _ from 'lodash';
+import Status from 'app_modules/site/util/component/status';
+import {access, requireFile} from './sync_fs';
 import path from 'path';
+import {paths} from './paths';
+//import { generateUI } from './scripts/gulp/generate-ui';
 
-import minimist from 'minimist';
 
-const argv = minimist(process.argv.slice(2));
-const isProd = argv.prod === true;
+//Helpers
+const id = x => x;
+const assign = (x, y) => Object.assign({}, x, y);
 
-const root = path.resolve(__dirname, '../../');
-const app_modules = path.resolve(root, 'app_modules');
-const node_modules = path.resolve(root, 'node_modules');
 
-export const paths = {
-  root,
-  app_modules,
-  node_modules,
+// Private
+// ==========================
+const getExamplePath = flavor =>
+  path.resolve(paths.ui, `${flavor.path}/index.react.example.jsx`);
 
-  scripts: path.resolve(root, 'scripts'),
-  site: path.resolve(root, 'site'),
-  ui: path.resolve(root, 'ui'),
+const addExamplePath = flavor =>
+  access(getExamplePath(flavor))
+    .map(ex_path => assign(flavor, {examplePath: ex_path}))
+    .fold(() => flavor, id);
 
-  icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
+const toExample = (ex, k) =>
+  [{ id: k, element: ex[k] }];
 
-  dist: path.resolve(root, '.dist'),
-  npm: path.resolve(root, '.npm'),
-  build: path.resolve(root, '.build'),
-  generated: path.resolve(root, '.generated'),
-  tmp: path.resolve(root, '.tmp'),
-  test: path.resolve(root, '.test'),
-  www: path.resolve(root, '.www')
-};
+const normalizeExamples = file =>
+  file.preview ? toExample(file, 'preview')
+    : file.default ? toExample(file, 'default')
+      : file.states;
 
-export default {
+const getExamples = flavor =>
+  requireFile(flavor.examplePath)
+    .map(normalizeExamples)
+    .fold(() => [], id);
 
-  /**
-   * Make __PATHS__ available in all modules
-   */
-  install: function() {
-    global.__PATHS__ = paths;
-    global.__NODE_MODULES_PATTERN__ = new RegExp(
-      _.escapeRegExp(path.resolve(root, 'node_modules'))
-    );
-  }
+const addExamples = flavor =>
+  assign(flavor, {examples: getExamples(flavor)});
 
-};
+const flattenUtilsWithComponents = scheme =>
+  scheme.reduce((acc, category) =>
+    acc.concat(category.components) , []);
+
+
+// Public
+// ==========================
+export const ui = schema =>
+  flattenUtilsWithComponents(schema)
+    .map(c => assign(c, { flavors: c.flavors.map(addExamplePath)}))
+    .map(c => assign(c, { status: Status.or(c.flavors.map(f => f.status)) }));
+
+export const compExamples = comps =>
+  comps.map(c => assign(c, { flavors: c.flavors.map(addExamples)}));

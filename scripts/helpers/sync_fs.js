@@ -8,51 +8,33 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+import fs from 'fs';
+import {Left, Right} from 'data.either';
 
-/* eslint-disable camelcase */
-
-import _ from 'lodash';
-import path from 'path';
-
-import minimist from 'minimist';
-
-const argv = minimist(process.argv.slice(2));
-const isProd = argv.prod === true;
-
-const root = path.resolve(__dirname, '../../');
-const app_modules = path.resolve(root, 'app_modules');
-const node_modules = path.resolve(root, 'node_modules');
-
-export const paths = {
-  root,
-  app_modules,
-  node_modules,
-
-  scripts: path.resolve(root, 'scripts'),
-  site: path.resolve(root, 'site'),
-  ui: path.resolve(root, 'ui'),
-
-  icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
-
-  dist: path.resolve(root, '.dist'),
-  npm: path.resolve(root, '.npm'),
-  build: path.resolve(root, '.build'),
-  generated: path.resolve(root, '.generated'),
-  tmp: path.resolve(root, '.tmp'),
-  test: path.resolve(root, '.test'),
-  www: path.resolve(root, '.www')
-};
-
-export default {
-
-  /**
-   * Make __PATHS__ available in all modules
-   */
-  install: function() {
-    global.__PATHS__ = paths;
-    global.__NODE_MODULES_PATTERN__ = new RegExp(
-      _.escapeRegExp(path.resolve(root, 'node_modules'))
-    );
+// returns result in an array or an empty if failure
+// allows things like readFile(path).map(contents => ...)
+const succeedMaybe = f => {
+  try {
+    return Right(f());
+  } catch(e) {
+    return Left(e);
   }
-
 };
+
+export const access = path =>
+  succeedMaybe(() => {
+    fs.accessSync(path);
+    return path;
+  });
+
+export const readFile = path =>
+  succeedMaybe(() => fs.readFileSync(path));
+
+export const writeFile = (path, contents) =>
+  succeedMaybe(() => fs.writeFileSync(path, contents));
+
+export const mkdir = path =>
+  succeedMaybe(() => fs.mkdirSync(path));
+
+export const requireFile = path =>
+  access(path).map(_ => require(path));

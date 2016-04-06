@@ -70,7 +70,7 @@ export default (
         </p>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field2 (3)">
+        <p className={pf('truncate m-bottom--xx-small')} title="Field2 (3)">
           Field 2 (3)
           <ButtonIcon
             flavor="icon-bare"

@@ -55,7 +55,7 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Truncation class is added to headings in the Edit Form for Touch
-- Removed max-height on `.slds-section__content` to prevent collison with JavaScript implementations
+- Removed max-height and animation on `.slds-section__content` to prevent collison with JavaScript implementations
 - Fixed IE11 page header truncation bug
 
 **DEPRECATED**

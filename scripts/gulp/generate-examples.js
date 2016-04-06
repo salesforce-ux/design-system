@@ -48,8 +48,8 @@ export const addExamples = comps =>
   })
 );
 
-export const getComponents = scheme =>
-  flatMap(generateUI(scheme), 'components');
+export const getComponents = schema =>
+  flatMap(generateUI(schema), 'components');
 
 const getName = (component, flavor, example) =>
   `${component.id}_${flavor.id}_${example.id}`;
@@ -63,7 +63,7 @@ const flattenExamples = comps =>
 const toHtml = el =>
   prettyHTML(renderToStaticMarkup(el));
 
-gulp.task('generate:examples', () => {
+gulp.task('generate:examples', ['generate:whitelist'], () => {
   const stream = through.obj();
   const examples = flattenExamples(addExamples(getComponents()));
   examples.forEach(ex =>

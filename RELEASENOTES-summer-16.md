@@ -53,7 +53,7 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
--
+- Truncation class is added to headings in the Edit Form for Touch
 
 **DEPRECATED**
 

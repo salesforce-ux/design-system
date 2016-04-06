@@ -3,7 +3,6 @@
 /.dist
 /.npm
 /.build
-/.test
 /.generated
 /.www
 /scripts/deploy

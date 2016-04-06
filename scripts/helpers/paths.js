@@ -23,7 +23,7 @@ const root = path.resolve(__dirname, '../../');
 const app_modules = path.resolve(root, 'app_modules');
 const node_modules = path.resolve(root, 'node_modules');
 
-export const paths = {
+const paths = {
   root,
   app_modules,
   node_modules,

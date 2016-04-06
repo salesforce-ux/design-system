@@ -18,7 +18,6 @@ import globals from 'app_modules/global';
 import defaultGulp from 'gulp';
 import gulpzip from 'gulp-zip';
 import { exec } from 'child_process';
-import { generate } from './generator';
 
 const css_path = 'assets/styles/salesforce-lightning-design-system.css';
 const zip_name = 'fullbuild.zip';
@@ -79,9 +78,6 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     execute(`rm -rf ${__PATHS__.build}`, () =>
       execute(`mkdir ${__PATHS__.build}`, cb));
 
-  const writeExamples = cb =>
-    cb(generate(buildPath('examples')));
-
   const writeGitInfo = cb =>
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
       cb(write(buildPath('gitinfo.txt'), out)));
@@ -107,11 +103,10 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     writeWebsite(() =>
     writeGitInfo(() =>
     writeStats(() =>
-    writeExamples(() =>
     zip(() =>
     getSha(sha =>
       getDependencies(deps =>
-        publish(sha, deps, done))))))))));
+        publish(sha, deps, done)))))))));
 };
 
 module.exports = publish;

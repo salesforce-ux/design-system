@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import { expect } from 'chai';
 import { isValidElement } from 'react';
-import { ui, compExamples } from 'scripts/helpers/component-examples';
+import { getComponents, addExamples } from 'scripts/gulp/generate-examples';
 
 // example schema (slimmed down from actual)
 const schema = [
@@ -42,11 +42,11 @@ const schema = [
 
 
 describe('scripts/helpers/component-examples.js', () => {
-  describe('ui', () => {
+  describe('getComponents', () => {
     let comps;
 
     before(() => {
-      comps = ui(schema)
+      comps = getComponents(schema)
     });
 
     it('returns an array of components and utils mixed together', () =>
@@ -65,7 +65,7 @@ describe('scripts/helpers/component-examples.js', () => {
       let button, floats;
 
       before(() => {
-        [button, floats] = compExamples(ui(schema))
+        [button, floats] = addExamples(getComponents(schema))
       });
 
       it('adds example objects to the flavors with state', () =>
@@ -78,7 +78,7 @@ describe('scripts/helpers/component-examples.js', () => {
         expect(isValidElement(button.flavors[0].examples[0].element)).to.be.ok)
 
       it('returns an empty array if no examples', () =>
-        expect(floats.flavors[1].examples.length).to.equal(0))
+        expect(floats.flavors.length).to.equal(1))
     });
   });
 });

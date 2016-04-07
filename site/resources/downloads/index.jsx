@@ -70,7 +70,7 @@ bower install salesforce-lightning-design-system --save
       `}</CodeBlock>
     </div>
 
-    <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
+    <h2 className="site-text-heading--large" id="zip">Design System Zip</h2>
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
       and icons to include in your project. See

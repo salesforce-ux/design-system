@@ -25,7 +25,7 @@
   }
 
   @include mq-medium-min {
-    padding: $spacing-large;
+    padding: $spacing-medium $spacing-large;
 
     &__title {
       font-size: $font-size-x-large;

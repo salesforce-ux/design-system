@@ -107,10 +107,6 @@
       color: $color-text-link-hover;
     }
 
-    &:focus {
-      @include focus;
-    }
-
     &:active {
       color: $color-text-link-active;
     }

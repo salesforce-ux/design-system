@@ -13,11 +13,8 @@
   border-bottom: $border-width-thin solid transparent;
   cursor: pointer;
 
-  &:hover {
-    border-bottom: $border-width-thin solid $color-text-link-hover;
-  }
-
+  &:hover,
   &:focus {
-    @include focus;
+    border-bottom: $border-width-thin solid $color-text-link-hover;
   }
 }

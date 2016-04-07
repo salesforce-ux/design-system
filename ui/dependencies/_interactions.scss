@@ -9,14 +9,6 @@
 
 
 
-@mixin focus {
-  // Firefox does not support the "auto" value
-  // scss-lint:disable DuplicateProperty
-  outline: thin dotted;
-  outline: 5px auto $color-brand;
-  outline-offset: -2px;
-}
-
 @mixin focus-button {
   outline: 0;
   box-shadow: $shadow-button-focus;

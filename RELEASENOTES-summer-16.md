@@ -49,6 +49,7 @@ The following changes have been made in this release:
 - Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 - Reduced vertical padding on page header
+- Removed over-reaching a:focus styles due to a recent FFOX visual change
 
 **FIXED**
 

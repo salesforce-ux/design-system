@@ -48,12 +48,16 @@ The following changes have been made in this release:
 - `slds-modal--content` should use the additive class of `slds-p-vertical--large` and `slds-p-horizontal--x-large`, instead of `slds-p-around--medium`.
 - Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
+- Reduced vertical padding on page header
+- Removed over-reaching a:focus styles due to a recent FFOX visual change
 
 **FIXED**
 
 The following issues have now been resolved:
 
 - Truncation class is added to headings in the Edit Form for Touch
+- Removed max-height and animation on `.slds-section__content` to prevent collison with JavaScript implementations
+- Fixed IE11 page header truncation bug
 
 **DEPRECATED**
 

@@ -38,6 +38,7 @@
   background: $color-background-button-default;
   border: $border-width-thin solid $color-border-button-default;
   border-radius: $border-radius-medium;
+  cursor: pointer;
 
   &.#{$css-prefix}is-new {
     background: $color-background-highlight;
@@ -50,8 +51,8 @@
   &.#{$css-prefix}is-locked {
     background: $color-background;
 
-    &:hover,
-    &:hover a {
+    &,
+    a {
       cursor: not-allowed;
     }
   }
@@ -62,6 +63,5 @@
 
   &:hover {
     background: $color-background-button-default-hover;
-    cursor: pointer;
   }
 }

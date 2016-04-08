@@ -153,6 +153,12 @@ export default () => formatNavItem({
         label: component.title,
         status: component.status
       })).concat({
+        label: 'Touch',
+        separator: true,
+        children: getUI('touch').map(component => ({
+          label: component.title
+        }))
+      }).concat({
         label: 'Utilities',
         separator: true,
         children: getUI('utilities').map(component => ({

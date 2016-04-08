@@ -1,7 +1,15 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release [1.0.2]
+
+- Added a link to an [archive of v1.0.0](https://design-system-v-1-0-0.herokuapp.com/), so you can access the documentation and downloads for that previous version
+- Generated the [unmanaged package]() for the 1.0.2 patch release
+- Fixed the application's version number in the Sass configuration
+
 ## Release [1.0.1]
+
+Happy birthday! The Lightning Design System turns 1...
 
 **CHANGES**
 
@@ -361,4 +369,5 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[1.0.2]: https://github.com/salesforce-ux/design-system-internal/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/salesforce-ux/design-system-internal/compare/v1.0.0...v1.0.1

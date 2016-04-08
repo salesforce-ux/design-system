@@ -1,25 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 1.X.X - [Unreleased]
-
-**SITE IA/ENHANCEMENTS**
-
-The following site enhancements are now available:
-
-
-
-**NEW COMPONENTS AND VARIANTS**
-
-The following components are now available:
-
-
-
-**ADDED**
-
-The following classes are now available:
-
-
+## Release [1.0.1]
 
 **CHANGES**
 
@@ -37,19 +19,6 @@ The following issues have now been resolved:
 - Fixed a bug in the Tree component that occurred in the scoped version of SLDS and prevented nested branches from being properly indented  - Fixes [design-system/issues/91](https://github.com/salesforce-ux/design-system/issues/91) and [design-system/issues/164](https://github.com/salesforce-ux/design-system/issues/164)
 - Fixed the file naming structure so that standard Sass implementations can watch the entire project and compile the framework correct files on the fly.
 - Fixed a bug where compilation would fail when using Ruby Sass - Fixes [design-system/issues/173](https://github.com/salesforce-ux/design-system/issues/173)
-
-
-
-**DEPRECATED**
-
-The following features are being marked as deprecated in this release and will be removed in three releases:
-
-
-
-**REMOVED**
-
-The following features are being removed in this release:
-
 
 
 ## Release 1.0.0 - March 2, 2016
@@ -392,4 +361,4 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v1.0.0...HEAD
+[1.0.1]: https://github.com/salesforce-ux/design-system-internal/compare/v1.0.0...v1.0.1

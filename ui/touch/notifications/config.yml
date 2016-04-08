@@ -1,0 +1,4 @@
+classBase: 'notify'
+status: 'dev-ready'
+flavors:
+  - prompt-for-touch

@@ -4,7 +4,7 @@
 ## Release [1.0.2]
 
 - Added a link to an [archive of v1.0.0](https://design-system-v-1-0-0.herokuapp.com/), so you can access the documentation and downloads for that previous version
-- Generated the [unmanaged package]() for the 1.0.2 patch release
+- Generated the [unmanaged package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo) for the 1.0.2 patch release
 - Fixed the application's version number in the Sass configuration
 
 ## Release [1.0.1]

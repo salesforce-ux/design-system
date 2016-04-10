@@ -28,6 +28,8 @@ classes:
     class: media--reverse
     description: Reverses the media object so that the figure is on the right
     applied: <code>.{{cssPrefix}}media</code>
+    deprecated: true
+    notes: Use existing <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__figure--reverse</code> instead.
   -
     class: media--double
     description: Allows you to add a figure on both the right and left sides

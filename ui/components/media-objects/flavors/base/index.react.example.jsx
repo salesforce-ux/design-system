@@ -44,7 +44,7 @@ export let states = [
   },
   {
     id: 'center',
-    label: 'Center',
+    label: 'Centered vertically',
     element: <MediaExample figureLeft={image} flavor="center" />
   },
   {
@@ -54,12 +54,12 @@ export let states = [
   },
   {
     id: 'reverse-center',
-    label: 'Reverse (centered)',
+    label: 'Reverse centered vertically',
     element: <MediaExample figureRight={image} flavor="center" />
   },
   {
     id: 'double',
-    label: 'Double (One on each side)',
+    label: 'Double figures',
     element: <MediaExample figureLeft={image} figureRight={image} />
   }
 ];

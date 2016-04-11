@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 2.X.X - Future, 2016
+## Release 2.0.0 - Future, 2016
 
 **SITE IA/ENHANCEMENTS**
 
@@ -49,12 +49,16 @@ The following changes have been made in this release:
 - Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 - Inline level help icon moved to the right of the input label
+- Reduced vertical padding on page header
+- Removed over-reaching a:focus styles due to a recent FFOX visual change
 
 **FIXED**
 
 The following issues have now been resolved:
 
 - Truncation class is added to headings in the Edit Form for Touch
+- Removed max-height and animation on `.slds-section__content` to prevent collison with JavaScript implementations
+- Fixed IE11 page header truncation bug
 
 **DEPRECATED**
 

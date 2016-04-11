@@ -70,7 +70,7 @@ bower install salesforce-lightning-design-system --save
       `}</CodeBlock>
     </div>
 
-    <h2 className="site-text-heading--large" id="framework">Design System Zip</h2>
+    <h2 className="site-text-heading--large" id="zip">Design System Zip</h2>
     <p>
       Download the pre-built <abbr title="Cascading Style Sheets">CSS</abbr> framework, font
       and icons to include in your project. See
@@ -221,6 +221,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="archives">Archives</h2>
     <ul className={pf('list--dotted')}>
+      <li><CTALink href="http://design-system-v-1-0-0.herokuapp.com/" eventType="SLDS-Archives">Version 1.0.0</CTALink></li>
       <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
     </ul>
 

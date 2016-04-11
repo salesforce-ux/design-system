@@ -26,8 +26,6 @@
   &__content {
     visibility: hidden;
     opacity: 0;
-    max-height: 0;
-    transition: all $duration-immediately;
   }
 
   .#{$css-prefix}button__icon {
@@ -45,7 +43,6 @@
       padding-top: $spacing-small;
       visibility: visible;
       opacity: 1;
-      max-height: 100vh;
     }
   }
 }

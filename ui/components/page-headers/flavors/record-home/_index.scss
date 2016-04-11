@@ -12,7 +12,7 @@
 
   &-row {
     // Note: This takes the width of the icon into account for alignment
-    margin: $spacing-large #{-$spacing-large} #{-$spacing-large};
+    margin: $spacing-small #{-$spacing-large} #{-$spacing-medium};
     padding: $spacing-small $spacing-large;
     background-color: $color-background-alt;
   }

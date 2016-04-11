@@ -28,7 +28,8 @@ export default {
     {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
   ],
   unmanagedPackageUrls: [
-    { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' }
+    { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' },
+    { version: '1.0.2', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo' }
   ],
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',

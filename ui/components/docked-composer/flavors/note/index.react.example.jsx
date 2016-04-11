@@ -15,7 +15,6 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const dialingIcon = (
@@ -26,7 +25,7 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--circle avatar--medium')}>
-    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+    <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 const recordIcon = (

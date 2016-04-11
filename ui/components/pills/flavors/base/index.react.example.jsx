@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -57,7 +56,7 @@ let Portrait = props =>
   <Demo>
     <Pill>
       <span className={pf('pill__icon avatar avatar--circle')}>
-        <Img src="/assets/images/avatar2.jpg" alt="" />
+        <img src="/assets/images/avatar2.jpg" alt="" />
       </span>
     </Pill>
   </Demo>;

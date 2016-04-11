@@ -14,7 +14,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import ToggleExample from 'app_modules/site/components/motion-and-animation/toggle-example';
 import Button from 'ui/components/buttons/index.react';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
@@ -25,7 +24,7 @@ export default (
         <ul className={pf('site-motion-principle-list grid wrap grid--pull-padded-large text-align--center')}>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-timing.svg" alt="Timing Image" />
+              <img src="/assets/images/motion/img-timing.svg" alt="Timing Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Timing</dt>
                 <dd><hr className="hr hr--blue" />
@@ -36,7 +35,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-elevation.svg" alt="Elevation Image" />
+              <img src="/assets/images/motion/img-elevation.svg" alt="Elevation Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Elevation</dt>
                 <dd><hr className="hr hr--blue"/>Utilizing the Z-axis to support spatial organization aids in creating a visual hierarchy we refer to as “atmosphere”.</dd>
@@ -45,7 +44,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-effects.svg" alt="Effects Image" style={{height: '60px'}} />
+              <img src="/assets/images/motion/img-effects.svg" alt="Effects Image" style={{height: '60px'}} />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Effects</dt>
                 <dd><hr className="hr hr--blue" />Attributes are animated over time to create a vocabulary of effects.</dd>
@@ -59,7 +58,7 @@ export default (
         <ul className={pf('site-motion-principle-list grid wrap grid--pull-padded-large text-align--center')}>
           <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-enter-exit.svg" alt="Enter then Exit Image" />
+              <img src="/assets/images/motion/img-enter-exit.svg" alt="Enter then Exit Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Enter & Exit</dt>
                 <dd><hr className="hr hr--blue" />
@@ -70,7 +69,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-emphasis.svg" alt="Emphasis Image" />
+              <img src="/assets/images/motion/img-emphasis.svg" alt="Emphasis Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Emphasis</dt>
                 <dd><hr className="hr hr--blue"/>Drawing attention to an object that is already on the screen.</dd>
@@ -79,7 +78,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-transitional.svg" alt="Transitional Image" />
+              <img src="/assets/images/motion/img-transitional.svg" alt="Transitional Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Transitional </dt>
                 <dd><hr className="hr hr--blue" />Informing the user that a context change is taking place.</dd>
@@ -88,7 +87,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
             <div className="grid-card">
-              <Img src="/assets/images/motion/img-personality.svg" alt="Personality and Branding Image" />
+              <img src="/assets/images/motion/img-personality.svg" alt="Personality and Branding Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Personality & Branding</dt>
                 <dd><hr className="hr hr--blue" />Characteristics or sequences of engaging animation that create surprise and delight.</dd>
@@ -138,7 +137,7 @@ export default (
               its relative elevation which aids in rendering the shadow.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none text-align--left')}>
-          <Img className={pf('image')} src="/assets/images/motion/img-elevation-perspective.svg" alt="Elevation Perspective Image" />
+          <img className={pf('image')} src="/assets/images/motion/img-elevation-perspective.svg" alt="Elevation Perspective Image" />
         </figure>
       </div>
 

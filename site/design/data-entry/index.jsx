@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
@@ -22,14 +21,14 @@ export default (
       <h2 className="site-text-heading--large">Basic Text Input</h2>
       <p><strong>The simplest method of freeform data entry, for single and multiple lines of text.</strong></p>
       <figure>
-        <Img className={pf('image')} src="/assets/images/data-entry/img-text-input.svg" alt="" />
+        <img className={pf('image')} src="/assets/images/data-entry/img-text-input.svg" alt="" />
       </figure>
       <p>To limit the amount of text, use a single­line input. To restrict the type of input, you can specify the format, such as number or email address.</p>
       <p>Multiline text areas allow the user to enter long­form plain text. You can’t specify a format to restrict the type of content.</p>
       <p>Label the input area above or to the left of the field. In most contexts, a stacked label (label on top) is better for readability and clarity. Use horizontal labels only if you need to save vertical real estate and have fewer than 10 fields.</p>
       <p>To group related fields together, such as individual parts of an address, use compound inputs.</p>
       <figure>
-        <Img className={pf('image')} src="/assets/images/data-entry/img-text-input-compound.svg" alt="" />
+        <img className={pf('image')} src="/assets/images/data-entry/img-text-input-compound.svg" alt="" />
       </figure>
 
       {/* Sizing + Help */}
@@ -41,7 +40,7 @@ export default (
               <p>The input width depends on the label placement. If the label is above the field, the input width is 100% of the container. If the label is on the side, the label width is 33%, and the input width is 67%.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-text-input-sizing.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-text-input-sizing.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
@@ -51,7 +50,7 @@ export default (
             <p>You can also use placeholder text to provide an example of the type of input required. For example, in a Name field, show a name in the correct format.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-text-input-help.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-text-input-help.svg" alt="" />
           </figure>
         </div>
       </div>
@@ -68,7 +67,7 @@ export default (
               <p>Instead of forcing the user to manually type a date, a datepicker provides a visual way for the user to browse and select a single date or range of dates.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-datepicker.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-datepicker.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
@@ -77,7 +76,7 @@ export default (
             <p>A lookup allows the user to search a database for records to fill a field. The lookup can either limit the user to a single record or allow for multiple records to populate a single field.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-lookup.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-lookup.svg" alt="" />
           </figure>
         </div>
       </div>
@@ -94,7 +93,7 @@ export default (
               <p>Use a single checkbox for Boolean fields in which the user can choose only between true and false or on and off.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-checkbox.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-checkbox.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
@@ -103,7 +102,7 @@ export default (
             <p>A radio list allows the user to select one option from a short list (fewer than 10 options). You must have enough space to present all options together to make comparison easy. Typically, radio lists are presented as a standalone field, such as a poll within a feed, and not used in a larger form.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-radio.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-radio.svg" alt="" />
           </figure>
         </div>
       </div>
@@ -116,7 +115,7 @@ export default (
               <p>Picklists, commonly known as dropdown menus, allow the user to select one option or multiple options from a list. Picklists are used instead of radio lists and checkbox lists inside of a larger form. They provide more flexibility in the number of options the user can choose from.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-picklist.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-picklist.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
@@ -125,7 +124,7 @@ export default (
             <p>Use this control when the user needs to select more than one option and define the order of the selected items.</p>
           </div>
           <figure className={pf('grow')}>
-            <Img className={pf('image')} src="/assets/images/data-entry/img-picklist-multi.svg" alt="" />
+            <img className={pf('image')} src="/assets/images/data-entry/img-picklist-multi.svg" alt="" />
           </figure>
         </div>
       </div>

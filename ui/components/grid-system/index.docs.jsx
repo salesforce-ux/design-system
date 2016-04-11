@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
@@ -37,6 +36,6 @@ export default (
 <p>Using the manual sizing class helpers, you can specify a column span across the following grids &ndash;2, 3, 4, 5, 6, and 12. The grid supports up to 12 columns.</p>
 
 <h2 className={pf('site-text-heading--label')}>Visual Glossary of Terminology</h2>
-<Img className={pf('image')} src="/assets/images/grid/grid-flex-diagram.svg" alt="" />
+<img className={pf('image')} src="/assets/images/grid/grid-flex-diagram.svg" alt="" />
 </ComponentDocs>
 );

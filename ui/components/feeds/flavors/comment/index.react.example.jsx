@@ -13,7 +13,6 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
@@ -114,7 +113,7 @@ export let Attachments = props =>
 const MediumAvatar = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="#void" title="Jason Rodgers">
-      <Img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
+      <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
     </a>
   </div>
 );
@@ -122,7 +121,7 @@ const MediumAvatar = (
 const SmallAvatar = (
   <div className={pf('avatar avatar--circle avatar--small')}>
     <a href="#void" title="Jenna Davis">
-      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );

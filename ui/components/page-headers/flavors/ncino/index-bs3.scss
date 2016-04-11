@@ -2,8 +2,6 @@
 .top-bar {
   //position: fixed;
   z-index: $z-index-default + 1;
-  height: $size-xxx-small;
-  line-height: $size-xxx-small;
   background: $color-background;
   box-shadow: $elevation-shadow-1;
 
@@ -16,6 +14,8 @@
 
   // Controls
   &-controls {
+    height: $size-3x-small;
+    line-height: $size-3x-small;
 
     .alert {
       float: left;
@@ -36,16 +36,21 @@
   }
 
   // Heading
-  &-heading a,
-  &-heading a:active,
-  &-heading a:hover,
-  &-heading a:link,
-  &-heading a:visited {
-    text-decoration: none;
-    color: $color-text-default;
-  }
+  &-heading {
+    height: $size-3x-small;
+    line-height: $size-3x-small;
 
-  &-heading .circle {
-    display: none;
+    a,
+    a:active,
+    a:hover,
+    a:link,
+    a:visited {
+    text-decoration: none;
+      color: $color-text-default;
+    }
+
+    .circle {
+      display: none;
+    }
   }
 }

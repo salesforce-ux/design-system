@@ -21,9 +21,9 @@
     background-color: $color-background-warning;
     color: $color-text-default;
 
-    *[class*="fa fa-"],
-    *[class*="glyphicon"],
-    *[class*="n-icon"] {
+    [class*="fa fa-"],
+    [class*="glyphicon"],
+    [class*="n-icon"] {
       fill: $color-text-icon-default;
     }
   }

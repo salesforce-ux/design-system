@@ -14,9 +14,9 @@ script:
   - npm run lint
   - npm run test
 after_success:
+  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm run build-server ; fi
   - export SHA=`git rev-parse --short HEAD`
-  - if [ -n $TRAVIS_PULL_REQUEST ] ; then npm run build-server ; fi
-  - if [ -n $TRAVIS_PULL_REQUEST ] ; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi
+  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi
 cache:
   directories:
     - node_modules

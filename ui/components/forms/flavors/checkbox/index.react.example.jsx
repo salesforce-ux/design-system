@@ -73,7 +73,7 @@ let Required = props =>
     </FormElement>
   </Demo>;
 
-let Error = props =>
+let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementControl>
@@ -155,7 +155,7 @@ export let states = [
   {
     id: 'checkbox-error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorState />
   },
   {
     id: 'checkbox-disabled',

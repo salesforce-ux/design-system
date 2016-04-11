@@ -30,7 +30,8 @@ gulp.task('generate:tokens', done => {
     sets: [
       'force-base',
       'force-mq-commons',
-      's1-base'
+      's1-base',
+      's1-base-large'
     ]
   }];
 
@@ -111,6 +112,24 @@ gulp.task('generate:tokens', done => {
     async.map(release.groups, mapGroup, (err, groups) => {
       if (err) return done(err);
       release.groups = groups;
+      // HACK: s1-base-large overrides
+      const slds = _.find(groups, { name: 'lightning-design-system' });
+      if (slds) {
+        const s1BaseLarge = _.find(slds.sets, { name: 's1-base-large' });
+        if (s1BaseLarge) {
+          _.forEach(slds.sets, (set) => {
+            _.forEach(['aliases', 'props'], (contentKey) => {
+              set.contents[contentKey] = _.mapValues(set.contents[contentKey], (value, key) => {
+                if (_.has(s1BaseLarge.contents[contentKey], key)) {
+                  return s1BaseLarge.contents[contentKey][key];
+                }
+                return value;
+              });
+            });
+          });
+          _.pull(slds.sets, s1BaseLarge);
+        }
+      }
       done(null, release);
     });
   }

@@ -13,7 +13,6 @@ import React from 'react';
 import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -68,7 +67,7 @@ const icon = (
 
 const image = (
   <span className={pf('avatar avatar--circle avatar--small')}>
-    <Img src="/assets/images/avatar2.jpg" alt="person's name" />
+    <img src="/assets/images/avatar2.jpg" alt="Person's name" />
   </span>
 );
 

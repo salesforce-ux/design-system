@@ -64,7 +64,7 @@
 
   &-responsive {
     overflow: hidden {
-      x: scroll;
+      x: auto;
     }
   }
 
@@ -142,6 +142,28 @@
           background-color: $color-background-row-selected;
         }
       }
+    }
+  }
+}
+
+.ui-lookup-results {
+  margin: $spacing-none;
+  border-radius: $border-radius-medium;
+  padding: $spacing-none;
+
+  div {
+    overflow: hidden;
+  }
+
+  table {
+    margin: $spacing-none;
+  }
+
+  &.is-small {
+    overflow: auto;
+
+    div {
+      overflow:visible;
     }
   }
 }

@@ -71,8 +71,15 @@
     }
   }
 
-  // Primary
-  &-primary {
+  // Base
+  &-default,
+  &-link {
+    // no additional directives
+  }
+
+  // Brand
+  &-primary,
+  &-success {
     @include button;
     @include button-brand;
 
@@ -83,7 +90,21 @@
     }
   }
 
-  // Ancillary
+  // Destructive
+  &-warning,
+  &-danger {
+    @include button;
+    @include button-destructive;
+  
+    &[disabled] {
+      background: $color-background-button-brand-disabled;
+      border-color: $color-border-button-brand-disabled;
+      color: $color-text-button-brand-disabled;
+    }
+  }
+
+  // Neutral
+  &-info,
   &-secondary,
   &-tertiary,
   &-cancel {

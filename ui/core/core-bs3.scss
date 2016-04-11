@@ -1,20 +1,31 @@
 .ui-container {
   padding: $spacing-none;
-  min-height: $size-large;
+  min-height: $size-frame-default;
   overflow: hidden {
     y: auto;
   }
+  background: $color-background;
 
   .body {
-    @include border($borders: left);
-    background: $color-background;
+
+    .message-container {
+      min-height: $spacing-none;
+    }
+
+    .alert,
+    .slds-box {
+      margin-bottom: $spacing-medium;
+    }
   }
 
-  .message-container {
-    min-height: $spacing-none;
-
-    .alert {
-      margin-bottom: $spacing-medium;
+  .help-block {
+    display: block;
+    position: absolute;
+    top: $size-4x-small;
+    left: 0;
+    margin: $spacing-none {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
     }
   }
 }

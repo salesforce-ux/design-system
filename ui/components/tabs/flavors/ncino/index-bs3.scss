@@ -1,5 +1,9 @@
 // Secondary Navigation
 .navigation-items {
+  @include border($borders: right bottom);
+  border-radius: $spacing-none $spacing-none $border-radius-medium $spacing-none;
+  min-height: ($size-frame-default - $size-3x-small);
+  overflow: hidden;
   text-transform: capitalize;
   background: $color-background-alt;
 
@@ -11,9 +15,9 @@
     line-height: $line-height-tab;
     color: $color-text-tab-label;
 
-    *[class*="fa fa-"],
-    *[class*="glyphicon"],
-    *[class*="n-icon"] {
+    [class*="fa fa-"],
+    [class*="glyphicon"],
+    [class*="n-icon"] {
       display: none;
     }
   }
@@ -61,9 +65,9 @@
       @include tab-focus;
     }
 
-    *[class*="fa fa-"],
-    *[class*="glyphicon"],
-    *[class*="n-icon"] {
+    [class*="fa fa-"],
+    [class*="glyphicon"],
+    [class*="n-icon"] {
       display: none;
     }
   }
@@ -98,9 +102,9 @@
   &-overflow {
     .dropdown {
       > a {
-        *[class*="fa fa-"],
-        *[class*="glyphicon"],
-        *[class*="n-icon"] {
+        [class*="fa fa-"],
+        [class*="glyphicon"],
+        [class*="n-icon"] {
           display: inline-block;
           padding: $spacing-xx-small;
         }
@@ -131,9 +135,9 @@
             @include tab-focus;
           }
 
-          *[class*="fa fa-"],
-          *[class*="glyphicon"],
-          *[class*="n-icon"] {
+          [class*="fa fa-"],
+          [class*="glyphicon"],
+          [class*="n-icon"] {
             display: none;
           }
         }

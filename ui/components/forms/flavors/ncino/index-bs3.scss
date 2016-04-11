@@ -1,9 +1,20 @@
 .content-label {
+  display: inline-block;
   width: 100%;
   font-size: $font-size-small;
-  line-height: $line-height-reset;
+  line-height: $line-height-text;
   white-space: nowrap;
   color: $color-text-label;
+
+  [class*="fa fa-"],
+  [class*="glyphicon"],
+  [class*="n-icon"] {
+    display: inline-block;
+    position: relative; // Since this container can have a tooltip
+    margin-right: $spacing-x-small;
+    font-size: $font-size-medium;
+    vertical-align: baseline;
+  }
 
   .form-control {
     z-index: $z-index-default;
@@ -11,14 +22,26 @@
   }
 
   .form-control-static {
-    margin: $spacing-xx-small $spacing-none;
+    margin-right: $spacing-small;
+    margin-bottom: $spacing-xx-small;
     padding: $spacing-none;
   }
 
   .input-sm {
-    height: $font-size-medium;
+    height: $size-5x-small;
     font-size: $font-size-small;
-    line-height: $line-height-reset;
+    line-height: $line-height-text;
+  }
+
+  .is-required:before {
+    content: '*';
+    position: relative;
+    left: ($spacing-xx-small * -1);
+    color: $color-text-required;
+  }
+  .is-required {
+    position: relative;
+    left: $spacing-xx-small;
   }
 
   label {
@@ -41,22 +64,106 @@
   }
 
   .input-sm {
-    height: $font-size-xx-large;
+    height: $size-4x-small;
     font-size: $font-size-medium;
     font-weight: $font-weight-regular;
   }
 
+  .textarea-sm {
+    height: auto;
+    min-height: $size-4x-small;
+  }
+
+  .input-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    display: table\9;
+    position: relative;
+
+    .input-group-addon {
+      z-index: $z-index-default + 1;
+      position: absolute;
+      margin: $spacing-x-small;
+      border: $border-width-thin solid transparent;
+      padding: $spacing-none;
+      height: $square-icon-utility-small;
+      width: $square-icon-utility-small;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-reset;
+      background-color: transparent;
+      color: $color-text-icon-default;
+
+      &:first-child,
+      &:last-child {
+        border: $border-width-thin solid transparent;
+      }
+
+      [class*="fa fa-"],
+      [class*="glyphicon"],
+      [class*="n-icon"] {
+        font-weight: $font-weight-regular;
+      }
+    }
+
+    .form-control ~ .input-group-addon {
+      right: $spacing-xx-small;
+    }
+
+    .form-control:first-child {
+      border-top-right-radius: $border-radius-medium;
+      border-bottom-right-radius: $border-radius-medium;
+      padding-right: ($spacing-x-large + $spacing-xx-small);
+    }
+
+    .form-control:last-child {
+      border-top-left-radius: $border-radius-medium;
+      border-bottom-left-radius: $border-radius-medium;
+      padding-left: $spacing-x-large;
+    }
+  }
+
+  .is-dirty,
+  .dirtyInput {
+    color: $color-text-warning;
+  }
+
   label {
-    display: inline;
-    margin: $spacing-none $spacing-x-small $spacing-x-small $spacing-xx-small;
+    display: block;
     vertical-align: middle;
     font-size: $font-size-medium;
     font-weight: $font-weight-regular;
   }
-  label:first-child {
-    margin-left: $spacing-none;
+
+  input,
+  select,
+  textarea {
+    @include form-states;
   }
-  label:last-child {
-    margin-right: $spacing-none;
+
+  [type="checkbox"],
+  [type="radio"] {
+    // fix for slight vertical misalignment of check boxes and radio buttons
+    position: relative;
+    top: -1px;
+    margin: ($spacing-x-small + $spacing-xxx-small) {
+      left: $spacing-none;
+    }
+    padding: $spacing-none;
+    height: $font-size-medium;
+    width: $font-size-medium;
+  }
+  [type="radio"] {
+    border-radius: $border-radius-circle;
+  }
+
+  [type="date"] {
+    line-height: 0\9;
+
+    .ie10 & {
+      line-height: $spacing-none;
+    }
   }
 }

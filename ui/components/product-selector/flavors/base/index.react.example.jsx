@@ -15,10 +15,8 @@ import Img from 'app_modules/ui/img';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Modal } from 'ui/components/modals/flavors/base/index.react.example';
-import { ModalHeader } from 'ui/components/modals/flavors/base/index.react.example';
-import { ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
-import { ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
+import { Filters, FiltersHeader, FiltersBody, FiltersFooter, FilterObject } from 'ui/components/panels/flavors/filtering/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -171,40 +169,6 @@ let SelectedProductList = props =>
     </li>
   </ul>;
 
-let Filters = props =>
-  <div>
-    <div className={pf('grid has-divider--bottom-space')}>
-      <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
-      <ButtonIcon
-        flavor="icon-bare,icon-small"
-        className="col--bump-left"
-        sprite="utility"
-        symbol="forward"
-        assistiveText="Close Filter Panel" />
-    </div>
-    <p className={pf('text-body--small m-bottom--x-small')}>All of these filters</p>
-    <ul className={pf('list--vertical has-cards--space')}>
-      <li className={pf('list__item theme--default grid')}>
-        <a href="#void" className={pf('grow has-blur-focus')}>
-          <p className={pf('text-body--small')}>Show me</p>
-          <p>All Products</p>
-        </a>
-        {removeButton}
-      </li>
-      <li className={pf('list__item theme--default grid')}>
-        <a href="#void" className={pf('grow has-blur-focus')}>
-          <p className={pf('text-body--small')}>List Price</p>
-          <p>greater than "500"</p>
-        </a>
-        {removeButton}
-      </li>
-    </ul>
-    <div className={pf('grid p-vertical--x-small')}>
-      <a href="#void">Add Filter</a>
-      <a href="#void" className={pf('col--bump-left')}>Remove All</a>
-    </div>
-  </div>;
-
 const imageEmpty = (
   <span className={pf('avatar avatar--small avatar--empty')}></span>
 );
@@ -274,8 +238,29 @@ let Filtering = props =>
           <ListFilterBar filterActive />
           <ProductList />
         </div>
-        <div className={pf('col col-rule--left size--4-of-12 theme--shade p-around--medium has-divider--left scrollable--y')}>
-          <Filters />
+        <div className={pf('col col-rule--left size--4-of-12 theme--shade has-divider--left scrollable--y')}>
+          <Filters>
+            <FiltersHeader>
+              <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
+              <ButtonIcon
+                flavor="icon-bare,icon-small"
+                className="col--bump-left"
+                sprite="utility"
+                symbol="forward"
+                assistiveText="Close Filter Panel" />
+            </FiltersHeader>
+            <FiltersBody>
+              <ol className={pf('list--vertical list--vertical-space')}>
+                <FilterObject type="Show Me">All Products</FilterObject>
+              </ol>
+              <p className={pf('text-body--small m-vertical--x-small')}>Matching all these filters</p>
+              <ol className={pf('list--vertical list--vertical-space')}>
+                <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
+                <FilterObject type="List Price" removable>greater than "500"</FilterObject>
+              </ol>
+            </FiltersBody>
+            <FiltersFooter />
+          </Filters>
         </div>
       </ModalContent>
       <ModalFooter className={pf('modal__footer--directional')}>

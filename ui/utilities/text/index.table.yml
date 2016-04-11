@@ -56,6 +56,18 @@ classes:
     description: Aligns text right
     applied: Any text
   -
+    class: text-color--default
+    description: Default color of text
+    applied: Any text
+  -
+    class: text-color--weak
+    description: Weak color of text
+    applied: Any text
+  -
+    class: text-color--error
+    description: Error color of text
+    applied: Any text
+  -
     class: section
     description: Container for a collapsable sub section through interaction with the section title
     required: true

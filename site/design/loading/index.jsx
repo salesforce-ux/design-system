@@ -90,11 +90,12 @@ export default (
           <div className={pf('size--1-of-1 medium-size--1-of-2 grow-none')}>
             <p className={pf('p-top--x-large')}>Stencils abstractly represent what the resulting content layout will look like. Use stencils for full page refreshes, not asynchronous updates. Stencils offer a more visually appealing experience than dozens of spinners animating at the same time or a blank white page.</p>
             <p>Use stencils when data takes longer than 300 ms to retrieve. For less than 300 ms, just show the data. If the data takes 301 ms to load, the stencil fades-in promptly and then cross-fades to the data. Do not have a “white flash” between stencils and data.</p>
+            <p>If a component is only displayed when it has data, then don’t show a stencil.</p>
           </div>
         </div>
-        <p>Keep stencils simple and lightweight, by using simple, subtle shapes to indicate content, but don’t include the placement of buttons and other UI elements. Keep the shape heights consistent to reduce visual noise. </p>
+        <p>Keep stencils simple and lightweight, by using simple, subtle shapes to indicate content, but don’t include the placement of buttons and other UI elements. Keep the shape heights consistent to reduce visual noise.</p>
         <p>Stencils should be responsive and stretch to fill the container that they are in.</p>
-        <p>Load stencils from the top left of the page to the bottom right. </p>
+        <p>Load stencils from the top left of the page to the bottom right.</p>
       </div>
 
       {/* Stencils */}

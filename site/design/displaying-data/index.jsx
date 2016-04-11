@@ -22,7 +22,7 @@ export default (
       <h2 className={pf('site-text-heading--large')}>Record Lists</h2>
       <p><strong>Record lists organize information to help users locate and/or browse specific records.</strong></p>
       <p>You can display records as a table, tile list, or interactive card. Differentiate types of items either by separating them into different lists or by clearly labeling them within the list. For example, put different file types into separate lists, or if they live in the same list, label each file file type (PDF, JPG, and so on).</p>
-      <p>Make sure to provide a visual affordance, such as an icon or a button, for all points of interaction on a list or record.</p>
+      <p>Make sure to provide a visible affordance, such as an icon or a button, for all points of interaction on a list or record.</p>
       <p>Title each list of records. Include field labels where possible. User name, date, and number fields are especially ambiguous when shown without a label.</p>
       <p>It’s recommended to provide a message when a list is empty. For example, “No items to display. Try editing filters for this list view or switching list views.”</p>
 
@@ -37,6 +37,20 @@ export default (
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
           <img className={pf('image')} src="/assets/images/displaying-data/img-table.svg" alt="" />
+        </figure>
+      </div>
+
+      {/* Tree Grid */}
+      <div className={pf('site-side-by-side grid wrap p-vertical--x-large')}>
+        <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
+          <h2 className={pf('site-text-heading--medium p-top--x-large')}>Tree Grid</h2>
+          <p>A tree grid is useful for displaying large amounts of hierarchical data, where records are grouped into parent-child relationships. This format is similar to a table, with the exception that the first column also represents the relationship between records. It also offers similar benefits including sorting and filtering.</p>
+          <p>A chevron button at the end of the row shows and hides nested children. It also indicates whether a record has children. Children are indented below their parent to communicate their position in the hierarchy.</p>
+          <p>Records and their children must share the same data structure to be displayed in columns. For example, files and folders share a similar set of metadata. When parent and child records have different fields, a tree grid should not be used. Consider using a related list or master detail instead.</p>
+          <p>On narrow screens where only a few columns will fit, tree grids should elegantly and responsively collapse into a tree list.</p>
+        </div>
+        <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
+          <Img className={pf('image')} src="/assets/images/displaying-data/img-tree-grid.svg" alt="" />
         </figure>
       </div>
 
@@ -89,7 +103,7 @@ export default (
         <div className={pf('size--1-of-1 medium-size--2-of-3 grow-none')}>
           <h2 className={pf('site-text-heading--medium p-top--x-large')}>Activity Feeds</h2>
           <p>An activity feed tracks what a user has done and what a user is about to do on a record. Each feed item includes the activity type, subject, and additional fields specific to that activity type. Activity types can include email messages, tasks, calendar events, calls logs, and other updates to the record or related records.</p>
-          <p>The activity feed can show past and future events. If you’re displaying future events, don’t include the timeline connector between the events.</p>
+          <p>The activity feed can show past and future events.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
           <img className={pf('image')} src="/assets/images/displaying-data/img-activity-feed.svg" alt="" />

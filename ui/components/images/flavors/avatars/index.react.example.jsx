@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -25,7 +24,7 @@ let Demo = props =>
 
 let Avatar = props =>
   <span className={className(pf('avatar'), props.className)}>
-    <Img src="/assets/images/avatar2.jpg" alt="person name" />
+    <img src="/assets/images/avatar2.jpg" alt="person name" />
   </span>;
 
 //////////////////////////////////////////////

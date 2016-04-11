@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
@@ -20,9 +19,9 @@ export default (
       <h1>404 <span className={pf('assistive-text')}>Not found</span></h1>
       <p>Oops, this does not seem like the page you are looking for.</p>
       <div className={pf('site-404__images')}>
-        <Img className={pf('site-404__image1')} src="/assets/images/404/tri.svg" alt="" />
-        <Img className={pf('site-404__image2')} src="/assets/images/404/square.svg" alt="" />
-        <Img className={pf('site-404__image3')} src="/assets/images/404/hex.svg" alt="" />
+        <img className={pf('site-404__image1')} src="/assets/images/404/tri.svg" alt="" />
+        <img className={pf('site-404__image2')} src="/assets/images/404/square.svg" alt="" />
+        <img className={pf('site-404__image3')} src="/assets/images/404/hex.svg" alt="" />
       </div>
     </div>
   </PageBody>

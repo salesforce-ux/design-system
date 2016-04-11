@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
@@ -35,7 +34,7 @@ export default (
         <div className={pf('site-diagram-section-list grid grid--vertical m-bottom--x-large')}>
           <p className={pf('site-diagram-section-top order--2 large-order--1')}>The page header above the content area extends across the entire viewport. When the user scrolls, the panel is fixed to provide locational context, but it shrinks to preserve vertical real estate.</p>
           <figure className={pf('large-size--1-of-2 order--1 large-order--2')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-record-layout.svg" alt="Wireframe image of record layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-record-layout.svg" alt="Wireframe image of record layout design" />
           </figure>
           <p className={pf('site-diagram-section-middle large-size--1-of-2 order--2 large-order--3')}>The main content area uses two-thirds of the viewport. The sidebar uses the other third, with a minimum width of 400px to maintain readability. If the reference layout appears inside of a Master/Detail, the sidebar collapses into a tab in the main content area.</p>
         </div>
@@ -48,7 +47,7 @@ export default (
             <p>A workspace layout facilitates user collaboration on records. It highlights the activity and discussion that is happening around a record by placing this information prominently in the larger content area, while simultaneously displaying the related records in the sidebar. A summary of the record’s details are in a panel above the content area for easy reference.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-workspace-layout.svg" alt="Wireframe image of workspace layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-workspace-layout.svg" alt="Wireframe image of workspace layout design" />
           </figure>
         </div>
 
@@ -59,7 +58,7 @@ export default (
             <p>A reference layout is optimized for when users are primarily jumping to related records. It highlights the related records by displaying this information in the larger content area. Collaborative items are placed in the smaller sidebar. A summary of the record’s details are in a panel above the content area for easy reference.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-reference-layout.svg" alt="Wireframe image of reference layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-reference-layout.svg" alt="Wireframe image of reference layout design" />
           </figure>
         </div>
 
@@ -84,7 +83,7 @@ export default (
             <p>The table can be of infinite length. Data is loaded as the user scrolls.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-table-layout.svg" alt="Wireframe image of table layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-table-layout.svg" alt="Wireframe image of table layout design" />
           </figure>
         </div>
 
@@ -98,7 +97,7 @@ export default (
             <p>If the columns don’t fill the viewport, they are expanded to their maximum width, and the area to the right of the last column remains empty.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-board-layout.svg" alt="Wireframe image of board layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-board-layout.svg" alt="Wireframe image of board layout design" />
           </figure>
         </div>
 
@@ -112,7 +111,7 @@ export default (
             <p>The layout groups together two layout views with a one-to-many relationship. Selecting an item from the master view (which contains a list) causes the details of that item to be populated in the detail view, using a condensed reference or workspace layout. </p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-master-detail-1.svg" alt="Wireframe image of master detail layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-master-detail-1.svg" alt="Wireframe image of master detail layout design" />
           </figure>
         </div>
         <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
@@ -120,7 +119,7 @@ export default (
             <p>A master-detail layout is also useful for exploring a deeply nested tree, like a file system, by displaying a tree component on the left and a table component on the right. This allows users to jump between nodes in the tree and to simultaneously view the full contents of each node as a list.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-master-detail-2.svg" alt="Wireframe image of master detail layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-master-detail-2.svg" alt="Wireframe image of master detail layout design" />
           </figure>
         </div>
         <div className={pf('site-side-by-side grid wrap m-bottom--x-large')}>
@@ -128,7 +127,7 @@ export default (
             <p>Master detail layouts work best on a larger screen (minimum of 1024px). If the screen is smaller, the two layout views should be defined as separate pages.</p>
           </div>
           <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-            <Img className={pf('image')} src="/assets/images/layout/img-master-detail-3.svg" alt="Wireframe image of master detail layout design" />
+            <img className={pf('image')} src="/assets/images/layout/img-master-detail-3.svg" alt="Wireframe image of master detail layout design" />
           </figure>
         </div>
       </div>

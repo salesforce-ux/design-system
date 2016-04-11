@@ -15,7 +15,6 @@ import CodeBlock from 'app_modules/ui/code-block';
 import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
-import Img from 'app_modules/ui/img';
 
 function unmanagedPackageUrls() {
   return g.unmanagedPackageUrls.map((item, idx) => {
@@ -42,7 +41,7 @@ export default (
       Instead of downloading the Design System you can also <a href="https://github.com/salesforce-ux/design-system">fork or clone it on GitHub</a>.
     </p>
     <CTALink href="https://github.com/salesforce-ux/design-system" className={pf('button button--neutral')} eventType="GitHub">
-      <Img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
+      <img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} />
       Design System on GitHub
     </CTALink>
 

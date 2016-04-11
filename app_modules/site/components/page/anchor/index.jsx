@@ -14,7 +14,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
-import Img from 'app_modules/ui/img';
 
 export default React.createClass({
 
@@ -41,7 +40,7 @@ export default React.createClass({
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>
-              <Img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
+              <img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
             </span>
             <div className={pf('media__body')}>
               {this.renderBreadcrumbs()}

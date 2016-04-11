@@ -65,7 +65,7 @@
     &:hover, // [1]
     &:focus { // [2]
       outline: 0;
-      background-color: $color-background-context-bar-highlight;
+      background-color: $color-background-context-bar-action-highlight;
     }
   }
 
@@ -90,7 +90,7 @@
     // Color of the arrow
     &,
     &:focus {
-      color: $color-text-context-nav-trigger;
+      color: $color-text-context-bar-action-trigger;
     }
   }
 

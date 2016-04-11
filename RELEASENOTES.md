@@ -1,25 +1,15 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release 1.X.X - [Unreleased]
+## Release [1.0.2] - April 8, 2016
 
-**SITE IA/ENHANCEMENTS**
+- Added a link to an [archive of v1.0.0](https://design-system-v-1-0-0.herokuapp.com/), so you can access the documentation and downloads for that previous version
+- Generated the [unmanaged package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo) for the 1.0.2 patch release
+- Fixed the application's version number in the Sass configuration
 
-The following site enhancements are now available:
+## Release [1.0.1] - April 8, 2016
 
-
-
-**NEW COMPONENTS AND VARIANTS**
-
-The following components are now available:
-
-
-
-**ADDED**
-
-The following classes are now available:
-
-
+Happy birthday! The Lightning Design System turns 1...
 
 **CHANGES**
 
@@ -37,19 +27,6 @@ The following issues have now been resolved:
 - Fixed a bug in the Tree component that occurred in the scoped version of SLDS and prevented nested branches from being properly indented  - Fixes [design-system/issues/91](https://github.com/salesforce-ux/design-system/issues/91) and [design-system/issues/164](https://github.com/salesforce-ux/design-system/issues/164)
 - Fixed the file naming structure so that standard Sass implementations can watch the entire project and compile the framework correct files on the fly.
 - Fixed a bug where compilation would fail when using Ruby Sass - Fixes [design-system/issues/173](https://github.com/salesforce-ux/design-system/issues/173)
-
-
-
-**DEPRECATED**
-
-The following features are being marked as deprecated in this release and will be removed in three releases:
-
-
-
-**REMOVED**
-
-The following features are being removed in this release:
-
 
 
 ## Release 1.0.0 - March 2, 2016
@@ -392,4 +369,5 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v1.0.0...HEAD
+[1.0.2]: https://github.com/salesforce-ux/design-system/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.0...v1.0.1

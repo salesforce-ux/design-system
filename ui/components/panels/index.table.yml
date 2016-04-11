@@ -2,7 +2,11 @@ description: This table gives you a quick overview of the unique {{abbreviatedNa
 classes:
   -
     class: panel
-    description: Container for slide out panels
+    description: Initiate panel
+    required: true
+  -
+    class: panel_container
+    description: Container for panels
     required: true
   -
     class: panel__section

@@ -140,7 +140,7 @@
   &__close {
     @include square($square-icon-large-boundary);
     position: absolute;
-    top: -$square-icon-large-boundary;
+    top: ($square-icon-large-boundary * -1);
     right: ((($square-icon-large-boundary - $square-icon-large-content) / 2) * -1);
   }
 }

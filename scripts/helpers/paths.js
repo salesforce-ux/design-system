@@ -36,6 +36,7 @@ const paths = {
 
   dist: path.resolve(root, '.dist'),
   npm: path.resolve(root, '.npm'),
+  build: path.resolve(root, '.build'),
   generated: path.resolve(root, '.generated'),
   tmp: path.resolve(root, '.tmp'),
   test: path.resolve(root, '.test'),

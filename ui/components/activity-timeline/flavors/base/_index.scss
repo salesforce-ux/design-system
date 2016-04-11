@@ -20,6 +20,7 @@
 
 .#{$css-prefix}timeline__title {
   position: relative;
+  size: $font-size-medium-a;
 
   &-content {
     position: relative;
@@ -38,16 +39,12 @@
     content: ' ';
     z-index: 1;
   }
-
-  .#{$css-prefix}plus-more {
-    width: 4.5rem;
-  }
 }
 
 .#{$css-prefix}timeline {
 
   &__icon {
-    margin-top: -$spacing-small;
+    margin-top: ($spacing-small * -1);
     border: $border-width-thick solid #fff {
       top-width: $spacing-small;
       bottom-width: $spacing-small;

@@ -10,9 +10,45 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import PageBody from 'app_modules/site/components/page/body';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-  <PageBody anchorTitle="Native">
-  </PageBody>
-);
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let DefaultText = props =>
+  <div className={pf('text-color--default')}>
+    The quick brown fox jumps over the lazy dog.
+  </div>;
+
+let WeakText = props =>
+  <div className={pf('text-color--weak')}>
+    The quick brown fox jumps over the lazy dog.
+  </div>;
+
+let ErrorText = props =>
+  <div className={pf('text-color--error')}>
+    The quick brown fox jumps over the lazy dog.
+  </div>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'text-color-default',
+    label: 'Default',
+    element: <DefaultText />
+  },
+  {
+    id: 'text-color-weak',
+    label: 'Weak',
+    element: <WeakText />
+  },
+  {
+    id: 'text-color-error',
+    label: 'Error',
+    element: <ErrorText />
+  }
+];

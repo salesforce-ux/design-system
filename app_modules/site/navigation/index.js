@@ -99,6 +99,15 @@ export default () => formatNavItem({
         },
         {
           label: 'Markup and Style'
+        },
+        {
+          label: 'Native',
+          children: [
+            {
+              id: 'ios',
+              label: 'iOS',
+            }
+          ]
         }
       ]
     },
@@ -153,15 +162,6 @@ export default () => formatNavItem({
     },
     {
       label: 'Voice and Tone'
-    },
-    {
-      label: 'Native',
-      children: [
-        {
-          id: 'ios',
-          label: 'iOS',
-        }
-      ]
     },
     {
       label: 'Resources',

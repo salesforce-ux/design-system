@@ -1,6 +1,8 @@
 # Documentation:
 # https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 
+plugin_directories: ['.scss-linters']
+
 scss_files: '{ui,site/assets/styles}/**/*.scss'
 exclude:
   - node_modules
@@ -126,3 +128,6 @@ linters:
     enabled: true
   ZeroUnit:
     enabled: true
+  DisallowLastParentSelector:
+    enabled: true
+    severity: error

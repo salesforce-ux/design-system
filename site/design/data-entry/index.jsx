@@ -129,6 +129,14 @@ export default (
         </div>
       </div>
 
+      {/* Inline Edit */}
+      <h2 className={pf('site-text-heading--medium')}>Inline Edit</h2>
+      <p>Inline editing allows the user to edit some part of a record without making a major switch between viewing and editing. This is a highly efficient method of updating a record. A user can make their changes without losing context and they can immediately return to what they were doing before.</p>
+      <p>A field that can be edited inline will have a pencil icon next to it. The user can either double click on the field value or click on the pencil icon to activate inline edit.</p>
+      <figure className={pf('grow')}>
+        <Img className={pf('image')} src="/assets/images/data-entry/img-inline-edit.svg" alt="" />
+      </figure>
+
     </div>
   </PageBody>
 );

@@ -20,35 +20,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 //////////////////////////////////////////////
 
-// Object Switcher
-const objectSwitcher = (
-  <Menu className={pf('dropdown--right')}>
-    <MenuList>
-      <MenuItem>
-        <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Accounts
-      </MenuItem>
-      <MenuItem>
-        <SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Cases
-      </MenuItem>
-      <MenuItem>
-        <SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Work Order
-      </MenuItem>
-      <MenuItem>
-        <SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Insights
-      </MenuItem>
-    </MenuList>
-  </Menu>);
-
-// Context Item Dropdown
-const contextDropdown = (
-  <Menu className={pf('dropdown--left')}>
-    <MenuList>
-      <MenuItem>Refresh Tab</MenuItem>
-      <MenuItem>Pin Tab</MenuItem>
-      <MenuItem>Close Tab</MenuItem>
-    </MenuList>
-  </Menu>);
-
 // Entity Add Dropdown
 const entityAddDropdown = (
   <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '267px', top: '44px' }}>
@@ -65,16 +36,22 @@ const entityAddDropdown = (
 
 // Context Tab
 let ContextTab = props =>
-  <li className={pf('context-bar__item context-bar__tab')} role="presentation">
-    <a href="#void" className={pf('context-bar__item-action context-bar__item-action--hover context-bar__tab-action')} role="tab" title={ props.title || 'tab name'}>{ props.title || 'tab name'}</a>
-    <div className={className(pf('context-bar__action-area dropdown-trigger dropdown-trigger--hover'), props.contextDropdownActive ? pf('is-open dropdown-trigger--click') : null)} tabIndex="0">
+  <li className={className(pf('context-bar__item context-bar__tab-item'), props.className)} role="presentation">
+    <a href="#void" className={pf('context-bar__item-action context-bar__tab-item-action')} role="tab" title={ props.title || 'tab name'} tabIndex={ props.tabIndex || '-1' }>{ props.title || 'tab name'}</a>
+    <div className={className(pf('context-bar__action-area context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover'), props.contextDropdownActive ? pf('is-open') : null)}>
       <button aria-haspopup="true" className={pf('context-bar__tab-menu-trigger button button--icon button--icon-xx-small')}>
         <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
         <span className={pf('assistive-text')}>Assistive text for submenu</span>
       </button>
-      { contextDropdown }
+      <Menu className={pf('dropdown--left')}>
+        <MenuList>
+          <MenuItem>Refresh Tab</MenuItem>
+          <MenuItem>Pin Tab</MenuItem>
+          <MenuItem>Close Tab</MenuItem>
+        </MenuList>
+      </Menu>
     </div>
-    <div className={pf('context-bar__action-area context-bar__action-area--right')} tabIndex="0">
+    <div className={pf('context-bar__action-area context-bar__action-area--right')}>
       <button className={pf('context-bar__tab-close button button--icon')}>
         <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="close" />
         <span className={pf('assistive-text')}>Close Tab</span>
@@ -109,7 +86,7 @@ export let Default = props =>
       </div>
 
       {/* Object Context */}
-      <div className={pf('context-bar__item context-bar__object-name col--bump-left')}>
+      <div className={pf('context-bar__item context-bar__item--hover context-bar__object-name col--bump-left')}>
         <div className={pf('context-bar__vertical-divider')}></div>
         <a href="#void" title="Context" className={pf('context-bar__item-action context-bar__item-action--hover truncate')}>
           <span className={pf('truncate')}>Accounts</span>
@@ -117,17 +94,24 @@ export let Default = props =>
       </div>
 
       {/* Object Context Switcher */}
-      <div className={className(pf('context-bar__item context-bar__object-switcher dropdown-trigger dropdown-trigger--hover'), props.objectSwitcherActive ? pf('is-open dropdown-trigger--click') : null)}>
+      <div className={pf('context-bar__item context-bar__item--hover context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
         {/*<div className={pf('context-bar__vertical-divider')}></div>*/}
         <button aria-haspopup="true" className={pf('context-bar__item-action context-bar__item-action--hover context-bar__item-action--button button button--icon')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
           <span className={pf('assistive-text')}>Assistive text for submenu</span>
         </button>
-        { props.objectSwitcherActive ? objectSwitcher : null }
+        <Menu className={pf('dropdown--right')}>
+          <MenuList>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Accounts</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Cases</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Work Order</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Insights</MenuItem>
+          </MenuList>
+        </Menu>
       </div>
 
       {/* Entity Add */}
-      <div className={className(pf('context-bar__item context-bar__object-switcher dropdown-trigger dropdown-trigger--hover'), props.objectSwitcherActive ? pf('is-open dropdown-trigger--click') : null)}>
+      <div className={className(pf('context-bar__item context-bar__item--hover context-bar__object-switcher dropdown-trigger dropdown-trigger--click'), props.objectSwitcherActive ? pf('is-open') : null)}>
         <div className={pf('context-bar__vertical-divider')}></div>
         <button aria-haspopup="true" className={pf('context-bar__item-action context-bar__item-action--hover context-bar__item-action--button button button--icon')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="add" />
@@ -139,24 +123,20 @@ export let Default = props =>
     {/* End Primary */}
 
     {/* Secondary Section */}
-    <nav className={pf('context-bar__secondary')} role="navigation">
+    <div className={pf('context-bar__secondary')}>
       <div className={pf('context-bar__vertical-divider')}></div>
-
-      <ul className={pf('grid')}>
-
+      <ul className={pf('grid')} role="tablist">
         <ContextTab title="Home" />
         <ContextTab title="Acme Inc." />
-        <ContextTab title="Global Media" />
-
       </ul>
-    </nav>
+    </div>
     {/* End Secondary Section */}
 
     {/* Tertiary Section */}
     <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
-        <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__item-action context-bar__item-action--hover')} href="#void">Actions</a>
+        <li className={pf('context-bar__item context-bar__item--hover')}>
+          <a className={pf('context-bar__item-action')} href="#void">Actions</a>
         </li>
       </ul>
     </div>
@@ -173,11 +153,6 @@ export let states = [
     id: 'context-bar',
     label: 'Default',
     element: <Default className={pf('context-bar--theme-service')} />
-  },
-  {
-    id: 'context-bar-object-switcher',
-    label: 'Object Switcher Active',
-    element: <Default className={pf('context-bar--theme-service')} objectSwitcherActive />
   },
   {
     id: 'context-bar-custom-entity',

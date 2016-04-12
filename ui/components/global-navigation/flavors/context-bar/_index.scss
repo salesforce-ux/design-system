@@ -7,18 +7,32 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$context-bar-theme-service: #7f32bb;
-$context-bar-theme-sales: #1e71ce;
-$context-bar-theme-marketing: #d04525;
-$context-bar-theme-analytics: #137e66;
-$context-bar-theme-community: #a60a52;
+// Context Bar
+$color-text-context-bar: $color-text-inverse !default;
+$color-context-bar-alt: #fff !default;
+$color-context-bar-shadow: #000 !default;
+$color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
+$color-background-context-bar-action-highlight: rgba($color-context-bar-alt, 0.2) !default;
+$color-text-context-bar-action-trigger: rgba($color-context-bar-alt, 0.4) !default;
+
+$height-context-bar: 2.25rem !default;
+$color-background-context-bar: $color-background-alt-inverse !default;
+$color-background-context-bar-theme-service: #7f32bb;
+$color-background-context-bar-theme-sales: #1e71ce;
+$color-background-context-bar-theme-marketing: #d04525;
+$color-background-context-bar-theme-analytics: #137e66;
+$color-background-context-bar-theme-community: #a60a52;
 $color-background-context-bar-shadow: rgba(#000, 0.15);
-$color-border-context-bar-item: rgba(#000, 0.2);
 $color-background-context-bar-item-hover: rgba(#000, 0.2);
 $color-background-context-bar-item-active: rgba(#000, 0.4);
 $color-background-context-bar-item-selected: rgba(#000, 0.4);
-$color-icon-context-nav: $color-text-context-nav-trigger;
-$color-icon-border-context-nav: $color-text-context-nav-trigger;
+$color-border-context-bar-item: rgba(#000, 0.2);
+$color-icon-context-nav: $color-text-context-bar-action-trigger;
+$color-icon-border-context-nav: $color-text-context-bar-action-trigger;
+
+
+
+
 
 .#{$css-prefix}context-bar {
   display: flex;
@@ -36,7 +50,6 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
 
   &__primary {
     min-width: $size-small;
-    // max-width: $size-large;
   }
 
   &__shadow {
@@ -72,6 +85,20 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
     position: relative;
   }
 
+  // Tells user the tab item is active and/or has focus inside the tab item
+  //
+  // [1] Highlight the primary action
+  &__item--active {
+    // background-color: $color-background-context-bar-item-active;
+
+    // [1]
+    .#{$css-prefix}context-bar__item-action--hover,
+    .#{$css-prefix}context-bar__item-action--hover:focus,
+    .#{$css-prefix}context-bar__item-action--hover:hover {
+      background-color: $color-background-context-bar-item-active;
+    }
+  }
+
   &__item-action {
     display: flex;
     align-content: center;
@@ -99,34 +126,20 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
     }
   }
 
-  &__item-action--hover {
+  &__item--hover {
 
-    &:hover, // [1]
-    &:focus { // [2]
+    &:hover {
       outline: 0;
       background-color: $color-background-context-bar-item-hover;
       box-shadow: none;
       border-radius: 0;
       text-decoration: none;
+      cursor: pointer;
     }
+  }
 
-    // Add a hoverable zone below the action so that the dropdown doesn't
-    // disappear when the mouse is between the action and the dropdown
-    &:hover:before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      width: 100%;
-
-      // A nubbin is a rotated square where sides have a length
-      // of $square-tooltip-nubbin.
-      // The height of the nubbin is half the square's diagonal.
-      // height: ((1 / 2) * ($square-tooltip-nubbin * sqrt(2)));
-      //
-      // Sass doesn't have advanced math functions so this is as
-      // close as it gets to calculating it:
-      height: $square-tooltip-nubbin * 0.707;
-    }
+  &__item-action--expand {
+    padding-right: $spacing-large;
   }
 
   &__item-action--button {
@@ -145,10 +158,10 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
   position: absolute;
   display: flex;
   align-items: center;
-  left: $spacing-x-small;
+  left: 0;
   bottom: 0;
   top: 0;
-  // color: $color-text-context-nav-trigger;
+  padding: 0 $spacing-x-small;
 
   .#{$css-prefix}button--icon {
     color: $color-icon-context-nav;
@@ -177,20 +190,48 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
 
   &--right {
     left: auto;
-    right: $spacing-x-small;
+    right: 0;
+  }
+}
+
+.#{$css-prefix}context-bar__dropdown-trigger {
+
+  // Add a hoverable zone below the action so that the dropdown doesn't
+  // disappear when the mouse is between the action and the dropdown
+  &:hover:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    // A nubbin is a rotated square where sides have a length
+    // of $square-tooltip-nubbin.
+    // The height of the nubbin is half the square's diagonal.
+    // height: ((1 / 2) * ($square-tooltip-nubbin * sqrt(2)));
+    //
+    // Sass doesn't have advanced math functions so this is as
+    // close as it gets to calculating it:
+    height: $square-tooltip-nubbin * 0.707;
   }
 }
 
 
 /// Tabs
-.#{$css-prefix}context-bar__tab {
+.#{$css-prefix}context-bar__tab-item {
   width: $size-x-small;
   border-right: $border-width-thin solid $color-border-context-bar-item;
+
+  &:hover {
+    background-color: $color-background-context-bar-item-hover;
+  }
 }
 
-.#{$css-prefix}context-bar__tab-action {
+.#{$css-prefix}context-bar__tab-item-action {
   padding: 0 $spacing-x-large;
 }
+
+
+
 
 //// @todo - not sure about this naming
 // Deals with specific interactions
@@ -231,23 +272,23 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
 //
 // Service
 .#{$css-prefix}context-bar--theme-service {
-  background: $context-bar-theme-service;
+  background: $color-background-context-bar-theme-service;
 }
 // Sales
 .#{$css-prefix}context-bar--theme-sales {
-  background: $context-bar-theme-sales;
+  background: $color-background-context-bar-theme-sales;
 }
 // Marketing
 .#{$css-prefix}context-bar--theme-marketing {
-  background: $context-bar-theme-marketing;
+  background: $color-background-context-bar-theme-marketing;
 }
 // Analytics
 .#{$css-prefix}context-bar--theme-analytics {
-  background: $context-bar-theme-analytics;
+  background: $color-background-context-bar-theme-analytics;
 }
 // Community
 .#{$css-prefix}context-bar--theme-community {
-  background: $context-bar-theme-community;
+  background: $color-background-context-bar-theme-community;
 }
 
 
@@ -303,7 +344,7 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
       outline: 0;
       border-radius: 0;
       box-shadow: none;
-      background-color: $color-background-context-bar-highlight;
+      background-color: $color-background-context-bar-action-highlight;
     }
   }
 
@@ -319,7 +360,7 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
     }
 
     &.#{$css-prefix}is-selected {
-      background-color: $color-background-context-bar-highlight;
+      background-color: $color-background-context-bar-action-highlight;
     }
 
     // Dividers can be used as borders around a label:
@@ -342,7 +383,7 @@ $color-icon-border-context-nav: $color-text-context-nav-trigger;
     // Color of the arrow icon
     &,
     &:focus {
-      color: $color-text-context-nav-trigger;
+      color: $color-icon-context-nav;
     }
   }
 

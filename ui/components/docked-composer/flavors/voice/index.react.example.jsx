@@ -14,7 +14,6 @@ import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -47,7 +46,7 @@ const RecordIcon = (
 
 const UserImage = (
   <span className={pf('avatar avatar--medium')}>
-    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+    <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 
@@ -116,7 +115,7 @@ let StateA = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -141,7 +140,7 @@ let StateB = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -199,7 +198,7 @@ let StateD = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -221,7 +220,7 @@ let StateE = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -249,7 +248,7 @@ let StateF = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -277,7 +276,7 @@ let StateG = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
@@ -337,7 +336,7 @@ let StateI = props =>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>

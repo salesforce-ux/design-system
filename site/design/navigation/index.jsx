@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
@@ -22,7 +21,7 @@ export default (
       <h2 className="site-text-heading--large">Tabs</h2>
       <p><strong>Use tabs to separate information into logical sections based on functionality or use case.</strong></p>
       <p>
-      <Img className="image" src="/assets/images/navigation/img-tabs.svg" alt="Wireframe image of tabs design" />
+      <img className="image" src="/assets/images/navigation/img-tabs.svg" alt="Wireframe image of tabs design" />
       </p>
       <p>Users can easily switch between tabs to perform tasks without leaving the page. Assign a default tab based on the most important use case for the page. The sections that the tabs define function independently of each other, so do not use tabs to define a linear, ordered process.</p>
       <p>Tab names must be consistent—use the same part of speech for each tab, such as a noun or verb.</p>
@@ -35,7 +34,7 @@ export default (
           <p>A global tab changes all of the content below it. For example, the Activity, Collaboration, and Details tabs change all of the content within the left column on an Opportunity.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/navigation/img-tabs-global.svg" alt="Wireframe image of tabs design" />
+          <img className={pf('image')} src="/assets/images/navigation/img-tabs-global.svg" alt="Wireframe image of tabs design" />
         </figure>
       </div>
 
@@ -46,7 +45,7 @@ export default (
           <p>A scoped tab affects only the content within the visual container that it sits on top of. For example, the publisher tabs change just the form for the activity timeline, but nothing changes in the feed below. This is useful when one wants to stack several tabbed sections.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/navigation/img-tabs-scoped.svg" alt="Wireframe image of tabs design" />
+          <img className={pf('image')} src="/assets/images/navigation/img-tabs-scoped.svg" alt="Wireframe image of tabs design" />
         </figure>
       </div>
 
@@ -57,7 +56,7 @@ export default (
           <p>Although not ideal, you might occasionally need to nest tabs. You can nest scoped tabs within a global tab set, but do not nest global tabs. If additional hierarchy is necessary, consider using a tree component.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/navigation/img-tabs-nesting.svg" alt="Wireframe image of tabs design" />
+          <img className={pf('image')} src="/assets/images/navigation/img-tabs-nesting.svg" alt="Wireframe image of tabs design" />
         </figure>
       </div>
 
@@ -72,7 +71,7 @@ export default (
           <p>Every item in the list doesn’t have to have a corresponding page. Instead, you can use label groups to organize related pages without providing an unnecessary landing page.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/navigation/img-tree.svg" alt="Wireframe image of tabs design" />
+          <img className={pf('image')} src="/assets/images/navigation/img-tree.svg" alt="Wireframe image of tabs design" />
         </figure>
       </div>
 
@@ -80,10 +79,10 @@ export default (
       <div className={pf('m-bottom--x-large')}>
         <h2 className="site-text-heading--large">Breadcrumbs</h2>
         <p><strong>Breadcrumbs help users navigate back up a hierarchy of pages.</strong></p>
-        <Img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs.svg" alt="Wireframe image of tabs design" />
+        <img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs.svg" alt="Wireframe image of tabs design" />
         <p>A breadcrumb indicates the hierarchy path (parent­-child relationships) of the page a user is on, rather than the order of the user’s browsing history. Breadcrumbs are especially useful when a user links directly to a page that is nested in a hierarchy but needs to go to a parent page. They also helps users situate themselves in the application.</p>
         <p>Breadcrumbs are commonly used in conjunction with a tree for navigating between nested pages. The full hierarchy path is listed on a second or third level page. When the user is on a page deeper than three levels, the breadcrumb displays only the last two links. The rest of the hierarchy path is truncated, as shown in the following figure.</p>
-        <Img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs-truncate.svg" alt="Wireframe image of tabs design" />
+        <img className={pf('image')} src="/assets/images/navigation/img-breadcrumbs-truncate.svg" alt="Wireframe image of tabs design" />
       </div>
 
       {/* Diagram */}
@@ -97,7 +96,7 @@ export default (
         <div className={pf('site-diagram-section-list grid grid--vertical m-bottom--x-large')}>
           <p className={pf('site-diagram-section-top order--2 large-order--1')}><strong>Header</strong> — Includes the title and an optional tagline. The title reflects the button text that triggered it. The tagline can contain links, or the entire tagline can be a link.</p>
           <figure className={pf('large-size--1-of-2 order--1 large-order--2')}>
-            <Img className={pf('image')} src="/assets/images/navigation/img-modal-sections.svg" alt="Wireframe image of tabs design" />
+            <img className={pf('image')} src="/assets/images/navigation/img-modal-sections.svg" alt="Wireframe image of tabs design" />
           </figure>
           <p className={pf('site-diagram-section-middle large-size--1-of-2 order--2 large-order--3')}><strong>Body</strong> — You can have any type of content: forms, text, videos, and other media. For a directional modal, you can add a step indicator to indicate the user’s progress.</p>
           <p className={pf('site-diagram-section-bottom order--2 large-order--3')}><strong>Footer</strong> — Contains the navigational and action buttons. Action buttons, such as Save, Close, Delete, are on the right. Place the primary button—the one that guides the user toward the default action on the far right. For a directional modal, like a wizard, place the Next and Back navigation buttons on the opposite sides (left for Back and right for Next).</p>
@@ -112,7 +111,7 @@ export default (
           <p>The height of a modal is determined primarily by the length of its contents. The maximum height of the modal container is determined by its exterior margin. If the content is longer than the length of the modal, allow the user to scroll within the modal. The header and footer are fixed.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/navigation/img-modal-width.svg" alt="Wireframe image of tabs design" />
+          <img className={pf('image')} src="/assets/images/navigation/img-modal-width.svg" alt="Wireframe image of tabs design" />
         </figure>
       </div>
     </div>

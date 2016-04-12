@@ -5,6 +5,10 @@
   background: $color-background;
   box-shadow: $elevation-shadow-1;
 
+  @at-root .zen .zen-moreTabs ul {
+    z-index: $z-index-default + 2;
+  }
+
   // Alerts
   .alert {
     margin: $spacing-x-small $spacing-none;
@@ -50,7 +54,19 @@
     }
 
     .circle {
-      display: none;
+      margin: ($size-3x-small - $square-icon-utility-large) / 2 {
+        left: $spacing-none;
+      }
+      border-radius: $border-radius-medium;
+      padding: ($square-icon-utility-large - $font-size-medium) / 2;
+      height: $square-icon-utility-large;
+      width: $square-icon-utility-large;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-reset;
+      text-align: center;
+      background-color: $color-background-success;
+      color: $color-text-icon-inverse;
     }
   }
 }

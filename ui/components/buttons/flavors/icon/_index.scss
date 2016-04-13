@@ -39,6 +39,10 @@
   @include button-base;
 }
 
+.#{$css-prefix}button--icon-inverse-border {
+  border: $border-width-thin solid $color-border-button-default;
+}
+
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
@@ -134,6 +138,16 @@
   }
 }
 
+.#{$css-prefix}button--icon-xx-small {
+  @include square($square-icon-xx-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .#{$css-prefix}button__icon {
+    @include square($square-icon-x-small-content);
+  }
+}
+
 // Sizing for icon that sits inside button--icon
 .#{$css-prefix}button__icon { // This is the icon inside the button--icon button
   @include square($square-icon-medium-content-alt);
@@ -157,14 +171,34 @@
   fill: $color-text-icon-default-hint;
 }
 
+.#{$css-prefix}button__icon--inverse-hint {
+  fill: $color-text-icon-inverse-hint;
+}
+
 // Hint parent should be applied to the parent of the button
 .#{$css-prefix}hint-parent {
+
+  .#{$css-prefix}button--icon-inverse-border {
+    border-color: $color-border-icon-inverse-hint;
+
+    &:focus {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+  }
 
   &:hover,
   &:focus {
 
+    .#{$css-prefix}button--icon-inverse-border {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+
     .#{$css-prefix}button__icon--hint {
       fill: $color-text-icon-default;
+    }
+
+    .#{$css-prefix}button__icon--inverse-hint {
+      fill: $color-text-icon-inverse-hint-hover;
     }
   }
 }

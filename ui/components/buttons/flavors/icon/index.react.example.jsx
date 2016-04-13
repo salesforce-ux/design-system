@@ -82,6 +82,13 @@ let ContainerBorderXSmall = props =>
     </Button>
   </Demo>;
 
+let ContainerBorderXxSmall = props =>
+  <Demo style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+    <Button className={pf('button--icon-border button--icon-xx-small')} assistiveText="More Options">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+    </Button>
+  </Demo>;
+
 let IconXSmall = props =>
   <Demo>
     <Button className={pf('button--icon')} assistiveText="More Options">
@@ -141,6 +148,15 @@ let IconHint = props =>
     </div>
   </Demo>;
 
+let IconHintInverse = props =>
+  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+    <div className={pf('hint-parent')}>
+      <Button className={pf('button--icon-inverse button--icon-inverse-border button--icon-x-small')} assistiveText="More Options">
+        <SvgIcon className={pf('button__icon button__icon--inverse-hint')} sprite="utility" symbol="down" />
+      </Button>
+    </div>
+  </Demo>;
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -187,6 +203,11 @@ export let states = [
     element: <ContainerBorderXSmall />
   },
   {
+    id: 'button-icon-border-xx-small',
+    label: 'Container xx-small',
+    element: <ContainerBorderXxSmall />
+  },
+  {
     id: 'button-icon-size-large',
     label: 'Icon size large',
     element: <IconLarge />
@@ -215,5 +236,10 @@ export let states = [
     id: 'button-icon-hint',
     label: 'Icon with hint hover',
     element: <IconHint />
+  },
+  {
+    id: 'button-icon-hint-inverse',
+    label: 'Icon with inverse hint hover',
+    element: <IconHintInverse />
   }
 ];

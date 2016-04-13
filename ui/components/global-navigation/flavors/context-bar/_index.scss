@@ -52,6 +52,7 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
     min-width: $size-small;
   }
 
+  // Crispy drop shadow
   &__shadow {
     position: absolute;
     top: 100%;
@@ -61,72 +62,20 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
     background: linear-gradient(to bottom, rgba($color-context-bar-shadow, 0.25) 0, rgba($color-context-bar-shadow, 0) 100%);
   }
 
+  // Manually add a divider between items
   &__vertical-divider {
     width: 0;
     overflow: hidden;
     border-left: $border-width-thin solid $color-border-context-bar-item;
   }
 
-  &__app-switcher {
-    color: $color-text-icon-inverse;
-    padding-left: $spacing-medium;
-
-    &:hover,
-    &:focus {
-      color: $color-text-context-bar-highlight;
-    }
-  }
-
+  // Any item on the horizontal axis of the context nav bar
   &__item {
     display: flex;
     align-content: center;
     align-items: stretch;
     white-space: nowrap;
     position: relative;
-  }
-
-  // Tells user the tab item is active and/or has focus inside the tab item
-  //
-  // [1] Highlight the primary action
-  &__item--active {
-    // background-color: $color-background-context-bar-item-active;
-
-    // [1]
-    .#{$css-prefix}context-bar__item-action--hover,
-    .#{$css-prefix}context-bar__item-action--hover:focus,
-    .#{$css-prefix}context-bar__item-action--hover:hover {
-      background-color: $color-background-context-bar-item-active;
-    }
-  }
-
-  &__item-action {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-grow: 1;
-    color: inherit;
-    padding: 0 $spacing-small;
-    width: 100%;
-
-    &:focus {
-      outline: 0;
-      text-decoration: underline;
-    }
-    &:hover,
-    &:focus:hover {
-      text-decoration: none;
-    }
-    &:hover,
-    &:focus {
-      color: $color-text-context-bar;
-    }
-    &:active {
-      color: $color-text-context-bar;
-      text-decoration: none;
-    }
-  }
-
-  &__item--hover {
 
     &:hover {
       outline: 0;
@@ -138,62 +87,85 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
     }
   }
 
-  &__item-action--expand {
-    padding-right: $spacing-large;
-  }
-
-  &__item-action--button {
+  // Actionable Text Links
+  &__item-action {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: inherit;
     padding: 0 $spacing-x-small;
-    border-radius: 0;
-  }
+    width: 100%;
 
-  &__item-action--icon {
-    color: $color-icon-context-nav;
-  }
-}
+    &:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
 
+    &:hover,
+    &:focus:hover {
+      text-decoration: none;
+    }
 
-/// Action Area
-.#{$css-prefix}context-bar__action-area {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  padding: 0 $spacing-x-small;
-
-  .#{$css-prefix}button--icon {
-    color: $color-icon-context-nav;
-    box-shadow: none;
-  }
-
-  &:hover,
-  &:focus {
-    outline: 0;
-
-    // Deal with icons
-    .#{$css-prefix}button--icon {
+    &:hover,
+    &:focus {
       color: $color-text-context-bar;
     }
 
-    // Deal with semantic interactions
-    .#{$css-prefix}context-bar__tab-close {
-      background-color: #fff;
-      color: $color-background-context-bar-item-active; // Need new token
-    }
-
-    .#{$css-prefix}context-bar__tab-menu-trigger {
-      border-color: #fff;
+    &:active {
+      color: $color-text-context-bar;
+      text-decoration: none;
     }
   }
 
-  &--right {
-    left: auto;
-    right: 0;
+  // Actionable Icons
+  &__icon-action {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0 $spacing-x-small;
+    color: $color-text-context-bar;
+
+    &:focus {
+      outline: 0;
+    }
+    &:hover,
+    &:focus {
+      color: $color-text-context-bar;
+    }
+    &:active {
+      color: $color-text-context-bar;
+    }
   }
 }
 
+// App switcher specifics
+.#{$css-prefix}context-bar__app-switcher {
+  color: $color-text-icon-inverse;
+  padding-left: $spacing-medium;
+
+  &:hover,
+  &:focus {
+    color: $color-text-context-bar-highlight;
+  }
+}
+
+// app-name: text is highlighted on hover / focus
+.#{$css-prefix}context-bar__app-name {
+  color: inherit;
+  padding: 0 $spacing-large 0 0;
+  font-size: 18px; // @todo tokenize
+  font-weight: 300; // @todo tokenize
+  max-width: $size-small;
+  line-height: 1.25;
+}
+
+.#{$css-prefix}context-bar__object-switcher {
+  min-width: 144px; // @todo tokenize
+  max-width: $size-x-small;
+}
+
+// Context Bar dropdown trigger specifics
 .#{$css-prefix}context-bar__dropdown-trigger {
 
   // Add a hoverable zone below the action so that the dropdown doesn't
@@ -215,57 +187,10 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   }
 }
 
-
-/// Tabs
+// Tabs
 .#{$css-prefix}context-bar__tab-item {
   width: $size-x-small;
   border-right: $border-width-thin solid $color-border-context-bar-item;
-
-  &:hover {
-    background-color: $color-background-context-bar-item-hover;
-  }
-}
-
-.#{$css-prefix}context-bar__tab-item-action {
-  padding: 0 $spacing-x-large;
-}
-
-
-
-
-//// @todo - not sure about this naming
-// Deals with specific interactions
-.#{$css-prefix}context-bar__tab-menu-trigger {
-  border: $border-width-thin solid $color-icon-border-context-nav;
-  width: 14px;
-  height: 14px;
-  border-radius: $border-radius-small;
-}
-
-.#{$css-prefix}context-bar__tab-close {
-  border-radius: $border-radius-circle;
-}
-
-
-
-
-// app-name: text is highlighted on hover / focus
-.#{$css-prefix}context-bar__app-name {
-  color: inherit;
-  padding: 0 $spacing-large 0 0;
-  font-size: 18px; // @todo tokenize
-  font-weight: 300; // @todo tokenize
-  max-width: $size-small;
-  line-height: 1.25;
-}
-
-.#{$css-prefix}context-bar__app-name-action {
-  padding-right: $spacing-large;
-}
-
-.#{$css-prefix}context-bar__object-name {
-  min-width: 144px; // @todo tokenize
-  max-width: $size-x-small;
 }
 
 // Themes
@@ -289,106 +214,4 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
 // Community
 .#{$css-prefix}context-bar--theme-community {
   background: $color-background-context-bar-theme-community;
-}
-
-
-///// OLD
-
-
-
-// Mouse/Keyboard interaction
-// 1. The whole block is hoverable
-// 2. The link is focusable and clickable
-// 3. The sub menu trigger is a discrete actionable button
-// 4. The sub menu trigger can't be clicked (only actionable via keyboard)
-.#{$css-prefix}context-bar-action {
-  // Needed to absolutely position the trigger
-  position: relative;
-
-  // Hovering an action adjacent to a selected action
-  // blends the backgrounds together and creates
-  // a 1px contrasted separation in between the two actions
-  margin-left: (-1 * $border-width-thin);
-
-  // Override the trigger's display value
-  // https://github.com/salesforce-ux/design-system-internal/pull/386
-  &.#{$css-prefix}context-bar-action {
-    display: flex;
-  }
-
-  // Add a hoverable zone below the action so that the dropdown doesn't
-  // disappear when the mouse is between the action and the dropdown
-  &:hover:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    width: 100%;
-
-    // A nubbin is a rotated square where sides have a length
-    // of $square-tooltip-nubbin.
-    // The height of the nubbin is half the square's diagonal.
-    // height: ((1 / 2) * ($square-tooltip-nubbin * sqrt(2)));
-    //
-    // Sass doesn't have advanced math functions so this is as
-    // close as it gets to calculating it:
-    height: $square-tooltip-nubbin * 0.707;
-  }
-
-  // label: background is highlighted on hover / focus
-  &__label,
-  &__trigger {
-    transition: background-color $duration-immediately linear;
-
-    &:hover, // [1]
-    &:focus { // [2]
-      outline: 0;
-      border-radius: 0;
-      box-shadow: none;
-      background-color: $color-background-context-bar-action-highlight;
-    }
-  }
-
-  &__label {
-    padding: {
-      left: calc(#{$spacing-small} + #{$border-width-thin}); // Restore lost 1px on the left
-      right: $spacing-small;
-    }
-
-    // Expand the label at the end to create space for the dropdown trigger (down arrow)
-    &--expand {
-      padding-right: $spacing-large;
-    }
-
-    &.#{$css-prefix}is-selected {
-      background-color: $color-background-context-bar-action-highlight;
-    }
-
-    // Dividers can be used as borders around a label:
-    // We're stretching the box so that the dividers sit on top
-    // of the label's background, blending them together
-    // and making the separation clearer.
-    &--include-dividers {
-      margin-left: (-1 * $border-width-thin);
-      margin-right: (-1 * $border-width-thin);
-    }
-  }
-
-  &__trigger { // [3]
-    position: absolute;
-    right: $spacing-x-small;
-    bottom: 0;
-    top: 0;
-    pointer-events: none; // [4]
-
-    // Color of the arrow icon
-    &,
-    &:focus {
-      color: $color-icon-context-nav;
-    }
-  }
-
-  &__trigger-icon {
-    fill: currentColor;
-    height: 100%; // Force vertical alignment in IE
-  }
 }

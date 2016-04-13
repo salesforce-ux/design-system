@@ -20,17 +20,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 //////////////////////////////////////////////
 
-// Object Switcher
-const objectSwitcher = (
-  <Menu className={pf('dropdown--right')}>
-    <MenuList>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Object 1</MenuItem>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Object 2</MenuItem>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Object 3</MenuItem>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Object 4</MenuItem>
-    </MenuList>
-  </Menu>);
-
 // Context Item Dropdown
 const contextDropdown = (
   <Menu className={pf('dropdown--right')}>
@@ -65,7 +54,7 @@ export let Default = props =>
 
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__app-switcher')}>
-        <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__item-action context-bar__item-action--button button button--icon')}>
+        <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
           <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
         </a>
       </div>
@@ -77,22 +66,26 @@ export let Default = props =>
         </a>
       </div>
 
-      {/* Object Context */}
-      <div className={pf('context-bar__item context-bar__item--hover context-bar__object-name col--bump-left')}>
-        <div className={pf('context-bar__vertical-divider')}></div>
+      {/* Object Context Switcher */}
+      <div className={pf('context-bar__vertical-divider')}></div>
+      <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
         <a href="#void" title="Context" className={pf('context-bar__item-action truncate')}>
           <span className={pf('truncate')}>Object</span>
         </a>
-      </div>
-
-      {/* Object Context Switcher */}
-      <div className={pf('context-bar__item context-bar__item--hover context-bar__object-switcher dropdown-trigger dropdown-trigger--hover')}>
-        {/*<div className={pf('context-bar__vertical-divider')}></div>*/}
-        <button aria-haspopup="true" className={pf('context-bar__item-action context-bar__item-action--button button button--icon')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-          <span className={pf('assistive-text')}>Assistive text for submenu</span>
-        </button>
-        { objectSwitcher }
+        <div className={pf('context-bar__icon-action')}>
+          <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+            <span className={pf('assistive-text')}>Assistive text for submenu</span>
+          </button>
+        </div>
+        <Menu className={pf('dropdown--right')}>
+          <MenuList>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Object 1</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Object 2</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Object 3</MenuItem>
+            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Object 4</MenuItem>
+          </MenuList>
+        </Menu>
       </div>
 
     </div>
@@ -103,24 +96,20 @@ export let Default = props =>
       <div className={pf('context-bar__vertical-divider')}></div>
 
       <ul className={pf('grid')}>
-        <li className={pf('context-bar__item context-bar__item--hover')}>
+        <li className={pf('context-bar__item')}>
           <a href="#void" className={pf('context-bar__item-action')}>Home</a>
         </li>
-        <li className={pf('context-bar__item context-bar__item--hover context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
-          <a href="#void" className={pf('context-bar__item-action context-bar__item-action--expand ')}>Context Menu Item 1</a>
-          <button aria-haspopup="true" className={pf('context-bar__action-area context-bar__action-area--right button button--icon')}>
-            <SvgIcon className={pf('context-bar__item-action--icon button__icon button__icon--small')} sprite="utility" symbol="down" />
-            <span className={pf('assistive-text')}>Assistive text for submenu</span>
-          </button>
-          {/*<div className={pf('context-bar__action-area context-bar__action-area--right')}>
-            <button aria-haspopup="true" className={pf('button button--icon')}>
-              <SvgIcon className={pf('context-bar__item-action--icon button__icon button__icon--small')} sprite="utility" symbol="down" />
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
+          <a href="#void" className={pf('context-bar__item-action')}>Context Menu Item 1</a>
+          <div className={pf('context-bar__icon-action p-left--none')}>
+            <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
+              <SvgIcon className={pf('button__icon button__icon--inverse-hint button__icon--x-small')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
-          </div>*/}
+          </div>
           { contextDropdown }
         </li>
-        <li className={pf('context-bar__item context-bar__item--hover')}>
+        <li className={pf('context-bar__item')}>
           <a href="#void" className={pf('context-bar__item-action')}>Context Menu Item 2</a>
         </li>
       </ul>
@@ -130,7 +119,7 @@ export let Default = props =>
     {/* Tertiary Section */}
     <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
-        <li className={pf('context-bar__item context-bar__item--hover')}>
+        <li className={pf('context-bar__item')}>
           <a className={pf('context-bar__item-action')} href="#void">Actions</a>
         </li>
       </ul>

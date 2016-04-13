@@ -81,6 +81,12 @@ $line-height-salespath: 1.5rem !default;
 
 $color-text-context-bar-highlight: rgba(255, 255, 255, 0.8) !default;
 
+// For context bar
+$square-icon-xx-small-boundary: 1rem;
+$color-text-icon-inverse-hint: rgba(#fff, 0.5);
+$color-text-icon-inverse-hint-hover: rgba(#fff, 0.75);
+$color-border-icon-inverse-hint: rgba(#fff, 0.5);
+$color-border-icon-inverse-hint-hover: rgba(#fff, 0.75);
 
 $force-base-map: map-merge($force-base-map, (
   'spacing-xx-large': $spacing-xx-large,

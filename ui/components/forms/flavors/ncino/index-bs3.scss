@@ -148,7 +148,7 @@
     // fix for slight vertical misalignment of check boxes and radio buttons
     position: relative;
     top: -1px;
-    margin: ($spacing-x-small + $spacing-xxx-small) {
+    margin: $spacing-x-small {
       left: $spacing-none;
     }
     padding: $spacing-none;

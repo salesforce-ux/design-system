@@ -24,7 +24,7 @@ let demoHeight = '32rem';
 let Prompt = props =>
 <div className="demo-only" style={{height: demoHeight}}>
   <Modal isOpen={true} renderInline={true}>
-    <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
+    <div className={pf('modal__menu')}>
       <Button flavor="neutral">Upload from Device</Button>
       <Button flavor="neutral">Select a Salesforce File</Button>
       <Button flavor="neutral">Cancel</Button>
@@ -43,7 +43,7 @@ let PromptWithHeader = props =>
       </h2>
     </Modal.Header>
 
-    <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
+    <div className={pf('modal__menu')}>
       <Button flavor="neutral">Simple</Button>
       <Button flavor="neutral">Advanced</Button>
       <Button flavor="neutral">Partner</Button>
@@ -67,7 +67,7 @@ let PromptWithHeaderAndTagline = props =>
       </p>
     </Modal.Header>
 
-    <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
+    <div className={pf('modal__menu')}>
       <Button flavor="destructive">Delete</Button>
       <Button flavor="neutral">Cancel</Button>
     </div>
@@ -95,7 +95,7 @@ let PromptWithHeaderAndTaglinePlusImage = props =>
       </p>
     </Modal.Header>
 
-    <div className={pf('modal__menu max-small-buttons--stretch x-small-buttons--stacked')}>
+    <div className={pf('modal__menu')}>
       <Button flavor="brand">Rate Salesforce1</Button>
       <Button flavor="neutral">No, thanks</Button>
       <Button flavor="neutral">Remind Me Later</Button>

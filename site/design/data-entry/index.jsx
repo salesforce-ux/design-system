@@ -34,17 +34,17 @@ export default (
       {/* Sizing + Help */}
       <div className={pf('grid wrap nowrap--medium grid--pull-padded-large p-vertical--x-large')}>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Sizing</h2>
+          <h2 className="site-text-heading--medium">Sizing</h2>
           <div>
-              <p>The default text size creates a visual hierarchy between the label text and the input text. To conserve vertical space or when you have a long list of fields in a width­-constrained sidebar, a smaller input size is also available.</p>
-              <p>The input width depends on the label placement. If the label is above the field, the input width is 100% of the container. If the label is on the side, the label width is 33%, and the input width is 67%.</p>
+            <p>The default text size creates a visual hierarchy between the label text and the input text. To conserve vertical space or when you have a long list of fields in a width­-constrained sidebar, a smaller input size is also available.</p>
+            <p>The input width depends on the label placement. If the label is above the field, the input width is 100% of the container. If the label is on the side, the label width is 33%, and the input width is 67%.</p>
           </div>
           <figure className={pf('grow')}>
             <img className={pf('image')} src="/assets/images/data-entry/img-text-input-sizing.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Input Help</h2>
+          <h2 className="site-text-heading--medium">Input Help</h2>
           <div>
             <p>To assist the users, you can add help text. If the explanation is lengthy, use an “info” icon and tooltip. For brief explanations (shorter than a sentence), you can place the text underneath the field.</p>
             <p>You can also use placeholder text to provide an example of the type of input required. For example, in a Name field, show a name in the correct format.</p>
@@ -56,22 +56,22 @@ export default (
       </div>
 
       {/* Complex Input */}
-      <h2 className={pf('site-text-heading--large')}>Complex Text Input</h2>
+      <h2 className="site-text-heading--large">Complex Text Input</h2>
       <p><strong>Complex text inputs provide users with additional assistance in specific types of data entry.</strong></p>
 
       {/* Datepicker + Lookups */}
       <div className={pf('grid wrap nowrap--medium grid--pull-padded-large p-vertical--x-large')}>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Date Pickers</h2>
+          <h2 className="site-text-heading--medium">Date Pickers</h2>
           <div>
-              <p>Instead of forcing the user to manually type a date, a datepicker provides a visual way for the user to browse and select a single date or range of dates.</p>
+            <p>Instead of forcing the user to manually type a date, a datepicker provides a visual way for the user to browse and select a single date or range of dates.</p>
           </div>
           <figure className={pf('grow')}>
             <img className={pf('image')} src="/assets/images/data-entry/img-datepicker.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Lookups</h2>
+          <h2 className="site-text-heading--medium">Lookups</h2>
           <div>
             <p>A lookup allows the user to search a database for records to fill a field. The lookup can either limit the user to a single record or allow for multiple records to populate a single field.</p>
           </div>
@@ -82,22 +82,22 @@ export default (
       </div>
 
       {/* Selection Input */}
-      <h2 className={pf('site-text-heading--large')}>Selection Input</h2>
+      <h2 className="site-text-heading--large">Selection Input</h2>
       <p><strong>Selection inputs allow a user to choose between a limited number of options for a given field.</strong></p>
 
       {/* Checkboxes + Radio */}
       <div className={pf('grid wrap nowrap--medium grid--pull-padded-large p-vertical--x-large')}>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Checkboxes</h2>
+          <h2 className="site-text-heading--medium">Checkboxes</h2>
           <div>
-              <p>Use a single checkbox for Boolean fields in which the user can choose only between true and false or on and off.</p>
+            <p>Use a single checkbox for Boolean fields in which the user can choose only between true and false or on and off.</p>
           </div>
           <figure className={pf('grow')}>
             <img className={pf('image')} src="/assets/images/data-entry/img-checkbox.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Radio Lists</h2>
+          <h2 className="site-text-heading--medium">Radio Lists</h2>
           <div>
             <p>A radio list allows the user to select one option from a short list (fewer than 10 options). You must have enough space to present all options together to make comparison easy. Typically, radio lists are presented as a standalone field, such as a poll within a feed, and not used in a larger form.</p>
           </div>
@@ -110,16 +110,16 @@ export default (
       {/* Picklists */}
       <div className={pf('grid wrap nowrap--medium grid--pull-padded-large p-vertical--x-large')}>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Picklists</h2>
+          <h2 className="site-text-heading--medium">Picklists</h2>
           <div>
-              <p>Picklists, commonly known as dropdown menus, allow the user to select one option or multiple options from a list. Picklists are used instead of radio lists and checkbox lists inside of a larger form. They provide more flexibility in the number of options the user can choose from.</p>
+            <p>Picklists, commonly known as dropdown menus, allow the user to select one option or multiple options from a list. Picklists are used instead of radio lists and checkbox lists inside of a larger form. They provide more flexibility in the number of options the user can choose from.</p>
           </div>
           <figure className={pf('grow')}>
             <img className={pf('image')} src="/assets/images/data-entry/img-picklist.svg" alt="" />
           </figure>
         </div>
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
-          <h2 className={pf('site-text-heading--medium')}>Dueling Picklists</h2>
+          <h2 className="site-text-heading--medium">Dueling Picklists</h2>
           <div>
             <p>Use this control when the user needs to select more than one option and define the order of the selected items.</p>
           </div>
@@ -130,7 +130,7 @@ export default (
       </div>
 
       {/* Inline Edit */}
-      <h2 className={pf('site-text-heading--medium')}>Inline Edit</h2>
+      <h2 className="site-text-heading--medium">Inline Edit</h2>
       <p>Inline editing allows the user to edit some part of a record without making a major switch between viewing and editing. This is a highly efficient method of updating a record. A user can make their changes without losing context and they can immediately return to what they were doing before.</p>
       <p>A field that can be edited inline will have a pencil icon next to it. The user can either double click on the field value or click on the pencil icon to activate inline edit.</p>
       <figure className={pf('grow')}>

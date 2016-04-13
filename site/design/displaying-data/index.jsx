@@ -50,7 +50,7 @@ export default (
           <p>On narrow screens where only a few columns will fit, tree grids should elegantly and responsively collapse into a tree list.</p>
         </div>
         <figure className={pf('size--1-of-1 medium-size--1-of-3 shrink-none')}>
-          <Img className={pf('image')} src="/assets/images/displaying-data/img-tree-grid.svg" alt="" />
+          <img className={pf('image')} src="/assets/images/displaying-data/img-tree-grid.svg" alt="" />
         </figure>
       </div>
 

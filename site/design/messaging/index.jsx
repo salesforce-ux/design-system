@@ -19,8 +19,8 @@ export default (
   <PageBody anchorTitle="Messaging" contentClassName={pf('site-design site-design-layout')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">When the user or system takes action, various messaging patterns are used to show the result or impact.</p>
-      <h2 className={pf('site-text-heading--large')}>Icons</h2>
-      <p>Icons are used in all the various messaging patterns. Follow these guidelines when deciding which icon to use in your messages.</p>
+      <h2 className="site-text-heading--large">Icons</h2>
+      <p>Icons may be used in messaging components. Follow these guidelines when deciding which icon to use in your messages.</p>
       <div className={pf('scrollable--x m-bottom--xx-large')}>
         <table className={pf('table max-medium-table--stacked no-row-hover')}>
           <thead>
@@ -37,7 +37,7 @@ export default (
                 </span>
                 Success
               </th>
-              <td data-label="When to Use">Action completed successfully.</td>
+              <td data-label="When to Use">Action was completed successfully.</td>
             </tr>
             <tr>
               <th scope="row" data-label="Icon">
@@ -46,7 +46,7 @@ export default (
                 </span>
                 Warning
               </th>
-              <td data-label="When to Use">Something undersirable might occur.</td>
+              <td data-label="When to Use">Something undesirable might occur.</td>
             </tr>
             <tr>
               <th scope="row" data-label="Icon">
@@ -64,7 +64,7 @@ export default (
                 </span>
                 Wrench
               </th>
-              <td data-label="When to Use">A message about maintenance</td>
+              <td data-label="When to Use">Maintenance - or admin - related message.</td>
             </tr>
             <tr>
               <th scope="row" data-label="Icon">
@@ -73,7 +73,7 @@ export default (
                 </span>
                 Offline
               </th>
-              <td data-label="When to Use">Something happened as a result of being offline. </td>
+              <td data-label="When to Use">Offline mode.</td>
             </tr>
             <tr>
               <th scope="row" data-label="Icon">
@@ -82,7 +82,7 @@ export default (
                 </span>
                 Info
               </th>
-              <td data-label="When to Use">Indicates additional information - either positive or negative - is available.</td>
+              <td data-label="When to Use">Additional information &mdash; either positive or negative &mdash; is available.</td>
             </tr>
           </tbody>
         </table>
@@ -90,19 +90,24 @@ export default (
 
       {/* Toasts */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>Toast Messages</h2>
-        <p><strong>Use a toast when you have important, high-level information to communicate about a recently attempted or completed action.</strong></p>
-        <p>A toast is a dismissable message used to communicate a successful process, an unsuccessful process, or a warning.</p>
+        <h2 className="site-text-heading--large">Toasts</h2>
+        <p><strong>Use a toast as a feedback mechanism to communicate important, high-level information after the user takes an action.</strong></p>
+        <p>Use a toast to communicate a successful process, an unsuccessful process, or a warning.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toasts.svg" alt="" />
         </figure>
-        <p>You can show a toast at the top of a page or modal, depending on where the user lands after attempting the action. For example, if a user successfully saves edits made to a record in a modal, the modal closes, and the toast appears at the top of the page from which the edit action was triggered. However, if the edits are unsuccessful, the modal doesn’t close, and the toast appears at the top of the modal to inform the user about the errors that prevented the edits from being saved.</p>
+        <p>Toasts appear on top of a page. For example, a user edits an opportunity via a modal and successfully saves it; the modal closes and the success toast appears on top of the opportunity detail page.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toast-app.svg" alt="" />
         </figure>
-        <p>Toasts are always dismissible via an X icon on the top right. Success and informational toasts dismiss themselves after 5 seconds. Error toasts never dismiss themselves. The user must explicitly dismiss them.</p>
+        <p>Toasts may appear in three different manners:</p>
+        <ul>
+          <li>Sticky &mdash; remains visible until the user dismisses it with the “X”.  Duration doesn’t apply to this type of toast.</li>
+          <li>Dismissible &mdash; remains visible until the user dismisses it with the “X” or duration has elapsed, whichever comes first.</li>
+          <li>Pester &mdash; remains visible until duration has elapsed. No “X” is presented and user cannot dismiss it early. This mode forces the user to “see” the toast for the full duration period.</li>
+        </ul>
         <p>The width of a toast is determined primarily by the length of its content and its inside padding. The minimum width is 480px. Center the toast within the canvas of the page (excluding the left navigation bar).The toast text wraps to as many lines as necessary without truncation.</p>
-        <p>Fix page­level toasts to the top of the page so that they’re always visible, even as the user scrolls, to ensure that the message is always delivered to the user.</p>
+        <p>Fix toasts to the top of the page so that they’re always visible to the user, even as they scroll the page.</p>
         <p>If you have <strong>more than one</strong> toast appearing at the same time, stack them, with the most recent toast on top. The other toasts stack underneath in chronological order.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toasts-alt.svg" alt="" />
@@ -111,15 +116,16 @@ export default (
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toasts-batch.svg" alt="" />
         </figure>
-        <p><strong>Note:</strong>  Don’t use a toast to confirm success when a create action brings the user to the newly created item. For example, successfully creating a new record from a listview doesn’t call a toast, because the user is taken directly to the new record. No more information is needed.</p>
+        <p><strong>Note:</strong> Don’t use a toast to confirm success when a create action brings the user to the newly created item. For example, successfully creating a new record from a listview doesn’t call a toast, because the user is taken directly to the new record. No more information is needed.</p>
       </div>
 
       {/* Prompts */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>Prompts</h2>
+        <h2 className="site-text-heading--large">Prompts</h2>
         <p><strong>A prompt is a notification that requires action from the user to proceed.</strong></p>
-        <p>Prompts provide the user with one or more options to proceed. The user must pick one of them to dismiss the prompt. The prompt has no close icon. The alert behaves like a modal, in that it sits on top of a mask that obscures the rest of the UI.</p>
-        <p>It can be used to confirm actions that have major impact, such as sending out an email to thousands of people, or destructive actions, such as deleting a record. It can also be used to notify the user of a systemic occurrence that requires action from the user to proceed, such as a session timeout that will force the user to log out.</p>
+        <p><strong>Note:</strong> Prompts are part of system messaging and are handled internally by Salesforce. Partners building apps that appear within Salesforce shouldn’t use prompts.</p>
+        <p>Prompts provide the user with one or more options to proceed. Prompts have no close icon; to dismiss them, the user must pick one of the options presented. Prompts behave like a modal in that it sits on top of a mask that obscures the rest of the UI.</p>
+        <p>Prompts are used to communicate system-related messaging to the user. For instance, to inform users about an upcoming maintenance or to warn users that they are about to be logged out due to inactivity.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-modal-notifications.svg" alt="" />
         </figure>
@@ -127,23 +133,36 @@ export default (
       </div>
 
 
-      {/* System Level Messaging */}
+      {/* Banners */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>System Level Messaging</h2>
-        <p><strong>These global messages communicate the status of the system when it affects how a user can expect the system to behave.</strong></p>
-        <p><strong>Note:</strong> System messages are handled internally by Salesforce. Partners building apps that appear within Salesforce shouldn’t use system messaging.</p>
-        <p>Use system-­level messaging when something affects the entire system, not just a feature or page. Typically, the user doesn’t have to perform an action.</p>
+        <h2 className="site-text-heading--large">Banners</h2>
+        <p><strong>Note:</strong> Banners are part of system messaging and are handled internally by Salesforce. Partners building apps that appear within Salesforce shouldn’t use banners.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-system-level.svg" alt="" />
         </figure>
-        <p>Examples of when to use system­-level messaging include:</p>
+        <p>Banners communicate something that affects the entire system, not just a feature or page. They appear without the user taking an action. Examples of when to use banners include:</p>
         <ul>
           <li>The user is using an unsupported browser.</li>
           <li>An admin is logged in as one of the users.</li>
           <li>The user is using a trial version of Salesforce.</li>
           <li>The user is offline.</li>
         </ul>
-        <p>System-­level messaging is generally not dismissible. It always appears as a strip above the global header. A system message can be dismissible if it communicates future impact to the system, but has no bearing on the system at the moment. For example, a system message notifying users of scheduled maintenance is dismissable.</p>
+        <p>Banners appear as a strip above the global header and are generally not dismissible. Banners can be dismissed if they communicate future impact to the system, but has no bearing on the system at the moment, e.g. notifying users of scheduled maintenance.</p>
+        <h2 className="site-text-heading--large">Popovers</h2>
+        <p>Popovers are used in two cases:</p>
+        <ul>
+          <li>As a feedback mechanism to communicate error messages after a user submits data.</li>
+          <li>As a way to engage the user and nudge them to do something (e.g. update a record that hasn’t been touched in 30 days, adding a task to a new record, etc).</li>
+        </ul>
+        <p>In the first case, the popover appears in conjunction with forms, and the icon is always placed to the left of action buttons (typically Save/Cancel).</p>
+        <figure className={pf('p-bottom--large')}>
+          <img className={pf('image')} src="/assets/images/messaging/img-popover-form.svg" alt="" />
+        </figure>
+        <p>In the second case, the popover icon typically appears to the right of the relevant item. However, depending on the item affected, the icon may appear in other positions.</p>
+        <figure className={pf('p-bottom--large')}>
+          <img className={pf('image')} src="/assets/images/messaging/img-popover-tile.svg" alt="" />
+        </figure>
+        <p>The popover can be shown/hidden by clicking on the icon or by clicking on the X button.</p>
       </div>
     </div>
   </PageBody>

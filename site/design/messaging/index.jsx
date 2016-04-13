@@ -156,11 +156,11 @@ export default (
         </ul>
         <p>In the first case, the popover appears in conjunction with forms, and the icon is always placed to the left of action buttons (typically Save/Cancel).</p>
         <figure className={pf('p-bottom--large')}>
-          <Img className={pf('image')} src="/assets/images/messaging/img-popover-form.svg" alt="" />
+          <img className={pf('image')} src="/assets/images/messaging/img-popover-form.svg" alt="" />
         </figure>
         <p>In the second case, the popover icon typically appears to the right of the relevant item. However, depending on the item affected, the icon may appear in other positions.</p>
         <figure className={pf('p-bottom--large')}>
-          <Img className={pf('image')} src="/assets/images/messaging/img-popover-tile.svg" alt="" />
+          <img className={pf('image')} src="/assets/images/messaging/img-popover-tile.svg" alt="" />
         </figure>
         <p>The popover can be shown/hidden by clicking on the icon or by clicking on the X button.</p>
       </div>

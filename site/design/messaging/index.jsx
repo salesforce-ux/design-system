@@ -19,7 +19,7 @@ export default (
   <PageBody anchorTitle="Messaging" contentClassName={pf('site-design site-design-layout')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">When the user or system takes action, various messaging patterns are used to show the result or impact.</p>
-      <h2 className={pf('site-text-heading--large')}>Icons</h2>
+      <h2 className="site-text-heading--large">Icons</h2>
       <p>Icons may be used in messaging components. Follow these guidelines when deciding which icon to use in your messages.</p>
       <div className={pf('scrollable--x m-bottom--xx-large')}>
         <table className={pf('table max-medium-table--stacked no-row-hover')}>
@@ -64,7 +64,7 @@ export default (
                 </span>
                 Wrench
               </th>
-              <td data-label="When to Use">Maintenance- or admin-related message.</td>
+              <td data-label="When to Use">Maintenance - or admin - related message.</td>
             </tr>
             <tr>
               <th scope="row" data-label="Icon">
@@ -90,7 +90,7 @@ export default (
 
       {/* Toasts */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>Toasts</h2>
+        <h2 className="site-text-heading--large">Toasts</h2>
         <p><strong>Use a toast as a feedback mechanism to communicate important, high-level information after the user takes an action.</strong></p>
         <p>Use a toast to communicate a successful process, an unsuccessful process, or a warning.</p>
         <figure className={pf('p-bottom--large')}>
@@ -116,12 +116,12 @@ export default (
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toasts-batch.svg" alt="" />
         </figure>
-        <p><strong>Note:</strong>  Don’t use a toast to confirm success when a create action brings the user to the newly created item. For example, successfully creating a new record from a listview doesn’t call a toast, because the user is taken directly to the new record. No more information is needed.</p>
+        <p><strong>Note:</strong> Don’t use a toast to confirm success when a create action brings the user to the newly created item. For example, successfully creating a new record from a listview doesn’t call a toast, because the user is taken directly to the new record. No more information is needed.</p>
       </div>
 
       {/* Prompts */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>Prompts</h2>
+        <h2 className="site-text-heading--large">Prompts</h2>
         <p><strong>A prompt is a notification that requires action from the user to proceed.</strong></p>
         <p><strong>Note:</strong> Prompts are part of system messaging and are handled internally by Salesforce. Partners building apps that appear within Salesforce shouldn’t use prompts.</p>
         <p>Prompts provide the user with one or more options to proceed. Prompts have no close icon; to dismiss them, the user must pick one of the options presented. Prompts behave like a modal in that it sits on top of a mask that obscures the rest of the UI.</p>
@@ -135,7 +135,7 @@ export default (
 
       {/* Banners */}
       <div className={pf('p-vertical--xx-large')}>
-        <h2 className={pf('site-text-heading--large')}>Banners</h2>
+        <h2 className="site-text-heading--large">Banners</h2>
         <p><strong>Note:</strong> Banners are part of system messaging and are handled internally by Salesforce. Partners building apps that appear within Salesforce shouldn’t use banners.</p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-system-level.svg" alt="" />
@@ -148,7 +148,7 @@ export default (
           <li>The user is offline.</li>
         </ul>
         <p>Banners appear as a strip above the global header and are generally not dismissible. Banners can be dismissed if they communicate future impact to the system, but has no bearing on the system at the moment, e.g. notifying users of scheduled maintenance.</p>
-        <h2 className={pf('site-text-heading--large')}>Popovers</h2>
+        <h2 className="site-text-heading--large">Popovers</h2>
         <p>Popovers are used in two cases:</p>
         <ul>
           <li>As a feedback mechanism to communicate error messages after a user submits data.</li>

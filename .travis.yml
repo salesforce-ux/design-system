@@ -13,6 +13,7 @@ install:
 script:
   - npm run lint
   - npm run test
+  - npm run build
 after_success:
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm run build-server ; fi
   - export SHA=`git rev-parse --short HEAD`

@@ -85,7 +85,7 @@ let Required = props =>
     </FormElement>
   </Demo>;
 
-let Error = props =>
+let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
@@ -180,7 +180,7 @@ export let states = [
   {
     id: 'input-error',
     label: 'Error',
-    element: <Error errorId="error-message" />
+    element: <ErrorState errorId="error-message" />
   },
   {
     id: 'input-error-icon',

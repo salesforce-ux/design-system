@@ -35,25 +35,18 @@ class ValueCell extends React.Component {
     let px;
 
     // We have a color, let's convert it to #RRGGBB
-    let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() + ', ' : null;
+    let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() : null;
 
     // If the raw value is different from the value, let's clean it up and show it
     let raw = this.props.valueRaw !== this.props.value ? toAliasString(this.props.valueRaw) : null;
 
-    // Wrap values and make it a re-usable element
-    let ValueRaw = props =>
-      <div className="slds-text-body--small">
-        {hex}
-        {raw}
-      </div>;
-
-    // Or, if there is no reason to show additional values, let's not show anything
-    let alternateValues = (hex === null && raw === null) ? null : <ValueRaw />;
+    let alternateHex = (hex === null) ? null : <div className="slds-text-body--small">{hex}</div>;
+    let alternateRaw = (raw === null) ? null : <div className="slds-text-body--small">{raw}</div>;
 
     // Show values in pixels, useful for designers (and other normal people who
     // don't want to read values in rems)
     if (/^([0-9\.]+)rem$/.test(this.props.value)) {
-      px = <span className="slds-text-body--small"> ({parseFloat(this.props.value) * 16}px)</span>;
+      px = <div className="slds-text-body--small">{parseFloat(this.props.value) * 16}px</div>;
     }
 
     const className = classNames('cell-wrap', 'site-property-value');
@@ -61,7 +54,8 @@ class ValueCell extends React.Component {
     return (
       <code className={pf(className)} data-slds-token-value>
         {this.props.value}
-        {alternateValues}
+        {alternateHex}
+        {alternateRaw}
         {px}
       </code>
     );

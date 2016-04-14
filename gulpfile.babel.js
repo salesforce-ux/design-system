@@ -126,6 +126,7 @@ const siteMiddleware = (req, res, next) => {
           const pattern = new RegExp(_.escapeRegExp(component.path));
           if (pattern.test(url)) {
             return generateComponentPages([component], err => {
+              if (err) console.log(err.stack);
               log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
               next();
             });
@@ -144,6 +145,7 @@ const siteMiddleware = (req, res, next) => {
       // Rebuild
       const log = SLDSLog();
       generatePages([indexPath], err => {
+        if (err) console.log(err.stack);
         log(`Rebuilt page "${gutil.colors.green(`/${url}`)}"`);
         next();
       });

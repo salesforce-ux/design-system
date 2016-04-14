@@ -12,23 +12,6 @@
   background-color: $color-background-alt-inverse;
   color: $color-text-inverse;
 
-  .#{$css-prefix}breadcrumb a {
-
-    &:link,
-    &:visited {
-      color: $site-color-text-weak-inverse;
-    }
-
-    &:hover,
-    &:focus {
-      color: $color-text-link-inverse-hover;
-    }
-
-    &:active {
-      color: $color-text-link-inverse-active;
-    }
-  }
-
   h1 {
     font: {
       weight: $font-weight-light;

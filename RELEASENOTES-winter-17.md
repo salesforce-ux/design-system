@@ -7,7 +7,7 @@
 
 The following site enhancements are now available:
 
--
+- New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 
 **NEW COMPONENTS AND VARIANTS**
 

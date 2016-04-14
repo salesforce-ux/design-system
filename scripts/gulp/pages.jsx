@@ -334,7 +334,6 @@ export const gulpRenderComponentPage = () =>
         base: __PATHS__.site
       }));
     } catch (err) {
-      console.log(err.stack);
       next(err);
     }
   });

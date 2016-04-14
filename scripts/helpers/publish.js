@@ -92,7 +92,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
 
   const publish = (sha, deps, done) =>
     request
-      .post(`${process.env.PUBLISH_HOST}/design-system/${sha}`)
+      .post(`${process.env.PUBLISH_HOST}/projects/design-system/builds/${sha}?token=${process.env.AUTH_TOKEN}`)
       .field('dependencies', JSON.stringify(deps))
       .attach('dist', buildPath(zip_name))
       .end(done);

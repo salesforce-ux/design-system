@@ -28,6 +28,7 @@ The following components are now available:
 The following classes are now available:
 
 - Utility - Light version theme texture - [Theme texture](/components/utilities/themes/#color)
+- Text Utility - Heading label normal - [Heading label normal](/components/utilities/text/#heading-label-normal)
 
 **CHANGES**
 

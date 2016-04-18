@@ -131,3 +131,5 @@ linters:
   DisallowLastParentSelector:
     enabled: true
     severity: error
+    exclude:
+      - site/assets/styles/**

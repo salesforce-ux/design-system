@@ -31,7 +31,13 @@ $color-icon-context-nav: $color-text-context-bar-action-trigger;
 $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
 
 
+@mixin context-bar-theme-dark {
 
+}
+
+@mixin context-bar-theme-light {
+
+}
 
 
 .#{$css-prefix}context-bar {
@@ -40,16 +46,13 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   background-color: $color-background-context-bar;
   color: $color-text-context-bar;
   position: relative;
+  padding: 0 $spacing-medium;
 
   &__primary,
   &__secondary,
   &__tertiary {
     display: flex;
     flex-shrink: 0;
-  }
-
-  &__primary {
-    min-width: $size-small;
   }
 
   // Crispy drop shadow
@@ -88,7 +91,7 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   }
 
   // Actionable Text Links
-  &__item-action {
+  &__label-action {
     display: flex;
     align-content: center;
     align-items: center;
@@ -139,25 +142,13 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   }
 }
 
-// App switcher specifics
-.#{$css-prefix}context-bar__app-switcher {
-  color: $color-text-icon-inverse;
-  padding-left: $spacing-medium;
-
-  &:hover,
-  &:focus {
-    color: $color-text-context-bar-highlight;
-  }
-}
-
 // app-name: text is highlighted on hover / focus
 .#{$css-prefix}context-bar__app-name {
-  color: inherit;
   padding: 0 $spacing-large 0 0;
   font-size: 18px; // @todo tokenize
-  font-weight: 300; // @todo tokenize
+  font-weight: $font-weight-light;
   max-width: $size-small;
-  line-height: 1.25;
+  line-height: $line-height-heading;
 }
 
 .#{$css-prefix}context-bar__object-switcher {
@@ -193,7 +184,8 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   border-right: $border-width-thin solid $color-border-context-bar-item;
 }
 
-// Themes
+// Themes - Pre-defined themes
+// Using mixin to determine text color and interactive states
 //
 // Service
 .#{$css-prefix}context-bar--theme-service {

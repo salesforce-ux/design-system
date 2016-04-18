@@ -53,15 +53,15 @@ export let Default = props =>
     <div className={pf('context-bar__primary')}>
 
       {/* App Switcher */}
-      <div className={pf('context-bar__item context-bar__app-switcher')}>
-        <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
+      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
+        <a href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
           <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
         </a>
       </div>
 
       {/* App Name */}
       <div className={pf('context-bar__item context-bar__app-name')}>
-        <a href="#void" className={pf('context-bar__item-action')}>
+        <a href="#void" className={pf('context-bar__label-action')}>
           <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
         </a>
       </div>
@@ -69,7 +69,7 @@ export let Default = props =>
       {/* Object Context Switcher */}
       <div className={pf('context-bar__vertical-divider')}></div>
       <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
-        <a href="#void" title="Context" className={pf('context-bar__item-action truncate')}>
+        <a href="#void" title="Context" className={pf('context-bar__label-action truncate')}>
           <span className={pf('truncate')}>Object</span>
         </a>
         <div className={pf('context-bar__icon-action')}>
@@ -97,10 +97,10 @@ export let Default = props =>
 
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a href="#void" className={pf('context-bar__item-action')}>Home</a>
+          <a href="#void" className={pf('context-bar__label-action')}>Home</a>
         </li>
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-          <a href="#void" className={pf('context-bar__item-action')}>Context Menu Item 1</a>
+          <a href="#void" className={pf('context-bar__label-action')}>Context Menu Item 1</a>
           <div className={pf('context-bar__icon-action p-left--none')}>
             <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
               <SvgIcon className={pf('button__icon button__icon--inverse-hint button__icon--x-small')} sprite="utility" symbol="down" />
@@ -110,7 +110,7 @@ export let Default = props =>
           { contextDropdown }
         </li>
         <li className={pf('context-bar__item')}>
-          <a href="#void" className={pf('context-bar__item-action')}>Context Menu Item 2</a>
+          <a href="#void" className={pf('context-bar__label-action')}>Context Menu Item 2</a>
         </li>
       </ul>
     </nav>
@@ -120,7 +120,7 @@ export let Default = props =>
     <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__item-action')} href="#void">Actions</a>
+          <a className={pf('context-bar__label-action')} href="#void">Actions</a>
         </li>
       </ul>
     </div>

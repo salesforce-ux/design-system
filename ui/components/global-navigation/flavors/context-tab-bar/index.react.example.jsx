@@ -37,7 +37,7 @@ const entityAddDropdown = (
 // Context Tab
 let ContextTab = props =>
   <li className={className(pf('context-bar__item context-bar__tab-item'), props.className)} role="presentation">
-    <a href="#void" className={pf('context-bar__item-action order--2')} role="tab" title={ props.title || 'tab name'}>{ props.title || 'tab name'}</a>
+    <a href="#void" className={pf('context-bar__label-action order--2')} role="tab" title={ props.title || 'tab name'}>{ props.title || 'tab name'}</a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent order--1'), props.contextDropdownActive ? pf('is-open') : null)}>
       <button aria-haspopup="true" className={pf('button button--icon-inverse button--icon-inverse-border button--icon-xx-small')}>
         <SvgIcon className={pf('button__icon button__icon--inverse-hint')} sprite="utility" symbol="down" />
@@ -72,7 +72,7 @@ export let Default = props =>
     <div className={pf('context-bar__primary')}>
 
       {/* App Switcher */}
-      <div className={pf('context-bar__item context-bar__app-switcher')}>
+      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
         <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
           <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
         </a>
@@ -80,7 +80,7 @@ export let Default = props =>
 
       {/* App Name */}
       <div className={pf('context-bar__item context-bar__app-name')}>
-        <a href="#void" className={pf('context-bar__item-action')}>
+        <a href="#void" className={pf('context-bar__label-action')}>
           <span className={pf('truncate')}>{ props.appName || 'Service Console' }</span>
         </a>
       </div>
@@ -88,7 +88,7 @@ export let Default = props =>
       {/* Object Context Switcher */}
       <div className={pf('context-bar__vertical-divider')}></div>
       <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
-        <a href="#void" title="Context" className={pf('context-bar__item-action truncate')}>
+        <a href="#void" title="Context" className={pf('context-bar__label-action truncate')}>
           <span className={pf('truncate')}>Accounts</span>
         </a>
         <div className={pf('context-bar__icon-action')}>
@@ -133,7 +133,7 @@ export let Default = props =>
     <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__item-action')} href="#void">Actions</a>
+          <a className={pf('context-bar__label-action')} href="#void">Actions</a>
         </li>
       </ul>
     </div>

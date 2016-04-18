@@ -124,6 +124,7 @@
         left: 50%;
         color: $color-text-inverse;
         transform: translate(-50%, -50%);
+        line-height: 1.3;
 
         &:before {
           position: absolute;
@@ -135,7 +136,7 @@
             bottom: 0.5rem solid $color-text-inverse;
             left: 0.5rem solid transparent;
           }
-          transform: translate(-50%, -300%);
+          transform: translate(-50%, -375%);
         }
 
         &:after {
@@ -148,7 +149,7 @@
             right: 0.5rem solid transparent;
             left: 0.5rem solid transparent;
           }
-          transform: translate(-50%, 200%);
+          transform: translate(-50%, 250%);
         }
       }
     }

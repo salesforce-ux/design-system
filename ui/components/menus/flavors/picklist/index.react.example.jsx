@@ -20,19 +20,19 @@ export default (
   <PickList label="Select an Option" aria-expanded="true" className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
     <Menu className={pf('dropdown--left')}>
       <Menu.List className={pf('dropdown--length-5')}>
-        <Menu.Item href="#">Option A</Menu.Item>
-        <Menu.Item href="#">Option B</Menu.Item>
-        <Menu.Item href="#">Option C</Menu.Item>
-        <Menu.Item href="#">Option D</Menu.Item>
-        <Menu.Item href="#">Option E</Menu.Item>
-        <Menu.Item href="#">Option F</Menu.Item>
-        <Menu.Item href="#">Option G</Menu.Item>
-        <Menu.Item href="#">Option H</Menu.Item>
-        <Menu.Item href="#">Option I</Menu.Item>
-        <Menu.Item href="#">Option J</Menu.Item>
-        <Menu.Item href="#">Option K</Menu.Item>
-        <Menu.Item href="#">Option L</Menu.Item>
-        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
+        <Menu.Item>Option A</Menu.Item>
+        <Menu.Item>Option B</Menu.Item>
+        <Menu.Item>Option C</Menu.Item>
+        <Menu.Item>Option D</Menu.Item>
+        <Menu.Item>Option E</Menu.Item>
+        <Menu.Item>Option F</Menu.Item>
+        <Menu.Item>Option G</Menu.Item>
+        <Menu.Item>Option H</Menu.Item>
+        <Menu.Item>Option I</Menu.Item>
+        <Menu.Item>Option J</Menu.Item>
+        <Menu.Item>Option K</Menu.Item>
+        <Menu.Item>Option L</Menu.Item>
+        <Menu.Item>Option MNOPQRSTUVWXYZ 123456</Menu.Item>
       </Menu.List>
     </Menu>
   </PickList>

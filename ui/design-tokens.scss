@@ -53,6 +53,9 @@ $force-base-map: map-merge($force-base-map, (
 ));
 
 // nCino Design Tokens
+$mq-bs3-small: 768px;
+$mq-bs3-medium: 992px;
+$mq-bs3-large: 1200px;
 $size-5x-small: 1rem !default;
 $size-4x-small: 2rem !default;
 $size-3x-small: 3rem !default;

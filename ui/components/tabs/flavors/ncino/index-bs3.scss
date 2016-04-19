@@ -1,5 +1,5 @@
 // Secondary Navigation
-.navigation-items {
+.navigation {
   @include border($borders: right bottom);
   border-radius: $spacing-none $spacing-none $border-radius-medium $spacing-none;
   min-height: ($size-frame-default - $size-3x-small);
@@ -7,7 +7,7 @@
   text-transform: capitalize;
   background: $color-background-alt;
 
-  a {
+  .item {
     @include tabs-link;
     border-left: $border-width-thick solid transparent;
     padding: $spacing-none $spacing-large;
@@ -30,8 +30,56 @@
 
   .inactive {}
 
-  .disabled a {
+  .disabled {
     @include disable;
+  }
+
+  @media (max-width: $mq-bs3-medium - 1) {
+    border-radius: $spacing-none;
+    height: $line-height-tab;
+    min-height: $line-height-tab;
+    overflow: initial;
+
+    &-overflow {
+      width: 100%;
+
+      .dropdown {
+        width: 100%;
+
+        &-menu {
+          margin: $spacing-none;
+          border-top: none;
+          @include border($borders: left right bottom);
+          border-radius: $spacing-none;
+          width: 100%;
+          box-shadow: none;
+
+          .active {
+            border-left: $border-width-thick solid transparent;
+          }
+        }
+      }
+
+      .overflow-icon {
+        @include border($borders: bottom);
+        padding: $spacing-none $spacing-large {
+          right: $spacing-none;
+        }
+
+        [class*="fa fa-"],
+        [class*="glyphicon"],
+        [class*="n-icon"] {
+          display: inline;
+          @include border($borders: left);
+          padding: $spacing-none $spacing-large;
+          height: $line-height-tab;
+          font-size: $font-size-x-large;
+          line-height: $line-height-tab;
+          background: $color-background-alt;
+          color: $color-text-tab-label-selected;
+        }
+      }
+    }
   }
 }
 

@@ -41,6 +41,7 @@
 
   // Heading
   &-heading {
+    @include truncate;
     height: $size-3x-small;
     line-height: $size-3x-small;
 

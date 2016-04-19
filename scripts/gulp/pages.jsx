@@ -315,8 +315,8 @@ export const gulpRenderComponentPage = () =>
             }
           }
         });
-      // HACK: Move "utilities" under "components"
-      const componentPath = /^utilities/.test(component.path)
+      // HACK: Move "touch" and "utilities" under "components"
+      const componentPath = /^utilities|touch/.test(component.path)
         ? `components/${component.path}`
         : component.path;
       // Create the <PageBody> for the component
@@ -362,10 +362,16 @@ gulp.task('pages:components', (done) => {
   generateComponentPages(components, done);
 });
 
+gulp.task('pages:components:touch', (done) => {
+  let { components } = _.find(generateUI(), { id: 'touch' });
+  generateComponentPages(components, done);
+});
+
 gulp.task('pages:components:utilities', (done) => {
   let { components } = _.find(generateUI(), { id: 'utilities' });
   generateComponentPages(components, done);
 });
+
 
 /**
  * Return a transform stream that converts JSX to HTML and
@@ -386,6 +392,6 @@ export const generatePages = (src, callback = _.noop) =>
     .on('error', callback)
     .on('finish', callback);
 
-gulp.task('pages', ['pages:components', 'pages:components:utilities'], (done) => {
+gulp.task('pages', ['pages:components', 'pages:components:touch', 'pages:components:utilities'], (done) => {
   generatePages('./site/**/index.jsx', done);
 });

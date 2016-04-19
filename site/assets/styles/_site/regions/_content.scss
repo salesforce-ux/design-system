@@ -78,9 +78,7 @@
   .#{$css-prefix}is-open {
 
     .site-states {
-      max-height: 100vh;
-      overflow: visible;
-      opacity: 1;
+      display: block;
     }
 
     .icon__svg {
@@ -164,9 +162,7 @@
 
   // Nested list for variant states
   .site-states {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
+    display: none;
 
     a {
       padding-left: $spacing-x-large;

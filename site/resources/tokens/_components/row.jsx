@@ -56,6 +56,7 @@ class Row extends React.Component {
     const value = token.value;
     return <ValueCell
       value={token.value}
+      valueRaw={token['.rawValue']}
       example={example}
       className={className} />;
   }

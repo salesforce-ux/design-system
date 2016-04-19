@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import fastdom from 'fastdom';
-import tinyColor from 'tinycolor2';
 
 import camelCase from 'lodash/camelCase';
 import kebabCase from 'lodash/kebabCase';
@@ -19,13 +18,6 @@ import emitter from '../framework/events';
 import { $, setClassName, hide } from '../framework/dom';
 import { search } from '../framework/helpers';
 import { set as setPreference, get as getPreference } from '../shared/preferences';
-
-const toRgbString = token => tinyColor(token.value).toRgbString();
-const toHexString = token => tinyColor(token.value).toHexString();
-const toAliasString = token => {
-  const value = token.valueRaw || token.value;
-  return value.replace(/^\{\!/, '').replace(/\}$/, '');
-};
 
 const nameFormats = [
   {
@@ -39,26 +31,6 @@ const nameFormats = [
     formatter: token => `t(${camelCase(token.name)})`
   }
 ];
-
-const valueFormats = {
-  color: [
-    {
-      label: 'RGB',
-      value: 'rgb',
-      formatter: toRgbString
-    },
-    {
-      label: 'Hex',
-      value: 'hex',
-      formatter: toHexString
-    },
-    {
-      label: 'Color Name',
-      value: 'alias',
-      formatter: toAliasString
-    }
-  ]
-};
 
 const handleInputChange = (sections, event, node) => {
   const { value } = node;
@@ -102,28 +74,6 @@ const handleNameSelectChange = (sections, event, node) => {
   });
 };
 
-const handleValueSelectChange = (sections, event, node) => {
-  const { sldsTokensValueFormat: formatKey } = node.dataset;
-  const formatList = valueFormats[formatKey];
-  const format = formatList.filter(f => f.value === node.value)[0];
-  setPreference(`tokens:valueFormat:${formatKey}`, format.value);
-  sections
-    .filter(section => section.refs.format)
-    .filter(section => {
-      const { sldsTokensValueFormat: key } = section.refs.format.dataset;
-      return formatKey === key;
-    })
-    .forEach(section => {
-      fastdom.mutate(() => {
-        section.refs.format.selectedIndex = formatList.indexOf(format);
-        section.tokens.forEach(token => {
-          const value = format.formatter(token);
-          section.lookups.values.get(token).innerHTML = value;
-        });
-      });
-    });
-};
-
 const setupSelect = (node, options) => {
   options.forEach(option => {
     const o = document.createElement('option');
@@ -135,20 +85,13 @@ const setupSelect = (node, options) => {
   });
 };
 
-const setupValueFormatSelect = node => {
-  const { sldsTokensValueFormat: format } = node.dataset;
-  if (!valueFormats[format]) return;
-  setupSelect(node, valueFormats[format]);
-};
-
 export default () => ({
   hooks: {
     listen_dom: delegate => {
       const sections = $('[data-slds-tokens-section]').map(node => {
         const refs = {
           section: node,
-          tokens: $('[data-slds-token]', node),
-          format: node.querySelector('[data-slds-tokens-value-format]')
+          tokens: $('[data-slds-token]', node)
         };
         const lookups = {
           tokens: new Map(),
@@ -158,7 +101,6 @@ export default () => ({
         const tokens = refs.tokens.map(node => {
           const token = JSON.parse(node.dataset.sldsToken);
           lookups.tokens.set(token, node);
-          lookups.values.set(token, node.querySelector('[data-slds-token-value]'));
           lookups.names.set(token, node.querySelector('[data-slds-token-name]'));
           return token;
         });
@@ -187,16 +129,6 @@ export default () => ({
         'change', '[data-slds-tokens-name-format]',
         handleNameSelectChange.bind(null, sections)
       );
-      // Value Formats
-      delegate(
-        'change', '[data-slds-tokens-value-format]',
-        handleValueSelectChange.bind(null, sections)
-      );
-      sections
-        .filter(section => section.refs.format)
-        .forEach(section => {
-          setupValueFormatSelect(section.refs.format);
-        });
     }
   }
 });

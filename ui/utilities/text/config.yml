@@ -6,6 +6,7 @@ flavors:
   - heading-medium
   - heading-small
   - heading-label
+  - heading-label-normal
   - color
   - alignment
   - longform

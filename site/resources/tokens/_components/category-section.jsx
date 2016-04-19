@@ -37,9 +37,8 @@ export default class CategorySection extends React.Component {
           type="h2"
             id={`category-${category.key}`}
             className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
-          <span className={pf('grid grid--align-spread wrap')}>
+          <span className={pf('grid wrap')}>
             <span className={pf('col align-bottom')}>{category.label}</span>
-            {this.renderValueFormatSelect()}
           </span>
         </Heading>
         {!category.description ? null : <p className="slds-m-bottom--x-large">
@@ -54,26 +53,6 @@ export default class CategorySection extends React.Component {
           </table>
         </div>
       </section>
-    );
-  }
-
-  renderValueFormatSelect() {
-    const { category } = this.props;
-    const { valueFormat } = category;
-    if (!valueFormat) return null;
-    return (
-      <span className={pf('col shrink-none align-bottom')}>
-        <label
-          className={pf('assistive-text')}
-          htmlFor={`select-format-${category.key}`}>
-          Select Output
-        </label>
-        <select
-          id={`select-format-${category.key}`}
-          className={pf('select')}
-          aria-label="select"
-          data-slds-tokens-value-format={valueFormat} />
-      </span>
     );
   }
 

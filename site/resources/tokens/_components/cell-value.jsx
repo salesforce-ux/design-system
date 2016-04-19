@@ -12,6 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import tinyColor from 'tinycolor2';
+
+
+const toAliasString = (valueRaw) => valueRaw.replace(/\{\!/, '').replace(/\}$/, '');
 
 class ValueCell extends React.Component {
 
@@ -27,10 +31,32 @@ class ValueCell extends React.Component {
 
   renderValue() {
     if (!this.props.value) return null;
+
+    let px;
+
+    // We have a color, let's convert it to #RRGGBB
+    let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() : null;
+
+    // If the raw value is different from the value, let's clean it up and show it
+    let raw = this.props.valueRaw !== this.props.value ? toAliasString(this.props.valueRaw) : null;
+
+    let alternateHex = (hex === null) ? null : <div className="slds-text-body--small">{hex}</div>;
+    let alternateRaw = (raw === null) ? null : <div className="slds-text-body--small">{raw}</div>;
+
+    // Show values in pixels, useful for designers (and other normal people who
+    // don't want to read values in rems)
+    if (/^([0-9\.]+)rem$/.test(this.props.value)) {
+      px = <div className="slds-text-body--small">{parseFloat(this.props.value) * 16}px</div>;
+    }
+
     const className = classNames('cell-wrap', 'site-property-value');
+
     return (
       <code className={pf(className)} data-slds-token-value>
         {this.props.value}
+        {alternateHex}
+        {alternateRaw}
+        {px}
       </code>
     );
   }
@@ -39,6 +65,7 @@ class ValueCell extends React.Component {
 
 ValueCell.propTypes = {
   value: React.PropTypes.string,
+  valueRaw: React.PropTypes.string,
   example: React.PropTypes.node
 };
 

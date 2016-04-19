@@ -89,15 +89,15 @@ export default (
 
               <div className={pf('form-element__row')}>
                 <div className={pf('form-element size--1-of-2')}>
-                  <label className={pf('form-element__label')} htmlFor="text-input-01">Assigned To</label>
+                  <label className={pf('form-element__label')} htmlFor="text-input-02">Assigned To</label>
                   <div className={pf('form-element__control')}>
-                    <input className={pf('input')} type="text" id="text-input-01" />
+                    <input className={pf('input')} type="text" id="text-input-02" />
                   </div>
                 </div>
                 <div className={pf('form-element size--1-of-2')}>
-                  <label className={pf('form-element__label')} htmlFor="text-input-01">Due Dates</label>
+                  <label className={pf('form-element__label')} htmlFor="text-input-03">Due Dates</label>
                   <div className={pf('form-element__control')}>
-                    <input className={pf('input')} type="text" id="text-input-01" />
+                    <input className={pf('input')} type="text" id="text-input-03" />
                   </div>
                 </div>
               </div>

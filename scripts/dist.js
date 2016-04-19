@@ -227,7 +227,7 @@ async.series([
    */
   (done) => {
     const pattern = /\'(.*?)\'(?=[,;])/g;
-    gulp.src(distPath('scss/design-tokens.scss'))
+    gulp.src(distPath('scss/_design-tokens.scss'))
     .pipe(through.obj(function(file, enc, next) {
       const newFile = file.clone();
       let sassImports = [];

@@ -82,6 +82,17 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
       cb(write(buildPath('gitinfo.txt'), out)));
 
+  const formatTestOut = out => {
+    const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
+    return { unitTests: parseInt(matches[0]),
+            allyTests: parseInt(matches[1]),
+            integrationTests: parseInt(matches[2]) };
+  };
+
+  const writeTestCounts = cb =>
+    execute('npm test', out =>
+      cb(write(buildPath('tests.json'), JSON.stringify(formatTestOut(out)))));
+
   const zip = cb =>
     gulp.src(buildPath('**/*'))
     .pipe(gulpzip(zip_name))
@@ -99,6 +110,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
 
   return done =>
     recreateBuildFolder(() =>
+    writeTestCounts(() =>
     writeDist(() =>
     writeWebsite(() =>
     writeGitInfo(() =>
@@ -106,7 +118,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     zip(() =>
     getSha(sha =>
       getDependencies(deps =>
-        publish(sha, deps, done)))))))));
+        publish(sha, deps, done))))))))));
 };
 
 module.exports = publish;

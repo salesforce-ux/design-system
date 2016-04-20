@@ -106,11 +106,15 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const poll = (attempts, url, done) =>
     request.get(url)
     .end((err, res) => {
-      console.log("ERR", err, "RES", (res && res.text));
-
-      err && attempts < 10 ?
-        setTimeout(() => poll(attempts+1, url, done), 5000) :
+      if(err) {
+        if(attempts <= 10) {
+          setTimeout(() => poll(attempts+1, url, done), 5000);
+        } else {
+          throw err;
+        }
+      } else {
         done();
+      }
     });
 
   const publish = (sha, deps, done) =>

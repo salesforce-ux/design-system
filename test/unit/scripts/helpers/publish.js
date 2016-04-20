@@ -36,11 +36,11 @@ const gulp = fakey(['src', 'pipe', 'dest',
   }
 ]);
 
-const request = fakey(['post', 'attach', 'field',
+const request = fakey(['get', 'post', 'attach', 'field',
   { name: 'end', f: (acc, commands) =>
     cb => {
       commands.push(['end', '']);
-      cb();
+      cb(null, { text: 'url' });
     }
   }
 ]);
@@ -73,7 +73,7 @@ describe('scripts/helpers/publish.js', () => {
   let publisher;
 
   before(function(done) {
-    process.env.PUBLISH_HOST = 'http://myurl';
+    process.env.BUILD_SERVER_HOST = 'http://myurl';
     publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done());
   });
 

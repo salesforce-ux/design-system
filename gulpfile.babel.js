@@ -232,9 +232,3 @@ gulp.task('build', callback => {
     'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });
-
-gulp.task('build:test', callback => {
-  runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages'], ['links'],
-  callback);
-});

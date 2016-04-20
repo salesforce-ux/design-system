@@ -1,16 +1,6 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
 classes:
   -
-    class: navigation-list--vertical
-    description: Initializes Vertical Navigation
-    required: true
-    applied: <code>&lt;div&gt;</code>
-  -
-    class: navigation-list--vertical__action
-    description: Hyperlink inside navigation's list items
-    required: true
-    applied: <code>&lt;a&gt;</code>
-  -
     class: context-bar
     description: Context bar wrapper
     required: true
@@ -41,29 +31,21 @@ classes:
     description: App switcher
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar-action
+    class: context-bar__item
     description: Context bar action wrapper
   -
-    class: context-bar-action__text-label
-    description: Action label (text is highlighted on hover)
+    class: context-bar__label-action
+    description: Action label
     applied: <code>&lt;a&gt;</code>
   -
-    class: context-bar-action__label
-    description: Action label (background is highlighted on hover)
+    class: context-bar__icon-action
+    description: Action Icon
     applied: <code>&lt;a&gt;</code>
   -
-    class: context-bar-action__label--include-dividers
-    description: Stretch the box of the label to get dividers to sit on top of its background
-    applied: <code>.{{cssPrefix}}context-bar-action__label</code>
+    class: context-bar__button
+    description:
+    applied: <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>
   -
-    class: context-bar-action__label--expand
-    description: Expand action label to leave space for the trigger
-    applied: <code>.{{cssPrefix}}context-bar-action__label</code>
-  -
-    class: context-bar-action__trigger
+    class: context-bar__dropdown-trigger
     description: Submenu / dropdown trigger
     applied: <code>&lt;button&gt;</code>
-  -
-    class: context-bar-action__trigger-icon
-    description: Submenu / dropdown trigger icon
-    applied: <code>&lt;svg&gt;</code>

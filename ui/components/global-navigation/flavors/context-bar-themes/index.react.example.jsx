@@ -22,31 +22,31 @@ export let states = [
   {
     id: 'context-bar-theme-platform',
     label: 'Platform',
-    element: <ContextBar />
+    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} />
   },
   {
     id: 'context-bar-theme-service',
     label: 'Service',
-    element: <ContextTabBar className={pf('context-bar--theme-service')} appName="Service Console" />
+    element: <ContextTabBar className={pf('context-bar--theme-service context-bar--theme-dark')} appName="Service Console" />
   },
   {
     id: 'context-bar-theme-sales',
     label: 'Sales',
-    element: <ContextTabBar className={pf('context-bar--theme-sales')} appName="Sales Console" />
+    element: <ContextTabBar className={pf('context-bar--theme-sales context-bar--theme-dark')} appName="Sales Console" />
   },
   {
     id: 'context-bar-theme-marketing',
     label: 'Marketing',
-    element: <ContextBar className={pf('context-bar--theme-marketing')} appName="Marketing Cloud" />
+    element: <ContextBar className={pf('context-bar--theme-marketing context-bar--theme-dark')} appName="Marketing Cloud" />
   },
   {
     id: 'context-bar-theme-analytics',
     label: 'Analytics',
-    element: <ContextBar className={pf('context-bar--theme-analytics')} appName="Analytics" />
+    element: <ContextBar className={pf('context-bar--theme-analytics context-bar--theme-dark')} appName="Analytics" />
   },
   {
     id: 'context-bar-theme-community',
     label: 'Community',
-    element: <ContextBar className={pf('context-bar--theme-community')} appName="Community" />
+    element: <ContextBar className={pf('context-bar--theme-community context-bar--theme-dark')} appName="Community" />
   },
 ];

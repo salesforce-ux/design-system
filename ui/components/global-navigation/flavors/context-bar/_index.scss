@@ -8,43 +8,36 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Context Bar
-$color-text-context-bar: $color-text-inverse !default;
-$color-context-bar-alt: #fff !default;
+// Context Bar - Text Color
+$color-text-context-bar-default: $color-text-default !default;
+$color-text-context-bar-inverse: $color-text-inverse !default;
+// Context Bar - Drop Shadow
 $color-context-bar-shadow: #000 !default;
-$color-border-context-bar-divider: rgba($color-context-bar-alt, 0.2) !default;
-$color-background-context-bar-action-highlight: rgba($color-context-bar-alt, 0.2) !default;
-$color-text-context-bar-action-trigger: rgba($color-context-bar-alt, 0.4) !default;
-
+// Context Bar - Height
 $height-context-bar: 2.25rem !default;
-$color-background-context-bar: $color-background-alt-inverse !default;
-$color-background-context-bar-theme-service: #7f32bb;
-$color-background-context-bar-theme-sales: #1e71ce;
-$color-background-context-bar-theme-marketing: #d04525;
-$color-background-context-bar-theme-analytics: #137e66;
-$color-background-context-bar-theme-community: #a60a52;
-$color-background-context-bar-shadow: rgba(#000, 0.15);
-$color-background-context-bar-item-hover: rgba(#000, 0.2);
-$color-background-context-bar-item-active: rgba(#000, 0.4);
-$color-background-context-bar-item-selected: rgba(#000, 0.4);
-$color-border-context-bar-item: rgba(#000, 0.2);
-$color-icon-context-nav: $color-text-context-bar-action-trigger;
-$color-icon-border-context-nav: $color-text-context-bar-action-trigger;
-
-
-@mixin context-bar-theme-dark {
-
-}
-
-@mixin context-bar-theme-light {
-
-}
-
+// Context Bar - Theme Backgrounds
+$color-background-context-bar-default: #092180 !default;
+$color-background-context-bar-service: #7f32bb !default;
+$color-background-context-bar-sales: #1e71ce !default;
+$color-background-context-bar-marketing: #d04525 !default;
+$color-background-context-bar-analytics: #137e66 !default;
+$color-background-context-bar-community: #a60a52 !default;
+// Context Bar - Interactions
+$color-background-context-bar-item-hover: rgba(#000, 0.2) !default;
+$color-background-context-bar-item-active: rgba(#000, 0.4) !default;
+$color-background-context-bar-item-selected: rgba(#000, 0.4) !default;
+$color-background-context-bar-inverse-item-hover: rgba(#fff, 0.2) !default;
+$color-background-context-bar-inverse-item-active: rgba(#fff, 0.4) !default;
+$color-background-context-bar-inverse-item-selected: rgba(#fff, 0.4) !default;
+// Context Bar - Borders
+$color-border-context-bar-item: rgba(#000, 0.1) !default;
+$color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 
 .#{$css-prefix}context-bar {
   display: flex;
   height: $height-context-bar;
-  background-color: $color-background-context-bar;
-  color: $color-text-context-bar;
+  background-color: $color-background-context-bar-default;
+  color: $color-text-context-bar-default;
   position: relative;
   padding: 0 $spacing-medium;
 
@@ -69,7 +62,7 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border-context-bar-item;
+    border-left: $border-width-thin solid $color-border-context-bar-inverse-item;
   }
 
   // Any item on the horizontal axis of the context nav bar
@@ -82,7 +75,7 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
 
     &:hover {
       outline: 0;
-      background-color: $color-background-context-bar-item-hover;
+      background-color: $color-background-context-bar-inverse-item-hover;
       box-shadow: none;
       border-radius: 0;
       text-decoration: none;
@@ -112,11 +105,11 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
 
     &:hover,
     &:focus {
-      color: $color-text-context-bar;
+      color: inherit;
     }
 
     &:active {
-      color: $color-text-context-bar;
+      color: inherit;
       text-decoration: none;
     }
   }
@@ -127,22 +120,34 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
     align-items: center;
     align-content: center;
     padding: 0 $spacing-small;
-    color: $color-text-context-bar;
+    color: $color-text-context-bar-default;
 
     &:focus {
       outline: 0;
     }
     &:hover,
     &:focus {
-      color: $color-text-context-bar;
+      color: $color-text-context-bar-default;
     }
     &:active {
-      color: $color-text-context-bar;
+      color: $color-text-context-bar-default;
+    }
+  }
+
+  // Button inside of actionable container
+  .#{$css-prefix}context-bar__button {
+    color: inherit;
+
+    // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
+    // Setting custom focus thats specific to context bar
+    &:focus {
+      box-shadow: none;
+      opacity: 0.8;
     }
   }
 }
 
-// app-name: text is highlighted on hover / focus
+// app-name
 .#{$css-prefix}context-bar__app-name {
   padding: 0 $spacing-large 0 0;
   font-size: 18px; // @todo tokenize
@@ -151,6 +156,7 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   line-height: $line-height-heading;
 }
 
+// object-switcher
 .#{$css-prefix}context-bar__object-switcher {
   min-width: 144px; // @todo tokenize
   max-width: $size-x-small;
@@ -178,32 +184,112 @@ $color-icon-border-context-nav: $color-text-context-bar-action-trigger;
   }
 }
 
-// Tabs
+// Tabs - unsure about this one
 .#{$css-prefix}context-bar__tab-item {
   width: $size-x-small;
   border-right: $border-width-thin solid $color-border-context-bar-item;
 }
 
+// Themes - Light vs Dark
+// Alters the interactions and text color
+//
+// Set interactions based on lightness of background
+@mixin _context-bar-theme-interactions($background) {
+  @if type-of($background) == color {
+    $value: round(lightness($background));
+
+    // Really Light Backgrounds, like a white or off-white
+    @if $value > 90% {
+      .#{$css-prefix}context-bar__vertical-divider {
+        border-color: $color-border-context-bar-item;
+      }
+      .#{$css-prefix}context-bar__item:hover {
+        background-color: $color-background-context-bar-item-hover;
+      }
+    }
+
+    // Light enough Backgrounds
+    @else if $value > 30% {
+      .#{$css-prefix}context-bar__vertical-divider {
+        border-color: $color-border-context-bar-item;
+      }
+      .#{$css-prefix}context-bar__item:hover {
+        background-color: $color-background-context-bar-item-hover;
+      }
+    }
+
+    // Dark Backgrounds
+    @else if $value <= 30% {
+      .#{$css-prefix}context-bar__vertical-divider {
+        border-color: $color-border-context-bar-inverse-item;
+      }
+      .#{$css-prefix}context-bar__item:hover {
+        background-color: $color-background-context-bar-inverse-item-hover;
+      }
+    }
+  }
+}
+
+// Light Theme
+.#{$css-prefix}context-bar--theme-light {
+  color: $color-text-context-bar-default;
+
+  .#{$css-prefix}context-bar__icon-action {
+    color: $color-text-context-bar-default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-text-context-bar-default;
+    }
+  }
+}
+
+// Dark Theme
+.#{$css-prefix}context-bar--theme-dark {
+  color: $color-text-context-bar-inverse;
+
+  .#{$css-prefix}context-bar__icon-action {
+    color: $color-text-context-bar-inverse;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-text-context-bar-inverse;
+    }
+  }
+}
+
 // Themes - Pre-defined themes
 // Using mixin to determine text color and interactive states
 //
+// Platform
+.#{$css-prefix}context-bar--theme-default {
+  @include _context-bar-theme-interactions($color-background-context-bar-default);
+  background: $color-background-context-bar-default;
+}
 // Service
 .#{$css-prefix}context-bar--theme-service {
-  background: $color-background-context-bar-theme-service;
+  @include _context-bar-theme-interactions($color-background-context-bar-service);
+  background: $color-background-context-bar-service;
 }
 // Sales
 .#{$css-prefix}context-bar--theme-sales {
-  background: $color-background-context-bar-theme-sales;
+  @include _context-bar-theme-interactions($color-background-context-bar-sales);
+  background: $color-background-context-bar-sales;
 }
 // Marketing
 .#{$css-prefix}context-bar--theme-marketing {
-  background: $color-background-context-bar-theme-marketing;
+  @include _context-bar-theme-interactions($color-background-context-bar-marketing);
+  background: $color-background-context-bar-marketing;
 }
 // Analytics
 .#{$css-prefix}context-bar--theme-analytics {
-  background: $color-background-context-bar-theme-analytics;
+  @include _context-bar-theme-interactions($color-background-context-bar-analytics);
+  background: $color-background-context-bar-analytics;
 }
 // Community
 .#{$css-prefix}context-bar--theme-community {
-  background: $color-background-context-bar-theme-community;
+  @include _context-bar-theme-interactions($color-background-context-bar-community);
+  background: $color-background-context-bar-community;
 }

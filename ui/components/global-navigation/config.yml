@@ -2,4 +2,3 @@ status: 'dev-ready'
 flavors:
   - context-bar
   - context-tab-bar
-  - context-bar-themes

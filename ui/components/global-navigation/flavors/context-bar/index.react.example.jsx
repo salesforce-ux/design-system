@@ -54,14 +54,13 @@ export let Default = props =>
 
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
-        <a href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
-          <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
-        </a>
-      </div>
-
-      {/* App Name */}
-      <div className={pf('context-bar__item context-bar__app-name')}>
-        <a href="#void" className={pf('context-bar__label-action')}>
+        <div className={pf('context-bar__icon-action')}>
+          <a href="#void" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
+            <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
+          </a>
+        </div>
+        {/* App Name */}
+        <a href="#void" className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
         </a>
       </div>
@@ -73,7 +72,7 @@ export let Default = props =>
           <span className={pf('truncate')}>Object</span>
         </a>
         <div className={pf('context-bar__icon-action')}>
-          <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
+          <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
             <span className={pf('assistive-text')}>Assistive text for submenu</span>
           </button>
@@ -102,8 +101,8 @@ export let Default = props =>
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
           <a href="#void" className={pf('context-bar__label-action')}>Context Menu Item 1</a>
           <div className={pf('context-bar__icon-action p-left--none')}>
-            <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
-              <SvgIcon className={pf('button__icon button__icon--inverse-hint button__icon--x-small')} sprite="utility" symbol="down" />
+            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
+              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
           </div>
@@ -116,14 +115,7 @@ export let Default = props =>
     </nav>
     {/* End Secondary Section */}
 
-    {/* Tertiary Section */}
-    <div className={pf('context-bar__tertiary col--bump-left')}>
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__label-action')} href="#void">Actions</a>
-        </li>
-      </ul>
-    </div>
+    {/* Tertiary Section Goes Here */}
   </div>
 </div>;
 
@@ -134,7 +126,7 @@ export let Default = props =>
 export let states = [
   {
     id: 'context-bar',
-    label: 'Default',
-    element: <Default />
+    label: 'Default - Platform',
+    element: <Default className={pf('context-bar--theme-dark')} />
   }
 ];

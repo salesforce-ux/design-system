@@ -22,7 +22,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Entity Add Dropdown
 const entityAddDropdown = (
-  <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '228px', top: '44px' }}>
+  <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '224px', top: '44px' }}>
   <div className={pf('popover__body')}>
     <div className={pf('form-element')}>
       <label className={pf('form-element__label')} htmlFor="text-input-01">Add Page by URL or ID</label>
@@ -73,14 +73,14 @@ export let Default = props =>
 
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
-        <a role="button" href="#void" aria-haspopup="true" className={pf('context-bar__icon-action button button--icon')}>
-          <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
-        </a>
-      </div>
+        <div className={pf('context-bar__icon-action')}>
+          <a href="#void" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
+            <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
+          </a>
+        </div>
 
-      {/* App Name */}
-      <div className={pf('context-bar__item context-bar__app-name')}>
-        <a href="#void" className={pf('context-bar__label-action')}>
+        {/* App Name */}
+        <a href="#void" className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.appName || 'Service Console' }</span>
         </a>
       </div>
@@ -92,7 +92,7 @@ export let Default = props =>
           <span className={pf('truncate')}>Accounts</span>
         </a>
         <div className={pf('context-bar__icon-action')}>
-          <button aria-haspopup="true" className={pf('button button--icon-inverse')}>
+          <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
             <span className={pf('assistive-text')}>Assistive text for submenu</span>
           </button>
@@ -110,7 +110,7 @@ export let Default = props =>
       {/* Entity Add */}
       <div className={className(pf('context-bar__item dropdown-trigger dropdown-trigger--click'), props.objectSwitcherActive ? pf('is-open') : null)}>
         <div className={pf('context-bar__vertical-divider')}></div>
-        <button aria-haspopup="true" className={pf('context-bar__icon-action button button--icon-inverse')}>
+        <button aria-haspopup="true" className={pf('context-bar__icon-action button button--icon context-bar__button')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="add" />
           <span className={pf('assistive-text')}>Assistive text for submenu</span>
         </button>
@@ -149,11 +149,11 @@ export let states = [
   {
     id: 'context-bar',
     label: 'Default',
-    element: <Default className={pf('context-bar--theme-service')} />
+    element: <Default className={pf('context-bar--theme-service context-bar--theme-dark')} />
   },
   {
     id: 'context-bar-custom-entity',
     label: 'Custom Entity Active',
-    element: <Default className={pf('context-bar--theme-service')} entityAddActive />
+    element: <Default className={pf('context-bar--theme-service context-bar--theme-dark')} entityAddActive />
   }
 ];

@@ -16,36 +16,40 @@ import publish from 'scripts/helpers/publish';
 const fakey = protocol => commands =>
   protocol.reduce((acc, x) => {
     if(x.name) {
-      acc[x.name] = x.f(acc, commands)
+      acc[x.name] = x.f(acc, commands);
     } else {
       acc[x] = function() {
-        commands.push([x, arguments])
+        commands.push([x, arguments]);
         return acc;
-      }
+      };
     }
-    return acc
-  }, {})
+    return acc;
+  }, {});
 
 const gulp = fakey(['src', 'pipe', 'dest',
   { name: 'on', f: (acc, commands) =>
-      (cmd, cb) => {
-        commands.push(["on", cmd])
-        if(cmd === "finish") cb()
-        return acc
-  }}])
+    (cmd, cb) => {
+      commands.push(['on', cmd]);
+      if(cmd === 'finish') cb();
+      return acc;
+    }
+  }
+]);
 
 const request = fakey(['post', 'attach', 'field',
   { name: 'end', f: (acc, commands) =>
-      cb => {
-        commands.push(["end", ""])
-        cb()
-  }}])
+    cb => {
+      commands.push(['end', '']);
+      cb();
+    }
+  }
+]);
 
 
 const execute = commands => (cmd, cb) => {
-  commands.push(cmd)
-  cb("2 passing 23 SUCESS 3 passing"+cmd)
-}
+  commands.push(cmd);
+  cb(`2 passing 23 SUCESS 3 passing ${cmd}`);
+};
 
 const fakeFS = (reads, writes) => {
   return {
@@ -53,11 +57,11 @@ const fakeFS = (reads, writes) => {
       writes.push([path, contents]),
 
     readFileSync: (path, charset) => {
-      reads.push(path)
-      return "fake read for "+path
+      reads.push(path);
+      return `fake read for ${path}`;
     }
-  }
-}
+  };
+};
 
 // TODO: rewrite these to use any() instead of [0][1] etc
 describe('scripts/helpers/publish.js', () => {
@@ -69,8 +73,8 @@ describe('scripts/helpers/publish.js', () => {
   let publisher;
 
   before(function(done) {
-    process.env.PUBLISH_HOST = "http://myurl"
-    publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done())
+    process.env.PUBLISH_HOST = 'http://myurl';
+    publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done());
   });
 
   it('removes the old folder', () =>

@@ -9,10 +9,10 @@ describe('All components (except spinners)', function() {
     components.filter(x => x.id != 'spinners').forEach(component => {
       const flavors = component.flavors;
       flavors.forEach(flavor => {
-        const path = p.join(group.id, component.id, 'flavors', flavor.id)
-        const states = fs.readdirSync(p.join(__dirname, '../../', '.www', path))
+        const path = p.join(group.id, component.id, 'flavors', flavor.id);
+        const states = fs.readdirSync(p.join(__dirname, '../../', '.www', path));
         states.forEach(state => {
-          const name = `${component.id}_${flavor.id}_${state.split('.')[0]}`
+          const name = `${component.id}_${flavor.id}_${state.split('.')[0]}`;
           it('takes a screenshot', client => {
             client
               .url(process.env.HOST + path+'/'+state)
@@ -21,7 +21,7 @@ describe('All components (except spinners)', function() {
               .screenCapture(name)
               .end();
           });
-        })
+        });
       });
     });
   });

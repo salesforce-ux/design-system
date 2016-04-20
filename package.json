@@ -22,7 +22,7 @@
     "start": "npm run gulp",
     "build": "npm run gulp -- build",
     "build-prod": "npm run gulp -- build",
-    "build-server": "babel-node scripts/publish.js",
+    "build-server": "babel-node scripts/npm/build-server.js",
     "dist": "babel-node scripts/dist.js",
     "dist-npm": "babel-node scripts/dist.js --npm",
     "lint": "npm run gulp -- lint",

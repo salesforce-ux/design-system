@@ -106,7 +106,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const poll = (attempts, url, done) =>
     request.get(url)
     .end((err, res) => {
-      console.log("ERR", err, "RES", (res && res.text));
+      console.log('ERR', err, 'RES', (res && res.text));
 
       err && attempts < 10 ?
         setTimeout(() => poll(attempts+1, url, done), 5000) :

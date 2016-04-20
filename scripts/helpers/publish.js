@@ -103,12 +103,23 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     .on('error', cb)
     .on('finish', cb);
 
+  const poll = (attempts, url, done) =>
+    request.get(url)
+    .end((err, res) => {
+      console.log("ERR", err, "RES", (res && res.text));
+
+      err && attempts < 10 ?
+        setTimeout(() => poll(attempts+1, url, done), 5000) :
+        done();
+    });
+
   const publish = (sha, deps, done) =>
     request
-      .post(`${process.env.PUBLISH_HOST}/projects/design-system/builds/${sha}?token=${process.env.AUTH_TOKEN}`)
+      .post(`${process.env.BUILD_SERVER_HOST}/projects/design-system/builds/${sha}`)
       .field('dependencies', JSON.stringify(deps))
       .attach('dist', buildPath(zip_name))
-      .end(done);
+      .end((err, res) =>
+        poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
 
   return done =>
     recreateBuildFolder(() =>

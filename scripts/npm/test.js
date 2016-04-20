@@ -35,6 +35,8 @@ let run = (script, done) => {
   command.on('error', done);
 };
 
+// HACK: The order of these tests is directly related
+// to "formatTestOut" in scripts/helpers/publish.js
 async.eachSeries(['test-unit', 'test-integration', 'test-browser'], run, (err) => {
   fs.writeFileSync(`${__PATHS__.logs}/test.txt`, logs);
   if (err) throw new Error('Tests Failed (see output above)');

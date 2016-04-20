@@ -83,8 +83,8 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     if (!matches) return {};
     return {
       unitTests: parseInt(matches[0]),
-      allyTests: parseInt(matches[1]),
-      integrationTests: parseInt(matches[2])
+      integrationTests: parseInt(matches[1]),
+      allyTests: parseInt(matches[2])
     };
   };
 

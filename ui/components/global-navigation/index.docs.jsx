@@ -86,6 +86,9 @@ export default (
     <p>-- IMG WILL GO HERE --</p>
     <p>Due to the platform-esc nature of the context bar, there is an available element utility to apply a divider between sections where needed. The `slds-context-bar__vertical-divider` class should be applied to an empty `div` and placed within the DOM of your context bar for a visual divider.</p>
 
+    <h2 className={pf('site-text-heading--small')}>1.8. Theming</h2>
+    <p>Coming Soon</p>
+
     <h2 className={pf('site-text-heading--small')}>1.9. Accessibility Requirements</h2>
     <p>Coming Soon</p>
   </ComponentDocs>

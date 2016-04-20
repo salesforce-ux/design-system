@@ -78,13 +78,12 @@ $color-border-inverse: $color-background-inverse;
 $height-sales-path: 2rem !default;
 $line-height-salespath: 1.5rem !default;
 
-
-$color-text-context-bar-highlight: rgba(255, 255, 255, 0.8) !default;
-
-// For context bar
+// Button Icon xx-small
 $square-icon-xx-small-boundary: 1rem;
+// Button Icon Inverse - Hint Parent
 $color-text-icon-inverse-hint: rgba(#fff, 0.5);
 $color-text-icon-inverse-hint-hover: rgba(#fff, 0.75);
+// Button Icon Inverse Border - Hint Parent
 $color-border-icon-inverse-hint: rgba(#fff, 0.5);
 $color-border-icon-inverse-hint-hover: rgba(#fff, 0.75);
 

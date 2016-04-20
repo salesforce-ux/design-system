@@ -92,7 +92,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     cb(write(
       buildPath('tests.json'),
       JSON.stringify(
-        formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`) || ''))
+        formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''))
     ));
 
   const zip = cb =>

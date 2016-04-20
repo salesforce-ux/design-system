@@ -83,19 +83,22 @@ describe('scripts/helpers/publish.js', () => {
     expect(executes[3]).to.match(/dist/i));
 
   it('calls the git info', () =>
-    expect(executes[7]).to.match(/git show/i));
+    expect(executes[5]).to.match(/git show/i));
+
+  it('reads the test logs', () =>
+    expect(reads[0]).to.match(/test\.txt$/i));
 
   it('writes the tests', () =>
-    expect(writes[0][0]).to.match(/tests.json/i));
+    expect(writes[0][0]).to.match(/tests\.json$/i));
 
   it('writes the git info to the write place', () =>
-    expect(writes[1][0]).to.match(/gitinfo.txt/i));
+    expect(writes[1][0]).to.match(/gitinfo\.txt$/i));
 
   it('writes the git info', () =>
     expect(writes[1][1]).to.match(/git show/i));
 
   it('gets the stats', () =>
-    expect(reads[0]).to.match(/design-system\.css/i));
+    expect(reads[1]).to.match(/design-system\.css$/i));
 
   it('writes the stats to the correct place', () =>
     expect(writes[2][0]).to.match(/stats.json/i));

@@ -24,7 +24,7 @@ const zip_name = 'fullbuild.zip';
 const local = resolve(__dirname, '../');
 
 const defaultExecute = (cmd, cb) =>
-  exec(cmd, {cwd: local, stdio: 'inherit'}, (err, out, stderr) => {
+  exec(cmd, { cwd: local, stdio: 'inherit' }, (err, out, stderr) => {
     if(err) throw(err);
     cb(out);
   });
@@ -60,9 +60,6 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const runDist = cb =>
     execute('npm run dist-npm', cb);
 
-  const runWebsite = cb =>
-    execute('npm run build', cb);
-
   const writePackageJSON = cb =>
     execute(`cp ${__PATHS__.root}/package.json ${__PATHS__.build}`, cb);
 
@@ -71,8 +68,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
       execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, cb));
 
   const writeWebsite = cb =>
-    runWebsite(() =>
-      execute(`mv ${__PATHS__.www} ${__PATHS__.build}/www`, cb));
+    execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
   const recreateBuildFolder = cb =>
     execute(`rm -rf ${__PATHS__.build}`, () =>
@@ -84,14 +80,20 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
 
   const formatTestOut = out => {
     const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
-    return { unitTests: parseInt(matches[0]),
-            allyTests: parseInt(matches[1]),
-            integrationTests: parseInt(matches[2]) };
+    if (!matches) return {};
+    return {
+      unitTests: parseInt(matches[0]),
+      allyTests: parseInt(matches[1]),
+      integrationTests: parseInt(matches[2])
+    };
   };
 
   const writeTestCounts = cb =>
-    execute('npm test', out =>
-      cb(write(buildPath('tests.json'), JSON.stringify(formatTestOut(out)))));
+    cb(write(
+      buildPath('tests.json'),
+      JSON.stringify(
+        formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`) || ''))
+    ));
 
   const zip = cb =>
     gulp.src(buildPath('**/*'))

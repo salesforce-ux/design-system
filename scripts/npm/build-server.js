@@ -1,3 +1,5 @@
 import publish from '../helpers/publish';
 
-publish()(r => console.log('DONE', r));
+if (process.env.BUILD_SERVER_HOST) {
+  publish()((err, r) => console.log('Successfully published build', err, r));
+}

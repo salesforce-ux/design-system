@@ -108,12 +108,13 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     .end((err, res) => {
       if(err) {
         if(attempts <= 10) {
-          setTimeout(() => poll(attempts+1, url, done), 5000);
+          console.log('attempt #', attempts);
+          setTimeout(() => poll(attempts+1, url, done), 10000);
         } else {
           throw err;
         }
       } else {
-        done();
+        done(null, res.text);
       }
     });
 

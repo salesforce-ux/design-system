@@ -62,7 +62,7 @@ export default React.createClass({
                 return (
                   <li className={className} key={state.id}>
                     <a
-                      role="button"
+                      href={`#${flavor.id}`}
                       data-slds-flavor-states={flavor.uid}
                       data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
                       {state.label}

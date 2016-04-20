@@ -20,7 +20,11 @@
   padding: $spacing-large;
 
   @include mq-large-min {
-    padding: $spacing-xx-large 0 $spacing-xx-large $spacing-xx-large;
+    padding: $spacing-xx-large;
+  }
+
+  &__bleed {
+    margin-right: -$spacing-xx-large;
   }
 }
 

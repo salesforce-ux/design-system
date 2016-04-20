@@ -14,7 +14,6 @@
   },
   "scripts": {
     "postinstall": "babel-node scripts/npm/postinstall.js",
-    "pretest": "npm run gulp -- build:test",
     "test": "babel-node scripts/npm/test.js",
     "test-unit": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js'",
     "test-browser": "karma start",

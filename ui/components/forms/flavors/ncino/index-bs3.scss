@@ -172,4 +172,13 @@
   input[type="date"]::-webkit-input-placeholder{
     visibility: hidden !important;
   }
+  a.form-control.lookup {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    border: none;
+  }
 }

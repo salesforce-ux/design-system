@@ -126,7 +126,7 @@ export let Default = props =>
 export let states = [
   {
     id: 'context-bar',
-    label: 'Default - Platform',
+    label: 'Default',
     element: <Default className={pf('context-bar--theme-dark')} />
   }
 ];

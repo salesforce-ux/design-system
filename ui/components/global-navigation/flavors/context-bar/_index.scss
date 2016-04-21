@@ -48,6 +48,15 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
     flex-shrink: 0;
   }
 
+  // Context nav items go in the secondary region
+  // and secondary region needs to respect the width
+  // of the context bar parent for JavaScript to work
+  // This is how to do that in CSS
+  &__secondary {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
   // Crispy drop shadow
   &__shadow {
     position: absolute;
@@ -96,6 +105,7 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
     &:focus {
       outline: 0;
       text-decoration: underline;
+      opacity: 0.8;
     }
 
     &:hover,
@@ -125,10 +135,12 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
     &:focus {
       outline: 0;
     }
+
     &:hover,
     &:focus {
       color: $color-text-context-bar-default;
     }
+
     &:active {
       color: $color-text-context-bar-default;
     }
@@ -195,14 +207,17 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 //
 // Set interactions based on lightness of background
 @mixin _context-bar-theme-interactions($background) {
+
   @if type-of($background) == color {
     $value: round(lightness($background));
 
     // Really Light Backgrounds, like a white or off-white
     @if $value > 90% {
+
       .#{$css-prefix}context-bar__vertical-divider {
         border-color: $color-border-context-bar-item;
       }
+
       .#{$css-prefix}context-bar__item:hover {
         background-color: $color-background-context-bar-item-hover;
       }
@@ -210,9 +225,11 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 
     // Light enough Backgrounds
     @else if $value > 30% {
+
       .#{$css-prefix}context-bar__vertical-divider {
         border-color: $color-border-context-bar-item;
       }
+
       .#{$css-prefix}context-bar__item:hover {
         background-color: $color-background-context-bar-item-hover;
       }
@@ -220,9 +237,11 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 
     // Dark Backgrounds
     @else if $value <= 30% {
+
       .#{$css-prefix}context-bar__vertical-divider {
         border-color: $color-border-context-bar-inverse-item;
       }
+
       .#{$css-prefix}context-bar__item:hover {
         background-color: $color-background-context-bar-inverse-item-hover;
       }

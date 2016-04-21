@@ -24,50 +24,57 @@ export const intro = (
 export default (
   <ComponentDocs>
     <h2 className={pf('site-text-heading--small')}>1.0. Building the context bar</h2>
-    <p>-- IMG WILL GO HERE --</p>
+    <figure className={pf('site-figure')}>
+      <img src="/assets/images/global-navigation/documentation/building-nav.svg" alt="" />
+    </figure>
     <p>The context bar is composed of a wrapper and 3 regions.</p>
     <ol>
-      <li>App Switcher + App Name + Object Switcher</li>
-      <li>Contextual Actions</li>
-      <li>Contextual Navigation</li>
+      <li><strong>Primary:</strong> App Switcher + App Name + Object Switcher</li>
+      <li><strong>Secondary:</strong> Contextual Navigation</li>
+      <li><strong>Tertiary:</strong> Contextual Actions</li>
     </ol>
     <p>The DOM should follow the order listed above where the Contextual Navigation, either hyperlinks or tabs should be the last element. This will allow for proper keyboard interaction set by the 508 compliance standards.</p>
-    <p>Each region inside the wrapper of `slds-context-bar`, will be described using ordering terms such as "primary" "secondary" "tertiary". This will describe the DOM ordering, not the visual ordering since we want the navigation last for keyboard interactions but visually displayed as adjacent to the app switcher.</p>
+    <p>Each region inside the wrapper of <CodeClass className="context-bar" />, will be described using ordering terms such as <strong>"primary"</strong> <strong>"secondary"</strong> <strong>"tertiary"</strong>. This will describe the DOM ordering, not the visual ordering since we want the navigation last for keyboard interactions but visually displayed as adjacent to the app switcher.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.1. Items on the Context Bar</h2>
-    <p>-- IMG WILL GO HERE --</p>
-    <p>Every item that sits on the horizontal axis of the context bar should receive the class `slds-context-bar__item`.</p>
-    <p>This class is used to notify the context bar that it has a new item. The styles applied allow the children of the context bar to vertically aligned, without knowing the height of the context bar. The styles will also allow for the actionable items `slds-context-bar__label-action` and `slds-context-bar__icon-action` to stretch 100% of the height of the context bar, optimizing the hit area of those actions.</p>
-    <p>Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as `slds-order--[#]`.</p>
+    <figure className={pf('site-figure')}>
+      <img src="/assets/images/global-navigation/documentation/items.svg" alt="" />
+    </figure>
+    <p>Every item that sits on the horizontal axis of the context bar should receive the class <CodeClass className="context-bar__item" />.</p>
+    <p>This class is used to notify the context bar that it has a new item. The styles applied allow the children of the context bar to vertically aligned, without knowing the height of the context bar. The styles will also allow for the actionable items <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" /> to stretch 100% of the height of the context bar, optimizing the hit area of those actions.</p>
+    <p>Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as <code>.slds-order--[#]</code>.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.2. Building the Context Bar Item</h2>
-    <p>-- IMG WILL GO HERE --</p>
+    <figure className={pf('site-figure')}>
+      <img src="/assets/images/global-navigation/documentation/building-items.svg" alt="" />
+    </figure>
     <p>The context bar item is built to accommodate 3 specific layout needs.</p>
     <ol>
       <li>Individual text hyperlink to invokes link destination</li>
       <li>Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available</li>
       <li>Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available + close button icon to remove the item</li>
     </ol>
-    <p>These layouts are built upon 2 reusable classes. The text hyperlink action area, would get the class `slds-context-bar__label-action` and the icon based action area, would get the class `slds-context-bar__icon-action`.</p>
-    <p>The `slds-context-bar__label-action` class handles the alignment and truncation of the text. This class also handles the interaction styles such as `:hover`, `:focus` and `:active`. This is a required class.</p>
-    <p>The `slds-context-bar__icon-action` class handles the alignment and coloring of the icons based on interactions such as `:hover`, `:focus` and `:active`. This is a required if you have an actionable icon area adjacent to an actionable text area.</p>
-    <p>The DOM structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as `slds-order--[#]`.</p>
+    <p>These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class <CodeClass className="context-bar__label-action" /> and the icon based action area would get the class <CodeClass className="context-bar__icon-action" />.</p>
+    <p>The <CodeClass className="context-bar__icon-action" /> class handles the alignment and coloring of the icons based on interactions such as <code>:hover</code>, <code>:focus</code> and <code>:active</code>. This is a required if you have an actionable icon area adjacent to an actionable text area.</p>
+    <p>The DOM structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as <code>.slds-order--[#]</code>.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.3. Building the Icons in the Context Bar</h2>
-    <p>-- IMG WILL GO HERE --</p>
+    <figure className={pf('site-figure')}>
+      <img src="/assets/images/global-navigation/documentation/icons.svg" alt="" />
+    </figure>
     <p>The icons in the context bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.</p>
-    <p>The class used to indicate a button icon will sit adjacent to another actionable item is `slds-context-bar__icon-action`.  If you two icons in an item, each icon should be contained in it's own `slds-context-bar__icon-action` element.</p>
-    <p>The look and feel of the button icon is dependant on the modifiers used from [Button Icon Variant Component](LINK) page.</p>
-    <p>The `slds-context-bar__icon-action` styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class `slds-p-left--none`.</p>
-    <p>If a context bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class `slds-hint-parent` to the hover region, most cases would be `slds-context-bar__icon-action` element.</p>
+    <p>The class used to indicate a button icon will sit adjacent to another actionable item is <CodeClass className="context-bar__icon-action" />.  If you two icons in an item, each icon should be contained in it's own <CodeClass className="context-bar__icon-action" /> element.</p>
+    <p>The look and feel of the button icon is dependant on the modifiers used from <a href="/components/buttons/#icon">Button Icon Variant Component</a> page.</p>
+    <p>The <CodeClass className="context-bar__icon-action" /> styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class <CodeClass className="p-left--none" />.</p>
+    <p>If a context bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class <CodeClass className="hint-parent" /> to the hover region, most cases would be <CodeClass className="context-bar__icon-action" /> element.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.4. Menus on Context Bar Items</h2>
     <p>-- IMG WILL GO HERE --</p>
     <p>When a context bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:</p>
     <ol>
-      <li>`slds-context-bar__dropdown-trigger` — Add a hoverable zone below the action so that the dropdown doesn't disappear when the mouse is between the action and the dropdown — this is specific to the context bar</li>
-      <li>`slds-dropdown-trigger` — Globally used utility that notifies the element there is a dropdown menu </li>
-      <li>`slds-dropdown-trigger--[interaction]` — Specify which type of interaction the menu should appear with "hover" or "click". The default pattern requires hover to show the menu besides the App Switcher Waffle icon.</li>
+      <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn't disappear when the mouse is between the action and the dropdown — this is specific to the context bar</li>
+      <li><CodeClass className="dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
+      <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with "hover" or "click". The default pattern requires hover to show the menu besides the App Switcher Waffle icon.</li>
     </ol>
 
     <h2 className={pf('site-text-heading--small')}>1.5. Specifics of the Context Bar - App Switcher</h2>
@@ -76,20 +83,20 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.6. Specifics of the Context Bar - App Name</h2>
     <p>-- IMG WILL GO HERE --</p>
-    <p>The application name needs to receive the `slds-context-bar__app-name` class. This class will handle such things as its unique font sizing and truncation widths.</p>
+    <p>The application name needs to receive the <CodeClass className="context-bar__app-name" /> class. This class will handle such things as its unique font sizing and truncation widths.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.7. Specifics of the Context Bar - Object Switcher</h2>
     <p>-- IMG WILL GO HERE --</p>
-    <p>The object switcher is specific to the context tab bar. There are unique attributes to the object switcher so the element requires the class `slds-context-bar__object-switcher`. The class will handle the object switchers min- and max-width.</p>
+    <p>The object switcher is specific to the context tab bar. There are unique attributes to the object switcher so the element requires the class <CodeClass className="context-bar__object-switcher" />. The class will handle the object switchers min- and max-width.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.8. Specifics of the Context Bar - Divider</h2>
     <p>-- IMG WILL GO HERE --</p>
-    <p>Due to the platform-esc nature of the context bar, there is an available element utility to apply a divider between sections where needed. The `slds-context-bar__vertical-divider` class should be applied to an empty `div` and placed within the DOM of your context bar for a visual divider.</p>
+    <p>Due to the platform-esc nature of the context bar, there is an available element utility to apply a divider between sections where needed. The <CodeClass className="context-bar__vertical-divider" /> class should be applied to an empty `div` and placed within the DOM of your context bar for a visual divider.</p>
 
-    <h2 className={pf('site-text-heading--small')}>1.8. Theming</h2>
+    <h2 className={pf('site-text-heading--small')}>2.0. Theming</h2>
     <p>Coming Soon</p>
 
-    <h2 className={pf('site-text-heading--small')}>1.9. Accessibility Requirements</h2>
+    <h2 className={pf('site-text-heading--small')}>3.0. Accessibility Requirements</h2>
     <p>Coming Soon</p>
   </ComponentDocs>
 );

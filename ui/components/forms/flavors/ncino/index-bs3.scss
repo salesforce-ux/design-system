@@ -176,9 +176,9 @@
     width: auto;
     height: auto;
     position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 0;
+    top: $spacing-xx-small;
+    right: $spacing-xx-small;
+    padding: $spacing-none;
     border: none;
   }
 }

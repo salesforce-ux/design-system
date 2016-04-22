@@ -1,31 +1,35 @@
-.ui-container {
-  padding: $spacing-none;
-  min-height: $size-frame-default;
-  overflow: hidden {
-    y: auto;
-  }
-  background: $color-background;
+ .ui-container {
+	  padding: $spacing-none;
+	  min-height: $size-frame-default;
+	  overflow: hidden {
+	    y: auto;
+	  }
+	  background: $color-background;
 
-  .body {
+	  .body {
 
-    .message-container {
-      min-height: $spacing-none;
-    }
+	    .message-container {
+	      min-height: $spacing-none;
+	    }
 
-    .alert,
-    .slds-box {
-      margin-bottom: $spacing-medium;
-    }
-  }
+	    .alert,
+	    .slds-box {
+	      margin-bottom: $spacing-medium;
+	    }
+	  }
 
-  .help-block {
-    display: block;
-    position: absolute;
-    top: $size-4x-small;
-    left: 0;
-    margin: $spacing-none {
-      top: $spacing-x-small;
-      bottom: $spacing-x-small;
-    }
-  }
+	.input-group{
+	  .help-block {
+	    display: block;
+	    position: absolute;
+	    top: $size-4x-small;
+	    left: 0;
+	    margin: $spacing-none {
+	      top: $spacing-x-small;
+	      bottom: $spacing-x-small;
+	    }
+	  }
+	}
 }
+
+

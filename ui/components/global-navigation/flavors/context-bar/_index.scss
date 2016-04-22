@@ -172,7 +172,7 @@ $opacity-8: 0.8 !default;
     // Setting custom focus thats specific to context bar
     &:focus {
       box-shadow: none;
-      opacity: 0.8; // @todo tokenize
+      opacity: $opacity-8;
     }
   }
 }

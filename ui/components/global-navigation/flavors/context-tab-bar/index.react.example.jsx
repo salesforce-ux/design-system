@@ -36,8 +36,10 @@ const entityAddDropdown = (
 
 // Context Tab
 let ContextTab = props =>
-  <li className={className(pf('context-bar__item context-bar__tab-item'), props.className)} role="presentation">
-    <a href="#void" className={pf('context-bar__label-action order--2')} role="tab" title={ props.title || 'tab name'}>{ props.title || 'tab name'}</a>
+  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null)} role="presentation">
+    <a href="#void" className={pf('context-bar__label-action order--2')} role="tab" title={ props.title || 'tab name'}>
+      <span className={pf('truncate')}>{ props.title || 'tab name'}</span>
+    </a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent order--1'), props.contextDropdownActive ? pf('is-open') : null)}>
       <button aria-haspopup="true" className={pf('button button--icon-inverse button--icon-inverse-border button--icon-xx-small')}>
         <SvgIcon className={pf('button__icon button__icon--inverse-hint')} sprite="utility" symbol="down" />
@@ -63,10 +65,9 @@ let ContextTab = props =>
 // State Constructor(s)
 //////////////////////////////////////////////
 
-export let Default = props =>
+export let ContextTabBar = props =>
 <div className="demo-only" style={{height: '16rem'}}>
   <div className={className(pf('context-bar'), props.className)}>
-    <div className={pf('context-bar__shadow')}></div>
 
     {/* Primary Section */}
     <div className={pf('context-bar__primary')}>
@@ -123,8 +124,7 @@ export let Default = props =>
     <div className={pf('context-bar__secondary')}>
       <div className={pf('context-bar__vertical-divider')}></div>
       <ul className={pf('grid')} role="tablist">
-        <ContextTab title="Home" />
-        <ContextTab title="Acme Inc." />
+        { props.children }
       </ul>
     </div>
     {/* End Secondary Section */}
@@ -147,13 +147,21 @@ export let Default = props =>
 
 export let states = [
   {
-    id: 'context-bar',
+    id: 'context-tab-bar',
     label: 'Default',
-    element: <Default className={pf('context-bar--theme-service context-bar--theme-dark')} />
+    element:
+      <ContextTabBar className={pf('context-bar--theme-service context-bar--theme-dark')}>
+        <ContextTab title="Home" />
+        <ContextTab title="Acme Inc." />
+      </ContextTabBar>
   },
   {
-    id: 'context-bar-custom-entity',
-    label: 'Custom Entity Active',
-    element: <Default className={pf('context-bar--theme-service context-bar--theme-dark')} entityAddActive />
+    id: 'context-tab-bar-item-active',
+    label: 'Tab Item Active',
+    element:
+      <ContextTabBar className={pf('context-bar--theme-service context-bar--theme-dark')}>
+        <ContextTab title="Home" />
+        <ContextTab title="Acme Inc." itemActive />
+      </ContextTabBar>
   }
 ];

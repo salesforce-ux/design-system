@@ -6,14 +6,6 @@ classes:
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__shadow
-    description: Add a drop shadow to the context bar
-    applied: <code>&lt;div&gt;</code>
-  -
-    class: context-bar__vertical-divider
-    description: Add a vertical divider between elements
-    applied: <code>&lt;div&gt;</code>
-  -
     class: context-bar__primary
     description: Primary zone
     required: true
@@ -21,31 +13,48 @@ classes:
   -
     class: context-bar__secondary
     description: Secondary zone
+    required: true
     applied: <code>&lt;div&gt;</code>
   -
     class: context-bar__tertiary
     description: Tertiary zone
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__app-switcher
-    description: App switcher
-    applied: <code>&lt;div&gt;</code>
-  -
     class: context-bar__item
-    description: Context bar action wrapper
+    description: Item on the horizontal axis of the context bar
+    required: true
+  -
+    class: context-bar__item--tab
+    description: Tab item on the horizontal axis of the context bar
   -
     class: context-bar__label-action
-    description: Action label
+    description: Text hyperlink
     applied: <code>&lt;a&gt;</code>
+    required: true
   -
     class: context-bar__icon-action
-    description: Action Icon
-    applied: <code>&lt;a&gt;</code>
+    description: Container for actionable area of SVG icon or button icon
+    applied: <code>&lt;div&gt;</code>
   -
     class: context-bar__button
-    description:
+    description: Styles for buttons
     applied: <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>
   -
     class: context-bar__dropdown-trigger
-    description: Submenu / dropdown trigger
-    applied: <code>&lt;button&gt;</code>
+    description: Submenu / dropdown trigger area
+    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    notes: Requires <code>.{{cssPrefix}}dropdown-trigger</code> and <code>.{{cssPrefix}}dropdown-trigger--hover</code>
+  -
+    class: context-bar__vertical-divider
+    description: Add a vertical divider between elements
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: context-bar__app-name
+    description: Styles for application name region
+    applied: <code>.{{cssPrefix}}context-bar__label-action</code>
+    required: true
+  -
+    class: context-bar__object-switcher
+    description: Styles for object switcher region
+    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    required: true

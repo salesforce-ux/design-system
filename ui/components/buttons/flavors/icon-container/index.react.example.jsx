@@ -18,11 +18,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-export let ButtonIcon = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
+export let ButtonIconContainer = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
     <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+      <span className={pf('assistive-text')}>More Options</span>
     </button>
   </div>;
 
@@ -32,23 +32,23 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
-    label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    id: 'button-icon-container',
+    label: 'Container with no border',
+    element: <ButtonIconContainer className={pf('button--icon-container')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
+    id: 'button-icon-border',
+    label: 'Container with border',
+    element: <ButtonIconContainer className={pf('button--icon-border')} />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - Container with border',
+    element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
+    id: 'button-icon-border-filled',
+    label: 'Filled container with border',
+    element: <ButtonIconContainer className={pf('button--icon-border-filled')} />
   }
 ];

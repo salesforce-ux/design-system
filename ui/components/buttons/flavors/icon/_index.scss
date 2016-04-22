@@ -9,6 +9,7 @@
 
 
 .#{$css-prefix}button--icon,
+.#{$css-prefix}button--icon-inverse,
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled,
@@ -39,13 +40,14 @@
   @include button-base;
 }
 
-.#{$css-prefix}button--icon-inverse-border {
+.#{$css-prefix}button--icon-border-inverse {
   border: $border-width-thin solid $color-border-button-default;
 }
 
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
-.#{$css-prefix}button--icon-border-filled { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
+.#{$css-prefix}button--icon-border-filled,
+.#{$css-prefix}button--icon-border-inverse { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
   @include square($square-icon-medium-boundary);
 }
 
@@ -89,7 +91,8 @@
 }
 
 // Button icon on inversed background
-.#{$css-prefix}button--icon-inverse {
+.#{$css-prefix}button--icon-inverse,
+.#{$css-prefix}button--icon-border-inverse {
   color: $color-text-link-inverse;
 
   &:hover,
@@ -125,7 +128,8 @@
 
 // Button icon container sizing
 .#{$css-prefix}button--icon-small {
-  @include square($square-icon-medium-boundary);
+  @include square($square-icon-small-boundary);
+  border-radius: $border-radius-small;
 }
 
 .#{$css-prefix}button--icon-x-small {
@@ -178,7 +182,7 @@
 // Hint parent should be applied to the parent of the button
 .#{$css-prefix}hint-parent {
 
-  .#{$css-prefix}button--icon-inverse-border {
+  .#{$css-prefix}button--icon-border-inverse {
     border-color: $color-border-icon-inverse-hint;
 
     &:focus {
@@ -189,7 +193,7 @@
   &:hover,
   &:focus {
 
-    .#{$css-prefix}button--icon-inverse-border {
+    .#{$css-prefix}button--icon-border-inverse {
       border-color: $color-border-icon-inverse-hint-hover;
     }
 

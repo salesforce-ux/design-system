@@ -11,20 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-export let ButtonIcon = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </button>
-  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -32,23 +21,23 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
+    id: 'button-icon-size-default',
     label: 'Default',
     element: <ButtonIcon className={pf('button--icon')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
+    id: 'button-icon-size-large',
+    label: 'Large',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--large')} />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
+    id: 'button-icon-size-small',
+    label: 'Small',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
+    id: 'button-icon-size-x-small',
+    label: 'x-Small',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--x-small')} />
   }
 ];

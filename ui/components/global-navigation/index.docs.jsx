@@ -25,7 +25,7 @@ export default (
   <ComponentDocs>
     <h2 className={pf('site-text-heading--small')}>1.0. Building the context bar</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/building-nav-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/building-nav.svg" alt="" />
     </figure>
     <p>The context bar is composed of a wrapper and 3 regions.</p>
     <ol>
@@ -38,7 +38,7 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.1. Items on the Context Bar</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/items-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/items.svg" alt="" />
     </figure>
     <p>Every item that sits on the horizontal axis of the context bar should receive the class <CodeClass className="context-bar__item" />.</p>
     <p>This class is used to notify the context bar that it has a new item. The styles applied allow the children of the context bar to vertically aligned, without knowing the height of the context bar. The styles will also allow for the actionable items <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" /> to stretch 100% of the height of the context bar, optimizing the hit area of those actions.</p>
@@ -46,7 +46,7 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.2. Building the Context Bar Item</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/building-items-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/building-items.svg" alt="" />
     </figure>
     <p>The context bar item is built to accommodate 3 specific layout needs.</p>
     <ol>
@@ -60,7 +60,7 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.3. Building the Icons in the Context Bar</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/icons-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/icons.svg" alt="" />
     </figure>
     <p>The icons in the context bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.</p>
     <p>The class used to indicate a button icon will sit adjacent to another actionable item is <CodeClass className="context-bar__icon-action" />.  If you two icons in an item, each icon should be contained in it's own <CodeClass className="context-bar__icon-action" /> element.</p>
@@ -70,7 +70,7 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.4. Menu trigger area on Context Bar Items</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/trigger-areas-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/trigger-areas.svg" alt="" />
     </figure>
     <p>When a context bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:</p>
     <ol>
@@ -82,25 +82,25 @@ export default (
 
     <h2 className={pf('site-text-heading--small')}>1.5. Specifics of the Context Bar - App Switcher</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/app-switcher-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/app-switcher.svg" alt="" />
     </figure>
     <p>The app switcher is the one element on the context bar that requires a mouse click or keyboard enter to invoke the app switcher dropdown. Please use JavaScript to accommodate this requirement.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.6. Specifics of the Context Bar - App Name</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/app-name-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/app-name.svg" alt="" />
     </figure>
     <p>The application name needs to receive the <CodeClass className="context-bar__app-name" /> class. This class will handle such things as its unique font sizing and truncation widths.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.7. Specifics of the Context Bar - Object Switcher</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/object-switcher-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/object-switcher.svg" alt="" />
     </figure>
     <p>The object switcher is specific to the context tab bar. There are unique attributes to the object switcher so the element requires the class <CodeClass className="context-bar__object-switcher" />. The class will handle the object switchers min- and max-width.</p>
 
     <h2 className={pf('site-text-heading--small')}>1.8. Specifics of the Context Bar - Divider</h2>
     <figure className={pf('site-figure')}>
-      <img src="/assets/images/global-navigation/documentation/divider-1.svg" alt="" />
+      <img src="/assets/images/global-navigation/documentation/divider.svg" alt="" />
     </figure>
     <p>Due to the platform-esc nature of the context bar, there is an available element utility to apply a divider between sections where needed. The <CodeClass className="context-bar__vertical-divider" /> class should be applied to an empty `div` and placed within the DOM of your context bar for a visual divider.</p>
 

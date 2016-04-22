@@ -60,16 +60,23 @@ classes:
     applied: <code>.{{cssPrefix}}button</code>
     notes: When used alone it has a subtle hover. When used in a button-group it assumes the hover state of the buttons next to it.
   -
+    class: button--icon-border-inverse
+    description: Creates an icon button with a white border
+    applied: <code>.{{cssPrefix}}button</code>
+    notes: There is no background color.
+  -
     class: button--icon-small
     deprecated: true
     description: Creates an icon button at the smaller 2rem (32px) size
     applied: <code>.{{cssPrefix}}button</code>
-    notes: Be aware that this sizes the button, not the icon
   -
     class: button--icon-x-small
     description: Creates an icon button at the smaller 1.25rem (20px) size
     applied: <code>.{{cssPrefix}}button</code>
-    notes: Be aware that this sizes the button, not the icon
+  -
+    class: button--icon-xx-small
+    description: Creates an icon button at the smaller 1rem (16px) size
+    applied: <code>.{{cssPrefix}}button</code>
   -
     class: button--icon-more
     description: Used for the style where only two icons are in a button
@@ -108,6 +115,11 @@ classes:
   -
     class: button__icon--hint
     description: Creates a grayed out icon until the parent is hovered
+    applied: <code>.{{cssPrefix}}button__icon</code>
+    notes: The parent must have the <code>.{{cssPrefix}}hint-parent</code> class applied
+  -
+    class: button__icon--inverse-hint
+    description: Creates a grayed out icon until the parent is hovered for inversed dark backgrounds
     applied: <code>.{{cssPrefix}}button__icon</code>
     notes: The parent must have the <code>.{{cssPrefix}}hint-parent</code> class applied
   -

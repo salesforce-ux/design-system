@@ -18,14 +18,18 @@
     }
   }
 
-  .help-block {
-    display: block;
-    position: absolute;
-    top: $size-4x-small;
-    left: 0;
-    margin: $spacing-none {
-      top: $spacing-x-small;
-      bottom: $spacing-x-small;
+  .input-group{
+    .help-block {
+      display: block;
+      position: absolute;
+      top: $size-4x-small;
+      left: 0;
+      margin: $spacing-none {
+        top: $spacing-x-small;
+        bottom: $spacing-x-small;
+      }
     }
   }
 }
+
+

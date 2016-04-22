@@ -159,7 +159,8 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.www,
   __PATHS__.generated,
   __PATHS__.tmp,
-  __PATHS__.dist
+  __PATHS__.dist,
+  __PATHS__.logs
 ]));
 
 gulp.task('serve', () => {
@@ -229,11 +230,5 @@ gulp.task('default', callback => {
 gulp.task('build', callback => {
   runSequence(
     'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
-  callback);
-});
-
-gulp.task('build:test', callback => {
-  runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages'], ['links'],
   callback);
 });

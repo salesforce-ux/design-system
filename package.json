@@ -31,7 +31,7 @@
     "stats": "gulp stylestats"
   },
   "dependencies": {
-    "@salesforce-ux/design-tokens": "git+ssh://git@github.com:salesforce-ux/design-tokens-internal.git#v2.0.5",
+    "@salesforce-ux/design-tokens": "git+ssh://git@github.com:salesforce-ux/design-tokens-internal.git#v3.0.0",
     "@salesforce-ux/icons": "3.5.1",
     "app-module-path": "1.0.5",
     "async": "1.5.2",

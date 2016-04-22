@@ -34,6 +34,8 @@ $color-border-context-bar-item: rgba(#000, 0.1) !default;
 $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 // New opacity token
 $opacity-8: 0.8 !default;
+// fix for theo bug - remove eventually
+$color-background-context-bar-shadow: #000;
 
 .#{$css-prefix}context-bar {
   display: flex;

@@ -41,7 +41,7 @@ let ContextTab = props =>
       <span className={pf('truncate')}>{ props.title || 'tab name'}</span>
     </a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent order--1'), props.contextDropdownActive ? pf('is-open') : null)}>
-      <button aria-haspopup="true" className={pf('button button--icon-inverse button--icon-inverse-border button--icon-xx-small')}>
+      <button aria-haspopup="true" className={pf('button button--icon-border-inverse button--icon-xx-small')}>
         <SvgIcon className={pf('button__icon button__icon--inverse-hint')} sprite="utility" symbol="down" />
         <span className={pf('assistive-text')}>Assistive text for submenu</span>
       </button>

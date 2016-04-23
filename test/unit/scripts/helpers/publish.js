@@ -77,11 +77,17 @@ describe('scripts/helpers/publish.js', () => {
     publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done());
   });
 
+  it('removes the old folder', () =>
+    expect(executes[0]).to.match(/rm -rf/i));
+
+  it('makes a new build folder', () =>
+    expect(executes[1]).to.match(/mkdir/i));
+
   it('calls the dist', () =>
-    expect(executes[1]).to.match(/dist/i));
+    expect(executes[3]).to.match(/dist/i));
 
   it('calls the git info', () =>
-    expect(executes[3]).to.match(/git show/i));
+    expect(executes[5]).to.match(/git show/i));
 
   it('reads the test logs', () =>
     expect(reads[0]).to.match(/test\.txt$/i));

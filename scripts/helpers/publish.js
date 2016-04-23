@@ -71,8 +71,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
   const recreateBuildFolder = cb =>
-    execute(`rm -rf ${__PATHS__.build}`, () =>
-      execute(`mkdir ${__PATHS__.build}`, cb));
+    execute(`mkdir ${__PATHS__.build}`, cb);
 
   const writeGitInfo = cb =>
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>

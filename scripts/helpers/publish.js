@@ -70,9 +70,6 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const writeWebsite = cb =>
     execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
-  const recreateBuildFolder = cb =>
-    execute(`mkdir ${__PATHS__.build}`, cb);
-
   const writeGitInfo = cb =>
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
       cb(write(buildPath('gitinfo.txt'), out)));
@@ -126,7 +123,6 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
         poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
 
   return done =>
-    recreateBuildFolder(() =>
     writeTestCounts(() =>
     writeDist(() =>
     writeWebsite(() =>
@@ -135,7 +131,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     zip(() =>
     getSha(sha =>
       getDependencies(deps =>
-        publish(sha, deps, done))))))))));
+        publish(sha, deps, done)))))))));
 };
 
 module.exports = publish;

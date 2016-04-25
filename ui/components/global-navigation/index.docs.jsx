@@ -77,7 +77,7 @@ export default (
     </figure>
     <p>When a context bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:</p>
     <ol>
-      <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn't disappear when the mouse is between the action and the dropdown — this is specific to the context bar</li>
+      <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn&rsquo;t disappear when the mouse is between the action and the dropdown — this is specific to the context bar</li>
       <li><CodeClass className="dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
       <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Switcher Waffle icon.</li>
     </ol>

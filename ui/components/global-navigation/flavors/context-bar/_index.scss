@@ -7,36 +7,6 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// Context Bar
-// Context Bar - Text Color
-$color-text-context-bar-default: $color-text-default !default;
-$color-text-context-bar-inverse: $color-text-inverse !default;
-// Context Bar - Drop Shadow
-// $color-context-bar-shadow: #000 !default;
-// Context Bar - Height
-$height-context-bar: 2.25rem !default;
-// Context Bar - Theme Backgrounds
-$color-background-context-bar-default: #092180 !default;
-$color-background-context-bar-service: #7f32bb !default;
-$color-background-context-bar-sales: #1e71ce !default;
-$color-background-context-bar-marketing: #d04525 !default;
-$color-background-context-bar-analytics: #137e66 !default;
-$color-background-context-bar-community: #a60a52 !default;
-// Context Bar - Interactions
-$color-background-context-bar-item-hover: rgba(#000, 0.2) !default;
-$color-background-context-bar-item-active: rgba(#000, 0.4) !default;
-$color-background-context-bar-item-selected: rgba(#000, 0.4) !default;
-$color-background-context-bar-inverse-item-hover: rgba(#fff, 0.2) !default;
-$color-background-context-bar-inverse-item-active: rgba(#fff, 0.4) !default;
-$color-background-context-bar-inverse-item-selected: rgba(#fff, 0.4) !default;
-// Context Bar - Borders
-$color-border-context-bar-item: rgba(#000, 0.1) !default;
-$color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
-// New opacity token
-$opacity-8: 0.8 !default;
-// fix for theo bug - remove eventually
-$color-background-context-bar-shadow: #000;
-
 .#{$css-prefix}context-bar {
   display: flex;
   height: $height-context-bar;

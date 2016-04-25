@@ -15,7 +15,7 @@ script:
   - npm run build
   # Run "test" after "build" because the build task cleans temporary directories
   - npm run test
-  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm run build-server ; fi
+  - npm run build-server
 after_success:
   - export SHA=`git rev-parse --short HEAD`
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi

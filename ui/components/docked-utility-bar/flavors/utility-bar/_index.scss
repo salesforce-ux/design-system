@@ -18,6 +18,7 @@ $color-border-utility-bar-active: $color-brand;
 .#{$css-prefix}utility-bar {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   background: $color-background;
   box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
@@ -28,6 +29,7 @@ $color-border-utility-bar-active: $color-brand;
     position: relative;
     padding: 0 $spacing-small;
     border-radius: 0;
+    border: 0;
     color: $color-text-default;
 
     &:after {

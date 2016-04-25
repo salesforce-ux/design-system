@@ -9,7 +9,8 @@
 
 .#{$css-prefix}utility-panel {
   position: fixed;
-  bottom: calc(#{$line-height-button} + 2px); // Button line-height + top/bottom border
+  // bottom: calc(#{$line-height-button} + 2px); // Button line-height + top/bottom border
+  bottom: $line-height-button;
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   width: 340px;
   height: 40px;
@@ -33,9 +34,23 @@
     }
   }
 
+  &__body {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: center;
+    overflow: auto;
+  }
+
   // Might be able to combine these action classes
   &__header-label-action {
     padding: $spacing-x-small;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
 
     &:focus {
       outline: 0;

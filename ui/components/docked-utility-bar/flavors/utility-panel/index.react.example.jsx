@@ -27,11 +27,11 @@ const dialingIcon = (
   </span>
 );
 
-const UtilityPanel = (
-  <div className={pf('utility-panel grid grid--vertical is-open')}>
+export let UtilityPanel = props =>
+  <div className={className(pf('utility-panel grid grid--vertical'), props.className)}>
     <div className={pf('utility-panel__header grid shrink-none')}>
-      <a href="#void" className={pf('utility-panel__header-label-action grow text-link--reset')}>
-        <MediaObject figureLeft={dialingIcon} flavor="center">Header</MediaObject>
+      <a href="#void" className={pf('utility-panel__header-label-action grow')}>
+        <MediaObject figureLeft={dialingIcon} flavor="center">{ props.header || 'Header' }</MediaObject>
       </a>
       <div className={pf('utility-panel__header-icon-action')}>
         <button className={pf('button button--icon button--icon-inverse')}>
@@ -40,25 +40,22 @@ const UtilityPanel = (
         </button>
       </div>
     </div>
-    <div className={pf('utility-panel__body col')}>
-      Utility Panel Body
+    <div className={pf('utility-panel__body')}>
+      { props.children }
     </div>
-  </div>
+  </div>;
+
+const PanelOpen = (
+  <UtilityPanel className={pf('is-open')}>
+    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+  </UtilityPanel>
 );
 
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let UtilityBarPanel = props =>
-  <div className="demo-only" style={{ height: '540px', position: 'relative' }}>
-    <UtilityBar panel={UtilityPanel}>
-      <UtilityBarItem symbol="call" className={pf('is-active')}>Call</UtilityBarItem>
-      <UtilityBarItem symbol="clock">History</UtilityBarItem>
-      <UtilityBarItem symbol="note">Notes</UtilityBarItem>
-    </UtilityBar>
-    {/*<UtilityPanel className={pf('is-open')} />*/}
-  </div>;
+const PanelClosed = (
+  <UtilityPanel>
+    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+  </UtilityPanel>
+);
 
 ///////////////////////////////////////////
 // Export
@@ -66,8 +63,27 @@ let UtilityBarPanel = props =>
 
 export let states = [
   {
-    id: 'utility-panel',
+    id: 'utility-panel-open',
     label: 'Open',
-    element: <UtilityBarPanel />
+    element:
+      <div className="demo-only" style={{ height: '540px' }}>
+        <UtilityBar panel={PanelOpen}>
+          <UtilityBarItem symbol="call" className={pf('is-active')}>Call</UtilityBarItem>
+          <UtilityBarItem symbol="clock">History</UtilityBarItem>
+          <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+        </UtilityBar>
+      </div>
+  },
+  {
+    id: 'utility-panel-closed',
+    label: 'Closed',
+    element:
+      <div className="demo-only" style={{ height: '540px' }}>
+        <UtilityBar panel={PanelClosed}>
+          <UtilityBarItem symbol="call">Call</UtilityBarItem>
+          <UtilityBarItem symbol="clock">History</UtilityBarItem>
+          <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+        </UtilityBar>
+      </div>
   }
 ];

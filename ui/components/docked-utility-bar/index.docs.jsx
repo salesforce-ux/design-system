@@ -16,7 +16,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    Docked Composer is a persistent utility bar that allows a user to continually use the app to complete tasks or gather information while expanding/collapsing a composer window.
+    Docked utility bar is a persistent bar that allows a user to continually use the app to complete tasks or gather information while expanding/collapsing utility panels.
   </p>
 );
 

@@ -48,7 +48,7 @@ const request = fakey(['get', 'post', 'attach', 'field',
 
 const execute = commands => (cmd, cb) => {
   commands.push(cmd);
-  cb('spring-16');
+  cb('summer-17-rc8');
 };
 
 const fakeFS = (reads, writes) => {

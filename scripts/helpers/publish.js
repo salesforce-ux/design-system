@@ -41,7 +41,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     resolve(__PATHS__.build, 'dist', extra);
 
   const shouldPublishBranch = b =>
-    b.match(/spring|summer|winter|master|development|next|release|buildserver/ig);
+    b.match(/^(spring|summer|winter|master|development|next|release)|buildserver/ig);
 
   const checkBranch = cb =>
     execute('git rev-parse --abbrev-ref HEAD', br =>

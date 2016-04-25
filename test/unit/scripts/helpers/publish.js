@@ -16,36 +16,40 @@ import publish from 'scripts/helpers/publish';
 const fakey = protocol => commands =>
   protocol.reduce((acc, x) => {
     if(x.name) {
-      acc[x.name] = x.f(acc, commands)
+      acc[x.name] = x.f(acc, commands);
     } else {
       acc[x] = function() {
-        commands.push([x, arguments])
+        commands.push([x, arguments]);
         return acc;
-      }
+      };
     }
-    return acc
-  }, {})
+    return acc;
+  }, {});
 
 const gulp = fakey(['src', 'pipe', 'dest',
   { name: 'on', f: (acc, commands) =>
-      (cmd, cb) => {
-        commands.push(["on", cmd])
-        if(cmd === "finish") cb()
-        return acc
-  }}])
+    (cmd, cb) => {
+      commands.push(['on', cmd]);
+      if(cmd === 'finish') cb();
+      return acc;
+    }
+  }
+]);
 
-const request = fakey(['post', 'attach', 'field',
+const request = fakey(['get', 'post', 'attach', 'field',
   { name: 'end', f: (acc, commands) =>
-      cb => {
-        commands.push(["end", ""])
-        cb()
-  }}])
+    cb => {
+      commands.push(['end', '']);
+      cb(null, { text: 'url' });
+    }
+  }
+]);
 
 
 const execute = commands => (cmd, cb) => {
-  commands.push(cmd)
-  cb("fake output "+cmd)
-}
+  commands.push(cmd);
+  cb('summer-17-rc8');
+};
 
 const fakeFS = (reads, writes) => {
   return {
@@ -53,11 +57,11 @@ const fakeFS = (reads, writes) => {
       writes.push([path, contents]),
 
     readFileSync: (path, charset) => {
-      reads.push(path)
-      return "fake read for "+path
+      reads.push(path);
+      return `fake read for ${path}`;
     }
-  }
-}
+  };
+};
 
 // TODO: rewrite these to use any() instead of [0][1] etc
 describe('scripts/helpers/publish.js', () => {
@@ -69,37 +73,34 @@ describe('scripts/helpers/publish.js', () => {
   let publisher;
 
   before(function(done) {
-    process.env.PUBLISH_HOST = "http://myurl"
-    publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done())
+    process.env.BUILD_SERVER_HOST = 'http://myurl';
+    publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done());
   });
 
-  it('removes the old folder', () =>
-    expect(executes[0]).to.match(/rm -rf/i));
-
-  it('makes a new build folder', () =>
-    expect(executes[1]).to.match(/mkdir/i));
-
   it('calls the dist', () =>
-    expect(executes[2]).to.match(/dist/i));
+    expect(executes[1]).to.match(/dist/i));
 
   it('calls the git info', () =>
-    expect(executes[6]).to.match(/git show/i));
+    expect(executes[4]).to.match(/git show/i));
+
+  it('reads the test logs', () =>
+    expect(reads[0]).to.match(/test\.txt$/i));
+
+  it('writes the tests', () =>
+    expect(writes[0][0]).to.match(/tests\.json$/i));
 
   it('writes the git info to the write place', () =>
-    expect(writes[0][0]).to.match(/gitinfo.txt/i));
-
-  it('writes the git info', () =>
-    expect(writes[0][1]).to.match(/git show/i));
+    expect(writes[1][0]).to.match(/gitinfo\.txt$/i));
 
   it('gets the stats', () =>
-    expect(reads[0]).to.match(/design-system\.css/i));
+    expect(reads[1]).to.match(/design-system\.css$/i));
 
   it('writes the stats to the correct place', () =>
-    expect(writes[1][0]).to.match(/stats.json/i));
+    expect(writes[2][0]).to.match(/stats.json/i));
 
   it('writes the stats with the correct info', () =>
-    expect(JSON.parse(writes[1][1]).size).to.be.greaterThan(120));
+    expect(JSON.parse(writes[2][1]).size).to.be.greaterThan(120));
 
   it('publishes the zip', () =>
-    expect(requests[0][1][0]).to.match(/myurl.*git/));
+    expect(requests[0][1][0]).to.match(/myurl/));
 });

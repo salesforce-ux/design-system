@@ -24,7 +24,7 @@ const zip_name = 'fullbuild.zip';
 const local = resolve(__dirname, '../');
 
 const defaultExecute = (cmd, cb) =>
-  exec(cmd, {cwd: local, stdio: 'inherit'}, (err, out, stderr) => {
+  exec(cmd, { cwd: local, stdio: 'inherit' }, (err, out, stderr) => {
     if(err) throw(err);
     cb(out);
   });
@@ -39,6 +39,13 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
 
   const distPath = extra =>
     resolve(__PATHS__.build, 'dist', extra);
+
+  const shouldPublishBranch = b =>
+    b.match(/^(spring|summer|winter|master|development|next|release)|buildserver/ig);
+
+  const checkBranch = cb =>
+    execute('git rev-parse --abbrev-ref HEAD', br =>
+      shouldPublishBranch(br) ? cb() : br);
 
   const getDependencies = cb => {
     const deps = require(resolve(__PATHS__.root, 'package.json')).dependencies;
@@ -60,9 +67,6 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const runDist = cb =>
     execute('npm run dist-npm', cb);
 
-  const runWebsite = cb =>
-    execute('npm run build', cb);
-
   const writePackageJSON = cb =>
     execute(`cp ${__PATHS__.root}/package.json ${__PATHS__.build}`, cb);
 
@@ -71,16 +75,28 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
       execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, cb));
 
   const writeWebsite = cb =>
-    runWebsite(() =>
-      execute(`mv ${__PATHS__.www} ${__PATHS__.build}/www`, cb));
-
-  const recreateBuildFolder = cb =>
-    execute(`rm -rf ${__PATHS__.build}`, () =>
-      execute(`mkdir ${__PATHS__.build}`, cb));
+    execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
   const writeGitInfo = cb =>
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
       cb(write(buildPath('gitinfo.txt'), out)));
+
+  const formatTestOut = out => {
+    const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
+    if (!matches) return {};
+    return {
+      unitTests: parseInt(matches[0]),
+      integrationTests: parseInt(matches[1]),
+      allyTests: parseInt(matches[2])
+    };
+  };
+
+  const writeTestCounts = cb =>
+    cb(write(
+      buildPath('tests.json'),
+      JSON.stringify(
+        formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''))
+    ));
 
   const zip = cb =>
     gulp.src(buildPath('**/*'))
@@ -90,23 +106,40 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     .on('error', cb)
     .on('finish', cb);
 
+  const poll = (attempts, url, done) =>
+    request.get(url)
+    .end((err, res) => {
+      if(err) {
+        if(attempts <= 15) {
+          console.log('attempt #', attempts);
+          setTimeout(() => poll(attempts+1, url, done), 10000);
+        } else {
+          throw err;
+        }
+      } else {
+        done(null, res.text);
+      }
+    });
+
   const publish = (sha, deps, done) =>
     request
-      .post(`${process.env.PUBLISH_HOST}/projects/design-system/builds/${sha}?token=${process.env.AUTH_TOKEN}`)
+      .post(`${process.env.BUILD_SERVER_HOST}/projects/design-system/builds/${sha}`)
       .field('dependencies', JSON.stringify(deps))
       .attach('dist', buildPath(zip_name))
-      .end(done);
+      .end((err, res) =>
+        poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
 
   return done =>
-    recreateBuildFolder(() =>
-    writeDist(() =>
-    writeWebsite(() =>
-    writeGitInfo(() =>
-    writeStats(() =>
-    zip(() =>
-    getSha(sha =>
-      getDependencies(deps =>
-        publish(sha, deps, done)))))))));
+    checkBranch(() =>
+      writeTestCounts(() =>
+      writeDist(() =>
+      writeWebsite(() =>
+      writeGitInfo(() =>
+      writeStats(() =>
+      zip(() =>
+      getSha(sha =>
+        getDependencies(deps =>
+          publish(sha, deps, done))))))))));
 };
 
 module.exports = publish;

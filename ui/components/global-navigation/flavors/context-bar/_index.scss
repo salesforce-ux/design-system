@@ -104,6 +104,14 @@ $color-background-context-bar-shadow: #000;
     &.#{$css-prefix}is-active {
       background-color: $color-background-context-bar-inverse-item-active;
     }
+
+    &--divider-left {
+      border-left: $border-width-thin solid $color-border-context-bar-inverse-item;
+    }
+
+    &--divider-right {
+      border-right: $border-width-thin solid $color-border-context-bar-inverse-item;
+    }
   }
 
   // Tab context bar items
@@ -253,6 +261,7 @@ $color-background-context-bar-shadow: #000;
 // Alters the interactions and text color
 //
 // Set interactions based on lightness of background
+// @access private
 @mixin _context-bar-theme-interactions($background) {
 
   @if type-of($background) == color {
@@ -261,7 +270,9 @@ $color-background-context-bar-shadow: #000;
     // Really Light Backgrounds, like a white or off-white
     @if $value > 90% {
 
-      .#{$css-prefix}context-bar__vertical-divider {
+      .#{$css-prefix}context-bar__vertical-divider,
+      .#{$css-prefix}context-bar__item--divider-left,
+      .#{$css-prefix}context-bar__item--divider-right {
         border-color: $color-border-context-bar-item;
       }
 
@@ -277,7 +288,9 @@ $color-background-context-bar-shadow: #000;
     // Light enough Backgrounds
     @else if $value > 30% {
 
-      .#{$css-prefix}context-bar__vertical-divider {
+      .#{$css-prefix}context-bar__vertical-divider,
+      .#{$css-prefix}context-bar__item--divider-left,
+      .#{$css-prefix}context-bar__item--divider-right {
         border-color: $color-border-context-bar-item;
       }
 
@@ -293,7 +306,9 @@ $color-background-context-bar-shadow: #000;
     // Dark Backgrounds
     @else if $value <= 30% {
 
-      .#{$css-prefix}context-bar__vertical-divider {
+      .#{$css-prefix}context-bar__vertical-divider,
+      .#{$css-prefix}context-bar__item--divider-left,
+      .#{$css-prefix}context-bar__item--divider-right {
         border-color: $color-border-context-bar-inverse-item;
       }
 

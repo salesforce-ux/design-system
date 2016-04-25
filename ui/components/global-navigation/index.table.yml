@@ -23,9 +23,11 @@ classes:
     class: context-bar__item
     description: Item on the horizontal axis of the context bar
     required: true
+    applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
   -
     class: context-bar__item--tab
     description: Tab item on the horizontal axis of the context bar
+    applied: <code>&lt;li&gt;</code>
   -
     class: context-bar__label-action
     description: Text hyperlink
@@ -48,6 +50,14 @@ classes:
     class: context-bar__vertical-divider
     description: Add a vertical divider between elements
     applied: <code>&lt;div&gt;</code>
+  -
+    class: context-bar__item--divider-left
+    description: Add a left border to a context bar item
+    applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
+  -
+    class: context-bar__item--divider-right
+    description: Add a right border to a context bar item
+    applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
   -
     class: context-bar__app-name
     description: Styles for application name region

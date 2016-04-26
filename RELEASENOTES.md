@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release [1.0.3] - April 26, 2016
+
+- Fixed Sass build issue for npm module
+
 ## Release [1.0.2] - April 8, 2016
 
 - Added a link to an [archive of v1.0.0](https://design-system-v-1-0-0.herokuapp.com/), so you can access the documentation and downloads for that previous version

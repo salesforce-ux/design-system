@@ -11,7 +11,7 @@
   display: flex;
   height: $height-context-bar;
   background-color: $color-background-context-bar-default;
-  color: $color-text-context-bar;
+  color: $color-text-context-bar-inverse;
   position: relative;
   padding: 0 $spacing-medium;
 
@@ -128,7 +128,7 @@
     align-items: center;
     align-content: center;
     padding: 0 $spacing-small;
-    color: $color-text-context-bar;
+    color: $color-text-context-bar-inverse;
 
     &:focus {
       outline: 0;
@@ -136,11 +136,11 @@
 
     &:hover,
     &:focus {
-      color: $color-text-context-bar;
+      color: $color-text-context-bar-inverse;
     }
 
     &:active {
-      color: $color-text-context-bar;
+      color: $color-text-context-bar-inverse;
     }
   }
 

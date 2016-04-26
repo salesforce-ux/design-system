@@ -132,11 +132,11 @@ export let states = [
   {
     id: 'context-bar',
     label: 'Default',
-    element: <ContextBar className={pf('context-bar--theme-dark')} />
+    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} />
   },
   {
     id: 'context-bar-item-active',
     label: 'Item Active',
-    element: <ContextBar className={pf('context-bar--theme-dark')} itemActive />
+    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} itemActive />
   }
 ];

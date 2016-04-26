@@ -18,6 +18,10 @@ classes:
     description: Styles for resizeable columns
     applied: <code>.{{cssPrefix}}table</code>
   -
+    class: table--compact
+    description: Styles for compact version
+    applied: <code>.{{cssPrefix}}table</code>
+  -
     class: is-selected
     description: Changes row to selected state
     applied: <code>&lt;tr&gt;</code>

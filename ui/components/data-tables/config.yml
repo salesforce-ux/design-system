@@ -1,4 +1,6 @@
 status: 'dev-ready'
 flavors:
-  - base
+  - basic
+  - advanced
+  - compact
   - responsive

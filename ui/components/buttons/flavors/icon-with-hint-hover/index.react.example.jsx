@@ -11,41 +11,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
-import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let Default = props =>
-  <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Charts">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    </ButtonIcon>
-  </ButtonGroup>;
-
-let Selected = props =>
-  <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border is-selected')} assistiveText="Charts">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    </ButtonIcon>
-  </ButtonGroup>;
+let ButtonIconHint = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
+    <div className={pf('hint-parent')}>
+      <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+        <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="down" />
+        <span className={pf('assistive-text')}>More Options</span>
+      </button>
+    </div>
+  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -53,13 +34,23 @@ let Selected = props =>
 
 export let states = [
   {
-    id: 'button-group-icon',
-    label: 'Default',
-    element: <Default />
+    id: 'button-icon-with-hint-hover',
+    label: 'Default with no border',
+    element: <ButtonIconHint className={pf('button--icon')} iconClassName={pf('button__icon--hint')} />
   },
   {
-    id: 'button-group-icon-selected',
-    label: 'Selected',
-    element: <Selected />
+    id: 'button-icon-border-with-hint-hover',
+    label: 'Container with border',
+    element: <ButtonIconHint className={pf('button--icon-border')} iconClassName={pf('button__icon--hint')} />
+  },
+  {
+    id: 'button-icon-inverse-with-hint-hover',
+    label: 'Inverse with no border',
+    element: <ButtonIconHint inverse className={pf('button--icon-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
+  },
+  {
+    id: 'button-icon-border-inverse-with-hint-hover',
+    label: 'Inverse container with border',
+    element: <ButtonIconHint inverse className={pf('button--icon-border-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
   }
 ];

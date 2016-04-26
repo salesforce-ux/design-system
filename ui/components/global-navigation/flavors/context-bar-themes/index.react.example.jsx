@@ -10,45 +10,43 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import { Default as ContextBar } from 'ui/components/global-navigation/flavors/context-bar/index.react.example';
+import { Default as ContextTabBar } from 'ui/components/global-navigation/flavors/context-tab-bar/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-export let ButtonIcon = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </button>
-  </div>;
-
-///////////////////////////////////////////
+//////////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+//////////////////////////////////////////////
 
 export let states = [
   {
-    id: 'button-icon',
-    label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    id: 'context-bar-theme-platform',
+    label: 'Platform',
+    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
+    id: 'context-bar-theme-service',
+    label: 'Service',
+    element: <ContextTabBar className={pf('context-bar--theme-service context-bar--theme-dark')} appName="Service Console" />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
+    id: 'context-bar-theme-sales',
+    label: 'Sales',
+    element: <ContextTabBar className={pf('context-bar--theme-sales context-bar--theme-dark')} appName="Sales Console" />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
-  }
+    id: 'context-bar-theme-marketing',
+    label: 'Marketing',
+    element: <ContextBar className={pf('context-bar--theme-marketing context-bar--theme-dark')} appName="Marketing Cloud" />
+  },
+  {
+    id: 'context-bar-theme-analytics',
+    label: 'Analytics',
+    element: <ContextBar className={pf('context-bar--theme-analytics context-bar--theme-dark')} appName="Analytics" />
+  },
+  {
+    id: 'context-bar-theme-community',
+    label: 'Community',
+    element: <ContextBar className={pf('context-bar--theme-community context-bar--theme-dark')} appName="Community" />
+  },
 ];

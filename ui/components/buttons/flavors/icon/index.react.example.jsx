@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 let Demo = props =>
   <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
     { props.children }
-  </div>
+  </div>;
 
 export let ButtonIcon = props =>
   <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>

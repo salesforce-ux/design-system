@@ -40,6 +40,13 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const distPath = extra =>
     resolve(__PATHS__.build, 'dist', extra);
 
+  const shouldPublishBranch = b =>
+    b.match(/^(spring|summer|winter|master|development|next|release)|buildserver/ig);
+
+  const checkBranch = cb =>
+    execute('git rev-parse --abbrev-ref HEAD', br =>
+      shouldPublishBranch(br) ? cb() : br);
+
   const getDependencies = cb => {
     const deps = require(resolve(__PATHS__.root, 'package.json')).dependencies;
     cb(Object.keys(deps)
@@ -107,7 +114,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     request.get(url)
     .end((err, res) => {
       if(err) {
-        if(attempts <= 10) {
+        if(attempts <= 15) {
           console.log('attempt #', attempts);
           setTimeout(() => poll(attempts+1, url, done), 10000);
         } else {
@@ -127,16 +134,16 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
         poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
 
   return done =>
-    recreateBuildFolder(() =>
-    writeTestCounts(() =>
-    writeDist(() =>
-    writeWebsite(() =>
-    writeGitInfo(() =>
-    writeStats(() =>
-    zip(() =>
-    getSha(sha =>
-      getDependencies(deps =>
-        publish(sha, deps, done))))))))));
+    checkBranch(() =>
+      writeTestCounts(() =>
+      writeDist(() =>
+      writeWebsite(() =>
+      writeGitInfo(() =>
+      writeStats(() =>
+      zip(() =>
+      getSha(sha =>
+        getDependencies(deps =>
+          publish(sha, deps, done))))))))));
 };
 
 module.exports = publish;

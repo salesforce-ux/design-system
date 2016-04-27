@@ -48,7 +48,7 @@ const request = fakey(['get', 'post', 'attach', 'field',
 
 const execute = commands => (cmd, cb) => {
   commands.push(cmd);
-  cb(`2 passing 23 SUCESS 3 passing ${cmd}`);
+  cb('summer-17-rc8');
 };
 
 const fakeFS = (reads, writes) => {
@@ -77,17 +77,11 @@ describe('scripts/helpers/publish.js', () => {
     publish(fakeFS(reads, writes), request(requests), execute(executes), gulp(gulps))(() => done());
   });
 
-  it('removes the old folder', () =>
-    expect(executes[0]).to.match(/rm -rf/i));
-
-  it('makes a new build folder', () =>
-    expect(executes[1]).to.match(/mkdir/i));
-
   it('calls the dist', () =>
-    expect(executes[3]).to.match(/dist/i));
+    expect(executes[1]).to.match(/dist/i));
 
   it('calls the git info', () =>
-    expect(executes[5]).to.match(/git show/i));
+    expect(executes[4]).to.match(/git show/i));
 
   it('reads the test logs', () =>
     expect(reads[0]).to.match(/test\.txt$/i));
@@ -97,9 +91,6 @@ describe('scripts/helpers/publish.js', () => {
 
   it('writes the git info to the write place', () =>
     expect(writes[1][0]).to.match(/gitinfo\.txt$/i));
-
-  it('writes the git info', () =>
-    expect(writes[1][1]).to.match(/git show/i));
 
   it('gets the stats', () =>
     expect(reads[1]).to.match(/design-system\.css$/i));
@@ -111,5 +102,5 @@ describe('scripts/helpers/publish.js', () => {
     expect(JSON.parse(writes[2][1]).size).to.be.greaterThan(120));
 
   it('publishes the zip', () =>
-    expect(requests[0][1][0]).to.match(/myurl.*git/));
+    expect(requests[0][1][0]).to.match(/myurl/));
 });

@@ -88,7 +88,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <h3 className={pf('text-heading--small')}>Opportunities (2+)</h3>
+            <p className={pf('text-heading--small')}>Opportunities (2+)</p>
           </MediaObject>
         </dt>
         {/* Opportunity One */}
@@ -141,7 +141,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconCases} flavor="center">
-            <h3 className={pf('text-heading--small')}>Cases (1)</h3>
+            <p className={pf('text-heading--small')}>Cases (1)</p>
           </MediaObject>
         </dt>
         {/* Case One */}

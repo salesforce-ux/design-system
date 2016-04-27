@@ -101,6 +101,9 @@
   'docked-utility-bar/flavors/utility-bar/index',
   'docked-utility-bar/flavors/utility-panel/index',
 
+  // Global Navigation
+  'global-navigation/flavors/context-bar/index',
+
   // Publishers
   'publishers/flavors/discussion-feed/index',
   'publishers/flavors/comment/index',
@@ -140,7 +143,6 @@
 
   // Navigation
   'navigation/flavors/vertical/index',
-  'navigation/flavors/context-bar/index',
 
   // Notifications -- Toasts & Alerts
   'notifications/index',
@@ -163,7 +165,7 @@
   'badges/flavors/base/index',
 
   // Tables
-  'data-tables/flavors/base/index',
+  'data-tables/flavors/basic/index',
   'data-tables/flavors/responsive/index',
 
   // Tree (Order matters)

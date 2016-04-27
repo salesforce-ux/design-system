@@ -18,13 +18,16 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-export let ButtonIcon = props =>
+let Demo = props =>
   <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </button>
+    { props.children }
   </div>;
+
+export let ButtonIcon = props =>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
+    <span className={pf('assistive-text')}>Settings</span>
+  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -34,21 +37,21 @@ export let states = [
   {
     id: 'button-icon',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
   },
   {
     id: 'button-icon-disabled',
     label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
+    element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
   },
   {
     id: 'button-icon-inverse',
     label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
   },
   {
     id: 'button-icon-inverse-disabled',
     label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
   }
 ];

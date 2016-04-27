@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
-import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -28,6 +28,12 @@ export let ButtonGroup = props =>
   <div className={pf('button-group')} role="group">
     {props.children}
   </div>;
+
+export let ButtonIcon = props =>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    { props.children }
+    <span className={pf('assistive-text')}>{ props.assistiveText }</span>
+  </button>;
 
 ///////////////////////////////////////////
 // State Constructor(s)

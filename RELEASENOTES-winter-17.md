@@ -16,6 +16,7 @@ The following components are now available:
 
 - Global Navigation - Standard context bar - [Global Navigation Component](/components/global-navigation)
 - Global Navigation - Console context tab bar - [Global Navigation Component](/components/global-navigation#context-tab-bar)
+- Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)

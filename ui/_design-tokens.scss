@@ -70,3 +70,12 @@ $color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
 $opacity-8: 0.8 !default;
 // fix for theo bug - remove eventually
 $color-background-context-bar-shadow: #000;
+
+// --------
+// Utility Bar
+// Interactions - Background
+$color-background-utility-bar-hover: rgb(224, 229, 238) !default;
+// Interactions - Border
+$color-border-utility-bar-active: $color-brand !default;
+// Shadow
+$shadow-docked: 0 -2px 2px 0 rgba(0, 0, 0, 0.16) !default;

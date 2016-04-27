@@ -7,26 +7,26 @@ classes:
     required: true
   -
     class: utility-bar
-    description:
-    applied:
+    description: Fixed bar at the bottom of viewport, contains items
+    applied: <code>&lt;div&gt;</code>
     required: true
   -
     class: utility-bar__item
-    description:
-    applied:
+    description: Items that invoke specific utility bar panel
+    applied: <code>&lt;button&gt;</code>
     required: true
   -
     class: utility-panel
-    description:
-    applied:
+    description: Container of the utility panel
+    applied: <code>&lt;div&gt;</code>
     required: true
   -
     class: utility-panel__header
-    description:
-    applied:
+    description: Header that contains an icon, title and panel actions such as minimizing the panel
+    applied: <code>&lt;div&gt;</code>
     required: true
   -
     class: utility-panel__body
-    description:
-    applied:
+    description: Area that contains the utility panel feature
+    applied: <code>&lt;div&gt;</code>
     required: true

@@ -9,29 +9,32 @@
 
 .#{$css-prefix}utility-panel {
   position: fixed;
-  // bottom: calc(#{$line-height-button} + 2px); // Button line-height + top/bottom border
   bottom: $line-height-button;
+  width: rem(340px);
+  height: rem(480px);
   border-radius: $border-radius-medium $border-radius-medium 0 0;
-  width: 340px;
-  height: 40px;
-  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16); // Token
   border: $border-width-thin solid $color-border {
     bottom: none;
   }
+  transform: translateY(100%);
 
   &.#{$css-prefix}is-open {
-    height: 480px;
+    box-shadow: $shadow-docked;
+    transform: translateY(0);
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}utility-panel__header {
+      background: $color-background-inverse;
+    }
   }
 
   &__header {
-    background: $color-background-button-brand; // Theme token - brand?
+    background: $color-background-alt-inverse;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
-    color: $color-text-inverse; // Part of theme
-
-    &:hover {
-      cursor: pointer;
-      background: $color-background-button-brand-hover; // Part of theme
-    }
+    color: $color-text-inverse;
   }
 
   &__body {
@@ -60,6 +63,6 @@
 
   &__header-icon-action {
     padding: $spacing-x-small;
-    color: $color-text-inverse; // Part of theme
+    color: $color-text-inverse;
   }
 }

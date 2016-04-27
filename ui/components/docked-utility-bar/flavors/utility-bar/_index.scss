@@ -7,10 +7,6 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// Interactions
-$color-background-utility-bar-hover: rgb(224, 229, 238);
-$color-border-utility-bar-active: $color-brand;
-
 .#{$css-prefix}utility-bar_container {
   position: relative;
 }
@@ -21,7 +17,7 @@ $color-border-utility-bar-active: $color-brand;
   left: 0;
   width: 100%;
   background: $color-background;
-  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: $shadow-docked;
   z-index: $z-index-overlay; // Better token - more specific to docked stuff
 
   // Button that invokes utility panel
@@ -45,10 +41,10 @@ $color-border-utility-bar-active: $color-brand;
     &:focus,
     &:hover {
       box-shadow: none;
+    }
 
-      &:after {
-        background: $color-border-utility-bar-active;
-      }
+    &:focus:after {
+      background: $color-border-utility-bar-active;
     }
 
     &:hover,
@@ -58,8 +54,8 @@ $color-border-utility-bar-active: $color-brand;
     }
 
     &.#{$css-prefix}is-active {
-      color: inherit;
       background: $color-background-utility-bar-hover;
+      color: inherit;
 
       &:after {
         background: $color-border-utility-bar-active;

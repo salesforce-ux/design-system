@@ -40,12 +40,9 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const distPath = extra =>
     resolve(__PATHS__.build, 'dist', extra);
 
-  const shouldPublishBranch = b =>
-    b.match(/^(spring|summer|winter|master|development|next|release)|buildserver/ig);
-
-  const checkBranch = cb =>
-    execute('git rev-parse --abbrev-ref HEAD', br =>
-      shouldPublishBranch(br) ? cb() : br);
+  const getBranch = cb =>
+    execute('git rev-parse --abbrev-ref HEAD', branch =>
+      cb(branch.trim()));
 
   const getDependencies = cb => {
     const deps = require(resolve(__PATHS__.root, 'package.json')).dependencies;
@@ -77,9 +74,9 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const writeWebsite = cb =>
     execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
-  const writeGitInfo = cb =>
+  const writeGitInfo = (branch, cb) =>
     execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
-      cb(write(buildPath('gitinfo.txt'), out)));
+      cb(write(buildPath('gitinfo.txt'), `${out}|${branch}`)));
 
   const formatTestOut = out => {
     const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
@@ -130,11 +127,11 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
         poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
 
   return done =>
-    checkBranch(() =>
+    getBranch(branch =>
       writeTestCounts(() =>
       writeDist(() =>
       writeWebsite(() =>
-      writeGitInfo(() =>
+      writeGitInfo(branch, () =>
       writeStats(() =>
       zip(() =>
       getSha(sha =>

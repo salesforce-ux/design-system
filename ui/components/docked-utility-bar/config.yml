@@ -1,0 +1,5 @@
+classBase: 'docked'
+status: 'prototype'
+flavors:
+  - utility-bar
+  - utility-panel

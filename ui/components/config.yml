@@ -8,6 +8,7 @@ components:
   - data-tables
   - datepickers
   - docked-composer
+  - docked-utility-bar
   - feeds
   - forms
   - global-navigation

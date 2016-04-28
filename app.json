@@ -8,6 +8,7 @@
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
     }
   ],
+  "logo": "https://avatars1.githubusercontent.com/u/4857302?v=3&s=200",
   "env": {
     "APP_MODE": {
       "required": true

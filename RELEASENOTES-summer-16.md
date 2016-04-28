@@ -38,7 +38,7 @@ The following changes have been made in this release:
 - Font sizes have been reduced
 - Page Headers are visually smaller
 - Page Header details are now on white and align to the left
-- Modals are visually tigher
+- Modals are visually tighter
 - All buttons are visually smaller
 - Form Elements are visually smaller
 - Reduced data table row heights
@@ -58,7 +58,7 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Truncation class is added to headings in the Edit Form for Touch
-- Removed max-height and animation on `.slds-section__content` to prevent collison with JavaScript implementations
+- Removed max-height and animation on `.slds-section__content` to prevent collision with JavaScript implementations
 - Fixed IE11 page header truncation bug
 
 **DEPRECATED**
@@ -71,7 +71,5 @@ The following features are being marked as deprecated in this release and will b
 
 The following features are being removed in this release:
 
-- `slds-button--small` has been removed (since buttons are now the same size as
-  it was)
-- `slds-input--small` has been removed (since inputs are now the same size as it
-  was)
+- Removed `slds-button--small`, since it’s the same as the new default button size
+- Removed `slds-input--small`, since it’s the same as the new default input size

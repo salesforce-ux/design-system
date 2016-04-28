@@ -11,10 +11,13 @@
   "logo": "https://avatars1.githubusercontent.com/u/4857302?v=3&s=200",
   "env": {
     "APP_MODE": {
-      "required": true
+      "required": true,
+      "value": "public",
+      "description": "The application's mode: public (for the public website), preview (for staging builds), or sso-landing (for internal releases)."
     },
     "BUG_URL": {
-      "required": true
+      "required": true,
+      "value": "https://github.com/salesforce-ux/design-system/issues"
     },
     "COOKIE_KEYS": {
       "required": true

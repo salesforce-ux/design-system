@@ -10,6 +10,7 @@ components:
   - docked-composer
   - feeds
   - forms
+  - global-header
   - global-navigation
   - grid-system
   - icons

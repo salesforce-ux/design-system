@@ -32,42 +32,15 @@ $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 
-// Button Icon xx-small
-// Added to tokens@3.1
-$square-icon-xx-small-boundary: 1rem !default;
-// Button Icon Inverse - Hint Parent
-// Added to tokens@3.1
-$color-text-icon-inverse-hint: rgba(#fff, 0.5) !default;
-$color-text-icon-inverse-hint-hover: rgba(#fff, 0.75) !default;
-// Button Icon Inverse Border - Hint Parent
-// Added to tokens@3.1
-$color-border-icon-inverse-hint: rgba(#fff, 0.5) !default;
-$color-border-icon-inverse-hint-hover: rgba(#fff, 0.75) default;
-// Context Bar
-// Context Bar - Text Color
-// Added to tokens@3.1
-$color-text-context-bar-inverse: $color-text-inverse !default;
 // Context Bar - Theme Backgrounds
 // Keep these until theming for context bar is resolved
-$color-background-context-bar-default: #092180 !default;
+$color-background-context-bar-inverse: #092180 !default;
 $color-background-context-bar-service: #7f32bb !default;
 $color-background-context-bar-sales: #1e71ce !default;
 $color-background-context-bar-marketing: #d04525 !default;
 $color-background-context-bar-analytics: #137e66 !default;
 $color-background-context-bar-community: #a60a52 !default;
-// Context Bar - Interactions
-// Added to tokens@3.1
-$color-background-context-bar-item-hover: rgba(#000, 0.2) !default;
-$color-background-context-bar-item-active: rgba(#000, 0.4) !default;
-$color-background-context-bar-inverse-item-hover: rgba(#fff, 0.2) !default;
-$color-background-context-bar-inverse-item-active: rgba(#fff, 0.4) !default;
-// Context Bar - Borders
-// Added to tokens@3.1
-$color-border-context-bar-item: rgba(#000, 0.1) !default;
-$color-border-context-bar-inverse-item: rgba(#fff, 0.1) !default;
-// New opacity token
-// Added to tokens@3.1
-$opacity-8: 0.8 !default;
+
 // fix for theo bug - remove eventually
 $color-background-context-bar-shadow: #000;
 

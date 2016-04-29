@@ -73,7 +73,7 @@ export default (
             </p>
             <dl className={pf('medium-size--1-of-2')}>
               <dt className={pf('site-text-heading--large')}>Contribute with Purpose</dt>
-              <dd>The Design System is an <a href="https://github.com/salesforce-ux/design-system">open source project on GitHub</a>, meaning you can directly impact its evolution by filing issues and submitting pull requests.. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
+              <dd>The Design System is an <a href="https://github.com/salesforce-ux/design-system">open source project on GitHub</a>, meaning you can directly impact its evolution by filing issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
             </dl>
           </li>
         </ul>

@@ -73,3 +73,4 @@ The following features are being removed in this release:
 
 - Removed `slds-button--small`, since it’s the same as the new default button size
 - Removed `slds-input--small`, since it’s the same as the new default input size
+- Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase

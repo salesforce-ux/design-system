@@ -10,7 +10,7 @@
 .#{$css-prefix}context-bar {
   display: flex;
   height: $height-context-bar;
-  background-color: $color-background-context-bar-default;
+  background-color: $color-background-context-bar-inverse;
   color: $color-text-context-bar-inverse;
   position: relative;
   padding: 0 $spacing-medium;
@@ -298,8 +298,8 @@
 //
 // Platform
 .#{$css-prefix}context-bar--theme-default {
-  @include _context-bar-theme-interactions($color-background-context-bar-default);
-  background: $color-background-context-bar-default;
+  @include _context-bar-theme-interactions($color-background-context-bar-inverse);
+  background: $color-background-context-bar-inverse;
 }
 // Service
 .#{$css-prefix}context-bar--theme-service {

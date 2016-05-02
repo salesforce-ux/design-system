@@ -104,7 +104,7 @@ let GlobalHeader = props =>
         </div>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
-        <li className={pf('action-group__item m-left--x-small')}>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
           <a href="#void" title="View Title">
             <span className={pf('avatar avatar--circle avatar--x-small')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />

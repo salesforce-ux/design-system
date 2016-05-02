@@ -1,5 +1,5 @@
 // Copyright (c) 2015, salesforce.com, inc. All rights reserved.
-//
+
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 // Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 // Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -7,72 +7,59 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-/// Version number
-/// Helps deprecating pieces of the codebase
-/// Note: update at each release
-///
-/// For internal use only
-///
-/// @type String
-/// @access private
-$app-version: '2.0.0';
+.#{$css-prefix}utility-bar_container {
+  position: relative;
+}
 
-/// Debug mode (uncomment to activate)
-/// Turn on to output deprecation warnings during development
-/// Note: remove when/if gulp-sass starts supporting the --quiet flag
-///
-/// @type Boolean
-// $app-debug: true;
+.#{$css-prefix}utility-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color-background;
+  box-shadow: $shadow-docked;
+  z-index: $z-index-overlay; // Better token - more specific to docked stuff
 
-/// Image Path
-///
-/// @type String
-$static-image-path: '../images' !default;
+  // Button that invokes utility panel
+  &__item {
+    position: relative;
+    padding: 0 $spacing-small;
+    border-radius: 0;
+    border: 0;
+    color: $color-text-default;
 
-/// Font Path
-///
-/// @type String
-$static-font-path: '../fonts/webfonts' !default;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: transparent;
+    }
 
-/// Grid
-///
-/// @type map
-$grid: (
-  'x-small': (
-    'breakpoint': $mq-x-small,
-    'columns': 4,
-  ),
-  'small': (
-    'breakpoint': $mq-small,
-    'columns': 8,
-  ),
-  'medium': (
-    'breakpoint': $mq-medium,
-    'columns': 12,
-  ),
-  'large': (
-    'breakpoint': $mq-large,
-    'columns': 12
-  )
-) !default;
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
 
-/// CSS Prefix
-/// Will prefix all CSS classes
-///
-/// @example scss Compile without prefix
-///  $css-prefix: '';
-///
-/// @example scss Use in a class name
-///  .#{$css-prefix}foo { ... } // outputs .slds-foo { ... }
-///
-/// @type String
-$css-prefix: 'slds-' !default;
+    &:focus:after {
+      background: $color-border-utility-bar-active;
+    }
 
-/// Reset wrapping class
-/// Wraps a version of normalize
-///
-/// @example scss
-///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
-///
-/// @type String
-$reset-wrapping-class: '.slds' !default;
+    &:hover,
+    &:focus:hover {
+      color: inherit;
+      background: $color-background-utility-bar-hover;
+    }
+
+    &.#{$css-prefix}is-active {
+      background: $color-background-utility-bar-hover;
+      color: inherit;
+
+      &:after {
+        background: $color-border-utility-bar-active;
+      }
+    }
+  }
+}

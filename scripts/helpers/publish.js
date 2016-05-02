@@ -12,12 +12,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import './setup';
 import defaultFs from 'fs';
 import { resolve } from 'path';
-import defaultRequest from 'superagent';
 import cssstats from 'cssstats';
 import globals from 'app_modules/global';
 import defaultGulp from 'gulp';
 import gulpzip from 'gulp-zip';
+import pckg from '../../package.json';
 import { exec } from 'child_process';
+
+const buildServer = require('@salesforce-ux/build-server-api')(process.env.BUILD_SERVER_HOST);
 
 const css_path = 'assets/styles/salesforce-lightning-design-system.css';
 const zip_name = 'fullbuild.zip';
@@ -29,7 +31,7 @@ const defaultExecute = (cmd, cb) =>
     cb(out);
   });
 
-const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultExecute, gulp=defaultGulp) {
+module.exports = (fs=defaultFs, execute=defaultExecute, gulp=defaultGulp) => {
 
   const write = (path, contents) =>
     fs.writeFileSync(path, contents, 'utf8');
@@ -40,23 +42,29 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const distPath = extra =>
     resolve(__PATHS__.build, 'dist', extra);
 
-  const getBranch = cb =>
-    execute('git rev-parse --abbrev-ref HEAD', branch =>
-      cb(branch.trim()));
-
   const getDependencies = cb => {
-    const deps = require(resolve(__PATHS__.root, 'package.json')).dependencies;
+    const deps = Object.assign({}, pckg.devDependencies, pckg.dependencies);
     cb(Object.keys(deps)
         .filter(k => k.match(/@salesforce/i))
         .reduce((acc, k) =>
           Object.assign(acc, {[k.split('/')[1]]: deps[k]}), {}));
   };
 
+  const normalizeStats = stats =>
+    ({
+      kbSize: stats.size,
+      gzipSize: stats.gzipSize,
+      ruleCount: stats.rules.total,
+      selectorCount: stats.selectors.total,
+      declarationCount: stats.declarations.total
+    });
+
   const getStats = () =>
-    cssstats(fs.readFileSync(distPath(css_path), 'utf8'));
+    normalizeStats(cssstats(fs.readFileSync(distPath(css_path), 'utf8')));
 
   const writeStats = cb =>
-    cb(write(buildPath('stats.json'), JSON.stringify(getStats())));
+    writeTestCounts(tests =>
+      cb(Object.assign(getStats(), tests)));
 
   const getSha = cb =>
     execute('git rev-parse HEAD', cb);
@@ -64,19 +72,16 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   const runDist = cb =>
     execute('npm run dist-npm', cb);
 
-  const writePackageJSON = cb =>
-    execute(`cp ${__PATHS__.root}/package.json ${__PATHS__.build}`, cb);
-
   const writeDist = cb =>
     runDist(() =>
-      execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, cb));
+      execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, () =>
+        execute(`rm -rf ${__PATHS__.build}/dist/`+'*.zip', cb)));
 
   const writeWebsite = cb =>
     execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
 
-  const writeGitInfo = (branch, cb) =>
-    execute('git show --format="%an|%ae|%ad|%s" | head -n 1', out =>
-      cb(write(buildPath('gitinfo.txt'), `${out}|${branch}`)));
+  const writeGitInfo = cb =>
+    execute('git show --format="%an|%ae|%ad|%s" | head -n 1', cb);
 
   const formatTestOut = out => {
     const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
@@ -89,11 +94,7 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
   };
 
   const writeTestCounts = cb =>
-    cb(write(
-      buildPath('tests.json'),
-      JSON.stringify(
-        formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''))
-    ));
+    cb(formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''));
 
   const zip = cb =>
     gulp.src(buildPath('**/*'))
@@ -103,40 +104,23 @@ const publish = function(fs=defaultFs, request=defaultRequest, execute=defaultEx
     .on('error', cb)
     .on('finish', cb);
 
-  const poll = (attempts, url, done) =>
-    request.get(url)
-    .end((err, res) => {
-      if(err) {
-        if(attempts <= 15) {
-          console.log('attempt #', attempts);
-          setTimeout(() => poll(attempts+1, url, done), 10000);
-        } else {
-          throw err;
-        }
-      } else {
-        done(null, res.text);
-      }
-    });
-
-  const publish = (sha, deps, done) =>
-    request
-      .post(`${process.env.BUILD_SERVER_HOST}/projects/design-system/builds/${sha}`)
-      .field('dependencies', JSON.stringify(deps))
-      .attach('dist', buildPath(zip_name))
-      .end((err, res) =>
-        poll(0, `${process.env.BUILD_SERVER_HOST}/${res.text}`, done));
+  const publish = (sha, info, stats, deps, done) =>
+    buildServer.publish({
+      project: 'design-system',
+      sha: sha,
+      fields: { info: info, stats: JSON.stringify(stats), dependencies: JSON.stringify(deps), tag: (process.env.TRAVIS_TAG || ''), version: pckg.version },
+      zipPath: buildPath(zip_name),
+      retryCount: 30 // s3 might take a while until we optimize
+    }).errors((err, push) => { throw err; })
+      .each(result => console.log('res', result.body));
 
   return done =>
-    getBranch(branch =>
-      writeTestCounts(() =>
-      writeDist(() =>
-      writeWebsite(() =>
-      writeGitInfo(branch, () =>
-      writeStats(() =>
-      zip(() =>
-      getSha(sha =>
-        getDependencies(deps =>
-          publish(sha, deps, done))))))))));
+    writeDist(() =>
+    writeWebsite(() =>
+    writeGitInfo(info =>
+    writeStats(stats =>
+    zip(() =>
+    getSha(sha =>
+      getDependencies(deps =>
+        publish(sha, info, stats, deps, done))))))));
 };
-
-module.exports = publish;

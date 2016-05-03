@@ -48,27 +48,6 @@ const publish = (url, folder) => {
     });
 };
 
-/**
- * Return a modified version number based on the release
- *
- * @param {string} version
- * @param {object} release
- * @returns {string}
- */
-const getVersion = (version, release) => {
-  const suffixMap = {
-    'dev': '-dev',
-    'feature-freeze': '-beta',
-    'release-freeze': '-rc',
-    'internal-release': '',
-    'external-release': ''
-  };
-  const suffix = suffixMap[release.mode]
-    ? suffixMap[release.mode] + '#' + moment().format('YYMMDD-HHmm')
-    : '';
-  return version + suffix;
-};
-
 if (process.env.HEROKU_APP_NAME) {
   exec('rm -rf server/');
   exec(`git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO} server`);
@@ -91,7 +70,7 @@ if (process.env.HEROKU_APP_NAME) {
     if (release.mode !== 'external-release') {
       process.env.INTERNAL = 'true';
       process.env.INTERNAL_RELEASE_NAME = release.id;
-      process.env.SLDS_VERSION = getVersion(packageJSON.version, release);
+      process.env.SLDS_VERSION = packageJSON.version;
     }
   } catch (err) {
     console.log(`Version "${packageJSON.version}" could not be mapped to a release`);

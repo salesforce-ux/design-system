@@ -32,4 +32,23 @@ $mq-medium: 768px !default;
 $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 
-$color-context-bar-shadow: #000 !default;
+// Context Bar - Theme Backgrounds
+// Keep these until theming for context bar is resolved
+$color-background-context-bar-inverse: #092180 !default;
+$color-background-context-bar-service: #7f32bb !default;
+$color-background-context-bar-sales: #1e71ce !default;
+$color-background-context-bar-marketing: #d04525 !default;
+$color-background-context-bar-analytics: #137e66 !default;
+$color-background-context-bar-community: #a60a52 !default;
+
+// fix for theo bug - remove eventually
+$color-background-context-bar-shadow: #000;
+
+// --------
+// Utility Bar
+// Interactions - Background
+$color-background-utility-bar-hover: rgb(224, 229, 238) !default;
+// Interactions - Border
+$color-border-utility-bar-active: $color-brand !default;
+// Shadow
+$shadow-docked: 0 -2px 2px 0 rgba(0, 0, 0, 0.16) !default;

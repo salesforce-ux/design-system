@@ -147,19 +147,19 @@ export let states = [
       </div>
   },
   {
-    id: 'global-header-setup-active',
-    label: 'Setup active',
-    element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader setup />
-      </div>
-  },
-  {
     id: 'global-header-actions-active',
     label: 'Global actions active',
     element:
       <div className="demo-only" style={{ height: '190px' }}>
         <GlobalHeader actions />
+      </div>
+  },
+  {
+    id: 'global-header-setup-active',
+    label: 'Setup active',
+    element:
+      <div className="demo-only" style={{ height: '190px' }}>
+        <GlobalHeader setup />
       </div>
   }
 ];

@@ -15,6 +15,7 @@ components:
   - grid-system
   - icons
   - images
+  - list-builder
   - lookups
   - media-objects
   - menus
@@ -25,7 +26,6 @@ components:
   - panels
   - pills
   - process
-  - product-selector
   - popovers
   - publishers
   - spinners

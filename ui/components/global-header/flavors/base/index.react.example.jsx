@@ -25,25 +25,25 @@ const SearchAutocomplete = (
     <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
     <ul className={pf('lookup__list')} role="presentation">
       <li>
-        <a className={pf('lookup__item-action media media--center')} id="1" href="#void" role="option">
+        <a className={pf('lookup__item-action media media--center')} id="option-01" href="#void" role="option">
           <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
           <div className={pf('media__body')}>Acme Inc.</div>
         </a>
       </li>
       <li>
-        <a className={pf('lookup__item-action media media--center')} id="1" href="#void" role="option">
+        <a className={pf('lookup__item-action media media--center')} id="option-02" href="#void" role="option">
           <SvgIcon className={pf('icon icon-standard-case icon--small media__figure')} sprite="standard" symbol="case" />
           <div className={pf('media__body')}>2949394</div>
         </a>
       </li>
       <li>
-        <a className={pf('lookup__item-action media media--center')} id="1" href="#void" role="option">
+        <a className={pf('lookup__item-action media media--center')} id="option-03" href="#void" role="option">
           <SvgIcon className={pf('icon icon-standard-case icon--small media__figure')} sprite="standard" symbol="case" />
           <div className={pf('media__body')}>2981574</div>
         </a>
       </li>
       <li>
-        <a className={pf('lookup__item-action media media--center')} id="1" href="#void" role="option">
+        <a className={pf('lookup__item-action media media--center')} id="option-04" href="#void" role="option">
           <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
           <div className={pf('media__body')}>John Smith</div>
         </a>

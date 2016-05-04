@@ -28,7 +28,7 @@ let foo = false;
 class CodeBlock extends React.Component {
   getCode() {
     const {language} = this.props;
-    const code = this.props.children.toString();
+    const code = this.props.children.toString().trim();
     const lines = code.split('\n');
     const line = lines.length > 1 ? lines[1] : '';
     const offsetMatch = line.match(/^\s*/);

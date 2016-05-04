@@ -32,7 +32,7 @@
   "dependencies": {
     "@salesforce-ux/build-server-api": "1.0.6",
     "@salesforce-ux/design-tokens": "3.1.2",
-    "@salesforce-ux/icons": "3.7.0",
+    "@salesforce-ux/icons": "3.8.0",
     "app-module-path": "1.0.5",
     "async": "1.5.2",
     "autoprefixer": "6.3.3",

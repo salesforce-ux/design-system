@@ -10,14 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import './setup';
-import defaultFs from 'fs';
+import fs from 'fs';
 import { resolve } from 'path';
 import cssstats from 'cssstats';
 import globals from 'app_modules/global';
-import defaultGulp from 'gulp';
+import gulp from 'gulp';
 import gulpzip from 'gulp-zip';
 import pckg from '../../package.json';
 import { exec } from 'child_process';
+import { getSha } from './git';
 
 const buildServer = require('@salesforce-ux/build-server-api')(process.env.BUILD_SERVER_HOST);
 
@@ -25,102 +26,97 @@ const css_path = 'assets/styles/salesforce-lightning-design-system.css';
 const zip_name = 'fullbuild.zip';
 const local = resolve(__dirname, '../');
 
-const defaultExecute = (cmd, cb) =>
+const execute = (cmd, cb) =>
   exec(cmd, { cwd: local, stdio: 'inherit' }, (err, out, stderr) => {
     if(err) throw(err);
     cb(out);
   });
 
-module.exports = (fs=defaultFs, execute=defaultExecute, gulp=defaultGulp) => {
 
-  const write = (path, contents) =>
-    fs.writeFileSync(path, contents, 'utf8');
+const write = (path, contents) =>
+  fs.writeFileSync(path, contents, 'utf8');
 
-  const buildPath = extra =>
-    resolve(__PATHS__.build, extra);
+const buildPath = extra =>
+  resolve(__PATHS__.build, extra);
 
-  const distPath = extra =>
-    resolve(__PATHS__.build, 'dist', extra);
+const distPath = extra =>
+  resolve(__PATHS__.build, 'dist', extra);
 
-  const getDependencies = cb => {
-    const deps = Object.assign({}, pckg.devDependencies, pckg.dependencies);
-    cb(Object.keys(deps)
-        .filter(k => k.match(/@salesforce/i))
-        .reduce((acc, k) =>
-          Object.assign(acc, {[k.split('/')[1]]: deps[k]}), {}));
-  };
-
-  const normalizeStats = stats =>
-    ({
-      kbSize: stats.size,
-      gzipSize: stats.gzipSize,
-      ruleCount: stats.rules.total,
-      selectorCount: stats.selectors.total,
-      declarationCount: stats.declarations.total
-    });
-
-  const getStats = () =>
-    normalizeStats(cssstats(fs.readFileSync(distPath(css_path), 'utf8')));
-
-  const writeStats = cb =>
-    writeTestCounts(tests =>
-      cb(Object.assign(getStats(), tests)));
-
-  const getSha = cb =>
-    execute('git rev-parse HEAD', cb);
-
-  const runDist = cb =>
-    execute('npm run dist-npm', cb);
-
-  const writeDist = cb =>
-    runDist(() =>
-      execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, () =>
-        execute(`rm -rf ${__PATHS__.build}/dist/`+'*.zip', cb)));
-
-  const writeWebsite = cb =>
-    execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
-
-  const writeGitInfo = cb =>
-    execute('git show --format="%an|%ae|%ad|%s" | head -n 1', cb);
-
-  const formatTestOut = out => {
-    const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
-    if (!matches) return {};
-    return {
-      unitTests: parseInt(matches[0]),
-      integrationTests: parseInt(matches[1]),
-      allyTests: parseInt(matches[2])
-    };
-  };
-
-  const writeTestCounts = cb =>
-    cb(formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''));
-
-  const zip = cb =>
-    gulp.src(buildPath('**/*'))
-    .pipe(gulpzip(zip_name))
-    .on('error', cb)
-    .pipe(gulp.dest(buildPath('')))
-    .on('error', cb)
-    .on('finish', cb);
-
-  const publish = (sha, info, stats, deps, done) =>
-    buildServer.publish({
-      project: 'design-system',
-      sha: sha,
-      fields: { info: info, stats: JSON.stringify(stats), dependencies: JSON.stringify(deps), tag: (process.env.TRAVIS_TAG || ''), version: pckg.version },
-      zipPath: buildPath(zip_name),
-      retryCount: 30 // s3 might take a while until we optimize
-    }).errors((err, push) => { throw err; })
-      .each(result => console.log('res', result.body));
-
-  return done =>
-    writeDist(() =>
-    writeWebsite(() =>
-    writeGitInfo(info =>
-    writeStats(stats =>
-    zip(() =>
-    getSha(sha =>
-      getDependencies(deps =>
-        publish(sha, info, stats, deps, done))))))));
+const getDependencies = cb => {
+  const deps = Object.assign({}, pckg.devDependencies, pckg.dependencies);
+  cb(Object.keys(deps)
+      .filter(k => k.match(/@salesforce/i))
+      .reduce((acc, k) =>
+        Object.assign(acc, {[k.split('/')[1]]: deps[k]}), {}));
 };
+
+const normalizeStats = stats =>
+  ({
+    kbSize: stats.size,
+    gzipSize: stats.gzipSize,
+    ruleCount: stats.rules.total,
+    selectorCount: stats.selectors.total,
+    declarationCount: stats.declarations.total
+  });
+
+const getStats = () =>
+  normalizeStats(cssstats(fs.readFileSync(distPath(css_path), 'utf8')));
+
+const writeStats = cb =>
+  writeTestCounts(tests =>
+    cb(Object.assign(getStats(), tests)));
+
+const runDist = cb =>
+  execute('npm run dist-npm', cb);
+
+const writeDist = cb =>
+  runDist(() =>
+    execute(`mv ${__PATHS__.npm} ${__PATHS__.build}/dist`, () =>
+      execute(`rm -rf ${__PATHS__.build}/dist/`+'*.zip', cb)));
+
+const writeWebsite = cb =>
+  execute(`cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`, cb);
+
+const writeGitInfo = cb =>
+  execute('git show --format="%an|%ae|%ad|%s" | head -n 1', cb);
+
+const formatTestOut = out => {
+  const matches = out.match(/(\d+)\s+(SUCCESS|passing)/ig);
+  if (!matches) return {};
+  return {
+    unitTests: parseInt(matches[0]),
+    integrationTests: parseInt(matches[1]),
+    allyTests: parseInt(matches[2])
+  };
+};
+
+const writeTestCounts = cb =>
+  cb(formatTestOut(fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || ''));
+
+const zip = cb =>
+  gulp.src(buildPath('**/*'))
+  .pipe(gulpzip(zip_name))
+  .on('error', cb)
+  .pipe(gulp.dest(buildPath('')))
+  .on('error', cb)
+  .on('finish', cb);
+
+const publish = (sha, info, stats, deps, done) =>
+  buildServer.publish({
+    project: 'design-system',
+    sha: sha,
+    fields: { info: info, stats: JSON.stringify(stats), dependencies: JSON.stringify(deps), tag: (process.env.TRAVIS_TAG || ''), version: pckg.version },
+    zipPath: buildPath(zip_name),
+    retryCount: 30 // s3 might take a while until we optimize
+  }).errors((err, push) => { throw err; })
+    .each(result => console.log('res', result.body));
+
+module.exports = done =>
+  writeDist(() =>
+  writeWebsite(() =>
+  writeGitInfo(info =>
+  writeStats(stats =>
+  zip(() =>
+  getSha(sha =>
+    getDependencies(deps =>
+      publish(sha, info, stats, deps, done))))))));

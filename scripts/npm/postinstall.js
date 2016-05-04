@@ -9,102 +9,38 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import '../helpers/setup';
-import _ from 'lodash';
-import fs from 'fs-extra';
-import path from 'path';
-import request from 'superagent';
-import semver from 'semver';
-import globals from '../../app_modules/global';
-import moment from 'moment';
-import { execSync } from 'child_process';
+const path = require('path');
+const { execSync } = require('child_process');
+const { download } = require('@salesforce-ux/build-server-api')(process.env.BUILD_SERVER_HOST);
 
 const local = path.resolve.bind(path, __dirname, '../../');
 
-const exec = (command, cwd = '') => {
+const exec = (command, cwd = '') =>
   execSync(command, {
     cwd: local(cwd),
     stdio: 'inherit',
     env: Object.assign({}, process.env)
   });
-};
 
-/**
- * Send npm ready zip to npm/bower app to publish
- * @param {string} url
- * @param {string|path} folder
- * @returns void
- */
-const publish = (url, folder) => {
-  const distPath = path.resolve.bind(path, folder);
-  const distFilePath = distPath(globals.zipName(process.env.SLDS_VERSION));
-  const fullurl = `${process.env.PUBLISH_HOST}/${url}`;
+const downloadBuild = () =>
+  download({
+    project: 'design-system',
+    sha: process.env.SOURCE_VERSION, // magic heroku variable
+    folderPath: 'www',
+    retryInterval: 10000,
+    retryCount: 60, // this may take a long time if travis kicks off in parallel
+    extractPath: local()
+  });
 
-  request
-    .post(fullurl)
-    .attach('dist', distFilePath)
-    .end(function(err, res){
-      // it's cool if it breaks
-    });
-};
-
-/**
- * Return a modified version number based on the release
- *
- * @param {string} version
- * @param {object} release
- * @returns {string}
- */
-const getVersion = (version, release) => {
-  const suffixMap = {
-    'dev': '-dev',
-    'feature-freeze': '-beta',
-    'release-freeze': '-rc',
-    'internal-release': '',
-    'external-release': ''
-  };
-  const suffix = suffixMap[release.mode]
-    ? suffixMap[release.mode] + '#' + moment().format('YYMMDD-HHmm')
-    : '';
-  return version + suffix;
-};
-
+// This assumes heroku has waited for travis to pass (and send a build to the build-server)
 if (process.env.HEROKU_APP_NAME) {
-  exec('rm -rf server/');
-  exec(`git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO} server`);
-  // Server tasks
-  const packageJSON = require(local('package.json'));
-  try {
-    // Get the deployments config
-    const config = require(local('server/config/deployments.json'));
-    // Find the first release that packageJSON.version satisfies
-    const release = _.find(config.releases, release =>
-      semver.satisfies(packageJSON.version.split('-')[0], release.semver));
-    // Throw if
-    if (!release) {
-      throw new Error(`
-        No release matched "${packageJSON.version}"
-        Please review deployments.json
-      `);
-    }
-    // Set the ENV (used for the banner)
-    if (release.mode !== 'external-release') {
-      process.env.INTERNAL = 'true';
-      process.env.INTERNAL_RELEASE_NAME = release.id;
-      process.env.SLDS_VERSION = getVersion(packageJSON.version, release);
-    }
-  } catch (err) {
-    console.log(`Version "${packageJSON.version}" could not be mapped to a release`);
-    console.log(err.stack);
-  }
+  const url = `https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO}`;
+  exec(`git clone ${url} server`);
   exec('npm install --production', 'server/heroku');
   exec('npm run dist', 'server/heroku');
-  // Design System Tasks
-  exec('npm run build-prod');
-  exec('npm run dist');
-  publish('bower', __PATHS__.dist);
-  exec('npm run dist-npm');
-  publish('npm', __PATHS__.npm);
+  downloadBuild()
+  .errors((err, push) => { throw err; })
+  .each(() => exec('mv www .www')); // TODO: REMOVE THIS AND THE IF/ELSE IN THE DEPLOY APP
 } else {
   // Verify & install ruby dependencies using our script
   exec('npm run install-ruby-dependencies');

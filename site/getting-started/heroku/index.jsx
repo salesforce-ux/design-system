@@ -86,8 +86,8 @@ export default (
             </a>
           </li>
           <li>
-            <a href="https://www.npmjs.com/package/npm" target="_blank">
-              NPM
+            <a href="https://www.npmjs.com/" target="_blank">
+              npm
             </a>
           </li>
           <li>
@@ -119,7 +119,7 @@ $ cd demo_slds_heroku
         </div>
 
         <p>
-          Inside of your <code>demo_slds_heroku/</code> folder create a <code>package.json</code>.
+          Inside of your <code>demo_slds_heroku/</code> folder, create a <code>package.json</code>.
         </p>
 
         <div className={pf('site-code--content scrollable--x')}>
@@ -204,7 +204,7 @@ $ touch public/index.html
 $ touch server.js
           `}</CodeBlock>
         </div>
-        <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your /public folder!):</p>
+        <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your <code>/public</code> folder!):</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 var express = require('express');
@@ -403,7 +403,7 @@ $ heroku open
           `}</CodeBlock>
         </div>
 
-        <Heading type="h2" id="step-8" className="site-text-heading--large">Congrats! You now have a static  application!</Heading>
+        <Heading type="h2" id="step-8" className="site-text-heading--large">Congrats! You now have a static application!</Heading>
         <p>Now that you have a static project using the {g.displayName} and Heroku you can use it with any framework, add a database to it, whatever! The world is your oyster!</p>
       </div>
     </div>

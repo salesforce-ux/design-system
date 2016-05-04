@@ -13,12 +13,12 @@
     "npm": ">=2.7.0"
   },
   "slds": {
-    "name": "Spring ’16",
-    "id": "200"
+    "name": "Summer ’16",
+    "id": "202"
   },
   "config": {
     "slds": {
-      "internal": false
+      "internal": true
     }
   },
   "scripts": {

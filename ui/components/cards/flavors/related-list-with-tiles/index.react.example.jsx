@@ -10,99 +10,61 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
-);
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-  <div className="demo-only">
-    <div className={pf('card')}>
-      <div className={pf('card__header grid grid--content-center grid--align-spread')}>
-        <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate size--1-of-3')}>
-          <h2 className={pf('truncate')}>Card Header (2)</h2>
-        </MediaObject>
-        <div className={pf('input-has-icon input-has-icon--left size--1-of-3')}>
-          <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-          <label htmlFor="text-input-01" className={pf('assistive-text')}>Find in List</label>
-          <input id="text-input-01" className={pf('input')} type="text" placeholder="Find in List" />
-        </div>
-        <div className={pf('no-flex align-middle size--1-of-3 text-align--right dropdown-trigger--click')}>
-          <Button className={pf('button text-link--reset')}>2 Selected <SvgIcon className={pf('button__icon button__icon--right')} sprite="utility" symbol="down" /></Button>
-        </div>
+let Tile = props =>
+  <div className={className(pf('card__tile tile media hint-parent'), props.className)}>
+    <div className={pf('media__figure')}>
+      <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
+    </div>
+    <div className={pf('media__body')}>
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('tile__title truncate')}><a href="#void">{ props.title || 'Related Record Title' }</a></p>
+        <button className={pf('button button--icon-border-filled button--icon-x-small no-flex')}>
+          <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
+          <span className={pf('assistive-text')}>More Options</span>
+        </button>
       </div>
-      <div className={pf('card__body')}>
-        <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
-          <thead>
-            <tr>
-              <th className={pf('cell-shrink')} scope="col">
-                <label className={pf('checkbox')} htmlFor="select-all">
-                  <input type="checkbox" name="options" id="select-all" className={pf('checked--intermediate')} defaultChecked />
-                  <span className={pf('checkbox--faux')}></span>
-                  <span className={pf('assistive-text')}>Select All</span>
-                </label>
-              </th>
-              <th className={pf('text-heading--label')} scope="col">Name</th>
-              <th className={pf('text-heading--label')} scope="col">Company</th>
-              <th className={pf('text-heading--label')} scope="col">Title</th>
-              <th className={pf('text-heading--label')} scope="col">Email</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className={pf('hint-parent')}>
-              <td className={pf('cell-shrink')}>
-                <label className={pf('checkbox')} htmlFor="select-row-01">
-                  <input type="checkbox" name="options" id="select-row-01" />
-                  <span className={pf('checkbox--faux')}></span>
-                  <span className={pf('assistive-text')}>Select Row</span>
-                </label>
-              </td>
-              <th scope="row" data-label="Name">Adam Choi</th>
-              <td data-label="Company">Company One</td>
-              <td data-label="Title">Director of Operations</td>
-              <td data-label="Email">adam@company.com</td>
-              <td className={pf('cell-shrink')}>
-                <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="Show More" />
-              </td>
-            </tr>
-            <tr className={pf('hint-parent')}>
-              <td className={pf('cell-shrink')}>
-                <label className={pf('checkbox')} htmlFor="select-row-02">
-                  <input type="checkbox" name="options" id="select-row-02" defaultChecked />
-                  <span className={pf('checkbox--faux')}></span>
-                  <span className={pf('assistive-text')}>Select Row</span>
-                </label>
-              </td>
-              <th scope="row" data-label="Name">Adam Choi</th>
-              <td data-label="Company">Company One</td>
-              <td data-label="Title">Director of Operations</td>
-              <td data-label="Email">adam@company.com</td>
-              <td className={pf('cell-shrink')}>
-                <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="Show More" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div className={pf('card__footer')}>
-        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
+      <div className={pf('tile__detail text-body--small')}>
+        <dl className={pf('dl--horizontal text-body--small')}>
+          <dt className={pf('dl--horizontal__label')}>
+            <p className={pf('truncate')}>Type:</p>
+          </dt>
+          <dd className={pf('dl--horizontal__detail tile__meta')}>
+            <p className={pf('truncate')}>Visit</p>
+          </dd>
+          <dt className={pf('dl--horizontal__label')}>
+            <p className={pf('truncate')}>Date:</p>
+          </dt>
+          <dd className={pf('dl--horizontal__detail tile__meta')}>
+            <p className={pf('truncate')}>1/31/15 3:45PM</p>
+          </dd>
+        </dl>
       </div>
     </div>
-  </div>
+  </div>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export default (
+  <Card>
+    <CardHeader symbol="contact" actions>Contacts (3)</CardHeader>
+    <CardBody>
+      <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
+        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 1" />
+        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 2" />
+        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 3" />
+      </div>
+    </CardBody>
+    <CardFooter><a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+  </Card>
 );

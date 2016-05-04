@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -18,24 +19,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Card = props =>
-  <div className={pf('card card--compact')}>
-    <div className={pf('card__header card__header--border grid')}>
-      <a href="#void" className={pf('text-link--reset truncate')}>
-        <span className={pf('text-heading--label-normal')}>Header</span>
-      </a>
-      <button className={pf('col--bump-left shrink-none button button--icon-border button--icon-x-small')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-        <span className={pf('assistive-text')}>More Options</span>
-      </button>
-    </div>
-    <div className={pf('card__body')}>
-      { props.children }
-    </div>
-  </div>;
-
 let Tile = props =>
-  <div className={pf('tile')}>
+  <div className={pf('card__tile tile')}>
     <p className={pf('tile__title truncate')}><a href="#void">{ props.title || 'Related Record Title' }</a></p>
     <div className={pf('tile__detail text-body--small')}>
       <dl className={pf('dl--horizontal text-body--small')}>
@@ -56,34 +41,20 @@ let Tile = props =>
   </div>;
 
 ///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: '230px' }}>
-    <Card>
-      <Tile title="Related Record Title 1" />
-      <Tile title="Related Record Title 2" />
-      <Tile title="Related Record Title 3" />
+  <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
+    <Card className={pf('card--compact')}>
+      <CardHeader className={pf('card__header--border')} actions="overflow">
+        <span className={pf('text-heading--label-normal')}>Contacts</span>
+      </CardHeader>
+      <CardBody>
+        <Tile title="Related Record Title 1" />
+        <Tile title="Related Record Title 2" />
+        <Tile title="Related Record Title 3" />
+      </CardBody>
     </Card>
   </div>
 );
-
-{/*export let states = [
-  {
-    id: 'card-compact',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '230px' }}>
-        <Card>
-          <Tile title="Related Record Title 1" />
-          <Tile title="Related Record Title 2" />
-          <Tile title="Related Record Title 3" />
-        </Card>
-      </div>
-  }
-];*/}

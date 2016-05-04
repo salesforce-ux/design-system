@@ -46,23 +46,13 @@
     }
   }
 
-  @include deprecate('4.0.0', 'Use .card__body--inner instead.') {
-    // .#{$css-prefix}tile {
-    //   margin: $spacing-small $spacing-large;
-    // }
-
-    // &__body--inner .#{$css-prefix}tile {
-    //   margin: {
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //   }
-    // }
-  }
-
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
     .#{$css-prefix}card--empty .#{$css-prefix}card__body {
       text-align: center;
     }
   }
+}
+
+.#{$css-prefix}card__tile {
+  margin-top: $spacing-x-small;
 }

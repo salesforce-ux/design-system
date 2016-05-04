@@ -23,3 +23,15 @@ classes:
     class: card__footer
     description: Initializes card footer
     applied: <code>&lt;div&gt;</code>
+  -
+    class: card__tile
+    description: Use class if card consumes any form of a tile
+    applied: <code>.{{cssPrefix}}tile</code>
+  -
+    class: card--narrow
+    description: Modifies styles for card in a narrow column
+    applied: <code>.{{cssPrefix}}card</code>
+  -
+    class: card--compact
+    description: Modifies styles for a compact card, specific use is within Console
+    applied: <code>.{{cssPrefix}}card</code>

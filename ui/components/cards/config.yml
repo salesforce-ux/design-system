@@ -4,13 +4,7 @@ flavors:
   - base
   - base-narrow
   - base-compact
-  # - with-filtering
-  # - narrow
-  # - related-list
-  # - compact-related-list
-  # - related-list
   - related-list-with-tiles
   - related-list-with-table
-  - related-list-with-filtering
+  - related-list-narrow
   - related-list-compact
-  # - empty

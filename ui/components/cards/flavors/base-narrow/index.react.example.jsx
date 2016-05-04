@@ -10,130 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
-);
-
 export default (
-  <div className="demo-only" style={{maxWidth: '300px'}}>
-    <div className={pf('card card--narrow')}>
-      <div className={pf('card__header grid grid--content-center')}>
-        <MediaObject figureLeft={image} flavor="center" className={pf('has-flexi-truncate')}>
-          <h2 className={pf(' truncate')}>Card Header (2)</h2>
-        </MediaObject>
-        <div className={pf('no-flex')}>
-          <ButtonIcon
-            className={pf('shrink-none')}
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
-        </div>
-      </div>
-      <div className={pf('card__body')}>
-        <ul className={pf('card__body--inner')}>
-          <li className={pf('tile hint-parent')}>
-            <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
-              </p>
-              <ButtonIcon
-                className={pf('shrink-none')}
-                flavor="icon-border-filled,icon-x-small"
-                iconFlavor="hint,small"
-                sprite="utility"
-                symbol="down"
-                assistiveText="Show More" />
-            </div>
-            <div className={pf('tile__detail')}>
-              <dl className={pf('dl--horizontal text-body--small')}>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Title:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>VP, Facilities</p>
-                </dd>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Email:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>achoi@burlingtion.com</p>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li className={pf('tile hint-parent')}>
-            <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
-              </p>
-              <ButtonIcon
-                className={pf('shrink-none')}
-                flavor="icon-border-filled,icon-x-small"
-                iconFlavor="hint,small"
-                sprite="utility"
-                symbol="down"
-                assistiveText="Show More" />
-            </div>
-            <div className={pf('tile__detail')}>
-              <dl className={pf('dl--horizontal text-body--small')}>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Title:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>VP, Facilities</p>
-                </dd>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Email:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>achoi@burlingtion.com</p>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li className={pf('tile hint-parent')}>
-            <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-              <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
-              </p>
-              <ButtonIcon
-                className={pf('shrink-none')}
-                flavor="icon-border-filled,icon-x-small"
-                iconFlavor="hint,small"
-                sprite="utility"
-                symbol="down"
-                assistiveText="Show More" />
-            </div>
-            <div className={pf('tile__detail')}>
-              <dl className={pf('dl--horizontal text-body--small')}>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Title:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>VP, Facilities</p>
-                </dd>
-                <dt className={pf('dl--horizontal__label')}>
-                  <p className={pf('truncate')}>Email:</p>
-                </dt>
-                <dd className={pf('dl--horizontal__detail tile__meta')}>
-                  <p className={pf('truncate')}>achoi@burlingtion.com</p>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className={pf('card__footer')}>
-        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
-      </div>
-    </div>
+  <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
+    <Card className={pf('card--narrow')}>
+      <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
+      <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+      <CardFooter>Card Footer</CardFooter>
+    </Card>
   </div>
 );

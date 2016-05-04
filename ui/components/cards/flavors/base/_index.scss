@@ -29,6 +29,11 @@
     font-size: $font-size-large;
   }
 
+  &__body:empty,
+  &__footer:empty {
+    display: none;
+  }
+
   &__footer {
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;

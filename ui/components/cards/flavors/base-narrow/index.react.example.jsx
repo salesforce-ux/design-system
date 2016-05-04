@@ -15,12 +15,33 @@ import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flav
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-  <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
-    <Card className={pf('card--narrow')}>
-      <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
-      <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
-      <CardFooter>Card Footer</CardFooter>
-    </Card>
-  </div>
-);
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'card-narrow',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
+        <Card className={pf('card--narrow')}>
+          <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
+          <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+          <CardFooter>Card Footer</CardFooter>
+        </Card>
+      </div>
+  },
+  {
+    id: 'card-narrow-empty',
+    label: 'Empty',
+    element:
+      <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
+        <Card className={pf('card--narrow')}>
+          <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
+          <CardBody></CardBody>
+          <CardFooter></CardFooter>
+        </Card>
+      </div>
+  }
+];

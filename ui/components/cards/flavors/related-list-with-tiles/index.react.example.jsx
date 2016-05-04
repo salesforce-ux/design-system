@@ -60,9 +60,9 @@ export default (
     <CardHeader symbol="contact" actions>Contacts (3)</CardHeader>
     <CardBody>
       <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
-        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 1" />
-        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 2" />
-        <Tile className={pf('p-horizontal--small size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 3" />
+        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 1" />
+        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 2" />
+        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 3" />
       </div>
     </CardBody>
     <CardFooter><a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>

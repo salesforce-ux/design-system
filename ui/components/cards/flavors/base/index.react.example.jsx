@@ -69,10 +69,29 @@ export let CardFooter = props =>
     { props.children }
   </div>;
 
-export default (
-  <Card>
-    <CardHeader symbol="contact" actions>Card Header</CardHeader>
-    <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
-    <CardFooter>Card Footer</CardFooter>
-  </Card>
-);
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'card',
+    label: 'Default',
+    element:
+      <Card>
+        <CardHeader symbol="contact" actions>Card Header</CardHeader>
+        <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
+  },
+  {
+    id: 'card-empty',
+    label: 'Empty',
+    element:
+      <Card>
+        <CardHeader symbol="contact" actions>Card Header</CardHeader>
+        <CardBody></CardBody>
+        <CardFooter></CardFooter>
+      </Card>
+  }
+];

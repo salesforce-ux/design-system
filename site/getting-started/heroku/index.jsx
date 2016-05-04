@@ -157,7 +157,7 @@ license: (ISC)
   "description": "demo_slds_heroku",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -185,8 +185,10 @@ $ touch public/index.html
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
   </head>
   <body>
@@ -246,17 +248,19 @@ demo_slds_heroku/
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-        <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look similar to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
     Kaixo!
@@ -292,10 +296,12 @@ demo_slds_heroku/
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
 
@@ -331,7 +337,7 @@ demo_slds_heroku/
         <p>Swap the text <code>Image</code> with an image.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-<img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house.">
+<img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house." />
           `}</CodeBlock>
         </div>
 
@@ -386,7 +392,7 @@ $ heroku create [name-of-your-project]
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ git add .
-$ git commit -m "Init"
+$ git commit -m "Initial commit"
 $ git push heroku master
           `}</CodeBlock>
         </div>

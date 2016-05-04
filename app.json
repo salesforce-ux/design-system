@@ -1,5 +1,5 @@
 {
-  "name": "Salesforce Lightning Design System",
+  "name": "Lightning Design System",
   "buildpacks": [
     {
       "url": "https://github.com/aputinski/heroku-buildpack-npm-github"

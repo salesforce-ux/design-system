@@ -11,6 +11,7 @@ components:
   - docked-utility-bar
   - feeds
   - forms
+  - global-header
   - global-navigation
   - grid-system
   - icons

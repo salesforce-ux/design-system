@@ -21,20 +21,20 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let AppLauncherTile = props =>
-  <div className={pf('media app-launcher__tile')}>
-    <div className={pf('media__figure app-launcher__tile-figure')}>
-      <span className={className(pf('avatar avatar--medium align--absolute-center'), props.figureClass)}>
-        {props.objectInitials}
-      </span>
+  <div className={className(pf('app-launcher__tile'), props.className, props.flavor == 'small' ? pf('app-launcher__tile--small') : pf('box theme--default'))}>
+    <div className={className(pf('app-launcher__tile-figure'), props.flavor == 'small' ? pf('app-launcher__tile-figure--small box--border theme--default') : pf('has-divider--right'))}>
+      { props.symbol ? <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--large')} sprite="standard" symbol={ props.symbol } /> :
+        <a href="#void" className={className(pf('avatar avatar--medium align--absolute-center'), props.figureClass)} tabIndex="-1">{props.objectInitials}</a>
+      }
     </div>
-    <div className={pf('media__body app-launcher__tile-body')}>
+    <div className={className(pf('app-launcher__tile-body'), props.flavor == 'small' ? pf('app-launcher__tile-body--small') : null)}>
       {props.children}
     </div>
   </div>;
 
 let AppLauncherModal = props =>
   <Modal className={pf('modal--large app-launcher')}>
-    <ModalHeader className={pf('app-launcher__header grid grid--align-spread')}>
+    <ModalHeader className={pf('app-launcher__header grid grid--align-spread grid--vertical-align-center')}>
       <h2 className={pf('text-heading--medium')}>App Launcher</h2>
       <div className={pf('app-launcher__header-search')}>
         <div className={pf('form-element')}>
@@ -56,20 +56,38 @@ let AppLauncherModal = props =>
           <h3 href="#void" className={pf('section__title-action')}>All Apps</h3>
         </div>
         <div className={pf('section__content')}>
-          <ul className={pf('grid wrap grid--pull-padded')}>
-            <li className={pf('col--padded grow-none size--1-of-3')}>
+          <ul className={pf('grid wrap')}>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
               <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')}>
                 <a href="#void">Sales Cloud</a>
                 <p>The primary internal Salesforce org. Used to run our business...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-3')}>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
+              <AppLauncherTile className={pf('box--border theme--default')} objectInitials="MC" figureClass={pf('icon-custom-59')}>
+                <a href="#void">Marketing Cloud</a>
+                <p>Salesforce Marketing Cloud lets businesses of any size grow...<a href="#void">More</a></p>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
+              <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')}>
+                <a href="#void">HR Concierge</a>
+                <p>Community for managing employee benefits and time off.</p>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
+              <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')}>
+                <a href="#void">Sales Cloud</a>
+                <p>The primary internal Salesforce org. Used to run our business...<a href="#void">More</a></p>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
               <AppLauncherTile objectInitials="MC" figureClass={pf('icon-custom-59')}>
                 <a href="#void">Marketing Cloud</a>
                 <p>Salesforce Marketing Cloud lets businesses of any size grow...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-3')}>
+            <li className={pf('size--1-of-3 p-around--x-small')}>
               <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')}>
                 <a href="#void">HR Concierge</a>
                 <p>Community for managing employee benefits and time off.</p>
@@ -86,8 +104,46 @@ let AppLauncherModal = props =>
           </button>
           <h3 href="#void" className={pf('section__title-action')}>All Items</h3>
         </div>
-        <div className={pf('section__content grid')}>
-          blah
+        <div className={pf('section__content')}>
+          <ul className={pf('grid wrap')}>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="account">
+                <a href="#void" className={pf('truncate')}>Accounts</a>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="announcement">
+                <div className={pf('truncate')}>
+                  <a href="#void" className={pf('tr3uncate')}>Announcements</a>
+                </div>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="approval">
+                <a href="#void" className={pf('truncate')}>Approvals</a>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="campaign">
+                <a href="#void" className={pf('truncate')}>Campaigns</a>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="case">
+                <a href="#void" className={pf('truncate')}>Cases</a>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="coaching">
+                <a href="#void" className={pf('truncate')}>Coaching</a>
+              </AppLauncherTile>
+            </li>
+            <li className={pf('size--xx-small')}>
+              <AppLauncherTile flavor="small" symbol="contact">
+                <a href="#void" className={pf('truncate')}>Contacts</a>
+              </AppLauncherTile>
+            </li>
+          </ul>
         </div>
       </div>
     </ModalContent>
@@ -100,7 +156,7 @@ let AppLauncherModal = props =>
 export let states = [
   {
     id: 'app-launcher-modal',
-    label: 'Modal',
+    label: 'Base',
     element:
       <div className="demo-only" style={{ height: '640px' }}>
         <AppLauncherModal />

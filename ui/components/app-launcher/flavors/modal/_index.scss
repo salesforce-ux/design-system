@@ -9,8 +9,9 @@
 
 .#{$css-prefix}app-launcher {
 
-  &__header {
-
+  &__header,
+  &__body {
+    background: $color-background;
   }
 
   &__header-search {
@@ -20,8 +21,9 @@
 
   // ?
   &__tile {
-    border: $border-width-thin solid $color-border;
-    border-radius: $border-radius-medium;
+    display: flex;
+    align-items: stretch;
+    // cursor: move;
   }
 
   &__tile-figure,
@@ -29,4 +31,20 @@
     padding: $spacing-small;
   }
 
+  &__tile-figure {
+    color: $color-text-inverse;
+  }
+
+  &__tile--small {
+    display: block;
+    text-align: center;
+  }
+
+  &__tile-figure--small {
+    display: inline-block;
+  }
+
+  &__tile-body--small {
+    padding: $spacing-x-small 0;
+  }
 }

@@ -16,6 +16,11 @@
   border-radius: $border-radius-medium;
   line-height: $line-height-reset;
 
+  &:hover,
+  &:focus:hover {
+    color: currentColor;
+  }
+
   &--x-small {
     @include square($square-icon-small-boundary);
   }

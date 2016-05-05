@@ -52,6 +52,7 @@ export function getConfig (options) {
     entry: {
       site: './site/assets/scripts/main.js'
     },
+    devtool: 'source-map',
     output: {
       filename: '[name].js',
       path: path.resolve(__PATHS__.www, 'assets/scripts'),
@@ -62,8 +63,11 @@ export function getConfig (options) {
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
-          query: '{ compact: false }',
-          exclude: /node_modules/
+          query: {
+            compact: false,
+            cacheDirectory: true
+          },
+          exclude: /node_modules/,
         },
         {
           test: /\.jsx?$/,

@@ -12,6 +12,15 @@
     "node": ">=0.12",
     "npm": ">=2.7.0"
   },
+  "slds": {
+    "name": "Summer ’16",
+    "id": "202"
+  },
+  "config": {
+    "slds": {
+      "internal": true
+    }
+  },
   "scripts": {
     "postinstall": "babel-node scripts/npm/postinstall.js",
     "pretest": "npm run gulp -- build:test",

@@ -19,11 +19,11 @@
     padding: 0 $spacing-medium;
   }
 
-  // ?
+  // App Launcher Tile Items
   &__tile {
     display: flex;
     align-items: stretch;
-    // cursor: move;
+    cursor: move;
   }
 
   &__tile-figure,
@@ -38,6 +38,7 @@
   &__tile--small {
     display: block;
     text-align: center;
+    cursor: pointer;
   }
 
   &__tile-figure--small {

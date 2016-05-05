@@ -57,37 +57,37 @@ let AppLauncherModal = props =>
         </div>
         <div className={pf('section__content')}>
           <ul className={pf('grid wrap')}>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')}>
                 <a href="#void">Sales Cloud</a>
-                <p>The primary internal Salesforce org. Used to run our business...<a href="#void">More</a></p>
+                <p>The primary internal Salesforce org. Used to run our...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile className={pf('box--border theme--default')} objectInitials="MC" figureClass={pf('icon-custom-59')}>
                 <a href="#void">Marketing Cloud</a>
-                <p>Salesforce Marketing Cloud lets businesses of any size grow...<a href="#void">More</a></p>
+                <p>Salesforce Marketing Cloud lets businesses of any size...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')}>
                 <a href="#void">HR Concierge</a>
                 <p>Community for managing employee benefits and time off.</p>
               </AppLauncherTile>
             </li>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')}>
                 <a href="#void">Sales Cloud</a>
-                <p>The primary internal Salesforce org. Used to run our business...<a href="#void">More</a></p>
+                <p>The primary internal Salesforce org. Used to run our...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="MC" figureClass={pf('icon-custom-59')}>
                 <a href="#void">Marketing Cloud</a>
-                <p>Salesforce Marketing Cloud lets businesses of any size grow...<a href="#void">More</a></p>
+                <p>Salesforce Marketing Cloud lets businesses of any size...<a href="#void">More</a></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('size--1-of-3 p-around--x-small')}>
+            <li className={pf('p-around--x-small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')}>
                 <a href="#void">HR Concierge</a>
                 <p>Community for managing employee benefits and time off.</p>

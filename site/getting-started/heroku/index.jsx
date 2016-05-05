@@ -269,7 +269,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">
           A. Use the Grid System Component (Order)
         </h3>
-        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/grid-system#order" target="_blank">Grid System component page</a>.</p>
+        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/utilities/grid/#order" target="_blank">Grid System component page</a>.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 <div class="slds-grid slds-wrap">

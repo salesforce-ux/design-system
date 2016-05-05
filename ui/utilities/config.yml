@@ -1,8 +1,10 @@
 components:
   - alignment
   - floats
+  - grid
   - interactions
   - lists
+  - media-objects
   - scrollable
   - sizing
   - spacing

@@ -2,6 +2,9 @@ status: 'dev-ready'
 classBase: 'card'
 flavors:
   - base
-  - with-filtering
-  - narrow
-  - empty
+  - base-narrow
+  - base-compact
+  - related-list-with-tiles
+  - related-list-with-table
+  - related-list-narrow
+  - related-list-compact

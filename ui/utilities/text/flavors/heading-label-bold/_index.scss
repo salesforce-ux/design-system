@@ -9,54 +9,6 @@
 
 
 
-.#{$css-prefix}card {
-  @include box($theme: shade, $padding: 0, $borders: around);
-
-  + .#{$css-prefix}card {
-    margin-top: $spacing-medium;
-  }
-
-  &__header,
-  &__footer,
-  &__body--inner {
-    padding-left: $spacing-large;
-    padding-right: $spacing-large;
-  }
-
-  &__header {
-    padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
-  }
-
-  &__body:empty,
-  &__footer:empty {
-    display: none;
-  }
-
-  &__footer {
-    margin-top: $spacing-small;
-    padding-bottom: $spacing-small;
-    text-align: right;
-  }
-
-  &--narrow {
-
-    .#{$css-prefix}card__header {
-      padding-top: $spacing-large;
-      margin-bottom: $spacing-large;
-    }
-    .#{$css-prefix}card__footer {
-      padding-bottom: $spacing-medium;
-    }
-  }
-
-  @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
-    .#{$css-prefix}card--empty .#{$css-prefix}card__body {
-      text-align: center;
-    }
-  }
-}
-
-.#{$css-prefix}card__tile {
-  margin-top: $spacing-x-small;
+.#{$css-prefix}text-heading--label-bold {
+  @include text-heading--label-bold;
 }

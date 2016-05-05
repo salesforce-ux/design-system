@@ -10,22 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
 export default (
-<div className="demo-only">
-  <div className={pf('card')}>
-    <div className={pf('card__header grid grid--content-center grid--flex-spread')}>
-      <h2 className={pf('text-heading--small truncate')}>Card Header</h2>
-    </div>
-    <div className={pf('card__body p-horizontal--small')}>
-      <div className={pf('text-align--center')}>
-        <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
-        <Button flavor="neutral" className={pf('m-bottom--x-large')}>Add Contact</Button>
-      </div>
-    </div>
+  <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
+    <Card className={pf('card--compact')}>
+      <CardHeader className={pf('has-divider--top')} actions="overflow">
+        <span className={pf('text-heading--label-bold')}>Card Header</span>
+      </CardHeader>
+      <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+    </Card>
   </div>
-</div>
 );

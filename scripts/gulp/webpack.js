@@ -44,9 +44,8 @@ function logStats (stats) {
  * The webpack configuration
  */
 export function getConfig (options) {
-  options = _.defaults({}, options, {
-    prod: false
-  });
+  options = _.defaults({}, options);
+
   const config = {
     context: __PATHS__.root,
     entry: {
@@ -101,16 +100,12 @@ export function getConfig (options) {
     })
   );*/
   // Uglify
-  if (options.prod) {
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
-  }
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
   return config;
 }
 
 gulp.task('webpack', done => {
-  const config = getConfig({
-    prod: true
-  });
+  const config = getConfig();
   const compiler = webpack(config);
   compiler.run((err, stats) => {
     logStats(stats);

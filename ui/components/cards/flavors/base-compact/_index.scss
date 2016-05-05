@@ -22,8 +22,7 @@
   }
 }
 
-.#{$css-prefix}card__header--border {
-  border-top: $border-width-thin solid $color-border;
+.#{$css-prefix}card__header--compact {
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
 }

@@ -22,7 +22,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
     <Card className={pf('card--compact')}>
-      <CardHeader className={pf('card__header--border')} actions="overflow">
+      <CardHeader className={pf('card__header--compact has-divider--top')} actions="overflow">
         <span className={pf('text-heading--label-normal')}>Card Header</span>
       </CardHeader>
       <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>

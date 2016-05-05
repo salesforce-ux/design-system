@@ -9,6 +9,7 @@ The following site enhancements are now available:
 
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
+- Card component state navigation has been improved
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -22,7 +23,7 @@ The following components are now available:
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
 - Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)
-
+- Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
 **ADDED**
 
 The following classes are now available:

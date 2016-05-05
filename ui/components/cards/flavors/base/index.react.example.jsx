@@ -54,7 +54,7 @@ export let CardHeader = props =>
       </div>
     </div>
     { props.search ? headerSearch : null }
-    <div className={className(pf('grid no-flex'), props.search ? pf('size--1-of-3') : null)}>
+    <div className={className(pf('no-flex'), props.search ? pf('size--1-of-3') : null)}>
       { props.actions == 'overflow' ? headerActionOverflow : headerAction }
     </div>
   </div>;

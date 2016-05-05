@@ -42,13 +42,6 @@ iframe {
   }
 }
 
-.token.utility-class {
-  background-color: $color-background-definition-highlight;
-  border-bottom: $border-width-thick dotted $color-text-warning;
-  text-decoration: none;
-  font-style: normal;
-}
-
 .badge {
 
   &--deprecated {

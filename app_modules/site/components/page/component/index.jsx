@@ -62,9 +62,9 @@ export default React.createClass({
                 return (
                   <li className={className} key={state.id}>
                     <a
-                      href={`#${flavor.id}`}
+                      href={`/${flavor.path}/_${state.id}.html?iframe`}
                       data-slds-flavor-states={flavor.uid}
-                      data-slds-flavor-states-src={`/${flavor.path}/_${state.id}.html?iframe`}>
+                      data-slds-flavor-href={`#flavor-${flavor.id}`}>
                       {state.label}
                     </a>
                   </li>
@@ -75,7 +75,7 @@ export default React.createClass({
         }
         return (
           <li className={pf('list__name site-states-parent')} key={flavor.uid} data-slds-status={flavor.status}>
-            <a href={`#${flavor.id}`}>
+            <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
               { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }
             </a>

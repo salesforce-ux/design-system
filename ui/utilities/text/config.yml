@@ -7,6 +7,7 @@ flavors:
   - heading-small
   - heading-label
   - heading-label-normal
+  - heading-label-bold
   - color
   - alignment
   - longform

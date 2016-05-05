@@ -47,8 +47,8 @@ let Tile = props =>
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
     <Card className={pf('card--compact')}>
-      <CardHeader className={pf('card__header--compact has-divider--top')} actions="overflow">
-        <span className={pf('text-heading--label-normal')}>Contacts</span>
+      <CardHeader className={pf('has-divider--top')} actions="overflow">
+        <span className={pf('text-heading--label-bold')}>Contacts</span>
       </CardHeader>
       <CardBody>
         <Tile title="Related Record Title 1" />

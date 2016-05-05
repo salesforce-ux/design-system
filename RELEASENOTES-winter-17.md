@@ -24,12 +24,14 @@ The following components are now available:
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
 - Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)
 - Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
+
 **ADDED**
 
 The following classes are now available:
 
 - Text color helpers - [Text color utilities](/components/utilities/text#color)
-- Added Utilities > Truncation > Max-width for use on truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
+- Truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
+- Text utility for text heading label bold `.slds-text-heading--label-bold` - [Text Heading Label Bold Utility](/components/utilities/text/#heading-label-bold)
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 
 **CHANGES**

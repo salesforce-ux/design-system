@@ -33,7 +33,7 @@ class CodeBlock extends React.Component {
     const line = lines.length > 1 ? lines[1] : '';
     const offsetMatch = line.match(/^\s*/);
     const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n');
+    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
     return {
       __html: highlight(codeTrimmed, language)
     };

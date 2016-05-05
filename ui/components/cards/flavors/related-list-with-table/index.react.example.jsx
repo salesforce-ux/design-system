@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions>Contacts (2)</CardHeader>
+    <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (1)</span></CardHeader>
     <CardBody>
       <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
         <thead>

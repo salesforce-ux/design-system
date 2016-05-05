@@ -79,7 +79,7 @@ export let states = [
     label: 'Default',
     element:
       <Card>
-        <CardHeader symbol="contact" actions>Card Header</CardHeader>
+        <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
         <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
         <CardFooter>Card Footer</CardFooter>
       </Card>
@@ -89,7 +89,7 @@ export let states = [
     label: 'Empty',
     element:
       <Card>
-        <CardHeader symbol="contact" actions>Card Header</CardHeader>
+        <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
         <CardBody></CardBody>
         <CardFooter></CardFooter>
       </Card>

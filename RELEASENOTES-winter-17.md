@@ -42,7 +42,7 @@ The following changes have been made in this release:
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
 - Updated Product Selector to use filtering component - [Product Selector Component](/components/product-selector)
 - Improvements made to `.slds-text-link--reset` - [Text Link Reset](components/utilities/interactions/#link-reset)
-
+- Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
 
 **FIXED**
 

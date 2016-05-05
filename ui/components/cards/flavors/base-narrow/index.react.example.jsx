@@ -26,7 +26,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
         <Card className={pf('card--narrow')}>
-          <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
+          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
           <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
           <CardFooter>Card Footer</CardFooter>
         </Card>
@@ -38,7 +38,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
         <Card className={pf('card--narrow')}>
-          <CardHeader symbol="contact" actions="overflow">Card Header</CardHeader>
+          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
           <CardBody></CardBody>
           <CardFooter></CardFooter>
         </Card>

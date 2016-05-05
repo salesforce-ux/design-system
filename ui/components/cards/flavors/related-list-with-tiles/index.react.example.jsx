@@ -57,7 +57,7 @@ let Tile = props =>
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions>Contacts (3)</CardHeader>
+    <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (3)</span></CardHeader>
     <CardBody>
       <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
         <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 1" />

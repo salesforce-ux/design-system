@@ -37,6 +37,7 @@ The following changes have been made in this release:
 
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
+- Renamed Product Selector to List Builder - [List Builder Component](/components/list-builder/)
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
 - Updated Product Selector to use filtering component - [Product Selector Component](/components/product-selector)
 - Improvements made to `.slds-text-link--reset` - [Text Link Reset](components/utilities/interactions/#link-reset)

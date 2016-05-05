@@ -13,9 +13,14 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 
+export const intro = (
+  <p className="site-text-introduction">
+    The List builder is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.
+  </p>
+);
+
 export default (
   <ComponentDocs>
-    <p className="site-text-introduction">The Product Selector is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.</p>
-    <p>The Product Selector relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
+    <p>The List builder relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
   </ComponentDocs>
 );

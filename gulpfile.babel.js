@@ -25,6 +25,8 @@ import url from 'url';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
+import { pathToURL } from 'app_modules/util/string';
+
 import './scripts/gulp/assets';
 import './scripts/gulp/generate';
 import { generateUI } from './scripts/gulp/generate-ui';
@@ -123,7 +125,7 @@ const siteMiddleware = (req, res, next) => {
       const log = SLDSLog();
       for (const category of ui) {
         for (const component of category.components) {
-          const pattern = new RegExp(_.escapeRegExp(component.path));
+          const pattern = new RegExp(_.escapeRegExp(pathToURL(component.path)));
           if (pattern.test(url)) {
             return generateComponentPages([component], err => {
               if (err) console.log(err.stack);

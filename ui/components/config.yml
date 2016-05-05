@@ -12,10 +12,12 @@ components:
   - docked-utility-bar
   - feeds
   - forms
+  - global-header
   - global-navigation
   - grid-system
   - icons
   - images
+  - list-builder
   - lookups
   - media-objects
   - menus
@@ -26,7 +28,6 @@ components:
   - panels
   - pills
   - process
-  - product-selector
   - popovers
   - publishers
   - spinners

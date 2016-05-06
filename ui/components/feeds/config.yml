@@ -1,4 +1,16 @@
 status: 'dev-ready'
 flavors:
-  - comment
-  - discussion-feed
+  # - comment
+  # - discussion-feed
+  - post
+  #   - card
+  #   - flat
+  - post-with-question
+  #   - with topics
+  - post-with-attachments
+  #   - link
+  #   - file(s)
+  #   - file(s) with link
+  #   - inline-image
+  # - post with comments
+  # - post narrow

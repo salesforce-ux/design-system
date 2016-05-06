@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (

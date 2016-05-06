@@ -13,7 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
 import StatefulClass from 'ui/components/lib/stateful.react';

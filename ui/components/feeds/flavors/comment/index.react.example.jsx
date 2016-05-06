@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';

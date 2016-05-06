@@ -32,7 +32,6 @@ export default (
             <Button flavor="neutral">Button</Button>
             <ButtonIcon
               flavor="icon-border-filled"
-              className={pf('toggle-visibility')}
               sprite="utility"
               symbol="down"
               assistiveText="Show More" />

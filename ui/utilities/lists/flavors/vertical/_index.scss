@@ -14,6 +14,13 @@
   }
 }
 
+.#{$css-prefix}list--vertical-space-medium {
+
+  .#{$css-prefix}list__item + .#{$css-prefix}list__item {
+    margin-top: $spacing-medium;
+  }
+}
+
 .#{$css-prefix}is-nested {
   margin-left: $spacing-medium;
 }

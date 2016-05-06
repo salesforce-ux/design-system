@@ -6,6 +6,7 @@ flavors:
   - horizontal-alignment-space
   - horizontal-alignment-spread
   - horizontal-alignment-end
+  - vertical-alignment-start
   - vertical-alignment-center
   - vertical-alignment-end
   - vertical-alignment-item

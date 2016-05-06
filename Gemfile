@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem "scss_lint", "0.47.1", require: false
+gem "scss_lint", "0.48.0", require: false

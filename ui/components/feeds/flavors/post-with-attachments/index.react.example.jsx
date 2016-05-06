@@ -70,8 +70,28 @@ let PostAttachmentFiles = props =>
   <ul className={pf('grid grid--pull-padded')}>
     <li className={pf('post__attachments-item col--padded size--1-of-3')}>
       <a href="#void" className={pf('post__attachments-item-action')}>
-        <figure className={pf('image image--has-crop image--card')}>
-          <div className={pf('image__crop image__crop--1-by-1')}>
+        <figure className={pf('image image--card')}>
+          <div className={pf('image__crop image__crop--16-by-9')}>
+            <img src="http://placehold.it/500x500" alt="Picture of Maui" />
+          </div>
+          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
+        </figure>
+      </a>
+    </li>
+    <li className={pf('post__attachments-item col--padded size--1-of-3')}>
+      <a href="#void" className={pf('post__attachments-item-action')}>
+        <figure className={pf('image image--card')}>
+          <div className={pf('image__crop image__crop--16-by-9')}>
+            <img src="/assets/images/company1.jpg" alt="Picture of Maui" />
+          </div>
+          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
+        </figure>
+      </a>
+    </li>
+    <li className={pf('post__attachments-item col--padded size--1-of-3')}>
+      <a href="#void" className={pf('post__attachments-item-action')}>
+        <figure className={pf('image image--card')}>
+          <div className={pf('image__crop image__crop--16-by-9')}>
             <img src="/assets/images/company1.jpg" alt="Picture of Maui" />
           </div>
           <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>

@@ -278,42 +278,38 @@
 @mixin spacing($property) {
   $prop-prefix: null;
   $positions: top right bottom left;
-​
+
   @if $property == margin {
     $prop-prefix: 'm';
   }
-​
+
   @else if $property == padding {
     $prop-prefix: 'p';
   }
-​
+
   @each $token, $size in $force-base-map {
     $token-string: inspect($token);
-​
+
     @if str-index($token-string, spacing) {
       $spacing: unquote(str-replace($token, 'spacing-', ''));
-​
+
       @each $position in $positions {
-        @if $size == 0 {
-          .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
-            #{$property}-#{$position}: $size !important;
-          }
-        }
+
         .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
           #{$property}-#{$position}: $size;
         }
       }
-​
+
       .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
         #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
-​
+
       .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
         #{$property}-left: $size;
       }
-​
+
       .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
         #{$property}: $size;
       }

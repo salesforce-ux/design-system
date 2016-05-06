@@ -40,14 +40,6 @@ export let Trigger = props =>
     {props.children}
   </div>;
 
-export let TriggerInverse = props =>
-  <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <Button className={pf('button--icon-border-filled')} assistiveText="More Options" aria-haspopup="true" disabled={props.disabled}>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-    </Button> }
-    {props.children}
-  </div>;
-
 
 ///////////////////////////////////////////
 // State Constructor(s)

@@ -13,7 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';

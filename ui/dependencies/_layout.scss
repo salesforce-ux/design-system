@@ -293,6 +293,7 @@
     @if str-index($token-string, spacing) {
       $spacing: unquote(str-replace($token, 'spacing-', ''));
 
+      // scss-lint:disable ImportantRule
       @each $position in $positions {
         @if $size == 0 {
           .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {

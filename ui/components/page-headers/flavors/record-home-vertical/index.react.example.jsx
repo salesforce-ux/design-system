@@ -29,12 +29,12 @@ export default (
   <div className="demo-only" style={{width: '300px'}}>
     <div className="slds-page-header--vertical" role="banner">
       <div className={pf('grid grid--vertical')}>
-        <div className={pf('col')}>
+        <div>
           <MediaObject flavor="center" figureLeft={image} className={pf('no-space has-divider--bottom-space')}>
-            <h1 className={pf('page-header__title align-middle')} title="Record Title">Record Title</h1>
+            <h1 className={pf('page-header__title align-middle')}>Record Title</h1>
           </MediaObject>
         </div>
-        <div className={pf('col grid grid--vertical grid--vertical-align-start has-divider--bottom-space')}>
+        <div className={pf('has-divider--bottom-space')}>
           <StatefulClass>
             <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
               <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>

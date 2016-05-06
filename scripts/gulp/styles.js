@@ -55,7 +55,6 @@ gulp.task('stylestats', done => {
 
       gutil.log(gutil.colors.gray(`That's ${sign(diff.size)}${diff.size.toKB()}KB (${sign(diff.gzippedSize)}${diff.gzippedSize.toKB()}KB gzipped) than the current public version.`));
 
-
       gutil.log(`Additional stats:
             Rules: ${result.rules} (${sign(diff.rules)}${diff.rules})
             Selectors: ${result.selectors} (${sign(diff.selectors)}${diff.selectors})`);

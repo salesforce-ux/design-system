@@ -17,34 +17,16 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let LockIcon = props =>
-<span className={pf('icon_container')}>
-  <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
-  <span className={pf('assistive-text')}>Lock Icon</span>
-</span>;
-
-let WarningIcon = props =>
-<span className={pf('icon_container')}>
-  <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
-  <span className={pf('assistive-text')}>Warning Icon</span>
-</span>;
-
-let ErrorIcon = props =>
-<span className={pf('icon_container')}>
-  <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
-  <span className={pf('assistive-text')}>Warning Icon</span>
-</span>;
-
 let CaseIcon = props =>
-<span className={pf('icon_container icon-standard-case')}>
+<span className={pf('icon_container icon-standard-case')} title="description of icon when needed">
   <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-  <span className={pf('assistive-text')}>Case icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 let LogACallIcon = props =>
-<span className={pf('icon_container icon-standard-log-a-call')}>
+<span className={pf('icon_container icon-standard-log-a-call')} title="description of icon when needed">
   <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
-  <span className={pf('assistive-text')}>Log a Call icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 //////////////////////////////////////////////
@@ -53,28 +35,13 @@ let LogACallIcon = props =>
 
 export let states = [
   {
-    id: 'lockicon',
-    label: 'Icon: Lock',
-    element: <LockIcon />
-  },
-  {
-    id: 'warningicon',
-    label: 'Icon: Warning',
-    element: <WarningIcon />
-  },
-  {
-    id: 'erroricon',
-    label: 'Icon: Error',
-    element: <ErrorIcon />
-  },
-  {
     id: 'caseicon',
-    label: 'Background: Case',
+    label: 'Case',
     element: <CaseIcon />
   },
   {
     id: 'logacallicon',
-    label: 'Background: Log a Call',
+    label: 'Log a Call',
     element: <LogACallIcon />
   }
 ];

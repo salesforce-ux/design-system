@@ -22,77 +22,94 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image = (
-  <SvgIcon className={pf('icon icon-standard-user')} sprite="standard" symbol="user" />
+  <SvgIcon className={pf('icon icon-standard-lead')} sprite="standard" symbol="lead" />
 );
 
 export default (
-  <div className="slds-page-header" role="banner">
-    <div className={pf('grid')}>
-      <div className={pf('col has-flexi-truncate')}>
-        <MediaObject flavor="center" figureLeft={image} className={pf('no-space grow')}>
-          <Heading flavor="label">Record Type</Heading>
-          <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
-        </MediaObject>
-      </div>
-      <div className={pf('col no-flex grid align-bottom')}>
-        <StatefulClass>
-          <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
-            <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
-            <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
-            <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
-          </Button>
-        </StatefulClass>
-        <div className={pf('button-group')} role="group">
-          <Button flavor="neutral">
-            Edit
-          </Button>
-          <Button flavor="neutral">
-            Delete
-          </Button>
-          <Button flavor="neutral">
-            Clone
-          </Button>
-          <div className={pf('button--last')}>
-            <ButtonIcon
-              flavor="icon-border-filled"
-              sprite="utility"
-              symbol="down"
-              assistiveText="More" />
+  <div className="demo-only" style={{width: '300px'}}>
+    <div className="slds-page-header--vertical" role="banner">
+      <div className={pf('grid grid--vertical')}>
+        <div className={pf('col')}>
+          <MediaObject flavor="center" figureLeft={image} className={pf('no-space has-divider--bottom-space')}>
+            <h1 className={pf('page-header__title align-middle')} title="Record Title">Record Title</h1>
+          </MediaObject>
+        </div>
+        <div className={pf('col grid grid--vertical grid--vertical-align-start has-divider--bottom-space')}>
+          <StatefulClass>
+            <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
+              <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
+              <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
+              <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
+            </Button>
+          </StatefulClass>
+          <div className={pf('button-group m-left--none m-top--x-small')} role="group">
+            <Button flavor="neutral">
+              Convert
+            </Button>
+            <Button flavor="neutral">
+              Clone
+            </Button>
+            <Button flavor="neutral">
+              Edit
+            </Button>
+            <div className={pf('button--last')}>
+              <ButtonIcon
+                flavor="icon-border-filled"
+                sprite="utility"
+                symbol="down"
+                assistiveText="More" />
+            </div>
           </div>
         </div>
       </div>
+      <ul className={pf('list--vertical-space-medium m-left--xx-small')}>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
+          <p className={pf('truncate')} title="Description that demonstrates truncation with a long text field">
+            Description that demonstrates truncation with a long text field.
+          </p>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 2">Field 2</p>
+          <a href="#void">Hyperlink</a>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
+          <p className={pf('truncate')} title="Description">
+            Description
+          </p>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 4 (3)">
+            Field 4 (3)
+            <ButtonIcon
+              flavor="icon-bare"
+              iconFlavor="small"
+              sprite="utility"
+              symbol="down"
+              assistiveText="More Actions" />
+          </p>
+          <p className={pf('text-body--regular')}>Multiple Values</p>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 5">Field 5</p>
+          <p className={pf('truncate')} title="Description">
+            Description
+          </p>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 6">Field 6</p>
+          <p className={pf('truncate')} title="Description">
+            Description
+          </p>
+        </li>
+        <li className={pf('list__item')}>
+          <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 7">Field 7</p>
+          <p className={pf('truncate')} title="Description">
+            Description
+          </p>
+        </li>
+      </ul>
     </div>
-    <ul className={pf('grid page-header__detail-row')}>
-      <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
-        <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
-          Description that demonstrates truncation with a long text field.
-        </p>
-      </li>
-      <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field2 (3)">
-          Field 2 (3)
-          <ButtonIcon
-            flavor="icon-bare"
-            iconFlavor="small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="More Actions" />
-        </p>
-        <p className={pf('text-body--regular')}>Multiple Values</p>
-      </li>
-      <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
-        <a href="#void">Hyperlink</a>
-      </li>
-      <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 4">Field 4</p>
-        <p>
-          <Truncate amount={50}>
-            Description (2-line truncation—must use JS to truncate).
-          </Truncate>
-        </p>
-      </li>
-    </ul>
   </div>
 );

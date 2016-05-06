@@ -92,6 +92,6 @@ export default (
 }
     `}</CodeBlock>
   </div>
-  <p>See <a href="/components/grid-system">Grid System</a> for more information and examples.</p>
+  <p>See <a href="/components/utilities/grid">Grid System</a> for more information and examples.</p>
 </ComponentDocs>
 );

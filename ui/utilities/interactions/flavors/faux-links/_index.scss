@@ -11,6 +11,8 @@
 
 .#{$css-prefix}type-focus {
   border-bottom: $border-width-thin solid transparent;
+  border-radius: 0;
+  color: $color-text-default;
   cursor: pointer;
 
   &:hover,

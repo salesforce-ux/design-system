@@ -28,13 +28,13 @@ const image = (
 export default (
   <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
-      <div className={pf('col has-flexi-truncate')}>
-        <MediaObject flavor="center" figureLeft={image} className={pf('no-space grow')}>
-          <Heading flavor="label">Record Type</Heading>
-          <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
+      <div className={pf('col')}>
+        <MediaObject figureLeft={image} className={pf('no-space grow')}>
+          <Heading className={pf('line-height--reset')} flavor="label">Record Type</Heading>
+          <h1 className={pf('page-header__title m-right--small align-middle')}>Record Title</h1>
         </MediaObject>
       </div>
-      <div className={pf('col no-flex grid align-bottom')}>
+      <div className={pf('col no-flex grid align-top')}>
         <StatefulClass>
           <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
             <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>

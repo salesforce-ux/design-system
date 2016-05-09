@@ -9,35 +9,35 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-export default {
-  abbreviatedName: 'SLDS',
-  cssPrefix: 'slds-',
-  displayName: 'Lightning Design System',
-  filenamePrefix: 'slds',
-  analyticsHostWhitelist: [
-    'getslds.com',
-    'www.getslds.com',
-    'lightningdesignsystem.com',
-    'www.lightningdesignsystem.com',
-    'lightning-design-system.herokuapp.com',
-    'salesforce.com',
-    'www.salesforce.com'
-  ],
-  herokuLightingReactAppUrl: [
-    {type: 'heroku-react-app', url: 'https://github.com/ccoenraets/lightning-react-app'},
-    {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
-  ],
-  unmanagedPackageUrls: [
-    { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' },
-    { version: '1.0.2', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo' },
-    { version: '1.0.3', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000YIVO' }
-  ],
-  moduleName: 'salesforce-lightning-design-system',
-  resetWrappingClass: '.slds',
-  zipName: function(version) {
-    return this.moduleName + '-' + version + '.zip';
-  },
-  downloadPath: function(version) {
-    return 'assets/downloads/' + this.zipName(version);
-  }
-};
+import React from 'react';
+import { prefix as pf } from 'app_modules/ui/util/component';
+
+export const preview = (
+<div className="demo-only demo-container">
+  <div className={pf('grid grid--vertical-align-start grid--pull-padded')} style={{height: '250px'}}>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>Content determines the width unless otherwise set</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>1</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>2</div>
+    </div>
+    <div className={pf('col--padded')}>
+      <div className={pf('box box--small theme--shade text-align--center')}>3</div>
+    </div>
+  </div>
+</div>
+);
+
+export const code = (
+<div className="demo-only demo-container">
+  <div className={pf('grid grid--vertical-align-start')}>
+    <div>Content determines the width unless otherwise set</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</div>
+);

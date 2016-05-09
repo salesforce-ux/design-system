@@ -2,6 +2,7 @@ status: 'prototype'
 flavors:
   - base
   - record-home
+  - record-home-vertical
   - object-home
   - related-list
 dependencies:

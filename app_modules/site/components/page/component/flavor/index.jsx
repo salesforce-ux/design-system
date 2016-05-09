@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
@@ -108,7 +109,7 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     return (
       <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
-        <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
+        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}
@@ -197,7 +198,7 @@ class ComponentFlavor extends React.Component {
     const src = previewState ? previewState.id : 'default';
     const iframe = (
       <iframe
-        src={`/${flavor.path}/_${src}.html?iframe&initial`}
+        src={`/${pathToURL(flavor.path)}/_${src}.html?iframe&initial`}
         height="100%"
         id={`iframe-${flavor.uid}`}
         name={flavor.uid}

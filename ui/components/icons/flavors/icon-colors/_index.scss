@@ -9,7 +9,14 @@
 
 
 
-.#{$css-prefix}grid--vertical-align-end {
-  align-items: flex-end; // Sinlge Row Alignment
-  align-content: flex-end; // Multi Row Alignment
+.#{$css-prefix}icon-text-default {
+  fill: $color-text-icon-default; // @TODO - should we use currentcolor?
+}
+
+.#{$css-prefix}icon-text-warning {
+  fill: $color-text-warning;
+}
+
+.#{$css-prefix}icon-text-error {
+  fill: $color-text-error;
 }

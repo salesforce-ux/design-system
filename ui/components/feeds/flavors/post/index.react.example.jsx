@@ -42,13 +42,13 @@ let PostFooterActions = props =>
 
 let PostFooterMeta = props =>
   <ul className={pf('col--bump-left list--horizontal has-dividers--right')}>
-    <li className={pf('list__item')}>2 Likes</li>
-    <li className={pf('list__item')}>3 Comments</li>
-    <li className={pf('list__item')}>20 Shares</li>
+    <li className={pf('list__item medium-show')}>2 Likes</li>
+    <li className={pf('list__item medium-show')}>3 Comments</li>
+    <li className={pf('list__item medium-show')}>20 Shares</li>
     <li className={pf('list__item')}>259 Views</li>
   </ul>;
 
-let PostHeader = props =>
+export let PostHeader = props =>
   <header className={pf('post__header media media--center')}>
     <div className={pf('media__figure')}>
       <div className={pf('avatar avatar--circle avatar--medium')}>
@@ -70,23 +70,23 @@ let PostHeader = props =>
     </div>
   </header>;
 
-let PostContent = props =>
+export let PostContent = props =>
   <div className={className(pf('post__content text-longform'), props.className)}>
     { props.children }
   </div>;
 
-let PostFooter = props =>
+export let PostFooter = props =>
   <footer className={className(pf('post__footer'), props.className)}>
     <PostFooterActions />
     <PostFooterMeta />
   </footer>;
 
-let Post = props =>
+export let Post = props =>
   <article className={className(pf('post'), props.className)}>
     { props.children }
   </article>;
 
-let Comments = props =>
+export let Comments = props =>
   <ul className={pf('feed__item-comments')}>
     <Publisher />
   </ul>;
@@ -100,30 +100,34 @@ export let states = [
     id: 'post-card',
     label: 'Card',
     element:
-      <div className={pf('feed__item feed__item--card')}>
-        <Post className={pf('post--card')}>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter />
-        </Post>
-        <Comments />
+      <div className="demo-only" style={{ maxWidth: '800px' }}>
+        <div className={pf('feed__item feed__item--card')}>
+          <Post className={pf('post--card')}>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter />
+          </Post>
+          <Comments />
+        </div>
       </div>
   },
   {
     id: 'post-flat',
     label: 'Flat',
     element:
-      <div className={pf('feed__item')}>
-        <Post className={pf('post')}>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter />
-        </Post>
-        <Comments />
+      <div className="demo-only" style={{ maxWidth: '800px' }}>
+        <div className={pf('feed__item')}>
+          <Post className={pf('post')}>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter />
+          </Post>
+          <Comments />
+        </div>
       </div>
   }
 ];

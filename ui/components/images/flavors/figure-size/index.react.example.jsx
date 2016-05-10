@@ -10,20 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { Image } from 'ui/components/images/flavors/figure/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-export let Image = props =>
-  <figure className={className(pf('image'), props.className)}>
-    <div className={className(pf('image__crop'), props.cropClass)}>
-      <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-    </div>
-    <figcaption className={className(pf('image__title'), props.titleClass)}>Ride Along Accounts.xls</figcaption>
-  </figure>;
 
 //////////////////////////////////////////////
 // Export
@@ -31,27 +20,27 @@ export let Image = props =>
 
 export let states = [
   {
-    id: 'figure',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image cropClass={pf('image__crop--16-by-9')} />
-      </div>
-  },
-  {
-    id: 'figure-card',
-    label: 'Card',
+    id: 'image-16-9',
+    label: '16:9',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
         <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
       </div>
   },
   {
-    id: 'figure-overlay',
-    label: 'Overlay',
+    id: 'image-4-3',
+    label: '4:3',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} titleClass={pf('image__title--overlay align--absolute-center')} />
+        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} />
+      </div>
+  },
+  {
+    id: 'image-1-1',
+    label: '1:1',
+    element:
+      <div className="demo-only" style={{ width: '25%' }}>
+        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} />
       </div>
   }
 ];

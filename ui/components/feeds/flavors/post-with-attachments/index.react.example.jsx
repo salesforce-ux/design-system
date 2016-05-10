@@ -13,51 +13,24 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
+import { Post, PostHeader, PostContent, PostFooter, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol={props.symbol} />
-    <span className={pf('assistive-text')}>{props.assistiveText}</span>
-  </button>;
-
-let PostFooterActions = props =>
-  <ul className={pf('list--horizontal')}>
-    <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Like this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" /> Like
-      </a>
-    </li>
-    <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Comment on this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
-      </a>
-    </li>
-    <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Share this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
-      </a>
-    </li>
-  </ul>;
-
-let PostFooterMeta = props =>
-  <ul className={pf('col--bump-left list--horizontal has-dividers--right')}>
-    <li className={pf('list__item')}>2 Likes</li>
-    <li className={pf('list__item')}>3 Comments</li>
-    <li className={pf('list__item')}>20 Shares</li>
-    <li className={pf('list__item')}>259 Views</li>
-  </ul>;
 
 let PostAttachments = props =>
-  <div className={pf('post__attachments')}>
+  <div className={pf('post__payload')}>
     { props.type == 'link' ? <PostAttachmentLink /> : null }
     { props.type == 'files' ? <PostAttachmentFiles /> : null }
   </div>;
 
 let PostAttachmentLink = props =>
   <a href="#void" className={pf('media box grow text-link--reset')}>
-    <div className={pf('media__figure')}>
-      <img src="/assets/images/company1.jpg" alt="Picture of Maui" />
+    <div className={pf('media__figure medium-show')}>
+      <div className={pf('image size--small')}>
+        <div className={pf('image__crop image__crop--16-by-9')}>
+          <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
+        </div>
+      </div>
     </div>
     <div className={pf('media__body')}>
       <h3 className={pf('text-heading--small')}>Maui By Air The Best Way Around The Island</h3>
@@ -68,79 +41,36 @@ let PostAttachmentLink = props =>
 
 let PostAttachmentFiles = props =>
   <ul className={pf('grid grid--pull-padded')}>
-    <li className={pf('post__attachments-item col--padded size--1-of-3')}>
+    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
       <a href="#void" className={pf('post__attachments-item-action')}>
         <figure className={pf('image image--card')}>
           <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="http://placehold.it/500x500" alt="Picture of Maui" />
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
+          </div>
+          <figcaption className={pf('image__title')}>Service Case Study.ppt</figcaption>
+        </figure>
+      </a>
+    </li>
+    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
+      <a href="#void" className={pf('post__attachments-item-action')}>
+        <figure className={pf('image image--card')}>
+          <div className={pf('image__crop image__crop--16-by-9')}>
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
           </div>
           <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
         </figure>
       </a>
     </li>
-    <li className={pf('post__attachments-item col--padded size--1-of-3')}>
+    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
       <a href="#void" className={pf('post__attachments-item-action')}>
-        <figure className={pf('image image--card')}>
+        <div className={pf('image')}>
           <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="/assets/images/company1.jpg" alt="Picture of Maui" />
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
           </div>
-          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
-        </figure>
+          <div className={pf('image__title image__title--overlay align--absolute-center text-heading--large')}>22+</div>
+        </div>
       </a>
     </li>
-    <li className={pf('post__attachments-item col--padded size--1-of-3')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
-        <figure className={pf('image image--card')}>
-          <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="/assets/images/company1.jpg" alt="Picture of Maui" />
-          </div>
-          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>;
-
-let PostHeader = props =>
-  <header className={pf('post__header media media--center')}>
-    <div className={pf('media__figure')}>
-      <div className={pf('avatar avatar--circle avatar--medium')}>
-        <a href="#void" title="Jason Rodgers">
-          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
-        </a>
-      </div>
-    </div>
-    <div className={pf('media__body')}>
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('truncate')}>
-          <a href="#void" title="Jason Rodgers">Jason Rogers</a> via <a href="#void" title="Design Systems">Design Systems</a>
-        </p>
-        <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
-      </div>
-      <p className={pf('text-body--small')}>
-        <a href="#void" title="Click for single-item view of this post" className={pf('text-link--reset')}>5 days Ago</a>
-      </p>
-    </div>
-  </header>;
-
-let PostContent = props =>
-  <div className={className(pf('post__content text-longform'), props.className)}>
-    { props.children }
-  </div>;
-
-let PostFooter = props =>
-  <footer className={className(pf('post__footer'), props.className)}>
-    <PostFooterActions />
-    <PostFooterMeta />
-  </footer>;
-
-let Post = props =>
-  <article className={className(pf('post'), props.className)}>
-    { props.children }
-  </article>;
-
-let Comments = props =>
-  <ul className={pf('feed__item-comments')}>
-    <Publisher />
   </ul>;
 
 ///////////////////////////////////////////
@@ -152,32 +82,36 @@ export let states = [
     id: 'post-attachment-link',
     label: 'Link',
     element:
-      <div className={pf('feed__item feed__item--card')}>
-        <Post className={pf('post--card')}>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostAttachments type="link" />
-          <PostFooter />
-        </Post>
-        <Comments />
+      <div className="demo-only" style={{ maxWidth: '800px' }}>
+        <div className={pf('feed__item feed__item--card')}>
+          <Post className={pf('post--card')}>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostAttachments type="link" />
+            <PostFooter />
+          </Post>
+          <Comments />
+        </div>
       </div>
   },
   {
     id: 'post-attachment-files',
     label: 'Files(s)',
     element:
-      <div className={pf('feed__item feed__item--card')}>
-        <Post className={pf('post--card')}>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostAttachments type="files" />
-          <PostFooter />
-        </Post>
-        <Comments />
+      <div className="demo-only" style={{ maxWidth: '800px' }}>
+        <div className={pf('feed__item feed__item--card')}>
+          <Post className={pf('post--card')}>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostAttachments type="files" />
+            <PostFooter />
+          </Post>
+          <Comments />
+        </div>
       </div>
   }
 ];

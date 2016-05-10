@@ -10,20 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { Avatar } from 'ui/components/images/flavors/avatar/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-export let Image = props =>
-  <figure className={className(pf('image'), props.className)}>
-    <div className={className(pf('image__crop'), props.cropClass)}>
-      <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-    </div>
-    <figcaption className={className(pf('image__title'), props.titleClass)}>Ride Along Accounts.xls</figcaption>
-  </figure>;
 
 //////////////////////////////////////////////
 // Export
@@ -31,27 +20,35 @@ export let Image = props =>
 
 export let states = [
   {
-    id: 'figure',
-    label: 'Default',
+    id: 'avatar-x-small',
+    label: 'X Small',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image cropClass={pf('image__crop--16-by-9')} />
-      </div>
+      <Avatar className={pf('avatar--x-small')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
   },
   {
-    id: 'figure-card',
-    label: 'Card',
+    id: 'avatar-small',
+    label: 'Small',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
-      </div>
+      <Avatar className={pf('avatar--small')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
   },
   {
-    id: 'figure-overlay',
-    label: 'Overlay',
+    id: 'avatar-medium',
+    label: 'Medium',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} titleClass={pf('image__title--overlay align--absolute-center')} />
-      </div>
+      <Avatar className={pf('avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-large',
+    label: 'Large',
+    element:
+      <Avatar className={pf('avatar--large')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
   }
 ];

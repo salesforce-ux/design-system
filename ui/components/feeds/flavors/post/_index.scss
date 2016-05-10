@@ -21,8 +21,8 @@ $color-background-comment: #f1f4f7;
 }
 
 // Card specific feed item
-.#{$css-prefix}feed__item--card {
-  border-radius: $border-radius-medium;
+.#{$css-prefix}feed__item--card + .#{$css-prefix}feed__item--card {
+  border: 0;
 }
 
 .#{$css-prefix}post {

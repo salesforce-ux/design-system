@@ -9,57 +9,35 @@
 
 
 
-.#{$css-prefix}image {
-  position: relative;
+.#{$css-prefix}avatar {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius-medium;
+  line-height: $line-height-reset;
 
-  &__crop {
-    position: relative;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      max-width: none;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-    }
-
-    &--1-by-1 {
-      padding-top: 100%;
-    }
-
-    &--16-by-9 {
-      padding-top: 56.25%;
-    }
-
-    &--4-by-3 {
-      padding-top: 75%;
-    }
+  &--x-small {
+    @include square($square-icon-small-boundary);
   }
 
-  &__title {
-    text-align: center;
-    padding: $spacing-x-small;
-
-    &--overlay {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
+  &--small {
+    @include square($square-icon-medium-boundary-alt);
   }
 
-  &--card {
-    border-radius: $border-radius-medium;
-    border: $border-width-thin solid $color-border;
-    background: $color-background-alt;
+  &--medium {
+    @include square($square-icon-large-boundary);
+  }
+
+  &--large {
+    @include square($square-icon-large-boundary-alt);
+  }
+
+  &--circle {
+    border-radius: $border-radius-circle;
+  }
+
+  // New in 2.0.0
+  &--empty {
+    border: $border-width-thin dashed $color-border;
   }
 }

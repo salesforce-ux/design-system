@@ -52,3 +52,10 @@ $color-background-utility-bar-hover: rgb(224, 229, 238) !default;
 $color-border-utility-bar-active: $color-brand !default;
 // Shadow
 $shadow-docked: 0 -2px 2px 0 rgba(0, 0, 0, 0.16) !default;
+
+// --------
+// Feed Post
+$shadow-feed-post: rgba(0, 0, 0, 0.15) 0 0 1px 1px !default;
+$color-background-post: #f1f4f7 !default;
+// Image
+$color-background-image-overlay: rgba(0, 0, 0, 0.4) !default;

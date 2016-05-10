@@ -7,58 +7,79 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.#{$css-prefix}comment {
 
-
-.#{$css-prefix}image {
-  position: relative;
-
-  &__crop {
-    position: relative;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
+  &__content {
+    padding: {
+      top: $spacing-x-small;
     }
+  }
+
+  &__overflow {
+    margin-bottom: $spacing-medium;
+  }
+
+  .#{$css-prefix}text-body--small a {
+    color: inherit;
+  }
+}
+
+
+// Comment with replies
+.#{$css-prefix}comment__replies {
+  padding-top: $spacing-medium;
+  margin-left: ($square-icon-large-boundary + $spacing-small);
+
+  > :last-child,
+  > :last-child .#{$css-prefix}comment {
+    padding-bottom: 0;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .#{$css-prefix}comment {
+    @include feed-vertical-rule($square-icon-medium-boundary-alt);
+    margin-bottom: 0;
+    padding-bottom: $spacing-medium;
+  }
+
+  .#{$css-prefix}avatar {
+    border: $border-width-thick solid $color-background-alt;
+  }
+}
+
+// Comment entity tags
+.#{$css-prefix}tags {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: $spacing-xx-small;
 
     &:after {
-      content: '';
-      display: block;
+      content: ', ';
     }
 
-    &--1-by-1 {
-      padding-top: 100%;
-    }
-
-    &--16-by-9 {
-      padding-top: 56.25%;
-    }
-
-    &--4-by-3 {
-      padding-top: 75%;
+    &:last-child:after {
+      content: none;
     }
   }
+}
 
-  &__title {
-    text-align: center;
-    padding: $spacing-x-small;
+// Comment + Publisher Attachments
+.#{$css-prefix}attachments {
+  padding-bottom: $spacing-x-small;
 
-    &--overlay {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
+  &:empty {
+    padding: 0;
   }
+}
 
-  &--card {
-    border-radius: $border-radius-medium;
-    border: $border-width-thin solid $color-border;
-    background: $color-background-alt;
-  }
+.#{$css-prefix}attachments__item + .#{$css-prefix}attachments__item {
+  margin-top: $spacing-medium;
 }

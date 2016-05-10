@@ -20,41 +20,18 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Export
 ///////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'post-with-question',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <h3 className={pf('text-heading--small')}>Barbecue Party Tips For A Truly Amazing Event?</h3>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments />
-        </div>
-      </div>
-  },
-  {
-    id: 'post-with-question-topics',
-    label: 'With topics',
-    element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <h3 className={pf('text-heading--small')}>Barbecue Party Tips For A Truly Amazing Event?</h3>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments />
-        </div>
-      </div>
-  }
-];
+export default (
+  <div className="demo-only" style={{ maxWidth: '800px' }}>
+    <div className={pf('feed__item feed__item--card')}>
+      <Post className={pf('post--card')}>
+        <PostHeader />
+        <PostContent>
+          <h3 className={pf('text-heading--small')}>Barbecue Party Tips For A Truly Amazing Event?</h3>
+          <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        </PostContent>
+        <PostFooter />
+      </Post>
+      <Comments />
+    </div>
+  </div>
+);

@@ -7,15 +7,10 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$shadow-feed-item: rgba(#000, 0.15) 0 0 1px 1px;
-$color-background-comment: #f1f4f7;
-
-
-
 // Container for feed item comments
 .#{$css-prefix}feed__item-comments {
   padding: $spacing-small $spacing-medium;
-  background: $color-background-comment;
+  background: $color-background-post;
   border: $border-width-thin solid $color-border;
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
 }
@@ -30,7 +25,7 @@ $color-background-comment: #f1f4f7;
   padding: $spacing-medium;
 
   &--card {
-    box-shadow: $shadow-feed-item;
+    box-shadow: $shadow-feed-post;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
   }
 
@@ -67,82 +62,4 @@ $color-background-comment: #f1f4f7;
       fill: currentColor;
     }
   }
-}
-
-
-.#{$css-prefix}comment {
-
-  &__content {
-    padding: {
-      top: $spacing-x-small;
-    }
-  }
-
-  &__overflow {
-    margin-bottom: $spacing-medium;
-  }
-
-  .#{$css-prefix}text-body--small a {
-    color: inherit;
-  }
-}
-
-
-// Comment with replies
-.#{$css-prefix}comment__replies {
-  padding-top: $spacing-medium;
-  margin-left: ($square-icon-large-boundary + $spacing-small);
-
-  > :last-child,
-  > :last-child .#{$css-prefix}comment {
-    padding-bottom: 0;
-
-    &:before {
-      content: none;
-    }
-  }
-
-  .#{$css-prefix}comment {
-    @include feed-vertical-rule($square-icon-medium-boundary-alt);
-    margin-bottom: 0;
-    padding-bottom: $spacing-medium;
-  }
-
-  .#{$css-prefix}avatar {
-    border: $border-width-thick solid $color-background-alt;
-  }
-}
-
-// Comment entity tags
-// .#{$css-prefix}tags {
-//   display: flex;
-
-//   &__list {
-//     display: flex;
-//   }
-
-//   &__item {
-//     margin-left: $spacing-xx-small;
-
-//     &:after {
-//       content: ', ';
-//     }
-
-//     &:last-child:after {
-//       content: none;
-//     }
-//   }
-// }
-
-// Comment + Publisher Attachments
-.#{$css-prefix}attachments {
-  padding-bottom: $spacing-x-small;
-
-  &:empty {
-    padding: 0;
-  }
-}
-
-.#{$css-prefix}attachments__item + .#{$css-prefix}attachments__item {
-  margin-top: $spacing-medium;
 }

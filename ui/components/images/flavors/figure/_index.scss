@@ -21,7 +21,7 @@
       top: 50%;
       left: 50%;
       transform: translate3d(-50%, -50%, 0);
-      max-width: none;
+      max-width: 200%; // This value helps with the positioning of large elements
     }
 
     &:after {
@@ -47,8 +47,8 @@
     padding: $spacing-x-small;
 
     &--overlay {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
+      background: $color-background-image-overlay;
+      color: $color-text-inverse;
       position: absolute;
       top: 0;
       left: 0;

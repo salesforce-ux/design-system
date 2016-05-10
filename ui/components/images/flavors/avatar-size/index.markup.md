@@ -1,1 +1,0 @@
-An avatar can be circular or a rounded rectangle, depending on usage. The default is a rounded rectangle and requires `.{{cssPrefix}}avatar` as the base class. Use a circle for all people-oriented objects that could potentially render as avatars. For a fully round avatar, add the `.{{cssPrefix}}avatar--circle` class. Four additional classes are available for sizing.

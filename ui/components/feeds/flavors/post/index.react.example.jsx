@@ -88,6 +88,7 @@ export let Post = props =>
 
 export let Comments = props =>
   <ul className={pf('feed__item-comments')}>
+    { props.children }
     <Publisher />
   </ul>;
 

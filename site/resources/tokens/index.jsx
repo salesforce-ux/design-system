@@ -99,7 +99,6 @@ const Tokens = React.createClass({
               className={pf('input')}
               id="find-token-input"
               type="search"
-              arial-label="text-input"
               placeholder="Find Token" />
           </div>
           {formatSelect}

@@ -38,7 +38,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 

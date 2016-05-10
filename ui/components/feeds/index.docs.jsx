@@ -17,7 +17,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion or activity timeline.
+    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
   </p>
 );
 

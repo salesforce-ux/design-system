@@ -17,6 +17,7 @@ script:
 after_success:
   - export SHA=`git rev-parse --short HEAD`
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA/$TRAVIS_BRANCH ; fi
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 cache:
   directories:
     - node_modules

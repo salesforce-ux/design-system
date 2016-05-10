@@ -31,7 +31,7 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header" role="banner">
+  <div className={pf('page-header page-header--object-home')} role="banner">
     <div className={pf('grid')}>
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className={pf('col')}>

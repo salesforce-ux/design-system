@@ -12,10 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
-import { Button as ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
-import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import { Menu, MenuList, MenuItem, Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 ///////////////////////////////////////////
@@ -29,12 +29,6 @@ let Demo = props =>
 
 export let ButtonGroup = props =>
   <div className={pf('button-group')} role="group">
-    {props.children}
-  </div>;
-
-export let Trigger = props =>
-  <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={pf('button--icon-border-filled')} assistiveText="More Options" hasPopup symbol="down" />}
     {props.children}
   </div>;
 
@@ -62,15 +56,7 @@ let More = props =>
     <Button className={pf('button--neutral')}>Refresh</Button>
     <Button className={pf('button--neutral')}>Edit</Button>
     <Button className={pf('button--neutral')}>Save</Button>
-    <Trigger ariaExpanded="false">
-        <Menu className={pf('dropdown--right')}>
-          <MenuList>
-            <MenuItem>Overflow Item One</MenuItem>
-            <MenuItem>Overflow Item Two</MenuItem>
-            <MenuItem>Overflow Item Three</MenuItem>
-          </MenuList>
-        </Menu>
-      </Trigger>
+    <Trigger className={pf('button--last')} ariaExpanded="false" />
   </ButtonGroup>;
 
 let MoreOpen = props =>
@@ -79,7 +65,7 @@ let MoreOpen = props =>
       <Button className={pf('button--neutral')}>Refresh</Button>
       <Button className={pf('button--neutral')}>Edit</Button>
       <Button className={pf('button--neutral')}>Save</Button>
-      <Trigger className={pf('is-open')}>
+      <Trigger className={pf('button--last is-open')}>
         <Menu className={pf('dropdown--right')}>
           <MenuList>
             <MenuItem>Overflow Item One</MenuItem>
@@ -96,15 +82,9 @@ let IconDisabled = props =>
     <Button className={pf('button--neutral')}>Refresh</Button>
     <Button className={pf('button--neutral')}>Edit</Button>
     <Button className={pf('button--neutral')}>Save</Button>
-    <Trigger disabled ariaExpanded="false">
-        <Menu className={pf('dropdown--right')}>
-          <MenuList>
-            <MenuItem>Overflow Item One</MenuItem>
-            <MenuItem>Overflow Item Two</MenuItem>
-            <MenuItem>Overflow Item Three</MenuItem>
-          </MenuList>
-        </Menu>
-      </Trigger>
+    <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+      <ButtonIcon className={pf('button--icon-border')} assistiveText="More Actions" disabled hasPopup symbol="down" />
+    </div>
   </ButtonGroup>;
 
 let Inverse = props =>
@@ -125,8 +105,8 @@ let InverseDisabled = props =>
       <Button className={pf('button--inverse')} disabled>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
       <Button className={pf('button--inverse')} disabled>Save</Button>
-       <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
-        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup symbol="down" />
+      <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" disabled hasPopup symbol="down" />
       </div>
     </ButtonGroup>
   </Demo>;

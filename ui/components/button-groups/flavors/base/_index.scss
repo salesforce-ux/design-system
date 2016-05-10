@@ -37,12 +37,14 @@
     }
   }
 
+@include deprecate('4.0.0') {
   .#{$css-prefix}toggle-visibility {
 
     &:last-child[disabled] {
       display: none;
     }
   }
+}
 
   & + .#{$css-prefix}button-group,
   & + .#{$css-prefix}button {

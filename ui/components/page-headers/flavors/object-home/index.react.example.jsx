@@ -37,7 +37,7 @@ export default (
       <div className={pf('col has-flexi-truncate')}>
         <MediaObject figureLeft={image} className={pf('no-space grow')}>
           <Heading className={pf('line-height--reset')} flavor="label">Leads</Heading>
-          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate')}>
+          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate line-height--reset')}>
             <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
             {icon}
           </button>
@@ -68,7 +68,7 @@ export default (
     {/* Close Grid */}
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
+        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <Button flavor="icon-more" aria-haspopup="true">

@@ -28,10 +28,10 @@ const image = (
 export default (
   <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
-      <div className={pf('col')}>
+      <div className={pf('col has-flexi-truncate')}>
         <MediaObject figureLeft={image} className={pf('no-space grow')}>
           <Heading className={pf('line-height--reset')} flavor="label">Record Type</Heading>
-          <h1 className={pf('page-header__title m-right--small align-middle')}>Record Title</h1>
+          <h1 className={pf('page-header__title m-right--small align-middle truncate')} title="this should match the Record Title">Record Title</h1>
         </MediaObject>
       </div>
       <div className={pf('col no-flex grid align-top')}>

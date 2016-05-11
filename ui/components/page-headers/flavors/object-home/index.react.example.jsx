@@ -37,7 +37,7 @@ export default (
       <div className={pf('col has-flexi-truncate')}>
         <MediaObject figureLeft={image} className={pf('no-space grow')}>
           <Heading className={pf('line-height--reset')} flavor="label">Leads</Heading>
-          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate line-height--reset')}>
+          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate')}>
             <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
             {icon}
           </button>

@@ -15,7 +15,6 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
-import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -85,13 +84,6 @@ let Active = props =>
     </Publisher>
   </Demo>;
 
-let Attachment = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <Attachments />
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -107,10 +99,5 @@ export let states = [
     id: 'publisher-feed-active',
     label: 'Active',
     element: <Active />
-  },
-  {
-    id: 'publisher-feed-with-attachment',
-    label: 'With attachment(s)',
-    element: <Attachment />
   }
 ];

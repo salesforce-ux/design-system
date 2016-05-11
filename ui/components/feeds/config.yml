@@ -1,4 +1,8 @@
 status: 'dev-ready'
 flavors:
+  - post
+  - post-with-question
+  - post-with-attachments
+  - post-with-comments
   - comment
-  - discussion-feed
+  - feed-list

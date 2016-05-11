@@ -9,4 +9,6 @@ coverage:
 
 comment:
   layout: "header, diff, changes, sunburst, uncovered"
+  branches:
+  - "!hotfix"
   behavior: default

@@ -10,18 +10,43 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export const intro = (
-  <p className="site-text-introduction">
-    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
-  </p>
-);
+export let Avatar = props =>
+  <span className={className(pf('avatar'), props.className)}>
+    { props.children }
+  </span>;
 
-export default (
-  <ComponentDocs>
-  </ComponentDocs>
-);
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'avatar-square',
+    label: 'Square',
+    element:
+      <Avatar className={pf('avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-circle',
+    label: 'Circle',
+    element:
+      <Avatar className={pf('avatar--circle avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-empty',
+    label: 'Empty',
+    element: <Avatar className={pf('avatar--empty avatar--medium')} />
+  }
+];

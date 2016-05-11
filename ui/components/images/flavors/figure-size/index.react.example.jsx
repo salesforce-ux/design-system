@@ -10,18 +10,37 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { Image } from 'ui/components/images/flavors/figure/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-export const intro = (
-  <p className="site-text-introduction">
-    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
-  </p>
-);
-
-export default (
-  <ComponentDocs>
-  </ComponentDocs>
-);
+export let states = [
+  {
+    id: 'image-16-9',
+    label: '16:9',
+    element:
+      <div className="demo-only" style={{ width: '25%' }}>
+        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
+      </div>
+  },
+  {
+    id: 'image-4-3',
+    label: '4:3',
+    element:
+      <div className="demo-only" style={{ width: '25%' }}>
+        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} />
+      </div>
+  },
+  {
+    id: 'image-1-1',
+    label: '1:1',
+    element:
+      <div className="demo-only" style={{ width: '25%' }}>
+        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} />
+      </div>
+  }
+];

@@ -30,3 +30,32 @@ classes:
     class: avatar--large
     description: Creates a 5rem&times;5rem icon
     applied: <code>.{{cssPrefix}}avatar</code>
+  -
+    class: image
+    description: Image wrapper, not intended to wrap icons
+    applied: <code>div</code>
+    required: true
+  -
+    class: image__crop
+    description: Optional if you need to crop image at a specific ratio
+    applied: <code>div</code>
+  -
+    class: image__crop--16x9
+    description: Crop image at a 16x9 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__crop--4x3
+    description: Crop image at a 4x3 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__crop--1x1
+    description: Crop image at a 1x1 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__title
+    description: Image title
+    applied: <code>figcaption</code> or <code>div</code>
+  -
+    class: image__title--overlay
+    description: Text overlay on top of image, has opaque overlay
+    applied: <code>.{{cssPrefix}}image__title</code>

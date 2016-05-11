@@ -24,5 +24,8 @@
 # Ignore logs
 *.log
 
+# Ignore code coverage reports
+coverage
+
 # Legacy folders
 /git_modules

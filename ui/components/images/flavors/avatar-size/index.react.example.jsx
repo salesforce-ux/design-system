@@ -10,18 +10,45 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { Avatar } from 'ui/components/images/flavors/avatar/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-export const intro = (
-  <p className="site-text-introduction">
-    A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
-  </p>
-);
-
-export default (
-  <ComponentDocs>
-  </ComponentDocs>
-);
+export let states = [
+  {
+    id: 'avatar-x-small',
+    label: 'X Small',
+    element:
+      <Avatar className={pf('avatar--x-small')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-small',
+    label: 'Small',
+    element:
+      <Avatar className={pf('avatar--small')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-medium',
+    label: 'Medium',
+    element:
+      <Avatar className={pf('avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-large',
+    label: 'Large',
+    element:
+      <Avatar className={pf('avatar--large')}>
+        <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  }
+];

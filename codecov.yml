@@ -5,7 +5,7 @@ codecov:
 coverage:
   precision: 2
   round: down
-  range: "60...100"
+  range: "70...100"
 
 comment:
   layout: "header, diff, changes, sunburst, uncovered"

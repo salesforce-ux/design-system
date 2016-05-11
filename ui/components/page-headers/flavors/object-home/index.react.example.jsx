@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const icon = (
-    <SvgIcon className={pf('button__icon button__icon--right')} sprite="utility" symbol="down" assistiveText="Down" />
+    <SvgIcon className={pf('button__icon button__icon--right no-flex')} sprite="utility" symbol="down" assistiveText="Down" />
 );
 
 const image = (

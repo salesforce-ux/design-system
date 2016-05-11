@@ -11,13 +11,13 @@
   padding: $spacing-medium $spacing-small;
   border-bottom: $border-width-thin solid $color-border;
   background: $color-background-page-header;
-  line-height: $line-height-heading;
 
   &__title {
     font: {
       weight: $font-weight-regular;
       size: $font-size-medium;
     }
+    line-height: $line-height-heading;
   }
 
   @include mq-medium-min {

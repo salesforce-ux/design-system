@@ -83,7 +83,6 @@ class Icons extends React.Component {
               className={pf('input')}
               id="find-icon-input"
               type="search"
-              arial-label="text-input"
               placeholder="Find Icon" />
           </div>
           <div className={pf('col align-middle shrink')}>

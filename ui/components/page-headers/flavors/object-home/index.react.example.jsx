@@ -34,11 +34,11 @@ export default (
   <div className={pf('page-header page-header--object-home')} role="banner">
     <div className={pf('grid')}>
       {/* Open Left Aligned Heading + Icon Grouping */}
-      <div className={pf('col')}>
+      <div className={pf('col has-flexi-truncate')}>
         <MediaObject figureLeft={image} className={pf('no-space grow')}>
           <Heading className={pf('line-height--reset')} flavor="label">Leads</Heading>
-          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center')}>
-            <h1 className={pf('page-header__title')}>My Leads</h1>
+          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate')}>
+            <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
             {icon}
           </button>
         </MediaObject>

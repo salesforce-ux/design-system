@@ -25,7 +25,7 @@ const icon = (
 );
 
 const image = (
-  <span class={pf('icon_container')}>
+  <span className={pf('icon_container')}>
     <SvgIcon className={pf('icon icon-standard-lead')} sprite="standard" symbol="lead" />
   </span>
 );
@@ -71,21 +71,27 @@ export default (
         <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
-        <Button flavor="icon-more" aria-haspopup="true">
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-          <span className={pf('assistive-text')}>Settings</span>
-          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-        </Button>
-        <Button className={pf('m-left--x-small hide')} flavor="brand" aria-hidden="true">Save</Button>
-        <Button flavor="icon-more" className={pf('m-left--xx-small')} aria-haspopup="true">
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-          <span className={pf('assistive-text')}>Table</span>
-          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-        </Button>
-        <Button flavor="icon-border" className={pf('m-left--xx-small')} aria-haspopup="true">
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="edit" />
-          <span className={pf('assistive-text')}>Edit</span>
-        </Button>
+        <div className={pf('dropdown-trigger dropdown-trigger--click m-left--x-small')} aria-expanded="false">
+          <Button flavor="icon-more" aria-haspopup="true">
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+            <span className={pf('assistive-text')}>Settings</span>
+            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+          </Button>
+        </div>
+        <Button className={pf('hide m-left--xx-small')} flavor="brand" aria-hidden="true">Save</Button>
+        <div className={pf('dropdown-trigger dropdown-trigger--click m-left--xx-small')} aria-expanded="false">
+          <Button flavor="icon-more" aria-haspopup="true">
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
+            <span className={pf('assistive-text')}>Table</span>
+            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+          </Button>
+        </div>
+        <ButtonIcon
+              flavor="icon-border"
+              sprite="utility"
+              symbol="edit"
+              className={pf('m-left--xx-small')}
+              assistiveText="Edit" />
         <div className={pf('button-group')} role="group">
           <StatefulClass>
             <ButtonIcon

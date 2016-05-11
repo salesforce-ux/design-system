@@ -66,7 +66,7 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
--
+- `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
 
 **REMOVED**
 

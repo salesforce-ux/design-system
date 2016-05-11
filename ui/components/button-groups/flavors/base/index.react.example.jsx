@@ -130,7 +130,7 @@ let InverseDisabled = props =>
       <Button className={pf('button--inverse')} disabled>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
       <Button className={pf('button--inverse')} disabled>Save</Button>
-       <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded="false" hasPopup>
+      <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded="false" hasPopup>
         <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
         </ButtonIcon>

@@ -20,10 +20,6 @@
     line-height: $line-height-heading;
   }
 
-  .#{$css-prefix}text-body--small {
-    line-height: $line-height-reset;
-  }
-
   @include mq-medium-min {
     padding: $spacing-medium $spacing-large;
 

@@ -8,6 +8,7 @@ flavors:
   - heading-label
   - heading-label-normal
   - heading-label-bold
+  - line-height-reset
   - color
   - alignment
   - longform

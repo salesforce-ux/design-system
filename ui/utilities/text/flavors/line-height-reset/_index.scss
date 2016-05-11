@@ -9,14 +9,6 @@
 
 
 
-.#{$css-prefix}type-focus {
-  border-bottom: $border-width-thin solid transparent;
-  border-radius: 0;
-  color: $color-text-default;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    border-bottom: $border-width-thin solid $color-text-link-hover;
-  }
+.#{$css-prefix}line-height--reset {
+  line-height: $line-height-reset;
 }

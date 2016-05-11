@@ -10,36 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Comment } from 'ui/components/feeds/flavors/comment/index.react.example';
-import { CommentLongform } from 'ui/components/feeds/flavors/comment/index.react.example';
-import { CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import className from 'classnames';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
+import { Post, PostHeader, PostContent, PostFooter, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
 export default (
-<div className="demo-only">
-  <div className={pf('feed')}>
-    <ul className={pf('feed__list')}>
-      <li className={pf('feed__item')}>
-        <Comment>
-          <CommentLongform><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p></CommentLongform>
-          <CommentFooter showLikeButton likes="21" />
-        </Comment>
-      </li>
-      <li className={pf('feed__item')}>
-        <Comment>
-          <CommentLongform><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CommentLongform>
-          <CommentFooter showLikeButton likes="456" />
-        </Comment>
-      </li>
-      <li className={pf('feed__item')}>
-        <Comment>
-          <CommentLongform><p>Nullam quis risus eget urna mollis ornare vel eu leo.</p></CommentLongform>
-          <CommentFooter showLikeButton likes="62" />
-        </Comment>
-      </li>
-    </ul>
+  <div className="demo-only" style={{ maxWidth: '800px' }}>
+    <div className={pf('feed__item feed__item--card')}>
+      <Post className={pf('post--card')}>
+        <PostHeader />
+        <PostContent>
+          <h3 className={pf('text-heading--small')}>Barbecue Party Tips For A Truly Amazing Event?</h3>
+          <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        </PostContent>
+        <PostFooter />
+      </Post>
+      <Comments />
+    </div>
   </div>
-</div>
 );

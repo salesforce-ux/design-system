@@ -17,6 +17,37 @@ classes:
     applied: <code>&lt;li&gt;</code>
     notes: Applies padding and border separator
   -
+    class: feed__item-comments
+    description: Container for feed item comments
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Contains comment replies and publisher
+  -
+    class: post
+    description: Primary content in feed item
+    applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
+    required: true
+  -
+    class: post--card
+    description: Styles for card look on a post
+    applied: <code>.{{cssPrefix}}post</code>
+  -
+    class: post__header
+    description: Header region of a feed post
+    applied: <code>&lt;header&gt;</code>
+  -
+    class: post__content
+    description: Content region of a feed post
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: post__footer
+    description: Footer region of a feed post
+    applied: <code>&lt;footer&gt;</code>
+  -
+    class: post__footer-action
+    description: Action items within the feed post footer
+    applied: <code>&lt;a&gt;</code>
+  -
     class: comment
     description: Initializes comment
     required: true
@@ -32,28 +63,35 @@ classes:
     description: List of children comments
     applied: <code>&lt;ul&gt;</code>
     required: true
+    deprecated: true
   -
     class: tags
     description: Container for comment "tags" or "topics"
     applied: <code>&lt;div&gt;</code>
+    required: true
     notes: Required if comment has "tags" or "topics" associated
+    deprecated: true
   -
     class: tags__list
     description: List for comment "tags" or "topics"
     applied: <code>&lt;ul&gt;</code>
     required: true
+    deprecated: true
   -
     class: tags__item
     description: Individual "tag" or "topic" item
     applied: <code>&lt;li&gt;</code>
     required: true
+    deprecated: true
   -
     class: attachments
     description: Container for attachments to a comment
     applied: <code>&lt;div&gt;</code>
     required: true
+    deprecated: true
   -
     class: attachments__item
     description: Individual attachment, can be more than one
     applied: <code>&lt;div&gt;</code>
     required: true
+    deprecated: true

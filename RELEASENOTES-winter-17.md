@@ -20,10 +20,13 @@ The following components are now available:
 - Global Header - [Global Header Component](/components/global-header)
 - Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
+- Feed v2 - [Feeds Component](/components/feeds/)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
 - Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)
 - Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
+- Image Cards - [Figure Card Component](/components/images/#flavor-figure)
+- Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
 
 **ADDED**
 
@@ -56,7 +59,7 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
--
+- Feeds v1 - Design has changed to v2 - [Feeds v2 Component](/components/feeds/)
 
 **REMOVED**
 

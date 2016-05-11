@@ -45,7 +45,7 @@ The following site enhancements are now available:
 - Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
 - Resources Information - [Resource Links](/resources/links/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
-- Improved Grid System documentation - [Grid System](/components/grid-system/)
+- Improved Grid System documentation - [Grid System](/components/utilities/grid-system/)
 - Copy updates on components to represent Voice & Tone Guidelines
 
 **NEW COMPONENTS AND VARIANTS**
@@ -58,7 +58,7 @@ The following components are now available:
 - Inline Level Help - [Inline Level Help component](/components/forms/#inline-level-help)
 - Sales Path - [Sales Path component](/components/process/#sales-path-coach)
 - Setup Wizard - [Wizard component](/components/process/#wizard)
-- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/grid-system/#alignment-item-bump)
+- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/utilities/grid-system/#alignment-item-bump)
 - Popover color themes added - [Popover Theme Variant](/components/popovers/#themes)
 - Tree [Tree Base Component](/components/trees/) - Tree was completely rebuilt and is now a new component
 
@@ -88,7 +88,7 @@ The following classes are now available:
 The following changes have been made in this release:
 
 - Removed Spinner gifs and refactored as CSS - [Spinner component](/components/spinners/)
-- Source order of both Reversed and Double Media Objects changed. They are no longer reordered using flexbox' order property. [Media Objects component](/components/media-objects/)
+- Source order of both Reversed and Double Media Objects changed. They are no longer reordered using flexbox' order property. [Media Objects component](/components/utilities/media-objects/)
 - Activity Timeline reflects Media Object changes. Also removed `dl` with single `dt` & `dd` pairs and replaced with `span`s.
 - Field-level help popover background color token update - [Popover colors](/components/popovers/#colors)
 - Switched media queries to use `em` instead of `px`

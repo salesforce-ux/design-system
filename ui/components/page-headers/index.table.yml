@@ -12,8 +12,9 @@ classes:
     applied: <code>&lt;p&gt;</code>
   -
     class: page-header__info
-    description: For the small supporting info text after the heading
+    description: No longer needed due to tightening
     applied: <code>&lt;p&gt;</code>
+    deprecated: true
   -
     class: page-header__detail-row
     description: Creates margins around the detail section of record home

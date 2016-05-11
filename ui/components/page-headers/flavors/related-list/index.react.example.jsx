@@ -48,7 +48,7 @@ export default (
     </div>
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
+        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <Button flavor="icon-more" aria-haspopup="true">

@@ -1,0 +1,12 @@
+codecov:
+  branch: winter-17
+  bot: kaelig
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+
+comment:
+  layout: "header, diff, changes, sunburst, uncovered"
+  behavior: default

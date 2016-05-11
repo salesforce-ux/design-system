@@ -7,7 +7,7 @@
 
 The following site enhancements are now available:
 
-- Added additional space between buttons in the modal footer
+- New states added for button-groups showing overflow dropdown
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -34,6 +34,7 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
+- Added additional space between buttons in the modal footer
 - Page Header markup structure is refactored for new design.
 - Font sizes have been reduced
 - Page Headers are visually smaller

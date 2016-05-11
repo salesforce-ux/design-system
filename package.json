@@ -118,7 +118,9 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "codecov": "^1.0.1",
     "cssstats": "^2.1.3",
+    "istanbul": "^1.0.0-alpha.2",
     "karma": "0.13.21",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "0.2.2",

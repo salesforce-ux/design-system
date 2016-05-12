@@ -11,6 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import publish from '../helpers/publish';
 
-if (process.env.BUILD_SERVER_HOST) {
-  publish((err, r) => console.log('Successfully published build', err, r));
+if (process.env.BUILD_SERVER_HOST_NEW) {
+  publish((err, res) => {
+    if (err) throw err;
+    console.log('Successfully published build', res);
+  });
 }

@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const path = require('path');
 const { execSync } = require('child_process');
-const { download } = require('@salesforce-ux/build-server-api')(process.env.BUILD_SERVER_HOST);
 
 const local = path.resolve.bind(path, __dirname, '../../');
 
@@ -22,25 +21,8 @@ const exec = (command, cwd = '') =>
     env: Object.assign({}, process.env)
   });
 
-const downloadBuild = () =>
-  download({
-    project: 'design-system',
-    sha: process.env.SOURCE_VERSION, // magic heroku variable
-    folderPath: 'www',
-    retryInterval: 10000,
-    retryCount: 60, // this may take a long time if travis kicks off in parallel
-    extractPath: local()
-  });
-
-// This assumes heroku has waited for travis to pass (and send a build to the build-server)
 if (process.env.HEROKU_APP_NAME) {
-  const url = `https://${process.env.GITHUB_USER}:${process.env.GITHUB_USER_ACCESS_TOKEN}@${process.env.DEPLOY_REPO}`;
-  exec(`git clone ${url} server`);
-  exec('npm install --production', 'server/heroku');
-  exec('npm run dist', 'server/heroku');
-  downloadBuild()
-  .errors((err, push) => { throw err; })
-  .each(() => exec('mv www .www')); // TODO: REMOVE THIS AND THE IF/ELSE IN THE DEPLOY APP
+
 } else {
   // Verify & install ruby dependencies using our script
   exec('npm run install-ruby-dependencies');

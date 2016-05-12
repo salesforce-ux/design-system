@@ -11,8 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import '../helpers/setup';
 import path from 'path';
-import globals from '../../app_modules/global';
-import request from 'superagent';
 import { execSync } from 'child_process';
 
 const local = path.resolve.bind(path, __dirname, '../../');
@@ -24,30 +22,32 @@ const exec = (command, cwd = '') =>
     env: Object.assign({}, process.env)
   });
 
-const setVersionVariables = () => {
-  process.env.INTERNAL = process.env.npm_package_config_slds_internal;
-  process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_id;
-  process.env.SLDS_VERSION = `${process.env.npm_package_version} (${process.env.INTERNAL_RELEASE_NAME})`;
+const setEnvironment = () => {
+  // Once the package.json is loaded into process.env all values become strings
+  if (process.env.npm_package_config_slds_internal === 'true') {
+    process.env.INTERNAL = process.env.npm_package_config_slds_internal;
+    process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_id;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version} (${process.env.INTERNAL_RELEASE_NAME})`;
+  } else {
+    // If the value isn't "true", then delete the variables
+    // because the code checks like:
+    // if (process.env.INTENRAL)
+    delete process.env.INTERNAL;
+    delete process.env.INTERNAL_RELEASE_NAME;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version}`;
+  }
 };
 
-const verifyAndBuildTheSite = () =>
+const runScript = () =>
   exec('npm run lint && npm run build && npm run test');
 
-const sendToBuildServer = () =>
+const publishBuild = () =>
   exec('npm run build-server');
 
-const sendToVisualTest = sha =>
-  request
-    .get(`${process.env.VISUALTEST_URL}/ci/${process.env.TRAVIS_COMMIT}/${process.env.TRAVIS_BRANCH}`)
-    .end((err, res) =>
-      err ? console.error(err) : console.log(res.text));
-
-
-if (process.env.BUILD_SERVER_HOST) {
-  setVersionVariables();
-  verifyAndBuildTheSite();
-  sendToBuildServer();
-  sendToVisualTest();
+if (process.env.BUILD_SERVER_HOST_NEW) {
+  setEnvironment();
+  runScript();
+  publishBuild();
 } else {
-  verifyAndBuildTheSite();
+  runScript();
 };

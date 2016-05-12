@@ -16,19 +16,6 @@ import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
-function unmanagedPackageUrls() {
-  return g.unmanagedPackageUrls.map((item, idx) => {
-    return <li key={`package-v${item.version}`}>
-      <CTALink
-        href={item.url}
-        eventType="unmanaged-package"
-        eventValues={{ type: `unmanagedPackage ${item.version}` }}>
-        Version {item.version}
-      </CTALink>
-    </li>;
-  });
-}
-
 export default (
   <PageBody anchorTitle="Downloads" contentClassName={pf('container--large')}>
 

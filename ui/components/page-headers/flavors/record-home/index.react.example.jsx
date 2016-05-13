@@ -52,7 +52,7 @@ export default (
           <Button flavor="neutral">
             Clone
           </Button>
-          <div className={pf('button--last')}>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
               flavor="icon-border-filled"
               sprite="utility"

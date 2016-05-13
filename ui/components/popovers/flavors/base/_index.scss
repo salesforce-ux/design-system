@@ -16,6 +16,9 @@
   &__body {
     position: relative;
     padding: $spacing-x-small $spacing-small;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   &[class*="theme--"] {

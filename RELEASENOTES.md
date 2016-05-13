@@ -45,7 +45,7 @@ The following site enhancements are now available:
 - Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
 - Resources Information - [Resource Links](/resources/links/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
-- Improved Grid System documentation - [Grid System](/components/utilities/grid-system/)
+- Improved Grid System documentation - [Grid System](/components/utilities/grid/)
 - Copy updates on components to represent Voice & Tone Guidelines
 
 **NEW COMPONENTS AND VARIANTS**
@@ -58,7 +58,7 @@ The following components are now available:
 - Inline Level Help - [Inline Level Help component](/components/forms/#inline-level-help)
 - Sales Path - [Sales Path component](/components/process/#sales-path-coach)
 - Setup Wizard - [Wizard component](/components/process/#wizard)
-- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/utilities/grid-system/#alignment-item-bump)
+- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/utilities/grid/#alignment-item-bump)
 - Popover color themes added - [Popover Theme Variant](/components/popovers/#themes)
 - Tree [Tree Base Component](/components/trees/) - Tree was completely rebuilt and is now a new component
 

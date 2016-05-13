@@ -19,31 +19,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Text = props =>
-  <div className={className(pf(props.className))}>
+  <div className={pf(props.className)}>
     The quick brown fox jumps over the lazy dog.
   </div>;
 
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Large = props =>
-  <Text className="text-heading--large" />;
-
-let Medium = props =>
-  <Text className="text-heading--medium" />;
-
-let Small = props =>
-  <Text className="text-heading--small" />;
-
-let Label = props =>
-  <Text className="text-heading--label" />;
-
-let LabelNormal = props =>
-  <Text className="text-heading--label-normal" />;
-
-let LabelBold = props =>
-  <Text className="text-heading--label-bold" />;
 
 ///////////////////////////////////////////
 // Export
@@ -53,31 +32,31 @@ export let states = [
   {
     id: 'heading-large',
     label: 'Large',
-    element: <Large />
+    element: <Text className={pf('text-heading--large')} />
   },
   {
     id: 'heading-medium',
     label: 'Medium',
-    element: <Medium />
+    element: <Text className={pf('text-heading--medium')} />
   },
   {
     id: 'heading-small',
     label: 'Small',
-    element: <Small />
+    element: <Text className={pf('text-heading--small')} />
   },
   {
     id: 'heading-label',
     label: 'Label',
-    element: <Label />
+    element: <Text className={pf('text-heading--label')} />
   },
   {
     id: 'heading-label-normal',
     label: 'Label Normal',
-    element: <LabelNormal />
+    element: <Text className={pf('text-heading--label-normal')} />
   },
   {
     id: 'heading-label-bold',
     label: 'Label Bold',
-    element: <LabelBold />
+    element: <Text className={pf('text-heading--label-bold')} />
   }
 ];

@@ -19,19 +19,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Text = props =>
-  <div className={className(pf(props.className))}>
+  <div className={pf(props.className)}>
     The quick brown fox jumps over the lazy dog.
   </div>;
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Text className="text-body--regular" />;
-
-let Small = props =>
-  <Text className="text-body--small" />;
 
   ///////////////////////////////////////////
 // Export
@@ -41,11 +31,11 @@ export let states = [
   {
     id: 'body-default',
     label: 'Default',
-    element: <Default />
+    element: <Text className={pf('text-body--regular')} />
   },
   {
     id: 'body-small',
     label: 'Small',
-    element: <Small />
+    element: <Text className={pf('text-body--small')} />
   }
 ];

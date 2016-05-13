@@ -9,6 +9,31 @@
 
 
 
-.#{$css-prefix}text-body--regular {
-  font-size: $font-size-medium;
+.#{$css-prefix}text-heading--large {
+  font-weight: $font-weight-light;
+  font-size: $font-size-xx-large;
+  line-height: $line-height-heading;
+}
+
+.#{$css-prefix}text-heading--medium {
+  font-weight: $font-weight-light;
+  font-size: $font-size-x-large;
+  line-height: $line-height-heading;
+}
+
+.#{$css-prefix}text-heading--small {
+  font-size: $font-size-large;
+  line-height: $line-height-heading;
+}
+
+.#{$css-prefix}text-heading--label {
+  @include text-heading--label;
+}
+
+.#{$css-prefix}text-heading--label-normal {
+  @include text-heading--label-normal;
+}
+
+.#{$css-prefix}text-heading--label-bold {
+  @include text-heading--label-bold;
 }

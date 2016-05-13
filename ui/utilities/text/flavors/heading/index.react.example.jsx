@@ -10,11 +10,74 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export default (
-  <div className={pf('text-body--small')}>
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let Text = props =>
+  <div className={className(pf(props.className))}>
     The quick brown fox jumps over the lazy dog.
-  </div>
-);
+  </div>;
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Large = props =>
+  <Text className="text-heading--large" />;
+
+let Medium = props =>
+  <Text className="text-heading--medium" />;
+
+let Small = props =>
+  <Text className="text-heading--small" />;
+
+let Label = props =>
+  <Text className="text-heading--label" />;
+
+let LabelNormal = props =>
+  <Text className="text-heading--label-normal" />;
+
+let LabelBold = props =>
+  <Text className="text-heading--label-bold" />;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'heading-large',
+    label: 'Large',
+    element: <Large />
+  },
+  {
+    id: 'heading-medium',
+    label: 'Medium',
+    element: <Medium />
+  },
+  {
+    id: 'heading-small',
+    label: 'Small',
+    element: <Small />
+  },
+  {
+    id: 'heading-label',
+    label: 'Label',
+    element: <Label />
+  },
+  {
+    id: 'heading-label-normal',
+    label: 'Label Normal',
+    element: <LabelNormal />
+  },
+  {
+    id: 'heading-label-bold',
+    label: 'Label Bold',
+    element: <LabelBold />
+  }
+];

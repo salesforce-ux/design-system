@@ -16,20 +16,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let DefaultText = props =>
-  <div className={pf('text-color--default')}>
+let Text = props =>
+  <div className={pf(props.className)}>
     The quick brown fox jumps over the lazy dog.
   </div>;
 
-let WeakText = props =>
-  <div className={pf('text-color--weak')}>
-    The quick brown fox jumps over the lazy dog.
-  </div>;
-
-let ErrorText = props =>
-  <div className={pf('text-color--error')}>
-    The quick brown fox jumps over the lazy dog.
-  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -39,16 +30,16 @@ export let states = [
   {
     id: 'text-color-default',
     label: 'Default',
-    element: <DefaultText />
+    element: <Text className={pf('text-color--default')} />
   },
   {
     id: 'text-color-weak',
     label: 'Weak',
-    element: <WeakText />
+    element: <Text className={pf('text-color--weak')} />
   },
   {
     id: 'text-color-error',
     label: 'Error',
-    element: <ErrorText />
+    element: <Text className={pf('text-color--error')} />
   }
 ];

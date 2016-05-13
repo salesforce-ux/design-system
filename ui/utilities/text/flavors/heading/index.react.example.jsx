@@ -10,11 +10,53 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
-export default (
-  <div className={pf('text-body--small')}>
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let Text = props =>
+  <div className={pf(props.className)}>
     The quick brown fox jumps over the lazy dog.
-  </div>
-);
+  </div>;
+
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'heading-large',
+    label: 'Large',
+    element: <Text className={pf('text-heading--large')} />
+  },
+  {
+    id: 'heading-medium',
+    label: 'Medium',
+    element: <Text className={pf('text-heading--medium')} />
+  },
+  {
+    id: 'heading-small',
+    label: 'Small',
+    element: <Text className={pf('text-heading--small')} />
+  },
+  {
+    id: 'heading-label',
+    label: 'Label',
+    element: <Text className={pf('text-heading--label')} />
+  },
+  {
+    id: 'heading-label-normal',
+    label: 'Label Normal',
+    element: <Text className={pf('text-heading--label-normal')} />
+  },
+  {
+    id: 'heading-label-bold',
+    label: 'Label Bold',
+    element: <Text className={pf('text-heading--label-bold')} />
+  }
+];

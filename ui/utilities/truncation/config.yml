@@ -1,4 +1,4 @@
-status: 'ga'
+status: 'dev-ready'
 flavors:
   - single-line
   - max-width

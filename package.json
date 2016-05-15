@@ -2,14 +2,14 @@
   "name": "design-system",
   "version": "2.1.0-beta.1",
   "description": "Salesforce Lightning Design System",
+  "author": "Salesforce",
   "license": "SEE LICENSE IN README.md",
   "repository": {
     "type": "git",
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
-  "author": "Salesforce",
   "engines": {
-    "node": ">=0.12",
+    "node": "^5.0.0",
     "npm": ">=2.7.0"
   },
   "slds": {
@@ -21,27 +21,10 @@
       "internal": true
     }
   },
-  "scripts": {
-    "postinstall": "babel-node scripts/npm/postinstall.js",
-    "test": "babel-node scripts/npm/test.js",
-    "test-unit": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js'",
-    "test-browser": "karma start",
-    "test-integration": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/integration/**/*.js'",
-    "start": "npm run gulp",
-    "build": "npm run gulp -- build",
-    "build-prod": "npm run gulp -- build",
-    "build-server": "babel-node scripts/npm/build-server.js",
-    "dist": "babel-node scripts/dist.js",
-    "dist-npm": "babel-node scripts/dist.js --npm",
-    "lint": "npm run gulp -- lint",
-    "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
-    "gulp": "gulp",
-    "stats": "gulp stylestats"
-  },
-  "dependencies": {
-    "@salesforce-ux/build-server-api": "1.0.6",
-    "@salesforce-ux/design-tokens": "3.1.2",
-    "@salesforce-ux/icons": "3.8.0",
+  "devDependencies": {
+    "@salesforce-ux/build-server-api": "1.2.8",
+    "@salesforce-ux/design-tokens": "2.0.5",
+    "@salesforce-ux/icons": "3.4.0",
     "app-module-path": "1.0.5",
     "async": "1.5.2",
     "autoprefixer": "6.3.3",
@@ -55,10 +38,12 @@
     "babel-runtime": "6.6.1",
     "browser-sync": "2.10.1",
     "bundle-loader": "0.5.4",
+    "chai": "3.5.0",
     "cheerio": "0.20.0",
     "classnames": "2.2.3",
     "colors": "1.1.2",
-    "data.either": "^1.3.0",
+    "cssstats": "2.1.3",
+    "data.either": "1.3.0",
     "del": "2.2.0",
     "eslint": "2.1.0",
     "eslint-path-formatter": "git://github.com/kaelig/eslint-path-formatter.git#master",
@@ -91,9 +76,17 @@
     "invariant": "2.2.0",
     "js-beautify": "1.6.2",
     "js-yaml": "3.5.3",
+    "karma": "0.13.21",
+    "karma-chai": "0.1.0",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-mocha": "0.2.2",
+    "karma-spec-reporter": "0.0.24",
+    "karma-webpack": "1.7.0",
     "lodash": "4.5.1",
     "markdown-it": "6.0.0",
     "minimist": "1.2.0",
+    "mkdirp": "0.5.1",
+    "mocha": "2.4.5",
     "moment": "2.11.2",
     "nconf": "0.8.4",
     "node-sass": "3.4.2",
@@ -106,7 +99,8 @@
     "rimraf": "2.5.2",
     "run-sequence": "1.1.5",
     "semver": "5.1.0",
-    "superagent": "1.7.2",
+    "sinon": "1.17.3",
+    "strip-ansi": "3.0.1",
     "stylestats": "6.2.0",
     "temp": "0.8.3",
     "theo": "4.2.0",
@@ -115,21 +109,5 @@
     "uuid": "2.0.1",
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.5.1"
-  },
-  "devDependencies": {
-    "chai": "3.5.0",
-    "codecov": "^1.0.1",
-    "cssstats": "^2.1.3",
-    "istanbul": "^1.0.0-alpha.2",
-    "karma": "0.13.21",
-    "karma-chai": "0.1.0",
-    "karma-chrome-launcher": "0.2.2",
-    "karma-mocha": "0.2.2",
-    "karma-spec-reporter": "0.0.24",
-    "karma-webpack": "1.7.0",
-    "mkdirp": "^0.5.1",
-    "mocha": "2.4.5",
-    "sinon": "1.17.3",
-    "strip-ansi": "^3.0.1"
   }
 }

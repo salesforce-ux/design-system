@@ -15,6 +15,9 @@
     "BUG_URL": {
       "required": true
     },
+    "BUILD_SERVER_HOST": {
+      "required": true
+    },
     "COOKIE_KEYS": {
       "required": true
     },

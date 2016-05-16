@@ -16,19 +16,6 @@ import CTALink from 'app_modules/site/components/cta-link';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
-function unmanagedPackageUrls() {
-  return g.unmanagedPackageUrls.map((item, idx) => {
-    return <li key={`package-v${item.version}`}>
-      <CTALink
-        href={item.url}
-        eventType="unmanaged-package"
-        eventValues={{ type: `unmanagedPackage ${item.version}` }}>
-        Version {item.version}
-      </CTALink>
-    </li>;
-  });
-}
-
 export default (
   <PageBody anchorTitle="Downloads" contentClassName={pf('container--large')}>
 
@@ -45,7 +32,7 @@ export default (
       Design System on GitHub
     </CTALink>
 
-    <h2 className="site-text-heading--large" id="npm-package">Design System npm Package</h2>
+    <h2 className="site-text-heading--large" id="npm-package">npm Package</h2>
 
     <p>
       If you use <a href="https://www.npmjs.com/">npm</a> in your local development environment, it can be installed with the following command:
@@ -57,7 +44,7 @@ npm install @salesforce-ux/design-system --save
       `}</CodeBlock>
     </div>
 
-    <h2 className="site-text-heading--large" id="bower-package">Design System Bower Package</h2>
+    <h2 className="site-text-heading--large" id="bower-package">Bower Package</h2>
 
     <p>
       If you use <a href="http://bower.io/">Bower</a> in your local development environment, it can be installed with the following command:
@@ -86,15 +73,6 @@ bower install salesforce-lightning-design-system --save
         </button>
       </CTALink>
     </form>
-
-    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
-
-    <p>
-      If you are working within a Salesforce org, the Design System can be installed directly as an unmanaged package:
-    </p>
-    <ul className={pf('list--dotted')}>
-      {unmanagedPackageUrls()}
-    </ul>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

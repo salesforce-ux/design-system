@@ -9,33 +9,34 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const sanitizeVersion = version =>
-  version.replace(/\s+|\(|\)/g, '_');
+import React from 'react';
+import className from 'classnames';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default {
-  abbreviatedName: 'SLDS',
-  cssPrefix: 'slds-',
-  displayName: 'Lightning Design System',
-  filenamePrefix: 'slds',
-  analyticsHostWhitelist: [
-    'getslds.com',
-    'www.getslds.com',
-    'lightningdesignsystem.com',
-    'www.lightningdesignsystem.com',
-    'lightning-design-system.herokuapp.com',
-    'salesforce.com',
-    'www.salesforce.com'
-  ],
-  herokuLightingReactAppUrl: [
-    {type: 'heroku-react-app', url: 'https://github.com/ccoenraets/lightning-react-app'},
-    {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
-  ],
-  moduleName: 'salesforce-lightning-design-system',
-  resetWrappingClass: '.slds',
-  zipName: function(version) {
-    return this.moduleName + '-' + sanitizeVersion(version) + '.zip';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let Text = props =>
+  <div className={pf(props.className)}>
+    The quick brown fox jumps over the lazy dog.
+  </div>;
+
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'heading-title',
+    label: 'Normal',
+    element: <Text className={pf('text-title')} />
   },
-  downloadPath: function(version) {
-    return 'assets/downloads/' + this.zipName(version);
+  {
+    id: 'heading-title--caps',
+    label: 'Uppercase',
+    element: <Text className={pf('text-title--caps')} />
   }
-};
+];

@@ -32,31 +32,16 @@ export let states = [
   {
     id: 'heading-large',
     label: 'Large',
-    element: <Text className="text-heading--large" />
+    element: <Text className={pf('text-heading--large')} />
   },
   {
     id: 'heading-medium',
     label: 'Medium',
-    element: <Text className="text-heading--medium" />
+    element: <Text className={pf('text-heading--medium')} />
   },
   {
     id: 'heading-small',
     label: 'Small',
-    element: <Text className="text-heading--small" />
-  },
-  {
-    id: 'heading-label',
-    label: 'Label',
-    element: <Text className="text-heading--label" />
-  },
-  {
-    id: 'heading-label-normal',
-    label: 'Label Normal',
-    element: <Text className="text-heading--label-normal" />
-  },
-  {
-    id: 'heading-label-bold',
-    label: 'Label Bold',
-    element: <Text className="text-heading--label-bold" />
+    element: <Text className={pf('text-heading--small')} />
   }
 ];

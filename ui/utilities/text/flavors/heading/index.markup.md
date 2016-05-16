@@ -9,11 +9,3 @@ The medium heading helper is typically the largest heading on a page and usually
 
 Small Headings are used for smaller content areas such as list sections or
 card titles.
-
-Label headers are used for small mini headers that don&rsquo;t need to bring
-visual attention to themselves. They usually label small content areas like
-table columns and list sections.
-
-Label header normal are headers that are not all caps.
-
-Label header bold are headers that are not all caps with bold weight.

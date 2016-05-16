@@ -21,7 +21,7 @@ class LabelHeading extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('text-heading--label'));
+    const className = this.$getClassName(pf('text-title--caps'));
     return (
       <p {...this.props} className={className}>
         {this.props.children}

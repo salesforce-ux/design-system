@@ -62,7 +62,7 @@ let Checkbox = props =>
   </label>;
 
 let HeadRowData = props =>
-  <Tr className={pf('text-heading--label')}>
+  <Tr className={pf('text-title--caps')}>
     <Th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.checked} /></Th>
     <Th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')}>

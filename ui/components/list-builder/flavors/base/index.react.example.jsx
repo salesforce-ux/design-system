@@ -39,14 +39,14 @@ let Search = props =>
       <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
       <input id="search-text-input-product" className={pf('input')} type="text" placeholder="Search Products" />
     </div>
-    <span className={pf('col--bump-left text-heading--label-normal')}>2 Item(s) Selected</span>
+    <span className={pf('col--bump-left text-title')}>2 Item(s) Selected</span>
   </div>;
 
 let ProductList = props =>
   <div className={pf('scrollable grow')}>
     <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
       <thead>
-        <tr className={pf('text-heading--label')} >
+        <tr className={pf('text-title--caps')} >
           <th className={pf('is-sortable')} scope="col">
             <span className={pf('truncate')}>Name</span>
             <ButtonIcon

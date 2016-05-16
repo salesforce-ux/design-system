@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className="demo-only">
     <dl className={pf('size--1-of-2')}>
-      <dt className={pf('text-heading--label')}>Field 4</dt>
+      <dt className={pf('text-title--caps')}>Field 4</dt>
       <dd><p className={pf('truncate')}>Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.</p></dd>
     </dl>
   </div>

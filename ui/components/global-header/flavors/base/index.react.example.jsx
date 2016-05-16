@@ -56,7 +56,7 @@ const SetupDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
       <div className={pf('dropdown__header')}>
-        <span className={pf('text-heading--label')}>Setup</span>
+        <span className={pf('text-title--caps')}>Setup</span>
       </div>
       <MenuItem>Setup Home</MenuItem>
     </MenuList>
@@ -67,7 +67,7 @@ const ActionsDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
       <div className={pf('dropdown__header')}>
-        <span className={pf('text-heading--label')}>Create</span>
+        <span className={pf('text-title--caps')}>Create</span>
       </div>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-log-a-call m-right--x-small')} sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>

@@ -73,5 +73,5 @@ gulp.task('generate:examples', ['generate:whitelist'], () => {
     })));
   stream.end();
   return stream
-    .pipe(gulp.dest(resolve(__PATHS__.build, 'examples')));
+    .pipe(gulp.dest(resolve(__PATHS__.generated, 'examples')));
 });

@@ -146,7 +146,7 @@ let AdditionalItems = props =>
 
 let Default = props =>
 <div className={pf('tree_container')} role="application">
-  <h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
+  <h4 className={pf('text-title--caps')} id="treeheading">Tree Group Header</h4>
 
   <ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
 

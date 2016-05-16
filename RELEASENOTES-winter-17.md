@@ -34,8 +34,8 @@ The following classes are now available:
 
 - Text color helpers - [Text color utilities](/components/utilities/text#color)
 - Truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
-- Text utility for text heading label bold `.slds-text-heading--label-bold` - [Text Heading Label Bold Utility](/components/utilities/text/#heading-label-bold)
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
+- Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
 
 **CHANGES**
 
@@ -60,6 +60,7 @@ The following issues have now been resolved:
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
 - Feeds v1 - Design has changed to v2 - [Feeds v2 Component](/components/feeds/)
+- Text heading label utility - Use Text title utilities instead - [Text Title](/components/utilities/text/#flavor-title)
 
 **REMOVED**
 

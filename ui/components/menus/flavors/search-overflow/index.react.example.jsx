@@ -24,7 +24,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className={pf('demo-only')} style={{height: '260px'}}>
   <Trigger className={pf('is-open')}>
-    <Menu className={pf('dropdown--left text-heading--label')}>
+    <Menu className={pf('dropdown--left text-title--caps')}>
       <MenuList>
         <MenuItem>
           <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />

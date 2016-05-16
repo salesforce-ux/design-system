@@ -28,7 +28,7 @@ let Navigation = props =>
   </div>;
 
 let SectionTitle = props =>
-  <h2 className={pf('text-heading--label p-around--small')} id={props.id}>
+  <h2 className={pf('text-title--caps p-around--small')} id={props.id}>
     {props.children}
   </h2>;
 

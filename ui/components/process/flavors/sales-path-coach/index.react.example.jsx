@@ -76,7 +76,7 @@ let Coachcontent3 = props =>
     <div className={pf('grid grid--align-spread')}>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
+          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
           <span className={pf('text-body--small')}><a href="#void">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
@@ -89,7 +89,7 @@ let Coachcontent3 = props =>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
+        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
           <p>Regularly cross-sell related products using <a href="#void">cross-sell tactics and principles</a>.</p>
           <p>Prepare demo deck using the <a href="#void">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
@@ -104,7 +104,7 @@ let Coachcontent4 = props =>
     <div className={pf('grid grid--align-spread')}>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
+          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
           <span className={pf('text-body--small')}><a href="#void">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
@@ -117,7 +117,7 @@ let Coachcontent4 = props =>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
+        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
           <p>Check out the latest Negotiation and Review tactics on our <a href="#void">online portal here</a>.</p>
           <p>Review Quote with the Legal and Marketing team and be sure to approve with Exec.</p>

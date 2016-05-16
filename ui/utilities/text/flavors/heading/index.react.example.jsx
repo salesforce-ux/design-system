@@ -43,20 +43,5 @@ export let states = [
     id: 'heading-small',
     label: 'Small',
     element: <Text className={pf('text-heading--small')} />
-  },
-  {
-    id: 'heading-label',
-    label: 'Label',
-    element: <Text className={pf('text-heading--label')} />
-  },
-  {
-    id: 'heading-label-normal',
-    label: 'Label Normal',
-    element: <Text className={pf('text-heading--label-normal')} />
-  },
-  {
-    id: 'heading-label-bold',
-    label: 'Label Bold',
-    element: <Text className={pf('text-heading--label-bold')} />
   }
 ];

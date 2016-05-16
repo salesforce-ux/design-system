@@ -43,4 +43,5 @@
 @mixin text-heading--label {
   @include text-heading--label-normal;
   text-transform: uppercase;
+  letter-spacing: 0.0625rem;
 }

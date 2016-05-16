@@ -8,31 +8,12 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
-.#{$css-prefix}text-heading--large {
-  font-weight: $font-weight-light;
-  font-size: $font-size-xx-large;
-  line-height: $line-height-heading;
+.#{$css-prefix}text-title {
+  @include text-heading--label-normal;
 }
 
-.#{$css-prefix}text-heading--medium {
-  font-weight: $font-weight-light;
-  font-size: $font-size-x-large;
-  line-height: $line-height-heading;
-}
-
-.#{$css-prefix}text-heading--small {
-  font-size: $font-size-large;
-  line-height: $line-height-heading;
-}
-
-@include  deprecate('4.0.0', 'Use slds text-title instead') {
-
-  .#{$css-prefix}text-heading--label {
-    @include text-heading--label;
-  }
-
-  .#{$css-prefix}text-heading--label-normal {
-    @include text-heading--label-normal;
-  }
+.#{$css-prefix}text-title--caps {
+  @include text-heading--label-normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
 }

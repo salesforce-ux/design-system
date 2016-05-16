@@ -64,13 +64,13 @@ export default (
     </div>
     <ul className={pf('grid page-header__detail-row')}>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
         <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
           Description that demonstrates truncation with a long text field.
         </p>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field2 (3)">
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field2 (3)">
           Field 2 (3)
           <ButtonIcon
             flavor="icon-bare"
@@ -82,11 +82,11 @@ export default (
         <p className={pf('text-body--regular')}>Multiple Values</p>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
         <a href="#void">Hyperlink</a>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 4">Field 4</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 4">Field 4</p>
         <p>
           <Truncate amount={50}>
             Description (2-line truncation—must use JS to truncate).

@@ -13,7 +13,7 @@ install:
 script:
   - npm run build-travis
 after_success:
-  - export SHA=`git rev-parse --short HEAD`
+  - export SHA=`git rev-parse HEAD`
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl $VISUAL_TEST_HOST/ci/$SHA/$TRAVIS_BRANCH ; fi
 cache:
   directories:

@@ -13,28 +13,9 @@ code {
     family: Consolas, Monaco, 'Andale Mono', monospace, monospace;
   }
   color: #000;
-
-  &[class*="language"] {
-    padding: 0;
-    overflow: visible;
-    height: auto;
-  }
-}
-
-pre[class*="language-"] {
-  margin: 0;
-  border: 0;
-  max-height: none;
-  box-shadow: none;
-
-  &:before,
-  &:after {
-    display: none;
-  }
 }
 
 .site-code--content {
-
   padding: $spacing-medium 0;
   margin: $spacing-medium 0;
 

@@ -41,7 +41,7 @@ class CodeBlock extends React.Component {
 
     return {
       __html: highlight(codeTrimmed, language)
-    }
+    };
   }
   render() {
     const {language} = this.props;

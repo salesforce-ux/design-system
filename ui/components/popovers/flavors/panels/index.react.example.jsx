@@ -53,7 +53,7 @@ export default (
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Billing Address</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Billing Address</p></dt>
             <dd>
               <p className={pf('truncate')}>3500 Deer Creek Rd.</p>
               <p className={pf('truncate')}>Palo Alto, CA 94304</p>
@@ -63,21 +63,21 @@ export default (
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Phone</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Phone</p></dt>
             <dd><a href="#void">212-345-3485</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Website</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Website</p></dt>
             <dd><a href="#void">teslamotors.com</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Account Owner</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Account Owner</p></dt>
             <dd><a href="#void">Jeff Maguire</a></dd>
           </dl>
         </div>

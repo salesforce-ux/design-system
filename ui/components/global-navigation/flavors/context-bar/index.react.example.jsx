@@ -31,7 +31,7 @@ const contextDropdown = (
     </MenuList>
     <hr className={pf('m-vertical--xx-small')} role="presentation" />
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Menu header</span>
+      <span className={pf('text-title--caps')}>Menu header</span>
     </div>
     <MenuList>
       <MenuItem>Menu Item One</MenuItem>

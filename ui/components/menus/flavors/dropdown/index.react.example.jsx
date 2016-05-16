@@ -128,14 +128,14 @@ let SubHeader = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
+          <span className={pf('text-title--caps')}>Menu Sub Heading</span>
         </div>
         <MenuList>
           <MenuItem>Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
         </MenuList>
         <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
+          <span className={pf('text-title--caps')}>Menu Sub Heading</span>
         </div>
         <MenuList>
           <MenuItem>Menu Item One</MenuItem>

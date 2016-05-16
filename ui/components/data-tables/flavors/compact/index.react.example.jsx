@@ -55,7 +55,7 @@ let Td = props =>
   </td>;
 
 let HeadRowData = props =>
-  <Tr className={pf('text-heading--label')}>
+  <Tr className={pf('text-title--caps')}>
     <Th scope="col"><div className={pf('truncate')}>Opportunity Name</div></Th>
     <Th scope="col"><div className={pf('truncate')}>Account Name</div></Th>
     <Th scope="col"><div className={pf('truncate')}>Close Date</div></Th>

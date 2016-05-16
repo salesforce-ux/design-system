@@ -325,7 +325,7 @@ let DeepNesting = props =>
 let TreeGrid = props =>
 <table className={pf('table table--bordered tree table--tree')} role="treegrid" aria-owns="tree0-node0 tree0-node1 tree0-node2 tree0-node3" aria-readonly="true">
   <thead>
-    <tr className={pf('text-heading--label')}>
+    <tr className={pf('text-title--caps')}>
       <th className={pf('cell-buffer--left cell-shrink')} scope="col"><ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="small" sprite="utility" symbol="chevrondown" assistiveText="Toggle" className={pf('m-right--xx-small table--tree__toggle')} />
         <span className={pf('truncate')}>Account Name</span>
         </th>

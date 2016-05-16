@@ -92,7 +92,7 @@ let RowData = props =>
 let AdvancedTable = props =>
   <Table className={pf('table--fixed-layout')}>
     <Thead>
-      <Tr className={pf('text-heading--label')}>
+      <Tr className={pf('text-title--caps')}>
         <Th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.allRowsChecked} /></Th>
         <Th className={pf('is-sortable is-resizable')} scope="col">
           <div className={pf('truncate')}>

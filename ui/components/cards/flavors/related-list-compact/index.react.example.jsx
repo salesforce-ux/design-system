@@ -48,7 +48,7 @@ export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
     <Card className={pf('card--compact')}>
       <CardHeader className={pf('has-divider--top')} actions="overflow">
-        <span className={pf('text-heading--label-bold')}>Contacts</span>
+        <span className={pf('text-heading--small')}>Contacts</span>
       </CardHeader>
       <CardBody>
         <Tile title="Related Record Title 1" />

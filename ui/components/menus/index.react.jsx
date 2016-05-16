@@ -56,7 +56,7 @@ class DropdownTitle extends React.Component {
 
   render() {
     return (
-        <span className={pf('text-heading--label')}>{ this.props.children }</span>
+        <span className={pf('text-title--caps')}>{ this.props.children }</span>
       );
   }
 }

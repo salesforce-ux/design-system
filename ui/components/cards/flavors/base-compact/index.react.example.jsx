@@ -23,7 +23,7 @@ export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
     <Card className={pf('card--compact')}>
       <CardHeader className={pf('has-divider--top')} actions="overflow">
-        <span className={pf('text-heading--label-bold')}>Card Header</span>
+        <span className={pf('text-heading--small')}>Card Header</span>
       </CardHeader>
       <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
     </Card>

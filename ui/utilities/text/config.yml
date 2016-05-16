@@ -2,6 +2,7 @@ status: 'ga'
 flavors:
   - body
   - heading
+  - title
   - line-height-reset
   - color
   - alignment

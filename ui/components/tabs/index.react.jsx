@@ -87,7 +87,7 @@ class TabItem extends React.Component {
   }
 
   render() {
-    const props = this.$propsWithoutKeys('className', 'id', 'role');
+    const props = this.$propsWithoutKeys('className', 'id', 'role', 'content');
     const className = classNames(
       this.props.className,
       pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {

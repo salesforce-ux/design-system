@@ -74,6 +74,7 @@
     "gulp-util": "3.0.7",
     "gulp-zip": "3.2.0",
     "invariant": "2.2.0",
+    "istanbul": "0.4.3",
     "js-beautify": "1.6.2",
     "js-yaml": "3.5.3",
     "karma": "0.13.21",

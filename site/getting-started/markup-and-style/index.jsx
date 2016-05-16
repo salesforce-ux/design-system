@@ -17,7 +17,6 @@ import g from 'app_modules/global';
 const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 
 export default (
   <PageBody anchorTitle="Markup and Style" contentClassName={pf('container--large')}>

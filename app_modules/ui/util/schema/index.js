@@ -15,6 +15,8 @@ import glob from 'glob';
 import yaml from 'js-yaml';
 import _ from 'lodash';
 
+import { pathTrimStart } from 'app_modules/util/string';
+
 const createTitle = str => _.map(_.words(str), w => _.capitalize(w)).join(' ');
 
 export default props => {
@@ -36,12 +38,11 @@ export default props => {
       let title = createTitle(id);
       let config = yaml.safeLoad(fs.readFileSync(configPath).toString());
       let localPath = path.dirname(configPath)
-        .replace(this.path, '')
-        .replace(/^\//, '');
+        .replace(this.path, '');
       return _.merge({}, {
         id,
         title,
-        path: localPath
+        path: pathTrimStart(localPath)
       }, config);
     },
     getComponents (categoryConfig) {

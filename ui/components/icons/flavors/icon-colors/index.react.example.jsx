@@ -17,27 +17,34 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let Action = props =>
-<span className={pf('icon_container icon_container--circle icon-action-description')} title="description of icon when needed">
-  <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
-  <span className={pf('assistive-text')}>Description of icon</span>
-</span>;
+let Demo = props =>
+  <div className="demo-only" {...props}>
+    {props.children}
+  </div>;
 
-let Doctype = props =>
+let BaseIcon = props =>
+<Demo style={{ padding: '0.5rem', background: '#16325c' }}>
+  <span className={pf('icon_container')} title="description of icon when needed">
+    <SvgIcon className={pf('icon')} sprite="standard" symbol="lead" />
+    <span className={pf('assistive-text')}>Description of icon</span>
+  </span>
+</Demo>;
+
+let DefaultIcon = props =>
 <span className={pf('icon_container')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
+  <SvgIcon className={pf('icon icon-text-default')} sprite="utility" symbol="lock" />
   <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
-let Standard = props =>
-<span className={pf('icon_container icon-standard-account')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-  <span className={pf('assistive-text')}>Description of icon</span>
-</span>;
-
-let Utility = props =>
+let WarningIcon = props =>
 <span className={pf('icon_container')} title="description of icon when needed">
-  <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
+  <SvgIcon className={pf('icon icon-text-warning')} sprite="utility" symbol="warning" />
+  <span className={pf('assistive-text')}>Description of icon</span>
+</span>;
+
+let ErrorIcon = props =>
+<span className={pf('icon_container')} title="description of icon when needed">
+  <SvgIcon className={pf('icon icon-text-error')} sprite="utility" symbol="warning" />
   <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
@@ -47,23 +54,23 @@ let Utility = props =>
 
 export let states = [
   {
-    id: 'standard',
-    label: 'Standard',
-    element: <Standard />
+    id: 'baseicon',
+    label: 'Base',
+    element: <BaseIcon />
   },
   {
-    id: 'utility',
-    label: 'Utility',
-    element: <Utility />
+    id: 'defaulticon',
+    label: 'Default',
+    element: <DefaultIcon />
   },
   {
-    id: 'action',
-    label: 'Action',
-    element: <Action />
+    id: 'warningicon',
+    label: 'Warning',
+    element: <WarningIcon />
   },
   {
-    id: 'doctype',
-    label: 'Doctype',
-    element: <Doctype />
+    id: 'erroricon',
+    label: 'Error',
+    element: <ErrorIcon />
   }
 ];

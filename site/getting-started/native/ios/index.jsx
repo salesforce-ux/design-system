@@ -146,11 +146,11 @@ UIColor* c = [UIColor sldsButtonColor:SLDSColorBtnBackgroundButtonBrand];
 
       <div className={pf('site-code--content scrollable--x')}>
         <CodeBlock language="bash">{`
-          #import <DesignSystem/DesignSystem.h>
+#import <DesignSystem/DesignSystem.h>
 
-          ...
+...
 
-          UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
+UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
 
         `}</CodeBlock>
       </div>

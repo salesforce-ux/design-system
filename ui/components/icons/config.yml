@@ -2,5 +2,6 @@ classBase: 'icon'
 status: 'dev-ready'
 flavors:
   - base
-  - colors
+  - icon-colors
+  - background-colors
   - sizes

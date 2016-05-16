@@ -9,44 +9,11 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
 import _ from 'lodash';
-import Prism from 'app_modules/site/vendor/prism';
+import path from 'path';
 
-function highlight(code, language) {
-  return Prism.highlight(code, Prism.languages[language]);
-}
+export const pathToURL = (p) =>
+  p.replace(new RegExp(_.escapeRegExp(path.sep), 'g'), '/');
 
-let foo = false;
-
-/**
- *   <CodeBlock language="scss">{`
- *     .foo { background: red; }
- *     .bar { background: blue; }
- *   `}</CodeBlock>
- */
-class CodeBlock extends React.Component {
-  getCode() {
-    const {language} = this.props;
-    const code = this.props.children.toString();
-    const lines = code.split('\n');
-    const line = lines.length > 1 ? lines[1] : '';
-    const offsetMatch = line.match(/^\s*/);
-    const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-    return {
-      __html: highlight(codeTrimmed, language)
-    };
-  }
-  render() {
-    const {language} = this.props;
-    return (
-      <pre className={`language-${language}`}>
-        <code className={`language-${language}`}
-          dangerouslySetInnerHTML={this.getCode()} />
-      </pre>
-    );
-  }
-}
-
-export default CodeBlock;
+export const pathTrimStart = (p) =>
+  _.trimStart(p, path.sep);

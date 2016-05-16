@@ -9,44 +9,45 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
-import _ from 'lodash';
-import Prism from 'app_modules/site/vendor/prism';
+import '../helpers/setup';
+import path from 'path';
+import { execSync } from 'child_process';
 
-function highlight(code, language) {
-  return Prism.highlight(code, Prism.languages[language]);
-}
+const local = path.resolve.bind(path, __dirname, '../../');
 
-let foo = false;
+const exec = (command, cwd = '') =>
+  execSync(command, {
+    cwd: local(cwd),
+    stdio: 'inherit',
+    env: Object.assign({}, process.env)
+  });
 
-/**
- *   <CodeBlock language="scss">{`
- *     .foo { background: red; }
- *     .bar { background: blue; }
- *   `}</CodeBlock>
- */
-class CodeBlock extends React.Component {
-  getCode() {
-    const {language} = this.props;
-    const code = this.props.children.toString();
-    const lines = code.split('\n');
-    const line = lines.length > 1 ? lines[1] : '';
-    const offsetMatch = line.match(/^\s*/);
-    const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-    return {
-      __html: highlight(codeTrimmed, language)
-    };
+const setEnvironment = () => {
+  // Once the package.json is loaded into process.env all values become strings
+  if (process.env.npm_package_config_slds_internal === 'true') {
+    process.env.INTERNAL = process.env.npm_package_config_slds_internal;
+    process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_id;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version} (${process.env.INTERNAL_RELEASE_NAME})`;
+  } else {
+    // If the value isn't "true", then delete the variables
+    // because the code checks like:
+    // if (process.env.INTENRAL)
+    delete process.env.INTERNAL;
+    delete process.env.INTERNAL_RELEASE_NAME;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version}`;
   }
-  render() {
-    const {language} = this.props;
-    return (
-      <pre className={`language-${language}`}>
-        <code className={`language-${language}`}
-          dangerouslySetInnerHTML={this.getCode()} />
-      </pre>
-    );
-  }
-}
+};
 
-export default CodeBlock;
+const runScript = () =>
+  exec('npm run lint && npm run build && npm run test');
+
+const publishBuild = () =>
+  exec('npm run build-server');
+
+if (process.env.BUILD_SERVER_HOST_NEW) {
+  setEnvironment();
+  runScript();
+  publishBuild();
+} else {
+  runScript();
+};

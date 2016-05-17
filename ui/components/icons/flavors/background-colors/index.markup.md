@@ -4,8 +4,8 @@ Icons (`.{{cssPrefix}}icon`) are white by default, and their container (`.{{cssP
 
 Change a background color using composed class names:
 
-```
-.{{cssPrefix}}icon-[sprite name]-[icon name]
+```css
+.{{cssPrefix}}icon-[sprite name]-[icon name] {}
 ```
 
 Place the class on the `.{{cssPrefix}}icon_container`.
@@ -18,3 +18,14 @@ Place the class on the `.{{cssPrefix}}icon_container`.
 ```
 
 Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.{{cssPrefix}}icon-action-log-a-call`.
+
+### Note on Custom Icons
+
+Custom icons follow a different naming scheme:
+
+```css
+.{{cssPrefix}}icon-custom-[number] {}
+
+/* e.g. */
+.{{cssPrefix}}icon-custom-47 {}
+```

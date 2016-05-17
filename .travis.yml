@@ -16,9 +16,8 @@ script:
 after_success:
   - export SHA=`git rev-parse HEAD`
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl $VISUAL_TEST_HOST/ci/$SHA/$TRAVIS_BRANCH ; fi
-  - babel-node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha -- 'test/unit/**/*.js' --compilers js:babel-register --require scripts/helpers/setup.js --recursive
+  - babel-node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha -- 'test/{unit,integration}/**/*.js' --compilers js:babel-register --require scripts/helpers/setup.js --recursive
   - codecov
-  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 cache:
   directories:
     - node_modules

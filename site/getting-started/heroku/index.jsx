@@ -150,7 +150,7 @@ license: (ISC)
           A <code>package.json</code> document will be created inside your <code>demo_slds_heroku/</code> folder and the contents should look similar to the following:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="json">{`
 {
   "name": "demo_slds_heroku",
   "version": "0.0.0",
@@ -183,7 +183,7 @@ $ touch public/index.html
         </div>
         <p>Copy the following markup into <code>public/index.html</code>:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -206,7 +206,7 @@ $ touch server.js
         </div>
         <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your <code>/public</code> folder!):</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="javascript">{`
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
@@ -247,13 +247,13 @@ demo_slds_heroku/
         <Heading type="h2" id="step-6-add-components" className="site-text-heading--large">Step 6: Add components</Heading>
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
         <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look similar to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -275,7 +275,7 @@ demo_slds_heroku/
         </h3>
         <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/grid-system#order" target="_blank">Grid System component page</a>.</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <div class="slds-grid slds-wrap">
   <nav class="slds-col slds-size--1-of-1">
     Page Header Component
@@ -294,7 +294,7 @@ demo_slds_heroku/
         </div>
         <p>Your <code>public/index.html</code> file should look like the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -336,7 +336,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">C. Add a Fun Image</h3>
         <p>Swap the text <code>Image</code> with an image.</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house." />
           `}</CodeBlock>
         </div>
@@ -372,7 +372,7 @@ web: node server.js
         <p>Log into your Heroku account.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-        $ heroku login
+$ heroku login
 Email: [your@email.com]
 Password: [typing will be hidden]
 

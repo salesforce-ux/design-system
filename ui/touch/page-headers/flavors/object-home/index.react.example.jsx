@@ -20,7 +20,7 @@ const Image = (
 
 const Button = (
   <button className={pf('button button--neutral')}>New</button>
-)
+);
 
 export default (
   <div className="slds-page-header" role="banner">

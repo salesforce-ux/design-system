@@ -17,7 +17,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    Page headers are used at the top of several page types. They use the <CodeClass className="page-header"/> class as a base and are comprised of multiple components.
+  The page header is a masthead that contains the Title of the page, and supporting details.
   </p>
 );
 

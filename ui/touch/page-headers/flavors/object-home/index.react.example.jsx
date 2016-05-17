@@ -14,22 +14,19 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
+const Image = (
   <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+);
+
+const Button = (
+  <button className={pf('button button--neutral')}>New</button>
 );
 
 export default (
   <div className="slds-page-header" role="banner">
-    <MediaObject figureLeft={image}>
-      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
-        Rohde Corp - 80,000 Widgets
-      </p>
-      <p className={pf('text-body--small line-height--reset')}>
-        Mark Jaeckal
-        &bull;
-        Unlimited Customer
-        &bull;
-        11/13/15
+    <MediaObject flavor="center" figureLeft={Image} figureRight={Button}>
+      <p className={pf('page-header__title truncate')} title="Rohde Corp - 80,000 Widgets">
+        Opportunities
       </p>
     </MediaObject>
   </div>

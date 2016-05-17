@@ -97,6 +97,7 @@ gulp.task('lint:html', () => {
       'inline-script-disabled': true,
       'src-not-empty': true,
       'tag-pair': true,
+      'tag-self-close': true,
       'tagname-lowercase': true,
       'title-require': true,
       // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed

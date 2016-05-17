@@ -2,3 +2,4 @@ components:
   - forms
   - menus
   - notifications
+  - page-headers

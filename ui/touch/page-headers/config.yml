@@ -1,6 +1,4 @@
 status: 'dev-ready'
 flavors:
   - record-home
-  - record-home-vertical
   - object-home
-  - related-list

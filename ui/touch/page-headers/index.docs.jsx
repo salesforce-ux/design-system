@@ -10,27 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+import CodeClass from 'app_modules/site/components/code-class';
+
+export const intro = (
+  <p className="site-text-introduction">
+    Page headers are used at the top of several page types. They use the <CodeClass className="page-header"/> class as a base and are comprised of multiple components.
+  </p>
 );
 
 export default (
-  <div className="slds-page-header" role="banner">
-    <MediaObject figureLeft={image}>
-      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
-        Rohde Corp - 80,000 Widgets
-      </p>
-      <p className={pf('text-body--small line-height--reset')}>
-        Mark Jaeckal
-        &bull;
-        Unlimited Customer
-        &bull;
-        11/13/15
-      </p>
-    </MediaObject>
-  </div>
+  <ComponentDocs>
+  </ComponentDocs>
 );

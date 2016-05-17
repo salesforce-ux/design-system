@@ -24,7 +24,7 @@ export default (
       <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>
-      <p className={pf('text-body--small line-height--reset')}>
+      <p className={pf('text-body--small')}>
         Mark Jaeckal
         &bull;
         Unlimited Customer

@@ -18,219 +18,217 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className="demo-only" style={{height: '640px'}}>
-  <div>
-    <div aria-hidden="false" role="dialog" className={pf('action-overflow--touch')}>
-      <div className={pf('action-overflow--touch__container')}>
-        <div className={pf('action-overflow--touch__content')}>
-          <div className={pf('action-overflow--touch__body')}>
-            <ul role="menu" className={pf('list--vertical has-block-links--space has-dividers--bottom')}>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
-                      </SvgIcon>
-                    </span>
-                    <span>Post</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
-                      </SvgIcon>
-                    </span>
-                    <span>New Task</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
-                      </SvgIcon>
-                    </span>
-                    <span>New Contact</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
-                      </SvgIcon>
-                    </span>
-                    <span>New Opportunity</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
-                      </SvgIcon>
-                    </span>
-                    <span>Convert</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
-                      </SvgIcon>
-                    </span>
-                    <span>Edit</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
-                      </SvgIcon>
-                    </span>
-                    <span>Post</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
-                      </SvgIcon>
-                    </span>
-                    <span>New Task</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
-                      </SvgIcon>
-                    </span>
-                    <span>New Contact</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
-                      </SvgIcon>
-                    </span>
-                    <span>New Opportunity</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
-                      </SvgIcon>
-                    </span>
-                    <span>Convert</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
-                      </SvgIcon>
-                    </span>
-                    <span>Edit</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
-                      </SvgIcon>
-                    </span>
-                    <span>Post</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
-                      </SvgIcon>
-                    </span>
-                    <span>New Task</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
-                      </SvgIcon>
-                    </span>
-                    <span>New Contact</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
-                      </SvgIcon>
-                    </span>
-                    <span>New Opportunity</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
-                      </SvgIcon>
-                    </span>
-                    <span>Convert</span>
-                  </p>
-                </a>
-              </li>
-              <li className={pf('list__item')}>
-                <a role="menuitem" href="javascript:void(0)">
-                  <p className={pf('truncate')}>
-                    <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
-                      <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
-                      </SvgIcon>
-                    </span>
-                    <span>Edit</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={pf('action-overflow--touch__footer')}>
-          <button className="slds-button slds-button--neutral">Cancel</button>
+  <div aria-hidden="false" role="dialog" className={pf('action-overflow--touch')}>
+    <div className={pf('action-overflow--touch__container')}>
+      <div className={pf('action-overflow--touch__content')}>
+        <div className={pf('action-overflow--touch__body')}>
+          <ul role="menu" className={pf('list--vertical has-block-links--space has-dividers--bottom')}>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
+                    </SvgIcon>
+                  </span>
+                  <span>Post</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
+                    </SvgIcon>
+                  </span>
+                  <span>New Task</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
+                    </SvgIcon>
+                  </span>
+                  <span>New Contact</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
+                    </SvgIcon>
+                  </span>
+                  <span>New Opportunity</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
+                    </SvgIcon>
+                  </span>
+                  <span>Convert</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
+                    </SvgIcon>
+                  </span>
+                  <span>Edit</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
+                    </SvgIcon>
+                  </span>
+                  <span>Post</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
+                    </SvgIcon>
+                  </span>
+                  <span>New Task</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
+                    </SvgIcon>
+                  </span>
+                  <span>New Contact</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
+                    </SvgIcon>
+                  </span>
+                  <span>New Opportunity</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
+                    </SvgIcon>
+                  </span>
+                  <span>Convert</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
+                    </SvgIcon>
+                  </span>
+                  <span>Edit</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="share_post">
+                    </SvgIcon>
+                  </span>
+                  <span>Post</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_task">
+                    </SvgIcon>
+                  </span>
+                  <span>New Task</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_contact">
+                    </SvgIcon>
+                  </span>
+                  <span>New Contact</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="new_opportunity">
+                    </SvgIcon>
+                  </span>
+                  <span>New Opportunity</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="lead_convert">
+                    </SvgIcon>
+                  </span>
+                  <span>Convert</span>
+                </p>
+              </a>
+            </li>
+            <li className={pf('list__item')}>
+              <a role="menuitem" href="javascript:void(0)">
+                <p className={pf('truncate')}>
+                  <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
+                    <SvgIcon aria-hidden="true" className={pf('icon icon--small')} sprite="action" symbol="edit">
+                    </SvgIcon>
+                  </span>
+                  <span>Edit</span>
+                </p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      <div className={pf('action-overflow--touch__footer text-align--center')}>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+      </div>
     </div>
-    <div className="slds-backdrop slds-backdrop--open"></div>
   </div>
+  <div className="slds-backdrop slds-backdrop--open"></div>
 </div>
 );

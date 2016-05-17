@@ -10,98 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-let demoHeight = '32rem';
-
-//////////////////////////////////////////////
-// State Constructor(s)
-//////////////////////////////////////////////
-
-let Prompt = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <Modal isOpen={true} renderInline={true}>
-    <div className={pf('modal__menu')}>
-      <Button flavor="neutral">Upload from Device</Button>
-      <Button flavor="neutral">Select a Salesforce File</Button>
-      <Button flavor="neutral">Cancel</Button>
-    </div>
-  </Modal>
-</div>;
-
-let PromptWithHeader = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <Modal isOpen={true} renderInline={true}>
-    <Modal.Header
-      closeButton={false}
-    >
-      <h2 className={pf('text-heading--medium')}>
-        Select a New Record Type
-      </h2>
-    </Modal.Header>
-
-    <div className={pf('modal__menu')}>
-      <Button flavor="neutral">Simple</Button>
-      <Button flavor="neutral">Advanced</Button>
-      <Button flavor="neutral">Partner</Button>
-      <Button flavor="neutral">Person Accounts</Button>
-      <Button flavor="neutral">Cancel</Button>
-    </div>
-  </Modal>
-</div>;
-
-let PromptWithHeaderAndTagline = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <Modal isOpen={true} renderInline={true}>
-    <Modal.Header
-      closeButton={false}
-    >
-      <h2 className={pf('text-heading--medium')}>
-        Delete Account
-      </h2>
-      <p className={pf('m-top--x-small')}>
-        Are you sure you want to delete this account?
-      </p>
-    </Modal.Header>
-
-    <div className={pf('modal__menu')}>
-      <Button flavor="destructive">Delete</Button>
-      <Button flavor="neutral">Cancel</Button>
-    </div>
-  </Modal>
-</div>;
-
-let PromptWithHeaderAndTaglinePlusImage = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <Modal isOpen={true} renderInline={true}>
-    <Modal.Header
-      closeButton={false}
-    >
-      <span className={pf('icon_container p-around--x-small icon-action-share-thanks m-bottom--x-small')}>
-        <SvgIcon className={pf('icon icon-action-share-thanks icon--medium')} sprite="action" symbol="share_thanks" />
-        <span className={pf('assistive-text')}>Share Thanks</span>
-      </span>
-      <h2 className={pf('text-heading--medium')}>
-        Your Feedback is Valuable
-      </h2>
-      <p className={pf('m-top--x-small')}>
-        We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your
-        input helps drive our products. Would you mind taking a moment
-        to give us feedback through the App Store? We really appreciate
-        your support.
-      </p>
-    </Modal.Header>
-
-    <div className={pf('modal__menu')}>
-      <Button flavor="brand">Rate Salesforce1</Button>
-      <Button flavor="neutral">No, thanks</Button>
-      <Button flavor="neutral">Remind Me Later</Button>
-    </div>
-  </Modal>
-</div>;
 
 ///////////////////////////////////////////
 // Export
@@ -111,21 +23,77 @@ export let states = [
   {
     id: 'default',
     label: 'Default',
-    element: <Prompt />
+    element:
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal>
+          <ModalContent className={pf('modal__menu')}>
+            <Button flavor="neutral">Upload from Device</Button>
+            <Button flavor="neutral">Select a Salesforce File</Button>
+            <Button flavor="neutral">Cancel</Button>
+          </ModalContent>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
   },
   {
     id: 'with-header',
     label: 'With Header',
-    element: <PromptWithHeader />
+    element:
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal>
+          <ModalHeader closeButton="false">
+            <h2 className={pf('text-heading--medium')}>Select a New Record Type</h2>
+          </ModalHeader>
+          <ModalContent className={pf('modal__menu')}>
+            <Button flavor="neutral">Simple</Button>
+            <Button flavor="neutral">Advanced</Button>
+            <Button flavor="neutral">Partner</Button>
+            <Button flavor="neutral">Person Accounts</Button>
+            <Button flavor="neutral">Cancel</Button>
+          </ModalContent>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
   },
   {
     id: 'with-header-and-tagline',
     label: 'With Header and Tagline',
-    element: <PromptWithHeaderAndTagline />
+    element:
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal>
+          <ModalHeader closeButton="false">
+            <h2 className={pf('text-heading--medium')}>Delete Account</h2>
+            <p className={pf('m-top--x-small')}>Are you sure you want to delete this account?</p>
+          </ModalHeader>
+          <ModalContent className={pf('modal__menu')}>
+            <Button flavor="destructive">Delete</Button>
+            <Button flavor="neutral">Cancel</Button>
+          </ModalContent>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
   },
   {
     id: 'with-header-and-tagline-plus-image',
     label: 'With Header and Tagline + image',
-    element: <PromptWithHeaderAndTaglinePlusImage />
+    element:
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal>
+          <ModalHeader closeButton="false">
+            <span className={pf('icon_container p-around--x-small icon-action-share-thanks m-bottom--x-small')}>
+              <SvgIcon className={pf('icon icon-action-share-thanks icon--medium')} sprite="action" symbol="share_thanks" />
+              <span className={pf('assistive-text')}>Share Thanks</span>
+            </span>
+            <h2 className={pf('text-heading--medium')}>Your Feedback is Valuable</h2>
+            <p className={pf('m-top--x-small')}>We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your input helps drive our products. Would you mind taking a moment to give us feedback through the App Store? We really appreciate your support.</p>
+          </ModalHeader>
+          <ModalContent className={pf('modal__menu')}>
+            <Button flavor="neutral">Upload from Device</Button>
+            <Button flavor="neutral">Select a Salesforce File</Button>
+            <Button flavor="neutral">Cancel</Button>
+          </ModalContent>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
   }
 ];

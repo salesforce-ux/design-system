@@ -14,9 +14,9 @@
   border: $border-width-thin solid $color-border;
 
   &__body {
+    @include hyphenate;
     position: relative;
     padding: $spacing-x-small $spacing-small;
-    @include hyphenate;
   }
 
   &[class*="theme--"] {

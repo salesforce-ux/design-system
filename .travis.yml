@@ -10,17 +10,15 @@ before_install:
 install:
   - bundle install --path vendor/bundle
   - npm install
+  - npm install -g codecov
 script:
-  # Run "test" after "build" because the build task cleans temporary directories.
-  # Build-server is a requirement for a passing travis run so keep it here. Also, must chain with && or does not guarentee successful build
-  - npm run lint && npm run build && npm run test && npm run build-server
+  - npm run build-travis
 after_success:
-  - export SHA=`git rev-parse --short HEAD`
-  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA/$TRAVIS_BRANCH ; fi
+  - export SHA=`git rev-parse HEAD`
+  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then curl $VISUAL_TEST_HOST/ci/$SHA/$TRAVIS_BRANCH ; fi
+  - babel-node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha -- 'test/{unit,integration}/**/*.js' --compilers js:babel-register --require scripts/helpers/setup.js --recursive
+  - codecov
 cache:
   directories:
     - node_modules
     - vendor/bundle
-addons:
-  code_climate:
-    repo_token: 1035e50117ef54a8d8d028a87bdf93ad26804012105ce5ac5db3a4b4398d2fad

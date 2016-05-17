@@ -21,7 +21,7 @@ export const preview = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')} style={{position: 'relative'}}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Single Icon - Left</span>
+      <span className={pf('text-title--caps')}>Single Icon - Left</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">
@@ -53,7 +53,7 @@ export const preview = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')} style={{position: 'relative'}}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Double Icon</span>
+      <span className={pf('text-title--caps')}>Double Icon</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">
@@ -88,7 +88,7 @@ export const preview = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')} style={{position: 'relative'}}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Single Icon - right</span>
+      <span className={pf('text-title--caps')}>Single Icon - right</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">
@@ -126,7 +126,7 @@ export const code = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Single Icon - Left</span>
+      <span className={pf('text-title--caps')}>Single Icon - Left</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">
@@ -158,7 +158,7 @@ export const code = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Double Icon</span>
+      <span className={pf('text-title--caps')}>Double Icon</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">
@@ -193,7 +193,7 @@ export const code = (
 
   <div className={pf('dropdown dropdown--left dropdown--small')}>
     <div className={pf('dropdown__header')}>
-      <span className={pf('text-heading--label')}>Single Icon - right</span>
+      <span className={pf('text-title--caps')}>Single Icon - right</span>
     </div>
     <ul className={pf('dropdown__list')} role="menu">
       <li className={pf('dropdown__item is-selected')} aria-selected="true">

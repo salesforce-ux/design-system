@@ -36,12 +36,15 @@ const isNpm = argv.npm === true;
 
 const MODULE_NAME = globals.moduleName;
 
+const myTest = function(foo) {
+  return foo;
+};
+
 ///////////////////////////////////////////////////////////////
 // Helpers
 ///////////////////////////////////////////////////////////////
 
-const distdir = isNpm ? __PATHS__.npm : __PATHS__.dist;
-const distPath = path.resolve.bind(path, distdir);
+const distPath = path.resolve.bind(path, isNpm ? __PATHS__.npm : __PATHS__.dist);
 
 function commentBanner(messages) {
   messages = messages.map(function(message) {
@@ -63,7 +66,7 @@ async.series([
   /**
    * Clean the dist folder
    */
-  (done) => rimraf(__PATHS__.dist, done),
+  (done) => rimraf(distPath(), done),
 
   /**
    * Copy necessary root files to be included in the final module

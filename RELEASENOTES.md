@@ -1,10 +1,14 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release [1.0.3] - April 26, 2016
+
+- Fixed Sass build issue for npm module
+
 ## Release [1.0.2] - April 8, 2016
 
 - Added a link to an [archive of v1.0.0](https://design-system-v-1-0-0.herokuapp.com/), so you can access the documentation and downloads for that previous version
-- Generated the [unmanaged package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo) for the 1.0.2 patch release
+- Generated the unmanaged package for the 1.0.2 patch release
 - Fixed the application's version number in the Sass configuration
 
 ## Release [1.0.1] - April 8, 2016
@@ -41,7 +45,7 @@ The following site enhancements are now available:
 - Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
 - Resources Information - [Resource Links](/resources/links/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
-- Improved Grid System documentation - [Grid System](/components/grid-system/)
+- Improved Grid System documentation - [Grid System](/components/utilities/grid/)
 - Copy updates on components to represent Voice & Tone Guidelines
 
 **NEW COMPONENTS AND VARIANTS**
@@ -54,7 +58,7 @@ The following components are now available:
 - Inline Level Help - [Inline Level Help component](/components/forms/#inline-level-help)
 - Sales Path - [Sales Path component](/components/process/#sales-path-coach)
 - Setup Wizard - [Wizard component](/components/process/#wizard)
-- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/grid-system/#alignment-item-bump)
+- Added an elegant way to add spacing between specific grid items — auto functionality in flexbox. [Alignment Item Bump Variant](/components/utilities/grid/#alignment-item-bump)
 - Popover color themes added - [Popover Theme Variant](/components/popovers/#themes)
 - Tree [Tree Base Component](/components/trees/) - Tree was completely rebuilt and is now a new component
 
@@ -84,7 +88,7 @@ The following classes are now available:
 The following changes have been made in this release:
 
 - Removed Spinner gifs and refactored as CSS - [Spinner component](/components/spinners/)
-- Source order of both Reversed and Double Media Objects changed. They are no longer reordered using flexbox' order property. [Media Objects component](/components/media-objects/)
+- Source order of both Reversed and Double Media Objects changed. They are no longer reordered using flexbox' order property. [Media Objects component](/components/utilities/media-objects/)
 - Activity Timeline reflects Media Object changes. Also removed `dl` with single `dt` & `dd` pairs and replaced with `span`s.
 - Field-level help popover background color token update - [Popover colors](/components/popovers/#colors)
 - Switched media queries to use `em` instead of `px`
@@ -369,5 +373,6 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[1.0.3]: https://github.com/salesforce-ux/design-system/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/salesforce-ux/design-system/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.0...v1.0.1

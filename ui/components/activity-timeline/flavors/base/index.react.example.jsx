@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -59,11 +59,11 @@ export default (
             </p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Contact:</span>
+                <span className={pf('tile__label text-title')}>Contact:</span>
                 <span className={pf('text-body--small')}><a href="#void">Lei Chan</a></span>
               </li>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
+                <span className={pf('tile__label text-title')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="#void">Betty Mason</a></span>
               </li>
             </ul>
@@ -84,15 +84,15 @@ export default (
             <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Time:</span>
+                <span className={pf('tile__label text-title')}>Time:</span>
                 <span className={pf('text-body--small')}><a href="#void">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
               </li>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Location:</span>
+                <span className={pf('tile__label text-title')}>Location:</span>
                 <span className={pf('text-body--small')}><a href="#void">300 Pike St, San Francisco CA</a></span>
               </li>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
+                <span className={pf('tile__label text-title')}>Name:</span>
                 <span className={pf('text-body--small')}><a href="#void">Lei Chan</a>, <a href="#void">Jason Dewar</a>, <a href="#void">Gwen Jones</a> and <a href="#void">Pete Schaffer</a></span>
               </li>
             </ul>
@@ -113,11 +113,11 @@ export default (
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
+                <span className={pf('tile__label text-title')}>Name:</span>
                 <span className={pf('text-body--small')}><a href="#void">Lei Chan</a></span>
               </li>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
+                <span className={pf('tile__label text-title')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="#void">Betty Mason</a></span>
               </li>
             </ul>
@@ -138,11 +138,11 @@ export default (
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('list__item truncate_container--50 m-right--large grid')}>
-                <span>To:</span>
-                <span className={pf('m-left--xx-small truncate')}><a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex')}> + 44 more</span>
+                <span className={pf('tile__label text-title')}>To:</span>
+                <span className={pf('text-body--small m-left--xx-small truncate')}><a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex text-body--small')}> + 44 more</span>
               </li>
               <li className={pf('list__item m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>From:</span>
+                <span className={pf('tile__label text-title')}>From:</span>
                 <span className={pf('text-body--small')}><a href="#void">Jason Dewar</a></span>
               </li>
             </ul>

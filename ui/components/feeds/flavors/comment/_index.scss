@@ -10,76 +10,71 @@
 .#{$css-prefix}comment {
 
   &__content {
-    padding: {
-      top: $spacing-x-small;
-    }
+    padding: $spacing-xx-small 0;
   }
 
-  &__overflow {
-    margin-bottom: $spacing-medium;
-  }
-
-  .#{$css-prefix}text-body--small a {
-    color: inherit;
+  + .#{$css-prefix}comment {
+    margin-top: $spacing-small;
   }
 }
 
+@include deprecate('4.0.0', 'Feeds have been redesigned') {
+  // Comment with replies
+  .#{$css-prefix}comment__replies {
+    padding-top: $spacing-medium;
+    margin-left: ($square-icon-large-boundary + $spacing-small);
 
-// Comment with replies
-.#{$css-prefix}comment__replies {
-  padding-top: $spacing-medium;
-  margin-left: ($square-icon-large-boundary + $spacing-small);
+    > :last-child,
+    > :last-child .#{$css-prefix}comment {
+      padding-bottom: 0;
 
-  > :last-child,
-  > :last-child .#{$css-prefix}comment {
-    padding-bottom: 0;
+      &:before {
+        content: none;
+      }
+    }
 
-    &:before {
-      content: none;
+    .#{$css-prefix}comment {
+      @include feed-vertical-rule($square-icon-medium-boundary-alt);
+      margin-bottom: 0;
+      padding-bottom: $spacing-medium;
+    }
+
+    .#{$css-prefix}avatar {
+      border: $border-width-thick solid $color-background-alt;
     }
   }
 
-  .#{$css-prefix}comment {
-    @include feed-vertical-rule($square-icon-medium-boundary-alt);
-    margin-bottom: 0;
-    padding-bottom: $spacing-medium;
-  }
-
-  .#{$css-prefix}avatar {
-    border: $border-width-thick solid $color-background-alt;
-  }
-}
-
-// Comment entity tags
-.#{$css-prefix}tags {
-  display: flex;
-
-  &__list {
+  // Comment entity tags
+  .#{$css-prefix}tags {
     display: flex;
-  }
 
-  &__item {
-    margin-left: $spacing-xx-small;
-
-    &:after {
-      content: ', ';
+    &__list {
+      display: flex;
     }
 
-    &:last-child:after {
-      content: none;
+    &__item {
+      margin-left: $spacing-xx-small;
+
+      &:after {
+        content: ', ';
+      }
+
+      &:last-child:after {
+        content: none;
+      }
     }
   }
-}
 
-// Comment + Publisher Attachments
-.#{$css-prefix}attachments {
-  padding-bottom: $spacing-x-small;
+  // Comment + Publisher Attachments
+  .#{$css-prefix}attachments {
+    padding-bottom: $spacing-x-small;
 
-  &:empty {
-    padding: 0;
+    &:empty {
+      padding: 0;
+    }
   }
-}
 
-.#{$css-prefix}attachments__item + .#{$css-prefix}attachments__item {
-  margin-top: $spacing-medium;
+  .#{$css-prefix}attachments__item + .#{$css-prefix}attachments__item {
+    margin-top: $spacing-medium;
+  }
 }

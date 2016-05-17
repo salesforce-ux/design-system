@@ -51,7 +51,7 @@ export default (
 
       <li>
         Where <strong>vertical centering</strong> is required, check out
-        our <a href="/components/media-objects/#center">centered media
+        our <a href="/components/utilities/media-objects/#center">centered media
         object</a> instead of applying extra <code>margin</code> or <code>padding</code>.
       </li>
     </ul>

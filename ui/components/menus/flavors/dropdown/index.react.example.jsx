@@ -38,7 +38,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 
@@ -128,14 +128,14 @@ let SubHeader = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
+          <span className={pf('text-title--caps')}>Menu Sub Heading</span>
         </div>
         <MenuList>
           <MenuItem>Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
         </MenuList>
         <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
+          <span className={pf('text-title--caps')}>Menu Sub Heading</span>
         </div>
         <MenuList>
           <MenuItem>Menu Item One</MenuItem>

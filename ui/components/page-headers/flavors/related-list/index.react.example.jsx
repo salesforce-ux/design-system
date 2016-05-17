@@ -36,7 +36,7 @@ export default (
           <Button flavor="neutral">
             Add Contact
           </Button>
-          <div className={pf('button--last')}>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
               flavor="icon-border-filled"
               sprite="utility"
@@ -48,15 +48,17 @@ export default (
     </div>
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
+        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
-        <Button flavor="icon-more" aria-haspopup="true">
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-          <span className={pf('assistive-text')}>Table</span>
-          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-        </Button>
-        <div className={pf('button-group')}>
+        <div className={pf('dropdown-trigger dropdown-trigger--click')} aria-expanded="false">
+          <Button flavor="icon-more" aria-haspopup="true">
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
+            <span className={pf('assistive-text')}>Table</span>
+            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+          </Button>
+        </div>
+        <div className={pf('button-group m-left--xx-small')}>
           <StatefulClass>
           <ButtonIcon
             flavor="icon-border"
@@ -71,12 +73,14 @@ export default (
             symbol="filterList"
             assistiveText="Filter List" />
           </StatefulClass>
-          <Button flavor="icon-more">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-            <span className={pf('assistive-text')}>Sort</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-            <span className={pf('assistive-text')}>More</span>
-          </Button>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+            <Button flavor="icon-more">
+              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
+              <span className={pf('assistive-text')}>Sort</span>
+              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+              <span className={pf('assistive-text')}>More</span>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

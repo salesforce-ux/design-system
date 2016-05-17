@@ -15,17 +15,35 @@ import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
-// State Constructor(s)
+// Partial(s)
 ///////////////////////////////////////////
 
-export let ButtonIconContainer = props =>
+let Demo = props =>
   <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
+    { props.children }
+  </div>;
+
+export let ButtonIconContainer = props =>
     <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
       <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
       <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-      <span className={pf('assistive-text')}>More settings</span>
-    </button>
-  </div>;
+      <span className={pf('assistive-text')}>{props.assitiveText || 'More settings'}</span>
+    </button>;
+
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Default = props =>
+  <Demo>
+    <ButtonIconContainer className={pf('button--icon-more')} />
+  </Demo>;
+
+let Inverse = props =>
+  <Demo>
+    <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
+  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -35,11 +53,11 @@ export let states = [
   {
     id: 'button-icon-with-dropdown',
     label: 'Default',
-    element: <ButtonIconContainer className={pf('button--icon-more')} />
+    element: <Default />
   },
   {
     id: 'button-icon-with-dropdown-inverse',
     label: 'Inverse',
-    element: <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
+    element: <Inverse />
   }
 ];

@@ -15,7 +15,7 @@ import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -29,12 +29,12 @@ export default (
   <div className="slds-page-header" role="banner">
     <div className={pf('grid')}>
       <div className={pf('col has-flexi-truncate')}>
-        <MediaObject flavor="center" figureLeft={image} className={pf('no-space grow')}>
-          <Heading flavor="label">Record Type</Heading>
-          <h1 className={pf('page-header__title m-right--small truncate align-middle')} title="Record Title">Record Title</h1>
+        <MediaObject figureLeft={image} className={pf('no-space grow')}>
+          <Heading className={pf('line-height--reset')} flavor="label">Record Type</Heading>
+          <h1 className={pf('page-header__title m-right--small align-middle truncate')} title="this should match the Record Title">Record Title</h1>
         </MediaObject>
       </div>
-      <div className={pf('col no-flex grid align-bottom')}>
+      <div className={pf('col no-flex grid align-top')}>
         <StatefulClass>
           <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
             <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
@@ -52,7 +52,7 @@ export default (
           <Button flavor="neutral">
             Clone
           </Button>
-          <div className={pf('button--last')}>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
               flavor="icon-border-filled"
               sprite="utility"
@@ -64,13 +64,13 @@ export default (
     </div>
     <ul className={pf('grid page-header__detail-row')}>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
         <p className={pf('text-body--regular truncate')} title="Description that demonstrates truncation with a long text field">
           Description that demonstrates truncation with a long text field.
         </p>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field2 (3)">
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field2 (3)">
           Field 2 (3)
           <ButtonIcon
             flavor="icon-bare"
@@ -82,11 +82,11 @@ export default (
         <p className={pf('text-body--regular')}>Multiple Values</p>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
         <a href="#void">Hyperlink</a>
       </li>
       <li className={pf('page-header__detail-block')}>
-        <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 4">Field 4</p>
+        <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 4">Field 4</p>
         <p>
           <Truncate amount={50}>
             Description (2-line truncation—must use JS to truncate).

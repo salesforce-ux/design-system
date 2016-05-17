@@ -75,9 +75,21 @@ const updateComponentPreviewSVG = document => svg4everybody(document);
  * and then update the src of the <iframe>
  */
 const handleFlavorStateNavClick = (event, element) => {
+  // Ignore the click handler if Cmd/Ctrl keys are pressed during the click
+  // to allow users to open links in a new window
+  if (event.metaKey || event.ctrlKey) {
+    return;
+  }
+
   event.preventDefault();
-  const [ flavor, src ] = ['', '-src'].map(key =>
-    element.getAttribute(`data-slds-flavor-states${key}`));
+
+  const flavor = element.getAttribute('data-slds-flavor-states');
+  const flavorHref = element.getAttribute('data-slds-flavor-href');
+  const src = element.href;
+
+  // Point to the state's flavor
+  window.location.hash = flavorHref;
+
   fastdom.mutate(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {

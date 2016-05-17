@@ -96,7 +96,7 @@ class FAQ extends React.Component {
       `How can I design responsively using the ${g.displayName}?`,
       <p className={pf('container--large')}>
         We recommend that you make good use of our flexible and
-        powerful <CTALink href="/components/grid-system" eventType="responsive-grid">Grid System</CTALink>,
+        powerful <CTALink href="/components/utilities/grid" eventType="responsive-grid">Grid System</CTALink>,
         which will help you construct responsive layouts that
         scale elegantly across screen sizes.
       </p>

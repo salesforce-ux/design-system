@@ -18,27 +18,27 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let Action = props =>
-<span className={pf('icon_container icon_container--circle icon-action-description')}>
+<span className={pf('icon_container icon_container--circle icon-action-description')} title="description of icon when needed">
   <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
-  <span className={pf('assistive-text')}>Description Icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 let Doctype = props =>
-<span className={pf('icon_container')}>
+<span className={pf('icon_container')} title="description of icon when needed">
   <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
-  <span className={pf('assistive-text')}>Doctype Icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 let Standard = props =>
-<span className={pf('icon_container icon-standard-account')}>
+<span className={pf('icon_container icon-standard-account')} title="description of icon when needed">
   <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-  <span className={pf('assistive-text')}>Account Icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 let Utility = props =>
-<span className={pf('icon_container')}>
+<span className={pf('icon_container')} title="description of icon when needed">
   <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
-  <span className={pf('assistive-text')}>Announcement Icon</span>
+  <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
 //////////////////////////////////////////////
@@ -46,16 +46,6 @@ let Utility = props =>
 //////////////////////////////////////////////
 
 export let states = [
-  {
-    id: 'action',
-    label: 'Action',
-    element: <Action />
-  },
-  {
-    id: 'doctype',
-    label: 'Doctype',
-    element: <Doctype />
-  },
   {
     id: 'standard',
     label: 'Standard',
@@ -65,5 +55,15 @@ export let states = [
     id: 'utility',
     label: 'Utility',
     element: <Utility />
+  },
+  {
+    id: 'action',
+    label: 'Action',
+    element: <Action />
+  },
+  {
+    id: 'doctype',
+    label: 'Doctype',
+    element: <Doctype />
   }
 ];

@@ -79,7 +79,7 @@ classes:
     description: Creates a custom styled checkbox
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox</code>
   -
     class: radio
     description: Initializes radio button
@@ -91,7 +91,7 @@ classes:
     description: Creates a custom styled radio button
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio</code>
   -
     class: form--horizontal
     description: Horizontally aligns a single form label and control on the same line

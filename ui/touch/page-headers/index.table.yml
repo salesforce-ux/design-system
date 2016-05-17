@@ -1,0 +1,12 @@
+description: This table gives you a quick overview of the unique {{abbreviatedName}} CSS classes that can be applied to create page headers.
+classes:
+  -
+    class: page-header
+    description: Applies background color and padding
+    required: true
+    applied: <code>&lt;div&gt;</code>
+    notes: Required on the main container for the page header
+  -
+    class: page-header__title
+    description: Page title (header text).
+    applied: <code>&lt;p&gt;</code>

@@ -38,13 +38,13 @@ export let Modal = props =>
 
 export let ModalHeader = props =>
   <div className={className(pf('modal__header'), props.className)}>
-    <ButtonIcon className={pf('modal__close')}
-      flavor="icon-inverse"
-      iconFlavor="large"
-      sprite="action"
-      symbol="close"
-      assistiveText="Close">
-    </ButtonIcon>
+    { props.closeButton != 'false' ?
+      <ButtonIcon className={pf('modal__close')}
+        flavor="icon-inverse"
+        iconFlavor="large"
+        sprite="action"
+        symbol="close"
+        assistiveText="Close" /> : null }
     {props.children}
   </div>;
 

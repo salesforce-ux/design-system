@@ -25,7 +25,7 @@ const Button = (
 export default (
   <div className="slds-page-header" role="banner">
     <MediaObject flavor="center" figureLeft={Image} figureRight={Button}>
-      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
+      <p className={pf('page-header__title truncate')} title="Rohde Corp - 80,000 Widgets">
         Opportunities
       </p>
     </MediaObject>

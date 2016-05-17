@@ -21,7 +21,7 @@ const image = (
 export default (
   <div className="slds-page-header" role="banner">
     <MediaObject figureLeft={image}>
-      <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
+      <p className={pf('page-header__title truncate')} title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>
       <p className={pf('text-body--small')}>

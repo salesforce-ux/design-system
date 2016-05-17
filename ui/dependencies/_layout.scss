@@ -260,6 +260,13 @@
   white-space: nowrap;
 }
 
+// Hyphenate
+@mixin hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 
 
 // Clearfix

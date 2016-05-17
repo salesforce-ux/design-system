@@ -9,21 +9,8 @@
 
 
 
-.#{$css-prefix}popover {
-  @include popover($shadow: $shadow-drop-down);
-  border: $border-width-thin solid $color-border;
-
-  &__body {
-    @include hyphenate;
-    position: relative;
-    padding: $spacing-x-small $spacing-small;
-  }
-
-  &[class*="theme--"] {
-    border: 0;
-  }
-
-  *:last-child {
-    margin-bottom: 0;
-  }
+// The truncation class can be used on an element, or the truncation
+// include can be added to an existing class.
+.#{$css-prefix}hyphenate {
+  @include hyphenate;
 }

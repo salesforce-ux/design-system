@@ -36,6 +36,7 @@ The following classes are now available:
 - Truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
+- Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 
 **CHANGES**
 

@@ -45,7 +45,7 @@ export default (
     <div className={pf('popover__header')}>
 
       <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <a href="#void" className={pf('text-heading--medium')}>Tesla Motors</a>
+        <p className={pf('text-heading--medium hyphenate')}><a href="#void">Tesla Motors</a></p>
       </MediaObject>
 
       {/* Additional Info */}
@@ -88,7 +88,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <p className={pf('text-heading--small')}>Opportunities (2+)</p>
+            <p className={pf('text-heading--small hyphenate')}>Opportunities (2+)</p>
           </MediaObject>
         </dt>
         {/* Opportunity One */}
@@ -141,7 +141,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconCases} flavor="center">
-            <p className={pf('text-heading--small')}>Cases (1)</p>
+            <p className={pf('text-heading--small hyphenate')}>Cases (1)</p>
           </MediaObject>
         </dt>
         {/* Case One */}

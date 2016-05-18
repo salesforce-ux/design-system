@@ -1,17 +1,8 @@
 {
   "name": "design-system",
-  "version": "2.1.0-beta.1",
   "description": "Salesforce Lightning Design System",
+  "version": "2.1.0-beta.1",
   "author": "Salesforce",
-  "license": "SEE LICENSE IN README.md",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:salesforce-ux/design-system.git"
-  },
-  "engines": {
-    "node": "^5.0.0",
-    "npm": ">=2.7.0"
-  },
   "slds": {
     "name": "Winter ’17",
     "id": "204"
@@ -110,6 +101,15 @@
     "uuid": "2.0.1",
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.5.1"
+  },
+  "engines": {
+    "node": "5.0.0",
+    "npm": ">=2.7.0"
+  },
+  "license": "SEE LICENSE IN README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "scripts": {
     "build": "npm run gulp -- build",

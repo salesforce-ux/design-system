@@ -57,6 +57,7 @@ let AppLauncherModal = props =>
         <div className={pf('section__title')}>
           <button className={pf('button button--icon m-right--small')}>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
+            <span className={pf('assistive-text')}>Toggle visibility of section</span>
           </button>
           <h3>All Apps</h3>
         </div>
@@ -106,6 +107,7 @@ let AppLauncherModal = props =>
         <div className={pf('section__title')}>
           <button className={pf('button button--icon m-right--small')}>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
+            <span className={pf('assistive-text')}>Toggle visibility of section</span>
           </button>
           <h3>All Items</h3>
         </div>

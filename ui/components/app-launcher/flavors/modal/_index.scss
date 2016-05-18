@@ -19,11 +19,32 @@
     padding: 0 $spacing-medium;
   }
 
+  &__body {
+    flex: 1 1 auto;
+  }
+
   // App Launcher Tile Items
   &__tile {
     display: flex;
     align-items: stretch;
+    margin: $spacing-x-small 0;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
     cursor: move;
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      border-color: $color-border-selection-hover;
+    }
+
+    &.#{$css-prefix}is-draggable {
+
+      // Remove bottom padding because the draggable icon is there
+      .#{$css-prefix}app-launcher__tile-figure {
+        padding-bottom: $spacing-xx-small;
+      }
+    }
   }
 
   &__tile-figure,
@@ -32,20 +53,63 @@
   }
 
   &__tile-figure {
+    flex-shrink: 0;
     color: $color-text-inverse;
+    background: $color-background-alt;
+    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    text-align: center;
+  }
+
+  &__tile-body {
+    flex: 1 1 auto;
+    background: $color-background-alt-2;
+    padding: $spacing-x-small $spacing-small;
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
   &__tile--small {
-    display: block;
+    flex-direction: column;
+    border: 0;
+    border-radius: none;
     text-align: center;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+
+      .#{$css-prefix}app-launcher__tile-figure--small {
+        border-color: $color-border-selection-hover;
+      }
+    }
   }
 
   &__tile-figure--small {
     display: inline-block;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
   }
 
   &__tile-body--small {
+    background: transparent;
     padding: $spacing-x-small 0;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+// @todo - move to utilities
+.#{$css-prefix}text-link {
+  color: $color-text-link;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $color-text-link-hover;
+  }
+
+  &:active {
+    color: $color-text-link-active;
   }
 }

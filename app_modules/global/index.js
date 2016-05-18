@@ -33,7 +33,8 @@ export default {
   unmanagedPackageUrls: [
     { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' },
     { version: '1.0.2', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kavo' },
-    { version: '1.0.3', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000YIVO' }
+    { version: '1.0.3', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000YIVO' },
+    { version: '1.0.4', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000gTat' }
   ],
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',

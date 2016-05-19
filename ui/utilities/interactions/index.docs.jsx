@@ -14,8 +14,8 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
 
-export default (
-<ComponentDocs>
-  <p className="site-text-introduction"></p>
-</ComponentDocs>
+export const intro = (
+  <p className="site-text-introduction">
+    Set of utilities that provide interaction(s).
+  </p>
 );

@@ -17,12 +17,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Intro
+    The App Launcher allows the user to quickly access all the apps and functionality with their organization.
   </p>
 );
 
 export default (
   <ComponentDocs>
-
+    
   </ComponentDocs>
 );

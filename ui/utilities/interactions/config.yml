@@ -1,5 +1,6 @@
 status: 'dev-ready'
 flavors:
+  - text-link-reset
+  - text-link
   - blur-focus
   - faux-links
-  - link-reset

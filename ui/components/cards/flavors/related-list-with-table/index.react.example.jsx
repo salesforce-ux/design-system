@@ -10,20 +10,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
-
-export const intro = (
-  <p className="site-text-introduction">
-    Cards are used to apply a container around a related grouping of information.
-  </p>
-);
-
 export default (
-  <ComponentDocs>
-    <p>To initialize a card, apply the <CodeClass className="card"/> class to a containing <code>&lt;div&gt;</code>. A card is made up of three sections, a header, a body, and a footer. The card header will get the <CodeClass className="card__header"/> class. The card body will get the <CodeClass className="card__body"/> class. The card footer will get the <CodeClass className="card__footer"/> class.</p>
-    <p>The card body can consume either a <a href="/components/data-tables">Data Table</a> or a <a href="/components/tiles">Tile</a>.</p>
-  </ComponentDocs>
+  <Card>
+    <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (1)</span></CardHeader>
+    <CardBody>
+      <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <th scope="col">Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Title</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className={pf('hint-parent')}>
+            <th scope="row"><div className={pf('truncate')}><a href="#void">Adam Choi</a></div></th>
+            <td>Company One</td>
+            <td>Director of Operations</td>
+            <td>adam@company.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </CardBody>
+    <CardFooter><a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+  </Card>
 );

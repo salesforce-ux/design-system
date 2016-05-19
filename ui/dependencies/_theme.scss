@@ -130,7 +130,7 @@
 
 // Bounding Box for components
 @mixin box($theme: null, $padding: $spacing-medium, $border-radius: $border-radius-medium, $borders: null) {
-  // padding: $padding;
+  padding: $padding;
 
   @if $border-radius != null {
     border-radius: $border-radius;

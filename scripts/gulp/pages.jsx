@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import assert from 'assert';
-import cheerio from 'cheerio';
 import fs from 'fs';
 import gulp from 'gulp';
 import gulpIgnore from 'gulp-ignore';
@@ -85,14 +84,6 @@ const prettyHTML = _.memoize(html => beautify.html(html, {
 }));
 
 /**
- * Return a cheerio object
- *
- * @param {string} html
- * @returns {object}
- */
-const loadHTML = html => cheerio.load(html);
-
-/**
  * Render a <PageBody /> inside a <Page /> and render as HTML
  *
  * @param {ReactElement} pageElement
@@ -106,13 +97,13 @@ export const renderPage = (element, props) => {
   // Create page element
   const page = React.createElement(Page,
     // Get any "page" specific props from the pageBody
-    getPrefixedProps(pageBody.props, 'page')
+    _.assign(
+      getPrefixedProps(pageBody.props, 'page'),
+      { contentHTML: renderToStaticMarkup(pageBody) }
+    )
   );
   // Construct the HTML
-  const $ = loadHTML(renderToStaticMarkup(page));
-  $('#app').append(renderToStaticMarkup(pageBody));
-  $('html').before('<!DOCTYPE html>');
-  return $.html();
+  return `<!DOCTYPE html>${renderToStaticMarkup(page)}`;
 };
 
 /**
@@ -163,7 +154,7 @@ ${html}
         name: 'component:iframe:updatePreviewMarkup',
         data: {
           flavor: '${flavor.uid}',
-          html: document.getElementById('preview').innerHTML
+          html: ${JSON.stringify(html)}
         }
       });
     }

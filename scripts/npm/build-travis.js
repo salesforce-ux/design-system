@@ -39,7 +39,7 @@ const setEnvironment = () => {
 };
 
 const runScript = () =>
-  exec('npm run lint && npm run build && npm run test');
+  exec('npm run build && npm run test && npm run lint');
 
 const publishBuild = () =>
   exec('npm run build-server');

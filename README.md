@@ -48,6 +48,7 @@ gulp lint:sass
 gulp lint:js
 gulp lint:js:test
 gulp lint:spaces
+gulp lint:html
 ```
 
 ### Compilation

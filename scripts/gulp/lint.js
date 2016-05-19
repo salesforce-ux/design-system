@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import cache from 'gulp-cached';
 import gulpif from 'gulp-if';
 import runSequence from 'run-sequence';

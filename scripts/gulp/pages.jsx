@@ -103,8 +103,6 @@ export const renderPage = (element, props) => {
     )
   );
   // Construct the HTML
-  // const pageTemplateHTML = renderToStaticMarkup(page);
-
   return `<!DOCTYPE html>${renderToStaticMarkup(page)}`;
 };
 

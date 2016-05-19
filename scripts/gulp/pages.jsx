@@ -154,7 +154,7 @@ ${html}
         name: 'component:iframe:updatePreviewMarkup',
         data: {
           flavor: '${flavor.uid}',
-          html: document.getElementById('preview').innerHTML
+          html: ${JSON.stringify(html)}
         }
       });
     }

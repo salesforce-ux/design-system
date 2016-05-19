@@ -1,0 +1,1 @@
+The narrow card is used primarily on desktop within a &ldquo;narrow&rdquo; column or &ldquo;sidebar&rdquo;, which takes up the remaining one-third of the viewport, with a minimum width of 400px to maintain readability.

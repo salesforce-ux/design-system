@@ -10,20 +10,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import CodeClass from 'app_modules/site/components/code-class';
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
-export const intro = (
-  <p className="site-text-introduction">
-    Cards are used to apply a container around a related grouping of information.
-  </p>
-);
-
-export default (
-  <ComponentDocs>
-    <p>To initialize a card, apply the <CodeClass className="card"/> class to a containing <code>&lt;div&gt;</code>. A card is made up of three sections, a header, a body, and a footer. The card header will get the <CodeClass className="card__header"/> class. The card body will get the <CodeClass className="card__body"/> class. The card footer will get the <CodeClass className="card__footer"/> class.</p>
-    <p>The card body can consume either a <a href="/components/data-tables">Data Table</a> or a <a href="/components/tiles">Tile</a>.</p>
-  </ComponentDocs>
-);
+export let states = [
+  {
+    id: 'card-narrow',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
+        <Card className={pf('card--narrow')}>
+          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
+          <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+          <CardFooter>Card Footer</CardFooter>
+        </Card>
+      </div>
+  },
+  {
+    id: 'card-narrow-empty',
+    label: 'Empty',
+    element:
+      <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
+        <Card className={pf('card--narrow')}>
+          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
+          <CardBody></CardBody>
+          <CardFooter></CardFooter>
+        </Card>
+      </div>
+  }
+];

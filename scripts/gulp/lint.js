@@ -10,13 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import cache from 'gulp-cached';
 import gulpif from 'gulp-if';
+import runSequence from 'run-sequence';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import eslintPathFormatter from 'eslint-path-formatter';
 import scsslint from 'gulp-scss-lint';
 import browserSync from 'browser-sync';
+import htmlhint from 'gulp-htmlhint';
 
 eslintPathFormatter.editor('sublime');
 
@@ -75,4 +78,33 @@ gulp.task('lint:js:test', lintjs([
   {env: {mocha: true}}
 ));
 
-gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js']);
+// This task lints pre-built assets (not the JSX templates),
+// So you typically have to run `npm run build` before linting HTML files.
+gulp.task('lint:html', () => {
+  return gulp.src('.www/components/**/*.html')
+    .pipe(htmlhint({
+      // Rules documentation:
+      // https://github.com/yaniswang/HTMLHint/wiki/Rules
+      'alt-require': true,
+      'attr-lowercase': true,
+      'attr-no-duplication': true,
+      'attr-unsafe-chars': true,
+      'attr-value-double-quotes': true,
+      'attr-value-not-empty': true,
+      'doctype-html5': true,
+      'id-class-ad-disabled': true,
+      'id-unique': true,
+      'inline-script-disabled': true,
+      'src-not-empty': true,
+      'tag-pair': true,
+      'tag-self-close': true,
+      'tagname-lowercase': true,
+      'title-require': true,
+      // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed
+      // as <div>&lt;div></div> raises errors at the moment
+      'spec-char-escape': false
+    }))
+    .pipe(htmlhint.reporter());
+});
+
+gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html']);

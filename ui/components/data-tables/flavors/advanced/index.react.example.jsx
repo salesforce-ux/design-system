@@ -42,10 +42,10 @@ let Tr = props =>
 let Th = props =>
   <th className={pf(props.className)} scope={props.scope} style={props.style}>
     <a href="#void" className={pf('th__action text-link--reset')}>
+      <span className={pf('assistive-text')}>Sort Column</span>
       <span className={pf('truncate')}>{ props.children }</span>
       <div className={pf('icon_container')} title="Sort Column">
         <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
-        <span className={pf('assistive-text')}>Sort Column</span>
       </div>
       <div className={pf('resizable')}>
         <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>

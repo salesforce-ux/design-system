@@ -49,7 +49,7 @@ let TreeBranch = props =>
 </div>;
 
 let Pill = props =>
-<span className={pf('pill shrink-none align-middle m-left--small')}>
+<span className={pf('pill shrink-none align-middle')}>
   <span className={pf('pill__label')}>Label</span>
 </span>;
 

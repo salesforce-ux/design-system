@@ -19,7 +19,6 @@ import Radio from 'ui/components/forms/flavors/radio/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Menu from 'ui/components/menus/index.react';
-import PickList from 'ui/components/picklists/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
 import { Select } from 'ui/components/forms/flavors/select/index.react.example';

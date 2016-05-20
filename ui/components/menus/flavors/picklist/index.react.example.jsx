@@ -11,13 +11,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Menu from 'ui/components/menus/index.react';
-import PickList from 'ui/components/picklists/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
 
 export default (
 <div className="demo-only" style={{height: '240px'}}>
-  <PickList label="Select an Option" aria-expanded="true" className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
+  <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')} aria-expanded="true" >
+    <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+      <span className={pf('truncate')}>Select an Option</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+    </button>
     <Menu className={pf('dropdown--left')}>
       <Menu.List className={pf('dropdown--length-5')}>
         <Menu.Item>Option A</Menu.Item>
@@ -35,6 +37,6 @@ export default (
         <Menu.Item>Option MNOPQRSTUVWXYZ 123456</Menu.Item>
       </Menu.List>
     </Menu>
-  </PickList>
+  </div>
 </div>
 );

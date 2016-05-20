@@ -17,7 +17,7 @@ The following components are now available:
 - Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Checkbox Alternate - [Checkbox alternate component](/components/forms/#checkbox-alternate)
 - Tree Grid - [Tree grid component](/components/trees/#grid)
-- Slide out Panel with Inline Edit Form - [Slide out panel component](/components/panels/#slide-out)
+- Detail Panel with Inline Edit Form - [Detail panel component](/components/panels/#detail)
 - Voice Integration - [Voice docked composer](/components/docked-composer/#voice)
 
 **ADDED**

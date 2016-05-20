@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only grid')} {...props} style={{ height: '845px', maxWidth: '420px' }}>
+  <div className={pf('demo-only grid')} {...props} style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
     {props.children}
   </div>;
 
@@ -34,10 +34,8 @@ let Checkbox = props =>
   </label>;
 
 export let Panel = props =>
-  <div className={className(pf('panel_container slds-grid slds-nowrap'), props.containerClassName)}>
-    <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
-      {props.children}
-    </div>
+  <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
+    {props.children}
   </div>;
 
 export let PanelBody = props =>

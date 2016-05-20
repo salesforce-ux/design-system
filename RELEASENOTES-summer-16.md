@@ -13,14 +13,11 @@ The following site enhancements are now available:
 
 The following components are now available:
 
-- Context Bar - [Context bar component page](/components/navigation/#context-bar/)
 - Checkbox Toggle - [Checkbox toggle component](/components/forms/#checkbox-toggle)
 - Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Checkbox Alternate - [Checkbox alternate component](/components/forms/#checkbox-alternate)
 - Tree Grid - [Tree grid component](/components/trees/#grid)
-- Product Selector - [Product selector component](/components/product-selector/)
-- Card with Simple Filtering - [Card component with filtering component](/components/cards/#with-filtering)
-- Slide out Panel with Inline Edit Form - [Slide out panel component](/components/panels/#slide-out)
+- Detail Panel with Inline Edit Form - [Detail panel component](/components/panels/#detail)
 - Voice Integration - [Voice docked composer](/components/docked-composer/#voice)
 
 **ADDED**

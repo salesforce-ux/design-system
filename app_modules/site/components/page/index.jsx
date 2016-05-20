@@ -125,7 +125,7 @@ export default React.createClass({
   renderBody() {
     return (
       <body>
-        <div id="app" />
+        <div id="app" dangerouslySetInnerHTML={{__html: this.props.contentHTML}} />
         {this.renderScripts()}
       </body>
     );

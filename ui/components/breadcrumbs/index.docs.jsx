@@ -25,6 +25,6 @@ export default (
   <ComponentDocs>
     <p>Breadcrumbs are typically constructed with an <code>ol</code> because their order matters. You mark up breadcrumbs with classes from the horizontal list utility. When you add  the <CodeClass className="breadcrumb" /> class, the separators are automatically generated.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Place the breadcrumb in a <code>nav</code> element with <code>role="navigation"</code>. The <code>nav</code> element is also marked-up with <code>aria-label="breadcrumbs"</code> to describe the type of navigation.</p>
+    <p>Place the breadcrumb in a <code>nav</code> element with <code>role="navigation"</code>. The <code>nav</code> element is also marked-up with <code>aria-label="Breadcrumbs"</code> to describe the type of navigation.</p>
   </ComponentDocs>
 );

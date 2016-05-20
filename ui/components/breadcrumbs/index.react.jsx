@@ -35,7 +35,7 @@ class BreadCrumbs extends React.Component {
 
   render() {
     return (
-      <nav {...this.props} role="navigation" aria-label="breadcrumbs">
+      <nav {...this.props} role="navigation" aria-label="Breadcrumbs">
         <ol className={pf('breadcrumb list--horizontal')}>
           {this.props.children}
         </ol>

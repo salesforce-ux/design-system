@@ -25,11 +25,11 @@ let Demo = props =>
   </div>;
 
 let Pill = props =>
-  <a href="#void" className={pf('pill')}>
+  <span className={pf('pill')}>
     {props.children}
-    <span className={pf('pill__label')}>{props.label || 'Pill Label'}</span>
+    <a href="#void" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </a>;
+  </span>;
 
 let PillContainer = props =>
   <div className={pf('pill_container')}>
@@ -48,7 +48,9 @@ let Default = props =>
 let Icon = props =>
   <Demo>
     <Pill>
-      <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+      <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+        <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+      </span>
     </Pill>
   </Demo>;
 
@@ -67,6 +69,13 @@ let Unlinked = props =>
       <span className={pf('pill__label')}>Pill Label</span>
       <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
     </span>
+  </Demo>;
+
+let Truncated = props =>
+  <Demo style={{ width: '220px' }}>
+    <PillContainer>
+      <Pill label="Pill label that is longer than the area that contains it" />
+    </PillContainer>
   </Demo>;
 
 let Container = props =>
@@ -102,6 +111,11 @@ export let states = [
     id: 'pill-unlinked',
     label: 'Unlinked',
     element: <Unlinked />
+  },
+  {
+    id: 'pill-truncated',
+    label: 'Truncated',
+    element: <Truncated />
   },
   {
     id: 'pill-container',

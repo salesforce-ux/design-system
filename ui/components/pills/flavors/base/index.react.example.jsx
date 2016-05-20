@@ -27,7 +27,7 @@ let Demo = props =>
 let Pill = props =>
   <span className={pf('pill')}>
     {props.children}
-    <a href="#void" className={pf('pill__label')} title="Full pill label verbiage mirrored here">{props.label || 'Pill Label'}</a>
+    <a href="#void" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
   </span>;
 

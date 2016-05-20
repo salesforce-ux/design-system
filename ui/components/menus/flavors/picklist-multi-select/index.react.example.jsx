@@ -26,7 +26,7 @@ export default (
     <div className={pf('dropdown dropdown--left')}>
       <ul className={pf('dropdown__list dropdown--length-5')} role="menu">
         <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               All
@@ -34,7 +34,7 @@ export default (
           </a>
         </li>
         <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option A
@@ -42,7 +42,7 @@ export default (
           </a>
         </li>
         <li className={pf('dropdown__item is-selected')} aria-selected="true">
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option B
@@ -50,7 +50,7 @@ export default (
           </a>
         </li>
         <li className={pf('dropdown__item is-selected')} aria-selected="true">
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option C
@@ -58,7 +58,7 @@ export default (
           </a>
         </li>
         <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option D
@@ -66,7 +66,7 @@ export default (
           </a>
         </li>
         <li className={pf('dropdown__item')}>
-          <a href="javascript:void(0)" role="menuitemradio">
+          <a href="#void" role="menuitemradio">
             <p className={pf('truncate')}>
               <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="check" />
               Option E

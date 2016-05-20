@@ -1,6 +1,10 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## 1.0.5 - Future, 2016
+
+- Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
+
 ## Release [1.0.4] - May 18, 2016
 
 - Added `title` attributes to icon containers, noticeably improving accessibility for users of pointing devices such as mice and trackpads

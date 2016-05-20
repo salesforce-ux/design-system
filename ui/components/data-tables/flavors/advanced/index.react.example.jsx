@@ -58,7 +58,7 @@ let Th = props =>
   </th>;
 
 let Td = props =>
-  <td className={pf(props.className)} scope={props.scope} data-label={props.dataLabel}>
+  <td className={pf(props.className)} scope={props.scope} data-label={props.dataLabel} title={props.title}>
     { props.children }
   </td>;
 
@@ -72,13 +72,13 @@ let Checkbox = props =>
 let RowData = props =>
   <Tr className={className(pf('hint-parent'), props.className)}>
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} /></Td>
-    <th className={pf('truncate')} scope="row" data-label="Opportunity Name">{props.title}</th>
-    <Td className={pf('truncate')} dataLabel="Account Name">Cloudhub</Td>
-    <Td dataLabel="Close Date">4/14/2015</Td>
-    <Td className={pf('truncate')} dataLabel="Prospecting">Prospecting</Td>
-    <Td dataLabel="Confidence">20%</Td>
-    <Td dataLabel="Amount">$25k</Td>
-    <Td className={pf('truncate')} dataLabel="Contact"><a href="#void">jrogers@cloudhub.com</a></Td>
+    <th className={pf('truncate')} scope="row" data-label="Opportunity Name" title={props.title}>{props.title}</th>
+    <Td className={pf('truncate')} dataLabel="Account Name" title="Cloudhub">Cloudhub</Td>
+    <Td dataLabel="Close Date" title="4/14/2015">4/14/2015</Td>
+    <Td className={pf('truncate')} dataLabel="Prospecting" title="Prospecting">Prospecting</Td>
+    <Td dataLabel="Confidence" title="20%">20%</Td>
+    <Td dataLabel="Amount" title="$25k">$25k</Td>
+    <Td className={pf('truncate')} dataLabel="Contact" title="jrogers@cloudhub.com"><a href="#void">jrogers@cloudhub.com</a></Td>
     <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"

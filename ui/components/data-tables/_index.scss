@@ -193,10 +193,6 @@ th.#{$css-prefix}is-sortable {
   &--asc .#{$css-prefix}is-sortable__icon {
     transform: rotate(180deg);
   }
-
-  &--desc .#{$css-prefix}is-sortable__icon {
-    transform: rotate(0);
-  }
 }
 
 // Provide an indicator that resizing is available

@@ -34,10 +34,6 @@ classes:
     description: Makes sortable icon point up
     applied: <code>&lt;th&gt;</code>
   -
-    class: is-sorted--desc
-    description: Makes sortable icon point down
-    applied: <code>&lt;th&gt;</code>
-  -
     class: is-resizable
     description: Enables table cell to be resized
     applied: <code>&lt;th&gt;</code>

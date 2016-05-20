@@ -13,6 +13,7 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -42,7 +43,12 @@ let LookupMultiWithSelection = props =>
       <div className={pf('input-has-icon input-has-icon--right grid grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <PillContainer className={pf('pill_container--bare')}>
-          <Pill>Paddy's Pub</Pill> <a href="#void">+1 more</a>
+          <Pill label="Paddy's Pub" unlinked>
+            <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+              <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+            </span>
+          </Pill>
+          <a href="#void" className={pf('m-left--x-small')}>+1 more</a>
         </PillContainer>
       </div>
     </div>
@@ -80,18 +86,6 @@ let LookupResultsItem = props =>
       </div>
     </a>
   </li>;
-
-let PillContainer = props =>
-  <div className={className(pf('pill_container'), props.className)}>
-    {props.children}
-  </div>;
-
-let Pill = props =>
-  <span className={className(pf('pill'), props.className)}>
-    <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-    <span className={pf('pill__label')}>{props.children}</span>
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>;
 
 ///////////////////////////////////////////
 // Export
@@ -182,8 +176,16 @@ export let states = [
       <LookupMulti label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')}>
         <LookupMenu>
           <PillContainer className={pf('pill_container--bare has-divider--bottom')}>
-            <Pill>Paddy's Pub</Pill>
-            <Pill>Vanderlay Industries</Pill>
+            <Pill label="Paddy's Pub" unlinked>
+              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              </span>
+            </Pill>
+            <Pill label="Vanderlay Industries" unlinked>
+              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              </span>
+            </Pill>
           </PillContainer>
           <LookupLabel>Recent Accounts</LookupLabel>
           <LookupResults>

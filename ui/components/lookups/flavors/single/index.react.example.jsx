@@ -13,6 +13,7 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -34,7 +35,11 @@ let LookupWithSelection = props =>
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
     <div className={pf('form-element__control lookup__search-control')}>
       <PillContainer>
-        <Pill>Paddy's Pub</Pill>
+        <Pill label="Paddy's Pub" unlinked>
+          <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+            <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+          </span>
+        </Pill>
       </PillContainer>
     </div>
     {props.children}
@@ -71,19 +76,6 @@ let LookupResultsItem = props =>
       </div>
     </a>
   </li>;
-
-let PillContainer = props =>
-  <div className={className(pf('pill_container'), props.className)}>
-    {props.children}
-  </div>;
-
-let Pill = props =>
-  <span className={className(pf('pill'), props.className)}>
-    <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-    <span className={pf('pill__label')}>{props.children}</span>
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </span>;
-
 
 ///////////////////////////////////////////
 // Export

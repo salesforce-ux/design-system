@@ -8,6 +8,8 @@
 The following site enhancements are now available:
 
 - New states added for button-groups showing overflow dropdown
+- Cards variant navigation has been improved
+- Data table variant navigation has been improved
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -50,6 +52,8 @@ The following changes have been made in this release:
 - Field level help icon moved to the right of the input label
 - Reduced vertical padding on page header
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
+- Data table sortable headings now have actionable area so they can be focusable
+- Improved interactions for resize element on data tables
 
 **FIXED**
 

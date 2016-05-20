@@ -134,25 +134,109 @@
 }
 
 // Applies move cursor to moveable cell
-.#{$css-prefix}is-sortable {
+th.#{$css-prefix}is-sortable {
   cursor: pointer;
+  padding: 0; // Reset padding so actionable link bleeds to edge
 
-  .#{$css-prefix}button {
-    visibility: hidden;
-    margin-left: $spacing-x-small;
-  }
-
-  .#{$css-prefix}button__icon {
-    fill: $color-text-link;
-  }
-
-  &:hover {
-    background-color: $color-background-row-hover;
-    color: $color-text-link;
-
+  @include deprecate('4.0.0', 'The entire cell is hyperlinked now, no need for the button') {
     .#{$css-prefix}button {
-      visibility: visible;
+      visibility: hidden;
+      margin-left: $spacing-x-small;
     }
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-link;
+    }
+
+    &:hover {
+      background-color: $color-background-row-hover;
+      color: $color-text-link;
+
+      .#{$css-prefix}button {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Actionable area inside th
+.#{$css-prefix}th__action {
+  display: flex;
+  padding: $spacing-x-small;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    background-color: $color-background-row-hover;
+
+    .#{$css-prefix}is-sortable__icon {
+      display: inline-block;
+    }
+  }
+}
+
+// Icon inside sortable th
+.#{$css-prefix}is-sortable__icon {
+  @include square($square-icon-small-content);
+  margin-left: $spacing-xx-small;
+  display: none;
+}
+
+// Active state of sorted column
+.#{$css-prefix}is-sorted {
+
+  .#{$css-prefix}is-sortable__icon {
+    display: inline-block;
+  }
+
+  // Change direction of arrow
+  &--asc .#{$css-prefix}is-sortable__icon {
+    transform: rotate(180deg);
+  }
+}
+
+// Provide an indicator that resizing is available
+.#{$css-prefix}is-resizable {
+
+  .#{$css-prefix}th__action:hover,
+  .#{$css-prefix}th__action:focus {
+    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+  }
+}
+
+// Resizable handle
+.#{$css-prefix}resizable {
+  max-width: 100%;
+
+  &__handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $spacing-xx-small;
+    height: 100%;
+    background: $color-background-button-brand;
+    display: block;
+    cursor: col-resize;
+    opacity: 0;
+    z-index: $z-index-popup;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    width: 1px;
+    background: $color-background-button-brand;
+  }
+
+  &__input:focus ~ .#{$css-prefix}resizable__handle {
+    opacity: 1;
   }
 }
 
@@ -160,7 +244,6 @@
 //
 // Set table to use fixed layout for width and truncation purposes
 .#{$css-prefix}table--fixed-layout {
-  position: relative;
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
@@ -187,41 +270,10 @@
   }
 }
 
-.#{$css-prefix}is-resizable:hover {
-  box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
-}
+.#{$css-prefix}table--compact {
 
-// Resizable handle
-.#{$css-prefix}resizable {
-  max-width: 100%;
-
-  &__handle {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: $spacing-xx-small;
-    height: 100%;
-    background: $color-background-button-brand;
-    display: block;
-    cursor: col-resize;
-    opacity: 0;
-    z-index: $z-index-popup;
-
-    &:hover,
-    &:active {
-      opacity: 1;
-    }
-
-    &--indicator {
-      right: auto;
-    }
-  }
-
-  &__divider {
-    position: absolute;
-    left: 50%;
-    height: 100vh;
-    width: 1px;
-    background: $color-background-button-brand;
+  th,
+  td {
+    padding: $spacing-xx-small $spacing-x-small;
   }
 }

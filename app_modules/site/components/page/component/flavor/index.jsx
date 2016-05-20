@@ -34,18 +34,28 @@ Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitel
 
 // Remove wrapping tag if it has the ".demo-only" class in it
 // Note: this will also remove other classes too on that tag! :)
-const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
+const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
 
 /**
- * Hight a string of text based on the language
+ * Highlight a string of text based on the language
  *
  * @param {string} code
  * @param {string} language
  * @returns {string}
  */
 function highlight(code, language) {
+  code = code.trim().replace(demoPattern, (match, tag, content) => content);
+  const lines = code.split('\n');
+  // If first line is empty, look at the second one instead
+  const firstLine = lines[0].length === 0 ? lines[1] : '';
+  // Figure out the number of spaces for that first line
+  const offsetMatch = firstLine.match(/^\s*/);
+  // How many spaces?
+  const offset = offsetMatch ? offsetMatch[0].length : 0;
+  const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
+
   return Prism.highlight(
-    code.replace(demoPattern, (match, tag, content) => content),
+    codeTrimmed,
     Prism.languages[language]
   );
 }

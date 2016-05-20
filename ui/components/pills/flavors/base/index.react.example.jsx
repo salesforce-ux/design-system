@@ -24,15 +24,16 @@ let Demo = props =>
     {props.children}
   </div>;
 
-let Pill = props =>
+export let Pill = props =>
   <span className={pf('pill')}>
     {props.children}
-    <a href="#void" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>
+    {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
+    : <a href="#void" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
   </span>;
 
-let PillContainer = props =>
-  <div className={pf('pill_container')}>
+export let PillContainer = props =>
+  <div className={className(pf('pill_container'), props.className)}>
     {props.children}
   </div>;
 
@@ -65,10 +66,7 @@ let Portrait = props =>
 
 let Unlinked = props =>
   <Demo>
-    <span className={pf('pill')}>
-      <span className={pf('pill__label')}>Pill Label</span>
-      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-    </span>
+    <Pill unlinked />
   </Demo>;
 
 let Truncated = props =>

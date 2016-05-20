@@ -64,6 +64,8 @@
 
     @include deprecate('4.0.0');
     padding: ($border-width-thin * 2) $border-width-thin; // $border-width-thin * 2 to accomodate for missing borders
+    border: 0;
+    border-radius: 0;
   }
 
   &__label {

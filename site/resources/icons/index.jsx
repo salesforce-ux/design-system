@@ -98,10 +98,8 @@ class Icons extends React.Component {
   }
 
   renderCategoryNav() {
-    const { categories } = this.state;
-    let capitalize = (e) => { return e.charAt(0).toUpperCase() + e.slice(1); };
-    return categories.map(category => {
-      const modCategory = capitalize(category.name);
+    return this.state.categories.map(category => {
+      const modCategory = _.upperFirst(category.name);
       return (
         <li className={pf('list__item')} key={category.name}>
           <a href={`#${category.name}`}>

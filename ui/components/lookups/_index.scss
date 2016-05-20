@@ -119,21 +119,6 @@
     // Show and remove border and border radius
     .#{$css-prefix}lookup__menu {
       display: block;
-      border: {
-        top: 0 {
-          left-radius: 0;
-          right-radius: 0;
-        }
-      }
-    }
-
-    // Remove border radius to square off with the menu dropdown container
-    .#{$css-prefix}lookup__search-control,
-    .#{$css-prefix}lookup__search-input {
-      border-bottom: {
-        left-radius: 0;
-        right-radius: 0;
-      }
     }
   }
 

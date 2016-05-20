@@ -44,7 +44,7 @@ let LookupMultiWithSelection = props =>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <PillContainer className={pf('pill_container--bare')}>
           <Pill label="Paddy's Pub" unlinked>
-            <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+            <span className={pf('icon_container icon-standard-account')}>
               <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
             </span>
           </Pill>
@@ -177,12 +177,12 @@ export let states = [
         <LookupMenu>
           <PillContainer className={pf('pill_container--bare has-divider--bottom')}>
             <Pill label="Paddy's Pub" unlinked>
-              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+              <span className={pf('icon_container icon-standard-account')}>
                 <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
               </span>
             </Pill>
             <Pill label="Vanderlay Industries" unlinked>
-              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
+              <span className={pf('icon_container icon-standard-account')}>
                 <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
               </span>
             </Pill>

@@ -27,22 +27,7 @@ class Icons extends React.Component {
 
   constructor(props) {
     super(props);
-    let icons = [];
-    categories.forEach(category => {
-      icons = [];
-      let customIcons = [];
-      let matchCustom = new RegExp('custom\\d+');
-      category.icons.map(icon => {
-        if (matchCustom.test(icon.symbol)) customIcons.push(icon);
-        else icons.push(icon);
-      });
-      customIcons.sort(function(a, b){
-        let one = parseInt(a.symbol.match(/\d+/).toString());
-        let two = parseInt(b.symbol.match(/\d+/).toString());
-        return one - two;
-      });
-      category.icons = icons.concat(customIcons);
-    });
+
     this.state = {
       categories
     };

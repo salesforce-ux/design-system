@@ -8,5 +8,5 @@ classes:
   -
     class: has-flexi-truncate
     description: Allows truncation in nested flexbox containers
-    applied: <code>.{{cssPrefix}}col</code><br><code>.{{cssPrefix}}col--padded</code>
+    applied: <code>.{{cssPrefix}}col</code><br /><code>.{{cssPrefix}}col--padded</code>
     notes: This class is placed on a parent element that contains a flexbox element containing <code>.{{cssPrefix}}truncate</code>. For example &mdash; for a media object that is nested in a grid column and contains truncation &mdash; the grid column would require this class.

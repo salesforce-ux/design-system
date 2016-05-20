@@ -29,7 +29,7 @@ classes:
     class: grid--align-spread
     description: Columns align to the left and right followed by center. Space is equal between them
     applied: <code>.{{cssPrefix}}grid</code>
-    notes: With only two columns &mdash; you can get a similar effect by setting one of the columns to <code>.{{cssPrefix}}no-flex<code>. (See details below.)
+    notes: With only two columns &mdash; you can get a similar effect by setting one of the columns to <code>.{{cssPrefix}}no-flex</code>. (See details below.)
   -
     class: grid--align-space
     description: Columns are evenly distributed with equal space around them all

@@ -69,8 +69,8 @@ classes:
   -
     class: has-dividers
     description: Adds spacing and dividers between list items
-    applied: <code>.{{cssPrefix}}list--vertical</code><br><code>.{{cssPrefix}}list--horizontal</code>
-    notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br>On vertical lists a border is added. Horizontal lists are separated by a dot.
+    applied: <code>.{{cssPrefix}}list--vertical</code><br /><code>.{{cssPrefix}}list--horizontal</code>
+    notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br />On vertical lists a border is added. Horizontal lists are separated by a dot.
   -
     class: has-dividers--top
     description: Adds 1px border divider above list items

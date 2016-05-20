@@ -209,12 +209,10 @@ class ComponentFlavor extends React.Component {
     const iframe = (
       <iframe
         src={`/${pathToURL(flavor.path)}/_${src}.html?iframe&initial`}
-        height="100%"
         id={`iframe-${flavor.uid}`}
         name={flavor.uid}
         ref="iframe"
-        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}
-        scrolling="no" />
+        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null} />
     );
     const previewPanel = (
       <Tabs.Content

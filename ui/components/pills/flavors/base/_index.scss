@@ -30,11 +30,6 @@
     background-color: $color-background-button-default-hover;
   }
 
-  &:focus {
-    outline: 0;
-    box-shadow: $shadow-button-focus;
-  }
-
   a {
     text-decoration: none;
   }
@@ -72,6 +67,12 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:focus {
+      outline: 0;
+      border-radius: $border-radius-medium;
+      box-shadow: $shadow-button-focus;
+    }
   }
 
   &__icon {

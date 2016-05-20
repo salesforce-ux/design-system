@@ -40,21 +40,21 @@ let Tr = props =>
   </tr>;
 
 let Th = props =>
-  <th className={pf(props.className)} scope={props.scope} style={props.style}>
+  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
     <a href="#void" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
       <span className={pf('truncate')}>{ props.children }</span>
       <div className={pf('icon_container')} title="Sort Column">
         <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
       </div>
-      <div className={pf('resizable')}>
-        <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
-        <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
-        <span className={pf('resizable__handle')}>
-          <span className={pf('resizable__divider')}></span>
-        </span>
-      </div>
     </a>
+    <div className={pf('resizable')}>
+      <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
+      <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
+      <span className={pf('resizable__handle')}>
+        <span className={pf('resizable__divider')}></span>
+      </span>
+    </div>
   </th>;
 
 let Td = props =>
@@ -175,7 +175,7 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted--asc')} scope="col">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
@@ -199,7 +199,7 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted--desc')} scope="col">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>

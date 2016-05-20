@@ -11,7 +11,7 @@ using JavaScript.
 
 The page header is located at the top of every record home. It includes the record title and compact layout for a record. Excluding the title, the page header displays 4 compact layout fields. Similar data types can be rolled up and be displayed as a single field.
 
-<h3 class="{{cssPrefix}}text-heading--small">Record Title</h3>
+### Record Title
 
 * Display Record Type icon to the left of the title
 * Record Type is displayed above the title

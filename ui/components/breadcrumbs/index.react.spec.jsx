@@ -42,9 +42,9 @@ describe('React', () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}list__item`);
       expect(node).length.to.be(2);
     });
-    it('renders the assistive text', () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}assistive-text`);
-      expect(node).length.to.be(1);
+    it('adds its aria-label', () => {
+      const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
+      expect(node.props['aria-label']).to.equal('Breadcrumbs');
     });
     it('mixes in the props', () => {
       const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];

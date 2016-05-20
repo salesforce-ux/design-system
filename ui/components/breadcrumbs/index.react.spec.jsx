@@ -42,6 +42,10 @@ describe('React', () => {
       const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}list__item`);
       expect(node).length.to.be(2);
     });
+    it('adds its aria-label', () => {
+      const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
+      expect(node.props['aria-label']).to.equal('Breadcrumbs');
+    });
     it('mixes in the props', () => {
       const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
       expect(node.props.id).to.equal('bumblebees');

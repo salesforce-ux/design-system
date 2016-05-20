@@ -40,35 +40,35 @@ let Tr = props =>
   </tr>;
 
 let Th = props =>
-  <th className={props.className} scope={props.scope} data-label={props.dataLabel}>
+  <th className={props.className} scope={props.scope} data-label={props.dataLabel} title={props.title}>
     {props.children}
   </th>;
 
 let Td = props =>
-  <td className={props.className} scope={props.scope} data-label={props.dataLabel}>
+  <td className={props.className} scope={props.scope} data-label={props.dataLabel} title={props.title}>
     {props.children}
   </td>;
 
 let HeadRowData = props =>
   <Tr className={pf('text-heading--label')}>
-    <Th scope="col"><div className={pf('truncate')}>Opportunity Name</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Account Name</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Close Date</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Stage</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Confidence</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Amount</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Contact</div></Th>
+    <Th scope="col" title="Opportunity Name"><div className={pf('truncate')}>Opportunity Name</div></Th>
+    <Th scope="col" title="Account Name"><div className={pf('truncate')}>Account Name</div></Th>
+    <Th scope="col" title="Close Date"><div className={pf('truncate')}>Close Date</div></Th>
+    <Th scope="col" title="Stage"><div className={pf('truncate')}>Stage</div></Th>
+    <Th scope="col" title="Confidence"><div className={pf('truncate')}>Confidence</div></Th>
+    <Th scope="col" title="Amount"><div className={pf('truncate')}>Amount</div></Th>
+    <Th scope="col" title="Contact"><div className={pf('truncate')}>Contact</div></Th>
   </Tr>;
 
 let RowData = props =>
   <Tr className={props.className}>
-    <Th scope="row" dataLabel="Opportunity Name"><div className={pf('truncate')}><a href="#void">{props.title}</a></div></Th>
-    <Td dataLabel="Account Name"><div className={pf('truncate')}>Cloudhub</div></Td>
-    <Td dataLabel="Close Date"><div className={pf('truncate')}>4/14/2015</div></Td>
-    <Td dataLabel="Prospecting"><div className={pf('truncate')}>Prospecting</div></Td>
-    <Td dataLabel="Confidence">20%</Td>
-    <Td dataLabel="Amount">$25k</Td>
-    <Td dataLabel="Contact"><div className={pf('truncate')}><a href="#void">jrogers@cloudhub.com</a></div></Td>
+    <Th scope="row" dataLabel="Opportunity Name" title={props.title}><div className={pf('truncate')}><a href="#void">{props.title}</a></div></Th>
+    <Td dataLabel="Account Name" title="Cloudhub"><div className={pf('truncate')}>Cloudhub</div></Td>
+    <Td dataLabel="Close Date" title="4/14/2015"><div className={pf('truncate')}>4/14/2015</div></Td>
+    <Td dataLabel="Prospecting" title="Prospecting"><div className={pf('truncate')}>Prospecting</div></Td>
+    <Td dataLabel="Confidence" title="20%">20%</Td>
+    <Td dataLabel="Amount" title="$25k">$25k</Td>
+    <Td dataLabel="Contact" title="jrogers@cloudhub.com"><div className={pf('truncate')}><a href="#void">jrogers@cloudhub.com</a></div></Td>
   </Tr>;
 
 //////////////////////////////////////////////

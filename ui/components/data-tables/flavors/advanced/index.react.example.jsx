@@ -43,7 +43,7 @@ let Th = props =>
   <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
     <a href="#void" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
-      <span className={pf('truncate')}>{ props.children }</span>
+      <span className={pf('truncate')} title={props.title}>{ props.children }</span>
       <div className={pf('icon_container')} title="Sort Column">
         <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
       </div>
@@ -103,13 +103,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>
@@ -127,13 +127,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>
@@ -151,13 +151,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" checked /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>
@@ -175,13 +175,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>
@@ -199,13 +199,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>
@@ -223,13 +223,13 @@ export let states = [
         <Thead>
           <Tr className={pf('text-heading--label')}>
             <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }}>Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }} title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
             <th className={pf('cell-shrink')}></th>
           </Tr>
         </Thead>

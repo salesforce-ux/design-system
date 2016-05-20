@@ -36,7 +36,6 @@
 
     a:hover,
     a:focus {
-      outline: 0;
       text-decoration: none;
     }
 
@@ -80,6 +79,7 @@
   }
 
   .#{$css-prefix}pill {
+    min-width: auto;
     margin-left: $spacing-small;
   }
 }

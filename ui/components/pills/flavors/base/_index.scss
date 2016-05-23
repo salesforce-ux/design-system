@@ -76,14 +76,11 @@
 
   &__icon {
     @include square($square-icon-x-small-boundary);
-
-    &.#{$css-prefix}avatar {
-      margin-right: $spacing-xx-small;
-    }
-  }
-
-  .#{$css-prefix}icon_container {
     margin-right: $spacing-xx-small;
+
+    .#{$css-prefix}icon {
+      @include square($square-icon-x-small-boundary);
+    }
   }
 
   &__remove {

@@ -10,6 +10,14 @@
 // This is third party code, disable all linting warnings
 // scss-lint:disable all
 
+// Disabled on mobile until we get it to work there
+@include mq-medium-max {
+  #search,
+  [href='#search'] {
+    display: none !important;
+  }
+}
+
 // Experiment and theming through this jsfiddle:
 // https://jsfiddle.net/kaelig/focfsg7r/4/
 .algolia-autocomplete {

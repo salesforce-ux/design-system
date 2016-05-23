@@ -137,6 +137,7 @@ export const wrapExample = (flavor, html) => `
   <style>
     body { padding: ${ForceBase.spacingMedium}; }
   </style>
+  <meta name="robots" content="noindex" />
 </head>
 <body>
 <div id="preview">

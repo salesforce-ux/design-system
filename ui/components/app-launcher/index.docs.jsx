@@ -22,7 +22,5 @@ export const intro = (
 );
 
 export default (
-  <ComponentDocs>
-    
-  </ComponentDocs>
+  <ComponentDocs></ComponentDocs>
 );

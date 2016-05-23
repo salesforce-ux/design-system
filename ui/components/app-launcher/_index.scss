@@ -47,13 +47,9 @@
     }
   }
 
-  &__tile-figure,
-  &__tile-body {
-    padding: $spacing-small;
-  }
-
   &__tile-figure {
     flex-shrink: 0;
+    padding: $spacing-small;
     color: $color-text-inverse;
     background: $color-background-alt;
     border-radius: $border-radius-medium 0 0 $border-radius-medium;
@@ -70,7 +66,7 @@
   &__tile--small {
     flex-direction: column;
     border: 0;
-    border-radius: none;
+    border-radius: 0;
     text-align: center;
     cursor: pointer;
 
@@ -84,7 +80,6 @@
   }
 
   &__tile-figure--small {
-    display: inline-block;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
   }

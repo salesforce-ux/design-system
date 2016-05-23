@@ -49,8 +49,8 @@ let Default = props =>
 let Icon = props =>
   <Demo>
     <Pill>
-      <span className={pf('icon_container icon-standard-account')}>
-        <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+      <span className={pf('icon_container icon-standard-account pill__icon')}>
+        <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
       </span>
     </Pill>
   </Demo>;

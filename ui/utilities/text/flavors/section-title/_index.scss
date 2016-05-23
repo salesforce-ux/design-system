@@ -50,7 +50,7 @@
   }
 }
 
-@include deprecate('4.0.0', 'Use .slds section__title instead') {
+@include deprecate('4.0.0', 'Use .slds-section__title instead') {
   .#{$css-prefix}section-title {
     font-size: $font-size-large;
 

@@ -1,6 +1,17 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## 1.0.5 - Future, 2016
+
+- Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
+
+## Release [1.0.4] - May 18, 2016
+
+- Added `title` attributes to icon containers, noticeably improving accessibility for users of pointing devices such as mice and trackpads
+- Improved the structure of the [icon component](/components/icons) section, making it easier for you to discover how and decorate your Lightning apps with our beautiful icons
+- Fixed the standard call icon, which gets its fancy yellow background back, instead of a purple one that had been assigned to it for obscure reasons (we’ve put our best designers on the case!)
+- Fixed [an issue](https://github.com/salesforce-ux/design-system/issues/208) where `npm install` would fail on Windows - which is only fair to our developer friends who are on PCs
+
 ## Release [1.0.3] - April 26, 2016
 
 - Fixed Sass build issue for npm module
@@ -373,6 +384,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[1.0.4]: https://github.com/salesforce-ux/design-system/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/salesforce-ux/design-system/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/salesforce-ux/design-system/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.0...v1.0.1

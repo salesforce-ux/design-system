@@ -40,13 +40,26 @@ let Tr = props =>
   </tr>;
 
 let Th = props =>
-  <th className={className(pf(''), props.className)} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
+  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
+    <a href="#void" className={pf('th__action text-link--reset')}>
+      <span className={pf('assistive-text')}>Sort Column</span>
+      <span className={pf('truncate')} title={props.title}>{ props.children }</span>
+      <div className={pf('icon_container')} title="Sort Column">
+        <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+      </div>
+    </a>
+    <div className={pf('resizable')}>
+      <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
+      <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
+      <span className={pf('resizable__handle')}>
+        <span className={pf('resizable__divider')}></span>
+      </span>
+    </div>
   </th>;
 
 let Td = props =>
-  <td className={className(pf(''), props.className)} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
+  <td className={pf(props.className)} scope={props.scope} data-label={props.dataLabel} title={props.title}>
+    { props.children }
   </td>;
 
 let Checkbox = props =>
@@ -56,25 +69,16 @@ let Checkbox = props =>
     <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
 
-let Resize = props =>
-  <div className={pf('shrink-none resizable resizable--vertical')}>
-    <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
-    <input className={pf('assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
-    <span className={pf('resizable__handle')}>
-      <span className={pf('resizable__divider')}></span>
-    </span>
-  </div>;
-
 let RowData = props =>
   <Tr className={className(pf('hint-parent'), props.className)}>
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} /></Td>
-    <Th className={pf('truncate')} scope="row" dataLabel="Opportunity Name">{props.title}</Th>
-    <Td className={pf('truncate')} dataLabel="Account Name">Cloudhub</Td>
-    <Td dataLabel="Close Date">4/14/2015</Td>
-    <Td className={pf('truncate')} dataLabel="Prospecting">Prospecting</Td>
-    <Td dataLabel="Confidence">20%</Td>
-    <Td dataLabel="Amount">$25k</Td>
-    <Td className={pf('truncate')} dataLabel="Contact"><a href="#void">jrogers@cloudhub.com</a></Td>
+    <th className={pf('truncate')} scope="row" data-label="Opportunity Name" title={props.title}>{props.title}</th>
+    <Td className={pf('truncate')} dataLabel="Account Name" title="Cloudhub">Cloudhub</Td>
+    <Td dataLabel="Close Date" title="4/14/2015">4/14/2015</Td>
+    <Td className={pf('truncate')} dataLabel="Prospecting" title="Prospecting">Prospecting</Td>
+    <Td dataLabel="Confidence" title="20%">20%</Td>
+    <Td dataLabel="Amount" title="$25k">$25k</Td>
+    <Td className={pf('truncate')} dataLabel="Contact" title="jrogers@cloudhub.com"><a href="#void">jrogers@cloudhub.com</a></Td>
     <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
@@ -85,71 +89,6 @@ let RowData = props =>
     </Td>
   </Tr>;
 
-//////////////////////////////////////////////
-// State Constructor(s)
-//////////////////////////////////////////////
-
-let AdvancedTable = props =>
-  <Table className={pf('table--fixed-layout')}>
-    <Thead>
-      <Tr className={pf('text-title--caps')}>
-        <Th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.allRowsChecked} /></Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Opportunity Name
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Account Name
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Close Date
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Stage
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Confidence
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Amount
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('is-sortable is-resizable')} scope="col">
-          <div className={pf('truncate')}>
-            Contact
-            <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
-            <Resize />
-          </div>
-        </Th>
-        <Th className={pf('cell-shrink')}></Th>
-      </Tr>
-    </Thead>
-    <Tbody>
-      { props.children }
-    </Tbody>
-  </Table>;
 
 //////////////////////////////////////////////
 // Export
@@ -160,27 +99,144 @@ export let states = [
     id: 'data-table-advanced',
     label: 'Default',
     element:
-      <AdvancedTable>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" />
-      </AdvancedTable>
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+        </Tbody>
+      </Table>
   },
   {
     id: 'data-table-advanced-row-selected',
     label: 'Row Selected',
     element:
-      <AdvancedTable>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-      </AdvancedTable>
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
+        </Tbody>
+      </Table>
   },
   {
     id: 'data-table-advanced-all-rows-selected',
     label: 'All Rows Selected',
     element:
-      <AdvancedTable allRowsChecked>
-        <RowData title="Cloudhub" className={pf('is-selected')} checked />
-        <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-      </AdvancedTable>
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" checked /></th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" className={pf('is-selected')} checked />
+          <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
+        </Tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-advanced-sorted-column-asc',
+    label: 'Sorted Ascending',
+    element:
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Anypoint Connectors" />
+          <RowData title="Cloudhub" />
+        </Tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-advanced-sorted-column-desc',
+    label: 'Sorted Descending',
+    element:
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending" title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Anypoint Connectors" />
+        </Tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-advanced-resized-column',
+    label: 'Column resized',
+    element:
+      <Table className={pf('table--fixed-layout')}>
+        <Thead>
+          <Tr className={pf('text-heading--label')}>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }} title="Opportunity Name">Opportunity Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Stage">Stage</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Amount">Amount</Th>
+            <Th className={pf('is-sortable is-resizable')} scope="col" title="Contact">Contact</Th>
+            <th className={pf('cell-shrink')}></th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Anypoint Connectors" />
+        </Tbody>
+      </Table>
   }
 ];

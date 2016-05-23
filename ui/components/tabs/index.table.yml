@@ -59,7 +59,7 @@ classes:
     class: dropdown-trigger
     description: Initializes tab item as menu
     required: true
-    applied: <code>.{{cssPrefix}}tabs--default__item--overflow</code>
+    applied: <code>.{{cssPrefix}}tabs__item--overflow</code>
   -
     class: active
     description: Applies the active state to a tab list item

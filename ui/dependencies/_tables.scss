@@ -15,9 +15,15 @@
     border: 0;
 
     thead {
-      position: absolute;
-      top: 0;
-      left: -9999em;
+      // scss-lint:disable ImportantRule
+      position: absolute !important;
+      margin: -1px !important;
+      border: 0 !important;
+      padding: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
     }
 
     th {
@@ -46,16 +52,10 @@
       }
 
       &:before {
+        @include text-heading--label;
         display: block;
         padding-bottom: $spacing-xx-small;
         content: attr(data-label);
-        color: $color-text-label;
-        text-transform: uppercase;
-        font: {
-          family: $font-family;
-          size: $font-size-small;
-          weight: $font-weight-light;
-        }
       }
     }
 
@@ -66,10 +66,11 @@
 
     &:not(.#{$css-prefix}no-row-hover) tbody tr:hover {
 
+      // scss-lint:disable ImportantRule
       td,
       th {
-        background-color: inherit;
-        box-shadow: none;
+        background-color: inherit !important;
+        box-shadow: none !important;
       }
     }
 

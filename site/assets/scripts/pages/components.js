@@ -23,15 +23,24 @@ import { updateScrollSpy } from '../shared/nav';
 const highlight = (() => {
   // Remove wrapping tag if it has the ".demo-only" class in it
   // Note: this will also remove other classes too on that tag! :)
-  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
+  const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
   const cache = {};
-  return html => {
-    html = html.trim();
-    let cached = cache[html];
+  return code => {
+    code = code.trim().replace(demoPattern, (match, tag, content) => content);
+    const lines = code.split('\n');
+    // If first line is empty, look at the second one instead
+    const firstLine = lines[0].length === 0 ? lines[1] : '';
+    // Figure out the number of spaces for that first line
+    const offsetMatch = firstLine.match(/^\s*/);
+    // How many spaces?
+    const offset = offsetMatch ? offsetMatch[0].length : 0;
+    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
+
+    let cached = cache[codeTrimmed];
     if (cached) return cached;
-    cached = cache[html] = Prism.highlight(
-      html.replace(pattern, (match, tag, content) => content),
-      Prism.languages['markup']
+    cached = cache[codeTrimmed] = Prism.highlight(
+      codeTrimmed,
+      Prism.languages.markup
     );
     return cached;
   };

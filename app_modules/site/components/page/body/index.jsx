@@ -140,6 +140,7 @@ export default React.createClass({
         </a>
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
+          <a href="#search">Skip to Search</a>
         </div>
       </header>
     );
@@ -148,7 +149,7 @@ export default React.createClass({
   renderNav() {
     return (
       <div className="site-navigation">
-        <form novalidate="novalidate" onsubmit="return false;" className="searchbox slds-m-bottom--small slds-m-horizontal--medium" style={{visibility: 'hidden', height: 0}}>
+        <form id="search" tabIndex="-1" novalidate="novalidate" onsubmit="return false;" className="searchbox slds-m-bottom--small slds-m-horizontal--medium" style={{visibility: 'hidden', height: 0}}>
           <div role="search" className="searchbox__wrapper">
             <label htmlFor="docsearch" className="slds-assistive-text">Search the docs</label>
             <input id="docsearch" type="search" name="search" placeholder="Search the docs" autocomplete="off" required="required" className="searchbox__input" />

@@ -149,9 +149,9 @@ export default React.createClass({
   renderNav() {
     return (
       <div className="site-navigation">
-        <form id="search" tabIndex="-1" novalidate="novalidate" onsubmit="return false;" className="searchbox slds-m-bottom--small slds-m-horizontal--medium" style={{visibility: 'hidden', height: 0}}>
+        <form id="search" tabIndex="-1" novalidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
           <div role="search" className="searchbox__wrapper">
-            <label htmlFor="docsearch" className="slds-assistive-text">Search the docs</label>
+            <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
             <input id="docsearch" type="search" name="search" placeholder="Search the docs" autocomplete="off" required="required" className="searchbox__input" />
             <button type="submit" title="Submit your search query" className="searchbox__submit">
               <svg role="img" aria-label="Search" dangerouslySetInnerHTML={{__html: `

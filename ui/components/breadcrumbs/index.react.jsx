@@ -35,9 +35,8 @@ class BreadCrumbs extends React.Component {
 
   render() {
     return (
-      <nav {...this.props} role="navigation">
-        <p id="bread-crumb-label" className={pf('assistive-text')}>You are here:</p>
-        <ol className={pf('breadcrumb list--horizontal')} aria-labelledby="bread-crumb-label">
+      <nav {...this.props} role="navigation" aria-label="Breadcrumbs">
+        <ol className={pf('breadcrumb list--horizontal')}>
           {this.props.children}
         </ol>
       </nav>

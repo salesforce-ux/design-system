@@ -10,12 +10,15 @@
 
 
 .#{$css-prefix}pill {
-  background-color: $color-background-pill;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; // Required to make the container shrink when truncated
+  min-width: $size-xx-small;
   padding: $spacing-xxx-small $spacing-xx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
-  vertical-align: middle;
+  background-color: $color-background-pill;
   line-height: $line-height-text; // Retain height if nested within a flexbox container
   position: relative;
 
@@ -25,12 +28,15 @@
 
   &:hover {
     background-color: $color-background-button-default-hover;
-    text-decoration: none;
   }
 
   &:focus {
     outline: 0;
     box-shadow: $shadow-button-focus;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   &--bare {
@@ -58,12 +64,11 @@
 
     @include deprecate('4.0.0');
     padding: ($border-width-thin * 2) $border-width-thin; // $border-width-thin * 2 to accomodate for missing borders
+    border: 0;
+    border-radius: 0;
   }
 
   &__label {
-    max-width: 13.5rem; // Roughly 30 Characters
-    display: inline-block;
-    vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -71,8 +76,6 @@
 
   &__icon {
     @include square($square-icon-x-small-boundary);
-    margin-right: $spacing-xx-small;
-    border-radius: $border-radius-small;
   }
 
   &__remove {

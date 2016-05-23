@@ -22,7 +22,7 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
 
-const sign = (x) => (x < 0) ? '' : '+';
+const sign = x => (x < 0) ? '' : '+';
 
 Number.prototype.toKB = function () {
   return (this / 1024).toFixed(2);
@@ -45,10 +45,10 @@ gulp.task('stylestats', done => {
     localStats.parse((error, result) => {
       const diff = {};
 
-      diff.size = remote.size - result.size;
-      diff.gzippedSize = remote.gzippedSize - result.gzippedSize;
-      diff.rules = remote.rules - result.rules;
-      diff.selectors = remote.selectors - result.selectors;
+      diff.size = result.size - remote.size;
+      diff.gzippedSize = result.gzippedSize - remote.gzippedSize;
+      diff.rules = result.rules - remote.rules;
+      diff.selectors = result.selectors - remote.selectors;
 
       gutil.log(gutil.colors.green(`slds.scss (minified):
             ${result.size.toKB()}KB (${result.gzippedSize.toKB()}KB gzipped)`));

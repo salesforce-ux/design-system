@@ -149,10 +149,10 @@ export default React.createClass({
   renderNav() {
     return (
       <div className="site-navigation">
-        <form id="search" tabIndex="-1" novalidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
+        <form id="search" tabIndex="-1" noValidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
           <div role="search" className="searchbox__wrapper">
             <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
-            <input id="docsearch" type="search" name="search" placeholder="Search the docs" autocomplete="off" required="required" className="searchbox__input" />
+            <input id="docsearch" type="search" name="search" placeholder="Search the docs" autoComplete="off" required="required" className="searchbox__input" />
             <button type="submit" title="Submit your search query" className="searchbox__submit">
               <svg role="img" aria-label="Search" dangerouslySetInnerHTML={{__html: `
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-search-13"></use>

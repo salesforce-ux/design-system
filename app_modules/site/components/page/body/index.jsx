@@ -146,7 +146,7 @@ export default React.createClass({
 
   renderNav() {
     return (
-      <nav id="navigation" className="site-navigation" role="navigation">
+      <nav id="navigation" className="site-navigation" role="navigation" tabIndex="-1">
         {this.renderNavItems(this.state.navItems)}
       </nav>
     );

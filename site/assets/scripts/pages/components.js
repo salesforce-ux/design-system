@@ -36,8 +36,7 @@ const highlight = (() => {
     const offset = offsetMatch ? offsetMatch[0].length : 0;
     const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
 
-    let cached = false;
-    // let cached = cache[html];
+    let cached = cache[codeTrimmed];
     if (cached) return cached;
     cached = cache[codeTrimmed] = Prism.highlight(
       codeTrimmed,

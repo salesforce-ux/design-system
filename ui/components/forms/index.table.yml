@@ -81,7 +81,7 @@ classes:
     description: Creates a custom styled checkbox
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox</code>
   -
     class: checkbox--button-group
     description: Container for a group of checkbox that look like a button group
@@ -101,7 +101,7 @@ classes:
     description: Creates a custom styled radio button
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio</code>
   -
     class: radio--button-group
     description: Container for a group of radio that look like a button group

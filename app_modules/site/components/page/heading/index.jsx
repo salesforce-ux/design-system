@@ -20,7 +20,7 @@ class Heading extends React.Component {
   }
 
   render() {
-    const props = this.$propsWithoutKeys('className', 'id');
+    const props = this.$propsWithoutKeys('className', 'id', 'type');
     let c = classNames(this.props.className, 'site-jump-anchor__container');
 
     switch (this.props.type) {

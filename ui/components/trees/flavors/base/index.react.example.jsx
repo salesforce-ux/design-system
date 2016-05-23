@@ -200,7 +200,7 @@ export let states = [
   },
   {
     id: 'with-label',
-    label: 'Label in an item',
+    label: 'Pill in an item',
     element: <Default itemContent={<Pill />} />
   },
   {

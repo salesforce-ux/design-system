@@ -59,9 +59,9 @@ export let ContextBar = props =>
           </a>
         </div>
         {/* App Name */}
-        <a href="#void" className={pf('context-bar__label-action context-bar__app-name')}>
+        <span className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
-        </a>
+        </span>
       </div>
 
       {/* Object Context Switcher */}
@@ -95,10 +95,14 @@ export let ContextBar = props =>
 
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a href="#void" className={pf('context-bar__label-action')}>Home</a>
+          <a href="#void" className={pf('context-bar__label-action')}>
+            <span className={pf('truncate')}>Home</span>
+          </a>
         </li>
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-          <a href="#void" className={pf('context-bar__label-action')}>Context Menu Item 1</a>
+          <a href="#void" className={pf('context-bar__label-action')}>
+            <span className={pf('truncate')}>Context Menu Item 1</span>
+          </a>
           <div className={pf('context-bar__icon-action p-left--none')}>
             <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
               <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
@@ -108,7 +112,9 @@ export let ContextBar = props =>
           { contextDropdown }
         </li>
         <li className={className(pf('context-bar__item'), props.itemActive ? pf('is-active') : null)}>
-          <a href="#void" className={pf('context-bar__label-action')}>Context Menu Item 2</a>
+          <a href="#void" className={pf('context-bar__label-action')}>
+            <span className={pf('truncate')}>Context Menu Item 2</span>
+          </a>
         </li>
       </ul>
     </nav>

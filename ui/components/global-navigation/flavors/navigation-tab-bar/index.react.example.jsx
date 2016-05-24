@@ -81,9 +81,9 @@ export let ContextTabBar = props =>
         </div>
 
         {/* App Name */}
-        <a href="#void" className={pf('context-bar__label-action context-bar__app-name')}>
+        <span className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.appName || 'Service Console' }</span>
-        </a>
+        </span>
       </div>
 
       {/* Object Context Switcher */}

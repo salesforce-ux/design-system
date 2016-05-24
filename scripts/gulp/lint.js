@@ -85,7 +85,7 @@ gulp.task('lint:html', () => {
       // Rules documentation:
       // https://github.com/yaniswang/HTMLHint/wiki/Rules
       'alt-require': true,
-      'attr-lowercase': true,
+      'attr-lowercase': ['viewBox', 'preserveAspectRatio'],
       'attr-no-duplication': true,
       'attr-unsafe-chars': true,
       'attr-value-double-quotes': true,

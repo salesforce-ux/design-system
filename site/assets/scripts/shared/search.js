@@ -3,7 +3,7 @@ import fastdom from 'fastdom';
 const handleResetClick = (event, node) => {
   fastdom.mutate(() => {
     document.querySelector('#docsearch').focus();
-    document.querySelector('#search [type="reset"]').classList.add('slds-hide');
+    document.querySelector('#search [type="reset"]').classList.add('hide');
     search.autocomplete.autocomplete.setVal('');
   });
 };

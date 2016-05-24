@@ -10,12 +10,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
+import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import CodeClass from 'app_modules/site/components/code-class';
 
-export const intro = (
-  <p className="site-text-introduction">
-    Set of utilities that provide interaction(s).
-  </p>
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export default (
+  <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>
+    <AppLauncherTile flavor="small" objectInitials="SC" figureClass={pf('icon-custom-27')}>
+      <span className={pf('truncate text-link')}>Sales Cloud</span>
+    </AppLauncherTile>
+  </div>
 );

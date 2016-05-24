@@ -10,12 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import CodeClass from 'app_modules/site/components/code-class';
 
-export const intro = (
-  <p className="site-text-introduction">
-    Set of utilities that provide interaction(s).
-  </p>
-);
+export let states = [
+  {
+    id: 'text-link-reset',
+    label: 'Hyperlink',
+    element: <a href="#void" className={pf('text-link--reset')}>Link</a>
+  },
+  {
+    id: 'text-button-reset',
+    label: 'Button',
+    element: <button className={pf('button text-link--reset')}>Button</button>
+  },
+];

@@ -11,11 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import CodeClass from 'app_modules/site/components/code-class';
+import CodeBlock from 'app_modules/ui/code-block';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Set of utilities that provide interaction(s).
+    The App Launcher allows the user to quickly access all the apps and functionality with their organization.
   </p>
+);
+
+export default (
+  <ComponentDocs></ComponentDocs>
 );

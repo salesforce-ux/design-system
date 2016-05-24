@@ -1,5 +1,6 @@
 components:
   - activity-timeline
+  - app-launcher
   - badges
   - breadcrumbs
   - buttons

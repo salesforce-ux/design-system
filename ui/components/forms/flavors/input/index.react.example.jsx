@@ -82,6 +82,7 @@ let IconLeftRight = props =>
       <FormElementControl className={pf('input-has-icon input-has-icon--left-right')}>
         <button className={pf('input__icon input__icon--right button button--icon')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
+          <span className={pf('assistive-text')}>Clear</span>
         </button>
         <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
         <Input />

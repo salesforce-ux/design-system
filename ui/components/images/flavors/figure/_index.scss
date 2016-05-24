@@ -43,7 +43,8 @@
   }
 
   &__title {
-    text-align: center;
+    display: flex;
+    align-items: center;
     padding: $spacing-x-small;
 
     &--overlay {
@@ -55,11 +56,18 @@
       right: 0;
       bottom: 0;
     }
+
+    &--card {
+      background: $color-background;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
   &--card {
-    border-radius: $border-radius-medium;
-    border: $border-width-thin solid $color-border;
     background: $color-background-alt;
+    box-shadow: rgba(0, 0, 0, .16) 0 1px 1px;
   }
 }

@@ -42,22 +42,34 @@ let PostAttachmentLink = props =>
 let PostAttachmentFiles = props =>
   <ul className={pf('grid grid--pull-padded')}>
     <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
+      <a href="#void" className={pf('post__attachments-item-action text-link--reset')}>
         <figure className={pf('image image--card')}>
           <div className={pf('image__crop image__crop--16-by-9')}>
             <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
           </div>
-          <figcaption className={pf('image__title')}>Service Case Study.ppt</figcaption>
+          <figcaption className={pf('image__title image__title--card')}>
+            <span className={pf('icon_container m-right--x-small')} title="Service Case Study Powerpoint Document">
+              <SvgIcon className={pf('icon icon--x-small')} sprite="doctype" symbol="ppt" />
+              <span className={pf('assistive-text')}>Powerpoint Document</span>
+            </span>
+            <span className={pf('truncate')}>Service Case Study.ppt</span>
+          </figcaption>
         </figure>
       </a>
     </li>
     <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
+      <a href="#void" className={pf('post__attachments-item-action text-link--reset')}>
         <figure className={pf('image image--card')}>
           <div className={pf('image__crop image__crop--16-by-9')}>
             <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
           </div>
-          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
+          <figcaption className={pf('image__title image__title--card')}>
+            <span className={pf('icon_container m-right--x-small')} title="Ride Along Accounts Excel Document">
+              <SvgIcon className={pf('icon icon--x-small')} sprite="doctype" symbol="excel" />
+              <span className={pf('assistive-text')}>Excel Document</span>
+            </span>
+            <span className={pf('truncate')}>Ride Along Accounts.xls</span>
+          </figcaption>
         </figure>
       </a>
     </li>

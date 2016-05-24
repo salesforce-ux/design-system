@@ -31,19 +31,11 @@ export let Image = props =>
 
 export let states = [
   {
-    id: 'figure',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image cropClass={pf('image__crop--16-by-9')} />
-      </div>
-  },
-  {
     id: 'figure-card',
     label: 'Card',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
+        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} titleClass={pf('image__title--card')} />
       </div>
   },
   {

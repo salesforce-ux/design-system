@@ -24,7 +24,7 @@ export let states = [
     label: '16:9',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
+        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} titleClass={pf('image__title--card')} />
       </div>
   },
   {
@@ -32,7 +32,7 @@ export let states = [
     label: '4:3',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} />
+        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} titleClass={pf('image__title--card')} />
       </div>
   },
   {
@@ -40,7 +40,7 @@ export let states = [
     label: '1:1',
     element:
       <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} />
+        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} titleClass={pf('image__title--card')} />
       </div>
   }
 ];

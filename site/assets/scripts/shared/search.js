@@ -1,9 +1,9 @@
 import fastdom from 'fastdom';
 
 const handleResetClick = (event, node) => {
-  document.querySelector('#docsearch').focus();
   fastdom.mutate(() => {
-    document.querySelector('#search [type="reset"]').classList.add('hide');
+    document.querySelector('#docsearch').focus();
+    document.querySelector('#search [type="reset"]').classList.add('slds-hide');
     document.querySelector('#docsearch').value = '';
   });
 };

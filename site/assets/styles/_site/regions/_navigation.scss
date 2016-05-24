@@ -80,8 +80,6 @@
   }
 
   @include mq-medium-min {
-    // TODO: refactor to use scrollable when theme is separated
-    @include scrollbar($track: $color-background-alt);
     position: fixed;
     top: $height-banner;
     bottom: 0;
@@ -90,10 +88,15 @@
     width: $width-sidebar;
 
     nav {
+      @include scrollbar($track: $color-background-alt);
+      position: absolute;
+      width: $width-sidebar;
       height: 100%;
       overflow: hidden {
         y: auto;
       };
+      // Remove the focus ring that appears when children are focused
+      outline: 0;
     }
 
     &.site-navigation--internal {

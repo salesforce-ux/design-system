@@ -144,7 +144,7 @@ export default React.createClass({
     if (globals.displaySearch) {
       scripts.push({ src: 'https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js'});
       scripts.push({ content: `
-        docsearch({
+        var search = docsearch({
           apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
           indexName: 'lightningdesignsystem',
           inputSelector: '#docsearch',

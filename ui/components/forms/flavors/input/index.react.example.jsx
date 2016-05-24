@@ -75,6 +75,20 @@ let IconRight = props =>
     </FormElement>
   </Demo>;
 
+let IconLeftRight = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-icon input-has-icon--left-right')}>
+        <button className={pf('input__icon input__icon--right button button--icon')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
+        </button>
+        <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
+        <Input />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
 let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
@@ -171,6 +185,11 @@ export let states = [
     id: 'input-icon-right',
     label: 'With icon to the right',
     element: <IconRight />
+  },
+  {
+    id: 'input-icon-left-right',
+    label: 'With icon to the left and right',
+    element: <IconLeftRight />
   },
   {
     id: 'input-required',

@@ -1,3 +1,4 @@
 status: 'dev-ready'
 flavors:
-  - avatars
+  - avatar
+  - avatar-size

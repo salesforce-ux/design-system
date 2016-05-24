@@ -80,6 +80,22 @@
       padding-right: $spacing-x-large;
     }
   }
+
+  &--left-right {
+
+    .#{$css-prefix}input__icon--left {
+      left: $spacing-small;
+    }
+
+    .#{$css-prefix}input__icon--right {
+      right: $spacing-small;
+    }
+
+    .#{$css-prefix}input,
+    .#{$css-prefix}input--bare {
+      padding: 0 $spacing-x-large;
+    }
+  }
 }
 
 .#{$css-prefix}input-has-fixed-addon {

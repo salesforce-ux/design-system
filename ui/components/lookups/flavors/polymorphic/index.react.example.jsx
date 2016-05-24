@@ -23,7 +23,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control lookup__search-control grid box--border')}>
+    <div className={pf('form-element__control grid box--border')}>
       <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
         <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
         <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
@@ -39,7 +39,7 @@ let LookupMulti = props =>
 let LookupMultiWithSelection = props =>
   <div className={className(pf('form-element lookup has-selection'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control lookup__search-control grid box--border')}>
+    <div className={pf('form-element__control grid box--border')}>
       <div className={pf('input-has-icon input-has-icon--right grid grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <PillContainer className={pf('pill_container--bare')}>
@@ -71,11 +71,9 @@ let LookupLabel = props =>
   </div>;
 
 let LookupAction = props =>
-  <div>
-    <button className={pf('button lookup__item-action')}>
-      {props.children}
-    </button>
-  </div>;
+  <a href="#void" className={className(pf('lookup__item-action lookup__item-action--label'), props.className)}>
+    {props.children}
+  </a>;
 
 let LookupResultsItem = props =>
   <li>
@@ -132,8 +130,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>
@@ -146,10 +144,10 @@ export let states = [
     <div className="demo-only" style={{ height: '230px' }}>
       <LookupMulti label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')} value="salesforce">
         <LookupMenu>
-          <LookupLabel>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="search" />
-            "salesforce" in accounts
-          </LookupLabel>
+          <LookupAction className={pf('text-body--small')}>
+            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="search" />
+            <span className={pf('truncate')}>"salesforce" in accounts</span>
+          </LookupAction>
           <LookupResults>
             <LookupResultsItem>
               <div className={pf('lookup__result-text')}><mark>Salesforce</mark>.com, Inc.</div>
@@ -161,8 +159,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>
@@ -215,8 +213,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>

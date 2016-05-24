@@ -60,7 +60,8 @@
   }
 
   &__item--label {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $spacing-x-small;
   }
 
@@ -86,6 +87,14 @@
     // Icon in results, here so it doesn't need to be repeated in DOM
     .#{$css-prefix}icon {
       margin-right: $spacing-x-small;
+    }
+  }
+
+  &__item-action--label {
+    padding: $spacing-x-small $spacing-small;
+
+    .#{$css-prefix}icon {
+      margin-right: $spacing-small;
     }
   }
 

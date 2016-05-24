@@ -65,7 +65,9 @@
   }
 
   &__item-action {
-    display: block;
+    font-size: $font-size-medium;
+    display: flex;
+    align-items: center;
     padding: $spacing-xx-small $spacing-x-small;
     color: $color-text-default;
     text-align: left;

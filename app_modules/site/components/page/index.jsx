@@ -133,11 +133,12 @@ export default React.createClass({
   },
 
   renderScripts() {
-    const autocompleteOptions = `{
-      // See https://github.com/algolia/autocomplete.js#options
-      // For full list of options
-      // debug: true
-    }`;
+    // See https://github.com/algolia/autocomplete.js#options
+    // for full list of options.
+    // Uncomment to enable debug mode:
+    // const autocompleteOptions = `{
+    //   debug: true
+    // }`;
     let scripts = [
       { src: '/assets/scripts/site.js' }
     ];
@@ -148,7 +149,7 @@ export default React.createClass({
           apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
           indexName: 'lightningdesignsystem',
           inputSelector: '#docsearch',
-          autocompleteOptions: ${autocompleteOptions}
+          autocompleteOptions: ${typeof autocompleteOptions !== 'undefined' ? autocompleteOptions : '{}'}
         });`});
     }
     return scripts.concat(this.props.scripts).map((script, index) => {

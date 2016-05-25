@@ -12,14 +12,11 @@
 
 // Disabled on mobile until we get it to work there
 @include mq-medium-max {
-  #search,
-  [href='#search'] {
+  #search {
     display: none !important;
   }
 }
 
-// Experiment and theming through this jsfiddle:
-// https://jsfiddle.net/kaelig/focfsg7r/4/
 .algolia-autocomplete {
   display: block;
   width: 100%;
@@ -61,7 +58,7 @@
   min-width: rem(500px);
   left: 0 !important;
   right: inherit !important;
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-drop-down;
 }
 .aa-dropdown-menu:before {
   position: absolute;
@@ -89,7 +86,7 @@
   background: #fff;
   border-radius: rem(4px);
   overflow: auto;
-  padding: 0 rem(12px) rem(6px);
+  padding: 0 1rem rem(6px);
 }
 .aa-dropdown-menu * {
   box-sizing: border-box;
@@ -112,9 +109,9 @@
 .algolia-docsearch-suggestion--content {
   display: block;
   float: right;
-  width: 70%;
+  width: 68%;
   position: relative;
-  padding: rem(4px) 0 rem(4px) rem(8px);
+  padding: rem(4px) 0 rem(4px) rem(12px);
   cursor: pointer;
 }
 .aa-cursor .algolia-docsearch-suggestion--content {
@@ -149,15 +146,15 @@
 }
 .algolia-docsearch-suggestion--subcategory-column {
   float: left;
-  width: 30%;
+  width: 32%;
   display: none;
-  padding-left: 0;
   text-align: right;
   position: relative;
-  padding: rem(4px) rem(8px);
+  padding: rem(4px) rem(12px) rem(4px) 0;
   color: #767676;
-  font-size: 0.9em;
+  font-size: rem(13px);
   word-wrap: break-word;
+  line-height: rem(21px); // To align it with the text on the right
 }
 .algolia-docsearch-suggestion--subcategory-column:before {
   content: '';
@@ -176,21 +173,20 @@
   display: none;
 }
 .algolia-docsearch-suggestion--title {
-  margin-bottom: rem(3px);
   color: #16325C;
-  font-size: 0.9em;
+  font-size: rem(13px);
   font-weight: bold;
 }
 .algolia-docsearch-suggestion--text {
   display: block;
-  line-height: 1.2em;
-  font-size: 0.85em;
-  color: #16325c;
+  line-height: 1.5;
+  font-size: rem(13px);
+  color: $color-background-browser;
 }
 .searchbox {
   display: inline-block;
   position: relative;
-  width: rem(200px);
+  width: 13rem;
   height: rem(33px) !important;
   white-space: nowrap;
   box-sizing: border-box;
@@ -201,20 +197,12 @@
   height: 100%;
 }
 .searchbox__input {
-  display: inline-block;
-  transition: box-shadow .4s ease, background .4s ease;
-  border: 0;
-  border-radius: rem(17px);
-  box-shadow: inset 0 0 0 1px #ccc;
-  background: #fff !important;
-  padding: 0;
   padding-right: rem(27px);
-  padding-left: rem(33px);
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  white-space: normal;
-  appearance: none;
+  padding-left: 1rem;
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 .searchbox__input::-webkit-search-decoration,
 .searchbox__input::-webkit-search-cancel-button,
@@ -222,59 +210,10 @@
 .searchbox__input::-webkit-search-results-decoration {
   display: none;
 }
-.searchbox__input:hover {
-  box-shadow: inset 0 0 0 1px #b3b3b3;
-}
-.searchbox__input:focus,
-.searchbox__input:active {
-  outline: 0;
-  box-shadow: inset 0 0 0 1px #aaa;
-  background: #fff;
-}
-.searchbox__input::placeholder {
-  color: #aaa;
-}
-.searchbox__submit {
-  position: absolute;
-  top: 0;
-  margin: 0;
-  border: 0;
-  border-radius: rem(16px) 0 0 rem(16px);
-  background-color: rgba(69, 142, 225, 0);
-  padding: 0;
-  width: rem(33px);
-  height: 100%;
-  vertical-align: middle;
-  text-align: center;
-  font-size: inherit;
-  user-select: none;
-  right: inherit;
-  left: rem(2px);
-}
-.searchbox__submit::before {
-  display: inline-block;
-  margin-right: rem(-4px);
-  height: 100%;
-  vertical-align: middle;
-  content: '';
-}
-.searchbox__submit:hover,
-.searchbox__submit:active {
-  cursor: pointer;
-}
-.searchbox__submit:focus {
-  outline: 0;
-}
-.searchbox__submit svg {
-  width: rem(15px);
-  height: rem(15px);
-  vertical-align: middle;
-  fill: #6D7E96;
-}
 .searchbox__reset {
   display: block;
   position: absolute;
-  top: rem(8px);
+  top: rem(9px);
   right: rem(8px);
   margin: 0;
   border: 0;

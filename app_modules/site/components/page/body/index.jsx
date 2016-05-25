@@ -127,14 +127,12 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" tabIndex="-1" noValidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
+      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
         <div role="search" className="searchbox__wrapper">
           <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
-          <input id="docsearch" type="search" name="search" placeholder="Search the docs" autoComplete="off" required="required" className="searchbox__input" />
-          <button type="submit" title="Submit your search query" className="searchbox__submit">
-            <svg role="img" aria-label="Search" dangerouslySetInnerHTML={{__html: `
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-search-13"></use>
-              `}} />
+          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
+          <button type="submit" className="slds-assistive-text">
+            Submit your search query
           </button>
           <button type="reset" title="Clear the search query." className="searchbox__reset hide">
             <svg role="img" aria-label="Reset" dangerouslySetInnerHTML={{__html: `
@@ -145,7 +143,6 @@ export default React.createClass({
         <div className="slds-hide">
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="sbx-icon-clear-3" viewBox="0 0 40 40"><path d="M16.228 20L1.886 5.657 0 3.772 3.772 0l1.885 1.886L20 16.228 34.343 1.886 36.228 0 40 3.772l-1.886 1.885L23.772 20l14.342 14.343L40 36.228 36.228 40l-1.885-1.886L20 23.772 5.657 38.114 3.772 40 0 36.228l1.886-1.885L16.228 20z" fill-rule="evenodd"/></symbol>
-            <symbol id="sbx-icon-search-13" viewBox="0 0 40 40"><path d="M26.806 29.012a16.312 16.312 0 0 1-10.427 3.746C7.332 32.758 0 25.425 0 16.378 0 7.334 7.333 0 16.38 0c9.045 0 16.378 7.333 16.378 16.38 0 3.96-1.406 7.593-3.746 10.426L39.547 37.34c.607.608.61 1.59-.004 2.203a1.56 1.56 0 0 1-2.202.004L26.807 29.012zm-10.427.627c7.322 0 13.26-5.938 13.26-13.26 0-7.324-5.938-13.26-13.26-13.26-7.324 0-13.26 5.936-13.26 13.26 0 7.322 5.936 13.26 13.26 13.26z" fill-rule="evenodd"/></symbol>
           </svg>
         </div>
       </form>
@@ -169,7 +166,6 @@ export default React.createClass({
         </a>
         <div className={pf('site-skip-content')}>
           <a href="#navigation">Skip to Navigation</a>
-          { globals.displaySearch ? <a href="#search">Skip to Search</a> : null }
         </div>
       </header>
     );

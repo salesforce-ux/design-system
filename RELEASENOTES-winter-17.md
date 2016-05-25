@@ -51,6 +51,7 @@ The following changes have been made in this release:
 - Updated Product Selector to use filtering component - [Product Selector Component](/components/list-builder/)
 - Improvements made to `.slds-text-link--reset` - [Text Link Reset](components/utilities/interactions/#link-reset)
 - Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
+- Removed `position: relative` from `.slds-grid`
 
 **FIXED**
 

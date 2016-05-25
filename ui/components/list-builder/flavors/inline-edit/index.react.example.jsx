@@ -45,7 +45,7 @@ let ProductList = props =>
           <Th className={pf('is-sortable')} scope="col" title="Date">Date</Th>
           <Th className={pf('is-sortable')} scope="col" title="Product Family">Product Family</Th>
           <Th className={pf('is-sortable')} scope="col" title="Total Price">Total Price</Th>
-          <th className={pf('cell-shrink')}></th>
+          <th className={pf('cell-shrink')} scope="col"></th>
         </tr>
       </thead>
       <tbody>

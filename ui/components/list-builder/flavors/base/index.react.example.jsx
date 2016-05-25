@@ -48,7 +48,7 @@ let ProductList = props =>
     <table className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
       <thead>
         <tr className={pf('text-title--caps')} >
-          <th className={pf('cell-shrink')}></th>
+          <th className={pf('cell-shrink')} scope="col"></th>
           <Th className={pf('is-sortable')} scope="col" title="Name">Name</Th>
           <Th className={pf('is-sortable')} scope="col" title="Product Code">Product Code</Th>
           <Th className={pf('is-sortable')} scope="col" title="List Price">List Price</Th>

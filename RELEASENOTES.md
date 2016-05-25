@@ -4,6 +4,7 @@
 ## 1.0.5 - Future, 2016
 
 - Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
+- The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules
 
 ## Release [1.0.4] - May 18, 2016
 

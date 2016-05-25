@@ -55,10 +55,9 @@ class Heading extends React.Component {
   render() {
     const props = this.$propsWithoutKeys('flavor');
     const Tag = this.props.flavor === 'medium' ? MediumHeading : LabelHeading;
-    const truncate = this.props.truncate;
     return (
       <Tag {...props }>
-        { truncate ? <Truncate amount={truncate}>{this.props.children}</Truncate> : this.props.children }
+        { this.props.children }
       </Tag>
     );
   }

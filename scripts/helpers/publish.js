@@ -120,6 +120,7 @@ const prepare = (done) => {
     let result = _.assign({}, { sha, info, stats, dependencies }, {
       tag: process.env.TRAVIS_TAG || '',
       pullRequest: process.env.TRAVIS_PULL_REQUEST || '',
+      branch: process.env.TRAVIS_BRANCH || '',
       version: packageJSON.version
     });
     done(null, result);

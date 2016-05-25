@@ -10,30 +10,41 @@ The following site enhancements are now available:
 - New states added for button-groups showing overflow dropdown
 - Cards variant navigation has been improved
 - Data table variant navigation has been improved
+- Lookup variant navigation has been improved
+- Grid system moved to utilities and renamed to "Grid"
+- Media object moved to utilities
 
 **NEW COMPONENTS AND VARIANTS**
 
 The following components are now available:
 
 - Checkbox Toggle - [Checkbox toggle component](/components/forms/#checkbox-toggle)
-- Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Checkbox Alternate - [Checkbox alternate component](/components/forms/#checkbox-alternate)
-- Tree Grid - [Tree grid component](/components/trees/#grid)
+- Card - Related list with tiles - [Related list card with tiles component](/components/cards#flavor-related-list-with-tiles)
+- Data Table - Basic and Advanced - [Data table component](/components/data-tables)
 - Detail Panel with Inline Edit Form - [Detail panel component](/components/panels/#detail)
-- Voice Integration - [Voice docked composer](/components/docked-composer/#voice)
+- Docked Composer - Voice Integration - [Voice docked composer component](/components/docked-composer/#voice)
+- Modal with no header and/or no footer - [Modal component](/components/modals#flavor-base)
+- Lookups spec updated - Single and Polymorphic - [Lookup component](/components/lookups)
+- Vertical Navigation for in-page navigation - [Vertical navigation component](/components/navigation#flavor-vertical)
+- Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
+- Tree Grid - [Tree grid component](/components/trees/#grid)
 
 **ADDED**
 
 The following classes are now available:
 
-- Utility - Light version theme texture - [Theme texture](/components/utilities/themes/#color)
+- Alignment utility - Absolute Center - [Alignment - Absolute center utility](/components/utilities/alignment)
+- Interaction utilities - Link reset - [Interaction Utilities](/components/utilities/interactions)
 - Text Utility - Heading label normal - [Heading label normal](/components/utilities/text/#heading-label-normal)
+- Theme Utility - Light version theme texture - [Theme texture](/components/utilities/themes/#color)
 - Position input icons on both sides of the input container - [Input](/components/forms/#flavor-input)
 
 **CHANGES**
 
 The following changes have been made in this release:
 
+- Overall, things will appear visually tighter
 - Added additional space between buttons in the modal footer
 - Page Header markup structure is refactored for new design.
 - Font sizes have been reduced

@@ -113,4 +113,4 @@ classes:
     class: has-list-interactions
     description: Adds hover and selected styles to list items
     applied: <code>.{{cssPrefix}}list__item</code>
-    notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via Javascript
+    notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via JavaScript

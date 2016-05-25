@@ -10,7 +10,7 @@
 .#{$css-prefix}text-link--reset {
   cursor: pointer;
   line-height: inherit;
-  border-radius: 0;
+  font-size: inherit;
 
   &:active {
     outline: none;

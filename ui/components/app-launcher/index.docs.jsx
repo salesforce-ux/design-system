@@ -9,25 +9,18 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import _ from 'lodash';
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
+import CodeBlock from 'app_modules/ui/code-block';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-class Truncate extends React.Component {
+export const intro = (
+  <p className="site-text-introduction">
+    The App Launcher allows the user to quickly access all the apps and functionality with their organization.
+  </p>
+);
 
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
-  // TODO: Remove span
-  render() {
-    const {children, amount} = this.props;
-    return <span title={children}>{amount ? _.truncate(children, amount) : children}</span>;
-  }
-}
-
-Truncate.propTypes = { truncate: PT.number };
-
-export default Truncate;
+export default (
+  <ComponentDocs></ComponentDocs>
+);

@@ -37,7 +37,7 @@ export let Modal = props =>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className(pf('modal__header'), props.className)} {...props}>
+  <div className={className(pf('modal__header'), props.className)}>
     { props.closeButton != 'false' ?
       <ButtonIcon className={pf('modal__close')}
         flavor="icon-inverse"

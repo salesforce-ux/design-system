@@ -9,25 +9,22 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import _ from 'lodash';
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
+import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
+import className from 'classnames';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-class Truncate extends React.Component {
 
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-  // TODO: Remove span
-  render() {
-    const {children, amount} = this.props;
-    return <span title={children}>{amount ? _.truncate(children, amount) : children}</span>;
-  }
-}
-
-Truncate.propTypes = { truncate: PT.number };
-
-export default Truncate;
+export default (
+  <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>
+    <AppLauncherTile flavor="small" objectInitials="SC" figureClass={pf('icon-custom-27')}>
+      <span className={pf('truncate text-link')}>Sales Cloud</span>
+    </AppLauncherTile>
+  </div>
+);

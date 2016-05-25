@@ -12,11 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
 export default (
-  <div className={pf('demo-only')}>
-    <a className={pf('text-link--reset')}>Link</a>
-    <hr />
-    <button className={pf('button text-link--reset')}>Button</button>
-  </div>
+  <a href="#void" className={pf('text-link--reset')}>
+    This text is a link but looks like normal text...<span className={pf('text-link')}>More</span>.
+  </a>
 );

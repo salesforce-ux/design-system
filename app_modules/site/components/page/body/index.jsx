@@ -134,16 +134,11 @@ export default React.createClass({
           <button type="submit" className="slds-assistive-text">
             Submit your search query
           </button>
-          <button type="reset" title="Clear the search query." className="searchbox__reset hide">
-            <svg role="img" aria-label="Reset" dangerouslySetInnerHTML={{__html: `
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-3"></use>
-              `}} />
+          <button type="reset" title="Clear the search query" className="searchbox__reset hide">
+            <svg role="img" aria-label="Reset">
+              <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+            </svg>
           </button>
-        </div>
-        <div className="slds-hide">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol id="sbx-icon-clear-3" viewBox="0 0 40 40"><path d="M16.228 20L1.886 5.657 0 3.772 3.772 0l1.885 1.886L20 16.228 34.343 1.886 36.228 0 40 3.772l-1.886 1.885L23.772 20l14.342 14.343L40 36.228 36.228 40l-1.885-1.886L20 23.772 5.657 38.114 3.772 40 0 36.228l1.886-1.885L16.228 20z" fill-rule="evenodd"/></symbol>
-          </svg>
         </div>
       </form>
     );

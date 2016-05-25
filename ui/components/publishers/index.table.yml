@@ -34,10 +34,10 @@ classes:
     description: Opens publisher container to display additional functionality
     applied: <code>.{{cssPrefix}}publisher</code>
     required: true
-    notes: Added through Javascript
+    notes: Added through JavaScript
   -
     class: has-focus
     description: Applies focus to comment publisher container when inside <code>textarea</code>
     applied: <code>.{{cssPrefix}}publisher</code>
     required: true
-    notes: Added through Javascript
+    notes: Added through JavaScript

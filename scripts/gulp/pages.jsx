@@ -140,9 +140,7 @@ export const wrapExample = (flavor, html) => `
   <meta name="robots" content="noindex" />
 </head>
 <body>
-<div id="preview">
 ${html}
-</div>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }

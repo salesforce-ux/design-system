@@ -46,12 +46,12 @@ export default (
   <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
-      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+      <div role="dialog" aria-labelledby="dialog-heading-id" className={pf('docked-composer grid grid--vertical nowrap is-open')}>
 
         {/* Composer Header */}
-        <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+        <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon} flavor="center">
-            New Task
+            <h2 id="dialog-heading-id">New Task</h2>
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -70,7 +70,7 @@ export default (
               symbol="close"
               assistiveText="Close" />
           </div>
-        </div>
+        </header>
 
         {/* Composer Body */}
         <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap')}>
@@ -113,13 +113,13 @@ export default (
         </div>
 
         {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none')}>
+        <footer className={pf('docked-composer__footer shrink-none')}>
 
           <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <Button flavor="brand">Save</Button>
           </div>
 
-        </div>
+        </footer>
       </div>
 
     {/*</div>*/}

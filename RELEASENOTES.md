@@ -1,10 +1,13 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## 1.0.5 - Future, 2016
+## Release [1.0.5] - May 26, 2016
 
+- Adding a background color to icons from the [custom set](/resources/icons/#custom) is now done using the `slds-icon-custom-customXX` class (e.g. `slds-icon-custom-custom25`), instead of `slds-icon-custom-XX` (deprecated). This change addresses [#203](https://github.com/salesforce-ux/design-system/issues/203)
 - Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
-- The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules
+- The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules. To disable the default font loading method, set `$slds-load-webfonts: false;` before importing the Design System Sass file.
+- The project is now compatible with Node.js 6
+- Thanks to our friends at [Algolia](https://community.algolia.com/docsearch/), you can now get faster to components and parts of the documentation using the search field at the top of the navigation
 
 ## Release [1.0.4] - May 18, 2016
 
@@ -385,6 +388,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[1.0.5]: https://github.com/salesforce-ux/design-system/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/salesforce-ux/design-system/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/salesforce-ux/design-system/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/salesforce-ux/design-system/compare/v1.0.1...v1.0.2

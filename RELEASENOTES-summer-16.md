@@ -66,6 +66,7 @@ The following changes have been made in this release:
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
 - Data table sortable headings now have actionable area so they can be focusable
 - Improved interactions for resize element on data tables
+- Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
 
 **FIXED**
 

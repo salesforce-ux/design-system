@@ -18,16 +18,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    { props.children }
+export let ButtonIconContainer = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
+    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
+      <span className={pf('assistive-text')}>More Options</span>
+    </button>
   </div>;
-
-export let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'settings'} />
-    <span className={pf('assistive-text')}>{props.assistiveText || 'Settings'}</span>
-  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -35,23 +32,23 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
-    label: 'Default',
-    element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
+    id: 'button-icon-container',
+    label: 'No border',
+    element: <ButtonIconContainer className={pf('button--icon-container')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
+    id: 'button-icon-border',
+    label: 'With border',
+    element: <ButtonIconContainer className={pf('button--icon-border')} />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - with border',
+    element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
+    id: 'button-icon-border-filled',
+    label: 'Filled — with border',
+    element: <ButtonIconContainer className={pf('button--icon-border-filled')} />
   }
 ];

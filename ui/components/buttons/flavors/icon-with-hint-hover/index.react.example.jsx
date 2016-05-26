@@ -18,16 +18,15 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    { props.children }
+let ButtonIconHint = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
+    <div className={pf('hint-parent')}>
+      <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+        <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="down" />
+        <span className={pf('assistive-text')}>More Options</span>
+      </button>
+    </div>
   </div>;
-
-export let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'settings'} />
-    <span className={pf('assistive-text')}>{props.assistiveText || 'Settings'}</span>
-  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -35,23 +34,23 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
-    label: 'Default',
-    element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
+    id: 'button-icon-with-hint-hover',
+    label: 'Default with no border',
+    element: <ButtonIconHint className={pf('button--icon')} iconClassName={pf('button__icon--hint')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
+    id: 'button-icon-border-with-hint-hover',
+    label: 'Container with border',
+    element: <ButtonIconHint className={pf('button--icon-border')} iconClassName={pf('button__icon--hint')} />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
+    id: 'button-icon-inverse-with-hint-hover',
+    label: 'Inverse with no border',
+    element: <ButtonIconHint inverse className={pf('button--icon-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
+    id: 'button-icon-border-inverse-with-hint-hover',
+    label: 'Inverse container with border',
+    element: <ButtonIconHint inverse className={pf('button--icon-border-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
   }
 ];

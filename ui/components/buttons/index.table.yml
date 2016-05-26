@@ -2,7 +2,7 @@ description: This table gives you a quick overview of the {{abbreviatedName}} CS
 classes:
   -
     class: button
-    description: Initializes a 2.25rem (36px) height button
+    description: Initializes a 2rem (32px) height button
     required: true
     applied: <code>button</code> or <code>link</code>
     notes: This neutralizes all the base styles making it look like a text link
@@ -43,17 +43,17 @@ classes:
     class: button--icon-container
     description: Creates a button that looks like a plain icon
     applied: <code>.{{cssPrefix}}button</code>
-    notes: This is 2.25rem&times;2.25rem like a button
+    notes: This is 2rem&times;2rem (32px) like a button
   -
     class: button--icon-border
     description: Creates an icon button with a border
     applied: <code>.{{cssPrefix}}button</code>
-    notes: There is no background color until hover for this style
+    notes: This is 2rem&times;2rem (32px) like a button, there is no background color until hover for this style
   -
     class: button--icon-border-filled
     description: Creates an icon button with a border
     applied: <code>.{{cssPrefix}}button</code>
-    notes: This is 2.25rem&times;2.25rem like a button
+    notes: This is 2rem&times;2rem (32px) like a button
   -
     class: button--icon-inverse
     description: Gives a white icon color on a dark background
@@ -66,8 +66,7 @@ classes:
     notes: There is no background color.
   -
     class: button--icon-small
-    deprecated: true
-    description: Creates an icon button at the smaller 2rem (32px) size
+    description: Creates an icon button at the smaller 1.5rem (24px) size
     applied: <code>.{{cssPrefix}}button</code>
   -
     class: button--icon-x-small

@@ -133,25 +133,9 @@ export default React.createClass({
   },
 
   renderScripts() {
-    // See https://github.com/algolia/autocomplete.js#options
-    // for full list of options.
-    // Uncomment to enable debug mode:
-    // const autocompleteOptions = `{
-    //   debug: true
-    // }`;
     let scripts = [
       { src: '/assets/scripts/site.js' }
     ];
-    if (globals.displaySearch) {
-      scripts.push({ src: 'https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js'});
-      scripts.push({ content: `
-        var search = docsearch({
-          apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
-          indexName: 'lightningdesignsystem',
-          inputSelector: '#docsearch',
-          autocompleteOptions: ${typeof autocompleteOptions !== 'undefined' ? autocompleteOptions : '{}'}
-        });`});
-    }
     return scripts.concat(this.props.scripts).map((script, index) => {
       const props = { key: index };
       if (script.src) props.src = script.src;

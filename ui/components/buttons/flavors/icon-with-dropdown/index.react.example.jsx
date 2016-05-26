@@ -36,5 +36,10 @@ export let states = [
     id: 'button-icon-with-dropdown',
     label: 'Default',
     element: <ButtonIconContainer className={pf('button--icon-more')} />
+  },
+  {
+    id: 'button-icon-with-dropdown-inverse',
+    label: 'Inverse',
+    element: <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
   }
 ];

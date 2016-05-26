@@ -28,7 +28,7 @@ let Demo = props =>
   </div>;
 
 export let ButtonGroup = props =>
-  <div className={pf('button-group')} role="group">
+  <div className={className(pf('button-group'), props.className)} role="group">
     {props.children}
   </div>;
 

@@ -21,6 +21,7 @@ The following components are now available:
 - Global Header - [Global Header Component](/components/global-header)
 - Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
+- Files - [File Components](/components/files/)
 - Feed v2 - [Feeds Component](/components/feeds/)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)

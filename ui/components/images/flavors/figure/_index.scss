@@ -10,6 +10,7 @@
 
 
 .#{$css-prefix}image {
+  display: block;
   position: relative;
 
   &__crop {
@@ -68,6 +69,21 @@
 
   &--card {
     background: $color-background-alt;
-    box-shadow: rgba(0, 0, 0, .16) 0 1px 1px;
+    border-top: $border-width-thin solid $color-border-separator;
+    box-shadow: $shadow-image;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
+  }
+
+  &__actions {
+    position: absolute;
+    top: $spacing-x-small;
+    right: $spacing-x-small;
   }
 }

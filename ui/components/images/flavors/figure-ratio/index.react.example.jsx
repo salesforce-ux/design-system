@@ -23,24 +23,36 @@ export let states = [
     id: 'image-16-9',
     label: '16:9',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} titleClass={pf('image__title--card')} />
+      <div className="demo-only" style={{ width: '50%' }}>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--16-by-9')}
+          titleClass={pf('image__title--card')}
+          image />
       </div>
   },
   {
     id: 'image-4-3',
     label: '4:3',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} titleClass={pf('image__title--card')} />
+      <div className="demo-only" style={{ width: '50%' }}>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--4-by-3')}
+          titleClass={pf('image__title--card')}
+          image />
       </div>
   },
   {
     id: 'image-1-1',
     label: '1:1',
     element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} titleClass={pf('image__title--card')} />
+      <div className="demo-only" style={{ width: '50%' }}>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--1-by-1')}
+          titleClass={pf('image__title--card')}
+          image />
       </div>
   }
 ];

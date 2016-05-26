@@ -36,6 +36,11 @@ classes:
     applied: <code>div</code>
     required: true
   -
+    class: image--card
+    description: Adds styles to give image a "card" look
+    applied: <code>.{{cssPrefix}}image</code>
+    required: true
+  -
     class: image__crop
     description: Optional if you need to crop image at a specific ratio
     applied: <code>div</code>
@@ -59,3 +64,11 @@ classes:
     class: image__title--overlay
     description: Text overlay on top of image, has opaque overlay
     applied: <code>.{{cssPrefix}}image__title</code>
+  -
+    class: image__icon
+    description: If file is missing an image, an icon should replace it. This class helps with the positioning of that icon.
+    applied: <code>.{{cssPrefix}}icon_container</code>
+  -
+    class: image__actions
+    description: If file has actions, then this class helps with the positioning of those actions
+    applied: <code>.{{cssPrefix}}button-group</code>

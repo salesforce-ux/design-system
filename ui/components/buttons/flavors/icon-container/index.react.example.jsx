@@ -33,22 +33,22 @@ export let ButtonIconContainer = props =>
 export let states = [
   {
     id: 'button-icon-container',
-    label: 'Container with no border',
+    label: 'No border',
     element: <ButtonIconContainer className={pf('button--icon-container')} />
   },
   {
     id: 'button-icon-border',
-    label: 'Container with border',
+    label: 'With border',
     element: <ButtonIconContainer className={pf('button--icon-border')} />
   },
   {
     id: 'button-icon-border-inverse',
-    label: 'Inverse - Container with border',
+    label: 'Inverse - with border',
     element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
   },
   {
     id: 'button-icon-border-filled',
-    label: 'Filled container with border',
+    label: 'Filled — with border',
     element: <ButtonIconContainer className={pf('button--icon-border-filled')} />
   }
 ];

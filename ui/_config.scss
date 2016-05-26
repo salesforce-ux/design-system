@@ -73,6 +73,18 @@ $grid: (
 /// @type String
 $css-prefix: 'slds-' !default;
 
+/// nCino CSS Prefix
+/// Will prefix all nCino CSS classes
+///
+/// @example scss Compile without prefix
+///  $nds-prefix: '';
+///
+/// @example scss Use in a class name
+///  .#{$nds-prefix}foo { ... } // outputs .nds-foo { ... }
+///
+/// @type String
+$nds-prefix: 'nds-' !default;
+
 /// Reset wrapping class
 /// Wraps a version of normalize
 ///

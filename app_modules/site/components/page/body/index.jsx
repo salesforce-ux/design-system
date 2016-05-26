@@ -13,6 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 
+import globals from 'app_modules/global';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
@@ -87,6 +88,7 @@ export default React.createClass({
     return (
       <div>
         {this.renderBanner()}
+
         <main className="site-main" role="main">
           {this.renderInternalBanner()}
           {this.renderAnchor()}
@@ -122,6 +124,26 @@ export default React.createClass({
     );
   },
 
+  renderSearch() {
+    if (!globals.displaySearch) return;
+    return (
+      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
+        <div role="search" className="searchbox__wrapper">
+          <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
+          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
+          <button type="submit" className="slds-assistive-text">
+            Submit your search query
+          </button>
+          <button type="reset" title="Clear the search query" className="searchbox__reset hide">
+            <svg role="img" aria-label="Reset">
+              <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    );
+  },
+
   renderAnchor() {
     if (this.props.anchor) return this.props.anchor;
     if (this.props.anchorTitle) {
@@ -146,9 +168,13 @@ export default React.createClass({
 
   renderNav() {
     return (
-      <nav id="navigation" className="site-navigation" role="navigation" tabIndex="-1">
-        {this.renderNavItems(this.state.navItems)}
-      </nav>
+      <div className="site-navigation">
+        {this.renderSearch()}
+
+        <nav id="navigation" role="navigation" tabIndex="-1">
+          {this.renderNavItems(this.state.navItems)}
+        </nav>
+      </div>
     );
   },
 

@@ -133,7 +133,7 @@ export default React.createClass({
   },
 
   renderScripts() {
-    const scripts = [
+    let scripts = [
       { src: '/assets/scripts/site.js' }
     ];
     return scripts.concat(this.props.scripts).map((script, index) => {

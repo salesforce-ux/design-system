@@ -29,6 +29,12 @@ let LogACallIcon = props =>
   <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
+let CustomIcon = props =>
+<span className={pf('icon_container icon-custom-custom25')} title="description of icon when needed">
+  <SvgIcon className={pf('icon')} sprite="custom" symbol="custom25" />
+  <span className={pf('assistive-text')}>Description of icon</span>
+</span>;
+
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -43,5 +49,10 @@ export let states = [
     id: 'logacallicon',
     label: 'Log a Call',
     element: <LogACallIcon />
+  },
+  {
+    id: 'customicon',
+    label: 'Custom Icon 25',
+    element: <CustomIcon />
   }
 ];

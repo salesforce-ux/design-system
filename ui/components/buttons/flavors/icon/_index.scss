@@ -106,8 +106,11 @@
 
   &[disabled] {
     color: $color-text-link-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
   }
+}
+
+.#{$css-prefix}button--icon-border-inverse[disabled] {
+  border-color: $color-border-button-inverse-disabled;
 }
 
 // Stateful Button Icon

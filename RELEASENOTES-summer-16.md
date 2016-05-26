@@ -39,6 +39,7 @@ The following classes are now available:
 - Text Utility - Heading label normal - [Heading label normal](/components/utilities/text/#heading-label-normal)
 - Theme Utility - Light version theme texture - [Theme texture](/components/utilities/themes/#color)
 - Position input icons on both sides of the input container - [Input](/components/forms/#flavor-input)
+- Position utilities - Relative and Static - [Position Utilities](/components/utilities/position/)
 
 **CHANGES**
 

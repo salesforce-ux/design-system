@@ -46,5 +46,5 @@ export default {
   downloadPath: function(version) {
     return 'assets/downloads/' + this.zipName(version);
   },
-  displaySearch: true
+  displaySearch: !process.env.INTERNAL
 };

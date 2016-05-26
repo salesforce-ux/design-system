@@ -22,114 +22,41 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let ListObject = props =>
-  <div className={pf('media media--center')}>
-    <div className={pf('media__figure')}>
-      <span className={className(pf('avatar avatar--small align--absolute-center'), props.figureClass)}>
-        {props.objectInitials}
-      </span>
-    </div>
-    <div className={pf('media__body')}><span className={pf('truncate')}>{props.children}</span></div>
-  </div>;
-
 let Search = props =>
-  <div className={pf('p-vertical--x-small p-horizontal--large grid grid--vertical-align-center shrink-none')}>
+  <div className={pf('p-vertical--x-small p-horizontal--large shrink-none theme--shade')}>
     <label className={pf('assistive-text')} htmlFor="search-text-input-product">Search Products</label>
-    <div className={pf('size--1-of-3 input-has-icon input-has-icon--left')}>
+    <div className={pf('size--1-of-1 m-bottom--x-small input-has-icon input-has-icon--left')}>
       <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
       <input id="search-text-input-product" className={pf('input')} type="text" placeholder="Search Products" />
     </div>
-    <span className={pf('col--bump-left text-title')}>2 Item(s) Selected</span>
+    <span className={pf('text-title')} aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
   </div>;
+
+let Th = props =>
+  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
+    <a href="#void" className={pf('th__action text-link--reset')}>
+      <span className={pf('assistive-text')}>Sort Column</span>
+      <span className={pf('truncate')} title={props.title}>{ props.children }</span>
+      <div className={pf('icon_container')} title="Sort Column">
+        <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+      </div>
+    </a>
+  </th>;
 
 let ProductList = props =>
   <div className={pf('scrollable grow')}>
-    <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
+    <table className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
       <thead>
         <tr className={pf('text-title--caps')} >
-          <th className={pf('is-sortable')} scope="col">
-            <span className={pf('truncate')}>Name</span>
-            <ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="arrowdown"
-              assistiveText="Sort" />
-          </th>
-          <th scope="col"><span className={pf('truncate')}>Product Code</span></th>
-          <th scope="col"><span className={pf('truncate')}>List Price</span></th>
-          <th scope="col"><span className={pf('truncate')}>Product Family</span></th>
-          <th scope="col" className={pf('cell-shrink')}>
-            <ButtonIcon
-              flavor="icon-border-filled,icon-small"
-              sprite="utility"
-              symbol="add"
-              assistiveText="Add all Products" />
-          </th>
+          <th className={pf('cell-shrink')} scope="col"></th>
+          <Th className={pf('is-sortable')} scope="col" title="Name">Name</Th>
+          <Th className={pf('is-sortable')} scope="col" title="Product Code">Product Code</Th>
+          <Th className={pf('is-sortable')} scope="col" title="List Price">List Price</Th>
+          <Th className={pf('is-sortable')} scope="col" title="Product Family">Product Family</Th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th data-label="name" scope="row">
-            <ListObject objectInitials="AP" figureClass={pf('icon-custom-10')}>Alpha Product</ListObject>
-          </th>
-          <td data-label="Product Code"><span className={pf('truncate')}>ANLTY</span></td>
-          <td data-label="List Price"><span className={pf('truncate')}>2750.00</span></td>
-          <td data-label="Product Family"><span className={pf('truncate')}>Family A</span></td>
-          <td className={pf('row-action')}>
-            <ButtonIcon
-              flavor="icon-border,icon-small"
-              className={pf('is-selected')}
-              sprite="utility"
-              symbol="add"
-              assistiveText="Add Product" />
-          </td>
-        </tr>
-        <tr>
-          <th data-label="name" scope="row">
-            <ListObject objectInitials="BP" figureClass={pf('icon-custom-20')}>Beta Product</ListObject>
-          </th>
-          <td data-label="Product Code"><span className={pf('truncate')}>MRKT</span></td>
-          <td data-label="List Price"><span className={pf('truncate')}>3460.00</span></td>
-          <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
-          <td className={pf('row-action')}>
-            <ButtonIcon
-              flavor="icon-border,icon-small"
-              sprite="utility"
-              symbol="add"
-              assistiveText="Add Product" />
-          </td>
-        </tr>
-        <tr>
-          <th data-label="name" scope="row">
-            <ListObject objectInitials="MS" figureClass={pf('icon-custom-30')}>Mobile Suite</ListObject>
-          </th>
-          <td data-label="Product Code"><span className={pf('truncate')}>SRVC</span></td>
-          <td data-label="List Price"><span className={pf('truncate')}>2230.00</span></td>
-          <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
-          <td className={pf('row-action')}>
-            <ButtonIcon
-              flavor="icon-border,icon-small"
-              className={pf('is-selected')}
-              sprite="utility"
-              symbol="add"
-              assistiveText="Add Product" />
-          </td>
-        </tr>
-        <tr>
-          <th data-label="name" scope="row">
-            <ListObject objectInitials="CC" figureClass={pf('icon-custom-40')}>Connectors</ListObject>
-          </th>
-          <td data-label="Product Code"><span className={pf('truncate')}>CLASS</span></td>
-          <td data-label="List Price"><span className={pf('truncate')}>750.00</span></td>
-          <td data-label="Product Family"><span className={pf('truncate')}>Family B</span></td>
-          <td className={pf('row-action')}>
-            <ButtonIcon
-              flavor="icon-border,icon-small"
-              sprite="utility"
-              symbol="add"
-              assistiveText="Add Product" />
-          </td>
-        </tr>
+        { props.children }
       </tbody>
     </table>
   </div>;
@@ -138,24 +65,161 @@ let ProductList = props =>
 // Export
 ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{height: '640px'}}>
-    <Modal className={pf('modal--large')}>
-      <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Add Products</h2>
-        <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="#void">(Change)</a></p>
-      </ModalHeader>
-      <ModalContent className={pf('grid nowrap')}>
-        <div className={pf('col grid grid--vertical nowrap')}>
-          <Search />
-          <ProductList />
-        </div>
-      </ModalContent>
-      <ModalFooter className={pf('modal__footer--directional')}>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Next</Button>
-      </ModalFooter>
-    </Modal>
-    <div className={pf('backdrop backdrop--open')} />
-  </div>
-);
+export let states = [
+  {
+    id: 'list-builder',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{height: '640px'}}>
+        <Modal className={pf('modal--large')}>
+          <ModalHeader>
+            <h2 className={pf('text-heading--medium')}>Add Products</h2>
+            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="#void">(Change)</a></p>
+          </ModalHeader>
+          <ModalContent className={pf('grid nowrap')}>
+            <div className={pf('col grid grid--vertical nowrap')}>
+              <Search />
+              <ProductList>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Alpha Product">Alpha Product</th>
+                  <td data-label="Product Code" title="ANLTY"><span className={pf('truncate')}>ANLTY</span></td>
+                  <td data-label="List Price" title="2750.00"><span className={pf('truncate')}>2750.00</span></td>
+                  <td data-label="Product Family" title="Family A"><span className={pf('truncate')}>Family A</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Beta Product">Beta Product</th>
+                  <td data-label="Product Code" title="MRKT"><span className={pf('truncate')}>MRKT</span></td>
+                  <td data-label="List Price" title="3460.00"><span className={pf('truncate')}>3460.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Service Console">Service Console</th>
+                  <td data-label="Product Code" title="SRVC"><span className={pf('truncate')}>SRVC</span></td>
+                  <td data-label="List Price" title="2230.00"><span className={pf('truncate')}>2230.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Connectors">Connectors</th>
+                  <td data-label="Product Code" title="CLASS"><span className={pf('truncate')}>CLASS</span></td>
+                  <td data-label="List Price" title="750.00"><span className={pf('truncate')}>750.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter className={pf('modal__footer--directional')}>
+            <Button flavor="neutral">Cancel</Button>
+            <Button flavor="neutral,brand">Next</Button>
+          </ModalFooter>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
+  },
+  {
+    id: 'list-builder-items-selected',
+    label: 'Items selected',
+    element:
+      <div className="demo-only" style={{height: '640px'}}>
+        <Modal className={pf('modal--large')}>
+          <ModalHeader>
+            <h2 className={pf('text-heading--medium')}>Add Products</h2>
+            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="#void">(Change)</a></p>
+          </ModalHeader>
+          <ModalContent className={pf('grid nowrap')}>
+            <div className={pf('col grid grid--vertical nowrap')}>
+              <Search itemsSelected="2" />
+              <ProductList>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Alpha Product">Alpha Product</th>
+                  <td data-label="Product Code" title="ANLTY"><span className={pf('truncate')}>ANLTY</span></td>
+                  <td data-label="List Price" title="2750.00"><span className={pf('truncate')}>2750.00</span></td>
+                  <td data-label="Product Family" title="Family A"><span className={pf('truncate')}>Family A</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      className={pf('is-selected')}
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Beta Product">Beta Product</th>
+                  <td data-label="Product Code" title="MRKT"><span className={pf('truncate')}>MRKT</span></td>
+                  <td data-label="List Price" title="3460.00"><span className={pf('truncate')}>3460.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      className={pf('is-selected')}
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Service Console">Service Console</th>
+                  <td data-label="Product Code" title="SRVC"><span className={pf('truncate')}>SRVC</span></td>
+                  <td data-label="List Price" title="2230.00"><span className={pf('truncate')}>2230.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+                <tr>
+                  <td className={pf('cell-shrink')}>
+                    <ButtonIcon
+                      flavor="icon-border,icon-small"
+                      sprite="utility"
+                      symbol="add"
+                      assistiveText="Add Product" />
+                  </td>
+                  <th className={pf('truncate')} scope="row" data-label="Name" title="Connectors">Connectors</th>
+                  <td data-label="Product Code" title="CLASS"><span className={pf('truncate')}>CLASS</span></td>
+                  <td data-label="List Price" title="750.00"><span className={pf('truncate')}>750.00</span></td>
+                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                </tr>
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter className={pf('modal__footer--directional')}>
+            <Button flavor="neutral">Cancel</Button>
+            <Button flavor="neutral,brand">Next</Button>
+          </ModalFooter>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')} />
+      </div>
+  }
+];

@@ -33,10 +33,8 @@ export let ButtonGroup = props =>
   </div>;
 
 export let Trigger = props =>
-  <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <Button className={pf('button--icon-border-filled')} assistiveText="More Options" aria-haspopup="true" disabled={props.disabled}>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-    </Button> }
+  <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={pf('button--icon-border-filled')} assistiveText="More Options" hasPopup symbol="down" />}
     {props.children}
   </div>;
 
@@ -72,7 +70,7 @@ let More = props =>
     <Button className={pf('button--neutral')}>Refresh</Button>
     <Button className={pf('button--neutral')}>Edit</Button>
     <Button className={pf('button--neutral')}>Save</Button>
-    <Trigger className={pf('button--last')} hasPopup ariaExpanded="false">
+    <Trigger ariaExpanded="false">
         <Menu className={pf('dropdown--right')}>
           <MenuList>
             <MenuItem>Overflow Item One</MenuItem>
@@ -89,7 +87,7 @@ let MoreOpen = props =>
       <Button className={pf('button--neutral')}>Refresh</Button>
       <Button className={pf('button--neutral')}>Edit</Button>
       <Button className={pf('button--neutral')}>Save</Button>
-      <Trigger className={pf('is-open button--last')} hasPopup>
+      <Trigger className={pf('is-open')}>
         <Menu className={pf('dropdown--right')}>
           <MenuList>
             <MenuItem>Overflow Item One</MenuItem>
@@ -101,13 +99,12 @@ let MoreOpen = props =>
     </ButtonGroup>
   </Demo>;
 
-
 let IconDisabled = props =>
   <ButtonGroup>
     <Button className={pf('button--neutral')}>Refresh</Button>
     <Button className={pf('button--neutral')}>Edit</Button>
     <Button className={pf('button--neutral')}>Save</Button>
-    <Trigger className={pf('button--last')} disabled hasPopup ariaExpanded="false">
+    <Trigger disabled ariaExpanded="false">
         <Menu className={pf('dropdown--right')}>
           <MenuList>
             <MenuItem>Overflow Item One</MenuItem>
@@ -124,10 +121,8 @@ let Inverse = props =>
       <Button className={pf('button--inverse')}>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
       <Button className={pf('button--inverse')}>Save</Button>
-      <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded="false" hasPopup>
-        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-        </ButtonIcon>
+      <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup symbol="down" />
       </div>
     </ButtonGroup>
   </Demo>;
@@ -138,10 +133,8 @@ let InverseDisabled = props =>
       <Button className={pf('button--inverse')} disabled>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
       <Button className={pf('button--inverse')} disabled>Save</Button>
-       <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded="false" hasPopup>
-        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-        </ButtonIcon>
+       <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup symbol="down" />
       </div>
     </ButtonGroup>
   </Demo>;
@@ -152,10 +145,8 @@ let InverseIconDisabled = props =>
       <Button className={pf('button--inverse')}>Refresh</Button>
       <Button className={pf('button--inverse')}>Edit</Button>
       <Button className={pf('button--inverse')}>Save</Button>
-      <div className={className(pf('dropdown-trigger dropdown-trigger--click button--last'), props.className)} aria-expanded="false" disabled hasPopup>
-        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" hasPopup disabled>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-        </ButtonIcon>
+      <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+        <ButtonIcon className={pf('button--icon-border button--icon-inverse')} assistiveText="More Actions" disabled hasPopup symbol="down" />
       </div>
     </ButtonGroup>
   </Demo>;

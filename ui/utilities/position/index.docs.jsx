@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Position utilities allow you to choose an alternate position property to an element.
+    Positioning utilities give you the ability to change the position property of an element.
   </p>
 );
 

@@ -27,22 +27,7 @@ class Icons extends React.Component {
 
   constructor(props) {
     super(props);
-    let icons = [];
-    categories.forEach(category => {
-      icons = [];
-      let customIcons = [];
-      let matchCustom = new RegExp('custom\\d+');
-      category.icons.map(icon => {
-        if (matchCustom.test(icon.symbol)) customIcons.push(icon);
-        else icons.push(icon);
-      });
-      customIcons.sort(function(a, b){
-        let one = parseInt(a.symbol.match(/\d+/).toString());
-        let two = parseInt(b.symbol.match(/\d+/).toString());
-        return one - two;
-      });
-      category.icons = icons.concat(customIcons);
-    });
+
     this.state = {
       categories
     };
@@ -113,10 +98,8 @@ class Icons extends React.Component {
   }
 
   renderCategoryNav() {
-    const { categories } = this.state;
-    let capitalize = (e) => { return e.charAt(0).toUpperCase() + e.slice(1); };
-    return categories.map(category => {
-      const modCategory = capitalize(category.name);
+    return this.state.categories.map(category => {
+      const modCategory = _.upperFirst(category.name);
       return (
         <li className={pf('list__item')} key={category.name}>
           <a href={`#${category.name}`}>
@@ -130,17 +113,17 @@ class Icons extends React.Component {
   renderIcons(category) {
     let isAction = category.name === 'action';
     let isUtility = category.name === 'utility';
-    let wrapperClassName = (icon) => isAction ? icon.className : null;
+
     return category.icons.map(icon => {
-      const svgClassName = classNames('icon', icon.className, {
-        'icon--large': !isUtility,
-        'p-around--x-small': isAction,
+      const svgClassName = classNames('icon', {
+        'icon--large': !isUtility && !isAction,
+        'icon--small': isAction,
         'icon-text-default': isUtility
       });
       return (
         <li className={pf('site-icon-width-container m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
           <figure>
-            <span className={pf(classNames('icon_container', wrapperClassName(icon)))}>
+            <span className={pf(classNames('icon_container', icon.className, {'icon_container--circle': isAction}))}>
               <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(svgClassName)} />
             </span>
             <figcaption className={pf('p-top--x-small text-body--small')}>{icon.symbol}</figcaption>

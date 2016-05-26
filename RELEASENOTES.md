@@ -3,6 +3,7 @@
 
 ## Release [1.0.5] - Future, 2016
 
+- Adding a background color to icons from the [custom set](/resources/icons/#custom) is now done using the `slds-icon-custom-customXX` class (e.g. `slds-icon-custom-custom25`), instead of `slds-icon-custom-XX` (deprecated). This change addresses [#203](https://github.com/salesforce-ux/design-system/issues/203)
 - Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
 - The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules. To disable the default font loading method, set `$slds-load-webfonts: false;` before importing the Design System Sass file.
 - The project is now compatible with Node.js 6

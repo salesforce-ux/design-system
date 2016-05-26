@@ -16,7 +16,7 @@ import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <SvgIcon className={pf('icon icon-doctype-zip')} sprite="doctype" symbol="zip" />
+  <SvgIcon className={pf('icon')} sprite="doctype" symbol="zip" />
 );
 
 export const preview = (

@@ -52,7 +52,7 @@ export let states = [
   },
   {
     id: 'customicon',
-    label: 'Custom Icon',
+    label: 'Custom Icon 25',
     element: <CustomIcon />
   }
 ];

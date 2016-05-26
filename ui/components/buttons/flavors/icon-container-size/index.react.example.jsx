@@ -11,20 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIconContainer } from 'ui/components/buttons/flavors/icon-container/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-export let ButtonIcon = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
-    </button>
-  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -32,23 +21,23 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
+    id: 'button-icon-container-size-default',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    element: <ButtonIconContainer className={pf('button--icon-border')} />
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
+    id: 'button-icon-container-size-small',
+    label: 'Small',
+    element: <ButtonIconContainer className={pf('button--icon-border button--icon-small')} />
   },
   {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
+    id: 'button-icon-container-size-x-small',
+    label: 'x-Small',
+    element: <ButtonIconContainer className={pf('button--icon-border button--icon-x-small')} />
   },
   {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
+    id: 'button-icon-container-size-xx-small',
+    label: 'xX-Small',
+    element: <ButtonIconContainer className={pf('button--icon-border button--icon-xx-small')} />
   }
 ];

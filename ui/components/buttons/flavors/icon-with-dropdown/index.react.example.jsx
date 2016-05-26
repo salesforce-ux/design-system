@@ -18,11 +18,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // State Constructor(s)
 ///////////////////////////////////////////
 
-export let ButtonIcon = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
+export let ButtonIconContainer = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
     <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="settings" />
-      <span className={pf('assistive-text')}>Settings</span>
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+      <span className={pf('assistive-text')}>More settings</span>
     </button>
   </div>;
 
@@ -32,23 +33,8 @@ export let ButtonIcon = props =>
 
 export let states = [
   {
-    id: 'button-icon',
+    id: 'button-icon-with-dropdown',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
-  },
-  {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon className={pf('button--icon')} disabled />
-  },
-  {
-    id: 'button-icon-inverse',
-    label: 'Icon inversed',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} />
-  },
-  {
-    id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
-    element: <ButtonIcon inverse className={pf('button--icon-inverse')} disabled />
+    element: <ButtonIconContainer className={pf('button--icon-more')} />
   }
 ];

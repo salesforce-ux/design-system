@@ -118,6 +118,9 @@ export default () => formatNavItem({
           label: 'Overview'
         },
         {
+          label: 'Accessibility'
+        },
+        {
           label: 'Color'
         },
         {

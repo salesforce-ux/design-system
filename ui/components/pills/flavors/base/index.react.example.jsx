@@ -29,7 +29,7 @@ export let Pill = props =>
     {props.children}
     {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
     : <a href="#void" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+    <ButtonIcon className={pf('pill__remove')} flavor="icon" sprite="utility" symbol="close" assistiveText="Remove" />
   </span>;
 
 export let PillContainer = props =>
@@ -49,8 +49,9 @@ let Default = props =>
 let Icon = props =>
   <Demo>
     <Pill>
-      <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
-        <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+      <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+        <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+        <span className={pf('assistive-text')}>Account</span>
       </span>
     </Pill>
   </Demo>;

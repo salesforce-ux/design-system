@@ -13,6 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -62,11 +63,12 @@ export default (
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
               <div className={pf('pill_container--bare show')}>
-                <a href="#void" className={pf('pill')}>
-                  <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-                  <span className={pf('pill__label')}>Lei Chan</span>
-                  <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />
-                </a>
+                <Pill label="Lei Chan">
+                  <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+                    <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                    <span className={pf('assistive-text')}>Account</span>
+                  </span>
+                </Pill>
               </div>
             </div>
             <div className={pf('grid shrink-none p-horizontal--small')}>

@@ -29,41 +29,51 @@ let Demo = props =>
 
 // Export used in discussion feeds
 export let Comment = props =>
-  <MediaObject figureLeft={MediumAvatar} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="#void" title="Design Systems">Design Systems</a> - <a href="#void" title="Jason Rodgers">Jason Rogers</a>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+  <article className={pf('media comment hint-parent')}>
+    <div className={pf('media__figure')}>
+      {MediumAvatar}
     </div>
-    <p className={pf('text-body--small')}>
-      <a href="#void" title="Click for single-item view of this post">18hr Ago</a>
-    </p>
-    {props.children}
-  </MediaObject>;
+    <div className={pf('media__body')}>
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('truncate')}>
+          <a href="#void" title="Design Systems">Design Systems</a> - <a href="#void" title="Jason Rodgers">Jason Rogers</a>
+        </p>
+        <ButtonIcon
+          className={pf('shrink-none')}
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
+      <p className={pf('text-body--small')}>
+        <a href="#void" title="Click for single-item view of this post">18hr Ago</a>
+      </p>
+      {props.children}
+    </div>
+  </article>;
 
 let CommentMinimal = props =>
-  <MediaObject figureLeft={SmallAvatar} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="#void" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+  <article className={pf('media comment hint-parent')}>
+    <div className={pf('media__figure')}>
+      {SmallAvatar}
     </div>
-    {props.children}
-  </MediaObject>;
+    <div className={pf('media__body')}>
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('truncate')}>
+          <a href="#void" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
+        </p>
+        <ButtonIcon
+          className={pf('shrink-none')}
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
+      {props.children}
+    </div>
+  </article>;
 
 // Export used in discussion feeds
 export let CommentLongform = props =>

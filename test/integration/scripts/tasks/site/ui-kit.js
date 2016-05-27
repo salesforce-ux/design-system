@@ -8,26 +8,17 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+import { expect } from 'chai';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
 
-import gulp from 'gulp';
 
-import './generate-icons';
-import './generate-release-notes';
-import './generate-tokens-zip';
-import './generate-ui-kit-zip';
-import './generate-tokens';
-import './generate-ui';
-import './generate-examples';
-import './generate-whitelist';
+describe('The build process', () => {
+  it('should create a zip file containing the UI Kit', () => {
+    const wwwDownloadPath = path.resolve(__PATHS__.www, 'assets/downloads');
+    const UIKitZipFile = glob.sync(`${wwwDownloadPath}/salesforce-lightning-design-system-ui-kit.zip`);
 
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:ui-kit:zip',
-  'generate:tokens:zip',
-  'generate:tokens',
-  'generate:ui',
-  'generate:examples',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
-]);
+    expect(UIKitZipFile.length).to.eql(1);
+  });
+});

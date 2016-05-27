@@ -25,7 +25,7 @@ let Demo = props =>
   </div>;
 
 let Pill = props =>
-  <a href="#void" className={pf('pill')}>
+  <a href="javascript:void(0);" className={pf('pill')}>
     {props.children}
     <span className={pf('pill__label')}>{props.label || 'Pill Label'}</span>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />

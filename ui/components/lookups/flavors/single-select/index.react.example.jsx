@@ -26,7 +26,7 @@ export default (
       <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
         <div className={pf('pill_container show')}>
-          <a href="#void" className={pf('pill')}>
+          <a href="javascript:void(0);" className={pf('pill')}>
             <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
             <span className={pf('pill__label')}>Pied Piper</span>
             <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />

@@ -25,22 +25,22 @@ export default (
           <Menu.Title>Lists</Menu.Title>
         </Menu.Header>
         <Menu.List>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             Opportunities Closing this Quarter
           </Menu.Item>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             All Opportunities
           </Menu.Item>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             My Opportunities
           </Menu.Item>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             United Partner Opportunities
           </Menu.Item>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             Acme Inc Opportunities
           </Menu.Item>
-          <Menu.Item className={pf('dropdown__item has-icon--left')} href="#">
+          <Menu.Item className={pf('dropdown__item has-icon--left')} href="javascript:void(0);">
             My Opportunities about 80k
           </Menu.Item>
         </Menu.List>

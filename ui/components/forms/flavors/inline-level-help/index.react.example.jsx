@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
 <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '9rem' }}>
-  <a href="#void" className={pf('button')}>
+  <a href="javascript:void(0);" className={pf('button')}>
     <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
     symbol="warning" />
     <span className={pf('assistive-text')}>Review the Following Errors</span>

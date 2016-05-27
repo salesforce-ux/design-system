@@ -62,7 +62,7 @@ export default (
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
               <div className={pf('pill_container--bare show')}>
-                <a href="#void" className={pf('pill')}>
+                <a href="javascript:void(0);" className={pf('pill')}>
                   <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
                   <span className={pf('pill__label')}>Lei Chan</span>
                   <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />

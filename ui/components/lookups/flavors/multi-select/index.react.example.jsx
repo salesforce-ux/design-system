@@ -28,12 +28,12 @@ export default (
         <input id="lookup" className={pf('input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-activedescendant="" />
       </div>
       <div className={pf('pill_container')}>
-        <a href="#void" className={pf('pill')}>
+        <a href="javascript:void(0);" className={pf('pill')}>
           <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
           <span className={pf('pill__label')}>Pied Piper</span>
           <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
         </a>
-        <a href="#void" className={pf('pill')}>
+        <a href="javascript:void(0);" className={pf('pill')}>
           <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
           <span className={pf('pill__label')}>Weyland-Yutani Corporation</span>
           <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />

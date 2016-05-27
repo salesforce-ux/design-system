@@ -59,7 +59,7 @@ export default (
           <tbody>
             <tr>
               <th scope="row">
-                <a id="s01" href="#" role="option">
+                <a id="s01" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
                   Acme Landscape
                 </a>
@@ -70,7 +70,7 @@ export default (
             </tr>
             <tr>
               <th scope="row">
-                <a id="s02" href="#" role="option">
+                <a id="s02" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
                   ACME Construction
                 </a>
@@ -81,7 +81,7 @@ export default (
             </tr>
             <tr>
               <th scope="row">
-                <a id="s03" href="#" role="option">
+                <a id="s03" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
                   Action Sports
                 </a>
@@ -92,7 +92,7 @@ export default (
             </tr>
             <tr>
               <th scope="row">
-                <a id="s04" href="#" role="option">
+                <a id="s04" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
                   Moderno Bistro
                 </a>
@@ -103,7 +103,7 @@ export default (
             </tr>
             <tr>
               <th scope="row">
-                <a id="s05" href="#" role="option">
+                <a id="s05" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
                   Cozy Kitchen
                 </a>

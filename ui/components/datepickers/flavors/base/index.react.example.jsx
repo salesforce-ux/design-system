@@ -132,7 +132,7 @@ let Default = props =>
             <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="#void" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -194,7 +194,7 @@ let Selected = props =>
             <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="#void" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -256,7 +256,7 @@ let MultiSelected = props =>
             <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="#void" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>

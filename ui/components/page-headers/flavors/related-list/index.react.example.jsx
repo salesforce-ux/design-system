@@ -23,8 +23,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className="slds-page-header" role="banner">
     <BreadCrumbs className={pf('m-bottom--xx-small')}>
-      <Crumb href="#void">Accounts</Crumb>
-      <Crumb href="#void">Company One</Crumb>
+      <Crumb href="javascript:void(0);">Accounts</Crumb>
+      <Crumb href="javascript:void(0);">Company One</Crumb>
     </BreadCrumbs>
     <div className={pf('grid')}>
       <div className={pf('col has-flexi-truncate')}>

@@ -31,11 +31,11 @@ export const preview = (
       <li className={pf('list__item')}>
         <div className={pf('tile tile--board')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">Cloudhub + Anypoint Connectors</a>
+            <a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a>
           </p>
           <div className={pf('tile__detail')}>
             <p className={pf('text-heading--medium')}>$500,000</p>
-            <p className={pf('truncate')}><a href="#">Company One</a></p>
+            <p className={pf('truncate')}><a href="javascript:void(0);">Company One</a></p>
             <p className={pf('truncate')}>Closing 9/30/2015</p>
           </div>
         </div>
@@ -45,11 +45,11 @@ export const preview = (
       <li className={pf('list__item')}>
         <div className={pf('tile tile--board')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">Cloudhub</a>
+            <a href="javascript:void(0);">Cloudhub</a>
           </p>
           <div className={pf('tile__detail')}>
             <p className={pf('text-heading--medium')}>$185,000</p>
-            <p className={pf('truncate')}><a href="#">Company Two</a></p>
+            <p className={pf('truncate')}><a href="javascript:void(0);">Company Two</a></p>
             <p className={pf('truncate has-alert')}>Closing 12/15/2015</p>
             { image() }
           </div>
@@ -60,11 +60,11 @@ export const preview = (
       <li className={pf('list__item')}>
         <div className={pf('tile tile--board')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">600 Widgets</a>
+            <a href="javascript:void(0);">600 Widgets</a>
           </p>
           <div className={pf('tile__detail')}>
             <p className={pf('text-heading--medium')}>$35,000</p>
-            <p className={pf('truncate')}><a href="#">Company Three</a></p>
+            <p className={pf('truncate')}><a href="javascript:void(0);">Company Three</a></p>
             <p className={pf('truncate')}>Closing 10/12/2015</p>
           </div>
         </div>
@@ -79,11 +79,11 @@ export const code = (
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">Cloudhub + Anypoint Connectors</a>
+          <a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a>
         </p>
         <div className={pf('tile__detail')}>
           <p className={pf('text-heading--medium')}>$500,000</p>
-          <p className={pf('truncate')}><a href="#">Company One</a></p>
+          <p className={pf('truncate')}><a href="javascript:void(0);">Company One</a></p>
           <p className={pf('truncate')}>Closing 9/30/2015</p>
         </div>
       </div>
@@ -91,11 +91,11 @@ export const code = (
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">Cloudhub</a>
+          <a href="javascript:void(0);">Cloudhub</a>
         </p>
         <div className={pf('tile__detail')}>
           <p className={pf('text-heading--medium')}>$185,000</p>
-          <p className={pf('truncate')}><a href="#">Company Two</a></p>
+          <p className={pf('truncate')}><a href="javascript:void(0);">Company Two</a></p>
           <p className={pf('truncate has-alert')}>Closing 12/15/2015</p>
           { image() }
         </div>
@@ -104,11 +104,11 @@ export const code = (
     <li className={pf('list__item')}>
       <div className={pf('tile tile--board')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">600 Widgets</a>
+          <a href="javascript:void(0);">600 Widgets</a>
         </p>
         <div className={pf('tile__detail')}>
           <p className={pf('text-heading--medium')}>$35,000</p>
-          <p className={pf('truncate')}><a href="#">Company Three</a></p>
+          <p className={pf('truncate')}><a href="javascript:void(0);">Company Three</a></p>
           <p className={pf('truncate')}>Closing 10/12/2015</p>
         </div>
       </div>

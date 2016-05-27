@@ -80,7 +80,7 @@ const checkbox = ( <Checkbox id="checkbox-01" label="Did you complete this task?
 let Default = props =>
   <Demo>
     <Tile>
-      <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
+      <TileTitle><a href="javascript:void(0);">Salesforce UX</a></TileTitle>
       <TileBody>
         <p className={pf('truncate')}>26 Members</p>
       </TileBody>
@@ -90,7 +90,7 @@ let Default = props =>
 let WithIcon = props =>
   <Demo>
     <MediaObject figureLeft={icon} className={pf('tile')}>
-      <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
+      <TileTitle><a href="javascript:void(0);">Salesforce UX</a></TileTitle>
       <TileBody>
         <p className={pf('truncate')}>26 Members</p>
       </TileBody>
@@ -100,7 +100,7 @@ let WithIcon = props =>
 let WithImage = props =>
   <Demo>
     <MediaObject figureLeft={image} className={pf('tile')}>
-      <TileTitle><a href="#">Lexee L. Jackson</a></TileTitle>
+      <TileTitle><a href="javascript:void(0);">Lexee L. Jackson</a></TileTitle>
       <TileBody>
         <ul className={pf('list--horizontal has-dividers')}>
           <li className={pf('truncate list__item')}>VP, Marketing</li>
@@ -114,7 +114,7 @@ let WithAction = props =>
   <Demo>
     <MediaObject figureLeft={icon} className={pf('tile hint-parent')}>
       <TileGrid>
-        <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
+        <TileTitle><a href="javascript:void(0);">Salesforce UX</a></TileTitle>
         <ActionButon />
       </TileGrid>
       <TileBody>
@@ -127,7 +127,7 @@ let WithBadge = props =>
   <Demo>
     <MediaObject figureLeft={image} className={pf('tile')}>
       <TileGrid>
-        <TileTitle><a href="#void">Jack Rogers</a></TileTitle>
+        <TileTitle><a href="javascript:void(0);">Jack Rogers</a></TileTitle>
         <span className={pf('badge')}>Primary</span>
       </TileGrid>
       <TileBody>
@@ -140,7 +140,7 @@ let Generic = props =>
   <Demo>
     <MediaObject figureLeft={image} className={pf('tile hint-parent')}>
       <TileGrid>
-        <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
+        <TileTitle><a href="javascript:void(0);">Salesforce UX</a></TileTitle>
         <ActionButon />
       </TileGrid>
       <TileBody>
@@ -172,7 +172,7 @@ let Task = props =>
   <Demo>
     <MediaObject figureLeft={checkbox} className={pf('tile')}>
       <TileGrid>
-        <TileTitle><a href="#void">The Trammel Crow Company</a></TileTitle>
+        <TileTitle><a href="javascript:void(0);">The Trammel Crow Company</a></TileTitle>
         <span className={pf('badge')}>Today</span>
       </TileGrid>
       <TileBody>
@@ -184,7 +184,7 @@ let Task = props =>
 let Author = props =>
   <Demo>
     <Tile>
-      <TileTitle><a href="#void">Company One beats Company Two to the 200-mile affordable electric car</a></TileTitle>
+      <TileTitle><a href="javascript:void(0);">Company One beats Company Two to the 200-mile affordable electric car</a></TileTitle>
       <TileBody>
         <p>by Steve Author</p>
         <ul className={pf('list--horizontal has-dividers tile__meta')}>

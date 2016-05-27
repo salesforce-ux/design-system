@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 

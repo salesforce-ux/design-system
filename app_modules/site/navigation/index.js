@@ -118,9 +118,6 @@ export default () => formatNavItem({
           label: 'Overview'
         },
         {
-          label: 'Accessibility'
-        },
-        {
           label: 'Color'
         },
         {
@@ -162,6 +159,9 @@ export default () => formatNavItem({
           label: component.title
         }))
       })
+    },
+    {
+      label: 'Accessibility'
     },
     {
       label: 'Voice and Tone'

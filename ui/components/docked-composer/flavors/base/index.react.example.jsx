@@ -77,7 +77,7 @@ let ComposerFooter = props =>
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <a href="#void" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
+    <a href="javascript:void(0);" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
       <span className={pf('align-middle')}>
         <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
         <span className={pf('assistive-text')}>View other docked windows</span>

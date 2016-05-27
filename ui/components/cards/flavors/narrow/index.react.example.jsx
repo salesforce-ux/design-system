@@ -42,7 +42,7 @@ export default (
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
+                <a href="javascript:void(0);">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -72,7 +72,7 @@ export default (
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
+                <a href="javascript:void(0);">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -102,7 +102,7 @@ export default (
           <li className={pf('tile hint-parent')}>
             <div className={pf('grid grid--align-spread has-flexi-truncate')}>
               <p className={pf('tile__title truncate')}>
-                <a href="#void">Adam Choi</a>
+                <a href="javascript:void(0);">Adam Choi</a>
               </p>
               <ButtonIcon
                 className={pf('shrink-none')}
@@ -132,7 +132,7 @@ export default (
         </ul>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

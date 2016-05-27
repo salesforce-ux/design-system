@@ -16,6 +16,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only">
-    <a href="#void" className={pf('has-blur-focus')}>Link with blur focus</a>
+    <a href="javascript:void(0);" className={pf('has-blur-focus')}>Link with blur focus</a>
   </div>
 );

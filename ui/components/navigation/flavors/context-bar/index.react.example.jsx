@@ -19,7 +19,7 @@ export default (
     <div className={pf('context-bar grid')}>
       <div className={pf('context-bar__shadow')}></div>
       <div className={pf('context-bar__primary context-bar-action grid grid--vertical-align-stretch')}>
-        <a href="#void" className={pf('context-bar-action__label grid grid--vertical-align-center text-link--reset p-horizontal--large text-heading--small')}>
+        <a href="javascript:void(0);" className={pf('context-bar-action__label grid grid--vertical-align-center text-link--reset p-horizontal--large text-heading--small')}>
           Title
         </a>
       </div>
@@ -27,10 +27,10 @@ export default (
         <div className={pf('context-bar__vertical-divider')}></div>
         <ul className={pf('grid grid--vertical-stretch')}>
           <li className={pf('context-bar-action grid')}>
-            <a href="#void" className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')}>Home</a>
+            <a href="javascript:void(0);" className={pf('context-bar-action__label text-link--reset grid grid--vertical-align-center')}>Home</a>
           </li>
           <li className={pf('context-bar-action grid dropdown-trigger dropdown-trigger--click is-open')}>
-            <a href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 1</a>
+            <a href="javascript:void(0);" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 1</a>
             <button aria-haspopup="true" className={pf('context-bar-action__trigger button button--icon-bare')}>
               <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
@@ -54,7 +54,7 @@ export default (
             </Menu>
           </li>
           <li className={pf('context-bar-action grid')}>
-            <a href="#void" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 2</a>
+            <a href="javascript:void(0);" className={pf('context-bar-action__label context-bar-action__label--expand text-link--reset grid grid--vertical-align-center')}>Menu Item 2</a>
             <button aria-haspopup="true" className={pf('context-bar-action__trigger button button--icon-bare')}>
               <SvgIcon className={pf('button__icon button__icon--small context-bar-action__trigger-icon')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>

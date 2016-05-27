@@ -10,37 +10,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Image } from 'ui/components/images/flavors/figure/index.react.example';
-import className from 'classnames';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
+import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
+export const intro = (
+  <p className="site-text-introduction">
+    Files are a representation of content uploaded as an attachment.
+  </p>
+);
 
-export let states = [
-  {
-    id: 'image-16-9',
-    label: '16:9',
-    element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--16-by-9')} />
-      </div>
-  },
-  {
-    id: 'image-4-3',
-    label: '4:3',
-    element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--4-by-3')} />
-      </div>
-  },
-  {
-    id: 'image-1-1',
-    label: '1:1',
-    element:
-      <div className="demo-only" style={{ width: '25%' }}>
-        <Image className={pf('image--card')} cropClass={pf('image__crop--1-by-1')} />
-      </div>
-  }
-];
+export default (
+  <ComponentDocs>
+    <p>Files rely heavily on images and utility classes to piece together the layout so please pay close attention to the markup and classes.</p>
+  </ComponentDocs>
+);

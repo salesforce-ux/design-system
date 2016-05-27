@@ -11,6 +11,7 @@ components:
   - docked-composer
   - docked-utility-bar
   - feeds
+  - files
   - forms
   - global-header
   - global-navigation

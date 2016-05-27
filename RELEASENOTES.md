@@ -7,12 +7,12 @@
 - Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
 - The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules. To disable the default font loading method, set `$slds-load-webfonts: false;` before importing the Design System Sass file.
 - The project is now compatible with Node.js 6
-- Thanks to our friends at [Algolia](https://community.algolia.com/docsearch/), you can now get faster to components and parts of the documentation using the search field at the top of the navigation
+- Search! You can now get faster to components and the deepest parts of the documentation using the search field at the top of the navigation
 
 ## Release [1.0.4] - May 18, 2016
 
 - Added `title` attributes to icon containers, noticeably improving accessibility for users of pointing devices such as mice and trackpads
-- Improved the structure of the [icon component](/components/icons) section, making it easier for you to discover how and decorate your Lightning apps with our beautiful icons
+- Improved the structure of the [icon component](/components/icons) section, making it easier for you to discover how to decorate your Lightning apps with our beautiful icons
 - Fixed the standard call icon, which gets its fancy yellow background back, instead of a purple one that had been assigned to it for obscure reasons (we’ve put our best designers on the case!)
 - Fixed [an issue](https://github.com/salesforce-ux/design-system/issues/208) where `npm install` would fail on Windows - which is only fair to our developer friends who are on PCs
 

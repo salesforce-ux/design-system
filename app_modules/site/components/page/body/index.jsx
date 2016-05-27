@@ -216,7 +216,7 @@ export default React.createClass({
   renderLink(item) {
     let label = this.renderLinkLabel(item);
     let renderAnchor = (props, content = label) =>
-      <a href="#" {...props}>{content}</a>;
+      <a href="javascript:void(0);" {...props}>{content}</a>;
     if (_.every(['url', 'path', 'hash'], key => !item[key])) {
       return renderAnchor();
     }

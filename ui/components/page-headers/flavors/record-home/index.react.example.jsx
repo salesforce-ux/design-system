@@ -83,7 +83,7 @@ export default (
       </li>
       <li className={pf('page-header__detail-block')}>
         <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
-        <a href="#void">Hyperlink</a>
+        <a href="javascript:void(0);">Hyperlink</a>
       </li>
       <li className={pf('page-header__detail-block')}>
         <p className={pf('text-heading--label-normal truncate m-bottom--xx-small')} title="Field 4">Field 4</p>

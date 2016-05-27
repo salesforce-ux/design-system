@@ -25,7 +25,7 @@ export let states = [
     element:
       <ul className={pf('grid grid--pull-padded')}>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="#void" className={pf('text-link--reset')}>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>
             <Image
               className={pf('image--card')}
               cropClass={pf('image__crop--16-by-9')}
@@ -35,7 +35,7 @@ export let states = [
           </a>
         </li>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="#void" className={pf('text-link--reset')}>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>
             <Image
               className={pf('image--card')}
               cropClass={pf('image__crop--16-by-9')}
@@ -51,7 +51,7 @@ export let states = [
     element:
       <ul className={pf('grid grid--pull-padded')}>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="#void" className={pf('text-link--reset')}>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>
             <Image
               className={pf('image--card')}
               cropClass={pf('image__crop--16-by-9')}
@@ -61,7 +61,7 @@ export let states = [
           </a>
         </li>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="#void" className={pf('text-link--reset')}>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>
             <Image
               className={pf('image--card')}
               cropClass={pf('image__crop--16-by-9')}
@@ -70,7 +70,7 @@ export let states = [
           </a>
         </li>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
-          <a href="#void" className={pf('text-link--reset')}>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>
             <Image
               className={pf('image--card')}
               cropClass={pf('image__crop--16-by-9')}

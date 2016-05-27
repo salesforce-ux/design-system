@@ -43,7 +43,7 @@ export default (
                 <span className={pf('assistive-text')}>Select Row</span>
               </label>
             </td>
-            <th scope="row"><div className={pf('truncate')}><a href="#void">Adam Choi</a></div></th>
+            <th scope="row"><div className={pf('truncate')}><a href="javascript:void(0);">Adam Choi</a></div></th>
             <td>Company One</td>
             <td>Director of Operations</td>
             <td>adam@company.com</td>
@@ -56,7 +56,7 @@ export default (
                 <span className={pf('assistive-text')}>Select Row</span>
               </label>
             </td>
-            <th scope="row"><div className={pf('truncate')}><a href="#void">Adam Choi</a></div></th>
+            <th scope="row"><div className={pf('truncate')}><a href="javascript:void(0);">Adam Choi</a></div></th>
             <td>Company One</td>
             <td>Director of Operations</td>
             <td>adam@company.com</td>
@@ -64,6 +64,6 @@ export default (
         </tbody>
       </table>
     </CardBody>
-    <CardFooter><a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+    <CardFooter><a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
   </Card>
 );

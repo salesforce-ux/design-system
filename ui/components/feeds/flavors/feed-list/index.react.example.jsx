@@ -29,7 +29,7 @@ export let states = [
               <Post className={pf('post--card')}>
                 <PostHeader />
                 <PostContent>
-                  <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
                 </PostContent>
                 <PostFooter />
               </Post>
@@ -39,7 +39,7 @@ export let states = [
               <Post className={pf('post--card')}>
                 <PostHeader />
                 <PostContent>
-                  <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
                 </PostContent>
                 <PostFooter />
               </Post>
@@ -60,7 +60,7 @@ export let states = [
               <Post className={pf('post')}>
                 <PostHeader />
                 <PostContent>
-                  <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
                 </PostContent>
                 <PostFooter />
               </Post>
@@ -70,7 +70,7 @@ export let states = [
               <Post className={pf('post')}>
                 <PostHeader />
                 <PostContent>
-                  <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
                 </PostContent>
                 <PostFooter />
               </Post>

@@ -20,19 +20,19 @@ export default (
   <PickList label="Select an Option" aria-expanded="true">
     <Menu className={pf('dropdown--left')}>
       <Menu.List>
-        <Menu.Item href="#">Option A</Menu.Item>
-        <Menu.Item href="#">Option B</Menu.Item>
-        <Menu.Item href="#">Option C</Menu.Item>
-        <Menu.Item href="#">Option D</Menu.Item>
-        <Menu.Item href="#">Option E</Menu.Item>
-        <Menu.Item href="#">Option F</Menu.Item>
-        <Menu.Item href="#">Option G</Menu.Item>
-        <Menu.Item href="#">Option H</Menu.Item>
-        <Menu.Item href="#">Option I</Menu.Item>
-        <Menu.Item href="#">Option J</Menu.Item>
-        <Menu.Item href="#">Option K</Menu.Item>
-        <Menu.Item href="#">Option L</Menu.Item>
-        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option A</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option B</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option C</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option D</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option E</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option F</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option G</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option H</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option I</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option J</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option K</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option L</Menu.Item>
+        <Menu.Item href="javascript:void(0);">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
       </Menu.List>
     </Menu>
   </PickList>

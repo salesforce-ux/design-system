@@ -26,7 +26,7 @@ export const preview = (
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_038.zip</a>
+            <a href="javascript:void(0);">SLDS_038.zip</a>
           </p>
           <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
             <li className={pf('truncate list__item')}>May 9th, 2015</li>
@@ -39,7 +39,7 @@ export const preview = (
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_037.zip</a>
+            <a href="javascript:void(0);">SLDS_037.zip</a>
           </p>
           <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
             <li className={pf('truncate list__item')}>May 8th, 2015</li>
@@ -52,7 +52,7 @@ export const preview = (
       <li className={pf('list__item')}>
         <MediaObject figureLeft={image} className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_036.zip</a>
+            <a href="javascript:void(0);">SLDS_036.zip</a>
           </p>
           <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
             <li className={pf('truncate list__item')}>May 7th, 2015</li>
@@ -70,7 +70,7 @@ export const code = (
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_038.zip</a>
+          <a href="javascript:void(0);">SLDS_038.zip</a>
         </p>
         <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
           <li className={pf('truncate list__item')}>May 9th, 2015</li>
@@ -81,7 +81,7 @@ export const code = (
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_037.zip</a>
+          <a href="javascript:void(0);">SLDS_037.zip</a>
         </p> has-dividers
         <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
           <li className={pf('truncate list__item')}>May 8th, 2015</li>
@@ -92,7 +92,7 @@ export const code = (
     <li className={pf('list__item')}>
       <MediaObject figureLeft={image} className={pf('tile')}>
         <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_036.zip</a>
+          <a href="javascript:void(0);">SLDS_036.zip</a>
         </p>
         <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
           <li className={pf('truncate list__item')}>May 7th, 2015</li>

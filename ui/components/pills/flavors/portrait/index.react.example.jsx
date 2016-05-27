@@ -19,7 +19,7 @@ const image = (
 
 export default (
 <div className="demo-only">
-  <a href="#void" className={pf('pill')}>
+  <a href="javascript:void(0);" className={pf('pill')}>
     <span className={pf('pill__icon avatar avatar--circle')}>{image}</span>
     <span className={pf('pill__label')}>Pill Label</span>
     <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />

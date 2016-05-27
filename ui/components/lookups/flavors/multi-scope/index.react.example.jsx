@@ -39,31 +39,31 @@ export default (
     <div className={pf('lookup__menu')} role="listbox">
       <ul className={pf('lookup__list')} role="presentation">
         <li className={pf('lookup__item')}>
-          <a id="s01" href="#" role="option">
+          <a id="s01" href="javascript:void(0);" role="option">
             <SvgIcon className={pf('icon icon-standard-user icon--small')} sprite="standard" symbol="user" />
             Diana Rios
           </a>
         </li>
         <li className={pf('lookup__item')}>
-          <a id="s02" href="#" role="option">
+          <a id="s02" href="javascript:void(0);" role="option">
             <SvgIcon className={pf('icon icon-standard-user icon--small')} sprite="standard" symbol="user" />
             Nicole Woods
           </a>
         </li>
         <li className={pf('lookup__item')}>
-          <a id="s03" href="#" role="option">
+          <a id="s03" href="javascript:void(0);" role="option">
             <SvgIcon className={pf('icon icon-standard-user icon--small')} sprite="standard" symbol="user" />
             James Freeman
           </a>
         </li>
         <li className={pf('lookup__item')}>
-          <a id="s04" href="#" role="option">
+          <a id="s04" href="javascript:void(0);" role="option">
             <SvgIcon className={pf('icon icon-standard-user icon--small')} sprite="standard" symbol="user" />
             Gloria Pearson
           </a>
         </li>
         <li className={pf('lookup__item')}>
-          <a id="s05" href="#" role="option">
+          <a id="s05" href="javascript:void(0);" role="option">
             <SvgIcon className={pf('icon icon-standard-user icon--small')} sprite="standard" symbol="user" />
             Jordan Dean
           </a>

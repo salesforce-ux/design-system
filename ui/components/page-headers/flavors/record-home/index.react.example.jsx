@@ -87,7 +87,7 @@ export default (
       </li>
       <li className={pf('col--padded size--1-of-4')}>
         <p className={pf('text-heading--label truncate')} title="Field 3">Field 3</p>
-        <a href="#void">Hyperlink</a>
+        <a href="javascript:void(0);">Hyperlink</a>
       </li>
       <li className={pf('col--padded size--1-of-4')}>
         <p className={pf('text-heading--label truncate')} title="Field 4">Field 4</p>

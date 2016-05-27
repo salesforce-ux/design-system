@@ -21,11 +21,14 @@ export default (
     <Modal
       isOpen={true}
       renderInline={true}
+      role="alertdialog"
+      aria-labelledby="prompt-heading-id"
+      aria-describedby="prompt-message-wrapper"
       className={pf('modal--prompt')}
     >
 
-      <Modal.Header className={pf('theme--error theme--alert-texture')}>
-        <h2 className={pf('text-heading--medium')}>
+      <Modal.Header className={pf('theme--error theme--alert-texture')} closeButton={false}>
+        <h2 className={pf('text-heading--medium')} id="prompt-heading-id">
           Service Unavailable
         </h2>
       </Modal.Header>

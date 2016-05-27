@@ -101,7 +101,7 @@ export default (
         </table>
       </div>
       <div className={pf('card__footer')}>
-        <a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a>
+        <a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a>
       </div>
     </div>
   </div>

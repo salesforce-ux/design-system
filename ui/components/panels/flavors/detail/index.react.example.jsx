@@ -56,7 +56,7 @@ let Tile = props =>
     </div>
     <div className={pf('media__body')}>
       <p className={pf('tile__title truncate text-heading--small')}>
-        <a href="#void">Follow up on '15 contact</a>
+        <a href="javascript:void(0);">Follow up on '15 contact</a>
       </p>
       <div className={pf('tile__detail text-body--small')}>
         <p className={pf('truncate')}>Jun 18</p>

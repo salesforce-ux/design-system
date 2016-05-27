@@ -2,3 +2,6 @@ status: 'dev-ready'
 classBase: 'badge'
 flavors:
   - base
+  - neutral
+  - tint
+  - inverse

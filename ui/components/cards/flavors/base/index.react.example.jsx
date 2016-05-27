@@ -51,7 +51,7 @@ export let CardHeader = props =>
           <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--small')} sprite="standard" symbol={ props.symbol } />
         </div> : null }
       <div className={pf('media__body truncate')}>
-        <a href="#void" className={pf('text-link--reset')}>{ props.children }</a>
+        <a href="javascript:void(0);" className={pf('text-link--reset')}>{ props.children }</a>
       </div>
     </div>
     { props.search ? headerSearch : null }

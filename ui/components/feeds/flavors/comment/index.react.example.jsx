@@ -32,7 +32,7 @@ export let CommentHeader = props =>
   <header className={pf('comment__header media media--center')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
-        <a href="#void" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
+        <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
       </p>
       <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
     </div>
@@ -47,7 +47,7 @@ export let CommentFooter = props =>
   <footer className={className(pf('comment__footer'), props.className)}>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
       <li className={pf('list__item')}>
-        <a href="#void" title="Like this item">Like</a>
+        <a href="javascript:void(0);" title="Like this item">Like</a>
       </li>
       <li className={pf('list__item')}>21 Likes</li>
     </ul>

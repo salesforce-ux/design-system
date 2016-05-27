@@ -25,8 +25,8 @@ export default (
     <div className={pf('grid')}>
       <div className={pf('col has-flexi-truncate')}>
         <BreadCrumbs className={pf('m-bottom--xx-small')}>
-          <Crumb href="#void">Accounts</Crumb>
-          <Crumb href="#void">Company One</Crumb>
+          <Crumb href="javascript:void(0);">Accounts</Crumb>
+          <Crumb href="javascript:void(0);">Company One</Crumb>
         </BreadCrumbs>
         <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)
         </h1>

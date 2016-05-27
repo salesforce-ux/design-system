@@ -49,7 +49,7 @@ let LookupMultiWithSelection = props =>
               <span className={pf('assistive-text')}>Account</span>
             </span>
           </Pill>
-          <a href="#void" className={pf('m-left--x-small')}>+1 more</a>
+          <a href="javascript:void(0);" className={pf('m-left--x-small')}>+1 more</a>
         </PillContainer>
       </div>
     </div>
@@ -72,13 +72,13 @@ let LookupLabel = props =>
   </div>;
 
 let LookupAction = props =>
-  <a href="#void" className={className(pf('lookup__item-action lookup__item-action--label'), props.className)}>
+  <a href="javascript:void(0);" className={className(pf('lookup__item-action lookup__item-action--label'), props.className)}>
     {props.children}
   </a>;
 
 let LookupResultsItem = props =>
   <li>
-    <a className={pf('lookup__item-action media media--center')} id={props.id} href="#void" role="option">
+    <a className={pf('lookup__item-action media media--center')} id={props.id} href="javascript:void(0);" role="option">
       <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
       <div className={pf('media__body')}>
         {props.children}

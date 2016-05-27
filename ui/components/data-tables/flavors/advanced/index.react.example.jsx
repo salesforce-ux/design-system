@@ -41,7 +41,7 @@ let Tr = props =>
 
 let Th = props =>
   <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
-    <a href="#void" className={pf('th__action text-link--reset')}>
+    <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
       <span className={pf('truncate')} title={props.title}>{ props.children }</span>
       <div className={pf('icon_container')} title="Sort Column">
@@ -78,7 +78,7 @@ let RowData = props =>
     <Td className={pf('truncate')} dataLabel="Prospecting" title="Prospecting">Prospecting</Td>
     <Td dataLabel="Confidence" title="20%">20%</Td>
     <Td dataLabel="Amount" title="$25k">$25k</Td>
-    <Td className={pf('truncate')} dataLabel="Contact" title="jrogers@cloudhub.com"><a href="#void">jrogers@cloudhub.com</a></Td>
+    <Td className={pf('truncate')} dataLabel="Contact" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></Td>
     <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"

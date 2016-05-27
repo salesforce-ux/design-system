@@ -54,7 +54,7 @@ export let MenuList = props =>
 
 export let MenuItem = props =>
   <li className={className(pf('dropdown__item'), props.className)} aria-selected={props.ariaSelected}>
-    <a href="#void" role="menuitem">
+    <a href="javascript:void(0);" role="menuitem">
       <p className={pf('truncate')}>
         { props.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }
         {props.children}

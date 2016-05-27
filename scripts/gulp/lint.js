@@ -91,7 +91,7 @@ gulp.task('lint:html', () => {
       'doctype-html5': true,
       'id-class-ad-disabled': true,
       'id-unique': true,
-      'inline-script-disabled': true,
+      'inline-script-disabled': false,
       'src-not-empty': true,
       'tag-pair': true,
       'tag-self-close': true,

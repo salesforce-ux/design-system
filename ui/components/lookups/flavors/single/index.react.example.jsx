@@ -63,14 +63,14 @@ let LookupLabel = props =>
 
 let LookupAction = props =>
   <div>
-    <a href="#void" className={pf('lookup__item-action lookup__item-action--label')}>
+    <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
       {props.children}
     </a>
   </div>;
 
 let LookupResultsItem = props =>
   <li>
-    <a className={pf('lookup__item-action media media--center')} id={props.id} href="#void" role="option">
+    <a className={pf('lookup__item-action media media--center')} id={props.id} href="javascript:void(0);" role="option">
       <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
       <div className={pf('media__body')}>
         {props.children}

@@ -51,14 +51,14 @@ const UserImage = (
 );
 
 let DockedComposer = props =>
-  <div className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
     {props.children}
   </div>;
 
 let ComposerHeader = props =>
-  <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
     <MediaObject figureLeft={DialingIcon} flavor="center">
-      {props.children}
+      <h2 id="dialog-heading-id" aria-live="polite" aria-atomic="true">{props.children}</h2>
     </MediaObject>
     <div className={pf('docked-composer__actions')}>
       <ButtonIcon
@@ -77,7 +77,7 @@ let ComposerHeader = props =>
         symbol="close"
         assistiveText="Close" />
     </div>
-  </div>;
+  </header>;
 
 let ComposerBody = props =>
   <div className={className(pf('docked-composer__body col grid grid--vertical nowrap'), props.className)}>
@@ -85,9 +85,9 @@ let ComposerBody = props =>
   </div>;
 
 let ComposerFooter = props =>
-  <div className={pf('docked-composer__footer shrink-none')}>
+  <footer className={pf('docked-composer__footer shrink-none')}>
     {props.children}
-  </div>;
+  </footer>;
 
 let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
@@ -110,7 +110,7 @@ let LookupMulti = props =>
 
 let StateA = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Connecting...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -135,7 +135,7 @@ let StateA = props =>
 
 let StateB = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Dialing...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -160,7 +160,7 @@ let StateB = props =>
 
 let StateC = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call in Progress</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
@@ -193,7 +193,7 @@ let StateC = props =>
 
 let StateD = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Cancelling...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -215,7 +215,7 @@ let StateD = props =>
 
 let StateE = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Busy</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -243,7 +243,7 @@ let StateE = props =>
 
 let StateF = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Failed</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -271,7 +271,7 @@ let StateF = props =>
 
 let StateG = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -299,7 +299,7 @@ let StateG = props =>
 
 let StateH = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Finished</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
@@ -331,7 +331,7 @@ let StateH = props =>
 
 let StateI = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Incoming Call...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
@@ -388,7 +388,7 @@ let StateI = props =>
 
 let StateJ = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan</ComposerHeader>
       <ComposerBody className={pf('docked-composer__body--form')}>
         <fieldset className={pf('form--compound scrollable--y')}>

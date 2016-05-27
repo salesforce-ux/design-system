@@ -72,7 +72,9 @@ const categories = {
 
   custom: () => _.assign(_category(), {
     getClassName(spriteName, symbolName) {
-      return `icon-${_.kebabCase(symbolName)}`;
+      // The desired format is: `icon-custom-custom27`, following the icon names displayed on the page
+      // below each icon, and be consistent with the class names in other sets
+      return `icon-${spriteName}-${symbolName.replace(/[^a-z0-9]/g, '')}`;
     },
     description: 'Custom icons are available for the identity of user created objects.',
     props: require('@salesforce-ux/design-tokens/dist/bg-custom.common.js')
@@ -80,7 +82,8 @@ const categories = {
 
   doctype: () => _.assign(_category(), {
     getClassName(spriteName, symbolName) {
-      return `icon-${symbolName} icon__svg--no-background`;
+      // Doctype icons have no background, so we're not generating any class for it
+      return null;
     },
     description: 'Doctype icons represent a type of file when a preview or image is unavailable'
   }),
@@ -95,7 +98,8 @@ const categories = {
 
   utility: () => _.assign(_category(), {
     getClassName(spriteName, symbolName) {
-      return `icon-utility-${symbolName}`;
+      // Utility icons have no background, so we're not generating any class for it
+      return null;
     },
     description: 'Utility icons are used throughout the interface and are SVG&rsquo;s for extensibility.'
   })

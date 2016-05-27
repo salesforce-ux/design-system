@@ -10,49 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-//////////////////////////////////////////////
-// State Constructor(s)
-//////////////////////////////////////////////
+export const intro = (
+  <p className="site-text-introduction">
+    Positioning utilities give you the ability to change the position property of an element.
+  </p>
+);
 
-let CaseIcon = props =>
-<span className={pf('icon_container icon-standard-case')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-  <span className={pf('assistive-text')}>Description of icon</span>
-</span>;
-
-let LogACallIcon = props =>
-<span className={pf('icon_container icon-standard-log-a-call')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
-  <span className={pf('assistive-text')}>Description of icon</span>
-</span>;
-
-let CustomIcon = props =>
-<span className={pf('icon_container icon-custom-custom25')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="custom" symbol="custom25" />
-  <span className={pf('assistive-text')}>Description of icon</span>
-</span>;
-
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
-
-export let states = [
-  {
-    id: 'caseicon',
-    label: 'Case',
-    element: <CaseIcon />
-  },
-  {
-    id: 'logacallicon',
-    label: 'Log a Call',
-    element: <LogACallIcon />
-  },
-  {
-    id: 'customicon',
-    label: 'Custom Icon 25',
-    element: <CustomIcon />
-  }
-];
+export default (
+  <ComponentDocs></ComponentDocs>
+);

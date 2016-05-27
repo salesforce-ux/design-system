@@ -25,9 +25,9 @@ export let Image = props =>
     <div className={className(pf('image__crop'), props.cropClass)}>
       { props.image ?
         <img src="/assets/images/placeholder-img@16x9.jpg" alt={ props.title || 'Image Title' } /> :
-        <span className={pf('image__icon icon_container')} title={ props.title || 'Image Title' }>
+        <span className={pf('image__icon icon_container')} title={ props.symbol + ' file type' || 'unknown file type' }>
           <SvgIcon className={pf('icon')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-          <span className={pf('assistive-text')}>{ props.title || 'Image Title' }</span>
+          <span className={pf('assistive-text')}>{ props.symbol + ' file type' || 'unknown file type' }</span>
         </span>
       }
       { props.actions ?
@@ -38,11 +38,11 @@ export let Image = props =>
     </div>
     <figcaption className={className(pf('image__title'), props.titleClass)}>
       { props.symbol ?
-      <span className={pf('icon_container m-right--x-small')} title={ props.title || 'Image Title' }>
+      <span className={pf('icon_container m-right--x-small')} title={ props.symbol + ' file type' || 'unknown file type' }>
         <SvgIcon className={pf('icon icon--x-small')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-        <span className={pf('assistive-text')}>{ props.title || 'Image Title' }</span>
+        <span className={pf('assistive-text')}>{ props.symbol + ' file type' || 'unknown file type' }</span>
       </span>: null }
-      <span className={pf('truncate')}>{ props.title || 'Image Title' }</span>
+      <span className={pf('truncate')} title={ props.title || 'Image Title' }>{ props.title || 'Image Title' }</span>
     </figcaption>
   </figure>;
 

@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Intro
+    Files are a representation of content uploaded as an attachment.
   </p>
 );
 

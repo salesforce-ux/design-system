@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -206,29 +207,32 @@ let IsEditing = props =>
           </FormElement>
           <Lookup label="Assigned To" id="text-input-02">
             <div className={pf('pill_container show')}>
-              <a href="#void" className={pf('pill')}>
-                <SvgIcon className={pf('icon icon-standard-avatar pill__icon')} sprite="standard" symbol="avatar" />
-                <span className={pf('pill__label')}>Jason Dewar</span>
-                <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-              </a>
+              <Pill label="Jason Dewar">
+                <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
+                  <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
+                  <span className={pf('assistive-text')}>Person</span>
+                </span>
+              </Pill>
             </div>
           </Lookup>
           <Lookup label="Name" id="text-input-03">
             <div className={pf('pill_container show')}>
-              <a href="#void" className={pf('pill')}>
-                <SvgIcon className={pf('icon icon-standard-avatar pill__icon')} sprite="standard" symbol="avatar" />
-                <span className={pf('pill__label')}>Adam Choi</span>
-                <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-              </a>
+              <Pill label="Adam Choi">
+                <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
+                  <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
+                  <span className={pf('assistive-text')}>Person</span>
+                </span>
+              </Pill>
             </div>
           </Lookup>
           <Lookup label="Related To" id="text-input-04">
             <div className={pf('pill_container show')}>
-              <a href="#void" className={pf('pill')}>
-                <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-                <span className={pf('pill__label')}>Tesla Cloudhub + Anypoint Connectors</span>
-                <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-              </a>
+              <Pill label="Tesla Cloudhub + Anypoint Connectors">
+                <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+                  <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                  <span className={pf('assistive-text')}>Account</span>
+                </span>
+              </Pill>
             </div>
           </Lookup>
           <FormElement label="Comments" id="text-input-05">

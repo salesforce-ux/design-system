@@ -74,7 +74,8 @@
     }
   }
 
-  &__icon {
+  &__icon,
+  &__icon_container {
     @include square($square-icon-x-small-boundary);
     margin-right: $spacing-xx-small;
 

@@ -210,6 +210,7 @@ let IsEditing = props =>
               <Pill label="Jason Dewar">
                 <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
                   <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
+                  <span className={pf('assistive-text')}>Person</span>
                 </span>
               </Pill>
             </div>
@@ -219,6 +220,7 @@ let IsEditing = props =>
               <Pill label="Adam Choi">
                 <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
                   <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
+                  <span className={pf('assistive-text')}>Person</span>
                 </span>
               </Pill>
             </div>
@@ -228,6 +230,7 @@ let IsEditing = props =>
               <Pill label="Tesla Cloudhub + Anypoint Connectors">
                 <span className={pf('icon_container icon-standard-account pill__icon_container')}>
                   <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                  <span className={pf('assistive-text')}>Account</span>
                 </span>
               </Pill>
             </div>

@@ -51,6 +51,7 @@ let Icon = props =>
     <Pill>
       <span className={pf('icon_container icon-standard-account pill__icon_container')}>
         <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+        <span className={pf('assistive-text')}>Account</span>
       </span>
     </Pill>
   </Demo>;

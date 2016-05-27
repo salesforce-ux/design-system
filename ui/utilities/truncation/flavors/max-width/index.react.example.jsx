@@ -30,15 +30,15 @@ let ListItem = props =>
   </li>;
 
 const longestName = (
-  <a href="#void">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
+  <a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
 );
 
 const longName = (
-  <a href="#void">Lei Chan with Long Name</a>
+  <a href="javascript:void(0);">Lei Chan with Long Name</a>
 );
 
 const shortName = (
-  <a href="#void">Lei Chan</a>
+  <a href="javascript:void(0);">Lei Chan</a>
 );
 
 

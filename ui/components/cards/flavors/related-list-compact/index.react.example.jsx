@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let Tile = props =>
   <div className={pf('card__tile tile')}>
-    <p className={pf('tile__title truncate')}><a href="#void">{ props.title || 'Related Record Title' }</a></p>
+    <p className={pf('tile__title truncate')}><a href="javascript:void(0);">{ props.title || 'Related Record Title' }</a></p>
     <div className={pf('tile__detail text-body--small')}>
       <dl className={pf('dl--horizontal text-body--small')}>
         <dt className={pf('dl--horizontal__label')}>

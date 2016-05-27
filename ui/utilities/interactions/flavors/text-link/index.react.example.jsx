@@ -13,7 +13,7 @@ import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <a href="#void" className={pf('text-link--reset')}>
+  <a href="javascript:void(0);" className={pf('text-link--reset')}>
     This text is a link but looks like normal text...<span className={pf('text-link')}>More</span>.
   </a>
 );

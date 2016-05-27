@@ -34,7 +34,7 @@ let Search = props =>
 
 let Th = props =>
   <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
-    <a href="#void" className={pf('th__action text-link--reset')}>
+    <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
       <span className={pf('truncate')} title={props.title}>{ props.children }</span>
       <div className={pf('icon_container')} title="Sort Column">
@@ -74,7 +74,7 @@ export let states = [
         <Modal className={pf('modal--large')}>
           <ModalHeader>
             <h2 className={pf('text-heading--medium')}>Add Products</h2>
-            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="#void">(Change)</a></p>
+            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
           </ModalHeader>
           <ModalContent className={pf('grid nowrap')}>
             <div className={pf('col grid grid--vertical nowrap')}>
@@ -151,7 +151,7 @@ export let states = [
         <Modal className={pf('modal--large')}>
           <ModalHeader>
             <h2 className={pf('text-heading--medium')}>Add Products</h2>
-            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="#void">(Change)</a></p>
+            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
           </ModalHeader>
           <ModalContent className={pf('grid nowrap')}>
             <div className={pf('col grid grid--vertical nowrap')}>

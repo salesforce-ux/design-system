@@ -33,7 +33,7 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <div className={pf('post__payload')}>
               <AttachmentLink
@@ -55,12 +55,12 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <div className={pf('post__payload')}>
               <ul className={pf('grid grid--pull-padded')}>
                 <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-                  <a href="#void" className={pf('text-link--reset')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
                     <Image
                       className={pf('image--card')}
                       cropClass={pf('image__crop--16-by-9')}
@@ -70,7 +70,7 @@ export let states = [
                   </a>
                 </li>
                 <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-                  <a href="#void" className={pf('text-link--reset')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
                     <Image
                       className={pf('image--card')}
                       cropClass={pf('image__crop--16-by-9')}
@@ -79,7 +79,7 @@ export let states = [
                   </a>
                 </li>
                 <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
-                  <a href="#void" className={pf('text-link--reset')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
                     <Image
                       className={pf('image--card')}
                       cropClass={pf('image__crop--16-by-9')}

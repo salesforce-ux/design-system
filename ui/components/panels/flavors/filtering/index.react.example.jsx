@@ -45,14 +45,14 @@ export let FiltersBody = props =>
 
 export let FiltersFooter = props =>
   <div className={pf('filters__footer grid shrink-none')}>
-    <a href="#void">Add Filter</a>
-    <a href="#void" className={pf('col--bump-left')}>Remove All</a>
+    <a href="javascript:void(0);">Add Filter</a>
+    <a href="javascript:void(0);" className={pf('col--bump-left')}>Remove All</a>
   </div>;
 
 export let FilterObject = props =>
   <li className={pf('list__item')}>
     <div className={className(pf('filters__item grid grid--vertical-align-center'), props.className)}>
-      <a href="#void" className={pf('grow has-blur-focus')}>
+      <a href="javascript:void(0);" className={pf('grow has-blur-focus')}>
         {props.type ? (<p className={pf('text-body--small')}>{props.type}</p>) : null }
         <p>{props.children}</p>
       </a>

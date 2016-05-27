@@ -37,7 +37,7 @@ const entityAddDropdown = (
 // Context Tab
 let ContextTab = props =>
   <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null)} role="presentation">
-    <a href="#void" className={pf('context-bar__label-action order--2')} role="tab" title={ props.title || 'tab name'}>
+    <a href="javascript:void(0);" className={pf('context-bar__label-action order--2')} role="tab" title={ props.title || 'tab name'}>
       <span className={pf('truncate')}>{ props.title || 'tab name'}</span>
     </a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent order--1'), props.contextDropdownActive ? pf('is-open') : null)}>
@@ -75,7 +75,7 @@ export let ContextTabBar = props =>
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
         <div className={pf('context-bar__icon-action')}>
-          <a href="#void" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
+          <a href="javascript:void(0);" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
             <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
           </a>
         </div>
@@ -89,7 +89,7 @@ export let ContextTabBar = props =>
       {/* Object Context Switcher */}
       <div className={pf('context-bar__vertical-divider')}></div>
       <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
-        <a href="#void" title="Context" className={pf('context-bar__label-action truncate')}>
+        <a href="javascript:void(0);" title="Context" className={pf('context-bar__label-action truncate')}>
           <span className={pf('truncate')}>Accounts</span>
         </a>
         <div className={pf('context-bar__icon-action')}>
@@ -133,7 +133,7 @@ export let ContextTabBar = props =>
     <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__label-action')} href="#void">Actions</a>
+          <a className={pf('context-bar__label-action')} href="javascript:void(0);">Actions</a>
         </li>
       </ul>
     </div>

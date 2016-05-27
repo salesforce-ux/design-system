@@ -28,8 +28,8 @@ let ButtonIcon = props =>
 
 let GlobalHeader = props =>
   <header className={pf('global-header_container')}>
-    <a href="#void" className={pf('assistive-text')}>Skip to Navigation</a>
-    <a href="#void" className={pf('assistive-text')}>Skip to Main Content</a>
+    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
+    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
@@ -41,7 +41,7 @@ let GlobalHeader = props =>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="#void" title="View Title">
+          <a href="javascript:void(0);" title="View Title">
             <span className={pf('avatar avatar--circle avatar--x-small')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>
@@ -81,7 +81,7 @@ export let states = [
               <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
               <ul className={pf('lookup__list')} role="presentation">
                 <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-01" href="#void" role="option">
+                  <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
                     <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
                     <div className={pf('media__body')}>
                       <div className={pf('lookup__result-text')}>Salesforce - 1,000 Licenses</div>
@@ -90,7 +90,7 @@ export let states = [
                   </a>
                 </li>
                 <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-02" href="#void" role="option">
+                  <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
                     <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
                     <div className={pf('media__body')}>
                       <div className={pf('lookup__result-text')}>Art Vandelay</div>
@@ -99,7 +99,7 @@ export let states = [
                   </a>
                 </li>
                 <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-03" href="#void" role="option">
+                  <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
                     <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
                     <div className={pf('media__body')}>
                       <div className={pf('lookup__result-text')}>Vandelary Industries</div>
@@ -108,7 +108,7 @@ export let states = [
                   </a>
                 </li>
                 <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="#void" role="option">
+                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
                     <SvgIcon className={pf('icon icon-custom-8 icon--small media__figure')} sprite="custom" symbol="custom8" />
                     <div className={pf('media__body')}>
                       <div className={pf('lookup__result-text')}>Salesforce UK 2016 Events</div>
@@ -117,7 +117,7 @@ export let states = [
                   </a>
                 </li>
                 <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="#void" role="option">
+                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
                     <SvgIcon className={pf('icon icon-standard-lead icon--small media__figure')} sprite="standard" symbol="lead" />
                     <div className={pf('media__body')}>
                       <div className={pf('lookup__result-text')}>H.E. Pennypacker</div>
@@ -148,14 +148,14 @@ export let states = [
             <input id="global-search" className={pf('input lookup__search-input')} type="search" defaultValue="ibm" />
           </div>
           <div className={pf('lookup__menu')} role="listbox">
-            <a href="#void" className={pf('lookup__item-action lookup__item-action--label text-body--small')}>
+            <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label text-body--small')}>
               <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="search" />
               <span className={pf('truncate')}>"ibm" in Salesforce</span>
               <span className={pf('col--bump-left shrink-none')}>Click "enter" to search</span>
             </a>
             <ul className={pf('lookup__list')} role="presentation">
               <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-01" href="#void" role="option">
+                <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}><mark>IBM</mark> - 1yr/100k</div>
@@ -164,7 +164,7 @@ export let states = [
                 </a>
               </li>
               <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-02" href="#void" role="option">
+                <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}><mark>IBM</mark></div>
@@ -173,7 +173,7 @@ export let states = [
                 </a>
               </li>
               <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-03" href="#void" role="option">
+                <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}><mark>IBM</mark> Watson</div>
@@ -182,7 +182,7 @@ export let states = [
                 </a>
               </li>
               <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-04" href="#void" role="option">
+                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}>200 Service Licenses - <mark>IBM</mark></div>
@@ -191,7 +191,7 @@ export let states = [
                 </a>
               </li>
               <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-04" href="#void" role="option">
+                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
                   <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}>Art Vandelay (<mark>IBM</mark>)</div>
@@ -200,7 +200,7 @@ export let states = [
                 </a>
               </li>
             </ul>
-            <a href="#void" className={pf('lookup__item-action lookup__item-action--label')}>
+            <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
               <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="forward" />
               <span className={pf('truncate')}>Go to <mark>Groups</mark> home</span>
             </a>

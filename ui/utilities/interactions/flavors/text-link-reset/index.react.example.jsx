@@ -16,7 +16,7 @@ export let states = [
   {
     id: 'text-link-reset',
     label: 'Hyperlink',
-    element: <a href="#void" className={pf('text-link--reset')}>Link</a>
+    element: <a href="javascript:void(0);" className={pf('text-link--reset')}>Link</a>
   },
   {
     id: 'text-button-reset',

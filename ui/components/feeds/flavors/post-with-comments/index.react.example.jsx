@@ -31,7 +31,7 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <PostFooter />
           </Post>
@@ -63,13 +63,13 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <PostFooter />
           </Post>
           <Comments>
             <div className={pf('has-divider--bottom p-bottom--small m-bottom--small')}>
-              <a href="#void">You</a>, <a href="#void">Tim</a>, <a href="#void">Sophia</a> and <a href="#void">14</a> others liked this post
+              <a href="javascript:void(0);">You</a>, <a href="javascript:void(0);">Tim</a>, <a href="javascript:void(0);">Sophia</a> and <a href="javascript:void(0);">14</a> others liked this post
             </div>
           </Comments>
         </div>
@@ -84,16 +84,16 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <PostFooter />
           </Post>
           <Comments>
             <div className={pf('has-divider--bottom p-bottom--small m-bottom--small')}>
-              <a href="#void">You</a>, <a href="#void">Tim</a>, <a href="#void">Sophia</a> and <a href="#void">14</a> others liked this post
+              <a href="javascript:void(0);">You</a>, <a href="javascript:void(0);">Tim</a>, <a href="javascript:void(0);">Sophia</a> and <a href="javascript:void(0);">14</a> others liked this post
             </div>
             <div className={pf('has-divider--bottom p-bottom--small m-bottom--small grid')}>
-              <a href="#void">More comments</a>
+              <a href="javascript:void(0);">More comments</a>
               <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
             </div>
             <Comment>

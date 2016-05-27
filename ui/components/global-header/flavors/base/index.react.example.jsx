@@ -52,8 +52,8 @@ let ButtonIcon = props =>
 
 let GlobalHeader = props =>
   <header className={pf('global-header_container')}>
-    <a href="#void" className={pf('assistive-text')}>Skip to Navigation</a>
-    <a href="#void" className={pf('assistive-text')}>Skip to Main Content</a>
+    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
+    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
@@ -71,7 +71,7 @@ let GlobalHeader = props =>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="#void" title="View Title">
+          <a href="javascript:void(0);" title="View Title">
             <span className={pf('avatar avatar--circle avatar--x-small')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>

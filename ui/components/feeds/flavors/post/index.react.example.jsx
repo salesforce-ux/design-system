@@ -24,17 +24,17 @@ let ButtonIcon = props =>
 let PostFooterActions = props =>
   <ul className={pf('list--horizontal')}>
     <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Like this item" className={pf('post__footer-action')}>
+      <a href="javascript:void(0);" title="Like this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" /> Like
       </a>
     </li>
     <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Comment on this item" className={pf('post__footer-action')}>
+      <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
     <li className={pf('list__item m-right--medium')}>
-      <a href="#void" title="Share this item" className={pf('post__footer-action')}>
+      <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
       </a>
     </li>
@@ -52,7 +52,7 @@ export let PostHeader = props =>
   <header className={pf('post__header media media--center')}>
     <div className={pf('media__figure')}>
       <div className={pf('avatar avatar--circle avatar--medium')}>
-        <a href="#void" title="Jason Rodgers">
+        <a href="javascript:void(0);" title="Jason Rodgers">
           <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
       </div>
@@ -60,12 +60,12 @@ export let PostHeader = props =>
     <div className={pf('media__body')}>
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>
         <p className={pf('truncate')}>
-          <a href="#void" title="Jason Rodgers">Jason Rogers</a> via <a href="#void" title="Design Systems">Design Systems</a>
+          <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> via <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
         </p>
         <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
       </div>
       <p className={pf('text-body--small')}>
-        <a href="#void" title="Click for single-item view of this post" className={pf('text-link--reset')}>5 days Ago</a>
+        <a href="javascript:void(0);" title="Click for single-item view of this post" className={pf('text-link--reset')}>5 days Ago</a>
       </p>
     </div>
   </header>;
@@ -106,7 +106,7 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <PostFooter />
           </Post>
@@ -123,7 +123,7 @@ export let states = [
           <Post className={pf('post')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
             <PostFooter />
           </Post>

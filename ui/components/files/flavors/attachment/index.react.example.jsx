@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 export let AttachmentLink = props =>
-  <a href="#void" className={pf('media box grow text-link--reset')}>
+  <a href="javascript:void(0);" className={pf('media box grow text-link--reset')}>
     <div className={pf('media__figure medium-show')}>
       <div className={pf('image size--small')}>
         <div className={pf('image__crop image__crop--16-by-9')}>
@@ -52,7 +52,7 @@ export let states = [
     label: 'File with image',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="#void" className={pf('text-link--reset')}>
+        <a href="javascript:void(0);" className={pf('text-link--reset')}>
           <Image
             className={pf('image--card')}
             cropClass={pf('image__crop--16-by-9')}
@@ -67,7 +67,7 @@ export let states = [
     label: 'File with no image',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="#void" className={pf('text-link--reset')}>
+        <a href="javascript:void(0);" className={pf('text-link--reset')}>
           <Image
             className={pf('image--card')}
             cropClass={pf('image__crop--16-by-9')}
@@ -82,7 +82,7 @@ export let states = [
     label: 'File with actions',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="#void" className={pf('text-link--reset')}>
+        <a href="javascript:void(0);" className={pf('text-link--reset')}>
           <Image
             className={pf('image--card')}
             cropClass={pf('image__crop--16-by-9')}

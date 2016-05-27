@@ -26,7 +26,7 @@ let LookupMulti = props =>
     <div className={pf('form-element__control lookup__search-control grid box--border')}>
       <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
         <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
+        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon" sprite="utility" symbol="down" assistiveText="Filter" />
       </div>
       <div className={pf('input-has-icon input-has-icon--right grid grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
@@ -44,8 +44,8 @@ let LookupMultiWithSelection = props =>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <PillContainer className={pf('pill_container--bare')}>
           <Pill label="Paddy's Pub" unlinked>
-            <span className={pf('icon_container icon-standard-account')}>
-              <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+            <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+              <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
             </span>
           </Pill>
           <a href="#void" className={pf('m-left--x-small')}>+1 more</a>
@@ -177,13 +177,13 @@ export let states = [
         <LookupMenu>
           <PillContainer className={pf('pill_container--bare has-divider--bottom')}>
             <Pill label="Paddy's Pub" unlinked>
-              <span className={pf('icon_container icon-standard-account')}>
-                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
               </span>
             </Pill>
             <Pill label="Vanderlay Industries" unlinked>
-              <span className={pf('icon_container icon-standard-account')}>
-                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
               </span>
             </Pill>
           </PillContainer>

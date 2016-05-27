@@ -62,11 +62,16 @@ export default (
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
               <div className={pf('pill_container--bare show')}>
-                <a href="#void" className={pf('pill')}>
-                  <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-                  <span className={pf('pill__label')}>Lei Chan</span>
-                  <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />
-                </a>
+                <span className={pf('pill')}>
+                  <span className={pf('icon_container slds-icon-standard-account slds-pill__icon_container')}>
+                    <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                  </span>
+                  <a href="#void" className={pf('pill__label')} title="Lei Chen">Lei Chen</a>
+                  <button className={pf('button slds-button--icon pill__remove')}>
+                    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="close" />
+                    <span className={pf('assistive-text')}>Remove</span>
+                  </button>
+                </span>
               </div>
             </div>
             <div className={pf('grid shrink-none p-horizontal--small')}>

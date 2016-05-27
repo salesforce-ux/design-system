@@ -1,0 +1,4 @@
+status: 'dev-ready'
+flavors:
+  - relative
+  - static

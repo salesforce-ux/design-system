@@ -24,26 +24,11 @@ let Demo = props =>
   </div>;
 
 export let ButtonIconContainer = props =>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-      <span className={pf('assistive-text')}>{props.assitiveText || 'More settings'}</span>
-    </button>;
-
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <ButtonIconContainer className={pf('button--icon-more')} />
-  </Demo>;
-
-let Inverse = props =>
-  <Demo>
-    <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
-  </Demo>;
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
+    <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    <span className={pf('assistive-text')}>{props.assitiveText || 'More settings'}</span>
+  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -53,11 +38,17 @@ export let states = [
   {
     id: 'button-icon-with-dropdown',
     label: 'Default',
-    element: <Default />
+    element:
+      <Demo>
+        <ButtonIconContainer className={pf('button--icon-more')} />
+      </Demo>
   },
   {
     id: 'button-icon-with-dropdown-inverse',
     label: 'Inverse',
-    element: <Inverse />
+    element:
+      <Demo inverse>
+        <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
+      </Demo>
   }
 ];

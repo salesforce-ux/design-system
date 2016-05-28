@@ -74,6 +74,18 @@ bower install salesforce-lightning-design-system --save
       </CTALink>
     </form>
 
+    <h2 className="site-text-heading--large" id="ui-kit">Sketch UI Kit</h2>
+    <p>
+      A Sketch file of common design patterns. <a href="https://github.com/salesforce-ux/design-system-ui-kit">Also available on GitHub</a> (private repository).
+    </p>
+    <form action={'/assets/downloads/salesforce-lightning-design-system-ui-kit.zip'}>
+      <CTALink eventName="Download" eventType="uikit">
+        <button className={pf('button button--neutral')}>
+          Download the Sketch UI Kit
+        </button>
+      </CTALink>
+    </form>
+
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
       Download all <CTALink href="/resources/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is

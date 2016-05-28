@@ -10,24 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import gutil from 'gulp-util';
+import gulpIgnore from 'gulp-ignore';
+import path from 'path';
+import zip from 'gulp-zip';
 
-import './generate-icons';
-import './generate-release-notes';
-import './generate-tokens-zip';
-import './generate-ui-kit-zip';
-import './generate-tokens';
-import './generate-ui';
-import './generate-examples';
-import './generate-whitelist';
-
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:ui-kit:zip',
-  'generate:tokens:zip',
-  'generate:tokens',
-  'generate:ui',
-  'generate:examples',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
-]);
+gulp.task('generate:ui-kit:zip', () =>
+  gulp
+    .src(path.resolve(__PATHS__.uiKit, '*.*'))
+    .pipe(gulpIgnore.exclude('package.json'))
+    .pipe(zip('salesforce-lightning-design-system-ui-kit.zip'))
+    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')))
+);

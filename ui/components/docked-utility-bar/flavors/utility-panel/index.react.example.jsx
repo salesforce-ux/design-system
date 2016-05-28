@@ -30,7 +30,7 @@ const dialingIcon = (
 export let UtilityPanel = props =>
   <div className={className(pf('utility-panel grid grid--vertical'), props.className)}>
     <div className={pf('utility-panel__header grid shrink-none')}>
-      <a href="#void" className={pf('utility-panel__header-label-action grow')}>
+      <a href="javascript:void(0);" className={pf('utility-panel__header-label-action grow')}>
         <MediaObject figureLeft={dialingIcon} flavor="center">{ props.header || 'Header' }</MediaObject>
       </a>
       <div className={pf('utility-panel__header-icon-action')}>

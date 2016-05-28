@@ -49,7 +49,7 @@ let Success = props =>
       <span className={pf('assistive-text')}>Success</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="custom" symbol="custom19" />
-        Scheduled Maintenance Notification: Sunday March 15, 8:00 AM&ndash;10:00 PST <a href="#">More Information</a>
+        Scheduled Maintenance Notification: Sunday March 15, 8:00 AM&ndash;10:00 PST <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>
   </div>
@@ -68,7 +68,7 @@ let ErrorAlert = props =>
       <span className={pf('assistive-text')}>Error</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="ban" />
-        Your browser is currently not supported. Your Salesforce may be degraded. <a href="#">More Information</a>
+        Your browser is currently not supported. Your Salesforce may be degraded. <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>
   </div>
@@ -87,7 +87,7 @@ let Offline = props =>
       <span className={pf('assistive-text')}>Offline</span>
       <h2>
         <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="offline" />
-        You are in offline mode. <a href="#void">More Information</a>
+        You are in offline mode. <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>
   </div>

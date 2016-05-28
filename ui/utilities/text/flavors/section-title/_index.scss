@@ -16,6 +16,7 @@
 
   &__title {
     display: flex;
+    align-items: center;
     font-size: $font-size-large;
   }
 
@@ -26,6 +27,7 @@
   &__content {
     visibility: hidden;
     opacity: 0;
+    height: 0;
   }
 
   .#{$css-prefix}button__icon {
@@ -43,6 +45,7 @@
       padding-top: $spacing-small;
       visibility: visible;
       opacity: 1;
+      height: auto;
     }
   }
 }

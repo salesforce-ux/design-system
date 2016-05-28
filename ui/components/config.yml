@@ -1,5 +1,6 @@
 components:
   - activity-timeline
+  - app-launcher
   - badges
   - breadcrumbs
   - buttons
@@ -10,6 +11,7 @@ components:
   - docked-composer
   - docked-utility-bar
   - feeds
+  - files
   - forms
   - global-header
   - global-navigation

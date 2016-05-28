@@ -67,13 +67,13 @@ let HeadRowData = props =>
 
 let RowData = props =>
   <Tr className={props.className}>
-    <Th scope="row" dataLabel="Opportunity Name"><div className={pf('truncate')}><a href="#void">{props.title}</a></div></Th>
+    <Th scope="row" dataLabel="Opportunity Name"><div className={pf('truncate')}><a href="javascript:void(0);">{props.title}</a></div></Th>
     <Td dataLabel="Account Name"><div className={pf('truncate')}>Cloudhub</div></Td>
     <Td dataLabel="Close Date"><div className={pf('truncate')}>4/14/2015</div></Td>
     <Td dataLabel="Prospecting"><div className={pf('truncate')}>Prospecting</div></Td>
     <Td dataLabel="Confidence">20%</Td>
     <Td dataLabel="Amount">$25k</Td>
-    <Td dataLabel="Contact"><div className={pf('truncate')}><a href="#void">jrogers@cloudhub.com</a></div></Td>
+    <Td dataLabel="Contact"><div className={pf('truncate')}><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
   </Tr>;
 
 //////////////////////////////////////////////

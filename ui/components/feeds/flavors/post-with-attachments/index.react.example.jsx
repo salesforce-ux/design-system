@@ -14,64 +14,10 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
 import { Post, PostHeader, PostContent, PostFooter, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
+import { Image } from 'ui/components/images/flavors/figure/index.react.example';
+import { AttachmentLink } from 'ui/components/files/flavors/attachment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-let PostAttachments = props =>
-  <div className={pf('post__payload')}>
-    { props.type == 'link' ? <PostAttachmentLink /> : null }
-    { props.type == 'files' ? <PostAttachmentFiles /> : null }
-  </div>;
-
-let PostAttachmentLink = props =>
-  <a href="#void" className={pf('media box grow text-link--reset')}>
-    <div className={pf('media__figure medium-show')}>
-      <div className={pf('image size--small')}>
-        <div className={pf('image__crop image__crop--16-by-9')}>
-          <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <div className={pf('media__body')}>
-      <h3 className={pf('text-heading--small')}>Maui By Air The Best Way Around The Island</h3>
-      <span className={pf('text-body--small')}>http://www.linkurl.com</span>
-      <p>Many conventional colleges and universities are now offering online DVD repair course, which are the exact...</p>
-    </div>
-  </a>;
-
-let PostAttachmentFiles = props =>
-  <ul className={pf('grid grid--pull-padded')}>
-    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
-        <figure className={pf('image image--card')}>
-          <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-          </div>
-          <figcaption className={pf('image__title')}>Service Case Study.ppt</figcaption>
-        </figure>
-      </a>
-    </li>
-    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
-        <figure className={pf('image image--card')}>
-          <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-          </div>
-          <figcaption className={pf('image__title')}>Ride Along Accounts.xls</figcaption>
-        </figure>
-      </a>
-    </li>
-    <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
-      <a href="#void" className={pf('post__attachments-item-action')}>
-        <div className={pf('image')}>
-          <div className={pf('image__crop image__crop--16-by-9')}>
-            <img src="/assets/images/placeholder-img@16x9.jpg" alt="" />
-          </div>
-          <div className={pf('image__title image__title--overlay align--absolute-center text-heading--large')}>22+</div>
-        </div>
-      </a>
-    </li>
-  </ul>;
 
 ///////////////////////////////////////////
 // Export
@@ -87,9 +33,13 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
-            <PostAttachments type="link" />
+            <div className={pf('post__payload')}>
+              <AttachmentLink
+                articleTitle="Maui By Air The Best Way Around The Island"
+                articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt." />
+            </div>
             <PostFooter />
           </Post>
           <Comments />
@@ -105,9 +55,41 @@ export let states = [
           <Post className={pf('post--card')}>
             <PostHeader />
             <PostContent>
-              <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
             </PostContent>
-            <PostAttachments type="files" />
+            <div className={pf('post__payload')}>
+              <ul className={pf('grid grid--pull-padded')}>
+                <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
+                    <Image
+                      className={pf('image--card')}
+                      cropClass={pf('image__crop--16-by-9')}
+                      titleClass={pf('image__title--card')}
+                      symbol="image"
+                      image />
+                  </a>
+                </li>
+                <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
+                    <Image
+                      className={pf('image--card')}
+                      cropClass={pf('image__crop--16-by-9')}
+                      titleClass={pf('image__title--card')}
+                      symbol="pdf" />
+                  </a>
+                </li>
+                <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
+                  <a href="javascript:void(0);" className={pf('text-link--reset')}>
+                    <Image
+                      className={pf('image--card')}
+                      cropClass={pf('image__crop--16-by-9')}
+                      titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+                      title="22+"
+                      image />
+                  </a>
+                </li>
+              </ul>
+            </div>
             <PostFooter />
           </Post>
           <Comments />

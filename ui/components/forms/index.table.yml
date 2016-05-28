@@ -45,12 +45,24 @@ classes:
     description: Hook for <code>.{{cssPrefix}}input-has-icon</code>
     applied: <code>&lt;svg&gt;</code>
   -
+    class: input__icon--left
+    description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
+    applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
+  -
+    class: input__icon--right
+    description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
+    applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
+  -
     class: input-has-icon--left
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the left of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
     class: input-has-icon--right
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
+    applied: <code>.{{cssPrefix}}input-has-icon</code>
+  -
+    class: input-has-icon--left-right
+    description: Positions <code>.{{cssPrefix}}input__icon--left</code> to the left of the text input and <code>.{{cssPrefix}}input__icon--right</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
     class: input-has-fixed-addon

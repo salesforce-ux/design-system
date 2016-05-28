@@ -10,6 +10,7 @@
 
 
 .#{$css-prefix}image {
+  display: block;
   position: relative;
 
   &__crop {
@@ -43,7 +44,8 @@
   }
 
   &__title {
-    text-align: center;
+    display: flex;
+    align-items: center;
     padding: $spacing-x-small;
 
     &--overlay {
@@ -55,11 +57,33 @@
       right: 0;
       bottom: 0;
     }
+
+    &--card {
+      background: $color-background;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
   &--card {
-    border-radius: $border-radius-medium;
-    border: $border-width-thin solid $color-border;
     background: $color-background-alt;
+    border-top: $border-width-thin solid $color-border-separator;
+    box-shadow: $shadow-image;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
+  }
+
+  &__actions {
+    position: absolute;
+    top: $spacing-x-small;
+    right: $spacing-x-small;
   }
 }

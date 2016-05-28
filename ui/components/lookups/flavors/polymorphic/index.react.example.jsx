@@ -23,10 +23,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control lookup__search-control grid box--border')}>
+    <div className={pf('form-element__control grid box--border')}>
       <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
         <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
+        <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon" sprite="utility" symbol="down" assistiveText="Filter" />
       </div>
       <div className={pf('input-has-icon input-has-icon--right grid grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
@@ -39,16 +39,17 @@ let LookupMulti = props =>
 let LookupMultiWithSelection = props =>
   <div className={className(pf('form-element lookup has-selection'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control lookup__search-control grid box--border')}>
+    <div className={pf('form-element__control grid box--border')}>
       <div className={pf('input-has-icon input-has-icon--right grid grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
         <PillContainer className={pf('pill_container--bare')}>
           <Pill label="Paddy's Pub" unlinked>
-            <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
-              <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+            <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+              <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+              <span className={pf('assistive-text')}>Account</span>
             </span>
           </Pill>
-          <a href="#void" className={pf('m-left--x-small')}>+1 more</a>
+          <a href="javascript:void(0);" className={pf('m-left--x-small')}>+1 more</a>
         </PillContainer>
       </div>
     </div>
@@ -71,15 +72,13 @@ let LookupLabel = props =>
   </div>;
 
 let LookupAction = props =>
-  <div>
-    <button className={pf('button lookup__item-action')}>
-      {props.children}
-    </button>
-  </div>;
+  <a href="javascript:void(0);" className={className(pf('lookup__item-action lookup__item-action--label'), props.className)}>
+    {props.children}
+  </a>;
 
 let LookupResultsItem = props =>
   <li>
-    <a className={pf('lookup__item-action media media--center')} id={props.id} href="#void" role="option">
+    <a className={pf('lookup__item-action media media--center')} id={props.id} href="javascript:void(0);" role="option">
       <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
       <div className={pf('media__body')}>
         {props.children}
@@ -132,8 +131,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>
@@ -146,10 +145,10 @@ export let states = [
     <div className="demo-only" style={{ height: '230px' }}>
       <LookupMulti label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')} value="salesforce">
         <LookupMenu>
-          <LookupLabel>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="search" />
-            "salesforce" in accounts
-          </LookupLabel>
+          <LookupAction className={pf('text-body--small')}>
+            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="search" />
+            <span className={pf('truncate')}>"salesforce" in accounts</span>
+          </LookupAction>
           <LookupResults>
             <LookupResultsItem>
               <div className={pf('lookup__result-text')}><mark>Salesforce</mark>.com, Inc.</div>
@@ -161,8 +160,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>
@@ -177,13 +176,15 @@ export let states = [
         <LookupMenu>
           <PillContainer className={pf('pill_container--bare has-divider--bottom')}>
             <Pill label="Paddy's Pub" unlinked>
-              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
-                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                <span className={pf('assistive-text')}>Account</span>
               </span>
             </Pill>
             <Pill label="Vanderlay Industries" unlinked>
-              <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
-                <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                <span className={pf('assistive-text')}>Account</span>
               </span>
             </Pill>
           </PillContainer>
@@ -215,8 +216,8 @@ export let states = [
             </LookupResultsItem>
           </LookupResults>
           <LookupAction>
-            <SvgIcon className={pf('button__icon icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            Add Account
+            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="add" />
+            <span className={pf('truncate')}>Add Account</span>
           </LookupAction>
         </LookupMenu>
       </LookupMulti>

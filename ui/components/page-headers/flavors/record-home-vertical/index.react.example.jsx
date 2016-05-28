@@ -71,7 +71,7 @@ export default (
         </li>
         <li className={pf('list__item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 2">Field 2</p>
-          <a href="#void">Hyperlink</a>
+          <a href="javascript:void(0);">Hyperlink</a>
         </li>
         <li className={pf('list__item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 3">Field 3</p>

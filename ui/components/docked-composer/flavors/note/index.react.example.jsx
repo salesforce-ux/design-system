@@ -79,11 +79,11 @@ export default (
             <div className={pf('docked-composer__contacts grid grid--align-spread')}>
               <div className={pf('pill_container')}>
                 <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Lei Chan</a>
+                  <a href="javascript:void(0);" className={pf('pill__label')}>Lei Chan</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
                 <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Tesla Motors</a>
+                  <a href="javascript:void(0);" className={pf('pill__label')}>Tesla Motors</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
               </div>

@@ -37,7 +37,7 @@ export let Modal = props =>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className(pf('modal__header'), props.className)} {...props}>
+  <div className={className(pf('modal__header'), props.className)}>
     { props.closeButton != 'false' ?
       <ButtonIcon className={pf('modal__close')}
         flavor="icon-inverse"
@@ -84,7 +84,7 @@ let Taglines = props =>
         <p className={pf('m-top--x-small')}>
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
-          to you. It is allowed to <a href="#">contain links or be a link</a>.
+          to you. It is allowed to <a href="javascript:void(0);">contain links or be a link</a>.
         </p>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>

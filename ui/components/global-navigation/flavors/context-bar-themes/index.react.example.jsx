@@ -10,8 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Default as ContextBar } from 'ui/components/global-navigation/flavors/context-bar/index.react.example';
-import { Default as ContextTabBar } from 'ui/components/global-navigation/flavors/context-tab-bar/index.react.example';
+import { Default as ContextBar } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { Default as ContextTabBar } from 'ui/components/global-navigation/flavors/navigation-tab-bar/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////

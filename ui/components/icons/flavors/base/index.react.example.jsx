@@ -41,6 +41,12 @@ let Utility = props =>
   <span className={pf('assistive-text')}>Description of icon</span>
 </span>;
 
+let Custom = props =>
+<span className={pf('icon_container icon-custom-custom5')} title="description of icon when needed">
+  <SvgIcon className={pf('icon')} sprite="custom" symbol="custom5" />
+  <span className={pf('assistive-text')}>Description of icon</span>
+</span>;
+
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -65,5 +71,10 @@ export let states = [
     id: 'doctype',
     label: 'Doctype',
     element: <Doctype />
+  },
+  {
+    id: 'custom',
+    label: 'Custom',
+    element: <Custom />
   }
 ];

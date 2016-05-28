@@ -26,7 +26,7 @@ let Tile = props =>
     </div>
     <div className={pf('media__body')}>
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('tile__title truncate')}><a href="#void">{ props.title || 'Related Record Title' }</a></p>
+        <p className={pf('tile__title truncate')}><a href="javascript:void(0);">{ props.title || 'Related Record Title' }</a></p>
         <button className={pf('button button--icon-border-filled button--icon-x-small no-flex')}>
           <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
           <span className={pf('assistive-text')}>More Options</span>
@@ -65,6 +65,6 @@ export default (
         <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 3" />
       </div>
     </CardBody>
-    <CardFooter><a href="#void">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+    <CardFooter><a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
   </Card>
 );

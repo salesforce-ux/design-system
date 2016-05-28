@@ -39,7 +39,7 @@ let List = props =>
 
 let Item = props =>
   <li className={className(pf('list__item'), props.className)}>
-    <a href="#void" className={pf('navigation-list--vertical__action text-link--reset')} aria-describedby={props.id}>
+    <a href="javascript:void(0);" className={pf('navigation-list--vertical__action text-link--reset')} aria-describedby={props.id}>
       {props.children}
     </a>
   </li>;

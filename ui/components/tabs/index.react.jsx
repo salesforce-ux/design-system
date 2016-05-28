@@ -76,7 +76,7 @@ class TabItem extends React.Component {
       <a
         className={pf(`tabs--${this.props.flavor}__link`)}
         onClick={this.props.onClick.bind(this)}
-        href="#void" role="tab"
+        href="javascript:void(0);" role="tab"
         tabIndex={tabIndex}
         aria-selected={this.props.current}
         aria-controls={this.props.id}

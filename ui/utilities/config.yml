@@ -5,6 +5,7 @@ components:
   - interactions
   - lists
   - media-objects
+  - position
   - scrollable
   - sizing
   - spacing

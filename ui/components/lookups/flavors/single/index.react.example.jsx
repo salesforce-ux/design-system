@@ -36,8 +36,9 @@ let LookupWithSelection = props =>
     <div className={pf('form-element__control')}>
       <PillContainer>
         <Pill label="Paddy's Pub" unlinked>
-          <span className={pf('icon_container icon-standard-account m-right--xx-small')}>
-            <SvgIcon className={pf('icon pill__icon')} sprite="standard" symbol="account" />
+          <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+            <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+            <span className={pf('assistive-text')}>Account</span>
           </span>
         </Pill>
       </PillContainer>
@@ -62,14 +63,14 @@ let LookupLabel = props =>
 
 let LookupAction = props =>
   <div>
-    <a href="#void" className={pf('lookup__item-action lookup__item-action--label')}>
+    <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
       {props.children}
     </a>
   </div>;
 
 let LookupResultsItem = props =>
   <li>
-    <a className={pf('lookup__item-action media media--center')} id={props.id} href="#void" role="option">
+    <a className={pf('lookup__item-action media media--center')} id={props.id} href="javascript:void(0);" role="option">
       <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
       <div className={pf('media__body')}>
         {props.children}

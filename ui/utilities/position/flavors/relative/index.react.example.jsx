@@ -10,19 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <img src="/assets/images/avatar2.jpg" alt="" />
-);
 
 export default (
-<div className="demo-only">
-  <a href="#void" className={pf('pill')}>
-    <span className={pf('pill__icon avatar avatar--circle')}>{image}</span>
-    <span className={pf('pill__label')}>Pill Label</span>
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </a>
-</div>
+  <div className={pf('demo-only grid')} style={{ height: '150px', width: '300px', padding: '2rem' }}>
+    <div className={pf('is-relative')}>
+      <div style={{ position: 'absolute', top: '1rem', left: '1rem', border: '1px solid red', background: '#f4f6f9' }}>An absolutely positioned element is positioned relative to the nearest positioned ancestor.</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
 );

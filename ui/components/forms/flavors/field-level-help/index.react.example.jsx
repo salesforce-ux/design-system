@@ -22,7 +22,7 @@ export default (
         <label className={pf('align-middle')} htmlFor="form-help">Text Label</label>
       </div>
       <div className={pf('form-element__icon')}>
-        <a href="#void">
+        <a href="javascript:void(0);">
           <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="info" />
           <span className={pf('assistive-text')}>Help</span>
         </a>

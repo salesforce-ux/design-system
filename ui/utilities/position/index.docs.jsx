@@ -10,17 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export const intro = (
+  <p className="site-text-introduction">
+    Positioning utilities give you the ability to change the position property of an element.
+  </p>
+);
 
 export default (
-<div className="demo-only">
-  <a href="#void" className={pf('pill')}>
-    <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-    <span className={pf('pill__label')}>Pill Label</span>
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />
-  </a>
-</div>
+  <ComponentDocs></ComponentDocs>
 );

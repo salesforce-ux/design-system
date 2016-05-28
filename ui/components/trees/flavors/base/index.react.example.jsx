@@ -30,7 +30,7 @@ let TreeItem = props =>
     sprite="utility"
     symbol="chevronright"
     assistiveText="Toggle" />
-  <a href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
   {props.children}
 </div>;
 
@@ -45,11 +45,11 @@ let TreeBranch = props =>
     assistiveText="Toggle" />
   <a
     id={props.ariaControls + '__label'}
-    href="#" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Branch</a>
+    href="javascript:void(0);" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Branch</a>
 </div>;
 
 let Pill = props =>
-<span className={pf('pill shrink-none align-middle m-left--small')}>
+<span className={pf('pill shrink-none align-middle')}>
   <span className={pf('pill__label')}>Label</span>
 </span>;
 
@@ -200,7 +200,7 @@ export let states = [
   },
   {
     id: 'with-label',
-    label: 'Label in an item',
+    label: 'Pill in an item',
     element: <Default itemContent={<Pill />} />
   },
   {

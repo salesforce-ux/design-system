@@ -10,41 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-//////////////////////////////////////////////
-// State Constructor(s)
-//////////////////////////////////////////////
+import CodeClass from 'app_modules/site/components/code-class';
 
-export let Badge = props =>
-  <span className={className(pf('badge'), props.className)}>Badge Label</span>;
+export const intro = (
+  <p className="site-text-introduction">
+    Badges are labels which hold small amounts of  information. They can accept different themes.
+  </p>
+);
 
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
-
-export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element: <Badge />
-  },
-  {
-    id: 'neutral',
-    label: 'Neutral',
-    element: <div className="demo-only" style={{ background: '#F4F6F9', padding: '0.65rem' }}>
-      <Badge className={pf('theme--default')} />
-    </div>
-  },
-  {
-    id: 'tint',
-    label: 'Tint',
-    element: <Badge className={pf('theme--shade')} />
-  },
-  {
-    id: 'inverse',
-    label: 'Inverse',
-    element: <Badge className={pf('theme--inverse')} />
-  }
-];
+export default (
+  <ComponentDocs>
+  </ComponentDocs>
+);

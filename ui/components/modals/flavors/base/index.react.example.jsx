@@ -126,7 +126,7 @@ let Directional = props =>
 let Headless = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
-      <ModalHeader className={pf('modal__header--empty')}>
+      <ModalHeader className={pf('modal__header modal__header--empty')}>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>

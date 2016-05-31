@@ -161,6 +161,9 @@ export default () => formatNavItem({
       })
     },
     {
+      label: 'Accessibility'
+    },
+    {
       label: 'Voice and Tone'
     },
     {

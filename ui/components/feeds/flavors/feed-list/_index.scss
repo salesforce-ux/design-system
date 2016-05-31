@@ -19,7 +19,7 @@
 
   &__item {
     padding: $spacing-x-small 0;
-    
+
     @include mq-medium-min {
       padding: $spacing-large 0;
 

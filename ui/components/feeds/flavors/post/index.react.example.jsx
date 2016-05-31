@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 let ButtonIcon = props =>
@@ -21,37 +20,38 @@ let ButtonIcon = props =>
     <span className={pf('assistive-text')}>{props.assistiveText}</span>
   </button>;
 
-let PostFooterActions = props =>
-  <ul className={pf('list--horizontal')}>
-    <li className={pf('list__item m-right--medium')}>
-      <a href="javascript:void(0);" title="Like this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" /> Like
+export let PostFooterActions = props =>
+  <ul className={pf('post__footer-actions-list list--horizontal')}>
+    <li className={pf('list__item')}>
+      <a href="javascript:void(0);" title="Like this item" className={className(pf('post__footer-action'), props.liked ? pf('is-active') : null)}>
+        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" />
+        { props.liked ? 'Liked' : 'Like' }
       </a>
     </li>
-    <li className={pf('list__item m-right--medium')}>
+    <li className={pf('list__item')}>
       <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
-    <li className={pf('list__item m-right--medium')}>
+    <li className={pf('list__item')}>
       <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
       </a>
     </li>
   </ul>;
 
-let PostFooterMeta = props =>
-  <ul className={pf('col--bump-left list--horizontal has-dividers--right')}>
-    <li className={pf('list__item medium-show')}>2 Likes</li>
-    <li className={pf('list__item medium-show')}>3 Comments</li>
-    <li className={pf('list__item medium-show')}>20 Shares</li>
+export let PostFooterMeta = props =>
+  <ul className={pf('post__footer-meta-list list--horizontal has-dividers--right text-title')}>
+    { props.liked ? <li className={pf('list__item')}>1 Likes</li> : null }
+    { props.comments ? <li className={pf('list__item')}>{ props.comments || '0' } Comments</li> : null }
+    <li className={pf('list__item')}>20 Shares</li>
     <li className={pf('list__item')}>259 Views</li>
   </ul>;
 
 export let PostHeader = props =>
   <header className={pf('post__header media media--center')}>
     <div className={pf('media__figure')}>
-      <div className={pf('avatar avatar--circle avatar--medium')}>
+      <div className={pf('avatar avatar--circle avatar--large')}>
         <a href="javascript:void(0);" title="Jason Rodgers">
           <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
@@ -77,8 +77,7 @@ export let PostContent = props =>
 
 export let PostFooter = props =>
   <footer className={className(pf('post__footer'), props.className)}>
-    <PostFooterActions />
-    <PostFooterMeta />
+    { props.children }
   </footer>;
 
 export let Post = props =>
@@ -87,10 +86,9 @@ export let Post = props =>
   </article>;
 
 export let Comments = props =>
-  <ul className={pf('feed__item-comments')}>
+  <div className={pf('feed__item-comments')}>
     { props.children }
-    <Publisher />
-  </ul>;
+  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -98,37 +96,40 @@ export let Comments = props =>
 
 export let states = [
   {
-    id: 'post-card',
-    label: 'Card',
+    id: 'post',
+    label: 'Default',
     element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments />
-        </div>
-      </div>
+      <Post>
+        <PostHeader />
+        <PostContent>
+          <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        </PostContent>
+        <PostFooter>
+          <PostFooterActions />
+          <PostFooterMeta />
+        </PostFooter>
+      </Post>
   },
   {
-    id: 'post-flat',
-    label: 'Flat',
+    id: 'post-with-liker-bar',
+    label: 'Like',
     element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item')}>
-          <Post className={pf('post')}>
-            <PostHeader />
-            <PostContent>
-              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments />
-        </div>
+      <div className="demo-only">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions liked />
+            <PostFooterMeta liked />
+          </PostFooter>
+        </Post>
+        <Comments>
+          <div className={pf('p-horizontal--medium p-vertical--x-small')}>
+            <a href="javascript:void(0);">You</a> liked this post
+          </div>
+        </Comments>
       </div>
   }
 ];

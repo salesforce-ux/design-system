@@ -9,24 +9,21 @@
 
 // Container for feed item comments
 .#{$css-prefix}feed__item-comments {
-  padding: $spacing-small $spacing-medium;
   background: $color-background-post;
-  border: $border-width-thin solid $color-border;
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
-}
+  border-top: $border-width-thin solid $color-border;
+  margin-top: $spacing-x-small;
 
-// Card specific feed item
-.#{$css-prefix}feed__item--card + .#{$css-prefix}feed__item--card {
-  border: 0;
+  .#{$css-prefix}comment {
+    padding: $spacing-x-small $spacing-medium;
+  }
 }
 
 .#{$css-prefix}post {
   background: $color-background-alt;
-  padding: $spacing-medium;
+  padding: $spacing-small $spacing-medium;
 
-  &--card {
-    box-shadow: $shadow-feed-post;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
+  @include mq-medium-min {
+    padding: 0 $spacing-medium;
   }
 
   &__header {
@@ -40,26 +37,61 @@
   &__footer {
     display: flex;
     font-size: $font-size-small;
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
   }
 }
 
 // Post Footer Actions
+.#{$css-prefix}post__footer-actions-list {
+  justify-content: space-between;
+  text-align: center;
+  order: 1;
+
+  @include mq-medium-min {
+    order: 0;
+  }
+}
+
+// Action Items
 .#{$css-prefix}post__footer-action {
   display: flex;
   align-items: center;
   color: $color-text-default;
+  padding: $spacing-small 0;
+
+  @include mq-medium-min {
+    margin-right: $spacing-medium;
+    padding: 0;
+  }
 
   .#{$css-prefix}icon {
     margin-right: $spacing-xx-small;
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.#{$css-prefix}is-active {
     color: $color-text-link-hover;
     text-decoration: none;
 
     .#{$css-prefix}icon {
       fill: currentColor;
+    }
+  }
+}
+
+// Meta list
+.#{$css-prefix}post__footer-meta-list {
+  margin-bottom: $spacing-medium;
+
+  @include mq-medium-min {
+    margin: {
+      left: auto;
+      bottom: 0;
     }
   }
 }

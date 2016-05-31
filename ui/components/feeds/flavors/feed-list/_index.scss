@@ -9,6 +9,8 @@
 
 .#{$css-prefix}feed {
   position: relative;
+  max-width: rem(784px);
+  margin: auto;
 
   &__list {
     margin: 0;
@@ -16,10 +18,14 @@
   }
 
   &__item {
-    padding: $spacing-medium 0;
+    padding: $spacing-x-small 0;
+    
+    @include mq-medium-min {
+      padding: $spacing-large 0;
 
-    + .#{$css-prefix}feed__item {
-      border-top: $border-width-thin solid $color-border;
+      + .#{$css-prefix}feed__item {
+        border-top: $border-width-thin solid $color-border;
+      }
     }
   }
 }

@@ -10,74 +10,40 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Post, PostHeader, PostContent, PostFooter, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
+import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'feed-post-card',
-    label: 'Card',
-    element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed')}>
-          <ul className={pf('feed__list')}>
-            <li className={pf('feed__item feed__item--card')}>
-              <Post className={pf('post--card')}>
-                <PostHeader />
-                <PostContent>
-                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-                </PostContent>
-                <PostFooter />
-              </Post>
-              <Comments />
-            </li>
-            <li className={pf('feed__item feed__item--card')}>
-              <Post className={pf('post--card')}>
-                <PostHeader />
-                <PostContent>
-                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-                </PostContent>
-                <PostFooter />
-              </Post>
-              <Comments />
-            </li>
-          </ul>
-        </div>
-      </div>
-  },
-  {
-    id: 'feed-post-flat',
-    label: 'Flat',
-    element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed')}>
-          <ul className={pf('feed__list')}>
-            <li className={pf('feed__item')}>
-              <Post className={pf('post')}>
-                <PostHeader />
-                <PostContent>
-                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-                </PostContent>
-                <PostFooter />
-              </Post>
-              <Comments />
-            </li>
-            <li className={pf('feed__item')}>
-              <Post className={pf('post')}>
-                <PostHeader />
-                <PostContent>
-                  <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-                </PostContent>
-                <PostFooter />
-              </Post>
-              <Comments />
-            </li>
-          </ul>
-        </div>
-      </div>
-  }
-];
+export default (
+  <div className={pf('feed')}>
+    <ul className={pf('feed__list')}>
+      <li className={pf('feed__item')}>
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta />
+          </PostFooter>
+        </Post>
+      </li>
+      <li className={pf('feed__item')}>
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta />
+          </PostFooter>
+        </Post>
+      </li>
+    </ul>
+  </div>
+);

@@ -27,19 +27,37 @@ let Demo = props =>
   </div>;
 
 const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
+  <div className={pf('avatar avatar--circle avatar--medium')}>
     <a href="javascript:void(0);" title="Jenna Davis">
       <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );
 
-let Publisher = props =>
+export let Publisher = props =>
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={className(pf('publisher publisher--comment'), props.className)}>
       <label htmlFor="comment-text-input-01" className={pf('assistive-text')}>Write a comment</label>
       <textarea id="comment-text-input-01" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-      {props.children}
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="adduser"
+              assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon
+              flavor="icon-container"
+              sprite="utility"
+              symbol="attach"
+              assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
     </div>
   </MediaObject>;
 
@@ -69,22 +87,16 @@ let PublisherActions = props =>
 ///////////////////////////////////////////
 
 export let Default = props =>
-  <Publisher>
-    <PublisherActions />
-  </Publisher>;
+  <Publisher />;
 
 let Active = props =>
   <Demo>
-    <Publisher className={pf('is-active')}>
-      <PublisherActions />
-    </Publisher>
+    <Publisher className={pf('is-active')} />
   </Demo>;
 
 let ActiveFocus = props =>
   <Demo>
-    <Publisher className={pf('is-active has-focus')}>
-      <PublisherActions />
-    </Publisher>
+    <Publisher className={pf('is-active has-focus')} />
   </Demo>;
 
 
@@ -96,16 +108,16 @@ export let states = [
   {
     id: 'publisher-comment-default',
     label: 'Default',
-    element: <Default />
+    element: <Publisher />
   },
   {
     id: 'publisher-comment-active',
     label: 'Active',
-    element: <Active />
+    element: <Publisher className={pf('is-active')} />
   },
   {
     id: 'publisher-comment-active-focus',
     label: 'Focused',
-    element: <ActiveFocus />
+    element: <Publisher className={pf('is-active has-focus')} />
   }
 ];

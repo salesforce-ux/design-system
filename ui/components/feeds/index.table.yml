@@ -44,6 +44,14 @@ classes:
     description: Footer region of a feed post
     applied: <code>&lt;footer&gt;</code>
   -
+    class: post__footer-actions-list
+    description: Footer region that contains quick action items for post
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: post__footer-meta-list
+    description: Footer region that contains read only items for post
+    applied: <code>&lt;div&gt;</code>
+  -
     class: post__footer-action
     description: Action items within the feed post footer
     applied: <code>&lt;a&gt;</code>

@@ -43,7 +43,7 @@ export default (
       <p>We provide a means of offering text-based alternatives for all images, icons and SVGs.</p>
 
       <h2 className="site-text-heading--large">Component Identity</h2>
-      <p>Our interactive components are created in accordance with the latest <a href="http://w3c.github.io/aria/practices/aria-practices.html">ARIA Authoring Practices</a>, so that they are understandable by screen reader users. Our Accessibility guidance and component state variants, also describe how those ARIA attributes should change as a component is interacted with, to best describe the components state to assistive technology.</p>
+      <p>Our interactive components are created in accordance with the latest <a href="http://w3c.github.io/aria/practices/aria-practices.html">ARIA Authoring Practices</a>, with attributes that are understandable by screen reader users on key page elements. It is important to note that as a component is interacted with, the ARIA attributes may need updating to reflect the new state. Hence, we provided detailed guidance on how and when to do this.</p>
 
       <h2 className="site-text-heading--large">Validating your applications</h2>
       <p>The Design System is only the foundation for accessible application development. We recommend that you review the accessibility of your applications before release and ensure that it meets the <a href="https://www.w3.org/TR/WCAG20/#conformance">WCAG Standard at the AA Level</a>.</p>

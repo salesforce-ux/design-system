@@ -405,3 +405,13 @@
     }
   }
 }
+
+@mixin docked-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color-background;
+  box-shadow: $shadow-docked;
+  z-index: $z-index-overlay; // Better token - more specific to docked stuff
+}

@@ -5,4 +5,3 @@ classes:
     description: Initializes a Badge
     applied: <code>&lt;span&gt;</code>
     required: true
-    notes: Can accept theme utilty classes

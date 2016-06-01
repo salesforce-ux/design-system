@@ -17,7 +17,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    Badges are labels which hold small amounts of  information. They can accept different themes.
+    Badges are labels which hold small amounts of information.
   </p>
 );
 

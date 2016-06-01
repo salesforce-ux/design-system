@@ -24,27 +24,6 @@ export let Badge = props =>
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element: <Badge />
-  },
-  {
-    id: 'neutral',
-    label: 'Neutral',
-    element: <div className="demo-only" style={{ background: '#F4F6F9', padding: '0.65rem' }}>
-      <Badge className={pf('theme--default')} />
-    </div>
-  },
-  {
-    id: 'tint',
-    label: 'Tint',
-    element: <Badge className={pf('theme--shade')} />
-  },
-  {
-    id: 'inverse',
-    label: 'Inverse',
-    element: <Badge className={pf('theme--inverse')} />
-  }
-];
+export default (
+  <Badge />
+);

@@ -63,3 +63,8 @@
     }
   }
 }
+
+.#{$css-prefix}edit-bar {
+  @include docked-bar;
+  padding: $spacing-x-small 0;
+}

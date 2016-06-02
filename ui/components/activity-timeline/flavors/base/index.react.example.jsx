@@ -14,139 +14,101 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import className from 'classnames';
+import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+export let TimelineIcon = props =>
+  <div className={pf('icon_container')}>
+    <SvgIcon className={className(pf('icon icon--small'), props.symbol == 'log_a_call' ? pf('icon-standard-log-a-call') : pf('icon-standard-' + props.symbol))} sprite="standard" symbol={ props.symbol } />
+    <span className={pf('assistive-text')}>{ props.assistiveText }</span>
+  </div>;
 
-const image1 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-task')} sprite="standard" symbol="task" />
-);
-
-const image2 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-event')} sprite="standard" symbol="event" />
-);
-
-const image3 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-log-a-call')} sprite="standard" symbol="log_a_call" />
-);
-
-const image4 = (
-  <SvgIcon className={pf('icon icon--small icon-standard-email')} sprite="standard" symbol="email" />
-);
-
-const content = (
+export let TimelineActions = props =>
   <div className={pf('timeline__actions')}>
-    <p className={pf('timeline__date')}>Feb 24</p>
+    <p className={pf('timeline__date')}>{ props.date || 'Feb 24' }</p>
     <ButtonIcon flavor="icon-border-filled,icon-x-small" sprite="utility" symbol="switch" assistiveText="Switch" />
-  </div>
-);
-
-const form = (
-  <Checkbox assistiveText="mark-complete" />
-);
+  </div>;
 
 export default (
 <div className="demo-only">
-  <ul className={pf('timeline')}>
+  <ul>
     <li>
-      <span className={pf('assistive-text')}>Task</span>
-      <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={image1} figureLeftClassName={pf('timeline__icon')}>
-          <MediaObject figureLeft={form} className={pf('tile')}>
-            <p className={pf('timeline__title truncate')}>
-              <span className={pf('timeline__title-content')}>
-                <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
-              </span>
-            </p>
+      <MediaObject figureRight={ <TimelineActions /> }>
+        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" assistiveText="Task" /> } figureLeftClassName={pf('timeline__icon')}>
+          <TileMedia title="Review proposals for EBC deck with larger team and have marketing review this" media={ <Checkbox assistiveText="mark-complete" /> }>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Contact:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
-          </MediaObject>
+          </TileMedia>
         </MediaObject>
       </MediaObject>
     </li>
     <li>
-      <span className={pf('assistive-text')}>Event</span>
-      <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={image2} figureLeftClassName={pf('timeline__icon')}>
-          <div className={pf('tile')}>
-            <p className={pf('timeline__title truncate')}>
-              <span className={pf('timeline__title-content')}>
-                <a href="javascript:void(0);">Company One — EBC Meeting</a>
-              </span>
-            </p>
+      <MediaObject figureRight={ <TimelineActions /> }>
+        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" assistiveText="Event" /> } figureLeftClassName={pf('timeline__icon')}>
+          <Tile title="Company One — EBC Meeting">
             <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Time:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
               </li>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Location:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">300 Pike St, San Francisco CA</a></span>
               </li>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a>, <a href="javascript:void(0);">Jason Dewar</a>, <a href="javascript:void(0);">Gwen Jones</a> and <a href="javascript:void(0);">Pete Schaffer</a></span>
               </li>
             </ul>
-          </div>
+          </Tile>
         </MediaObject>
       </MediaObject>
     </li>
     <li>
-      <span className={pf('assistive-text')}>Call</span>
-      <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={image3} figureLeftClassName={pf('timeline__icon')}>
-          <div className={pf('tile')}>
-            <p className={pf('timeline__title truncate')}>
-              <span className={pf('timeline__title-content')}>
-                <a href="javascript:void(0);">Mobile conversation on Monday</a>
-              </span>
-            </p>
+      <MediaObject figureRight={ <TimelineActions /> }>
+        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" assistiveText="Call" /> } figureLeftClassName={pf('timeline__icon')}>
+          <Tile title="Mobile conversation on Monday">
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
-          </div>
+          </Tile>
         </MediaObject>
       </MediaObject>
     </li>
     <li>
-      <span className={pf('assistive-text')}>Email</span>
-      <MediaObject figureRight={content} className={pf('tile')}>
-        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={image4} figureLeftClassName={pf('timeline__icon')}>
-          <div className={pf('tile')}>
-            <p className={pf('timeline__title truncate')}>
-              <span className={pf('timeline__title-content')}>
-                <a href="javascript:void(0);">Updated Proposals</a>
-              </span>
-            </p>
+      <MediaObject figureRight={ <TimelineActions /> }>
+        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" assistiveText="Email" /> } figureLeftClassName={pf('timeline__icon')}>
+          <Tile title="Mobile conversation on Monday">
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>To:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
-              <li className={pf('list__item m-right--large')}>
+              <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>From:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
               </li>
             </ul>
-          </div>
+          </Tile>
         </MediaObject>
       </MediaObject>
     </li>

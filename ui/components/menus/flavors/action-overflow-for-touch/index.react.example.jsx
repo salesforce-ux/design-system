@@ -23,8 +23,8 @@ export default (
       <div className={pf('action-overflow--touch__container')}>
         <div className={pf('action-overflow--touch__content')}>
           <div className={pf('action-overflow--touch__body')}>
-            <ul role="menu" className={pf('list--vertical has-block-links--space has-dividers--bottom')}>
-              <li className={pf('list__item')}>
+            <ul role="menu" className={pf('has-block-links--space has-dividers--bottom')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
@@ -35,7 +35,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
@@ -46,7 +46,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
@@ -57,7 +57,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
@@ -68,7 +68,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
@@ -79,7 +79,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
@@ -90,7 +90,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
@@ -101,7 +101,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
@@ -112,7 +112,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
@@ -123,7 +123,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
@@ -134,7 +134,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
@@ -145,7 +145,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>
@@ -156,7 +156,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-share-post m-right--medium')}>
@@ -167,7 +167,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-task m-right--medium')}>
@@ -178,7 +178,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-contact m-right--medium')}>
@@ -189,7 +189,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-new-opportunity m-right--medium')}>
@@ -200,7 +200,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-lead-convert m-right--medium')}>
@@ -211,7 +211,7 @@ export default (
                   </p>
                 </a>
               </li>
-              <li className={pf('list__item')}>
+              <li className={pf('item')}>
                 <a role="menuitem" href="javascript:void(0);">
                   <p className={pf('truncate')}>
                     <span className={pf('icon_container icon_container--circle icon-action-edit m-right--medium')}>

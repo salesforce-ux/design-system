@@ -13,43 +13,19 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
+import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Tile = props =>
-  <div className={className(pf('card__tile tile media hint-parent'), props.className)}>
-    <div className={pf('media__figure')}>
-      <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
-    </div>
-    <div className={pf('media__body')}>
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('tile__title truncate')}><a href="javascript:void(0);">{ props.title || 'Related Record Title' }</a></p>
-        <button className={pf('button button--icon-border-filled button--icon-x-small no-flex')}>
-          <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
-          <span className={pf('assistive-text')}>More Options</span>
-        </button>
-      </div>
-      <div className={pf('tile__detail text-body--small')}>
-        <dl className={pf('dl--horizontal text-body--small')}>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')}>Type:</p>
-          </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')}>Visit</p>
-          </dd>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')}>Date:</p>
-          </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')}>1/31/15 3:45PM</p>
-          </dd>
-        </dl>
-      </div>
-    </div>
-  </div>;
+const icon = (
+  <div className={pf('icon_container')}>
+    <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
+    <span className={pf('assistive-text')}>Contact</span>
+  </div>
+);
 
 ///////////////////////////////////////////
 // Export
@@ -60,9 +36,54 @@ export default (
     <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (3)</span></CardHeader>
     <CardBody>
       <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
-        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 1" />
-        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 2" />
-        <Tile className={pf('col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')} title="Related Record Title 3" />
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+          <dl className={pf('dl--horizontal')}>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Type">Type:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="Visit">Visit</p>
+            </dd>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Date">Date:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+            </dd>
+          </dl>
+        </TileMedia>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+          <dl className={pf('dl--horizontal')}>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Type">Type:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="Visit">Visit</p>
+            </dd>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Date">Date:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+            </dd>
+          </dl>
+        </TileMedia>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+          <dl className={pf('dl--horizontal')}>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Type">Type:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="Visit">Visit</p>
+            </dd>
+            <dt className={pf('dl--horizontal__label')}>
+              <p className={pf('truncate')} title="Date">Date:</p>
+            </dt>
+            <dd className={pf('dl--horizontal__detail tile__meta')}>
+              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+            </dd>
+          </dl>
+        </TileMedia>
       </div>
     </CardBody>
     <CardFooter><a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>

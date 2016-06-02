@@ -95,12 +95,12 @@ let CommentEntityTags = props =>
 // Export used in discussion feeds
 export let CommentFooter = props =>
   <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-    <li className={pf('list__item')}>
+    <li className={pf('item')}>
       <a href="javascript:void(0);" title="Like this item">
         { props.showLikeButton ? LikeButton : null }Like
       </a>
     </li>
-    <li className={pf('list__item')}>{props.likes} Likes</li>
+    <li className={pf('item')}>{props.likes} Likes</li>
   </ul>;
 
 // Export used within publisher

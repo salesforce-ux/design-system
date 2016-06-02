@@ -30,7 +30,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ width: '320px' }}>
       <TileMedia title="Salesforce UX" media={ icon }>
-        <dl className={pf('dl--horizontal text-body--small')}>
+        <dl className={pf('dl--horizontal')}>
           <dt className={pf('dl--horizontal__label')}>
             <p className={pf('truncate')} title="Company">Company:</p>
           </dt>
@@ -53,7 +53,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ width: '320px' }}>
       <TileMedia title="Salesforce UX" media={ icon } actions>
-        <dl className={pf('dl--horizontal text-body--small')}>
+        <dl className={pf('dl--horizontal')}>
           <dt className={pf('dl--horizontal__label')}>
             <p className={pf('truncate')} title="Company">Company:</p>
           </dt>

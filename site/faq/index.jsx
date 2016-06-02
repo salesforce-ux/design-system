@@ -89,6 +89,10 @@ class FAQ extends React.Component {
             <td data-label="Browser">Internet Explorer</td>
             <td data-label="Version">11</td>
           </tr>
+          <tr>
+            <td data-label="Browser">Microsoft Edge</td>
+            <td data-label="Version">Latest</td>
+          </tr>
         </tbody>
       </table>
     );

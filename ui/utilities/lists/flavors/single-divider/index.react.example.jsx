@@ -12,18 +12,65 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
-<div className={pf('grid grid--align-space demo-only')}>
-  <ol>
-    <li>Basic ordered list</li>
-    <li>List Item</li>
-    <li>List Item</li>
-  </ol>
-  <ol className={pf('list--ordered')}>
-    <li>Numeric ordered list</li>
-    <li>List Item</li>
-    <li>List Item</li>
-  </ol>
-</div>
-);
+export let states = [
+  {
+    id: 'divider-top',
+    label: 'Top',
+    element:
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li className={pf('has-divider--top')}>List Item</li>
+      </ul>
+  },
+  {
+    id: 'divider-top-space',
+    label: 'Top with space',
+    element:
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li className={pf('has-divider--top-space')}>List Item</li>
+      </ul>
+  },
+  {
+    id: 'divider-right',
+    label: 'Right',
+    element:
+      <ul className={pf('list--horizontal')}>
+        <li>List Item</li>
+        <li className={pf('has-divider--right')}>List Item</li>
+        <li>List Item</li>
+      </ul>
+  },
+  {
+    id: 'divider-bottom',
+    label: 'Bottom',
+    element:
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li className={pf('has-divider--bottom')}>List Item</li>
+      </ul>
+  },
+  {
+    id: 'divider-bottom-space',
+    label: 'Bottom with space',
+    element:
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li className={pf('has-divider--bottom-space')}>List Item</li>
+      </ul>
+  },
+  {
+    id: 'divider-left',
+    label: 'Left',
+    element:
+      <ul className={pf('list--horizontal')}>
+        <li>List Item</li>
+        <li className={pf('has-divider--left')}>List Item</li>
+        <li>List Item</li>
+      </ul>
+  }
+];

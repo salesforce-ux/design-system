@@ -12,11 +12,35 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
-  <ul className={pf('list--vertical')}>
-    <li className={pf('list__item')}>List Item</li>
-    <li className={pf('list__item')}>List Item</li>
-    <li className={pf('list__item has-divider--top-space')}>List Item</li>
-  </ul>
-);
+export let states = [
+  {
+    id: 'horizontal-list-left',
+    label: 'Left',
+    element:
+      <ul className={pf('list--horizontal has-dividers--left')}>
+        <li className={pf('item')}>Horizontal List with dot dividers</li>
+        <li className={pf('item')}>List Item</li>
+        <li className={pf('item')}>List Item</li>
+      </ul>
+  },
+  {
+    id: 'horizontal-list-link-left',
+    label: 'Left with link',
+    element:
+      <ul className={pf('list--horizontal has-dividers--left has-block-links')}>
+        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with dot dividers</a></li>
+        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      </ul>
+  },
+  {
+    id: 'horizontal-list-link-space-left',
+    label: 'Left with link space',
+    element:
+      <ul className={pf('list--horizontal has-dividers--left has-block-links--space')}>
+        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with dot dividers</a></li>
+        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      </ul>
+  }
+];

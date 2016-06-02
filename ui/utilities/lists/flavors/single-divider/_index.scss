@@ -28,13 +28,7 @@
   }
 
   &--right {
-    @include border(right);
-
-    &-space {
-      @include border(right);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
+    @include dot-separator(right);
   }
 
   &--bottom {
@@ -48,12 +42,6 @@
   }
 
   &--left {
-    @include border(left);
-
-    &-space {
-      @include border(left);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
+    @include dot-separator(left);
   }
 }

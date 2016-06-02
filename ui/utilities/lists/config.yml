@@ -1,12 +1,8 @@
-status: 'prototype'
+status: 'dev-ready'
 flavors:
-  - dotted
-  - ordered
   - vertical
-  - has-divider
-  - vertical-with-dividers
-  - vertical-with-cards
+  - vertical-dividers
   - horizontal
-  - horizontal-with-dividers
-  - description-inline
-  - description-horizontal
+  - horizontal-dividers
+  - single-divider
+  - description-list

@@ -7,31 +7,36 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.#{$css-prefix}dl--inline {
+  @include clearfix;
 
-// New in 0.12.0
-.#{$css-prefix}has-cards {
+  @include mq-medium-min {
 
-  .#{$css-prefix}list__item {
-    @include border(around, $border-radius-medium);
+    &__label {
+      float: left;
+      clear: left;
+    }
 
-    + .#{$css-prefix}list__item {
-      margin-top: $spacing-x-small;
+    &__detail {
+      float: left;
+      padding-left: $spacing-xx-small;
     }
   }
+}
 
-  &--space {
+.#{$css-prefix}dl--horizontal {
 
-    .#{$css-prefix}list__item {
-      @include border(around, $border-radius-medium);
-      padding: $spacing-small;
+  @include mq-medium-min {
+    @include flex-wrap(true);
+    display: flex;
 
-      @include mq-small-min {
-        padding: $spacing-x-small;
-      }
+    &__label {
+      width: 30%;
+      padding-right: $spacing-small;
+    }
 
-      + .#{$css-prefix}list__item {
-        margin-top: $spacing-x-small;
-      }
+    &__detail {
+      width: 70%;
     }
   }
 }

@@ -9,6 +9,50 @@
 
 
 
-.#{$css-prefix}list--ordered {
-  @include list-has-numbers;
+.#{$css-prefix}has-block-links {
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .#{$css-prefix}is-nested {
+    margin-left: $spacing-medium;
+  }
+
+  &--space {
+
+    .#{$css-prefix}list__item,
+    .#{$css-prefix}item {
+      padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: $spacing-small;
+
+      @include mq-medium-min {
+        padding: $spacing-x-small; // Re-apply that padding to the link
+      }
+    }
+  }
+}
+
+.#{$css-prefix}has-inline-block-links {
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &--space a {
+    display: inline-block;
+    text-decoration: none;
+    padding: $spacing-small;
+
+    @include mq-medium-min {
+      padding: $spacing-x-small;
+    }
+  }
 }

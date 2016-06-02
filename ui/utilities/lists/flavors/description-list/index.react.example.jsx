@@ -12,11 +12,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
-  <ul className={pf('list--vertical')}>
-    <li className={pf('list__item')}>List Item</li>
-    <li className={pf('list__item')}>List Item</li>
-    <li className={pf('list__item has-divider--top-space')}>List Item</li>
-  </ul>
-);
+export let states = [
+  {
+    id: 'description-list',
+    label: 'Default',
+    element:
+      <dl>
+        <dt>First Label:</dt>
+        <dd>Description for first label</dd>
+        <dt>Second Label:</dt>
+        <dd>Description for second label</dd>
+      </dl>
+  },
+  {
+    id: 'description-list-inline',
+    label: 'Inline',
+    element:
+      <dl className={pf('dl--inline')}>
+        <dt className={pf('dl--inline__label')}>First Label:</dt>
+        <dd className={pf('dl--inline__detail')}>Description for first label</dd>
+        <dt className={pf('dl--inline__label')}>Second Label:</dt>
+        <dd className={pf('dl--inline__detail')}>Description for second label</dd>
+      </dl>
+  },
+  {
+    id: 'description-list-horizontal',
+    label: 'Horizontal',
+    element:
+      <dl className={pf('dl--horizontal')}>
+        <dt className={pf('dl--horizontal__label')}>First Label:</dt>
+        <dd className={pf('dl--horizontal__detail')}>Description for first label</dd>
+        <dt className={pf('dl--horizontal__label')}>Second Label:</dt>
+        <dd className={pf('dl--horizontal__detail')}>Second description</dd>
+      </dl>
+  }
+];

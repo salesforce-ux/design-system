@@ -11,3 +11,10 @@
 .#{$css-prefix}is-nested {
   margin-left: $spacing-medium;
 }
+
+.#{$css-prefix}list--dotted {
+  @include list-has-bullets;
+}
+.#{$css-prefix}list--ordered {
+  @include list-has-numbers;
+}

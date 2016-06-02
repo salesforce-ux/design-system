@@ -38,7 +38,7 @@ export let states = [
     label: 'Block links',
     element:
       <ul className={pf('list--horizontal has-block-links')}>
-        <li><a href="javascript:void(0);">Horizontal List with inline level links</a></li>
+        <li><a href="javascript:void(0);">Horizontal List with block level links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
       </ul>
@@ -48,7 +48,7 @@ export let states = [
     label: 'Block links with space',
     element:
       <ul className={pf('list--horizontal has-block-links--space')}>
-        <li><a href="javascript:void(0);">Horizontal List with inline level links</a></li>
+        <li><a href="javascript:void(0);">Horizontal List with block level links and space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
       </ul>
@@ -58,7 +58,7 @@ export let states = [
     label: 'Inline block links',
     element:
       <ul className={pf('list--horizontal has-inline-block-links')}>
-        <li><a href="javascript:void(0);">Horizontal List with inline level links</a></li>
+        <li><a href="javascript:void(0);">Horizontal List with inline-block level links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
       </ul>
@@ -68,7 +68,7 @@ export let states = [
     label: 'Inline block links with space',
     element:
       <ul className={pf('list--horizontal has-inline-block-links--space')}>
-        <li><a href="javascript:void(0);">Horizontal List with inline level links</a></li>
+        <li><a href="javascript:void(0);">Horizontal List with inline-block level links and space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
       </ul>

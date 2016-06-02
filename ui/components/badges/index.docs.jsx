@@ -10,20 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-//////////////////////////////////////////////
-// State Constructor(s)
-//////////////////////////////////////////////
+import CodeClass from 'app_modules/site/components/code-class';
 
-export let Badge = props =>
-  <span className={className(pf('badge'), props.className)}>Badge Label</span>;
-
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
+export const intro = (
+  <p className="site-text-introduction">
+    Badges are labels which hold small amounts of information.
+  </p>
+);
 
 export default (
-  <Badge />
+  <ComponentDocs>
+  </ComponentDocs>
 );

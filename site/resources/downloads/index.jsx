@@ -74,6 +74,10 @@ bower install salesforce-lightning-design-system --save
       </CTALink>
     </form>
 
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
+    <p>The unmanaged package has been deprecated.</p>
+    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Salesforce Desktop Application and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments. There are still cases where you will need to use a static resource. Current examples are — within Visualforce, when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out.</p>
+
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
       Download all <CTALink href="/resources/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is

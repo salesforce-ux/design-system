@@ -193,15 +193,16 @@ class FAQ extends React.Component {
         <p className={pf('container--large')}>
           Lightning Components also use a special syntax to reference your static resources, and
           you need edit the code you cut and paste from the {g.displayName}.
-          If you want to load the master stylesheet and you uploaded the {g.displayName} as
-          a static resource named <code>{compactVersion}</code> then you should
-          include the style sheet like:
+          If you are adding a custom scoped file as a static resource named <code>{compactVersion}</code> then you should
+          include the style sheet in this format:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="javascript">{`
 <ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.css"/>
           `}</CodeBlock>
         </div>
+        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here.</a>
+        </p>
       </div>
     );
     this.addContentItem(

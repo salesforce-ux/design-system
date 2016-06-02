@@ -23,7 +23,9 @@
     text-align: center;
   }
 
-  .#{$css-prefix}modal__close {
-    display: none; // @TODO - Amy, can you make this optional?
+  @include deprecate('4.0.0', 'Close button should be removed from the markup') {
+    #{$css-prefix}modal__close {
+      display: none; // @TODO - Amy, can you make this optional?
+    }
   }
 }

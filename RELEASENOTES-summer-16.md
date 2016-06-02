@@ -68,6 +68,8 @@ The following changes have been made in this release:
 - Data table sortable headings now have actionable area so they can be focusable
 - Improved interactions for resize element on data tables
 - Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
+- Notification Prompt has improved accessibility in better identifying the component to screen readers using `aria-role="alertdialog"`, `aria-labelledby` and
+  `aria-describedby`. The redundant `slds-modal__close` button has also been removed.
 
 **FIXED**
 
@@ -82,6 +84,7 @@ The following issues have now been resolved:
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
 - `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
+- The rule that hides the close button in Notification Prompt `.slds-modal--prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
 
 **REMOVED**
 

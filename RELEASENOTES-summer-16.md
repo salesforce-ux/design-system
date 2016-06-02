@@ -7,12 +7,12 @@
 
 The following site enhancements are now available:
 
+- Grid system moved to utilities and renamed to "Grid"
+- Media object moved to utilities
 - New states added for button-groups showing overflow dropdown
 - Cards variant navigation has been improved
 - Data table variant navigation has been improved
 - Lookup variant navigation has been improved
-- Grid system moved to utilities and renamed to "Grid"
-- Media object moved to utilities
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -26,6 +26,7 @@ The following components are now available:
 - Docked Composer - Voice Integration - [Voice docked composer component](/components/docked-composer/#voice)
 - Modal with no header and/or no footer - [Modal component](/components/modals#flavor-base)
 - Lookups spec updated - Single and Polymorphic - [Lookup component](/components/lookups)
+- Page headers spec updated - [Page Header component](/components/page-headers/)
 - Vertical Navigation for in-page navigation - [Vertical navigation component](/components/navigation#flavor-vertical)
 - Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Tree Grid - [Tree grid component](/components/trees/#grid)
@@ -47,14 +48,12 @@ The following changes have been made in this release:
 
 - Overall, things will appear visually tighter
 - Added additional space between buttons in the modal footer
-- Page Header markup structure is refactored for new design.
 - Font sizes have been reduced
 - Page Headers are visually smaller
 - Page Header details are now on white and align to the left
 - Modals are visually tighter
 - All buttons are visually smaller
 - Form Elements are visually smaller
-- Reduced data table row heights
 - Activity timeline sizing & spacing is reduced
 - Visual density changes in cards
 - Visual density changes in popovers
@@ -63,25 +62,37 @@ The following changes have been made in this release:
 - Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 - Field level help icon moved to the right of the input label
-- Reduced vertical padding on page header
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
 - Data table sortable headings now have actionable area so they can be focusable
 - Improved interactions for resize element on data tables
 - Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
+- Removed `.slds-button__icon--hint` from dropdown menu triggers
+- Base page header uses `.slds-media--center` and has `.slds-icon--large` removed
+- Preview panel icon changed to use `.slds-icon--small`
 
 **FIXED**
 
 The following issues have now been resolved:
 
+- Datepicker uses correct aria-selected role
+- Datepicker uses correct headers for individual dates
+- Docked composers are now dialogs
+- Docked composers are correctly labeled dialogs by the heading
+- Docked composers semantics use header and footer
+- Feed comment semantics use article
 - Truncation class is added to headings in the Edit Form for Touch
 - Removed max-height and animation on `.slds-section__content` to prevent collision with JavaScript implementations
 - Fixed IE11 page header truncation bug
+- Resolved semantic bug by making Pill container a `<span>`. `<a>` moved inside and adjacent to the close button.
 
 **DEPRECATED**
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
 - `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
+- Lookups have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Lookup component](/components/lookups)
+- Page headers have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Page Header component](/components/page-headers/)
+
 
 **REMOVED**
 
@@ -90,3 +101,4 @@ The following features are being removed in this release:
 - Removed `slds-button--small`, since it’s the same as the new default button size
 - Removed `slds-input--small`, since it’s the same as the new default input size
 - Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
+- Removed `slds-tile__title`, since it didn't apply any styles

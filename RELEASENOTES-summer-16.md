@@ -7,12 +7,13 @@
 
 The following site enhancements are now available:
 
+- Grid system moved to utilities and renamed to "Grid"
+- Media object moved to utilities
 - New states added for button-groups showing overflow dropdown
 - Cards variant navigation has been improved
 - Data table variant navigation has been improved
 - Lookup variant navigation has been improved
-- Grid system moved to utilities and renamed to "Grid"
-- Media object moved to utilities
+- List variant navigation has been improved
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -26,6 +27,7 @@ The following components are now available:
 - Docked Composer - Voice Integration - [Voice docked composer component](/components/docked-composer/#voice)
 - Modal with no header and/or no footer - [Modal component](/components/modals#flavor-base)
 - Lookups spec updated - Single and Polymorphic - [Lookup component](/components/lookups)
+- Page headers spec updated - [Page Header component](/components/page-headers/)
 - Vertical Navigation for in-page navigation - [Vertical navigation component](/components/navigation#flavor-vertical)
 - Radio Group Alternate - [Radio group alternate component](/components/forms/#radio-group-alternate)
 - Tree Grid - [Tree grid component](/components/trees/#grid)
@@ -47,14 +49,12 @@ The following changes have been made in this release:
 
 - Overall, things will appear visually tighter
 - Added additional space between buttons in the modal footer
-- Page Header markup structure is refactored for new design.
 - Font sizes have been reduced
 - Page Headers are visually smaller
 - Page Header details are now on white and align to the left
 - Modals are visually tighter
 - All buttons are visually smaller
 - Form Elements are visually smaller
-- Reduced data table row heights
 - Activity timeline sizing & spacing is reduced
 - Visual density changes in cards
 - Visual density changes in popovers
@@ -63,11 +63,12 @@ The following changes have been made in this release:
 - Removed first and last cell padding from Data Tables to allow nesting. New
   class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
 - Field level help icon moved to the right of the input label
-- Reduced vertical padding on page header
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
 - Data table sortable headings now have actionable area so they can be focusable
 - Improved interactions for resize element on data tables
 - Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
+- Datepicker has improved markup, focusing on semantic structure and identifying proper aria roles for dates.
+- Resolved semantic bug by making Pill container a `<span>`. `<a>` moved inside and adjacent to the close button.
 - Notification Prompt has improved accessibility in better identifying the component to screen readers using `aria-role="alertdialog"`, `aria-labelledby` and
   `aria-describedby`. The redundant `slds-modal__close` button has also been removed.
 
@@ -83,13 +84,43 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
+- Lookups have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Lookup component](/components/lookups)
+- Page headers have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Page Header component](/components/page-headers/)
 - `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
+- `.slds-button-space-left` is no longer supported. Please use spacing utilities instead.
+- `.slds-button--icon-bare` is no longer needed. Please use `.slds-button--icon` instead.
+- `.slds-card--empty` is no longer needed. Please use `.slds-text-align--center` utility class instead.
+- `.slds-button` inside of `.slds-is-sortable` is no longer needed. The entire cell is hyperlinked now, no need for the button.
+- `.slds-form-element__helper` is no longer supported.
+- `.slds-input__icon` no longer supports a color by default. Please use `.slds-icon-text-default` on the SVG icon instead.
+- `.slds-icon__container` is no longer supported. Please use `.slds-icon_container` instead.
+- `.slds-icon-custom-XX` is no longer supported. Please use `.slds-icon-custom-customXX` instead.
+- `.slds-dropdown--nubbin-top` is no longer supported. Please use `.slds-nubbin--top` instead.
+- `.slds-has-icon--left`, `.slds-has-icon--right`, and `.slds-has-icon--left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
+- `.slds-modal-backdrop` is no longer supported. Please use `.slds-backdrop` instead.
+- `.slds-notify-container` is no longer supported. Please use `.slds-notify_container` instead.
+- `.slds-pill-container` and `.slds-pill__container` are no longer supported. Please use `.slds-pill_container` instead.
+- `.slds-pill__container--bare` is no longer supported. Please use `.slds-pill_container--bare` instead.
+- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs--default__item` or `.slds-tabs--scoped__item`.
+- `.slds-tooltip` and `.slds-tooltip__body` are no longer supported. Please use `.slds-popover` and `.slds-popover__body` instead.
+- `.slds-tree-container` is no longer supported, please use `.slds-tree_container` instead.
+- `.slds-col-rule--left`, `.slds-col-rule--right`, `.slds-col-rule--top`, and `.slds-col-rule--bottom` are no longer supported. Please use `.slds-col--rule-left`, `.slds-col--rule-right`, `.slds-col--rule-top`, and `.slds-col--rule-bottom` instead.
+- `.slds-nowrap--small`, `.slds-nowrap--medium`, and `.slds-nowrap--large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
+- `.slds-align-content-center` is no longer supported. Please use `.slds-align--absolute-center` instead.
+- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers--{position}` instead.
+- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider--{position}` instead.
+- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider--around` instead.
+- `.slds-has-cards--space` is no longer supported. Please use `.slds-has-divider--around-space` instead.
+- `.slds-section-title` is no longer supported. Please use `.slds-section__title` instead.
+- `.slds-collapsed` is no longer supported. Please use `.slds-is-collapsed` instead.
+- `.slds-expanded` is no longer supported. Please use `.slds-is-expanded` instead.
 - The rule that hides the close button in Notification Prompt `.slds-modal--prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
 
 **REMOVED**
 
 The following features are being removed in this release:
 
+- Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
 - Removed `slds-button--small`, since it’s the same as the new default button size
 - Removed `slds-input--small`, since it’s the same as the new default input size
-- Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
+- Removed `slds-tile__title`, since it didn't apply any styles

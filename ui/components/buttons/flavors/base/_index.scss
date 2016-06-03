@@ -78,7 +78,7 @@
 
 .#{$css-prefix}button-space-left {
 
-  @include deprecate('4.0.0') {
+  @include deprecate('4.0.0', 'Use spacing utilities instead') {
     margin-left: $spacing-xx-small;
   }
 }

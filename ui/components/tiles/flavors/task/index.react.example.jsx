@@ -10,22 +10,41 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+let Checkbox = props =>
+  <label className={pf('checkbox')}>
+    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
+    <span className={pf('checkbox--faux')}></span>
+    <span className={pf('form-element__label assistive-text')}>{props.label}</span>
+  </label>;
 
-export default (
-<div className="demo-only">
-  <div className={pf('card')}>
-    <div className={pf('card__header grid grid--content-center grid--flex-spread')}>
-      <h2 className={pf('text-heading--small truncate')}>Card Header</h2>
-    </div>
-    <div className={pf('card__body p-horizontal--small')}>
-      <div className={pf('text-align--center')}>
-        <h3 className={pf('text-heading--small p-top--large p-bottom--large')}>No Related Contacts</h3>
-        <Button flavor="neutral" className={pf('m-bottom--x-large')}>Add Contact</Button>
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'tile-task',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> }>
+          <p className={pf('truncate')}>Assignee</p>
+        </TileMedia>
       </div>
-    </div>
-  </div>
-</div>
-);
+  },
+  {
+    id: 'tile-task-with-action',
+    label: 'With actions',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> } actions>
+          <p className={pf('truncate')}>Assignee</p>
+        </TileMedia>
+      </div>
+  }
+];

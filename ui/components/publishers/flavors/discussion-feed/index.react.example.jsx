@@ -37,9 +37,9 @@ const image = (
 
 let Publisher = props =>
   <div className={className(pf('publisher publisher--discussion'), props.className)}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
+    <dl className={pf('dl--inline m-bottom--small publisher__toggle-visibility')}>
+      <dt className={pf('dl--inline__label text-body--small')}>To: </dt>
+      <dd className={pf('dl--inline__detail')}>My Followers</dd>
     </dl>
     <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
     <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />

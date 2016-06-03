@@ -11,38 +11,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const icon = (
-  <SvgIcon className={pf('icon')} sprite="doctype" symbol="zip" />
-);
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
-export default (
-  <ul className={pf('has-dividers--bottom-space')}>
-    <li className={pf('item')}>
-      <TileMedia title="SLDS_038.zip" media={ icon }>
-        <ul className={pf('list--horizontal has-dividers--right')}>
-          <li className={pf('item')}>May 9th, 2015</li>
-          <li className={pf('item')}>3.6mb</li>
-        </ul>
-      </TileMedia>
-    </li>
-    <li className={pf('item')}>
-    <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
-      </ul>
-    </TileMedia>
-    </li>
-    <li className={pf('item')}>
-    <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
-      </ul>
-    </TileMedia>
-    </li>
-  </ul>
-);
+export let states = [
+  {
+    id: 'tile-article',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
+          <p>by Steve Author</p>
+          <ul className={pf('list--horizontal has-dividers--right tile__meta')}>
+            <li className={pf('item')}>Breaking News</li>
+            <li className={pf('item')}>1 day ago</li>
+          </ul>
+        </Tile>
+      </div>
+  }
+];

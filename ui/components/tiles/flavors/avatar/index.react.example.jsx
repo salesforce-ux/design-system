@@ -12,37 +12,44 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const icon = (
-  <SvgIcon className={pf('icon')} sprite="doctype" symbol="zip" />
+const avatar = (
+  <span className={pf('avatar avatar--circle avatar--small')}>
+    <img src="/assets/images/avatar2.jpg" alt="Person's name" />
+  </span>
 );
 
-export default (
-  <ul className={pf('has-dividers--bottom-space')}>
-    <li className={pf('item')}>
-      <TileMedia title="SLDS_038.zip" media={ icon }>
-        <ul className={pf('list--horizontal has-dividers--right')}>
-          <li className={pf('item')}>May 9th, 2015</li>
-          <li className={pf('item')}>3.6mb</li>
-        </ul>
-      </TileMedia>
-    </li>
-    <li className={pf('item')}>
-    <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
-      </ul>
-    </TileMedia>
-    </li>
-    <li className={pf('item')}>
-    <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
-      </ul>
-    </TileMedia>
-    </li>
-  </ul>
-);
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'tile-avatar',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <TileMedia title="Lexee L. Jackson" media={ avatar }>
+          <ul className={pf('list--horizontal has-dividers--right')}>
+            <li className={pf('item')}>VP, Marketing</li>
+            <li className={pf('item')}>Decision Maker</li>
+          </ul>
+        </TileMedia>
+      </div>
+  },
+  {
+    id: 'tile-avatar-with-action',
+    label: 'With actions',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <TileMedia title="Lexee L. Jackson" media={ avatar } actions>
+          <ul className={pf('list--horizontal has-dividers--right')}>
+            <li className={pf('item')}>VP, Marketing</li>
+            <li className={pf('item')}>Decision Maker</li>
+          </ul>
+        </TileMedia>
+      </div>
+  }
+];

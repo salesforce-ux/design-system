@@ -10,38 +10,37 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-  <div className="demo-only" style={{ width: '320px' }}>
-    <ul className={pf('has-dividers--around-space')}>
-      <li className={pf('item')}>
-        <Tile title="Anypoint Connectors" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$500,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company One</a></p>
-          <p className={pf('truncate')}>Closing 9/30/2015</p>
-        </Tile>
-      </li>
-      <li className={pf('item')}>
-        <Tile title="Cloudhub" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$185,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company Two</a></p>
-          <p className={pf('truncate has-alert')}>Closing 12/15/2015</p>
-          <span className={pf('icon_container tile--board__icon')}>
-            <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-            <span className={pf('assistive-text')}>Warning Icon</span>
-          </span>
-        </Tile>
-      </li>
-      <li className={pf('item')}>
-        <Tile title="600 Widgets" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$35,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company Three</a></p>
-          <p className={pf('truncate')}>Closing 10/12/2015</p>
-        </Tile>
-      </li>
-    </ul>
-  </div>
-);
+export let states = [
+  {
+    id: 'timeline-email',
+    label: 'Default',
+    element:
+      <div className="demo-only">
+        <span className={pf('assistive-text')}>Email</span>
+        <MediaObject figureRight={ <TimelineActions /> }>
+          <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName={pf('timeline__icon')}>
+            <p className={pf('truncate')} title="Mobile conversation on Monday">
+              <a href="javascript:void(0);">Mobile conversation on Monday</a>
+            </p>
+            <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
+            <ul className={pf('list--horizontal wrap')}>
+              <li className={pf('m-right--large')}>
+                <span className={pf('tile__label text-heading--label-normal')}>To:</span>
+                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
+              </li>
+              <li className={pf('m-right--large')}>
+                <span className={pf('tile__label text-heading--label-normal')}>From:</span>
+                <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
+              </li>
+            </ul>
+          </MediaObject>
+        </MediaObject>
+      </div>
+  }
+];

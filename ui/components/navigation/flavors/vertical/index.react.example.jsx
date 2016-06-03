@@ -38,7 +38,7 @@ let List = props =>
   </ul>;
 
 let Item = props =>
-  <li className={className(pf('list__item'), props.className)}>
+  <li className={pf(props.className)}>
     <a href="javascript:void(0);" className={pf('navigation-list--vertical__action text-link--reset')} aria-describedby={props.id}>
       {props.children}
     </a>

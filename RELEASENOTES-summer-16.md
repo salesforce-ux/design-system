@@ -13,6 +13,7 @@ The following site enhancements are now available:
 - Cards variant navigation has been improved
 - Data table variant navigation has been improved
 - Lookup variant navigation has been improved
+- List variant navigation has been improved
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -66,39 +67,57 @@ The following changes have been made in this release:
 - Data table sortable headings now have actionable area so they can be focusable
 - Improved interactions for resize element on data tables
 - Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
-- Removed `.slds-button__icon--hint` from dropdown menu triggers
-- Base page header uses `.slds-media--center` and has `.slds-icon--large` removed
-- Preview panel icon changed to use `.slds-icon--small`
+- Datepicker has improved markup, focusing on semantic structure and identifying proper aria roles for dates.
+- Resolved semantic bug by making Pill container a `<span>`. `<a>` moved inside and adjacent to the close button.
 
 **FIXED**
 
 The following issues have now been resolved:
 
-- Datepicker uses correct aria-selected role
-- Datepicker uses correct headers for individual dates
-- Docked composers are now dialogs
-- Docked composers are correctly labeled dialogs by the heading
-- Docked composers semantics use header and footer
-- Feed comment semantics use article
 - Truncation class is added to headings in the Edit Form for Touch
 - Removed max-height and animation on `.slds-section__content` to prevent collision with JavaScript implementations
 - Fixed IE11 page header truncation bug
-- Resolved semantic bug by making Pill container a `<span>`. `<a>` moved inside and adjacent to the close button.
 
 **DEPRECATED**
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
-- `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
 - Lookups have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Lookup component](/components/lookups)
 - Page headers have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Page Header component](/components/page-headers/)
-
+- `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
+- `.slds-button-space-left` is no longer supported. Please use spacing utilities instead.
+- `.slds-button--icon-bare` is no longer needed. Please use `.slds-button--icon` instead.
+- `.slds-card--empty` is no longer needed. Please use `.slds-text-align--center` utility class instead.
+- `.slds-button` inside of `.slds-is-sortable` is no longer needed. The entire cell is hyperlinked now, no need for the button.
+- `.slds-form-element__helper` is no longer supported.
+- `.slds-input__icon` no longer supports a color by default. Please use `.slds-icon-text-default` on the SVG icon instead.
+- `.slds-icon__container` is no longer supported. Please use `.slds-icon_container` instead.
+- `.slds-icon-custom-XX` is no longer supported. Please use `.slds-icon-custom-customXX` instead.
+- `.slds-dropdown--nubbin-top` is no longer supported. Please use `.slds-nubbin--top` instead.
+- `.slds-has-icon--left`, `.slds-has-icon--right`, and `.slds-has-icon--left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
+- `.slds-modal-backdrop` is no longer supported. Please use `.slds-backdrop` instead.
+- `.slds-notify-container` is no longer supported. Please use `.slds-notify_container` instead.
+- `.slds-pill-container` and `.slds-pill__container` are no longer supported. Please use `.slds-pill_container` instead.
+- `.slds-pill__container--bare` is no longer supported. Please use `.slds-pill_container--bare` instead.
+- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs--default__item` or `.slds-tabs--scoped__item`.
+- `.slds-tooltip` and `.slds-tooltip__body` are no longer supported. Please use `.slds-popover` and `.slds-popover__body` instead.
+- `.slds-tree-container` is no longer supported, please use `.slds-tree_container` instead.
+- `.slds-col-rule--left`, `.slds-col-rule--right`, `.slds-col-rule--top`, and `.slds-col-rule--bottom` are no longer supported. Please use `.slds-col--rule-left`, `.slds-col--rule-right`, `.slds-col--rule-top`, and `.slds-col--rule-bottom` instead.
+- `.slds-nowrap--small`, `.slds-nowrap--medium`, and `.slds-nowrap--large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
+- `.slds-align-content-center` is no longer supported. Please use `.slds-align--absolute-center` instead.
+- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers--{position}` instead.
+- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider--{position}` instead.
+- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider--around` instead.
+- `.slds-has-cards--space` is no longer supported. Please use `.slds-has-divider--around-space` instead.
+- `.slds-section-title` is no longer supported. Please use `.slds-section__title` instead.
+- `.slds-collapsed` is no longer supported. Please use `.slds-is-collapsed` instead.
+- `.slds-expanded` is no longer supported. Please use `.slds-is-expanded` instead.
 
 **REMOVED**
 
 The following features are being removed in this release:
 
+- Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
 - Removed `slds-button--small`, since it’s the same as the new default button size
 - Removed `slds-input--small`, since it’s the same as the new default input size
-- Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
 - Removed `slds-tile__title`, since it didn't apply any styles

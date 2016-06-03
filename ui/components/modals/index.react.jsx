@@ -131,11 +131,12 @@ class Modal extends React.Component {
     const classNameModalBackdrop = classNames(pf('backdrop'), {
       [`${cssPrefix}backdrop--open`]: this.props.isOpen
     });
+    const role = this.props.role ? this.props.role : 'dialog';
     return (
       <AccessibleDialogContainer onEsc={this.onClick.bind(this)}>
-        <div aria-hidden={!this.props.isOpen} role="dialog" className={className} onClick={ this.onClick.bind(this) }>
+        <div aria-hidden={!this.props.isOpen} aria-labelledby={this.props['aria-labelledby']} aria-describedby={this.props['aria-describedby']} role={role} className={className} onClick={ this.onClick.bind(this) }>
           <ClassNameTransitionGroup transitionName={pf('modal__container')} timeout={100}>
-            <div className={classNameModalContainer} onClick={ this.onContentClick.bind(this) } key="content">
+            <div className={classNameModalContainer} role="document" id={this.props['aria-describedby']} tabIndex="0" onClick={ this.onContentClick.bind(this) } key="content">
               { this.props.children }
             </div>
           </ClassNameTransitionGroup>

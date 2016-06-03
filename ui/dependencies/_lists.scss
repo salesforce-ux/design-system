@@ -57,15 +57,15 @@
 // @param $color {String} Defines the color of the dot
 // @param $mq {Boolean} If you want a dots on touch device or not
 
-@mixin dot-separator($direction: right, $size: 4px, $color: $color-text-weak, $mq: null) {
+@mixin dot-separator($direction: right, $size: 2px, $color: $color-text-weak, $mq: null) {
   position: relative;
+  display: flex;
+  align-items: center;
 
   @if $direction == right {
     &:after {
       @include square($size);
       content: '';
-      display: inline-block;
-      vertical-align: middle;
       margin: {
         left: $spacing-x-small;
         right: $spacing-x-small;

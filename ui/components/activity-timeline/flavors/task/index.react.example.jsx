@@ -26,7 +26,10 @@ export let states = [
       <span className={pf('assistive-text')}>Task</span>
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
-          <TileMedia title="Review proposals for EBC deck with larger team and have marketing review this" media={ <Checkbox assistiveText="mark-complete" /> }>
+          <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
+            <p className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
+              <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
+            </p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
                 <span className={pf('tile__label text-heading--label-normal')}>Contact:</span>
@@ -37,7 +40,7 @@ export let states = [
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
-          </TileMedia>
+          </MediaObject>
         </MediaObject>
       </MediaObject>
     </div>

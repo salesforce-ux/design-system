@@ -22,8 +22,10 @@ export let states = [
     id: 'timeline-task',
     label: 'Default',
     element:
+    <div className="demo-only">
+      <span className={pf('assistive-text')}>Task</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" assistiveText="Task" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
           <TileMedia title="Review proposals for EBC deck with larger team and have marketing review this" media={ <Checkbox assistiveText="mark-complete" /> }>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
@@ -38,5 +40,6 @@ export let states = [
           </TileMedia>
         </MediaObject>
       </MediaObject>
+    </div>
   }
 ];

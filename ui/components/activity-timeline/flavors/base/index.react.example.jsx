@@ -21,7 +21,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export let TimelineIcon = props =>
   <div className={pf('icon_container')}>
     <SvgIcon className={className(pf('icon icon--small'), props.symbol == 'log_a_call' ? pf('icon-standard-log-a-call') : pf('icon-standard-' + props.symbol))} sprite="standard" symbol={ props.symbol } />
-    <span className={pf('assistive-text')}>{ props.assistiveText }</span>
   </div>;
 
 export let TimelineActions = props =>
@@ -34,8 +33,9 @@ export default (
 <div className="demo-only">
   <ul>
     <li>
+      <span className={pf('assistive-text')}>Task</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" assistiveText="Task" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
           <TileMedia title="Review proposals for EBC deck with larger team and have marketing review this" media={ <Checkbox assistiveText="mark-complete" /> }>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
@@ -52,8 +52,9 @@ export default (
       </MediaObject>
     </li>
     <li>
+      <span className={pf('assistive-text')}>Event</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" assistiveText="Event" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName={pf('timeline__icon')}>
           <Tile title="Company One — EBC Meeting">
             <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
             <ul className={pf('list--horizontal wrap')}>
@@ -75,8 +76,9 @@ export default (
       </MediaObject>
     </li>
     <li>
+      <span className={pf('assistive-text')}>Call</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" assistiveText="Call" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName={pf('timeline__icon')}>
           <Tile title="Mobile conversation on Monday">
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className={pf('list--horizontal wrap')}>
@@ -94,8 +96,9 @@ export default (
       </MediaObject>
     </li>
     <li>
+      <span className={pf('assistive-text')}>Email</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" assistiveText="Email" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName={pf('timeline__icon')}>
           <Tile title="Mobile conversation on Monday">
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
             <ul className={pf('list--horizontal wrap')}>

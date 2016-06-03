@@ -42,7 +42,6 @@ classes:
   -
     class: timeline
     description: Defines the overall timeline component
-    required: true
     applied: <code>ul</code>
     notes: By default icons have a white fill color
     deprecated: true

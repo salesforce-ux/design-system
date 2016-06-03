@@ -21,22 +21,25 @@ export let states = [
     id: 'timeline-email',
     label: 'Default',
     element:
-      <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" assistiveText="Email" /> } figureLeftClassName={pf('timeline__icon')}>
-          <Tile title="Mobile conversation on Monday">
-            <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
-            <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>To:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
-              </li>
-              <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>From:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
-              </li>
-            </ul>
-          </Tile>
+      <div className="demo-only">
+        <span className={pf('assistive-text')}>Email</span>
+        <MediaObject figureRight={ <TimelineActions /> }>
+          <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName={pf('timeline__icon')}>
+            <Tile title="Mobile conversation on Monday">
+              <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
+              <ul className={pf('list--horizontal wrap')}>
+                <li className={pf('m-right--large')}>
+                  <span className={pf('tile__label text-heading--label-normal')}>To:</span>
+                  <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
+                </li>
+                <li className={pf('m-right--large')}>
+                  <span className={pf('tile__label text-heading--label-normal')}>From:</span>
+                  <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
+                </li>
+              </ul>
+            </Tile>
+          </MediaObject>
         </MediaObject>
-      </MediaObject>
+      </div>
   }
 ];

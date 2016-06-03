@@ -21,8 +21,10 @@ export let states = [
     id: 'timeline-event',
     label: 'Default',
     element:
+    <div className="demo-only">
+      <span className={pf('assistive-text')}>Event</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" assistiveText="Event" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName={pf('timeline__icon')}>
           <Tile title="Company One — EBC Meeting">
             <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
             <ul className={pf('list--horizontal wrap')}>
@@ -42,5 +44,6 @@ export let states = [
           </Tile>
         </MediaObject>
       </MediaObject>
+    </div>
   }
 ];

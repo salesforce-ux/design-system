@@ -69,6 +69,8 @@ The following changes have been made in this release:
 - Docked Composer has improved markup, focusing on semantic structure and identifying the component correctly to Assistive Technology as a labelled `dialog`.
 - Datepicker has improved markup, focusing on semantic structure and identifying proper aria roles for dates.
 - Resolved semantic bug by making Pill container a `<span>`. `<a>` moved inside and adjacent to the close button.
+- Notification Prompt has improved accessibility in better identifying the component to screen readers using `aria-role="alertdialog"`, `aria-labelledby` and
+  `aria-describedby`. The redundant `slds-modal__close` button has also been removed.
 
 **FIXED**
 
@@ -112,6 +114,7 @@ The following features are being marked as deprecated in this release and will b
 - `.slds-section-title` is no longer supported. Please use `.slds-section__title` instead.
 - `.slds-collapsed` is no longer supported. Please use `.slds-is-collapsed` instead.
 - `.slds-expanded` is no longer supported. Please use `.slds-is-expanded` instead.
+- The rule that hides the close button in Notification Prompt `.slds-modal--prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
 
 **REMOVED**
 

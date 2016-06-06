@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "2.0.0-rc.8",
+  "version": "2.0.0",
   "description": "Salesforce Lightning Design System",
   "license": "SEE LICENSE IN README.md",
   "repository": {
@@ -18,7 +18,7 @@
   },
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     }
   },
   "scripts": {

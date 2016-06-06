@@ -11,7 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+// import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -24,7 +25,8 @@ export default (
   </a>
   <Button type="button" flavor="neutral">Cancel</Button>
   <Button type="button" flavor="brand">Save</Button>
-  <div className={pf('popover nubbin--bottom-left theme--error')} role="alert" aria-live="polite" style={{position: 'absolute', top: '30px', left: '12px'}}>
+  <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" aria-live="polite" style={{position: 'absolute', top: '30px', left: '12px'}}>
+    <ButtonIcon inverse className={pf('button--icon-inverse button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
     <div className={pf('popover__body text-longform')}>
       <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
     </div>

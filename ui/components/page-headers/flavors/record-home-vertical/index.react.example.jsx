@@ -63,23 +63,23 @@ export default (
         </div>
       </div>
       <ul className={pf('list--vertical-space-medium m-left--xx-small')}>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 1">Field 1</p>
           <p className={pf('truncate')} title="Description that demonstrates truncation with a long text field">
             Description that demonstrates truncation with a long text field.
           </p>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 2">Field 2</p>
           <a href="javascript:void(0);">Hyperlink</a>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 3">Field 3</p>
           <p className={pf('truncate')} title="Description">
             Description
           </p>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 4 (3)">
             Field 4 (3)
             <ButtonIcon
@@ -91,19 +91,19 @@ export default (
           </p>
           <p className={pf('text-body--regular')}>Multiple Values</p>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 5">Field 5</p>
           <p className={pf('truncate')} title="Description">
             Description
           </p>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 6">Field 6</p>
           <p className={pf('truncate')} title="Description">
             Description
           </p>
         </li>
-        <li className={pf('list__item')}>
+        <li className={pf('item')}>
           <p className={pf('text-title truncate m-bottom--xx-small')} title="Field 7">Field 7</p>
           <p className={pf('truncate')} title="Description">
             Description

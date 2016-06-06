@@ -31,11 +31,11 @@ export let states = [
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Name:</span>
+                <span className={pf('text-title')}>Name:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
               <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-heading--label-normal')}>Assigned to:</span>
+                <span className={pf('text-title')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>

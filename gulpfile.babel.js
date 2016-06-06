@@ -157,7 +157,8 @@ gulp.task('clean', del.bind(null, [
   __PATHS__.www,
   __PATHS__.generated,
   __PATHS__.tmp,
-  __PATHS__.dist
+  __PATHS__.dist,
+  __PATHS__.logs
 ]));
 
 gulp.task('serve', () => {

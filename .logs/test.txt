@@ -1,0 +1,23 @@
+
+> design-system@2.0.0 test-unit /Users/adam.putinski/Development/github/design-system-internal
+> mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js' "--color"
+
+
+  36 passing (241ms)
+
+
+> design-system@2.0.0 test-integration /Users/adam.putinski/Development/github/design-system-internal
+> mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/integration/**/*.js' "--color"
+
+
+  2 passing (430ms)
+
+
+> design-system@2.0.0 test-browser /Users/adam.putinski/Development/github/design-system-internal
+> karma start "--color"
+
+ERROR LOG: 'Warning: ReactDOMComponent: Do not access .props of a DOM node; instead, recreate the props as `render` did originally or read the DOM properties/attributes directly from this node (e.g., this.refs.box.className). This DOM node was rendered by `BreadCrumbs`.'
+
+Chrome 50.0.2661 (Mac OS X 10.11.5): Executed 3247 of 3247 SUCCESS (0.888 secs / 0.236 secs)
+TOTAL: 3247 SUCCESS
+

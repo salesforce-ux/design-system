@@ -11,8 +11,7 @@ install:
   - bundle install --path vendor/bundle
   - npm install
 script:
-  - npm run lint
-  - npm run test
+  - npm run build-travis
 after_success:
   - export SHA=`git rev-parse --short HEAD`
   - if [ -n $TRAVIS_PULL_REQUEST ] ; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi

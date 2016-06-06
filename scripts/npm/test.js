@@ -8,39 +8,34 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-import { expect } from 'chai';
-import _ from 'lodash';
+
+import '../helpers/setup';
+
+import async from 'async';
+import { spawn } from 'child_process';
 import fs from 'fs';
-import glob from 'glob';
+import mkdirp from 'mkdirp';
 import path from 'path';
-import { ignore as ignoreExtensions } from 'scripts/gulp/assets';
+import stripAnsi from 'strip-ansi';
 
-describe('scripts/tasks/site/assets.js', () => {
+mkdirp(__PATHS__.logs);
 
-  it('does not copy any jsx/scss/.file to .www', () => {
-    let files = glob.sync(`${__PATHS__.www}/**/*.{${ignoreExtensions}}`);
-    expect(files).to.eql([]);
+let logs = '';
+let run = (script, done) => {
+  let command = spawn('npm',  ['run', script, '--', '--color'], {
+    cwd: __PATHS__.root,
+    stdio: ['inherit', 'pipe', 'inherit']
   });
-
-  it('does copy all non-jsx/scss to .www', () => {
-
-    // build list of source site file paths which should be copied
-    let siteFiles = (function () {
-      let all = glob.sync(`${__PATHS__.site}/**/*.*`);
-      let ignore = glob.sync(`${__PATHS__.site}/**/*.{${ignoreExtensions}}`);
-      return _.difference(all, ignore);
-    })();
-
-    let relativeSiteFiles = siteFiles.map(f => path.relative(__PATHS__.site, f));
-
-    // build list of www file paths
-    let wwwFiles = glob.sync(`${__PATHS__.www}/**/*.*`);
-    let relativeWwwFiles = wwwFiles.map(f => path.relative(__PATHS__.www, f));
-
-    // all of relativeSiteFiles should be in relativeWwwFiles
-    let copiedSiteFiles = _.intersection(relativeSiteFiles, relativeWwwFiles);
-    expect(relativeSiteFiles).to.eql(copiedSiteFiles);
+  command.stdout.on('data', (d) => {
+    let str = d.toString();
+    logs += stripAnsi(str);
+    console.log(str);
   });
+  command.on('close', done);
+  command.on('error', done);
+};
 
+async.eachSeries(['test-unit', 'test-integration', 'test-browser'], run, (err) => {
+  fs.writeFileSync(`${__PATHS__.logs}/test.txt`, logs);
+  if (err) throw new Error('Tests Failed (see output above)');
 });
-

@@ -2,6 +2,8 @@
 .tmp
 /.dist
 /.npm
+/.build
+/.logs
 /.generated
 /.www
 /scripts/deploy

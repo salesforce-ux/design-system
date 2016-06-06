@@ -3,5 +3,11 @@ classes:
   -
     class: breadcrumb
     description: Initializes a breadcrumb component
-    applied: <code>ol</code>
+    applied: <code>&lt;ol&gt;</code>
+    required: true
     notes: This class allows the <code>.{{cssPrefix}}list__item</code> to display in the breadcrumb style
+  -
+    class: breadcrumb__item
+    description: Item of the breadcrumb list
+    required: true
+    applied: <code>&lt;li&gt;</code>

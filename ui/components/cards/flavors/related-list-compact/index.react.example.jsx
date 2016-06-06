@@ -17,31 +17,6 @@ import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.ex
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-{/*let Tile = props =>
-  <div className={pf('card__tile tile')}>
-    <p className={pf('tile__title truncate')}><a href="javascript:void(0);">{ props.title || 'Related Record Title' }</a></p>
-    <div className={pf('tile__detail text-body--small')}>
-      <dl className={pf('dl--horizontal text-body--small')}>
-        <dt className={pf('dl--horizontal__label')}>
-          <p className={pf('truncate')}>Type:</p>
-        </dt>
-        <dd className={pf('dl--horizontal__detail tile__meta')}>
-          <p className={pf('truncate')}>Visit</p>
-        </dd>
-        <dt className={pf('dl--horizontal__label')}>
-          <p className={pf('truncate')}>Date:</p>
-        </dt>
-        <dd className={pf('dl--horizontal__detail tile__meta')}>
-          <p className={pf('truncate')}>1/31/15 3:45PM</p>
-        </dd>
-      </dl>
-    </div>
-  </div>;*/}
-
-///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 

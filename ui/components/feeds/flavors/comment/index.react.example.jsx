@@ -46,10 +46,10 @@ export let CommentContent = props =>
 export let CommentFooter = props =>
   <footer className={className(pf('comment__footer'), props.className)}>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-      <li className={pf('list__item')}>
+      <li className={pf('item')}>
         <a href="javascript:void(0);" title="Like this item">Like</a>
       </li>
-      <li className={pf('list__item')}>21 Likes</li>
+      <li className={pf('item')}>21 Likes</li>
     </ul>
   </footer>;
 

@@ -50,26 +50,24 @@ export let PanelSection = props =>
   </div>;
 
 let Tile = props =>
-  <div className={pf('media tile')}>
+  <div className={pf('media')}>
     <div className={pf('media__figure')}>
       <Checkbox id="completed" />
     </div>
     <div className={pf('media__body')}>
-      <p className={pf('tile__title truncate text-heading--small')}>
+      <p className={pf('truncate text-heading--small')}>
         <a href="javascript:void(0);">Follow up on '15 contact</a>
       </p>
-      <div className={pf('tile__detail text-body--small')}>
-        <p className={pf('truncate')}>Jun 18</p>
-        <div className={pf('button-group m-top--small')} role="group">
-          <Button flavor="neutral" className={pf('grow')}>Edit</Button>
-          <Button flavor="neutral" className={pf('grow')}>Follow Up</Button>
-          <Button flavor="neutral" className={pf('grow')}>Delete</Button>
-          <ButtonIcon
-            flavor="icon-border-filled"
-            sprite="utility"
-            symbol="down"
-            assistiveText="More Actions"/>
-        </div>
+      <p className={pf('truncate text-body--small')}>Jun 18</p>
+      <div className={pf('button-group m-top--small')} role="group">
+        <Button flavor="neutral" className={pf('grow')}>Edit</Button>
+        <Button flavor="neutral" className={pf('grow')}>Follow Up</Button>
+        <Button flavor="neutral" className={pf('grow')}>Delete</Button>
+        <ButtonIcon
+          flavor="icon-border-filled"
+          sprite="utility"
+          symbol="down"
+          assistiveText="More Actions"/>
       </div>
     </div>
   </div>;

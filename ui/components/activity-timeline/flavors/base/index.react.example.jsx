@@ -42,11 +42,11 @@ export default (
             </p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-title')}>Contact:</span>
+                <span className={pf('text-title')}>Contact:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
               <li className={pf('m-right--large')}>
-                <span className={pf('tile__label text-title')}>Assigned to:</span>
+                <span className={pf('text-title')}>Assigned to:</span>
                 <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
@@ -64,15 +64,15 @@ export default (
           <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>Time:</span>
+              <span className={pf('text-title')}>Time:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
             </li>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>Location:</span>
+              <span className={pf('text-title')}>Location:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">300 Pike St, San Francisco CA</a></span>
             </li>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>Name:</span>
+              <span className={pf('text-title')}>Name:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a>, <a href="javascript:void(0);">Jason Dewar</a>, <a href="javascript:void(0);">Gwen Jones</a> and <a href="javascript:void(0);">Pete Schaffer</a></span>
             </li>
           </ul>
@@ -89,11 +89,11 @@ export default (
           <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>Name:</span>
+              <span className={pf('text-title')}>Name:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
             </li>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>Assigned to:</span>
+              <span className={pf('text-title')}>Assigned to:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
             </li>
           </ul>
@@ -110,11 +110,11 @@ export default (
           <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('truncate_container--50 m-right--large grid')}>
-              <span className={pf('tile__label text-title')}>To:</span>
+              <span className={pf('text-title')}>To:</span>
               <span className={pf('text-body--small m-left--xx-small truncate')}><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex text-body--small')}> + 44 more</span>
             </li>
             <li className={pf('m-right--large')}>
-              <span className={pf('tile__label text-title')}>From:</span>
+              <span className={pf('text-title')}>From:</span>
               <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
             </li>
           </ul>

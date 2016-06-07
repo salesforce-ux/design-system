@@ -9,7 +9,7 @@
   },
   "config": {
     "slds": {
-      "internal": false
+      "internal": true
     }
   },
   "devDependencies": {

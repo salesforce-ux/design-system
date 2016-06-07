@@ -50,7 +50,7 @@ export let FiltersFooter = props =>
   </div>;
 
 export let FilterObject = props =>
-  <li className={pf('list__item')}>
+  <li className={pf('item')}>
     <div className={className(pf('filters__item grid grid--vertical-align-center'), props.className)}>
       <a href="javascript:void(0);" className={pf('grow has-blur-focus')}>
         {props.type ? (<p className={pf('text-body--small')}>{props.type}</p>) : null }

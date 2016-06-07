@@ -9,14 +9,16 @@
 
 .#{$css-prefix}list--vertical-space {
 
-  .#{$css-prefix}list__item + .#{$css-prefix}list__item {
+  .#{$css-prefix}list__item + .#{$css-prefix}list__item,
+  .#{$css-prefix}item + .#{$css-prefix}item {
     margin-top: $spacing-x-small;
   }
 }
 
 .#{$css-prefix}list--vertical-space-medium {
 
-  .#{$css-prefix}list__item + .#{$css-prefix}list__item {
+  .#{$css-prefix}list__item + .#{$css-prefix}list__item,
+  .#{$css-prefix}item + .#{$css-prefix}item {
     margin-top: $spacing-medium;
   }
 }

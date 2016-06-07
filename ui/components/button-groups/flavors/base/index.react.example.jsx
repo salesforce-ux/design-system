@@ -102,11 +102,11 @@ let Inverse = props =>
 let InverseDisabled = props =>
   <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
     <ButtonGroup>
-      <Button className={pf('button--inverse')} disabled>Refresh</Button>
-      <Button className={pf('button--inverse')}>Edit</Button>
-      <Button className={pf('button--inverse')} disabled>Save</Button>
+      <Button className={pf('button--inverse')}>Refresh</Button>
+      <Button className={pf('button--inverse')} disabled>Edit</Button>
+      <Button className={pf('button--inverse')} >Save</Button>
       <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
-        <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" disabled hasPopup symbol="down" />
+        <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" hasPopup symbol="down" />
       </div>
     </ButtonGroup>
   </Demo>;

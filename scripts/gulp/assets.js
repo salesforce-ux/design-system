@@ -29,7 +29,13 @@ gulp.task('assets:icons:zip', () =>
     .pipe(gulp.dest(getPath('www', 'assets/downloads')))
 );
 
-gulp.task('assets', ['assets:icons', 'assets:icons:zip'], () =>
+gulp.task('assets:config', () =>
+  gulp
+    .src(['site/*-config.js'])
+    .pipe(gulp.dest(__PATHS__.www))
+);
+
+gulp.task('assets', ['assets:icons', 'assets:icons:zip', 'assets:config'], () =>
   gulp
     .src(['site/**/*.*', `!site/**/*.{${ignore}}`])
     .pipe(gulp.dest(__PATHS__.www))

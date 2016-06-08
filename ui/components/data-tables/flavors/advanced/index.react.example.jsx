@@ -13,6 +13,7 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -62,16 +63,16 @@ let Td = props =>
     { props.children }
   </td>;
 
-let Checkbox = props =>
+{/*let Checkbox = props =>
   <label className={pf('checkbox')}>
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} />
     <span className={pf('checkbox--faux')}></span>
     <span className={pf('assistive-text')}>{props.label}</span>
-  </label>;
+  </label>;*/}
 
 let RowData = props =>
   <Tr className={className(pf('hint-parent'), props.className)}>
-    <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} /></Td>
+    <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} hideLabel /></Td>
     <th className={pf('truncate')} scope="row" data-label="Opportunity Name" title={props.title}>{props.title}</th>
     <Td className={pf('truncate')} dataLabel="Account Name" title="Cloudhub">Cloudhub</Td>
     <Td dataLabel="Close Date" title="4/14/2015">4/14/2015</Td>
@@ -102,7 +103,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" hideLabel /></th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
@@ -126,7 +127,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" hideLabel indeterminate="true" checked /></th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
@@ -150,7 +151,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" checked /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" checked hideLabel /></th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
@@ -174,7 +175,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" hideLabel /></th>
             <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending" title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
@@ -198,7 +199,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" hideLabel /></th>
             <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending" title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>
@@ -222,7 +223,7 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead>
           <Tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+            <th className={pf('cell-shrink')}><Checkbox label="Select All" hideLabel /></th>
             <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }} title="Opportunity Name">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Account Name">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col" title="Close Date">Close Date</Th>

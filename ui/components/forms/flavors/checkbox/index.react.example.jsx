@@ -43,12 +43,12 @@ let FormElementControl = props =>
     {props.children}
   </div>;
 
-let Checkbox = props =>
-  <label className={className(pf('checkbox'), props.className)}>
+export let Checkbox = props =>
+  <label className={className(pf('checkbox'), props.className, props.indeterminate ? pf('is-indeterminate') : null)}>
     {props.children}
-    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} checked={props.checked} indeterminate={props.indeterminate} />
+    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} defaultChecked={props.checked} indeterminate={props.indeterminate} />
     <span className={pf('checkbox--faux')}></span>
-    <span className={pf('form-element__label')}>{props.label}</span>
+    <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
   </label>;
 
 //////////////////////////////////////////////
@@ -68,7 +68,7 @@ let Indeterminate = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox className={pf('is-indeterminate')} id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" indeterminate="true" checked />
+        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" indeterminate="true" checked />
       </FormElementControl>
     </FormElement>
   </Demo>;

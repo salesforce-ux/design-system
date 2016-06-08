@@ -23,17 +23,17 @@ let ButtonIcon = props =>
 
 let PostFooterActions = props =>
   <ul className={pf('list--horizontal')}>
-    <li className={pf('list__item m-right--medium')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Like this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" /> Like
       </a>
     </li>
-    <li className={pf('list__item m-right--medium')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
-    <li className={pf('list__item m-right--medium')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
       </a>
@@ -42,10 +42,10 @@ let PostFooterActions = props =>
 
 let PostFooterMeta = props =>
   <ul className={pf('col--bump-left list--horizontal has-dividers--right')}>
-    <li className={pf('list__item medium-show')}>2 Likes</li>
-    <li className={pf('list__item medium-show')}>3 Comments</li>
-    <li className={pf('list__item medium-show')}>20 Shares</li>
-    <li className={pf('list__item')}>259 Views</li>
+    <li className={pf('item medium-show')}>2 Likes</li>
+    <li className={pf('item medium-show')}>3 Comments</li>
+    <li className={pf('item medium-show')}>20 Shares</li>
+    <li className={pf('item')}>259 Views</li>
   </ul>;
 
 export let PostHeader = props =>

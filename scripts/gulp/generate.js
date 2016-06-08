@@ -14,6 +14,7 @@ import gulp from 'gulp';
 import './generate-icons';
 import './generate-release-notes';
 import './generate-tokens-zip';
+import './generate-ui-kit-zip';
 import './generate-tokens';
 import './generate-ui';
 import './generate-examples';
@@ -22,6 +23,7 @@ import './generate-whitelist';
 gulp.task('generate', [
   'generate:icons',
   'generate:release-notes',
+  'generate:ui-kit:zip',
   'generate:tokens:zip',
   'generate:tokens',
   'generate:ui',

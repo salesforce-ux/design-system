@@ -119,8 +119,8 @@ let StateA = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Connecting...
@@ -144,8 +144,8 @@ let StateB = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Dialing...
@@ -167,8 +167,8 @@ let StateC = props =>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('list__item')}>VP of Sales</li>
-              <li className={pf('list__item ')}>Acme Corporation</li>
+              <li className={pf('item')}>VP of Sales</li>
+              <li className={pf('item ')}>Acme Corporation</li>
             </ul>
           </MediaObject>
           <p className={pf('text-heading--large')}>5:37</p>
@@ -202,8 +202,8 @@ let StateD = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Cancelling...
@@ -224,8 +224,8 @@ let StateE = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Busy
@@ -252,8 +252,8 @@ let StateF = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Call Failed
@@ -280,8 +280,8 @@ let StateG = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             No Answer
@@ -306,8 +306,8 @@ let StateH = props =>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('list__item')}>VP of Sales</li>
-              <li className={pf('list__item ')}>Acme Corporation</li>
+              <li className={pf('item')}>VP of Sales</li>
+              <li className={pf('item ')}>Acme Corporation</li>
             </ul>
           </MediaObject>
         </div>
@@ -340,16 +340,16 @@ let StateI = props =>
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             (416) 555-1234
           </p>
           <div className={pf('p-horizontal--x-small text-align--left')}>
             <p className={pf('m-bottom--x-small')}>Recent Activity</p>
-            <ul className={pf('has-cards--space')}>
-              <li className={pf('list__item theme--shade grid')}>
+            <ul className={pf('has-dividers--around-space')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-task m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
                   <span className={pf('assistive-text')}>Task Icon</span>
@@ -357,7 +357,7 @@ let StateI = props =>
                 Discussed New Pricing Models
                 <span className={pf('col--bump-left')}>Yesterday</span>
               </li>
-              <li className={pf('list__item theme--shade grid')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-email m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
                   <span className={pf('assistive-text')}>Task Icon</span>
@@ -365,7 +365,7 @@ let StateI = props =>
                 Re: Updated Proposals
                 <span className={pf('col--bump-left')}>4 Hours Ago</span>
               </li>
-              <li className={pf('list__item theme--shade grid')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-note m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
                   <span className={pf('assistive-text')}>Task Icon</span>

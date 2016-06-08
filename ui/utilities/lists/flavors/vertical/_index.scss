@@ -9,18 +9,27 @@
 
 .#{$css-prefix}list--vertical-space {
 
-  .#{$css-prefix}list__item + .#{$css-prefix}list__item {
+  .#{$css-prefix}list__item + .#{$css-prefix}list__item,
+  .#{$css-prefix}item + .#{$css-prefix}item {
     margin-top: $spacing-x-small;
   }
 }
 
 .#{$css-prefix}list--vertical-space-medium {
 
-  .#{$css-prefix}list__item + .#{$css-prefix}list__item {
+  .#{$css-prefix}list__item + .#{$css-prefix}list__item,
+  .#{$css-prefix}item + .#{$css-prefix}item {
     margin-top: $spacing-medium;
   }
 }
 
 .#{$css-prefix}is-nested {
   margin-left: $spacing-medium;
+}
+
+.#{$css-prefix}list--dotted {
+  @include list-has-bullets;
+}
+.#{$css-prefix}list--ordered {
+  @include list-has-numbers;
 }

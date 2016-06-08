@@ -54,7 +54,7 @@
   &__actions {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__date {

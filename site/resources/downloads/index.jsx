@@ -74,6 +74,23 @@ bower install salesforce-lightning-design-system --save
       </CTALink>
     </form>
 
+    <h2 className="site-text-heading--large" id="ui-kit">Sketch UI Kit</h2>
+    <p>
+      A Sketch file of common design patterns.
+    </p>
+    <form action={'/assets/downloads/salesforce-lightning-design-system-ui-kit.zip'}>
+      <CTALink eventName="Download" eventType="uikit">
+        <button className={pf('button button--neutral')}>
+          Download the Sketch UI Kit
+        </button>
+      </CTALink>
+    </form>
+
+    <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
+    <p>The unmanaged package has been deprecated.</p>
+    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments.</p>
+    <p>There <strong>are</strong> still cases where you will need to use a static resource. Current examples are — within Visualforce, when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
+
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
       Download all <CTALink href="/resources/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is
@@ -198,7 +215,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="archives">Archives</h2>
     <ul className={pf('list--dotted')}>
-      <li><CTALink href="http://design-system-v-1-0-0.herokuapp.com/" eventType="SLDS-Archives">Version 1.0.0</CTALink></li>
+      <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
       <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
     </ul>
 

@@ -18,7 +18,7 @@ class Crumb extends React.Component {
   render() {
     const text = this.props.children;
     return (
-      <li className={pf('list__item text-title--caps')}>
+      <li className={pf('breadcrumb__item text-title--caps')}>
         <a href={this.props.href}>{text}</a>
       </li>
     );

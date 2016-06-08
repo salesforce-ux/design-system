@@ -1,5 +1,9 @@
 status: 'dev-ready'
 flavors:
   - base
+  - icon
+  - avatar
+  - task
+  - article
   - list
   - board

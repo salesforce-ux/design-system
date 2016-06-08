@@ -1,6 +1,8 @@
 import fastdom from 'fastdom';
 import globals from 'app_modules/global';
 
+let search;
+
 if (globals.displaySearch) {
   require.ensure(['docsearch.js'], () => {
     // See https://github.com/algolia/autocomplete.js#options
@@ -9,7 +11,7 @@ if (globals.displaySearch) {
     const autocompleteOptions = {
       //debug: true
     };
-    docsearch({
+    search = docsearch({
       apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
       indexName: 'lightningdesignsystem',
       inputSelector: '#docsearch',

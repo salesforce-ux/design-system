@@ -63,13 +63,6 @@ let Td = props =>
     { props.children }
   </td>;
 
-{/*let Checkbox = props =>
-  <label className={pf('checkbox')}>
-    <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('assistive-text')}>{props.label}</span>
-  </label>;*/}
-
 let RowData = props =>
   <Tr className={className(pf('hint-parent'), props.className)}>
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} hideLabel /></Td>

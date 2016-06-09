@@ -7,7 +7,7 @@ module.exports = {
       status: 301
     },
     {
-      source: '/components/media-object ',
+      source: '/components/media-object',
       destination: '/components/utilities/media-object',
       status: 301
     }

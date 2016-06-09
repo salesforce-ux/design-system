@@ -89,15 +89,13 @@
 
   &.#{$css-prefix}is-indeterminate {
 
-    [type="checkbox"] {
-
-      + .#{$css-prefix}checkbox--faux:after,
-      ~ .#{$css-prefix}checkbox--faux:after {
-        height: 2px;
-        background: $color-brand;
-        border: none;
-        transform: translate3d(-50%, -50%, 0);
-      }
+    // scss-lint:disable SelectorDepth
+    [type="checkbox"] + .#{$css-prefix}checkbox--faux:after,
+    [type="checkbox"] ~ .#{$css-prefix}checkbox--faux:after {
+      height: 2px;
+      background: $color-brand;
+      border: 0;
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 }

@@ -10,10 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-let FileUploader = props =>
+export let FileUploader = props =>
 <div className={className(pf('form-element'), props.error ? pf('has-error') : null)}>
   <span className={pf('form-element__label')}>Attachment</span>
   <div className={pf('form-element__control')}>
@@ -21,8 +22,10 @@ let FileUploader = props =>
       <div className={className(pf('file-uploader__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
         <input className={pf('file-uploader__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} />
         <div className={pf('file-uploader__body')}>
-          <span className={pf('file-uploader__button button button--brand')}>Upload file</span>
-          <span className={pf('p-horizontal--x-small')}>or Drop files</span>
+          <span className={pf('file-uploader__button button button--brand')}>
+            <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
+          </span>
+          <span className={pf('file-uploader__text medium-show')}>or Drop {props.files ? 'Files' : 'Image'}</span>
         </div>
       </div>
     </label>
@@ -32,23 +35,23 @@ let FileUploader = props =>
 
 export let states = [
   {
-    id: 'single-file-uploader',
+    id: 'file-uploader-files',
     label: 'Default',
-    element: <FileUploader />
+    element: <FileUploader files className={pf('file-uploader--files')} />
   },
   {
-    id: 'single-file-uploader-error',
+    id: 'file-uploader-files-error',
     label: 'Error',
-    element: <FileUploader error />
+    element: <FileUploader files className={pf('file-uploader--files')} error />
   },
   {
-    id: 'single-file-uploader-draggover',
+    id: 'file-uploader-files-draggover',
     label: 'Dragover',
-    element: <FileUploader draggover />
+    element: <FileUploader files className={pf('file-uploader--files')} draggover />
   },
   {
-    id: 'single-file-uploader-draggover-error',
+    id: 'file-uploader-files-draggover-error',
     label: 'Dragover with error',
-    element: <FileUploader draggoverError error />
+    element: <FileUploader files className={pf('file-uploader--files')} draggoverError error />
   }
 ];

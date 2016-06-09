@@ -1,3 +1,9 @@
 status: 'dev-ready'
 flavors:
-  - single
+  # - single
+  - files
+  - image
+  # - self-contained
+  #   - files
+  #   - image
+  - integrated

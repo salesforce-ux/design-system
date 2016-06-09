@@ -33,5 +33,29 @@ export let states = [
           </ul>
         </Tile>
       </div>
+  },
+  {
+    id: 'tile-article-liker-bar',
+    label: 'With like bar',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
+          <p>...an introduction for beginners about climbing ropes and how they can use...</p>
+          <ul className={pf('list--horizontal has-dividers--right m-top--xx-small')}>
+            <li className={pf('item')}>000001296</li>
+            <li className={pf('item')}>Published</li>
+            <li className={pf('item')}>How to Guide</li>
+          </ul>
+          <p>Last Modified: 1/14/16</p>
+          <ul className={pf('list--horizontal m-top--xx-small')}>
+            <li>
+              <button className={pf('button button--icon-border button--icon-x-small')}>
+                <SvgIcon className={pf('button__icon')} sprite="utility" symbol="like" />
+              </button>
+              <span className={pf('align-middle')}>1320</span>
+            </li>
+          </ul>
+        </Tile>
+      </div>
   }
 ];

@@ -7,8 +7,8 @@ module.exports = {
       status: 301
     },
     {
-      source: '/components/media-object',
-      destination: '/components/utilities/media-object',
+      source: '/components/media-objects',
+      destination: '/components/utilities/media-objects',
       status: 301
     }
   ]

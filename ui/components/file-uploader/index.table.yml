@@ -1,0 +1,54 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: file-uploader
+    description: Initializes file-uploader
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: file-uploader__dropzone
+    description: Region that a file can be dropped within
+    required: true
+  -
+    class: file-uploader__input
+    description: Hidden input element
+    required: true
+    notes: Required for accessibility purposes
+  -
+    class: file-uploader__body
+    description: Container for file uploader content, specifically within the dropzone
+    required: true
+  -
+    class: file-uploader__button
+    description: Faux button
+    required: true
+  -
+    class: file-uploader__body-icon
+    description: Visual icon that describes state of dropzone
+    required: true
+  -
+    class: file-uploader__text
+    description: Descriptive call back text
+    required: true
+  -
+    class: has-drag
+    description: Informs dropzone that file has been dragged into the viewport
+    required: true
+    notes: To be added with JavaScript
+  -
+    class: has-drag-over
+    description: Informs dropzone that file has been dragged into its region
+    required: true
+    notes: To be added with JavaScript
+  -
+    class: file-uploader--files
+    description: Modifier for self contained files uploader
+    required: true
+  -
+    class: file-uploader--images
+    description: Modifier for self container image uploader
+    required: true
+  -
+    class: file-uploader--integrated
+    description: Modifier for integrated file uploader
+    required: true

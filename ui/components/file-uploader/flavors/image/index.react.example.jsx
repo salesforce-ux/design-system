@@ -20,7 +20,7 @@ export let states = [
     id: 'file-uploader-images',
     label: 'Default',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileUploader className={pf('file-uploader--images')} />
       </div>
   },
@@ -28,7 +28,7 @@ export let states = [
     id: 'file-uploader-images-error',
     label: 'Error',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileUploader className={pf('file-uploader--images')} error />
       </div>
   },
@@ -36,7 +36,7 @@ export let states = [
     id: 'file-uploader-images-draggover',
     label: 'Dragover',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileUploader className={pf('file-uploader--images')} draggover />
       </div>
   },
@@ -44,7 +44,7 @@ export let states = [
     id: 'file-uploader-images-draggover-error',
     label: 'Dragover with error',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileUploader className={pf('file-uploader--images')} draggoverError error />
       </div>
   }

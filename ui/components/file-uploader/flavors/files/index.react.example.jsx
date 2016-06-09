@@ -18,17 +18,17 @@ export let FileUploader = props =>
 <div className={className(pf('form-element'), props.error ? pf('has-error') : null)}>
   <span className={pf('form-element__label')}>Attachment</span>
   <div className={pf('form-element__control')}>
-    <label className={className(pf('file-uploader'), props.className)}>
+    <div className={className(pf('file-uploader'), props.className)}>
       <div className={className(pf('file-uploader__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
         <input className={pf('file-uploader__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} />
-        <div className={pf('file-uploader__body')}>
+        <label className={pf('file-uploader__body')} htmlFor="file-upload-input-01">
           <span className={pf('file-uploader__button button button--brand')}>
             <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
           </span>
           <span className={pf('file-uploader__text medium-show')}>or Drop {props.files ? 'Files' : 'Image'}</span>
-        </div>
+        </label>
       </div>
-    </label>
+    </div>
   </div>
   { props.error ? <div className={pf('form-element__help')}>File type not supported</div> : null }
 </div>;

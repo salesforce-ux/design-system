@@ -51,6 +51,7 @@ export let states = [
             <li>
               <button className={pf('button button--icon-border button--icon-x-small')}>
                 <SvgIcon className={pf('button__icon')} sprite="utility" symbol="like" />
+                <span className={pf('assistive-text')}>Upvote</span>
               </button>
               <span className={pf('align-middle')}>1320</span>
             </li>

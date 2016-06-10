@@ -13,6 +13,7 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -24,13 +25,39 @@ let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
     <div className={pf('form-element__control grid box--border')}>
-      <div className={pf('dropdown-trigger--click align-middle m-left--x-small shrink-none')}>
+      <div className={className(pf('dropdown-trigger--click align-middle m-left--xx-small shrink-none'), props.objectDropdown ? pf('is-open') : null)}>
         <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
         <ButtonIcon className={pf('button-space-left shrink-none')} flavor="icon" sprite="utility" symbol="down" assistiveText="Filter" />
+        { props.objectDropdown ?
+          <Menu className={pf('dropdown--left')}>
+            <MenuList>
+              <MenuItem>
+                <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
+                Accounts
+              </MenuItem>
+              <MenuItem>
+                <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
+                Approvals
+              </MenuItem>
+              <MenuItem>
+                <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
+                Lead
+              </MenuItem>
+              <MenuItem>
+                <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
+                Opportunities
+              </MenuItem>
+              <MenuItem>
+                <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
+                Products
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        : null}
       </div>
-      <div className={pf('input-has-icon input-has-icon--right grid grow')}>
+      <div className={pf('input-has-icon input-has-icon--right grow')}>
         <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-        <input id={props.id} className={pf('lookup__search-input input--bare grow')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Search Accounts" defaultValue={props.value} />
+        <input id={props.id} className={pf('lookup__search-input input--bare')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Search Accounts" defaultValue={props.value} />
       </div>
     </div>
     {props.children}
@@ -39,19 +66,15 @@ let LookupMulti = props =>
 let LookupMultiWithSelection = props =>
   <div className={className(pf('form-element lookup has-selection'), props.className)} data-select="multi" data-scope="multi">
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control grid box--border')}>
-      <div className={pf('input-has-icon input-has-icon--right grid grow')}>
-        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-        <PillContainer className={pf('pill_container--bare')}>
-          <Pill label="Paddy's Pub" unlinked>
-            <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
-              <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-              <span className={pf('assistive-text')}>Account</span>
-            </span>
-          </Pill>
-          <a href="javascript:void(0);" className={pf('m-left--x-small')}>+1 more</a>
-        </PillContainer>
-      </div>
+    <div className={pf('form-element__control')}>
+      <PillContainer>
+        <Pill label="Paddy's Pub" unlinked className={pf('size--1-of-1')}>
+          <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
+            <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+            <span className={pf('assistive-text')}>Account</span>
+          </span>
+        </Pill>
+      </PillContainer>
     </div>
     {props.children}
   </div>;
@@ -95,6 +118,14 @@ export let states = [
     id: 'lookup-polymorphic',
     label: 'Default',
     element: <LookupMulti label="Parent Account" id="lookup-01" selectType="single" />
+  },
+  {
+    id: 'lookup-polymorphic-dropdown',
+    label: 'Object dropdown',
+    element:
+      <div className="demo-only" style={{ height: '270px' }}>
+        <LookupMulti label="Parent Account" id="lookup-01" selectType="single" objectDropdown />
+      </div>
   },
   {
     id: 'lookup-multi-scope-active',
@@ -168,64 +199,8 @@ export let states = [
     </div>
   },
   {
-    id: 'lookup-multi-scope-selection-active',
-    label: 'Active with selection(s)',
-    element:
-    <div className="demo-only" style={{ height: '380px' }}>
-      <LookupMulti label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')}>
-        <LookupMenu>
-          <PillContainer className={pf('pill_container--bare has-divider--bottom')}>
-            <Pill label="Paddy's Pub" unlinked>
-              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
-                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-                <span className={pf('assistive-text')}>Account</span>
-              </span>
-            </Pill>
-            <Pill label="Vanderlay Industries" unlinked>
-              <span className={pf('icon_container icon-standard-account  pill__icon_container')}>
-                <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-                <span className={pf('assistive-text')}>Account</span>
-              </span>
-            </Pill>
-          </PillContainer>
-          <LookupLabel>Recent Accounts</LookupLabel>
-          <LookupResults>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>The Boston Consulting Group</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Boston</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Acuity</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Sheboygan</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>SAS Insistute</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Cary</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Genentech</div>
-              <span className={pf('lookup__result-meta text-body--small')}>South San Francisco</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Camden Property Trust</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Houston</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Salesforce.com Inc.</div>
-              <span className={pf('lookup__result-meta text-body--small')}>San Francisco</span>
-            </LookupResultsItem>
-          </LookupResults>
-          <LookupAction>
-            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="add" />
-            <span className={pf('truncate')}>Add Account</span>
-          </LookupAction>
-        </LookupMenu>
-      </LookupMulti>
-    </div>
-  },
-  {
     id: 'lookup-multi-scope-selection',
-    label: 'With selection(s)',
+    label: 'With selection',
     element: <LookupMultiWithSelection label="Parent Account" id="lookup-01" selectType="single" />
   }
 ];

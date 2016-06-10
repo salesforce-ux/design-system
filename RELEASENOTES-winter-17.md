@@ -53,6 +53,7 @@ The following changes have been made in this release:
 - Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
+- Add close button to error popover so a screen reader can access popover
 
 **FIXED**
 

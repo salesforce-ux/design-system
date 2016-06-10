@@ -70,7 +70,7 @@
 .#{$css-prefix}tabs--default__item {
 
   &.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
-    border-color: $color-text-tab-label-selected;
+    border-color: $color-border-tab-selected;
     color: $color-text-action-label-active;
 
     &:focus {

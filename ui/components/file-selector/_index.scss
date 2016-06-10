@@ -63,8 +63,8 @@
   }
 
   .#{$css-prefix}file-selector__button {
-    height: $line-height-pill;
-    line-height: $line-height-pill;
+    max-height: $height-pill;
+    line-height: $height-pill;
   }
 
   .#{$css-prefix}file-selector__text {

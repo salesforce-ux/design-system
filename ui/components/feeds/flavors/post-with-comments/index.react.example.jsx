@@ -12,8 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
-import { Post, PostHeader, PostContent, PostFooter, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
+import { Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
+import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -26,16 +26,19 @@ export let states = [
     id: 'post-with-comments',
     label: 'Default',
     element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments>
+      <div className="demo-only">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta comments="2" />
+          </PostFooter>
+        </Post>
+        <Comments>
+          <div>
             <Comment>
               <CommentHeader />
               <CommentContent>
@@ -50,61 +53,79 @@ export let states = [
               </CommentContent>
               <CommentFooter />
             </Comment>
-          </Comments>
-        </div>
-      </div>
-  },
-  {
-    id: 'post-with-liker-bar',
-    label: 'Like Bar',
-    element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments>
-            <div className={pf('has-divider--bottom p-bottom--small m-bottom--small')}>
-              <a href="javascript:void(0);">You</a>, <a href="javascript:void(0);">Tim</a>, <a href="javascript:void(0);">Sophia</a> and <a href="javascript:void(0);">14</a> others liked this post
-            </div>
-          </Comments>
-        </div>
+          </div>
+          <Publisher />
+        </Comments>
       </div>
   },
   {
     id: 'post-with-overflow',
     label: 'Overflow Bar',
     element:
-      <div className="demo-only" style={{ maxWidth: '800px' }}>
-        <div className={pf('feed__item feed__item--card')}>
-          <Post className={pf('post--card')}>
-            <PostHeader />
-            <PostContent>
-              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter />
-          </Post>
-          <Comments>
-            <div className={pf('has-divider--bottom p-bottom--small m-bottom--small')}>
-              <a href="javascript:void(0);">You</a>, <a href="javascript:void(0);">Tim</a>, <a href="javascript:void(0);">Sophia</a> and <a href="javascript:void(0);">14</a> others liked this post
-            </div>
-            <div className={pf('has-divider--bottom p-bottom--small m-bottom--small grid')}>
-              <a href="javascript:void(0);">More comments</a>
-              <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
-            </div>
-            <Comment>
-              <CommentHeader />
-              <CommentContent>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </CommentContent>
-              <CommentFooter />
-            </Comment>
-          </Comments>
-        </div>
+      <div className="demo-only">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta comments="8" />
+          </PostFooter>
+        </Post>
+        <Comments>
+          <div className={pf('has-divider--bottom p-horizontal--medium p-vertical--x-small grid')}>
+            <a href="javascript:void(0);">More comments</a>
+            <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
+          </div>
+          <ul>
+            <li>
+              <Comment>
+                <CommentHeader />
+                <CommentContent>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </CommentContent>
+                <CommentFooter />
+              </Comment>
+            </li>
+          </ul>
+          <Publisher />
+        </Comments>
+      </div>
+  },
+  {
+    id: 'post-with-publisher-active',
+    label: 'Publisher active',
+    element:
+      <div className="demo-only">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta comments="8" />
+          </PostFooter>
+        </Post>
+        <Comments>
+          <div className={pf('has-divider--bottom p-horizontal--medium p-vertical--x-small grid')}>
+            <a href="javascript:void(0);">More comments</a>
+            <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
+          </div>
+          <ul>
+            <li>
+              <Comment>
+                <CommentHeader />
+                <CommentContent>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </CommentContent>
+                <CommentFooter />
+              </Comment>
+            </li>
+          </ul>
+          <Publisher className={pf('is-active has-focus')} />
+        </Comments>
       </div>
   }
 ];

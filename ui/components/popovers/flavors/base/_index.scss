@@ -19,6 +19,11 @@
     padding: $spacing-x-small $spacing-small;
   }
 
+  &__close {
+    position: relative;
+    z-index: ($z-index-dialog + 1);
+  }
+
   &[class*="theme--"] {
     border: 0;
   }

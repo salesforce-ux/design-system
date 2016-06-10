@@ -58,6 +58,18 @@
       left: $spacing-large;
     }
   }
+
+  &-around {
+    padding: $spacing-small;
+  }
+
+  &-around-medium {
+    padding: $spacing-medium;
+  }
+
+  &-around-large {
+    padding: $spacing-large;
+  }
 }
 
 .#{$css-prefix}grid--pull-padded {

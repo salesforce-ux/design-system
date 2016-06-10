@@ -236,6 +236,11 @@
   }
 }
 
+// Align the icon correctly in the middle of the button
+.site-cta-buttons__icon {
+  vertical-align: -0.5rem;
+}
+
 
 // Keep "Design System" on same line
 .text-no-wrap {

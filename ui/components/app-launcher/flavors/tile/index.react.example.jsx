@@ -22,7 +22,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let AppLauncherTile = props =>
   <a href="javascript:void(0);" className={className(pf('app-launcher__tile text-link--reset'), props.className, props.flavor == 'small' ? pf('app-launcher__tile--small') : null, props.draggable ? pf('is-draggable') : null)}>
-    <div className={className(pf('app-launcher__tile-figure'), props.flavor == 'small' ? pf('app-launcher__tile-figure--small') : pf('has-divider--right'))}>
+    <div className={className(pf('app-launcher__tile-figure'), props.flavor == 'small' ? pf('app-launcher__tile-figure--small') : null)}>
       { props.symbol ? <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--large')} sprite="standard" symbol={ props.symbol } /> :
         <span className={className(pf('avatar avatar--large align--absolute-center'), props.figureClass)}>{props.objectInitials}</span>
       }

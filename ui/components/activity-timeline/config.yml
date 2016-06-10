@@ -1,7 +1,7 @@
-status: 'prototype'
-classBase: 'timeline'
+status: 'dev-ready'
 flavors:
   - base
-dependencies:
-  - core/media-objects
-  - core/icons
+  - call
+  - email
+  - event
+  - task

@@ -42,13 +42,13 @@ export let states = [
     element: <ButtonIconContainer className={pf('button--icon-border')} />
   },
   {
-    id: 'button-icon-border-inverse',
-    label: 'Inverse - with border',
-    element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
-  },
-  {
     id: 'button-icon-border-filled',
     label: 'Filled — with border',
     element: <ButtonIconContainer className={pf('button--icon-border-filled')} />
+  },
+  {
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - with border',
+    element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
   }
 ];

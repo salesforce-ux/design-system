@@ -22,18 +22,18 @@ let ButtonIcon = props =>
 
 export let PostFooterActions = props =>
   <ul className={pf('post__footer-actions-list list--horizontal')}>
-    <li className={pf('list__item')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Like this item" className={className(pf('post__footer-action'), props.liked ? pf('is-active') : null)}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
       </a>
     </li>
-    <li className={pf('list__item')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
-    <li className={pf('list__item')}>
+    <li className={pf('item m-right--medium')}>
       <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
       </a>
@@ -42,10 +42,10 @@ export let PostFooterActions = props =>
 
 export let PostFooterMeta = props =>
   <ul className={pf('post__footer-meta-list list--horizontal has-dividers--right text-title')}>
-    { props.liked ? <li className={pf('list__item')}>1 Likes</li> : null }
-    { props.comments ? <li className={pf('list__item')}>{ props.comments || '0' } Comments</li> : null }
-    <li className={pf('list__item')}>20 Shares</li>
-    <li className={pf('list__item')}>259 Views</li>
+    { props.liked ? <li className={pf('item')}>1 Likes</li> : null }
+    { props.comments ? <li className={pf('item')}>{ props.comments || '0' } Comments</li> : null }
+    <li className={pf('item')}>20 Shares</li>
+    <li className={pf('item')}>259 Views</li>
   </ul>;
 
 export let PostHeader = props =>

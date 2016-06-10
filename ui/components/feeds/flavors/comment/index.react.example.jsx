@@ -46,11 +46,11 @@ export let CommentContent = props =>
 export let CommentFooter = props =>
   <footer className={className(pf('comment__footer'), props.className)}>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-      <li className={pf('list__item')}>
+      <li className={pf('item')}>
         <a href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>
       </li>
-      { props.liked ? <li className={pf('list__item')}>1 Like</li> : null }
-      <li className={pf('list__item')}>16hr Ago</li>
+      { props.liked ? <li className={pf('item')}>1 Like</li> : null }
+      <li className={pf('item')}>16hr Ago</li>
     </ul>
   </footer>;
 

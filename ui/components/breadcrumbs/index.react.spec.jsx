@@ -39,7 +39,7 @@ describe('React', () => {
       expect(node).length.to.be(1);
     });
     it('renders its items', () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}list__item`);
+      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}breadcrumb__item`);
       expect(node).length.to.be(2);
     });
     it('adds its aria-label', () => {

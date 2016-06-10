@@ -11,7 +11,8 @@
 
 .#{$css-prefix}breadcrumb {
 
-  .#{$css-prefix}list__item {
+  .#{$css-prefix}list__item,
+  &__item {
     position: relative;
 
     &:before {

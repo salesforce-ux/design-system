@@ -22,6 +22,10 @@ classes:
     description: Modifier used to apply panel specific styles
     applied: <code>.{{cssPrefix}}popover</code>
   -
+    class: popover__close
+    description: Close button within a popover
+    applied: <code>.{{cssPrefix}}button--icon</code>
+  -
     class: nubbin--top
     description: Triangle that points upwards which is horizontally centered
     applied: <code>.{{cssPrefix}}popover</code>

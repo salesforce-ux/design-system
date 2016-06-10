@@ -46,7 +46,7 @@ let FormElementControl = props =>
 export let Checkbox = props =>
   <label className={className(pf('checkbox'), props.className, props.indeterminate ? pf('is-indeterminate') : null)}>
     {props.children}
-    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} defaultChecked={props.checked} indeterminate={props.indeterminate} />
+    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} defaultChecked={props.checked} />
     <span className={pf('checkbox--faux')}></span>
     <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
   </label>;

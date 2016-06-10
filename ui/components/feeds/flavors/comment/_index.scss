@@ -12,10 +12,6 @@
   &__content {
     padding: $spacing-xx-small 0;
   }
-
-  + .#{$css-prefix}comment {
-    margin-top: $spacing-small;
-  }
 }
 
 @include deprecate('4.0.0', 'Feeds have been redesigned') {

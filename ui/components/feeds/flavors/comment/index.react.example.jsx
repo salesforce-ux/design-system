@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export let Comment = props =>
   <article className={className(pf('comment media'), props.className)}>
     <div className={pf('media__figure')}>
-      <span className={className(pf('avatar avatar--small avatar--circle align--absolute-center'), props.figureClass || pf('icon-custom-22'))}>{props.userInitials || 'JD'}</span>
+      <span className={className(pf('avatar avatar--medium avatar--circle align--absolute-center'), props.figureClass || pf('icon-custom-22'))}>{props.userInitials || 'JD'}</span>
     </div>
     <div className={pf('media__body')}>
       { props.children }
@@ -32,7 +32,7 @@ export let CommentHeader = props =>
   <header className={pf('comment__header media media--center')}>
     <div className={pf('grid grid--align-spread has-flexi-truncate')}>
       <p className={pf('truncate')}>
-        <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
+        <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a>
       </p>
       <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
     </div>
@@ -47,9 +47,10 @@ export let CommentFooter = props =>
   <footer className={className(pf('comment__footer'), props.className)}>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
       <li className={pf('item')}>
-        <a href="javascript:void(0);" title="Like this item">Like</a>
+        <a href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>
       </li>
-      <li className={pf('item')}>21 Likes</li>
+      { props.liked ? <li className={pf('item')}>1 Like</li> : null }
+      <li className={pf('item')}>16hr Ago</li>
     </ul>
   </footer>;
 
@@ -63,14 +64,29 @@ let ButtonIcon = props =>
 // Export
 ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ maxWidth: '800px' }}>
-    <Comment>
-      <CommentHeader />
-      <CommentContent>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </CommentContent>
-      <CommentFooter />
-    </Comment>
-  </div>
-);
+export let states = [
+  {
+    id: 'comment',
+    label: 'Default',
+    element:
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter />
+      </Comment>
+  },
+  {
+    id: 'comment-liked',
+    label: 'Like',
+    element:
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter liked />
+      </Comment>
+  }
+];

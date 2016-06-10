@@ -27,7 +27,6 @@
 .#{$css-prefix}file-selector__input {
 
   &:focus ~ .#{$css-prefix}file-selector__body > .#{$css-prefix}file-selector__button {
-    // background-color: $color-background-button-brand-hover;
     box-shadow: $shadow-button-focus;
   }
 
@@ -87,6 +86,7 @@
     &:after {
       content: '';
       padding-top: 100%;
+      display: table; // FF issue
     }
   }
 

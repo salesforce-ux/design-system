@@ -20,7 +20,7 @@ export let FileSelector = props =>
   <div className={pf('form-element__control')}>
     <div className={className(pf('file-selector'), props.className)}>
       <div className={className(pf('file-selector__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
-        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} />
+        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'error-01' : null} />
         <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
           <span className={pf('file-selector__button button button--neutral')}>
             <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
@@ -30,7 +30,7 @@ export let FileSelector = props =>
       </div>
     </div>
   </div>
-  { props.error ? <div className={pf('form-element__help')}>File type not supported</div> : null }
+  { props.error ? <div className={pf('form-element__help')} id="error-01">File type not supported</div> : null }
 </div>;
 
 export let states = [

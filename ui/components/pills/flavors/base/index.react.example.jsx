@@ -25,7 +25,7 @@ let Demo = props =>
   </div>;
 
 export let Pill = props =>
-  <span className={pf('pill')}>
+  <span className={className(pf('pill'), props.className)}>
     {props.children}
     {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
     : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}

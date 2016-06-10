@@ -64,7 +64,7 @@
   }
 }
 
-.#{$css-prefix}edit-bar {
+.#{$css-prefix}docked-form-footer {
   @include docked-bar;
   padding: $spacing-x-small 0;
 }

@@ -12,6 +12,7 @@ components:
   - docked-utility-bar
   - feeds
   - files
+  - file-selector
   - forms
   - global-header
   - global-navigation

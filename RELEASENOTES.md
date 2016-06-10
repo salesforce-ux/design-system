@@ -1,6 +1,26 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## Release [2.0.2] - Future
+
+**CHANGES**
+
+The following changes have been made in this release:
+
+- Pills now reference a token that allow for consistent heights in all context
+
+**FIXED**
+
+The following issues have now been resolved:
+
+- Text inputs are referencing the correct 32px tall token - fixes https://github.com/salesforce-ux/design-system/issues/150
+
+**REMOVED**
+
+The following features are being removed in this release:
+
+- Removed incorrect spec for lookups with active selection(s)
+
 ## Release [2.0.1] - June 6, 2016
 
 **SITE IA/ENHANCEMENTS**

@@ -11,11 +11,11 @@
 
 .#{$css-prefix}select {
   @include form-states;
-  height: $line-height-button-small;
+  height: calc(#{$height-input} + (#{$border-width-thin} * 2));
 
   &[size],
   &[multiple] {
-    min-height: $line-height-button-small;
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2));
     height: inherit;
 
     option {

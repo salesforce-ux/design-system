@@ -12,18 +12,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { FileUploader } from 'ui/components/file-uploader/flavors/files/index.react.example';
+import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-let IntegratedFileUploader = props =>
-  <div className={className(pf('file-uploader'), props.className)}>
-    <div className={className(pf('file-uploader__dropzone'), props.drag ? pf('has-drag') : null, props.draggover ? pf('has-drag-over') : null)}>
-      <input className={pf('file-uploader__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} tabIndex={props.drag ? '0' : '-1'} />
-      <label className={pf('file-uploader__body')} htmlFor="file-upload-input-01">
+let IntegratedFileSelector = props =>
+  <div className={className(pf('file-selector'), props.className)}>
+    <div className={className(pf('file-selector__dropzone'), props.drag ? pf('has-drag') : null, props.draggover ? pf('has-drag-over') : null)}>
+      <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} tabIndex={props.drag ? '0' : '-1'} />
+      <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
         { props.draggoverError ?
-          <SvgIcon className={pf('file-uploader__body-icon icon icon-text-default')} sprite="utility" symbol="close" />
-        : <SvgIcon className={pf('file-uploader__body-icon icon icon-text-default')} sprite="utility" symbol="upload" /> }
-        <span className={pf('file-uploader__text')}>Drop Files</span>
+          <SvgIcon className={pf('file-selector__body-icon icon icon-text-default')} sprite="utility" symbol="close" />
+        : <SvgIcon className={pf('file-selector__body-icon icon icon-text-default')} sprite="utility" symbol="upload" /> }
+        <span className={pf('file-selector__text')}>Drop Files</span>
       </label>
     </div>
     { props.children }
@@ -31,43 +31,43 @@ let IntegratedFileUploader = props =>
 
 export let states = [
   {
-    id: 'integrated-file-uploader-default',
+    id: 'integrated-file-selector-default',
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileUploader className={pf('file-uploader--integrated')}>
+        <IntegratedFileSelector className={pf('file-selector--integrated')}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileUploader>
+        </IntegratedFileSelector>
       </div>
   },
   {
-    id: 'integrated-file-uploader-drag',
+    id: 'integrated-file-selector-drag',
     label: 'Drag',
     element:
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileUploader className={pf('file-uploader--integrated')} drag>
+        <IntegratedFileSelector className={pf('file-selector--integrated')} drag>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileUploader>
+        </IntegratedFileSelector>
       </div>
   },
   {
-    id: 'integrated-file-uploader-draggover',
+    id: 'integrated-file-selector-draggover',
     label: 'Dragover',
     element:
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileUploader className={pf('file-uploader--integrated')} drag draggover>
+        <IntegratedFileSelector className={pf('file-selector--integrated')} drag draggover>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileUploader>
+        </IntegratedFileSelector>
       </div>
   },
   {
-    id: 'integrated-file-uploader-draggover-error',
+    id: 'integrated-file-selector-draggover-error',
     label: 'Dragover with error',
     element:
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileUploader className={pf('file-uploader--integrated')} drag draggoverError error>
+        <IntegratedFileSelector className={pf('file-selector--integrated')} drag draggoverError error>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileUploader>
+        </IntegratedFileSelector>
       </div>
   }
 ];

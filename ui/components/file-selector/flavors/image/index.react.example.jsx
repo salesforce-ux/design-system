@@ -12,40 +12,40 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { FileUploader } from 'ui/components/file-uploader/flavors/files/index.react.example';
+import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
-    id: 'file-uploader-images',
+    id: 'file-selector-images',
     label: 'Default',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileUploader className={pf('file-uploader--images')} />
+        <FileSelector className={pf('file-selector--images')} />
       </div>
   },
   {
-    id: 'file-uploader-images-error',
+    id: 'file-selector-images-error',
     label: 'Error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileUploader className={pf('file-uploader--images')} error />
+        <FileSelector className={pf('file-selector--images')} error />
       </div>
   },
   {
-    id: 'file-uploader-images-draggover',
+    id: 'file-selector-images-draggover',
     label: 'Dragover',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileUploader className={pf('file-uploader--images')} draggover />
+        <FileSelector className={pf('file-selector--images')} draggover />
       </div>
   },
   {
-    id: 'file-uploader-images-draggover-error',
+    id: 'file-selector-images-draggover-error',
     label: 'Dragover with error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileUploader className={pf('file-uploader--images')} draggoverError error />
+        <FileSelector className={pf('file-selector--images')} draggoverError error />
       </div>
   }
 ];

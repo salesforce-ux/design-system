@@ -17,7 +17,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    File uploader intro
+    The File selector component allows the user to select files(s) from a users file system. Either natively using an file input or drag and drop.
   </p>
 );
 

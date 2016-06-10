@@ -14,18 +14,18 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export let FileUploader = props =>
+export let FileSelector = props =>
 <div className={className(pf('form-element'), props.error ? pf('has-error') : null)}>
   <span className={pf('form-element__label')}>Attachment</span>
   <div className={pf('form-element__control')}>
-    <div className={className(pf('file-uploader'), props.className)}>
-      <div className={className(pf('file-uploader__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
-        <input className={pf('file-uploader__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} />
-        <label className={pf('file-uploader__body')} htmlFor="file-upload-input-01">
-          <span className={pf('file-uploader__button button button--brand')}>
+    <div className={className(pf('file-selector'), props.className)}>
+      <div className={className(pf('file-selector__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
+        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} />
+        <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
+          <span className={pf('file-selector__button button button--neutral')}>
             <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
           </span>
-          <span className={pf('file-uploader__text medium-show')}>or Drop {props.files ? 'Files' : 'Image'}</span>
+          <span className={pf('file-selector__text medium-show')}>or Drop {props.files ? 'Files' : 'Image'}</span>
         </label>
       </div>
     </div>
@@ -35,23 +35,23 @@ export let FileUploader = props =>
 
 export let states = [
   {
-    id: 'file-uploader-files',
+    id: 'file-selector-files',
     label: 'Default',
-    element: <FileUploader files className={pf('file-uploader--files')} />
+    element: <FileSelector files className={pf('file-selector--files')} />
   },
   {
-    id: 'file-uploader-files-error',
+    id: 'file-selector-files-error',
     label: 'Error',
-    element: <FileUploader files className={pf('file-uploader--files')} error />
+    element: <FileSelector files className={pf('file-selector--files')} error />
   },
   {
-    id: 'file-uploader-files-draggover',
+    id: 'file-selector-files-draggover',
     label: 'Dragover',
-    element: <FileUploader files className={pf('file-uploader--files')} draggover />
+    element: <FileSelector files className={pf('file-selector--files')} draggover />
   },
   {
-    id: 'file-uploader-files-draggover-error',
+    id: 'file-selector-files-draggover-error',
     label: 'Dragover with error',
-    element: <FileUploader files className={pf('file-uploader--files')} draggoverError error />
+    element: <FileSelector files className={pf('file-selector--files')} draggoverError error />
   }
 ];

@@ -415,3 +415,11 @@
   box-shadow: $shadow-docked;
   z-index: $z-index-overlay; // Better token - more specific to docked stuff
 }
+
+@mixin absolute-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}

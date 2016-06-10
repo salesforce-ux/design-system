@@ -1,33 +1,33 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: file-uploader
-    description: Initializes file-uploader
+    class: file-selector
+    description: Initializes file-selector
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: file-uploader__dropzone
+    class: file-selector__dropzone
     description: Region that a file can be dropped within
     required: true
   -
-    class: file-uploader__input
+    class: file-selector__input
     description: Hidden input element
     required: true
     notes: Required for accessibility purposes
   -
-    class: file-uploader__body
-    description: Container for file uploader content, specifically within the dropzone
+    class: file-selector__body
+    description: Container for file selector content, specifically within the dropzone
     required: true
   -
-    class: file-uploader__button
+    class: file-selector__button
     description: Faux button
     required: true
   -
-    class: file-uploader__body-icon
+    class: file-selector__body-icon
     description: Visual icon that describes state of dropzone
     required: true
   -
-    class: file-uploader__text
+    class: file-selector__text
     description: Descriptive call back text
     required: true
   -
@@ -41,14 +41,14 @@ classes:
     required: true
     notes: To be added with JavaScript
   -
-    class: file-uploader--files
-    description: Modifier for self contained files uploader
+    class: file-selector--files
+    description: Modifier for self contained files selector
     required: true
   -
-    class: file-uploader--images
-    description: Modifier for self container image uploader
+    class: file-selector--images
+    description: Modifier for self container image selector
     required: true
   -
-    class: file-uploader--integrated
-    description: Modifier for integrated file uploader
+    class: file-selector--integrated
+    description: Modifier for integrated file selector
     required: true

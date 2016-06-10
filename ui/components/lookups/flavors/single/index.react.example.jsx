@@ -35,7 +35,7 @@ let LookupWithSelection = props =>
     <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
     <div className={pf('form-element__control')}>
       <PillContainer>
-        <Pill label="Paddy's Pub" unlinked>
+        <Pill label="Paddy's Pub" unlinked className={pf('size--1-of-1')}>
           <span className={pf('icon_container icon-standard-account pill__icon_container')}>
             <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
             <span className={pf('assistive-text')}>Account</span>

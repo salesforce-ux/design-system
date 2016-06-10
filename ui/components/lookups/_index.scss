@@ -143,7 +143,8 @@
   }
 
   // Single selection specific
-  &[data-select="single"] {
+  &[data-select="single"],
+  &[data-select="multi"] {
 
     // Stretch pill 100% of container
     .#{$css-prefix}pill {

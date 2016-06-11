@@ -23,6 +23,7 @@ The following components are now available:
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
 - Files - [File Components](/components/files/)
 - Feed v2 - [Feeds Component](/components/feeds/)
+- Indeterminate checkbox - [Indeterminate checkbox component](/components/forms/#flavor-checkbox)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
 - Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)

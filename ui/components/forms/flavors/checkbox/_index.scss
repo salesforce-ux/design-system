@@ -86,6 +86,18 @@
       }
     }
   }
+
+  &.#{$css-prefix}is-indeterminate {
+
+    // scss-lint:disable SelectorDepth
+    [type="checkbox"] + .#{$css-prefix}checkbox--faux:after,
+    [type="checkbox"] ~ .#{$css-prefix}checkbox--faux:after {
+      height: 2px;
+      background: $color-brand;
+      border: 0;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
 }
 
 .#{$css-prefix}has-error .#{$css-prefix}checkbox [type="checkbox"] {

@@ -11,3 +11,9 @@ When a single checkbox is required, `<div class="slds-checkbox">` should get `<a
 When a checkbox group is required, the `<fieldset>` should receive the class `.{{cssPrefix}}is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
 
 As SLDS checkboxes rely on the :checked psuedo selector, and the indeterminate state is only accessible via JavaScript, the use of a CSS class on the input will be necessary to implement this in SLDS. Use JavaScript to add the class when the indeterminate property is set to true on the input.
+
+The following JavaScript demonstrates how to set a checkbox to be indeterminate:
+```js
+var checkbox = document.getElementById('checkbox-indeterminate-01');
+checkbox.indeterminate = true;
+```

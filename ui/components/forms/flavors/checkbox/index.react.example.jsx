@@ -68,7 +68,7 @@ let Indeterminate = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" indeterminate="true" checked />
+        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" indeterminate="true" />
       </FormElementControl>
     </FormElement>
   </Demo>;

@@ -59,7 +59,9 @@ Component.propTypes = {
     'x-small',
     'small',
     'large',
-    'inverse'
+    'inverse',
+    'edit',
+    'lock'
   ),
   sprite: React.PropTypes.string.isRequired,
   symbol: React.PropTypes.string.isRequired,

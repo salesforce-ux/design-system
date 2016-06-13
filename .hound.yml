@@ -5,9 +5,7 @@ javascript:
 jscs:
   enabled: false
 eslint:
-  # Disabled until HoundCI updates to ESLint 2.0
-  # See https://github.com/houndci/eslint/issues/18
-  enabled: false
+  enabled: true
   config_file: .eslintrc.yml
 ruby:
   enabled: false

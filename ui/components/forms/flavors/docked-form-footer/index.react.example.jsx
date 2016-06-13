@@ -15,7 +15,7 @@ import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.examp
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
+{/*export default (
 <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '9rem' }}>
   <a href="javascript:void(0);" className={pf('button')}>
     <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
@@ -31,4 +31,56 @@ export default (
     </div>
   </div>
 </div>
-);
+);*/}
+
+export let states = [
+  {
+    id: 'docked-form-footer',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ height: '80px' }}>
+        <div className={pf('docked-form-footer')}>
+          <Button type="button" flavor="neutral">Cancel</Button>
+          <Button type="button" flavor="brand">Save</Button>
+        </div>
+      </div>
+  },
+  {
+    id: 'docked-form-footer-with-error',
+    label: 'With error(s)',
+    element:
+      <div className="demo-only" style={{ height: '80px' }}>
+        <div className={pf('docked-form-footer')}>
+          <a href="javascript:void(0);" className={pf('button')}>
+            <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
+            symbol="warning" />
+            <span className={pf('assistive-text')}>Review the Following Errors</span>
+          </a>
+          <Button type="button" flavor="neutral">Cancel</Button>
+          <Button type="button" flavor="brand">Save</Button>
+        </div>
+      </div>
+  },
+  {
+    id: 'docked-form-footer-with-tooltip',
+    label: 'With error tooltip',
+    element:
+      <div className="demo-only" style={{ height: '180px' }}>
+        <div className={pf('docked-form-footer')}>
+          <a href="javascript:void(0);" className={pf('button')}>
+            <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
+            symbol="warning" />
+            <span className={pf('assistive-text')}>Review the Following Errors</span>
+          </a>
+          <Button type="button" flavor="neutral">Cancel</Button>
+          <Button type="button" flavor="brand">Save</Button>
+          <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" aria-live="polite" style={{position: 'absolute', bottom: '56px', marginLeft: '-24px', transform: 'translate3d(-50%, 0, 0)' }}>
+            <ButtonIcon inverse className={pf('button--icon-inverse button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
+            <div className={pf('popover__body text-longform')}>
+              <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  }
+];

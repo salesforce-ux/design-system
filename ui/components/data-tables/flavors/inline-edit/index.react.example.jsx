@@ -35,7 +35,7 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Phone">Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Status">Status</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Rating">Rating</Th>
-      <th className={pf('cell-shrink')} scope="col" title="Actions">Actions</th>
+      <th className={pf('cell-shrink')} scope="col" title="Actions"><span className={pf('assistive-text')}>Actions</span></th>
     </Tr>
   </thead>;
 
@@ -68,7 +68,12 @@ let Th = props =>
   </th>;
 
 let Td = props =>
-  <td className={pf('cell-edit')} className={pf(props.className)} data-label={props.dataLabel} title={props.title}>
+  <td className={pf('cell-edit')} data-label={props.dataLabel} title={props.title}>
+    { props.children }
+  </td>;
+
+let TdDemo = props =>
+  <td className={className(pf('cell-edit'), props.className)} data-label={props.dataLabel} title={props.title}>
     { props.children }
   </td>;
 
@@ -79,45 +84,53 @@ let Checkbox = props =>
     <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
 
+let ButtonEdit = props =>
+  <button className={pf('button button--icon cell-edit__button m-left--x-small')} tabIndex={props.tabindex} disabled={props.disabled}>
+    <span className={pf('assistive-text')}>{props.alt}</span>
+    <SvgIcon className={className(pf('button__icon button__icon--hint'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
+  </button>;
+
 let RowData = props =>
   <Tr>
-    <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
-    <th className={pf('cell-edit')} scope="row" data-label="Name" title="Lei Chan"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>Lei Chan</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></th>
-    <Td className={pf('cell-edit')} dataLabel="Company" title={props.title}><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>{props.title}</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} dataLabel="Address" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>12 Embarcadero Plaza, San Francisco, CA 94105</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} dataLabel="Email" title="jdoe@acme.com"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>jdoe@acme.com</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} dataLabel="Phone" title="800-555-1212"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>800-555-1212</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} dataLabel="Status" title="Contacted"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>Contacted</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} dataLabel="Rating" title="Premium Yield"><span className={pf('grid grid--align-spread')}><span className={pf('truncate grow')}>Premium Yield</span><span className={pf('cell-edit__icon')}><ButtonIcon
-              flavor="icon-bare"
-              sprite="utility"
-              symbol="edit"
-              assistiveText="Edit" /></span></span></Td>
-    <Td className={pf('cell-edit')} className={pf('cell-shrink')} dataLabel="Actions">
+    <Td dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
+    <th className={pf('cell-edit')} scope="row" data-label="Name" title="Lei Chan">
+      <span className={pf('grid grid--align-spread')}>
+        <a href="javascript:void()" className={pf('truncate grow')} tabindex="-1">Lei Chan</a>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: Lei Chan" />
+      </span>
+    </th>
+    { props.children }
+    <Td dataLabel="Address" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>12 Embarcadero Plaza, San Francisco, CA 94105</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
+      </span>
+    </Td>
+    <Td dataLabel="Email" title="jdoe@acme.com">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>jdoe@acme.com</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: jdoe@acme.com" />
+      </span>
+    </Td>
+    <Td dataLabel="Phone" title="800-555-1212">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>800-555-1212</span>
+        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+      </span>
+    </Td>
+    <Td dataLabel="Status" title="Contacted">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>Contacted</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: Contacted" />
+      </span>
+    </Td>
+    <Td dataLabel="Rating" title="Premium Yield">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>Premium Yield</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Premium Yield" />
+      </span>
+    </Td>
+    <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -129,15 +142,49 @@ let RowData = props =>
 
 let RowDataStatic = props =>
   <Tr>
-    <Td className={pf('cell-edit')} className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
-    <th scope="row" data-label="Name" title="John Doe">John Doe</th>
-    <Td className={pf('cell-edit')} dataLabel="Company" title="Rohde Corp">Rohde Corp</Td>
-    <Td className={pf('cell-edit')} dataLabel="Address" title="1 Ferry Building San Francisco, CA 94105 United States">1 Ferry Building San Francisco, CA 94105</Td>
-    <Td className={pf('cell-edit')} dataLabel="Email" title="lchan@rohdecorp.com">lchan@rohdecorp.com</Td>
-    <Td className={pf('cell-edit')} dataLabel="Phone" title="800-555-1212">800-555-1212</Td>
-    <Td className={pf('cell-edit')} dataLabel="Status" title="New">New</Td>
-    <Td className={pf('cell-edit')} dataLabel="Rating" title="Junk Yield">Junk Yield</Td>
-    <Td className={pf('cell-edit')} className={pf('cell-shrink')} dataLabel="Actions">
+    <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
+    <th className={pf('cell-edit')} scope="row" data-label="Name" title="John Doe">
+      <span className={pf('grid grid--align-spread')}>
+        <a href="javascript:void()" className={pf('truncate grow')} tabindex="-1">John Doe</a>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: John Doe" />
+      </span>
+    </th>
+    <Td dataLabel="Company" title="Rohde Corp"><span className={pf('grid grid--align-spread')}>
+      <span className={pf('truncate grow')}>Rohde Corp</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Rohde Corp" />
+      </span>
+    </Td>
+    <Td dataLabel="Address" title="1 Ferry Building San Francisco, CA 94105 United States">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>1 Ferry Building San Francisco, CA 94105</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
+      </span>
+    </Td>
+    <Td dataLabel="Email" title="lchan@rohdecorp.com">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>lchan@rohdecorp.com</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: lchan@rohdecorp.com" />
+      </span>
+    </Td>
+    <Td dataLabel="Phone" title="800-555-1212">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>800-555-1212</span>
+        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+      </span>
+    </Td>
+    <Td dataLabel="Status" title="New">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>New</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: New" />
+      </span>
+    </Td>
+    <Td dataLabel="Rating" title="Junk Yield">
+      <span className={pf('grid grid--align-spread')}>
+        <span className={pf('truncate grow')}>Junk Yield</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Junk Yield" />
+      </span>
+    </Td>
+    <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -160,20 +207,72 @@ export let states = [
       <Table className={pf('table--fixed-layout')}>
         <Thead />
         <Tbody>
-          <RowData title="Acme Enterprises" />
+          <RowData title="Acme Enterprises">
+            <TdDemo dataLabel="Company" title="Acme Enterprises">
+              <span className={pf('grid grid--align-spread')}>
+                <span className={pf('truncate grow')}>Acme Enterprises</span>
+                <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Acme Enterprises" />
+              </span>
+            </TdDemo>
+          </RowData>
           <RowDataStatic />
         </Tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-resized-column',
-    label: 'Column resized',
+    id: 'data-table-inline-edit-selected',
+    label: 'Cell focused',
     element:
       <Table className={pf('table--fixed-layout')}>
         <Thead />
         <Tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Anypoint Connectors" />
+          <RowData title="Acme Enterprises">
+            <TdDemo className={pf('is-selected')} dataLabel="Company" title="Acme Enterprises">
+              <span className={pf('grid grid--align-spread')}>
+                <span className={pf('truncate grow')}>Acme Enterprises</span>
+                <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+              </span>
+            </TdDemo>
+          </RowData>
+          <RowDataStatic />
+        </Tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-inline-edit-focus',
+    label: 'Cell selected',
+    element:
+      <Table className={pf('table--fixed-layout')}>
+        <Thead />
+        <Tbody>
+          <RowData title="Acme Enterprises">
+            <TdDemo className={pf('is-active')} dataLabel="Company" title="Acme Enterprises">
+              <span className={pf('grid grid--align-spread')}>
+                <span className={pf('truncate grow')}>Acme Enterprises</span>
+                <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+              </span>
+            </TdDemo>
+          </RowData>
+          <RowDataStatic />
+        </Tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-inline-edit-no-edit',
+    label: 'Cell - Edit mode',
+    element:
+      <Table className={pf('table--fixed-layout')}>
+        <Thead />
+        <Tbody>
+          <RowData title="Acme Enterprises">
+            <TdDemo className={pf('is-active')} dataLabel="Company" title="Acme Enterprises">
+              <span className={pf('grid grid--align-spread')}>
+                <span className={pf('truncate grow')}>Acme Enterprises</span>
+                <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+              </span>
+            </TdDemo>
+          </RowData>
+          <RowDataStatic />
         </Tbody>
       </Table>
   }

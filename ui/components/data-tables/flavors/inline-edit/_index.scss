@@ -13,15 +13,61 @@
 
 .#{$css-prefix}cell-edit {
 
-  &__icon {
+  .#{$css-prefix}button__icon--edit,
+  .#{$css-prefix}button__icon--lock {
     opacity: 0;
   }
 
   &:hover,
   &:focus {
 
-    &__icon {
+    .#{$css-prefix}button__icon--edit {
       opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        fill: $color-text-brand;
+      }
+    }
+
+    .#{$css-prefix}button__icon--lock {
+      opacity: 1;
     }
   }
+
+  .#{$css-prefix}cell-edit__button {
+      padding-right: $spacing-xxx-small;
+      padding-left: $spacing-xxx-small;
+    }
+
+  &.#{$css-prefix}is-selected { // This is the state where you've clicked outside the table, but this cell is still selected
+
+    .#{$css-prefix}cell-edit__button { // This is actually done with JS by putting the actual focus on the button. How do we show this?
+      @include focus-button;
+    }
+
+    .#{$css-prefix}button__icon--edit,
+    .#{$css-prefix}button__icon--lock {
+      opacity: 1;
+      fill: $color-text-brand;
+    }
+  }
+
+  &.#{$css-prefix}is-active { // This is the focused state
+    background-color: $color-background-row-hover;
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 0.5;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+  }
+}
+
+.#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
+    background-color: $color-background-alt;
 }

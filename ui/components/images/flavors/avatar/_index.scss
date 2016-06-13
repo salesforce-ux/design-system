@@ -22,19 +22,19 @@
   }
 
   &--x-small {
-    @include square($square-icon-small-boundary);
+    @include square($square-icon-x-small-boundary);
   }
 
   &--small {
-    @include square($square-icon-medium-boundary-alt);
+    @include square($square-icon-small-boundary);
   }
 
   &--medium {
-    @include square($square-icon-large-boundary);
+    @include square($square-icon-medium-boundary);
   }
 
   &--large {
-    @include square($square-icon-large-boundary-alt);
+    @include square($square-icon-large-boundary);
   }
 
   &--circle {

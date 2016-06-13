@@ -127,8 +127,9 @@
 
 // Add alternating strips to rows
 .#{$css-prefix}table--striped {
-
-  tr:nth-of-type(even) > td {
+  // scss-lint:disable SelectorDepth
+  tbody tr:nth-of-type(even) > td,
+  tbody tr:nth-of-type(even) > th {
     background-color: $color-background-row-hover;
   }
 }

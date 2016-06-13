@@ -84,6 +84,21 @@ classes:
     applied: Grid items of <code>.{{cssPrefix}}grid</code>
     notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
   -
+    class: col--padded-around
+    description: Initializes a grid column with .75rem of padding around
+    applied: Grid items of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
+    class: col--padded-around-medium
+    description: Initializes a grid column with 1rem of padding around
+    applied: Grid items of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
+    class: col--padded-around-large
+    description: Initializes a grid column with 1.5rem of padding around
+    applied: Grid items of <code>.{{cssPrefix}}grid</code>
+    notes: This is used instead of <code>.{{cssPrefix}}col</code> &mdash; not in addition to it
+  -
     class: col--bump-left
     description: Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container
     applied: Grid item(s) of <code>.{{cssPrefix}}grid</code>

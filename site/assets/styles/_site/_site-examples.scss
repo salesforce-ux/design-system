@@ -59,7 +59,12 @@ iframe {
   }
 
   &--dev-ready {
-    display: none;
+    background: $color-background-success;
+    color: $color-text-inverse;
+
+    &:after {
+      content: ': Stable';
+    }
   }
 
   &--desktop {

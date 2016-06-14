@@ -132,10 +132,7 @@ export default () => {
   return {
     hooks: {
       before_listen_dom() {
-        setStrategies([DefaultsStrategy(), LocalStorageStrategy()]);
-      },
-      listen_dom: delegate =>  {
-        delegate('change', '#status-dropdown', handleStatusChange);
+        setStrategies([DefaultsStrategy()]);
       },
       after_listen_dom: delegate =>  {
         sync();

@@ -10,12 +10,8 @@ before_install:
 install:
   - bundle install --path vendor/bundle
   - npm install
-  - npm install -g codecov
 script:
   - npm run build-travis
-after_success:
-  - babel-node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha -- 'test/{unit,integration}/**/*.js' --compilers js:babel-register --require scripts/helpers/setup.js --recursive
-  - codecov
 cache:
   directories:
     - node_modules

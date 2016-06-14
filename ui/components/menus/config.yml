@@ -1,14 +1,9 @@
-classBase: 'dropdown'
 status: 'dev-ready'
 flavors:
   - dropdown
   - dropdown-positioning
   - dropdown-height
   - picklist
-  - picklist-multi-select
   - search-overflow
   - action-overflow
   - action-overflow-for-touch
-dependencies:
-  - helpers/text
-  - core/icons

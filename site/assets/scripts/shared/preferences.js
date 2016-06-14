@@ -17,7 +17,7 @@ const EVENT_KEY = 'preferences:updated';
 
 const PrefsDefaults = {
   internal: Object.assign({}, { status: 'dev-ready'}),
-  external: Object.assign({}, { status: 'prototype' })
+  external: Object.assign({}, { status: 'dev-ready' })
 };
 
 /**
@@ -34,29 +34,6 @@ export const DefaultsStrategy = props => {
     },
     load () {},
     update (prefs) {}
-  }, props);
-};
-
-export const LocalStorageStrategy = props => {
-  return Object.assign({
-    getInitialPrefs(currentPrefs) {
-      return this.load() || currentPrefs;
-    },
-    load () {
-      if (!window.localStorage) { return {}; }
-      const prefs = localStorage.getItem(STORAGE_KEY);
-      try {
-        return JSON.parse(prefs);
-      } catch (e) {
-        return {};
-      }
-    },
-    update (prefs) {
-      if (!window.localStorage) { return; }
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
-      } catch (e) {}
-    }
   }, props);
 };
 

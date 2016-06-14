@@ -111,7 +111,7 @@ const handleFlavorStateNavClick = (event, element) => {
 
   // Point to the state's flavor
   window.location.hash = flavorHref;
-    fastdom.mutate(() => {
+  fastdom.mutate(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
       setClassName(node.parentElement, { 'slds-is-active': false });
@@ -122,10 +122,6 @@ const handleFlavorStateNavClick = (event, element) => {
     // The code will be updated by the <iframe> using the delegate
     document.getElementById(`iframe-${flavor}`).setAttribute('src', src);
   });
-};
-
-const activateFlavor = (flavor, flavorHref) => {
-
 };
 
 /**

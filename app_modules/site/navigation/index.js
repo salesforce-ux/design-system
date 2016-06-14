@@ -112,10 +112,13 @@ export default () => formatNavItem({
       ]
     },
     {
-      label: 'Design',
+      label: 'Guidelines',
       children: [
         {
           label: 'Overview'
+        },
+        {
+          label: 'Accessibility'
         },
         {
           label: 'Color'
@@ -143,6 +146,9 @@ export default () => formatNavItem({
         },
         {
           label: 'Typography'
+        },
+        {
+          label: 'Voice and Tone'
         }
       ]
     },
@@ -159,12 +165,6 @@ export default () => formatNavItem({
           label: component.title
         }))
       })
-    },
-    {
-      label: 'Accessibility'
-    },
-    {
-      label: 'Voice and Tone'
     },
     {
       label: 'Resources',

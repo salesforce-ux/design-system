@@ -16,7 +16,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Messaging" contentClassName={pf('site-design site-design-layout')}>
+  <PageBody anchorTitle="Messaging" contentClassName={pf('site-guidelines site-guidelines-layout')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">When the user or system takes action, various messaging patterns are used to show the result or impact.</p>
       <h2 className="site-text-heading--large">Icons</h2>

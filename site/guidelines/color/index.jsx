@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Colors" contentClassName={pf('site-design site-design-layout')}>
+  <PageBody anchorTitle="Colors" contentClassName={pf('site-guidelines site-guidelines-layout')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">Salesforce ({globals.abbreviatedName}) uses a specific color palette to communicate meaning, convey visual differentiation, and provide a consistent look and feel. From neutrals to brights, each hue is chosen to fit into the overall visual language and promote a contemporary and vibrant user experience.</p>
 

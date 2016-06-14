@@ -15,7 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Data Entry" contentClassName={pf('site-design site-design-layout')}>
+  <PageBody anchorTitle="Data Entry" contentClassName={pf('site-guidelines site-guidelines-layout')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">Salesforce users need to add, change, and delete information frequently. A wide variety of text entry and selection options clearly and efficiently facilitates this experience.</p>
       <h2 className="site-text-heading--large">Basic Text Input</h2>

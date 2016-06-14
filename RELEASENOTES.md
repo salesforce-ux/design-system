@@ -3,6 +3,9 @@
 
 ## Release [2.0.2] - Future
 
+**SITE IA/ENHANCEMENTS**
+- Renamed "Design" section to "Guidelines"
+
 **CHANGES**
 
 The following changes have been made in this release:

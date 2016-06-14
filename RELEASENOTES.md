@@ -5,6 +5,7 @@
 
 **SITE IA/ENHANCEMENTS**
 - Renamed "Design" section to "Guidelines"
+- Moved "Accessibility" and "Voice & Tone" sections to Guidelines
 
 **CHANGES**
 

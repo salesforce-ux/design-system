@@ -67,12 +67,29 @@
 
 .site-banner-badge {
   @include gradient-striped(rgba(#fff, 0.2), -45deg, #fbbc05);
-  background-size: rem(12px) rem(12px);
+  background-size: 12px 12px;
   color: #16325c;
   font-weight: $font-weight-bold;
   height: $height-banner-badge;
   line-height: $height-banner-badge;
   padding: 0 $spacing-medium;
+
+  .#{$css-prefix}select_container {
+
+    &:before {
+      top: calc(((#{$line-height-button-small} - 4px) / 2) - 3px);
+    }
+
+    &:after {
+      bottom: calc(((#{$line-height-button-small} - 4px) / 2) - 3px);
+    }
+
+    .#{$css-prefix}select {
+      height: calc(#{$line-height-button-small} - 4px);
+      line-height: calc(#{$line-height-button-small} - 4px);
+      font-size: $font-size-small;
+    }
+  }
 }
 
 .site-logo {

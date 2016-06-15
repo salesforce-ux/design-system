@@ -40,18 +40,23 @@ export let states = [
     element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
   },
   {
+    id: 'button-icon-error',
+    label: 'Error',
+    element: <Demo><ButtonIcon className={pf('button--icon-error')} symbol="warning" /></Demo>
+  },
+  {
     id: 'button-icon-disabled',
     label: 'Disabled',
     element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
   },
   {
     id: 'button-icon-inverse',
-    label: 'Icon inversed',
+    label: 'Inverse',
     element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
   },
   {
     id: 'button-icon-inverse-disabled',
-    label: 'Icon inversed disabled',
+    label: 'Inverse disabled',
     element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
   }
 ];

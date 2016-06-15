@@ -19,6 +19,8 @@ body {
 
 [class*="site-text-heading"],
 p,
+blockquote,
+figure,
 ul,
 ol,
 dl,
@@ -34,8 +36,20 @@ ul,
 ol {
   ul,
   ol {
-    margin-bottom: 0;
+    margin-bottom: 0; // Is this needed? Rule above should cover this, I think
   }
+}
+
+blockquote {
+  margin: {
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+cite {
+  font-style: normal;
 }
 
 [class*="site-text-heading"] {
@@ -173,6 +187,7 @@ ol {
   white-space: nowrap;
 }
 
+// TODO: Replace these with new margin reset utilities
 .m-bottom--reset {
   margin-bottom: 0;
 }

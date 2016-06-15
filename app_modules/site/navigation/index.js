@@ -136,6 +136,9 @@ export default () => formatNavItem({
           label: 'Messaging'
         },
         {
+          label: 'Localization'
+        },
+        {
           label: 'Motion'
         },
         {

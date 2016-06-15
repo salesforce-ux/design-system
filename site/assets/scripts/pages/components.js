@@ -27,15 +27,13 @@ const highlight = (() => {
   const cache = {};
   return code => {
     code = code.trim().replace(demoPattern, (match, tag, content) => content);
+    // Remove uncessary leading whitespace so code is flush left
     const lines = code.split('\n');
-    // If first line is empty, look at the second one instead
     const firstLine = lines[0].length === 0 ? lines[1] : '';
-    // Figure out the number of spaces for that first line
     const offsetMatch = firstLine.match(/^\s*/);
-    // How many spaces?
     const offset = offsetMatch ? offsetMatch[0].length : 0;
     const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-
+    // Cache
     let cached = cache[codeTrimmed];
     if (cached) return cached;
     cached = cache[codeTrimmed] = Prism.highlight(

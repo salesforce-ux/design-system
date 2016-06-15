@@ -48,6 +48,7 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
+- Brightened yellow background on `mark` element and selected new filter panel.
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
 - Renamed Product Selector to List Builder - [List Builder Component](/components/list-builder/)

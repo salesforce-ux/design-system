@@ -42,6 +42,7 @@
 
   &.#{$css-prefix}is-new {
     background: $color-background-highlight;
+    color: $color-text-default;
   }
 
   &.#{$css-prefix}has-error {

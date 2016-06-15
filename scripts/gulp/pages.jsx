@@ -147,7 +147,7 @@ export const wrapExample = (flavor, html) => {
 </head>
 <body>
 ${html}
-<noscript style="display:none;" id="${markupId}">
+<noscript id="${markupId}">
   ${html}
 </noscript>
 <script>

@@ -14,11 +14,14 @@
   // Activity Timeline
   'activity-timeline/flavors/base/index',
 
+  // Badges
+  'badges/index',
+
   // Breadcrumbs
-  'breadcrumbs/flavors/base/index',
+  'breadcrumbs/index',
 
   // Button Groups
-  'button-groups/flavors/base/index',
+  'button-groups/index',
 
   // Button
   'buttons/flavors/base/index',
@@ -26,15 +29,15 @@
   'buttons/flavors/icon/index',
 
   // Icons
-  'icons/flavors/base/index',
+  'icons/index',
   'icons/flavors/icon-colors/index',
-  'icons/flavors/background-colors/index',
   'icons/flavors/sizes/index',
 
   // Card
-  'cards/flavors/base/index',
+  'cards/index',
 
   // Forms
+  'forms/index',
   'forms/flavors/input/index',
   'forms/flavors/textarea/index',
   'forms/flavors/radio/index',
@@ -45,13 +48,12 @@
   'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
   'forms/flavors/edit-dialog-for-touch/index',
-  'forms/flavors/form-element/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
   'forms/flavors/inline-form/index',
   'forms/flavors/compound-form/index',
 
-  // Tooltip
+  // Tooltip - This is deprecated
   'tooltips/flavors/base/index',
 
   // Page Headers
@@ -59,7 +61,7 @@
   'page-headers/flavors/record-home/index',
 
   // Panels
-  'panels/flavors/detail/index',
+  'panels/index',
 
   // Popovers
   'popovers/flavors/base/index',
@@ -130,9 +132,6 @@
 
   // Images
   'images/flavors/avatar/index',
-
-  // Badges
-  'badges/flavors/base/index',
 
   // Tables
   'data-tables/index',

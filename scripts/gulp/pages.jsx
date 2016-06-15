@@ -22,6 +22,7 @@ import beautify from 'js-beautify';
 import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
+import crypto from 'crypto';
 
 import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
@@ -120,11 +121,16 @@ export const renderExample = element => {
  * Wrap example markup with additonal boilerplate to be properly
  * displayed in an iframe
  *
+ * NOTE: The example markup is put inside a hidden <noscript> instead of stringified
+ * in the JavaScript so that <script> tags can be used in the example markup
+ *
  * @param {object} flavor
  * @param {string} html
  * @returns {string}
  */
-export const wrapExample = (flavor, html) => `
+export const wrapExample = (flavor, html) => {
+  const markupId = crypto.createHash('sha1').update('markup').digest('hex');
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,6 +147,9 @@ export const wrapExample = (flavor, html) => `
 </head>
 <body>
 ${html}
+<noscript style="display:none;" id="${markupId}">
+  ${html}
+</noscript>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -153,7 +162,7 @@ ${html}
         name: 'component:iframe:updatePreviewMarkup',
         data: {
           flavor: '${flavor.uid}',
-          html: ${JSON.stringify(html)}
+          html: document.getElementById('${markupId}').textContent
         }
       });
     }
@@ -179,6 +188,7 @@ ${html}
 </script>
 </body>
 </html>`.trim();
+};
 
 /**
  * Return the example element for the current flavor

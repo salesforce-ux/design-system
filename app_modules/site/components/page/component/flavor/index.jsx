@@ -20,21 +20,12 @@ import _ from 'lodash';
 import Heading from 'app_modules/site/components/page/heading';
 import Tabs from 'ui/components/tabs/index.react';
 
-import globals from 'app_modules/global';
-import whitelistUtilities from '.generated/whitelist-utilities.js';
-
-/**
- * Custom Prism addition to the markup syntax that adds a "utility-class" class
- * to any attribute value tokens that are contained in whitelistUtilities
- */
-Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
-  .map(c => c.replace(/^\./, ''))
-  .map(c => `${globals.cssPrefix}${c}`)
-  .map(c => new RegExp(_.escapeRegExp(c)));
-
 // Remove wrapping tag if it has the ".demo-only" class in it
 // Note: this will also remove other classes too on that tag! :)
 const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
+// Remove any inlined <script> tags that might be used for one of JS
+// functionality inside an example
+const scriptPattern = /\<(script)[\s\S]*?\>([\s\S]*?)\<\/\1\>/;
 
 /**
  * Highlight a string of text based on the language
@@ -45,15 +36,13 @@ const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\
  */
 function highlight(code, language) {
   code = code.trim().replace(demoPattern, (match, tag, content) => content);
+  code = code.replace(scriptPattern, '');
+  // Remove uncessary leading whitespace so code is flush left
   const lines = code.split('\n');
-  // If first line is empty, look at the second one instead
   const firstLine = lines[0].length === 0 ? lines[1] : '';
-  // Figure out the number of spaces for that first line
   const offsetMatch = firstLine.match(/^\s*/);
-  // How many spaces?
   const offset = offsetMatch ? offsetMatch[0].length : 0;
   const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-
   return Prism.highlight(
     codeTrimmed,
     Prism.languages[language]

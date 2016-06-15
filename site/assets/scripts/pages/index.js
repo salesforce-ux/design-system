@@ -21,13 +21,6 @@ const updateStatusVisibility = event => {
     const shouldShow = Status.shouldDisplay(event.status, node.dataset.sldsStatus);
     hide(node, !shouldShow);
   });
-
-  //ensure correct option is selected
-  $('#status-dropdown').forEach(d => {
-    $('option', d).forEach(o => {
-      if(event.status == o.value) o.setAttribute('selected', true);
-    });
-  });
 };
 
 export default () => ({

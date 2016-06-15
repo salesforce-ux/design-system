@@ -128,7 +128,7 @@ export const renderExample = element => {
  * @param {string} html
  * @returns {string}
  */
-export const wrapExample = (flavor, html) => {
+export const wrapExample = (flavor, html, script = '') => {
   const markupId = crypto.createHash('sha1').update('markup').digest('hex');
   return `
 <!DOCTYPE html>
@@ -147,9 +147,12 @@ export const wrapExample = (flavor, html) => {
 </head>
 <body>
 ${html}
-<noscript id="${markupId}">
+<script type="text/javascript">
+  ${script}
+</script>
+<script type="text/template" id="${markupId}">
   ${html}
-</noscript>
+</script>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -295,7 +298,7 @@ export const gulpRenderComponentPage = () =>
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, renderExample(element))
+                  wrapExample(flavor, renderExample(element), state.script)
                 ),
                 base: __PATHS__.site
               }));

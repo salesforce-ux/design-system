@@ -23,9 +23,6 @@ import Tabs from 'ui/components/tabs/index.react';
 // Remove wrapping tag if it has the ".demo-only" class in it
 // Note: this will also remove other classes too on that tag! :)
 const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
-// Remove any inlined <script> tags that might be used for one of JS
-// functionality inside an example
-const scriptPattern = /\<(script)[\s\S]*?\>([\s\S]*?)\<\/\1\>/;
 
 /**
  * Highlight a string of text based on the language
@@ -36,7 +33,6 @@ const scriptPattern = /\<(script)[\s\S]*?\>([\s\S]*?)\<\/\1\>/;
  */
 function highlight(code, language) {
   code = code.trim().replace(demoPattern, (match, tag, content) => content);
-  code = code.replace(scriptPattern, '');
   // Remove uncessary leading whitespace so code is flush left
   const lines = code.split('\n');
   const firstLine = lines[0].length === 0 ? lines[1] : '';

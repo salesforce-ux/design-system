@@ -22,6 +22,7 @@ The following components are now available:
 - Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
 - Files - [File Components](/components/files/)
+- File selector - [File Selector](/components/file-selector)
 - Feed v2 - [Feeds Component](/components/feeds/)
 - Indeterminate checkbox - [Indeterminate checkbox component](/components/forms/#flavor-checkbox)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
@@ -41,6 +42,7 @@ The following classes are now available:
 - Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
+- Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 
 **CHANGES**
 

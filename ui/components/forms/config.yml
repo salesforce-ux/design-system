@@ -13,4 +13,4 @@ flavors:
   - inline-form
   - compound-form
   - field-level-help
-  - inline-level-help
+  - docked-form-footer

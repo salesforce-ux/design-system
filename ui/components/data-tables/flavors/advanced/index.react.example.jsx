@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={className(pf('table table--bordered table--cell-buffer'), props.className)}>
+  <table className={className(pf('table table--bordered'), props.className)}>
     {props.children}
   </table>;
 

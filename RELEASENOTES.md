@@ -14,6 +14,7 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Text inputs are referencing the correct 32px tall token - fixes https://github.com/salesforce-ux/design-system/issues/150
+- Resolve issue where `<th>` stayed white on striped row when `slds-table--striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
 
 **REMOVED**
 

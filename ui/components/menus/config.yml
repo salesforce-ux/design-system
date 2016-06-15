@@ -4,6 +4,5 @@ flavors:
   - dropdown-positioning
   - dropdown-height
   - picklist
-  - picklist-multi-select
   - search-overflow
   - action-overflow

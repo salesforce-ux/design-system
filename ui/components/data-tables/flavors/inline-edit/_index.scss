@@ -7,8 +7,32 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}table--edit {
 
+.#{$css-prefix}table--edit_container {
+  position: relative;
+
+  &:focus:before {
+    content: ' ';
+    position: absolute;
+    z-index: $z-index-default;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-background-backdrop;
+  }
+}
+
+.#{$css-prefix}table--edit {
+  opacity: 1; //briefly putting this here to get a whitelisted className
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .#{$css-prefix}button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
 }
 
 .#{$css-prefix}cell-edit {
@@ -42,32 +66,59 @@
     }
 
   &.#{$css-prefix}is-selected { // This is the state where you've clicked outside the table, but this cell is still selected
-
-    .#{$css-prefix}cell-edit__button { // This is actually done with JS by putting the actual focus on the button. How do we show this?
-      @include focus-button;
-    }
-
-    .#{$css-prefix}button__icon--edit,
-    .#{$css-prefix}button__icon--lock {
-      opacity: 1;
-      fill: $color-text-brand;
-    }
-  }
-
-  &.#{$css-prefix}is-active { // This is the focused state
     background-color: $color-background-row-hover;
 
     .#{$css-prefix}button__icon--edit {
       opacity: 0.5;
     }
+  }
 
-    a {
-      text-decoration: underline;
+  &.#{$css-prefix}has-focus { // This is the focused state
+    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
+
+    .#{$css-prefix}button__icon--edit,
+    .#{$css-prefix}button__icon--lock {
+      opacity: 1;
     }
 
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  &.#{$css-prefix}was-edited {
+    background-color: $color-background-highlight;
+  }
+
+  &.#{$css-prefix}has-error {
+    background-color: $color-background-highlight;
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
   }
 }
 
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
     background-color: $color-background-alt;
+}
+
+.#{$css-prefix}form-element__label--edit {
+  margin: 0 $spacing-xxx-small 0;
+}
+
+.#{$css-prefix}popover--edit {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  .#{$css-prefix}popover__body {
+    padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 0;
+  }
+}
+
+.#{$css-prefix}error-indicator {
+
+}
+
+.#{$css-prefix}error-none-indicator {
+
 }

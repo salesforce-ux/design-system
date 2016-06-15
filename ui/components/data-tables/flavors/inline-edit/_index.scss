@@ -8,10 +8,10 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}table--edit_container {
-  position: relative;
+.#{$css-prefix}table--edit_container:focus {
+  outline: none;
 
-  &:focus:before {
+  &:before {
     content: ' ';
     position: absolute;
     z-index: $z-index-default;
@@ -20,6 +20,7 @@
     bottom: 0;
     left: 0;
     background-color: $color-background-backdrop;
+    box-shadow: $shadow-focus-inset;
   }
 }
 
@@ -32,6 +33,11 @@
 
   .#{$css-prefix}button__icon--edit:focus {
     fill: $color-text-brand;
+  }
+
+  .#{$css-prefix}indicator-error,
+  .#{$css-prefix}indicator-error-none {
+    width: 1%;
   }
 }
 
@@ -115,10 +121,10 @@
   }
 }
 
-.#{$css-prefix}error-indicator {
-
+.#{$css-prefix}indicator-error:focus {
+  border-left: 5px solid $color-border-error;
 }
 
-.#{$css-prefix}error-none-indicator {
-
+.#{$css-prefix}indicator-error-none:focus {
+  border-left: 5px solid $color-border-brand;
 }

@@ -20,18 +20,21 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('scrollable table--edit_container')} tabIndex={props.tabindex} id={props.id}>
+  <div className={pf('scrollable table--edit_container is-relative')} tabIndex={props.tabindex} id={props.id}>
     {props.children}
   </div>;
 
 let Table = props =>
-    <table className={pf('table table--edit table--bordered table--cell-buffer table--fixed-layout')}>
+    <table className={pf('table table--edit table--bordered table--fixed-layout')}>
       {props.children}
     </table>;
 
 let Thead = props =>
   <thead>
     <Tr className={pf('text-heading--label')}>
+      { props.rowError ?
+        <th className={pf('cell-shrink')} scope="col" title="Errors"></th>
+      : null }
       <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
@@ -100,8 +103,16 @@ let EditPanel = props =>
   </div>;
 
 let RowData = props =>
-  <Tr>
-    <Td dataLabel="Select Row" className={props.checkClass}><Checkbox label="Select Row" tabIndex={props.checkIndex} checkID="checkbox-01" /></Td>
+  <Tr  className={pf(props.className)}>
+    { props.rowError ?
+        <td className={pf('cell-shrink indicator-error')} dataLabel="Errors">
+          <button className={pf('button button--icon button--icon-error')} tabIndex="0" id="error-01">
+            <span className={pf('assistive-text')}>Row has errors</span>
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
+          </button>
+        </td>
+      : null }
+    <Td dataLabel="Select Row" className={className(pf('cell-shrink'), props.checkClass)}><Checkbox label="Select Row" tabIndex={props.checkIndex} checkID="checkbox-01" /></Td>
     <th className={className(pf('cell-edit'), props.thClassName)} scope="row" data-label="Name" title="Lei Chan">
       <span className={pf('grid grid--align-spread')}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1" id={props.linkId}>Lei Chan</a>
@@ -150,7 +161,10 @@ let RowData = props =>
   </Tr>;
 
 let RowDataStatic = props =>
-  <Tr>
+  <Tr className={pf(props.className)}>
+    { props.rowError ?
+      <td className={pf('cell-shrink indicator-error-none')} dataLabel="Errors"><span className={pf('assistive-text')}>Row has no errors</span></td>
+      : null }
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
     <th className={pf('cell-edit')} scope="row" data-label="Name" title="John Doe">
       <span className={pf('grid grid--align-spread')}>
@@ -367,141 +381,25 @@ export let states = [
   },
   {
     id: 'data-table-inline-edit-row-error',
-    label: 'Error - Row level',
+    label: 'Error - Row level on save',
     element:
       <Container>
         <Table>
-          <thead>
-            <Tr className={pf('text-heading--label')}>
-              <th className="cell-shrink" scope="col" title="Errors"></th>
-              <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Address">Address</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Email">Email</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Phone">Phone</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Status">Status</Th>
-              <Th className={pf('is-sortable is-resizable')} scope="col" title="Rating">Rating</Th>
-              <th className={pf('cell-shrink')} scope="col" title="Actions"><span className={pf('assistive-text')}>Actions</span></th>
-            </Tr>
-          </thead>
+          <Thead rowError />
           <Tbody>
-            <Tr className="is-selected">
-              <td className={pf('error-indicator')} dataLabel="Errors">
-                <button className={pf('button button--icon cell-error__button')} tabIndex="0" id="error-01">
-                  <span className={pf('assistive-text')}>Row has errors</span>
-                  <SvgIcon className={pf('button__icon icon-text-error')} sprite="utility" symbol="warning" />
-                </button>
-              </td>
-              <Td dataLabel="Select Row"><Checkbox label="Select Row" tabIndex="-1" checkID="checkbox-01" /></Td>
-              <th className={pf('cell-edit')} scope="row" data-label="Name" title="Lei Chan">
-                <span className={pf('grid grid--align-spread')}>
-                  <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1">Lei Chan</a>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: Lei Chan" />
-                </span>
-              </th>
+            <RowData rowError title="Acme Enterprises">
               <Td className={pf('has-error')} dataLabel="Company" title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
-              <Td dataLabel="Address" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>12 Embarcadero Plaza, San Francisco, CA 94105</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
-                </span>
-              </Td>
-              <Td dataLabel="Email" title="jdoe@acme.com">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>jdoe@acme.com</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: jdoe@acme.com" />
-                </span>
-              </Td>
-              <Td dataLabel="Phone" title="800-555-1212">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>800-555-1212</span>
-                  <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-                </span>
-              </Td>
-              <Td dataLabel="Status" title="Contacted">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>Contacted</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: Contacted" />
-                </span>
-              </Td>
-              <Td dataLabel="Rating" title="Premium Yield">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>Premium Yield</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Premium Yield" />
-                </span>
-              </Td>
-              <Td className={pf('cell-shrink')} dataLabel="Actions">
-                <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="Show More" />
-              </Td>
-            </Tr>
-            <Tr>
-              <td className={pf('error-none-indicator')} dataLabel="Errors"><span className={pf('assistive-text')}>Row has no errors</span></td>
-              <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
-              <th className={pf('cell-edit')} scope="row" data-label="Name" title="John Doe">
-                <span className={pf('grid grid--align-spread')}>
-                  <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1">John Doe</a>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: John Doe" />
-                </span>
-              </th>
-              <Td dataLabel="Company" title="Rohde Corp"><span className={pf('grid grid--align-spread')}>
-                <span className={pf('truncate grow')}>Rohde Corp</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Rohde Corp" />
-                </span>
-              </Td>
-              <Td dataLabel="Address" title="1 Ferry Building San Francisco, CA 94105 United States">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>1 Ferry Building San Francisco, CA 94105</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
-                </span>
-              </Td>
-              <Td dataLabel="Email" title="lchan@rohdecorp.com">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>lchan@rohdecorp.com</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: lchan@rohdecorp.com" />
-                </span>
-              </Td>
-              <Td dataLabel="Phone" title="800-555-1212">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>800-555-1212</span>
-                  <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-                </span>
-              </Td>
-              <Td dataLabel="Status" title="New">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>New</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: New" />
-                </span>
-              </Td>
-              <Td dataLabel="Rating" title="Junk Yield">
-                <span className={pf('grid grid--align-spread')}>
-                  <span className={pf('truncate grow')}>Junk Yield</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Junk Yield" />
-                </span>
-              </Td>
-              <Td className={pf('cell-shrink')} dataLabel="Actions">
-                <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
-                  symbol="down"
-                  assistiveText="Show More" />
-              </Td>
-            </Tr>
+            </RowData>
+            <RowDataStatic rowError />
           </Tbody>
         </Table>
         <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('error-01').focus()
+          document.getElementById('button-01').focus()
         `}} />
       </Container>
   },

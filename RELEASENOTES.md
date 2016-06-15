@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release [2.0.2] - Future
+## Unreleased - Future
 
 **SITE IA/ENHANCEMENTS**
 - Renamed "Design" section to "Guidelines"

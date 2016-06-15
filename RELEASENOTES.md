@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Unreleased - Future
+## Release [2.0.2] - June 15, 2016
 
 **CHANGES**
 
@@ -533,6 +533,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[2.0.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.5...v2.0.1
 [1.0.5]: https://github.com/salesforce-ux/design-system/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/salesforce-ux/design-system/compare/v1.0.3...v1.0.4

@@ -35,9 +35,8 @@
     fill: $color-text-brand;
   }
 
-  .#{$css-prefix}indicator-error,
-  .#{$css-prefix}indicator-error-none {
-    width: 1%;
+  .#{$css-prefix}indicator-header {
+    width: $square-icon-medium-boundary;
   }
 }
 
@@ -103,6 +102,13 @@
   }
 }
 
+.#{$css-prefix}cell-edit__button:focus {
+
+  .#{$css-prefix}button__icon--edit {
+      opacity: 1;
+    }
+}
+
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
     background-color: $color-background-alt;
 }
@@ -121,10 +127,10 @@
   }
 }
 
-.#{$css-prefix}indicator-error:focus {
-  border-left: 5px solid $color-border-error;
+.#{$css-prefix}indicator-error.#{$css-prefix}has-focus {
+  box-shadow: $spacing-xx-small 0 0 0 $color-border-error inset;
 }
 
-.#{$css-prefix}indicator-error-none:focus {
-  border-left: 5px solid $color-border-brand;
+.#{$css-prefix}indicator-error-none.#{$css-prefix}has-focus {
+  box-shadow: $spacing-xx-small 0 0 0 $color-border-brand inset;
 }

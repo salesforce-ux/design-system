@@ -33,7 +33,7 @@ let Thead = props =>
   <thead>
     <Tr className={pf('text-heading--label')}>
       { props.rowError ?
-        <th className={pf('cell-shrink')} scope="col" title="Errors"></th>
+        <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"></th>
       : null }
       <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
@@ -105,7 +105,7 @@ let EditPanel = props =>
 let RowData = props =>
   <Tr  className={pf(props.className)}>
     { props.rowError ?
-        <td className={pf('cell-shrink indicator-error')} dataLabel="Errors">
+        <td id={props.cellID} className={pf('cell-shrink indicator-error')} dataLabel="Errors">
           <button className={pf('button button--icon button--icon-error')} tabIndex="0" id="error-01">
             <span className={pf('assistive-text')}>Row has errors</span>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
@@ -263,10 +263,10 @@ export let states = [
             <RowDataStatic />
           </Tbody>
         </Table>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('checkbox-01').focus()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('checkbox-01').focus()
+    `
   },
   {
     id: 'data-table-inline-edit-with-link',
@@ -287,10 +287,10 @@ export let states = [
             <RowDataStatic />
           </Tbody>
         </Table>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('link-01').focus()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('link-01').focus()
+    `
   },
   {
     id: 'data-table-inline-edit-focused',
@@ -311,10 +311,10 @@ export let states = [
             <RowDataStatic />
           </Tbody>
         </Table>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('button-01').focus()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('button-01').focus()
+    `
   },
   {
     id: 'data-table-inline-edit-selected',
@@ -370,7 +370,7 @@ export let states = [
               <Td className={pf('has-error')} dataLabel="Company" title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -378,6 +378,30 @@ export let states = [
           </Tbody>
         </Table>
       </Container>
+  },
+  {
+    id: 'data-table-inline-edit-field-error-focused',
+    label: 'Error - Field level focused',
+    element:
+      <Container>
+        <Table>
+          <Thead />
+          <Tbody>
+            <RowData title="Acme Enterprises">
+              <Td className={pf('has-error')} dataLabel="Company" title="Acme Enterprises">
+                <span className={pf('grid grid--align-spread')}>
+                  <span className={pf('truncate grow')}>Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic />
+          </Tbody>
+        </Table>
+      </Container>,
+    script: `
+      document.getElementById('button-01').focus()
+    `
   },
   {
     id: 'data-table-inline-edit-row-error',
@@ -391,17 +415,41 @@ export let states = [
               <Td className={pf('has-error')} dataLabel="Company" title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" id="button-01" />
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
             </RowData>
             <RowDataStatic rowError />
           </Tbody>
         </Table>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('button-01').focus()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('button-01').focus()
+    `
+  },
+  {
+    id: 'data-table-inline-edit-row-error-focus',
+    label: 'Error - Row level focused',
+    element:
+      <Container>
+        <Table>
+          <Thead rowError />
+          <Tbody>
+            <RowData rowError cellID="error-01" title="Acme Enterprises">
+              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises">
+                <span className={pf('grid grid--align-spread')}>
+                  <span className={pf('truncate grow')}>Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic rowError />
+          </Tbody>
+        </Table>
+      </Container>,
+    script: `
+      document.getElementById('error-01').focus()
+    `
   },
   {
     id: 'data-table-inline-edit-basic',
@@ -424,7 +472,7 @@ export let states = [
         </Table>
         <EditPanel>
           <div className={pf('form-element grid')}>
-            <label className={pf('form-element__label form-element__label--edit no-flex')} for="company-01">
+            <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
               <span className={pf('assistive-text')}>Company</span>
             </label>
             <div className={pf('form-element__control grow')}>
@@ -432,11 +480,11 @@ export let states = [
             </div>
           </div>
         </EditPanel>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('company-01').focus(),
-          document.getElementById('company-01').select()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('company-01').focus()
+      document.getElementById('company-01').select()
+    `
   },
   {
     id: 'data-table-inline-edit-required',
@@ -458,7 +506,7 @@ export let states = [
           </Tbody>
         </Table>
         <EditPanel>
-          <div className={pf('form-element is-required grid')}>
+          <div className={pf('form-element grid')}>
             <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
               <abbr className={pf('slds-required')} title="required">*</abbr>
               <span className={pf('assistive-text')}>Company</span>
@@ -468,11 +516,48 @@ export let states = [
             </div>
           </div>
         </EditPanel>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('company-01').focus(),
-          document.getElementById('company-01').select()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('company-01').focus()
+      document.getElementById('company-01').select()
+    `
+  },
+  {
+    id: 'data-table-inline-edit-error',
+    label: 'Cell edit — Error',
+    element:
+      <Container>
+        <Table>
+          <Thead />
+          <Tbody>
+            <RowData title="Acme Enterprises">
+              <Td className={pf('is-editing')} dataLabel="Company" title="Acme Enterprises">
+                <span className={pf('grid grid--align-spread')}>
+                  <span className={pf('truncate grow')}>Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic />
+          </Tbody>
+        </Table>
+        <EditPanel>
+          <div className={pf('form-element has-error grid')}>
+            <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
+              <abbr className={pf('slds-required')} title="required">*</abbr>
+              <span className={pf('assistive-text')}>Company</span>
+            </label>
+            <div className={pf('form-element__control grow')}>
+              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
+            </div>
+          </div>
+          <div id="error-message-01" className={pf('form-element__help')}>This field is required</div>
+        </EditPanel>
+      </Container>,
+    script: `
+      document.getElementById('company-01').focus()
+      document.getElementById('company-01').select()
+    `
   },
   {
     id: 'data-table-inline-table-matte',
@@ -503,9 +588,9 @@ export let states = [
             <RowDataStatic />
           </Tbody>
         </Table>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.getElementById('table-edit-01').focus()
-        `}} />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('table-edit-01').focus()
+    `
   }
 ];

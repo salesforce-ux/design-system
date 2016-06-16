@@ -103,9 +103,9 @@ let EditPanel = props =>
   </div>;
 
 let RowData = props =>
-  <Tr  className={pf(props.className)}>
+  <Tr className={pf(props.className)}>
     { props.rowError ?
-        <td id={props.cellID} className={pf('cell-shrink indicator-error')} dataLabel="Errors" tabIndex={props.errorindex || -1}>
+        <td id={props.cellID} className={className(pf('cell-shrink'), props.classIndicator)} dataLabel="Errors" tabIndex={props.errorindex || -1}>
           <button className={pf('button button--icon button--icon-error')} tabIndex="0" id="error-01">
             <span className={pf('assistive-text')}>Row has errors</span>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
@@ -163,7 +163,7 @@ let RowData = props =>
 let RowDataStatic = props =>
   <Tr className={pf(props.className)}>
     { props.rowError ?
-      <td id={props.cellID} className={pf('cell-shrink indicator-error-none')} dataLabel="Errors" tabIndex={props.errorindex || -1}><span className={pf('assistive-text')}>Row has no errors</span></td>
+      <td id={props.cellID}  className={className(pf('cell-shrink'), props.classIndicator)} dataLabel="Errors" tabIndex={props.errorindex || -1}><span className={pf('assistive-text')}>Row has no errors</span></td>
       : null }
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
     <th className={pf('cell-edit')} scope="row" data-label="Name" title="John Doe">
@@ -435,11 +435,11 @@ export let states = [
         <Table>
           <Thead rowError />
           <Tbody>
-            <RowData rowError cellID="error-01" errorindex="0" title="Acme Enterprises">
+            <RowData rowError classIndicator={pf('indicator-error')} errorindex="-1" title="Acme Enterprises">
               <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises" tabIndex="0">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="button__icon--edit"tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -460,20 +460,17 @@ export let states = [
           <Thead rowError />
           <Tbody>
             <RowData rowError title="Acme Enterprises">
-              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises" tabIndex="0">
+              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises" tabIndex="-1">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic rowError cellID="no-error-01" errorindex="0" />
+            <RowDataStatic rowError classIndicator={pf('indicator-error-none')} cellID="no-error-01" errorindex="0" />
           </Tbody>
         </Table>
-      </Container>,
-    script: `
-      document.getElementById('no-error-01').focus()
-    `
+      </Container>
   },
   {
     id: 'data-table-inline-edit-basic',

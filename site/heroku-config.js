@@ -27,6 +27,11 @@ module.exports = {
       status: 301
     },
     {
+      source: '/design/localization',
+      destination: '/guidelines/localization',
+      status: 301
+    },
+    {
       source: '/design/messaging',
       destination: '/guidelines/messaging',
       status: 301
@@ -64,6 +69,26 @@ module.exports = {
     {
       source: '/components/media-objects',
       destination: '/components/utilities/media-objects',
+      status: 301
+    },
+    {
+      source: '/resources/tokens',
+      destination: '/tokens',
+      status: 301
+    },
+    {
+      source: '/resources/icons',
+      destination: '/icons',
+      status: 301
+    },
+    {
+      source: '/resources/downloads',
+      destination: '/downloads',
+      status: 301
+    },
+    {
+      source: '/resources/links',
+      destination: '/articles',
       status: 301
     }
   ]

@@ -206,14 +206,14 @@ export default (
       </div>
 
       <div className={pf('p-vertical--xx-large')}>
-        To implement the shadows in code there are <a href="/resources/tokens/#category-atmosphere">Design Tokens</a> you
+        To implement the shadows in code there are <a href="/tokens/#category-atmosphere">Design Tokens</a> you
         can include in the CSS <code>box-shadow</code> attribute.
       </div>
       <div className={pf('p-bottom--xx-large')}>
         <h2 className="site-text-heading--large">Timing</h2>
         <p>Timings are a set of duration values. Values are calculated as even
           multiples of <code>100ms</code>, which is 6 frames at 60 frames-per-second (3 frames at 30 frames-per-second).</p>
-        <p>To use the timing tokens see the <a href="/resources/tokens/#category-timing">timing section</a>.</p>
+        <p>To use the timing tokens see the <a href="/tokens/#category-timing">timing section</a>.</p>
       </div>
       <div>
         <h2 className="site-text-heading--large">Named Animations</h2>

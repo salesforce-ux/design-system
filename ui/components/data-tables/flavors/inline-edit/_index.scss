@@ -129,9 +129,11 @@
 }
 
 .#{$css-prefix}indicator-error:focus {
+  outline: none;
   box-shadow: $spacing-xx-small 0 0 0 $color-border-error inset;
 }
 
 .#{$css-prefix}indicator-error-none:focus {
+  outline: none;
   box-shadow: $spacing-xx-small 0 0 0 $color-border-brand inset;
 }

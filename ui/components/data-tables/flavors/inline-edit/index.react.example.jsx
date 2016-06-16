@@ -163,7 +163,7 @@ let RowData = props =>
 let RowDataStatic = props =>
   <Tr className={pf(props.className)}>
     { props.rowError ?
-      <td className={pf('cell-shrink indicator-error-none')} dataLabel="Errors"><span className={pf('assistive-text')}>Row has no errors</span></td>
+      <td id={props.cellID} className={pf('cell-shrink indicator-error-none')} dataLabel="Errors"><span className={pf('assistive-text')}>Row has no errors</span></td>
       : null }
     <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" /></Td>
     <th className={pf('cell-edit')} scope="row" data-label="Name" title="John Doe">
@@ -429,14 +429,14 @@ export let states = [
   },
   {
     id: 'data-table-inline-edit-row-error-focus',
-    label: 'Error - Row level focused',
+    label: 'Error indicator - Focused',
     element:
       <Container>
         <Table>
           <Thead rowError />
           <Tbody>
             <RowData rowError cellID="error-01" title="Acme Enterprises">
-              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises">
+              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises" tabIndex="0">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
@@ -449,6 +449,30 @@ export let states = [
       </Container>,
     script: `
       document.getElementById('error-01').focus()
+    `
+  },
+  {
+    id: 'data-table-inline-edit-row-no-error-focus',
+    label: 'No Error indicator - Focused',
+    element:
+      <Container>
+        <Table>
+          <Thead rowError />
+          <Tbody>
+            <RowData rowError title="Acme Enterprises">
+              <Td className={pf('has-error has-focus')} dataLabel="Company" title="Acme Enterprises" tabIndex="0">
+                <span className={pf('grid grid--align-spread')}>
+                  <span className={pf('truncate grow')}>Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic rowError cellID="no-error-01" />
+          </Tbody>
+        </Table>
+      </Container>,
+    script: `
+      document.getElementById('no-error-01').focus()
     `
   },
   {
@@ -542,7 +566,7 @@ export let states = [
           </Tbody>
         </Table>
         <EditPanel>
-          <div className={pf('form-element has-error grid')}>
+          <div className={pf('form-element has-error grid wrap')}>
             <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
               <abbr className={pf('slds-required')} title="required">*</abbr>
               <span className={pf('assistive-text')}>Company</span>
@@ -550,8 +574,8 @@ export let states = [
             <div className={pf('form-element__control grow')}>
               <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
             </div>
-          </div>
           <div id="error-message-01" className={pf('form-element__help')}>This field is required</div>
+          </div>
         </EditPanel>
       </Container>,
     script: `

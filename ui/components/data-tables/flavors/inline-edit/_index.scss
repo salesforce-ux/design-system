@@ -125,12 +125,17 @@
   .#{$css-prefix}popover__body {
     padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 0;
   }
+
+  .#{$css-prefix}form-element__help {
+    width: 100%;
+    padding-left: $spacing-small;
+  }
 }
 
-.#{$css-prefix}indicator-error.#{$css-prefix}has-focus {
+.#{$css-prefix}indicator-error:focus {
   box-shadow: $spacing-xx-small 0 0 0 $color-border-error inset;
 }
 
-.#{$css-prefix}indicator-error-none.#{$css-prefix}has-focus {
+.#{$css-prefix}indicator-error-none:focus {
   box-shadow: $spacing-xx-small 0 0 0 $color-border-brand inset;
 }

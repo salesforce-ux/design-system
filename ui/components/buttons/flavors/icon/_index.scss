@@ -112,18 +112,13 @@
 
 // Button icon for errors
 .#{$css-prefix}button--icon-error {
-  color: $color-text-error;
 
+  &,
   &:hover,
   &:active,
   &:focus {
     color: $color-text-error;
   }
-
-  // &[disabled] {
-  //   color: $color-text-link-inverse-disabled;
-  // }
-
 }
 
 .#{$css-prefix}button--icon-border-inverse[disabled] {

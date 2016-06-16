@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('scrollable table--edit_container is-relative')} tabIndex={props.tabindex} id={props.id}>
+  <div className={pf('table--edit_container is-relative')} tabIndex={props.tabindex} id={props.id}>
     {props.children}
   </div>;
 
@@ -31,7 +31,7 @@ let Table = props =>
 
 let Thead = props =>
   <thead>
-    <Tr className={pf('text-heading--label')}>
+    <Tr className={pf('text-title--caps')}>
       { props.rowError ?
         <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"></th>
       : null }
@@ -346,7 +346,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises">
-              <Td className={pf('was-edited')} dataLabel="Company" title="Acme Enterprises">
+              <Td className={pf('is-edited')} dataLabel="Company" title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
@@ -484,7 +484,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises">
-              <Td className={pf('is-')} dataLabel="Company" title="Acme Enterprises">
+              <Td dataLabel="Company" title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />

@@ -14,18 +14,17 @@
   &:before {
     content: ' ';
     position: absolute;
-    z-index: $z-index-default;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: $z-index-default;
     background-color: $color-background-backdrop;
     box-shadow: $shadow-focus-inset;
   }
 }
 
 .#{$css-prefix}table--edit {
-  opacity: 1; //briefly putting this here to get a whitelisted className
 
   a:hover {
     text-decoration: none;
@@ -92,7 +91,7 @@
     }
   }
 
-  &.#{$css-prefix}was-edited {
+  &.#{$css-prefix}is-edited {
     background-color: $color-background-highlight;
   }
 
@@ -102,11 +101,8 @@
   }
 }
 
-.#{$css-prefix}cell-edit__button:focus {
-
-  .#{$css-prefix}button__icon--edit {
-      opacity: 1;
-    }
+.#{$css-prefix}cell-edit__button:focus .#{$css-prefix}button__icon--edit {
+    opacity: 1;
 }
 
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {

@@ -21,13 +21,13 @@ export const intro = (
   <p className="site-text-introduction">
     Icons provide visual context and enhance usability.
     <br />
-    Looking for the icons? Go to <a href="/resources/icons/">Resources › Icons</a>.
+    Looking for the icons? Go to <a href="/icons/">Resources › Icons</a>.
   </p>
 );
 
 export default (
   <ComponentDocs>
-    <p>Five separate SVG sprites are used to create icons — <a href="/resources/icons/#action">action</a>, <a href="/resources/icons/#custom">custom</a>, <a href="/resources/icons/#doctype">doctype</a>, <a href="/resources/icons/#standard">standard</a> and <a href="/resources/icons/#utility">utility</a>. Link to the icon SVG sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <a href="/resources/icons/">icon page</a>.)</p>
+    <p>Five separate SVG sprites are used to create icons — <a href="/icons/#action">action</a>, <a href="/icons/#custom">custom</a>, <a href="/icons/#doctype">doctype</a>, <a href="/icons/#standard">standard</a> and <a href="/icons/#utility">utility</a>. Link to the icon SVG sprite by targeting the icon&rsquo;s hash/ID value in the use href attribute. (You can find the values on the <a href="/icons/">icon page</a>.)</p>
     <p>When placing the icon code into your page, customize the path in the <code>use</code> attribute of the <code>svg</code> to the proper path and icon name for your specific icon. For example, the <i>case</i> icon in the <i>standard</i> sprite would have a path like this:</p>
     <CodeBlock language="markup">{`
     <svg aria-hidden="true" class="slds-icon">
@@ -38,7 +38,7 @@ export default (
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>If an icon has visible descriptive text, nothing more is required. If the icon has no descriptive text, add a <code>span</code> with the <CodeClass className="icon_container"/> class. Place both the <code>svg</code> with the base <CodeClass className="icon"/> class and the description for assistive screen readers inside a <code>span</code> with the <CodeClass className="assistive-text"/> class.</p>
     <p><strong>Note:</strong> You must include the SVG sprites to link to them. If you&rsquo;re using Visualforce, see <a href="/getting-started/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/resources/lightning-svg-icon-component-helper">Lightning components, see tutorial</a>.</p>
-    <p>You can access the SVG sprites by downloading the entire <a href="/resources/downloads">CSS Framework or just the icons</a>. To include a sprite in your application, the recommended method is to place it into the page as the first element inside the <code>body</code> element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> script for Internet Explorer.</p>
+    <p>You can access the SVG sprites by downloading the entire <a href="/downloads">CSS Framework or just the icons</a>. To include a sprite in your application, the recommended method is to place it into the page as the first element inside the <code>body</code> element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> script for Internet Explorer.</p>
     <p>When placed into the <code>body</code>, the SVG sprite takes up space in the page. Use either <code>display:none</code> or <code>position:absolute</code> and set both the width and height to zero.</p>
     <div className={pf('site-code--content scrollable--x')}>
       <CodeBlock language="markup">{`

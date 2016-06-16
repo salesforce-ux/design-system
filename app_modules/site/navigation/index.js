@@ -112,10 +112,13 @@ export default () => formatNavItem({
       ]
     },
     {
-      label: 'Design',
+      label: 'Guidelines',
       children: [
         {
           label: 'Overview'
+        },
+        {
+          label: 'Accessibility'
         },
         {
           label: 'Color'
@@ -136,6 +139,9 @@ export default () => formatNavItem({
           label: 'Messaging'
         },
         {
+          label: 'Localization'
+        },
+        {
           label: 'Motion'
         },
         {
@@ -143,6 +149,9 @@ export default () => formatNavItem({
         },
         {
           label: 'Typography'
+        },
+        {
+          label: 'Voice and Tone'
         }
       ]
     },
@@ -167,40 +176,28 @@ export default () => formatNavItem({
       })
     },
     {
-      label: 'Accessibility'
+      label: 'Tokens'
     },
     {
-      label: 'Voice and Tone'
+      label: 'Icons'
     },
     {
-      label: 'Resources',
-      children: [
-        {
-          label: 'Downloads'
-        },
-        {
-          label: 'Icons'
-        },
-        {
-          id: 'tokens',
-          label: 'Design Tokens'
-        },
-        {
-          label: 'Links'
-        }
-      ]
+      label: 'Downloads'
+    },
+    {
+      label: 'Articles'
     },
     {
       label: 'FAQ',
       abbrTitle: 'Frequently Asked Questions'
     },
     {
-      label: 'Give Feedback',
+      label: 'Feedback',
       path: 'https://github.com/salesforce-ux/design-system/issues',
       internal: false
     },
     {
-      label: 'Give Feedback',
+      label: 'Feedback',
       path: '/feedback',
       internal: true
     },

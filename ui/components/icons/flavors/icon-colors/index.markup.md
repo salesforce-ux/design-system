@@ -11,4 +11,4 @@ You may also use these helper classes:
 
 ### Note on “doctype” icons
 
-Note that [doctype icons](/resources/icons/#doctype) have specific colors that cannot be changed with the `fill` CSS property.
+Note that [doctype icons](/icons/#doctype) have specific colors that cannot be changed with the `fill` CSS property.

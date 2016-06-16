@@ -113,13 +113,6 @@ export default React.createClass({
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
-        <div className={pf('select_container col--bump-left align-middle')}>
-          <select
-            id="status-dropdown"
-            className={pf('select')}>
-            {options}
-          </select>
-        </div>
       </div>
     );
   },
@@ -127,7 +120,7 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox slds-m-bottom--small slds-m-horizontal--medium">
+      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox">
         <div role="search" className="searchbox__wrapper">
           <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
           <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
@@ -168,7 +161,7 @@ export default React.createClass({
 
   renderNav() {
     return (
-      <div className="site-navigation">
+      <div className={classNames('site-navigation', globals.displaySearch ? 'site-navigation--has-search' : '')}>
         {this.renderSearch()}
 
         <nav id="navigation" role="navigation" tabIndex="-1">

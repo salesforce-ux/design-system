@@ -81,7 +81,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
-      Download all <CTALink href="/resources/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is
+      Download all <CTALink href="/icons" eventType="icons-link-click">icon sets</CTALink>. Each icon is
       available as <abbr title="Scalable Vector Graphics">SVG</abbr> and in
       two different PNG sizes.
     </p>
@@ -98,7 +98,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="design-tokens">Design Tokens</h2>
     <p>
-      <CTALink href="/resources/tokens" eventType="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
+      <CTALink href="/tokens" eventType="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
       formats depending on which technology your application uses. For
       web-based applications, you can use our tokens
       as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" eventType="alistapart-link-click">variables</CTALink> through

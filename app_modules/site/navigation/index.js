@@ -170,34 +170,28 @@ export default () => formatNavItem({
       })
     },
     {
-      label: 'Resources',
-      children: [
-        {
-          label: 'Downloads'
-        },
-        {
-          label: 'Icons'
-        },
-        {
-          id: 'tokens',
-          label: 'Design Tokens'
-        },
-        {
-          label: 'Links'
-        }
-      ]
+      label: 'Tokens'
+    },
+    {
+      label: 'Icons'
+    },
+    {
+      label: 'Downloads'
+    },
+    {
+      label: 'Articles'
     },
     {
       label: 'FAQ',
       abbrTitle: 'Frequently Asked Questions'
     },
     {
-      label: 'Give Feedback',
+      label: 'Feedback',
       path: 'https://github.com/salesforce-ux/design-system/issues',
       internal: false
     },
     {
-      label: 'Give Feedback',
+      label: 'Feedback',
       path: '/feedback',
       internal: true
     },

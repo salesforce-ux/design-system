@@ -15,7 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Loading" contentClassName={pf('site-design site-design-loading site-text-longform')}>
+  <PageBody anchorTitle="Loading" contentClassName={pf('site-guidelines site-guidelines-loading site-text-longform')}>
     <div className={pf('container--large')}>
       <p className="site-text-introduction">Loading indicators help to reassure the user that the system is actively retrieving data.</p>
 

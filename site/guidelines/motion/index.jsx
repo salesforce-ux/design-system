@@ -17,7 +17,7 @@ import Button from 'ui/components/buttons/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Motion" contentClassName={pf('site-design site-design-motion')}>
+  <PageBody anchorTitle="Motion" contentClassName={pf('site-guidelines site-guidelines-motion')}>
     <div className={pf('container--x-large')}>
       <div className={pf('m-bottom--xx-large')}>
         <h2 className="site-text-heading--large">Key Principles</h2>

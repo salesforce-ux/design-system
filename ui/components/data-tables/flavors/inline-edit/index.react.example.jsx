@@ -58,7 +58,7 @@ let Tr = props =>
   </tr>;
 
 let Th = props =>
-  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
+  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort} tabIndex={props.tabindex || -1}>
     <a href="#void" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
       <span title={props.title}>{ props.children }</span>
@@ -76,7 +76,7 @@ let Th = props =>
   </th>;
 
 let Td = props =>
-  <td className={className(pf('cell-edit'), props.className)} title={props.title}>
+  <td className={className(pf('cell-edit'), props.className)} title={props.title} tabIndex={props.tabindex || -1}>
     { props.children }
   </td>;
 

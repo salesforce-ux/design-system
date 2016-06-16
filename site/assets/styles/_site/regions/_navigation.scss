@@ -99,6 +99,11 @@
       outline: 0;
     }
 
+    &.site-navigation--has-search nav {
+      top: $height-searchbox;
+      bottom: 0;
+      height: auto;
+    }
     &.site-navigation--internal {
       top: ($height-banner + $height-banner-badge);
     }

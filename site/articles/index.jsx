@@ -16,10 +16,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Links" contentClassName={pf('text-longform')}>
+  <PageBody anchorTitle="Articles" contentClassName={pf('text-longform')}>
     <div className={pf('container--large')}>
-      <p>Interested in learning more about the Design System, how we built it, and how you can use it? Check out the links below, and check back often - we&#39;re always writing articles and gathering community-generated content.</p>
-      <h2 className={pf('site-text-heading--large')}>Articles</h2>
+      <p>Interested in learning more about the Design System, how we built it, and how you can use it? Check out the links below, and check back often - we&#39;re always writing articles and gathering community-generated content:</p>
       <ul>
         <li>Christophe Coenraets: <a href="http://coenraets.org/blog/2015/10/react-university-sample-app-react-node-js-4-lightning-design-system">React University: Sample Application with React, Node.js 4, and the Lightning Design System</a></li>
         <li>Jina Bolton: <a href="https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b">The Salesforce Team Model for Scaling a Design System</a></li>

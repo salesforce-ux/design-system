@@ -43,7 +43,7 @@
   height: 100%;
   display: block;
 }
-.aa-dropdown-menu {
+.ds-dropdown-menu {
   position: relative;
   top: rem(-6px);
   border-radius: rem(4px);
@@ -60,7 +60,7 @@
   right: inherit !important;
   box-shadow: $shadow-drop-down;
 }
-.aa-dropdown-menu:before {
+.ds-dropdown-menu:before {
   position: absolute;
   content: '';
   width: rem(14px);
@@ -76,11 +76,11 @@
   display: block;
   left: rem(48px);
 }
-.aa-dropdown-menu .aa-suggestions {
+.ds-dropdown-menu .ds-suggestions {
   position: relative;
   z-index: 1000;
 }
-.aa-dropdown-menu [class^="aa-dataset-"] {
+.ds-dropdown-menu [class^="ds-dataset-"] {
   position: relative;
   border: solid 1px #D8DDE6;
   background: #fff;
@@ -88,7 +88,7 @@
   overflow: auto;
   padding: 0 1rem rem(6px);
 }
-.aa-dropdown-menu * {
+.ds-dropdown-menu * {
   box-sizing: border-box;
 }
 .algolia-docsearch-suggestion {
@@ -114,7 +114,7 @@
   padding: rem(4px) 0 rem(4px) rem(12px);
   cursor: pointer;
 }
-.aa-cursor .algolia-docsearch-suggestion--content {
+.ds-cursor .algolia-docsearch-suggestion--content {
   background: rgba(0, 0, 0, 0.03);
 }
 .algolia-docsearch-suggestion--content:before {
@@ -244,6 +244,22 @@
   animation-name: sbx-reset-in;
   animation-duration: .15s;
 }
+.algolia-docsearch-suggestion--no-result {
+  float: none;
+  width: auto;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  &:before {
+    display: none;
+  }
+
+  .algolia-docsearch-suggestion--title {
+    font-weight: normal;
+  }
+}
+
 @keyframes sbx-reset-in {
   0% {
     transform: translate3d(-20%, 0, 0);

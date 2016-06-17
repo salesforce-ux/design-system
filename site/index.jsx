@@ -28,7 +28,7 @@ export default (
         Create the world’s best enterprise app experiences.
       </h2>
       <p className={pf('site-cta-buttons m-bottom--medium')}>
-        <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
+        <CTALink href="/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
         <CTALink
           href="https://github.com/salesforce-ux/design-system"
           className={pf('button button--neutral')}
@@ -118,7 +118,7 @@ export default (
               </div>
               <hr className="hr hr--pink" />
               <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
-              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" eventType="downloads-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/downloads" eventType="downloads-bottom">Learn More</CTALink>
             </div>
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>

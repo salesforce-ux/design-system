@@ -48,10 +48,6 @@
 .#{$css-prefix}cell-edit {
   padding: $spacing-x-small; // Add padding to div inside
 
-  // &:first-child {
-  //   padding-right: $spacing-xx-small;
-  // }
-
   .#{$css-prefix}button__icon--edit,
   .#{$css-prefix}button__icon--lock {
     opacity: 0;
@@ -89,6 +85,7 @@
   }
 
   &.#{$css-prefix}has-focus { // This is the focused state
+    background-color: $color-background-alt;
     box-shadow: $color-border-selection 0 0 0 $border-width-thin;
 
     .#{$css-prefix}button__icon--edit,

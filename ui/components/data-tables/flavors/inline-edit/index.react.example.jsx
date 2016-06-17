@@ -25,7 +25,7 @@ let Container = props =>
   </div>;
 
 let Table = props =>
-    <table className={pf('table table--edit table--bordered table--fixed-layout')}>
+    <table className={pf('table table--edit table--bordered table--fixed-layout')} role="grid">
       {props.children}
     </table>;
 
@@ -35,7 +35,7 @@ let Thead = props =>
       { props.rowError ?
         <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"><span className={pf('slds-assistive-text')}>Errors</span></th>
       : null }
-      <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
+      <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Address">Address</Th>
@@ -53,7 +53,7 @@ let Tbody = props =>
   </tbody>;
 
 let Tr = props =>
-  <tr {...props}>
+  <tr role="row" {...props}>
     {props.children}
   </tr>;
 
@@ -76,7 +76,7 @@ let Th = props =>
   </th>;
 
 let Td = props =>
-  <td title={props.title} tabIndex={props.tabindex || -1} className={props.tdClassName}>
+  <td title={props.title} tabIndex={props.tabindex || -1} className={props.tdClassName} role="gridcell" aria-selected={props.ariaSelected || false} aria-readonly={props.ariaReadonly || false}>
     { props.children }
   </td>;
 
@@ -114,12 +114,12 @@ let RowData = props =>
           </div>
         </td>
       : null }
-    <Td tdClassName={pf('cell-shrink')}>
+    <Td tdClassName={pf('cell-shrink')} ariaSelected={props.checkSelected || false}>
       <div className={className(pf('cell-edit'), props.checkClass)}>
         <Checkbox label="Select Row" tabIndex={props.checkIndex} checkID="checkbox-01" />
       </div>
     </Td>
-    <th scope="row" title="Lei Chan" tabIndex="-1">
+    <th role="rowheader" title="Lei Chan" tabIndex="-1">
       <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1" id={props.linkId}>Lei Chan</a>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: Lei Chan" />
@@ -138,7 +138,7 @@ let RowData = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: jdoe@acme.com" />
       </span>
     </Td>
-    <Td title="800-555-1212">
+    <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
@@ -183,7 +183,7 @@ let RowDataStatic = props =>
         <Checkbox  label="Select Row" tabIndex="-1" />
       </div>
     </Td>
-    <th scope="row" tabIndex="-1" title="John Doe">
+    <th role="rowheader" tabIndex="-1" title="John Doe">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1">John Doe</a>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: John Doe" />
@@ -207,7 +207,7 @@ let RowDataStatic = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: lchan@rohdecorp.com" />
       </span>
     </Td>
-    <Td title="800-555-1212">
+    <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
@@ -270,7 +270,7 @@ export let states = [
         <Table>
           <Thead />
           <Tbody>
-            <RowData title="Acme Enterprises" checkIndex="0" checkClass={pf('has-focus')}>
+            <RowData title="Acme Enterprises" checkIndex="0" checkClass={pf('has-focus')} checkSelected="true">
               <Td title="Acme Enterprises">
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
@@ -295,7 +295,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises" thClassName={pf('has-focus')} linkId="link-01">
-              <Td title="Acme Enterprises">
+              <Td title="Acme Enterprises" ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Acme Enterprises" />
@@ -319,7 +319,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+              <Td title="Acme Enterprises" ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-focus')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
@@ -343,7 +343,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+              <Td title="Acme Enterprises" ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit is-selected')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
@@ -406,7 +406,7 @@ export let states = [
           <Thead />
           <Tbody>
             <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+              <Td title="Acme Enterprises" ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
@@ -430,7 +430,7 @@ export let states = [
           <Thead rowError />
           <Tbody>
             <RowData rowError title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+              <Td title="Acme Enterprises" ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />

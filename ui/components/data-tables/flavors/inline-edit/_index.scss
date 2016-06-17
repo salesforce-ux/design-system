@@ -37,9 +37,16 @@
   .#{$css-prefix}indicator-header {
     width: $square-icon-medium-boundary;
   }
+
+  td,
+  tbody th,
+  .#{$css-prefix}cell-error { // Remove padding
+    padding: 0;
+  }
 }
 
 .#{$css-prefix}cell-edit {
+  padding: $spacing-x-small; // Add padding to div inside
 
   .#{$css-prefix}button__icon--edit,
   .#{$css-prefix}button__icon--lock {
@@ -78,7 +85,7 @@
   }
 
   &.#{$css-prefix}has-focus { // This is the focused state
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
+    box-shadow: $color-border-selection 0 0 0 $border-width-thin;
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {
@@ -97,7 +104,7 @@
 
   &.#{$css-prefix}has-error {
     background-color: $color-background-highlight;
-    box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+    box-shadow: $color-border-error 0 0 0 $border-width-thin;
   }
 }
 

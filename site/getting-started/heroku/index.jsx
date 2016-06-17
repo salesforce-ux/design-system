@@ -225,7 +225,7 @@ app.listen(port);
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
-        <p><a href="/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
+        <p><a href="/downloads/">Download the {g.displayName} CSS framework</a></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`

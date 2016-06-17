@@ -40,6 +40,5 @@ export default {
   downloadPath: function(version) {
     return 'assets/downloads/' + this.zipName(version);
   },
-  // until we can figure out the Chrome font issue
-  displaySearch: false // !process.env.INTERNAL
+  displaySearch: !process.env.INTERNAL
 };

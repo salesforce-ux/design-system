@@ -1,7 +1,11 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release [2.0.2] - Future
+## Release [2.0.2] - June 16, 2016
+
+**SITE IA/ENHANCEMENTS**
+- Renamed "Design" section to "Guidelines"
+- Moved "Accessibility" and "Voice & Tone" sections to Guidelines
 
 **CHANGES**
 
@@ -148,7 +152,7 @@ The following features are being removed in this release:
 
 ## Release [1.0.5] - May 26, 2016
 
-- Adding a background color to icons from the [custom set](/resources/icons/#custom) is now done using the `slds-icon-custom-customXX` class (e.g. `slds-icon-custom-custom25`), instead of `slds-icon-custom-XX` (deprecated). This change addresses [#203](https://github.com/salesforce-ux/design-system/issues/203)
+- Adding a background color to icons from the [custom set](/icons/#custom) is now done using the `slds-icon-custom-customXX` class (e.g. `slds-icon-custom-custom25`), instead of `slds-icon-custom-XX` (deprecated). This change addresses [#203](https://github.com/salesforce-ux/design-system/issues/203)
 - Improved accessibility of the [breadcrumbs component](/components/breadcrumbs/)
 - The Design System now allows developers to load Salesforce webfonts using their preferred method instead of the default `@font-face` rules. To disable the default font loading method, set `$slds-load-webfonts: false;` before importing the Design System Sass file.
 - The project is now compatible with Node.js 6
@@ -203,7 +207,7 @@ The following site enhancements are now available:
 - Improved Component Overview tables for more narrow readability
 - Improved status labels. Now associated with colors and contain more information
 - Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
-- Resources Information - [Resource Links](/resources/links/)
+- Resources Information - [Resource Links](/articles/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
 - Improved Grid System documentation - [Grid System](/components/utilities/grid/)
 - Copy updates on components to represent Voice & Tone Guidelines
@@ -312,11 +316,11 @@ The following features are being marked as deprecated in this release and will b
 - Apply proper accessibility requirements (aria-labelledby) to tabs (fixes https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
 - Make `.slds-text-body--small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
-- Mark all list utilities "dev-ready" - [www.lightningdesignsystem.com/utilities/lists]
+- Mark all list utilities "dev-ready" - [/components/utilities/lists](/components/utilities/lists)
 - Field-level help popover background color token update
 - Fix truncation on Sales Path (fixes https://github.com/salesforce-ux/design-system/issues/135)
-- Fix chevron alignment on Sales Path - [www.lightningdesignsystem.com/components/tabs#sales-path]
-- Updated demo on buttons > neutral icon to demonstrate "mutton" - [www.lightningdesignsystem.com/components/buttons#neutral-icon]
+- Fix chevron alignment on Sales Path - [/components/tabs#sales-path](/components/tabs#sales-path)
+- Updated demo on buttons > neutral icon to demonstrate "mutton" - [/components/buttons#neutral-icon](/components/buttons#neutral-icon)
 - Updated lists > description horizontal to use flexbox. No class change required. `dt` and `dd` can now accept sizing utilities. Change margin to padding.
 
 **NEW COMPONENTS**
@@ -341,13 +345,13 @@ The following features are being marked as deprecated in this release and will b
 - Updated demo for icons > color and added `slds-text-error` for validation errors
 
 **NEW COMPONENTS**
-- Added initial state of tabs > sales path www.lightningdesignsystem.com/components/tabs#sales-path
-- Added max-width sizing utilities www.lightningdesignsystem.com/utilities/sizing
-- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) www.lightningdesignsystem.com/components/buttons#overview
-- Added stretched button utilities for full-width buttons on small form factors www.lightningdesignsystem.com/components/buttons#overview
+- Added initial state of tabs > sales path [/components/tabs#sales-path](/components/tabs#sales-path)
+- Added max-width sizing utilities [/components/utilities/sizing](/components/utilities/sizing)
+- Added button spacing utilities for stacked and horizontal sets of buttons (both a single class and a wrapper class) [/components/buttons#overview](/components/buttons#overview)
+- Added stretched button utilities for full-width buttons on small form factors [/components/buttons#overview](/components/buttons#overview)
 - Dialog Menus for small form factor
-  - Action overflow for touch www.lightningdesignsystem.com/components/menus#action-overflow-for-touch
-- Added Edit dialog form for touch devices www.lightningdesignsystem.com/components/forms#edit-dialog-for-touch
+  - Action overflow for touch [/components/menus#action-overflow-for-touch](/components/menus#action-overflow-for-touch)
+- Added Edit dialog form for touch devices [/components/forms#edit-dialog-for-touch](/components/forms#edit-dialog-for-touch)
 
 **DEPRECATED**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
@@ -374,10 +378,10 @@ The following features are being marked as deprecated in this release and will b
 
 **SITE IA**
 
-- Moved tooltips to popovers, deprecated tooltip section www.lightningdesignsystem.com/components/popovers#tooltips
-- Moved Dropdowns into Menus, deprecated dropdowns sectio www.lightningdesignsystem.com/components/menus
-- Moved Picklist Dropdown Menu into Menus www.lightningdesignsystem.com/components/menus#picklist
-- Moved Multi-Select Picklist into Forms www.lightningdesignsystem.com/components/forms#multi-select
+- Moved tooltips to popovers, deprecated tooltip section [/components/popovers#tooltips](/components/popovers#tooltips)
+- Moved Dropdowns into Menus, deprecated dropdowns sectio [/components/menus](/components/menus)
+- Moved Picklist Dropdown Menu into Menus [/components/menus#picklist](/components/menus#picklist)
+- Moved Multi-Select Picklist into Forms [/components/forms#multi-select](/components/forms#multi-select)
 - Menus component variants are now more explicit
   - Dropdown
   - Dropdown with Icons
@@ -398,13 +402,13 @@ The following features are being marked as deprecated in this release and will b
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
-- Added notifications > prompt (modal-style alert) [www.lightningdesignsystem.com/components/notifications#prompt](www.lightningdesignsystem.com/components/notifications#prompt)
-- Added Preview Panel Popovers [www.lightningdesignsystem.com/components/popovers#panels](www.lightningdesignsystem.com/components/popovers#panels)
-- More directional support for popover nubbins [www.lightningdesignsystem.com/components/popovers#nubbins](www.lightningdesignsystem.com/components/popovers#nubbins)
+- Added notifications > prompt (modal-style alert) [/components/notifications#prompt](/components/notifications#prompt)
+- Added Preview Panel Popovers [/components/popovers#panels](/components/popovers#panels)
+- More directional support for popover nubbins [/components/popovers#nubbins](/components/popovers#nubbins)
 
 ## Release 0.10.2 - October 29, 2015
 - Updated Icons to version 3.2.0
-- Dropdown menus now have bottom positioning support, with accommodating nubbin support [www.lightningdesignsystem.com/components/menus#dropdown-positioning](www.lightningdesignsystem.com/components/menus#dropdown-positioning)
+- Dropdown menus now have bottom positioning support, with accommodating nubbin support [/components/menus#dropdown-positioning](/components/menus#dropdown-positioning)
 - Added Google Analytics
 
 ## Release 0.10.1 - October 21, 2015
@@ -436,9 +440,9 @@ The following features are being marked as deprecated in this release and will b
 
 **NEW COMPONENTS**
 
-- Full-width button variant for small form factors www.lightningdesignsystem.com/components/buttons#responsive
-- Feed and Comment components have been added www.lightningdesignsystem.com/components/feeds
-- Publisher component has been added www.lightningdesignsystem.com/components/publishers
+- [Full-width button variant](/components/buttons#responsive) for small form factors
+- [Feed and Comment components](/components/feeds) have been added
+- [Publisher component](/components/publishers) has been added
 
 **SASS UPDATES**
 
@@ -533,6 +537,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[2.0.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.5...v2.0.1
 [1.0.5]: https://github.com/salesforce-ux/design-system/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/salesforce-ux/design-system/compare/v1.0.3...v1.0.4

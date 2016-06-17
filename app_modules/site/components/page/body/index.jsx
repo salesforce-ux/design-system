@@ -113,6 +113,13 @@ export default React.createClass({
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
+        <div className={pf('select_container col--bump-left align-middle')}>
+          <select
+            id="status-dropdown"
+            className={pf('select')}>
+            {options}
+          </select>
+        </div>
       </div>
     );
   },

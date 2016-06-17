@@ -53,7 +53,7 @@ let Tbody = props =>
   </tbody>;
 
 let Tr = props =>
-  <tr role="row" {...props}>
+  <tr scope="row" {...props}>
     {props.children}
   </tr>;
 
@@ -119,7 +119,7 @@ let RowData = props =>
         <Checkbox label="Select Row" tabIndex={props.checkIndex} checkID="checkbox-01" />
       </div>
     </Td>
-    <th role="rowheader" title="Lei Chan" tabIndex="-1">
+    <th title="Lei Chan" tabIndex="-1">
       <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1" id={props.linkId}>Lei Chan</a>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: Lei Chan" />
@@ -183,7 +183,7 @@ let RowDataStatic = props =>
         <Checkbox  label="Select Row" tabIndex="-1" />
       </div>
     </Td>
-    <th role="rowheader" tabIndex="-1" title="John Doe">
+    <th tabIndex="-1" title="John Doe">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1">John Doe</a>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: John Doe" />

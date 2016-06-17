@@ -9,13 +9,22 @@ if (globals.displaySearch) {
     // for full list of options.
     const docsearch = require('docsearch.js');
     const autocompleteOptions = {
-      //debug: true
+      // debug: true
     };
+
     search = docsearch({
       apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
       indexName: 'lightningdesignsystem',
       inputSelector: '#docsearch',
-      autocompleteOptions
+      autocompleteOptions,
+      transformData: (hits) => {
+        return hits.map(function (hit) {
+          // Remove the domain name from the result URL
+          // so that search works on multiple domains (not just lightningdesignsystem.com)
+          hit.url = hit.url.replace(/^(?:\/\/|[^\/]+)*\//, '/');
+          return hit;
+        });
+      }
     });
   });
 }

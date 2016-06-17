@@ -40,13 +40,17 @@
 
   td,
   tbody th,
-  .#{$css-prefix}cell-error { // Remove padding
+  tbody .#{$css-prefix}cell-shrink:first-child { // Remove padding
     padding: 0;
   }
 }
 
 .#{$css-prefix}cell-edit {
   padding: $spacing-x-small; // Add padding to div inside
+
+  // &:first-child {
+  //   padding-right: $spacing-xx-small;
+  // }
 
   .#{$css-prefix}button__icon--edit,
   .#{$css-prefix}button__icon--lock {
@@ -114,6 +118,8 @@
 
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
     background-color: $color-background-alt;
+    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
+                $color-border 0 ($border-width-thin) 0 inset;
 }
 
 .#{$css-prefix}form-element__label--edit {

@@ -33,7 +33,7 @@ let Thead = props =>
   <thead>
     <Tr className={pf('text-title--caps')}>
       { props.rowError ?
-        <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"></th>
+        <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"><span className={pf('slds-assistive-text')}>Errors</span></th>
       : null }
       <th className={pf('cell-shrink')}><Checkbox label="Select All" /></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
@@ -106,7 +106,7 @@ let RowData = props =>
   <Tr>
     { props.rowError ?
         <td tabIndex={props.errorindex || -1} className={pf(' cell-error')}>
-          <div id={props.cellID} className={className(pf('cell-edit'), props.editName)}>
+          <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
             <button className={pf('button button--icon button--icon-error')} tabIndex="0" id="error-01">
               <span className={pf('assistive-text')}>Row has errors</span>
               <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
@@ -156,7 +156,7 @@ let RowData = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Premium Yield" />
       </span>
     </Td>
-    <Td className={pf('cell-shrink')}>
+    <Td tdClassName={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -170,7 +170,7 @@ let RowDataStatic = props =>
   <Tr>
     { props.rowError ?
       <td className={pf('cell-error')} tabIndex={props.errorindex || -1}>
-        <div id={props.cellID} className={className(pf('cell-edit'), props.editName)}>
+        <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
           <button className={pf('hidden button button--icon button--icon-error')} tabIndex="0" id="error-01" aria-hidden="true">
             <span className={pf('assistive-text')}>Row has no errors</span>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
@@ -225,7 +225,7 @@ let RowDataStatic = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Junk Yield" />
       </span>
     </Td>
-    <Td className={pf('cell-shrink')}>
+    <Td tdClassName={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"

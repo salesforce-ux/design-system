@@ -13,7 +13,6 @@ import fastdom from 'fastdom';
 import Status from 'app_modules/site/util/component/status';
 import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
-import { set as setPreference } from '../shared/preferences';
 
 import { $, setClassName } from '../framework/dom';
 import { updateScrollSpy } from '../shared/nav';
@@ -78,18 +77,6 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
-
-const handleFlavorStatusChange = () => {
-  if (window.location.hash) {
-    const askedFlavor = window.location.hash;
-    const section = $(`[data-slds-status="prototype"] ${askedFlavor}`);
-
-    if (section.length > 0) {
-      setPreference('status', 'prototype');
-    }
-  }
-};
-
 /**
  * Listen for flavor state buttons to be clicked
  * and then update the src of the <iframe>
@@ -109,6 +96,7 @@ const handleFlavorStateNavClick = (event, element) => {
 
   // Point to the state's flavor
   window.location.hash = flavorHref;
+
   fastdom.mutate(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
@@ -155,9 +143,6 @@ export default () => ({
     listen_dom: delegate => {
       // States
       delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);
-    },
-    after_listen_dom: () => {
-      handleFlavorStatusChange();
     }
   }
 });

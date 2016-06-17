@@ -13,10 +13,11 @@ import emitter from '../framework/events';
 
 const USER_KEY = process.env.INTERNAL ? 'internal' : 'external';
 const STORAGE_KEY = `slds-${USER_KEY}-prefs`;
+const EVENT_KEY = 'preferences:updated';
 
 const PrefsDefaults = {
   internal: Object.assign({}, { status: 'dev-ready'}),
-  external: Object.assign({}, { status: 'dev-ready' })
+  external: Object.assign({}, { status: 'prototype' })
 };
 
 /**
@@ -33,6 +34,29 @@ export const DefaultsStrategy = props => {
     },
     load () {},
     update (prefs) {}
+  }, props);
+};
+
+export const LocalStorageStrategy = props => {
+  return Object.assign({
+    getInitialPrefs(currentPrefs) {
+      return this.load() || currentPrefs;
+    },
+    load () {
+      if (!window.localStorage) { return {}; }
+      const prefs = localStorage.getItem(STORAGE_KEY);
+      try {
+        return JSON.parse(prefs);
+      } catch (e) {
+        return {};
+      }
+    },
+    update (prefs) {
+      if (!window.localStorage) { return; }
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+      } catch (e) {}
+    }
   }, props);
 };
 
@@ -59,7 +83,7 @@ const sync = (emit = true) => {
   const newPrefs = all();
   strategies.forEach(s => s.update(newPrefs));
   if (emit) {
-    emitter.emit('preferences:updated', newPrefs);
+    emitter.emit(EVENT_KEY, newPrefs);
   }
 };
 
@@ -98,17 +122,22 @@ export const set = (key, value) => {
  */
 export const get = key => prefs[key];
 
+const handleStatusChange = event => set('status', event.target.value);
+
 /**
  * Preferences
- * Sets up a listener and emits events for when the status changes.
+ * Sets up a listener and emitts events for when the dropdown changes.
  */
 export default () => {
   return {
     hooks: {
       before_listen_dom() {
-        setStrategies([DefaultsStrategy()]);
+        setStrategies([DefaultsStrategy(), LocalStorageStrategy()]);
       },
-      after_listen_dom: delegate => {
+      listen_dom: delegate =>  {
+        delegate('change', '#status-dropdown', handleStatusChange);
+      },
+      after_listen_dom: delegate =>  {
         sync();
       }
     }

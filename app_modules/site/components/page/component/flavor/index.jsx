@@ -102,17 +102,8 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
-    const styles = {};
-
-    if (flavor.status === 'prototype') {
-      styles.display = 'none';
-    }
-
     return (
-      <section
-        className={pf('m-bottom--xx-large p-top--x-large')}
-        style={styles}
-        data-slds-status={flavor.status}>
+      <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
         <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}

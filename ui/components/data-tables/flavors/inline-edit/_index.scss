@@ -26,10 +26,6 @@
 
 .#{$css-prefix}table--edit {
 
-  a:hover {
-    text-decoration: none;
-  }
-
   .#{$css-prefix}button__icon--edit:focus {
     fill: $color-text-brand;
   }

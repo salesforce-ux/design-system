@@ -101,7 +101,7 @@
 
   &.#{$css-prefix}has-error {
     background-color: $color-background-highlight;
-    box-shadow: $color-border-error 0 0 0 $border-width-thin;
+    box-shadow: $color-border-error 0 0 0 $border-width-thick;
   }
 }
 

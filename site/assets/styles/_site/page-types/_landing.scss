@@ -193,30 +193,48 @@
   }
 }
 
-
-
-
 // Floating Shapes
 .site-shapes {
-  display: none;
-
-  @include mq-large-min {
-    display: block;
-    opacity: 0;
-    transition: opacity ($duration-slowly * 2) linear;
-  }
-
-  @media (min-device-width : 760px) and (max-device-width : 1024px) and (orientation : landscape) {
-    display: none;
-  }
+  opacity: 0;
+  transition: opacity ($duration-slowly * 2) linear;
 
   &--on {
     opacity: 1;
   }
 }
 
+// Hide shapes that are out of the viewport
+// Prevents Safari from adding horizontal scrolling:
+// Fixes https://github.com/salesforce-ux/design-system/issues/223
 
+// Let's hide all shapes, and their container
+.site-shapes,
+[data-slds-shape] {
+  display: none;
+}
 
+// Now we make shapes appear one at a time
+@media (min-width: 73em) { // The first shape is in the viewport
+  .site-shapes,
+  [data-slds-shape=cub] {
+    display: block;
+  }
+}
+@media (min-width: 80em) { // The triangular prism appears
+  [data-slds-shape="tri"] {
+    display: block;
+  }
+}
+@media (min-width: 90em) { // Now to the rectangular prism
+  [data-slds-shape="rect"] {
+    display: block;
+  }
+}
+@media (min-width: 100em) {
+  [data-slds-shape="dten"] { // Finishing with the decahedron
+    display: block;
+  }
+}
 
 // CTA Buttons
 // - centered / full-width on mobile

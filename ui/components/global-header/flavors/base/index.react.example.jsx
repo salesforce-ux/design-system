@@ -82,11 +82,11 @@ let GlobalHeader = props =>
           { props.setup ? SetupDropdown : null}
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="javascript:void(0);" title="person name">
+          <button className={pf('button')} title="person name">
             <span className={pf('avatar avatar--circle avatar--medium')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>
-          </a>
+          </button>
         </li>
       </ul>
     </div>

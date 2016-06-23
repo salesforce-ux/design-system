@@ -28,10 +28,21 @@ const dialingIcon = (
 );
 
 export let UtilityPanel = props =>
-  <div className={className(pf('utility-panel grid grid--vertical'), props.className)}>
+  <div className={className(pf('utility-panel grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <div className={pf('utility-panel__header grid shrink-none')}>
       <a href="javascript:void(0);" className={pf('utility-panel__header-label-action grow')}>
-        <MediaObject figureLeft={dialingIcon} flavor="center">{ props.header || 'Header' }</MediaObject>
+        <div className={pf('media media--center')}>
+          <div className={pf('media__figure')}>
+            <span className={pf('icon_container')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
+              <span className={pf('assistive-text')}>Call Icon</span>
+            </span>
+          </div>
+          <div className={pf('media__body')}>
+            <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
+          </div>
+        </div>
+        {/*<MediaObject figureLeft={dialingIcon} flavor="center">{ props.header || 'Header' }</MediaObject>*/}
       </a>
       <div className={pf('utility-panel__header-icon-action')}>
         <button className={pf('button button--icon button--icon-inverse')}>

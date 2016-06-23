@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -42,7 +41,6 @@ export let UtilityPanel = props =>
             <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
           </div>
         </div>
-        {/*<MediaObject figureLeft={dialingIcon} flavor="center">{ props.header || 'Header' }</MediaObject>*/}
       </a>
       <div className={pf('utility-panel__header-icon-action')}>
         <button className={pf('button button--icon button--icon-inverse')}>

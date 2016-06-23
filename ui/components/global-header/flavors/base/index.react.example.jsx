@@ -34,10 +34,10 @@ const SetupDropdown = (
 const ActionsDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
-      <div className={pf('dropdown__header')}>
+      <li className={pf('dropdown__header')} role="separator">
         <span className={pf('text-title--caps')}>Create</span>
-      </div>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
+      </li>
+      <MenuItem tabIndex="0"><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-log-a-call m-right--x-small')} sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-event m-right--x-small')} sprite="standard" symbol="event" /> New Event</MenuItem>
     </MenuList>

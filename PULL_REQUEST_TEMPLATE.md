@@ -12,5 +12,5 @@ Changes proposed in this pull request:
 - [ ] Release notes mention the changes
 
 ⚠️ Once this pull request is merged, please merge the code into other development branches:
-[Merge branch 'summer-16' into winter-17](https://github.com/salesforce-ux/design-system-internal/compare/winter-17...summer-16?expand=1&title=Merge branch %27summer-16%27 into winter-17)
-[Merge branch 'winter-17' into spring-17](https://github.com/salesforce-ux/design-system-internal/compare/spring-17...winter-17?expand=1&title=Merge branch %27winter-17%27 into spring-17)
+[Merge branch 'summer-16' into winter-17](http://bit.ly/28Qnxke)
+[Merge branch 'winter-17' into spring-17](http://bit.ly/28OZIGM)

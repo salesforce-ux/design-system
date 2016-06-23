@@ -45,7 +45,7 @@ const ActionsDropdown = (
 );
 
 let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
     <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={ props.symbol } />
     <span className={pf('assistive-text')}>{ props.assistiveText }</span>
   </button>;
@@ -82,8 +82,8 @@ let GlobalHeader = props =>
           { props.setup ? SetupDropdown : null}
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="javascript:void(0);" title="View Title">
-            <span className={pf('avatar avatar--circle avatar--x-small')}>
+          <a href="javascript:void(0);" title="person name">
+            <span className={pf('avatar avatar--circle avatar--medium')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>
           </a>

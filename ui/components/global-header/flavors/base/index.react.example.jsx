@@ -69,24 +69,24 @@ let GlobalHeader = props =>
           </div>
         </div>
       </div>
-      <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
+      <ul className={pf('global-header__item grid grid--vertical-align-center')}>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
+          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
+          { props.actions ? ActionsDropdown : null}
+        </li>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
+          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
+        </li>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
+          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
+          { props.setup ? SetupDropdown : null}
+        </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
           <a href="javascript:void(0);" title="View Title">
             <span className={pf('avatar avatar--circle avatar--x-small')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>
           </a>
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
-          { props.setup ? SetupDropdown : null}
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
-          { props.actions ? ActionsDropdown : null}
         </li>
       </ul>
     </div>

@@ -44,13 +44,7 @@
     }
   }
 
-  // Selected Cell
-  td.#{$css-prefix}is-selected,
-  td.#{$css-prefix}is-selected:hover,
-  th.#{$css-prefix}is-selected,
-  th.#{$css-prefix}is-selected:hover {
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
-  }
+
 
   // Deal with truncation
   .#{$css-prefix}truncate {

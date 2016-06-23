@@ -44,8 +44,8 @@
 
 @mixin button-destructive {
   // @TODO - update when new tokens hit the repo
-  background-color: #c23934; //$color-background-destructive;
-  border: $border-width-thin solid #c23934; //$color-border-destructive;
+  background-color: $color-background-destructive;
+  border: $border-width-thin solid $color-background-destructive;
   color: $color-text-inverse;
 
   &:link,
@@ -56,12 +56,12 @@
 
   &:hover,
   &:focus {
-    background-color: #a61a14; //$color-background-destructive-hover;
+    background-color: $color-background-destructive-hover;
     color: $color-text-inverse;
   }
 
   &:active {
-    background-color: #870500; //$color-background-button-destructive-active;
-    border-color: #870500; //$color-border-destructive-active;
+    background-color: $color-background-destructive-active;
+    border-color: $color-border-destructive-active;
   }
 }

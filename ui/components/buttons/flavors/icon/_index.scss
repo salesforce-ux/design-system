@@ -13,7 +13,8 @@
 .#{$css-prefix}button--icon-container,
 .#{$css-prefix}button--icon-border,
 .#{$css-prefix}button--icon-border-filled,
-.#{$css-prefix}button--icon-more {
+.#{$css-prefix}button--icon-more,
+.#{$css-prefix}button--icon-error {
   line-height: $line-height-reset;
   vertical-align: middle;
   color: $color-text-icon-default;
@@ -106,6 +107,17 @@
 
   &[disabled] {
     color: $color-text-link-inverse-disabled;
+  }
+}
+
+// Button icon for errors
+.#{$css-prefix}button--icon-error {
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-error;
   }
 }
 

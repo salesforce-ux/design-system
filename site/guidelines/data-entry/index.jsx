@@ -36,7 +36,7 @@ export default (
         <div className={pf('grid grid--vertical col--padded-large medium-size--1-of-2')}>
           <h2 className="site-text-heading--medium">Sizing</h2>
           <div>
-            <p>The default text size creates a visual hierarchy between the label text and the input text. To conserve vertical space or when you have a long list of fields in a width­-constrained sidebar, a smaller input size is also available.</p>
+            <p>The default text size creates a visual hierarchy between the label text and the input text. To conserve vertical space or when you have a long list of fields in a width-constrained sidebar, a smaller input size is also available.</p>
             <p>The input width depends on the label placement. If the label is above the field, the input width is 100% of the container. If the label is on the side, the label width is 33%, and the input width is 67%.</p>
           </div>
           <figure className={pf('grow')}>

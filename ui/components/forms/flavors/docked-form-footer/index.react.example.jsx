@@ -33,8 +33,8 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '80px' }}>
         <div className={pf('docked-form-footer')}>
-          <button className={pf('button button--icon')}>
-            <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
+          <button className={pf('button button--icon button--icon-error')}>
+            <SvgIcon className={pf('button__icon icon--small')} sprite="utility"
             symbol="warning" />
             <span className={pf('assistive-text')}>Review the Following Errors</span>
           </button>
@@ -49,8 +49,8 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '180px' }}>
         <div className={pf('docked-form-footer')}>
-          <button className={pf('button button--icon')}>
-            <SvgIcon className={pf('icon icon-text-error icon--small')} sprite="utility"
+          <button className={pf('button button--icon button--icon-error')}>
+            <SvgIcon className={pf('button__icon icon--small')} sprite="utility"
             symbol="warning" />
             <span className={pf('assistive-text')}>Review the Following Errors</span>
           </button>

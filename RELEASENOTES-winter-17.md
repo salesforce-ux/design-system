@@ -24,9 +24,11 @@ The following components are now available:
 - Files - [File Components](/components/files/)
 - File selector - [File Selector](/components/file-selector)
 - Feed v2 - [Feeds Component](/components/feeds/)
+- Inline Edit Data Table - [Data Tables › Inline Edit](/components/data-tables/#flavor-inline-edit)
 - Indeterminate checkbox - [Indeterminate checkbox component](/components/forms/#flavor-checkbox)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
+- Button Icon Error - [Button Icon Error](/components/buttons/#flavor-icon)
 - Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)
 - Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
 - Image Cards - [Figure Card Component](/components/images/#flavor-figure)
@@ -41,6 +43,7 @@ The following classes are now available:
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
+- Position utilities -[Utilities › Postion](/components/utilities/position/)
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 

@@ -66,7 +66,13 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
--
+- Utility bar a11y fixes
+  - Add landmark `role="footer"` to utility bar
+  - Add `aria-label="Utility Bar"` description to utility bar
+  - Add hidden heading to utility bar
+  - Add aria `role=dialog` and `aria-labelledby` to utility bar panel
+  - Change panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
+  - Place utility bar buttons inside `<ul>`
 
 **DEPRECATED**
 

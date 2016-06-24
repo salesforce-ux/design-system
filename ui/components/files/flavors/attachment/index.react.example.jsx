@@ -52,14 +52,12 @@ export let states = [
     label: 'File with image',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="javascript:void(0);" className={pf('text-link--reset')}>
-          <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
-            symbol="image"
-            image />
-        </a>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--16-by-9')}
+          titleClass={pf('image__title--card')}
+          symbol="image"
+          image />
       </div>
   },
   {
@@ -67,14 +65,12 @@ export let states = [
     label: 'File with no image',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="javascript:void(0);" className={pf('text-link--reset')}>
-          <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
-            symbol="pdf"
-            title="Proposal.pdf" />
-        </a>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--16-by-9')}
+          titleClass={pf('image__title--card')}
+          symbol="pdf"
+          title="Proposal.pdf" />
       </div>
   },
   {
@@ -82,15 +78,13 @@ export let states = [
     label: 'File with actions',
     element:
       <div className="demo-only" style={{ width: '50%' }}>
-        <a href="javascript:void(0);" className={pf('text-link--reset')}>
-          <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
-            symbol="image"
-            actions
-            image />
-        </a>
+        <Image
+          className={pf('image--card')}
+          cropClass={pf('image__crop--16-by-9')}
+          titleClass={pf('image__title--card')}
+          symbol="image"
+          actions
+          image />
       </div>
   }
 ];

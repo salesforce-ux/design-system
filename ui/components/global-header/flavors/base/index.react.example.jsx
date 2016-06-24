@@ -23,10 +23,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const SetupDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
-      <div className={pf('dropdown__header')}>
+      <li className={pf('dropdown__header')} role="separator">
         <span className={pf('text-title--caps')}>Setup</span>
-      </div>
-      <MenuItem>Setup Home</MenuItem>
+      </li>
+      <MenuItem tabIndex="0">Setup Home</MenuItem>
     </MenuList>
   </Menu>
 );
@@ -50,7 +50,7 @@ let ButtonIcon = props =>
     <span className={pf('assistive-text')}>{ props.assistiveText }</span>
   </button>;
 
-let GlobalHeader = props =>
+export let GlobalHeader = props =>
   <header className={pf('global-header_container')}>
     <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
     <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
@@ -63,10 +63,12 @@ let GlobalHeader = props =>
       <div className={pf('global-header__item global-header__item--search')}>
         <div className={className(pf('form-element lookup'), props.autocomplete ? pf('is-open'): null)}>
           <label className={pf('assistive-text')} htmlFor="global-search">Search Salesforce</label>
-          <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
-            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-            <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
-          </div>
+          { props.autocomplete ?
+            props.children
+            : <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
+                <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+                <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
+              </div> }
         </div>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center')}>
@@ -82,7 +84,7 @@ let GlobalHeader = props =>
           { props.setup ? SetupDropdown : null}
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <button className={pf('button')} title="person name">
+          <button className={pf('button')} title="person name" aria-haspopup="true">
             <span className={pf('avatar avatar--circle avatar--medium')}>
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>

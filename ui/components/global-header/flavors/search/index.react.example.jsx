@@ -12,53 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { GlobalHeader } from 'ui/components/global-header/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-//////////////////////////////////////////////
-// Partial(s)
-//////////////////////////////////////////////
-
-let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={ props.symbol } />
-    <span className={pf('assistive-text')}>{ props.assistiveText }</span>
-  </button>;
-
-let GlobalHeader = props =>
-  <header className={pf('global-header_container')}>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
-    <div className={pf('global-header grid grid--align-spread')}>
-      <div className={pf('global-header__item')}>
-        <div className={pf('global-header__logo')}>
-          <img src="/assets/images/logo.svg" alt="Salesforce.com" />
-        </div>
-      </div>
-      <div className={pf('global-header__item global-header__item--search')}>
-        { props.children }
-      </div>
-      <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="javascript:void(0);" title="View Title">
-            <span className={pf('avatar avatar--circle avatar--x-small')}>
-              <img src="/assets/images/avatar2.jpg" alt="person name" />
-            </span>
-          </a>
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
-        </li>
-      </ul>
-    </div>
-  </header>;
 
 //////////////////////////////////////////////
 // Export
@@ -70,63 +27,60 @@ export let states = [
     label: 'Active',
     element:
       <div className="demo-only" style={{ height: '260px' }}>
-        <GlobalHeader>
-          <div className={pf('form-element lookup is-open')}>
-            <label className={pf('assistive-text')} htmlFor="global-search">Search Salesforce</label>
-            <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
-              <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-              <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
-            </div>
-            <div className={pf('lookup__menu')} role="listbox">
-              <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
-              <ul className={pf('lookup__list')} role="presentation">
-                <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
-                    <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
-                    <div className={pf('media__body')}>
-                      <div className={pf('lookup__result-text')}>Salesforce - 1,000 Licenses</div>
-                      <span className={pf('lookup__result-meta text-body--small')}>Opportunity &bull; Prospecting</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
-                    <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
-                    <div className={pf('media__body')}>
-                      <div className={pf('lookup__result-text')}>Art Vandelay</div>
-                      <span className={pf('lookup__result-meta text-body--small')}>Contact &bull; avandelay@vandelay.com</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
-                    <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
-                    <div className={pf('media__body')}>
-                      <div className={pf('lookup__result-text')}>Vandelary Industries</div>
-                      <span className={pf('lookup__result-meta text-body--small')}>Account &bull; San Francisco</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
-                    <SvgIcon className={pf('icon icon-custom-8 icon--small media__figure')} sprite="custom" symbol="custom8" />
-                    <div className={pf('media__body')}>
-                      <div className={pf('lookup__result-text')}>Salesforce UK 2016 Events</div>
-                      <span className={pf('lookup__result-meta text-body--small')}>General Ledger &bull; $20,000</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
-                    <SvgIcon className={pf('icon icon-standard-lead icon--small media__figure')} sprite="standard" symbol="lead" />
-                    <div className={pf('media__body')}>
-                      <div className={pf('lookup__result-text')}>H.E. Pennypacker</div>
-                      <span className={pf('lookup__result-meta text-body--small')}>Lead &bull; Nursing</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <GlobalHeader autocomplete>
+          <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
+            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+            <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
+          </div>
+          <div className={pf('lookup__menu')} role="listbox">
+            <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
+            <ul className={pf('lookup__list')} role="presentation">
+              <li role="presentation">
+                <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
+                  <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
+                  <div className={pf('media__body')}>
+                    <div className={pf('lookup__result-text')}>Salesforce - 1,000 Licenses</div>
+                    <span className={pf('lookup__result-meta text-body--small')}>Opportunity &bull; Prospecting</span>
+                  </div>
+                </a>
+              </li>
+              <li role="presentation">
+                <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
+                  <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
+                  <div className={pf('media__body')}>
+                    <div className={pf('lookup__result-text')}>Art Vandelay</div>
+                    <span className={pf('lookup__result-meta text-body--small')}>Contact &bull; avandelay@vandelay.com</span>
+                  </div>
+                </a>
+              </li>
+              <li role="presentation">
+                <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
+                  <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
+                  <div className={pf('media__body')}>
+                    <div className={pf('lookup__result-text')}>Vandelary Industries</div>
+                    <span className={pf('lookup__result-meta text-body--small')}>Account &bull; San Francisco</span>
+                  </div>
+                </a>
+              </li>
+              <li role="presentation">
+                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
+                  <SvgIcon className={pf('icon icon-custom-8 icon--small media__figure')} sprite="custom" symbol="custom8" />
+                  <div className={pf('media__body')}>
+                    <div className={pf('lookup__result-text')}>Salesforce UK 2016 Events</div>
+                    <span className={pf('lookup__result-meta text-body--small')}>General Ledger &bull; $20,000</span>
+                  </div>
+                </a>
+              </li>
+              <li role="presentation">
+                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
+                  <SvgIcon className={pf('icon icon-standard-lead icon--small media__figure')} sprite="standard" symbol="lead" />
+                  <div className={pf('media__body')}>
+                    <div className={pf('lookup__result-text')}>H.E. Pennypacker</div>
+                    <span className={pf('lookup__result-meta text-body--small')}>Lead &bull; Nursing</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </GlobalHeader>
       </div>
@@ -136,75 +90,77 @@ export let states = [
     label: 'Typeahead',
     element:
       <div className="demo-only" style={{ height: '310px' }}>
-      <GlobalHeader>
-        <div className={pf('form-element lookup is-open')}>
-          <label className={pf('assistive-text')} htmlFor="global-search">Search Salesforce</label>
-          <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left-right')}>
-            <button className={pf('input__icon input__icon--right button button--icon')}>
-              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
-              <span className={pf('assistive-text')}>Clear</span>
-            </button>
-            <SvgIcon className={pf('input__icon input__icon--left')} sprite="utility" symbol="search" />
-            <input id="global-search" className={pf('input lookup__search-input')} type="search" defaultValue="ibm" />
-          </div>
-          <div className={pf('lookup__menu')} role="listbox">
-            <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label text-body--small')}>
-              <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="search" />
-              <span className={pf('truncate')}>"ibm" in Salesforce</span>
-              <span className={pf('col--bump-left shrink-none')}>Click "enter" to search</span>
-            </a>
-            <ul className={pf('lookup__list')} role="presentation">
-              <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
-                  <div className={pf('media__body')}>
-                    <div className={pf('lookup__result-text')}><mark>IBM</mark> - 1yr/100k</div>
-                    <span className={pf('lookup__result-meta text-body--small')}>Opportunity &bull; Proposal/Quote</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
-                  <div className={pf('media__body')}>
-                    <div className={pf('lookup__result-text')}><mark>IBM</mark></div>
-                    <span className={pf('lookup__result-meta text-body--small')}>Account  &bull; Menlo Park</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
-                  <div className={pf('media__body')}>
-                    <div className={pf('lookup__result-text')}><mark>IBM</mark> Watson</div>
-                    <span className={pf('lookup__result-meta text-body--small')}>Account  &bull; Menlo Park</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
-                  <div className={pf('media__body')}>
-                    <div className={pf('lookup__result-text')}>200 Service Licenses - <mark>IBM</mark></div>
-                    <span className={pf('lookup__result-meta text-body--small')}>Opportunity  &bull; Close-Won</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
-                  <div className={pf('media__body')}>
-                    <div className={pf('lookup__result-text')}>Art Vandelay (<mark>IBM</mark>)</div>
-                    <span className={pf('lookup__result-meta text-body--small')}>User &bull; Latex Salesman</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
-              <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="forward" />
-              <span className={pf('truncate')}>Go to <mark>Groups</mark> home</span>
-            </a>
-          </div>
+      <GlobalHeader autocomplete>
+        <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left-right')}>
+
+          <SvgIcon className={pf('input__icon input__icon--left')} sprite="utility" symbol="search" />
+          <input id="global-search" className={pf('input lookup__search-input')} type="search" defaultValue="ibm" />
+          <button className={pf('input__icon input__icon--right button button--icon')}>
+            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
+            <span className={pf('assistive-text')}>Clear the current search term</span>
+          </button>
+        </div>
+        <div className={pf('lookup__menu')} role="listbox">
+          <ul className={pf('lookup__list')} role="presentation">
+            <li role="presentation">
+              <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label text-body--small')}>
+                <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="search" />
+                <span className={pf('truncate')}>"ibm" in Salesforce</span>
+                <span className={pf('col--bump-left shrink-none')}>Click "enter" to search</span>
+              </a>
+            </li>
+            <li role="presentation">
+              <a className={pf('lookup__item-action media media--center')} id="option-01" href="javascript:void(0);" role="option">
+                <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
+                <div className={pf('media__body')}>
+                  <div className={pf('lookup__result-text')}><mark>IBM</mark> - 1yr/100k</div>
+                  <span className={pf('lookup__result-meta text-body--small')}>Opportunity &bull; Proposal/Quote</span>
+                </div>
+              </a>
+            </li>
+            <li role="presentation">
+              <a className={pf('lookup__item-action media media--center')} id="option-02" href="javascript:void(0);" role="option">
+                <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
+                <div className={pf('media__body')}>
+                  <div className={pf('lookup__result-text')}><mark>IBM</mark></div>
+                  <span className={pf('lookup__result-meta text-body--small')}>Account  &bull; Menlo Park</span>
+                </div>
+              </a>
+            </li>
+            <li role="presentation">
+              <a className={pf('lookup__item-action media media--center')} id="option-03" href="javascript:void(0);" role="option">
+                <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
+                <div className={pf('media__body')}>
+                  <div className={pf('lookup__result-text')}><mark>IBM</mark> Watson</div>
+                  <span className={pf('lookup__result-meta text-body--small')}>Account  &bull; Menlo Park</span>
+                </div>
+              </a>
+            </li>
+            <li role="presentation">
+              <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
+                <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
+                <div className={pf('media__body')}>
+                  <div className={pf('lookup__result-text')}>200 Service Licenses - <mark>IBM</mark></div>
+                  <span className={pf('lookup__result-meta text-body--small')}>Opportunity  &bull; Close-Won</span>
+                </div>
+              </a>
+            </li>
+            <li role="presentation">
+              <a className={pf('lookup__item-action media media--center')} id="option-04" href="javascript:void(0);" role="option">
+                <SvgIcon className={pf('icon icon-standard-contact icon--small media__figure')} sprite="standard" symbol="contact" />
+                <div className={pf('media__body')}>
+                  <div className={pf('lookup__result-text')}>Art Vandelay (<mark>IBM</mark>)</div>
+                  <span className={pf('lookup__result-meta text-body--small')}>User &bull; Latex Salesman</span>
+                </div>
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
+                <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="forward" />
+                <span className={pf('truncate')}>Go to <mark>Groups</mark> home</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </GlobalHeader>
       </div>

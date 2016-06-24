@@ -25,7 +25,7 @@ export let Image = props =>
     <a href="javascript:void(0);" className={className(pf('image__crop'), props.cropClass)}>
       { props.overlay ? <div className={pf('image--overlay')}></div> : null }
       { props.image ?
-        <img src="/assets/images/placeholder-img@16x9.jpg" alt="" /> :
+        <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
         <span className={pf('image__icon icon_container')} title={ props.symbol || 'unknown file type' }>
           <SvgIcon className={pf('icon')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
           <span className={pf('assistive-text')}>{ props.symbol || 'unknown file type' }</span>

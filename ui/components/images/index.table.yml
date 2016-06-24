@@ -72,3 +72,11 @@ classes:
     class: image__actions
     description: If file has actions, then this class helps with the positioning of those actions
     applied: <code>.{{cssPrefix}}button-group</code>
+  -
+    class: image--overlay
+    description: Applies overlay to an image
+    applied: <code>div</code>
+  -
+    class: image__text
+    description: Text inside of <code>.{{cssPrefix}}image__title</code>
+    applied: <code>span</code>

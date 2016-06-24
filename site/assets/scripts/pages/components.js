@@ -80,6 +80,13 @@ const updateComponentPreviewSVG = document => svg4everybody(document);
 
 
 const handleFlavorStatusChange = () => {
+
+  // always show when developing local
+  if (window.location.href.match('localhost')) {
+    return setPreference('status', 'prototype');
+  }
+
+  // show if someone has a link
   if (window.location.hash) {
     const askedFlavor = window.location.hash;
     const section = $(`[data-slds-status="prototype"] ${askedFlavor}`);

@@ -3,6 +3,18 @@
 
 ## Release [2.0.2] - June 16, 2016
 
+**FIXED**
+
+The following issues have now been resolved:
+
+- Card a11y fixes
+  - Card semantically changed to an `article`
+  - Card header semantically changed to a `header`
+  - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
+  - Wrap card header text in an `<h2>`
+
+## Release [2.0.2] - June 16, 2016
+
 **SITE IA/ENHANCEMENTS**
 - Renamed "Design" section to "Guidelines"
 - Moved "Accessibility" and "Voice & Tone" sections to Guidelines

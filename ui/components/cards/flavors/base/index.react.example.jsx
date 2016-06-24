@@ -16,7 +16,7 @@ import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const headerActionOverflow = (
-  <button className={pf('button button--icon-border-filled button--icon-x-small')}>
+  <button className={pf('button button--icon-border-filled button--icon-x-small')} aria-haspopup="true">
     <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
     <span className={pf('assistive-text')}>More Options</span>
   </button>
@@ -39,26 +39,28 @@ const headerSearch = (
 ///////////////////////////////////////////
 
 export let Card = props =>
-  <div className={className(pf('card'), props.className)}>
+  <article className={className(pf('card'), props.className)}>
     { props.children }
-  </div>;
+  </article>;
 
 export let CardHeader = props =>
-  <div className={className(pf('card__header grid'), props.className)}>
+  <header className={className(pf('card__header grid'), props.className)}>
     <div className={className(pf('media media--center has-flexi-truncate'), props.search ? pf('size--1-of-3') : null)}>
       { props.symbol ?
         <div className={pf('media__figure')}>
           <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--small')} sprite="standard" symbol={ props.symbol } />
         </div> : null }
       <div className={pf('media__body truncate')}>
-        <a href="javascript:void(0);" className={pf('text-link--reset')}>{ props.children }</a>
+        <h2>
+          <a href="javascript:void(0);" className={pf('text-link--reset')}>{ props.children }</a>
+        </h2>
       </div>
     </div>
     { props.search ? headerSearch : null }
     <div className={className(pf('no-flex'), props.search ? pf('size--1-of-3') : null)}>
       { props.actions == 'overflow' ? headerActionOverflow : headerAction }
     </div>
-  </div>;
+  </header>;
 
 export let CardBody = props =>
   <div className={className(pf('card__body'), props.className)}>

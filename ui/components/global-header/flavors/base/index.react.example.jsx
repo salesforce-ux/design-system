@@ -57,7 +57,7 @@ let GlobalHeader = props =>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
-          <img src="/assets/images/logo.svg" alt="Salesforce.com" />
+          <img src="/assets/images/logo.svg" alt="" />
         </div>
       </div>
       <div className={pf('global-header__item global-header__item--search')}>

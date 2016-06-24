@@ -66,7 +66,21 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
--
+- Global header a11y fixes
+  - Improve semantics of dropdown menus
+  - Apply `role=separator` to dropdown menu list items that do not have an actionable element
+  - Apply `role=presentation` to dropdown menu list items
+  - Changed `<p>` wrapping dropdown menu items text to `<span>`
+  - Dropdown menu items have a default `tabindex="-1"`, tab focused items change to a `tabindex="0"`
+  - Modify tab order of global header actions
+  - Add `title` attribute to global header actions
+  - Change avatar wrapper from anchor to a button
+  - Allow `slds-assistive-text` to become visible on focus if `slds-assistive-text--focus` is used
+  - Add aria roles to global search input
+  - Changed global search listbox options to be non-actionable
+  - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
+  - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
+  - Moved clear button to the right of the input to visually match tab order
 
 **DEPRECATED**
 

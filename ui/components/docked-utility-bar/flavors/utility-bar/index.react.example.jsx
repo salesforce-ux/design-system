@@ -19,16 +19,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 export let UtilityBarItem = props =>
-  <button className={className(pf('utility-bar__item button'), props.className)}>
-    <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol={ props.symbol } />
-    { props.children }
-  </button>;
+  <li>
+    <button className={className(pf('button utility-bar__item'), props.className)}>
+      <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol={ props.symbol } />
+      { props.children }
+    </button>
+  </li>;
 
 export let UtilityBar = props =>
-  <div className={pf('utility-bar_container')}>
-    <div className={pf('utility-bar')}>
+  <div className={pf('utility-bar_container')} role="footer" aria-label="Utility Bar">
+    <h2 className={pf('assistive-text')}>Utility Bar</h2>
+    <ul className={pf('utility-bar')}>
       { props.children }
-    </div>
+    </ul>
     { props.panel }
   </div>;
 

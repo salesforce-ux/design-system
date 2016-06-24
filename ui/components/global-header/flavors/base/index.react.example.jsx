@@ -62,12 +62,12 @@ export let GlobalHeader = props =>
       </div>
       <div className={pf('global-header__item global-header__item--search')}>
         <div className={className(pf('form-element lookup'), props.autocomplete ? pf('is-open'): null)}>
-          <label className={pf('assistive-text')} htmlFor="global-search">Search Salesforce</label>
+          <label className={pf('assistive-text')} htmlFor="global-search-01">Search Salesforce</label>
           { props.autocomplete ?
             props.children
             : <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
                 <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-                <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
+                <input id="global-search-01" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
               </div> }
         </div>
       </div>

@@ -52,8 +52,8 @@ let ButtonIcon = props =>
 
 export let GlobalHeader = props =>
   <header className={pf('global-header_container')}>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
+    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Navigation</a>
+    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Main Content</a>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>

@@ -1,7 +1,7 @@
 # Salesforce Lightning Design System
 # Release notes
 
-## Release [2.0.2] - June 16, 2016
+## Release [2.0.3] - Future
 
 **FIXED**
 

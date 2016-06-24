@@ -9,46 +9,50 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-const foldMap = monoid => xs => xs.reduce((acc, x) => acc.concat(monoid.of(x)), monoid.empty()).value;
+import _ from 'lodash';
+import React from 'react';
+import Heading from 'app_modules/site/components/page/heading';
+import PageBody from 'app_modules/site/components/page/body';
+import Status from 'app_modules/site/util/component/status';
+import { prefix as pf } from 'app_modules/ui/util/component';
+import { generateUI } from '../../scripts/gulp/generate-ui';
 
-const states = {devReady: 'dev-ready', prototype: 'prototype'};
+const crazyHackForUtilitiesNav = url =>
+  url.replace('/utilities', '/components/utilities');
 
-class Or {
-  constructor(x) {
-    this.value = x;
+class Prototypes extends React.Component {
+
+  prototypes() {
+    return _.flatMap(generateUI(), 'components')
+    .filter(x => Status.isPrototype(x.status))
+    .map(c => this.renderComponentLink(c));
   }
 
-  concat(other) {
-    return (this.value === states.devReady || other.value === states.devReady) ? Or.of(states.devReady) : Or.of(states.prototype);
+  renderComponentLink(c) {
+    const [flavor] = c.flavors;
+    const link = crazyHackForUtilitiesNav(`/${c.path}/#flavor-${flavor.id}`);
+    return (
+      <li>
+        <a href={link}>
+          {c.title}
+        </a>
+      </li>
+    );
   }
+
+  render () {
+    return (
+      <PageBody {...this.props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>
+        <Heading type="h2" id="prototypes" className="site-text-heading--large">Prototypes</Heading>
+        <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
+          <ul className={pf('list--dotted')}>
+            {this.prototypes()}
+          </ul>
+        </div>
+      </PageBody>
+    );
+  }
+
 }
 
-Or.of = x => new Or(x);
-Or.empty = () => Or.of(states.prototype);
-
-
-class And {
-  constructor(x) {
-    this.value = x;
-  }
-
-  concat(other) {
-    return (other.value === states.devReady && this.value === states.devReady) ? And.of(states.devReady) : And.of(states.prototype);
-  }
-}
-
-And.of = x => new And(x);
-And.empty = () => And.of(states.devReady);
-
-const shouldDisplay = (pref, status) => {
-  const showAll = !pref || pref === 'prototype';
-  const missingStatusSoSkipForNow = !status;
-  const isActuallyDevReady = status === states.devReady;
-  return showAll || missingStatusSoSkipForNow || isActuallyDevReady;
-};
-
-const isPrototype = status =>
-  states.prototype === status;
-
-export default { and: foldMap(And), or: foldMap(Or), shouldDisplay, states, isPrototype };
-
+export default <Prototypes />;

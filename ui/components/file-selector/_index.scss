@@ -135,11 +135,11 @@
     @include absolute-center;
     background: $color-background-alt;
     box-shadow: $shadow-drop-down;
+    border-radius: $border-radius-medium;
     flex-direction: column;
   }
 
   .#{$css-prefix}file-selector__text {
     margin-top: $spacing-small;
-    font-size: $font-size-large;
   }
 }

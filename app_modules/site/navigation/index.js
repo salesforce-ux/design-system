@@ -81,12 +81,36 @@ export const getActiveNavItems = (item, path) => {
   return items;
 };
 
+const utilities = {
+  label: 'Utilities',
+  children: getUI('utilities').map(component => ({
+    label: component.title
+  }))
+};
+
+const touch = {
+  label: 'Touch',
+  separator: true,
+  children: getUI('touch').map(component => ({
+    label: component.title
+  }))
+};
+
+const components = getUI('components').map((component, index) => ({
+  label: component.title,
+  status: component.status,
+  separator: index === 0
+}));
+
 export default () => formatNavItem({
   label: 'Root',
   path: '/',
   children: [
     {
-      label: 'Getting Started',
+      label: 'Getting Started'
+    },
+    {
+      label: 'Platforms',
       children: [
         {
           label: 'Visualforce'
@@ -98,16 +122,8 @@ export default () => formatNavItem({
           label: 'Heroku'
         },
         {
-          label: 'Markup and Style'
-        },
-        {
-          label: 'Native',
-          children: [
-            {
-              id: 'ios',
-              label: 'iOS',
-            }
-          ]
+          id: 'ios',
+          label: 'iOS'
         }
       ]
     },
@@ -136,6 +152,9 @@ export default () => formatNavItem({
           label: 'Loading'
         },
         {
+          label: 'Markup and Style'
+        },
+        {
           label: 'Messaging'
         },
         {
@@ -158,22 +177,7 @@ export default () => formatNavItem({
     {
       route: 'components',
       label: 'Components',
-      children: getUI('components').map(component => ({
-        label: component.title,
-        status: component.status
-      })).concat({
-        label: 'Touch',
-        separator: true,
-        children: getUI('touch').map(component => ({
-          label: component.title
-        }))
-      }).concat({
-        label: 'Utilities',
-        separator: true,
-        children: getUI('utilities').map(component => ({
-          label: component.title
-        }))
-      })
+      children: [utilities, touch].concat(components)
     },
     {
       label: 'Tokens'

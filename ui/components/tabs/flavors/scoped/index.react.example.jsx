@@ -18,19 +18,17 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 export let Default = props =>
-<div className="demo-only">
-  <Tabs flavor="scoped" selectedIndex={props.selectedIndex || 0}>
-    <Tabs.Item title="Item One" id="tab-scoped-1">
-      Item One Content
-    </Tabs.Item>
-    <Tabs.Item title="Item Two" id="tab-scoped-2">
-      Item Two Content
-    </Tabs.Item>
-    <Tabs.Item title="Item Three" id="tab-scoped-3">
-      Item Three Content
-    </Tabs.Item>
-  </Tabs>
-</div>;
+<Tabs flavor="scoped" selectedIndex={props.selectedIndex || 0}>
+  <Tabs.Item title="Item One" id="tab-scoped-1">
+    Item One Content
+  </Tabs.Item>
+  <Tabs.Item title="Item Two" id="tab-scoped-2">
+    Item Two Content
+  </Tabs.Item>
+  <Tabs.Item title="Item Three" id="tab-scoped-3">
+    Item Three Content
+  </Tabs.Item>
+</Tabs>;
 
 //////////////////////////////////////////////
 // Export

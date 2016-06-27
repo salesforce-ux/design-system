@@ -99,6 +99,9 @@ export default () => formatNavItem({
   path: '/',
   children: [
     {
+      label: 'Getting Started'
+    },
+    {
       label: 'Platforms',
       children: [
         {

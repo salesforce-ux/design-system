@@ -113,7 +113,7 @@ module.exports = {
     },
     {
       source: '/getting-started/markup-and-style',
-      destination: '/guidelines//markup-and-style',
+      destination: '/guidelines/markup-and-style',
       status: 301
     }
   ]

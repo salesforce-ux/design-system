@@ -83,15 +83,15 @@ export const getActiveNavItems = (item, path) => {
 
 const utilities = {
   label: 'Utilities',
-  separator: true,
   children: getUI('utilities').map(component => ({
     label: component.title
   }))
 };
 
-const components = getUI('components').map(component => ({
+const components = getUI('components').map((component, index) => ({
   label: component.title,
-  status: component.status
+  status: component.status,
+  separator: index === 0
 }));
 
 export default () => formatNavItem({

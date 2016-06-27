@@ -114,6 +114,7 @@ export default () => formatNavItem({
           label: 'Heroku'
         },
         {
+          id: 'ios',
           label: 'iOS'
         }
       ]

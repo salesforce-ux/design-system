@@ -81,6 +81,19 @@ export const getActiveNavItems = (item, path) => {
   return items;
 };
 
+const utilities = {
+  label: 'Utilities',
+  separator: true,
+  children: getUI('utilities').map(component => ({
+    label: component.title
+  }))
+};
+
+const components = getUI('components').map(component => ({
+  label: component.title,
+  status: component.status
+}));
+
 export default () => formatNavItem({
   label: 'Root',
   path: '/',
@@ -158,16 +171,7 @@ export default () => formatNavItem({
     {
       route: 'components',
       label: 'Components',
-      children: getUI('components').map(component => ({
-        label: component.title,
-        status: component.status
-      })).concat({
-        label: 'Utilities',
-        separator: true,
-        children: getUI('utilities').map(component => ({
-          label: component.title
-        }))
-      })
+      children: [utilities].concat(components)
     },
     {
       label: 'Tokens'

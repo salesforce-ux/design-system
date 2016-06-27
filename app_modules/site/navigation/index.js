@@ -99,7 +99,7 @@ export default () => formatNavItem({
   path: '/',
   children: [
     {
-      label: 'Getting Started',
+      label: 'Platforms',
       children: [
         {
           label: 'Visualforce'
@@ -111,16 +111,7 @@ export default () => formatNavItem({
           label: 'Heroku'
         },
         {
-          label: 'Markup and Style'
-        },
-        {
-          label: 'Native',
-          children: [
-            {
-              id: 'ios',
-              label: 'iOS',
-            }
-          ]
+          label: 'iOS',
         }
       ]
     },
@@ -147,6 +138,9 @@ export default () => formatNavItem({
         },
         {
           label: 'Loading'
+        },
+        {
+          label: 'Markup and Style'
         },
         {
           label: 'Messaging'

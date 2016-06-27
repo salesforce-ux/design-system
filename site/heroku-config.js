@@ -90,6 +90,31 @@ module.exports = {
       source: '/resources/links',
       destination: '/articles',
       status: 301
+    },
+    {
+      source: '/getting-started/visualforce',
+      destination: '/platforms/visualforce',
+      status: 301
+    },
+    {
+      source: '/getting-started/lightning',
+      destination: '/platforms/lightning',
+      status: 301
+    },
+    {
+      source: '/getting-started/heroku',
+      destination: '/platforms/heroku',
+      status: 301
+    },
+    {
+      source: '/getting-started/native/ios',
+      destination: '/platforms/ios',
+      status: 301
+    },
+    {
+      source: '/getting-started/markup-and-style',
+      destination: '/guidelines//markup-and-style',
+      status: 301
     }
   ]
 };

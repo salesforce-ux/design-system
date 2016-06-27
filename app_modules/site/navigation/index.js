@@ -90,7 +90,6 @@ const utilities = {
 
 const touch = {
   label: 'Touch',
-  separator: true,
   children: getUI('touch').map(component => ({
     label: component.title
   }))

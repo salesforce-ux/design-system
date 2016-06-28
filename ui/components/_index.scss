@@ -12,13 +12,16 @@
 @import
 
   // Activity Timeline
-  'activity-timeline/flavors/base/index',
+  'activity-timeline/index',
+
+  // Badges
+  'badges/index',
 
   // Breadcrumbs
-  'breadcrumbs/flavors/base/index',
+  'breadcrumbs/index',
 
   // Button Groups
-  'button-groups/flavors/base/index',
+  'button-groups/index',
 
   // Button
   'buttons/flavors/base/index',
@@ -26,16 +29,16 @@
   'buttons/flavors/icon/index',
 
   // Icons
-  'icons/flavors/base/index',
+  'icons/index',
   'icons/flavors/icon-colors/index',
-  'icons/flavors/background-colors/index',
   'icons/flavors/sizes/index',
 
   // Card
-  'cards/flavors/base/index',
+  'cards/index',
   'cards/flavors/base-compact/index',
 
   // Forms
+  'forms/index',
   'forms/flavors/input/index',
   'forms/flavors/textarea/index',
   'forms/flavors/radio/index',
@@ -45,7 +48,6 @@
   'forms/flavors/select/index',
   'forms/flavors/checkbox-alternate/index',
   'forms/flavors/multi-select/index',
-  'forms/flavors/form-element/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
   'forms/flavors/inline-form/index',
@@ -55,7 +57,7 @@
   // File selector
   'file-selector/index',
 
-  // Tooltip
+  // Tooltip - This is deprecated
   'tooltips/flavors/base/index',
 
   // Page Headers
@@ -65,26 +67,26 @@
   'page-headers/flavors/object-home/index',
 
   // Panels
-  'panels/flavors/detail/index',
+  'panels/index',
   'panels/flavors/filtering/index',
 
   // Popovers
-  'popovers/flavors/base/index',
+  'popovers/index',
   'popovers/flavors/tooltips/index',
   'popovers/flavors/panels/index',
   'popovers/flavors/nubbins/index',
 
   // Menus
-  'menus/flavors/dropdown/index',
+  'menus/index',
   'menus/flavors/picklist/index',
   'menus/flavors/action-overflow/index',
 
   // Datepicker
-  'datepickers/flavors/base/index',
+  'datepickers/index',
   'datepickers/flavors/time/index',
 
   // Docked Composer
-  'docked-composer/flavors/base/index',
+  'docked-composer/index',
   'docked-composer/flavors/email/index',
   'docked-composer/flavors/task/index',
 
@@ -99,6 +101,7 @@
   'global-navigation/index',
 
   // Publishers
+  'publishers/index',
   'publishers/flavors/discussion-feed/index',
   'publishers/flavors/comment/index',
 
@@ -109,19 +112,20 @@
   'feeds/flavors/post-with-attachments/index',
 
   // Modal
-  'modals/flavors/base/index',
+  'modals/index',
 
   // App Launcher
   'app-launcher/index',
 
   // Pills
-  'pills/flavors/base/index',
+  'pills/index',
 
   // Process
   'process/flavors/wizard/index',
   'process/flavors/sales-path-coach/index',
 
   // Spinners
+  'spinners/index',
   'spinners/flavors/small/index',
   'spinners/flavors/medium/index',
   'spinners/flavors/large/index',
@@ -129,7 +133,7 @@
   'spinners/flavors/inverse-small/index',
 
   // Title
-  'tiles/flavors/base/index',
+  'tiles/index',
   'tiles/flavors/board/index',
 
   // Tabs
@@ -151,9 +155,6 @@
   // Images
   'images/flavors/avatar/index',
   'images/flavors/figure/index',
-
-  // Badges
-  'badges/flavors/base/index',
 
   // Tables
   'data-tables/index',

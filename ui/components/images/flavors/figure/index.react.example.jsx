@@ -28,7 +28,7 @@ export let Image = props =>
         <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
         <span className={pf('image__icon icon_container')} title={ props.symbol || 'unknown file type' }>
           <SvgIcon className={pf('icon')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-          <span className={pf('assistive-text')}>{ props.symbol || 'unknown file type' }</span>
+          <span className={pf('assistive-text')}>{ props.title || 'Image Title' }</span>
         </span>
       }
     </a>

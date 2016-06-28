@@ -134,10 +134,10 @@ export default () => {
       before_listen_dom() {
         setStrategies([DefaultsStrategy(), LocalStorageStrategy()]);
       },
-      listen_dom: delegate =>  {
+      listen_dom: delegate => {
         delegate('change', '#status-dropdown', handleStatusChange);
       },
-      after_listen_dom: delegate =>  {
+      after_listen_dom: delegate => {
         sync();
       }
     }

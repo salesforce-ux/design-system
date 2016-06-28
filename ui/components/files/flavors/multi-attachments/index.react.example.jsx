@@ -25,23 +25,19 @@ export let states = [
     element:
       <ul className={pf('grid grid--pull-padded')}>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>
-            <Image
-              className={pf('image--card')}
-              cropClass={pf('image__crop--16-by-9')}
-              titleClass={pf('image__title--card')}
-              symbol="image"
-              image />
-          </a>
+          <Image
+            className={pf('image--card')}
+            cropClass={pf('image__crop--16-by-9')}
+            titleClass={pf('image__title--card')}
+            symbol="image"
+            image />
         </li>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>
-            <Image
-              className={pf('image--card')}
-              cropClass={pf('image__crop--16-by-9')}
-              titleClass={pf('image__title--card')}
-              symbol="pdf" />
-          </a>
+          <Image
+            className={pf('image--card')}
+            cropClass={pf('image__crop--16-by-9')}
+            titleClass={pf('image__title--card')}
+            symbol="pdf" />
         </li>
       </ul>
   },
@@ -51,33 +47,28 @@ export let states = [
     element:
       <ul className={pf('grid grid--pull-padded')}>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>
-            <Image
-              className={pf('image--card')}
-              cropClass={pf('image__crop--16-by-9')}
-              titleClass={pf('image__title--card')}
-              symbol="image"
-              image />
-          </a>
+          <Image
+            className={pf('image--card')}
+            cropClass={pf('image__crop--16-by-9')}
+            titleClass={pf('image__title--card')}
+            symbol="image"
+            image />
         </li>
-        <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>
-            <Image
-              className={pf('image--card')}
-              cropClass={pf('image__crop--16-by-9')}
-              titleClass={pf('image__title--card')}
-              symbol="pdf" />
-          </a>
+      <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
+          <Image
+            className={pf('image--card')}
+            cropClass={pf('image__crop--16-by-9')}
+            titleClass={pf('image__title--card')}
+            symbol="pdf" />
         </li>
         <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>
-            <Image
-              className={pf('image--card')}
-              cropClass={pf('image__crop--16-by-9')}
-              titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
-              title="22+"
-              image />
-          </a>
+          <Image
+            className={pf('image--card')}
+            cropClass={pf('image__crop--16-by-9')}
+            titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+            title="22+"
+            image
+            overlay />
         </li>
       </ul>
   }

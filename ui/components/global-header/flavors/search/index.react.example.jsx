@@ -41,9 +41,9 @@ export let states = [
               aria-expanded="true"
               aria-autocomplete="list" />
           </div>
-          <div className={pf('lookup__menu')} id="global-search-list-01" role="listbox">
+          <div className={pf('lookup__menu')} id="global-search-list-01" role="presentation">
             <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
-            <ul className={pf('lookup__list')} role="presentation">
+            <ul className={pf('lookup__list')} role="listbox">
               <li role="presentation">
                 <span className={pf('lookup__item-action media media--center')} id="option-01" role="option">
                   <SvgIcon className={pf('icon icon-standard-opportunity icon--small media__figure')} sprite="standard" symbol="opportunity" />
@@ -121,8 +121,8 @@ export let states = [
             <span className={pf('assistive-text')}>Clear the current search term</span>
           </button>
         </div>
-        <div className={pf('lookup__menu')} id="global-search-list-01" role="listbox">
-          <ul className={pf('lookup__list')} role="presentation">
+        <div className={pf('lookup__menu')} id="global-search-list-01">
+          <ul className={pf('lookup__list')} role="listbox">
             <li role="presentation">
               <span className={pf('lookup__item-action lookup__item-action--label text-body--small has-focus')} id="option-00" role="option">
                 <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="search" />

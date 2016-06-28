@@ -23,9 +23,9 @@ export let Tile = props =>
   <div className={className(pf('tile'), props.className, props.actions ? pf('hint-parent') : null)}>
     { props.actions ?
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('truncate')} title={ props.title || 'Title' }>
+        <h3 className={pf('truncate')} title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
-        </p>
+        </h3>
         <ButtonIcon
           className={pf('shrink-none')}
           flavor="icon-border-filled,icon-x-small"
@@ -35,9 +35,9 @@ export let Tile = props =>
           assistiveText="Show More" />
       </div>
     :
-      <p className={pf('truncate')} title={ props.title || 'Title' }>
+      <h3 className={pf('truncate')} title={ props.title || 'Title' }>
         <a href="javascript:void(0);">{ props.title || 'Title' }</a>
-      </p>
+      </h3>
     }
     <div className={pf('tile__detail text-body--small')}>
       { props.children }
@@ -54,9 +54,9 @@ export let TileMedia = props =>
     <div className={pf('media__body')}>
       { props.actions ?
         <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-          <p className={pf('truncate')} title={ props.title || 'Title' }>
+          <h3 className={pf('truncate')} title={ props.title || 'Title' }>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
-          </p>
+          </h3>
           <ButtonIcon
             className={pf('shrink-none')}
             flavor="icon-border-filled,icon-x-small"
@@ -66,9 +66,9 @@ export let TileMedia = props =>
             assistiveText="Show More" />
         </div>
       :
-        <p className={pf('truncate')} title={ props.title || 'Title' }>
+        <h3 className={pf('truncate')} title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
-        </p>
+        </h3>
       }
       <div className={pf('tile__detail text-body--small')}>
         { props.children }

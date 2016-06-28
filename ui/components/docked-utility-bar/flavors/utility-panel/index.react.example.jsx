@@ -29,7 +29,7 @@ const dialingIcon = (
 export let UtilityPanel = props =>
   <div className={className(pf('utility-panel grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <div className={pf('utility-panel__header grid shrink-none')}>
-      <a href="javascript:void(0);" className={pf('utility-panel__header-label-action grow')}>
+      <div className={pf('utility-panel__header-label')}>
         <div className={pf('media media--center')}>
           <div className={pf('media__figure')}>
             <span className={pf('icon_container')}>
@@ -41,8 +41,8 @@ export let UtilityPanel = props =>
             <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
           </div>
         </div>
-      </a>
-      <div className={pf('utility-panel__header-icon-action')}>
+      </div>
+      <div className={pf('utility-panel__header-icon-action col--bump-left')}>
         <button className={pf('button button--icon button--icon-inverse')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="minimize_window" />
           <span className={pf('assistive-text')}>Minimize</span>

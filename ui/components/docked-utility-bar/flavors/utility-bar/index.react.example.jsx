@@ -27,13 +27,13 @@ export let UtilityBarItem = props =>
   </li>;
 
 export let UtilityBar = props =>
-  <div className={pf('utility-bar_container')} role="footer" aria-label="Utility Bar">
+  <footer className={pf('utility-bar_container')} role="footer" aria-label="Utility Bar">
     <h2 className={pf('assistive-text')}>Utility Bar</h2>
     <ul className={pf('utility-bar')}>
       { props.children }
     </ul>
     { props.panel }
-  </div>;
+  </footer>;
 
 
 ///////////////////////////////////////////

@@ -70,7 +70,7 @@ const flavorLink = (comp, flavor) =>
   crazyHackForUtilitiesNav(`/${comp.path}/#flavor-${flavor.id}`);
 
 const flavors = comp =>
-  comp.flavors.map(fl => Object.assign({link: flavorLink(comp, fl)}, fl));
+  comp.flavors.filter(x => Status.isPrototype(x.status)).map(fl => Object.assign({link: flavorLink(comp, fl)}, fl));
 
 const Prototypes = props => (
   <PageBody {...props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>

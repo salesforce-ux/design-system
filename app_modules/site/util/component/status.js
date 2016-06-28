@@ -41,7 +41,7 @@ And.of = x => new And(x);
 And.empty = () => And.of(states.devReady);
 
 const shouldDisplay = (pref, status) => {
-  const showAll = !pref || pref === 'prototype';
+  const showAll = !pref || pref === states.prototype;
   const missingStatusSoSkipForNow = !status;
   const isActuallyDevReady = status === states.devReady;
   return showAll || missingStatusSoSkipForNow || isActuallyDevReady;

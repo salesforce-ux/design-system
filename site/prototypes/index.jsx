@@ -20,39 +20,55 @@ import { generateUI } from '../../scripts/gulp/generate-ui';
 const crazyHackForUtilitiesNav = url =>
   url.replace('/utilities', '/components/utilities');
 
-class Prototypes extends React.Component {
+const anyFlavorIsPrototype = comp =>
+  [comp.flavors.map(x => x.status)]
+  .map(Status.and)
+  .map(Status.isPrototype)[0];
 
-  prototypes() {
-    return _.flatMap(generateUI(), 'components')
-    .filter(x => Status.isPrototype(x.status))
-    .map(c => this.renderComponentLink(c));
-  }
+const componentsWithPrototypes = () =>
+  _.flatMap(generateUI(), 'components')
+  .filter(anyFlavorIsPrototype);
 
-  renderComponentLink(c) {
-    const [flavor] = c.flavors;
-    const link = crazyHackForUtilitiesNav(`/${c.path}/#flavor-${flavor.id}`);
-    return (
-      <li>
-        <a href={link}>
-          {c.title}
-        </a>
-      </li>
-    );
-  }
+const Leaf = props => (
+  <div className="slds-tree__item">
+    <a href={props.link} tabIndex="-1" role="presentation" className="slds-truncate">{props.id}</a>
+  </div>
+);
 
-  render () {
-    return (
-      <PageBody {...this.props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>
-        <Heading type="h2" id="prototypes" className="site-text-heading--large">Prototypes</Heading>
-        <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-          <ul className={pf('list--dotted')}>
-            {this.prototypes()}
-          </ul>
-        </div>
-      </PageBody>
-    );
-  }
+const Branch = props => (
+  <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
+    <li role="treeitem" aria-level="1">
+      <Leaf link={props.path} id={props.id} />
+      <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
+        <li role="treeitem" aria-level="2">
+          {props.items.map(i => <Leaf {...i} />) }
+        </li>
+      </ul>
+    </li>
+  </ul>
+);
 
-}
+const Tree = props => (
+  <div className="slds-tree_container" role="application">
+    { props.children }
+  </div>
+);
+
+const flavorLink = (comp, flavor) =>
+  crazyHackForUtilitiesNav(`/${comp.path}/#flavor-${flavor.id}`);
+
+const flavors = comp =>
+  comp.flavors.map(fl => Object.assign({link: flavorLink(comp, fl)}, fl));
+
+const Prototypes = props => (
+  <PageBody {...props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>
+    <Heading type="h2" id="prototypes" className="site-text-heading--large">Prototypes</Heading>
+    <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
+      <Tree>
+        { componentsWithPrototypes().map(comp => <Branch id={comp.id} items={flavors(comp)} />) }
+      </Tree>
+    </div>
+  </PageBody>
+);
 
 export default <Prototypes />;

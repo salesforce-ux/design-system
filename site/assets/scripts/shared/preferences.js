@@ -126,7 +126,7 @@ const handleStatusChange = event => set('status', event.target.value);
 
 /**
  * Preferences
- * Sets up a listener and emitts events for when the dropdown changes.
+ * Sets up a listener and emits events for when the dropdown changes.
  */
 export default () => {
   return {

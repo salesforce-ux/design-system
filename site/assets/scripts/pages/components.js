@@ -78,11 +78,13 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
+// always show when developing local or a pr app
+const alwaysShowPrototypeForHref = href =>
+  href.match('localhost') || href.match(/pr-(\d+)/);
 
 const handleFlavorStatusChange = () => {
 
-  // always show when developing local
-  if (window.location.href.match('localhost')) {
+  if (alwaysShowPrototypeForHref(window.location.href)) {
     return setPreference('status', 'prototype');
   }
 

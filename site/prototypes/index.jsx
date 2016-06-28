@@ -13,7 +13,9 @@ import _ from 'lodash';
 import React from 'react';
 import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import Status from 'app_modules/site/util/component/status';
+import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { generateUI } from '../../scripts/gulp/generate-ui';
 
@@ -29,28 +31,38 @@ const componentsWithPrototypes = () =>
   _.flatMap(generateUI(), 'components')
   .filter(anyFlavorIsPrototype);
 
-const Leaf = props => (
+
+const TreeItem = props => (
   <div className="slds-tree__item">
+
+    <button className={classNames('slds-button slds-m-right--x-small', {'slds-is-disabled': props.disabled })} aria-controls={props.id}>
+      <SvgIcon sprite="utility" symbol="chevronright" className={pf('button__icon button__icon--small')} />
+      <span className="slds-assistive-text">Toggle</span>
+    </button>
     <a href={props.link} tabIndex="-1" role="presentation" className="slds-truncate">{props.id}</a>
   </div>
 );
 
+const Leaf = props => (
+  <li role="treeitem" id={props.id} aria-level="2">
+    <TreeItem {...(Object.assign({disabled: true}, props))} />
+  </li>
+);
+
 const Branch = props => (
-  <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
-    <li role="treeitem" aria-level="1">
-      <Leaf link={props.path} id={props.id} />
-      <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
-        <li role="treeitem" aria-level="2">
-          {props.items.map(i => <Leaf {...i} />) }
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <li role="treeitem" id={props.id} aria-level="1" aria-expanded="true">
+    <TreeItem link={props.path} id={props.id} />
+    <ul className="slds-is-expanded" role="group">
+      {props.items.map(i => <Leaf {...i} />) }
+    </ul>
+  </li>
 );
 
 const Tree = props => (
   <div className="slds-tree_container" role="application">
-    { props.children }
+    <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
+      { props.children }
+    </ul>
   </div>
 );
 
@@ -63,7 +75,7 @@ const flavors = comp =>
 const Prototypes = props => (
   <PageBody {...props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>
     <Heading type="h2" id="prototypes" className="site-text-heading--large">Prototypes</Heading>
-    <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
+    <div className={pf('m-top--xx-large col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
       <Tree>
         { componentsWithPrototypes().map(comp => <Branch id={comp.id} items={flavors(comp)} />) }
       </Tree>

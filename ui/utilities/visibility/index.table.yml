@@ -60,3 +60,7 @@ classes:
     description: Hides an element yet enables a screen reader to read the element that is hidden
     applied: any element
     notes: This should be used over other methods when you don't want to hide from screenreaders
+  -
+    class: assistive-text--focus
+    description: Enables <code>.{{cssPrefix}}assistive-text</code> to become visible on focus
+    applied: <code>.{{cssPrefix}}assistive-text</code>

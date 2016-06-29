@@ -12,6 +12,12 @@
   width: 100%;
   top: 0;
   left: 0;
+
+  // Position for when assistive text becomes into focus
+  .#{$css-prefix}assistive-text--focus {
+    background: $color-background-alt;
+    top: 0;
+  }
 }
 
 .#{$css-prefix}global-header {

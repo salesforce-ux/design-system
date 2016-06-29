@@ -82,7 +82,7 @@
 
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin;
+    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {
@@ -101,7 +101,7 @@
 
   &.#{$css-prefix}has-error {
     background-color: $color-background-highlight;
-    box-shadow: $color-border-error 0 0 0 $border-width-thick;
+    box-shadow: $color-border-error 0 0 0 $border-width-thick inset;
   }
 }
 

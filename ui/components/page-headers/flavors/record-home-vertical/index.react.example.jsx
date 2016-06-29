@@ -68,51 +68,50 @@ export default (
       </div>
       <ul className={pf('list--vertical-space-medium m-left--xx-small')}>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 1">Field 1</div>
+          <div className={pf('text-title m-bottom--xx-small')}>Field 1</div>
           <div className={pf('text-body--regular')} title="Description that demonstrates truncation with a long text field">
             Description that demonstrates a long text field and will eventually wrap.
           </div>
         </li>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 2">Field 2</div>
+          <div className={pf('text-title m-bottom--xx-small')}>Field 2</div>
           <div className={pf('text-body--regular')} title="Hyperlink">
             <a href="javascript:void(0);">Hyperlink</a>
           </div>
         </li>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 3">Field 3</div>
+          <div className={pf('text-title m-bottom--xx-small')}>Field 3</div>
           <div className={pf('truncate')} title="Description">
             Description
           </div>
         </li>
         <li className={pf('item')}>
-          <a href="javascript:void(0);" className={pf('text-link--reset')} aria-haspopup="true">
-            <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 4 (3)">Field 4 (3)
-              <div className={pf('icon_container')}>
-                <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="down" />
-                <span className={pf('assistive-text')}>More Actions</span>
-              </div>
-            </div>
-            <div className={pf('text-body--regular')}>
-              <div>1 Market St</div>
-              <div>San Francisco, CA 94105</div>
-            </div>
-          </a>
+          <div className={pf('text-title m-bottom--xx-small')}>
+            <button className={pf('slds-button slds-text-link--reset')} aria-haspopup="true">
+              Field 4 (3)
+              <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
+              <span className={pf('assistive-text')}>More Actions</span>
+            </button>
+          </div>
+          <div className={pf('text-body--regular')}>
+            <div>1 Market St</div>
+            <div>San Francisco, CA 94105</div>
+          </div>
         </li>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 5">Field 5</div>
+          <div className={pf('text-title m-bottom--xx-small')}>Field 5</div>
           <div className={pf('text-body--regular')} title="Description">
             Description
           </div>
         </li>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 6">Field 6</div>
+          <div className={pf('text-title m-bottom--xx-small')}>Field 6</div>
           <div className={pf('text-body--regular')} title="Description">
             Description
           </div>
         </li>
         <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')} title="Field 7">Field 7</div>
+          <div className={pf('text-title truncate m-bottom--xx-small')}>Field 7</div>
           <div className={pf('text-body--regular')} title="Description">
             Description
           </div>

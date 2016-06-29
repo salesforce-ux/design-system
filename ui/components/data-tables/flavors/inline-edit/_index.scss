@@ -36,7 +36,7 @@
 
   td,
   tbody th,
-  tbody .#{$css-prefix}cell-shrink:first-child { // Remove padding
+  .#{$css-prefix}cell-shrink:first-child { // Remove padding
     padding: 0;
   }
 }

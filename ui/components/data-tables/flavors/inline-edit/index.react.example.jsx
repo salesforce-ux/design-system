@@ -35,7 +35,8 @@ let Thead = props =>
       { props.rowError ?
         <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"><span className={pf('slds-assistive-text')}>Errors</span></th>
       : null }
-      <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
+      <th className={pf('cell-shrink')} scope="col">
+        <div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Address">Address</Th>

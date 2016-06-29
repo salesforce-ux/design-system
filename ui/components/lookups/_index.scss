@@ -15,7 +15,7 @@
 
   &__list {
     // crazy calc - line height of primary text + line height of meta text - the offset to bring the meta up a bit + the top/bottom padding multipied by how many items I want to show
-    max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 5);
+    max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 7);
     overflow-y: auto;
   }
 
@@ -77,8 +77,10 @@
     border-radius: 0;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.#{$css-prefix}has-focus {
       outline: 0;
+      cursor: pointer;
       background-color: $color-background-row-hover;
       color: $color-text-default;
       text-decoration: none;

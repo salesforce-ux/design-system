@@ -78,8 +78,17 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
+// always show when developing local or a pr app
+const alwaysShowPrototypeForHref = href =>
+  href.match('localhost') || href.match(/pr-(\d+)/);
 
 const handleFlavorStatusChange = () => {
+
+  if (alwaysShowPrototypeForHref(window.location.href)) {
+    return setPreference('status', 'prototype');
+  }
+
+  // show if someone has a link
   if (window.location.hash) {
     const askedFlavor = window.location.hash;
     const section = $(`[data-slds-status="prototype"] ${askedFlavor}`);

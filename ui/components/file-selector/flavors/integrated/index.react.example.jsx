@@ -17,13 +17,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let IntegratedFileSelector = props =>
   <div className={className(pf('file-selector'), props.className)}>
-    <div className={className(pf('file-selector__dropzone'), props.drag ? pf('has-drag') : null, props.draggover ? pf('has-drag-over') : null)}>
-      <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} tabIndex={props.drag ? '0' : '-1'} />
+    <div className={className(pf('file-selector__dropzone'), props.drag ? pf('has-drag') : null, props.draggover ? pf('has-drag-over') : null)} aria-hidden="true">
+      <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} tabIndex="-1" />
       <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
         { props.draggoverError ?
-          <SvgIcon className={pf('file-selector__body-icon icon icon-text-default')} sprite="utility" symbol="close" />
+          <SvgIcon className={pf('file-selector__body-icon icon icon-text-default')} sprite="utility" symbol="ban" />
         : <SvgIcon className={pf('file-selector__body-icon icon icon-text-default')} sprite="utility" symbol="upload" /> }
-        <span className={pf('file-selector__text')}>Drop Files</span>
+        <span className={pf('file-selector__text text-heading--medium text-align--center')}>
+          { props.draggoverError ? 'Too many files selected. Attach up to 1 file.' : 'Drop Files' }</span>
       </label>
     </div>
     { props.children }

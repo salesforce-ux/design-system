@@ -103,5 +103,19 @@ export let states = [
           <RowData title="Cloudhub + Anypoint Connectors" />
         </Tbody>
       </Table>
+  },
+  {
+    id: 'data-table-vertical-borders',
+    label: 'With vertical borders',
+    element:
+      <Table className={pf('table--col-bordered')}>
+        <Thead>
+          <HeadRowData />
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+        </Tbody>
+      </Table>
   }
 ];

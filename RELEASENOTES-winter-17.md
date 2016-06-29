@@ -46,6 +46,7 @@ The following classes are now available:
 - Position utilities -[Utilities › Postion](/components/utilities/position/)
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
+- Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
 
 **CHANGES**
 

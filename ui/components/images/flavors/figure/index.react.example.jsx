@@ -22,27 +22,31 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let Image = props =>
   <figure className={className(pf('image'), props.className)}>
-    <div className={className(pf('image__crop'), props.cropClass)}>
+    <a href="javascript:void(0);" className={className(pf('image__crop'), props.cropClass)}>
+      { props.overlay ? <div className={pf('image--overlay')}></div> : null }
       { props.image ?
-        <img src="/assets/images/placeholder-img@16x9.jpg" alt={ props.title || 'Image Title' } /> :
-        <span className={pf('image__icon icon_container')} title={ props.symbol + ' file type' || 'unknown file type' }>
+        <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
+        <span className={pf('image__icon icon_container')} title={ props.symbol || 'unknown file type' }>
           <SvgIcon className={pf('icon')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-          <span className={pf('assistive-text')}>{ props.symbol + ' file type' || 'unknown file type' }</span>
+          <span className={pf('assistive-text')}>{ props.title || 'Image Title' }</span>
         </span>
       }
-      { props.actions ?
-        <ButtonGroup className={pf('image__actions')}>
-          <ButtonIcon className={pf('button--icon-border-filled')} symbol="download" assistiveText="Download" />
-          <ButtonIcon className={pf('button--icon-border-filled')} symbol="down" assitiveText="More Actions" />
-        </ButtonGroup> : null }
-    </div>
+    </a>
+    { props.actions ?
+      <ButtonGroup className={pf('image__actions')}>
+        <ButtonIcon className={pf('button--icon-border-filled')} symbol="download" assistiveText="Download" />
+        <ButtonIcon className={pf('button--icon-border-filled')} symbol="down" assitiveText="More Actions" />
+      </ButtonGroup> : null }
     <figcaption className={className(pf('image__title'), props.titleClass)}>
       { props.symbol ?
-      <span className={pf('icon_container m-right--x-small')} title={ props.symbol + ' file type' || 'unknown file type' }>
+      <span className={pf('icon_container m-right--x-small')} title={ props.symbol || 'unknown file type' }>
         <SvgIcon className={pf('icon icon--x-small')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-        <span className={pf('assistive-text')}>{ props.symbol + ' file type' || 'unknown file type' }</span>
+        <span className={pf('assistive-text')}>{ props.symbol || 'unknown file type' }</span>
       </span>: null }
-      <span className={pf('truncate')} title={ props.title || 'Image Title' }>{ props.title || 'Image Title' }</span>
+      <span className={pf('image__text truncate')} title={ props.title || 'Image Title' }>
+        { props.title || 'Image Title' }
+        { props.overlay ? <span className={pf('assistive-text')}>more files</span> : null }
+      </span>
     </figcaption>
   </figure>;
 
@@ -71,8 +75,10 @@ export let states = [
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--overlay align--absolute-center')}
-          image />
+          titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+          title="22+"
+          image
+          overlay />
       </div>
   }
 ];

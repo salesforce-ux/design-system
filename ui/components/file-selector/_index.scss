@@ -121,7 +121,7 @@
     &.#{$css-prefix}has-drag {
       background: $color-background-backdrop;
       opacity: 1;
-      z-index: 0;
+      z-index: $z-index-overlay;
     }
 
     &.#{$css-prefix}has-drag-over {
@@ -135,11 +135,12 @@
     @include absolute-center;
     background: $color-background-alt;
     box-shadow: $shadow-drop-down;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
     flex-direction: column;
   }
 
   .#{$css-prefix}file-selector__text {
     margin-top: $spacing-small;
-    font-size: $font-size-large;
   }
 }

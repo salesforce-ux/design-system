@@ -41,7 +41,7 @@ export let states = [
               aria-expanded="true"
               aria-autocomplete="list" />
           </div>
-          <div className={pf('lookup__menu')} id="global-search-list-01" role="presentation">
+          <div className={pf('lookup__menu')} id="global-search-list-01">
             <div className={pf('lookup__item--label text-body--small')}>Recent Items</div>
             <ul className={pf('lookup__list')} role="listbox">
               <li role="presentation">

@@ -81,6 +81,16 @@ The following issues have now been resolved:
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
   - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
   - Moved clear button to the right of the input to visually match tab order
+- Utility bar a11y fixes
+  - Add landmark `role="footer"` to utility bar
+  - Add `aria-label="Utility Bar"` description to utility bar
+  - Add hidden heading to utility bar
+  - Add aria `role=dialog` and `aria-labelledby` to utility bar panel
+  - Change panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
+  - Place utility bar buttons inside `<ul>`
+- Files a11y fixes
+  - Fix invalid markup by moving button group outside of anchor
+  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 
 **DEPRECATED**
 

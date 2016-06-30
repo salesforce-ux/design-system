@@ -49,7 +49,7 @@ export let ContextBar = props =>
   <div className={className(pf('context-bar'), props.className)}>
 
     {/* Primary Section */}
-    <div className={pf('context-bar__primary')}>
+    <div className={pf('context-bar__primary context-bar__item--divider-right')}>
 
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
@@ -71,7 +71,7 @@ export let ContextBar = props =>
     <nav className={pf('context-bar__secondary')} role="navigation">
 
       <ul className={pf('grid')}>
-        <li className={className(pf('context-bar__item'), props.itemActive ? pf('is-active') : null)}>
+        <li className={pf('context-bar__item')}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Home">
             <span className={pf('truncate')}>Home</span>
           </a>
@@ -82,7 +82,7 @@ export let ContextBar = props =>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')}>
             <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="down" />
+              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
           </div>
@@ -93,7 +93,7 @@ export let ContextBar = props =>
             <span className={pf('truncate')}>Menu Item 2</span>
           </a>
         </li>
-        <li className={pf('context-bar__item')}>
+        <li className={className(pf('context-bar__item'), props.itemActive ? pf('is-active') : null)}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 3">
             <span className={pf('truncate')}>Menu Item 3</span>
           </a>

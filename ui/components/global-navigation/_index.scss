@@ -12,7 +12,7 @@
   height: $height-context-bar;
   background-color: $color-background-context-bar;
   border-top: $border-width-thin solid $color-border;
-  border-bottom: 3px solid $color-border-context-bar-default;
+  border-bottom: 3px solid $color-border-context-bar-theme-default;
   color: $color-text-context-bar;
   position: relative;
   padding: 0 $spacing-medium;
@@ -57,10 +57,35 @@
       outline: 0;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
-      border-bottom: 3px solid $color-border-context-bar-default-hover;
+      border-bottom: 3px solid $color-border-context-bar-theme-default-hover;
       margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
+    }
+
+    &.#{$css-prefix}is-active {
+      border-bottom-color: #dfe4ee;
+      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        display: block;
+        background: $color-border-context-bar-theme-default;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      &:hover {
+        border-bottom-color: $color-border-context-bar-theme-default-alt;
+      }
+    }
+
+    &:first-child.#{$css-prefix}is-active {
+      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border;
     }
 
     &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
@@ -147,19 +172,19 @@
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border-context-bar-item;
 
-    &.#{$css-prefix}is-active {
-      background-color: #fff;
-      box-shadow: inset 0 3px 0 0 $color-border-context-bar-default-hover;
-      border-bottom-color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        border-bottom-color: transparent;
-      }
+    .#{$css-prefix}context-bar__icon-action {
+      padding: 0 $spacing-xx-small;
     }
 
-    .#{$css-prefix}context-bar__label-action {
-      flex-grow: 0;
+    &.#{$css-prefix}is-active {
+      background-color: $color-background-context-tab-bar-item;
+      border-bottom-color: $color-background-context-tab-bar-item;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $color-background-context-tab-bar-item;
+        border-bottom-color: transparent;
+      }
     }
   }
 }
@@ -202,16 +227,19 @@
 //
 // Platform
 .#{$css-prefix}context-bar--theme-default {
-  border-bottom-color: $color-border-context-bar-default;
+  border-bottom-color: $color-border-context-bar-theme-default;
 
   .#{$css-prefix}context-bar__item:hover,
   .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-    border-bottom-color: $color-border-context-bar-default-hover;
+    border-bottom-color: $color-border-context-bar-theme-default-hover;
   }
 
   .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: #fff;
-    box-shadow: inset 0 3px 0 0 $color-border-context-bar-default-hover;
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: $color-border-context-bar-theme-default-hover;
+    }
   }
 }
 
@@ -225,8 +253,11 @@
   }
 
   .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: #fff;
-    box-shadow: inset 0 3px 0 0 #b75d0d;
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: #b75d0d;
+    }
   }
 }
 
@@ -240,7 +271,10 @@
   }
 
   .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: #fff;
-    box-shadow: inset 0 3px 0 0 #570d8c;
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: #570d8c;
+    }
   }
 }

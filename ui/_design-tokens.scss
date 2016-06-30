@@ -33,14 +33,16 @@ $mq-large: 1024px !default;
 $mq-x-large: 1280px !default;
 
 // Context Bar - Theme Backgrounds
-$height-context-bar: 2.5rem;
-$color-background-context-bar: $color-background-alt;
-$color-border-context-bar-default: #00a1df;
-$color-border-context-bar-default-hover: #0b2399;
-$color-text-context-bar: #4e6994;
-$color-background-context-bar-item-hover: #f7f9fb;
-$color-background-context-bar-item-active: #f7f9fb;
-$color-icon-context-bar: #a7b8d1;
+$height-context-bar: 2.5rem; // DONE
+$color-background-context-bar: $color-background-alt; // DONE
+$color-border-context-bar-theme-default: #00a1df; // DONE
+$color-border-context-bar-theme-default-alt: #dfe4ee; // DONE
+$color-border-context-bar-theme-default-hover: #0b2399; // DONE
+$color-border-context-bar-theme-default-active: #00a1df; // DONE
+$color-text-context-bar: #54698D; // DONE
+$color-background-context-bar-item-hover: #f7f9fb; // DONE
+$color-background-context-bar-item-active: #f7f9fb; // DONE
+$color-background-context-tab-bar-item: #fff; // DONE
 
 // Keep these until theming for context bar is resolved
 $color-background-context-bar-inverse: #092180 !default;

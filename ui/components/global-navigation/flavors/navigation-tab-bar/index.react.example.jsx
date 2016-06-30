@@ -46,7 +46,7 @@ let ContextTab = props =>
     </a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent p-left--none'), props.contextDropdownActive ? pf('is-open') : null)}>
       <button aria-haspopup="true" className={pf('button button--icon-container button--icon-x-small')}>
-        <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
+        <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="chevrondown" />
         <span className={pf('assistive-text')}>Assistive text for submenu</span>
       </button>
       <Menu className={pf('dropdown--right')}>
@@ -98,7 +98,7 @@ export let ContextTabBar = props =>
         </a>
         <div className={pf('context-bar__icon-action')}>
           <button aria-haspopup="true" className={pf('button button--icon-container button--icon-x-small')}>
-            <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="down" />
+            <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="chevrondown" />
             <span className={pf('assistive-text')}>Assistive text for submenu</span>
           </button>
         </div>
@@ -151,7 +151,7 @@ export let ContextTabBar = props =>
 
 export default (
   <ContextTabBar className={pf('context-bar--theme-service')}>
-    <ContextTab title="Home" />
-    <ContextTab title="Tab Item 1" itemActive />
+    <ContextTab title="Home" itemActive />
+    <ContextTab title="Tab Item 1"  />
   </ContextTabBar>
 );

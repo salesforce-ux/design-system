@@ -110,8 +110,6 @@
 
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
     background-color: $color-background-alt;
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
-                $color-border 0 ($border-width-thin) 0 inset;
 }
 
 .#{$css-prefix}form-element__label--edit {

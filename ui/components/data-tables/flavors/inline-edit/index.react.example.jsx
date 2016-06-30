@@ -456,7 +456,7 @@ export let states = [
           <Tbody>
             <RowData rowError editName={pf('indicator-error')} errorindex="-1" title="Acme Enterprises">
               <Td title="Acme Enterprises">
-                <span className={pf('grid grid--align-spread cell-edit has-error has-focus')}>
+                <span className={pf('grid grid--align-spread cell-edit has-error')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>

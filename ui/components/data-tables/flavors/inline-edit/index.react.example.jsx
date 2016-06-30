@@ -104,7 +104,7 @@ let EditPanel = props =>
   </div>;
 
 let RowData = props =>
-  <Tr>
+  <Tr className={pf('hint-parent')}>
     { props.rowError ?
         <td tabIndex={props.errorindex || -1} className={pf(' cell-error')}>
           <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
@@ -168,7 +168,7 @@ let RowData = props =>
   </Tr>;
 
 let RowDataStatic = props =>
-  <Tr>
+  <Tr className={pf('hint-parent')}>
     { props.rowError ?
       <td className={pf('cell-error')} tabIndex={props.errorindex || -1}>
         <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
@@ -552,7 +552,7 @@ export let states = [
               <span className={pf('assistive-text')}>Company</span>
             </label>
             <div className={pf('form-element__control grow')}>
-              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" />
+              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required />
             </div>
           </div>
         </EditPanel>

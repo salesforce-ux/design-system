@@ -158,12 +158,14 @@ let RowData = props =>
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>
-      <ButtonIcon
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+      <div className={pf('cell-edit')}>
+        <ButtonIcon
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
     </Td>
   </Tr>;
 
@@ -227,12 +229,14 @@ let RowDataStatic = props =>
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>
-      <ButtonIcon
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+      <div className={pf('cell-edit')}>
+        <ButtonIcon
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
     </Td>
   </Tr>;
 

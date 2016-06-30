@@ -82,7 +82,7 @@ export let ContextBar = props =>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')}>
             <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-              <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
+              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="down" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
           </div>

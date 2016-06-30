@@ -12,7 +12,7 @@
   height: $height-context-bar;
   background-color: $color-background-context-bar;
   border-top: $border-width-thin solid $color-border;
-  border-bottom: 4px solid $color-border-context-bar-default;
+  border-bottom: 3px solid $color-border-context-bar-default;
   color: $color-text-context-bar;
   position: relative;
   padding: 0 $spacing-medium;
@@ -55,16 +55,15 @@
     &:not(.#{$css-prefix}no-hover):hover,
     &.#{$css-prefix}is-active {
       outline: 0;
-      box-shadow: none;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
-      border-bottom: 4px solid $color-border-context-bar-default-hover;
-      margin-bottom: (4px * -1);
+      border-bottom: 3px solid $color-border-context-bar-default-hover;
+      margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
     }
 
-    &.#{$css-prefix}is-active {
+    &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
       font-weight: bold;
     }
 
@@ -75,12 +74,6 @@
     &--divider-right {
       border-right: $border-width-thin solid $color-border-context-bar-item;
     }
-  }
-
-  // Tab context bar items
-  &__item--tab {
-    width: $size-x-small;
-    border-right: $border-width-thin solid $color-border-context-bar-item;
   }
 
   // Actionable Text Links
@@ -148,6 +141,27 @@
       opacity: $opacity-8;
     }
   }
+
+  // Tab context bar items
+  &__item--tab {
+    width: $size-x-small;
+    border-right: $border-width-thin solid $color-border-context-bar-item;
+
+    &.#{$css-prefix}is-active {
+      background-color: #fff;
+      box-shadow: inset 0 3px 0 0 $color-border-context-bar-default-hover;
+      border-bottom-color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border-bottom-color: transparent;
+      }
+    }
+
+    .#{$css-prefix}context-bar__label-action {
+      flex-grow: 0;
+    }
+  }
 }
 
 // Context Bar dropdown trigger specifics
@@ -160,11 +174,11 @@
     position: absolute;
     top: 100%;
     width: 100%;
-    height: 4px;
+    height: 3px;
   }
 
   .#{$css-prefix}dropdown {
-    margin-top: 4px;
+    margin-top: 3px;
   }
 }
 
@@ -194,6 +208,11 @@
   .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
     border-bottom-color: $color-border-context-bar-default-hover;
   }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: #fff;
+    box-shadow: inset 0 3px 0 0 $color-border-context-bar-default-hover;
+  }
 }
 
 // Marketing - temp
@@ -203,5 +222,25 @@
   .#{$css-prefix}context-bar__item:hover,
   .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
     border-bottom-color: #b75d0d;
+  }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: #fff;
+    box-shadow: inset 0 3px 0 0 #b75d0d;
+  }
+}
+
+// Service - temp
+.#{$css-prefix}context-bar--theme-service {
+  border-bottom-color: #bc35bc;
+
+  .#{$css-prefix}context-bar__item:hover,
+  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
+    border-bottom-color: #570d8c;
+  }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: #fff;
+    box-shadow: inset 0 3px 0 0 #570d8c;
   }
 }

@@ -43,7 +43,7 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Email">Email</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Phone">Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Status">Status</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Rating">Rating</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
       <th className={pf('cell-shrink')} scope="col" title="Actions"><span className={pf('assistive-text')}>Actions</span></th>
     </Tr>
   </thead>;
@@ -141,7 +141,7 @@ let RowData = props =>
     </Td>
     <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow text-align--right')}>800-555-1212</span>
+        <span className={pf('truncate grow')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
@@ -151,10 +151,10 @@ let RowData = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: Contacted" />
       </span>
     </Td>
-    <Td title="Premium Yield">
+    <Td title="60%">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Premium Yield</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Premium Yield" />
+        <span className={pf('truncate grow text-align--right')}>60%</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 60%" />
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>
@@ -212,7 +212,7 @@ let RowDataStatic = props =>
     </Td>
     <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow text-align--right')}>800-555-1212</span>
+        <span className={pf('truncate grow')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
@@ -222,10 +222,10 @@ let RowDataStatic = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: New" />
       </span>
     </Td>
-    <Td title="Junk Yield">
+    <Td title="20%">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Junk Yield</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Junk Yield" />
+        <span className={pf('truncate grow text-align--right')}>20%</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 20%" />
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>

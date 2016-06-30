@@ -340,27 +340,6 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-selected',
-    label: 'Cell selected',
-    element:
-      <Container>
-        <Table>
-          <Thead />
-          <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises" ariaSelected="true">
-                <span className={pf('grid grid--align-spread cell-edit is-selected')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic />
-          </Tbody>
-        </Table>
-      </Container>
-  },
-  {
     id: 'data-table-inline-edit-edited',
     label: 'Cell edited',
     element:
@@ -613,7 +592,7 @@ export let states = [
           <Tbody>
             <RowData title="Acme Enterprises">
               <Td title="Acme Enterprises">
-                <span className={pf('grid grid--align-spread cell-edit is-selected')}>
+                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>

@@ -141,7 +141,7 @@ let RowData = props =>
     </Td>
     <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>800-555-1212</span>
+        <span className={pf('truncate grow text-align--right')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
@@ -210,7 +210,7 @@ let RowDataStatic = props =>
     </Td>
     <Td title="800-555-1212" ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>800-555-1212</span>
+        <span className={pf('truncate grow text-align--right')}>800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>

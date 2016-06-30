@@ -19,8 +19,8 @@
     bottom: 0;
     left: 0;
     z-index: $z-index-default;
-    background-color: $color-background-backdrop;
-    box-shadow: $shadow-focus-inset;
+    background-color: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
   }
 }
 

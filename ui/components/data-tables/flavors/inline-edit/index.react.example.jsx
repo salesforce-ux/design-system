@@ -601,7 +601,7 @@ export let states = [
   },
   {
     id: 'data-table-inline-table-matte',
-    label: 'Table deselected',
+    label: 'Table focused',
     element:
       <Container tabindex="1" id="table-edit-01">
         <Table>

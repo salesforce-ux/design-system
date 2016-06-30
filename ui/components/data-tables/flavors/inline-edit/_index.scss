@@ -53,17 +53,16 @@
   &:focus {
 
     .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
+      opacity: 1;
 
       &:hover,
       &:focus {
-        opacity: 1;
         fill: $color-text-brand;
       }
     }
 
     .#{$css-prefix}button__icon--lock {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
 
@@ -76,7 +75,7 @@
     background-color: $color-background-row-hover;
 
     .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 

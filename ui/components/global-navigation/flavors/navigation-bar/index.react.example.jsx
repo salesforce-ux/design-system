@@ -66,7 +66,7 @@ export let ContextBar = props =>
 
     </div>
     {/* End Primary */}
-    
+
     {/* Secondary Section */}
     <nav className={pf('context-bar__secondary')} role="navigation">
 
@@ -77,7 +77,7 @@ export let ContextBar = props =>
           </a>
         </li>
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 1">
             <span className={pf('truncate')}>Menu Item 1</span>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')}>
@@ -89,17 +89,17 @@ export let ContextBar = props =>
           { contextDropdown }
         </li>
         <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Context Menu Item 2">
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 2">
             <span className={pf('truncate')}>Menu Item 2</span>
           </a>
         </li>
         <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Context Menu Item 3">
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 3">
             <span className={pf('truncate')}>Menu Item 3</span>
           </a>
         </li>
         <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Context Menu Item 4">
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 4">
             <span className={pf('truncate')}>Menu Item 4</span>
           </a>
         </li>

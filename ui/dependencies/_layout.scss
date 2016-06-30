@@ -373,6 +373,19 @@
       }
     }
   }
+  .#{$css-prefix}max-#{$class-name}-show {
+
+    @media (max-width: $min - 1) {
+      display: block;
+
+      &--inline-block {
+        display: inline-block;
+      }
+      &--inline {
+        display: inline;
+      }
+    }
+  }
 }
 
 @mixin align-horizontal($children: null, $fallback: null, $mq: null) {

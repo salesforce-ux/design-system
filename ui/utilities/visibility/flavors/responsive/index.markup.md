@@ -102,6 +102,33 @@
         <td class="visible">Initial</td>
         <td class="visible">Initial</td>
       </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}max-x-small-show</code></th>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}max-small-show</code></th>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}max-medium-show</code></th>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
     </table>
   </div>
 </div>

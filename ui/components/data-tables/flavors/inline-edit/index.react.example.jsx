@@ -13,6 +13,7 @@ import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -20,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('table--edit_container is-relative')} tabIndex={props.tabindex} id={props.id}>
+  <div className={pf('table--edit_container is-relative')} tabIndex={props.tabIndex} id={props.id}>
     {props.children}
   </div>;
 
@@ -33,18 +34,17 @@ let Thead = props =>
   <thead>
     <Tr className={pf('text-title--caps')}>
       { props.rowError ?
-        <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"><span className={pf('slds-assistive-text')}>Errors</span></th>
+        <th className={pf('cell-shrink indicator-header')} scope="col"><span className={pf('slds-assistive-text')}>Errors</span></th>
       : null }
-      <th className={pf('cell-shrink')} scope="col">
-        <div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Address">Address</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Email">Email</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Phone">Phone</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Status">Status</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
-      <th className={pf('cell-shrink')} scope="col" title="Actions"><span className={pf('assistive-text')}>Actions</span></th>
+      <td className={pf('cell-shrink')} role="gridcell"><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></td>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
+      <th className={pf('cell-shrink')} scope="col"><span className={pf('assistive-text')}>Actions</span></th>
     </Tr>
   </thead>;
 
@@ -54,42 +54,61 @@ let Tbody = props =>
   </tbody>;
 
 let Tr = props =>
-  <tr scope="row" {...props}>
+  <tr {...props}>
     {props.children}
   </tr>;
 
-let Th = props =>
-  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort} tabIndex={props.tabindex || -1}>
-    <a href="#void" className={pf('th__action text-link--reset')}>
-      <span className={pf('assistive-text')}>Sort Column</span>
-      <span title={props.title}>{ props.children }</span>
-      <div className={pf('icon_container')} title="Sort Column">
-        <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+let Th = (props) => {
+  const rangeLabel = props.children + ' column width';
+  let sortDirection;
+  if(props.ariaSort) {
+    sortDirection = (props.ariaSort === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
+  }
+  const uniqueId = _.uniqueId('cell-resize-handle-');
+
+  return(
+    <th className={pf(props.className)} scope={props.scope} style={props.style} aria-label={props.children} aria-sort={props.ariaSort}>
+      <a href="javascript:void(0);" className={pf('th__action text-link--reset')} tabIndex={props.navigationModeTabIndex}>
+        <span className={pf('assistive-text')}>Sort </span>
+        <span className={pf('truncate')} title={props.children}>{ props.children }</span>
+        <div className={pf('icon_container')}>
+          <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+        </div>
+        <span className={pf('assistive-text')} aria-live="assertive" aria-atomic="true">{sortDirection}</span>
+      </a>
+      <div className={pf('resizable')}>
+        <label htmlFor={uniqueId} className={pf('assistive-text')}>{rangeLabel}</label>
+        <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id={uniqueId} tabIndex={props.navigationModeTabIndex} />
+        <span className={pf('resizable__handle')}>
+          <span className={pf('resizable__divider')}></span>
+        </span>
       </div>
-    </a>
-    <div className={pf('resizable')}>
-      <label className={pf('assistive-text')} htmlFor="cell-resize-handle-1">click and drag to resize</label>
-      <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id="cell-resize-handle-1" />
-      <span className={pf('resizable__handle')}>
-        <span className={pf('resizable__divider')}></span>
-      </span>
-    </div>
-  </th>;
+    </th>
+  );
+};
 
 let Td = props =>
-  <td title={props.title} tabIndex={props.tabindex || -1} className={props.tdClassName} role="gridcell" aria-selected={props.ariaSelected || false} aria-readonly={props.ariaReadonly || false}>
+  <td
+    aria-readonly={props.ariaReadonly}
+    aria-selected={props.ariaSelected}
+    className={pf(props.className)}
+    data-label={props.dataLabel}
+    role="gridcell"
+    scope={props.scope}
+    tabIndex={props.tabIndex}
+  >
     { props.children }
   </td>;
 
 let Checkbox = props =>
   <label className={pf('checkbox')}>
-    <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabindex || '-1'} id={props.checkID} />
+    <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
     <span className={pf('checkbox--faux')}></span>
     <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
 
 let ButtonEdit = props =>
-  <button className={pf('button button--icon cell-edit__button m-left--x-small')} tabIndex={props.tabindex} disabled={props.disabled} id={props.id}>
+  <button className={pf('button button--icon cell-edit__button m-left--x-small')} tabIndex={props.tabIndex || '-1'} disabled={props.disabled} id={props.id}>
     <span className={pf('assistive-text')}>{props.alt}</span>
     <SvgIcon className={className(pf('button__icon button__icon--hint'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
   </button>;
@@ -103,139 +122,146 @@ let EditPanel = props =>
     <span id="form-end" tabIndex="0"></span>
   </div>;
 
-let RowData = props =>
-  <Tr className={pf('hint-parent')}>
-    { props.rowError ?
-        <td tabIndex={props.errorindex || -1} className={pf(' cell-error')}>
-          <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
-            <button className={pf('button button--icon button--icon-error')} tabIndex="0" id="error-01">
-              <span className={pf('assistive-text')}>Row has errors</span>
-              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
-            </button>
-          </div>
-        </td>
-      : null }
-    <Td tdClassName={pf('cell-shrink')} ariaSelected={props.checkSelected || false}>
-      <div className={className(pf('cell-edit'), props.checkClass)}>
-        <Checkbox label="Select Row" tabIndex={props.checkIndex} checkID="checkbox-01" />
-      </div>
-    </Td>
-    <th title="Lei Chan" tabIndex="-1">
-      <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
-        <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1" id={props.linkId}>Lei Chan</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: Lei Chan" />
-      </span>
-    </th>
-    { props.children }
-    <Td title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>12 Embarcadero Plaza, San Francisco, CA 94105</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
-      </span>
-    </Td>
-    <Td title="jdoe@acme.com">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>jdoe@acme.com</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: jdoe@acme.com" />
-      </span>
-    </Td>
-    <Td title="800-555-1212" ariaReadonly="true">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>800-555-1212</span>
-        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-      </span>
-    </Td>
-    <Td title="Contacted">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Contacted</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: Contacted" />
-      </span>
-    </Td>
-    <Td title="60%">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow text-align--right')}>60%</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 60%" />
-      </span>
-    </Td>
-    <Td tdClassName={pf('cell-shrink')}>
-      <div className={pf('cell-edit')}>
-        <ButtonIcon
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
-          symbol="down"
-          assistiveText="Show More" />
-      </div>
-    </Td>
-  </Tr>;
+let RowData = (props) => {
+  let checkboxLabel = 'Select row ' + props.title;
+
+  return(
+    <Tr ariaSelected={props.checkSelected} className={pf('hint-parent')}>
+      { props.rowError ?
+          <td tabIndex={props.errorindex} className={pf(' cell-error')}>
+            <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
+              <button className={pf('button button--icon button--icon-error')} tabIndex={props.navigationModeTabIndex} id="error-01">
+                <span className={pf('assistive-text')}>Row has errors</span>
+                <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
+              </button>
+            </div>
+          </td>
+        : null }
+      <Td tabIndex={props.initialCellTabIndex} className={pf('cell-shrink')}>
+        <div className={className(pf('cell-edit'), props.checkClass)}>
+          <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
+        </div>
+      </Td>
+      <th>
+        <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
+          <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
+          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
+        </span>
+      </th>
+      { props.children }
+      <Td>
+        <span className={pf('grid grid--align-spread cell-edit')}>
+          <span className={pf('truncate grow')} title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
+          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
+        </span>
+      </Td>
+      <Td>
+        <span className={pf('grid grid--align-spread cell-edit')}>
+          <span className={pf('truncate grow')} title="jdoe@acme.com">jdoe@acme.com</span>
+          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
+        </span>
+      </Td>
+      <Td ariaReadonly="true">
+        <span className={pf('grid grid--align-spread cell-edit')}>
+          <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
+          <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+        </span>
+      </Td>
+      <Td>
+        <span className={pf('grid grid--align-spread cell-edit')}>
+          <span className={pf('truncate grow')} title="Contacted">Contacted</span>
+          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
+        </span>
+      </Td>
+      <Td>
+        <span className={pf('grid grid--align-spread cell-edit')}>
+          <span className={pf('truncate grow text-align--right')} title="60%">60%</span>
+          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
+        </span>
+      </Td>
+      <Td className={pf('cell-shrink')}>
+        <div className={pf('cell-edit')}>
+          <ButtonIcon
+            flavor="icon-border-filled,icon-x-small"
+            iconFlavor="hint,small"
+            sprite="utility"
+            symbol="down"
+            assistiveText="Show More"
+            tabIndex={props.navigationModeTabIndex} />
+        </div>
+      </Td>
+    </Tr>
+  );
+};
 
 let RowDataStatic = props =>
   <Tr className={pf('hint-parent')}>
     { props.rowError ?
-      <td className={pf('cell-error')} tabIndex={props.errorindex || -1}>
+      <td className={pf('cell-error')}>
         <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
-          <button className={pf('hidden button button--icon button--icon-error')} tabIndex="0" id="error-01" aria-hidden="true">
+          <button className={pf('hidden button button--icon button--icon-error')} tabIndex={props.navigationModeTabIndex} id="error-01" aria-hidden="true">
             <span className={pf('assistive-text')}>Row has no errors</span>
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
           </button>
         </div>
       </td>
       : null }
-    <Td tdClassName={pf('cell-shrink')}>
+    <Td className={pf('cell-shrink')}>
       <div className={pf('cell-edit')}>
-        <Checkbox  label="Select Row" tabIndex="-1" />
+        <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>
-    <th tabIndex="-1" title="John Doe">
+    <th>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <a href="javascript:void()" className={pf('truncate grow')} tabIndex="-1">John Doe</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Name: John Doe" />
+        <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
       </span>
     </th>
-    <Td title="Rohde Corp">
+    <Td>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Rohde Corp</span>
-            <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Rohde Corp" />
+        <span className={pf('truncate grow')} title="Rohde Corp">Rohde Corp</span>
+            <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
       </span>
     </Td>
-    <Td title="1 Ferry Building San Francisco, CA 94105 United States">
+    <Td>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>1 Ferry Building San Francisco, CA 94105</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
+        <span className={pf('truncate grow')} title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
       </span>
     </Td>
-    <Td title="lchan@rohdecorp.com">
+    <Td>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>lchan@rohdecorp.com</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Email: lchan@rohdecorp.com" />
+        <span className={pf('truncate grow')} title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
       </span>
     </Td>
-    <Td title="800-555-1212" ariaReadonly="true">
+    <Td ariaReadonly="true">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>800-555-1212</span>
-        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabindex="-1" alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+        <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
+        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
-    <Td title="New">
+    <Td>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>New</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: New" />
+        <span className={pf('truncate grow')} title="New">New</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
       </span>
     </Td>
-    <Td title="20%">
+    <Td>
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow text-align--right')}>20%</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 20%" />
+        <span className={pf('truncate grow text-align--right')} title="20%">20%</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
       </span>
     </Td>
-    <Td tdClassName={pf('cell-shrink')}>
+    <Td className={pf('cell-shrink')}>
       <div className={pf('cell-edit')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"
           sprite="utility"
           symbol="down"
-          assistiveText="Show More" />
+          assistiveText="Show More"
+          tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>
   </Tr>;
@@ -252,17 +278,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="-1" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </Tbody>
         </Table>
       </Container>
@@ -273,17 +299,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises" checkIndex="0" checkClass={pf('has-focus')} checkSelected="true">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" checkClass={pf('has-focus')} checkSelected="true" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -297,17 +323,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises" thClassName={pf('has-focus')} linkId="link-01">
-              <Td title="Acme Enterprises" ariaSelected="true">
+            <RowData title="Acme Enterprises" thClassName={pf('has-focus')} linkId="link-01" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -321,17 +347,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises" ariaSelected="true">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit has-focus')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -345,17 +371,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit is-edited')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>
@@ -366,17 +392,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>
@@ -387,17 +413,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises" ariaSelected="true">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -411,17 +437,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead rowError />
+          <Thead navigationModeTabIndex="0" rowError />
           <Tbody>
-            <RowData rowError title="Acme Enterprises">
-              <Td title="Acme Enterprises" ariaSelected="true">
+            <RowData rowError title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic rowError />
+            <RowDataStatic rowError navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -435,17 +461,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead rowError />
+          <Thead navigationModeTabIndex="0" rowError />
           <Tbody>
-            <RowData rowError editName={pf('indicator-error')} errorindex="-1" title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData rowError editName={pf('indicator-error')} errorindex="0" title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic rowError />
+            <RowDataStatic rowError navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>,
@@ -459,17 +485,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead rowError />
+          <Thead navigationModeTabIndex="0" rowError />
           <Tbody>
-            <RowData rowError title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData rowError title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit has-error has-focus')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic rowError editName={pf('indicator-error-none')} cellID="no-error-01" errorindex="0" />
+            <RowDataStatic rowError editName={pf('indicator-error-none')} cellID="no-error-01" navigationModeTabIndex="0" />
           </Tbody>
         </Table>
       </Container>
@@ -480,17 +506,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
         <EditPanel>
@@ -515,17 +541,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit is-editing')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
         <EditPanel>
@@ -551,17 +577,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="0" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+              <Td ariaSelected="true">
                 <span className={pf('grid grid--align-spread cell-edit is-editing')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
         <EditPanel>
@@ -586,29 +612,29 @@ export let states = [
     id: 'data-table-inline-table-matte',
     label: 'Table focused',
     element:
-      <Container tabindex="1" id="table-edit-01">
+      <Container tabIndex="1" id="table-edit-01">
         <Table>
-          <Thead />
+          <Thead navigationModeTabIndex="-1" />
           <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="-1">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit has-focus')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
-            <RowDataStatic />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </Tbody>
         </Table>
       </Container>,

@@ -1,5 +1,15 @@
+# Default configuration
+#
+# To override these values, multiple options:
+# - Environment variable:
+#     BROWSERSYNC__PORT=3005 npm start
+# - Arguments:
+#     npm start -- --browsersync:port 3006 --webpack:quiet
+# - .sldsrc.yml (override file):
+#     copy and paste the contents of this file to .sldsrc.yml
+#     and tweak the values as desired
 webpack:
   quiet: true
 browsersync:
-  port: false # Run browsersync on a different port
+  port: false # Run browsersync on a different port (e.g. port: 3008)
   open: false # Opens localhost in a browser window automatically when running npm start

@@ -16,11 +16,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let FileSelector = props =>
 <div className={className(pf('form-element'), props.error ? pf('has-error') : null)}>
-  <span className={pf('form-element__label')}>Attachment</span>
+  <span className={pf('form-element__label')} id="file-selector-id">Attachment</span>
   <div className={pf('form-element__control')}>
     <div className={className(pf('file-selector'), props.className)}>
       <div className={className(pf('file-selector__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
-        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'error-01' : null} />
+        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'file-selector-id error-01' : 'file-selector-id'} />
         <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
           <span className={pf('file-selector__button button button--neutral')}>
             <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}

@@ -1,0 +1,5 @@
+webpack:
+  quiet: true
+browsersync:
+  port: false # Run browsersync on a different port
+  open: false # Opens localhost in a browser window automatically when running npm start

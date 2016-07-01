@@ -81,6 +81,7 @@
     "mocha": "2.5.3",
     "moment": "2.13.0",
     "nconf": "0.8.4",
+    "nconf-yaml": "1.0.2",
     "node-sass": "3.7.0",
     "postcss": "5.0.21",
     "pretty-time": "0.2.0",

@@ -218,7 +218,7 @@ The following site enhancements are now available:
 - Components and their variants can now be built with states and will show up in the component variant & states navigation on the right, when available
 - Improved Component Overview tables for more narrow readability
 - Improved status labels. Now associated with colors and contain more information
-- Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
+- Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/guidelines/markup-and-style/)
 - Resources Information - [Resource Links](/articles/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
 - Improved Grid System documentation - [Grid System](/components/utilities/grid/)

@@ -35,14 +35,15 @@ let Thead = props =>
       { props.rowError ?
         <th className={pf('cell-shrink indicator-header')} scope="col" title="Errors"><span className={pf('slds-assistive-text')}>Errors</span></th>
       : null }
-      <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
+      <th className={pf('cell-shrink')} scope="col">
+        <div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Name">Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Company">Company</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Address">Address</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Email">Email</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Phone">Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" title="Status">Status</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" title="Rating">Rating</Th>
+      <Th className={pf('is-sortable is-resizable')} scope="col" title="Confidence">Confidence</Th>
       <th className={pf('cell-shrink')} scope="col" title="Actions"><span className={pf('assistive-text')}>Actions</span></th>
     </Tr>
   </thead>;
@@ -103,7 +104,7 @@ let EditPanel = props =>
   </div>;
 
 let RowData = props =>
-  <Tr>
+  <Tr className={pf('hint-parent')}>
     { props.rowError ?
         <td tabIndex={props.errorindex || -1} className={pf(' cell-error')}>
           <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
@@ -150,24 +151,26 @@ let RowData = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: Contacted" />
       </span>
     </Td>
-    <Td title="Premium Yield">
+    <Td title="60%">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Premium Yield</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Premium Yield" />
+        <span className={pf('truncate grow text-align--right')}>60%</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 60%" />
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>
-      <ButtonIcon
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+      <div className={pf('cell-edit')}>
+        <ButtonIcon
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
     </Td>
   </Tr>;
 
 let RowDataStatic = props =>
-  <Tr>
+  <Tr className={pf('hint-parent')}>
     { props.rowError ?
       <td className={pf('cell-error')} tabIndex={props.errorindex || -1}>
         <div id={props.cellID} className={className(pf('cell-edit p-left--small'), props.editName)}>
@@ -219,19 +222,21 @@ let RowDataStatic = props =>
         <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Status: New" />
       </span>
     </Td>
-    <Td title="Junk Yield">
+    <Td title="20%">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')}>Junk Yield</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Rating: Junk Yield" />
+        <span className={pf('truncate grow text-align--right')}>20%</span>
+        <ButtonEdit iconClassName="button__icon--edit" tabindex="-1" alt="Edit Confidence: 20%" />
       </span>
     </Td>
     <Td tdClassName={pf('cell-shrink')}>
-      <ButtonIcon
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+      <div className={pf('cell-edit')}>
+        <ButtonIcon
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
     </Td>
   </Tr>;
 
@@ -335,27 +340,6 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-selected',
-    label: 'Cell selected',
-    element:
-      <Container>
-        <Table>
-          <Thead />
-          <Tbody>
-            <RowData title="Acme Enterprises">
-              <Td title="Acme Enterprises" ariaSelected="true">
-                <span className={pf('grid grid--align-spread cell-edit is-selected')}>
-                  <span className={pf('truncate grow')}>Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic />
-          </Tbody>
-        </Table>
-      </Container>
-  },
-  {
     id: 'data-table-inline-edit-edited',
     label: 'Cell edited',
     element:
@@ -455,7 +439,7 @@ export let states = [
           <Tbody>
             <RowData rowError editName={pf('indicator-error')} errorindex="-1" title="Acme Enterprises">
               <Td title="Acme Enterprises">
-                <span className={pf('grid grid--align-spread cell-edit has-error has-focus')}>
+                <span className={pf('grid grid--align-spread cell-edit has-error')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
@@ -551,7 +535,7 @@ export let states = [
               <span className={pf('assistive-text')}>Company</span>
             </label>
             <div className={pf('form-element__control grow')}>
-              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" />
+              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required />
             </div>
           </div>
         </EditPanel>
@@ -600,7 +584,7 @@ export let states = [
   },
   {
     id: 'data-table-inline-table-matte',
-    label: 'Table deselected',
+    label: 'Table focused',
     element:
       <Container tabindex="1" id="table-edit-01">
         <Table>
@@ -608,7 +592,7 @@ export let states = [
           <Tbody>
             <RowData title="Acme Enterprises">
               <Td title="Acme Enterprises">
-                <span className={pf('grid grid--align-spread cell-edit is-selected')}>
+                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
                   <span className={pf('truncate grow')}>Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabindex="0" alt="Edit Company: Acme Enterprises" />
                 </span>

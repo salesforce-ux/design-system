@@ -33,6 +33,18 @@
   }
 }
 
+  .#{$css-prefix}table--edit_container-message {
+    width: $size-medium;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+    margin-left: (($size-medium / 2) * -1);
+    background-color: $color-background-alt;
+    text-align: center;
+    z-index: $z-index-default;
+  }
+
 .#{$css-prefix}table--edit {
 
   .#{$css-prefix}button__icon--edit:focus {
@@ -48,9 +60,16 @@
   .#{$css-prefix}cell-shrink:first-child { // Remove padding
     padding: 0;
   }
+
+  .#{$css-prefix}cell-edit:hover {
+      background-color: $color-background-alt;
+      box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
+                  $color-border 0 ($border-width-thin) 0 inset;
+  }
 }
 
 .#{$css-prefix}cell-edit {
+  margin: ($border-width-thin * -1) 0; // Make contents completely fill table cell
   padding: $spacing-x-small; // Add padding to div inside
 
   .#{$css-prefix}button__icon--edit,
@@ -96,21 +115,26 @@
   }
 
   &.#{$css-prefix}is-edited {
-    background-color: $color-background-highlight;
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
   }
 
   &.#{$css-prefix}has-error {
-    background-color: $color-background-highlight;
-    border: $border-width-thick solid $color-border-error;
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      border: $border-width-thin solid $color-border-error;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thin) inset;
+    }
   }
 }
 
 .#{$css-prefix}cell-edit__button:focus .#{$css-prefix}button__icon--edit {
     opacity: 1;
-}
-
-.#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
-    background-color: $color-background-alt;
 }
 
 .#{$css-prefix}form-element__label--edit {

@@ -95,13 +95,24 @@ let ButtonEdit = props =>
   </button>;
 
 let EditPanel = props =>
-  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '2.2rem', left: '10.875rem' }}>
+  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '2.1rem', left: '10.875rem' }}>
     <span id="form-start" tabIndex="0"></span>
     <div className={pf('popover__body')}>
       { props.children }
     </div>
     <span id="form-end" tabIndex="0"></span>
   </div>;
+
+let TableFocusInfo = props =>
+  <div className={pf('box table--edit_container-message')}>
+    <p>To access the list, press Enter.</p>
+    <p>To exit the list, press Esc.</p>
+  </div>;
+
+let ErrorPanel = props =>
+  <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" style={{ position: 'absolute', top: '-0.25rem', left: '-0.75rem', width: 'auto' }}>
+    <div className={pf('popover__body')}>Company encountered an error.</div>
+</div>;
 
 let RowData = props =>
   <Tr className={pf('hint-parent')}>
@@ -448,6 +459,7 @@ export let states = [
             <RowDataStatic rowError />
           </Tbody>
         </Table>
+        <ErrorPanel />
       </Container>,
     script: `
       document.getElementById('error-01').focus()
@@ -611,6 +623,7 @@ export let states = [
             <RowDataStatic />
           </Tbody>
         </Table>
+        <TableFocusInfo />
       </Container>,
     script: `
       document.getElementById('table-edit-01').focus()

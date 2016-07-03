@@ -373,16 +373,13 @@
       }
     }
   }
-  .#{$css-prefix}max-#{$class-name}-show {
 
-    @media (max-width: $min - 1) {
-      display: block;
+  @if $min {
 
-      &--inline-block {
-        display: inline-block;
-      }
-      &--inline {
-        display: inline;
+    .#{$css-prefix}min-#{$class-name}-hide {
+
+      @media (min-width: $min) {
+        display: none;
       }
     }
   }

@@ -19,18 +19,19 @@ export default (
     <div className={pf('x-small-show')}>Show on 320px and up</div>
     <div className={pf('x-small-show-only')}>Show only between 320px and 479px</div>
     <div className={pf('max-x-small-hide')}>Hide on 319px and down</div>
-    <div className={pf('hide max-x-small-show')}>Hide on 320px and up</div>
+    <div className={pf('min-x-small-hide')}>Hide on 320px and up</div>
 
     <div className={pf('small-show')}>Show on 480px and up</div>
     <div className={pf('small-show-only')}>Show only between 480px and 767px</div>
     <div className={pf('max-small-hide')}>Hide on 479px and down</div>
-    <div className={pf('hide max-small-show')}>Hide on 480px and up</div>
+    <div className={pf('min-small-hide')}>Hide on 480px and up</div>
 
     <div className={pf('medium-show')}>Show on 768px and up</div>
     <div className={pf('medium-show-only')}>Show only between 768px and 1023px</div>
     <div className={pf('max-medium-hide')}>Hide on 1023px and down</div>
-    <div className={pf('hide max-medium-show')}>Hide on 1024px and up</div>
+    <div className={pf('min-medium-hide')}>Hide on 768px and up</div>
 
     <div className={pf('large-show')}>Show on 1024px and up</div>
+    <div className={pf('min-large-hide')}>Hide on 1024px and up</div>
   </div>
 );

@@ -103,7 +103,7 @@
         <td class="visible">Initial</td>
       </tr>
       <tr>
-        <th><code>.{{cssPrefix}}max-x-small-show</code></th>
+        <th><code>.{{cssPrefix}}min-x-small-hide</code></th>
         <td class="visible">Initial</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
@@ -112,7 +112,7 @@
         <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.{{cssPrefix}}max-small-show</code></th>
+        <th><code>.{{cssPrefix}}min-small-hide</code></th>
         <td class="visible">Initial</td>
         <td class="visible">Initial</td>
         <td class="hidden">Hide</td>
@@ -121,7 +121,7 @@
         <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.{{cssPrefix}}max-medium-show</code></th>
+        <th><code>.{{cssPrefix}}min-medium-hide</code></th>
         <td class="visible">Initial</td>
         <td class="visible">Initial</td>
         <td class="visible">Initial</td>

@@ -28,10 +28,11 @@ export default (
 
     <div className={pf('medium-show')}>Show on 768px and up</div>
     <div className={pf('medium-show-only')}>Show only between 768px and 1023px</div>
-    <div className={pf('max-medium-hide')}>Hide on 1023px and down</div>
+    <div className={pf('max-medium-hide')}>Hide on 767px and down</div>
     <div className={pf('min-medium-hide')}>Hide on 768px and up</div>
 
     <div className={pf('large-show')}>Show on 1024px and up</div>
+    <div className={pf('max-medium-hide')}>Hide on 1023px and down</div>
     <div className={pf('min-large-hide')}>Hide on 1024px and up</div>
   </div>
 );

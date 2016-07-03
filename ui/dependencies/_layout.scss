@@ -364,17 +364,15 @@
       }
     }
   }
-  @if $max {
+
+  @if $min {
 
     .#{$css-prefix}max-#{$class-name}-hide {
 
-      @media (max-width: $max - 1) {
+      @media (max-width: $min - 1) {
         display: none;
       }
     }
-  }
-
-  @if $min {
 
     .#{$css-prefix}min-#{$class-name}-hide {
 

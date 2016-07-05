@@ -132,7 +132,7 @@ class FAQ extends React.Component {
           <li>Modifier represents a different state of a block or element (e.g. <code>{g.filenamePrefix}-button--neutral</code>)</li>
         </ul>
         <p>
-          For more information, refer to our <a href="/getting-started/markup-and-style/">Markup and Style page</a> and <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">this article on guidelines for BEM naming</a> which
+          For more information, refer to our <a href="/guidelines/markup-and-style">Markup and Style page</a> and <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">this article on guidelines for BEM naming</a> which
           has more detail on why BEM is a useful convention.
         </p>
       </div>
@@ -141,7 +141,7 @@ class FAQ extends React.Component {
       'How do I display SVG icons with Lightning Components?',
       <div className={pf('container--large')}>
         <p>
-          Please review <a href="/getting-started/lightning">Getting Started with Lightning</a>.
+          Please review <a href="/platforms/lightning/">Getting Started with Lightning</a>.
         </p>
       </div>
     );

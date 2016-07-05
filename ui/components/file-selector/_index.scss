@@ -105,42 +105,42 @@
 .#{$css-prefix}file-selector--integrated {
   @include square(100%);
   position: relative;
-  display: flex;
+  display: block;
+}
 
-  .#{$css-prefix}file-selector__dropzone {
-    @include absolute-center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 0;
-    opacity: 0;
-    z-index: -1;
+.#{$css-prefix}file-selector__dropzone--integrated {
+  @include absolute-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  opacity: 0;
+  z-index: -1;
 
-    &.#{$css-prefix}has-drag {
-      background: $color-background-backdrop;
-      opacity: 1;
-      z-index: $z-index-overlay;
-    }
-
-    &.#{$css-prefix}has-drag-over {
-      background: $color-background-backdrop-tint;
-      box-shadow: 0 0 0 4px $color-border-brand inset;
-    }
+  &.#{$css-prefix}has-drag {
+    background: $color-background-backdrop;
+    opacity: 1;
+    z-index: $z-index-overlay;
   }
 
-  .#{$css-prefix}file-selector__body {
-    @include square($size-x-small);
-    @include absolute-center;
-    background: $color-background-alt;
-    box-shadow: $shadow-drop-down;
-    border: $border-width-thin solid $color-border;
-    border-radius: $border-radius-medium;
-    flex-direction: column;
+  &.#{$css-prefix}has-drag-over {
+    background: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
   }
+}
 
-  .#{$css-prefix}file-selector__text {
-    margin-top: $spacing-small;
-  }
+.#{$css-prefix}file-selector__body--integrated {
+  @include square($size-x-small);
+  @include absolute-center;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  flex-direction: column;
+}
+
+.#{$css-prefix}file-selector__text--integrated {
+  margin-top: $spacing-small;
 }

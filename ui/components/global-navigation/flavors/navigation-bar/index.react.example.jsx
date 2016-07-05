@@ -49,10 +49,10 @@ export let ContextBar = props =>
   <div className={className(pf('context-bar'), props.className)}>
 
     {/* Primary Section */}
-    <div className={pf('context-bar__primary')}>
+    <div className={pf('context-bar__primary context-bar__item--divider-right')}>
 
       {/* App Switcher */}
-      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
+      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
         <div className={pf('context-bar__icon-action')}>
           <a href="javascript:void(0);" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
             <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
@@ -64,56 +64,43 @@ export let ContextBar = props =>
         </span>
       </div>
 
-      {/* Object Context Switcher */}
-      <div className={pf('context-bar__vertical-divider')}></div>
-      <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
-        <a href="javascript:void(0);" title="Context" className={pf('context-bar__label-action truncate')}>
-          <span className={pf('truncate')}>Object</span>
-        </a>
-        <div className={pf('context-bar__icon-action')}>
-          <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-            <span className={pf('assistive-text')}>Assistive text for submenu</span>
-          </button>
-        </div>
-        <Menu className={pf('dropdown--right')}>
-          <MenuList>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Object 1</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Object 2</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Object 3</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Object 4</MenuItem>
-          </MenuList>
-        </Menu>
-      </div>
-
     </div>
     {/* End Primary */}
 
     {/* Secondary Section */}
     <nav className={pf('context-bar__secondary')} role="navigation">
-      <div className={pf('context-bar__vertical-divider')}></div>
 
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Home">
             <span className={pf('truncate')}>Home</span>
           </a>
         </li>
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')}>
-            <span className={pf('truncate')}>Context Menu Item 1</span>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 1">
+            <span className={pf('truncate')}>Menu Item 1</span>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')}>
             <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
           </div>
           { contextDropdown }
         </li>
+        <li className={pf('context-bar__item')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 2">
+            <span className={pf('truncate')}>Menu Item 2</span>
+          </a>
+        </li>
         <li className={className(pf('context-bar__item'), props.itemActive ? pf('is-active') : null)}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')}>
-            <span className={pf('truncate')}>Context Menu Item 2</span>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 3">
+            <span className={pf('truncate')}>Menu Item 3</span>
+          </a>
+        </li>
+        <li className={pf('context-bar__item')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 4">
+            <span className={pf('truncate')}>Menu Item 4</span>
           </a>
         </li>
       </ul>
@@ -128,15 +115,6 @@ export let ContextBar = props =>
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'context-bar',
-    label: 'Default',
-    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} />
-  },
-  {
-    id: 'context-bar-item-active',
-    label: 'Item Active',
-    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} itemActive />
-  }
-];
+export default (
+  <ContextBar itemActive />
+);

@@ -52,3 +52,15 @@ classes:
     class: file-selector--integrated
     description: Modifier for integrated file selector
     required: true
+  -
+    class: file-selector__dropzone--integrated
+    description: Specific to integrated file selector — region that a file can be dropped within
+    required: true
+  -
+    class: file-selector__body--integrated
+    description: Specific to integrated file selector — container for file selector content, specifically within the dropzone
+    required: true
+  -
+    class: file-selector__text--integrated
+    description: Specific to integrated file selector — Descriptive call back text
+    required: true

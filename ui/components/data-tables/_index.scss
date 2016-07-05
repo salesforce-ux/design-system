@@ -235,7 +235,7 @@ th.#{$css-prefix}is-sortable {
 
   &__divider {
     position: absolute;
-    left: 50%;
+    right: 0;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;

@@ -19,8 +19,17 @@
     bottom: 0;
     left: 0;
     z-index: $z-index-default;
-    background-color: $color-background-backdrop;
-    box-shadow: $shadow-focus-inset;
+    background-color: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
+  }
+
+  .#{$css-prefix}has-focus {
+    background: $color-background-row-hover;
+    border: 0;
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 1;
+    }
   }
 }
 
@@ -36,7 +45,7 @@
 
   td,
   tbody th,
-  tbody .#{$css-prefix}cell-shrink:first-child { // Remove padding
+  .#{$css-prefix}cell-shrink:first-child { // Remove padding
     padding: 0;
   }
 }
@@ -53,17 +62,16 @@
   &:focus {
 
     .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
+      opacity: 1;
 
       &:hover,
       &:focus {
-        opacity: 1;
         fill: $color-text-brand;
       }
     }
 
     .#{$css-prefix}button__icon--lock {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
 
@@ -72,17 +80,9 @@
       padding-left: $spacing-xxx-small;
     }
 
-  &.#{$css-prefix}is-selected { // This is the state where you've clicked outside the table, but this cell is still selected
-    background-color: $color-background-row-hover;
-
-    .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
-    }
-  }
-
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin;
+    border: $border-width-thin solid $color-border-selection;
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {
@@ -101,7 +101,7 @@
 
   &.#{$css-prefix}has-error {
     background-color: $color-background-highlight;
-    box-shadow: $color-border-error 0 0 0 $border-width-thick;
+    border: $border-width-thick solid $color-border-error;
   }
 }
 
@@ -111,8 +111,6 @@
 
 .#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
     background-color: $color-background-alt;
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
-                $color-border 0 ($border-width-thin) 0 inset;
 }
 
 .#{$css-prefix}form-element__label--edit {

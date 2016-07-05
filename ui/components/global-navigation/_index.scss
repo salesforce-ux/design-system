@@ -10,22 +10,12 @@
 .#{$css-prefix}context-bar {
   display: flex;
   height: $height-context-bar;
-  background-color: $color-background-context-bar-inverse;
-  color: $color-text-context-bar-inverse;
+  background-color: $color-background-context-bar;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: 3px solid $color-border-context-bar-theme-default;
+  color: $color-text-context-bar;
   position: relative;
   padding: 0 $spacing-medium;
-
-  // Crispy drop shadow
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    height: rem(4px);
-    background: linear-gradient(to bottom, rgba($color-background-context-bar-shadow, 0.25) 0, rgba($color-background-context-bar-shadow, 0) 100%);
-  }
 
   &__primary,
   &__secondary,
@@ -47,7 +37,7 @@
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border-context-bar-inverse-item;
+    border-left: $border-width-thin solid $color-border-context-bar-item;
   }
 
   // Any item on the horizontal axis of the context nav bar
@@ -62,32 +52,53 @@
     position: relative;
     max-width: $size-small;
 
-    &:hover {
+    &:not(.#{$css-prefix}no-hover):hover,
+    &.#{$css-prefix}is-active {
       outline: 0;
-      box-shadow: none;
       border-radius: 0;
-      background-color: $color-background-context-bar-inverse-item-hover;
+      background-color: $color-background-context-bar-item-hover;
+      border-bottom: 3px solid $color-border-context-bar-theme-default-hover;
+      margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
     }
 
     &.#{$css-prefix}is-active {
-      background-color: $color-background-context-bar-inverse-item-active;
+      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
+      border-bottom-color: $color-background-context-bar-item-hover;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        display: block;
+        background: $color-border-context-bar-theme-default-hover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      &:hover {
+        border-bottom-color: $color-background-context-bar-item-hover;
+      }
+    }
+
+    &:first-child.#{$css-prefix}is-active {
+      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border;
+    }
+
+    &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
+      font-weight: bold;
     }
 
     &--divider-left {
-      border-left: $border-width-thin solid $color-border-context-bar-inverse-item;
+      border-left: $border-width-thin solid $color-border-context-bar-item;
     }
 
     &--divider-right {
-      border-right: $border-width-thin solid $color-border-context-bar-inverse-item;
+      border-right: $border-width-thin solid $color-border-context-bar-item;
     }
-  }
-
-  // Tab context bar items
-  &__item--tab {
-    width: $size-x-small;
-    border-right: $border-width-thin solid $color-border-context-bar-item;
   }
 
   // Actionable Text Links
@@ -128,7 +139,7 @@
     align-items: center;
     align-content: center;
     padding: 0 $spacing-small;
-    color: $color-text-context-bar-inverse;
+    color: $color-text-context-bar;
 
     &:focus {
       outline: 0;
@@ -136,11 +147,11 @@
 
     &:hover,
     &:focus {
-      color: $color-text-context-bar-inverse;
+      color: $color-text-context-bar;
     }
 
     &:active {
-      color: $color-text-context-bar-inverse;
+      color: $color-text-context-bar;
     }
   }
 
@@ -155,6 +166,27 @@
       opacity: $opacity-8;
     }
   }
+
+  // Tab context bar items
+  &__item--tab {
+    width: $size-x-small;
+    border-right: $border-width-thin solid $color-border-context-bar-item;
+
+    .#{$css-prefix}context-bar__icon-action {
+      padding: 0 $spacing-xx-small;
+    }
+
+    &.#{$css-prefix}is-active {
+      background-color: $color-background-context-tab-bar-item;
+      border-bottom-color: $color-background-context-tab-bar-item;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $color-background-context-tab-bar-item;
+        border-bottom-color: transparent;
+      }
+    }
+  }
 }
 
 // Context Bar dropdown trigger specifics
@@ -167,15 +199,11 @@
     position: absolute;
     top: 100%;
     width: 100%;
+    height: 3px;
+  }
 
-    // A nubbin is a rotated square where sides have a length
-    // of $square-tooltip-nubbin.
-    // The height of the nubbin is half the square's diagonal.
-    // height: ((1 / 2) * ($square-tooltip-nubbin * sqrt(2)));
-    //
-    // Sass doesn't have advanced math functions so this is as
-    // close as it gets to calculating it:
-    height: ($square-tooltip-nubbin * 0.707);
+  .#{$css-prefix}dropdown {
+    margin-top: 3px;
   }
 }
 
@@ -193,136 +221,60 @@
   max-width: $size-x-small;
 }
 
-////////////////////////////////////////
-//  Theming
-///////////////////////////////////////
-
-// Light Theme
-.#{$css-prefix}context-bar--theme-light {
-  color: $color-text-context-bar;
-
-  .#{$css-prefix}context-bar__icon-action {
-    color: $color-text-context-bar;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-text-context-bar;
-    }
-  }
-}
-
-// Dark Theme
-.#{$css-prefix}context-bar--theme-dark {
-  color: $color-text-context-bar-inverse;
-
-  .#{$css-prefix}context-bar__icon-action {
-    color: $color-text-context-bar-inverse;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-text-context-bar-inverse;
-    }
-  }
-}
-
-// Themes - Light vs Dark
-// Alters the interactions and text color
-//
-// Set interactions based on lightness of background
-// @access private
-@mixin _context-bar-theme-interactions($background) {
-
-  @if type-of($background) == color {
-    $value: round(lightness($background));
-
-    // Really Light Backgrounds, like a white or off-white
-    @if $value > 90% {
-
-      .#{$css-prefix}context-bar__vertical-divider,
-      .#{$css-prefix}context-bar__item--divider-left,
-      .#{$css-prefix}context-bar__item--divider-right {
-        border-color: $color-border-context-bar-item;
-      }
-
-      .#{$css-prefix}context-bar__item:hover {
-        background-color: $color-background-context-bar-item-hover;
-      }
-
-      .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-        background-color: $color-background-context-bar-item-active;
-      }
-    }
-
-    // Light enough Backgrounds
-    @else if $value > 30% {
-
-      .#{$css-prefix}context-bar__vertical-divider,
-      .#{$css-prefix}context-bar__item--divider-left,
-      .#{$css-prefix}context-bar__item--divider-right {
-        border-color: $color-border-context-bar-item;
-      }
-
-      .#{$css-prefix}context-bar__item:hover {
-        background-color: $color-background-context-bar-item-hover;
-      }
-
-      .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-        background-color: $color-background-context-bar-item-active;
-      }
-    }
-
-    // Dark Backgrounds
-    @else if $value <= 30% {
-
-      .#{$css-prefix}context-bar__vertical-divider,
-      .#{$css-prefix}context-bar__item--divider-left,
-      .#{$css-prefix}context-bar__item--divider-right {
-        border-color: $color-border-context-bar-inverse-item;
-      }
-
-      .#{$css-prefix}context-bar__item:hover {
-        background-color: $color-background-context-bar-inverse-item-hover;
-      }
-
-      .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-        background-color: $color-background-context-bar-inverse-item-active;
-      }
-    }
-  }
-}
 
 // Themes - Pre-defined themes
 // Using mixin to determine text color and interactive states
 //
 // Platform
 .#{$css-prefix}context-bar--theme-default {
-  @include _context-bar-theme-interactions($color-background-context-bar-inverse);
-  background: $color-background-context-bar-inverse;
+  border-bottom-color: $color-border-context-bar-theme-default;
+
+  .#{$css-prefix}context-bar__item:hover,
+  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
+    border-bottom-color: $color-border-context-bar-theme-default-hover;
+  }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: $color-border-context-bar-theme-default-hover;
+    }
+  }
 }
-// Service
-.#{$css-prefix}context-bar--theme-service {
-  @include _context-bar-theme-interactions($color-background-context-bar-service);
-  background: $color-background-context-bar-service;
-}
-// Sales
-.#{$css-prefix}context-bar--theme-sales {
-  @include _context-bar-theme-interactions($color-background-context-bar-sales);
-  background: $color-background-context-bar-sales;
-}
-// Marketing
+
+// Marketing - temp
 .#{$css-prefix}context-bar--theme-marketing {
-  @include _context-bar-theme-interactions($color-background-context-bar-marketing);
-  background: $color-background-context-bar-marketing;
+  border-bottom-color: #f59331;
+
+  .#{$css-prefix}context-bar__item:hover,
+  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
+    border-bottom-color: #b75d0d;
+  }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: #b75d0d;
+    }
+  }
 }
-// Analytics
-.#{$css-prefix}context-bar--theme-analytics {
-  @include _context-bar-theme-interactions($color-background-context-bar-analytics);
-  background: $color-background-context-bar-analytics;
-}
-// Community
-.#{$css-prefix}context-bar--theme-community {
-  @include _context-bar-theme-interactions($color-background-context-bar-community);
-  background: $color-background-context-bar-community;
+
+// Service - temp
+.#{$css-prefix}context-bar--theme-service {
+  border-bottom-color: #bc35bc;
+
+  .#{$css-prefix}context-bar__item:hover,
+  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
+    border-bottom-color: #570d8c;
+  }
+
+  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
+    border-bottom-color: $color-background-context-tab-bar-item;
+
+    &:before {
+      background: #570d8c;
+    }
+  }
 }

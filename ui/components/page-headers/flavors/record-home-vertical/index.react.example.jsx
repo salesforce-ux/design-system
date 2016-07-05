@@ -90,7 +90,6 @@ export default (
             <button className={pf('slds-button slds-text-link--reset')} aria-haspopup="true">
               Field 4 (3)
               <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
-              <span className={pf('assistive-text')}>More Actions</span>
             </button>
           </div>
           <div className={pf('text-body--regular')}>

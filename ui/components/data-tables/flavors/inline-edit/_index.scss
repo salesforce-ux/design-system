@@ -51,13 +51,8 @@
     fill: $color-text-brand;
   }
 
-  .#{$css-prefix}indicator-header {
-    width: $square-icon-medium-boundary;
-  }
-
-  td,
-  tbody th,
-  .#{$css-prefix}cell-shrink:first-child { // Remove padding
+  th,
+  td { // Remove padding to place on internal node
     padding: 0;
   }
 
@@ -66,10 +61,22 @@
       box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
                   $color-border 0 ($border-width-thin) 0 inset;
   }
+
+  tbody tr {
+    counter-increment: row-number;
+  }
+
+  .#{$css-prefix}row-number {
+
+    &:after {
+      content: counter(row-number);
+    }
+  }
 }
 
 .#{$css-prefix}cell-edit {
-  margin: ($border-width-thin * -1) 0; // Make contents completely fill table cell
+  //margin: ($border-width-thin * -1) 0;
+  min-height: 2.3125rem; // Make contents completely fill table cell
   padding: $spacing-x-small; // Add padding to div inside
 
   .#{$css-prefix}button__icon--edit,
@@ -133,6 +140,10 @@
   }
 }
 
+.#{$css-prefix}cell-error {
+  padding-left: 0;
+}
+
 .#{$css-prefix}cell-edit__button:focus .#{$css-prefix}button__icon--edit {
     opacity: 1;
 }
@@ -154,14 +165,4 @@
     width: 100%;
     padding-left: $spacing-small;
   }
-}
-
-.#{$css-prefix}indicator-error {
-  outline: none;
-  box-shadow: $spacing-xx-small 0 0 0 $color-border-error inset;
-}
-
-.#{$css-prefix}indicator-error-none {
-  outline: none;
-  box-shadow: $spacing-xx-small 0 0 0 $color-border-brand inset;
 }

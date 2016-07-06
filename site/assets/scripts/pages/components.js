@@ -72,45 +72,42 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
   });
 };
 
+const isFlavor = hash =>
+  hash.match(/^flavor/ig);
+
+const onHashChange = () => {
+  const hash = window.location.hash.slice(1);
+  if (!isFlavor(hash)) {
+    return;
+  }
+  const flavor = hash;
+
+  const element = $(`.site-states [href="#${flavor}"]`)[0];
+  if (element) {
+    const iframeId = element.getAttribute('data-slds-flavor-states');
+    const iframeHref = element.getAttribute('data-slds-state-href');
+
+    fastdom.mutate(() => {
+      // Remove all "is-active" classes from the states
+      $('.site-states a').forEach(node => {
+        setClassName(node.parentElement, { 'slds-is-active': false });
+      });
+      // Add "is-active" to the selected state
+      setClassName(element.parentElement, { 'slds-is-active': true });
+      // Update the iframe src
+      // The code will be updated by the <iframe> using the delegate
+      console.log(iframeHref);
+      document.getElementById(`iframe-${iframeId}`).setAttribute('src', iframeHref);
+    });
+  }
+};
+
 /**
  * Fix SVG elements in a flavor's preview
  *
  * @param {object} document
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
-
-/**
- * Listen for flavor state buttons to be clicked
- * and then update the src of the <iframe>
- */
-const handleFlavorStateNavClick = (event, element) => {
-  // Ignore the click handler if Cmd/Ctrl keys are pressed during the click
-  // to allow users to open links in a new window
-  if (event.metaKey || event.ctrlKey) {
-    return;
-  }
-
-  event.preventDefault();
-
-  const flavor = element.getAttribute('data-slds-flavor-states');
-  const flavorHref = element.getAttribute('data-slds-flavor-href');
-  const src = element.href;
-
-  // Point to the state's flavor
-  window.location.hash = flavorHref;
-
-  fastdom.mutate(() => {
-    // Remove all "is-active" classes from the states
-    $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
-      setClassName(node.parentElement, { 'slds-is-active': false });
-    });
-    // Add "is-active" to the selected state
-    setClassName(element.parentElement, { 'slds-is-active': true });
-    // Update the iframe src
-    // The code will be updated by the <iframe> using the delegate
-    document.getElementById(`iframe-${flavor}`).setAttribute('src', src);
-  });
-};
 
 /**
  * Called when a form factor tab is selected
@@ -143,8 +140,8 @@ export default () => ({
       });
     },
     listen_dom: delegate => {
-      // States
-      delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);
+      window.addEventListener("hashchange", onHashChange, false);
+      onHashChange();
     }
   }
 });

@@ -67,6 +67,12 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
+- Record home vertical a11y fixes
+  - Add `aria-haspopup="true"` to action overflow buttons
+  - Add assistive text for icon
+  - Removed unnecessary aria roles from action overflow buttons
+  - Improve assistive text verbiage
+  - Make multiple value field entirely clickable to invoke dropdown
 - Global header a11y fixes
   - Improve semantics of dropdown menus
   - Apply `role=separator` to dropdown menu list items that do not have an actionable element

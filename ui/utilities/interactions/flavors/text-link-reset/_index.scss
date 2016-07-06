@@ -11,6 +11,7 @@
   cursor: pointer;
   line-height: inherit;
   font-size: inherit;
+  border-radius: inherit;
 
   &:active {
     outline: none;
@@ -22,6 +23,5 @@
   &:hover {
     color: inherit;
     text-decoration: inherit;
-    box-shadow: none;
   }
 }

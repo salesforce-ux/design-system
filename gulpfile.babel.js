@@ -18,6 +18,7 @@ import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import nconf from 'nconf';
+nconf.formats.yaml = require('nconf-yaml');
 import path from 'path';
 import prettyTime from 'pretty-time';
 import runSequence from 'run-sequence';
@@ -36,12 +37,21 @@ import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 import './scripts/gulp/links';
 
-nconf.argv().file({
-  file: './.sldsconfig'
-}).defaults({
-  'webpack-quiet': true,
-  'browser-sync-open': false
-});
+// Configuration
+nconf
+  // Environment variables:
+  // BROWSERSYNC__PORT=3005 npm start
+  .env({
+    separator: '__',
+    lowerCase: true
+  })
+  // Command line arguments:
+  // npm start -- --browsersync:port 3006
+  .argv()
+  // User configuration in a .sldsrc.yml file
+  .file('user', { file: './.sldsrc.yml', format: nconf.formats.yaml })
+  // Default configuration
+  .file('defaults', { file: './.sldsrc.defaults.yml', format: nconf.formats.yaml });
 
 const watchPaths = {
   sass: [
@@ -169,8 +179,7 @@ gulp.task('clean', del.bind(null, [
 gulp.task('serve', () => {
   const webpackConfig = getWebpackConfig();
   const webpackCompiler = webpack(webpackConfig);
-
-  browserSync({
+  const browserSyncConfig = {
     server: {
       baseDir: __PATHS__.www,
       middleware: [
@@ -180,17 +189,25 @@ gulp.task('serve', () => {
         // when dependencies have changed and then rebuild
         webpackDevMiddleware(webpackCompiler, {
           publicPath: webpackConfig.output.publicPath,
-          quiet: nconf.get('webpack-quiet')
+          quiet: nconf.get('webpack:quiet')
         })
       ]
     },
     notify: false,
-    open: nconf.get('browser-sync-open'),
+    open: nconf.get('browsersync:open'),
     // Disable ghost mode as it creates unexpected cross-iframe interactions
     // Fixes an issue where clicking a label in component A
     // scrolls down to component B
     ghostMode: false
-  });
+  };
+
+  // The port can't be passed as false or null,
+  // so we assign it separately, only if overriden
+  if (nconf.get('browsersync:port')) {
+    browserSyncConfig.port = nconf.get('browsersync:port');
+  }
+
+  browserSync(browserSyncConfig);
 
   // Reload after each rebuild
   webpackCompiler.plugin('done', stats => reload());

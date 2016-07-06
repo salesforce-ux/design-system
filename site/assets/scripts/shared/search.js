@@ -4,14 +4,19 @@ import globals from 'app_modules/global';
 let search;
 
 if (globals.displaySearch) {
-  require.ensure(['docsearch.js'], () => {
-    // See https://github.com/algolia/autocomplete.js#options
-    // for full list of options.
-    const docsearch = require('docsearch.js');
-    const autocompleteOptions = {
-      // debug: true
-    };
+  // See https://github.com/algolia/autocomplete.js#options
+  // for full list of options.
+  const autocompleteOptions = {
+    // debug: true
+  };
 
+  const d = document;
+  const t = 'script';
+  const o = d.createElement(t);
+  const s = d.getElementsByTagName(t)[0];
+  o.src = 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js';
+
+  o.addEventListener('load', function (e) {
     search = docsearch({
       apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
       indexName: 'lightningdesignsystem',
@@ -27,6 +32,7 @@ if (globals.displaySearch) {
       }
     });
   });
+  s.parentNode.insertBefore(o, s);
 }
 
 const handleResetClick = (event, node) => {

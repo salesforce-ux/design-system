@@ -38,7 +38,7 @@ export default (
     </p>
 
     <h2 className="site-text-heading--large">
-      <a href="/platforms/markup-and-style/">Markup and Style</a>
+      <a href="/guidelines/markup-and-style/">Markup and Style</a>
     </h2>
     <p>
       Discover the naming convention that power {globals.displayName}’s CSS and markup.'.

@@ -395,51 +395,6 @@ export let states = [
       </Container>
   },
   {
-    id: 'data-table-inline-edit-field-error',
-    label: 'Error - Field level',
-    element:
-      <Container>
-        <Table>
-          <Thead navigationModeTabIndex="0" />
-          <Tbody>
-            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
-              <Td>
-                <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
-          </Tbody>
-        </Table>
-      </Container>
-  },
-  {
-    id: 'data-table-inline-edit-field-error-focused',
-    label: 'Error - Field level focused',
-    element:
-      <Container>
-        <Table>
-          <Thead navigationModeTabIndex="0" />
-          <Tbody>
-            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
-              <Td ariaSelected="true">
-                <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
-          </Tbody>
-        </Table>
-      </Container>,
-    script: `
-      document.getElementById('button-01').focus()
-    `
-  },
-  {
     id: 'data-table-inline-edit-row-error',
     label: 'Error - Row level on save',
     element:

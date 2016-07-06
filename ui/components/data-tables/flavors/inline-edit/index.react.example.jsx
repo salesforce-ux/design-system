@@ -113,7 +113,7 @@ let ButtonEdit = props =>
   </button>;
 
 let EditPanel = props =>
-  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '2.05rem', left: '10.875rem' }}>
+  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '0', left: '0.5rem' }}>
     <span id="form-start" tabIndex="0"></span>
     <div className={pf('popover__body')}>
       { props.children }
@@ -499,21 +499,21 @@ export let states = [
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
+                <EditPanel>
+                  <div className={pf('form-element grid')}>
+                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
+                      <span className={pf('assistive-text')}>Company</span>
+                    </label>
+                    <div className={pf('form-element__control grow')}>
+                      <input id="company-01" className={pf('input')} type="text" defaultValue="Acme Enterprises" />
+                    </div>
+                  </div>
+                </EditPanel>
               </Td>
             </RowData>
             <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
-        <EditPanel>
-          <div className={pf('form-element grid')}>
-            <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-              <span className={pf('assistive-text')}>Company</span>
-            </label>
-            <div className={pf('form-element__control grow')}>
-              <input id="company-01" className={pf('input')} type="text" defaultValue="Acme Enterprises" />
-            </div>
-          </div>
-        </EditPanel>
       </Container>,
     script: `
       document.getElementById('company-01').focus()
@@ -534,22 +534,22 @@ export let states = [
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
+                <EditPanel>
+                  <div className={pf('form-element grid')}>
+                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
+                      <abbr className={pf('slds-required')} title="required">*</abbr>
+                      <span className={pf('assistive-text')}>Company</span>
+                    </label>
+                    <div className={pf('form-element__control grow')}>
+                      <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required />
+                    </div>
+                  </div>
+                </EditPanel>
               </Td>
             </RowData>
             <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
-        <EditPanel>
-          <div className={pf('form-element grid')}>
-            <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-              <abbr className={pf('slds-required')} title="required">*</abbr>
-              <span className={pf('assistive-text')}>Company</span>
-            </label>
-            <div className={pf('form-element__control grow')}>
-              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required />
-            </div>
-          </div>
-        </EditPanel>
       </Container>,
     script: `
       document.getElementById('company-01').focus()
@@ -570,23 +570,23 @@ export let states = [
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
+                <EditPanel>
+                  <div className={pf('form-element has-error grid wrap')}>
+                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
+                      <abbr className={pf('slds-required')} title="required">*</abbr>
+                      <span className={pf('assistive-text')}>Company</span>
+                    </label>
+                    <div className={pf('form-element__control grow')}>
+                      <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
+                    </div>
+                  <div id="error-message-01" className={pf('form-element__help')}>This field is required</div>
+                  </div>
+                </EditPanel>
               </Td>
             </RowData>
             <RowDataStatic navigationModeTabIndex="0" />
           </Tbody>
         </Table>
-        <EditPanel>
-          <div className={pf('form-element has-error grid wrap')}>
-            <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-              <abbr className={pf('slds-required')} title="required">*</abbr>
-              <span className={pf('assistive-text')}>Company</span>
-            </label>
-            <div className={pf('form-element__control grow')}>
-              <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
-            </div>
-          <div id="error-message-01" className={pf('form-element__help')}>This field is required</div>
-          </div>
-        </EditPanel>
       </Container>,
     script: `
       document.getElementById('company-01').focus()

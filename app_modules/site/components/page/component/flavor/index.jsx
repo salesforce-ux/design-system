@@ -117,9 +117,16 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
+    const StateAnchor = props =>
+      <div className="site-jump-anchor"><span id={props.id}></span></div>;
+    let statesIds = null;
+    if (flavor.example && _.isArray(flavor.example.states)) {
+      statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`} />);
+    }
     return (
       <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
         <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
+          {statesIds}
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}

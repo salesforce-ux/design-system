@@ -73,19 +73,19 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
 };
 
 const isFlavor = hash =>
-  hash.match(/^flavor/ig);
+  hash.match(/^\#flavor-/ig);
 
 const onHashChange = () => {
-  const hash = window.location.hash.slice(1);
+  const hash = window.location.hash;
   if (!isFlavor(hash)) {
     return;
   }
-  const flavor = hash;
 
-  const element = $(`.site-states [href="#${flavor}"]`)[0];
+  const element = $(`.site-states [href="${hash}"]`)[0];
+
   if (element) {
-    const iframeId = element.getAttribute('data-slds-flavor-states');
-    const iframeHref = element.getAttribute('data-slds-state-href');
+    const iframeId = element.getAttribute('data-slds-target');
+    const iframeSrc = element.getAttribute('data-slds-state-href');
 
     fastdom.mutate(() => {
       // Remove all "is-active" classes from the states
@@ -96,8 +96,7 @@ const onHashChange = () => {
       setClassName(element.parentElement, { 'slds-is-active': true });
       // Update the iframe src
       // The code will be updated by the <iframe> using the delegate
-      console.log(iframeHref);
-      document.getElementById(`iframe-${iframeId}`).setAttribute('src', iframeHref);
+      document.getElementById(iframeId).setAttribute('src', iframeSrc);
     });
   }
 };
@@ -140,8 +139,8 @@ export default () => ({
       });
     },
     listen_dom: delegate => {
-      window.addEventListener("hashchange", onHashChange, false);
-      onHashChange();
+      window.addEventListener('hashchange', onHashChange, false);
+      setTimeout(onHashChange, 400);
     }
   }
 });

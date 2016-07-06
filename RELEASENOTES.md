@@ -166,7 +166,7 @@ The following features are being removed in this release:
 
 The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via `app.css`). It is no longer necessary to add a static resource for Lightning Components running within these environments.
 
-Starting in 2.0.x, the Lightning Design System is no longer available as an unmanaged package. Also, the scoped CSS files (`salesforce-lightning-design-system-vf.css` and `salesforce-lightning-design-system-ltng.css`) are no longer distributed as part of the Design System zip file (available in the [Downloads](/downloads/) page). As an alternative, you may now generate your own scoped Design System zip file using the new [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer) and upload it as a static resource as documented on the tool’s page.
+Starting in 2.0.x, the Lightning Design System is no longer available as an unmanaged package. Also, the scoped CSS files (`salesforce-lightning-design-system-vf.css` and `salesforce-lightning-design-system-ltng.css`) are no longer distributed as part of the Design System zip file (available in the [Downloads](/downloads/) page). As an alternative, you may now generate your own scoped Design System zip file using the new [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer) and upload it as a static resource as documented on the tool’s page. However, we strongly recommend that you do not install SLDS as a static resource when building for Lightning.
 
 Resources:
 

@@ -1,0 +1,88 @@
+$nds-font-color: #16325C;
+$nds-border-color: #D8DDE6;
+$nds-border-radius: 4px;
+
+@mixin nds-box-shadow-none {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+}
+
+@mixin nds-border-and-image {
+	border-color: $nds-border-color !important;
+	background-image: none !important;
+}
+
+div.chosen-container-single {
+
+	a.chosen-default {
+		@include nds-box-shadow-none;
+		color: $nds-font-color;
+		background: none;
+		line-height: 2.4;
+		border: 1px solid $nds-border-color;
+		font-family: Salesforce Sans;
+		font-size: 14px;
+		height: 33px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	a.chosen-single {
+		@extend a.chosen-default;
+	}
+}
+
+div.chosen-container {
+
+	a div b {
+		display: none;
+	}
+
+	div.chosen-drop {
+		@include nds-box-shadow-none;
+		border-color: $nds-border-color;
+
+		div.chosen-search {
+			input {
+				border-radius: $nds-border-radius !important;
+				border-color: $nds-border-color !important;
+			}
+		}
+	}
+
+	ul.chosen-results {
+
+		li.highlighted {
+			background-color: #F4F6F9 !important;
+			background-image: none !important;
+			border-radius: $nds-border-radius;
+			color: inherit;
+		}
+
+		li.active-result {
+			color: $nds-font-color;
+		}
+
+		li em {
+			text-decoration: none !important;
+		}
+	}
+}
+
+div.chosen-with-drop {
+
+	a.chosen-single {
+		@include nds-border-and-image;
+	}
+}
+
+div.chosen-container-active {
+
+	a.chosen-single {
+		@include nds-border-and-image;
+	}
+}

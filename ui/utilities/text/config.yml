@@ -6,8 +6,8 @@ flavors:
   - heading-medium
   - heading-small
   - heading-label
+  - heading-label-normal
   - alignment
   - longform
   - section-title
   - section-title-dividers
-  - faux-links

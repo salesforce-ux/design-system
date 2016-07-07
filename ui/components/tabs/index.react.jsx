@@ -76,7 +76,7 @@ class TabItem extends React.Component {
       <a
         className={pf(`tabs--${this.props.flavor}__link`)}
         onClick={this.props.onClick.bind(this)}
-        href="#void" role="tab"
+        href="javascript:void(0);" role="tab"
         tabIndex={tabIndex}
         aria-selected={this.props.current}
         aria-controls={this.props.id}
@@ -87,7 +87,7 @@ class TabItem extends React.Component {
   }
 
   render() {
-    const props = this.$propsWithoutKeys('className', 'id', 'role');
+    const props = this.$propsWithoutKeys('className', 'id', 'role', 'content');
     const className = classNames(
       this.props.className,
       pf(classNames(`tabs--${this.props.flavor}__item`, 'text-heading--label', {

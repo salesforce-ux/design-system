@@ -18,7 +18,7 @@ class Crumb extends React.Component {
   render() {
     const text = this.props.children;
     return (
-      <li className={pf('list__item text-heading--label')}>
+      <li className={pf('breadcrumb__item text-heading--label')}>
         <a href={this.props.href}>{text}</a>
       </li>
     );
@@ -35,9 +35,8 @@ class BreadCrumbs extends React.Component {
 
   render() {
     return (
-      <nav {...this.props} role="navigation">
-        <p id="bread-crumb-label" className={pf('assistive-text')}>You are here:</p>
-        <ol className={pf('breadcrumb list--horizontal')} aria-labelledby="bread-crumb-label">
+      <nav {...this.props} role="navigation" aria-label="Breadcrumbs">
+        <ol className={pf('breadcrumb list--horizontal')}>
           {this.props.children}
         </ol>
       </nav>

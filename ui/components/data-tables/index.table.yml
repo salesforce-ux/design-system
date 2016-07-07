@@ -26,9 +26,37 @@ classes:
     description: Enables user interactions for sorting a column
     applied: <code>&lt;th&gt;</code>
   -
+    class: is-sortable__icon
+    description: Arrow that indicates sorted direction
+    applied: <code>&lt;svg&gt;</code>
+  -
+    class: is-sorted--asc
+    description: Makes sortable icon point up
+    applied: <code>&lt;th&gt;</code>
+  -
     class: is-resizable
     description: Enables table cell to be resized
     applied: <code>&lt;th&gt;</code>
+  -
+    class: resizable
+    description: Resizing element within a table heading cell
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: resizable__input
+    description: Input inside resizable element that is used for screen readers, value updates as the column width updates
+    applied: <code>&lt;input type="range"&gt;</code>
+  -
+    class: resizable__handle
+    description: Handle the user interacts with to initiate a column resize
+    applied: <code>&lt;span&gt;</code>
+  -
+    class: resizable__divider
+    description: Vertical indicator spanning down the table column
+    applied: <code>&lt;span&gt;</code>
+  -
+    class: th__action
+    description: Actionable area inside a table heading cell
+    applied: <code>&lt;a&gt;</code>
   -
     class: cell-wrap
     description: Forces text to wrap in a cell

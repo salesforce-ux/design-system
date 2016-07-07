@@ -22,24 +22,44 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
 
+const sign = x => (x < 0) ? '' : '+';
+
+Number.prototype.toKB = function () {
+  return (this / 1024).toFixed(2);
+};
+
 gulp.task('stylestats', done => {
-  const file = '.www/assets/styles/slds.css';
-  const c = gutil.colors;
-  const logPrefix = `[${c.cyan(path.basename(file))}] `;
-  const stats = new StyleStats(file);
-  stats.parse((error, result) => {
-    let sizeColor = 'green';
-    switch (true) {
-    case (result.size > 200 * 1024):
-      sizeColor = 'bgred';
-      break;
-    case (result.size > 160 * 1024 && result.size <= 200 * 1024):
-      sizeColor = 'yellow';
-      break;
-    }
-    gutil.log(logPrefix + c[sizeColor](`Size: ${(result.size / 1024).toFixed(2)}KB (${(result.gzippedSize / 1024).toFixed(2)}KB gzipped)`));
-    gutil.log(`${logPrefix}Rules: ${result.rules} | Selectors: ${result.selectors}`);
-    done(err, result);
+  const localFile = '.www/assets/styles/slds.css';
+  const remoteFile = 'https://www.lightningdesignsystem.com/assets/styles/slds.css';
+
+  const localStats = new StyleStats(localFile, '.stylestatsrc');
+  const remoteStats = new StyleStats(remoteFile, '.stylestatsrc');
+  const remote = {};
+
+  remoteStats.parse((error, result) => {
+    remote.size = result.size;
+    remote.gzippedSize = result.gzippedSize;
+    remote.rules = result.rules;
+    remote.selectors = result.selectors;
+
+    localStats.parse((error, result) => {
+      const diff = {};
+
+      diff.size = result.size - remote.size;
+      diff.gzippedSize = result.gzippedSize - remote.gzippedSize;
+      diff.rules = result.rules - remote.rules;
+      diff.selectors = result.selectors - remote.selectors;
+
+      gutil.log(gutil.colors.green(`slds.scss (minified):
+            ${result.size.toKB()}KB (${result.gzippedSize.toKB()}KB gzipped)`));
+
+      gutil.log(gutil.colors.gray(`That's ${sign(diff.size)}${diff.size.toKB()}KB (${sign(diff.gzippedSize)}${diff.gzippedSize.toKB()}KB gzipped) than the current public version.`));
+
+      gutil.log(`Additional stats:
+            Rules: ${result.rules} (${sign(diff.rules)}${diff.rules})
+            Selectors: ${result.selectors} (${sign(diff.selectors)}${diff.selectors})`);
+      done(error, result);
+    });
   });
 });
 

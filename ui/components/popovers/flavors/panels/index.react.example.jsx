@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -19,7 +19,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 const iconHeader = (
   <span className={pf('icon_container icon-standard-account')}>
-    <SvgIcon className={pf('icon icon--large')} sprite="standard" symbol="account" />
+    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
     <span className={pf('assistive-text')}>Tesla Motors</span>
   </span>
 );
@@ -36,13 +36,16 @@ const iconCases = (
   </span>
 );
 
+const ViewAll = () =>
+  <dd className={pf('m-top--x-small text-align--right')}><a href="javascript:void(0);" title="View all Opportunities">View All</a></dd>;
+
 export default (
   <div className={pf('popover popover--panel nubbin--left-top')} role="dialog">
 
     <div className={pf('popover__header')}>
 
       <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <a href="#void" className={pf('text-heading--medium')}>Tesla Motors</a>
+        <a href="javascript:void(0);" className={pf('text-heading--medium')}>Tesla Motors</a>
       </MediaObject>
 
       {/* Additional Info */}
@@ -61,21 +64,21 @@ export default (
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Phone</p></dt>
-            <dd><a href="#void">212-345-3485</a></dd>
+            <dd><a href="javascript:void(0);">212-345-3485</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Website</p></dt>
-            <dd><a href="#void">teslamotors.com</a></dd>
+            <dd><a href="javascript:void(0);">teslamotors.com</a></dd>
           </dl>
         </div>
 
         <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-heading--label truncate')}>Account Owner</p></dt>
-            <dd><a href="#void">Jeff Maguire</a></dd>
+            <dd><a href="javascript:void(0);">Jeff Maguire</a></dd>
           </dl>
         </div>
 
@@ -85,13 +88,13 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <h3 className={pf('text-heading--small')}>Opportunities (2+)</h3>
+            <p className={pf('text-heading--small')}>Opportunities (2+)</p>
           </MediaObject>
         </dt>
         {/* Opportunity One */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#void">Tesla - Mule ESB</a>
+            <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -113,7 +116,7 @@ export default (
         {/* Opportunity Two */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#void">Tesla - Anypoint Studios</a>
+            <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -132,20 +135,19 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="#void" title="View all Opportunities">View All</a></dd>
+        <ViewAll />
       </dl>
-
 
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconCases} flavor="center">
-            <h3 className={pf('text-heading--small')}>Cases (1)</h3>
+            <p className={pf('text-heading--small')}>Cases (1)</p>
           </MediaObject>
         </dt>
         {/* Case One */}
         <dd className={pf('tile')}>
           <p className={pf('tile__title truncate')}>
-            <a href="#void">Tesla - Anypoint Studios</a>
+            <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <div className={pf('tile__detail')}>
             <dl className={pf('dl--horizontal text-body--small')}>
@@ -164,11 +166,8 @@ export default (
             </dl>
           </div>
         </dd>
-        <dd className={pf('m-top--small')}><a href="#void" title="View all Cases">View All</a></dd>
+        <ViewAll />
       </dl>
-
-
     </div>
-
   </div>
 );

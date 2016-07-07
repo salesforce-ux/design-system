@@ -89,6 +89,10 @@ class FAQ extends React.Component {
             <td data-label="Browser">Internet Explorer</td>
             <td data-label="Version">11</td>
           </tr>
+          <tr>
+            <td data-label="Browser">Microsoft Edge</td>
+            <td data-label="Version">Latest</td>
+          </tr>
         </tbody>
       </table>
     );
@@ -96,7 +100,7 @@ class FAQ extends React.Component {
       `How can I design responsively using the ${g.displayName}?`,
       <p className={pf('container--large')}>
         We recommend that you make good use of our flexible and
-        powerful <CTALink href="/components/grid-system" eventType="responsive-grid">Grid System</CTALink>,
+        powerful <CTALink href="/components/utilities/grid" eventType="responsive-grid">Grid System</CTALink>,
         which will help you construct responsive layouts that
         scale elegantly across screen sizes.
       </p>
@@ -104,7 +108,7 @@ class FAQ extends React.Component {
     this.addContentItem(
       `Can I use the ${g.displayName} together with Bootstrap or any other CSS framework?`,
       <p className={pf('container--large')}>
-        Yes, but you have to use the {g.moduleName}-scoped.css. All CSS selectors are uniquely scoped and prefixed to prevent any collisions.
+        Yes. All CSS selectors are prefixed with <code>.slds-</code> to prevent any collisions.
       </p>
     );
     this.addContentItem(
@@ -125,17 +129,11 @@ class FAQ extends React.Component {
         <ul>
           <li>Block represents a high-level component (e.g. <code>{g.filenamePrefix}-button</code>)</li>
           <li>Element represents a descendent of a component (e.g. <code>{g.filenamePrefix}-button__icon</code>)</li>
-          <li>Modifier represents a different state of a block or element (e.g. <code>{g.filenamePrefix}-button__icon--x-small</code>)</li>
+          <li>Modifier represents a different state of a block or element (e.g. <code>{g.filenamePrefix}-button--neutral</code>)</li>
         </ul>
         <p>
-          Using double rather than single hyphens and underscores means that
-          the block or modifier can itself contain hyphens or underscores, for
-          example <code>--x-small</code>.
-        </p>
-        <p>
-          For more information, refer to <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">this article on guidelines for BEM naming</a> which
-          has more detail on why BEM is a useful convention; we would
-          highly encourage that you read it if you are confused.
+          For more information, refer to our <a href="/getting-started/markup-and-style/">Markup and Style page</a> and <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">this article on guidelines for BEM naming</a> which
+          has more detail on why BEM is a useful convention.
         </p>
       </div>
     );
@@ -195,15 +193,16 @@ class FAQ extends React.Component {
         <p className={pf('container--large')}>
           Lightning Components also use a special syntax to reference your static resources, and
           you need edit the code you cut and paste from the {g.displayName}.
-          If you want to load the master stylesheet and you uploaded the {g.displayName} as
-          a static resource named <code>{compactVersion}</code> then you should
-          include the style sheet like:
+          If you are adding a custom scoped file as a static resource named <code>{compactVersion}</code> then you should
+          include the style sheet in this format:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="javascript">{`
-<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}.css"/>
+<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.css"/>
           `}</CodeBlock>
         </div>
+        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here.</a>
+        </p>
       </div>
     );
     this.addContentItem(

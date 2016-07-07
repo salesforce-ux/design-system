@@ -17,12 +17,11 @@ import g from 'app_modules/global';
 const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 
 export default (
   <PageBody anchorTitle="Markup and Style" contentClassName={pf('container--large')}>
     <p className="site-text-introduction">
-      The Salesforce Lightning Design System (SLDS) component library was developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
+      The Salesforce Lightning Design System (SLDS) component library is actively developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
     </p>
     <p>In order to accomplish this goal, we’ve chosen to use very specific naming techniques. These allow us to keep our code base flat, with low specificity, and keeps us from fighting specificity wars that start with frustration and end with <code>!important</code>. Though we base our naming on the BEM method, we have a few additions of our own outlined below.</p>
     <h2 className="site-text-heading--large">BEM Naming</h2>
@@ -47,8 +46,8 @@ export default (
     <h3 className="site-text-heading--medium">Namespacing</h3>
     <p>In order to make this framework easy to use with other frameworks, we’ve added the <code>.slds-</code> namespace. Rather than using <code>.button</code>, our framework uses <code>.slds-button</code>. This allows you to integrate the Lightning Design System (SLDS) with your own bespoke CSS or to integrate it with an application that uses the modified Salesforce Bootstrap framework previously used as you wean your application away from it.</p>
     <h3 className="site-text-heading--medium">Scoping</h3>
-    <p>In some cases, when you don&rsquo;t have full control of the DOM (for example, when integrating with Visualforce, Lightning Components or another framework), you may need to scope components built with SLDS. In this case, three different versions of the CSS framework are available in the download.</p>
-    <p>The components built from SLDS should have the class <code>.slds</code> at the highest level of the DOM where they&rsquo;re included. In some cases this will be a wrapper at the component level, in other cases you may wrap several components. Do not place <code>.slds</code> on the body level of the application if you are including non-slds components within it. This would cause the non-slds components to be scoped and may override expected styles with negative effects.</p>
+    <p>In some cases, within the Salesforce ecosystem, SLDS CSS is not yet available. In those cases, for example, when building within Visualforce, Lightning Applications (my.app), or deploying components via Lightning Out, you should scope components built with SLDS. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
+    <p>The components built with your custom-scoped SLDS will need your custom scoped class at the highest level of the DOM where the components are included. In some cases this will be a wrapper at the component level, in other cases you may wrap several components. Do not place your custom class on the body element of the application if you are including non-SLDS components within that area as well. This would cause the non-SLDS components to be scoped and could override expected styles with unwanted effects.</p>
     <h2 className="site-text-heading--large">Component States</h2>
     <p>When a component has a variety of states, we add a class to indicate the state the component, or certain portions of the component, are in. Some examples are: <code>.is-selected</code>, <code>.is-active</code>, <code>.is-expanded</code>, <code>.is-nested</code>, <code>.is-open</code>, <code>.has-focus</code>, <code>.has-error</code>, etc.</p>
     <p>

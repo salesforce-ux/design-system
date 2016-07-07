@@ -13,6 +13,7 @@ import fastdom from 'fastdom';
 import Status from 'app_modules/site/util/component/status';
 import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
+import { set as setPreference } from '../shared/preferences';
 
 import { $, setClassName } from '../framework/dom';
 import { updateScrollSpy } from '../shared/nav';
@@ -23,15 +24,24 @@ import { updateScrollSpy } from '../shared/nav';
 const highlight = (() => {
   // Remove wrapping tag if it has the ".demo-only" class in it
   // Note: this will also remove other classes too on that tag! :)
-  const pattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
+  const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
   const cache = {};
-  return html => {
-    html = html.trim();
-    let cached = cache[html];
+  return code => {
+    code = code.trim().replace(demoPattern, (match, tag, content) => content);
+    const lines = code.split('\n');
+    // If first line is empty, look at the second one instead
+    const firstLine = lines[0].length === 0 ? lines[1] : '';
+    // Figure out the number of spaces for that first line
+    const offsetMatch = firstLine.match(/^\s*/);
+    // How many spaces?
+    const offset = offsetMatch ? offsetMatch[0].length : 0;
+    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
+
+    let cached = cache[codeTrimmed];
     if (cached) return cached;
-    cached = cache[html] = Prism.highlight(
-      html.replace(pattern, (match, tag, content) => content),
-      Prism.languages['markup']
+    cached = cache[codeTrimmed] = Prism.highlight(
+      codeTrimmed,
+      Prism.languages.markup
     );
     return cached;
   };
@@ -70,14 +80,37 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
+
+const handleFlavorStatusChange = () => {
+  if (window.location.hash) {
+    const askedFlavor = window.location.hash;
+    const section = $(`[data-slds-status="prototype"] ${askedFlavor}`);
+
+    if (section.length > 0) {
+      setPreference('status', 'prototype');
+    }
+  }
+};
+
 /**
  * Listen for flavor state buttons to be clicked
  * and then update the src of the <iframe>
  */
 const handleFlavorStateNavClick = (event, element) => {
+  // Ignore the click handler if Cmd/Ctrl keys are pressed during the click
+  // to allow users to open links in a new window
+  if (event.metaKey || event.ctrlKey) {
+    return;
+  }
+
   event.preventDefault();
-  const [ flavor, src ] = ['', '-src'].map(key =>
-    element.getAttribute(`data-slds-flavor-states${key}`));
+
+  const flavor = element.getAttribute('data-slds-flavor-states');
+  const flavorHref = element.getAttribute('data-slds-flavor-href');
+  const src = element.href;
+
+  // Point to the state's flavor
+  window.location.hash = flavorHref;
   fastdom.mutate(() => {
     // Remove all "is-active" classes from the states
     $(`[data-slds-flavor-states="${flavor}"]`).forEach(node => {
@@ -124,6 +157,9 @@ export default () => ({
     listen_dom: delegate => {
       // States
       delegate('click', '[data-slds-flavor-states]', handleFlavorStateNavClick);
+    },
+    after_listen_dom: () => {
+      handleFlavorStatusChange();
     }
   }
 });

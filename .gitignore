@@ -1,16 +1,28 @@
-.DS_Store
-.tmp
-/.dist
-/.npm
-/.generated
-/.www
-/scripts/deploy
-/scripts-internal
-/server
-/git_modules
+# Ignore all hidden dotfiles
+.*
+
+# Whitelist useful dotfiles
+!/.scss-linters/
+!/.babelrc
+!/.editorconfig
+!/.eslintignore
+!/.eslintrc.yml
+!/.gitattributes
+!/.gitignore
+!/.hound.yml
+!/.scss-lint.yml
+!/.stylestatsrc
+!/.travis.yml
+
+# Add a .gitkeep file in an empty
+# directory to check it in the repository
+!.gitkeep
+
+# Ignore modules
 /node_modules
-/public
-/site/assets/downloads/design-tokens
+
+# Ignore logs
 *.log
-.sldsconfig
-/.npmrc
+
+# Legacy folders
+/git_modules

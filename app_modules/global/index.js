@@ -9,6 +9,11 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+// NOTE: Do not import any modules in here. This also runs in the browser.
+
+const sanitizeVersion = version =>
+  version.replace(/\s+|\(|\)/g, '_');
+
 export default {
   abbreviatedName: 'SLDS',
   cssPrefix: 'slds-',
@@ -27,9 +32,6 @@ export default {
     {type: 'heroku-react-app', url: 'https://github.com/ccoenraets/lightning-react-app'},
     {type: 'heroku-static-starter', url: 'https://github.com/salesforce-ux/demo_slds_heroku'}
   ],
-  unmanagedPackageUrls: [
-    { version: '1.0.0', url: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04t61000000kZwH' }
-  ],
   moduleName: 'salesforce-lightning-design-system',
   resetWrappingClass: '.slds',
   zipName: function(version) {
@@ -37,5 +39,6 @@ export default {
   },
   downloadPath: function(version) {
     return 'assets/downloads/' + this.zipName(version);
-  }
+  },
+  displaySearch: !process.env.INTERNAL
 };

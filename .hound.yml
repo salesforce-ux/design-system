@@ -7,3 +7,5 @@ jscs:
 eslint:
   enabled: true
   config_file: .eslintrc.yml
+ruby:
+  enabled: false

@@ -10,31 +10,122 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import PickList from 'ui/components/picklists/index.react';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export default (
-<div className="demo-only" style={{height: '240px'}}>
-  <PickList label="Select an Option" aria-expanded="true" className={pf('dropdown-trigger dropdown-trigger--click is-open')}>
-    <Menu className={pf('dropdown--left')}>
-      <Menu.List className={pf('dropdown--length-5')}>
-        <Menu.Item href="#">Option A</Menu.Item>
-        <Menu.Item href="#">Option B</Menu.Item>
-        <Menu.Item href="#">Option C</Menu.Item>
-        <Menu.Item href="#">Option D</Menu.Item>
-        <Menu.Item href="#">Option E</Menu.Item>
-        <Menu.Item href="#">Option F</Menu.Item>
-        <Menu.Item href="#">Option G</Menu.Item>
-        <Menu.Item href="#">Option H</Menu.Item>
-        <Menu.Item href="#">Option I</Menu.Item>
-        <Menu.Item href="#">Option J</Menu.Item>
-        <Menu.Item href="#">Option K</Menu.Item>
-        <Menu.Item href="#">Option L</Menu.Item>
-        <Menu.Item href="#">Option MNOPQRSTUVWXYZ 123456</Menu.Item>
-      </Menu.List>
-    </Menu>
-  </PickList>
-</div>
-);
+export let states = [
+  {
+    id: 'picklist-closed',
+    label: 'Closed',
+    element:
+      <div className={pf('picklist dropdown-trigger dropdown-trigger--click')} aria-expanded="false" >
+        <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+          <span className={pf('truncate')}>Select an Option</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        </button>
+        <Menu className={pf('dropdown--left')}>
+          <MenuList className={pf('dropdown--length-5')}>
+            <MenuItem isSelectable>Option A</MenuItem>
+            <MenuItem isSelectable>Option B</MenuItem>
+            <MenuItem isSelectable>Option C</MenuItem>
+            <MenuItem isSelectable>Option D</MenuItem>
+            <MenuItem isSelectable>Option E</MenuItem>
+            <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
+          </MenuList>
+        </Menu>
+      </div>
+  },
+  {
+    id: 'picklist-open',
+    label: 'Open',
+    element:
+      <div className="demo-only" style={{height: '240px'}}>
+        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')} aria-expanded="true" >
+          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+            <span className={pf('truncate')}>Select an Option</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+          </button>
+          <Menu className={pf('dropdown--left')}>
+            <MenuList className={pf('dropdown--length-5')}>
+              <MenuItem isSelectable>Option A</MenuItem>
+              <MenuItem isSelectable>Option B</MenuItem>
+              <MenuItem isSelectable>Option C</MenuItem>
+              <MenuItem isSelectable>Option D</MenuItem>
+              <MenuItem isSelectable>Option E</MenuItem>
+              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
+            </MenuList>
+          </Menu>
+        </div>
+      </div>
+  },
+  {
+    id: 'picklist-open-item-selected',
+    label: 'Item selected',
+    element:
+      <div className="demo-only" style={{height: '240px'}}>
+        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')} aria-expanded="true" >
+          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+            <span className={pf('truncate')}>Option A</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+          </button>
+          <Menu className={pf('dropdown--left')}>
+            <MenuList className={pf('dropdown--length-5')}>
+              <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Option A</MenuItem>
+              <MenuItem isSelectable>Option B</MenuItem>
+              <MenuItem isSelectable>Option C</MenuItem>
+              <MenuItem isSelectable>Option D</MenuItem>
+              <MenuItem isSelectable>Option E</MenuItem>
+              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
+            </MenuList>
+          </Menu>
+        </div>
+      </div>
+  },
+  {
+    id: 'picklist-open-item-multi-selected',
+    label: 'Multiple items selected',
+    element:
+      <div className="demo-only" style={{height: '240px'}}>
+        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')} aria-expanded="true" >
+          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+            <span className={pf('truncate')}>2 Options selected</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+          </button>
+          <Menu className={pf('dropdown--left')}>
+            <MenuList className={pf('dropdown--length-5')}>
+              <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Option A</MenuItem>
+              <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Option B</MenuItem>
+              <MenuItem isSelectable>Option C</MenuItem>
+              <MenuItem isSelectable>Option D</MenuItem>
+              <MenuItem isSelectable>Option E</MenuItem>
+              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
+            </MenuList>
+          </Menu>
+        </div>
+      </div>
+  },
+  {
+    id: 'picklist-closed-item-multi-selected',
+    label: 'Closed - Multiple items selected',
+    element:
+      <div className="demo-only">
+        <div className={pf('picklist dropdown-trigger dropdown-trigger--click')} aria-expanded="false" >
+          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true" aria-activedescendant="">
+            <span className={pf('truncate')}>2 Options selected</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+          </button>
+          <Menu className={pf('dropdown--left')}>
+            <MenuList className={pf('dropdown--length-5')}>
+              <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Option A</MenuItem>
+              <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Option B</MenuItem>
+              <MenuItem isSelectable>Option C</MenuItem>
+              <MenuItem isSelectable>Option D</MenuItem>
+              <MenuItem isSelectable>Option E</MenuItem>
+              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
+            </MenuList>
+          </Menu>
+        </div>
+        <PillContainer className={pf('pill_container--bare')}>
+          <Pill label="Option A" unlinked />
+          <Pill label="Option B" unlinked />
+        </PillContainer>
+      </div>
+  }
+];

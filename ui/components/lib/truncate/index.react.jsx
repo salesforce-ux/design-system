@@ -24,7 +24,7 @@ class Truncate extends React.Component {
   // TODO: Remove span
   render() {
     const {children, amount} = this.props;
-    return <span>{amount ? _.truncate(children, amount) : children}</span>;
+    return <span title={children}>{amount ? _.truncate(children, amount) : children}</span>;
   }
 }
 

@@ -1,0 +1,5 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: align--absolute-center
+    description: Class will absolutely center children content

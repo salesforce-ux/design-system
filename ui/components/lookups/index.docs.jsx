@@ -30,7 +30,7 @@ export default (
       <li>Input field has attributes <code>role="combobox"</code>, <code>aria-autocomplete="list"</code></li>
       <li>Input field has an <code>aria-expanded</code> attribute whose value is <code>false</code> when the results list is hidden, <code>true</code> when the results list is visible</li>
       <li>Input field has an <code>aria-activedescendant</code> attribute whose value is the id of the highlighted results list option, no value if nothing&rsquo;s highlighted in the list</li>
-      <li>Results list is an <code>&lt;ul role="presentation"&gt;</code>, where each item is containing an <code>&lt;a href="javascript:void(0)" role="option"&gt;</code></li>
+      <li>Results list is an <code>&lt;ul role="presentation"&gt;</code>, where each item is containing an <code>&lt;a href="javascript:void(0);" role="option"&gt;</code></li>
     </ul>
     <p>Expected keyboard interactions:</p>
     <ul>

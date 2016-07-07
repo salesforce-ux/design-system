@@ -74,7 +74,7 @@ let Required = props =>
     </FormElement>
   </Demo>;
 
-let Error = props =>
+let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
@@ -135,7 +135,7 @@ export let states = [
   {
     id: 'select-error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorState />
   },
   {
     id: 'select-disabled',

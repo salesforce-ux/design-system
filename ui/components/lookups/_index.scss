@@ -1,0 +1,169 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}lookup {
+  position: relative;
+  width: 100%; // Fill up parent container
+
+  &__list {
+    // crazy calc - line height of primary text + line height of meta text - the offset to bring the meta up a bit + the top/bottom padding multipied by how many items I want to show
+    max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 5);
+    overflow-y: auto;
+  }
+
+  &__menu {
+    background: $color-background-alt;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    z-index: $z-index-dropdown;
+    position: absolute;
+    width: 100%;
+    padding: $spacing-xx-small 0;
+    display: none;
+  }
+
+  @include deprecate('4.0.0', 'Use .slds-lookup__item-action instead') {
+    &__item {
+
+      > a,
+      > span,
+      > button {
+        display: block;
+        padding: $spacing-x-small;
+        color: $color-text-default;
+        text-align: left;
+        width: 100%;
+        line-height: $line-height-text;
+        border-radius: 0;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          background-color: $color-background-row-hover;
+          color: $color-text-default;
+          text-decoration: none;
+        }
+
+        .#{$css-prefix}icon {
+          margin-right: $spacing-x-small;
+        }
+      }
+    }
+  }
+
+  &__item--label {
+    display: flex;
+    align-items: center;
+    padding: $spacing-x-small;
+  }
+
+  &__item-action {
+    font-size: $font-size-medium;
+    display: flex;
+    align-items: center;
+    padding: $spacing-xx-small $spacing-x-small;
+    color: $color-text-default;
+    text-align: left;
+    width: 100%;
+    line-height: $line-height-text;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: $color-background-row-hover;
+      color: $color-text-default;
+      text-decoration: none;
+    }
+
+    // Icon in results, here so it doesn't need to be repeated in DOM
+    .#{$css-prefix}icon {
+      margin-right: $spacing-x-small;
+    }
+  }
+
+  &__item-action--label {
+    padding: $spacing-x-small $spacing-small;
+
+    .#{$css-prefix}icon {
+      margin-right: $spacing-small;
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+  }
+
+  // Primary Text in results, truncate mixin used so class wouldn't need to be repeated in DOM
+  &__result-text {
+    @include truncate;
+    display: block;
+  }
+
+  // Meta data in results
+  &__result-meta {
+    display: block;
+    margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+  }
+
+  &__pill-container {
+    padding: 0 $spacing-x-small $spacing-xx-small; // center aligns pills within selection area due to top padding on menu
+  }
+
+  // Typeahead bizness
+  mark {
+    font-weight: $font-weight-bold;
+    background-color: transparent;
+  }
+
+  // Deal with Lookup when user activates the lookup
+  &.#{$css-prefix}is-open {
+
+    // Show and remove border and border radius
+    .#{$css-prefix}lookup__menu {
+      display: block;
+    }
+  }
+
+  // Deal with lookup if selection has been made
+  &.#{$css-prefix}has-selection {
+
+    // If developer needs to keep the input in the DOM and not able to remove it
+    .#{$css-prefix}lookup__search-input {
+      display: none;
+    }
+  }
+
+  // Single selection specific
+  &[data-select="single"],
+  &[data-select="multi"] {
+
+    // Stretch pill 100% of container
+    .#{$css-prefix}pill {
+      display: flex;
+    }
+
+    // Send close button to the end of the pill
+    .#{$css-prefix}pill__remove {
+      margin-left: auto;
+    }
+  }
+
+  @include deprecate('4.0.0', '.slds-has-selection now removes the selector .slds-lookup__search-input instead of .slds-input') {
+    &.#{$css-prefix}has-selection {
+
+      .#{$css-prefix}input,
+      .#{$css-prefix}input__icon {
+        display: none;
+      }
+    }
+  }
+}

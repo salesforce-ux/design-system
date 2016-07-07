@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
@@ -33,18 +34,28 @@ Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitel
 
 // Remove wrapping tag if it has the ".demo-only" class in it
 // Note: this will also remove other classes too on that tag! :)
-const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\S\s]*?)\<\/\1\>$/;
+const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
 
 /**
- * Hight a string of text based on the language
+ * Highlight a string of text based on the language
  *
  * @param {string} code
  * @param {string} language
  * @returns {string}
  */
 function highlight(code, language) {
+  code = code.trim().replace(demoPattern, (match, tag, content) => content);
+  const lines = code.split('\n');
+  // If first line is empty, look at the second one instead
+  const firstLine = lines[0].length === 0 ? lines[1] : '';
+  // Figure out the number of spaces for that first line
+  const offsetMatch = firstLine.match(/^\s*/);
+  // How many spaces?
+  const offset = offsetMatch ? offsetMatch[0].length : 0;
+  const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
+
   return Prism.highlight(
-    code.replace(demoPattern, (match, tag, content) => content),
+    codeTrimmed,
     Prism.languages[language]
   );
 }
@@ -106,11 +117,22 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
+    const styles = {};
+
+    if (flavor.status === 'prototype') {
+      styles.display = 'none';
+    }
+
     return (
-      <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
-        <Heading type="h2" id={flavor.id} className={pf('site-text-heading--large site-text-heading--callout')}>
+      <section
+        className={pf('m-bottom--xx-large p-top--x-large')}
+        style={styles}
+        data-slds-status={flavor.status}>
+        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
           {flavor.title}
           {this.renderBadge(flavor.status)}
+          {this.renderBadge(flavor.formFactorStatus)}
+          {this.renderCompatiblityBadges()}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>
@@ -130,10 +152,46 @@ class ComponentFlavor extends React.Component {
     if (!status) return null;
     const words = _.words(status).join(' ');
     const statusBadgeType = _.words(status).join('-');
-    const classes = classNames(pf('badge m-left--medium shrink-none align-middle'), 'badge--' + statusBadgeType);
-    return (
-      <span className={classes}>{words}</span>
+    const className = classNames(
+      pf('badge m-left--medium shrink-none align-middle'),
+      `badge--${statusBadgeType}`
     );
+    return (
+      <span className={className}>{words}</span>
+    );
+  }
+
+  renderCompatiblityBadges() {
+    const { flavor } = this.props;
+    if (!flavor.compatibility) return null;
+    const labels = {
+      s1: 'S1 Mobile',
+      aura: 'Aura',
+      lightning: 'Lightning Out'
+    };
+    const labelVisbility = {
+      internal: ['aura'],
+      external: ['s1', 'lightning']
+    };
+    return _.keys(flavor.compatibility)
+      .filter(key => labels[key])
+      .filter(key => {
+        const k = process.env.INTERNAL ? 'internal' : 'external';
+        return _.includes(labelVisbility[k], key);
+      })
+      .reduce((badges, key) => {
+        const compatible = flavor.compatibility[key];
+        const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
+        const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
+          'badge--compatible': compatible,
+          'badge--not-compatible': !compatible
+        }));
+        return badges.concat((
+          <span className={className} key={`badge-${key}`}>
+            {label}
+          </span>
+        ));
+      }, []);
   }
 
   renderInfo() {
@@ -159,13 +217,11 @@ class ComponentFlavor extends React.Component {
     const src = previewState ? previewState.id : 'default';
     const iframe = (
       <iframe
-        src={`/${flavor.path}/_${src}.html?iframe&initial`}
-        height="100%"
+        src={`/${pathToURL(flavor.path)}/_${src}.html?iframe&initial`}
         id={`iframe-${flavor.uid}`}
         name={flavor.uid}
         ref="iframe"
-        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}
-        scrolling="no" />
+        data-form-factor={previewTabActive ? this.state.previewTabActive.key : null} />
     );
     const previewPanel = (
       <Tabs.Content

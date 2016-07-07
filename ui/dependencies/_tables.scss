@@ -1,0 +1,85 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+@mixin table-stacked {
+
+  @include mq-medium-max {
+    border: 0;
+
+    thead {
+      // scss-lint:disable ImportantRule
+      position: absolute !important;
+      margin: -1px !important;
+      border: 0 !important;
+      padding: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+    }
+
+    th {
+      border-top: 0;
+    }
+
+    tr {
+      display: block;
+      border-top: $border-width-thick solid $color-border;
+    }
+
+    th,
+    td {
+      display: block;
+      padding: $spacing-small;
+      max-width: 100%;
+      width: 100%;
+      clear: both;
+      white-space: normal;
+      overflow: hidden;
+      text-align: left;
+
+      // Remove max width from truncate definition
+      &.#{$css-prefix}truncate {
+        max-width: 100%;
+      }
+
+      &:before {
+        @include text-heading--label;
+        display: block;
+        padding-bottom: $spacing-xx-small;
+        content: attr(data-label);
+      }
+    }
+
+    tr > td:first-child,
+    tr > td:last-child {
+      padding: $spacing-small;
+    }
+
+    &:not(.#{$css-prefix}no-row-hover) tbody tr:hover {
+
+      // scss-lint:disable ImportantRule
+      td,
+      th {
+        background-color: inherit !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .#{$css-prefix}is-interactive .#{$css-prefix}button {
+      visibility: visible;
+    }
+
+    .#{$css-prefix}cell-shrink {
+      width: auto;
+    }
+  }
+}

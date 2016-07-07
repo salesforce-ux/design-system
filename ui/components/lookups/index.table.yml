@@ -23,8 +23,28 @@ classes:
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: form-element
-    description: Initializes lookup form element
+    class: lookup__item--label
+    description: Non-actionable label inside of a lookup item
     required: true
     applied: <code>&lt;div&gt;</code>
-    notes: Wraps <code>&lt;input&gt;</code> and <code>.{{cssPrefix}}pill_container</code>
+  -
+    class: lookup__item-action
+    description: Actionable element inside of a lookup item
+    required: true
+    applied: <code>&lt;a&gt;</code>
+  -
+    class: lookup__item-action--label
+    description: Actionable element inside of a lookup item that's output is single line text
+    applied: <code>.{{cssPrefix}}lookup__item-action</code>
+  -
+    class: lookup__result-text
+    description: Primary entity name within lookup item
+    applied: <code>&lt;span&gt;</code>
+  -
+    class: lookup__result-meta
+    description: Secondary info of primary entity name within lookup item
+    applied: <code>&lt;a&gt;</code>
+  -
+    class: lookup__search-input
+    description: Styles for a lookup's form input
+    applied: <code>&lt;input&gt;</code>

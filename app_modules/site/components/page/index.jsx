@@ -101,6 +101,7 @@ export default React.createClass({
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', '${GOOGLE_ANALYTICS_ID}', 'auto');
+      ga('require', 'linkid');
       ga('send', 'pageview');
     `}} />;
   },
@@ -125,14 +126,14 @@ export default React.createClass({
   renderBody() {
     return (
       <body>
-        <div id="app" />
+        <div id="app" dangerouslySetInnerHTML={{__html: this.props.contentHTML}} />
         {this.renderScripts()}
       </body>
     );
   },
 
   renderScripts() {
-    const scripts = [
+    let scripts = [
       { src: '/assets/scripts/site.js' }
     ];
     return scripts.concat(this.props.scripts).map((script, index) => {

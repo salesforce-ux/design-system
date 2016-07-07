@@ -1,0 +1,36 @@
+.#{$nds-prefix}section {
+  @include box($theme: shade, $padding: 0, $borders: around);
+  background-color: $color-background-alt;
+
+  + .#{$nds-prefix}section {
+    margin-top: $spacing-medium;
+  }
+
+  &__header {
+    padding: $spacing-large $spacing-large $spacing-xx-small;
+  }
+
+  &__body {
+    padding: $spacing-x-small $spacing-none;
+  }
+
+  &__footer {
+    padding: $spacing-xx-small $spacing-large $spacing-large;
+  }
+
+  .#{$css-prefix}tile {
+    margin: $spacing-none;
+    padding: $spacing-small $spacing-large;
+
+    + .#{$css-prefix}tile {
+      margin-top: $spacing-none;
+    }
+  }
+
+  .#{$css-prefix}col {
+    &--padded {
+      padding-left: $spacing-large;
+      padding-right: $spacing-large;
+    }
+  }
+}

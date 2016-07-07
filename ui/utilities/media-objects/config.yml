@@ -1,0 +1,5 @@
+status: 'dev-ready'
+classBase: 'media'
+flavors:
+  - base
+  - responsive

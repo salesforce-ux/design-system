@@ -19,23 +19,18 @@ import g from 'app_modules/global';
 const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
 const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
-const unmanagedPackageUrl = g.unmanagedPackageUrls[0].url;
 
 export default (
   <PageBody anchorTitle="Visualforce" contentClassName={pf('container--large')}>
     <p className="site-text-introduction">
-      The {g.displayName} is ready to use in your Visualforce pages.
+      Create a custom CSS file to use the {g.displayName} in Visualforce.
     </p>
-    <p>
-      For an extensive getting started tutorial, please see our <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>. We cover setup, and the {g.displayName} class structure, before building a list view page and a record home page with a number of our components.
-    </p>
+    <p>To use the Design System in Visualforce you need to create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here.</a></p>
     <p>
       If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:
     </p>
     <ul className={pf('list--dotted')}>
-      <li>As an alternative to downloading the {g.displayName}, you can install it directly in your development org using an <a href="/resources/downloads">unmanaged package</a>.</li>
       <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-visualforce-static-resources-like-stylesheets-and-icons">FAQ</a>.</li>
-      <li>All your Design System markup needs to be contained, or scoped, within a <code>&lt;div class="slds"&gt;</code> outer wrapper.</li>
       <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the component examples, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
       <li>To use the SVG spritemap icons, add the attributes <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> to the <code>&lt;html&gt;</code> element as documented in the <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>. Do not add the attributes to individual <code>&lt;svg&gt;</code> elements as can cause a page rendering bug.</li>
       <li>To use SVG spritemap image icons with Internet Explorer, use the <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a> script.</li>

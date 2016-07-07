@@ -1,0 +1,104 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.site-banner {
+  font-weight: $font-weight-regular;
+  white-space: nowrap;
+
+  a {
+    display: block;
+    color: $color-text-default;
+    padding: $spacing-large $spacing-x-large;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: rgba($color-background, 0.5);
+    }
+
+    &:active {
+      background-color: rgba($color-background, 0.75);
+    }
+  }
+
+  > a > span {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: $line-height-reset;
+    text-transform: lowercase;
+
+    &:first-child {
+      margin-right: $spacing-x-small;
+    }
+  }
+
+  @include mq-medium-min {
+    position: fixed;
+    top: 0;
+    border-right: $border-width-thin solid $color-border-separator;
+    width: $width-sidebar;
+    height: $height-banner;
+    text-align: left;
+    z-index: $z-index-overlay;
+
+    > a {
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+      height: $height-banner;
+      line-height: $height-banner;
+    }
+
+    &.site-banner--internal {
+      height: ($height-banner + $height-banner-badge);
+    }
+  }
+}
+
+.site-banner-badge {
+  @include gradient-striped(rgba(#fff, 0.2), -45deg, #fbbc05);
+  background-size: rem(12px) rem(12px);
+  color: #16325c;
+  font-weight: $font-weight-bold;
+  height: $height-banner-badge;
+  line-height: $height-banner-badge;
+  padding: 0 $spacing-medium;
+}
+
+.site-logo {
+  width: 3.9375rem;
+  height: 2.75rem;
+  text-indent: -9999em;
+  background: url('../images/logo.svg') no-repeat;
+}
+
+.site-skip-content a {
+  padding: {
+    top: $spacing-small;
+    bottom: $spacing-small;
+  }
+  background-color: $color-background-alt-2;
+
+  @include mq-medium-min {
+    position: absolute;
+    left: -9999em;
+    margin-top: -2.125rem;
+    width: 100%;
+    background: none;
+    padding-left: $spacing-x-large + $spacing-x-small + 3.9375rem;
+
+    &:focus {
+      left: 0;
+    }
+  }
+}

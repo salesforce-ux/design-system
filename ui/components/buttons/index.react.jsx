@@ -38,10 +38,15 @@ class Button extends React.Component {
 
 Button.propTypes = {
   flavor: componentUtil.PropTypes.flavor(
-    'neutral', 'brand', 'inverse', 'destructive',
-    'neutral-selected', 'inverse-selected',
-    'hint', 'small',
-    'more', 'icon-more'
+    'neutral',
+    'brand',
+    'inverse',
+    'destructive',
+    'neutral-selected',
+    'inverse-selected',
+    'hint',
+    'more',
+    'icon-more'
   )
 };
 

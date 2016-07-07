@@ -12,10 +12,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import Img from 'app_modules/ui/img';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const dialingIcon = (
@@ -26,7 +25,7 @@ const dialingIcon = (
 );
 const image = (
   <span className={pf('avatar avatar--circle avatar--medium')}>
-    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+    <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 const recordIcon = (
@@ -80,11 +79,11 @@ export default (
             <div className={pf('docked-composer__contacts grid grid--align-spread')}>
               <div className={pf('pill_container')}>
                 <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Lei Chan</a>
+                  <a href="javascript:void(0);" className={pf('pill__label')}>Lei Chan</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
                 <span className={pf('pill')}>
-                  <a href="#" className={pf('pill__label')}>Tesla Motors</a>
+                  <a href="javascript:void(0);" className={pf('pill__label')}>Tesla Motors</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
               </div>

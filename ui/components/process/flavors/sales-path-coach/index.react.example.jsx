@@ -37,13 +37,13 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon flavor="icon-small,icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button flavor="brand,small" className={className(pf('button--border-filled path__mark-complete no-flex m-horizontal--small'), props.className)}>
+  <Button flavor="brand" className={className(pf('path__mark-complete no-flex m-horizontal--small'), props.className)}>
     {props.children}
   </Button>;
 
@@ -56,7 +56,7 @@ let Tabsmain = props =>
 
 let Tab = props =>
   <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
-    <a className={pf('tabs--path__link')} id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="#void" aria-live="assertive">
+    <a className={pf('tabs--path__link')} id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
       {props.children}
     </a>
   </li>;
@@ -77,7 +77,7 @@ let Coachcontent3 = props =>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
           <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
-          <span className={pf('text-body--small')}><a href="#void">Edit</a></span>
+          <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
           <dt className={pf('coach__item dl--horizontal__label')}>Expected Budget</dt>
@@ -85,15 +85,15 @@ let Coachcontent3 = props =>
           <dt className={pf('coach__item dl--horizontal__label')}>Lead Source</dt>
           <dd className={pf('coach__value dl--horizontal__detail')}>Marketing and Web Referral</dd>
           <dt className={pf('coach__item dl--horizontal__label')}>Support Engineer</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}><a href="#void">Jack Arthur</a></dd>
+          <dd className={pf('coach__value dl--horizontal__detail')}><a href="javascript:void(0);">Jack Arthur</a></dd>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
         <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
-          <p>Regularly cross-sell related products using <a href="#void">cross-sell tactics and principles</a>.</p>
-          <p>Prepare demo deck using the <a href="#void">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
-          <p>Look up <a href="#void">needs analysis principles</a> and review selling plan with Sales Engineer.</p>
+          <p>Regularly cross-sell related products using <a href="javascript:void(0);">cross-sell tactics and principles</a>.</p>
+          <p>Prepare demo deck using the <a href="javascript:void(0);">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
+          <p>Look up <a href="javascript:void(0);">needs analysis principles</a> and review selling plan with Sales Engineer.</p>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ let Coachcontent4 = props =>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
           <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
-          <span className={pf('text-body--small')}><a href="#void">Edit</a></span>
+          <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
           <dt className={pf('coach__item dl--horizontal__label')}>Build State</dt>
@@ -113,13 +113,13 @@ let Coachcontent4 = props =>
           <dt className={pf('coach__item dl--horizontal__label')}>Expected Sign Date</dt>
           <dd className={pf('coach__value dl--horizontal__detail')}>-</dd>
           <dt className={pf('coach__item dl--horizontal__label')}>Key Buyer</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}><a href="#void">-</a></dd>
+          <dd className={pf('coach__value dl--horizontal__detail')}><a href="javascript:void(0);">-</a></dd>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
         <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
-          <p>Check out the latest Negotiation and Review tactics on our <a href="#void">online portal here</a>.</p>
+          <p>Check out the latest Negotiation and Review tactics on our <a href="javascript:void(0);">online portal here</a>.</p>
           <p>Review Quote with the Legal and Marketing team and be sure to approve with Exec.</p>
           <p>Set up at time to delivery schedule and check with Inventory.</p>
         </div>

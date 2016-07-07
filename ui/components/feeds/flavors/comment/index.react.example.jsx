@@ -12,8 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
@@ -30,41 +29,51 @@ let Demo = props =>
 
 // Export used in discussion feeds
 export let Comment = props =>
-  <MediaObject figureLeft={MediumAvatar} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="#void" title="Design Systems">Design Systems</a> - <a href="#void" title="Jason Rodgers">Jason Rogers</a>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+  <article className={pf('media comment hint-parent')}>
+    <div className={pf('media__figure')}>
+      {MediumAvatar}
     </div>
-    <p className={pf('text-body--small')}>
-      <a href="#void" title="Click for single-item view of this post">18hr Ago</a>
-    </p>
-    {props.children}
-  </MediaObject>;
+    <div className={pf('media__body')}>
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('truncate')}>
+          <a href="javascript:void(0);" title="Design Systems">Design Systems</a> - <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a>
+        </p>
+        <ButtonIcon
+          className={pf('shrink-none')}
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
+      <p className={pf('text-body--small')}>
+        <a href="javascript:void(0);" title="Click for single-item view of this post">18hr Ago</a>
+      </p>
+      {props.children}
+    </div>
+  </article>;
 
 let CommentMinimal = props =>
-  <MediaObject figureLeft={SmallAvatar} className={pf('comment hint-parent')}>
-    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-      <p className={pf('truncate')}>
-        <a href="#void" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
-      </p>
-      <ButtonIcon
-        className={pf('shrink-none')}
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
-        symbol="down"
-        assistiveText="Show More" />
+  <article className={pf('media comment hint-parent')}>
+    <div className={pf('media__figure')}>
+      {SmallAvatar}
     </div>
-    {props.children}
-  </MediaObject>;
+    <div className={pf('media__body')}>
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('truncate')}>
+          <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
+        </p>
+        <ButtonIcon
+          className={pf('shrink-none')}
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
+      {props.children}
+    </div>
+  </article>;
 
 // Export used in discussion feeds
 export let CommentLongform = props =>
@@ -76,22 +85,22 @@ let CommentEntityTags = props =>
   <div className={pf('tags text-body--small p-bottom--x-small')}>
     <span>Topics:</span>
     <ul className={pf('tags__list')}>
-      <li className={pf('tags__item')}><a href="#void" title="Powerpoint">Powerpoint</a></li>
-      <li className={pf('tags__item')}><a href="#void" title="Sales Presentation">Sales Presentation</a></li>
-      <li className={pf('tags__item')}><a href="#void" title="Todo">Todo</a></li>
-      <li className={pf('tags__item')}>and <a href="#void" title="Show the remaining topics">3 more</a></li>
+      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Powerpoint">Powerpoint</a></li>
+      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Sales Presentation">Sales Presentation</a></li>
+      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Todo">Todo</a></li>
+      <li className={pf('tags__item')}>and <a href="javascript:void(0);" title="Show the remaining topics">3 more</a></li>
     </ul>
   </div>;
 
 // Export used in discussion feeds
 export let CommentFooter = props =>
   <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-    <li className={pf('list__item')}>
-      <a href="#void" title="Like this item">
-        { props.showLikeButton ? LikeButton : null } Like
+    <li className={pf('item')}>
+      <a href="javascript:void(0);" title="Like this item">
+        { props.showLikeButton ? LikeButton : null }Like
       </a>
     </li>
-    <li className={pf('list__item')}>{props.likes} Likes</li>
+    <li className={pf('item')}>{props.likes} Likes</li>
   </ul>;
 
 // Export used within publisher
@@ -100,7 +109,7 @@ export let Attachments = props =>
     <div className={pf('attachments__item box box--x-small theme--shade')}>
       <div className={pf('grid grid--align-spread')}>
         <MediaObject figureLeft={SmallIcon}>
-          <a href="#void" title="filename.ppt">filename.ppt</a>
+          <a href="javascript:void(0);" title="filename.ppt">filename.ppt</a>
         </MediaObject>
         <ButtonIcon
           flavor="icon-bare"
@@ -113,16 +122,16 @@ export let Attachments = props =>
 
 const MediumAvatar = (
   <div className={pf('avatar avatar--circle avatar--medium')}>
-    <a href="#void" title="Jason Rodgers">
-      <Img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
+    <a href="javascript:void(0);" title="Jason Rodgers">
+      <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
     </a>
   </div>
 );
 
 const SmallAvatar = (
   <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="#void" title="Jenna Davis">
-      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+    <a href="javascript:void(0);" title="Jenna Davis">
+      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );
@@ -150,7 +159,7 @@ const LikeButton = (
 let Default = props =>
   <Comment>
     <CommentLongform>
-      <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+      <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </CommentLongform>
     <CommentEntityTags />
     <CommentFooter showLikeButton likes="21" />
@@ -159,7 +168,7 @@ let Default = props =>
 let Minimal = props =>
   <CommentMinimal>
     <CommentLongform>
-      <p><a href="#void" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
+      <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
     </CommentLongform>
     <CommentFooter likes="21" />
   </CommentMinimal>;
@@ -167,7 +176,7 @@ let Minimal = props =>
 let WithAttachment = props =>
   <Comment>
     <CommentLongform>
-      <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+      <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </CommentLongform>
     <Attachments />
     <CommentEntityTags />
@@ -178,7 +187,7 @@ let WithPublisher = props =>
   <Demo>
     <Comment>
       <CommentLongform>
-        <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
       </CommentLongform>
       <CommentEntityTags />
       <CommentFooter showLikeButton likes="21" />
@@ -194,7 +203,7 @@ let WithReplies = props =>
   <Demo>
     <Comment>
       <CommentLongform>
-        <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
       </CommentLongform>
       <CommentEntityTags />
       <CommentFooter showLikeButton likes="21" />
@@ -203,7 +212,7 @@ let WithReplies = props =>
       <li>
         <CommentMinimal>
           <CommentLongform>
-            <p><a href="#void" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
+            <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
           </CommentLongform>
           <CommentFooter likes="13" />
         </CommentMinimal>
@@ -218,7 +227,7 @@ let WithOverflow = props =>
   <Demo>
     <Comment>
       <CommentLongform>
-        <p>Here's the latest demo presentation <a href="#void" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
       </CommentLongform>
       <CommentEntityTags />
       <CommentFooter showLikeButton likes="21" />
@@ -230,7 +239,7 @@ let WithOverflow = props =>
       <li>
         <CommentMinimal>
           <CommentLongform>
-            <p><a href="#void" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
+            <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
           </CommentLongform>
           <CommentFooter likes="13" />
         </CommentMinimal>

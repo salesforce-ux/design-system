@@ -1,0 +1,48 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// The Sass importer needs the extension to be explicit when multiple files have the same name
+// scss-lint:disable ImportPath
+
+@import
+  '@salesforce-ux/design-tokens/dist/s1-base-large.default.scss',
+  '@salesforce-ux/design-tokens/dist/s1-base.default.scss',
+  '@salesforce-ux/design-tokens/dist/force-base.default.scss',
+  '@salesforce-ux/design-tokens/dist/force-base.map.scss',
+  '@salesforce-ux/design-tokens/dist/bg-actions.default.scss',
+  '@salesforce-ux/design-tokens/dist/bg-custom.default.scss',
+  '@salesforce-ux/design-tokens/dist/bg-standard.default.scss',
+  '@salesforce-ux/design-tokens/dist/bg-actions.map.scss',
+  '@salesforce-ux/design-tokens/dist/bg-custom.map.scss',
+  '@salesforce-ux/design-tokens/dist/bg-standard.map.scss';
+
+
+// TODO: Add to Design Tokens
+
+// MQ
+$mq-x-small: 320px !default;
+$mq-small: 480px !default;
+$mq-medium: 768px !default;
+$mq-large: 1024px !default;
+$mq-x-large: 1280px !default;
+
+$color-context-bar-shadow: #000 !default;
+$height-input: 1.875rem !default;
+$height-pill: 1.625rem !default;
+
+// nCino Design Tokens
+$mq-bs3-small: 768px;
+$mq-bs3-medium: 992px;
+$mq-bs3-large: 1200px;
+$size-5x-small: 1rem !default;
+$size-4x-small: 2rem !default;
+$size-3x-small: 3rem !default;
+$size-frame-default: 48rem;
+$elevation-shadow-1: 0px 1px 1px 0px rgba(0,0,0,.16) !default;
+$line-height-button-xsmall: 1.5rem;

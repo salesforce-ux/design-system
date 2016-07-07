@@ -14,6 +14,10 @@ import _ from 'lodash';
 import Prism from 'app_modules/site/vendor/prism';
 
 function highlight(code, language) {
+  // If a language isn't supported, fall back to C
+  if (!(language in Prism.languages)) {
+    language = 'clike';
+  }
   return Prism.highlight(code, Prism.languages[language]);
 }
 
@@ -30,10 +34,11 @@ class CodeBlock extends React.Component {
     const {language} = this.props;
     const code = this.props.children.toString();
     const lines = code.split('\n');
-    const line = lines.length > 1 ? lines[1] : '';
-    const offsetMatch = line.match(/^\s*/);
+    const firstLine = lines.length > 1 ? lines[1] : '';
+    const offsetMatch = firstLine.match(/^\s*/);
     const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n');
+    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
+
     return {
       __html: highlight(codeTrimmed, language)
     };

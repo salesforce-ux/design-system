@@ -1,0 +1,10 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: is-relative
+    description: Used to contain children if children are absolutely positioned and out of flow. Also used to position element without changing layout.
+    applied: any element
+  -
+    class: is-static
+    description: Reset positioning back to normal behavior
+    applied: any element

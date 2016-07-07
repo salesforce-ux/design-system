@@ -16,7 +16,6 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
-import Img from 'app_modules/ui/img';
 
 export default (
   <PageBody anchorTitle="Heroku" contentClassName={pf('grid wrap')}>
@@ -87,8 +86,8 @@ export default (
             </a>
           </li>
           <li>
-            <a href="https://www.npmjs.com/package/npm" target="_blank">
-              NPM
+            <a href="https://www.npmjs.com/" target="_blank">
+              npm
             </a>
           </li>
           <li>
@@ -120,7 +119,7 @@ $ cd demo_slds_heroku
         </div>
 
         <p>
-          Inside of your <code>demo_slds_heroku/</code> folder create a <code>package.json</code>.
+          Inside of your <code>demo_slds_heroku/</code> folder, create a <code>package.json</code>.
         </p>
 
         <div className={pf('site-code--content scrollable--x')}>
@@ -151,14 +150,14 @@ license: (ISC)
           A <code>package.json</code> document will be created inside your <code>demo_slds_heroku/</code> folder and the contents should look similar to the following:
         </p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="json">{`
 {
   "name": "demo_slds_heroku",
   "version": "0.0.0",
   "description": "demo_slds_heroku",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -184,10 +183,12 @@ $ touch public/index.html
         </div>
         <p>Copy the following markup into <code>public/index.html</code>:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
   </head>
   <body>
@@ -203,9 +204,9 @@ $ touch public/index.html
 $ touch server.js
           `}</CodeBlock>
         </div>
-        <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your /public folder!):</p>
+        <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your <code>/public</code> folder!):</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="javascript">{`
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
@@ -220,11 +221,11 @@ app.listen(port);
         </div>
         <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm run start</code> as it will yield the same results.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
+          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
-        <p><a href="/resources/downloads/">Download the {g.displayName} CSS framework</a></p>
+        <p><a href="/downloads/">Download the {g.displayName} CSS framework</a></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
@@ -246,18 +247,20 @@ demo_slds_heroku/
         <Heading type="h2" id="step-6-add-components" className="site-text-heading--large">Step 6: Add components</Heading>
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
-        <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+          <CodeBlock language="markup">{`
+        <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look similar to the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
     Kaixo!
@@ -270,9 +273,9 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">
           A. Use the Grid System Component (Order)
         </h3>
-        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/grid-system#order" target="_blank">Grid System component page</a>.</p>
+        <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/utilities/grid/#order" target="_blank">Grid System component page</a>.</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <div class="slds-grid slds-wrap">
   <nav class="slds-col slds-size--1-of-1">
     Page Header Component
@@ -291,12 +294,14 @@ demo_slds_heroku/
         </div>
         <p>Your <code>public/index.html</code> file should look like the following:</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
+          <CodeBlock language="markup">{`
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
 
@@ -320,7 +325,7 @@ demo_slds_heroku/
           `}</CodeBlock>
           </div>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
+          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
         </figure>
 
         <h3 className="site-text-heading--medium">
@@ -331,8 +336,8 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">C. Add a Fun Image</h3>
         <p>Swap the text <code>Image</code> with an image.</p>
         <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
-<Img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house.">
+          <CodeBlock language="markup">{`
+<img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house." />
           `}</CodeBlock>
         </div>
 
@@ -348,7 +353,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
         <p>If you feel kind of cramped, check out the <a href="/components/utilities/spacing" target="_blank">Utilities</a> page for spacing classes.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <Img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
+          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>
@@ -367,7 +372,7 @@ web: node server.js
         <p>Log into your Heroku account.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
-        $ heroku login
+$ heroku login
 Email: [your@email.com]
 Password: [typing will be hidden]
 
@@ -387,7 +392,7 @@ $ heroku create [name-of-your-project]
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ git add .
-$ git commit -m "Init"
+$ git commit -m "Initial commit"
 $ git push heroku master
           `}</CodeBlock>
         </div>
@@ -398,7 +403,7 @@ $ heroku open
           `}</CodeBlock>
         </div>
 
-        <Heading type="h2" id="step-8" className="site-text-heading--large">Congrats! You now have a static  application!</Heading>
+        <Heading type="h2" id="step-8" className="site-text-heading--large">Congrats! You now have a static application!</Heading>
         <p>Now that you have a static project using the {g.displayName} and Heroku you can use it with any framework, add a database to it, whatever! The world is your oyster!</p>
       </div>
     </div>

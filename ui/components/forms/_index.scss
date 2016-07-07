@@ -88,15 +88,8 @@
 
 // Error Styles
 .#{$css-prefix}has-error {
-  @include form-input-error('.#{$css-prefix}input');
-  @include form-input-error('.#{$css-prefix}textarea');
-  @include form-input-error('.#{$css-prefix}select');
 
   .#{$css-prefix}form-element__help {
     color: $color-text-error;
-  }
-
-  .#{$css-prefix}input__icon {
-    fill: $color-text-error;
   }
 }

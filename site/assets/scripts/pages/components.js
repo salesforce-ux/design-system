@@ -72,14 +72,21 @@ const updateComponentPreviewHeight = ({ flavor, height }) => {
   });
 };
 
-const isFlavor = hash =>
+/**
+ * Check if a hash is a flavor
+ * @param  {string} hash A location hash, e.g. #flavor-name
+ * @return {boolean} #flavor-name: true / #anything-else: false
+ */
+const isFlavor = (hash) =>
   hash.match(/^\#flavor-/ig);
 
+/**
+ * Location hash change handler
+ */
 const onHashChange = () => {
   const hash = window.location.hash;
-  if (!isFlavor(hash)) {
-    return;
-  }
+
+  if (!isFlavor(hash)) return;
 
   const element = $(`.site-states [href="${hash}"]`)[0];
 
@@ -95,7 +102,6 @@ const onHashChange = () => {
       // Add "is-active" to the selected state
       setClassName(element.parentElement, { 'slds-is-active': true });
       // Update the iframe src
-      // The code will be updated by the <iframe> using the delegate
       document.getElementById(iframeId).setAttribute('src', iframeSrc);
     });
   }

@@ -117,20 +117,25 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
-    const StateAnchor = props =>
-      <div className="site-jump-anchor"><span id={props.id}></span></div>;
+    const StateAnchor = props => (
+      <span className="site-jump-anchor">
+        <span className={pf('assistive-text')} id={props.id} data-docsearch="component-flavor-state" role="presentation" tabIndex="-1">
+          {props.children}
+        </span>
+      </span>
+    );
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
-      statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`} />);
+      statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`}>{flavor.title} › {state.label}</StateAnchor>);
     }
     return (
       <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
-        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
-          {statesIds}
+        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')} data-docsearch="component-flavor">
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}
           {this.renderCompatiblityBadges()}
+          {statesIds}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>

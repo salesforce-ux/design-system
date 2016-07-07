@@ -106,3 +106,12 @@
   margin: 0 $spacing-x-small;
   align-self: center;
 }
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}input');
+
+  .#{$css-prefix}input__icon {
+    fill: $color-text-error;
+  }
+}

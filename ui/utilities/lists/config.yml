@@ -6,3 +6,4 @@ flavors:
   - horizontal-dividers
   - single-divider
   - description-list
+  - name-value-pair

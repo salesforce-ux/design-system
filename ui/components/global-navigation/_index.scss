@@ -57,26 +57,45 @@
       outline: 0;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
-      border-bottom: 3px solid $color-border-context-bar-theme-default-hover;
+      border-bottom: 3px solid $color-border-context-bar-theme-default;
       margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
+    }
+
+    &:not(.#{$css-prefix}no-hover):hover:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      display: block;
+      background: rgba(0, 0, 0, 0.5);
+      mix-blend-mode: soft-light;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
     }
 
     &.#{$css-prefix}is-active {
       box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
       border-bottom-color: $color-background-context-bar-item-hover;
 
-      &:before {
+      &:before,
+      &:after {
         content: '';
         width: 100%;
         height: 3px;
         display: block;
-        background: $color-border-context-bar-theme-default-hover;
+        background: $color-border-context-bar-theme-default;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+      }
+
+      &:after {
+        background: rgba(0, 0, 0, 0.5);
+        mix-blend-mode: soft-light;
       }
 
       &:hover {
@@ -225,56 +244,22 @@
 // Themes - Pre-defined themes
 // Using mixin to determine text color and interactive states
 //
-// Platform
-.#{$css-prefix}context-bar--theme-default {
-  border-bottom-color: $color-border-context-bar-theme-default;
-
-  .#{$css-prefix}context-bar__item:hover,
-  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-    border-bottom-color: $color-border-context-bar-theme-default-hover;
-  }
-
-  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: $color-background-context-tab-bar-item;
-
-    &:before {
-      background: $color-border-context-bar-theme-default-hover;
-    }
-  }
-}
-
 // Marketing - temp
 .#{$css-prefix}context-bar--theme-marketing {
   border-bottom-color: #f59331;
 
-  .#{$css-prefix}context-bar__item:hover,
-  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-    border-bottom-color: #b75d0d;
+  .#{$css-prefix}context-bar__item:not(.#{$css-prefix}no-hover):hover {
+    border-bottom-color: #f59331;
   }
 
-  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: $color-background-context-tab-bar-item;
+  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
 
     &:before {
-      background: #b75d0d;
+      background: #f59331;
     }
-  }
-}
 
-// Service - temp
-.#{$css-prefix}context-bar--theme-service {
-  border-bottom-color: #bc35bc;
-
-  .#{$css-prefix}context-bar__item:hover,
-  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
-    border-bottom-color: #570d8c;
-  }
-
-  .#{$css-prefix}context-bar__item--tab.#{$css-prefix}is-active {
-    border-bottom-color: $color-background-context-tab-bar-item;
-
-    &:before {
-      background: #570d8c;
+    &:hover {
+      border-bottom-color: $color-background-context-bar-item-hover;
     }
   }
 }

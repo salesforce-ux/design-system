@@ -254,6 +254,10 @@ th.#{$css-prefix}is-sortable {
   width: 100%;
   white-space: nowrap;
 
+  thead {
+    background-color: $color-background-alt;
+  }
+
   .#{$css-prefix}cell-shrink {
     width: $square-icon-large-boundary;
 

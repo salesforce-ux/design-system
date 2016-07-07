@@ -46,7 +46,7 @@ const contextDropdown = (
 
 export let ContextBar = props =>
 <div className="demo-only" style={{height: '16rem'}}>
-  <div className={className(pf('context-bar context-bar--theme-marketing'), props.className)}>
+  <div className={className(pf('context-bar'), props.className)}>
 
     {/* Primary Section */}
     <div className={pf('context-bar__primary context-bar__item--divider-right')}>

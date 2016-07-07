@@ -47,7 +47,7 @@ The following classes are now available:
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 - Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
-
+- Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
 **CHANGES**
 
 The following changes have been made in this release:

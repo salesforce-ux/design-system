@@ -11,10 +11,18 @@ classes:
     applied: <code>ol</code>
     notes: Our application framework removes default list styling. This recreates it
   -
-    class: list--horizontal
-    description: Causes list to display horizontally
+    class: list--vertical
+    description: Marks a vertical list
     applied: Any element
-    notes: This lists stacks in a mobile context
+  -
+    class: list--horizontal
+    description: Causes items of a list to display horizontally
+    applied: Any element
+    notes: This lists stacks in a mobile context. The output differs on the name-value variant, name-value display horizontally but stacks after each name-value
+  -
+    class: list--inline
+    description: Causes items of a list to display horizontally
+    applied: Any element
   -
     class: item
     description: Marks a list item
@@ -46,6 +54,14 @@ classes:
     class: dl--horizontal__detail
     description: Marks a description
     applied: <code>dd</code>
+  -
+    class: item--label
+    description: Label of the name-value pair variant. Layout is modified by its parent class.
+    applied: <code>div</code>
+  -
+    class: item--detail
+    description: Detail of the name-value pair variant. Layout is modified by its parent class.
+    applied: <code>div</code>
   -
     class: has-divider--top
     description: Adds 1px border divider above an HTML element
@@ -115,12 +131,6 @@ classes:
     description: Adds hover and selected styles to list items
     applied: <code>.{{cssPrefix}}item</code>
     notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via JavaScript
-  -
-    class: list--vertical
-    description: Marks a vertical list
-    applied: <code>ul</code>
-    deprecated: true
-    notes: Not required anymore
   -
     class: list__item
     description: Marks a list item

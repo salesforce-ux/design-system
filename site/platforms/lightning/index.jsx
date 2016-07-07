@@ -30,7 +30,7 @@ export default (
     </p>
 
       <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments.</p>
-      <p>There <strong>are</strong> still cases where you will need to use a static resource with Lightning Components. Current examples are —  when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, you'll need to <a href="https://tools.lightningdesignsystem.com/css-customizer">create a customized scoped CSS file to use.</a></p>
+      <p>There <strong>are</strong> still cases where you will need to use a static resource with Lightning Components. Current examples are —  when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, you'll need to <a href="https://tools.lightningdesignsystem.com/css-customizer">create a customized scoped CSS file to use</a>.</p>
     <p>
       We have prepared a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you through installation, usage, and examples. It includes details on how to use the Design System SVG spritemap icons in Lightning components.
     </p>

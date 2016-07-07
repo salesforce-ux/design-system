@@ -261,7 +261,7 @@ async.series([
    * Build design system and vf css from the scss files. The big one!
    */
   (done) => {
-    gulp.src(distPath('scss/index.scss'))
+    gulp.src(distPath('scss/index*.scss'))
       .pipe(sass({
         precision: 10,
         includePaths: [
@@ -276,6 +276,13 @@ async.series([
         return path;
       }))
       .pipe(gulp.dest(distPath('assets/styles/')))
+      .on('error', done)
+      .on('finish', done);
+  },
+  (done) => {
+    gulp.src(distPath('assets/styles/*-vf.css'), { base: distPath() })
+      .pipe(rem2px(16))
+      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
   },

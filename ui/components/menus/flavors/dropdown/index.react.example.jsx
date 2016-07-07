@@ -53,12 +53,12 @@ export let MenuList = props =>
   </ul>;
 
 export let MenuItem = props =>
-  <li className={className(pf('dropdown__item'), props.className)} aria-selected={props.ariaSelected}>
-    <a href="javascript:void(0);" role="menuitem">
-      <p className={pf('truncate')}>
+  <li className={className(pf('dropdown__item'), props.className)} aria-selected={props.ariaSelected} role="presentation">
+    <a href="javascript:void(0);" role="menuitem" tabIndex={ props.tabIndex || '-1' }>
+      <span className={pf('truncate')}>
         { props.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }
         {props.children}
-      </p>
+      </span>
       { props.iconRight ? props.iconRight : null }
     </a>
   </li>;

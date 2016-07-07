@@ -25,7 +25,7 @@ export default (
     <p className="site-text-introduction">
       Create a custom CSS file to use the {g.displayName} in Visualforce.
     </p>
-    <p>To use the Design System in Visualforce you need to create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here.</a></p>
+    <p>To use the Design System in Visualforce you need to create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here</a>.</p>
     <p>
       If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:
     </p>

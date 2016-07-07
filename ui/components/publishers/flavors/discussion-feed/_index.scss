@@ -7,43 +7,6 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}publisher {
-
-  &.#{$css-prefix}is-active {
-
-    .#{$css-prefix}publisher__toggle-visibility {
-      display: inherit;
-    }
-
-    .#{$css-prefix}publisher__input {
-      line-height: $line-height-text;
-      height: auto;
-      max-height: 10rem;
-      resize: vertical;
-      padding: {
-        top: $spacing-small;
-        bottom: $spacing-small;
-      }
-    }
-  }
-
-  &__input {
-    line-height: $line-height-button;
-    padding: 0 $spacing-medium;
-    resize: none;
-    min-height: calc(#{$line-height-button} + 2px);
-    max-height: calc(#{$line-height-button} + 2px);
-    width: 100%;
-  }
-
-  &__actions > .#{$css-prefix}button {
-    margin-left: $spacing-small;
-  }
-
-  .#{$css-prefix}publisher__toggle-visibility {
-    display: none;
-  }
-}
 
 .#{$css-prefix}publisher--discussion {
   display: flex;

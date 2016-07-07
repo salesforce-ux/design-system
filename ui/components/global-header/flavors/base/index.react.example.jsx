@@ -23,10 +23,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const SetupDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
-      <div className={pf('dropdown__header')}>
+      <li className={pf('dropdown__header')} role="separator">
         <span className={pf('text-title--caps')}>Setup</span>
-      </div>
-      <MenuItem>Setup Home</MenuItem>
+      </li>
+      <MenuItem tabIndex="0">Setup Home</MenuItem>
     </MenuList>
   </Menu>
 );
@@ -34,10 +34,10 @@ const SetupDropdown = (
 const ActionsDropdown = (
   <Menu className={pf('dropdown--right nubbin--top-right')}>
     <MenuList>
-      <div className={pf('dropdown__header')}>
+      <li className={pf('dropdown__header')} role="separator">
         <span className={pf('text-title--caps')}>Create</span>
-      </div>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
+      </li>
+      <MenuItem tabIndex="0"><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-log-a-call m-right--x-small')} sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
       <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-event m-right--x-small')} sprite="standard" symbol="event" /> New Event</MenuItem>
     </MenuList>
@@ -45,48 +45,50 @@ const ActionsDropdown = (
 );
 
 let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
     <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={ props.symbol } />
     <span className={pf('assistive-text')}>{ props.assistiveText }</span>
   </button>;
 
-let GlobalHeader = props =>
+export let GlobalHeader = props =>
   <header className={pf('global-header_container')}>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Navigation</a>
-    <a href="javascript:void(0);" className={pf('assistive-text')}>Skip to Main Content</a>
+    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Navigation</a>
+    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Main Content</a>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
-          <img src="/assets/images/logo.svg" alt="Salesforce.com" />
+          <img src="/assets/images/logo.svg" alt="" />
         </div>
       </div>
       <div className={pf('global-header__item global-header__item--search')}>
         <div className={className(pf('form-element lookup'), props.autocomplete ? pf('is-open'): null)}>
-          <label className={pf('assistive-text')} htmlFor="global-search">Search Salesforce</label>
-          <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
-            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-            <input id="global-search" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
-          </div>
+          <label className={pf('assistive-text')} htmlFor="global-search-01">Search Salesforce</label>
+          { props.autocomplete ?
+            props.children
+            : <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
+                <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+                <input id="global-search-01" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
+              </div> }
         </div>
       </div>
-      <ul className={pf('global-header__item grid grid--vertical-align-center grid--reverse')}>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <a href="javascript:void(0);" title="View Title">
-            <span className={pf('avatar avatar--circle avatar--x-small')}>
-              <img src="/assets/images/avatar2.jpg" alt="person name" />
-            </span>
-          </a>
+      <ul className={pf('global-header__item grid grid--vertical-align-center')}>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
+          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
+          { props.actions ? ActionsDropdown : null}
+        </li>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
+          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
           <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
           { props.setup ? SetupDropdown : null}
         </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
-          { props.actions ? ActionsDropdown : null}
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
+          <button className={pf('button')} title="person name" aria-haspopup="true">
+            <span className={pf('avatar avatar--circle avatar--medium')}>
+              <img src="/assets/images/avatar2.jpg" alt="person name" />
+            </span>
+          </button>
         </li>
       </ul>
     </div>

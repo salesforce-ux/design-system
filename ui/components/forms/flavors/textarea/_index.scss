@@ -14,3 +14,8 @@
   resize: vertical;
   padding: $spacing-x-small $spacing-small;
 }
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}textarea');
+}

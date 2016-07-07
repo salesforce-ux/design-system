@@ -46,7 +46,8 @@ The following classes are now available:
 - Position utilities -[Utilities › Postion](/components/utilities/position/)
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
-
+- Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
+- Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
 **CHANGES**
 
 The following changes have been made in this release:
@@ -66,7 +67,37 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
--
+- Record home vertical a11y fixes
+  - Add `aria-haspopup="true"` to action overflow buttons
+  - Add assistive text for icon
+  - Removed unnecessary aria roles from action overflow buttons
+  - Improve assistive text verbiage
+  - Make multiple value field entirely clickable to invoke dropdown
+- Global header a11y fixes
+  - Improve semantics of dropdown menus
+  - Apply `role=separator` to dropdown menu list items that do not have an actionable element
+  - Apply `role=presentation` to dropdown menu list items
+  - Changed `<p>` wrapping dropdown menu items text to `<span>`
+  - Dropdown menu items have a default `tabindex="-1"`, tab focused items change to a `tabindex="0"`
+  - Modify tab order of global header actions
+  - Add `title` attribute to global header actions
+  - Change avatar wrapper from anchor to a button
+  - Allow `slds-assistive-text` to become visible on focus if `slds-assistive-text--focus` is used
+  - Add aria roles to global search input
+  - Changed global search listbox options to be non-actionable
+  - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
+  - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
+  - Moved clear button to the right of the input to visually match tab order
+- Utility bar a11y fixes
+  - Add landmark `role="footer"` to utility bar
+  - Add `aria-label="Utility Bar"` description to utility bar
+  - Add hidden heading to utility bar
+  - Add aria `role=dialog` and `aria-labelledby` to utility bar panel
+  - Change panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
+  - Place utility bar buttons inside `<ul>`
+- Files a11y fixes
+  - Fix invalid markup by moving button group outside of anchor
+  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 
 **DEPRECATED**
 

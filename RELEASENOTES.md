@@ -1,6 +1,18 @@
 # Salesforce Lightning Design System
 # Release notes
 
+## [Unreleased]
+
+**FIXED**
+
+The following issues have now been resolved:
+
+- Card a11y fixes
+  - Card semantically changed to an `article`
+  - Card header semantically changed to a `header`
+  - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
+  - Wrap card header text in an `<h2>`
+
 ## Release [2.0.2] - June 16, 2016
 
 **SITE IA/ENHANCEMENTS**
@@ -150,6 +162,18 @@ The following features are being removed in this release:
 - Removed `slds-input--small`, since it’s the same as the new default input size
 - Removed `slds-tile__title`, since it didn't apply any styles
 
+**🗒 Notes About Scoped CSS files, the Unmanaged Package, Visualforce and Lightning Components**
+
+The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via `app.css`). It is no longer necessary to add a static resource for Lightning Components running within these environments.
+
+Starting in 2.0.x, the Lightning Design System is no longer available as an unmanaged package. Also, the scoped CSS files (`salesforce-lightning-design-system-vf.css` and `salesforce-lightning-design-system-ltng.css`) are no longer distributed as part of the Design System zip file (available in the [Downloads](/downloads/) page). As an alternative, you may now generate your own scoped Design System zip file using the new [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer) and upload it as a static resource as documented on the tool’s page. However, we strongly recommend that you do not install SLDS as a static resource when building for Lightning.
+
+Resources:
+
+- [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer)
+- [Using SLDS in Lightning](/platforms/lightning/)
+- [Using SLDS in Visualforce](/platforms/visualforce/)
+
 ## Release [1.0.5] - May 26, 2016
 
 - Adding a background color to icons from the [custom set](/icons/#custom) is now done using the `slds-icon-custom-customXX` class (e.g. `slds-icon-custom-custom25`), instead of `slds-icon-custom-XX` (deprecated). This change addresses [#203](https://github.com/salesforce-ux/design-system/issues/203)
@@ -206,7 +230,7 @@ The following site enhancements are now available:
 - Components and their variants can now be built with states and will show up in the component variant & states navigation on the right, when available
 - Improved Component Overview tables for more narrow readability
 - Improved status labels. Now associated with colors and contain more information
-- Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/getting-started/markup-and-style/)
+- Markup and Style guidelines with BEM information - [Markup and Style Guidelines](/guidelines/markup-and-style/)
 - Resources Information - [Resource Links](/articles/)
 - Updated documentation and accessibility information for tabs - [Tabs](/components/tabs/)
 - Improved Grid System documentation - [Grid System](/components/utilities/grid/)
@@ -537,6 +561,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.0.2...summer-16
 [2.0.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.5...v2.0.1
 [1.0.5]: https://github.com/salesforce-ux/design-system/compare/v1.0.4...v1.0.5

@@ -20,3 +20,16 @@
   overflow: hidden !important;
   clip: rect(0 0 0 0) !important;
 }
+
+.#{$css-prefix}assistive-text--focus {
+  // scss-lint:disable ImportantRule
+  &:focus {
+    margin: inherit !important;
+    border: inherit !important;
+    padding: inherit !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+  }
+}

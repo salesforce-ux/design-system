@@ -9,18 +9,35 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import React from 'react';
-import Input from 'ui/components/forms/flavors/input/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
+import { expect } from 'chai';
+import _ from 'lodash';
 
+const shrinkwrap = require('../../npm-shrinkwrap.json');
 
-export const preview = (
-<Input label="Label" assistiveText="text input" />
-);
+describe('shrinkwrapped dependencies', () => {
+  after((done) => {
+    console.log('⚠️  Run "clingwrap npmbegone" if the tests fail. Clingwrap installation instructions available at https://github.com/goodeggs/clingwrap');
+    done();
+  });
 
-export const code = (
-<div className={pf('form-element')}>
-  <label className={pf('form-element__label')}>Label</label>
-  <div className={pf('form-element__control')}>Form Element</div>
-</div>
-);
+  _.forEach(shrinkwrap.dependencies, (dependency, dependencyName) => {
+    it('should not contain any key pointing to registry.npmjs.org, only to GitHub', (done) => {
+      expect(dependency, 'Dependency: ' + dependencyName).to.satisfy(function(dependency) {
+        if (dependency.hasOwnProperty('resolved')) {
+          return /github/.test(dependency.resolved);
+        } else {
+          return true;
+        }
+      });
+      done();
+    });
+    it('should not contain "from"', (done) => {
+      expect(dependency, 'Dependency: ' + dependencyName).to.not.have.property('from');
+      done();
+    });
+    it('should have a "version" key with whatever value it has', (done) => {
+      expect(dependency, 'Dependency: ' + dependencyName).to.have.property('version');
+      done();
+    });
+  });
+});

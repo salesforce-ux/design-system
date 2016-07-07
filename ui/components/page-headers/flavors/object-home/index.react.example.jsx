@@ -37,15 +37,17 @@ export default (
       <div className={pf('col has-flexi-truncate')}>
         <MediaObject figureLeft={image} className={pf('no-space grow')}>
           <Heading className={pf('line-height--reset')} flavor="label">Leads</Heading>
-          <button className={pf('button type-focus m-right--small grid grid--vertical-align-center truncate')}>
-            <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
-            {icon}
+          <button className={pf('button type-focus m-right--small grid truncate')} aria-haspopup="true">
+            <div className={pf('grid grid--vertical-align-center truncate')}>
+              <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
+              {icon}
+            </div>
           </button>
         </MediaObject>
       </div>
       {/* Close Col */}
       {/* Open Right Aligned Icon Grouping */}
-      <div className={pf('col no-flex grid align-top')}>
+      <div className={pf('col no-flex grid align-top p-bottom--xx-small')}>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
             New Lead
@@ -68,21 +70,21 @@ export default (
     {/* Close Grid */}
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
+        <p className={pf('text-body--small')}>10 items &bull; Sorted by Name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <div className={pf('dropdown-trigger dropdown-trigger--click m-left--x-small')} aria-expanded="false">
           <Button flavor="icon-more" aria-haspopup="true">
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-            <span className={pf('assistive-text')}>Settings</span>
+            <span className={pf('assistive-text')}>List View Controls</span>
             <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
           </Button>
         </div>
-        <Button className={pf('hide m-left--xx-small')} flavor="brand" aria-hidden="true">Save</Button>
+        <Button className={pf('hide m-left--xx-small')} flavor="brand" aria-hidden="true">Save List</Button>
         <div className={pf('dropdown-trigger dropdown-trigger--click m-left--xx-small')} aria-expanded="false">
           <Button flavor="icon-more" aria-haspopup="true">
             <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-            <span className={pf('assistive-text')}>Table</span>
+            <span className={pf('assistive-text')}>Displays</span>
             <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
           </Button>
         </div>
@@ -91,28 +93,26 @@ export default (
               sprite="utility"
               symbol="edit"
               className={pf('m-left--xx-small')}
-              assistiveText="Edit" />
+              assistiveText="Edit List" />
+          <ButtonIcon
+              flavor="icon-border"
+              sprite="utility"
+              symbol="refresh"
+              assistiveText="Refresh" />
         <div className={pf('button-group')} role="group">
           <StatefulClass>
             <ButtonIcon
               flavor="icon-border"
               sprite="utility"
-              symbol="refresh"
-              assistiveText="Refresh" />
-          </StatefulClass>
-          <StatefulClass>
-            <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
               symbol="chart"
-              assistiveText="Chart" />
+              assistiveText="Charts" />
           </StatefulClass>
           <StatefulClass>
             <ButtonIcon
               flavor="icon-border"
               sprite="utility"
               symbol="filterList"
-              assistiveText="Filter List" />
+              assistiveText="Filters" />
           </StatefulClass>
         </div>
       </div>

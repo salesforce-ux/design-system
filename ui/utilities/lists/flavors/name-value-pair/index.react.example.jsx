@@ -10,49 +10,40 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Image } from 'ui/components/images/flavors/figure/index.react.example';
-import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-//////////////////////////////////////////////
-// Export
-//////////////////////////////////////////////
 
 export let states = [
   {
-    id: 'image-16-9',
-    label: '16:9',
+    id: 'name-value-pair-horizontal',
+    label: 'Horizontal',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
-          image />
+      <div className={pf('list--horizontal')}>
+        <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
+        <div className={pf('item--detail truncate')}>Description for first label</div>
+        <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>
+        <div className={pf('item--detail truncate')}>Description for second label</div>
       </div>
   },
   {
-    id: 'image-4-3',
-    label: '4:3',
+    id: 'name-value-pair-inline',
+    label: 'Inline',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--4-by-3')}
-          titleClass={pf('image__title--card')}
-          image />
+      <div className={pf('list--inline')}>
+        <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
+        <div className={pf('item--detail truncate')}>Description for first label</div>
+        <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>
+        <div className={pf('item--detail truncate')}>Description for second label</div>
       </div>
   },
   {
-    id: 'image-1-1',
-    label: '1:1',
+    id: 'name-value-pair-stacked',
+    label: 'Stacked',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--1-by-1')}
-          titleClass={pf('image__title--card')}
-          image />
+      <div className={pf('list--stacked')}>
+        <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
+        <div className={pf('item--detail truncate')}>Description for first label</div>
+        <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>
+        <div className={pf('item--detail truncate')}>Second description</div>
       </div>
   }
 ];

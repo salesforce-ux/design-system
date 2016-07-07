@@ -119,6 +119,17 @@
   }
 }
 
+// Add column borders
+.#{$css-prefix}table--col-bordered {
+
+  td + td,
+  th + th,
+  th + td,
+  td + th {
+    border-left: $border-width-thin solid $color-border;
+  }
+}
+
 // Add alternating strips to rows
 .#{$css-prefix}table--striped {
   // scss-lint:disable SelectorDepth
@@ -224,7 +235,7 @@ th.#{$css-prefix}is-sortable {
 
   &__divider {
     position: absolute;
-    left: 50%;
+    right: 0;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;
@@ -242,6 +253,10 @@ th.#{$css-prefix}is-sortable {
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
+
+  thead {
+    background-color: $color-background-alt;
+  }
 
   .#{$css-prefix}cell-shrink {
     width: $square-icon-large-boundary;

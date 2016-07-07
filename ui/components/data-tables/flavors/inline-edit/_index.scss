@@ -19,10 +19,31 @@
     bottom: 0;
     left: 0;
     z-index: $z-index-default;
-    background-color: $color-background-backdrop;
-    box-shadow: $shadow-focus-inset;
+    background-color: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
+  }
+
+  .#{$css-prefix}has-focus {
+    background: $color-background-row-hover;
+    border: 0;
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 1;
+    }
   }
 }
+
+  .#{$css-prefix}table--edit_container-message {
+    width: $size-medium;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+    margin-left: (($size-medium / 2) * -1);
+    background-color: $color-background-alt;
+    text-align: center;
+    z-index: $z-index-default;
+  }
 
 .#{$css-prefix}table--edit {
 
@@ -30,18 +51,32 @@
     fill: $color-text-brand;
   }
 
-  .#{$css-prefix}indicator-header {
-    width: $square-icon-medium-boundary;
+  th,
+  td { // Remove padding to place on internal node
+    padding: 0;
   }
 
-  td,
-  tbody th,
-  tbody .#{$css-prefix}cell-shrink:first-child { // Remove padding
-    padding: 0;
+  .#{$css-prefix}cell-edit:hover {
+      background-color: $color-background-alt;
+      box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
+                  $color-border 0 ($border-width-thin) 0 inset;
+  }
+
+  tbody tr {
+    counter-increment: row-number;
+  }
+
+  .#{$css-prefix}row-number {
+
+    &:after {
+      content: counter(row-number);
+    }
   }
 }
 
 .#{$css-prefix}cell-edit {
+  //margin: ($border-width-thin * -1) 0;
+  min-height: 2.3125rem; // Make contents completely fill table cell
   padding: $spacing-x-small; // Add padding to div inside
 
   .#{$css-prefix}button__icon--edit,
@@ -53,17 +88,16 @@
   &:focus {
 
     .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
+      opacity: 1;
 
       &:hover,
       &:focus {
-        opacity: 1;
         fill: $color-text-brand;
       }
     }
 
     .#{$css-prefix}button__icon--lock {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
 
@@ -72,17 +106,9 @@
       padding-left: $spacing-xxx-small;
     }
 
-  &.#{$css-prefix}is-selected { // This is the state where you've clicked outside the table, but this cell is still selected
-    background-color: $color-background-row-hover;
-
-    .#{$css-prefix}button__icon--edit {
-      opacity: 0.5;
-    }
-  }
-
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin;
+    border: $border-width-thin solid $color-border-selection;
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {
@@ -96,23 +122,30 @@
   }
 
   &.#{$css-prefix}is-edited {
-    background-color: $color-background-highlight;
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
   }
 
   &.#{$css-prefix}has-error {
-    background-color: $color-background-highlight;
-    box-shadow: $color-border-error 0 0 0 $border-width-thick;
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      border: $border-width-thin solid $color-border-error;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thin) inset;
+    }
   }
+}
+
+.#{$css-prefix}cell-error {
+  padding-left: 0;
 }
 
 .#{$css-prefix}cell-edit__button:focus .#{$css-prefix}button__icon--edit {
     opacity: 1;
-}
-
-.#{$css-prefix}table:not(.#{$css-prefix}no-row-hover) tbody .#{$css-prefix}cell-edit:hover {
-    background-color: $color-background-alt;
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
-                $color-border 0 ($border-width-thin) 0 inset;
 }
 
 .#{$css-prefix}form-element__label--edit {
@@ -132,14 +165,4 @@
     width: 100%;
     padding-left: $spacing-small;
   }
-}
-
-.#{$css-prefix}indicator-error {
-  outline: none;
-  box-shadow: $spacing-xx-small 0 0 0 $color-border-error inset;
-}
-
-.#{$css-prefix}indicator-error-none {
-  outline: none;
-  box-shadow: $spacing-xx-small 0 0 0 $color-border-brand inset;
 }

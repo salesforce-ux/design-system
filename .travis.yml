@@ -11,15 +11,8 @@ install:
   - bundle install --path vendor/bundle
   - npm install
 script:
-  - npm run lint
-  - npm run test
-after_success:
-  - export SHA=`git rev-parse --short HEAD`
-  - if [ -n $TRAVIS_PULL_REQUEST ] ; then curl https://$VISUALTEST_USERNAME:$VISUALTEST_PASSWORD@design-system-regression-test.herokuapp.com/ci/$SHA ; fi
+  - npm run build-travis
 cache:
   directories:
     - node_modules
     - vendor/bundle
-addons:
-  code_climate:
-    repo_token: 1035e50117ef54a8d8d028a87bdf93ad26804012105ce5ac5db3a4b4398d2fad

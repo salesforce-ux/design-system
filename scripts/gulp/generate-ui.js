@@ -17,20 +17,20 @@ import path from 'path';
 import through from 'through2';
 
 import Status from 'app_modules/site/util/component/status';
-import Scheme from 'app_modules/ui/util/scheme';
+import Schema from 'app_modules/ui/util/schema';
 
-export const eachComponent = (scheme, callback) =>
-  scheme.forEach(category => {
+export const eachComponent = (schema, callback) =>
+  schema.forEach(category => {
     category.components.forEach(callback);
   });
 
-export const addStatus = scheme =>
-  eachComponent(scheme, component =>
+export const addStatus = schema =>
+  eachComponent(schema, component =>
     component.status = Status.or(component.flavors.map(x => x.status))
   );
 
-export const addExamplePath = scheme =>
-  eachComponent(scheme, component => {
+export const addExamplePath = schema =>
+  eachComponent(schema, component => {
     component.flavors.forEach(flavor => {
       const examplePath = `${flavor.path}/index.react.example.jsx`;
       try {
@@ -41,11 +41,11 @@ export const addExamplePath = scheme =>
     });
   });
 
-export const generateUI = () => {
-  const scheme = Scheme({ path: __PATHS__.ui }).generate();
-  addStatus(scheme);
-  addExamplePath(scheme);
-  return scheme;
+export const generateUI = (schema) => {
+  schema = schema || Schema({ path: __PATHS__.ui }).generate();
+  addStatus(schema);
+  addExamplePath(schema);
+  return schema;
 };
 
 gulp.task('generate:ui', () => {

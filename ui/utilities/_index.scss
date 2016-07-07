@@ -1,0 +1,99 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+//
+// HELPERS
+//
+
+@import
+  // Grid
+  'grid/flavors/automatic-sizing/index',
+  'grid/flavors/horizontal-alignment-center/index',
+  'grid/flavors/horizontal-alignment-space/index',
+  'grid/flavors/horizontal-alignment-spread/index',
+  'grid/flavors/horizontal-alignment-end/index',
+  'grid/flavors/vertical-alignment-center/index',
+  'grid/flavors/vertical-alignment-end/index',
+  'grid/flavors/vertical-alignment-item/index',
+  'grid/flavors/vertical-stretch/index',
+  'grid/flavors/alignment-item-bump/index',
+  'grid/flavors/container-frame/index',
+  'grid/flavors/containers/index',
+  'grid/flavors/overflow/index',
+
+  // Alignment
+  'alignment/flavors/absolute-center/index',
+
+  // Objects
+  'media-objects/flavors/base/index',
+  'media-objects/flavors/responsive/index',
+
+  // Spacing
+  'spacing/flavors/margin/index',
+  'spacing/flavors/padding/index',
+
+  // Floats
+  'floats/flavors/float-left/index',
+  'floats/flavors/float-right/index',
+  'floats/flavors/clearfix/index',
+
+  // Interactions
+  'interactions/flavors/blur-focus/index',
+  'interactions/flavors/faux-links/index',
+  'interactions/flavors/link-reset/index',
+
+  // Lists
+  'lists/index',
+  'lists/flavors/vertical/index',
+  'lists/flavors/vertical-dividers/index',
+  'lists/flavors/horizontal/index',
+  'lists/flavors/horizontal-dividers/index',
+  'lists/flavors/single-divider/index',
+  'lists/flavors/description-list/index',
+
+  // Truncation
+  'truncation/flavors/single-line/index',
+
+  // Theme
+  'themes/flavors/box/index',
+  'themes/flavors/color/index',
+
+  // Text
+  'text/flavors/base/index',
+  'text/flavors/heading-large/index',
+  'text/flavors/heading-medium/index',
+  'text/flavors/heading-small/index',
+  'text/flavors/heading-label/index',
+  'text/flavors/heading-label-normal/index',
+  'text/flavors/body-small/index',
+  'text/flavors/alignment/index',
+  'text/flavors/longform/index',
+  'text/flavors/section-title/index',
+  'text/flavors/section-title-dividers/index',
+
+  // Interactions
+  'scrollable/flavors/base/index',
+  'scrollable/flavors/vertical/index',
+  'scrollable/flavors/horizontal/index',
+
+  // Sizing
+  'sizing/flavors/widths/index',
+
+  // Position
+  'position/index',
+
+  // Visibility
+  'visibility/flavors/hide-show/index',
+  'visibility/flavors/hidden-visible/index',
+  'visibility/flavors/transition-hide-show/index',
+  'visibility/flavors/collapsed-expanded/index',
+  'visibility/flavors/assistive-text/index',
+  'visibility/flavors/responsive/index';

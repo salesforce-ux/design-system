@@ -16,3 +16,19 @@ classes:
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Contains the icon and the action that toggles the nested branch
+  -
+    class: is-disabled
+    description: Creates the indentation space to match rows with children
+    required: true
+    applied: <code>.slds-button</code>
+  -
+    class: table--tree
+    description: Initializes the tree grid item
+    required: true
+    applied: <code>&lt;table&gt;</code>
+  -
+    class: table--tree__toggle
+    description: Used on the main tree grid toggle button
+    required: true
+    applied: <code>.slds-button</code>
+    notes: Placed on the <code>.button</code> in the table header to open all nodes

@@ -12,7 +12,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
-import { Button as ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import { ButtonIconContainer } from 'ui/components/buttons/flavors/icon-with-dropdown/index.react.example';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -21,30 +23,16 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let Default = props =>
   <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Charts">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-border')} symbol="chart" assistiveText="Charts" />
+    <ButtonIcon className={pf('button--icon-border')} symbol="filterList" assistiveText="Filter List" />
+    <ButtonIconContainer className={pf('button--icon-more')} assitiveText="More Actions" />
   </ButtonGroup>;
 
 let Selected = props =>
   <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border is-selected')} assistiveText="Charts">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chart" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-border')} assistiveText="Filter List">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="filterList" />
-    </ButtonIcon>
-    <ButtonIcon className={pf('button--icon-more')} assistiveText="More Actions" hasPopup>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-      <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    </ButtonIcon>
+    <ButtonIcon className={pf('button--icon-border is-selected')} symbol="chart" assistiveText="Charts" />
+    <ButtonIcon className={pf('button--icon-border')} symbol="filterList" assistiveText="Filter List" />
+    <ButtonIconContainer className={pf('button--icon-more')} assitiveText="More Actions" />
   </ButtonGroup>;
 
 ///////////////////////////////////////////

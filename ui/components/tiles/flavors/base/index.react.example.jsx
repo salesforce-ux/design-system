@@ -10,10 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -21,180 +19,62 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" style={{width: '420px'}}>
-    {props.children}
+export let Tile = props =>
+  <div className={className(pf('tile'), props.className, props.actions ? pf('hint-parent') : null)}>
+    { props.actions ?
+      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+        <p className={pf('truncate')} title={ props.title || 'Title' }>
+          <a href="javascript:void(0);">{ props.title || 'Title' }</a>
+        </p>
+        <ButtonIcon
+          className={pf('shrink-none')}
+          flavor="icon-border-filled,icon-x-small"
+          iconFlavor="hint,small"
+          sprite="utility"
+          symbol="down"
+          assistiveText="Show More" />
+      </div>
+    :
+      <p className={pf('truncate')} title={ props.title || 'Title' }>
+        <a href="javascript:void(0);">{ props.title || 'Title' }</a>
+      </p>
+    }
+    <div className={pf('tile__detail text-body--small')}>
+      { props.children }
+    </div>
   </div>;
 
-let Tile = props =>
-  <div className={className(pf('tile'), props.className)}>
-    {props.children}
+export let TileMedia = props =>
+  <div className={className(pf('tile media'), props.className, props.actions ? pf('hint-parent') : null)}>
+    { props.media ?
+      <div className={pf('media__figure')}>
+        { props.media }
+      </div>
+    : null }
+    <div className={pf('media__body')}>
+      { props.actions ?
+        <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+          <p className={pf('truncate')} title={ props.title || 'Title' }>
+            <a href="javascript:void(0);">{ props.title || 'Title' }</a>
+          </p>
+          <ButtonIcon
+            className={pf('shrink-none')}
+            flavor="icon-border-filled,icon-x-small"
+            iconFlavor="hint,small"
+            sprite="utility"
+            symbol="down"
+            assistiveText="Show More" />
+        </div>
+      :
+        <p className={pf('truncate')} title={ props.title || 'Title' }>
+          <a href="javascript:void(0);">{ props.title || 'Title' }</a>
+        </p>
+      }
+      <div className={pf('tile__detail text-body--small')}>
+        { props.children }
+      </div>
+    </div>
   </div>;
-
-let TileGrid = props =>
-  <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-    {props.children}
-  </div>;
-
-let TileTitle = props =>
-  <p className={pf('tile__title truncate')}>
-    {props.children}
-  </p>;
-
-let TileBody = props =>
-  <div className={pf('tile__detail text-body--small')}>
-    {props.children}
-  </div>;
-
-let ActionButon = props =>
-  <ButtonIcon
-    className={pf('shrink-none')}
-    flavor="icon-border-filled,icon-x-small"
-    iconFlavor="hint,small"
-    sprite="utility"
-    symbol="down"
-    assistiveText="Show More" />;
-
-let Checkbox = props =>
-  <label className={pf('checkbox')}>
-    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('form-element__label assistive-text')}>{props.label}</span>
-  </label>;
-
-const icon = (
-  <SvgIcon className={pf('icon icon-standard-groups')} sprite="standard" symbol="groups" />
-);
-
-const image = (
-  <span className={pf('avatar avatar--circle avatar--small')}>
-    <Img src="/assets/images/avatar2.jpg" alt="person's name" />
-  </span>
-);
-
-const checkbox = ( <Checkbox id="checkbox-01" label="Did you complete this task?" /> );
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <Tile>
-      <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
-      <TileBody>
-        <p className={pf('truncate')}>26 Members</p>
-      </TileBody>
-    </Tile>
-  </Demo>;
-
-let WithIcon = props =>
-  <Demo>
-    <MediaObject figureLeft={icon} className={pf('tile')}>
-      <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
-      <TileBody>
-        <p className={pf('truncate')}>26 Members</p>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let WithImage = props =>
-  <Demo>
-    <MediaObject figureLeft={image} className={pf('tile')}>
-      <TileTitle><a href="#">Lexee L. Jackson</a></TileTitle>
-      <TileBody>
-        <ul className={pf('list--horizontal has-dividers')}>
-          <li className={pf('truncate list__item')}>VP, Marketing</li>
-          <li className={pf('truncate list__item')}>Decision Maker</li>
-        </ul>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let WithAction = props =>
-  <Demo>
-    <MediaObject figureLeft={icon} className={pf('tile hint-parent')}>
-      <TileGrid>
-        <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
-        <ActionButon />
-      </TileGrid>
-      <TileBody>
-        <p className={pf('truncate')}>26 Members</p>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let WithBadge = props =>
-  <Demo>
-    <MediaObject figureLeft={image} className={pf('tile')}>
-      <TileGrid>
-        <TileTitle><a href="#void">Jack Rogers</a></TileTitle>
-        <span className={pf('badge')}>Primary</span>
-      </TileGrid>
-      <TileBody>
-        <p className={pf('truncate')}>VP, Facilities</p>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let Generic = props =>
-  <Demo>
-    <MediaObject figureLeft={image} className={pf('tile hint-parent')}>
-      <TileGrid>
-        <TileTitle><a href="#void">Salesforce UX</a></TileTitle>
-        <ActionButon />
-      </TileGrid>
-      <TileBody>
-        <dl className={pf('dl--horizontal text-body--small')}>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')}>Title:</p>
-          </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')}>VP, Facilities</p>
-          </dd>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')}>Email:</p>
-          </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')}>jrogers@burlingtion.com</p>
-          </dd>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')}>Phone:</p>
-          </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')}>(415) 444-4444</p>
-          </dd>
-        </dl>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let Task = props =>
-  <Demo>
-    <MediaObject figureLeft={checkbox} className={pf('tile')}>
-      <TileGrid>
-        <TileTitle><a href="#void">The Trammel Crow Company</a></TileTitle>
-        <span className={pf('badge')}>Today</span>
-      </TileGrid>
-      <TileBody>
-        <p className={pf('truncate')}>Assignee</p>
-      </TileBody>
-    </MediaObject>
-  </Demo>;
-
-let Author = props =>
-  <Demo>
-    <Tile>
-      <TileTitle><a href="#void">Company One beats Company Two to the 200-mile affordable electric car</a></TileTitle>
-      <TileBody>
-        <p>by Steve Author</p>
-        <ul className={pf('list--horizontal has-dividers tile__meta')}>
-          <li className={pf('list__item')}>Breaking News</li>
-          <li className={pf('list__item')}>1 day ago</li>
-        </ul>
-      </TileBody>
-    </Tile>
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -204,41 +84,19 @@ export let states = [
   {
     id: 'tile',
     label: 'Default',
-    element: <Default />
-  },
-  {
-    id: 'tile-with-icon',
-    label: 'With icon',
-    element: <WithIcon />
-  },
-  {
-    id: 'tile-with-image',
-    label: 'With image',
-    element: <WithImage />
+    element:
+      <Tile title="Salesforce UX">
+        <p className={pf('truncate')}>26 Members</p>
+      </Tile>
   },
   {
     id: 'tile-with-action',
-    label: 'With action',
-    element: <WithAction />
-  },
-  {
-    id: 'tile-with-badge',
-    label: 'With badge',
-    element: <WithBadge />
-  },
-  {
-    id: 'tile-generic',
-    label: 'Generic',
-    element: <Generic />
-  },
-  {
-    id: 'tile-task',
-    label: 'Task',
-    element: <Task />
-  },
-  {
-    id: 'tile-author',
-    label: 'Author',
-    element: <Author />
+    label: 'Default with actions',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <Tile title="Salesforce UX" actions>
+          <p className={pf('truncate')}>26 Members</p>
+        </Tile>
+      </div>
   }
 ];

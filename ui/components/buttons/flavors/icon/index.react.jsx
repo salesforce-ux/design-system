@@ -46,6 +46,7 @@ Component.displayName = 'ButtonIcon';
 Component.propTypes = {
   flavor: componentUtil.PropTypes.flavor(
     'icon-container',
+    'icon',
     'icon-bare',
     'icon-border',
     'icon-border-filled',

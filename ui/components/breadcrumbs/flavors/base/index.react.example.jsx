@@ -15,7 +15,7 @@ const {Crumb} = BreadCrumbs;
 
 export default (
     <BreadCrumbs>
-      <Crumb href="#">Parent Entity</Crumb>
-      <Crumb href="#">Parent Record Name</Crumb>
+      <Crumb href="javascript:void(0);">Parent Entity</Crumb>
+      <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
     </BreadCrumbs>
 );

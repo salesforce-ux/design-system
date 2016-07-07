@@ -95,10 +95,10 @@ classes:
     description: Bar showcasing which step of the process a user is on
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Inline width styles should be modified with Javascript
+    notes: Inline width styles should be modified with JavaScript
   -
     class: is-active
     description: Stateful class that turns dot indicator and progress bar blue
     required: true
     applied: <code>{{cssPrefix}}wizard__item</code>
-    notes: Class should be applied thought Javascript
+    notes: Class should be applied thought JavaScript

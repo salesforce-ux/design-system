@@ -1,0 +1,14 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: blur-focus
+    description:
+  -
+    class: type-focus
+    description: Creates a faux link with interactions
+    applied: container
+    notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
+  -
+    class: text-link--reset
+    description: Makes links and buttons appear as regular text
+    applied: <code>&lt;a&gt;</code> or <code>.{{cssPrefix}}button</code>

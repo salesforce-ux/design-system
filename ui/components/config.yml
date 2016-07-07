@@ -10,15 +10,15 @@ components:
   - docked-composer
   - feeds
   - forms
-  - grid-system
   - icons
   - images
   - lookups
-  - media-objects
   - menus
   - modals
+  - navigation
   - notifications
   - page-headers
+  - panels
   - pills
   - process
   - popovers

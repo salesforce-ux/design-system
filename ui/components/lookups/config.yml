@@ -1,13 +1,4 @@
-status: 'prototype'
-classBase: 'lookup'
 flavors:
-  - base
-  - single-select
-  - multi-select
-  - single-scope
-  - multi-scope
+  - single
+  - polymorphic
   - advanced-modal
-dependencies:
-  - core/forms
-  - core/forms/flavors/input
-  - core/icons

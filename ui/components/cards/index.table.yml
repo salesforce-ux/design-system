@@ -16,12 +16,18 @@ classes:
     applied: <code>&lt;div&gt;</code>
     required: true
   -
+    class: card__body--inner
+    description: Add spacing around inner elements of a card (e.g. a tile)
+    applied: Any element
+  -
     class: card__footer
     description: Initializes card footer
     applied: <code>&lt;div&gt;</code>
-    required: true
   -
-    class: grid
-    description: Horizontally aligns text and actions on separate ends of card header
-    applied: <code>.{{cssPrefix}}card__header</code>
-    notes: Only required if you have actions
+    class: card__tile
+    description: Use class if card consumes any form of a tile
+    applied: <code>.{{cssPrefix}}tile</code>
+  -
+    class: card--narrow
+    description: Modifies styles for card in a narrow column
+    applied: <code>.{{cssPrefix}}card</code>

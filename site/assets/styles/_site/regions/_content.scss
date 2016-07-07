@@ -1,0 +1,176 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.site-jump-anchor {
+  position: absolute;
+  top: ($spacing-x-large * -1);
+
+  &__container {
+    position: relative;
+  }
+}
+
+.sticky {
+  position: static;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: $z-index-dropdown;
+  }
+}
+
+.sticky__placeholder {
+  display: none;
+
+  &--on {
+    display: block;
+  }
+}
+
+.site-text-longform .has-border-bottom {
+  margin-bottom: $spacing-medium;
+  border-bottom: $border-width-thin solid $color-border-separator;
+  padding-bottom: $spacing-medium;
+}
+
+.framed-image {
+  margin-bottom: $spacing-medium;
+  border: $border-width-thin solid $color-border;
+  padding: $spacing-x-small;
+}
+
+.resources-illustration {
+  display: block;
+  margin: $spacing-large auto;
+  width: 80%;
+  max-width: 20rem;
+}
+
+
+
+@include mq-large-max {
+
+  .sticky--fixed {
+    position: static;
+  }
+
+  .sticky__placeholder--on {
+    display: none;
+  }
+}
+
+// Defaults for site menu jump links list
+.site-menu--jump-links {
+
+  .icon__svg {
+    display: none;
+  }
+
+  // Deal with open states
+  .#{$css-prefix}is-open {
+
+    .site-states {
+      display: block;
+    }
+
+    .icon__svg {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+// Nested list for variant states
+.site-states {
+
+  a {
+    padding: {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
+      left: $spacing-x-large;
+    }
+  }
+}
+
+// Large Overrides
+@include mq-large-min {
+
+  .site-main-content {
+    margin: {
+      top: -$spacing-xx-large;
+      bottom: -$spacing-xx-large;
+    }
+    padding: {
+      top: $spacing-xx-large;
+      right: $spacing-xx-large;
+      bottom: $spacing-xx-large * 2;
+    }
+  }
+
+  // Component nav container
+  .site-menu--jump-links_container {
+    width: 16.667%;
+  }
+
+  // List of jump menu items
+  .site-menu--jump-links {
+    @include scrollbar($track: $color-background-alt);
+    overflow-x: hidden;
+    z-index: $z-index-default;
+
+    // Label at the top of jump menu items
+    .site-text-heading--label {
+      padding-left: $spacing-large;
+    }
+
+    // Links
+    a {
+      display: flex;
+      padding: $spacing-x-small $spacing-x-small $spacing-x-small $spacing-large;
+      line-height: 1.28571428571429;
+      color: $color-text-default;
+
+      &:hover {
+        background-color: rgba($color-background, 0.5);
+      }
+    }
+
+    // When component variant is selected
+    .#{$css-prefix}is-selected {
+      background-color: $color-background;
+
+      a:hover {
+        background-color: darken($color-background, 2.5);
+      }
+    }
+
+    .icon__svg {
+      @include square($square-icon-x-small-content);
+      display: inline-block;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+    }
+  }
+
+  // Nested list for variant states
+  .site-states {
+    display: none;
+
+    a {
+      padding-left: $spacing-x-large;
+    }
+
+    .#{$css-prefix}is-active a {
+      color: $color-text-tab-label-selected;
+      background-color: $color-background-alt-2;
+    }
+  }
+}

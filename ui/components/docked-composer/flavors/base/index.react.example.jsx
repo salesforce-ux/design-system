@@ -13,7 +13,7 @@ import React from 'react';
 import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -35,14 +35,14 @@ const dialingIcon = (
 );
 
 let DockedComposer = props =>
-  <div className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
     {props.children}
   </div>;
 
 let ComposerHeader = props =>
-  <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
     <MediaObject figureLeft={dialingIcon} flavor="center">
-      Header
+      <h2 id="dialog-heading-id">Header</h2>
     </MediaObject>
     <div className={pf('docked-composer__actions')}>
       <ButtonIcon
@@ -61,7 +61,7 @@ let ComposerHeader = props =>
         symbol="close"
         assistiveText="Close" />
     </div>
-  </div>;
+  </header>;
 
 let ComposerBody = props =>
   <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
@@ -69,15 +69,15 @@ let ComposerBody = props =>
   </div>;
 
 let ComposerFooter = props =>
-  <div className={pf('docked-composer__footer shrink-none')}>
+  <footer className={pf('docked-composer__footer shrink-none')}>
     <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
       <Button flavor="brand">Action</Button>
     </div>
-  </div>;
+  </footer>;
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <a href="#void" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
+    <a href="javascript:void(0);" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
       <span className={pf('align-middle')}>
         <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
         <span className={pf('assistive-text')}>View other docked windows</span>
@@ -149,7 +149,7 @@ let Modal = props =>
 let StateA = props =>
   <Demo>
     <div className={pf('docked_container')}>
-      <DockedComposer className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
         <ComposerHeader />
         <ComposerBody />
         <ComposerFooter />
@@ -160,7 +160,7 @@ let StateA = props =>
 let StateB = props =>
   <Demo>
     <div className={pf('docked_container')}>
-      <DockedComposer>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id">
         <ComposerHeader />
         <ComposerBody />
         <ComposerFooter />
@@ -183,7 +183,7 @@ let StateC = props =>
 let StateD = props =>
   <Demo>
     <div className={pf('docked_container')}>
-      <DockedComposer className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
         <ComposerHeader />
         <ComposerBody />
         <ComposerFooter />
@@ -195,7 +195,7 @@ let StateE = props =>
   <Demo>
     <div className={pf('docked_container')}>
       <ComposerOverflowMenu />
-      <DockedComposer className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
         <ComposerHeader />
         <ComposerBody />
         <ComposerFooter />

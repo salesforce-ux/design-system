@@ -13,8 +13,7 @@ import React from 'react';
 import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -47,19 +46,19 @@ const RecordIcon = (
 
 const UserImage = (
   <span className={pf('avatar avatar--medium')}>
-    <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+    <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 
 let DockedComposer = props =>
-  <div className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
     {props.children}
   </div>;
 
 let ComposerHeader = props =>
-  <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
     <MediaObject figureLeft={DialingIcon} flavor="center">
-      {props.children}
+      <h2 id="dialog-heading-id" aria-live="polite" aria-atomic="true">{props.children}</h2>
     </MediaObject>
     <div className={pf('docked-composer__actions')}>
       <ButtonIcon
@@ -78,7 +77,7 @@ let ComposerHeader = props =>
         symbol="close"
         assistiveText="Close" />
     </div>
-  </div>;
+  </header>;
 
 let ComposerBody = props =>
   <div className={className(pf('docked-composer__body col grid grid--vertical nowrap'), props.className)}>
@@ -86,9 +85,9 @@ let ComposerBody = props =>
   </div>;
 
 let ComposerFooter = props =>
-  <div className={pf('docked-composer__footer shrink-none')}>
+  <footer className={pf('docked-composer__footer shrink-none')}>
     {props.children}
-  </div>;
+  </footer>;
 
 let LookupMulti = props =>
   <div className={className(pf('form-element lookup'), props.className)} data-select="multi" data-scope="multi">
@@ -111,17 +110,17 @@ let LookupMulti = props =>
 
 let StateA = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Connecting...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Connecting...
@@ -136,17 +135,17 @@ let StateA = props =>
 
 let StateB = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Dialing...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Dialing...
@@ -161,15 +160,15 @@ let StateB = props =>
 
 let StateC = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call in Progress</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('list__item')}>VP of Sales</li>
-              <li className={pf('list__item ')}>Acme Corporation</li>
+              <li className={pf('item')}>VP of Sales</li>
+              <li className={pf('item ')}>Acme Corporation</li>
             </ul>
           </MediaObject>
           <p className={pf('text-heading--large')}>5:37</p>
@@ -194,17 +193,17 @@ let StateC = props =>
 
 let StateD = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Cancelling...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Cancelling...
@@ -216,17 +215,17 @@ let StateD = props =>
 
 let StateE = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Busy</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Busy
@@ -244,17 +243,17 @@ let StateE = props =>
 
 let StateF = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Failed</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             Call Failed
@@ -272,17 +271,17 @@ let StateF = props =>
 
 let StateG = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             No Answer
@@ -300,15 +299,15 @@ let StateG = props =>
 
 let StateH = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Call Finished</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
           <MediaObject figureLeft={UserImage}>
             <p className={pf('text-heading--medium')}>Lei Chan</p>
             <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('list__item')}>VP of Sales</li>
-              <li className={pf('list__item ')}>Acme Corporation</li>
+              <li className={pf('item')}>VP of Sales</li>
+              <li className={pf('item ')}>Acme Corporation</li>
             </ul>
           </MediaObject>
         </div>
@@ -332,25 +331,25 @@ let StateH = props =>
 
 let StateI = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan - Incoming Call...</ComposerHeader>
       <ComposerBody className={pf('slds-grid--align-center')}>
         <div className={pf('text-align--center scrollable--y')}>
           <span className={pf('avatar avatar--large')}>
-            <Img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
           </span>
           <h3 className={pf('text-heading--large')}>Lei Chan</h3>
           <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-            <li className={pf('list__item')}>VP of Sales</li>
-            <li className={pf('list__item ')}>Acme Corporation</li>
+            <li className={pf('item')}>VP of Sales</li>
+            <li className={pf('item ')}>Acme Corporation</li>
           </ul>
           <p className={pf('text-heading--medium m-top--medium')}>
             (416) 555-1234
           </p>
           <div className={pf('p-horizontal--x-small text-align--left')}>
             <p className={pf('m-bottom--x-small')}>Recent Activity</p>
-            <ul className={pf('has-cards--space')}>
-              <li className={pf('list__item theme--shade grid')}>
+            <ul className={pf('has-dividers--around-space')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-task m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
                   <span className={pf('assistive-text')}>Task Icon</span>
@@ -358,7 +357,7 @@ let StateI = props =>
                 Discussed New Pricing Models
                 <span className={pf('col--bump-left')}>Yesterday</span>
               </li>
-              <li className={pf('list__item theme--shade grid')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-email m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
                   <span className={pf('assistive-text')}>Task Icon</span>
@@ -366,7 +365,7 @@ let StateI = props =>
                 Re: Updated Proposals
                 <span className={pf('col--bump-left')}>4 Hours Ago</span>
               </li>
-              <li className={pf('list__item theme--shade grid')}>
+              <li className={pf('item theme--shade grid')}>
                 <span className={pf('icon_container icon-standard-note m-right--x-small')}>
                   <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
                   <span className={pf('assistive-text')}>Task Icon</span>
@@ -389,7 +388,7 @@ let StateI = props =>
 
 let StateJ = props =>
   <Demo>
-    <DockedComposer className={pf('is-open')}>
+    <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
       <ComposerHeader>Lei Chan</ComposerHeader>
       <ComposerBody className={pf('docked-composer__body--form')}>
         <fieldset className={pf('form--compound scrollable--y')}>
@@ -407,7 +406,7 @@ let StateJ = props =>
               <div className={pf('form-element')}>
                 <label className={pf('form-element__label')} htmlFor="text-input-01">Comments</label>
                 <div className={pf('form-element__control')}>
-                  <textarea className={pf('textarea')} type="text" id="textrea-input-01" />
+                  <textarea className={pf('textarea')} id="textrea-input-01" />
                 </div>
               </div>
             </div>
@@ -447,9 +446,34 @@ export let states = [
     element: <StateC />
   },
   {
+    id: 'single-composer-cancelled',
+    label: 'Cancelled',
+    element: <StateD />
+  },
+  {
+    id: 'single-composer-busy',
+    label: 'Busy',
+    element: <StateE />
+  },
+  {
+    id: 'single-composer-failed',
+    label: 'Failed',
+    element: <StateF />
+  },
+  {
+    id: 'single-composer-missed',
+    label: 'No Answer',
+    element: <StateG />
+  },
+  {
     id: 'single-composer-finished',
     label: 'Finished',
     element: <StateH />
+  },
+  {
+    id: 'single-composer-incoming-call',
+    label: 'Incoming Call',
+    element: <StateI />
   },
   {
     id: 'single-composer-log-call',

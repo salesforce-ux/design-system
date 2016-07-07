@@ -11,18 +11,14 @@ classes:
     applied: <code>ol</code>
     notes: Our application framework removes default list styling. This recreates it
   -
-    class: list--vertical
-    description: Marks a vertical list
-    applied: <code>ul</code>
-  -
     class: list--horizontal
     description: Causes list to display horizontally
-    applied: <code>ul</code>
+    applied: Any element
     notes: This lists stacks in a mobile context
   -
-    class: list__item
+    class: item
     description: Marks a list item
-    applied: <code>li</code>
+    applied: Any element
     notes: All lists use this class. Different CSS applies depending on the parent class.
   -
     class: dl--inline
@@ -51,66 +47,101 @@ classes:
     description: Marks a description
     applied: <code>dd</code>
   -
+    class: has-divider--top
+    description: Adds 1px border divider above an HTML element
+    applied: Any element
+  -
+    class: has-divider--top-space
+    description: Adds 1px border divider above an HTML element with a 0.5rem separation between the item above it
+    applied: Any element
+  -
+    class: has-divider--bottom
+    description: Adds 1px border divider below an HTML element
+    applied: Any element
+  -
+    class: has-divider--bottom-space
+    description: Adds 1px border divider below an HTML element with a 0.5rem separation between the item below it
+    applied: Any element
+  -
+    class: has-divider--right
+    description: Adds dot separator to the right of an HTML element
+    applied: Any element
+  -
+    class: has-divider--left
+    description: Adds dot separator to the left of an HTML element
+    applied: Any element
+  -
     class: has-block-links
     description: Gives the anchors within the list block styling
-    applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
+    applied: Any element
   -
     class: has-inline-block-links
     description: Gives the anchors within the list inline-block styling
-    applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
+    applied: Any element
   -
     class: has-block-links--space
     description: Gives the anchors within the list block styling with 0.5rem padding
-    applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
+    applied: Any element
   -
     class: has-inline-block-links--space
     description: Gives the anchors within the list inline-block styling with 0.5rem padding
-    applied: <code>.{{cssPrefix}}list--vertical</code> or <code>.{{cssPrefix}}list--vertical</code>
-  -
-    class: has-dividers
-    description: Adds spacing and dividers between list items
-    applied: <code>.{{cssPrefix}}list--vertical</code><br><code>.{{cssPrefix}}list--horizontal</code>
-    notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br>On vertical lists a border is added. Horizontal lists are separated by a dot.
+    applied: Any element
   -
     class: has-dividers--top
     description: Adds 1px border divider above list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
-    notes:
+    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
     class: has-dividers--bottom
     description: Adds 1px border divider below list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
-    notes:
+    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
     class: has-dividers--top-space
-    description: Adds 1px border divider above list items and 0.5rem padding between list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
-    notes:
+    description: Adds 1px border divider above list items and 0.5rem padding between items
+    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
     class: has-dividers--bottom-space
-    description: Adds 1px border divider below list items and 0.5rem padding between list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
-    notes:
+    description: Adds 1px border divider below list items and 0.5rem padding between items
+    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
     class: has-dividers--left
     description: Adds dot separators to the left of horizontal list items
-    applied: <code>.{{cssPrefix}}list--horizontal</code>
-    notes:
+    applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
   -
     class: has-dividers--right
     description: Adds dot separators to the right of horizontal list items
-    applied: <code>.{{cssPrefix}}list--horizontal</code>
-    notes:
+    applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
+  -
+    class: has-list-interactions
+    description: Adds hover and selected styles to list items
+    applied: <code>.{{cssPrefix}}item</code>
+    notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via JavaScript
+  -
+    class: list--vertical
+    description: Marks a vertical list
+    applied: <code>ul</code>
+    deprecated: true
+    notes: Not required anymore
+  -
+    class: list__item
+    description: Marks a list item
+    applied: <code>li</code>
+    notes: Please use <code>.{{cssPrefix}}item</code> instead
+    deprecated: true
+  -
+    class: has-dividers
+    description: Adds spacing and dividers between list items
+    applied: <code>.{{cssPrefix}}list--vertical</code><br /><code>.{{cssPrefix}}list--horizontal</code>
+    notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br />On vertical lists a border is added. Horizontal lists are separated by a dot.
+    deprecated: true
   -
     class: has-cards
     description:  Adds 1px border around list items
     applied: <code>.{{cssPrefix}}list--vertical</code>
+    deprecated: true
+    notes: Please use <code>.{{cssPrefix}}has-dividers--around</code> instead
   -
     class: has-cards--space
     description:  Adds 1px border around list items and 0.5rem padding inside list items
     applied: <code>.{{cssPrefix}}list--vertical</code>
-  -
-    class: has-list-interactions
-    description: Adds hover and selected styles to list items
-    applied: <code>.{{cssPrefix}}list__item</code>
-    notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via Javascript
+    deprecated: true
+    notes: Please use <code>.{{cssPrefix}}has-dividers--around-space</code> instead

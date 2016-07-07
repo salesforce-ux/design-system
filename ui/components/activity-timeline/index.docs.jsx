@@ -25,6 +25,6 @@ export default (
   <ComponentDocs>
     <p>Each Activity timeline item receives its width from the parent list. It can consume the full width of the main page area or be placed in the smaller right sidebar.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Text describing the type of timeline item is placed in a <code>span</code>. It is the first element in the <CodeClass className="timeline__item"/> and should be hidden with the <CodeClass className="assistive-text"/> class. The <code>SVG</code> image does not need the <CodeClass className="assistive-text"/> class.</p>
+    <p>Text describing the type of timeline item is placed in a <code>span</code>. It is the first element in the timeline item and should be hidden with the <CodeClass className="assistive-text"/> class. The <code>SVG</code> image does not need the <CodeClass className="assistive-text"/> class.</p>
   </ComponentDocs>
 );

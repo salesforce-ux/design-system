@@ -61,10 +61,10 @@ let Overflowing = props =>
       <h2>Item Seven Content</h2>
     </Tabs.Item>
     <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
-      <a className={pf('tabs--default__link')} href="#" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
+      <a className={pf('tabs--default__link')} href="javascript:void(0);" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
-      <Menu className={pf('dropdown--medium dropdown--right dropdown--overflow')}>
+      <Menu className={pf('dropdown--medium dropdown--right')}>
         <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-10')}>
           <Menu.Item>
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />

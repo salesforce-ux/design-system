@@ -1,45 +1,15 @@
 {
-  "name": "Salesforce Lightning Design System",
+  "name": "Lightning Design System",
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
     }
   ],
   "env": {
-    "APP_MODE": {
-      "required": true
-    },
     "BUG_URL": {
       "required": true
     },
-    "COOKIE_KEYS": {
-      "required": true
-    },
-    "DEPLOY_REPO": {
-      "required": true
-    },
     "FEEDBACK_URL": {
-      "required": true
-    },
-    "GITHUB_USER": {
-      "required": true
-    },
-    "GITHUB_USER_ACCESS_TOKEN": {
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "required": true
-    },
-    "INTERNAL_USERNAME": {
-      "required": true
-    },
-    "INTERNAL_PASSWORD": {
-      "required": true
-    },
-    "NPM_TOKEN": {
-      "required": true
-    },
-    "REDIS_URL": {
       "required": true
     }
   }

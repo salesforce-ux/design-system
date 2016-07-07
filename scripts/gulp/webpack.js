@@ -44,14 +44,14 @@ function logStats (stats) {
  * The webpack configuration
  */
 export function getConfig (options) {
-  options = _.defaults({}, options, {
-    prod: false
-  });
+  options = _.defaults({}, options);
+
   const config = {
     context: __PATHS__.root,
     entry: {
       site: './site/assets/scripts/main.js'
     },
+    devtool: 'source-map',
     output: {
       filename: '[name].js',
       path: path.resolve(__PATHS__.www, 'assets/scripts'),
@@ -62,8 +62,11 @@ export function getConfig (options) {
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
-          query: '{ compact: false }',
-          exclude: /node_modules/
+          query: {
+            compact: false,
+            cacheDirectory: true
+          },
+          exclude: /node_modules/,
         },
         {
           test: /\.jsx?$/,
@@ -97,16 +100,12 @@ export function getConfig (options) {
     })
   );*/
   // Uglify
-  if (options.prod) {
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
-  }
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
   return config;
 }
 
 gulp.task('webpack', done => {
-  const config = getConfig({
-    prod: true
-  });
+  const config = getConfig();
   const compiler = webpack(config);
   compiler.run((err, stats) => {
     logStats(stats);

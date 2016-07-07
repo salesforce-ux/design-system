@@ -68,7 +68,7 @@ let Required = props =>
     </Fieldset>
   </Demo>;
 
-let Error = props =>
+let ErrorState = props =>
   <Demo>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
@@ -109,7 +109,7 @@ export let states = [
   {
     id: 'radio-group-error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorState />
   },
   {
     id: 'radio-group-disabled',

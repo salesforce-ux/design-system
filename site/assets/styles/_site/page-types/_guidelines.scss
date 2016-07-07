@@ -1,0 +1,137 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.site-guidelines {
+
+  .image,
+  .image:only-of-type {
+    margin: {
+      top: $spacing-x-large;
+      bottom: $spacing-x-large;
+    }
+  }
+
+  figure {
+
+    @include mq-medium-max {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .site-side-by-side {
+    > div {
+      @include mq-medium-min {
+        padding-right: $spacing-xx-large;
+      }
+    }
+
+    &--img-left {
+      > div {
+        @include mq-medium-min {
+          padding-right: 0;
+          padding-left: $spacing-xx-large;
+        }
+      }
+    }
+  }
+
+
+  .#{$css-prefix}text-heading--small,
+  strong {
+    color: #5876a3;
+  }
+
+  // Diagrams
+  .site-diagram-section-list {
+    position: relative;
+
+    strong {
+      color: $site-color-text-strong;
+    }
+
+    figure {
+      margin-bottom: $spacing-xx-large;
+
+      @include mq-large-min {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .site-diagram-section-top,
+  .site-diagram-section-middle,
+  .site-diagram-section-bottom {
+    @include mq-large-min {
+      &:before {
+        content: '';
+        position: absolute;
+      }
+    }
+  }
+
+  .site-diagram-section-middle {
+    @include mq-large-min {
+      position: absolute;
+      padding-left: $spacing-xx-large;
+      right: 0;
+      top: 250px;
+
+      &:before {
+        left: -100px;
+        top: $font-size-medium;
+        height: 1px;
+        width: 140px;
+        background: $site-color-text-strong;
+      }
+    }
+  }
+
+  .site-diagram-section-top,
+  .site-diagram-section-bottom {
+    @include mq-large-min {
+      padding-left: 40%;
+    }
+  }
+
+  .site-diagram-section-top {
+    @include mq-large-min {
+      &:before {
+        width: 120px;
+        height: 160px;
+        transform: translate3d(-160px, $font-size-medium, 0);
+        border-radius: 50%/50% 0 0 0;
+        border: {
+          top: $border-width-thin solid $site-color-text-strong;
+          left: $border-width-thin solid $site-color-text-strong;
+        }
+      }
+    }
+  }
+  .site-diagram-section-bottom {
+    @include mq-large-min {
+      &:before {
+        width: 120px;
+        height: 140px;
+        transform: translate3d(-160px, -125px, 0);
+        border-radius: 50%/0 0 0 50%;
+        border: {
+          bottom: $border-width-thin solid $site-color-text-strong;
+          left: $border-width-thin solid $site-color-text-strong;
+        }
+      }
+    }
+  }
+
+  .site-scale-example {
+    p {
+      line-height: 1.5;
+    }
+  }
+}

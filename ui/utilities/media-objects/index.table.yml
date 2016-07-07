@@ -1,0 +1,42 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create media objects.
+classes:
+  -
+    class: media
+    description: Defines the overall media object
+    required: true
+    notes: Can be applied to any outer element and will be as wide as its parent container
+  -
+    class: media__figure
+    description: Defines the figure area
+    required: false
+    notes: Apply this class to the first element inside the <code>.{{cssPrefix}}media</code> and contains the image, icon, svg or video
+  -
+    class: media__figure--reverse
+    description: Defines the figure area on the other side
+    required: false
+    notes: Apply this class to the last element inside the <code>.{{cssPrefix}}media</code> and contains the image, icon, svg or video
+  -
+    class: media__body
+    description: Defines the body area
+    required: true
+    notes: Apply this class to the second element inside the <code>.{{cssPrefix}}media</code> and contains the text or other content
+  -
+    class: media--center
+    description: Aligns the content in the <code>.{{cssPrefix}}media__body</code> to the middle of the <code>.{{cssPrefix}}media__figure</code>
+    applied: <code>.{{cssPrefix}}media</code>
+  -
+    class: media--reverse
+    description: Reverses the media object so that the figure is on the right
+    applied: <code>.{{cssPrefix}}media</code>
+    deprecated: true
+    notes: Use existing <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__figure--reverse</code> instead.
+  -
+    class: media--double
+    description: Allows you to add a figure on both the right and left sides
+    applied: <code>.{{cssPrefix}}media</code>
+    notes: Use existing <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__figure--reverse</code> instead.
+    deprecated: true
+  -
+    class: media--responsive
+    description: <code>.{{cssPrefix}}media__figure</code> and <code>.{{cssPrefix}}media__body</code> stack on smaller screens
+    applied: <code>.{{cssPrefix}}media</code>

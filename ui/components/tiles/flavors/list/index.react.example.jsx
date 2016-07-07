@@ -10,95 +10,39 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/components/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
+import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const image = (
-  <SvgIcon className={pf('icon icon-doctype-zip')} sprite="doctype" symbol="zip" />
+const icon = (
+  <SvgIcon className={pf('icon')} sprite="doctype" symbol="zip" />
 );
 
-export const preview = (
-<div className="demo-only">
-  <ul className={pf('list--vertical has-dividers--bottom-space has-list-interactions')}>
-    <StatefulClass>
-      <li className={pf('list__item')}>
-        <MediaObject figureLeft={image} className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_038.zip</a>
-          </p>
-          <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-            <li className={pf('truncate list__item')}>May 9th, 2015</li>
-            <li className={pf('truncate list__item')}>3.6mb</li>
-          </ul>
-        </MediaObject>
-      </li>
-    </StatefulClass>
-    <StatefulClass>
-      <li className={pf('list__item')}>
-        <MediaObject figureLeft={image} className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_037.zip</a>
-          </p>
-          <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-            <li className={pf('truncate list__item')}>May 8th, 2015</li>
-            <li className={pf('truncate list__item')}>3.7mb</li>
-          </ul>
-        </MediaObject>
-      </li>
-    </StatefulClass>
-    <StatefulClass>
-      <li className={pf('list__item')}>
-        <MediaObject figureLeft={image} className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
-            <a href="#">SLDS_036.zip</a>
-          </p>
-          <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-            <li className={pf('truncate list__item')}>May 7th, 2015</li>
-            <li className={pf('truncate list__item')}>3.9mb</li>
-          </ul>
-        </MediaObject>
-      </li>
-    </StatefulClass>
-  </ul>
-</div>
-);
-
-export const code = (
-  <ul className={pf('list--vertical has-dividers--bottom-space has-selection')}>
-    <li className={pf('list__item')}>
-      <MediaObject figureLeft={image} className={pf('tile')}>
-        <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_038.zip</a>
-        </p>
-        <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-          <li className={pf('truncate list__item')}>May 9th, 2015</li>
-          <li className={pf('truncate list__item')}>3.6mb</li>
+export default (
+  <ul className={pf('has-dividers--bottom-space')}>
+    <li className={pf('item')}>
+      <TileMedia title="SLDS_038.zip" media={ icon }>
+        <ul className={pf('list--horizontal has-dividers--right')}>
+          <li className={pf('item')}>May 9th, 2015</li>
+          <li className={pf('item')}>3.6mb</li>
         </ul>
-      </MediaObject>
+      </TileMedia>
     </li>
-    <li className={pf('list__item')}>
-      <MediaObject figureLeft={image} className={pf('tile')}>
-        <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_037.zip</a>
-        </p> has-dividers
-        <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-          <li className={pf('truncate list__item')}>May 8th, 2015</li>
-          <li className={pf('truncate list__item')}>3.7mb</li>
-        </ul>
-      </MediaObject>
+    <li className={pf('item')}>
+    <TileMedia title="SLDS_038.zip" media={ icon }>
+      <ul className={pf('list--horizontal has-dividers--right')}>
+        <li className={pf('item')}>May 9th, 2015</li>
+        <li className={pf('item')}>3.6mb</li>
+      </ul>
+    </TileMedia>
     </li>
-    <li className={pf('list__item')}>
-      <MediaObject figureLeft={image} className={pf('tile')}>
-        <p className={pf('tile__title truncate')}>
-          <a href="#">SLDS_036.zip</a>
-        </p>
-        <ul className={pf('tile__detail list--horizontal has-dividers text-body--small')}>
-          <li className={pf('truncate list__item')}>May 7th, 2015</li>
-          <li className={pf('truncate list__item')}>3.9mb</li>
-        </ul>
-      </MediaObject>
+    <li className={pf('item')}>
+    <TileMedia title="SLDS_038.zip" media={ icon }>
+      <ul className={pf('list--horizontal has-dividers--right')}>
+        <li className={pf('item')}>May 9th, 2015</li>
+        <li className={pf('item')}>3.6mb</li>
+      </ul>
+    </TileMedia>
     </li>
   </ul>
 );

@@ -18,7 +18,7 @@ export default (
   <PageBody anchorTitle="Release Notes" contentClassName={pf('site-release-notes container--large')}>
     <p className="site-text-introduction">
       Download the CSS Framework and other resources from
-      the <a href="/resources/downloads">Downloads page</a>
+      the <a href="/downloads">Downloads page</a>
     </p>
     <div className={pf('releasenotes')}
       dangerouslySetInnerHTML={{__html: releaseNotes.html}} >

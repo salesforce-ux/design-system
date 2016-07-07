@@ -14,7 +14,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
-import Img from 'app_modules/ui/img';
 
 export default React.createClass({
 
@@ -41,10 +40,9 @@ export default React.createClass({
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>
-              <Img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
+              <img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
             </span>
             <div className={pf('media__body')}>
-              {this.renderBreadcrumbs()}
               <div className={pf('grid')}>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
@@ -53,31 +51,6 @@ export default React.createClass({
         </div>
         {this.props.actions}
       </header>
-    );
-  },
-
-  renderBreadcrumbs() {
-    let childNavItems = _.dropRight(this.getNavItems());
-    // If we're at the top level, don't show any breadcrumbs
-    if (!childNavItems.length) return null;
-    let breadcrumbs = childNavItems.map(item => {
-      return (
-        <li className={pf('list__item')} key={item.id}>
-          <a href={item.path}>{item.label}</a>
-        </li>
-      );
-    });
-    return (
-      <nav>
-        <p id="masthead-bread-crumb-label" className={pf('assistive-text')}>
-          You are here:
-        </p>
-        <ol
-          className={pf('breadcrumb list--horizontal')}
-          aria-labelledby="masthead-bread-crumb-label">
-          {breadcrumbs}
-        </ol>
-      </nav>
     );
   },
 

@@ -29,8 +29,8 @@ describe('React', () => {
     beforeEach(() => {
       cmp = renderIntoDocument(
         <BreadCrumbs id="bumblebees">
-          <Crumb href="#">Parent Entity</Crumb>
-          <Crumb href="#">Parent Record Name</Crumb>
+          <Crumb href="javascript:void(0);">Parent Entity</Crumb>
+          <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
         </BreadCrumbs>
       );
     });
@@ -39,12 +39,12 @@ describe('React', () => {
       expect(node).length.to.be(1);
     });
     it('renders its items', () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}list__item`);
+      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}breadcrumb__item`);
       expect(node).length.to.be(2);
     });
-    it('renders the assistive text', () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}assistive-text`);
-      expect(node).length.to.be(1);
+    it('adds its aria-label', () => {
+      const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];
+      expect(node.props['aria-label']).to.equal('Breadcrumbs');
     });
     it('mixes in the props', () => {
       const node = scryRenderedDOMComponentsWithTag(cmp, 'nav')[0];

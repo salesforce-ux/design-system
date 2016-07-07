@@ -1,9 +1,0 @@
-status: 'prototype'
-dependencies:
-  - components/picklists
-  - core/forms
-  - core/forms/input
-  - components/dropdowns/flavors/menu/index
-  - components/dropdowns/flavors/menu-with-search/index
-showFormFactors:
-  - large

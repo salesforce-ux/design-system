@@ -2,11 +2,7 @@ status: 'dev-ready'
 classBase: 'card'
 flavors:
   - base
-  - compact
-  - empty
-dependencies:
-  - core/text
-  - core/grid-system/index
-  - core/grid-system/index/flex-spread
-  - components/button-group
-  - components/tables
+  - base-narrow
+  - related-list-with-tiles
+  - related-list-with-table
+  - related-list-narrow

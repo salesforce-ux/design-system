@@ -28,7 +28,9 @@ classes:
   -
     class: input--small
     description: Applies styles for a smaller text input
+    deprecated: true
     applied: <code>.{{cssPrefix}}input</code>
+    notes: Removed in version 2.0.0
   -
     class: input--bare
     description: Removes background and border from text input
@@ -43,12 +45,24 @@ classes:
     description: Hook for <code>.{{cssPrefix}}input-has-icon</code>
     applied: <code>&lt;svg&gt;</code>
   -
+    class: input__icon--left
+    description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
+    applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
+  -
+    class: input__icon--right
+    description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
+    applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
+  -
     class: input-has-icon--left
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the left of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
     class: input-has-icon--right
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
+    applied: <code>.{{cssPrefix}}input-has-icon</code>
+  -
+    class: input-has-icon--left-right
+    description: Positions <code>.{{cssPrefix}}input__icon--left</code> to the left of the text input and <code>.{{cssPrefix}}input__icon--right</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
     class: input-has-fixed-addon
@@ -79,7 +93,15 @@ classes:
     description: Creates a custom styled checkbox
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox</code>
+  -
+    class: checkbox--button-group
+    description: Container for a group of checkbox that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: checkbox--button
+    description: Customizes your checkbox to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
     class: radio
     description: Initializes radio button
@@ -91,7 +113,15 @@ classes:
     description: Creates a custom styled radio button
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio<code>
+    notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio</code>
+  -
+    class: radio--button-group
+    description: Container for a group of radio that look like a button group
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: radio--button
+    description: Customizes your radio to look like a button in a button group
+    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
     class: form--horizontal
     description: Horizontally aligns a single form label and control on the same line

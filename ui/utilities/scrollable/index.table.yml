@@ -1,12 +1,17 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
+    class: scrollable
+    description: Forces element to scroll horizontally and vertically when content exceeds element's width and height
+    required: yes
+    applied: surrounding <code>div</code>
+  -
     class: scrollable--x
-    description: Forces element to scroll horizontally when content exceeds elements width
+    description: Forces element to scroll horizontally when content exceeds element's width
     required: yes
     applied: surrounding <code>div</code>
   -
     class: scrollable--y
-    description: Forces element to scroll vertically when content exceeds elements height
+    description: Forces element to scroll vertically when content exceeds element's height
     required: yes
     applied: surrounding <code>div</code>

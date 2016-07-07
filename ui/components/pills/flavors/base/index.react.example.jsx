@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Img from 'app_modules/ui/img';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -25,15 +24,16 @@ let Demo = props =>
     {props.children}
   </div>;
 
-let Pill = props =>
-  <a href="#void" className={pf('pill')}>
+export let Pill = props =>
+  <span className={className(pf('pill'), props.className)}>
     {props.children}
-    <span className={pf('pill__label')}>{props.label || 'Pill Label'}</span>
-    <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-  </a>;
+    {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
+    : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
+    <ButtonIcon className={pf('pill__remove')} flavor="icon" sprite="utility" symbol="close" assistiveText="Remove" />
+  </span>;
 
-let PillContainer = props =>
-  <div className={pf('pill_container')}>
+export let PillContainer = props =>
+  <div className={className(pf('pill_container'), props.className)}>
     {props.children}
   </div>;
 
@@ -49,7 +49,10 @@ let Default = props =>
 let Icon = props =>
   <Demo>
     <Pill>
-      <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
+      <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+        <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+        <span className={pf('assistive-text')}>Account</span>
+      </span>
     </Pill>
   </Demo>;
 
@@ -57,17 +60,21 @@ let Portrait = props =>
   <Demo>
     <Pill>
       <span className={pf('pill__icon avatar avatar--circle')}>
-        <Img src="/assets/images/avatar2.jpg" alt="" />
+        <img src="/assets/images/avatar2.jpg" alt="" />
       </span>
     </Pill>
   </Demo>;
 
 let Unlinked = props =>
   <Demo>
-    <span className={pf('pill')}>
-      <span className={pf('pill__label')}>Pill Label</span>
-      <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
-    </span>
+    <Pill unlinked />
+  </Demo>;
+
+let Truncated = props =>
+  <Demo style={{ width: '220px' }}>
+    <PillContainer>
+      <Pill label="Pill label that is longer than the area that contains it" />
+    </PillContainer>
   </Demo>;
 
 let Container = props =>
@@ -103,6 +110,11 @@ export let states = [
     id: 'pill-unlinked',
     label: 'Unlinked',
     element: <Unlinked />
+  },
+  {
+    id: 'pill-truncated',
+    label: 'Truncated',
+    element: <Truncated />
   },
   {
     id: 'pill-container',

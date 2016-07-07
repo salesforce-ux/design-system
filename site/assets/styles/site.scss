@@ -7,17 +7,24 @@
 //
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-@import
 
-  // DEPENDENCIES
+@import
   'ui/design-tokens',
-  'ui/config',
+  'ui/config';
+
+// Site-wide variables
+$height-searchfield: calc($line-height-button-small + #{$border-width-thin * 2}); // Height of a text input
+$height-searchbox: calc(#{$line-height-button-small + $spacing-small} + #{$border-width-thin * 2});
+
+@import
+  // DEPENDENCIES
   'ui/dependencies/index',
   '_site/dependencies/typography',
   '_site/dependencies/layout',
 
   // VENDOR
   '_vendor/prism/prism',
+  '_vendor/prism/overrides',
 
   // CORE
   '_site/site-typography',
@@ -33,7 +40,7 @@
   '_site/regions/tools',
   '_site/regions/content',
   '_site/regions/contentinfo',
-  '_site/regions/settings',
+  '_site/regions/search',
 
   // PAGE TYPES
   '_site/page-types/demo',
@@ -41,7 +48,7 @@
   '_site/page-types/examples',
   '_site/page-types/tokens',
   '_site/page-types/motion',
-  '_site/page-types/design',
+  '_site/page-types/guidelines',
   '_site/page-types/loading',
   '_site/page-types/tutorial',
   '_site/page-types/404',

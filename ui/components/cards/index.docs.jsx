@@ -25,6 +25,5 @@ export default (
   <ComponentDocs>
     <p>To initialize a card, apply the <CodeClass className="card"/> class to a containing <code>&lt;div&gt;</code>. A card is made up of three sections, a header, a body, and a footer. The card header will get the <CodeClass className="card__header"/> class. The card body will get the <CodeClass className="card__body"/> class. The card footer will get the <CodeClass className="card__footer"/> class.</p>
     <p>The card body can consume either a <a href="/components/data-tables">Data Table</a> or a <a href="/components/tiles">Tile</a>.</p>
-    <p>For available classes and options, see the <a href="#overview">card overview legend</a> below.</p>
   </ComponentDocs>
 );

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import CTALink from 'app_modules/site/components/cta-link';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Img from 'app_modules/ui/img';
 import PageBody from 'app_modules/site/components/page/body';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
@@ -29,7 +28,7 @@ export default (
         Create the world’s best enterprise app experiences.
       </h2>
       <p className={pf('site-cta-buttons m-bottom--medium')}>
-        <CTALink href="/resources/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
+        <CTALink href="/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
         <CTALink
           href="https://github.com/salesforce-ux/design-system"
           className={pf('button button--neutral')}
@@ -52,7 +51,7 @@ export default (
         <ul className={pf('grid wrap grid--pull-padded-large site-grid--landing-primary')}>
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
             <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
-              <Img className="image" src="/assets/images/landing/img-icon-group.svg" alt="" />
+              <img className="image" src="/assets/images/landing/img-icon-group.svg" alt="" />
             </p>
             <dl className={pf('medium-size--1-of-2')}>
               <dt className="site-text-heading--large">Style with Ease</dt>
@@ -61,7 +60,7 @@ export default (
           </li>
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
             <p className={pf('size--1-of-1 medium-size--1-of-2 float--left')}>
-              <Img className="image" src="/assets/images/landing/img-expertise.svg" alt="" />
+              <img className="image" src="/assets/images/landing/img-expertise.svg" alt="" />
             </p>
             <dl className={pf('medium-size--1-of-2 float--right')}>
               <dt className="site-text-heading--large">Design with Expertise</dt>
@@ -70,18 +69,18 @@ export default (
           </li>
           <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
             <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
-              <Img className="image" src="/assets/images/landing/img-opensource.svg" alt="" />
+              <img className="image" src="/assets/images/landing/img-opensource.svg" alt="" />
             </p>
             <dl className={pf('medium-size--1-of-2')}>
               <dt className={pf('site-text-heading--large')}>Contribute with Purpose</dt>
-              <dd>The Design System is an <a href="https://github.com/salesforce-ux/design-system">open source project on GitHub</a>, meaning you can directly impact its evolution by filing issues and submitting pull requests.. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
+              <dd>The Design System is an <a href="https://github.com/salesforce-ux/design-system">open source project on GitHub</a>, meaning you can directly impact its evolution by filing issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
             </dl>
           </li>
         </ul>
         <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/landing/icon-trust.svg" alt="" />
+              <img src="/assets/images/landing/icon-trust.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Trustworthy</dt>
                 <dd><hr className="hr hr--orange" />We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports.</dd>
@@ -90,7 +89,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/landing/icon-platform.svg" alt="" />
+              <img src="/assets/images/landing/icon-platform.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Platform-Agnostic</dt>
                 <dd><hr className="hr hr--purple" />You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku.</dd>
@@ -99,7 +98,7 @@ export default (
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
             <div className="grid-card">
-              <Img src="/assets/images/landing/icon-living.svg" alt="" />
+              <img src="/assets/images/landing/icon-living.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Living</dt>
                 <dd><hr className="hr hr--pink" />The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</dd>
@@ -115,22 +114,22 @@ export default (
             <div className="grid-card">
               <div className={pf('grid grid--align-spread')}>
                 <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="downloads-header">Downloads</h3>
-                <Img src="/assets/images/landing/icon-download.svg" alt="" />
+                <img src="/assets/images/landing/icon-download.svg" alt="" />
               </div>
               <hr className="hr hr--pink" />
               <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
-              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/resources/downloads" eventType="downloads-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/downloads" eventType="downloads-bottom">Learn More</CTALink>
             </div>
           </li>
           <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
             <div className="grid-card">
               <div className={pf('grid grid--align-spread')}>
-                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="tutorials-header">Tutorials</h3>
-                <Img src="/assets/images/landing/icon-tutorial.svg" alt="" />
+                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="getting-started-header">Getting started</h3>
+                <img src="/assets/images/landing/icon-getting-started.svg" alt="" />
               </div>
               <hr className="hr hr--orange" />
               <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-              <CTALink aria-describedby="tutorials-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="tutorials-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="getting-started-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
             </div>
           </li>
         </ul>

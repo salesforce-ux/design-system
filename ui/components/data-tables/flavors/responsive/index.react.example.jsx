@@ -118,7 +118,7 @@ let RowData = props =>
     <Td className={pf('truncate')} dataLabel="Prospecting">Prospecting</Td>
     <Td dataLabel="Confidence">20%</Td>
     <Td dataLabel="Amount">$25k</Td>
-    <Td className={pf('truncate')} dataLabel="Contact"><a href="#void">jrogers@cloudhub.com</a></Td>
+    <Td className={pf('truncate')} dataLabel="Contact"><a href="javascript:void(0);">jrogers@cloudhub.com</a></Td>
     <Td className={pf('cell-shrink')} dataLabel="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
@@ -188,10 +188,11 @@ export let states = [
     id: 'data-table-responsive-stacked',
     label: 'Stacked',
     element: <Stacked />
-  },
-  {
-    id: 'data-table-responsive-overflow',
-    label: 'Overflow',
-    element: <Overflow />
   }
+  // , @TODO: Hidden until scrolling on S1 works
+  // {
+  //   id: 'data-table-responsive-overflow',
+  //   label: 'Overflow',
+  //   element: <Overflow />
+  // }
 ];

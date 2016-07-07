@@ -40,8 +40,7 @@ const MODULE_NAME = globals.moduleName;
 // Helpers
 ///////////////////////////////////////////////////////////////
 
-const distdir = isNpm ? __PATHS__.npm : __PATHS__.dist;
-const distPath = path.resolve.bind(path, distdir);
+const distPath = path.resolve.bind(path, isNpm ? __PATHS__.npm : __PATHS__.dist);
 
 function commentBanner(messages) {
   messages = messages.map(function(message) {
@@ -63,7 +62,7 @@ async.series([
   /**
    * Clean the dist folder
    */
-  (done) => rimraf(__PATHS__.dist, done),
+  (done) => rimraf(distPath(), done),
 
   /**
    * Copy necessary root files to be included in the final module
@@ -227,7 +226,7 @@ async.series([
    */
   (done) => {
     const pattern = /\'(.*?)\'(?=[,;])/g;
-    gulp.src(distPath('scss/design-tokens.scss'))
+    gulp.src(distPath('scss/_design-tokens.scss'))
     .pipe(through.obj(function(file, enc, next) {
       const newFile = file.clone();
       let sassImports = [];
@@ -262,7 +261,7 @@ async.series([
    * Build design system and vf css from the scss files. The big one!
    */
   (done) => {
-    gulp.src(distPath('scss/index*.scss'))
+    gulp.src(distPath('scss/index.scss'))
       .pipe(sass({
         precision: 10,
         includePaths: [
@@ -277,13 +276,6 @@ async.series([
         return path;
       }))
       .pipe(gulp.dest(distPath('assets/styles/')))
-      .on('error', done)
-      .on('finish', done);
-  },
-  (done) => {
-    gulp.src(distPath('assets/styles/*-vf.css'), { base: distPath() })
-      .pipe(rem2px(16))
-      .pipe(gulp.dest(distPath()))
       .on('error', done)
       .on('finish', done);
   },

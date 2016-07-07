@@ -2,7 +2,7 @@ description: This table gives you a quick overview of the {{abbreviatedName}} CS
 classes:
   -
     class: text-body--regular
-    description: Creates the 14px regular body copy
+    description: Creates the 13px regular body copy
     notes: This is the base body font size and is rarely needed
   -
     class: text-body--small
@@ -10,24 +10,29 @@ classes:
     notes: Typically used as supportive text
   -
     class: text-heading--large
-    description: Very large 32px heading
+    description: Very large 28px heading
     applied: Any heading
     notes: These are rarely used in the app and are reserved for extremely large text to showcase data (such as totals or stats).
   -
     class: text-heading--medium
-    description: Large 24px heading
+    description: Large 20px heading
     applied: Any heading
     notes: Typically the largest heading on a page
   -
     class: text-heading--small
-    description: Smaller 18px heading
+    description: Smaller 16px heading
     applied: Any heading
     notes: Used for smaller content areas such as list sections or card titles
   -
     class: text-heading--label
     description: All caps 12px heading
     applied: Any heading
-    notes: Usually labels small content areas like table columns and list sections
+    notes: Usually labels small content areas like tabs and page header titles
+  -
+    class: text-heading--label-normal
+    description: 12px heading that is not all caps
+    applied: Any heading
+    notes: Usually labels small content areas like list sections.
   -
     class: text-longform
     description: Adds default spacing and list styling within a wrapper
@@ -49,7 +54,7 @@ classes:
     class: section
     description: Container for a collapsable sub section through interaction with the section title
     required: true
-    notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__body</code>
+    notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__content</code>
   -
     class: section__title
     description: Title of a section, can contain an interactive button icon to expand/collapse sub section(s)

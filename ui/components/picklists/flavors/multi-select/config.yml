@@ -1,7 +1,0 @@
-status: 'prototype'
-dependencies:
-  - helpers/grid
-  - forms/index
-  - forms/picklist/index
-showFormFactors:
-  - large

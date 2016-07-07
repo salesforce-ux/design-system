@@ -28,22 +28,22 @@ export let states = [
     id: 'name-value-pair-inline',
     label: 'Inline',
     element:
-      <dl className={pf('list--inline')}>
+      <div className={pf('list--inline')}>
         <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
         <div className={pf('item--detail truncate')}>Description for first label</div>
         <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>
         <div className={pf('item--detail truncate')}>Description for second label</div>
-      </dl>
+      </div>
   },
   {
     id: 'name-value-pair-stacked',
     label: 'Stacked',
     element:
-      <dl className={pf('list--stacked')}>
+      <div className={pf('list--stacked')}>
         <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
         <div className={pf('item--detail truncate')}>Description for first label</div>
         <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>
         <div className={pf('item--detail truncate')}>Second description</div>
-      </dl>
+      </div>
   }
 ];

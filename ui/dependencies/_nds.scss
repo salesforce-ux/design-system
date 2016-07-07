@@ -1,0 +1,9 @@
+@mixin disable {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@mixin tab-focus {
+  color: $color-text-tab-label-selected;
+  box-shadow: $color-text-tab-label-selected 0 ($border-width-thin * -1) 0 inset;
+}

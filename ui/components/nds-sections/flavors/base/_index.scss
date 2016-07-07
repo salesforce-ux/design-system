@@ -21,6 +21,10 @@
   .#{$css-prefix}tile {
     margin: $spacing-none;
     padding: $spacing-small $spacing-large;
+
+    + .#{$css-prefix}tile {
+      margin-top: $spacing-none;
+    }
   }
 
   .#{$css-prefix}col {

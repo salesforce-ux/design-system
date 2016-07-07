@@ -103,6 +103,9 @@
     "webpack": "1.13.1",
     "webpack-dev-middleware": "1.6.1"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "engines": {
     "node": "5.0.0",
     "npm": ">=2.7.0"

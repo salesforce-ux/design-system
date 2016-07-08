@@ -16,7 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
 <div className="demo-only" style={{width: '440px'}}>
   <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label')}>Location</legend>
+    <legend className={pf('form-element__label text-title--caps')}>Location</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
         <div className={pf('form-element size--1-of-2')}>
@@ -32,7 +32,7 @@ export default (
   </fieldset>
 
   <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label')}>Address</legend>
+    <legend className={pf('form-element__label text-title--caps')}>Address</legend>
     <div className={pf('form-element__group')}>
       <div className={pf('form-element__row')}>
         <div className={pf('form-element size--1-of-1')}>

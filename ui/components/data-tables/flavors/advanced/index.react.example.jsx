@@ -25,31 +25,16 @@ let Table = props =>
     {props.children}
   </table>;
 
-let Thead = props =>
-  <thead {...props}>
-    {props.children}
-  </thead>;
-
-let Tbody = props =>
-  <tbody>
-    {props.children}
-  </tbody>;
-
-let Tr = props =>
-  <tr {...props}>
-    {props.children}
-  </tr>;
-
 let Th = (props) => {
   const rangeLabel = props.children + ' column width';
   let sortDirection;
-  if(props.ariaSort) {
-    sortDirection = (props.ariaSort === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
+  if (props['aria-sort']) {
+    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
   }
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
   return(
-    <th className={pf(props.className)} scope={props.scope} style={props.style} aria-label={props.children} aria-sort={props.ariaSort} tabIndex={props.tabindex}>
+    <th {...props} aria-label={props.children}>
       <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
         <span className={pf('assistive-text')}>Sort </span>
         <span className={pf('truncate')} title={props.children}>{ props.children }</span>
@@ -70,22 +55,13 @@ let Th = (props) => {
 };
 
 let Td = props =>
-  <td
-    aria-readonly={props.ariaReadonly}
-    aria-selected={props.ariaSelected}
-    className={pf(props.className)}
-    data-label={props.dataLabel}
-    role="gridcell"
-    scope={props.scope}
-    tabIndex={props.tabindex}
-    title={props.title}
-  >
+  <td role="gridcell" {...props}>
     { props.children }
   </td>;
 
 let Checkbox = props =>
   <label className={pf('checkbox')}>
-    <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} id={props.checkID} />
+    <input type="checkbox" name="options" defaultChecked={props.checked} />
     <span className={pf('checkbox--faux')}></span>
     <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
@@ -94,16 +70,16 @@ let RowData = (props) => {
   let checkboxLabel = 'Select row ' + props.title;
 
   return(
-    <Tr className={className(pf('hint-parent'), props.className)} aria-selected={props.checked}>
-      <Td className={pf('cell-shrink')} dataLabel={checkboxLabel}><Checkbox label={checkboxLabel} tabIndex={props.checkIndex} checked={props.checked} /></Td>
-      <th className={pf('truncate')} scope="row" data-label="Opportunity Name" title={props.title}>{props.title}</th>
-      <Td className={pf('truncate')} dataLabel="Account Name" title="Cloudhub">Cloudhub</Td>
-      <Td dataLabel="Close Date">4/14/2015</Td>
-      <Td className={pf('truncate')} dataLabel="Prospecting" title="Prospecting">Prospecting</Td>
-      <Td dataLabel="Confidence">20%</Td>
-      <Td dataLabel="Amount">$25k</Td>
-      <Td className={pf('truncate')} dataLabel="Contact" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></Td>
-      <Td className={pf('cell-shrink')} dataLabel="Actions">
+    <tr className={className(pf('hint-parent'), props.className)} aria-selected={props.checked}>
+      <Td className={pf('cell-shrink')} data-label={checkboxLabel}><Checkbox label={checkboxLabel} checked={props.checked} /></Td>
+      <th scope="row" data-label="Opportunity Name"><div className={pf('truncate')} title={props.title}>{props.title}</div></th>
+      <Td data-label="Account Name"><div className={pf('truncate')} title="Cloudhub">Cloudhub</div></Td>
+      <Td data-label="Close Date"><div className={pf('truncate')} title="4/14/2015">4/14/2015</div></Td>
+      <Td data-label="Prospecting"><div className={pf('truncate')} title="Prospecting">Prospecting</div></Td>
+      <Td data-label="Confidence"><div className={pf('truncate')} title="20%">20%</div></Td>
+      <Td data-label="Amount"><div className={pf('truncate')} title="$25k">$25k</div></Td>
+      <Td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
+      <Td className={pf('cell-shrink')} data-label="Actions">
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"
@@ -111,7 +87,7 @@ let RowData = (props) => {
           symbol="down"
           assistiveText="Show More" />
       </Td>
-    </Tr>
+    </tr>
   );
 };
 
@@ -126,9 +102,9 @@ export let states = [
     label: 'Default',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" /></td>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" /></Td>
             <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
@@ -137,12 +113,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {
@@ -150,9 +126,9 @@ export let states = [
     label: 'Row Selected',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" indeterminate="true" checked /></td>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" indeterminate="true" checked /></Td>
             <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
@@ -161,12 +137,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {
@@ -174,9 +150,9 @@ export let states = [
     label: 'All Rows Selected',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" checked /></td>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" checked /></Td>
             <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
@@ -185,12 +161,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Cloudhub" className={pf('is-selected')} checked />
           <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {
@@ -198,10 +174,10 @@ export let states = [
     label: 'Sorted Ascending',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" /></td>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" ariaSort="ascending">Opportunity Name</Th>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" /></Td>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" aria-sort="ascending">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
@@ -209,12 +185,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Anypoint Connectors" />
           <RowData title="Cloudhub" />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {
@@ -222,10 +198,10 @@ export let states = [
     label: 'Sorted Descending',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" /></td>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" ariaSort="descending">Opportunity Name</Th>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" /></Td>
+            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" aria-sort="descending">Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
@@ -233,12 +209,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Anypoint Connectors" />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {
@@ -246,9 +222,9 @@ export let states = [
     label: 'Column resized',
     element:
       <Table className={pf('table--fixed-layout')}>
-        <Thead>
-          <Tr className={pf('text-title--caps')}>
-            <td className={pf('cell-shrink')} role="gridcell"><Checkbox label="Select All" /></td>
+        <thead>
+          <tr className={pf('text-title--caps')}>
+            <Td className={pf('cell-shrink')}><Checkbox label="Select All" /></Td>
             <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }}>Opportunity Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
@@ -257,12 +233,12 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
             <th className={pf('cell-shrink')}></th>
-          </Tr>
-        </Thead>
-        <Tbody>
+          </tr>
+        </thead>
+        <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Anypoint Connectors" />
-        </Tbody>
+        </tbody>
       </Table>
   }
 ];

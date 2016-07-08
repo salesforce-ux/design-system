@@ -19,75 +19,40 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
-let Table = props =>
-  <table className={className(pf('table table--bordered table--cell-buffer'), props.className)}>
-    {props.children}
-  </table>;
-
-let Thead = props =>
-  <thead {...props}>
-    {props.children}
-  </thead>;
-
-let Tbody = props =>
-  <tbody>
-    {props.children}
-  </tbody>;
-
-let Tr = props =>
-  <tr {...props}>
-    {props.children}
+let HeadRowData = props =>
+  <tr className={pf('text-title--caps')}>
+    <th scope="col"><div className={pf('truncate')} title="Opportunity Name">Opportunity Name</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Account Name">Account Name</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Close Date">Close Date</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Stage">Stage</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Confidence">Confidence</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Amount">Amount</div></th>
+    <th scope="col"><div className={pf('truncate')} title="Contact">Contact</div></th>
   </tr>;
 
-let Th = props =>
-  <th className={props.className} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
-  </th>;
-
-let Td = props =>
-  <td className={props.className} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
-  </td>;
-
-let HeadRowData = props =>
-  <Tr className={pf('text-title--caps')}>
-    <Th scope="col"><div className={pf('truncate')}>Opportunity Name</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Account Name</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Close Date</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Stage</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Confidence</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Amount</div></Th>
-    <Th scope="col"><div className={pf('truncate')}>Contact</div></Th>
-  </Tr>;
-
 let RowData = props =>
-  <Tr className={props.className}>
-    <Th scope="row" dataLabel="Opportunity Name"><div className={pf('truncate')}><a href="javascript:void(0);">{props.title}</a></div></Th>
-    <Td dataLabel="Account Name"><div className={pf('truncate')}>Cloudhub</div></Td>
-    <Td dataLabel="Close Date"><div className={pf('truncate')}>4/14/2015</div></Td>
-    <Td dataLabel="Prospecting"><div className={pf('truncate')}>Prospecting</div></Td>
-    <Td dataLabel="Confidence">20%</Td>
-    <Td dataLabel="Amount">$25k</Td>
-    <Td dataLabel="Contact"><div className={pf('truncate')}><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
-  </Tr>;
+  <tr className={props.className}>
+    <th scope="row" data-label="Opportunity Name"><div className={pf('truncate')} title={props.title}><a href="javascript:void(0);">{props.title}</a></div></th>
+    <td data-label="Account Name"><div className={pf('truncate')} title="Cloudhub">Cloudhub</div></td>
+    <td data-label="Close Date"><div className={pf('truncate')} title="4/14/2015">4/14/2015</div></td>
+    <td data-label="Prospecting"><div className={pf('truncate')} title="Prospecting">Prospecting</div></td>
+    <td data-label="Confidence"><div className={pf('truncate')} title="20%">20%</div></td>
+    <td data-label="Amount"><div className={pf('truncate')} title="$25k">$25k</div></td>
+    <td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></td>
+  </tr>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
 export default (
-  <Table className={pf('table--compact')}>
-    <Thead>
+  <table className={pf('table table--bordered table--cell-buffer table--compact')}>
+    <thead>
       <HeadRowData />
-    </Thead>
-    <Tbody>
+    </thead>
+    <tbody>
       <RowData title="Cloudhub" />
       <RowData title="Cloudhub + Anypoint Connectors" />
-    </Tbody>
-  </Table>
+    </tbody>
+  </table>
 );

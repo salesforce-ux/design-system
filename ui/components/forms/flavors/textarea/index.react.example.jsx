@@ -36,7 +36,7 @@ let FormElementControl = props =>
   </div>;
 
 let Textarea = props =>
-  <textarea id="textarea-input-02" className={className(pf('textarea'), props.className)} placeholder="Placeholder Text" {...props} />;
+  <textarea id="textarea-input-01" className={className(pf('textarea'), props.className)} placeholder="Placeholder Text" {...props} />;
 
 //////////////////////////////////////////////
 // State Constructor(s)

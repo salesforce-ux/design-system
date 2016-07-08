@@ -98,6 +98,7 @@ The following issues have now been resolved:
 - Files a11y fixes
   - Fix invalid markup by moving button group outside of anchor
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
+- Make primary labels of compound fields capital
 
 **DEPRECATED**
 

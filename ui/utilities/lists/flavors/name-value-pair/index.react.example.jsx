@@ -17,7 +17,7 @@ export let states = [
     id: 'name-value-pair-horizontal',
     label: 'Horizontal',
     element:
-      <div className={pf('list--horizontal')}>
+      <div className={pf('list--horizontal wrap')}>
         <div className={pf('item--label text-color--weak truncate')} title="First Label">First Label:</div>
         <div className={pf('item--detail truncate')}>Description for first label</div>
         <div className={pf('item--label text-color--weak truncate')} title="Second Label">Second Label:</div>

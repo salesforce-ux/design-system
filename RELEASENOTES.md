@@ -12,6 +12,7 @@ The following issues have now been resolved:
   - Card header semantically changed to a `header`
   - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
   - Wrap card header text in an `<h2>`
+- Fix label for / textarea id mismatch in form textarea example
 
 ## Release [2.0.2] - June 16, 2016
 

@@ -10,8 +10,12 @@
 // This is third party code, disable all linting warnings
 // scss-lint:disable all
 
+// TODO: map some of these things to tokens!
+
+
 // Disabled on mobile until we get it to work there
 @include mq-medium-max {
+
   #search {
     display: none !important;
   }
@@ -100,7 +104,7 @@
 }
 .algolia-docsearch-suggestion--highlight {
   color: #00559f;
-  background-color: rgba(0, 112, 210, 0.08)
+  background-color: $color-background-highlight-search;
 }
 .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
   color: inherit;

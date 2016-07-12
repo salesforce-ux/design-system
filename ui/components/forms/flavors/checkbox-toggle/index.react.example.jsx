@@ -41,7 +41,7 @@ let Label = props =>
   </label>;
 
 let FauxLabel = props =>
-  <span className={pf('form-element__label m-bottom--')}>{props.children}</span>;
+  <span className={pf('form-element__label m-bottom--none')}>{props.children}</span>;
 
 let Checkbox = props =>
   <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;

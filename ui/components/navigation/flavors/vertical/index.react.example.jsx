@@ -24,17 +24,17 @@ let Navigation = props =>
   </div>;
 
 let SectionTitle = props =>
-  <h2 className={pf('text-title--caps p-around--small')} id={props.id}>
+  <h2 className={pf('text-title--caps p-around--medium')} id={props.id}>
     {props.children}
   </h2>;
 
 let List = props =>
-  <ul className={className(pf('list--vertical has-block-links--space'), props.className)}>
+  <ul className={ props.className }>
     {props.children}
   </ul>;
 
 let Item = props =>
-  <li className={className(pf('item'), props.className)}>
+  <li className={ props.className }>
     <a href="javascript:void(0);" className={pf('navigation-list--vertical__action text-link--reset')} aria-describedby={props.id}>
       {props.children}
     </a>

@@ -9,26 +9,7 @@
 
 .#{$css-prefix}navigation-list--vertical {
 
-  .#{$css-prefix}navigation-list--vertical__action {
-    display: block;
-    border: {
-      left: $spacing-xx-small solid transparent;
-      top: $border-width-thin solid transparent;
-      bottom: $border-width-thin solid transparent;
-    }
-    padding-left: $spacing-medium;
-
-    &:hover,
-    &:focus {
-      outline: 0;
-      background-color: $color-background-row-hover;
-    }
-
-    &:active {
-      background-color: $color-background-row-active;
-    }
-  }
-
+  // Active item
   .#{$css-prefix}is-active {
     color: $color-text-link;
 
@@ -42,6 +23,27 @@
         color: $color-text-link-focus;
       }
     }
+  }
+}
+
+// Actionable item inside a vertical navigation list
+.#{$css-prefix}navigation-list--vertical__action {
+  display: block;
+  border: {
+    left: $spacing-xx-small solid transparent;
+    top: $border-width-thin solid transparent;
+    bottom: $border-width-thin solid transparent;
+  }
+  padding: $spacing-x-small $spacing-large;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background-color: $color-background-row-hover;
+  }
+
+  &:active {
+    background-color: $color-background-row-active;
   }
 }
 

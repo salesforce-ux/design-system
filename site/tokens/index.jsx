@@ -87,19 +87,24 @@ const Tokens = React.createClass({
     });
     const formatSelect = !process.env.INTERNAL
       ? null
-      : <div className={pf('col align-middle p-vertical--medium')}>
-          <select className={pf('select')} data-slds-tokens-name-format />
+      : <div className={pf('form-element p-horizontal--medium')}>
+          <label htmlFor="slds-tokens-name-format" className={pf('slds-form-element__label')} >Format:</label>
+          <div className={pf('form-element__control')}>
+            <select className={pf('select no-flex')} id="slds-tokens-name-format" />
+          </div>
         </div>;
     return (
       <Sticky>
-        <div className={pf('site-tools grid grid--align-spread')}>
-          <div className={pf('col align-middle p-vertical--medium')}>
+        <div className={pf('site-tools form--inline')}>
+          <div className={pf('form-element p-vertical--medium')}>
             <label className={pf('assistive-text')} htmlFor="find-token-input">Find Token</label>
-            <input
-              className={pf('input')}
-              id="find-token-input"
-              type="search"
-              placeholder="Find Token" />
+            <div className={pf('form-element__control')}>
+              <input
+                className={pf('input')}
+                id="find-token-input"
+                type="search"
+                placeholder="Find Token" />
+            </div>
           </div>
           {formatSelect}
         </div>

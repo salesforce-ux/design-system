@@ -12,7 +12,7 @@
   height: $height-context-bar;
   background-color: $color-background-context-bar;
   border-top: $border-width-thin solid $color-border;
-  border-bottom: 3px solid $color-border-context-bar-theme-default;
+  border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-context-bar;
   position: relative;
   padding: 0 $spacing-medium;
@@ -57,7 +57,7 @@
       outline: 0;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
-      border-bottom: 3px solid $color-border-context-bar-theme-default;
+      border-bottom: 3px solid $color-background-context-bar-brand-accent;
       margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
@@ -86,7 +86,7 @@
         width: 100%;
         height: 3px;
         display: block;
-        background: $color-border-context-bar-theme-default;
+        background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
         left: 0;

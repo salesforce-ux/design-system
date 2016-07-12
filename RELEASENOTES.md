@@ -13,6 +13,7 @@ The following issues have now been resolved:
   - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
   - Wrap card header text in an `<h2>`
 - Fix label for / textarea id mismatch in form textarea example
+- Fix modal close button styling so the focus halo no longer overlaps with the modal body
 
 ## Release [2.0.2] - June 16, 2016
 

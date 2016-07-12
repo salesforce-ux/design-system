@@ -14,6 +14,7 @@ The following issues have now been resolved:
   - Wrap card header text in an `<h2>`
 - Fix label for / textarea id mismatch in form textarea example
 - Fix modal close button styling so the focus halo no longer overlaps with the modal body
+- Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
 
 ## Release [2.0.2] - June 16, 2016
 

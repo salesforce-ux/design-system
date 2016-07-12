@@ -9,8 +9,14 @@
 
 .#{$css-prefix}navigation-list--vertical {
 
-  &__action {
-    border-left: $spacing-xx-small solid transparent;
+  .#{$css-prefix}navigation-list--vertical__action {
+    display: block;
+    border: {
+      left: $spacing-xx-small solid transparent;
+      top: $border-width-thin solid transparent;
+      bottom: $border-width-thin solid transparent;
+    }
+    padding-left: $spacing-medium;
 
     &:hover,
     &:focus {
@@ -23,14 +29,26 @@
     }
   }
 
-  .#{$css-prefix}is-active .#{$css-prefix}navigation-list--vertical__action {
-    background-color: $color-background-row-selected;
-    border-left-color: $color-background-button-brand-hover;
+  .#{$css-prefix}is-active {
     color: $color-text-link;
 
-    &:focus {
-      border-left-width: $spacing-x-small;
-      color: $color-text-link-focus;
+    .#{$css-prefix}navigation-list--vertical__action {
+      background-color: $color-background-row-selected;
+      border-color: $color-border;
+      border-left-color: $color-background-button-brand-hover;
+
+      &:focus {
+        border-left-width: $spacing-x-small;
+        color: $color-text-link-focus;
+      }
     }
+  }
+}
+
+// Vertical Navigation on tinted background
+.#{$css-prefix}navigation-list--vertical-inverse {
+
+  .#{$css-prefix}is-active .#{$css-prefix}navigation-list--vertical__action {
+    background-color: $color-background-alt;
   }
 }

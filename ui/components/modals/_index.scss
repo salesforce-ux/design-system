@@ -138,10 +138,10 @@
   }
 
   &__close {
-    @include square($square-icon-large-boundary);
+    @include square($square-icon-medium-boundary);
     position: absolute;
-    top: ($square-icon-large-boundary * -1);
-    right: ((($square-icon-large-boundary - $square-icon-large-content) / 2) * -1);
+    top: ($square-icon-medium-boundary * -1.25);
+    right: ((($square-icon-medium-boundary - $square-icon-medium-content) / 2) * -1);
   }
 }
 

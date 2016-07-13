@@ -85,6 +85,14 @@ function getPreviewTabs() {
   }];
 }
 
+const StateAnchor = props => (
+  <span className="site-jump-anchor">
+    <span className={pf('assistive-text')} id={props.id} data-docsearch="component-flavor-state" role="presentation" tabIndex="-1">
+      {props.children}
+    </span>
+  </span>
+);
+
 class ComponentFlavor extends React.Component {
 
   constructor(props) {
@@ -117,13 +125,7 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
-    const StateAnchor = props => (
-      <span className="site-jump-anchor">
-        <span className={pf('assistive-text')} id={props.id} data-docsearch="component-flavor-state" role="presentation" tabIndex="-1">
-          {props.children}
-        </span>
-      </span>
-    );
+
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
       statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`}>{flavor.title} › {state.label}</StateAnchor>);

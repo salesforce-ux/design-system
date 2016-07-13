@@ -63,9 +63,9 @@ export default React.createClass({
                 return (
                   <li className={className} key={state.id}>
                     <a
-                      href={`/${pathToURL(flavor.path)}/_${state.id}.html?iframe`}
-                      data-slds-flavor-states={flavor.uid}
-                      data-slds-flavor-href={`#flavor-${flavor.id}`}>
+                      href={`#flavor-${flavor.id}-${state.id}`}
+                      data-slds-target={`iframe-${flavor.uid}`}
+                      data-slds-state-href={`/${pathToURL(flavor.path)}/_${state.id}.html?iframe`}>
                       {state.label}
                     </a>
                   </li>

@@ -146,7 +146,7 @@ export default () => ({
     },
     listen_dom: delegate => {
       window.addEventListener('hashchange', onHashChange, false);
-      setTimeout(onHashChange, 400);
+      onHashChange();
     }
   }
 });

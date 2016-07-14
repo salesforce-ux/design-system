@@ -27,8 +27,7 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <div {...props} className={className(pf('modal fade-in-open'), props.className)}
-    role="dialog" tabIndex="-1">
+  <div role="dialog" tabIndex="-1" {...props} className={className(pf('modal fade-in-open'), props.className)}>
     <div className={pf('modal__container')}>
       {props.children}
     </div>

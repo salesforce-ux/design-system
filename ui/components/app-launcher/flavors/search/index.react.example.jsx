@@ -22,9 +22,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let AppLauncherModal = props =>
-  <Modal className={pf('modal--large app-launcher')}>
+  <Modal aria-labelledby="header43" className={pf('modal--large app-launcher')}>
     <ModalHeader className={pf('app-launcher__header grid grid--align-spread grid--vertical-align-center')}>
-      <h2 className={pf('text-heading--medium')}>App Launcher</h2>
+      <h2 id="header43" className={pf('text-heading--medium')}>App Launcher</h2>
       <div className={pf('app-launcher__header-search')}>
         <div className={pf('form-element')}>
           <label htmlFor="app-launcher-search" className={pf('form-element__label assistive-text')}>Find an app</label>

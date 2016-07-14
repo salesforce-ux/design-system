@@ -28,8 +28,7 @@ let Demo = props =>
 
 export let Modal = props =>
   <div className={className(pf('modal fade-in-open'), props.className)}
-    aria-hidden="false"
-    role="dialog">
+    role="dialog" {...props} tabIndex="-1">
 
     <div className={pf('modal__container')}>
       {props.children}
@@ -66,7 +65,7 @@ let Default = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
       <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
@@ -78,9 +77,9 @@ let Default = props =>
 
 let Taglines = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
+    <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
         <p className={pf('m-top--x-small')}>
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
@@ -97,9 +96,9 @@ let Taglines = props =>
 
 let Large = props =>
   <Demo style={{height: '640px'}}>
-    <Modal className={pf('modal--large')}>
+    <Modal className={pf('modal--large')} aria-labelledby="header43">
       <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
@@ -111,9 +110,9 @@ let Large = props =>
 
 let Directional = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
+    <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter className={pf('modal__footer--directional')}>
@@ -138,9 +137,9 @@ let Headless = props =>
 
 let Footless = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
+    <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>
       <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
     </Modal>

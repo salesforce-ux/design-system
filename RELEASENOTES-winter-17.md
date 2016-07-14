@@ -48,20 +48,23 @@ The following classes are now available:
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 - Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
+
 **CHANGES**
 
 The following changes have been made in this release:
 
-- Brightened yellow background on `mark` element and selected new filter panel.
+- Brightened yellow background on `mark` element.
+- Text selected with your mouse is light blue.
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
 - Renamed Product Selector to List Builder - [List Builder Component](/components/list-builder/)
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
-- Improvements made to `.slds-text-link--reset` - [Text Link Reset](components/utilities/interactions/#link-reset)
+- Improvements made to `.slds-text-link--reset` - [Text Link Reset](/components/utilities/interactions/#link-reset)
 - Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
 - Add close button to error popover so a screen reader can access popover
+- Add animated waffle icon to Global Navigation [Global Navigation](/components/global-navigation/)
 
 **FIXED**
 
@@ -99,6 +102,9 @@ The following issues have now been resolved:
   - Fix invalid markup by moving button group outside of anchor
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 - Make primary labels of compound fields capital
+- Dropdowns appear on icon focus within Global Navigation
+- Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
+
 
 **DEPRECATED**
 

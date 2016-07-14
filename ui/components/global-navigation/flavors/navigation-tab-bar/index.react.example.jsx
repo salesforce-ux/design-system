@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -79,9 +80,7 @@ export let ContextTabBar = props =>
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
         <div className={pf('context-bar__icon-action')}>
-          <a href="javascript:void(0);" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-            <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
-          </a>
+          { <WaffleIcon /> }
         </div>
 
         {/* App Name */}

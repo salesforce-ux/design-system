@@ -70,6 +70,14 @@ function getPreviewTabs() {
   }];
 }
 
+const StateAnchor = props => (
+  <span className="site-jump-anchor">
+    <span className={pf('assistive-text')} id={props.id} data-docsearch="component-flavor-state" role="presentation" tabIndex="-1">
+      {props.children}
+    </span>
+  </span>
+);
+
 class ComponentFlavor extends React.Component {
 
   constructor(props) {
@@ -104,6 +112,11 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const styles = {};
 
+    let statesIds = null;
+    if (flavor.example && _.isArray(flavor.example.states)) {
+      statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`}>{flavor.title} › {state.label}</StateAnchor>);
+    }
+
     if (flavor.status === 'prototype') {
       styles.display = 'none';
     }
@@ -118,6 +131,7 @@ class ComponentFlavor extends React.Component {
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}
           {this.renderCompatiblityBadges()}
+          {statesIds}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>

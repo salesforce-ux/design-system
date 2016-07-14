@@ -21,8 +21,8 @@ div.chosen-container-single {
 		border-style: solid;
 		font-family: $font-family;
 		font-size: $font-size-medium;
-		height: $line-height-button;
-		line-height: $size-4x-small;
+		height: calc(#{$height-input} + (#{$border-width-thin} * 2));
+		line-height: $height-input;
 		background: none;
 		&:hover {
 			text-decoration: none;

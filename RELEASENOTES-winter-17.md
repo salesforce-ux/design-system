@@ -103,6 +103,8 @@ The following issues have now been resolved:
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 - Make primary labels of compound fields capital
 - Dropdowns appear on icon focus within Global Navigation
+- Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
+
 
 **DEPRECATED**
 

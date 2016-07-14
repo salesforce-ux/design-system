@@ -20,6 +20,21 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 //////////////////////////////////////////////
 
+export let WaffleIcon = () =>
+  <a href="javascript:void(0);" className={pf('icon-waffle_container context-bar__button')}>
+    <div className={pf('icon-waffle')}>
+      <div className={pf('r1')}></div>
+      <div className={pf('r2')}></div>
+      <div className={pf('r3')}></div>
+      <div className={pf('r4')}></div>
+      <div className={pf('r5')}></div>
+      <div className={pf('r6')}></div>
+      <div className={pf('r7')}></div>
+      <div className={pf('r8')}></div>
+      <div className={pf('r9')}></div>
+    </div>
+  </a>;
+
 // Context Item Dropdown
 const contextDropdown = (
   <Menu className={pf('dropdown--right')}>
@@ -54,9 +69,7 @@ export let ContextBar = props =>
       {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
         <div className={pf('context-bar__icon-action')}>
-          <a href="javascript:void(0);" aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
-            <SvgIcon className={pf('button__icon button__icon--large')} sprite="utility" symbol="apps" />
-          </a>
+          <WaffleIcon />
         </div>
         {/* App Name */}
         <span className={pf('context-bar__label-action context-bar__app-name')}>
@@ -80,8 +93,8 @@ export let ContextBar = props =>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 1">
             <span className={pf('truncate')}>Menu Item 1</span>
           </a>
-          <div className={pf('context-bar__icon-action p-left--none')}>
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')}>
+          <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
+            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
               <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>

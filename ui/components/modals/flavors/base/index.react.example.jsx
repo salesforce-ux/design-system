@@ -61,7 +61,7 @@ export let ModalFooter = props =>
 
 let Default = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
+    <Modal aria-labelledby="header43">
       <ModalHeader>
         <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>

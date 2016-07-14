@@ -27,9 +27,7 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <div className={className(pf('modal fade-in-open'), props.className)}
-    role="dialog" {...props} tabIndex="-1">
-
+  <div role="dialog" tabIndex="-1" {...props} className={className(pf('modal fade-in-open'), props.className)}>
     <div className={pf('modal__container')}>
       {props.children}
     </div>
@@ -63,7 +61,7 @@ export let ModalFooter = props =>
 
 let Default = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
+    <Modal aria-labelledby="header43">
       <ModalHeader>
         <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
       </ModalHeader>

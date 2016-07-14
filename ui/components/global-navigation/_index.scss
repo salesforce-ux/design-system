@@ -270,15 +270,17 @@
 }
 
 // Waffle Icon + animation
+.#{$css-prefix}icon-waffle_container {
+  outline: 0;
+}
+
 .#{$css-prefix}icon-waffle {
-  width: 21px;
-  height: 21px;
+  @include square(rem(21px));
   position: relative;
 }
 
 .#{$css-prefix}icon-waffle div {
-  width: 5px;
-  height: 5px;
+  @include square(rem(5px));
   background: $color-text-context-bar;
   display: inline-block;
   position: absolute;
@@ -294,7 +296,7 @@
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r2 {
   top: 0;
-  left: 8px;
+  left: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
@@ -303,17 +305,17 @@
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
-  top: 8px;
+  top: rem(8px);
   left: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r5 {
-  top: 8px;
-  left: 8px;
+  top: rem(8px);
+  left: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r6 {
-  top: 8px;
+  top: rem(8px);
   right: 0;
 }
 
@@ -324,7 +326,7 @@
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
   bottom: 0;
-  left: 8px;
+  left: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
@@ -419,12 +421,6 @@
 .#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
 .#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
   transition-delay: 50ms;
-}
-
-@-webkit-keyframes throb {
-  100% {
-    transform: scale(1.5);
-  }
 }
 
 @keyframes throb {

@@ -14,6 +14,7 @@ The following issues have now been resolved:
   - Wrap card header text in an `<h2>`
 - Fix label for / textarea id mismatch in form textarea example
 - Fix modal close button styling so the focus halo no longer overlaps with the modal body
+- Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
 
 ## Release [2.0.2] - June 16, 2016
 
@@ -33,6 +34,7 @@ The following issues have now been resolved:
 
 - Text inputs are referencing the correct 32px tall token - fixes https://github.com/salesforce-ux/design-system/issues/150
 - Resolve issue where `<th>` stayed white on striped row when `slds-table--striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
+- Toggle checkboxes are now aligned vertically with their label (`slds-form-element__label m-bottom--` › `slds-form-element__label slds-m-bottom--none`) — [Checkbox Toggle variant](/components/forms/#flavor-checkbox-toggle)
 
 **REMOVED**
 

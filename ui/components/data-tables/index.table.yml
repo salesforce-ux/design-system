@@ -10,9 +10,15 @@ classes:
     description: Adds borders to the table
     applied: <code>.{{cssPrefix}}table</code>
   -
+    class: table--col-bordered
+    description: Adds vertical lines between columns
+    applied: <code>.{{cssPrefix}}table</code>
+    notes: Used in tables where each column represents a record, for example when mapping fields. Do not use for tables where a row is a record.
+  -
     class: table--striped
     description: Adds stripes to alternating rows
     applied: <code>.{{cssPrefix}}table</code>
+    notes: Used to increase the readability of some tables, especially when printing.
   -
     class: table--fixed-layout
     description: Styles for resizeable columns

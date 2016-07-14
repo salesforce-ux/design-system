@@ -12,7 +12,7 @@
   height: $height-context-bar;
   background-color: $color-background-context-bar;
   border-top: $border-width-thin solid $color-border;
-  border-bottom: 3px solid $color-border-context-bar-theme-default;
+  border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-context-bar;
   position: relative;
   padding: 0 $spacing-medium;
@@ -57,7 +57,7 @@
       outline: 0;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
-      border-bottom: 3px solid $color-border-context-bar-theme-default;
+      border-bottom: 3px solid $color-background-context-bar-brand-accent;
       margin-bottom: (3px * -1);
       text-decoration: none;
       cursor: pointer;
@@ -86,7 +86,7 @@
         width: 100%;
         height: 3px;
         display: block;
-        background: $color-border-context-bar-theme-default;
+        background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
         left: 0;
@@ -162,6 +162,11 @@
 
     &:focus {
       outline: 0;
+
+      ~ .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &:hover,
@@ -261,5 +266,165 @@
     &:hover {
       border-bottom-color: $color-background-context-bar-item-hover;
     }
+  }
+}
+
+// Waffle Icon + animation
+.#{$css-prefix}icon-waffle_container {
+  outline: 0;
+}
+
+.#{$css-prefix}icon-waffle {
+  @include square(rem(21px));
+  position: relative;
+}
+
+.#{$css-prefix}icon-waffle div {
+  @include square(rem(5px));
+  background: $color-text-context-bar;
+  display: inline-block;
+  position: absolute;
+  border-radius: $border-radius-circle;
+  transition: background 100ms;
+  transform-origin: 50% 50%;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r1 {
+  top: 0;
+  left: 0;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r2 {
+  top: 0;
+  left: rem(8px);
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
+  top: 0;
+  right: 0;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+  top: rem(8px);
+  left: 0;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r5 {
+  top: rem(8px);
+  left: rem(8px);
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r6 {
+  top: rem(8px);
+  right: 0;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+  bottom: 0;
+  left: 0;
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+  bottom: 0;
+  left: rem(8px);
+}
+
+.#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+  bottom: 0;
+  right: 0;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle {
+  cursor: pointer;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r1,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r1,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
+  background: #418fde;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r7,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+  background: #ed8b00;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r9,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+  background: #ffb60f;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+  transition-delay: 50ms;
+  animation-delay: 50ms;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle div,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle div {
+  animation: throb 2 200ms alternate;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r7,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+  transition-delay: 100ms;
+  animation-delay: 100ms;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+  transition-delay: 150ms;
+  animation-delay: 150ms;
+}
+
+.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r9,
+.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+  transition-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r1 {
+  transition-delay: 200ms;
+}
+
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+  transition-delay: 150ms;
+}
+
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+  transition-delay: 100ms;
+}
+
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
+.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+  transition-delay: 50ms;
+}
+
+@keyframes throb {
+  100% {
+    transform: scale(1.5);
   }
 }

@@ -114,19 +114,18 @@ export default () => ({
         handleInputChange.bind(null, sections)
       );
       // Name formats
-      $('[data-slds-tokens-name-format]').forEach(node => {
-        const key = getPreference('tokens:nameFormat');
-        const format = nameFormats.filter(f => f.value === key)[0];
-        setupSelect(node, nameFormats);
-        if (format) {
-          fastdom.mutate(() => {
-            node.selectedIndex = nameFormats.indexOf(format);
-            handleNameSelectChange(sections, {}, node);
-          });
-        }
-      });
+      const formatSelect = $('#slds-tokens-name-format')[0];
+      const key = getPreference('tokens:nameFormat');
+      const format = nameFormats.filter(f => f.value === key)[0];
+      setupSelect(formatSelect, nameFormats);
+      if (format) {
+        fastdom.mutate(() => {
+          formatSelect.selectedIndex = nameFormats.indexOf(format);
+          handleNameSelectChange(sections, {}, formatSelect);
+        });
+      }
       delegate(
-        'change', '[data-slds-tokens-name-format]',
+        'change', '#slds-tokens-name-format',
         handleNameSelectChange.bind(null, sections)
       );
     }

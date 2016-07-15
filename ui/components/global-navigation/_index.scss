@@ -281,7 +281,7 @@
 
 .#{$css-prefix}icon-waffle div {
   @include square(rem(5px));
-  background: $color-text-context-bar;
+  background: $color-background-icon-waffle;
   display: inline-block;
   position: absolute;
   border-radius: $border-radius-circle;

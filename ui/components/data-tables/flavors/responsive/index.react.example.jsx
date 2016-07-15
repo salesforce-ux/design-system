@@ -19,40 +19,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 let Table = props =>
   <table className={className(pf('table table--bordered'), props.className)}>
     {props.children}
   </table>;
-
-let Thead = props =>
-  <thead {...props}>
-    {props.children}
-  </thead>;
-
-let Tbody = props =>
-  <tbody>
-    {props.children}
-  </tbody>;
-
-let Tr = props =>
-  <tr {...props}>
-    {props.children}
-  </tr>;
-
-let Th = props =>
-  <th className={className(pf(''), props.className)} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
-  </th>;
-
-let Td = props =>
-  <td className={className(pf(''), props.className)} scope={props.scope} data-label={props.dataLabel}>
-    {props.children}
-  </td>;
 
 let Checkbox = props =>
   <label className={pf('checkbox')}>
@@ -62,117 +32,111 @@ let Checkbox = props =>
   </label>;
 
 let HeadRowData = props =>
-  <Tr className={pf('text-title--caps')}>
-    <Th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.checked} /></Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+  <tr className={pf('text-title--caps')}>
+    <th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.checked} /></th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Close Date">
         Opportunity Name
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Account Name">
         Account Name
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Close Date">
         Close Date
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Stage">
         Stage
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Confidence">
         Confidence
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Amount">
         Amount
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')}>
+    </th>
+    <th className={pf('is-sortable')} scope="col">
+      <div className={pf('truncate')} title="Contact">
         Contact
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
-    </Th>
-    <Th className={pf('cell-shrink')}></Th>
-  </Tr>;
+    </th>
+    <th className={pf('cell-shrink')}></th>
+  </tr>;
 
 let RowData = props =>
-  <Tr className={className(pf('hint-parent'), props.className)}>
-    <Td className={pf('cell-shrink')} dataLabel="Select Row"><Checkbox label="Select Row" checked={props.checked} /></Td>
-    <Th className={pf('truncate')} scope="row" dataLabel="Opportunity Name">{props.title}</Th>
-    <Td className={pf('truncate')} dataLabel="Account Name">Cloudhub</Td>
-    <Td dataLabel="Close Date">4/14/2015</Td>
-    <Td className={pf('truncate')} dataLabel="Prospecting">Prospecting</Td>
-    <Td dataLabel="Confidence">20%</Td>
-    <Td dataLabel="Amount">$25k</Td>
-    <Td className={pf('truncate')} dataLabel="Contact"><a href="javascript:void(0);">jrogers@cloudhub.com</a></Td>
-    <Td className={pf('cell-shrink')} dataLabel="Actions">
+  <tr className={pf('hint-parent')}>
+    <td className={pf('cell-shrink')} data-label="Select Row"><Checkbox label="Select Row" checked={props.checked} /></td>
+    <th scope="row" data-label="Opportunity Name"><div className={pf('truncate')} title={props.title}>{props.title}</div></th>
+    <td data-label="Account Name"><div className={pf('truncate')} title="Cloudhub">Cloudhub</div></td>
+    <td data-label="Close Date"><div className={pf('truncate')} title="4/14/2015">4/14/2015</div></td>
+    <td data-label="Prospecting"><div className={pf('truncate')} title="Prospecting">Prospecting</div></td>
+    <td data-label="Confidence"><div className={pf('truncate')} title="20%">20%</div></td>
+    <td data-label="Amount"><div className={pf('truncate')} title="$25k">$25k</div></td>
+    <td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></td>
+    <td className={pf('cell-shrink')} data-label="Actions">
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
         sprite="utility"
         symbol="down"
         assistiveText="Show More" />
-    </Td>
-  </Tr>;
+    </td>
+  </tr>;
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Overflow = props =>
-  <Demo>
-    <div className={pf('scrollable--x')}>
-      <Table>
-        <Thead>
-          <HeadRowData />
-        </Thead>
-        <Tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Cloudhub + Anypoint Connectors" />
-        </Tbody>
-      </Table>
-    </div>
-  </Demo>;
+  <div className={pf('scrollable--x')}>
+    <Table>
+      <thead>
+        <HeadRowData />
+      </thead>
+      <tbody>
+        <RowData title="Cloudhub" />
+        <RowData title="Cloudhub + Anypoint Connectors" />
+      </tbody>
+    </Table>
+  </div>;
 
 let Stacked = props =>
-  <Demo>
-    <Table className={pf('max-medium-table--stacked')}>
-      <Thead>
-        <HeadRowData />
-      </Thead>
-      <Tbody>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" />
-      </Tbody>
-    </Table>
-  </Demo>;
+  <Table className={pf('max-medium-table--stacked')}>
+    <thead>
+      <HeadRowData />
+    </thead>
+    <tbody>
+      <RowData title="Cloudhub" />
+      <RowData title="Cloudhub + Anypoint Connectors" />
+    </tbody>
+  </Table>;
 
 let Horizontal = props =>
-  <Demo>
-    <Table className={pf('max-medium-table--stacked-horizontal')}>
-      <Thead>
-        <HeadRowData />
-      </Thead>
-      <Tbody>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" />
-      </Tbody>
-    </Table>
-  </Demo>;
+  <Table className={pf('max-medium-table--stacked-horizontal')}>
+    <thead>
+      <HeadRowData />
+    </thead>
+    <tbody>
+      <RowData title="Cloudhub" />
+      <RowData title="Cloudhub + Anypoint Connectors" />
+    </tbody>
+  </Table>;
 
 //////////////////////////////////////////////
 // Export

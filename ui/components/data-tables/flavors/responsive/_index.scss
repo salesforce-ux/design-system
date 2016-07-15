@@ -26,7 +26,6 @@
   @include table-stacked;
 
   @include mq-medium-max {
-
     td {
       text-align: right;
 
@@ -34,6 +33,11 @@
         float: left;
         margin-top: $spacing-xxx-small;
       }
+    }
+
+    // Revert max-width: $size-small;
+    .#{$css-prefix}truncate {
+      max-width: 100%;
     }
   }
 }

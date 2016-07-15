@@ -22,10 +22,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Th = props =>
-  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
+  <th className={pf(props.className)} scope={props.scope} style={props.style}>
     <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
-      <span className={pf('truncate')} title={props.title}>{ props.children }</span>
+      <span className={pf('truncate')} title={props.title}>{props.children}</span>
       <div className={pf('icon_container')} title="Sort Column">
         <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
       </div>
@@ -69,8 +69,8 @@ export default (
         <div className={pf('col grid grid--vertical nowrap')}>
           <ProductList>
             <tr>
-              <th className={pf('truncate')} scope="row" data-label="Name" title="Beta Product">Beta Product</th>
-              <td data-label="List Price" title="5000.00"><span className={pf('truncate')}>5,000.00</span></td>
+              <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
+              <td data-label="List Price"><div className={pf('truncate')} title="5,000.00">5,000.00</div></td>
               <td data-label="Discount">
                 <label htmlFor="discount-01" className={pf('assistive-text')}>Discount</label>
                 <input className={pf('input')} id="discount-01" defaultValue="300.00" />
@@ -87,8 +87,8 @@ export default (
                 <label htmlFor="date-01" className={pf('assistive-text')}>Date</label>
                 <input className={pf('input')} id="date-01" defaultValue="8/12/16" />
               </td>
-              <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
-              <td data-label="Total Price" title="$4,700.00"><span className={pf('truncate')}>$4,700.00</span></td>
+              <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+              <td data-label="Total Price"><div className={pf('truncate')} title="$4,700.00">$4,700.00</div></td>
               <td>
                 <ButtonIcon
                   flavor="icon-border-filled,icon-x-small"
@@ -99,8 +99,8 @@ export default (
               </td>
             </tr>
             <tr>
-              <th className={pf('truncate')} scope="row" data-label="Name" title="Service Product">Service Product</th>
-              <td data-label="List Price" title="5000.00"><span className={pf('truncate')}>3,750.00</span></td>
+              <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Product">Service Product</div></th>
+              <td data-label="List Price"><div className={pf('truncate')} title="3,750.00">3,750.00</div></td>
               <td data-label="Discount">
                 <label htmlFor="discount-02" className={pf('assistive-text')}>Discount</label>
                 <input className={pf('input')} id="discount-02" />
@@ -117,8 +117,8 @@ export default (
                 <label htmlFor="date-02" className={pf('assistive-text')}>Date</label>
                 <input className={pf('input')} id="date-02" defaultValue="8/12/16" />
               </td>
-              <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
-              <td data-label="Total Price" title="$11,250.00"><span className={pf('truncate')}>$11,250.00</span></td>
+              <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+              <td data-label="Total Price"><div className={pf('truncate')} title="$11,250.00">$11,250.00</div></td>
               <td>
                 <ButtonIcon
                   flavor="icon-border-filled,icon-x-small"

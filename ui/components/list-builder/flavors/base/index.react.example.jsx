@@ -33,10 +33,10 @@ let Search = props =>
   </div>;
 
 let Th = props =>
-  <th className={pf(props.className)} scope={props.scope} style={props.style} aria-sort={props.ariaSort}>
+  <th {...props} aria-label={props.children}>
     <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
       <span className={pf('assistive-text')}>Sort Column</span>
-      <span className={pf('truncate')} title={props.title}>{ props.children }</span>
+      <span className={pf('truncate')} title={props.children}>{props.children}</span>
       <div className={pf('icon_container')} title="Sort Column">
         <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
       </div>
@@ -49,10 +49,10 @@ let ProductList = props =>
       <thead>
         <tr className={pf('text-title--caps')} >
           <th className={pf('cell-shrink')} scope="col"></th>
-          <Th className={pf('is-sortable')} scope="col" title="Name">Name</Th>
-          <Th className={pf('is-sortable')} scope="col" title="Product Code">Product Code</Th>
-          <Th className={pf('is-sortable')} scope="col" title="List Price">List Price</Th>
-          <Th className={pf('is-sortable')} scope="col" title="Product Family">Product Family</Th>
+          <Th className={pf('is-sortable')} scope="col">Name</Th>
+          <Th className={pf('is-sortable')} scope="col">Product Code</Th>
+          <Th className={pf('is-sortable')} scope="col">List Price</Th>
+          <Th className={pf('is-sortable')} scope="col">Product Family</Th>
         </tr>
       </thead>
       <tbody>
@@ -88,10 +88,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Alpha Product">Alpha Product</th>
-                  <td data-label="Product Code" title="ANLTY"><span className={pf('truncate')}>ANLTY</span></td>
-                  <td data-label="List Price" title="2750.00"><span className={pf('truncate')}>2750.00</span></td>
-                  <td data-label="Product Family" title="Family A"><span className={pf('truncate')}>Family A</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family A">Family A</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -101,10 +101,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Beta Product">Beta Product</th>
-                  <td data-label="Product Code" title="MRKT"><span className={pf('truncate')}>MRKT</span></td>
-                  <td data-label="List Price" title="3460.00"><span className={pf('truncate')}>3460.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="3460.00">3460.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -114,10 +114,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Service Console">Service Console</th>
-                  <td data-label="Product Code" title="SRVC"><span className={pf('truncate')}>SRVC</span></td>
-                  <td data-label="List Price" title="2230.00"><span className={pf('truncate')}>2230.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="2230.00">2230.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -127,10 +127,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Connectors">Connectors</th>
-                  <td data-label="Product Code" title="CLASS"><span className={pf('truncate')}>CLASS</span></td>
-                  <td data-label="List Price" title="750.00"><span className={pf('truncate')}>750.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="750.00">750.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>
@@ -165,10 +165,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Alpha Product">Alpha Product</th>
-                  <td data-label="Product Code" title="ANLTY"><span className={pf('truncate')}>ANLTY</span></td>
-                  <td data-label="List Price" title="2750.00"><span className={pf('truncate')}>2750.00</span></td>
-                  <td data-label="Product Family" title="Family A"><span className={pf('truncate')}>Family A</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family A">Family A</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -179,10 +179,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Beta Product">Beta Product</th>
-                  <td data-label="Product Code" title="MRKT"><span className={pf('truncate')}>MRKT</span></td>
-                  <td data-label="List Price" title="3460.00"><span className={pf('truncate')}>3460.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="3,460.00">3,460.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -193,10 +193,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Service Console">Service Console</th>
-                  <td data-label="Product Code" title="SRVC"><span className={pf('truncate')}>SRVC</span></td>
-                  <td data-label="List Price" title="2230.00"><span className={pf('truncate')}>2230.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="2,230.00">2,230.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
                   <td className={pf('cell-shrink')}>
@@ -206,10 +206,10 @@ export let states = [
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th className={pf('truncate')} scope="row" data-label="Name" title="Connectors">Connectors</th>
-                  <td data-label="Product Code" title="CLASS"><span className={pf('truncate')}>CLASS</span></td>
-                  <td data-label="List Price" title="750.00"><span className={pf('truncate')}>750.00</span></td>
-                  <td data-label="Product Family" title="Family B"><span className={pf('truncate')}>Family B</span></td>
+                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
+                  <td data-label="Product Code"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
+                  <td data-label="List Price"><div className={pf('truncate')} title="750.00">750.00</div></td>
+                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>

@@ -33,6 +33,7 @@ The following components are now available:
 - Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
 - Image Cards - [Figure Card Component](/components/images/#flavor-figure)
 - Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
+- Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical)
 
 **ADDED**
 
@@ -48,6 +49,7 @@ The following classes are now available:
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 - Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
+
 **CHANGES**
 
 The following changes have been made in this release:

@@ -45,7 +45,7 @@
     }
 
     &:focus:after {
-      background: $color-border-utility-bar-active;
+      background: $color-background-utility-bar-active;
     }
 
     &:hover,
@@ -59,7 +59,7 @@
       color: inherit;
 
       &:after {
-        background: $color-border-utility-bar-active;
+        background: $color-background-utility-bar-active;
       }
     }
   }

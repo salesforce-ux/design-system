@@ -33,6 +33,7 @@ The following components are now available:
 - Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
 - Image Cards - [Figure Card Component](/components/images/#flavor-figure)
 - Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
+- Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical)
 
 **ADDED**
 

@@ -21,11 +21,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export let Comment = props =>
   <article className={className(pf('comment media hint-parent'), props.className)}>
     <div className={pf('media__figure')}>
-      <div className={pf('avatar avatar--circle avatar--medium')}>
-        <a href="javascript:void(0);" title="Jenna Davis">
-          <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-        </a>
-      </div>
+      <a href="javascript:void(0);" title="Jenna Davis" className={pf('avatar avatar--circle avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+      </a>
     </div>
     <div className={pf('media__body')}>
       { props.children }

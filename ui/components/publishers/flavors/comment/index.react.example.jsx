@@ -27,11 +27,9 @@ let Demo = props =>
   </div>;
 
 const image = (
-  <div className={pf('avatar avatar--circle avatar--medium')}>
-    <a href="javascript:void(0);" title="Jenna Davis">
-      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
+  <a className={pf('avatar avatar--circle avatar--medium')} href="javascript:void(0);" title="Jenna Davis">
+    <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+  </a>
 );
 
 export let Publisher = props =>

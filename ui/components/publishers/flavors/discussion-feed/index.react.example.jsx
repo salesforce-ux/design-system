@@ -27,11 +27,9 @@ let Demo = props =>
   </div>;
 
 const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0);" title="Jenna Davis">
-      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
+  <a className={pf('avatar avatar--circle avatar--small')} href="javascript:void(0);" title="Jenna Davis">
+    <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+  </a>
 );
 
 let Publisher = props =>

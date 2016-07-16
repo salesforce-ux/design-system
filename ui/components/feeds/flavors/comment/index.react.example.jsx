@@ -48,7 +48,7 @@ export let CommentContent = props =>
   </div>;
 
 export let CommentFooter = props =>
-  <footer className={className(pf('comment__footer'), props.className)}>
+  <footer>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
       <li className={pf('item')}>
         <a className={pf('text-color--weak')} href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>

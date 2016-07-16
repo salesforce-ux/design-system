@@ -19,6 +19,7 @@ The following issues have now been resolved:
 ## Release [2.0.2] - June 16, 2016
 
 **SITE IA/ENHANCEMENTS**
+- Revamped "Getting Started" section.
 - Renamed "Design" section to "Guidelines"
 - Moved "Accessibility" and "Voice & Tone" sections to Guidelines
 

@@ -123,9 +123,8 @@ cite {
 .site-guidelines,
 .site-release-notes {
 
-  ul:not(.#{$css-prefix}grid) {
-    @include list-has-bullets;
-
+  ul:not(.#{$css-prefix}grid),
+  ol:not(.#{$css-prefix}grid) {
     @include mq-small-min {
       margin-left: $spacing-x-large;
     }
@@ -133,6 +132,14 @@ cite {
     @include mq-medium-min {
       margin-left: $spacing-xx-large;
     }
+  }
+
+  ul:not(.#{$css-prefix}grid) {
+    @include list-has-bullets;
+  }
+
+  ol:not(.#{$css-prefix}grid) {
+    @include list-has-numbers;
   }
 }
 

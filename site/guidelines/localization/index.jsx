@@ -123,14 +123,14 @@ export default (
       <figure className={pf('p-vertical--xx-large')}>
         <form className={pf('form--inline')} aria-hidden>
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="name">
+            <label className={pf('form-element__label')} htmlFor="form-date-range-1">
               Date Range
             </label>
 
             <div className={pf('form-element__control')}>
               <div className={pf('slds-select_container')}>
                 <select className={pf('slds-select')} tabIndex={-1}
-                  value="Current FQ">
+                  defaultValue="Current FQ" id="form-date-range-1">
                   <option>Current FQ</option>
                 </select>
               </div>
@@ -138,24 +138,24 @@ export default (
           </div>
 
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="name">
+            <label className={pf('form-element__label')} htmlFor="form-name-1">
               From
             </label>
 
             <div className={pf('form-element__control')}>
-              <input id="name" className={pf('input')} type="text"
-                value="10/1/2015" tabIndex={-1} />
+              <input id="form-name-1" className={pf('input')} type="text"
+                defaultValue="10/1/2015" tabIndex={-1} />
             </div>
           </div>
 
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="email">
+            <label className={pf('form-element__label')} htmlFor="form-email-1">
               To
             </label>
 
             <div className={pf('form-element__control')}>
-              <input id="email" className={pf('input')} type="text"
-                value="12/31/2015" tabIndex={-1} />
+              <input id="form-email-1" className={pf('input')} type="text"
+                defaultValue="12/31/2015" tabIndex={-1} />
             </div>
           </div>
         </form>
@@ -187,14 +187,14 @@ export default (
       <figure className={pf('p-vertical--xx-large')}>
         <form className={pf('form--inline')} aria-hidden>
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="name">
+            <label className={pf('form-element__label')} htmlFor="form-date-range-2">
               Date Range
             </label>
 
             <div className={pf('form-element__control')}>
               <div className={pf('slds-select_container')}>
                 <select className={pf('slds-select')} tabIndex={-1}
-                  value="Current FQ">
+                  defaultValue="Current FQ" id="form-date-range-2">
                   <option>Current FQ</option>
                 </select>
               </div>
@@ -202,24 +202,24 @@ export default (
           </div>
 
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="name">
+            <label className={pf('form-element__label')} htmlFor="form-name-2">
               From:
             </label>
 
             <div className={pf('form-element__control')}>
-              <input id="name" className={pf('input')} type="text"
-                value="10/1/2015" tabIndex={-1} />
+              <input id="form-name-2" className={pf('input')} type="text"
+                defaultValue="10/1/2015" tabIndex={-1} />
             </div>
           </div>
 
           <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} for="email">
+            <label className={pf('form-element__label')} htmlFor="form-email-2">
               To:
             </label>
 
             <div className={pf('form-element__control')}>
-              <input id="email" className={pf('input')} type="text"
-                value="12/31/2015" tabIndex={-1} />
+              <input id="form-email-2" className={pf('input')} type="text"
+                defaultValue="12/31/2015" tabIndex={-1} />
             </div>
           </div>
         </form>

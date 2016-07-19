@@ -42,7 +42,7 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
-      <th scope="col" style={{ width: '4rem' }}>
+      <th scope="col" style={{ width: '5rem' }}>
         <span className={pf('truncate')} title="Actions">Actions</span></th>
     </tr>
   </thead>;

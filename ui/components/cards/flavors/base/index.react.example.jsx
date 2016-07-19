@@ -23,7 +23,7 @@ const headerActionOverflow = (
 );
 
 const headerAction = (
-  <button className={pf('button button--neutral col--bump-left')}>New</button>
+  <button className={pf('button button--neutral')}>New</button>
 );
 
 const headerSearch = (

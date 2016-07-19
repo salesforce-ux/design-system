@@ -33,17 +33,17 @@
   }
 }
 
-  .#{$css-prefix}table--edit_container-message {
-    width: $size-medium;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
-    margin-left: (($size-medium / 2) * -1);
-    background-color: $color-background-alt;
-    text-align: center;
-    z-index: $z-index-default;
-  }
+.#{$css-prefix}table--edit_container-message {
+  width: $size-medium;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+  margin-left: (($size-medium / 2) * -1);
+  background-color: $color-background-alt;
+  text-align: center;
+  z-index: $z-index-default;
+}
 
 .#{$css-prefix}table--edit {
 
@@ -75,7 +75,6 @@
 }
 
 .#{$css-prefix}cell-edit {
-  //margin: ($border-width-thin * -1) 0;
   min-height: 2.3125rem; // Make contents completely fill table cell
   padding: $spacing-x-small; // Add padding to div inside
 
@@ -136,6 +135,18 @@
       background-color: $color-background-highlight;
       border: $border-width-thin solid $color-border-error;
       box-shadow: $color-border-error 0 0 0 ($border-width-thin) inset;
+    }
+  }
+}
+
+.#{$css-prefix}no-cell-focus {
+
+  .#{$css-prefix}has-focus {
+    background: $color-background-row-hover;
+    border: 0;
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 1;
     }
   }
 }

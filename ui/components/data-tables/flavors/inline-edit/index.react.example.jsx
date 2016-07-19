@@ -26,7 +26,7 @@ let Container = props =>
   </div>;
 
 let Table = props =>
-  <table className={pf('table table--edit table--bordered table--fixed-layout')} role="grid">
+  <table className={className(pf('table table--edit table--bordered table--fixed-layout'), props.className)} role="grid">
     {props.children}
   </table>;
 
@@ -354,6 +354,27 @@ export let states = [
     script: `
       document.getElementById('button-01').focus()
     `
+  },
+  {
+    id: 'data-table-inline-edit-selected',
+    label: 'Cell selected',
+    element:
+      <Container>
+        <Table className={pf('no-cell-focus')}>
+          <Thead navigationModeTabIndex="0" />
+          <tbody>
+            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+              <Td>
+                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic navigationModeTabIndex="0" />
+          </tbody>
+        </Table>
+      </Container>
   },
   {
     id: 'data-table-inline-edit-edited',

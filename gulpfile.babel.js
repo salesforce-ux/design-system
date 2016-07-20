@@ -25,6 +25,7 @@ import runSequence from 'run-sequence';
 import url from 'url';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
+import express from 'express';
 
 import { pathToURL } from 'app_modules/util/string';
 
@@ -179,19 +180,28 @@ gulp.task('clean', del.bind(null, [
 gulp.task('serve', () => {
   const webpackConfig = getWebpackConfig();
   const webpackCompiler = webpack(webpackConfig);
+
+  // Use Express instead of Connect for BrowserSync
+  const app = express();
+
+  app.use(
+    webpackDevMiddleware(
+      webpackCompiler, {
+        publicPath: webpackConfig.output.publicPath,
+        quiet: nconf.get('webpack:quiet')
+      }
+    )
+  );
+  app.use(siteMiddleware);
+
+  // Show a different favicon during development
+  app.use('/favicons/*.png', (req, res, next) =>
+    res.redirect('/favicon-dev.png'));
+
   const browserSyncConfig = {
     server: {
       baseDir: __PATHS__.www,
-      middleware: [
-        // Serve /site pages on demand
-        siteMiddleware,
-        // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
-        // when dependencies have changed and then rebuild
-        webpackDevMiddleware(webpackCompiler, {
-          publicPath: webpackConfig.output.publicPath,
-          quiet: nconf.get('webpack:quiet')
-        })
-      ]
+      middleware: [app]
     },
     notify: false,
     open: nconf.get('browsersync:open'),

@@ -29,7 +29,7 @@ const handleNavClick = (event, node) => {
 
 
 /**
- * Initialize a scroll spy nav that matches `.site-jump-anchor` with corresponding
+ * Initialize a scroll spy nav that matches `data-js-jump-anchor` with corresponding
  * anchor tags in a `.site-menu--jump-links`
  */
 export const updateScrollSpy = (() => {
@@ -60,7 +60,7 @@ export const updateScrollSpy = (() => {
   return () => {
     fastdom.measure(() => {
       const isVisible = node => node.offsetParent;
-      const anchors = $('.site-jump-anchor').filter(isVisible).map(node => ({
+      const anchors = $('[data-js-jump-anchor]').filter(isVisible).map(node => ({
         id: node.id,
         top: node.getBoundingClientRect().top + window.pageYOffset
       }));

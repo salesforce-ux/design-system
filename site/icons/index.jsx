@@ -84,7 +84,7 @@ class Icons extends React.Component {
     return this.state.categories.map(category => {
       return (
         <div key={category.name} data-slds-icons-section>
-          <Heading type="h2" id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
+          <Heading textLabel={`${category.name} Icons`} type="h2" id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
             {`${category.name} Icons`}
           </Heading>
           {/* This is only outputing text without a paragraph. Can we fix? */}

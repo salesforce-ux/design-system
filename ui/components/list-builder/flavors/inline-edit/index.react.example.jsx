@@ -34,7 +34,7 @@ let Th = props =>
 
 let ProductList = props =>
   <div className={pf('scrollable')}>
-    <table className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
+    <table role="grid" className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
       <thead>
         <tr className={pf('text-title--caps')} >
           <Th className={pf('is-sortable')} scope="col" title="Name">Name</Th>
@@ -70,26 +70,26 @@ export default (
           <ProductList>
             <tr>
               <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
-              <td data-label="List Price"><div className={pf('truncate')} title="5,000.00">5,000.00</div></td>
-              <td data-label="Discount">
+              <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="5,000.00">5,000.00</div></td>
+              <td data-label="Discount" role="gridcell">
                 <label htmlFor="discount-01" className={pf('assistive-text')}>Discount</label>
                 <input className={pf('input')} id="discount-01" defaultValue="300.00" />
               </td>
-              <td data-label="Sale Price">
+              <td data-label="Sale Price" role="gridcell">
                 <label htmlFor="sale-price-01" className={pf('assistive-text')}>Sale Price</label>
                 <input className={pf('input')} id="sale-price-01" defaultValue="5000.00" />
               </td>
-              <td data-label="Quantity">
+              <td data-label="Quantity" role="gridcell">
                 <label htmlFor="quantity-01" className={pf('assistive-text')}>Quantity</label>
                 <input className={pf('input')} id="quantity-01" defaultValue="1" />
               </td>
-              <td data-label="Date">
+              <td data-label="Date" role="gridcell">
                 <label htmlFor="date-01" className={pf('assistive-text')}>Date</label>
                 <input className={pf('input')} id="date-01" defaultValue="8/12/16" />
               </td>
-              <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
-              <td data-label="Total Price"><div className={pf('truncate')} title="$4,700.00">$4,700.00</div></td>
-              <td>
+              <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+              <td data-label="Total Price" role="gridcell"><div className={pf('truncate')} title="$4,700.00">$4,700.00</div></td>
+              <td role="gridcell">
                 <ButtonIcon
                   flavor="icon-border-filled,icon-x-small"
                   iconFlavor="hint,small"
@@ -100,26 +100,26 @@ export default (
             </tr>
             <tr>
               <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Product">Service Product</div></th>
-              <td data-label="List Price"><div className={pf('truncate')} title="3,750.00">3,750.00</div></td>
-              <td data-label="Discount">
+              <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="3,750.00">3,750.00</div></td>
+              <td data-label="Discount" role="gridcell">
                 <label htmlFor="discount-02" className={pf('assistive-text')}>Discount</label>
                 <input className={pf('input')} id="discount-02" />
               </td>
-              <td data-label="Sale Price">
+              <td data-label="Sale Price" role="gridcell">
                 <label htmlFor="sale-price-02" className={pf('assistive-text')}>Sale Price</label>
                 <input className={pf('input')} id="sale-price-02" defaultValue="3750.00" />
               </td>
-              <td data-label="Quantity">
+              <td data-label="Quantity" role="gridcell">
                 <label htmlFor="quantity-02" className={pf('assistive-text')}>Quantity</label>
                 <input className={pf('input')} id="quantity-02" defaultValue="3" />
               </td>
-              <td data-label="Date">
+              <td data-label="Date" role="gridcell">
                 <label htmlFor="date-02" className={pf('assistive-text')}>Date</label>
                 <input className={pf('input')} id="date-02" defaultValue="8/12/16" />
               </td>
-              <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
-              <td data-label="Total Price"><div className={pf('truncate')} title="$11,250.00">$11,250.00</div></td>
-              <td>
+              <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+              <td data-label="Total Price" role="gridcell"><div className={pf('truncate')} title="$11,250.00">$11,250.00</div></td>
+              <td role="gridcell">
                 <ButtonIcon
                   flavor="icon-border-filled,icon-x-small"
                   iconFlavor="hint,small"

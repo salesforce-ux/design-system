@@ -106,6 +106,7 @@ The following issues have now been resolved:
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
 - Tables a11y fixes: all tables now use the same truncation method when text is too long in a cell and show the full text when truncated text is hovered
+- Accessibility fixes for list builder
 
 **DEPRECATED**
 

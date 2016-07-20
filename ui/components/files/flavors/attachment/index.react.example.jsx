@@ -29,8 +29,8 @@ export let AttachmentLink = props =>
     </div>
     <div className={pf('media__body')}>
       <h3 className={pf('text-heading--small')}>{ props.articleTitle || 'Article Title' }</h3>
-      <span className={pf('text-body--small')}>{ props.articleTitle || 'http://www.linkurl.com' }</span>
       <p>{ props.articleDescription || 'Article Description' }</p>
+      <span className={pf('text-body--small')}>{ props.articleTitle || 'http://www.linkurl.com' }</span>
     </div>
   </a>;
 

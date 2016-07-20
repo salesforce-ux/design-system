@@ -22,7 +22,7 @@
   background: $color-background-alt;
   padding: $spacing-small $spacing-medium;
 
-  @include mq-medium-min {
+  @include mq-large-min {
     padding: 0 $spacing-medium;
   }
 
@@ -31,7 +31,11 @@
   }
 
   &__content {
-    margin-bottom: $spacing-large;
+    margin-bottom: $spacing-small;
+
+    @include mq-medium-min {
+      margin-bottom: $spacing-large;
+    }
   }
 
   &__footer {
@@ -60,6 +64,7 @@
 .#{$css-prefix}post__footer-action {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: $color-text-default;
   padding: $spacing-small 0;
 

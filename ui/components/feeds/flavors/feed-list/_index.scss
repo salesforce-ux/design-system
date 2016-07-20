@@ -21,6 +21,10 @@
     padding: $spacing-x-small 0;
 
     @include mq-medium-min {
+      padding: $spacing-medium 0;
+    }
+
+    @include mq-large-min {
       padding: $spacing-large 0;
 
       + .#{$css-prefix}feed__item {

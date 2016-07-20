@@ -66,6 +66,12 @@ The following changes have been made in this release:
 - Feeds are now responsive
 - Add close button to error popover so a screen reader can access popover
 - Add animated waffle icon to Global Navigation [Global Navigation](/components/global-navigation/)
+- Feeds:
+  - Change post's comment metric labels to lowercase
+  - Add hint-hover to post's comment action overflow icon
+  - Change post's comment "link" text to use `color-link-weak`
+  - Remove dotted line separator from post's attachment payload
+  - Moved URL of post's attachment to the bottom of the content ordering
 
 **FIXED**
 

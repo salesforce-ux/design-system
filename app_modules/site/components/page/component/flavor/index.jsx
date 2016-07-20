@@ -18,6 +18,7 @@ import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
 
 import Heading from 'app_modules/site/components/page/heading';
+import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
 import Tabs from 'ui/components/tabs/index.react';
 
 import globals from 'app_modules/global';
@@ -85,14 +86,6 @@ function getPreviewTabs() {
   }];
 }
 
-const StateAnchor = props => (
-  <span className="site-jump-anchor">
-    <span className={pf('assistive-text')} id={props.id} data-docsearch="component-flavor-state" role="presentation" tabIndex="-1">
-      {props.children}
-    </span>
-  </span>
-);
-
 class ComponentFlavor extends React.Component {
 
   constructor(props) {
@@ -128,16 +121,16 @@ class ComponentFlavor extends React.Component {
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
-      statesIds = flavor.example.states.map(state => <StateAnchor id={`flavor-${flavor.id}-${state.id}`}>{flavor.title} › {state.label}</StateAnchor>);
+      statesIds = flavor.example.states.map(state => <JumpAnchor id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
     return (
       <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
-        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')} data-docsearch="component-flavor">
+        <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
+          {statesIds}
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}
           {this.renderCompatiblityBadges()}
-          {statesIds}
         </Heading>
         <div className={pf('grid wrap grid--vertical-stretch')}>
           <h3 className={pf('assistive-text')}>Preview</h3>

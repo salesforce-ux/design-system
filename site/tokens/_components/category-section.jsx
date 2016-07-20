@@ -34,9 +34,10 @@ export default class CategorySection extends React.Component {
         className={pf(`site-tokens ${category.key}`)}
         data-slds-tokens-section={category.key}>
         <Heading
+          textLabel={category.label}
           type="h2"
-            id={`category-${category.key}`}
-            className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
+          id={`category-${category.key}`}
+          className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
           <span className={pf('grid wrap')}>
             <span className={pf('col align-bottom')}>{category.label}</span>
           </span>

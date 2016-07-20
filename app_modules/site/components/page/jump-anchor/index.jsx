@@ -10,52 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import classNames from 'classnames';
-import { install, prefix as pf } from 'app_modules/ui/util/component';
-import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
-class Heading extends React.Component {
-  constructor(props) {
-    super(props);
-    install(this);
-  }
+const JumpAnchor = (props) =>
+  <span
+    data-js-jump-anchor={props.scrollSpyActive || null}
+    className="site-jump-anchor"
+    id={props.id}
 
-  render() {
+    data-docsearch-level={props.children ? props.level : null}>
+    {props.children ? <span className={pf('assistive-text')} role="presentation">{props.children}</span> : null}
+  </span>;
 
-    const props = this.$propsWithoutKeys('className', 'id', 'type', 'textLabel');
-    let c = classNames(this.props.className, 'site-jump-anchor__container');
-
-    switch (this.props.type) {
-    case 'h1':
-      return <h1 className={pf(c)} {...props}>
-        <JumpAnchor id={this.props.id} level="1" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
-        {this.props.children}
-      </h1>;
-      break;
-    case 'h2':
-      return <h2 className={pf(c)} {...props}>
-        <JumpAnchor id={this.props.id} level="2" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
-        {this.props.children}
-      </h2>;
-      break;
-    case 'h3':
-      return <h3 className={pf(c)} {...props}>
-        <JumpAnchor id={this.props.id} level="3" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
-        {this.props.children}
-      </h3>;
-      break;
-    default:
-      return React.createElement(this.props.type, this.props, this.props.children);
-    }
-  }
-
-}
-
-Heading.propTypes = {
-  classNames: React.PropTypes.string,
-  textLabel: React.PropTypes.string,
-  type: React.PropTypes.string.isRequired,
-  id: React.PropTypes.string.isRequired
-};
-
-export default Heading;
+export default JumpAnchor;

@@ -66,6 +66,21 @@ export let states = [
       </Table>
   },
   {
+    id: 'data-table-striped-rows',
+    label: 'With striped rows',
+    element:
+      <Table className={pf('table--striped')}>
+        <Thead>
+          <HeadRowData />
+        </Thead>
+        <Tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+          <RowData title="Cloudhub" />
+        </Tbody>
+      </Table>
+  },
+  {
     id: 'data-table-no-hover',
     label: 'With no row hovers',
     element:

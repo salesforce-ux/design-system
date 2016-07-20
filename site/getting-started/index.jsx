@@ -12,37 +12,127 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import globals from 'app_modules/global';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Getting Started">
+    <div className={pf('container--large site-guidelines')}>
+      <p className="site-text-introduction">
+        The Salesforce Lightning Design System includes the resources to
+        create user interfaces consistent with the Salesforce Lightning
+        princples, design language, and best practices. Rather than focusing
+        on pixels, developers can focus on application logic,
+        while&nbsp;designers can focus on user experience, interactions,
+        and&nbsp;flows.
+      </p>
 
-    <h2 className="site-text-heading--large">
-      <a href="/platforms/visualforce/">Visualforce</a>
-    </h2>
-    <p>
-      How to use the {globals.displayName} within a Visualforce page.
-    </p>
+      <p>
+        This site provides a range of resources for designers and developers,
+        which&nbsp;includes:
+      </p>
 
-    <h2 className="site-text-heading--large">
-      <a href="/platforms/lightning/">Lightning Components</a>
-    </h2>
-    <p>
-      How to use the {globals.displayName} with Lighting apps and components.
-    </p>
+      <ul>
+        <li>semantic and accessible component&nbsp;markup.</li>
 
-    <h2 className="site-text-heading--large">
-      <a href="/platforms/heroku/">Heroku</a>
-    </h2>
-    <p>
-      How to use the {globals.displayName} within a static Heroku application.
-    </p>
+        <li>cross-browser compatible&nbsp;CSS.</li>
 
-    <h2 className="site-text-heading--large">
-      <a href="/guidelines/markup-and-style/">Markup and Style</a>
-    </h2>
-    <p>
-      Discover the naming convention that power {globals.displayName}’s CSS and markup.'.
-    </p>
+        <li>icons, font, and design&nbsp;guidelines.</li>
+      </ul>
 
+
+
+      <div className={pf('grid grid--pull-padded wrap')}>
+        <div className={pf('col--padded size--1-of-1 large-size--1-of-2 small-order--1 large-order--2')}>
+          <h2 className={pf('site-text-heading--large p-top--xx-large')}>
+            Designers
+          </h2>
+
+          <p>Start with the&nbsp;following:</p>
+
+          <ol>
+            <li>
+              Explore the <a href="/guidelines/overview/">Guidelines</a> to
+              learn the Salesforce product design patterns
+              and&nbsp;principles.
+            </li>
+
+            <li>
+              Review the Components section, to familiarize yourself with the
+              existing components which you can incorporate into
+              your&nbsp;designs.
+            </li>
+          </ol>
+        </div>
+
+        <div className={pf('col--padded size--1-of-1 large-size--1-of-2 small-order--2 large-order--1')}>
+          <h2 className={pf('site-text-heading--large p-top--xx-large')}>
+            Developers
+          </h2>
+
+          <p>Familiarize yourself with the&nbsp;following:</p>
+
+          <ol>
+            <li>
+              Get an overview of
+              our <a href="/guidelines/markup-and-style">Markup and Style</a> guidelines
+              including the class naming conventions used in our&nbsp;CSS.
+            </li>
+
+            <li>
+              Review the Components; each component provides semantically
+              correct and accessible markup and&nbsp;documentation.
+            </li>
+
+            <li>
+              Dive into the platform-specific getting started
+              steps&nbsp;below.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 className="site-text-heading--label">Lightning</h3>
+
+      <p>
+        Get started with the Lightning Design System
+        on <a href="/platforms/lightning">Lightning</a>. Please be careful to
+        pay attention to the specific requirements for the Lightning
+        technology you are&nbsp;using:
+      </p>
+
+      <ul>
+        <li>Lightning&nbsp;Experience</li>
+
+        <li>Salesforce1</li>
+
+        <li>Stand-alone Lightning&nbsp;app</li>
+
+        <li>Lightning Out&nbsp;component</li>
+      </ul>
+
+      <div className={pf('grid grid--pull-padded wrap')}>
+        <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
+          <h3 className={pf('site-text-heading--label p-top--xx-large')}>
+            Visualforce
+          </h3>
+
+          <p>
+            Get started with the Lightning Design System
+            on&nbsp;<a href="/platforms/visualforce">Visualforce</a>.
+          </p>
+        </div>
+
+        <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
+          <h3 className={pf('site-text-heading--label p-top--xx-large')}>
+            Heroku
+          </h3>
+
+          <p>
+            Get started with the Lightning Design System
+            on&nbsp;<a href="/platforms/heroku">Heroku</a>.
+          </p>
+        </div>
+      </div>
+    </div>
   </PageBody>
 );

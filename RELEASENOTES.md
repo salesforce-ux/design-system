@@ -15,10 +15,12 @@ The following issues have now been resolved:
 - Fix label for / textarea id mismatch in form textarea example
 - Fix modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
+- Added an example usage of `slds-table--striped` in the basic data table example
 
 ## Release [2.0.2] - June 16, 2016
 
 **SITE IA/ENHANCEMENTS**
+- Revamped "Getting Started" section.
 - Renamed "Design" section to "Guidelines"
 - Moved "Accessibility" and "Voice & Tone" sections to Guidelines
 

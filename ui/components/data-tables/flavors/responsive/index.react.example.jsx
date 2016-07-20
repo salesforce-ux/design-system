@@ -33,7 +33,7 @@ let Checkbox = props =>
 
 let HeadRowData = props =>
   <tr className={pf('text-heading--label')}>
-    <th className={pf('cell-shrink')}><Checkbox label="Select All" checked={props.checked} /></th>
+    <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" checked={props.checked} /></th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Close Date">
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
@@ -75,7 +75,7 @@ let HeadRowData = props =>
         <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('cell-shrink')}></th>
+    <th className={pf('cell-shrink')} scope="col"></th>
   </tr>;
 
 let RowData = props =>

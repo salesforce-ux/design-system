@@ -50,67 +50,77 @@ export default (
               </th>
             </tr>
             <tr>
-              <th scope="col">Account Name</th>
-              <th scope="col">Location</th>
-              <th scope="col">Secondary Column</th>
-              <th scope="col">Tertiary Column</th>
+              <th scope="col"><div className={pf('truncate')} title="Account Name">Account Name</div></th>
+              <th scope="col"><div className={pf('truncate')} title="Location">Location</div></th>
+              <th scope="col"><div className={pf('truncate')} title="Secondary Column">Secondary Column</div></th>
+              <th scope="col"><div className={pf('truncate')} title="Tertiary Column">Tertiary Column</div></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">
                 <a id="s01" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
-                  Acme Landscape
+                  <div className={pf('truncate')} title="Acme Landscape">
+                    <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
+                    Acme Landscape
+                  </div>
                 </a>
               </th>
-              <td>Seattle, WA</td>
-              <td>Secondary Field</td>
-              <td>Tertiary Field</td>
+              <td><div className={pf('truncate')} title="Seattle, WA">Seattle, WA</div></td>
+              <td><div className={pf('truncate')} title="Secondary Field">Secondary Field</div></td>
+              <td><div className={pf('truncate')} title="Tertiary Field">Tertiary Field</div></td>
             </tr>
             <tr>
               <th scope="row">
                 <a id="s02" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
-                  ACME Construction
+                  <div className={pf('truncate')} title="ACME Construction">
+                    <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
+                    ACME Construction
+                  </div>
                 </a>
               </th>
-              <td>San Francisco, CA</td>
-              <td>Secondary Field</td>
-              <td>Tertiary Field</td>
+              <td><div className={pf('truncate')} title="San Francisco, CA">San Francisco, CA</div></td>
+              <td><div className={pf('truncate')} title="Secondary Field">Secondary Field</div></td>
+              <td><div className={pf('truncate')} title="Tertiary Field">Tertiary Field</div></td>
             </tr>
             <tr>
               <th scope="row">
                 <a id="s03" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
-                  Action Sports
+                  <div className={pf('truncate')} title="Action Sports">
+                    <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
+                    Action Sports
+                  </div>
                 </a>
               </th>
-              <td>Madison, WI</td>
-              <td>Secondary Field</td>
-              <td>Tertiary Field</td>
+              <td><div className={pf('truncate')} title="Madison, WI">Madison, WI</div></td>
+              <td><div className={pf('truncate')} title="Secondary Field">Secondary Field</div></td>
+              <td><div className={pf('truncate')} title="Tertiary Field">Tertiary Field</div></td>
             </tr>
             <tr>
               <th scope="row">
                 <a id="s04" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
-                  Moderno Bistro
+                  <div className={pf('truncate')} title="Moderno Bistro">
+                    <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
+                    Moderno Bistro
+                  </div>
                 </a>
               </th>
-              <td>Acton, OH</td>
-              <td>Secondary Field</td>
-              <td>Tertiary Field</td>
+              <td><div className={pf('truncate')} title="Acton, OH">Acton, OH</div></td>
+              <td><div className={pf('truncate')} title="Secondary Field">Secondary Field</div></td>
+              <td><div className={pf('truncate')} title="Tertiary Field">Tertiary Field</div></td>
             </tr>
             <tr>
               <th scope="row">
                 <a id="s05" href="javascript:void(0);" role="option">
-                  <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
-                  Cozy Kitchen
+                  <div className={pf('truncate')} title="Cozy Kitchen">
+                    <SvgIcon className={pf('icon icon-standard-account icon--small m-right--x-small')} sprite="standard" symbol="account" />
+                    Cozy Kitchen
+                  </div>
                 </a>
               </th>
-              <td>Acton, CA</td>
-              <td>Secondary Field</td>
-              <td>Tertiary Field</td>
+              <td><div className={pf('truncate')} title="Acton, CA">Acton, CA</div></td>
+              <td><div className={pf('truncate')} title="Secondary Field">Secondary Field</div></td>
+              <td><div className={pf('truncate')} title="Tertiary Field">Tertiary Field</div></td>
             </tr>
           </tbody>
         </table>

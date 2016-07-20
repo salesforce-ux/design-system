@@ -18,11 +18,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 let Section = props =>
   <div className={className(pf('section'), props.className)}>
     {props.children}
@@ -34,49 +29,15 @@ let SectionContent = props =>
   </div>;
 
 let SectionTitle = props =>
-  <div className={className(pf('section__title'), props.className)}>
-    {props.children}
-  </div>;
-
-let SectionTitleAction = props =>
-  <h3 href="javascript:void(0);" className={className(pf('section__title-action'), props.className)}>
-    <button className={pf('button button--icon-container')}>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
-    </button>
+  <h3 className={className(pf('section__title'), props.className)}>
     {props.children}
   </h3>;
 
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <SectionTitle>Section Title</SectionTitle>
-  </Demo>;
-
-let Closed = props =>
-  <Demo>
-    <Section>
-      <SectionTitle>
-        <SectionTitleAction>Section Title</SectionTitleAction>
-      </SectionTitle>
-      <SectionContent />
-    </Section>
-  </Demo>;
-
-let Open = props =>
-  <Demo>
-    <Section className={pf('is-open')}>
-      <SectionTitle>
-        <SectionTitleAction>Section Title</SectionTitleAction>
-      </SectionTitle>
-      <SectionContent>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
-      </SectionContent>
-    </Section>
-  </Demo>;
+let SectionTitleAction = props =>
+  <button className={pf('button section__title-action')}>
+    <SvgIcon className={pf('section__title-action-icon button__icon slds-button__icon--left')} sprite="utility" symbol="switch" />
+    {props.children}
+  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -86,16 +47,31 @@ export let states = [
   {
     id: 'section-title',
     label: 'Default',
-    element: <Default />
+    element: <SectionTitle>Section Title</SectionTitle>
   },
   {
     id: 'section-title-closed',
     label: 'Closed',
-    element: <Closed />
+    element:
+      <Section>
+        <SectionTitle>
+          <SectionTitleAction>Section Title</SectionTitleAction>
+        </SectionTitle>
+        <SectionContent />
+      </Section>
   },
   {
     id: 'section-title-open',
     label: 'Open',
-    element: <Open />
+    element:
+      <Section className={pf('is-open')}>
+        <SectionTitle>
+          <SectionTitleAction>Section Title</SectionTitleAction>
+        </SectionTitle>
+        <SectionContent>
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
+        </SectionContent>
+      </Section>
   }
 ];

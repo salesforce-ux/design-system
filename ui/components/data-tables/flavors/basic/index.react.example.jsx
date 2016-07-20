@@ -70,9 +70,9 @@ export let states = [
     label: 'With striped rows',
     element:
       <Table className={pf('table--striped')}>
-        <Thead>
+        <thead>
           <HeadRowData />
-        </Thead>
+        </thead>
         <Tbody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />

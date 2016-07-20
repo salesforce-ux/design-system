@@ -73,11 +73,11 @@ export let states = [
         <thead>
           <HeadRowData />
         </thead>
-        <Tbody>
+        <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
           <RowData title="Cloudhub" />
-        </Tbody>
+        </tbody>
       </Table>
   },
   {

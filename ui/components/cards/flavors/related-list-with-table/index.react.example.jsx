@@ -21,18 +21,18 @@ export default (
       <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
         <thead>
           <tr className={pf('text-heading--label')}>
-            <th scope="col">Name</th>
-            <th scope="col">Company</th>
-            <th scope="col">Title</th>
-            <th scope="col">Email</th>
+            <th scope="col"><div className={pf('truncate')} title="Name">Name</div></th>
+            <th scope="col"><div className={pf('truncate')} title="Company">Company</div></th>
+            <th scope="col"><div className={pf('truncate')} title="Title">Title</div></th>
+            <th scope="col"><div className={pf('truncate')} title="Email">Email</div></th>
           </tr>
         </thead>
         <tbody>
           <tr className={pf('hint-parent')}>
-            <th scope="row"><div className={pf('truncate')}><a href="javascript:void(0);">Adam Choi</a></div></th>
-            <td>Company One</td>
-            <td>Director of Operations</td>
-            <td>adam@company.com</td>
+            <th scope="row"><div className={pf('truncate')} title="Adam Choi"><a href="javascript:void(0);">Adam Choi</a></div></th>
+            <td><div className={pf('truncate')} title="Company One">Company One</div></td>
+            <td><div className={pf('truncate')} title="Director of Operations">Director of Operations</div></td>
+            <td><div className={pf('truncate')} title="adam@company.com">adam@company.com</div></td>
           </tr>
         </tbody>
       </table>

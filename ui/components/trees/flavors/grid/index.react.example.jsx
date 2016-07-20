@@ -23,12 +23,15 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let Expanded = props =>
 <tr className={pf('hint-parent')} id="tree0-node1-0" role="row" aria-level="2">
-  <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (Oakland)</a></th>
-  <td data-label="employees">745</td>
-  <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-  <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-  <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-  <td className={pf('row-action')}>
+  <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+    <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+    <div className={pf('truncate')} title="Acme Corporation (Oakland)"><a href="javascript:void(0);">Acme Corporation (Oakland)</a></div>
+  </th>
+  <td data-label="Employees"><div className={pf('truncate')} title="745">745</div></td>
+  <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+  <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+  <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+  <td className={pf('cell-shrink')}>
     <ButtonIcon
       flavor="icon-border-filled,icon-x-small"
       iconFlavor="hint,small"
@@ -41,12 +44,15 @@ let Expanded = props =>
 let Default = props =>
 <tbody>
   <tr className={pf('hint-parent')} id="tree0-node0" role="row" aria-level="1">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Rewis Inc</a></th>
-    <td data-label="employees">3,100</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Phoenix, AZ</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Rewis Inc"><a href="javascript:void(0);">Rewis Inc</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="3,100">3,100</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')}>Phoenix, AZ</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -56,12 +62,15 @@ let Default = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1" role="row" aria-level="1" aria-owns={props.isExpanded ? 'tree0-node1-0' : null} aria-expanded={props.isExpanded ? true : false}>
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation</a></th>
-    <td data-label="employees">10,000</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>San Francisco, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="10,000">10,000</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="San Francisco, CA">San Francisco, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -72,12 +81,15 @@ let Default = props =>
   </tr>
   {props.additionalItem}
   <tr className={pf('hint-parent')} id="tree0-node2" role="row" aria-level="1" aria-expanded="false">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node2" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Rohde Enterprises</a></th>
-    <td data-label="employees">6,000</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node2" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Rohde Enterprises"><a href="javascript:void(0);">Rohde Enterprises</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="6,000">6,000</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -87,12 +99,15 @@ let Default = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node3" role="row" aria-level="1">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Cheese Corp</a></th>
-    <td data-label="employees">1,234</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Paris, France</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Cheese Corp"><a href="javascript:void(0);">Cheese Corp</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="1,234">1,234</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')}>Paris, France</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -107,12 +122,15 @@ let Default = props =>
 let DeepNesting = props =>
 <tbody>
   <tr className={pf('hint-parent')} id="tree0-node0" role="row" aria-level="1">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Rewis Inc</a></th>
-    <td data-label="employees">3,100</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Phoenix, AZ</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Rewis Inc"><a href="javascript:void(0);">Rewis Inc</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="3,100">3,100</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')}>Phoenix, AZ</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -122,12 +140,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1" role="row" aria-level="1" aria-owns="tree0-node1-0 tree0-node1-1" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation</a></th>
-    <td data-label="employees">10,000</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>San Francisco, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="10,000">10,000</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="San Francisco, CA">San Francisco, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -137,12 +158,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-0" role="row" aria-level="2" aria-owns="tree0-node1-0-0 tree0-node1-0-1" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1-0" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (Bay Area)</a></th>
-    <td data-label="employees">3,000</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1-0" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Acme Corporation (Bay Area)"><a href="javascript:void(0);">Acme Corporation (Bay Area)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="3,000">3,000</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -152,12 +176,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-0-0" role="row" aria-level="3">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (Oakland)</a></th>
-    <td data-label="employees">745</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Acme Corporation (Oakland)"><a href="javascript:void(0);">Acme Corporation (Oakland)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="745">745</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -167,12 +194,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-0-1" role="row" aria-level="3">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (San Francisco)</a></th>
-    <td data-label="employees">578</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Los Angeles, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Acme Corporation (San Francisco)"><a href="javascript:void(0);">Acme Corporation (San Francisco)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="578">578</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="Los Angeles, CA">Los Angeles, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -182,12 +212,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-1" role="row" aria-level="2" aria-owns="tree0-node1-1-0 tree0-node1-1-1" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1-1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (East)</a></th>
-    <td data-label="employees">430</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>San Francisco, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1-1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Acme Corporation (East)"><a href="javascript:void(0);">Acme Corporation (East)</a></div>
+  </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="430">430</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="San Francisco, CA">San Francisco, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -197,12 +230,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-1-0" role="row" aria-level="3">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (NY)</a></th>
-    <td data-label="employees">1,210</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Acme Corporation (NY)"><a href="javascript:void(0);">Acme Corporation (NY)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="1,210">1,210</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -212,12 +248,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-1-1" role="row" aria-level="3" aria-owns="tree0-node1-0-1-0" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1-1-1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Acme Corporation (VA)</a></th>
-    <td data-label="employees">410</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1-1-1" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Acme Corporation (VA)"><a href="javascript:void(0);">Acme Corporation (VA)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="410">410</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -227,12 +266,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-0-1-0" role="row" aria-level="4" aria-owns="tree0-node1-0-1-0-0" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node1-0-1-0" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Allied Technologies</a></th>
-    <td data-label="employees">390</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>Jane Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Los Angeles, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node1-0-1-0" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Allied Technologies"><a href="javascript:void(0);">Allied Technologies</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="390">390</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="Los Angeles, CA">Los Angeles, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -242,12 +284,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node1-0-1-0-0" role="row" aria-level="5">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Allied Technologies (UV)</a></th>
-    <td data-label="employees">270</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>San Francisco, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Allied Technologies (UV)"><a href="javascript:void(0);">Allied Technologies (UV)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="270">270</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="San Francisco, CA">San Francisco, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -257,12 +302,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node2" role="row" aria-level="1" aria-owns="tree0-node2-0" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node2" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Rohde Enterprises</a></th>
-    <td data-label="employees">6,000</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node2" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <div className={pf('truncate')} title="Rohde Enterprises"><a href="javascript:void(0);">Rohde Enterprises</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="6,000">6,000</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -272,12 +320,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node2-0" role="row" aria-level="2">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Rohde Enterprises (UCA)</a></th>
-    <td data-label="employees">2,540</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Rohde Enterprises (UCA)"><a href="javascript:void(0);">Rohde Enterprises (UCA)</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="2,540">2,540</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -287,12 +338,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node3" role="row" aria-level="1" aria-owns="tree0-node3-0" aria-expanded="true">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon aria-controls="tree0-node3" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" /><a href="javascript:void(0);" className={pf('truncate')}>Tech Labs</a></th>
-    <td data-label="employees">1,856</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>New York, NY</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon aria-controls="tree0-node3" className={pf('m-right--x-small')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" />
+      <a href="javascript:void(0);">Tech Labs</a>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="1,856">1,856</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="New York, NY">New York, NY</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -302,12 +356,15 @@ let DeepNesting = props =>
     </td>
   </tr>
   <tr className={pf('hint-parent')} id="tree0-node3-0" role="row" aria-level="2">
-    <th data-label="account-name" scope="row" className={pf('tree__item')}><ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled /><a href="javascript:void(0);" className={pf('truncate')}>Opportunity Resources Inc</a></th>
-    <td data-label="employees">1,934</td>
-    <td data-label="phone-number"><span className={pf('truncate')}>837-555-1212</span></td>
-    <td data-label="account-owner"><a className={pf('truncate')}>John Doe</a></td>
-    <td data-label="billing-city"><span className={pf('truncate')}>Los Angeles, CA</span></td>
-    <td className={pf('row-action')}>
+    <th data-label="Account Name" scope="row" className={pf('tree__item')}>
+      <ButtonIcon className={pf('m-right--x-small is-disabled')} flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" disabled />
+      <div className={pf('truncate')} title="Opportunity Resources Inc"><a href="javascript:void(0);">Opportunity Resources Inc</a></div>
+    </th>
+    <td data-label="Employees"><div className={pf('truncate')} title="1,934">1,934</div></td>
+    <td data-label="Phone Number"><div className={pf('truncate')} title="837-555-1212">837-555-1212</div></td>
+    <td data-label="Account Owner"><div className={pf('truncate')} title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
+    <td data-label="Billing City"><div className={pf('truncate')} title="Los Angeles, CA">Los Angeles, CA</div></td>
+    <td className={pf('cell-shrink')}>
       <ButtonIcon
         flavor="icon-border-filled,icon-x-small"
         iconFlavor="hint,small"
@@ -326,14 +383,17 @@ let TreeGrid = props =>
 <table className={pf('table table--bordered tree table--tree')} role="treegrid" aria-owns="tree0-node0 tree0-node1 tree0-node2 tree0-node3" aria-readonly="true">
   <thead>
     <tr className={pf('text-heading--label')}>
-      <th className={pf('cell-buffer--left cell-shrink')} scope="col"><ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="small" sprite="utility" symbol="chevrondown" assistiveText="Toggle" className={pf('m-right--xx-small table--tree__toggle')} />
-        <span className={pf('truncate')}>Account Name</span>
-        </th>
-      <th scope="col"><span className={pf('truncate')}>Employees</span></th>
-      <th scope="col"><span className={pf('truncate')}>Phone Number</span></th>
-      <th scope="col"><span className={pf('truncate')}>Account Owner</span></th>
-      <th scope="col"><span className={pf('truncate')}>Billing City</span></th>
-      <th className={pf('row-action')} scope="col">
+      <th className={pf('cell-buffer--left')} scope="col">
+        <div className={pf('grid grid--vertical-align-center')}>
+          <ButtonIcon flavor="icon-border-filled,icon-x-small" iconFlavor="small" sprite="utility" symbol="chevrondown" assistiveText="Toggle" className={pf('m-right--x-small shrink-none table--tree__toggle')} />
+          <div className={pf('truncate')} title="Account Name">Account Name</div>
+        </div>
+      </th>
+      <th scope="col"><div className={pf('truncate')} title="Employees">Employees</div></th>
+      <th scope="col"><div className={pf('truncate')} title="Phone Number">Phone Number</div></th>
+      <th scope="col"><div className={pf('truncate')} title="Account Owner">Account Owner</div></th>
+      <th scope="col"><div className={pf('truncate')} title="Billing City">Billing City</div></th>
+      <th className={pf('cell-shrink')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"

@@ -18,11 +18,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>;
-
 let StatefulButton = props =>
   <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-live="assertive">
     <span className={pf('text-not-selected')}>
@@ -40,43 +35,12 @@ let StatefulButton = props =>
   </button>;
 
 let StatefulIcon = props =>
-  <button className={className(pf('button button--icon button--icon-border'), props.className)} disabled={props.disabled}>
+  <button className={className(pf('button button--icon button--icon-border'), props.className, props.selected ? pf('is-selected') : pf('not-selected'))} disabled={props.disabled}>
     <SvgIcon className={pf('button__icon')} sprite="utility" symbol="like" />
+    <span className={pf('assistive-text')}>
+      { props.selected ? 'Liked' : 'Like' }
+    </span>
   </button>;
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let NotSelected = props =>
-  <Demo>
-    <StatefulButton className={pf('button--neutral not-selected')} />
-  </Demo>;
-
-let Selected = props =>
-  <Demo>
-    <StatefulButton className={pf('button--neutral is-selected')} />
-  </Demo>;
-
-let InverseNotSelected = props =>
-  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
-    <StatefulButton className={pf('button--inverse not-selected')} />
-  </Demo>;
-
-let InverseSelected = props =>
-  <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
-    <StatefulButton className={pf('button--inverse is-selected')} />
-  </Demo>;
-
-let IconNotSelected = props =>
-  <Demo>
-    <StatefulIcon className={pf('not-selected')} />
-  </Demo>;
-
-let IconSelected = props =>
-  <Demo>
-    <StatefulIcon className={pf('is-selected')} />
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -86,31 +50,37 @@ export let states = [
   {
     id: 'button-neutral-stateful-not-selected',
     label: 'Neutral - Not Selected',
-    element: <NotSelected />
+    element: <StatefulButton className={pf('button--neutral not-selected')} />
   },
   {
     id: 'button-neutral-stateful-selected',
     label: 'Neutral - Selected',
-    element: <Selected />
+    element: <StatefulButton className={pf('button--neutral is-selected')} />
   },
   {
     id: 'button-inverse-stateful-not-selected',
     label: 'Inverse - Not Selected',
-    element: <InverseNotSelected />
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <StatefulButton className={pf('button--inverse not-selected')} />
+      </div>
   },
   {
     id: 'button-inverse-stateful-selected',
     label: 'Inverse - Selected',
-    element: <InverseSelected />
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <StatefulButton className={pf('button--inverse is-selected')} />
+      </div>
   },
   {
     id: 'button-icon-stateful-not-selected',
     label: 'Icon - Not Selected',
-    element: <IconNotSelected />
+    element: <StatefulIcon />
   },
   {
     id: 'button-icon-stateful-selected',
     label: 'Icon - Selected',
-    element: <IconSelected />
+    element: <StatefulIcon selected />
   }
 ];

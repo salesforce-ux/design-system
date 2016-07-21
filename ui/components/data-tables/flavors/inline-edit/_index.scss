@@ -23,27 +23,19 @@
     box-shadow: 0 0 0 4px $color-border-brand inset;
   }
 
-  .#{$css-prefix}has-focus {
-    background: $color-background-row-hover;
-    border: 0;
-
-    .#{$css-prefix}button__icon--edit {
-      opacity: 1;
-    }
+  .#{$css-prefix}table--edit_container-message {
+    width: $size-medium;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+    margin-left: (($size-medium / 2) * -1);
+    background-color: $color-background-alt;
+    text-align: center;
+    z-index: $z-index-default;
   }
 }
 
-.#{$css-prefix}table--edit_container-message {
-  width: $size-medium;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
-  margin-left: (($size-medium / 2) * -1);
-  background-color: $color-background-alt;
-  text-align: center;
-  z-index: $z-index-default;
-}
 
 .#{$css-prefix}table--edit {
 

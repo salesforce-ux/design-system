@@ -1,0 +1,12 @@
+.#{$nds-prefix}notify-container,
+.#{$nds-prefix}notify_container {
+  @extend .#{$css-prefix}notify_container;
+  position: relative;
+  display: block;
+  z-index: $z-index-default;
+  text-align: left;
+
+  .#{$css-prefix}notify--toast {
+    margin: $spacing-none;
+  }
+}

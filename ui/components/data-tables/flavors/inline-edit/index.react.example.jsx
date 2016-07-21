@@ -34,7 +34,7 @@ let Thead = props =>
   <thead>
     <tr className={pf('text-title--caps')}>
       <th scope="col" style={{ width: '2.75rem' }}><span className={pf('slds-assistive-text')}>Errors</span></th>
-      <td role="gridcell" style={{ width: '2.2rem' }}><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></td>
+      <th role="gridcell" style={{ width: '2.2rem' }}><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
@@ -43,7 +43,7 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
       <th scope="col" style={{ width: '5rem' }}>
-        <span className={pf('truncate')} title="Actions">Actions</span></th>
+        <span className={pf('truncate p-right--large')} title="Actions">Actions</span></th>
     </tr>
   </thead>;
 
@@ -95,7 +95,7 @@ let ButtonEdit = props =>
   </button>;
 
 let EditPanel = props =>
-  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '0', left: '0.5rem' }}>
+  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
     <span id="form-start" tabIndex="0"></span>
     <div className={pf('popover__body')}>
       { props.children }
@@ -171,7 +171,7 @@ let RowData = (props) => {
         </span>
       </Td>
       <Td>
-        <div className={pf('cell-edit text-align--right')}>
+        <div className={pf('cell-edit text-align--right p-right--large')}>
           <ButtonIcon
             flavor="icon-border-filled,icon-x-small"
             iconFlavor="hint,small"
@@ -244,7 +244,7 @@ let RowDataStatic = props =>
       </span>
     </Td>
     <Td>
-      <div className={pf('cell-edit text-align--right')}>
+      <div className={pf('cell-edit text-align--right p-right--large')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"

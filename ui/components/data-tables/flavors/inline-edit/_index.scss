@@ -108,6 +108,7 @@
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
     border: $border-width-thin solid $color-border-selection;
+    outline: 0; // May want to add this to the `cell-edit` (tho that may be overreaching)
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {

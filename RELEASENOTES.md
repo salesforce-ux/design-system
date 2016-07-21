@@ -16,6 +16,8 @@ The following issues have now been resolved:
 - Fix modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
 - Added an example usage of `slds-table--striped` in the basic data table example
+- Add title attribute to truncation example
+- Changed status of single-line truncation to dev-ready
 
 ## Release [2.0.2] - June 16, 2016
 

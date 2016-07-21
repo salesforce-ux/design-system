@@ -269,7 +269,7 @@ async.series([
         ]
       }))
       .pipe(sass().on('error', sass.logError))
-      .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+      .pipe(postcss([ autoprefixer({ remove: false }) ]))
       .pipe(gulprename(function(path) {
         path.basename = MODULE_NAME + path.basename.substring('index'.length);
         path.extname = '.css';

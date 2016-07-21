@@ -118,8 +118,8 @@ let RowData = (props) => {
   let checkboxLabel = 'Select row ' + props.title;
 
   return(
-    <tr ariaSelected={props.checkSelected} className={pf('hint-parent')}>
-      <td tabIndex={props.errorindex}>
+    <tr className={pf('hint-parent')}>
+      <td tabIndex={props.errorindex} aria-selected={props.errorSelected}>
         <div id={props.cellID} className={className(pf('cell-edit cell-error'), props.editName)}>
           <button className={className(pf('button button--icon button--icon-error'), props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
             <span className={pf('assistive-text')}>Row has errors</span>
@@ -128,12 +128,12 @@ let RowData = (props) => {
           <span className={pf('row-number text-body--small')}></span>
         </div>
       </td>
-      <Td tabIndex={props.initialCellTabIndex}>
+      <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
         <div className={className(pf('cell-edit'), props.checkClass)}>
           <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
         </div>
       </Td>
-      <th>
+      <th aria-selected={props.defaultSelected}>
         <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
           <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
@@ -263,6 +263,27 @@ let RowDataStatic = props =>
 
 export let states = [
   {
+    id: 'data-table-inline-edit',
+    label: 'Default',
+    element:
+      <Container>
+        <Table className={pf('no-cell-focus')}>
+          <Thead navigationModeTabIndex="0" />
+          <tbody>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')}>
+              <Td>
+                <span className={pf('grid grid--align-spread cell-edit')}>
+                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic navigationModeTabIndex="0" />
+          </tbody>
+        </Table>
+      </Container>
+  },
+  {
     id: 'data-table-inline-table-matte',
     label: 'Table container focused',
     element:
@@ -298,48 +319,6 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-selected',
-    label: 'Table entered',
-    element:
-      <Container>
-        <Table className={pf('no-cell-focus')}>
-          <Thead navigationModeTabIndex="0" />
-          <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
-              <Td>
-                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
-          </tbody>
-        </Table>
-      </Container>
-  },
-  {
-    id: 'data-table-inline-edit',
-    label: 'Default',
-    element:
-      <Container>
-        <Table className={pf('no-cell-focus')}>
-          <Thead navigationModeTabIndex="-1" />
-          <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')}>
-              <Td>
-                <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
-          </tbody>
-        </Table>
-      </Container>
-  },
-  {
     id: 'data-table-inline-edit-with-link',
     label: 'Cell focused - Link',
     element:
@@ -347,8 +326,8 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')} linkId="link-01" navigationModeTabIndex="0">
-              <Td aria-selected="true">
+            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')} linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
+              <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
@@ -371,7 +350,7 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} checkClass={pf('has-focus')} checkSelected="true" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} checkClass={pf('has-focus')} checkSelected="true" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
@@ -396,7 +375,7 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
-              <Td>
+              <Td aria-selected="true">
                 <span className={pf('grid grid--align-spread cell-edit has-focus')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />

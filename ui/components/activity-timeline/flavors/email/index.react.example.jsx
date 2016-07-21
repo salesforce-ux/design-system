@@ -30,9 +30,9 @@ export let states = [
             </p>
             <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
             <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('m-right--large')}>
+              <li className={pf('truncate_container--50 m-right--large grid')}>
                 <span className={pf('text-title')}>To:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
+                <span className={pf('text-body--small m-left--xx-small truncate')}><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex text-body--small')}> + 44 more</span>
               </li>
               <li className={pf('m-right--large')}>
                 <span className={pf('text-title')}>From:</span>

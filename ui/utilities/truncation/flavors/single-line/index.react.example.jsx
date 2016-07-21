@@ -17,7 +17,7 @@ export default (
   <div className="demo-only">
     <dl className={pf('size--1-of-2')}>
       <dt className={pf('text-title--caps')}>Field 4</dt>
-      <dd><p className={pf('truncate')}>Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.</p></dd>
+      <dd><p className={pf('truncate')} title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.">Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.</p></dd>
     </dl>
   </div>
 );

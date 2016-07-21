@@ -24,16 +24,21 @@
   }
 
   .#{$css-prefix}table--edit_container-message {
-    width: $size-medium;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: $size-medium;
     margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
     margin-left: (($size-medium / 2) * -1);
     background-color: $color-background-alt;
     text-align: center;
     z-index: $z-index-default;
   }
+}
+
+.#{$css-prefix}table--edit_container-message {
+  display: none;
 }
 
 

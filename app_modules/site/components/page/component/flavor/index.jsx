@@ -119,7 +119,8 @@ class ComponentFlavor extends React.Component {
         className={pf('m-bottom--xx-large p-top--x-large')}
         style={styles}
         data-slds-status={flavor.status}>
-        <Heading type="h2" id={`flavor-${flavor.id}`} className={pf('site-text-heading--large site-text-heading--callout')}>
+        <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
+          {statesIds}
           {flavor.title}
           {this.renderBadge(flavor.status)}
           {this.renderBadge(flavor.formFactorStatus)}

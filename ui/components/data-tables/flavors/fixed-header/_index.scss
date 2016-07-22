@@ -29,6 +29,6 @@
 .#{$css-prefix}table--bordered .#{$css-prefix}header-fixed {
 
   th {
-    border-top-color: transparent;
+    border-top: 0;
   }
 }

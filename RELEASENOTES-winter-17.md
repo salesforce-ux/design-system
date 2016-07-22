@@ -7,6 +7,7 @@
 
 The following site enhancements are now available:
 
+- New Checkbox Toggle guidelines under Data Entry section in [App Launcher Component](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
 - Card component state navigation has been improved
@@ -66,6 +67,12 @@ The following changes have been made in this release:
 - Feeds are now responsive
 - Add close button to error popover so a screen reader can access popover
 - Add animated waffle icon to Global Navigation [Global Navigation](/components/global-navigation/)
+- Feeds:
+  - Change post's comment metric labels to lowercase
+  - Add hint-hover to post's comment action overflow icon
+  - Change post's comment "link" text to use `color-link-weak`
+  - Remove dotted line separator from post's attachment payload
+  - Moved URL of post's attachment to the bottom of the content ordering
 
 **FIXED**
 
@@ -106,6 +113,7 @@ The following issues have now been resolved:
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
 - Tables a11y fixes: all tables now use the same truncation method when text is too long in a cell and show the full text when truncated text is hovered
+- Accessibility fixes for list builder
 
 **DEPRECATED**
 

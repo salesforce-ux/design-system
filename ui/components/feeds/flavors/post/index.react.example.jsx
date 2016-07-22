@@ -22,18 +22,18 @@ let ButtonIcon = props =>
 
 export let PostFooterActions = props =>
   <ul className={pf('post__footer-actions-list list--horizontal')}>
-    <li className={pf('item m-right--medium')}>
+    <li className={pf('col item m-right--medium')}>
       <a href="javascript:void(0);" title="Like this item" className={className(pf('post__footer-action'), props.liked ? pf('is-active') : null)}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
       </a>
     </li>
-    <li className={pf('item m-right--medium')}>
+    <li className={pf('col item m-right--medium')}>
       <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
-    <li className={pf('item m-right--medium')}>
+    <li className={pf('col item m-right--medium')}>
       <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
         <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
       </a>
@@ -42,10 +42,10 @@ export let PostFooterActions = props =>
 
 export let PostFooterMeta = props =>
   <ul className={pf('post__footer-meta-list list--horizontal has-dividers--right text-title')}>
-    { props.liked ? <li className={pf('item')}>1 Likes</li> : null }
-    { props.comments ? <li className={pf('item')}>{ props.comments || '0' } Comments</li> : null }
-    <li className={pf('item')}>20 Shares</li>
-    <li className={pf('item')}>259 Views</li>
+    { props.liked ? <li className={pf('item')}>1 likes</li> : null }
+    { props.comments ? <li className={pf('item')}>{ props.comments || '0' } comments</li> : null }
+    <li className={pf('item')}>20 shares</li>
+    <li className={pf('item')}>259 views</li>
   </ul>;
 
 export let PostHeader = props =>
@@ -60,7 +60,7 @@ export let PostHeader = props =>
     <div className={pf('media__body')}>
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>
         <p className={pf('truncate')}>
-          <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> via <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
+          <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
         </p>
         <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
       </div>

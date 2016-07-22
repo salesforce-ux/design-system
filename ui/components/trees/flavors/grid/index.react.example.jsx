@@ -393,7 +393,7 @@ let TreeGrid = props =>
       <th scope="col"><div className={pf('truncate')} title="Phone Number">Phone Number</div></th>
       <th scope="col"><div className={pf('truncate')} title="Account Owner">Account Owner</div></th>
       <th scope="col"><div className={pf('truncate')} title="Billing City">Billing City</div></th>
-      <th className={pf('cell-shrink')}>
+      <th className={pf('cell-shrink')} scope="col">
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"

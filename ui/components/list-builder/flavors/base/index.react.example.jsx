@@ -27,7 +27,7 @@ let Search = props =>
     <label className={pf('assistive-text')} htmlFor="search-text-input-product">Search Products</label>
     <div className={pf('size--1-of-1 m-bottom--x-small input-has-icon input-has-icon--left')}>
       <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-      <input id="search-text-input-product" className={pf('input')} type="text" placeholder="Search Products" />
+      <input id="search-text-input-product" className={pf('input')} type="search" placeholder="Search Products" />
     </div>
     <span className={pf('text-title')} aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
   </div>;
@@ -45,7 +45,7 @@ let Th = props =>
 
 let ProductList = props =>
   <div className={pf('scrollable grow')}>
-    <table className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
+    <table role="grid" className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
       <thead>
         <tr className={pf('text-title--caps')} >
           <th className={pf('cell-shrink')} scope="col"></th>
@@ -81,7 +81,7 @@ export let states = [
               <Search />
               <ProductList>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -89,12 +89,12 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family A">Family A</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family A">Family A</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -102,12 +102,12 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="3460.00">3460.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="3460.00">3460.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -115,12 +115,12 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="2230.00">2230.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2230.00">2230.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -128,9 +128,9 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="750.00">750.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="750.00">750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>
@@ -158,7 +158,7 @@ export let states = [
               <Search itemsSelected="2" />
               <ProductList>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -166,40 +166,38 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family A">Family A</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family A">Family A</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
-                      className={pf('is-selected')}
                       sprite="utility"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="3,460.00">3,460.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="3,460.00">3,460.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
-                      className={pf('is-selected')}
                       sprite="utility"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="2,230.00">2,230.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,230.00">2,230.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')}>
+                  <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
                       flavor="icon-border,icon-small"
                       sprite="utility"
@@ -207,9 +205,9 @@ export let states = [
                       assistiveText="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
-                  <td data-label="List Price"><div className={pf('truncate')} title="750.00">750.00</div></td>
-                  <td data-label="Product Family"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
+                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="750.00">750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>

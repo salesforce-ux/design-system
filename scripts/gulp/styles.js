@@ -76,7 +76,7 @@ gulp.task('styles', () =>
         __PATHS__.node_modules
       ]
     }).on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+    .pipe(autoprefixer({ remove: false }))
     .pipe(minifycss({ advanced: false }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.www/assets/styles'))

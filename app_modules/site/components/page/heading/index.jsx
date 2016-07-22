@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import classNames from 'classnames';
 import { install, prefix as pf } from 'app_modules/ui/util/component';
+import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
 
 class Heading extends React.Component {
   constructor(props) {
@@ -20,25 +21,26 @@ class Heading extends React.Component {
   }
 
   render() {
-    const props = this.$propsWithoutKeys('className', 'id', 'type');
+
+    const props = this.$propsWithoutKeys('className', 'id', 'type', 'textLabel');
     let c = classNames(this.props.className, 'site-jump-anchor__container');
 
     switch (this.props.type) {
     case 'h1':
       return <h1 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
+        <JumpAnchor id={this.props.id} level="1" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h1>;
       break;
     case 'h2':
       return <h2 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
+        <JumpAnchor id={this.props.id} level="2" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h2>;
       break;
     case 'h3':
       return <h3 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
+        <JumpAnchor id={this.props.id} level="3" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h3>;
       break;
@@ -51,6 +53,7 @@ class Heading extends React.Component {
 
 Heading.propTypes = {
   classNames: React.PropTypes.string,
+  textLabel: React.PropTypes.string,
   type: React.PropTypes.string.isRequired,
   id: React.PropTypes.string.isRequired
 };

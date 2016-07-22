@@ -33,6 +33,7 @@ export let WaffleIcon = () =>
       <div className={pf('r8')}></div>
       <div className={pf('r9')}></div>
     </div>
+    <span className={pf('assistive-text')}>Open App Launcher</span>
   </a>;
 
 // Context Item Dropdown

@@ -21,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('table--edit_container is-relative')} tabIndex={props.tabIndex} id={props.id}>
+  <div className={pf('table--edit_container')} tabIndex={props.tabIndex} id={props.id}>
     {props.children}
   </div>;
 

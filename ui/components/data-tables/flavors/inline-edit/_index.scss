@@ -8,32 +8,40 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}table--edit_container:focus {
-  outline: none;
+.#{$css-prefix}table--edit_container {
+  position: relative;
+  //height: 80%;
+  padding-top: 2rem;
+  border-top: 1px solid #d8dde6;
+  background: white;
 
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $z-index-default;
-    background-color: $color-background-backdrop-tint;
-    box-shadow: 0 0 0 4px $color-border-brand inset;
-  }
+  &:focus {
+    outline: none;
 
-  .#{$css-prefix}table--edit_container-message {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: $size-medium;
-    margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
-    margin-left: (($size-medium / 2) * -1);
-    background-color: $color-background-alt;
-    text-align: center;
-    z-index: $z-index-default;
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: $z-index-default;
+      background-color: $color-background-backdrop-tint;
+      box-shadow: 0 0 0 4px $color-border-brand inset;
+    }
+
+    .#{$css-prefix}table--edit_container-message {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $size-medium;
+      margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+      margin-left: (($size-medium / 2) * -1);
+      background-color: $color-background-alt;
+      text-align: center;
+      z-index: $z-index-default;
+    }
   }
 }
 

@@ -176,7 +176,7 @@ class ModalWrapper extends React.Component {
   render() {
     const {renderInline} = this.props;
     return renderInline
-      ? <Modal {...this.props} tabindex="-1" />
+      ? <Modal {...this.props} tabIndex="-1" />
       : null;
   }
   renderModal(props) {

@@ -7,6 +7,7 @@
 
 The following site enhancements are now available:
 
+- New Checkbox Toggle guidelines under Data Entry section in [App Launcher Component](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
 - Card component state navigation has been improved

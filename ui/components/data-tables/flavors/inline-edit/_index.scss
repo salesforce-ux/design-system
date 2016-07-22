@@ -10,10 +10,6 @@
 
 .#{$css-prefix}table--edit_container {
   position: relative;
-  //height: 80%;
-  padding-top: 2rem;
-  border-top: 1px solid #d8dde6;
-  background: white;
 
   &:focus {
     outline: none;

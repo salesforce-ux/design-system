@@ -7,7 +7,23 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}table--edit_container--inner {
+
+.#{$css-prefix}table--header-fixed_container {
+  position: relative;
+  padding-top: 2rem;
+  border-top: $border-width-thin solid $color-border;
+  background-color: $color-border;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   $color-background-alt,
+  //   $color-background-alt 1.9735rem,
+  //   $color-border 2rem,
+  //   $color-background-alt 2.0625rem,
+  //   $color-background-alt
+  //   );
+}
+
+.#{$css-prefix}table--header-fixed_container--inner {
   height: 18rem;
   overflow-y: auto;
   overflow-x: auto; // for now, don't know why it's displaying except body of iframe has 1rem of padding which seems to be affecting it
@@ -16,19 +32,14 @@
 .#{$css-prefix}cell-fixed {
   position: absolute;
   top: 0;
-  min-height: 2rem;
+  min-height: 2.2rem;
 }
 
-.#{$css-prefix}header-fixed {
+.#{$css-prefix}table--header-fixed {
+  border-top: 0;
 
   th {
     position: static;
-  }
-}
-
-.#{$css-prefix}table--bordered .#{$css-prefix}header-fixed {
-
-  th {
     border-top: 0;
   }
 }

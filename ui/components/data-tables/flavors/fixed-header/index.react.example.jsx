@@ -21,14 +21,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('table--edit_container')} tabIndex={props.tabIndex} id={props.id}>
-    <div className={pf('table--edit_container--inner')}>
+  <div className={pf('table--header-fixed_container')} tabIndex={props.tabIndex} id={props.id}>
+    <div className={pf('table--header-fixed_container--inner')}>
       {props.children}
     </div>
   </div>;
 
 let Table = props =>
-  <table className={className(pf('table table--edit table--bordered table--fixed-layout'), props.className)} role="grid">
+  <table className={className(pf('table table--edit table--bordered table--fixed-layout table--header-fixed'), props.className)} role="grid">
     {props.children}
   </table>;
 

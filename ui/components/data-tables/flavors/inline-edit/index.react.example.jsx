@@ -34,7 +34,7 @@ let Thead = props =>
   <thead>
     <tr className={pf('text-title--caps')}>
       <th scope="col" style={{ width: '2.75rem' }}><span className={pf('slds-assistive-text')}>Errors</span></th>
-      <th role="gridcell" style={{ width: '2.2rem' }}><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
+      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
@@ -133,7 +133,7 @@ let RowData = (props) => {
           <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
         </div>
       </Td>
-      <th aria-selected={props.defaultSelected}>
+      <th aria-selected={props.defaultSelected} scope="row">
         <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
           <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
@@ -201,7 +201,7 @@ let RowDataStatic = props =>
         <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>
-    <th>
+    <th scope="row">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />

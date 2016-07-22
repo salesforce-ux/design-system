@@ -44,6 +44,7 @@ let DatepickerHeader = props =>
       </div>
     </div>
     <div className={pf('shrink-none')}>
+      <label className={pf('assistive-text')} htmlFor="select-01">Pick a Year</label>
       <Select>
         <option>2014</option>
         <option>2015</option>

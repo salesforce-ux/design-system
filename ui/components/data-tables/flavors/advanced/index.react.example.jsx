@@ -112,7 +112,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -136,7 +136,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -160,7 +160,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -184,7 +184,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -208,7 +208,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -232,7 +232,7 @@ export let states = [
             <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
             <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')}></th>
+            <th className={pf('cell-shrink')} scope="col"></th>
           </tr>
         </thead>
         <tbody>

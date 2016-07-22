@@ -52,11 +52,6 @@
     box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
   }
 
-  // Deal with truncation
-  .#{$css-prefix}truncate {
-    max-width: $size-small;
-  }
-
   // By default, nowrap is applied
   .#{$css-prefix}cell-wrap {
     white-space: normal;

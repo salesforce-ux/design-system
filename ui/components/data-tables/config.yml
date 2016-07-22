@@ -3,5 +3,6 @@ flavors:
   - basic
   - advanced
   - inline-edit
+  - fixed-header
   - compact
   - responsive

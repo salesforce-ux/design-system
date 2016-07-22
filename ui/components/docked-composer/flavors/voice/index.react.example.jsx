@@ -404,9 +404,9 @@ let StateJ = props =>
             </div>
             <div className={pf('form-element__row')}>
               <div className={pf('form-element')}>
-                <label className={pf('form-element__label')} htmlFor="text-input-01">Comments</label>
+                <label className={pf('form-element__label')} htmlFor="textarea-input-01">Comments</label>
                 <div className={pf('form-element__control')}>
-                  <textarea className={pf('textarea')} id="textrea-input-01" />
+                  <textarea className={pf('textarea')} id="textarea-input-01" />
                 </div>
               </div>
             </div>

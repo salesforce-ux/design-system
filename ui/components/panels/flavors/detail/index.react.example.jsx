@@ -29,9 +29,8 @@ let Demo = props =>
 let Checkbox = props =>
   <label className={className(pf('checkbox'), props.className)} htmlFor={props.id}>
     <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}>
-      {props.children}
-    </span>
+    <span className={pf('checkbox--faux')}></span>
+    <span className={pf('assistive-text')}>{props.label}</span>
   </label>;
 
 export let Panel = props =>
@@ -52,7 +51,7 @@ export let PanelSection = props =>
 let Tile = props =>
   <div className={pf('media')}>
     <div className={pf('media__figure')}>
-      <Checkbox id="completed" />
+      <Checkbox id="completed" label="Complete Task" />
     </div>
     <div className={pf('media__body')}>
       <p className={pf('truncate text-heading--small')}>

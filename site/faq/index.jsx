@@ -38,7 +38,8 @@ class FAQ extends React.Component {
     );
     this.content.push(
       <Heading type="h2" id={id} key={`${id}-h2`}
-        className="site-text-heading--large">
+        className="site-text-heading--large"
+        textLabel={title}>
         {title}
       </Heading>,
       <div key={`${id}-content`}>{content}</div>

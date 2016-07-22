@@ -9,12 +9,10 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import ui from '.generated/ui';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { renderIntoDocument } from 'react-addons-test-utils';
-
-import ui from '.generated/ui';
 
 const requireExample = require.context(
   'ui', true, /(index\.react\.example\.jsx)$/
@@ -46,11 +44,15 @@ const getStates = (component, flavor) => {
       });
     }
     return states.map(({ label, element }) => {
-      let renderedComponent = renderIntoDocument(element);
+      let div = document.createElement('div');
+      ReactDOM.render(element, div);
+      let node =  div.children[0];
+      if (!node || node.nodeType != Node.ELEMENT_NODE) {
+        throw new Error('An element failed to render in the document.');
+      }
       return {
         label,
-        renderedComponent,
-        node: ReactDOM.findDOMNode(renderedComponent)
+        node: div.children[0]
       };
     });
   } catch (e) {

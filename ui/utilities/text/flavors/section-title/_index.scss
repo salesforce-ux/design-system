@@ -21,7 +21,22 @@
   }
 
   &__title-action {
+    display: flex;
+    align-items: center;
+    background: $color-background;
     cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: currentColor;
+    font-size: inherit;
+    padding: 0 $spacing-x-small;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color-background-button-default-active;
+      color: inherit;
+    }
   }
 
   &__content {
@@ -30,13 +45,13 @@
     height: 0;
   }
 
-  .#{$css-prefix}button__icon {
+  &__title-action-icon {
     transform: rotate(-90deg);
   }
 
   &.#{$css-prefix}is-open {
 
-    .#{$css-prefix}button__icon {
+    .#{$css-prefix}section__title-action-icon {
       transform: rotate(0deg);
       transform-origin: 45%;
     }

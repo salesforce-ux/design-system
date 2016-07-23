@@ -107,7 +107,7 @@ class ComponentFlavor extends React.Component {
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
-      statesIds = flavor.example.states.map(state => <JumpAnchor id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
+      statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
 
     if (flavor.status === 'prototype') {

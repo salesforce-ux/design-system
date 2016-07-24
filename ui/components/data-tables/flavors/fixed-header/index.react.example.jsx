@@ -102,7 +102,7 @@ let RowData = (props) => {
 
   return(
     <tr className={pf('hint-parent')}>
-      <td tabIndex={props.errorindex} aria-selected={props.errorSelected}>
+      <td data-label="Opportunity Name" tabIndex={props.errorindex} aria-selected={props.errorSelected}>
         <div id={props.cellID} className={className(pf('cell-edit cell-error'), props.editName)}>
           <button className={className(pf('button button--icon button--icon-error'), props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
             <span className={pf('assistive-text')}>Row has errors</span>
@@ -111,49 +111,49 @@ let RowData = (props) => {
           <span className={pf('row-number text-body--small')}></span>
         </div>
       </td>
-      <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
+      <Td data-label="Opportunity Name" tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
         <div className={className(pf('cell-edit'), props.checkClass)}>
           <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
         </div>
       </Td>
-      <th aria-selected={props.defaultSelected}>
+      <th aria-selected={props.defaultSelected} data-label="Opportunity Name">
         <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
           <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
       { props.children }
-      <Td>
+      <Td data-label="Opportunity Name">
         <span className={pf('grid grid--align-spread cell-edit')}>
           <span className={pf('truncate grow')} title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
         </span>
       </Td>
-      <Td>
+      <Td data-label="Opportunity Name">
         <span className={pf('grid grid--align-spread cell-edit')}>
           <span className={pf('truncate grow')} title="jdoe@acme.com">jdoe@acme.com</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
         </span>
       </Td>
-      <Td aria-readonly="true">
+      <Td aria-readonly="true" data-label="Opportunity Name">
         <span className={pf('grid grid--align-spread cell-edit')}>
           <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
           <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
         </span>
       </Td>
-      <Td>
+      <Td data-label="Opportunity Name">
         <span className={pf('grid grid--align-spread cell-edit')}>
           <span className={pf('truncate grow')} title="Contacted">Contacted</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
         </span>
       </Td>
-      <Td>
+      <Td data-label="Opportunity Name">
         <span className={pf('grid grid--align-spread cell-edit')}>
           <span className={pf('truncate grow text-align--right')} title="60%">60%</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
         </span>
       </Td>
-      <Td>
+      <Td data-label="Opportunity Name">
         <div className={pf('cell-edit text-align--right p-right--large')}>
           <ButtonIcon
             flavor="icon-border-filled,icon-x-small"
@@ -170,7 +170,7 @@ let RowData = (props) => {
 
 let RowDataStatic = props =>
   <tr className={pf('hint-parent')}>
-    <td>
+    <td data-label="Opportunity Name">
       <div id={props.cellID} className={className(pf('cell-edit cell-error'), props.editName)}>
         <button className={pf('hidden button button--icon button--icon-error')} tabIndex={props.navigationModeTabIndex} aria-hidden="true">
           <span className={pf('assistive-text')}>Row has no errors</span>
@@ -179,54 +179,54 @@ let RowDataStatic = props =>
         <span className={pf('row-number text-body--small')}></span>
       </div>
     </td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <div className={pf('cell-edit')}>
         <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>
-    <th>
+    <th data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
       </span>
     </th>
-    <Td>
+    <Td data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')} title="Rohde Corp">Rohde Corp</span>
             <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
       </span>
     </Td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')} title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
       </span>
     </Td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')} title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
       </span>
     </Td>
-    <Td aria-readonly="true">
+    <Td aria-readonly="true" data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow')} title="New">New</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
       </span>
     </Td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <span className={pf('grid grid--align-spread cell-edit')}>
         <span className={pf('truncate grow text-align--right')} title="20%">20%</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
       </span>
     </Td>
-    <Td>
+    <Td data-label="Opportunity Name">
       <div className={pf('cell-edit text-align--right p-right--large')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
@@ -254,7 +254,7 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')}>
-              <Td>
+              <Td data-label="Opportunity Name">
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />

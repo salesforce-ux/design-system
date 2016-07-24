@@ -10,20 +10,20 @@
 
 .#{$css-prefix}table--header-fixed_container {
   position: relative;
-  padding-top: 2rem;
+  padding-top: 2rem; // This matches the height of the hover state w/border
   border-top: $border-width-thin solid $color-border;
-  background-color: $color-border;
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   $color-background-alt,
-  //   $color-background-alt 1.9735rem,
-  //   $color-border 2rem,
-  //   $color-background-alt 2.0625rem,
-  //   $color-background-alt
-  //   );
+  background-color: $color-background-alt;
+  background-image: linear-gradient(
+    to bottom,
+    $color-background-alt,
+    $color-background-alt 1.911rem,
+    $color-border 1.9375rem,
+    $color-background-alt 2rem,
+    $color-background-alt
+    ); // Creates line below th for faux fixed headers
 }
 
-.#{$css-prefix}table--header-fixed_container--inner {
+.#{$css-prefix}table--header-fixed_container--inner { // This class needs to be removed before we push the code live
   height: 18rem;
   overflow-y: auto;
   overflow-x: auto; // for now, don't know why it's displaying except body of iframe has 1rem of padding which seems to be affecting it
@@ -32,13 +32,13 @@
 .#{$css-prefix}cell-fixed {
   position: absolute;
   top: 0;
-  min-height: 2.2rem;
+  min-height: 2rem;
 }
 
 .#{$css-prefix}table--header-fixed {
   border-top: 0;
 
-  th {
+  thead th {
     position: static;
     border-top: 0;
   }

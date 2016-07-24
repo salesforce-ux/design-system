@@ -9,7 +9,6 @@
 
 
 .#{$css-prefix}table--edit_container {
-  position: relative;
 
   &:focus {
     outline: none;
@@ -65,6 +64,14 @@
 
   tbody tr {
     counter-increment: row-number;
+
+    &:hover { // adds the same box-shadow border when a row is hovered
+      // scss-lint:disable SelectorDepth
+      .#{$css-prefix}cell-edit.#{$css-prefix}is-edited,
+      .#{$css-prefix}cell-edit.#{$css-prefix}has-focus {
+        box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset, $color-border 0 ($border-width-thin) 0 inset;
+      }
+    }
   }
 
   .#{$css-prefix}row-number {
@@ -109,7 +116,7 @@
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
     border: $border-width-thin solid $color-border-selection;
-    outline: 0; // May want to add this to the `cell-edit` (tho that may be overreaching)
+    outline: 0; // @TODO: May want to add this to the `cell-edit` (tho that may be overreaching)
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {

@@ -57,7 +57,7 @@ let Th = (props) => {
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
   return(
-    <th {...props} aria-label={props.children} style={{ width: '8.25rem' }}>
+    <th {...props} aria-label={props.children} style={{ width: '8.25rem' }} scope="row">
       <div className={pf('cell-fixed')} style={{ width: '8.25rem' }}>
         <a href="javascript:void(0);" className={pf('th__action text-link--reset')} tabIndex={props.navigationModeTabIndex}>
           <span className={pf('assistive-text')}>Sort </span>

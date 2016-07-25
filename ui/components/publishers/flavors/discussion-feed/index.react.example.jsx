@@ -21,11 +21,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 const image = (
   <a className={pf('avatar avatar--circle avatar--small')} href="javascript:void(0);" title="Jenna Davis">
     <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
@@ -69,18 +64,14 @@ let PublisherActions = props =>
 ///////////////////////////////////////////
 
 let Default = props =>
-  <Demo>
-    <Publisher>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
+  <Publisher>
+    <PublisherActions />
+  </Publisher>;
 
 let Active = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
+  <Publisher className={pf('is-active')}>
+    <PublisherActions />
+  </Publisher>;
 
 
 ///////////////////////////////////////////

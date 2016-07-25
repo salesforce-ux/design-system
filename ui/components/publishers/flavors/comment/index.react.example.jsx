@@ -21,11 +21,6 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 const image = (
   <a className={pf('avatar avatar--circle avatar--medium')} href="javascript:void(0);" title="Jenna Davis">
     <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
@@ -88,14 +83,10 @@ export let Default = props =>
   <Publisher />;
 
 let Active = props =>
-  <Demo>
-    <Publisher className={pf('is-active')} />
-  </Demo>;
+  <Publisher className={pf('is-active')} />;
 
 let ActiveFocus = props =>
-  <Demo>
-    <Publisher className={pf('is-active has-focus')} />
-  </Demo>;
+  <Publisher className={pf('is-active has-focus')} />;
 
 
 ///////////////////////////////////////////

@@ -16,6 +16,27 @@ import { Publisher } from 'ui/components/publishers/flavors/comment/index.react.
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
+import _ from 'lodash';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+const CommentList = props =>
+  <ul>
+    {_.times(props.comments || 1, i =>
+    <li key={`comment-${i}`}>
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter />
+      </Comment>
+    </li>
+    )}
+  </ul>;
+
 
 ///////////////////////////////////////////
 // Export
@@ -38,22 +59,7 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div>
-            <Comment>
-              <CommentHeader />
-              <CommentContent>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </CommentContent>
-              <CommentFooter />
-            </Comment>
-            <Comment>
-              <CommentHeader />
-              <CommentContent>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </CommentContent>
-              <CommentFooter />
-            </Comment>
-          </div>
+          <CommentList comments="2" />
           <Publisher />
         </Comments>
       </div>
@@ -78,17 +84,7 @@ export let states = [
             <a href="javascript:void(0);">More comments</a>
             <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
           </div>
-          <ul>
-            <li>
-              <Comment>
-                <CommentHeader />
-                <CommentContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </CommentContent>
-                <CommentFooter />
-              </Comment>
-            </li>
-          </ul>
+          <CommentList />
           <Publisher />
         </Comments>
       </div>
@@ -113,17 +109,7 @@ export let states = [
             <a href="javascript:void(0);">More comments</a>
             <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
           </div>
-          <ul>
-            <li>
-              <Comment>
-                <CommentHeader />
-                <CommentContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </CommentContent>
-                <CommentFooter />
-              </Comment>
-            </li>
-          </ul>
+          <CommentList />
           <Publisher className={pf('is-active has-focus')} />
         </Comments>
       </div>

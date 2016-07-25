@@ -51,11 +51,9 @@ export let PostFooterMeta = props =>
 export let PostHeader = props =>
   <header className={pf('post__header media media--center')}>
     <div className={pf('media__figure')}>
-      <div className={pf('avatar avatar--circle avatar--large')}>
-        <a href="javascript:void(0);" title="Jason Rodgers">
-          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
-        </a>
-      </div>
+      <a href="javascript:void(0);" title="Jason Rodgers" className={pf('avatar avatar--circle avatar--large')}>
+        <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
+      </a>
     </div>
     <div className={pf('media__body')}>
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>

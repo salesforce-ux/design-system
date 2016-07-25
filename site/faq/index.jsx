@@ -226,16 +226,8 @@ class FAQ extends React.Component {
 
   render () {
     return (
-      <PageBody {...this.props} anchorTitle="Frequently Asked Questions" contentClassName={pf('grid wrap')}>
-        <StickyNav>
-          <div className={pf('site-menu--jump-links')}>
-            <h3 className="site-text-heading--label">Questions</h3>
-            <ul className={pf('list--vertical has-block-links--space')}>
-              {this.jumpLinks}
-            </ul>
-          </div>
-        </StickyNav>
-        <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
+      <PageBody {...this.props} anchorTitle="Frequently Asked Questions">
+        <div className={pf('site-main-content')}>
           {this.content}
         </div>
       </PageBody>

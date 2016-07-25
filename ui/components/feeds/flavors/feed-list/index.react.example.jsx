@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
+import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -31,6 +32,23 @@ export default (
             <PostFooterMeta />
           </PostFooter>
         </Post>
+        <Comments>
+          <div className={pf('has-divider--bottom p-horizontal--medium p-vertical--x-small grid')}>
+            <a href="javascript:void(0);">More comments</a>
+            <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
+          </div>
+          <ul>
+            <li>
+              <Comment>
+                <CommentHeader />
+                <CommentContent>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </CommentContent>
+                <CommentFooter />
+              </Comment>
+            </li>
+          </ul>
+        </Comments>
       </li>
       <li className={pf('feed__item')}>
         <Post>

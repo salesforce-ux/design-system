@@ -179,7 +179,7 @@ export default () => formatNavItem({
       children: [utilities, touch].concat(components)
     },
     {
-      label: 'Tokens'
+      label: 'Design Tokens'
     },
     {
       label: 'Icons'

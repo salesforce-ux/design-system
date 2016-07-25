@@ -21,11 +21,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export let Comment = props =>
   <article className={className(pf('comment media hint-parent'), props.className)}>
     <div className={pf('media__figure')}>
-      <div className={pf('avatar avatar--circle avatar--medium')}>
-        <a href="javascript:void(0);" title="Jenna Davis">
-          <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-        </a>
-      </div>
+      <a href="javascript:void(0);" title="Jenna Davis" className={pf('avatar avatar--circle avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+      </a>
     </div>
     <div className={pf('media__body')}>
       { props.children }
@@ -48,7 +46,7 @@ export let CommentContent = props =>
   </div>;
 
 export let CommentFooter = props =>
-  <footer className={className(pf('comment__footer'), props.className)}>
+  <footer>
     <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
       <li className={pf('item')}>
         <a className={pf('text-color--weak')} href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>

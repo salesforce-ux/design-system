@@ -11,6 +11,7 @@ The following site enhancements are now available:
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
 - Card component state navigation has been improved
+- Link to Styling with Design Tokens on the platform added on Design Tokens and Downloads pages.
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -73,18 +74,20 @@ The following changes have been made in this release:
   - Change post's comment "link" text to use `color-link-weak`
   - Remove dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
+  - Removed truncation from preamble
+  - Reduce white space between feed items
 
 **FIXED**
 
 The following issues have now been resolved:
 
-- Record home vertical a11y fixes
+- Record home vertical accessibility fixes
   - Add `aria-haspopup="true"` to action overflow buttons
   - Add assistive text for icon
   - Removed unnecessary aria roles from action overflow buttons
   - Improve assistive text verbiage
   - Make multiple value field entirely clickable to invoke dropdown
-- Global header a11y fixes
+- Global header accessibility fixes
   - Improve semantics of dropdown menus
   - Apply `role=separator` to dropdown menu list items that do not have an actionable element
   - Apply `role=presentation` to dropdown menu list items
@@ -99,21 +102,25 @@ The following issues have now been resolved:
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
   - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
   - Moved clear button to the right of the input to visually match tab order
-- Utility bar a11y fixes
+- Utility bar accessibility fixes
   - Add landmark `role="footer"` to utility bar
   - Add `aria-label="Utility Bar"` description to utility bar
   - Add hidden heading to utility bar
   - Add aria `role=dialog` and `aria-labelledby` to utility bar panel
   - Change panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
   - Place utility bar buttons inside `<ul>`
-- Files a11y fixes
+- Files accessibility fixes
   - Fix invalid markup by moving button group outside of anchor
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 - Make primary labels of compound fields capital
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
-- Tables a11y fixes: all tables now use the same truncation method when text is too long in a cell and show the full text when truncated text is hovered
+- Tables accessibility fixes: all tables now use the same truncation method when text is too long in a cell and show the full text when truncated text is hovered
 - Accessibility fixes for list builder
+- Fixed an issue where examples contained the same ID multiple times
+- Feeds accessibility fixes
+  - Comments are now list items in an unordered list structure
+  - The browser shows a focus ring when avatars are focused
 
 **DEPRECATED**
 

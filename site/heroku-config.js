@@ -73,7 +73,12 @@ module.exports = {
     },
     {
       source: '/resources/tokens',
-      destination: '/tokens',
+      destination: '/design-tokens',
+      status: 301
+    },
+    {
+      source: '/tokens',
+      destination: '/design-tokens',
       status: 301
     },
     {

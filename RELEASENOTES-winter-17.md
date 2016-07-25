@@ -74,6 +74,8 @@ The following changes have been made in this release:
   - Change post's comment "link" text to use `color-link-weak`
   - Remove dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
+  - Removed truncation from preamble
+  - Reduce white space between feed items
 
 **FIXED**
 

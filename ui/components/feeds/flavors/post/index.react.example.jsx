@@ -57,7 +57,7 @@ export let PostHeader = props =>
     </div>
     <div className={pf('media__body')}>
       <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('truncate')}>
+        <p>
           <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
         </p>
         <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />

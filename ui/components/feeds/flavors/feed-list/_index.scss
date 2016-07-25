@@ -30,6 +30,10 @@
       + .#{$css-prefix}feed__item {
         border-top: $border-width-thin solid $color-border;
       }
+
+      .#{$css-prefix}feed__item-comments {
+        margin-bottom: ($spacing-large * -1);
+      }
     }
   }
 }

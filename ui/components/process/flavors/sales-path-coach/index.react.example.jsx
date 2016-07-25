@@ -55,14 +55,16 @@ let Tabsmain = props =>
     </ul>
   </div>;
 
-const uniqueId = _.uniqueId('tabs-path-');
-
-let Tab = props =>
-  <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
-    <a className={pf('tabs--path__link')} id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
-      {props.children}
-    </a>
-  </li>;
+let Tab = props => {
+  const uniqueId = _.uniqueId('tabs-path-');
+  return (
+    <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
+      <a className={pf('tabs--path__link')} id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+        {props.children}
+      </a>
+    </li>
+  );
+};
 
 let Coachcontent1 = props =>
   <div id="content-path-1" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-1">

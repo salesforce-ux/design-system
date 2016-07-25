@@ -81,7 +81,7 @@ export let states = [
                 </span>
               </li>
               <li role="presentation">
-                <span className={pf('lookup__item-action media media--center')} id="option-04" role="option">
+                <span className={pf('lookup__item-action media media--center')} id="option-05" role="option">
                   <SvgIcon className={pf('icon icon-standard-lead icon--small media__figure')} sprite="standard" symbol="lead" />
                   <div className={pf('media__body')}>
                     <div className={pf('lookup__result-text')}>H.E. Pennypacker</div>

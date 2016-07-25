@@ -15,6 +15,7 @@ import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -54,12 +55,16 @@ let Tabsmain = props =>
     </ul>
   </div>;
 
-let Tab = props =>
-  <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
-    <a className={pf('tabs--path__link')} id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
-      {props.children}
-    </a>
-  </li>;
+let Tab = props => {
+  const uniqueId = _.uniqueId('tabs-path-');
+  return (
+    <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
+      <a className={pf('tabs--path__link')} id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+        {props.children}
+      </a>
+    </li>
+  );
+};
 
 let Coachcontent1 = props =>
   <div id="content-path-1" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-1">

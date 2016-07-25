@@ -59,7 +59,7 @@ export default (
           <figure className={pf('site-stencil m-vertical--large')}>
             <div className={pf('form--stacked')} aria-hidden="true">
               {_.times(2, i =>
-                <div className={pf('form-element')}>
+                <div key={`item-${i}`} className={pf('form-element')}>
                   <label className={pf('form-element__label site-stencil__color-light')}>
                     🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                   </label>
@@ -96,7 +96,7 @@ export default (
               <div className={pf('form-element__group')}>
                 <div className={pf('form-element__row')}>
                   {_.times(2, i =>
-                    <div className={pf('form-element size--1-of-2')}>
+                    <div key={`item-${i}`} className={pf('form-element size--1-of-2')}>
                       <label className={pf('form-element__label site-stencil__color-light')}>
                         🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                       </label>
@@ -249,7 +249,7 @@ export default (
                   <div className={pf('select_container site-stencil__border-dark-bottom-before site-stencil__border-dark-top-after')}>
                     <select disabled className={pf('select site-stencil__border-light site-stencil__color-light site-stencil__squeeze')} tabIndex="-1">
                       {_.times(3, i =>
-                        <option>
+                        <option key={`item-${i}`}>
                           🁢🁢🁢🁢🁢🁢🁢🁢
                         </option>
                       )}
@@ -262,7 +262,7 @@ export default (
                 <thead>
                   <tr>
                     {_.times(7, i =>
-                      <th className={pf('site-stencil__color-light')}>🁢🁢🁢🁢</th>
+                      <th key={`item-${i}`} className={pf('site-stencil__color-light')}>🁢🁢🁢🁢</th>
                     )}
                   </tr>
                 </thead>
@@ -272,22 +272,22 @@ export default (
                     <td className={pf('disabled-text site-stencil__color-light')}>🁢🁢</td>
 
                     {_.times(4, i =>
-                      <td className={pf('site-stencil__background-none-hover-parent')}>
+                      <td key={`item-${i}`} className={pf('site-stencil__background-none-hover-parent')}>
                         <span className={pf('day')}>🁢🁢</span>
                       </td>
                     )}
 
                     {_.times(2, i =>
-                      <td className={pf('site-stencil__background-none-hover-parent')}>
+                      <td key={`item-${i}`} className={pf('site-stencil__background-none-hover-parent')}>
                         <span className={pf('day')}>🁢🁢</span>
                       </td>
                     )}
                   </tr>
 
                   {_.times(3, i =>
-                    <tr>
+                    <tr key={`item-${i}`}>
                       {_.times(7, i =>
-                        <td className={pf('site-stencil__background-none-hover-parent')}>
+                        <td key={`item-${i}`} className={pf('site-stencil__background-none-hover-parent')}>
                           <span className={pf('day')}>🁢🁢</span>
                         </td>
                       )}
@@ -296,7 +296,7 @@ export default (
 
                   <tr>
                     {_.times(2, i =>
-                      <td className={pf('site-stencil__background-none-hover-parent')}>
+                      <td key={`item-${i}`} className={pf('site-stencil__background-none-hover-parent')}>
                         <span className={pf('day')}>🁢🁢</span>
                       </td>
                     )}
@@ -308,14 +308,14 @@ export default (
                     </td>
 
                     {_.times(4, i =>
-                      <td className={pf('disabled-text site-stencil__color-light site-stencil__background-none-hover-parent')}>
+                      <td key={`item-${i}`} className={pf('disabled-text site-stencil__color-light site-stencil__background-none-hover-parent')}>
                         <span className={pf('day')}>🁢🁢</span>
                       </td>
                     )}
                   </tr>
 
                   <tr>
-                    <td colspan="7">
+                    <td colSpan="7">
                       <a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small site-stencil__color-light')} tabIndex="-1">
                         🁢🁢🁢🁢🁢🁢
                       </a>
@@ -361,7 +361,7 @@ export default (
 
                 <ul className={pf('list--reset lookup__list m-left--none')}>
                   {_.times(5, i =>
-                    <li>
+                    <li key={`item-${i}`}>
                       <a className={pf('lookup__item-action media media--center site-stencil__color-dark site-stencil__background-none-hover')} href="javascript:void(0);" tabIndex="-1">
                         <SvgIcon className={'icon icon-standard-account icon--small media__figure site-stencil__background-light'} />
 
@@ -555,7 +555,7 @@ export default (
               <fieldset className={pf('form--element')}>
                 <div className={pf('form-element__control')}>
                   {_.times(2, i =>
-                    <div className={pf('form-element')}>
+                    <div key={`item-${i}`} className={pf('form-element')}>
                       <label className={pf('checkbox--toggle grid grid--vertical-align-center p-around--x-small has-divider--bottom site-stencil__border-light')}>
                         <span className={pf('form-element__label site-stencil__color-light m-bottom--none')}>
                           🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
@@ -567,7 +567,7 @@ export default (
                   )}
 
                   {_.times(2, i =>
-                    <div className={pf('form-element')}>
+                    <div key={`item-${i}`} className={pf('form-element')}>
                       <label className={pf('checkbox--toggle grid grid--vertical-align-center p-around--x-small has-divider--bottom site-stencil__border-light')}>
                         <span className={pf('form-element__label site-stencil__color-light m-bottom--none')}>
                           🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
@@ -611,7 +611,7 @@ export default (
                   </div>
 
                   {_.times(2, i =>
-                    <div className={pf('form-element')}>
+                    <div key={`item-${i}`} className={pf('form-element')}>
                       <label className={pf('checkbox--toggle grid grid--vertical-align-center p-around--x-small has-divider--bottom site-stencil__border-light')}>
                         <span className={pf('form-element__label site-stencil__color-light m-bottom--none')}>
                           🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
@@ -669,7 +669,7 @@ export default (
                   </div>
 
                   {_.times(2, i =>
-                    <div className={pf('form-element p-around--x-small has-divider--bottom site-stencil__border-light')}>
+                    <div key={`item-${i}`} className={pf('form-element p-around--x-small has-divider--bottom site-stencil__border-light')}>
                       <label className={pf('form-element__label site-stencil__color-light')}>
                         🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                       </label>
@@ -762,7 +762,7 @@ export default (
                   </li>
 
                   {_.times(5, i =>
-                    <li className={pf('dropdown__item')}>
+                    <li key={`item-${i}`} className={pf('dropdown__item')}>
                       <a href="javascript:void(0);" tabIndex="-1" className={pf('site-stencil__color-dark')}>
                         <span className={pf('truncate')}>
                           <SvgIcon sprite="utility" symbol="check" className={'icon icon--selected icon--x-small icon-text-default m-right--x-small'} />
@@ -800,7 +800,7 @@ export default (
                 <div className={pf('picklist picklist--multi')}>
                   <ul className={pf('list--reset picklist__options picklist__options--multi site-stencil__border-light site-stencil__background-none-hover-parent m-left--none size--1-of-1 size--1-of-1')}>
                     {_.times(4, i =>
-                      <li className={pf('picklist__item')}>
+                      <li key={`item-${i}`} className={pf('picklist__item')}>
                         <span className={pf('truncate')}>🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
                       </li>
                     )}

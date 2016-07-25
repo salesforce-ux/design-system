@@ -34,7 +34,6 @@ const componentsWithPrototypes = () =>
 
 const TreeItem = props => (
   <div className="slds-tree__item">
-
     <button className={classNames('slds-button slds-m-right--x-small', {'slds-is-disabled': props.disabled })} aria-controls={props.id}>
       <SvgIcon sprite="utility" symbol="chevronright" className={pf('button__icon button__icon--small')} />
       <span className="slds-assistive-text">Toggle</span>
@@ -53,14 +52,14 @@ const Branch = props => (
   <li role="treeitem" id={props.id} aria-level="1" aria-expanded="true">
     <TreeItem link={props.path} id={props.id} />
     <ul className="slds-is-expanded" role="group">
-      {props.items.map(i => <Leaf {...i} />) }
+      {props.items.map(item => <Leaf key={`leaf-${props.id}-${item.id}`} {...item} />) }
     </ul>
   </li>
 );
 
 const Tree = props => (
   <div className="slds-tree_container" role="application">
-    <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
+    <ul className="slds-tree" role="tree" aria-labelledby="prototypes-heading">
       { props.children }
     </ul>
   </div>
@@ -74,10 +73,10 @@ const flavors = comp =>
 
 const Prototypes = props => (
   <PageBody {...props} anchorTitle="Prototypes" contentClassName={pf('grid wrap')}>
-    <Heading type="h2" id="prototypes" className="site-text-heading--large">Prototypes</Heading>
+    <Heading type="h2" id="prototypes-heading" className="site-text-heading--large">Prototypes</Heading>
     <div className={pf('m-top--xx-large col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
       <Tree>
-        { componentsWithPrototypes().map(comp => <Branch id={comp.id} items={flavors(comp)} />) }
+        { componentsWithPrototypes().map((comp, i) => <Branch key={`${comp.id}-${i}`} id={comp.id} items={flavors(comp)} />) }
       </Tree>
     </div>
   </PageBody>

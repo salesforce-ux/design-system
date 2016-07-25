@@ -14,9 +14,15 @@ import _ from 'lodash';
 
 describe('package.json', () => {
   const dependencies = require('../../package.json').devDependencies;
+  const trustedDependencies = [
+    '@salesforce-ux/build-server-api'
+  ];
 
   it('should reference dependencies with strict version numbers', () => {
     _.each(dependencies, (version, name) => {
+      if (trustedDependencies.indexOf(name) > -1) {
+        return true;
+      }
       expect(version).to.not.contain('~'); // e.g. ~1.0.0 (would accept patches)
       expect(version).to.not.contain('^'); // e.g. ^1.0.0 (would accept 1.1.0, 1.2.0…)
       expect(version).to.not.contain('.x'); // e.g. 1.0.x, 1.x.x

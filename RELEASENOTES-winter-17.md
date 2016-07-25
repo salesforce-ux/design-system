@@ -11,6 +11,7 @@ The following site enhancements are now available:
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
 - Card component state navigation has been improved
+- Link to Styling with Design Tokens on the platform added on Design Tokens and Downloads pages.
 
 **NEW COMPONENTS AND VARIANTS**
 

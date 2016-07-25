@@ -137,6 +137,11 @@ const Tokens = React.createClass({
           maintain a scalable and consistent visual system
           for <abbr title="User Interface">UI</abbr> development.
         </p>
+
+        <p>
+          Using Lightning Components? Read the Developer Guide
+          on <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm">Styling with Design Tokens</a>.
+        </p>
       </div>
     ];
   },

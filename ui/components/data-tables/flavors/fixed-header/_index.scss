@@ -16,17 +16,12 @@
   background-image: linear-gradient(
     to bottom,
     $color-background-alt,
-    $color-background-alt 1.911rem,
+    $color-background-alt 1.9375rem,
     $color-border 1.9375rem,
+    $color-border 2rem,
     $color-background-alt 2rem,
     $color-background-alt
     ); // Creates line below th for faux fixed headers
-}
-
-.#{$css-prefix}table--header-fixed_container--inner { // This class needs to be removed before we push the code live
-  height: 18rem;
-  overflow-y: auto;
-  overflow-x: auto; // for now, don't know why it's displaying except body of iframe has 1rem of padding which seems to be affecting it
 }
 
 .#{$css-prefix}cell-fixed {
@@ -41,5 +36,13 @@
   thead th {
     position: static;
     border-top: 0;
+  }
+
+  tbody tr:first-child { // Remove first border row due to faux th border
+
+    td,
+    th {
+      border: 0;
+    }
   }
 }

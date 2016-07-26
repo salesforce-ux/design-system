@@ -17,6 +17,7 @@ const shrinkwrap = require('../../npm-shrinkwrap.json');
 describe('shrinkwrapped dependencies', () => {
   after((done) => {
     console.log('⚠️  Run "clingwrap npmbegone" if the tests fail. Clingwrap installation instructions available at https://github.com/goodeggs/clingwrap');
+    console.log('️ ️  More information on dependency management at https://github.com/salesforce-ux/design-system-internal/wiki/How-to-install-or-remove-npm-dependencies');
     done();
   });
 

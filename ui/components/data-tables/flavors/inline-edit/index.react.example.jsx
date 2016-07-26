@@ -42,8 +42,8 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
-      <th scope="col" style={{ width: '5rem' }}>
-        <span className={pf('truncate p-right--large')} title="Actions">Actions</span></th>
+      <th scope="col" style={{ width: '3.25rem' }}>
+        <span className={pf('truncate assistive-text p-right--large')} title="Actions">Actions</span></th>
     </tr>
   </thead>;
 
@@ -171,7 +171,7 @@ let RowData = (props) => {
         </span>
       </Td>
       <Td>
-        <div className={pf('cell-edit text-align--right p-right--large')}>
+        <div className={pf('grid grid--align-end cell-edit p-right--large')}>
           <ButtonIcon
             flavor="icon-border-filled,icon-x-small"
             iconFlavor="hint,small"
@@ -244,7 +244,7 @@ let RowDataStatic = props =>
       </span>
     </Td>
     <Td>
-      <div className={pf('cell-edit text-align--right p-right--large')}>
+      <div className={pf('grid grid--align-end cell-edit p-right--large')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"

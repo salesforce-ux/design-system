@@ -44,13 +44,6 @@
     }
   }
 
-
-
-  // Deal with truncation
-  .#{$css-prefix}truncate {
-    max-width: $size-small;
-  }
-
   // By default, nowrap is applied
   .#{$css-prefix}cell-wrap {
     white-space: normal;
@@ -99,8 +92,8 @@
   }
 
   // Cells
-  td,
-  th {
+  tbody td,
+  tbody th {
     border-top: $border-width-thin solid $color-border;
   }
 

@@ -270,7 +270,7 @@ export let states = [
         <Table className={pf('no-cell-focus')}>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')}>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('cell-marker')}>
               <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>

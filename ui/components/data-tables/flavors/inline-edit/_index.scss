@@ -67,8 +67,8 @@
 
     &:hover { // adds the same box-shadow border when a row is hovered
       // scss-lint:disable SelectorDepth
-      .#{$css-prefix}cell-edit.#{$css-prefix}is-edited,
-      .#{$css-prefix}cell-edit.#{$css-prefix}has-focus {
+      .#{$css-prefix}cell-marker,
+      .#{$css-prefix}is-edited:not(.#{$css-prefix}has-focus) {
         box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset, $color-border 0 ($border-width-thin) 0 inset;
       }
     }
@@ -80,6 +80,10 @@
       content: counter(row-number);
     }
   }
+}
+
+.#{$css-prefix}cell-marker {
+  background-color: $color-background-row-hover;
 }
 
 .#{$css-prefix}cell-edit {
@@ -109,18 +113,22 @@
   }
 
   .#{$css-prefix}cell-edit__button {
-      padding-right: $spacing-xxx-small;
-      padding-left: $spacing-xxx-small;
+      @include square($square-icon-utility-medium);
+      flex-shrink: 0;
     }
 
   &.#{$css-prefix}has-focus { // This is the focused state
     background-color: $color-background-alt;
-    border: $border-width-thin solid $color-border-selection;
     outline: 0; // @TODO: May want to add this to the `cell-edit` (tho that may be overreaching)
+    box-shadow: $color-border-selection 0 0 0 1px inset;
 
     .#{$css-prefix}button__icon--edit,
     .#{$css-prefix}button__icon--lock {
       opacity: 1;
+    }
+
+    &:hover {
+      box-shadow: $color-border-selection 0 0 0 1px inset;
     }
 
     a:focus {
@@ -153,6 +161,7 @@
   .#{$css-prefix}has-focus {
     background: $color-background-row-hover;
     border: 0;
+    box-shadow: none;
 
     .#{$css-prefix}button__icon--edit {
       opacity: 1;

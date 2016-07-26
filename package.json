@@ -13,7 +13,7 @@
     }
   },
   "devDependencies": {
-    "@salesforce-ux/build-server-api": "1.3.5",
+    "@salesforce-ux/build-server-api": "^1.3.6",
     "@salesforce-ux/design-tokens": "3.6.0",
     "@salesforce-ux/icons": "5.0.0",
     "@salesforce-ux/design-system-ui-kit": "github:salesforce-ux/design-system-ui-kit#v1.0.1",

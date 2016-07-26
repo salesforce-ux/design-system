@@ -1,6 +1,8 @@
 # Salesforce Lightning Design System
 # Release notes
 
+<!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
+
 ## Release 2.1.0 - Future, 2016
 
 **SITE IA/ENHANCEMENTS**

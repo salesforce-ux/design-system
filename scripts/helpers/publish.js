@@ -121,6 +121,9 @@ const prepare = (done) => {
       tag: process.env.TRAVIS_TAG || '',
       pullRequest: process.env.TRAVIS_PULL_REQUEST || '',
       branch: process.env.TRAVIS_BRANCH || '',
+      commitRange: process.env.TRAVIS_COMMIT_RANGE || '',
+      commit: process.env.TRAVIS_COMMIT || '',
+      eventType: process.env.TRAVIS_EVENT_TYPE || '',
       version: packageJSON.version
     });
     done(null, result);

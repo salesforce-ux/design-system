@@ -135,7 +135,7 @@ let RowData = (props) => {
       </Td>
       <th aria-selected={props.defaultSelected} scope="row">
         <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
-          <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
+          <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
@@ -203,8 +203,8 @@ let RowDataStatic = props =>
     </Td>
     <th scope="row">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
+        <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
       </span>
     </th>
     <Td>

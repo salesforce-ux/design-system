@@ -137,3 +137,4 @@ The following features are being removed in this release:
 
 - Context Bar has been removed and replaced with Global Navigation Component - [Global Navigation Component](/components/global-navigation)
 - `slsd-is-recording` class was not in use.
+- Removed inverse and state themes from examples to provide clarity of usage.

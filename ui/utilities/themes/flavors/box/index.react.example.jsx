@@ -12,30 +12,29 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export const preview = (
-<div className="demo-only">
-  <div className={pf('box m-bottom--medium')}>
-    <p>This is a regular sized box.</p>
-  </div>
-  <div className={pf('box box--small m-bottom--medium')}>
-    <p>This is a small box.</p>
-  </div>
-  <div className={pf('box box--x-small m-bottom--medium')}>
-    <p>This is an extra small box.</p>
-  </div>
-</div>
-);
-export const code = (
-<div className="demo-only">
-  <div className={pf('box')}>
-    <p>This is a regular sized box.</p>
-  </div>
-  <div className={pf('box box--small')}>
-    <p>This is a small box.</p>
-  </div>
-  <div className={pf('box box--x-small')}>
-    <p>This is an extra small box.</p>
-  </div>
-</div>
-);
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <div className={pf('box')}>
+        <p>This is a regular-sized box.</p>
+      </div>
+  },
+  {
+    id: 'small',
+    label: 'Small',
+    element:
+      <div className={pf('box box--small')}>
+        <p>This is a small box.</p>
+      </div>
+  },
+  {
+    id: 'x-small',
+    label: 'X-Small',
+    element:
+      <div className={pf('box box--x-small')}>
+        <p>This is an extra-small box.</p>
+      </div>
+  }
+];

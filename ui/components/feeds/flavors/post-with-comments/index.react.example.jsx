@@ -80,7 +80,7 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div className={pf('has-divider--bottom p-horizontal--medium p-vertical--x-small grid')}>
+          <div className={pf('p-horizontal--medium p-vertical--x-small grid')}>
             <a href="javascript:void(0);">More comments</a>
             <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
           </div>
@@ -105,7 +105,7 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div className={pf('has-divider--bottom p-horizontal--medium p-vertical--x-small grid')}>
+          <div className={pf('p-horizontal--medium p-vertical--x-small grid')}>
             <a href="javascript:void(0);">More comments</a>
             <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
           </div>

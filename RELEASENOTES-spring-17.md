@@ -33,7 +33,7 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
--
+- Removed custom styled scrollbar mixin from `slds--scrollable-` helpers
 
 **DEPRECATED**
 

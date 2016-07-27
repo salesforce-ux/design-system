@@ -10,7 +10,6 @@
 
 
 .#{$css-prefix}scrollable--x {
-  @include scrollbar;
   @include enable-ios-momentum-scrolling;
   max-width: 100%;
   overflow: hidden {

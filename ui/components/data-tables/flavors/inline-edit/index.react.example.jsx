@@ -42,8 +42,8 @@ let Thead = props =>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
       <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
-      <th scope="col" style={{ width: '5rem' }}>
-        <span className={pf('truncate p-right--large')} title="Actions">Actions</span></th>
+      <th scope="col" style={{ width: '3.25rem' }}>
+        <span className={pf('truncate assistive-text p-right--large')} title="Actions">Actions</span></th>
     </tr>
   </thead>;
 
@@ -135,7 +135,7 @@ let RowData = (props) => {
       </Td>
       <th aria-selected={props.defaultSelected} scope="row">
         <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
-          <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
+          <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
@@ -171,7 +171,7 @@ let RowData = (props) => {
         </span>
       </Td>
       <Td>
-        <div className={pf('cell-edit text-align--right p-right--large')}>
+        <div className={pf('grid grid--align-end cell-edit p-right--large')}>
           <ButtonIcon
             flavor="icon-border-filled,icon-x-small"
             iconFlavor="hint,small"
@@ -203,8 +203,8 @@ let RowDataStatic = props =>
     </Td>
     <th scope="row">
       <span className={pf('grid grid--align-spread cell-edit')}>
-        <a href="javascript:void()" className={pf('truncate grow')} tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
+        <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
+        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
       </span>
     </th>
     <Td>
@@ -244,7 +244,7 @@ let RowDataStatic = props =>
       </span>
     </Td>
     <Td>
-      <div className={pf('cell-edit text-align--right p-right--large')}>
+      <div className={pf('grid grid--align-end cell-edit p-right--large')}>
         <ButtonIcon
           flavor="icon-border-filled,icon-x-small"
           iconFlavor="hint,small"
@@ -270,7 +270,7 @@ export let states = [
         <Table className={pf('no-cell-focus')}>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')}>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('cell-marker')}>
               <Td>
                 <span className={pf('grid grid--align-spread cell-edit')}>
                   <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>

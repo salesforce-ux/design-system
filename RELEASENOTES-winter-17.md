@@ -13,7 +13,7 @@ The following site enhancements are now available:
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Button Icon component state navigation has been improved
 - Card component state navigation has been improved
-- Link to Styling with Design Tokens on the platform added on Design Tokens and Downloads pages.
+- Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
 
 **NEW COMPONENTS AND VARIANTS**
 
@@ -137,3 +137,4 @@ The following features are being removed in this release:
 
 - Context Bar has been removed and replaced with Global Navigation Component - [Global Navigation Component](/components/global-navigation)
 - `slsd-is-recording` class was not in use.
+- Removed inverse and state themes from examples to provide clarity of usage.

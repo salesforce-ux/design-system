@@ -1,8 +1,9 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: blur-focus
-    description:
+    class: has-blur-focus
+    description: Blur focus is an accessibility class that will add a blurred border to an element when it is focused.
+    applied: any element
   -
     class: type-focus
     description: Creates a faux link with interactions

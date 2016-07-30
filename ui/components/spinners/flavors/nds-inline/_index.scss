@@ -1,0 +1,31 @@
+.#{$nds-prefix}inline-spinner_container {
+	height: 100%;
+	width: 100%;
+	display: table;
+
+	.#{$nds-prefix}inline-spinner{
+  	display: table-cell;
+  	text-align: center;
+  	vertical-align: middle;
+
+    .#{$nds-prefix}spinner--inline {
+      position: static;
+      transform: translate(-100%, 0%) rotate(90deg);
+      height: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .#{$css-prefix}spinner--small {
+    	height: 2.5rem;
+    }
+
+    .#{$css-prefix}spinner--medium {
+      height: 4.0rem;
+    }
+
+    .#{$css-prefix}spinner--large {
+      height: 5.5rem;
+    }
+  }
+}

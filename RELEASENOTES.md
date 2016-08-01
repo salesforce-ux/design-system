@@ -12,13 +12,13 @@ The following issues have now been resolved:
 - Card a11y fixes
   - Card semantically changed to an `article`
   - Card header semantically changed to a `header`
-  - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
-  - Wrap card header text in an `<h2>`
-- Fix label for / textarea id mismatch in form textarea example
-- Fix modal close button styling so the focus halo no longer overlaps with the modal body
+  - Added `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
+  - Wrapped card header text in an `<h2>`
+- Fixed label for / textarea id mismatch in form textarea example
+- Fixed modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
 - Added an example usage of `slds-table--striped` in the basic data table example
-- Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found.
+- Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
 - Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)  

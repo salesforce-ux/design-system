@@ -3,7 +3,8 @@
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
-## [Unreleased]
+<!--## [Unreleased]-->
+## Release [2.0.3] - August 1, 2016
 
 **FIXED**
 
@@ -12,15 +13,20 @@ The following issues have now been resolved:
 - Card a11y fixes
   - Card semantically changed to an `article`
   - Card header semantically changed to a `header`
-  - Add `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
-  - Wrap card header text in an `<h2>`
-- Fix label for / textarea id mismatch in form textarea example
-- Fix modal close button styling so the focus halo no longer overlaps with the modal body
+  - Added `aria-haspopup="true"` to action overflow button since it invokes a dropdown menu
+  - Wrapped card header text in an `<h2>`
+- Fixed label for / textarea id mismatch in form textarea example
+- Fixed modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
 - Added an example usage of `slds-table--striped` in the basic data table example
-- Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found.
+- Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
+- Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)
+
+**CHANGES**
+
+- The Sass file architecture was reorganized for better maintainability - [see commit de2dc7f](https://github.com/salesforce-ux/design-system-internal/commit/de2dc7f6bd5aff31998fb43254d438ec9cec8dc3) for a full breakdown of changes
 
 ## Release [2.0.2] - June 16, 2016
 
@@ -486,7 +492,7 @@ The following features are being marked as deprecated in this release and will b
 
 ## Site Update - October 20, 2015
 
-- Fixed issues when installing with NPM 3
+- Fixed issues when installing with npm 3
 - Updated Voice and Tone guidelines
 
 ## Site Update - October 5th, 2015
@@ -572,7 +578,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.0.2...summer-16
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.0.3...summer-16
+[2.0.3]: https://github.com/salesforce-ux/design-system/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.5...v2.0.1
 [1.0.5]: https://github.com/salesforce-ux/design-system/compare/v1.0.4...v1.0.5

@@ -22,7 +22,11 @@ The following issues have now been resolved:
 - Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
-- Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)  
+- Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)
+
+**CHANGES**
+
+- The Sass file architecture was reorganized for better maintainability - [see commit de2dc7f](https://github.com/salesforce-ux/design-system-internal/commit/de2dc7f6bd5aff31998fb43254d438ec9cec8dc3) for a full breakdown of changes
 
 ## Release [2.0.2] - June 16, 2016
 

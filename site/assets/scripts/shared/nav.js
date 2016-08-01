@@ -39,7 +39,8 @@ export const updateScrollSpy = (() => {
     instances.forEach(instance => {
       const anchor = instance.anchors.reduce((currentAnchor, anchor) =>
         y >= anchor.top - 20 ? anchor : currentAnchor, instance.anchors[0]);
-      if (anchor !== instance.currentAnchor) {
+      // anchor is not present when asking for a prototype
+      if (anchor && anchor !== instance.currentAnchor) {
         instance.currentAnchor = anchor;
         instance.anchors.forEach(anchor => {
           setClassName(anchor.linkNode.parentElement, {

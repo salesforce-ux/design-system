@@ -42,6 +42,7 @@ export default (
 
 
       <div className={pf('grid grid--pull-padded wrap')}>
+
         <div className={pf('col--padded size--1-of-1 large-size--1-of-2 small-order--1 large-order--2')}>
           <h2 className={pf('site-text-heading--large p-top--xx-large')}>
             Designers
@@ -88,31 +89,27 @@ export default (
               steps&nbsp;below.
             </li>
           </ol>
-        </div>
-      </div>
 
-      <h3 className="site-text-heading--label">Lightning</h3>
+          <h3 className="site-text-heading--label">Lightning</h3>
 
-      <p>
-        Get started with the Lightning Design System
-        on <a href="/platforms/lightning">Lightning</a>. Please be careful to
-        pay attention to the specific requirements for the Lightning
-        technology you are&nbsp;using:
-      </p>
+          <p>
+            Get started with the Lightning Design System
+            on <a href="/platforms/lightning">Lightning</a>. Please be careful to
+            pay attention to the specific requirements for the Lightning
+            technology you are&nbsp;using:
+          </p>
 
-      <ul>
-        <li>Lightning&nbsp;Experience</li>
+          <ul>
+            <li>Lightning&nbsp;Experience</li>
 
-        <li>Salesforce1</li>
+            <li>Salesforce1</li>
 
-        <li>Stand-alone Lightning&nbsp;app</li>
+            <li>Stand-alone Lightning&nbsp;app</li>
 
-        <li>Lightning Out&nbsp;component</li>
-      </ul>
+            <li>Lightning Out&nbsp;component</li>
+          </ul>
 
-      <div className={pf('grid grid--pull-padded wrap')}>
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
-          <h3 className={pf('site-text-heading--label p-top--xx-large')}>
+          <h3 className={pf('site-text-heading--label')}>
             Visualforce
           </h3>
 
@@ -120,10 +117,7 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/visualforce">Visualforce</a>.
           </p>
-        </div>
-
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
-          <h3 className={pf('site-text-heading--label p-top--xx-large')}>
+          <h3 className={pf('site-text-heading--label')}>
             Heroku
           </h3>
 
@@ -131,8 +125,12 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/heroku">Heroku</a>.
           </p>
+      
         </div>
       </div>
+
     </div>
+
+
   </PageBody>
 );

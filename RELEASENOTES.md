@@ -20,7 +20,7 @@ The following issues have now been resolved:
 - Added an example usage of `slds-table--striped` in the basic data table example
 - Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found.
 - Added a title attribute to the truncation example
-- Changed status of single-line truncation to dev-ready
+- Changed status of single-line truncation to dev-ready  
 
 ## Release [2.0.2] - June 16, 2016
 
@@ -486,7 +486,7 @@ The following features are being marked as deprecated in this release and will b
 
 ## Site Update - October 20, 2015
 
-- Fixed issues when installing with NPM 3
+- Fixed issues when installing with npm 3
 - Updated Voice and Tone guidelines
 
 ## Site Update - October 5th, 2015

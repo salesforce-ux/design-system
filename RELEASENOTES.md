@@ -20,7 +20,8 @@ The following issues have now been resolved:
 - Added an example usage of `slds-table--striped` in the basic data table example
 - Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found.
 - Added a title attribute to the truncation example
-- Changed status of single-line truncation to dev-ready  
+- Changed status of single-line truncation to dev-ready
+- Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)  
 
 ## Release [2.0.2] - June 16, 2016
 

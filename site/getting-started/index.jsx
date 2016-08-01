@@ -20,7 +20,7 @@ export default (
       <p className="site-text-introduction">
         The Salesforce Lightning Design System includes the resources to
         create user interfaces consistent with the Salesforce Lightning
-        princples, design language, and best practices. Rather than focusing
+        principles, design language, and best practices. Rather than focusing
         on pixels, developers can focus on application logic,
         while&nbsp;designers can focus on user experience, interactions,
         and&nbsp;flows.
@@ -125,7 +125,7 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/heroku">Heroku</a>.
           </p>
-      
+
         </div>
       </div>
 

@@ -17,7 +17,7 @@ export default (
 <div className="demo-only">
   <section className={pf('clearfix')}>
     <div className={pf('float--left')}>
-      <p>I'm floooaaaating</p>
+      <p>I’m floooaaaating</p>
     </div>
   </section>
 </div>

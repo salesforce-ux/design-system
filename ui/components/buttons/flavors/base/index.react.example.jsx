@@ -101,22 +101,22 @@ export let states = [
   {
     id: 'button',
     label: 'Reset',
-    element: <Reset />,
+    element: <Reset />
   },
   {
     id: 'button-neutral',
     label: 'Neutral',
-    element: <Neutral />,
+    element: <Neutral />
   },
   {
     id: 'button-neutral-disabled',
     label: 'Neutral disabled',
-    element: <NeutralDisabled />,
+    element: <NeutralDisabled />
   },
   {
     id: 'button-neutral-icon-left',
     label: 'Neutral with left icon',
-    element: <NeutralIconLeft />,
+    element: <NeutralIconLeft />
   },
   {
     id: 'button-neutral-icon-right',

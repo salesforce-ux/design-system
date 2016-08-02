@@ -258,7 +258,6 @@ export const getExampleElement = (example, options) => {
   return defaultElement;
 };
 
-
 /**
  * Return a transform stream that converts JSX to HTML
  *

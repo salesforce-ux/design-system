@@ -73,8 +73,8 @@ export default (
         <p>
           If you&rsquo;re interested in a more in-depth tutorial check
           out <strong><a href={g.herokuLightingReactAppUrl[0].url} target="_blank">Christophe Coenraets&rsquo; GitHub project</a></strong>.
-          His project is a reference application built with the
-          {g.displayName}, React, Node, Postgres, and Heroku. For a
+          His project is a reference application built with the {g.displayName},
+          React, Node, Postgres, and Heroku. For a
           static example, please continue with the steps below!
         </p>
 
@@ -166,7 +166,7 @@ license: (ISC)
         </div>
 
         <Heading type="h2" id="step-2-install-node-dependencies" className="site-text-heading--large">Step 2: Install node dependencies - Express</Heading>
-        <p>Use NPM to install Express. While in your project folder, install express via NPM.</p>
+        <p>Use npm to install Express. While in your project folder, install express via npm.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`
 $ npm install express --save

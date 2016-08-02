@@ -281,7 +281,8 @@ export let states = [
             <RowDataStatic navigationModeTabIndex="0" />
           </tbody>
         </Table>
-      </Container>
+      </Container>,
+    description: 'Example state description for `.{{cssPrefix}}data-table-inline-edit`'
   },
   {
     id: 'data-table-inline-table-matte',

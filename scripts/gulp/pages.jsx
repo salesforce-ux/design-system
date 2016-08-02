@@ -29,6 +29,23 @@ import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
 
+import globals from 'app_modules/global';
+import markdown from 'markdown-it';
+
+const md = markdown({
+  html: true,
+  linkify: true
+});
+
+const renderMarkdown = string => {
+  if (string) return md.render(replaceGlobals(string).trim()).replace(/\r?\n|\r/g, '');
+};
+
+const replaceGlobals = string =>
+  string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
+    return globals[p1] || p1;
+  });
+
 /**
  * Return true if a file path contains a directory prefixed with an underscore
  *
@@ -128,7 +145,7 @@ export const renderExample = element => {
  * @param {string} html
  * @returns {string}
  */
-export const wrapExample = (flavor, html, script = '') => {
+export const wrapExample = (flavor, state, html, script = '', md) => {
   const markupId = crypto.createHash('sha1').update('markup').digest('hex');
   return `
 <!DOCTYPE html>
@@ -181,6 +198,17 @@ ${html}
       });
     }
     updatePreviewHeight();
+    // Add per-state description to the iframe
+    function updateStateDescription () {
+      parent.__eventQueue.push({
+        name: 'component:iframe:updateStateDescription',
+        data: {
+          flavor: '${flavor.uid}',
+          desc: '${md}'
+        }
+      });
+    }
+    updateStateDescription();
     window.addEventListener('resize', updatePreviewHeight);
     // Fix SVG
     parent.__eventQueue.push({
@@ -229,6 +257,7 @@ export const getExampleElement = (example, options) => {
   }
   return defaultElement;
 };
+
 
 /**
  * Return a transform stream that converts JSX to HTML
@@ -298,7 +327,7 @@ export const gulpRenderComponentPage = () =>
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, renderExample(element), state.script)
+                  wrapExample(flavor, state, renderExample(element), state.script, renderMarkdown(state.description))
                 ),
                 base: __PATHS__.site
               }));

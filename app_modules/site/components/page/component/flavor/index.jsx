@@ -132,6 +132,7 @@ class ComponentFlavor extends React.Component {
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
             {this.renderCode()}
+            {this.renderDesc()}
             {this.renderInfo()}
           </div>
         </div>
@@ -272,6 +273,15 @@ class ComponentFlavor extends React.Component {
           initialView={this.state.initialView} />
       );
     });
+  }
+
+  renderDesc() {
+    const { flavor } = this.props;
+
+    return (
+      <div
+        id={`desc-${flavor.uid}`} />
+    );
   }
 
   renderCode() {

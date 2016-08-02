@@ -26,7 +26,7 @@ The following issues have now been resolved:
 
 **CHANGES**
 
-- The Sass file architecture was reorganized for better maintainability - [see commit de2dc7f](https://github.com/salesforce-ux/design-system-internal/commit/de2dc7f6bd5aff31998fb43254d438ec9cec8dc3) for a full breakdown of changes
+- The Sass file architecture was reorganized for better maintainability - [see commit de2dc7f](https://github.com/salesforce-ux/design-system/commit/de2dc7f6bd5aff31998fb43254d438ec9cec8dc3) for a full breakdown of changes
 
 ## Release [2.0.2] - June 16, 2016
 

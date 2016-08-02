@@ -15,10 +15,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 const JumpAnchor = (props) =>
   <span
     data-js-jump-anchor={props.scrollSpyActive || null}
-    className="site-jump-anchor"
-    id={props.id}
-
-    data-docsearch-level={props.children ? props.level : null}>
+    className={`site-jump-anchor ${props.children ? `docsearch-level-${props.level}` : ''}`}
+    id={props.id}>
     {props.children ? <span className={pf('assistive-text')} role="presentation">{props.children}</span> : null}
   </span>;
 

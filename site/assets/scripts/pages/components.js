@@ -51,7 +51,7 @@ const highlight = (() => {
  * @param {string} flavor
  * @param {string} desc
  */
-const updateComponentDescription = ({ flavor, desc }) => {
+const updateComponentPreviewDescription = ({ flavor, desc }) => {
   fastdom.mutate(() => {
     document.getElementById(`desc-${flavor}`).innerHTML = desc;
     updateScrollSpy();
@@ -167,8 +167,8 @@ export default () => ({
     listen_event: emitter => {
       emitter.on('component:iframe:updatePreviewMarkup',
         updateComponentPreviewMarkup);
-      emitter.on('component:iframe:updateStateDescription',
-        updateComponentDescription);
+      emitter.on('component:iframe:updatePreviewDescription',
+        updateComponentPreviewDescription);
       emitter.on('component:iframe:updatePreviewHeight',
         updateComponentPreviewHeight);
       emitter.on('component:iframe:updatePreviewSVG',

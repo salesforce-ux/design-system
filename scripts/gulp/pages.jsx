@@ -38,7 +38,7 @@ const md = markdown({
 });
 
 const renderMarkdown = string => {
-  if (string) return md.render(replaceGlobals(string).trim()).replace(/\r?\n|\r/g, '');
+  return string ? md.render(replaceGlobals(string).trim()).replace(/\r?\n|\r/g, '') : '';
 };
 
 const replaceGlobals = string =>
@@ -142,10 +142,13 @@ export const renderExample = element => {
  * in the JavaScript so that <script> tags can be used in the example markup
  *
  * @param {object} flavor
+ * @param {object} state
  * @param {string} html
+ * @param {string} script
+ * @param {string} desc
  * @returns {string}
  */
-export const wrapExample = (flavor, state, html, script = '', md) => {
+export const wrapExample = (flavor, state, html, script = '', desc) => {
   const markupId = crypto.createHash('sha1').update('markup').digest('hex');
   return `
 <!DOCTYPE html>
@@ -201,10 +204,10 @@ ${html}
     // Add per-state description to the iframe
     function updateStateDescription () {
       parent.__eventQueue.push({
-        name: 'component:iframe:updateStateDescription',
+        name: 'component:iframe:updatePreviewDescription',
         data: {
           flavor: '${flavor.uid}',
-          desc: '${md}'
+          desc: '${desc}'
         }
       });
     }

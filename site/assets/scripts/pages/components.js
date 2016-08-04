@@ -11,39 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import fastdom from 'fastdom';
 import Status from 'app_modules/site/util/component/status';
-import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
 import { set as setPreference } from '../shared/preferences';
 
 import { $, setClassName } from '../framework/dom';
 import { updateScrollSpy } from '../shared/nav';
-
-/**
- * Return a string of highlighed HTML
- */
-const highlight = (() => {
-  // Remove wrapping tag if it has the ".demo-only" class in it
-  // Note: this will also remove other classes too on that tag! :)
-  const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
-  const cache = {};
-  return code => {
-    code = code.trim().replace(demoPattern, (match, tag, content) => content);
-    // Remove uncessary leading whitespace so code is flush left
-    const lines = code.split('\n');
-    const firstLine = lines[0].length === 0 ? lines[1] : '';
-    const offsetMatch = firstLine.match(/^\s*/);
-    const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-    // Cache
-    let cached = cache[codeTrimmed];
-    if (cached) return cached;
-    cached = cache[codeTrimmed] = Prism.highlight(
-      codeTrimmed,
-      Prism.languages.markup
-    );
-    return cached;
-  };
-})();
 
 /**
  * Update a flavor's markup
@@ -54,7 +26,7 @@ const highlight = (() => {
  */
 const updateComponentPreview = ({ flavor, html, description }) => {
   fastdom.mutate(() => {
-    document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
+    document.getElementById(`code-${flavor}`).innerHTML = html;
     document.getElementById(`description-${flavor}`).innerHTML = description;
     updateScrollSpy();
   });

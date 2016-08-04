@@ -21,8 +21,10 @@ import path from 'path';
 import beautify from 'js-beautify';
 import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
+import Prism from 'app_modules/site/vendor/prism';
 import through from 'through2';
 import crypto from 'crypto';
+import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
@@ -128,13 +130,11 @@ export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') =
 <body>
 ${html}
 <script type="text/javascript">
-  ${script}
+${script}
 </script>
-<script type="text/template" id="${markupId}">
-  ${html}
-</script>
+<script type="text/template" id="${markupId}">${highlightMarkup(html)}</script>
 <script type="text/template" id="${descriptionId}">
-  ${descriptionMarkup}
+${descriptionMarkup}
 </script>
 <script>
   (function() {
@@ -212,7 +212,7 @@ export const getExampleElementAndDescription = (example, options) => {
   if (!defaultElement && _.isArray(example.states) && example.states.length) {
     if (React.isValidElement(example.states[0].element)) {
       defaultElement = example.states[0].element;
-      defaultDescription = 'description' in example.states[0] ? example.states[0].description : '';
+      defaultDescription = ('description' in example.states[0]) ? example.states[0].description : '';
     }
   }
   if (!defaultElement) {
@@ -309,7 +309,7 @@ export const gulpRenderComponentPage = () =>
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, state, state.script, renderMarkdownAndReplaceGlobals(state.description))
+                  wrapExample(flavor, renderExample(element), state.script, renderMarkdownAndReplaceGlobals(state.description))
                 ),
                 base: __PATHS__.site
               }));

@@ -68,12 +68,6 @@ const addInfo = component => {
     };
   });
 
-  getIndex(component.path, 'table.md', indexPath => {
-    component.info.table = {
-      __html: getMarkdown(indexPath)
-    };
-  });
-
   getIndex(component.path, 'table.yml', indexPath => {
     component.info.tableYaml = getYaml(indexPath);
   });

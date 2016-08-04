@@ -106,7 +106,7 @@ export default React.createClass({
 
   renderComponentOverviewLink() {
     let info = this.props.component.info;
-    if (info.table || info.tableYaml) {
+    if (info.tableYaml) {
       return (
         <div className={pf('align-middle')}>
           <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
@@ -129,8 +129,6 @@ export default React.createClass({
     const { component } = this.props;
     if (component.info.tableYaml) {
       return <TableYAML data={component.info.tableYaml} />;
-    } else if (component.info.table) {
-      return <div className="site-text-longform" dangerouslySetInnerHTML={component.info.table}/>;
     } else {
       return null;
     }

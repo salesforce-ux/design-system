@@ -23,28 +23,13 @@ import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import through from 'through2';
 import crypto from 'crypto';
+import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
 import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
 
-import globals from 'app_modules/global';
-import markdown from 'markdown-it';
-
-const md = markdown({
-  html: true,
-  linkify: true
-});
-
-const renderMarkdown = string => {
-  return string ? md.render(replaceGlobals(string).trim()).replace(/\r?\n|\r/g, '') : '';
-};
-
-const replaceGlobals = string =>
-  string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
-    return globals[p1] || p1;
-  });
 
 /**
  * Return true if a file path contains a directory prefixed with an underscore
@@ -120,14 +105,14 @@ export const renderExample = element => {
  * in the JavaScript so that <script> tags can be used in the example markup
  *
  * @param {object} flavor
- * @param {object} state
  * @param {string} html
  * @param {string} script
- * @param {string} desc
+ * @param {string} descriptionMarkup
  * @returns {string}
  */
-export const wrapExample = (flavor, state, html, script = '', desc) => {
+export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') => {
   const markupId = crypto.createHash('sha1').update('markup').digest('hex');
+  const descriptionId = `description-${markupId}`;
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -151,6 +136,9 @@ ${html}
 <script type="text/template" id="${markupId}">
   ${html}
 </script>
+<script type="text/template" id="${descriptionId}">
+  ${descriptionMarkup}
+</script>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -160,10 +148,11 @@ ${html}
     // Update the markup
     if (!/initial/.test(window.location.search)) {
       parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewMarkup',
+        name: 'component:iframe:updatePreview',
         data: {
           flavor: '${flavor.uid}',
-          html: document.getElementById('${markupId}').textContent
+          html: document.getElementById('${markupId}').textContent,
+          description: document.getElementById('${descriptionId}').textContent
         }
       });
     }
@@ -179,17 +168,6 @@ ${html}
       });
     }
     updatePreviewHeight();
-    // Add per-state description to the iframe
-    function updateStateDescription () {
-      parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewDescription',
-        data: {
-          flavor: '${flavor.uid}',
-          desc: '${desc}'
-        }
-      });
-    }
-    updateStateDescription();
     window.addEventListener('resize', updatePreviewHeight);
     // Fix SVG
     parent.__eventQueue.push({
@@ -205,10 +183,11 @@ ${html}
 /**
  * Return the example element for the current flavor
  *
+ * @param {object} example
  * @param {object} options
  * @returns {ReactElement|null}
  */
-export const getExampleElement = (example, options) => {
+export const getExampleElementAndDescription = (example, options) => {
   options = _.defaults({}, options, {
     // The keys (in order) that will be checked for a ReactElement
     keys: ['preview', 'default'],
@@ -217,6 +196,8 @@ export const getExampleElement = (example, options) => {
     // The state to be rendered
     state: null
   });
+  let defaultDescription = '';
+
   // Get the first valid ReactElement
   let defaultElement = _(options.keys)
     .filter(key => _.has(example, key))
@@ -224,19 +205,38 @@ export const getExampleElement = (example, options) => {
     .filter(React.isValidElement)
     .first();
   // Exit early if no state is needed
-  if (options.renderState === false) return defaultElement;
+  if (options.renderState === false) {
+    return {
+      element: defaultElement,
+      description: ''
+    };
+  }
   // If no element was found, check to see if states exist
   if (!defaultElement && _.isArray(example.states) && example.states.length) {
     if (React.isValidElement(example.states[0].element)) {
       defaultElement = example.states[0].element;
+      defaultDescription = 'description' in example.states[0] ? example.states[0].description : '';
     }
   }
-  if (!defaultElement) return null;
-  if (!options.state) return defaultElement;
-  if (React.isValidElement(options.state.element)) {
-    return options.state.element;
+  if (!defaultElement) {
+    return {
+      element: null,
+      description: ''
+    };
   }
-  return defaultElement;
+  if (!options.state) {
+    return {
+      element: defaultElement,
+      description: defaultDescription
+    };
+  }
+  if (React.isValidElement(options.state.element)) {
+    defaultElement = options.state.element;
+  }
+  return {
+    element: defaultElement,
+    description: defaultDescription
+  };
 };
 
 /**
@@ -277,14 +277,16 @@ export const gulpRenderComponentPage = () =>
       component.flavors.forEach(flavor => {
         let example = tryRequire(`ui/${flavor.path}/index.react.example.jsx`);
         if (example) {
-          const exampleElement = getExampleElement(example);
-          const exampleCodeElement = getExampleElement(example, {
+          const exampleElement = getExampleElementAndDescription(example).element;
+          const exampleDescription = getExampleElementAndDescription(example).description;
+          const exampleCodeElement = getExampleElementAndDescription(example, {
             keys: ['code', 'default'],
             renderState: false
-          });
+          }).element;
           flavor.example = example;
           flavor.exampleMarkup = renderExample(exampleCodeElement
             ? exampleCodeElement : exampleElement);
+          flavor.exampleDescription = exampleDescription;
         }
       });
       // Render example markup for each flavor and push a corresponding HTML
@@ -297,24 +299,27 @@ export const gulpRenderComponentPage = () =>
           if (flavor.example.states) {
             // Push a new file for each state
             flavor.example.states.forEach((state, index) => {
-              const element = getExampleElement(flavor.example, { state });
+              const element = getExampleElementAndDescription(flavor.example, { state }).element;
               ['id', 'label'].forEach(key => {
                 invariant(
                   _.isString(state[key]),
                   `state ${index} of "${flavor.uid}" is missing property "${key}"`
                 );
               });
+              if (!('description' in state)) {
+                state.description = '';
+              }
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, state, renderExample(element), state.script, renderMarkdown(state.description))
+                  wrapExample(flavor, state, state.script, renderMarkdownAndReplaceGlobals(state.description))
                 ),
                 base: __PATHS__.site
               }));
             });
           } else {
             // No states were found, just get the single example
-            const element = getExampleElement(flavor.example);
+            const element = getExampleElementAndDescription(flavor.example).element;
             if (element) {
               // Push a new file for the single example
               this.push(new gutil.File({

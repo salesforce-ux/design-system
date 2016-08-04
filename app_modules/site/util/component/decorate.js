@@ -14,13 +14,9 @@ import fs from 'fs';
 import jsYaml from 'js-yaml';
 import path from 'path';
 import markdown from 'markdown-it';
+import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import globals from 'app_modules/global';
-
-const md = markdown({
-  html: true,
-  linkify: true
-});
 
 /**
  * Check of a directory has a file of a specified type
@@ -60,13 +56,8 @@ const getIndex = (dir, ext, success, error) =>
 const addInfo = component => {
   component.info = {};
 
-  const replaceGlobals = string =>
-    string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
-      return globals[p1] || p1;
-    });
-
   const getMarkdown = indexPath =>
-    md.render(replaceGlobals(fs.readFileSync(indexPath).toString()));
+    renderMarkdownAndReplaceGlobals(fs.readFileSync(indexPath).toString());
 
   const getYaml = indexPath =>
     jsYaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));

@@ -46,27 +46,16 @@ const highlight = (() => {
 })();
 
 /**
- * Update a flavor's description
- *
- * @param {string} flavor
- * @param {string} desc
- */
-const updateComponentPreviewDescription = ({ flavor, desc }) => {
-  fastdom.mutate(() => {
-    document.getElementById(`desc-${flavor}`).innerHTML = desc;
-    updateScrollSpy();
-  });
-};
-
-/**
  * Update a flavor's markup
  *
  * @param {string} flavor
- * @param {string} code
+ * @param {string} html
+ * @param {string} description
  */
-const updateComponentPreviewMarkup = ({ flavor, html }) => {
+const updateComponentPreview = ({ flavor, html, description }) => {
   fastdom.mutate(() => {
     document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
+    document.getElementById(`description-${flavor}`).innerHTML = description;
     updateScrollSpy();
   });
 };
@@ -165,10 +154,8 @@ const updateFormFactor = ({tab, panel}) => {
 export default () => ({
   hooks: {
     listen_event: emitter => {
-      emitter.on('component:iframe:updatePreviewMarkup',
-        updateComponentPreviewMarkup);
-      emitter.on('component:iframe:updatePreviewDescription',
-        updateComponentPreviewDescription);
+      emitter.on('component:iframe:updatePreview',
+        updateComponentPreview);
       emitter.on('component:iframe:updatePreviewHeight',
         updateComponentPreviewHeight);
       emitter.on('component:iframe:updatePreviewSVG',

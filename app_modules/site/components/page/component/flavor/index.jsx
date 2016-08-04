@@ -16,6 +16,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
+import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import Heading from 'app_modules/site/components/page/heading';
 import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
@@ -201,6 +202,20 @@ class ComponentFlavor extends React.Component {
     ) : null;
   }
 
+  renderDesc() {
+    const { flavor } = this.props;
+    const exampleDescriptionMarkup = flavor.exampleDescription ?
+      renderMarkdownAndReplaceGlobals(flavor.exampleDescription)
+        .trim()
+        .replace(/\r?\n|\r/g, '')
+        .replace(/<h3/g, '<h3 class="site-text-heading--medium"') : '';
+
+    return <div
+        id={`description-${flavor.uid}`}
+        className={pf('text-longform')}
+        dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup ? exampleDescriptionMarkup : null}} />;
+  }
+
   renderPreview() {
     if (!this.props.flavor.example) return null;
     const { flavor } = this.props;
@@ -273,15 +288,6 @@ class ComponentFlavor extends React.Component {
           initialView={this.state.initialView} />
       );
     });
-  }
-
-  renderDesc() {
-    const { flavor } = this.props;
-
-    return (
-      <div
-        id={`desc-${flavor.uid}`} />
-    );
   }
 
   renderCode() {

@@ -58,23 +58,6 @@ export const excludeUnderscore = file =>
     .some(part => /^_/.test(part));
 
 /**
- * Return a props object with only props prefixed and then strip the prefix
- *
- * @params {object} props
- * @params {string} prefix
- * @returns {object}
- */
-export const getPrefixedProps = (props, prefix) => {
-  assert.ok(_.isObject(props), 'props must be an object');
-  assert.ok(_.isString(prefix), 'prefix must be a string');
-  const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
-  const prefixedProps = _.pick(props, _.keys(props).filter(key => pattern.test(key)));
-  return _.mapKeys(prefixedProps, (value, key) => {
-    return _.camelCase(key.replace(pattern, ''));
-  });
-};
-
-/**
  * Try to requre a module
  *
  * @param {object} obj
@@ -113,11 +96,7 @@ export const renderPage = (element, props) => {
   const pageBody = React.cloneElement(element, _.assign({}, props));
   // Create page element
   const page = React.createElement(Page,
-    // Get any "page" specific props from the pageBody
-    _.assign(
-      getPrefixedProps(pageBody.props, 'page'),
-      { contentHTML: renderToStaticMarkup(pageBody) }
-    )
+    { contentHTML: renderToStaticMarkup(pageBody) }
   );
   // Construct the HTML
   return `<!DOCTYPE html>${renderToStaticMarkup(page)}`;

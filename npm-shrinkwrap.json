@@ -2858,7 +2858,12 @@
       "version": "0.6.2"
     },
     "redent": {
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "dependencies": {
+        "strip-indent": {
+          "version": "1.0.1"
+        }
+      }
     },
     "reduce-component": {
       "version": "1.0.1"
@@ -3226,7 +3231,7 @@
       "version": "1.0.0"
     },
     "strip-indent": {
-      "version": "1.0.1"
+      "version": "2.0.0"
     },
     "strip-json-comments": {
       "version": "1.0.4"

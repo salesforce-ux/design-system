@@ -57,7 +57,7 @@ export let GlobalHeader = props =>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
-          <img src="/assets/images/logo.svg" alt="" />
+          <img src="/assets/images/logo-noname.svg" alt="" />
         </div>
       </div>
       <div className={pf('global-header__item global-header__item--search')}>
@@ -72,17 +72,6 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center')}>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
-          { props.actions ? ActionsDropdown : null}
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
-        </li>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
-          { props.setup ? SetupDropdown : null}
-        </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
           <button className={pf('button')} title="person name" aria-haspopup="true">
             <span className={pf('avatar avatar--circle avatar--medium')}>
@@ -98,29 +87,8 @@ export let GlobalHeader = props =>
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'global-header',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ height: '60px' }}>
-        <GlobalHeader />
-      </div>
-  },
-  {
-    id: 'global-header-actions-active',
-    label: 'Global actions active',
-    element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader actions />
-      </div>
-  },
-  {
-    id: 'global-header-setup-active',
-    label: 'Setup active',
-    element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader setup />
-      </div>
-  }
-];
+export default (
+  <div className="demo-only" style={{ height: '60px' }}>
+    <GlobalHeader />
+  </div>
+);

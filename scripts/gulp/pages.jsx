@@ -55,8 +55,7 @@ const replaceGlobals = string =>
 export const excludeUnderscore = file =>
   file.relative
     .split(path.sep)
-    .filter(part => /^_/.test(part))
-    .reduce(() => true, false);
+    .some(part => /^_/.test(part));
 
 /**
  * Return a props object with only props prefixed and then strip the prefix

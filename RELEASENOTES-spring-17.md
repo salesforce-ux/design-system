@@ -27,7 +27,8 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
--
+- Global actions icon on global header updated to have a background color
+- Change global header icon's color and size
 
 **FIXED**
 
@@ -45,4 +46,4 @@ The following features are being marked as deprecated in this release and will b
 
 The following features are being removed in this release:
 
-- 
+-

@@ -57,7 +57,7 @@ export let GlobalHeader = props =>
     <div className={pf('global-header grid grid--align-spread')}>
       <div className={pf('global-header__item')}>
         <div className={pf('global-header__logo')}>
-          <img src="/assets/images/logo.svg" alt="" />
+          <img src="/assets/images/logo-noname.svg" alt="" />
         </div>
       </div>
       <div className={pf('global-header__item global-header__item--search')}>
@@ -72,16 +72,39 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <ul className={pf('global-header__item grid grid--vertical-align-center')}>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.actions ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="add" assistiveText="Global Actions" />
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click p-around--xx-small'), props.actions ? pf('is-open'): null)}>
+          <ButtonIcon
+            className={pf('button--icon button--icon-small button--icon-container global-header__button--icon-actions')}
+            iconClassName={pf('global-header__icon-actions')}
+            hasPopup
+            symbol="add"
+            assistiveText="Global Actions" />
           { props.actions ? ActionsDropdown : null}
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.help ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="question" assistiveText="Help and Training" />
+          <ButtonIcon
+            className={pf('button--icon button--icon-container global-header__button--icon')}
+            iconClassName={pf('global-header__icon')}
+            hasPopup
+            symbol="question"
+            assistiveText="Help and Training" />
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
-          <ButtonIcon className={pf('button--icon-container')} hasPopup symbol="settings" assistiveText="Setup" />
+          <ButtonIcon
+            className={pf('button--icon button--icon-container global-header__button--icon')}
+            iconClassName={pf('global-header__icon')}
+            hasPopup
+            symbol="setup"
+            assistiveText="Setup" />
           { props.setup ? SetupDropdown : null}
+        </li>
+        <li className={className(pf('dropdown-trigger dropdown-trigger--click'), props.setup ? pf('is-open'): null)}>
+          <ButtonIcon
+            className={pf('button--icon button--icon-container global-header__button--icon')}
+            iconClassName={pf('global-header__icon')}
+            hasPopup
+            symbol="notification"
+            assistiveText="Setup" />
         </li>
         <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
           <button className={pf('button')} title="person name" aria-haspopup="true">

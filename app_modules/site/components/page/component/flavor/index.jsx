@@ -191,10 +191,6 @@ class ComponentFlavor extends React.Component {
   renderInfo() {
     const { flavor } = this.props;
 
-    if (flavor.info.markup) {
-      flavor.info.markup['__html'] = flavor.info.markup['__html'].replace(/<h3/g, '<h3 class="site-text-heading--medium"');
-    }
-
     return flavor.info.markup ? (
       <div
         className="slds-text-longform"
@@ -205,10 +201,7 @@ class ComponentFlavor extends React.Component {
   renderDesc() {
     const { flavor } = this.props;
     const exampleDescriptionMarkup = flavor.exampleDescription ?
-      renderMarkdownAndReplaceGlobals(flavor.exampleDescription)
-        .trim()
-        .replace(/\r?\n|\r/g, '')
-        .replace(/<h3/g, '<h3 class="site-text-heading--medium"') : '';
+      renderMarkdownAndReplaceGlobals(flavor.exampleDescription) : '';
 
     return <div
         id={`description-${flavor.uid}`}

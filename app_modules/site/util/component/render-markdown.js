@@ -17,10 +17,17 @@ const md = markdown({
   linkify: true
 });
 
-export const replaceGlobals = string =>
-  string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
+export const replaceGlobals = str =>
+  str.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
     return globals[p1] || p1;
   });
 
-export const renderMarkdownAndReplaceGlobals = markdown =>
+export const renderMarkdown = markdown =>
   md.render(replaceGlobals(markdown));
+
+export const renderMarkdownAndReplaceGlobals = markdown =>
+  renderMarkdown(markdown)
+    .trim()
+    .replace(/\r?\n|\r/g, '')
+    // Add a bit of formatting for the website
+    .replace(/<h3/g, '<h3 class="site-text-heading--medium"');

@@ -101,9 +101,6 @@ export const renderExample = element => {
  * Wrap example markup with additonal boilerplate to be properly
  * displayed in an iframe
  *
- * NOTE: The example markup is put inside a hidden <noscript> instead of stringified
- * in the JavaScript so that <script> tags can be used in the example markup
- *
  * @param {object} flavor
  * @param {string} html
  * @param {string} script

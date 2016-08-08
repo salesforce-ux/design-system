@@ -84,14 +84,16 @@ export const getActiveNavItems = (item, path) => {
 const utilities = {
   label: 'Utilities',
   children: getUI('utilities').map(component => ({
-    label: component.title
+    label: component.title,
+    status: component.status
   }))
 };
 
 const touch = {
   label: 'Touch',
   children: getUI('touch').map(component => ({
-    label: component.title
+    label: component.title,
+    status: component.status
   }))
 };
 

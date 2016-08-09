@@ -126,7 +126,7 @@ export default React.createClass({
   renderBody() {
     return (
       <body>
-        <div class="page-wrapper" dangerouslySetInnerHTML={{__html: this.props.contentHTML}} />
+        <div className="page-wrapper" dangerouslySetInnerHTML={{__html: this.props.contentHTML}} />
         {this.renderScripts()}
       </body>
     );

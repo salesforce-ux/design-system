@@ -59,7 +59,7 @@ const updateComponentPreviewMarkup = ({ flavor, html }) => {
 };
 
 /**
- * Update a flavor's markup
+ * Update a flavor's height
  *
  * @param {string} flavor
  * @param {number} height

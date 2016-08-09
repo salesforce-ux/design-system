@@ -9,7 +9,7 @@
 
 @include mq-medium-min {
   // scss-lint:disable IdSelector
-  #app > div {
+  .page-wrapper > div {
     display: flex;
     min-height: 100vh;
     flex-direction: column;

@@ -51,7 +51,7 @@ export let states = [
     id: 'attachment-file-with-image',
     label: 'File with image',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
@@ -64,7 +64,7 @@ export let states = [
     id: 'attachment-file-no-image',
     label: 'File with no image',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
@@ -77,7 +77,7 @@ export let states = [
     id: 'attachment-file-with-actions',
     label: 'File with actions',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}

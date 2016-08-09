@@ -59,7 +59,7 @@ export let states = [
     id: 'figure-card',
     label: 'Card',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
@@ -71,7 +71,7 @@ export let states = [
     id: 'figure-overlay',
     label: 'Overlay',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}

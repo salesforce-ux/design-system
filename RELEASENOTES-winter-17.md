@@ -11,8 +11,6 @@ The following site enhancements are now available:
 
 - New Checkbox Toggle guidelines under Data Entry section in [App Launcher Component](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
-- Button Icon component state navigation has been improved
-- Card component state navigation has been improved
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
 
 **NEW COMPONENTS AND VARIANTS**
@@ -21,7 +19,6 @@ The following components are now available:
 
 - App Launcher - [App Launcher Component](/components/app-launcher/)
 - Global Navigation - Standard context bar - [Global Navigation Component](/components/global-navigation)
-- Global Navigation - Console context tab bar - [Global Navigation Component](/components/global-navigation#context-tab-bar)
 - Global Header - [Global Header Component](/components/global-header)
 - Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
 - Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
@@ -33,8 +30,6 @@ The following components are now available:
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
 - Button Icon Error - [Button Icon Error](/components/buttons/#flavor-icon)
-- Compact variant for Data Tables - To be used for Console - [Compact Data Tables](/components/data-tables/#compact)
-- Compact variant for Cards - To be used for Console - [Compact Card](/components/cards/#base-compact)
 - Image Cards - [Figure Card Component](/components/images/#flavor-figure)
 - Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
 - Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical)

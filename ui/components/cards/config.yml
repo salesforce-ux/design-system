@@ -3,8 +3,6 @@ classBase: 'card'
 flavors:
   - base
   - base-narrow
-  - base-compact
   - related-list-with-tiles
   - related-list-with-table
   - related-list-narrow
-  - related-list-compact

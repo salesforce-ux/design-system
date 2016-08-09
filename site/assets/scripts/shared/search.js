@@ -18,8 +18,9 @@ if (globals.displaySearch) {
 
   o.addEventListener('load', function (e) {
     search = docsearch({
-      apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
-      indexName: 'lightningdesignsystem',
+      appId: 'B2KKG101RI',
+      apiKey: 'f289c1dd954797a3e57158c04a897d46',
+      indexName: 'winter-17',
       inputSelector: '#docsearch',
       autocompleteOptions,
       transformData: (hits) => {

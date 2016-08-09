@@ -158,4 +158,42 @@ $stencil-dark:  #a8b8d0 !default;
       right: 0;
     }
   }
+
+  &__line--red {
+
+    &,
+    &::before,
+    &::after {
+      background-color: #c23934;
+    }
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &--absolute-box {
+    position: absolute;
+    top: -0.25rem;
+    left: 0;
+    right: 0;
+    bottom: -0.25rem;
+    border: 1px solid #c23934;
+    margin-top: 0;
+  }
+}
+
+.docs-example {
+
+  ul,
+  ol,
+  p,
+  dl,
+  figure,
+  table {
+    margin: inherit; // If I'm using a component inside of the component docs
+  }
 }

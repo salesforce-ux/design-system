@@ -82,11 +82,11 @@ const SLDSLog = (hrtime = process.hrtime()) => message =>
   ].join(' '));
 
 /**
- * Return a debounced function that will start a task every wait seconds
+ * Return a debounced function that will start a task every [wait] seconds
  *
  * @param {string} task
- * @param {nuber} [wait]
- * @returns functions
+ * @param {int} [wait]
+ * @returns function
  */
 const debounceTask = (task, wait = 10000) =>
   _.debounce(() => gulp.start(task), wait, {
@@ -125,7 +125,7 @@ const siteMiddleware = (req, res, next) => {
   const query = req.query || {};
   const ext = path.extname(req.url);
   if (!ext || ext === '.html' && !query.iframe) {
-    // Remov <PageBody> from cache
+    // Remove <PageBody> from cache
     removeFromCache(require.resolve('app_modules/site/components/page/body'));
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
@@ -226,7 +226,7 @@ gulp.task('serve', () => {
 
   gulp.watch(watchPaths.sass, ['styles']);
 
-  // Only lint every 10s so they don't take CPU time away from compilation tasks
+  // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(
     watchPaths.js,
     debounceTask('lint:js')

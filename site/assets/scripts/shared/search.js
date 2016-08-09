@@ -18,9 +18,9 @@ if (globals.displaySearch) {
 
   o.addEventListener('load', function (e) {
     search = docsearch({
-      appId: 'Z5ZLYCW20R',
-      apiKey: '44d94a34ce3e7ca25df5cc17651b0c14',
-      indexName: 'winter-17',
+      appId: 'B2KKG101RI',
+      apiKey: 'f289c1dd954797a3e57158c04a897d46',
+      indexName: 'winter17',
       inputSelector: '#docsearch',
       autocompleteOptions,
       transformData: (hits) => {

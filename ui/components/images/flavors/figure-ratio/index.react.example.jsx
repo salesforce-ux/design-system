@@ -23,7 +23,7 @@ export let states = [
     id: 'image-16-9',
     label: '16:9',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
@@ -35,7 +35,7 @@ export let states = [
     id: 'image-4-3',
     label: '4:3',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--4-by-3')}
@@ -47,7 +47,7 @@ export let states = [
     id: 'image-1-1',
     label: '1:1',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--1-by-1')}

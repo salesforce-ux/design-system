@@ -10,26 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import path from 'path';
+import theo from 'theo';
+import concat from 'gulp-concat';
+import zip from 'gulp-zip';
+import replace from 'gulp-replace';
 
-import './generate-icons';
-import './generate-release-notes';
-import './generate-tokens-zip';
-import './generate-tokens-components';
-import './generate-tokens';
-import './generate-ui-kit-zip';
-import './generate-ui';
-import './generate-examples';
-import './generate-whitelist';
-
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:tokens:zip',
-  'generate:tokens:components',
-  'generate:tokens',
-  'generate:ui-kit:zip',
-  'generate:ui',
-  'generate:examples',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
-]);
+gulp.task('generate:tokens:components', () =>
+  gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
+    .pipe(replace(/(\.\/)?aliases/g, path.resolve(__PATHS__.node_modules, '@salesforce-ux/design-tokens/tokens/force-base/aliases')))
+    .pipe(theo.plugins.transform('web'))
+    .pipe(theo.plugins.format('default.scss'))
+    .pipe(concat('component-tokens.default.scss'))
+    .pipe(gulp.dest(path.resolve(__PATHS__.generated)))
+);

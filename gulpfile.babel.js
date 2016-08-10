@@ -57,15 +57,20 @@ nconf
 const watchPaths = {
   sass: [
     'site/assets/styles/**/*.scss',
-    'ui/**/*.scss'
+    'ui/**/*.scss',
+    '.generated/*.scss'
   ],
   pages: [
-    'ui/**/*.{md,yml}'
+    'ui/**/*.{md,yml}',
+    '!ui/**/tokens/*.yml'
   ],
   js: [
     'app_modules/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     'site/**/*.{js,jsx}'
+  ],
+  tokens: [
+    'ui/**/tokens/*.yml'
   ]
 };
 
@@ -235,6 +240,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:components']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(

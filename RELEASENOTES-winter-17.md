@@ -86,11 +86,6 @@ The following issues have now been resolved:
   - Improve assistive text verbiage
   - Make multiple value field entirely clickable to invoke dropdown
 - Global header accessibility fixes
-  - Improve semantics of dropdown menus
-  - Apply `role=separator` to dropdown menu list items that do not have an actionable element
-  - Apply `role=presentation` to dropdown menu list items
-  - Changed `<p>` wrapping dropdown menu items text to `<span>`
-  - Dropdown menu items have a default `tabindex="-1"`, tab focused items change to a `tabindex="0"`
   - Modify tab order of global header actions
   - Add `title` attribute to global header actions
   - Change avatar wrapper from anchor to a button
@@ -100,6 +95,12 @@ The following issues have now been resolved:
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
   - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
   - Moved clear button to the right of the input to visually match tab order
+- Lookup/Global Header Search accessibility fixes
+  - Improve semantics of dropdown menus
+  - Apply `role=separator` to dropdown menu list items that do not have an actionable element
+  - Apply `role=presentation` to dropdown menu list items
+  - Changed `<p>` wrapping dropdown menu items text to `<span>`
+  - Dropdown menu items have a default `tabindex="-1"`, tab focused items change to a `tabindex="0"`
 - Utility bar accessibility fixes
   - Add landmark `role="footer"` to utility bar
   - Add `aria-label="Utility Bar"` description to utility bar
@@ -110,6 +111,8 @@ The following issues have now been resolved:
 - Files accessibility fixes
   - Fix invalid markup by moving button group outside of anchor
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
+- Card accessibility fixes
+  - Moved `<header>` element to only contain the card header text, rather than the text and overflow menu
 - Make primary labels of compound fields capital
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component

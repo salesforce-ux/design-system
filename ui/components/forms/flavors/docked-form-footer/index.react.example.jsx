@@ -56,7 +56,7 @@ export let states = [
           </button>
           <Button type="button" flavor="neutral">Cancel</Button>
           <Button type="button" flavor="brand">Save</Button>
-          <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', marginLeft: '-24px', transform: 'translate3d(-50%, 0, 0)' }}>
+          <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', marginLeft: '-16px', transform: 'translate3d(-50%, 0, 0)' }}>
             <ButtonIcon inverse className={pf('button--icon-inverse button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
             <div className={pf('popover__body text-longform')} id="dialog-description-01">
               <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>

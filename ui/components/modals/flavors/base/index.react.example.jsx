@@ -164,17 +164,17 @@ export let states = [
     element: <Large />
   },
   {
-    id: 'Directional',
+    id: 'directional',
     label: 'Directional',
     element: <Directional />
   },
   {
-    id: 'Headless',
+    id: 'headless',
     label: 'Header empty',
     element: <Headless />
   },
   {
-    id: 'Footless',
+    id: 'footless',
     label: 'Footer removed',
     element: <Footless />
   }

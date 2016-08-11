@@ -12,6 +12,7 @@ The following site enhancements are now available:
 - New Checkbox Toggle guidelines under Data Entry section in [App Launcher Component](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
+- Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icon)
 
 **NEW COMPONENTS AND VARIANTS**
 

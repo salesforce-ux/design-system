@@ -12,11 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
-import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -57,10 +56,10 @@ export default (
           </Button>
           <div className={pf('button--last')}>
             <ButtonIcon
-            flavor="icon-border-filled"
-            sprite="utility"
-            symbol="down"
-            assistiveText="More Actions" />
+              className={pf('button--icon-border-filled')}
+              symbol="down"
+              aria-haspopup="true"
+              assistiveText="More Actions" />
           </div>
         </div>
         {/* Close Button Group */}
@@ -74,46 +73,37 @@ export default (
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <div className={pf('dropdown-trigger dropdown-trigger--click m-left--x-small')} aria-expanded="false">
-          <Button flavor="icon-more" aria-haspopup="true">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-            <span className={pf('assistive-text')}>List View Controls</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-          </Button>
+          <ButtonIcon
+            className={pf('button--icon-more')}
+            symbol="settings"
+            hasDropdown
+            assistiveText="List View Controls" />
         </div>
         <Button className={pf('hide m-left--xx-small')} flavor="brand" aria-hidden="true">Save List</Button>
         <div className={pf('dropdown-trigger dropdown-trigger--click m-left--xx-small')} aria-expanded="false">
-          <Button flavor="icon-more" aria-haspopup="true">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-            <span className={pf('assistive-text')}>Displays</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-          </Button>
+          <ButtonIcon
+            className={pf('button--icon-more')}
+            symbol="table"
+            hasDropdown
+            assistiveText="Change view" />
         </div>
         <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="edit"
-              className={pf('m-left--xx-small')}
-              assistiveText="Edit List" />
-          <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="refresh"
-              assistiveText="Refresh" />
+          className={pf('m-left--xx-small button--icon-border')}
+          symbol="edit"
+          assistiveText="Edit List" />
+        <ButtonIcon
+          className={pf('m-left--xx-small button--icon-border')}
+          symbol="refresh"
+          assistiveText="Refresh" />
         <div className={pf('button-group')} role="group">
-          <StatefulClass>
-            <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="chart"
-              assistiveText="Charts" />
-          </StatefulClass>
-          <StatefulClass>
-            <ButtonIcon
-              flavor="icon-border"
-              sprite="utility"
-              symbol="filterList"
-              assistiveText="Filters" />
-          </StatefulClass>
+          <ButtonIcon
+            className={pf('button--icon-border')}
+            symbol="chart"
+            assistiveText="Charts" />
+          <ButtonIcon
+            className={pf('button--icon-border')}
+            symbol="filterList"
+            assistiveText="Filters" />
         </div>
       </div>
     </div>

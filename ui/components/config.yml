@@ -4,6 +4,7 @@ components:
   - badges
   - breadcrumbs
   - buttons
+  - button-icon
   - button-groups
   - cards
   - data-tables

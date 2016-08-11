@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -38,21 +38,9 @@ export default (
             <h2 id="dialogheading-id">New Email</h2>
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="minimize_window"
-              assistiveText="Minimize window" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="expand_alt"
-              assistiveText="Expand Composer" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="close"
-              assistiveText="Close" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
           </div>
         </header>
 
@@ -106,50 +94,41 @@ export default (
               </div>
               <div className={pf('button-group')} role="group">
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="bold"
                   assistiveText="Bold" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="italic"
                   assistiveText="Italic" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="underline"
                   assistiveText="Underline" />
               </div>
               <div className={pf('button-group')} role="group">
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="richtextnumberedlist"
                   assistiveText="Numbered List" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="richtextbulletedlist"
                   assistiveText="Bulleted List" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="left_align_text"
                   assistiveText="Left Align Text" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="center_align_text"
                   assistiveText="Center Align Text" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="right_align_text"
                   assistiveText="Right Align Text" />
                 <ButtonIcon
-                  flavor="icon-border-filled"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled')}
                   symbol="link"
                   assistiveText="Link" />
               </div>
@@ -164,28 +143,23 @@ export default (
 
           <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="link"
                 assistiveText="Attach File" />
             <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="insert_template"
                 assistiveText="Insert Template" />
             <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="insert_tag_field"
                 assistiveText="Insert HTML" />
             <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="preview"
                 assistiveText="Preview" />
             <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="delete"
                 assistiveText="Delete" />
             <Button flavor="brand">Send</Button>

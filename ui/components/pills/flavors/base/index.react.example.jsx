@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -29,7 +29,7 @@ export let Pill = props =>
     {props.children}
     {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
     : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className={pf('pill__remove')} flavor="icon" sprite="utility" symbol="close" assistiveText="Remove" />
+    <ButtonIcon className={pf('button--icon pill__remove')} symbol="close" assistiveText="Remove" />
   </span>;
 
 export let PillContainer = props =>

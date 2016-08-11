@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
@@ -74,10 +74,7 @@ let LookupSearchInput = props =>
 let LookupEntity = props =>
   <div className={className(pf('dropdown--trigger dropdown-trigger--click align-middle m-left--xx-small shrink-none'), props.showEntityDropdown ? pf('is-open') : null)}>
     <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-    <button className={pf('button button--icon button--icon-small')} aria-haspopup="true">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-      <span className={pf('assistive-text')}>Filter by object</span>
-    </button>
+    <ButtonIcon className={pf('button--icon button--icon-small')} symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
     { props.showEntityDropdown ?
       <Menu className={pf('dropdown--left')}>
         <MenuList>
@@ -178,6 +175,7 @@ export let Lookup = props => {
       { !props.selection ?
         <LookupSearchInput
           id={ uniqueId }
+          placeholder={ props.placeholder }
           typeahead={ props.typeahead }
           polymorphic={ props.polymorphic }
           showLookupDropdown={ props.showLookupDropdown }

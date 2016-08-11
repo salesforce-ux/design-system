@@ -14,10 +14,9 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -35,13 +34,11 @@ export default (
         </MediaObject>
       </div>
       <div className={pf('col no-flex grid align-top')}>
-        <StatefulClass>
-          <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
-            <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
-            <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
-            <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
-          </Button>
-        </StatefulClass>
+        <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
+          <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
+          <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
+          <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
+        </Button>
         <div className={pf('button-group')} role="group">
           <Button flavor="neutral">
             Edit
@@ -54,10 +51,10 @@ export default (
           </Button>
           <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
-              flavor="icon-border-filled"
-              sprite="utility"
+              className={pf('button--icon-border-filled')}
               symbol="down"
-              assistiveText="More" />
+              aria-haspopup="true"
+              assistiveText="More Actions" />
           </div>
         </div>
       </div>
@@ -73,10 +70,10 @@ export default (
         <p className={pf('text-title truncate m-bottom--xx-small')} title="Field2 (3)">
           Field 2 (3)
           <ButtonIcon
-            flavor="icon-bare"
-            iconFlavor="small"
-            sprite="utility"
+            className={pf('button--icon')}
+            iconClassName={pf('button__icon--small')}
             symbol="down"
+            aria-haspopup="true"
             assistiveText="More Actions" />
         </p>
         <p className={pf('text-body--regular')}>Multiple Values</p>

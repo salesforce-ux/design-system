@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -38,7 +38,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={pf('button--icon-border-filled')} symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
@@ -63,8 +63,7 @@ let Tile = props =>
         <Button flavor="neutral" className={pf('grow')}>Follow Up</Button>
         <Button flavor="neutral" className={pf('grow')}>Delete</Button>
         <ButtonIcon
-          flavor="icon-border-filled"
-          sprite="utility"
+          className={pf('button--icon-border-filled')}
           symbol="down"
           assistiveText="More Actions"/>
       </div>
@@ -82,10 +81,8 @@ let FormElementStatic = props =>
 let FormElementStaticInline = props =>
   <div className={pf('form-element hint-parent has-divider--bottom')}>
     <ButtonIcon
-      flavor="icon-bare"
-      className={pf('float--right')}
-      iconFlavor="hint,small"
-      sprite="utility"
+      className={pf('float--right button--icon button--icon-small')}
+      iconClassName={pf('button__icon--hint')}
       symbol="edit"
       assistiveText="Edit this Field"/>
     <span className={pf('form-element__label')}>{props.label}</span>
@@ -105,10 +102,8 @@ let FormElementStaticLonform = props =>
 let FormElementStaticLonformInline = props =>
   <div className={pf('form-element hint-parent has-divider--bottom')}>
     <ButtonIcon
-      flavor="icon-bare"
-      className={pf('float--right')}
-      iconFlavor="hint,small"
-      sprite="utility"
+      className={pf('float--right button--icon button--icon-small')}
+      iconClassName={pf('button__icon--hint')}
       symbol="edit"
       assistiveText="Edit this Field"/>
     <span className={pf('form-element__label')}>{props.label}</span>

@@ -11,10 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import Tooltip from 'ui/components/tooltips/index.react';
-import Lorem from 'react-lorem-component';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import Control from 'ui/components/lib/control/flavors/popover';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (

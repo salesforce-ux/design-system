@@ -13,10 +13,9 @@ import React from 'react';
 import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
-import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -38,9 +37,9 @@ export default (
           </Button>
           <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
-              flavor="icon-border-filled"
-              sprite="utility"
+              className={pf('button--icon-border-filled')}
               symbol="down"
+              aria-haspopup="true"
               assistiveText="More Actions" />
           </div>
         </div>
@@ -52,34 +51,27 @@ export default (
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
         <div className={pf('dropdown-trigger dropdown-trigger--click')} aria-expanded="false">
-          <Button flavor="icon-more" aria-haspopup="true">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-            <span className={pf('assistive-text')}>Table</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-          </Button>
-        </div>
-        <div className={pf('button-group m-left--xx-small')}>
-          <StatefulClass>
           <ButtonIcon
-            flavor="icon-border"
-            sprite="utility"
+            className={pf('button--icon-more')}
+            symbol="table"
+            hasDropdown
+            assistiveText="Change view" />
+        </div>
+        <div className={pf('button-group m-left--xx-small')} role="group">
+          <ButtonIcon
+            className={pf('button--icon-border')}
             symbol="chart"
             assistiveText="Chart" />
-          </StatefulClass>
-          <StatefulClass>
           <ButtonIcon
-            flavor="icon-border"
-            sprite="utility"
+            className={pf('button--icon-border')}
             symbol="filterList"
             assistiveText="Filter List" />
-          </StatefulClass>
           <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
-            <Button flavor="icon-more">
-              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-              <span className={pf('assistive-text')}>Sort</span>
-              <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-              <span className={pf('assistive-text')}>More</span>
-            </Button>
+            <ButtonIcon
+              className={pf('button--icon-more')}
+              symbol="sort"
+              hasDropdown
+              assistiveText="Sort" />
           </div>
         </div>
       </div>

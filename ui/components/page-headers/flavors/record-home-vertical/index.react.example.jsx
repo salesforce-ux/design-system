@@ -14,7 +14,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
@@ -57,11 +57,10 @@ export default (
             </Button>
             <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
               <ButtonIcon
-                flavor="icon-border-filled"
-                sprite="utility"
+                className={pf('button--icon-border-filled')}
                 symbol="down"
-                assistiveText="More actions"
-                aria-haspopup="true" />
+                aria-haspopup="true"
+                assistiveText="More Actions" />
             </div>
           </div>
         </div>

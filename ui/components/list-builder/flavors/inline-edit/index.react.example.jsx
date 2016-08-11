@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 import className from 'classnames';
@@ -91,9 +91,7 @@ export default (
               <td data-label="Total Price" role="gridcell"><div className={pf('truncate')} title="$4,700.00">$4,700.00</div></td>
               <td role="gridcell">
                 <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled button--icon-x-small')}
                   symbol="down"
                   assistiveText="Show More" />
               </td>
@@ -121,9 +119,7 @@ export default (
               <td data-label="Total Price" role="gridcell"><div className={pf('truncate')} title="$11,250.00">$11,250.00</div></td>
               <td role="gridcell">
                 <ButtonIcon
-                  flavor="icon-border-filled,icon-x-small"
-                  iconFlavor="hint,small"
-                  sprite="utility"
+                  className={pf('button--icon-border-filled button--icon-x-small')}
                   symbol="down"
                   assistiveText="Show More" />
               </td>

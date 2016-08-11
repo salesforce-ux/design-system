@@ -24,9 +24,15 @@ let Demo = props =>
   </div>;
 
 export let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'settings'} />
-    <span className={pf('assistive-text')}>{props.assistiveText || 'Settings'}</span>
+  <button
+    className={className(pf('button'), props.className, props.stateful ? props.selected ? pf('is-selected') : pf('not-selected') : null)}
+    disabled={ props.disabled }
+    aria-haspopup={ props.hasDropdown ? 'true' : null }>
+    <SvgIcon
+      className={className(pf('button__icon'), props.iconClassName)}
+      sprite="utility"
+      symbol={ props.symbol || 'settings' } />
+    <span className={pf('assistive-text')}>{ props.assistiveText || 'Settings' }</span>
   </button>;
 
 ///////////////////////////////////////////

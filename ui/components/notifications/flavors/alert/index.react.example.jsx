@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -25,9 +25,7 @@ let Default = props =>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
       <ButtonIcon
-        className={pf('notify__close')}
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
         symbol="close"
         assistiveText="Close" />
         <span className={pf('assistive-text')}>Info</span>
@@ -41,9 +39,7 @@ let Success = props =>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--success theme--alert-texture')} role="alert">
       <ButtonIcon
-        className={pf('notify__close')}
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
         symbol="close"
         assistiveText="Close" />
       <span className={pf('assistive-text')}>Success</span>
@@ -60,9 +56,7 @@ let ErrorAlert = props =>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--error theme--alert-texture')} role="alert">
       <ButtonIcon
-        className={pf('notify__close')}
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
         symbol="close"
         assistiveText="Close" />
       <span className={pf('assistive-text')}>Error</span>
@@ -79,9 +73,7 @@ let Offline = props =>
   <div className={pf('notify_container')}>
     <div className={pf('notify notify--alert theme--offline theme--alert-texture')} role="alert">
       <ButtonIcon
-        className={pf('notify__close')}
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
         symbol="close"
         assistiveText="Close" />
       <span className={pf('assistive-text')}>Offline</span>

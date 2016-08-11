@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { Panel } from 'ui/components/panels/flavors/detail/index.react.example';
@@ -50,7 +50,7 @@ export let FiltersFooter = props =>
   </div>;
 
 export let FilterObject = props =>
-  <li className={pf('item')}>
+  <li className={pf('item hint-parent')}>
     <div className={className(pf('filters__item grid grid--vertical-align-center'), props.className)}>
       <a href="javascript:void(0);" className={pf('grow has-blur-focus')}>
         {props.type ? (<p className={pf('text-body--small')}>{props.type}</p>) : null }
@@ -63,9 +63,8 @@ export let FilterObject = props =>
 
 const removeButton = (
   <ButtonIcon
-    flavor="icon-bare,icon-small"
-    iconFlavor="hint"
-    sprite="utility"
+    className={pf('button--icon button--icon-small')}
+    iconClassName={pf('button__icon--hint')}
     symbol="close"
     assistiveText="Remove" />
 );
@@ -82,9 +81,7 @@ let Default = props =>
           <FiltersHeader>
             <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
             <ButtonIcon
-              flavor="icon-bare,icon-small"
-              className="col--bump-left"
-              sprite="utility"
+              className={pf('col--bump-left button--icon button--icon-small')}
               symbol="forward"
               assistiveText="Close Filter Panel" />
           </FiltersHeader>
@@ -165,9 +162,7 @@ let Locked = props =>
           <FiltersHeader>
             <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
             <ButtonIcon
-              flavor="icon-bare,icon-small"
-              className="col--bump-left"
-              sprite="utility"
+              className={pf('col--bump-left button--icon button--icon-small')}
               symbol="forward"
               assistiveText="Close Filter Panel" />
           </FiltersHeader>

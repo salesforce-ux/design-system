@@ -11,7 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Input from 'ui/components/forms/flavors/input/index.react';
@@ -54,21 +55,9 @@ export default (
             <h2 id="dialog-heading-id">New Task</h2>
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="minimize_window"
-              assistiveText="Minimize window" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="expand_alt"
-              assistiveText="Expand Composer" />
-            <ButtonIcon
-              flavor="icon-bare,icon-inverse"
-              sprite="utility"
-              symbol="close"
-              assistiveText="Close" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
+            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
           </div>
         </header>
 
@@ -103,8 +92,8 @@ export default (
               </div>
 
               <div className={pf('form-element__row')}>
-                <LookupMulti label="Name" placeholder="Search Leads" id="lookup-01" className={pf('size--1-of-2')} />
-                <LookupMulti label="Related To" placeholder="Search Accounts" id="lookup-02" className={pf('size--1-of-2')} />
+                <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Leads" />
+                <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Accounts" />
               </div>
 
             </div>

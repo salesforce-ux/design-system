@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -30,10 +30,8 @@ export default (
           <div className={pf('notify notify--toast theme--error')} role="alert">
             <span className={pf('assistive-text')}>Error</span>
             <ButtonIcon
-              className={pf('notify__close')}
-              iconFlavor="large"
-              flavor="icon-inverse"
-              sprite="utility"
+              className={pf('notify__close button--icon-inverse')}
+              iconClassName={pf('button__icon--large')}
               symbol="close"
               assistiveText="Close" />
             <div className={pf('notify__content grid')}>

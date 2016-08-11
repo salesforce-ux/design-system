@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
@@ -46,24 +46,9 @@ export default (
               Lei Chan - Connected
             </MediaObject>
             <div className={pf('docked-composer__actions')}>
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="dash"
-                assistiveText="Minimize window" />
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="new_window"
-                assistiveText="Open in window" />
-              <ButtonIcon
-                flavor="icon-bare"
-                iconFlavor="inverse"
-                sprite="utility"
-                symbol="close"
-                assistiveText="Close" />
+              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
+              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
+              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
             </div>
           </div>
           <div className={pf('docked-composer__body grow grid grid--vertical nowrap')}>
@@ -88,9 +73,7 @@ export default (
                 </span>
               </div>
               <ButtonIcon
-                className={pf('shrink-none')}
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container shrink-none')}
                 symbol="add"
                 assistiveText="Add user" />
             </div>
@@ -99,13 +82,11 @@ export default (
           <div className={pf('docked-composer__footer shrink-none grid grid--align-spread')}>
             <div>
               <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="chat"
                 assistiveText="Chat" />
               <ButtonIcon
-                flavor="icon-container"
-                sprite="utility"
+                className={pf('button--icon-container')}
                 symbol="settings"
                 assistiveText="Settings" />
             </div>

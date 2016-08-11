@@ -34,7 +34,7 @@ export default (
   <Trigger className={pf('is-open')} triggerIcon={moreIcon}>
     <Menu className={pf('dropdown--left dropdown--actions')}>
       <MenuList>
-        <MenuItem>Action One</MenuItem>
+        <MenuItem tabIndex="0">Action One</MenuItem>
         <MenuItem>Action Two</MenuItem>
         <MenuItem>Action Three</MenuItem>
       </MenuList>

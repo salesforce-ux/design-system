@@ -72,6 +72,11 @@ module.exports = {
       status: 301
     },
     {
+      source: '/components/buttons#flavor-icon',
+      destination: '/components/button-icon/',
+      status: 301
+    },
+    {
       source: '/resources/tokens',
       destination: '/design-tokens',
       status: 301

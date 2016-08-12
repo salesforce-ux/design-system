@@ -27,6 +27,7 @@ components:
   - notifications
   - page-headers
   - panels
+  - picklist
   - pills
   - process
   - popovers

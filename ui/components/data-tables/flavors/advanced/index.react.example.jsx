@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
@@ -81,9 +81,8 @@ let RowData = (props) => {
       <Td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
       <Td className={pf('cell-shrink')} data-label="Actions">
         <ButtonIcon
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
+          className={pf('button--icon-border button--icon-x-small')}
+          iconClassName={pf('button__icon--hint button__icon--small')}
           symbol="down"
           assistiveText="Show More" />
       </Td>

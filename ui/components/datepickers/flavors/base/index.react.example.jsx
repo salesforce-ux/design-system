@@ -10,10 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import Input from 'ui/components/forms/flavors/input/index.react';
-import Menu from 'ui/components/menus/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { Select as Select } from 'ui/components/forms/flavors/select/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -36,11 +33,11 @@ let DatepickerHeader = props =>
   <div className={pf('datepicker__filter grid')}>
     <div className={pf('datepicker__filter--month grid grid--align-spread grow')}>
       <div className={pf('align-middle')}>
-        <ButtonIcon flavor="icon-container" iconFlavor="small" sprite="utility" symbol="left" assistiveText="Previous Month" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="left" assistiveText="Previous Month" />
       </div>
       <h2 id="month" className={pf('align-middle')} aria-live="assertive" aria-atomic="true">June</h2>
       <div className={pf('align-middle')}>
-        <ButtonIcon flavor="icon-container" iconFlavor="small" sprite="utility" symbol="right" assistiveText="Next Month" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="right" assistiveText="Next Month" />
       </div>
     </div>
     <div className={pf('shrink-none')}>

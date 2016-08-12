@@ -10,20 +10,44 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export const intro = (
-  <p className="site-text-introduction">
-    Tooltips provide additional information about a particular input field or element on the page.
-  </p>
-);
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
-export default (
-  <ComponentDocs>
-    <p>The popup text appears when the user hovers or tabs into the “info” icon and disappears when the user hovers off or tabs away.</p>
-    <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Showing the tooltip on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.
-    Give the tooltip an ID and use that as the value of the <code>aria-describedby</code> attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.</p>
-  </ComponentDocs>
-);
+export let states = [
+  {
+    id: 'button-icon-container',
+    label: 'No border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-container')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border',
+    label: 'With border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-filled',
+    label: 'Filled — with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border-filled')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <ButtonIcon inverse className={pf('button--icon-border-inverse')} />
+      </div>
+  }
+];

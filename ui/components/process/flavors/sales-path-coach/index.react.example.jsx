@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import className from 'classnames';
@@ -38,10 +38,10 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small')} symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small flip--vertical')} symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
   <Button flavor="brand" className={className(pf('path__mark-complete no-flex m-horizontal--small'), props.className)}>

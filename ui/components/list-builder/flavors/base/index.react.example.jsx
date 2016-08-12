@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 import className from 'classnames';
@@ -83,8 +83,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -96,8 +95,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -109,8 +107,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -122,8 +119,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -160,8 +156,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -173,8 +168,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -186,8 +180,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
@@ -199,8 +192,7 @@ export let states = [
                 <tr>
                   <td className={pf('cell-shrink')} role="gridcell">
                     <ButtonIcon
-                      flavor="icon-border,icon-small"
-                      sprite="utility"
+                      className={pf('button--icon-border button--icon-small')}
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>

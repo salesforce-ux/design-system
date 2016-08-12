@@ -10,20 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    Tooltips provide additional information about a particular input field or element on the page.
+    Create a button with a <code>button</code> or <code>a</code> element to retain the native click function. Use a disabled attribute when a button can’t be clicked.
   </p>
 );
 
 export default (
   <ComponentDocs>
-    <p>The popup text appears when the user hovers or tabs into the “info” icon and disappears when the user hovers off or tabs away.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Showing the tooltip on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.
-    Give the tooltip an ID and use that as the value of the <code>aria-describedby</code> attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.</p>
+    <p>
+      If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
+    </p>
   </ComponentDocs>
 );

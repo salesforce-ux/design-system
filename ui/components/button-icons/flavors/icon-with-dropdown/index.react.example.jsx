@@ -10,23 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let ButtonIconHint = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
-    <div className={pf('hint-parent')}>
-      <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-        <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol="down" />
-        <span className={pf('assistive-text')}>More Options</span>
-      </button>
-    </div>
-  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -34,23 +19,19 @@ let ButtonIconHint = props =>
 
 export let states = [
   {
-    id: 'button-icon-with-hint-hover',
-    label: 'Default with no border',
-    element: <ButtonIconHint className={pf('button--icon')} iconClassName={pf('button__icon--hint')} />
+    id: 'button-icon-with-dropdown',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem' }}>
+        <ButtonIcon hasDropdown className={pf('button--icon-more')} assistiveText="More options" />
+      </div>
   },
   {
-    id: 'button-icon-border-with-hint-hover',
-    label: 'Container with border',
-    element: <ButtonIconHint className={pf('button--icon-border')} iconClassName={pf('button__icon--hint')} />
-  },
-  {
-    id: 'button-icon-inverse-with-hint-hover',
-    label: 'Inverse with no border',
-    element: <ButtonIconHint inverse className={pf('button--icon-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
-  },
-  {
-    id: 'button-icon-border-inverse-with-hint-hover',
-    label: 'Inverse container with border',
-    element: <ButtonIconHint inverse className={pf('button--icon-border-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
+    id: 'button-icon-with-dropdown-inverse',
+    label: 'Inverse',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <ButtonIcon hasDropdown className={pf('button--icon-inverse button--icon-more')} assistiveText="More options" />
+      </div>
   }
 ];

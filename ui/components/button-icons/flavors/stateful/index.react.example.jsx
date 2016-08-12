@@ -10,25 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-let Demo = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
-    { props.children }
-  </div>;
-
-export let ButtonIconContainer = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-    <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    <span className={pf('assistive-text')}>{props.assitiveText || 'More settings'}</span>
-  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -36,19 +19,13 @@ export let ButtonIconContainer = props =>
 
 export let states = [
   {
-    id: 'button-icon-with-dropdown',
-    label: 'Default',
-    element:
-      <Demo>
-        <ButtonIconContainer className={pf('button--icon-more')} />
-      </Demo>
+    id: 'button-icon-stateful-not-selected',
+    label: 'Not Selected',
+    element: <ButtonIcon className={pf('button--icon-border')} stateful symbol="like" assistiveText="Like" />
   },
   {
-    id: 'button-icon-with-dropdown-inverse',
-    label: 'Inverse',
-    element:
-      <Demo inverse>
-        <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
-      </Demo>
+    id: 'button-icon-stateful-selected',
+    label: 'Selected',
+    element: <ButtonIcon className={pf('button--icon-border')} stateful selected symbol="like" assistiveText="Liked" />
   }
 ];

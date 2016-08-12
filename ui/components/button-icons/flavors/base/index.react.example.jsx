@@ -11,9 +11,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+///////////////////////////////////////////
+// State Constructor(s)
+///////////////////////////////////////////
+
+let Demo = props =>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
+    { props.children }
+  </div>;
+
+export let ButtonIcon = props =>
+  <button
+    className={className(pf('button'), props.className, props.stateful ? props.selected ? pf('is-selected') : pf('not-selected') : null)}
+    disabled={ props.disabled }
+    aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
+    aria-controls={ props['aria-controls'] }
+    aria-hidden={ props['aria-hidden'] }
+    tabIndex={ props.tabIndex } >
+    <SvgIcon
+      className={className(pf('button__icon'), props.iconClassName)}
+      sprite="utility"
+      symbol={ props.symbol || 'settings' } />
+    { props.hasDropdown ? <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" /> : null }
+    <span className={pf('assistive-text')}>{ props.assistiveText || 'Settings' }</span>
+  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -21,23 +45,28 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
-    id: 'button-icon-size-default',
+    id: 'button-icon',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
   },
   {
-    id: 'button-icon-size-large',
-    label: 'Large',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--large')} />
+    id: 'button-icon-error',
+    label: 'Error',
+    element: <Demo><ButtonIcon className={pf('button--icon-error')} symbol="warning" /></Demo>
   },
   {
-    id: 'button-icon-size-small',
-    label: 'Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} />
+    id: 'button-icon-disabled',
+    label: 'Disabled',
+    element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
   },
   {
-    id: 'button-icon-size-x-small',
-    label: 'x-Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--x-small')} />
+    id: 'button-icon-inverse',
+    label: 'Inverse',
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
+  },
+  {
+    id: 'button-icon-inverse-disabled',
+    label: 'Inverse disabled',
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
   }
 ];

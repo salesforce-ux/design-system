@@ -10,21 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-export let ButtonIconContainer = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
-    <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-      <span className={pf('assistive-text')}>More Options</span>
-    </button>
-  </div>;
 
 ///////////////////////////////////////////
 // Export
@@ -32,23 +19,23 @@ export let ButtonIconContainer = props =>
 
 export let states = [
   {
-    id: 'button-icon-container',
-    label: 'No border',
-    element: <ButtonIconContainer className={pf('button--icon-container')} />
+    id: 'button-icon-size-default',
+    label: 'Default',
+    element: <ButtonIcon className={pf('button--icon')} />
   },
   {
-    id: 'button-icon-border',
-    label: 'With border',
-    element: <ButtonIconContainer className={pf('button--icon-border')} />
+    id: 'button-icon-size-large',
+    label: 'Large',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--large')} />
   },
   {
-    id: 'button-icon-border-filled',
-    label: 'Filled — with border',
-    element: <ButtonIconContainer className={pf('button--icon-border-filled')} />
+    id: 'button-icon-size-small',
+    label: 'Small',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} />
   },
   {
-    id: 'button-icon-border-inverse',
-    label: 'Inverse - with border',
-    element: <ButtonIconContainer inverse className={pf('button--icon-border-inverse')} />
+    id: 'button-icon-size-x-small',
+    label: 'x-Small',
+    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--x-small')} />
   }
 ];

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -19,43 +19,19 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
-    id: 'button-icon-with-hint-hover',
-    label: 'Default with no border',
+    id: 'button-icon-with-dropdown',
+    label: 'Default',
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--hint')} />
-        </div>
+        <ButtonIcon hasDropdown className={pf('button--icon-more')} assistiveText="More options" />
       </div>
   },
   {
-    id: 'button-icon-border-with-hint-hover',
-    label: 'Container with border',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon-border')} iconClassName={pf('button__icon--hint')} />
-        </div>
-      </div>
-  },
-  {
-    id: 'button-icon-inverse-with-hint-hover',
-    label: 'Inverse with no border',
+    id: 'button-icon-with-dropdown-inverse',
+    label: 'Inverse',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
-        </div>
+        <ButtonIcon hasDropdown className={pf('button--icon-inverse button--icon-more')} assistiveText="More options" />
       </div>
-  },
-  {
-    id: 'button-icon-border-inverse-with-hint-hover',
-    label: 'Inverse container with border',
-    element:
-    <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-      <div className={pf('hint-parent')}>
-        <ButtonIcon className={pf('button--icon-border-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
-      </div>
-    </div>
   }
 ];

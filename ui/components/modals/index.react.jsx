@@ -13,7 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 const PT = React.PropTypes;
 
-import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import AccessibleDialogContainer from 'ui/components/lib/accessible-dialog-container.react';
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;

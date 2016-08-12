@@ -13,7 +13,7 @@ import React from 'react';
 import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
 import Button from 'ui/components/buttons/index.react';
-import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';

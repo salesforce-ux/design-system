@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -19,13 +19,35 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
-    id: 'button-icon-stateful-not-selected',
-    label: 'Not Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful symbol="like" assistiveText="Like" />
+    id: 'button-icon-container',
+    label: 'No border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-container')} />
+      </div>
   },
   {
-    id: 'button-icon-stateful-selected',
-    label: 'Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful selected symbol="like" assistiveText="Liked" />
+    id: 'button-icon-border',
+    label: 'With border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-filled',
+    label: 'Filled — with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border-filled')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <ButtonIcon inverse className={pf('button--icon-border-inverse')} />
+      </div>
   }
 ];

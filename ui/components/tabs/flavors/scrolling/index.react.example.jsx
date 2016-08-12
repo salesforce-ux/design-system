@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Tabs from 'ui/components/tabs/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icon/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
@@ -60,8 +60,8 @@ export let states = [
             role="presentation"><a className="slds-tabs--scoped__link" href="javascript:void(0);" role="tab" tabIndex="-1" aria-selected="false" aria-controls="tab-scoped-12" id="tab-scoped-12__item">Item Twelve</a></li>
         </ul>
         <div className="slds-tab__scroll-controls">
-          <ButtonIcon className={pf('button--icon-border')} sprite="utility" symbol="chevronleft" aria-hidden="true" assistiveText="foo" />
-          <ButtonIcon className={pf('button--icon-border')} sprite="utility" symbol="chevronright" aria-hidden="true" assistiveText="foo" />
+          <ButtonIcon className={pf('button--icon-border')} symbol="chevronleft" aria-hidden="true" assistiveText="foo" />
+          <ButtonIcon className={pf('button--icon-border')} symbol="chevronright" aria-hidden="true" assistiveText="foo" />
         </div>
       </Scroller>
       <div id="tab-scoped-1" className="slds-tabs--scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item">Item One Content</div>

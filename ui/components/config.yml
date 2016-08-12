@@ -35,4 +35,5 @@ components:
   - spinners
   - tabs
   - tiles
+  - tooltips
   - trees

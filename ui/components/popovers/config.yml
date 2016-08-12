@@ -2,7 +2,6 @@ status: 'dev-ready'
 classBase: 'popover'
 flavors:
   - base
-  - tooltips
   - panels
   - themes
   - nubbins

@@ -181,7 +181,7 @@ class ComponentFlavor extends React.Component {
 
     return <div
         id={`description-${flavor.uid}`}
-        className={pf('text-longform')}
+        className={pf('text-longform m-bottom--large')}
         dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />;
   }
 

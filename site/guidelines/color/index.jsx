@@ -18,28 +18,6 @@ import globals from 'app_modules/global';
 export default (
   <PageBody anchorTitle="Colors" contentClassName={pf('site-guidelines site-guidelines-layout')}>
     <div className={pf('container--large')}>
-      <p className="site-text-introduction">Salesforce ({globals.abbreviatedName}) uses a specific color palette to communicate meaning, convey visual differentiation, and provide a consistent look and feel. From neutrals to brights, each hue is chosen to fit into the overall visual language and promote a contemporary and vibrant user experience.</p>
-
-      {/* Neutral Colors */}
-      <h2 className="site-text-heading--large">Neutrals</h2>
-      <p>Salesforce uses cool-toned grays injected with a hint of blue to create a lively and modern mood for the interface. In general, color is used sparingly to keep the content center stage and not distract end users.</p>
-      <figure>
-        <img className={pf('image')} src="/assets/images/color/img-neutral-colors.svg" alt="" />
-      </figure>
-
-      {/* Primary Colors */}
-      <h2 className="site-text-heading--large">Primary Colors</h2>
-      <p>Salesforce’s primary brand color is a bright, friendly blue. We also use some darker blues for various other use cases.</p>
-      <figure>
-        <img className={pf('image')} src="/assets/images/color/img-primary-colors.svg" alt="" />
-      </figure>
-
-      {/* Secondary Colors */}
-      <h2 className="site-text-heading--large">Secondary Colors</h2>
-      <p>We use a broad range of secondary colors that complement the neutral and primary colors. The level of saturation is vibrant but not neon, mellow but not muted.</p>
-      <figure>
-        <img className={pf('image')} src="/assets/images/color/img-secondary-colors.svg" alt="" />
-      </figure>
 
       {/* Usage */}
       <h2 className="site-text-heading--large">Usage</h2>

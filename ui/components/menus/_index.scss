@@ -294,11 +294,11 @@
   > [class*="#{$css-prefix}button--icon"] {
 
     ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
-      left: ($spacing-medium * -1);
+      left: ($spacing-x-small * -1);
     }
 
     ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
-      right: ($spacing-medium * -1);
+      right: ($spacing-x-small * -1);
     }
   }
 }

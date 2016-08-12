@@ -29,7 +29,7 @@ export default (
         <input id="form-help" className={pf('input')} type="text" placeholder="Field Level Help" aria-describedby="help" />
       </div>
     </div>
-    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1.5rem', width: '20rem'}}>
+    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}>
       <div className={pf('popover__body text-longform')}>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
       </div>

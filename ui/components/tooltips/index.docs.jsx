@@ -16,8 +16,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Tooltips provide additional information about a particular input field or element on the page.
-  </p>
+    A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.</p>
 );
 
 export default (

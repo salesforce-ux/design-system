@@ -109,8 +109,8 @@ class ComponentFlavor extends React.Component {
           <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
-            {this.renderCode()}
             {this.renderDesc()}
+            {this.renderCode()}
             {this.renderInfo()}
           </div>
         </div>

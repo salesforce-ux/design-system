@@ -34,8 +34,11 @@ export default React.createClass({
     return this.getNavItems().map(item => item.id)[0] || fallback;
   },
 
+  capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  },
+
   render() {
-    const category = this.getNavItems()[0].label;
     return (
       <header className={pf('site-masthead grid wrap')}>
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
@@ -45,7 +48,7 @@ export default React.createClass({
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
-                <span className={pf('assistive-text docsearch-category')}>{category}</span>
+                <span className={pf('assistive-text docsearch-category')}>{this.capitalize(this.rootNavName())}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

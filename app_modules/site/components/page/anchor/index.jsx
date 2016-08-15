@@ -35,6 +35,7 @@ export default React.createClass({
   },
 
   render() {
+    const category = this.getNavItems()[0].label;
     return (
       <header className={pf('site-masthead grid wrap')}>
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
@@ -44,7 +45,7 @@ export default React.createClass({
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
-                <span className={pf('assistive-text docsearch-category')}>Components</span>
+                <span className={pf('assistive-text docsearch-category')}>{category}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

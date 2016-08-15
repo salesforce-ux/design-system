@@ -44,6 +44,7 @@ export default React.createClass({
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
+                <div className={pf('assistive-text docsearch-category')}>Components</div>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

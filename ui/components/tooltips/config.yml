@@ -1,4 +1,3 @@
-status: 'prototype'
-classBase: 'tooltip'
+status: 'dev-ready'
 flavors:
   - base

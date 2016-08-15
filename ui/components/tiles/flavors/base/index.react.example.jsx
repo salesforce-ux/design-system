@@ -10,8 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -26,13 +25,9 @@ export let Tile = props =>
         <h3 className={pf('truncate')} title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
-        <ButtonIcon
-          className={pf('shrink-none')}
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
-          symbol="down"
-          assistiveText="Show More" />
+        <div className={pf('shrink-none')}>
+          <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} iconClassName={pf('button__icon--hint')} symbol="down" aria-haspopup="true" assistiveText="More options" />
+        </div>
       </div>
     :
       <h3 className={pf('truncate')} title={ props.title || 'Title' }>
@@ -57,13 +52,9 @@ export let TileMedia = props =>
           <h3 className={pf('truncate')} title={ props.title || 'Title' }>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
-          <ButtonIcon
-            className={pf('shrink-none')}
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More" />
+          <div className={pf('shrink-none')}>
+            <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} iconClassName={pf('button__icon--hint')} symbol="down" aria-haspopup="true" assistiveText="More options" />
+          </div>
         </div>
       :
         <h3 className={pf('truncate')} title={ props.title || 'Title' }>

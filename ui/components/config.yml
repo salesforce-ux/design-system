@@ -4,6 +4,7 @@ components:
   - badges
   - breadcrumbs
   - buttons
+  - button-icons
   - button-groups
   - cards
   - data-tables
@@ -34,4 +35,5 @@ components:
   - spinners
   - tabs
   - tiles
+  - tooltips
   - trees

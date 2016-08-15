@@ -15,19 +15,28 @@ import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
-// Partial(s)
+// State Constructor(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem', background: '#F4F6F9' }}>
+  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
     { props.children }
   </div>;
 
-export let ButtonIconContainer = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="settings" />
-    <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-    <span className={pf('assistive-text')}>{props.assitiveText || 'More settings'}</span>
+export let ButtonIcon = props =>
+  <button
+    className={className(pf('button'), props.className, props.stateful ? props.selected ? pf('is-selected') : pf('not-selected') : null)}
+    disabled={ props.disabled }
+    aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
+    aria-controls={ props['aria-controls'] }
+    aria-hidden={ props['aria-hidden'] }
+    tabIndex={ props.tabIndex } >
+    <SvgIcon
+      className={className(pf('button__icon'), props.iconClassName)}
+      sprite="utility"
+      symbol={ props.symbol || 'settings' } />
+    { props.hasDropdown ? <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" /> : null }
+    <span className={pf('assistive-text')}>{ props.assistiveText || 'Settings' }</span>
   </button>;
 
 ///////////////////////////////////////////
@@ -36,19 +45,28 @@ export let ButtonIconContainer = props =>
 
 export let states = [
   {
-    id: 'button-icon-with-dropdown',
+    id: 'button-icon',
     label: 'Default',
-    element:
-      <Demo>
-        <ButtonIconContainer className={pf('button--icon-more')} />
-      </Demo>
+    element: <Demo><ButtonIcon className={pf('button--icon')} /></Demo>
   },
   {
-    id: 'button-icon-with-dropdown-inverse',
+    id: 'button-icon-error',
+    label: 'Error',
+    element: <Demo><ButtonIcon className={pf('button--icon-error')} symbol="warning" /></Demo>
+  },
+  {
+    id: 'button-icon-disabled',
+    label: 'Disabled',
+    element: <Demo><ButtonIcon className={pf('button--icon')} disabled /></Demo>
+  },
+  {
+    id: 'button-icon-inverse',
     label: 'Inverse',
-    element:
-      <Demo inverse>
-        <ButtonIconContainer inverse className={pf('button--icon-inverse button--icon-more')} />
-      </Demo>
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} /></Demo>
+  },
+  {
+    id: 'button-icon-inverse-disabled',
+    label: 'Inverse disabled',
+    element: <Demo inverse><ButtonIcon inverse className={pf('button--icon-inverse')} disabled /></Demo>
   }
 ];

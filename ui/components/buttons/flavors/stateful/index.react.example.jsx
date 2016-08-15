@@ -34,14 +34,6 @@ let StatefulButton = props =>
     </span>
   </button>;
 
-let StatefulIcon = props =>
-  <button className={className(pf('button button--icon button--icon-border'), props.className, props.selected ? pf('is-selected') : pf('not-selected'))} disabled={props.disabled}>
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="like" />
-    <span className={pf('assistive-text')}>
-      { props.selected ? 'Liked' : 'Like' }
-    </span>
-  </button>;
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -72,15 +64,5 @@ export let states = [
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <StatefulButton className={pf('button--inverse is-selected')} />
       </div>
-  },
-  {
-    id: 'button-icon-stateful-not-selected',
-    label: 'Icon - Not Selected',
-    element: <StatefulIcon />
-  },
-  {
-    id: 'button-icon-stateful-selected',
-    label: 'Icon - Selected',
-    element: <StatefulIcon selected />
   }
 ];

@@ -10,34 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
-import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-///////////////////////////////////////////
-// Export
-///////////////////////////////////////////
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 
-export let states = [
-  {
-    id: 'button-icon-size-default',
-    label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
-  },
-  {
-    id: 'button-icon-size-large',
-    label: 'Large',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--large')} />
-  },
-  {
-    id: 'button-icon-size-small',
-    label: 'Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} />
-  },
-  {
-    id: 'button-icon-size-x-small',
-    label: 'x-Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--x-small')} />
-  }
-];
+export const intro = (
+  <p className="site-text-introduction">
+    Create a button with a <code>button</code> or <code>a</code> element to retain the native click function. Use a disabled attribute when a button can’t be clicked.
+  </p>
+);
+
+export default (
+  <ComponentDocs>
+    <h4 className="site-text-heading--label">Accessibility</h4>
+    <p>
+      If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
+    </p>
+  </ComponentDocs>
+);

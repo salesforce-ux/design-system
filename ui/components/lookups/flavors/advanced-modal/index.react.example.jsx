@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Menu from 'ui/components/menus/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -43,8 +43,8 @@ export default (
             <tr>
               <th colSpan="4" scope="col">
                 <div className={pf('float--right')}>
-                  <ButtonIcon flavor="icon-bare,icon-x-small" sprite="utility" symbol="filterList" assistiveText="Filter List" />
-                  <ButtonIcon flavor="icon-bare,icon-x-small" sprite="utility" symbol="sort" assistiveText="Sort" />
+                  <ButtonIcon className={pf('button--icon button--icon-x-small')} symbol="filterList" assistiveText="Filter List" />
+                  <ButtonIcon className={pf('button--icon button--icon-x-small')} symbol="sort" assistiveText="Sort" />
                 </div>
                 5 Results, sorted by relevancy
               </th>

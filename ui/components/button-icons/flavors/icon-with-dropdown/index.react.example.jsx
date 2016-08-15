@@ -10,14 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
-export default (
-  <div className={pf('popover popover--tooltip nubbin--bottom')} role="tooltip">
-    <div className={pf('popover__body')}>
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-    </div>
-  </div>
-);
+export let states = [
+  {
+    id: 'button-icon-with-dropdown',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem' }}>
+        <ButtonIcon hasDropdown className={pf('button--icon-more')} assistiveText="More options" />
+      </div>
+  },
+  {
+    id: 'button-icon-with-dropdown-inverse',
+    label: 'Inverse',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <ButtonIcon hasDropdown className={pf('button--icon-inverse button--icon-more')} assistiveText="More options" />
+      </div>
+  }
+];

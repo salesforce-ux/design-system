@@ -13,26 +13,41 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
+
 export let states = [
   {
-    id: 'popover',
-    label: 'Default',
+    id: 'button-icon-container',
+    label: 'No border',
     element:
-      <div className={pf('popover nubbin--left')} role="dialog">
-        <div className={pf('popover__body')}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-        </div>
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-container')} />
       </div>
   },
   {
-    id: 'popover-close',
-    label: 'Close',
+    id: 'button-icon-border',
+    label: 'With border',
     element:
-      <div className={pf('popover nubbin--left')} role="dialog">
-        <ButtonIcon className={pf('button--icon button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
-        <div className={pf('popover__body')}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-        </div>
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-filled',
+    label: 'Filled — with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
+        <ButtonIcon className={pf('button--icon-border-filled')} />
+      </div>
+  },
+  {
+    id: 'button-icon-border-inverse',
+    label: 'Inverse - with border',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+        <ButtonIcon inverse className={pf('button--icon-border-inverse')} />
       </div>
   }
 ];

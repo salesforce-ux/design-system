@@ -3,9 +3,3 @@ classBase: 'button'
 flavors:
   - base
   - stateful
-  - icon
-  - icon-size
-  - icon-container
-  - icon-container-size
-  - icon-with-hint-hover
-  - icon-with-dropdown

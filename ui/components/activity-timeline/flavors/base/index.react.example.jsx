@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
@@ -26,7 +26,7 @@ export let TimelineIcon = props =>
 export let TimelineActions = props =>
   <div className={pf('timeline__actions')}>
     <p className={pf('timeline__date')}>{ props.date || 'Feb 24' }</p>
-    <ButtonIcon flavor="icon-border-filled,icon-x-small" sprite="utility" symbol="switch" assistiveText="Switch" />
+    <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} symbol="down" assistiveText="More Options" />
   </div>;
 
 export default (

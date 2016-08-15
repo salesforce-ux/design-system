@@ -10,14 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-export default (
-  <div className={pf('tooltip nubbin--left')} role="tooltip">
-    <div className={pf('tooltip__body')}>
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+export let Tooltip = props =>
+  <div className={className(pf('popover popover--tooltip'), props.className)} role="tooltip">
+    <div className={pf('popover__body')}>
+      { props.children }
     </div>
-  </div>
+  </div>;
+
+export default (
+  <Tooltip className={pf('nubbin--bottom')}>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+  </Tooltip>
 );

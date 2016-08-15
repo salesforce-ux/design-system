@@ -121,29 +121,8 @@ export let GlobalHeader = props =>
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'global-header',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ height: '60px' }}>
-        <GlobalHeader />
-      </div>
-  },
-  {
-    id: 'global-header-actions-active',
-    label: 'Global actions active',
-    element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader actions />
-      </div>
-  },
-  {
-    id: 'global-header-setup-active',
-    label: 'Setup active',
-    element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader setup />
-      </div>
-  }
-];
+export default (
+  <div className="demo-only" style={{ height: '60px' }}>
+    <GlobalHeader />
+  </div>
+);

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
@@ -22,7 +22,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 const settingsIcon = (
-  <ButtonIcon flavor="icon-container" sprite="utility" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
+  <ButtonIcon className={pf('button--icon-container')} symbol="settings" assistiveText="Settings" aria-haspopup="true" />
 );
 
 //////////////////////////////////////////////

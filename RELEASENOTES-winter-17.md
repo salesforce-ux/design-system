@@ -125,10 +125,10 @@ The following issues have now been resolved:
   - The browser shows a focus ring when avatars are focused
 - Accessibility fixes to Menus and Picklist, including Menus used in composite SLDS components.
   - Removal of `aria-expanded` on containers
-  - `role="presentation` on list items to remove them from the accessibility tree
+  - `role="presentation"` on list items to remove them from the accessibility tree
   - Correct use of `menuitemcheckbox` for selectable menu items, with the use of `aria-checked` instead of `aria-selected`
   - Correct sub heading menus which was split across multiple un-ordered lists
-  - Include line separators and sub-heading separators into the accessibility tree with `role="separator`
+  - Include line separators and sub-heading separators into the accessibility tree with `role="separator"`
 
 **DEPRECATED**
 

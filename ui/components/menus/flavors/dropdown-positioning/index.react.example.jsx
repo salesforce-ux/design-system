@@ -34,7 +34,7 @@ let TopLeft = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('dropdown--left nubbin--top-left')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>
@@ -47,7 +47,7 @@ let Top = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('nubbin--top')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>
@@ -60,7 +60,7 @@ let TopRight = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('dropdown--right nubbin--top-right')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>
@@ -73,7 +73,7 @@ let BottomLeft = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('dropdown--bottom dropdown--left nubbin--bottom-left')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>
@@ -86,7 +86,7 @@ let Bottom = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('dropdown--bottom nubbin--bottom')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>
@@ -99,7 +99,7 @@ let BottomRight = props =>
     <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
       <Menu className={pf('dropdown--bottom dropdown--right nubbin--bottom-right')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
         </MenuList>

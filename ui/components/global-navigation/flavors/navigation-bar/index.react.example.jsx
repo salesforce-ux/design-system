@@ -45,12 +45,9 @@ const contextDropdown = (
         <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="add" />
         Main action
       </MenuItem>
-    </MenuList>
-    <hr className={pf('m-vertical--xx-small')} role="presentation" />
-    <div className={pf('dropdown__header')}>
-      <span className={pf('text-title--caps')}>Menu header</span>
-    </div>
-    <MenuList>
+      <li className={pf('dropdown__header has-divider--top-space')} role="separator">
+        <span className={pf('text-title--caps')}>Menu header</span>
+      </li>
       <MenuItem>Menu Item One</MenuItem>
       <MenuItem>Menu Item Two</MenuItem>
       <MenuItem>Menu Item Three</MenuItem>

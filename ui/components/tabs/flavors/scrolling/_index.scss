@@ -12,15 +12,15 @@
   position: relative;
 }
 
-.#{$css-prefix}tabs__nav-scroller--inner {
-  overflow-x: hidden;
-}
-
 .#{$css-prefix}tab__scroll-controls {
   display: none;
 }
 
 .#{$css-prefix}has-overflow {
+
+  .#{$css-prefix}tabs__nav-scroller--inner {
+    overflow-x: hidden;
+  }
 
   .#{$css-prefix}tabs--scoped__nav,
   .#{$css-prefix}tabs--default__nav {

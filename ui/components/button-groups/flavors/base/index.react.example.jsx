@@ -74,7 +74,7 @@ export let states = [
           <Trigger className={pf('button--last is-open')}>
             <Menu className={pf('dropdown--right')}>
               <MenuList>
-                <MenuItem>Overflow Item One</MenuItem>
+                <MenuItem tabIndex="0">Overflow Item One</MenuItem>
                 <MenuItem>Overflow Item Two</MenuItem>
                 <MenuItem>Overflow Item Three</MenuItem>
               </MenuList>
@@ -91,7 +91,7 @@ export let states = [
         <Button className={pf('button--neutral')}>Refresh</Button>
         <Button className={pf('button--neutral')}>Edit</Button>
         <Button className={pf('button--neutral')}>Save</Button>
-        <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+        <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
           <ButtonIcon className={pf('button--icon-border')} assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
         </div>
       </ButtonGroup>
@@ -105,7 +105,7 @@ export let states = [
           <Button className={pf('button--inverse')}>Refresh</Button>
           <Button className={pf('button--inverse')}>Edit</Button>
           <Button className={pf('button--inverse')}>Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
             <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>
@@ -120,7 +120,7 @@ export let states = [
           <Button className={pf('button--inverse')}>Refresh</Button>
           <Button className={pf('button--inverse')} disabled>Edit</Button>
           <Button className={pf('button--inverse')} >Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
             <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>
@@ -135,7 +135,7 @@ export let states = [
           <Button className={pf('button--inverse')}>Refresh</Button>
           <Button className={pf('button--inverse')}>Edit</Button>
           <Button className={pf('button--inverse')}>Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
             <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>

@@ -86,7 +86,8 @@ let Overflowing = props =>
             <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
             Products
           </Menu.Item>
-          <Menu.Item className={pf('has-divider--top-space')}>
+          <li className={pf('has-divider--top-space')} role="separator"></li>
+          <Menu.Item>
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
             Accounts
           </Menu.Item>

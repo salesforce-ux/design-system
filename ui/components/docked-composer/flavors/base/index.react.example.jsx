@@ -65,13 +65,13 @@ let ComposerFooter = props =>
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <a href="javascript:void(0);" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
+    <button className={pf('docked-composer--overflow__pill theme--alt-inverse')} aria-haspopup="true">
       <span className={pf('align-middle')}>
         <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
         <span className={pf('assistive-text')}>View other docked windows</span>
       </span>
       <span className={pf('text-body--small align-middle')}>99 +</span>
-    </a>
+    </button>
     <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
       <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
         <Menu.Item>

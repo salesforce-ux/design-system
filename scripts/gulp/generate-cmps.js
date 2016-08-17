@@ -9,25 +9,29 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import fs from 'fs';
 import gulp from 'gulp';
+import gutil from 'gulp-util';
+import gulpzip from 'gulp-zip';
+import path from 'path';
+import through from 'through2';
 
-import './generate-icons';
-import './generate-release-notes';
-import './generate-tokens-zip';
-import './generate-tokens';
-import './generate-cmps';
-import './generate-ui';
-import './generate-examples';
-import './generate-whitelist';
+import { resolve } from 'path';
 
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:tokens:zip',
-  'generate:tokens',
-  'generate:ui',
-  'generate:examples',
-  'generate:cmps',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
-]);
+const wrapInTemplate = el =>
+  `
+  <aura:component>
+    <aura:attribute name="examplesInLightning" type="Boolean" default="true"/>
+    ${el}
+  </aura:component>
+  `
+
+gulp.task('generate:cmps', ['generate:examples'], () =>
+  gulp.src(resolve(__PATHS__.generated, 'examples/*'))
+  .pipe(through.obj((file, enc, next) => {
+    file.contents = new Buffer(wrapInTemplate(file.contents.toString()))
+    next(null, file)
+  }))
+  .pipe(gulpzip('cmps.zip'))
+  .pipe(gulp.dest(resolve(__PATHS__.www)))
+);

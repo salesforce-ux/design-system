@@ -81,6 +81,7 @@ export default React.createClass({
         <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         {this.renderAnalytics()}
+        {this.renderNewRelicJsErrorTracking()}
       </head>
     );
   },

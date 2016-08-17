@@ -20,7 +20,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let Scroller = props =>
   <div className={pf('tabs__nav-scroller has-overflow')}>
-    {props.children}
+    <div className={pf('tabs__nav-scroller--inner')}>
+      {props.children}
+    </div>
   </div>;
 
 //////////////////////////////////////////////

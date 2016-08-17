@@ -8,37 +8,40 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}tabs__nav-scroller {
+.#{$css-prefix}tabs__nav-scroller.#{$css-prefix}has-overflow {
+  position: relative;
+}
 
-  &.#{$css-prefix}has-overflow {
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  .#{$css-prefix}tabs--scoped__nav,
-  .#{$css-prefix}tabs--default__nav {
-    padding-right: 2.375rem; // Allow for controls
-  }
+.#{$css-prefix}tabs__nav-scroller--inner {
+  overflow-x: hidden;
 }
 
 .#{$css-prefix}tab__scroll-controls {
   display: none;
 }
 
-.#{$css-prefix}has-overflow .#{$css-prefix}tab__scroll-controls {
-  display: block;
-  position: absolute;
-  top: $border-width-thin;
-  background-color: $color-background-alt;
+.#{$css-prefix}has-overflow {
+
+  .#{$css-prefix}tabs--scoped__nav,
+  .#{$css-prefix}tabs--default__nav {
+    padding-right: 5.0225rem; // Allow for controls
+  }
+
+  .#{$css-prefix}tab__scroll-controls {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: $border-width-thin;
+    background-color: $color-background-alt;
+  }
 }
 
 .#{$css-prefix}tabs--default .#{$css-prefix}tab__scroll-controls {
-  right: 0;
   padding: calc(#{$spacing-xx-small} - #{$border-width-thin}) $border-width-thin calc(#{$spacing-xx-small} - #{$border-width-thin}) $spacing-xx-small;
 }
 
 .#{$css-prefix}tabs--scoped .#{$css-prefix}tab__scroll-controls {
-  right: $border-width-thin;
+  border-right: $border-width-thin solid $color-border;
   border-left: $border-width-thin solid $color-border;
   border-radius: 0 $border-radius-medium 0 0;
   padding: calc(#{$spacing-xx-small} - #{$border-width-thin}) $spacing-xx-small;

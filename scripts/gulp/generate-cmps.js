@@ -24,13 +24,13 @@ const wrapInTemplate = el =>
     <aura:attribute name="examplesInLightning" type="Boolean" default="true"/>
     ${el}
   </aura:component>
-  `
+  `;
 
 gulp.task('generate:cmps', ['generate:examples'], () =>
   gulp.src(resolve(__PATHS__.generated, 'examples/*'))
   .pipe(through.obj((file, enc, next) => {
-    file.contents = new Buffer(wrapInTemplate(file.contents.toString()))
-    next(null, file)
+    file.contents = new Buffer(wrapInTemplate(file.contents.toString()));
+    next(null, file);
   }))
   .pipe(gulpzip('cmps.zip'))
   .pipe(gulp.dest(resolve(__PATHS__.www)))

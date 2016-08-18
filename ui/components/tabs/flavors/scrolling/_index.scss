@@ -64,7 +64,7 @@
     border-bottom: $border-width-thin solid $color-border;
 
     &.#{$css-prefix}active {
-      border-bottom-color: $color-border-path-divider; // @TODO: Make a new token
+      border-bottom-color: $color-border-tab-active;
     }
   }
 

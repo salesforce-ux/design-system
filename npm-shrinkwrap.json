@@ -500,6 +500,14 @@
         }
       }
     },
+    "check-type": {
+      "version": "0.4.11",
+      "dependencies": {
+        "underscore": {
+          "version": "1.6.0"
+        }
+      }
+    },
     "chokidar": {
       "version": "1.6.0"
     },
@@ -599,6 +607,9 @@
           "version": "2.0.6"
         }
       }
+    },
+    "concat-with-sourcemaps": {
+      "version": "1.0.4"
     },
     "config-chain": {
       "version": "1.1.10"
@@ -3381,9 +3392,6 @@
     },
     "timers-browserify": {
       "version": "1.4.2"
-    },
-    "tinycolor2": {
-      "version": "1.4.1"
     },
     "tmp": {
       "version": "0.0.28"

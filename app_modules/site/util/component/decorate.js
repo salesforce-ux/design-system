@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import fs from 'fs';
-import jsYaml from 'js-yaml';
+import yaml from 'js-yaml';
 import path from 'path';
 import markdown from 'markdown-it';
 import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
@@ -60,7 +60,7 @@ const addInfo = component => {
     renderMarkdownAndReplaceGlobals(fs.readFileSync(indexPath).toString());
 
   const getYaml = indexPath =>
-    jsYaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
+    yaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
 
   getIndex(component.path, 'markup.md', indexPath => {
     component.info.markup = {

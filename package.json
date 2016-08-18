@@ -69,6 +69,7 @@
     "gulp-scss-lint": "0.4.0",
     "gulp-sourcemaps": "1.6.0",
     "gulp-util": "3.0.7",
+    "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "3.2.0",
     "invariant": "2.2.1",
     "js-beautify": "1.6.4",

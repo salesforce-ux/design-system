@@ -11,40 +11,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
+import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
+import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 
 import Heading from 'app_modules/site/components/page/heading';
 import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
 import Tabs from 'ui/components/tabs/index.react';
 
-// Remove wrapping tag if it has the ".demo-only" class in it
-// Note: this will also remove other classes too on that tag! :)
-const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
 
-/**
- * Highlight a string of text based on the language
- *
- * @param {string} code
- * @param {string} language
- * @returns {string}
- */
-function highlight(code, language) {
-  code = code.trim().replace(demoPattern, (match, tag, content) => content);
-  // Remove uncessary leading whitespace so code is flush left
-  const lines = code.split('\n');
-  const firstLine = lines[0].length === 0 ? lines[1] : '';
-  const offsetMatch = firstLine.match(/^\s*/);
-  const offset = offsetMatch ? offsetMatch[0].length : 0;
-  const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-  return Prism.highlight(
-    codeTrimmed,
-    Prism.languages[language]
-  );
-}
 
 /**
  * Return a list of tab objects for the "preview" section
@@ -131,6 +109,7 @@ class ComponentFlavor extends React.Component {
           <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
+            {this.renderDesc()}
             {this.renderCode()}
             {this.renderInfo()}
           </div>
@@ -189,15 +168,24 @@ class ComponentFlavor extends React.Component {
   renderInfo() {
     const { flavor } = this.props;
 
-    if (flavor.info.markup) {
-      flavor.info.markup['__html'] = flavor.info.markup['__html'].replace(/<h3/g, '<h3 class="site-text-heading--medium"');
-    }
-
     return flavor.info.markup ? (
       <div
         className="slds-text-longform"
         dangerouslySetInnerHTML={flavor.info.markup} />
     ) : null;
+  }
+
+  renderDesc() {
+    const { flavor } = this.props;
+    const exampleDescriptionMarkup = renderMarkdownAndReplaceGlobals(flavor.exampleDescription);
+
+    return exampleDescriptionMarkup ? <div>
+            <h3 className="site-text-heading--small site-text-heading--callout">State markup changes</h3>
+            <div
+              id={`description-${flavor.uid}`}
+              className={pf('text-longform m-bottom--large')}
+              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />
+          </div> : null;
   }
 
   renderPreview() {
@@ -278,7 +266,7 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const className = 'language-markup';
     const code = flavor.exampleMarkup
-      ? highlight(flavor.exampleMarkup, 'markup') : null;
+      ? highlightMarkup(flavor.exampleMarkup) : null;
     return (
       <div className={pf('site-code--content scrollable--x')}>
         <pre className={className}>

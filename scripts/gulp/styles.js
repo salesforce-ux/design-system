@@ -63,7 +63,7 @@ gulp.task('stylestats', done => {
   });
 });
 
-gulp.task('styles', ['generate:tokens:components'], () =>
+gulp.task('styles', ['generate:tokens:components:sass'], () =>
   gulp
     .src('site/assets/styles/*.scss')
     .pipe(plumber())

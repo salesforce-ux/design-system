@@ -25,7 +25,7 @@ gulp.task('generate', [
   'generate:icons',
   'generate:release-notes',
   'generate:tokens:zip',
-  'generate:tokens:components',
+  'generate:tokens:components:sass',
   'generate:tokens',
   'generate:ui-kit:zip',
   'generate:ui',

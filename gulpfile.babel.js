@@ -240,7 +240,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
-  gulp.watch(watchPaths.tokens, ['generate:tokens:components']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:components:sass']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(

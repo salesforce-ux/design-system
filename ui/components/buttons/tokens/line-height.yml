@@ -1,0 +1,14 @@
+global:
+  category: "line-height"
+  type: number
+  cssProperties:
+  - font
+  - "*height"
+props:
+  LINE_HEIGHT_BUTTON:
+    value: 1.875rem
+    cssProperties:
+    - font
+    -  "*height"
+    - bottom
+    comment: Line heights for regular buttons

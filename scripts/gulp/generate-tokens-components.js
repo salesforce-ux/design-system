@@ -15,8 +15,47 @@ import theo from 'theo';
 import concat from 'gulp-concat';
 import zip from 'gulp-zip';
 import replace from 'gulp-replace';
+import rename from 'gulp-rename';
+import _ from 'lodash';
 
-gulp.task('generate:tokens:components', () =>
+let formatTransforms = _({
+  'web': [
+    'styl',
+    'less',
+    'sass',
+    'default.sass',
+    'scss',
+    'default.scss',
+    'map.scss',
+    'map.variables.scss',
+    'html',
+    'json',
+    'common.js',
+    'amd.js',
+    'aura.theme',
+    'aura.tokens'
+  ],
+  'ios': ['ios.json'],
+  'android': ['android.xml']
+}).map((formats, transform) =>
+  formats.map((name) => ({
+    name: name,
+    transform: transform
+  }))
+).flatten().value();
+
+gulp.task('generate:tokens:components:all', () => {
+  formatTransforms.forEach(format =>
+    gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
+      .pipe(replace(/(\.\/)?aliases/g, path.resolve(__PATHS__.node_modules, '@salesforce-ux/design-tokens/tokens/force-base/aliases')))
+      .pipe(theo.plugins.transform(format.transform))
+      .pipe(theo.plugins.format(format.name))
+      .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
+      .pipe(gulp.dest(path.resolve(__PATHS__.generated, 'design-tokens')))
+  );
+});
+
+gulp.task('generate:tokens:components:sass', () =>
   gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
     .pipe(replace(/(\.\/)?aliases/g, path.resolve(__PATHS__.node_modules, '@salesforce-ux/design-tokens/tokens/force-base/aliases')))
     .pipe(theo.plugins.transform('web'))

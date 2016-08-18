@@ -110,7 +110,7 @@ gulp.task('lint:html', () => {
 gulp.task('lint:tokens:yaml', () =>
   gulp.src([
     './ui/components/**/tokens/*.yml',
-    './tokens/aliases/*.yml'
+    './design-tokens/aliases/*.yml'
   ])
     .pipe(yamlValidate())
 );
@@ -119,8 +119,7 @@ gulp.task('lint:tokens:components', () =>
   gulp.src([
     './ui/components/**/tokens/*.yml',
     '!./ui/components/**/tokens/bg-*.yml', // icons
-    '!./ui/components/**/tokens/force-font-commons.json', // fonts
-    '!./ui/components/**/tokens/aliases/*.yml' // aliases
+    '!./ui/components/**/tokens/force-font-commons.yml' // fonts
   ])
     .pipe(tokenlint())
     .pipe(tokenlint.report('verbose'))
@@ -128,7 +127,7 @@ gulp.task('lint:tokens:components', () =>
 
 gulp.task('lint:tokens:aliases', () =>
   gulp.src([
-    './tokens/aliases/*.yml'
+    './design-tokens/aliases/*.yml'
   ])
     .pipe(tokenlint({ prefix: false }))
     .pipe(tokenlint.report('verbose'))

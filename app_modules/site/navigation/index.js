@@ -44,7 +44,7 @@ export const formatNavItem = (item, parent) => {
 
 export const rootNav = (path) => {
   return _.drop(getActiveNavItems(nav, path)).map(item => item)[0];
-}
+};
 
 /**
  * Return true if an item contaons a path

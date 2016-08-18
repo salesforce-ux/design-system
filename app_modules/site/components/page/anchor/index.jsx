@@ -13,7 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
+import { rootNav } from 'app_modules/site/navigation';
 
 export default React.createClass({
 
@@ -24,31 +24,17 @@ export default React.createClass({
     path: React.PropTypes.string
   },
 
-  getNavItems() {
-    return _.drop(getActiveNavItems(navigation(), this.props.path));
-  },
-
-  rootNavName() {
-    // pick a fallback that will hopefully stay around
-    const fallback = 'resources';
-    return this.getNavItems().map(item => item.id)[0] || fallback;
-  },
-
-  capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  },
-
   render() {
     return (
       <header className={pf('site-masthead grid wrap')}>
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>
-              <img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
+              <img src={`/assets/images/header-${rootNav(this.props.path).id || 'resources'}.svg`} alt="" />
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
-                <span className={pf('assistive-text docsearch-category')}>{this.capitalize(this.rootNavName())}</span>
+                <span className={pf('assistive-text docsearch-category')}>{rootNav(this.props.path).label || 'Resources'}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

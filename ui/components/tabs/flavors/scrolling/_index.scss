@@ -52,19 +52,23 @@
 
 .#{$css-prefix}tabs--scoped {
 
-  .#{$css-prefix}has-overflow .#{$css-prefix}tabs__nav-scroller--inner {
-    border: $border-width-thin solid $color-border;
-    border-bottom: 0;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
-    background-color: $color-background;
-  }
+  .#{$css-prefix}has-overflow {
 
-  .#{$css-prefix}tabs--scoped__item {
-    margin-bottom: 0;
-    border-bottom: $border-width-thin solid $color-border;
+    .#{$css-prefix}tabs__nav-scroller--inner {
+      border: $border-width-thin solid $color-border;
+      border-bottom: 0;
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+      background-color: $color-background;
+    }
 
-    &.#{$css-prefix}active {
-      border-bottom-color: $color-border-tab-active;
+    .#{$css-prefix}tabs--scoped__item {
+      margin-bottom: 0;
+      border-bottom: $border-width-thin solid $color-border;
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      &.#{$css-prefix}active {
+        border-bottom-color: $color-border-tab-active;
+      }
     }
   }
 

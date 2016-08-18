@@ -6,7 +6,7 @@ global:
   - border*
   - box-shadow
 imports:
-- "aliases.json"
+- "../../../../design-tokens/aliases/color.yml"
 props:
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"

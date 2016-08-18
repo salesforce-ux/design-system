@@ -47,7 +47,6 @@ let formatTransforms = _({
 gulp.task('generate:tokens:components:all', () => {
   formatTransforms.forEach(format =>
     gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
-      .pipe(replace(/(\.\/)?aliases/g, path.resolve(__PATHS__.node_modules, '@salesforce-ux/design-tokens/tokens/force-base/aliases')))
       .pipe(theo.plugins.transform(format.transform))
       .pipe(theo.plugins.format(format.name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
@@ -57,7 +56,6 @@ gulp.task('generate:tokens:components:all', () => {
 
 gulp.task('generate:tokens:components:sass', () =>
   gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
-    .pipe(replace(/(\.\/)?aliases/g, path.resolve(__PATHS__.node_modules, '@salesforce-ux/design-tokens/tokens/force-base/aliases')))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(concat('component-tokens.default.scss'))

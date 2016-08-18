@@ -9,6 +9,6 @@ props:
     value: 1.875rem
     cssProperties:
     - font
-    -  "*height"
+    - "*height"
     - bottom
     comment: Line heights for regular buttons

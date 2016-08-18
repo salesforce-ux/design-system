@@ -7,6 +7,7 @@ updatedependencies:
 	npm install
 	npm shrinkwrap
 	clingwrap npmbegone
+	npm run build
 	npm test
 	git add npm-shrinkwrap.json package.json
 	@echo "Dependency tree updated, ready to commit!"

@@ -1,0 +1,32 @@
+global:
+  category: line-height
+  type: number
+  cssProperties:
+  - font
+  - '*height'
+props:
+  LINE_HEIGHT_HEADING:
+    value: '1.25'
+    comment: Unitless line-heights for reusability
+  LINE_HEIGHT_TEXT:
+    value: '1.375'
+    comment: Unitless line-heights for reusability
+  LINE_HEIGHT_RESET:
+    value: '1'
+    comment: Remove extra leading. Unitless line-heights for reusability
+  LINE_HEIGHT_TAB:
+    value: 2.5rem
+    comment: Line heights for tabs
+  LINE_HEIGHT_BUTTON:
+    value: 1.875rem
+    cssProperties:
+      - font
+      - '*height'
+      - bottom
+    comment: Line heights for regular buttons
+  LINE_HEIGHT_BUTTON_SMALL:
+    value: 1.75rem
+    comment: Line heights for small buttons
+  LINE_HEIGHT_TOGGLE:
+    value: 1.3rem
+    comment: Line heights for toggle buttons

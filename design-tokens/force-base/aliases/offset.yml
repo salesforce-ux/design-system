@@ -1,5 +1,5 @@
 aliases:
-  OFFSET_NONE: 0
+  OFFSET_NONE: "0" # Needs to be quoted or will be interpreted as 'false'
   OFFSET_X_SMALL: 2
   OFFSET_SMALL: 3
   OFFSET_MEDIUM: 4

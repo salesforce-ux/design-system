@@ -67,7 +67,7 @@ const categories = {
       return `icon-${spriteName}-${symbolName}`;
     },
     description: 'Actions can be seen throughout the interface and represent actions a user can take on any given screen.',
-    props: require('@salesforce-ux/design-tokens/dist/bg-actions.common.js')
+    props: require('design-tokens/dist/bg-actions.common.js')
   }),
 
   custom: () => _.assign(_category(), {
@@ -77,7 +77,7 @@ const categories = {
       return `icon-${spriteName}-${symbolName.replace(/[^a-z0-9]/g, '')}`;
     },
     description: 'Custom icons are available for the identity of user created objects.',
-    props: require('@salesforce-ux/design-tokens/dist/bg-custom.common.js')
+    props: require('design-tokens/dist/bg-custom.common.js')
   }),
 
   doctype: () => _.assign(_category(), {
@@ -93,7 +93,7 @@ const categories = {
       return `icon-${spriteName}-${symbolName}`;
     },
     description: 'Standard icons represent entities and objects within Salesforce.',
-    props: require('@salesforce-ux/design-tokens/dist/bg-standard.common.js')
+    props: require('design-tokens/dist/bg-standard.common.js')
   }),
 
   utility: () => _.assign(_category(), {

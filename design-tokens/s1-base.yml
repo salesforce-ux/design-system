@@ -1,0 +1,10 @@
+imports:
+- ./force-base/aliases/color.yml
+- ./s1-base/sizing.yml
+- ./s1-base/border-color.yml
+- ./s1-base/background-color.yml
+- ./s1-base/line-height.yml
+- ./s1-base/duration.yml
+auraExtends: 'force:base'
+auraImports:
+- 'one:actionBackgrounds'

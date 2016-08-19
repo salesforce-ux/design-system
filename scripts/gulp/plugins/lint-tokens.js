@@ -41,10 +41,9 @@ export const prefixes = [
 const tokenReporter = (lint) =>
   gutil.log(JSON.stringify(lint));
 
-const verboseReporter = (lint, file) => {
+const verboseReporter = (lint, file) =>
   lint.errors.forEach((error) =>
     gutil.log('tokenlint', `${error.error}: ${error.token} in ${file.path}`));
-};
 
 const prefixLint = (tokenName) =>
   prefixes.some(prefix => tokenName.startsWith(prefix));

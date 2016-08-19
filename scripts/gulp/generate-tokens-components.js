@@ -44,25 +44,32 @@ let formatTransforms = _({
   }))
 ).flatten().value();
 
+gulp.task('generate:tokens:base', () => {
+  formatTransforms.forEach(format =>
+    gulp.src([
+      path.resolve(__PATHS__.designTokens, '*.yml')
+    ])
+      .pipe(theo.plugins.transform(format.transform))
+      .pipe(theo.plugins.format(format.name))
+      .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
+  );
+});
+
 gulp.task('generate:tokens:components:all', () => {
   formatTransforms.forEach(format =>
     gulp.src([
-      path.resolve(__PATHS__.designTokens, '**/*.yml'),
-      path.resolve(__PATHS__.ui, '**/tokens/*.yml'),
-      `!${path.resolve(__PATHS__.designTokens, 'aliases/*.yml')}`
+      path.resolve(__PATHS__.ui, '**/tokens/*.yml')
     ])
       .pipe(theo.plugins.transform(format.transform))
       .pipe(theo.plugins.format(format.name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
-      .pipe(gulp.dest(path.resolve(__PATHS__.generated, 'design-tokens')))
+      .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist/components')))
   );
 });
 
 gulp.task('generate:tokens:components:sass', () =>
   gulp.src([
-    path.resolve(__PATHS__.designTokens, '**/*.yml'),
-    path.resolve(__PATHS__.ui, '**/tokens/*.yml'),
-    `!${path.resolve(__PATHS__.designTokens, 'aliases/*.yml')}`
+    path.resolve(__PATHS__.ui, '**/tokens/*.yml')
   ])
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))

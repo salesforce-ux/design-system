@@ -28,5 +28,8 @@
 # Ignore code coverage reports
 coverage
 
+# Ignore tokens distribution
+/design-tokens/dist
+
 # Legacy folders
 /git_modules

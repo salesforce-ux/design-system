@@ -28,7 +28,7 @@ class Row extends React.Component {
     const tokenData = JSON.stringify({
       name: token.name,
       value: token.value,
-      valueRaw: token['.rawValue']
+      rawValue: token['.rawValue']
     });
     return (
       <tr
@@ -56,7 +56,7 @@ class Row extends React.Component {
     const value = token.value;
     return <CellValue
       value={token.value}
-      valueRaw={token['.rawValue']}
+      rawValue={token['.rawValue']}
       example={example}
       className={className} />;
   }

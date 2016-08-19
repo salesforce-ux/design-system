@@ -15,7 +15,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import tinyColor from 'tinycolor2';
 
 
-const toAliasString = (valueRaw) => valueRaw.replace(/\{\!/, '').replace(/\}$/, '');
+const toAliasString = (rawValue) => rawValue.replace(/\{\!/, '').replace(/\}$/, '');
 
 class CellValue extends React.Component {
 
@@ -38,7 +38,7 @@ class CellValue extends React.Component {
     let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() : null;
 
     // If the raw value is different from the value, let's clean it up and show it
-    let raw = this.props.valueRaw !== this.props.value ? toAliasString(this.props.valueRaw) : null;
+    let raw = this.props.rawValue !== this.props.value ? toAliasString(this.props.rawValue) : null;
 
     let alternateHex = (hex === null) ? null : <div className="slds-text-body--small">{hex}</div>;
     let alternateRaw = (raw === null) ? null : <div className="slds-text-body--small">{raw}</div>;
@@ -63,9 +63,9 @@ class CellValue extends React.Component {
 
 }
 
-  value: React.PropTypes.string,
-  valueRaw: React.PropTypes.string,
 CellValue.propTypes = {
+  value: React.PropTypes.string.isRequired,
+  rawValue: React.PropTypes.string,
   example: React.PropTypes.node
 };
 

@@ -21,11 +21,11 @@ export let states = [
   {
     id: 'button-icon-stateful-not-selected',
     label: 'Not Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful symbol="like" assistiveText="Like" />
+    element: <ButtonIcon className={pf('button--icon-border')} stateful assertive symbol="like" assistiveText="Like" />
   },
   {
     id: 'button-icon-stateful-selected',
     label: 'Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful selected symbol="like" assistiveText="Liked" />
+    element: <ButtonIcon className={pf('button--icon-border')} stateful selected assertive symbol="like" assistiveText="Liked" />
   }
 ];

@@ -130,8 +130,9 @@ The following issues have now been resolved:
   - Correct use of `menuitemcheckbox` for selectable menu items, with the use of `aria-checked` instead of `aria-selected`
   - Correct sub heading menus which was split across multiple un-ordered lists
   - Include line separators and sub-heading separators into the accessibility tree with `role="separator"`
-- Add `aria-live` attribute to the stateful icon button
 - Added `aria-describedby` on textarea element to show error message ID
+- Added `aria-live` attribute to the stateful icon button
+- Added `aria-describedby` on select element to show error message ID
 
 **DEPRECATED**
 

@@ -37,7 +37,7 @@ let FormElementControl = props =>
 
 export let Select = props =>
   <div className={pf('select_container')}>
-    <select id="select-01" className={className(pf('select'), props.className)} disabled={props.disabled} multiple={props.multiple}>
+    <select id="select-01" className={className(pf('select'), props.className)} disabled={props.disabled} multiple={props.multiple} >
       {props.children}
     </select>
   </div>;
@@ -79,13 +79,13 @@ let ErrorState = props =>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
-        <Select>
+        <select id="select-01" className={pf('select')} aria-describedby="error-02">
           <option>Option One</option>
           <option>Option Two</option>
           <option>Option Three</option>
-        </Select>
+        </select>
       </FormElementControl>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div className={pf('form-element__help')} id="error-02">This field is required</div>
     </FormElement>
   </Demo>;
 

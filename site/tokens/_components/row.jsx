@@ -54,7 +54,6 @@ class Row extends React.Component {
       'token--empty': _.isUndefined(token),
       'site-token__generic-size': isSizeToken
     });
-    const value = token.value;
     return <CellValue
       value={token.value}
       rawValue={token['.rawValue']}

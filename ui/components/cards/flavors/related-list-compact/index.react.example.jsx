@@ -30,48 +30,48 @@ export default (
         <Tile title="Related Record Title 1">
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>
         <Tile title="Related Record Title 2">
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>
         <Tile title="Related Record Title 3">
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>

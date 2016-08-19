@@ -13,25 +13,55 @@ import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import gulpzip from 'gulp-zip';
-import path from 'path';
 import through from 'through2';
-
-import { resolve } from 'path';
+import path from 'path';
 
 const wrapInTemplate = el =>
   `
   <aura:component>
-    <aura:attribute name="examplesInLightning" type="Boolean" default="true"/>
-    ${el}
+  <aura:attribute name="examplesInLightning" type="Boolean" default="true"/>
+    <aura:if isTrue="{!v.examplesInLightning}">
+
+      <!-- TODO example using lightning components -->
+
+    <aura:set attribute="else">
+      <!-- HTML example -->
+
+      ${el}
+
+    </aura:set>
+    </aura:if>
   </aura:component>
   `;
 
-gulp.task('generate:cmps', ['generate:examples'], () =>
-  gulp.src(resolve(__PATHS__.generated, 'examples/*'))
-  .pipe(through.obj((file, enc, next) => {
+const exDir = path.resolve.bind(path, __PATHS__.generated, 'examples');
+
+const createCmps = () => {
+  let files = [];
+
+  const transform = (oldFile, enc, next) => {
+    let file = oldFile.clone();
+    file.path = file.path.replace(/html$/, 'cmp');
     file.contents = new Buffer(wrapInTemplate(file.contents.toString()));
+    files.push(file.relative);
     next(null, file);
-  }))
+  };
+
+  const flush = function(next) {
+    const json = JSON.stringify({files});
+    this.push(new gutil.File({
+      path: 'index.json',
+      contents: new Buffer(json)
+    }));
+    next();
+  };
+
+  return through.obj(transform, flush);
+};
+
+
+gulp.task('generate:cmps', ['generate:examples'], () =>
+  gulp.src(exDir('*'))
+  .pipe(createCmps())
   .pipe(gulpzip('cmps.zip'))
-  .pipe(gulp.dest(resolve(__PATHS__.www)))
-);
+  .pipe(gulp.dest(__PATHS__.www)));

@@ -13,8 +13,8 @@ import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-import ExampleCell from './cell-example';
-import ValueCell from './cell-value';
+import CellExample from './cell-example';
+import CellValue from './cell-value';
 
 class Row extends React.Component {
 
@@ -46,7 +46,7 @@ class Row extends React.Component {
     const { category, token, formFactors } = this.props;
     const example = token
       ? category.renderExample(token)
-      : <ExampleCell />;
+      : <CellExample />;
     const isSizeToken = token.name.toString().match(/^SIZE_/);
     const className = classNames({
       'token': token,
@@ -54,7 +54,7 @@ class Row extends React.Component {
       'site-token__generic-size': isSizeToken
     });
     const value = token.value;
-    return <ValueCell
+    return <CellValue
       value={token.value}
       valueRaw={token['.rawValue']}
       example={example}

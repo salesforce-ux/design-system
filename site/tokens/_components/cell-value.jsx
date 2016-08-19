@@ -17,7 +17,7 @@ import tinyColor from 'tinycolor2';
 
 const toAliasString = (valueRaw) => valueRaw.replace(/\{\!/, '').replace(/\}$/, '');
 
-class ValueCell extends React.Component {
+class CellValue extends React.Component {
 
   render() {
     const className = classNames('', this.props.className);
@@ -63,10 +63,10 @@ class ValueCell extends React.Component {
 
 }
 
-ValueCell.propTypes = {
   value: React.PropTypes.string,
   valueRaw: React.PropTypes.string,
+CellValue.propTypes = {
   example: React.PropTypes.node
 };
 
-export default ValueCell;
+export default CellValue;

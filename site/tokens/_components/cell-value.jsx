@@ -32,8 +32,6 @@ class CellValue extends React.Component {
   renderValue() {
     if (!this.props.value) return null;
 
-    let px;
-
     // We have a color, let's convert it to #RRGGBB
     let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() : null;
 
@@ -45,9 +43,7 @@ class CellValue extends React.Component {
 
     // Show values in pixels, useful for designers (and other normal people who
     // don't want to read values in rems)
-    if (/^([0-9\.]+)rem$/.test(this.props.value)) {
-      px = <div className="slds-text-body--small">{parseFloat(this.props.value) * 16}px</div>;
-    }
+    let px = this.props.pxValue ? <div className="slds-text-body--small">{this.props.pxValue}</div> : null;
 
     const className = classNames('cell-wrap', 'site-property-value');
 
@@ -66,6 +62,7 @@ class CellValue extends React.Component {
 CellValue.propTypes = {
   value: React.PropTypes.string.isRequired,
   rawValue: React.PropTypes.string,
+  pxValue: React.PropTypes.string,
   example: React.PropTypes.node
 };
 

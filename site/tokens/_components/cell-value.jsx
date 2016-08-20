@@ -15,9 +15,9 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 import tinyColor from 'tinycolor2';
 
 
-const toAliasString = (valueRaw) => valueRaw.replace(/\{\!/, '').replace(/\}$/, '');
+const toAliasString = (rawValue) => rawValue.replace(/\{\!/, '').replace(/\}$/, '');
 
-class ValueCell extends React.Component {
+class CellValue extends React.Component {
 
   render() {
     const className = classNames('', this.props.className);
@@ -32,22 +32,18 @@ class ValueCell extends React.Component {
   renderValue() {
     if (!this.props.value) return null;
 
-    let px;
-
     // We have a color, let's convert it to #RRGGBB
     let hex = (/^(rgb|hsl)\(/g.test(this.props.value)) ? tinyColor(this.props.value).toHexString() : null;
 
     // If the raw value is different from the value, let's clean it up and show it
-    let raw = this.props.valueRaw !== this.props.value ? toAliasString(this.props.valueRaw) : null;
+    let raw = this.props.rawValue !== this.props.value ? toAliasString(this.props.rawValue) : null;
 
     let alternateHex = (hex === null) ? null : <div className="slds-text-body--small">{hex}</div>;
     let alternateRaw = (raw === null) ? null : <div className="slds-text-body--small">{raw}</div>;
 
     // Show values in pixels, useful for designers (and other normal people who
     // don't want to read values in rems)
-    if (/^([0-9\.]+)rem$/.test(this.props.value)) {
-      px = <div className="slds-text-body--small">{parseFloat(this.props.value) * 16}px</div>;
-    }
+    let px = this.props.pxValue ? <div className="slds-text-body--small">{this.props.pxValue}</div> : null;
 
     const className = classNames('cell-wrap', 'site-property-value');
 
@@ -63,10 +59,11 @@ class ValueCell extends React.Component {
 
 }
 
-ValueCell.propTypes = {
-  value: React.PropTypes.string,
-  valueRaw: React.PropTypes.string,
+CellValue.propTypes = {
+  value: React.PropTypes.string.isRequired,
+  rawValue: React.PropTypes.string,
+  pxValue: React.PropTypes.string,
   example: React.PropTypes.node
 };
 
-export default ValueCell;
+export default CellValue;

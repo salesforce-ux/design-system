@@ -15,7 +15,7 @@ import _ from 'lodash';
 import tinyColor from 'tinycolor2';
 
 import CategorySection from './_components/category-section';
-import ExampleCell from './_components/cell-example';
+import CellExample from './_components/cell-example';
 
 const MAX_EXAMPLE_WIDTH_REMS = 10;
 
@@ -51,7 +51,7 @@ class Category {
    * @return {React.PropTypes.node}
    */
   renderExample(token) {
-    return <ExampleCell />;
+    return <CellExample />;
   }
   /**
    * Render an optional descripton below the title
@@ -67,7 +67,7 @@ class Category {
 
 /**
  * When displaying the a releaseSet, "props" will be grouped by category
- * and each category needs a slightly different <ExampleCell />
+ * and each category needs a slightly different <CellExample />
  */
 const categories = {
 
@@ -77,7 +77,7 @@ const categories = {
     valueFormat: 'color',
     renderExample(token) {
       return (
-        <ExampleCell style={{backgroundColor: token.value}} />
+        <CellExample style={{backgroundColor: token.value}} />
       );
     }
   }),
@@ -91,9 +91,9 @@ const categories = {
         'site-example-color-text-inverse': tinyColor.readability('#FFF', token.value) < 3
       });
       return (
-        <ExampleCell className={className}>
+        <CellExample className={className}>
           <span style={{color: token.value}}>Aa</span>
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -104,9 +104,9 @@ const categories = {
     valueFormat: 'color',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example site-example-color-border">
+        <CellExample className="site-example site-example-color-border">
           <div className="site-box-color-border" style={{borderColor: token.value}} />
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -118,12 +118,12 @@ const categories = {
       return (
         // if the token value isn't a number, it's a font-family
         // if it's a number, it is a font-weight
-        <ExampleCell style={
+        <CellExample style={
           (isNaN(token.value)) ? { fontFamily: token.value } : { fontWeight: token.value }
         }>
           {/* Making the text larger to make weights more obvious */}
           <span style={{fontSize: '2rem'}}>Aa</span>
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -133,9 +133,9 @@ const categories = {
     description: 'Use these sizing tokens for font sizes.',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example-color-border" style={{fontSize: token.value}}>
+        <CellExample className="site-example-color-border" style={{fontSize: token.value}}>
           Aa
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -145,9 +145,9 @@ const categories = {
     description: 'Use these tokens for changing the line-height of elements. Usually, the line-height-text is already inherited by default. Only set it if you need to apply it again.',
     renderExample(token) {
       return (
-        <ExampleCell style={{lineHeight: token.value}}>
+        <CellExample style={{lineHeight: token.value}}>
           Scenester cliche try-hard 3 wolf moon, lomo banjo cardigan meditation retro. Flannel DIY narwhal cornhole, brunch PBR bicycle rights YOLO seitan Marfa fanny pack XOXO locavore.
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -157,9 +157,9 @@ const categories = {
     description: 'Spacing tokens are used for padding, margins, and position coordinates. Border-width tokens are used for the border property.',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example-spacing">
+        <CellExample className="site-example-spacing">
           <div className="site-box-spacing" style={{width: token.value, height: token.value}} />
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -169,9 +169,9 @@ const categories = {
     description: 'Use radius tokens to change the border-radius size (rounded corners).',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example-radius">
+        <CellExample className="site-example-radius">
           <div className="site-box-radius" style={{borderRadius: token.value}} />
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -188,9 +188,9 @@ const categories = {
         width = intWidth > MAX_EXAMPLE_WIDTH_REMS ? '100%' : `${intWidth}rem`;
       }
       return (
-        <ExampleCell className="site-example-spacing">
+        <CellExample className="site-example-spacing">
           <div className="site-box-spacing" style={{width: width, height: token.value}} />
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -200,9 +200,9 @@ const categories = {
     description: 'Use shadow tokens to set a box shadow.',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example site-example-shadow">
+        <CellExample className="site-example site-example-shadow">
           <div className="site-box-shadow" style={{boxShadow: token.value}} />
-        </ExampleCell>
+        </CellExample>
       );
     }
   }),
@@ -213,12 +213,12 @@ const categories = {
     renderExample(token) {
       if (token.type === 'box-shadow') {
         return (
-          <ExampleCell className="site-example site-example-atmosphere">
+          <CellExample className="site-example site-example-atmosphere">
             <div className="site-atmosphere" style={{boxShadow: token.value}} />
-          </ExampleCell>
+          </CellExample>
         );
       } else {
-        return <ExampleCell />;
+        return <CellExample />;
       }
     }
   }),
@@ -228,7 +228,7 @@ const categories = {
     description: 'Use timing tokens for animation durations.',
     renderExample(token) {
       return (
-        <ExampleCell className="site-example site-example-time" />
+        <CellExample className="site-example site-example-time" />
       );
     }
   }),
@@ -238,7 +238,7 @@ const categories = {
     description: 'Use media query tokens to set media query width ranges.',
     renderExample() {
       return (
-        <ExampleCell />
+        <CellExample />
       );
     }
   }),
@@ -248,7 +248,7 @@ const categories = {
     description: 'Use z-index tokens to set the z order layering of elements.',
     renderExample() {
       return (
-        <ExampleCell />
+        <CellExample />
       );
     }
   }),
@@ -258,7 +258,7 @@ const categories = {
     description: 'These sizing tokens will be moved to the sizing section. The width, height, max-height, max-width are tokens used for their respective CSS properties. Square tokens are used for both width and height. Flex tokens are used for flex box sizing.',
     renderExample() {
       return (
-        <ExampleCell />
+        <CellExample />
       );
     }
   })

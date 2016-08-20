@@ -115,6 +115,7 @@ The following issues have now been resolved:
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 - Card accessibility fixes
   - Moved `<header>` element to only contain the card header text, rather than the text and overflow menu
+  - Changed `<p>` tags with truncation in related list markup to `<span>` tags
 - Make primary labels of compound fields capital
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
@@ -130,6 +131,7 @@ The following issues have now been resolved:
   - Correct use of `menuitemcheckbox` for selectable menu items, with the use of `aria-checked` instead of `aria-selected`
   - Correct sub heading menus which was split across multiple un-ordered lists
   - Include line separators and sub-heading separators into the accessibility tree with `role="separator"`
+- Add `aria-live` attribute to the stateful icon button
 
 **DEPRECATED**
 

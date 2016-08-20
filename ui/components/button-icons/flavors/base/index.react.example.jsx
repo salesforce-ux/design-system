@@ -30,6 +30,7 @@ export let ButtonIcon = props =>
     aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
+    aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
     tabIndex={ props.tabIndex } >
     <SvgIcon
       className={className(pf('button__icon'), props.iconClassName)}

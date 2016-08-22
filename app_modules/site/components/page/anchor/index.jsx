@@ -34,7 +34,7 @@ export default React.createClass({
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
-                <span className={pf('assistive-text docsearch-category')}>{rootNavLabel(this.props.path)}</span>
+                <span className={pf('hide docsearch-category')}>{rootNavLabel(this.props.path)}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

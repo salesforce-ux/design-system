@@ -19,7 +19,7 @@
   }
 
   @mixin header-margins{
-    margin {
+    margin: {
       top: $spacing-large;
       right: $spacing-large;
       bottom: $spacing-none;
@@ -78,6 +78,7 @@
   }
 
   h6{
+    @include header-margins;
     @include header-fonts;
     font: {
       size: $font-size-small;

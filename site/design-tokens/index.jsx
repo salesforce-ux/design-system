@@ -17,7 +17,7 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-import releases from '.generated/ui.tokens';
+import sets from '.generated/ui.tokens';
 import categories from './_categories';
 
 const nameFormats = [
@@ -36,13 +36,9 @@ const nameFormats = [
 const Tokens = React.createClass({
 
   getInitialState() {
-    const release = releases[0];
-    const group = release.groups[0];
-    const tokensByCategory = this.getTokensByCategory(group);
+    const tokensByCategory = this.getTokensByCategory(sets);
     return {
       role: 'regular',
-      release,
-      group,
       tokensByCategory
     };
   },
@@ -51,11 +47,11 @@ const Tokens = React.createClass({
     return _.find(nameFormats, { role: this.state.role });
   },
 
-  getTokensByCategory(group) {
-    const tokens = group.sets.reduce((tokens, set) =>
+  getTokensByCategory(sets) {
+    const setTokens = sets.reduce((tokens, set) =>
       tokens.concat(set.contents.propKeys.map(key => set.contents.props[key]))
     , []);
-    return _.groupBy(tokens, 'category');
+    return _.groupBy(setTokens, 'category');
   },
 
   render() {
@@ -81,10 +77,6 @@ const Tokens = React.createClass({
   },
 
   renderHeader() {
-    const {release} = this.state;
-    const options = release.groups.map(group => {
-      return <option key={group.name} value={group.name}>{group.label}</option>;
-    });
     const formatSelect = !process.env.INTERNAL
       ? null
       : <div className={pf('form-element p-horizontal--medium')}>

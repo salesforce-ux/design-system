@@ -16,13 +16,58 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
 import theo from 'theo';
-import concat from 'gulp-concat';
 import yaml from 'js-yaml';
 import through from 'through2';
 import insert from 'gulp-insert';
 
 const rem2px = (value, baseFontPercentage = 100, baseFontPixel = 16) =>
   `${value.replace(/rem$/g, '') * baseFontPixel * (baseFontPercentage / 100)}px`;
+
+const addPxValueProp = () =>
+  through.obj((file, enc, next) => {
+    const set = {
+      name: path.basename(file.path, '.yml'),
+      contents: JSON.parse(file.contents.toString())
+    };
+    Object.keys(set.contents.props).forEach(prop => {
+      if (/rem$/.test(set.contents.props[prop])) {
+        set.contents.props['.pxValue'] = rem2px(set.contents.props[prop]);
+      }
+    });
+    file.contents = new Buffer(JSON.stringify(set, null, 2));
+    next(null, file);
+  });
+
+const overrideValuesWith = (set) =>
+  through.obj((file, enc, next) => {
+    const sets = JSON.parse(file.contents);
+    const s1BaseLarge = _.find(sets, { name: set });
+
+    // A bit complicated, but basically takes all the tokens from "set"
+    // and overrides similar tokens with those values in other sets
+    _.forEach(sets, (set) => {
+      _.forEach(['aliases', 'props'], (contentKey) => {
+        set.contents[contentKey] = _.mapValues(set.contents[contentKey], (value, key) => {
+          if (_.has(s1BaseLarge.contents[contentKey], key)) {
+            return s1BaseLarge.contents[contentKey][key];
+          }
+          return value;
+        });
+      });
+    });
+
+    file.contents = new Buffer(JSON.stringify(sets, null, 2));
+    next(null, file);
+  });
+
+const deleteSet = (set) =>
+  through.obj((file, enc, next) => {
+    const sets = JSON.parse(file.contents);
+    const setsWithoutSet = _.pull(sets, _.find(sets, { name: set }));
+    file.contents = new Buffer(JSON.stringify(setsWithoutSet, null, 2));
+    next(null, file);
+  });
+
 
 gulp.task('generate:tokens', (done) =>
   gulp.src([
@@ -36,22 +81,21 @@ gulp.task('generate:tokens', (done) =>
       includeRawValue: true
     }))
     .on('error', done)
-    .pipe(through.obj((file, enc, next) => {
-      let set = {
-        name: path.basename(file.path, '.yml'),
-        contents: JSON.parse(file.contents.toString())
-      };
-      Object.keys(set.contents.props).forEach(prop => {
-        if (/rem$/.test(set.contents.props[prop])) {
-          set.contents.props['.pxValue'] = rem2px(set.contents.props[prop]);
-        }
+    .pipe(addPxValueProp())
+    .pipe(gutil.buffer())
+    .pipe(through.obj((files, enc, next) => {
+      const json = [];
+      files.forEach(file =>
+        json.push(JSON.parse(file.contents))
+      );
+      const file = new gutil.File({
+        path: 'ui.tokens.js',
+        contents: new Buffer(JSON.stringify(json, null, 2))
       });
-      set = JSON.stringify(set, null, 2) + ',';
-      file.contents = new Buffer(set);
       next(null, file);
     }))
-    .pipe(concat('ui.tokens.js'))
-    .pipe(insert.prepend('module.exports = [\n'))
-    .pipe(insert.append('\n];'))
+    .pipe(overrideValuesWith('s1-base-large'))
+    .pipe(deleteSet('s1-base-large'))
+    .pipe(insert.prepend('module.exports = '))
     .pipe(gulp.dest(__PATHS__.generated))
 );

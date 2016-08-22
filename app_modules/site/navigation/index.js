@@ -42,8 +42,18 @@ export const formatNavItem = (item, parent) => {
   return item;
 };
 
-export const rootNav = (path) => {
-  return _.drop(getActiveNavItems(nav, path)).map(item => item)[0];
+/**
+ * Return root nav id
+ */
+export const rootNavId = (path) => {
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.id)[0] || 'resources';
+};
+
+/**
+ * Return root nav label
+ */
+export const rootNavLabel = (path) => {
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.label)[0] || 'Resources';
 };
 
 /**

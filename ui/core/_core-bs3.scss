@@ -18,6 +18,83 @@
     }
   }
 
+  @mixin header-margins{
+    margin {
+      top: $spacing-large;
+      right: $spacing-large;
+      bottom: $spacing-none;
+      left: $spacing-large;
+    }
+  }
+
+  @mixin header-fonts{
+    font-family: $font-family;
+    line-height: $line-height-heading;
+  }
+
+  h1{
+    @include header-margins;
+    @include header-fonts;
+    font: {
+        size: $font-size-xx-large;;
+        weight: $font-weight-light;
+      }
+  }
+
+  h2{
+    @include header-margins;
+    @include header-fonts;
+    font: {
+      size: $font-size-x-large;
+      weight: $font-weight-light;
+    }
+  }
+
+  h3{
+    @include header-margins;
+    @include header-fonts;
+    font: {
+      size: $font-size-large;
+      weight: $font-weight-light;
+    }
+  }
+
+  h4{
+    @include header-margins;
+    @include header-fonts;
+    font: {
+      size: $font-size-large;
+    }
+  }
+
+  h5{
+    @include header-margins;
+    @include header-fonts;
+    font: {
+      size: $font-size-medium;
+      weight: $font-weight-light;
+    }
+    text-transform: uppercase;
+  }
+
+  h6{
+    @include header-fonts;
+    font: {
+      size: $font-size-small;
+      weight: $font-weight-light;
+    }
+  }
+
+  p{
+    color: $color-text-default;
+    font-family: $font-family;
+    line-height: $line-height-text;
+    margin-top: $spacing-small;
+    margin-right: $spacing-large;
+    margin-bottom: $spacing-none;
+    margin-left: $spacing-large;
+  }
+
   .input-group{
     .help-block {
       display: block;

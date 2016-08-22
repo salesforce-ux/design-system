@@ -13,7 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
+import { rootNavId, rootNavLabel } from 'app_modules/site/navigation';
 
 export default React.createClass({
 
@@ -24,26 +24,17 @@ export default React.createClass({
     path: React.PropTypes.string
   },
 
-  getNavItems() {
-    return _.drop(getActiveNavItems(navigation(), this.props.path));
-  },
-
-  rootNavName() {
-    // pick a fallback that will hopefully stay around
-    const fallback = 'resources';
-    return this.getNavItems().map(item => item.id)[0] || fallback;
-  },
-
   render() {
     return (
       <header className={pf('site-masthead grid wrap')}>
         <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
           <div className={pf('media media--center media--responsive')}>
             <span className={pf('media__figure')}>
-              <img src={`/assets/images/header-${this.rootNavName()}.svg`} alt="" />
+              <img src={`/assets/images/header-${rootNavId(this.props.path)}.svg`} alt="" />
             </span>
             <div className={pf('media__body')}>
               <div className={pf('grid')}>
+                <span className={pf('hide docsearch-category')}>{rootNavLabel(this.props.path)}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>

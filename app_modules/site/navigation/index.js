@@ -57,7 +57,7 @@ export const rootNavLabel = (path) => {
 };
 
 /**
- * Return true if an item contaons a path
+ * Return true if an item contains a path
  *
  * @param {object} item
  * @param {string} path

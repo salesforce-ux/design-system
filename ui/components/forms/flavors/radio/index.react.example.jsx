@@ -36,11 +36,13 @@ let FormElementControl = props =>
   </div>;
 
 let Radio = props =>
-  <label className={pf('radio')}>
-    <input type="radio" name="options" disabled={props.disabled} />
-    <span className={pf('radio--faux')}></span>
-    <span className={pf('form-element__label')}>{props.children}</span>
-  </label>;
+  <span className={pf('radio')}>
+    <input type="radio" id="radio_1" name="options" disabled={props.disabled} defaultChecked={props.checked} />
+    <label className={pf('label--radio')} htmlFor="radio_1">
+      <span className={pf('radio--faux')}></span>
+      <span className={pf('form-element__label')}>{props.children}</span>
+    </label>
+  </span>;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -51,7 +53,7 @@ let Default = props =>
     <Fieldset>
       <Legend>Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -62,7 +64,7 @@ let Required = props =>
     <Fieldset className={pf('is-required')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -73,7 +75,7 @@ let ErrorState = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>

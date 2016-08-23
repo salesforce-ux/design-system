@@ -44,12 +44,14 @@ let FormElementControl = props =>
   </div>;
 
 export let Checkbox = props =>
-  <label className={className(pf('checkbox'), props.className, props.indeterminate ? pf('is-indeterminate') : null)}>
+  <span className={className(pf('checkbox'), props.indeterminate ? pf('is-indeterminate') : null)}>
     {props.children}
     <input type="checkbox" name="options" id={props.id} disabled={props.disabled} defaultChecked={props.checked} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
-  </label>;
+    <label className={className(pf('label--checkbox'), props.className)} htmlFor={props.id}>
+      <span className={pf('checkbox--faux')}></span>
+      <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
+  </label>
+  </span>;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -106,7 +108,7 @@ let Group = props =>
     <Fieldset>
       <Legend>Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-01" label="Checkbox Label" checked />
         <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
@@ -117,7 +119,7 @@ let GroupRequired = props =>
     <Fieldset className={pf('is-required')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-01" label="Checkbox Label" checked />
         <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
@@ -128,7 +130,7 @@ let GroupError = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-01" label="Checkbox Label" checked />
         <Checkbox id="checkbox-02" label="Checkbox Label" />
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>

@@ -39,7 +39,8 @@
     position: absolute;
 
     &:checked + .#{$css-prefix}checkbox--faux,
-    &:checked ~ .#{$css-prefix}checkbox--faux {
+    &:checked ~ .#{$css-prefix}checkbox--faux,
+    &:checked + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
 
       &:after {
         display: block;
@@ -58,14 +59,16 @@
     &:focus {
 
       + .#{$css-prefix}checkbox--faux,
-      ~ .#{$css-prefix}checkbox--faux {
+      ~ .#{$css-prefix}checkbox--faux,
+      + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
         content: '';
         border-color: $color-border-input-active;
         box-shadow: $shadow-button-focus;
       }
 
       &:checked > .#{$css-prefix}checkbox--faux,
-      &:checked ~ .#{$css-prefix}checkbox--faux {
+      &:checked ~ .#{$css-prefix}checkbox--faux,
+      &:checked + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
         border-color: $color-border-input-active;
         background-color: $color-background-input;
       }
@@ -75,14 +78,15 @@
       // scss-lint:disable NestingDepth
 
       + .#{$css-prefix}checkbox--faux,
-      ~ .#{$css-prefix}checkbox--faux {
+      ~ .#{$css-prefix}checkbox--faux,
+      + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
-      }
 
-      + .#{$css-prefix}checkbox--faux:after,
-      ~ .#{$css-prefix}checkbox--faux:after {
-        border-color: $color-background-input;
+
+        &:after {
+          border-color: $color-background-input;
+        }
       }
     }
   }
@@ -91,7 +95,8 @@
 
     // scss-lint:disable SelectorDepth
     [type="checkbox"] + .#{$css-prefix}checkbox--faux:after,
-    [type="checkbox"] ~ .#{$css-prefix}checkbox--faux:after {
+    [type="checkbox"] ~ .#{$css-prefix}checkbox--faux:after,
+    [type="checkbox"] + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux:after {
       height: 2px;
       background: $color-brand;
       border: 0;
@@ -103,24 +108,26 @@
 .#{$css-prefix}has-error .#{$css-prefix}checkbox [type="checkbox"] {
 
   + .#{$css-prefix}checkbox--faux,
-  ~ .#{$css-prefix}checkbox--faux {
+  ~ .#{$css-prefix}checkbox--faux,
+  + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
     border-color: $color-border-error;
     border-width: $border-width-thick;
   }
 
   &:checked + .#{$css-prefix}checkbox--faux,
-  &:checked ~ .#{$css-prefix}checkbox--faux {
+  &:checked ~ .#{$css-prefix}checkbox--faux,
+  &:checked + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
     border-color: $color-border-error;
     background-color: $color-background-input;
-  }
 
-  &:checked + .#{$css-prefix}checkbox--faux:after,
-  &:checked ~ .#{$css-prefix}checkbox--faux:after {
-    border-color: $color-background-error;
+    &:after {
+      border-color: $color-background-error;
+    }
   }
 }
 
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] + .#{$css-prefix}checkbox--faux,
-.#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux {
+.#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux,
+.#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux {
   margin-right: $spacing-x-small;
 }

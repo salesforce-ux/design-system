@@ -69,7 +69,7 @@ const deleteSet = (set) =>
   });
 
 
-gulp.task('generate:tokens', (done) =>
+gulp.task('generate:tokens:ui', (done) =>
   gulp.src([
     path.resolve(__PATHS__.designTokens, 'force-base.yml'),
     path.resolve(__PATHS__.designTokens, 'force-mq-commons.yml'),

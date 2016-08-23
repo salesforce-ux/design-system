@@ -63,7 +63,7 @@ gulp.task('generate:tokens:components:all', () => {
       .pipe(theo.plugins.transform(format.transform))
       .pipe(theo.plugins.format(format.name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
-      .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist/components')))
+      .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
   );
 });
 
@@ -74,5 +74,5 @@ gulp.task('generate:tokens:components:sass', () =>
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(concat('component-tokens.default.scss'))
-    .pipe(gulp.dest(path.resolve(__PATHS__.generated)))
+    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
 );

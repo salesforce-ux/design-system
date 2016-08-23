@@ -15,7 +15,7 @@ import './generate-icons';
 import './generate-release-notes';
 import './generate-tokens-zip';
 import './generate-tokens-components';
-import './generate-tokens';
+import './generate-tokens-ui';
 import './generate-ui-kit-zip';
 import './generate-ui';
 import './generate-examples';
@@ -24,9 +24,11 @@ import './generate-whitelist';
 gulp.task('generate', [
   'generate:icons',
   'generate:release-notes',
-  'generate:tokens:zip',
+  'generate:tokens:base',
   'generate:tokens:components:sass',
-  'generate:tokens',
+  'generate:tokens:components:all',
+  'generate:tokens:zip',
+  'generate:tokens:ui',
   'generate:ui-kit:zip',
   'generate:ui',
   'generate:examples',

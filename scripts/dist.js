@@ -229,37 +229,19 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Inline the design-tokens
+   * Move component design tokens
    */
   (done) => {
-    const pattern = /\'(.*?)\'(?=[,;])/g;
-    gulp.src(distPath('scss/_design-tokens.scss'))
-    .pipe(through.obj(function(file, enc, next) {
-      const newFile = file.clone();
-      let sassImports = [];
-      let contents = newFile.contents.toString();
-      let match;
-      // Collect the @import paths
-      while ((match = pattern.exec(contents)) !== null) {
-        sassImports.push(match[1]);
-      }
-      // Convert the array of paths to an array of file contents
-      sassImports = sassImports.map(i => {
-        return path.resolve(__dirname, '../node_modules', i);
-      }).filter(i => {
-        return fs.existsSync(i);
-      }).map(i => {
-        return fs.readFileSync(i).toString();
-      });
-      // Replace @import "dep/a", "dep/b"; with the inlined tokens
-      contents = contents.replace(/\@import[\s\S]*?;/, () => {
-        return sassImports.join('\n');
-      });
-      newFile.contents = new Buffer(contents);
-      next(null, newFile);
-    }))
-    .on('error', done)
-    .pipe(gulp.dest(distPath('scss')))
+    // Bundle everything in the npm package
+    // but only sources and Sass files in the zip
+    // because it would make the zip too large to be imported
+    // as a Static Resource in a Salesforce Org (limited to 5MB)
+    const src = isNpm ? '**/*.*' : ['**/*.yml', '**/*.scss'];
+    gulp.src(src, {
+      base: `${__PATHS__.designTokens}`,
+      cwd: `${__PATHS__.designTokens}`
+    })
+    .pipe(gulp.dest(distPath('design-tokens')))
     .on('error', done)
     .on('finish', done);
   },

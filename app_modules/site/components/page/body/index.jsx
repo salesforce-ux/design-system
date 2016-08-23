@@ -187,7 +187,7 @@ export default React.createClass({
         dataProps['data-slds-nav-children'] = true;
       }
       return (
-        <li className={pf(className)} key={item.uid}>
+        <li className={pf(className)} key={item.uid} {...dataProps}>
           {this.renderLink(item)}
           {item.hasChildren
             ? this.renderNavItems(item.children, level + 1)

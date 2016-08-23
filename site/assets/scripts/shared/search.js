@@ -18,8 +18,8 @@ if (globals.displaySearch) {
 
   o.addEventListener('load', function (e) {
     search = docsearch({
-      appId: 'B2KKG101RI',
-      apiKey: 'f289c1dd954797a3e57158c04a897d46',
+      appId: process.env.SEARCH_APP_ID,
+      apiKey: process.env.SEARCH_API_KEY,
       indexName: 'winter-17',
       inputSelector: '#docsearch',
       autocompleteOptions,

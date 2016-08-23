@@ -14,10 +14,14 @@ import packageJSON from '../../package.json';
 export const WebpackDefineKeys = [
   'INTERNAL',
   'INTERNAL_RELEASE_NAME',
-  'SLDS_VERSION'
+  'SLDS_VERSION',
+  'SEARCH_APP_ID',
+  'SEARCH_API_KEY'
 ];
 
 // NOTE: scripts/npm/postinstall.js modifies process.env if running on Heroku
 process.env = Object.assign({
-  SLDS_VERSION: packageJSON.version
+  SLDS_VERSION: packageJSON.version,
+  SEARCH_APP_ID: packageJSON.config.search.appId,
+  SEARCH_API_KEY: packageJSON.config.search.apiKey
 }, process.env);

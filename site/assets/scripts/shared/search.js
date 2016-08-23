@@ -20,7 +20,7 @@ if (globals.displaySearch) {
     search = docsearch({
       appId: process.env.SEARCH_APP_ID,
       apiKey: process.env.SEARCH_API_KEY,
-      indexName: 'winter-17',
+      indexName: 'spring-17',
       inputSelector: '#docsearch',
       autocompleteOptions,
       transformData: (hits) => {

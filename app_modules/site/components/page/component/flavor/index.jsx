@@ -107,7 +107,7 @@ class ComponentFlavor extends React.Component {
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
             {this.renderDesc()}
-            <div className='show-for-proto' style={boxStyles} data-slds-status={flavor.status}>
+            <div className="show-for-proto" style={boxStyles} data-slds-status={flavor.status}>
               {this.renderBox()}
             </div>
             <div style={codeStyles} data-slds-status={flavor.status}>
@@ -122,7 +122,7 @@ class ComponentFlavor extends React.Component {
 
   renderBox() {
     return (
-      <div className={pf("box theme--default theme--alert-texture m-top--medium")}>
+      <div className={pf('box theme--default theme--alert-texture m-top--medium')}>
         <p>Code will be available once this component is Dev-Ready.</p>
       </div>
     );

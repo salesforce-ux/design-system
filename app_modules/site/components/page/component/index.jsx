@@ -75,7 +75,7 @@ export default React.createClass({
           );
         }
         return (
-          <li className={pf('list__name site-states-parent')} key={flavor.uid} data-slds-status={flavor.status}>
+          <li className={pf('list__name site-states-parent')} key={flavor.uid}>
             <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
               { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }

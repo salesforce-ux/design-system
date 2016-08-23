@@ -182,12 +182,12 @@ export default React.createClass({
         'is-active': item.isActive,
         'is-closed': !item.isOpen && item.hasChildren
       });
-      const dataProps = {'data-slds-status': item.status};
+      const dataProps = {};
       if (item.hasChildren) {
         dataProps['data-slds-nav-children'] = true;
       }
       return (
-        <li className={pf(className)} key={item.uid} {...dataProps}>
+        <li className={pf(className)} key={item.uid}>
           {this.renderLink(item)}
           {item.hasChildren
             ? this.renderNavItems(item.children, level + 1)

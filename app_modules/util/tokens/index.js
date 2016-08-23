@@ -12,43 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
-import {getContrastRatio} from './color';
 
-/**
- * Add contrast rations to a set of properties
- *
- * @param {object} set - A design properties json object
- */
-function addContrastRatios(set) {
-  const backgroundColorNames = [
-    'COLOR_BACKGROUND_ALT',
-    'COLOR_BACKGROUND_INVERSE',
-    'COLOR_BACKGROUND'
-  ];
-  // Find the color values for the specified prop names
-  const backgroundColors = _(set.props)
-    .filter(prop => _.includes(backgroundColorNames, prop.name))
-    .value();
-  // If the color values were found in this set
-  if (backgroundColors.length) {
-    // Check each prop
-    _.forEach(set.props, prop => {
-      // Find each "text-color"
-      if (prop.category === 'text-color') {
-        let textColor = prop.value;
-        prop['.contrastRatios'] = backgroundColors.map(backgroundColor => {
-          const ratio = getContrastRatio(textColor, backgroundColor.value);
-          return {
-            backgroundColor: backgroundColor,
-            ratio: ratio,
-            large: ratio >= 3.0,
-            normal: ratio >= 4.5
-          };
-        });
-      }
-    });
-  }
-}
 /**
  * If a property contains a value with an "rem" suffix, convert it
  * to "px" and add it to the prop as ".pxValue"
@@ -69,6 +33,5 @@ function addPxValue(prop) {
 }
 
 module.exports = {
-  addContrastRatios,
   addPxValue
 };

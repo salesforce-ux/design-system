@@ -16,7 +16,6 @@ import classNames from 'classnames';
 import Heading from 'app_modules/site/components/page/heading';
 import RowHeader from './row-header';
 import Row from './row';
-import ValueCell from './cell-value';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default class CategorySection extends React.Component {

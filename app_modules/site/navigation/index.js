@@ -43,6 +43,20 @@ export const formatNavItem = (item, parent) => {
 };
 
 /**
+ * Return root nav id
+ */
+export const rootNavId = (path) => {
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.id)[0] || 'resources';
+};
+
+/**
+ * Return root nav label
+ */
+export const rootNavLabel = (path) => {
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.label)[0] || 'Resources';
+};
+
+/**
  * Return true if an item contaons a path
  *
  * @param {object} item
@@ -103,7 +117,7 @@ const components = getUI('components').map((component, index) => ({
   separator: index === 0
 }));
 
-export default () => formatNavItem({
+const nav = formatNavItem({
   label: 'Root',
   path: '/',
   children: [
@@ -213,3 +227,5 @@ export default () => formatNavItem({
     }
   ]
 });
+
+export default () => nav;

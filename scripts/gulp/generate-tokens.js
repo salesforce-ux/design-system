@@ -17,10 +17,7 @@ import path from 'path';
 import theo from 'theo';
 import through from 'through2';
 
-import {
-  addContrastRatios,
-  addPxValue
-} from 'app_modules/util/tokens';
+import { addPxValue } from 'app_modules/util/tokens';
 
 gulp.task('generate:tokens', done => {
 
@@ -57,8 +54,6 @@ gulp.task('generate:tokens', done => {
           name: path.basename(file.path, '.json'),
           contents: JSON.parse(file.contents.toString())
         };
-        // Accessibility
-        addContrastRatios(set.contents);
         // Add px values as well as rem
         _.forEach(set.contents.props, prop => {
           if (/rem$/.test(prop.value)) {

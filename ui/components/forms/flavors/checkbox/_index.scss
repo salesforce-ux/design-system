@@ -74,6 +74,21 @@
       }
     }
 
+    &:indeterminate + .#{$css-prefix}checkbox--faux:after,
+    &:indeterminate ~ .#{$css-prefix}checkbox--faux:after,
+    &:indeterminate + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $square-icon-x-small-content;
+      height: 2px;
+      background: $color-brand;
+      border: 0;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
     &[disabled] {
       // scss-lint:disable NestingDepth
 
@@ -88,19 +103,6 @@
           border-color: $color-background-input;
         }
       }
-    }
-  }
-
-  &.#{$css-prefix}is-indeterminate {
-
-    // scss-lint:disable SelectorDepth
-    [type="checkbox"] + .#{$css-prefix}checkbox--faux:after,
-    [type="checkbox"] ~ .#{$css-prefix}checkbox--faux:after,
-    [type="checkbox"] + .#{$css-prefix}label--checkbox .#{$css-prefix}checkbox--faux:after {
-      height: 2px;
-      background: $color-brand;
-      border: 0;
-      transform: translate3d(-50%, -50%, 0);
     }
   }
 }

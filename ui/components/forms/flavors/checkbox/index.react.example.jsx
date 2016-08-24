@@ -44,7 +44,7 @@ let FormElementControl = props =>
   </div>;
 
 export let Checkbox = props =>
-  <span className={className(pf('checkbox'), props.indeterminate ? pf('is-indeterminate') : null)}>
+  <span className={pf('checkbox')}>
     {props.children}
     <input type="checkbox" name="options" id={props.id} disabled={props.disabled} defaultChecked={props.checked} />
     <label className={className(pf('label--checkbox'), props.className)} htmlFor={props.id}>
@@ -61,7 +61,7 @@ let Default = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox id="checkbox-01" label="Checkbox Label" checked />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -70,7 +70,7 @@ let Indeterminate = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" indeterminate="true" />
+        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -161,7 +161,11 @@ export let states = [
   {
     id: 'checkbox-indeterminate',
     label: 'Indeterminate',
-    element: <Indeterminate />
+    element: <Indeterminate />,
+    script: `
+      var checkbox = document.getElementById('checkbox-indeterminate-01')
+      checkbox.indeterminate = true
+    `
   },
   {
     id: 'checkbox-required',

@@ -87,40 +87,6 @@ let StateC = props =>
     </LabelWrapper>
   </Demo>;
 
-let StateD = props =>
-  <Demo>
-    <Fieldset>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>North East Sales Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-    </Fieldset>
-  </Demo>;
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -140,10 +106,5 @@ export let states = [
     id: 'checkbox-toggle-disabled',
     label: 'Disabled',
     element: <StateC />
-  },
-  {
-    id: 'checkbox-toggle-group',
-    label: 'Grouped',
-    element: <StateD />
   }
 ];

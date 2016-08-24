@@ -174,13 +174,16 @@ const siteMiddleware = (req, res, next) => {
   }
 };
 
-gulp.task('clean', del.bind(null, [
+gulp.task('clean', () => del.sync([
   __PATHS__.www,
   __PATHS__.generated,
   __PATHS__.tmp,
   __PATHS__.dist,
   __PATHS__.logs,
-  __PATHS__.build
+  __PATHS__.build,
+  path.join(__PATHS__.designTokens, 'dist/**'),
+  // Don't delete the directory itself
+  // `!${path.join(__PATHS__.designTokens, 'dist')}`
 ]));
 
 gulp.task('serve', () => {
@@ -241,7 +244,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
-  gulp.watch(watchPaths.tokens, ['generate:tokens:components:sass', 'generate:tokens:ui']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:base:sass', 'generate:tokens:components:sass', 'generate:tokens:ui']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(
@@ -260,7 +263,7 @@ gulp.task('serve', () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], 'serve',
+    'clean', 'generate:sass', 'styles', ['assets', 'generate'], 'serve',
   callback);
 });
 

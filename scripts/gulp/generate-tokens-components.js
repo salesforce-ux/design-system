@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import path from 'path';
 import theo from 'theo';
 import concat from 'gulp-concat';
@@ -22,16 +23,16 @@ let formatTransforms = _({
   'web': [
     'styl',
     'less',
-    'sass',
-    'default.sass',
+    // 'sass',
+    // 'default.sass',
     'scss',
     'default.scss',
     'map.scss',
     'map.variables.scss',
-    'html',
+    // 'html',
     'json',
     'common.js',
-    'amd.js',
+    // 'amd.js',
     'aura.theme',
     'aura.tokens'
   ],
@@ -44,7 +45,7 @@ let formatTransforms = _({
   }))
 ).flatten().value();
 
-gulp.task('generate:tokens:base', () => {
+gulp.task('generate:tokens:base:all', (callback) => {
   formatTransforms.forEach(format =>
     gulp.src([
       path.resolve(__PATHS__.designTokens, '*.yml')
@@ -53,9 +54,26 @@ gulp.task('generate:tokens:base', () => {
       .pipe(theo.plugins.format(format.name))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
   );
+  callback();
 });
 
-gulp.task('generate:tokens:components:all', () => {
+gulp.task('generate:tokens:base:sass:default', () =>
+  gulp.src([
+    path.resolve(__PATHS__.designTokens, '*.yml')
+  ])
+    .pipe(theo.plugins.transform('web'))
+    .pipe(theo.plugins.format('default.scss'))
+    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
+
+gulp.task('generate:tokens:base:sass:map', () =>
+  gulp.src([
+    path.resolve(__PATHS__.designTokens, '*.yml')
+  ])
+    .pipe(theo.plugins.transform('web'))
+    .pipe(theo.plugins.format('map.scss'))
+    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
+
+gulp.task('generate:tokens:components:all', (callback) => {
   formatTransforms.forEach(format =>
     gulp.src([
       path.resolve(__PATHS__.ui, '**/tokens/*.yml')
@@ -65,6 +83,7 @@ gulp.task('generate:tokens:components:all', () => {
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
   );
+  callback();
 });
 
 gulp.task('generate:tokens:components:sass', () =>
@@ -74,5 +93,4 @@ gulp.task('generate:tokens:components:sass', () =>
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(concat('component-tokens.default.scss'))
-    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
-);
+    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));

@@ -25,8 +25,8 @@ props:
     value: '#6b9ee2'
   CUSTOM_10:
     value: '#6488e3'
-CUSTOM_11:
-  value: '#8784ea'
+  CUSTOM_11:
+    value: '#8784ea'
   CUSTOM_12:
     value: '#dc71d1'
   CUSTOM_13:

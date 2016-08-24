@@ -36,12 +36,14 @@ let CheckboxGroup = props =>
   </div>;
 
 let Checkbox = props =>
-  <label className={className(pf('button checkbox--button'), props.className)} htmlFor={props.id}>
+  <span className={className(pf('button checkbox--button'), props.className)} htmlFor={props.id}>
     <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}>
-      {props.children}
-    </span>
-  </label>;
+    <label className={pf('checkbox--button__label')} htmlFor={props.id}>
+      <span className={pf('checkbox--faux')}>
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)

@@ -13,7 +13,7 @@
   .#{$css-prefix}checkbox--faux {
     display: inline-block;
     position: relative;
-    width: $width-toggle; // @TODO: do we tokenize these?
+    width: $width-toggle;
     height: $height-toggle;
     padding: $spacing-xxx-small;
     background-color: $color-background-toggle;
@@ -26,27 +26,14 @@
       background-color: $color-background-toggle-hover;
     }
 
-    &:before {
-      content: attr(data-check-off);
-      position: absolute;
-      right: $spacing-x-small;
-      font-size: $font-size-x-small;
-      font-weight: $font-weight-bold;
-      text-transform: uppercase;
-      color: $color-text-inverse;
-      line-height: $line-height-toggle;
-      transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
-    }
-
     &:after {
       content: '';
       position: absolute;
       left: $spacing-xxx-small;
       width: $square-toggle-slider;
-      height: $square-toggle-slider; // I'm not sure this is the one
+      height: $square-toggle-slider;
       background-color: $color-background-alt;
       border-radius: $border-radius-pill;
-      transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
     }
   }
 
@@ -67,7 +54,6 @@
       & + .#{$css-prefix}checkbox--faux,
       & ~ .#{$css-prefix}checkbox--faux {
         background-color: $color-background-toggle-active;
-        color: $color-text-inverse;
 
         &:hover,
         &:focus {
@@ -86,15 +72,17 @@
         }
 
         &:after {
-          content: attr(data-check-on);
+          content: ' ';
           position: absolute;
-          left: $spacing-x-small;
+          top: 0.3rem; // These are arbitrary to create the checkbox
+          left: 0.65rem; // like the right positioning above
+          height: 0.7rem; // Seems silly to tokenize?
+          width: 0.45rem;
+          border-bottom: $border-width-thick solid $color-border-toggle-checked;
+          border-right: $border-width-thick solid $color-border-toggle-checked;
+          border-radius: 0;
           background-color: transparent;
-          color: $color-text-inverse;
-          font-size: $font-size-x-small;
-          font-weight: $font-weight-bold;
-          text-transform: uppercase;
-          line-height: $line-height-toggle;
+          transform: rotate(45deg);
         }
       }
     }
@@ -108,13 +96,8 @@
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
 
-        &:before,
-        &:after {
-          color: $color-text-toggle-disabled;
-        }
-
         &:hover,
-        &:focus {
+        &:focus{
           background-color: $color-background-toggle-disabled;
           cursor: default;
         }

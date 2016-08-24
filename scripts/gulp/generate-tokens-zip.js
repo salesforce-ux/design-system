@@ -47,7 +47,6 @@ gulp.task('generate:tokens:zip:scss', () =>
 );
 
 gulp.task('generate:tokens:zip', [
-  'generate:tokens:components:all',
   'generate:tokens:zip:ios',
   'generate:tokens:zip:android',
   'generate:tokens:zip:styl',

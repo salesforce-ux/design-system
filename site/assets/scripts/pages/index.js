@@ -19,7 +19,7 @@ import Status from 'app_modules/site/util/component/status';
 const updateStatusVisibility = event => {
   $('[data-slds-status]').forEach(node => {
     const shouldShow = Status.shouldDisplay(event.status, node.dataset.sldsStatus);
-    hide(node, !shouldShow);
+    node.classList.contains('show-for-proto') ? hide(node, shouldShow) : hide(node, !shouldShow);
   });
 };
 

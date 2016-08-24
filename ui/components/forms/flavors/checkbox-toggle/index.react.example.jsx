@@ -36,7 +36,7 @@ let LabelWrapper = props =>
   </div>;
 
 let Label = props =>
-  <label className={className(pf('checkbox--toggle grid grid--vertical-align-center'), props.className)} htmlFor={props.id}>
+  <label className={className(pf('checkbox--toggle grid'), props.className)} htmlFor={props.id}>
     {props.children}
   </label>;
 
@@ -47,7 +47,9 @@ let Checkbox = props =>
   <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
 
 let Toggle = props =>
-  <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;
+  <span className={className(pf('checkbox--faux_container'), props.className)}  data-check-on="Enabled" data-check-off="Disabled">
+    <span className={pf('checkbox--faux')}></span>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)

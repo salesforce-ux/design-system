@@ -11,7 +11,7 @@
   width: 100%;
 
   .#{$css-prefix}checkbox--faux {
-    display: inline-block;
+    display: block;
     position: relative;
     width: $width-toggle;
     height: $height-toggle;
@@ -47,12 +47,24 @@
     padding: 0;
     position: absolute;
 
+    + .#{$css-prefix}checkbox--faux_container:after {
+      content: attr(data-check-off);
+      font-size: $font-size-x-small;
+      color: $color-text-label;
+    }
+
 
     // Checked State with Interactions
     &:checked {
 
+
+      + .#{$css-prefix}checkbox--faux_container:after {
+          content: attr(data-check-on);
+        }
+
       & + .#{$css-prefix}checkbox--faux,
-      & ~ .#{$css-prefix}checkbox--faux {
+      & ~ .#{$css-prefix}checkbox--faux,
+      & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
         background-color: $color-background-toggle-active;
 
         &:hover,
@@ -91,7 +103,8 @@
     // scss-lint:disable NestingDepth
 
       & + .#{$css-prefix}checkbox--faux,
-      & ~ .#{$css-prefix}checkbox--faux {
+      & ~ .#{$css-prefix}checkbox--faux,
+      & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
         // scss-lint:disable NestingDepth
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
@@ -102,6 +115,10 @@
           cursor: default;
         }
       }
+
+      + .#{$css-prefix}checkbox--faux_container:after {
+          content: ' '; // @TODO: I'm unclear on what happens when the toggle is disabled (since it's the same color). I've removed the words altogether, but they can be replaced and/or dimmed.
+        }
     }
   }
 }

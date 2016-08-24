@@ -17,16 +17,6 @@ props:
   LINE_HEIGHT_TAB:
     value: 2.5rem
     comment: Line heights for tabs
-  LINE_HEIGHT_BUTTON:
-    value: 1.875rem
-    cssProperties:
-      - font
-      - '*height'
-      - bottom
-    comment: Line heights for regular buttons
-  LINE_HEIGHT_BUTTON_SMALL:
-    value: 1.75rem
-    comment: Line heights for small buttons
   LINE_HEIGHT_TOGGLE:
     value: 1.3rem
     comment: Line heights for toggle buttons

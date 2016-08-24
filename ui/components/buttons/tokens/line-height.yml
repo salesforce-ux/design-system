@@ -12,3 +12,6 @@ props:
     - "*height"
     - bottom
     comment: Line heights for regular buttons
+  LINE_HEIGHT_BUTTON_SMALL:
+    value: 1.75rem
+    comment: Line heights for small buttons

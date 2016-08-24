@@ -101,12 +101,12 @@ export let states = [
   },
   {
     id: 'checkbox-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'checkbox-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

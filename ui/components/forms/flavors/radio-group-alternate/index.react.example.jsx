@@ -101,12 +101,12 @@ export let states = [
   },
   {
     id: 'radio-group-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'radio-group-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

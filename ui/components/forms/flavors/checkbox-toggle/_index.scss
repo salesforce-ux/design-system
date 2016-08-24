@@ -63,10 +63,12 @@
     // Checked State with Interactions
     &:checked {
 
+      // scss-lint:disable NestingDepth SelectorDepth
       + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--off {
           display: none;
         }
 
+      // scss-lint:disable NestingDepth SelectorDepth
       + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--on {
         display: block;
       }

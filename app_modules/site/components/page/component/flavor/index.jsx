@@ -81,22 +81,19 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
-    const styles = {};
+    const codeStyles = {};
+    const boxStyles = {};
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
       statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
 
-    if (flavor.status === 'prototype') {
-      styles.display = 'none';
-    }
+    flavor.status === 'prototype' ? codeStyles.display = 'none' : boxStyles.display = 'none';
 
     return (
       <section
-        className={pf('m-bottom--xx-large p-top--x-large')}
-        style={styles}
-        data-slds-status={flavor.status}>
+        className={pf('m-bottom--xx-large p-top--x-large')} >
         <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
           {statesIds}
           {flavor.title}
@@ -110,12 +107,24 @@ class ComponentFlavor extends React.Component {
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
             {this.renderDesc()}
-            {this.renderCode()}
+            <div className="show-for-proto" style={boxStyles} data-slds-status={flavor.status}>
+              {this.renderBox()}
+            </div>
+            <div style={codeStyles} data-slds-status={flavor.status}>
+              {this.renderCode()}
+            </div>
             {this.renderInfo()}
           </div>
         </div>
-
       </section>
+    );
+  }
+
+  renderBox() {
+    return (
+      <div className={pf('box theme--default theme--alert-texture m-top--medium')}>
+        <p>Code will be available once this component is Dev-Ready.</p>
+      </div>
     );
   }
 

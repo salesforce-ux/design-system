@@ -42,7 +42,7 @@ export let Radio = props => {
   return (
     <span className={pf('radio')}>
       <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} />
-      <label className={pf('label--radio')} htmlFor={ uniqueId }>
+      <label className={pf('radio__label')} htmlFor={ uniqueId }>
         <span className={pf('radio--faux')}></span>
         <span className={pf('form-element__label')}>{props.children}</span>
       </label>

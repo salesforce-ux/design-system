@@ -51,7 +51,7 @@ export let Checkbox = props => {
     <span className={pf('checkbox')}>
       {props.children}
       <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} />
-      <label className={className(pf('label--checkbox'), props.className)} htmlFor={ props.id ? props.id : uniqueId }>
+      <label className={className(pf('checkbox__label'), props.className)} htmlFor={ props.id ? props.id : uniqueId }>
         <span className={pf('checkbox--faux')}></span>
         <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
       </label>

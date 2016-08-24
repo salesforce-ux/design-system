@@ -181,9 +181,7 @@ gulp.task('clean', () => del.sync([
   __PATHS__.dist,
   __PATHS__.logs,
   __PATHS__.build,
-  path.join(__PATHS__.designTokens, 'dist/**'),
-  // Don't delete the directory itself
-  // `!${path.join(__PATHS__.designTokens, 'dist')}`
+  path.join(__PATHS__.designTokens, 'dist/**')
 ]));
 
 gulp.task('serve', () => {
@@ -269,6 +267,6 @@ gulp.task('default', callback => {
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
+    'clean', 'generate:sass', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });

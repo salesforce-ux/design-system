@@ -56,7 +56,7 @@ export let Checkbox = props => {
         <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
       </label>
     </span>
-  )
+  );
 };
 
 //////////////////////////////////////////////

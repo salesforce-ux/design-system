@@ -47,7 +47,7 @@ export let Radio = props => {
         <span className={pf('form-element__label')}>{props.children}</span>
       </label>
     </span>
-  )
+  );
 };
 
 //////////////////////////////////////////////

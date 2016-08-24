@@ -44,10 +44,10 @@ let FauxLabel = props =>
   <span className={pf('form-element__label m-bottom--none')}>{props.children}</span>;
 
 let Checkbox = props =>
-  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
+  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} aria-describedby="toggle-desc" />;
 
 let Toggle = props =>
-  <span className={className(pf('checkbox--faux_container'), props.className)} aria-live="assertive">
+  <span id="toggle-desc" className={className(pf('checkbox--faux_container'), props.className)} aria-live="assertive">
     <span className={pf('checkbox--faux')}></span>
     <span className={className(pf('checkbox--on'), props.className)}>Enabled</span>
     <span className={className(pf('checkbox--off'), props.className)}>Disabled</span>

@@ -109,6 +109,10 @@
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
 
+        &:after {
+          background-color: $color-background-input-checkbox-disabled;
+        }
+
         &:hover,
         &:focus {
           background-color: $color-background-toggle-disabled;
@@ -116,9 +120,19 @@
         }
       }
 
-      + .#{$css-prefix}checkbox--faux_container:after {
-          content: ' '; // @TODO: I'm unclear on what happens when the toggle is disabled (since it's the same color). I've removed the words altogether, but they can be replaced and/or dimmed.
+      &:checked {
+
+        & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+
+          &:before {
+            background-color: $color-background-input-checkbox-disabled;
+          }
+
+          &:after {
+            background-color: transparent;
+          }
         }
+      }
     }
   }
 }

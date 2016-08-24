@@ -25,12 +25,12 @@ import './generate-whitelist';
 gulp.task('generate', callback =>
   runSequence(
     [
-      'generate:icons',
       'generate:release-notes',
       'generate:tokens:base:all',
       'generate:tokens:components:all',
     ],
     [
+      'generate:icons',
       'generate:tokens:zip',
       'generate:tokens:ui',
       'generate:ui-kit:zip',

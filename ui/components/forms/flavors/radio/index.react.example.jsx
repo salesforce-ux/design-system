@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -35,14 +36,19 @@ let FormElementControl = props =>
     {props.children}
   </div>;
 
-let Radio = props =>
-  <span className={pf('radio')}>
-    <input type="radio" id="radio_1" name="options" disabled={props.disabled} defaultChecked={props.checked} />
-    <label className={pf('label--radio')} htmlFor="radio_1">
-      <span className={pf('radio--faux')}></span>
-      <span className={pf('form-element__label')}>{props.children}</span>
-    </label>
-  </span>;
+export let Radio = props => {
+  const uniqueId = _.uniqueId('radio-');
+
+  return (
+    <span className={pf('radio')}>
+      <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} />
+      <label className={pf('label--radio')} htmlFor={ uniqueId }>
+        <span className={pf('radio--faux')}></span>
+        <span className={pf('form-element__label')}>{props.children}</span>
+      </label>
+    </span>
+  )
+};
 
 //////////////////////////////////////////////
 // State Constructor(s)

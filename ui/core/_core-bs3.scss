@@ -21,9 +21,9 @@
   @mixin header-margins{
     margin: {
       top: $spacing-large;
-      right: $spacing-large;
+      right: $spacing-none;
       bottom: $spacing-none;
-      left: $spacing-large;
+      left: $spacing-none;
     }
   }
 
@@ -91,9 +91,9 @@
     font-family: $font-family;
     line-height: $line-height-text;
     margin-top: $spacing-small;
-    margin-right: $spacing-large;
+    margin-right: $spacing-none;
     margin-bottom: $spacing-none;
-    margin-left: $spacing-large;
+    margin-left: $spacing-none;
   }
 
   .input-group{

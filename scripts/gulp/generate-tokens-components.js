@@ -9,6 +9,7 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import async from 'async';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
@@ -45,16 +46,16 @@ let formatTransforms = _({
   }))
 ).flatten().value();
 
-gulp.task('generate:tokens:base:all', (callback) => {
-  formatTransforms.forEach(format =>
+gulp.task('generate:tokens:base:all', (done) => {
+  const convert = (format, done) =>
     gulp.src([
       path.resolve(__PATHS__.designTokens, '*.yml')
     ])
       .pipe(theo.plugins.transform(format.transform))
       .pipe(theo.plugins.format(format.name))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
-  );
-  callback();
+      .on('finish', done);
+  async.each(formatTransforms, convert, done);
 });
 
 gulp.task('generate:tokens:base:sass:default', () =>
@@ -73,8 +74,8 @@ gulp.task('generate:tokens:base:sass:map', () =>
     .pipe(theo.plugins.format('map.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
 
-gulp.task('generate:tokens:components:all', (callback) => {
-  formatTransforms.forEach(format =>
+gulp.task('generate:tokens:components:all', (done) => {
+  const convert = (format, done) =>
     gulp.src([
       path.resolve(__PATHS__.ui, '**/tokens/*.yml')
     ])
@@ -82,8 +83,8 @@ gulp.task('generate:tokens:components:all', (callback) => {
       .pipe(theo.plugins.format(format.name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
-  );
-  callback();
+      .on('finish', done);
+  async.each(formatTransforms, convert, done);
 });
 
 gulp.task('generate:tokens:components:sass', () =>

@@ -47,8 +47,10 @@ let Checkbox = props =>
   <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
 
 let Toggle = props =>
-  <span className={className(pf('checkbox--faux_container'), props.className)}  data-check-on="Enabled" data-check-off="Disabled">
+  <span className={className(pf('checkbox--faux_container'), props.className)} aria-live="assertive">
     <span className={pf('checkbox--faux')}></span>
+    <span className={className(pf('checkbox--on'), props.className)}>Enabled</span>
+    <span className={className(pf('checkbox--off'), props.className)}>Disabled</span>
   </span>;
 
 ///////////////////////////////////////////

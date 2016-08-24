@@ -47,20 +47,29 @@
     padding: 0;
     position: absolute;
 
-    + .#{$css-prefix}checkbox--faux_container:after {
-      content: attr(data-check-off);
+    + .#{$css-prefix}checkbox--faux_container {
       font-size: $font-size-x-small;
       color: $color-text-label;
-    }
 
+      .#{$css-prefix}checkbox--off {
+        display: block;
+      }
+
+      .#{$css-prefix}checkbox--on {
+        display: none;
+      }
+    }
 
     // Checked State with Interactions
     &:checked {
 
-
-      + .#{$css-prefix}checkbox--faux_container:after {
-          content: attr(data-check-on);
+      + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--off {
+          display: none;
         }
+
+      + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--on {
+        display: block;
+      }
 
       & + .#{$css-prefix}checkbox--faux,
       & ~ .#{$css-prefix}checkbox--faux,

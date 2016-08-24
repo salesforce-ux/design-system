@@ -36,12 +36,14 @@ let RadioGroup = props =>
   </div>;
 
 let Radio = props =>
-  <label className={className(pf('button radio--button'), props.className)} htmlFor={props.id}>
+  <span className={className(pf('button radio--button'), props.className)}>
     <input name="radio" type="radio" id={props.id} disabled={props.disabled} />
-    <span className={pf('radio--faux')}>
-      {props.children}
-    </span>
-  </label>;
+    <label className={pf('radio--button__label')} htmlFor={props.id}>
+      <span className={pf('radio--faux')}>
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -99,12 +101,12 @@ export let states = [
   },
   {
     id: 'radio-group-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'radio-group-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

@@ -363,7 +363,7 @@ export default (
                   {_.times(5, i =>
                     <li key={`item-${i}`}>
                       <a className={pf('lookup__item-action media media--center site-stencil__color-dark site-stencil__background-none-hover')} href="javascript:void(0);" tabIndex="-1">
-                        <SvgIcon className={'icon icon-standard-account icon--small media__figure site-stencil__background-light'} />
+                        <div className={pf('icon icon-standard-account icon--small media__figure site-stencil__background-light')} />
 
                         <div className={pf('media__body')}>
                           <div className={pf('lookup__result-text')}>

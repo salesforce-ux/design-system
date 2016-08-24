@@ -97,7 +97,7 @@
         pointer-events: none;
 
         &:hover,
-        &:focus{
+        &:focus {
           background-color: $color-background-toggle-disabled;
           cursor: default;
         }

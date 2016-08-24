@@ -35,7 +35,7 @@ class Spinner extends React.Component {
     return (
       <div className={pf('spinner_container')}>
         <div className={classnames} {...props} role="alert">
-        <span className={pf('assistive-text')}>Loading</span>
+          <span className={pf('assistive-text')}>Loading</span>
           <div className={pf('spinner__dot-a')}></div>
           <div className={pf('spinner__dot-b')}></div>
         </div>

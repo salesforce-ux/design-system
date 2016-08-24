@@ -47,6 +47,7 @@
     padding: 0;
     position: absolute;
 
+    // scss-lint:disable NestingDepth SelectorDepth
     + .#{$css-prefix}checkbox--faux_container {
       font-size: $font-size-x-small;
       color: $color-text-label;

@@ -36,7 +36,7 @@ let FormElementControl = props =>
   </div>;
 
 let Textarea = props =>
-  <textarea id="textarea-input-01" className={className(pf('textarea'), props.className)} placeholder="Placeholder Text" aria-describedby="error-01" {...props} />;
+  <textarea id="textarea-input-01" className={className(pf('textarea'), props.className)} placeholder="Placeholder Text" {...props} />;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -67,7 +67,7 @@ let ErrorState = props =>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
-        <Textarea required />
+        <Textarea required aria-describedby="error-01" />
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help" id="error-01">This field is required</div>
     </FormElement>

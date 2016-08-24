@@ -36,12 +36,14 @@ let RadioGroup = props =>
   </div>;
 
 let Radio = props =>
-  <label className={className(pf('button radio--button'), props.className)} htmlFor={props.id}>
+  <span className={className(pf('button radio--button'), props.className)}>
     <input name="radio" type="radio" id={props.id} disabled={props.disabled} />
-    <span className={pf('radio--faux')}>
-      {props.children}
-    </span>
-  </label>;
+    <label className={pf('radio--button__label')} htmlFor={props.id}>
+      <span className={pf('radio--faux')}>
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)

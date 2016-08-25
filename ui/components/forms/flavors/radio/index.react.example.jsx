@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -35,12 +36,19 @@ let FormElementControl = props =>
     {props.children}
   </div>;
 
-let Radio = props =>
-  <label className={pf('radio')}>
-    <input type="radio" name="options" disabled={props.disabled} />
-    <span className={pf('radio--faux')}></span>
-    <span className={pf('form-element__label')}>{props.children}</span>
-  </label>;
+export let Radio = props => {
+  const uniqueId = _.uniqueId('radio-');
+
+  return (
+    <span className={pf('radio')}>
+      <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} />
+      <label className={pf('radio__label')} htmlFor={ uniqueId }>
+        <span className={pf('radio--faux')}></span>
+        <span className={pf('form-element__label')}>{props.children}</span>
+      </label>
+    </span>
+  );
+};
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -51,7 +59,7 @@ let Default = props =>
     <Fieldset>
       <Legend>Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -62,7 +70,7 @@ let Required = props =>
     <Fieldset className={pf('is-required')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -73,7 +81,7 @@ let ErrorState = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
       <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>

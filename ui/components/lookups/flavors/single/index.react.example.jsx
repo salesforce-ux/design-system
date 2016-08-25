@@ -171,7 +171,10 @@ export let Lookup = props => {
 
   return (
     <div className={className(pf('form-element lookup'), props.className, props.showLookupDropdown ? pf('is-open') : null)} data-select="single">
-      <label className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label>
+      { !props.selection ?
+      <label className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
+      <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{ props.label || 'Account Name' }</span>
+      }
       { !props.selection ?
         <LookupSearchInput
           id={ uniqueId }

@@ -38,6 +38,8 @@ import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 import './scripts/gulp/links';
 
+import axeCore from 'gulp-axe-core';
+
 // Configuration
 nconf
   // Environment variables:
@@ -249,6 +251,15 @@ gulp.task('serve', () => {
     [watchPaths.sass, watchPaths.js, watchPaths.pages],
     debounceTask('lint:spaces')
   );
+});
+
+gulp.task('a11y', callback => {
+  const options = {
+      saveOutputIn: 'allHtml.json',
+      browser: 'chrome'
+    };
+    return gulp.src('.generated/**/*.html')
+        .pipe(axeCore(options));
 });
 
 gulp.task('default', callback => {

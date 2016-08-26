@@ -130,14 +130,13 @@
     min-width: 0%;
     color: inherit;
 
-    &:focus {
+    &:focus,
+    &:focus:hover {
       outline: 0;
       text-decoration: underline;
-      // opacity: $opacity-8;
     }
 
-    &:hover,
-    &:focus:hover {
+    &:hover {
       text-decoration: none;
     }
 
@@ -198,7 +197,7 @@
 
     .#{$css-prefix}context-bar__label-action {
       opacity: $opacity-8;
-      color: #16325C;
+      color: $color-text-default;
 
       &:hover,
       &:focus {
@@ -279,7 +278,7 @@
 
   .#{$css-prefix}context-bar__label-action {
     opacity: $opacity-8;
-    color: #16325C;
+    color: $color-text-default;
 
     &:hover,
     &:focus {

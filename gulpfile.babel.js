@@ -31,14 +31,13 @@ import { pathToURL } from 'app_modules/util/string';
 
 import './scripts/gulp/assets';
 import './scripts/gulp/generate';
+import './scripts/gulp/accessibility';
 import { generateUI } from './scripts/gulp/generate-ui';
 import './scripts/gulp/lint';
 import { generatePages, generateComponentPages } from './scripts/gulp/pages';
 import './scripts/gulp/styles';
 import { getConfig as getWebpackConfig } from './scripts/gulp/webpack';
 import './scripts/gulp/links';
-
-import axeCore from 'gulp-axe-core';
 
 // Configuration
 nconf
@@ -251,15 +250,6 @@ gulp.task('serve', () => {
     [watchPaths.sass, watchPaths.js, watchPaths.pages],
     debounceTask('lint:spaces')
   );
-});
-
-gulp.task('a11y', callback => {
-  const options = {
-      saveOutputIn: 'allHtml.json',
-      browser: 'chrome'
-    };
-    return gulp.src('.generated/**/*.html')
-        .pipe(axeCore(options));
 });
 
 gulp.task('default', callback => {

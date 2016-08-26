@@ -107,9 +107,9 @@
       box-shadow: inset ($border-width-thin * -1) 0 0 $color-border;
     }
 
-    &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
-      font-weight: bold;
-    }
+    // &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
+    //   font-weight: bold;
+    // }
 
     &--divider-left {
       border-left: $border-width-thin solid $color-border-context-bar-item;
@@ -133,7 +133,7 @@
     &:focus {
       outline: 0;
       text-decoration: underline;
-      opacity: $opacity-8;
+      // opacity: $opacity-8;
     }
 
     &:hover,
@@ -157,7 +157,7 @@
     display: flex;
     align-items: center;
     align-content: center;
-    padding: 0 $spacing-small;
+    padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
 
     &:focus {
@@ -196,11 +196,18 @@
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border-context-bar-item;
 
-    .#{$css-prefix}context-bar__icon-action {
-      padding: 0 $spacing-xx-small;
+    .#{$css-prefix}context-bar__label-action {
+      opacity: $opacity-8;
+      color: #16325C;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
     }
 
-    &.#{$css-prefix}is-active {
+    &.#{$css-prefix}is-active,
+    &:nth-child(n).#{$css-prefix}is-active {
       background-color: $color-background-context-tab-bar-item;
       border-bottom-color: $color-background-context-tab-bar-item;
       box-shadow: none;
@@ -208,6 +215,32 @@
       &:hover {
         background-color: $color-background-context-tab-bar-item;
         border-bottom-color: transparent;
+      }
+
+      .#{$css-prefix}context-bar__label-action {
+        opacity: 1;
+      }
+    }
+
+    &.#{$css-prefix}is-pinned {
+      width: auto;
+      padding-right: $spacing-x-small;
+
+      .#{$css-prefix}toggle-visibility--pinned {
+        display: none;
+      }
+    }
+
+    &.#{$css-prefix}is-unsaved .#{$css-prefix}context-bar__label-action {
+      font-style: italic;
+      position: relative;
+
+      &:before {
+        content: '*';
+        position: absolute;
+        left: $spacing-xxx-small;
+        top: $spacing-xxx-small;
+        color: $color-brand;
       }
     }
   }
@@ -243,6 +276,16 @@
 .#{$css-prefix}context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
+
+  .#{$css-prefix}context-bar__label-action {
+    opacity: $opacity-8;
+    color: #16325C;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
 }
 
 

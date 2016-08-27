@@ -27,25 +27,24 @@ export default (
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Lightning apps and
       components. It is now automatically included for Lightning Components
-      running in the Lightning Experience and Salesforce S1 mobile application
-      (via app.css). It is no longer necessary to add a static resource for
+      running in the Lightning Experience and Salesforce S1 mobile application. It is no longer necessary to add a static resource for
       Lightning Components running within these environments.
     </p>
 
     <p>
-      There <strong>are</strong> still cases where you will need to use a
-      static resource with Lightning Components, such as:
-    </p>
+      Your application automatically gets the Lightning Design System
+      stylesheets and design tokens if it extends <code>force:slds</code>.
+      This is the easiest way to stay up-to-date and consistent with SLDS
+      enhancements.</p>
 
-    <ul className={pf('list--dotted')}>
-      <li>When building a standalone Lightning Application (my.app).</li>
-
-      <li>
-        In a component that will be used via Lightning Out. In this case,
-        you&rsquo;ll need
-        to <a href="https://tools.lightningdesignsystem.com/css-customizer">create a customized scoped CSS file to use</a>.
-      </li>
-    </ul>
+    <p>To extend <code>force:slds</code>, your application should look like this:</p>
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="html">{`
+      <aura:application extends="force:slds">
+      <!-- customize your application here -->
+      </aura:application>
+      `}</CodeBlock>
+    </div>
 
     <p>
       We have prepared

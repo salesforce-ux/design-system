@@ -32,8 +32,8 @@ export default (
     </p>
 
     <p>
-      Your application automatically gets the Lightning Design System
-      stylesheets and design tokens if it extends <code>force:slds</code>.
+      Your <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/apps_intro.htm">Lightning Application</a> automatically get the Lightning Design System
+      stylesheets and design tokens if they extend <code>force:slds</code>.
       This is the easiest way to stay up-to-date and consistent with SLDS
       enhancements.</p>
 
@@ -63,7 +63,7 @@ export default (
         When using the component sample code from the Trailhead module, be
         sure to replace all static resource paths with the Lightning resource
         URL syntax, as summarized in
-        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a>
+        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (Be aware that the Trailhead is being updated due to the recent ability to extend the template, so you will no longer need to utilize the CSS portion of your static resource)
       </li>
 
       <li>

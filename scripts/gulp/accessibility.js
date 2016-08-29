@@ -1,9 +1,10 @@
 import gulp from 'gulp';
 import axeCore from 'gulp-axe-core';
 
-gulp.task('accessibility', () => {
+gulp.task('a11y', () => {
   const options = {
-      saveOutputIn: 'allHtml.json',
+      folderOutputReport: '.reports',
+      saveOutputIn: 'a11y.json',
       browser: 'phantomjs'
     };
     return gulp

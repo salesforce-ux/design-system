@@ -3,6 +3,11 @@ import gutil from 'gulp-util';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 
+// Token linting tasks
+//
+// Documentation:
+// https://github.com/salesforce-ux/design-system/wiki/Design-Tokens
+
 export const prefixes = [
   'BORDER_RADIUS',
   'BORDER_WIDTH',

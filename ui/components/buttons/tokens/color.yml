@@ -10,7 +10,6 @@ imports:
 props:
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"
-    #value: "#f40000"
     comment: Brandable primary button
   COLOR_BACKGROUND_BUTTON_BRAND_ACTIVE:
     value: "{!MIDNIGHT_BLUE}"

@@ -3,10 +3,6 @@ import gutil from 'gulp-util';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 
-// Helper function
-const isFunction = (f) =>
-  Object.prototype.toString.call(f) === '[object Function]';
-
 export const prefixes = [
   'BORDER_RADIUS',
   'BORDER_WIDTH',
@@ -127,7 +123,7 @@ tokenlintPlugin.report = (reporter) =>
         tokenReporter(file.tokenlint);
       } else if (reporter === 'verbose') {
         verboseReporter(file.tokenlint, file);
-      } else if (isFunction(reporter)) {
+      } else if (_.isFunction(reporter)) {
         reporter(file.tokenlint, file);
       }
     }

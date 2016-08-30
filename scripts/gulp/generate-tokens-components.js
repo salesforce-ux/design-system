@@ -47,40 +47,32 @@ let formatTransforms = _({
 ).flatten().value();
 
 gulp.task('generate:tokens:base:all', (done) => {
-  const convert = (format, done) =>
-    gulp.src([
-      path.resolve(__PATHS__.designTokens, '*.yml')
-    ])
-      .pipe(theo.plugins.transform(format.transform))
-      .pipe(theo.plugins.format(format.name))
+  const convert = ({name, transform}, done) =>
+    gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
+      .pipe(theo.plugins.transform(transform))
+      .pipe(theo.plugins.format(name))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
       .on('finish', done);
   async.each(formatTransforms, convert, done);
 });
 
 gulp.task('generate:tokens:base:sass:default', () =>
-  gulp.src([
-    path.resolve(__PATHS__.designTokens, '*.yml')
-  ])
+  gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:base:sass:map', () =>
-  gulp.src([
-    path.resolve(__PATHS__.designTokens, '*.yml')
-  ])
+  gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('map.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:components:all', (done) => {
-  const convert = (format, done) =>
-    gulp.src([
-      path.resolve(__PATHS__.ui, '**/tokens/*.yml')
-    ])
-      .pipe(theo.plugins.transform(format.transform))
-      .pipe(theo.plugins.format(format.name))
+  const convert = ({name, transform}, done) =>
+    gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
+      .pipe(theo.plugins.transform(transform))
+      .pipe(theo.plugins.format(name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
       .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
       .on('finish', done);
@@ -88,9 +80,7 @@ gulp.task('generate:tokens:components:all', (done) => {
 });
 
 gulp.task('generate:tokens:components:sass', () =>
-  gulp.src([
-    path.resolve(__PATHS__.ui, '**/tokens/*.yml')
-  ])
+  gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(concat('components.default.scss'))

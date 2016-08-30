@@ -513,7 +513,7 @@ The following features are being marked as deprecated in this release and will b
 ## Site Update - September 25th, 2015
 
 - Doc changes
-- Internal SVG icon helper can use `<use xlink:href>` now
+- Internal SVG icon helper can use `<use xlink:href="..."></use>` now
 - Miscellaneous typo fixes
 
 ## Release 0.9.1 — September 24th, 2015

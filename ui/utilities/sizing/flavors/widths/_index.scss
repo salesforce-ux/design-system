@@ -32,7 +32,7 @@ $_sizes: (
 @include width();
 
 // Ordering helpers
-@each $i in $grid-columns {
+@for $i from 1 through 12 {
   .#{$css-prefix}order--#{$i} {
     order: $i;
   }
@@ -48,8 +48,6 @@ $_sizes: (
 @each $size in map-keys($breakpoints) {
   // Store nested value from map
   $breakpoint: map-get($breakpoints, $size);
-  // $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
-  // $columns: map-get(map-get($grid, $size), 'columns');
 
   @media (min-width: #{pem($breakpoint)}) {
 
@@ -67,7 +65,7 @@ $_sizes: (
 
     // Loop through column spread and generate
     // ordering helpers, e.g. <div class="slds-medium-order--2">
-    @each $i in $grid-columns {
+    @for $i from 1 through 12 {
       .#{$css-prefix}#{$size}-order--#{$i} {
         order: $i;
       }
@@ -89,8 +87,8 @@ $_sizes: (
     @include width($breakpoint: #{$size}, $max: true);
 
     // Loop through column spread and generate
-    // ordering helpers, e.g. <div class="slds-medium-order--2">
-    @each $i in $grid-columns {
+    // ordering helpers, e.g. <div class="slds-max-medium-order--2">
+    @for $i from 1 through 12 {
       .#{$css-prefix}max-#{$size}-order--#{$i} {
         order: $i;
       }

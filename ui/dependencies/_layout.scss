@@ -145,7 +145,6 @@
 // Sizing Helper
 @mixin width($columns: $grid-columns, $breakpoint: null, $max: false) {
   $breakpoint-string: null;
-  // $columns: $grid-columns;
 
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {

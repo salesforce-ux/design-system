@@ -6,7 +6,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- ../force-base/aliases/color.yml
+- "../../../../design-tokens/force-base/aliases/color.yml"
 props:
   COLOR_BACKGROUND_PATH_COMPLETE:
     value: '{!EMERALD}'

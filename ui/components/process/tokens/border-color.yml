@@ -2,10 +2,10 @@ global:
   type: color
   category: border-color
   cssProperties:
-    - 'border*'
-    - box-shadow
+  - 'border*'
+  - box-shadow
 imports:
-  - ../force-base/aliases/color.yml
+- "../../../../design-tokens/force-base/aliases/color.yml"
 props:
   COLOR_BORDER_PATH_DIVIDER:
     value: '{!WHITE}'

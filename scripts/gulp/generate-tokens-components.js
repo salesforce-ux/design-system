@@ -18,6 +18,7 @@ import concat from 'gulp-concat';
 import zip from 'gulp-zip';
 import replace from 'gulp-replace';
 import rename from 'gulp-rename';
+import through from 'through2';
 import _ from 'lodash';
 
 let formatTransforms = _({
@@ -68,9 +69,28 @@ gulp.task('generate:tokens:base:sass:map', () =>
     .pipe(theo.plugins.format('map.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
 
-gulp.task('generate:tokens:components:all', (done) => {
+gulp.task('generate:tokens:base:sass', ['generate:tokens:base:sass:default', 'generate:tokens:base:sass:map']);
+
+gulp.task('generate:tokens:components:imports', (done) =>
+  gulp.src(path.resolve(__PATHS__.ui, 'components/**/tokens/**/*.yml'))
+    .pipe(gutil.buffer())
+    .pipe(through.obj((files, enc, next) => {
+      const componentTokenFiles = { imports: [] };
+      files.forEach(file =>
+        componentTokenFiles.imports.push(path.relative(__PATHS__.generated, file.path))
+      );
+      const file = new gutil.File({
+        path: 'components.json',
+        contents: new Buffer(JSON.stringify(componentTokenFiles, null, 2))
+      });
+      next(null, file);
+    }))
+    .pipe(gulp.dest(__PATHS__.generated))
+);
+
+gulp.task('generate:tokens:components:concatenated:all', ['generate:tokens:components:imports'], (done) => {
   const convert = ({name, transform}, done) =>
-    gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
+    gulp.src(path.resolve(__PATHS__.generated, 'components.json'))
       .pipe(theo.plugins.transform(transform))
       .pipe(theo.plugins.format(name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
@@ -79,9 +99,8 @@ gulp.task('generate:tokens:components:all', (done) => {
   async.each(formatTransforms, convert, done);
 });
 
-gulp.task('generate:tokens:components:sass', () =>
-  gulp.src(path.resolve(__PATHS__.ui, '**/tokens/*.yml'))
+gulp.task('generate:tokens:components:concatenated:sass', ['generate:tokens:components:imports'], () =>
+  gulp.src(path.resolve(__PATHS__.generated, 'components.json'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
-    .pipe(concat('components.default.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));

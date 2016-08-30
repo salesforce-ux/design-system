@@ -27,7 +27,7 @@ gulp.task('generate', callback =>
     [
       'generate:release-notes',
       'generate:tokens:base:all',
-      'generate:tokens:components:all',
+      'generate:tokens:components:concatenated:all',
     ],
     [
       'generate:icons',
@@ -44,8 +44,7 @@ gulp.task('generate', callback =>
 
 gulp.task('generate:sass', callback =>
   runSequence([
-    'generate:tokens:base:sass:default',
-    'generate:tokens:base:sass:map',
-    'generate:tokens:components:sass'
+    'generate:tokens:base:sass',
+    'generate:tokens:components:concatenated:sass'
   ], callback)
 );

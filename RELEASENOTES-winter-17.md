@@ -50,6 +50,7 @@ The following classes are now available:
 - Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
 - Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
+- Generate grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
 
 **CHANGES**
 

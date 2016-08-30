@@ -338,6 +338,7 @@ export const gulpRenderComponentPage = () =>
         ? `components/${component.path}`
         : component.path;
       // Create the <PageBody> for the component
+      component.path = componentPath;
       const pageBody = (
         <PageBody contentClassName={false} path={`/${componentPath}`}>
           <Component

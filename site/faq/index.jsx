@@ -60,8 +60,7 @@ class FAQ extends React.Component {
         No. The {g.displayName} is a pure CSS framework that you
         can use with any front-end development framework you’d like,
         including Salesforce-specific technologies such as Visualforce
-        and Lightning, as well as third-party frameworks like for
-        instance React or Angular.
+        and Lightning, as well as third-party frameworks like React or Angular.
       </p>
     );
     this.addContentItem(
@@ -182,6 +181,8 @@ class FAQ extends React.Component {
 <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           `}</CodeBlock>
         </div>
+        <p>Using a custom CSS scope class is now required for building with Visualforce and {g.displayName}. The scoped file is no longer included in the download files, but can instead be created <a href="https://tools.lightningdesignsystem.com/css-customizer">using this tool to create your custom CSS.</a>
+        </p>
         <p>
           Please refer to our <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead Module</a> for more detailed instructions and examples.
         </p>
@@ -192,8 +193,8 @@ class FAQ extends React.Component {
       'How do I link to Lightning static resources like stylesheets and icons?',
       <div>
         <p className={pf('container--large')}>
-          Lightning Components also use a special syntax to reference your static resources, and
-          you need edit the code you cut and paste from the {g.displayName}.
+          Lightning Components also use a special syntax to reference your static resources. Since {g.displayName} is either included in platform or can be extended in other use cases, it's rare that you need to add it as a static resource. In the rare case that you do,
+          you need to edit the code you cut and paste from the {g.displayName}.
           If you are adding a custom scoped file as a static resource named <code>{compactVersion}</code> then you should
           include the style sheet in this format:
         </p>
@@ -202,7 +203,7 @@ class FAQ extends React.Component {
 <ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.css"/>
           `}</CodeBlock>
         </div>
-        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here.</a>
+        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">The tool to create your custom CSS is available here.</a>
         </p>
       </div>
     );

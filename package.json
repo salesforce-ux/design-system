@@ -112,8 +112,8 @@
     "fsevents": "*"
   },
   "engines": {
-    "node": "5.0.0",
-    "npm": ">=2.7.0"
+    "node": ">=6.5.0",
+    "npm": ">=3.10.6"
   },
   "license": "SEE LICENSE IN README.md",
   "repository": {

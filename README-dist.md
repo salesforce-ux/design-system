@@ -1,3 +1,4 @@
+# Salesforce Lightning Design System
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 
@@ -22,3 +23,9 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 * swatches/
   - salesforce-lightning-design-system.ase
   - salesforce-lightning-design-system.clr - adobe and ios swatch formats, respectively. See [https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html](https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html)
+
+## Licenses
+
+* Source code is licensed under [BSD License Clause 2](http://opensource.org/licenses/BSD-2-Clause)
+* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
+* The font is licensed under our [font license](https://www.lightningdesignsystem.com/assets/licenses/License-for-font.txt)

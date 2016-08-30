@@ -91,8 +91,9 @@ async.series([
     packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
     delete packageJSON.dependencies;
-    delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
+    delete packageJSON.optionalDependencies;
+    delete packageJSON.engines;
     fs.writeFile(
       distPath('package.json'),
       JSON.stringify(packageJSON, null, 2),

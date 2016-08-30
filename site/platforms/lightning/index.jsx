@@ -63,7 +63,7 @@ export default (
         When using the component sample code from the Trailhead module, be
         sure to replace all static resource paths with the Lightning resource
         URL syntax, as summarized in
-        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (Be aware that the Trailhead is being updated due to the recent ability to extend the template, so you will no longer need to utilize the CSS portion of your static resource)
+        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (You should no longer need to link to the CSS portion of your static resource)
       </li>
 
       <li>

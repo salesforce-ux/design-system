@@ -53,29 +53,6 @@ $breakpoints: (
   'large': $mq-large
 ) !default;
 
-/// Grid
-/// This will be deprecated
-///
-/// @type map
-$grid: (
-  'x-small': (
-    'breakpoint': $mq-x-small,
-    'columns': 4,
-  ),
-  'small': (
-    'breakpoint': $mq-small,
-    'columns': 8,
-  ),
-  'medium': (
-    'breakpoint': $mq-medium,
-    'columns': 12,
-  ),
-  'large': (
-    'breakpoint': $mq-large,
-    'columns': 12
-  )
-) !default;
-
 /// Grid Column Support
 ///
 /// @type array

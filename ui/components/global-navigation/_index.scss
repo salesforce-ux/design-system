@@ -15,7 +15,7 @@
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-context-bar;
   position: relative;
-  padding: 0 $spacing-medium;
+  padding: 0 0 0 $spacing-medium;
 
   &__primary,
   &__secondary,
@@ -77,7 +77,6 @@
     }
 
     &.#{$css-prefix}is-active {
-      // box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
       border-left: $border-width-thin solid $color-border-context-bar-item;
       border-right: $border-width-thin solid $color-border-context-bar-item;
       border-bottom-color: $color-background-context-bar-item-hover;
@@ -154,11 +153,16 @@
     display: flex;
     align-items: center;
     align-content: center;
+    border-radius: 0;
     padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
 
     &:focus {
       outline: 0;
+
+      .#{$css-prefix}context-bar__button {
+        @include focus-button;
+      }
 
       ~ .#{$css-prefix}dropdown {
         visibility: visible;
@@ -201,10 +205,6 @@
       &:hover {
         background-color: $color-background-context-tab-bar-item;
         border-bottom-color: transparent;
-      }
-
-      .#{$css-prefix}context-bar__label-action {
-        opacity: 1;
       }
     }
 

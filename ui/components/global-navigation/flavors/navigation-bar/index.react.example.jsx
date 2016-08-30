@@ -63,26 +63,18 @@ export let ContextBar = props =>
 
   <div className={className(pf('context-bar'), props.className)}>
 
-    {/* Primary Section */}
     <div className={pf('context-bar__primary context-bar__item--divider-right')}>
-
-      {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
         <div className={pf('context-bar__icon-action')}>
           <WaffleIcon />
         </div>
-        {/* App Name */}
         <span className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
-
     </div>
-    {/* End Primary */}
 
-    {/* Secondary Section */}
     <nav className={pf('context-bar__secondary')} role="navigation">
-
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Home">
@@ -95,7 +87,7 @@ export let ContextBar = props =>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
             <ButtonIcon
-              className={pf('button button--icon button--icon-x-small')}
+              className={pf('button--icon-container button--icon-x-small context-bar__button')}
               symbol="chevrondown"
               tabIndex="-1"
               assistiveText="Open menu item submenu" />
@@ -112,9 +104,7 @@ export let ContextBar = props =>
           ) : props.children }
       </ul>
     </nav>
-    {/* End Secondary Section */}
-
-    {/* Tertiary Section Goes Here */}
+    
   </div>;
 
 //////////////////////////////////////////////

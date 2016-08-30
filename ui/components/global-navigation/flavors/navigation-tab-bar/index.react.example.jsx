@@ -57,7 +57,7 @@ let ContextTab = props =>
       </div>
       <span className={pf('truncate toggle-visibility--pinned')} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
-    <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click p-left--none p-right--none'), props.contextDropdownActive ? pf('is-open') : null)}>
+    <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click p-left--none p-right--none'), props.actionOverflow == 'true' ? pf('is-open') : null)}>
       <ButtonIcon
         className={pf('button--icon-container button--icon-x-small')}
         tabIndex="-1"
@@ -66,7 +66,7 @@ let ContextTab = props =>
         assistiveText="Open tab actions menu" />
       <Menu className={pf('dropdown--right')}>
         <MenuList>
-          <MenuItem tabIndex="0">Refresh Tab</MenuItem>
+          <MenuItem>Refresh Tab</MenuItem>
           <MenuItem>Pin Tab</MenuItem>
           <MenuItem>Close Tab</MenuItem>
         </MenuList>
@@ -89,22 +89,16 @@ export let ContextTabBar = props =>
 
   <div className={className(pf('context-bar'), props.className)}>
 
-    {/* Primary Section */}
     <div className={pf('context-bar__primary')}>
-
-      {/* App Switcher */}
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
         <div className={pf('context-bar__icon-action')}>
           { <WaffleIcon /> }
         </div>
-
-        {/* App Name */}
         <span className={pf('context-bar__label-action context-bar__app-name')}>
           <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
         </span>
       </div>
 
-      {/* Object Context Switcher */}
       <div className={className(pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click'), props.objectSwitchClassName)}>
         <a href="javascript:void(0);" title="Context" className={pf('context-bar__label-action')}>
           <span className={pf('truncate')}>Object</span>
@@ -118,7 +112,7 @@ export let ContextTabBar = props =>
         </div>
         <Menu className={pf('dropdown--right')}>
           <MenuList>
-            <MenuItem tabIndex="0">
+            <MenuItem>
               <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
               Accounts
             </MenuItem>
@@ -134,7 +128,6 @@ export let ContextTabBar = props =>
         </Menu>
       </div>
 
-      {/* Entity Add */}
       <div className={className(pf('context-bar__item dropdown-trigger dropdown-trigger--click'), props.objectSwitcherActive ? pf('is-open') : null)}>
         <div className={pf('context-bar__icon-action')}>
           <ButtonIcon
@@ -143,27 +136,32 @@ export let ContextTabBar = props =>
             assistiveText="Open object switcher menu" />
         </div>
       </div>
-
     </div>
-    {/* End Primary */}
 
-    {/* Secondary Section */}
     <div className={pf('context-bar__secondary')}>
       <div className={pf('context-bar__vertical-divider')}></div>
       <ul className={pf('grid')} role="tablist">
         { props.children }
       </ul>
     </div>
-    {/* End Secondary Section */}
 
-    {/* Tertiary Section */}
-    {/*<div className={pf('context-bar__tertiary col--bump-left')}>
+    { props.showTertiary ?
+    <div className={pf('context-bar__tertiary col--bump-left')}>
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__label-action')} href="javascript:void(0);">Actions</a>
+          <ButtonIcon
+            className={pf('button--icon context-bar__icon-action')}
+            symbol="side_list"
+            assistiveText="Toggle split view" />
+        </li>
+        <li className={pf('context-bar__item')}>
+          <ButtonIcon
+            className={pf('button--icon context-bar__icon-action')}
+            symbol="table"
+            assistiveText="Toggle split view" />
         </li>
       </ul>
-    </div>*/}
+    </div> : null }
   </div>;
 
 //////////////////////////////////////////////
@@ -237,7 +235,7 @@ export let states = [
             </a>
             <Menu className={pf('dropdown--right')}>
               <MenuList>
-                <MenuItem tabIndex="0">
+                <MenuItem>
                   <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
@@ -272,5 +270,27 @@ export let states = [
           <ContextTab title="Tab Item 2"  />
         </ContextTabBar>
       </div>
+  },
+  {
+    id: 'tab-item-action-menu-open',
+    label: 'Tab Item - Action Overflow',
+    element:
+      <div className="demo-only" style={{height: '10rem'}}>
+        <ContextTabBar>
+          <ContextTab title="Home" />
+          <ContextTab title="Tab Item 1" itemActive />
+          <ContextTab title="Tab Item 2" actionOverflow="true" />
+        </ContextTabBar>
+      </div>
+  },
+  {
+    id: 'tertiary',
+    label: 'Tertiary actions',
+    element:
+      <ContextTabBar showTertiary>
+        <ContextTab title="Home" />
+        <ContextTab title="Tab Item 1" itemActive />
+        <ContextTab title="Tab Item 2" />
+      </ContextTabBar>
   }
 ];

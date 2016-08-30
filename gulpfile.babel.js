@@ -58,7 +58,6 @@ const watchPaths = {
   sass: [
     'site/assets/styles/**/*.scss',
     'ui/**/*.scss',
-    '.generated/*.scss',
     'design-tokens/dist/**/*.scss',
   ],
   pages: [

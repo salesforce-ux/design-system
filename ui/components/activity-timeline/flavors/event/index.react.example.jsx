@@ -25,9 +25,9 @@ export let states = [
       <span className={pf('assistive-text')}>Event</span>
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName={pf('timeline__icon')}>
-          <p className={pf('truncate')} title="Company One — EBC Meeting">
+          <h3 className={pf('truncate')} title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
-          </p>
+          </h3>
           <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('m-right--large')}>

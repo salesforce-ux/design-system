@@ -26,7 +26,7 @@ export let TimelineIcon = props =>
 export let TimelineActions = props =>
   <div className={pf('timeline__actions')}>
     <p className={pf('timeline__date')}>{ props.date || 'Feb 24' }</p>
-    <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} symbol="down" assistiveText="More Options" />
+    <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} symbol="down" assistiveText="More Options" aria-haspopup="true" />
   </div>;
 
 export default (
@@ -37,9 +37,9 @@ export default (
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
           <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
-            <p className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
+            <h3 className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
               <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
-            </p>
+            </h3>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
                 <span className={pf('text-title')}>Contact:</span>
@@ -58,9 +58,9 @@ export default (
       <span className={pf('assistive-text')}>Event</span>
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName={pf('timeline__icon')}>
-          <p className={pf('truncate')} title="Company One — EBC Meeting">
+          <h3 className={pf('truncate')} title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
-          </p>
+          </h3>
           <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('m-right--large')}>
@@ -83,9 +83,9 @@ export default (
       <span className={pf('assistive-text')}>Call</span>
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName={pf('timeline__icon')}>
-          <p className={pf('truncate')} title="Mobile conversation on Monday">
+          <h3 className={pf('truncate')} title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
-          </p>
+          </h3>
           <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('m-right--large')}>
@@ -104,9 +104,9 @@ export default (
       <span className={pf('assistive-text')}>Email</span>
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName={pf('timeline__icon')}>
-          <p className={pf('truncate')} title="Mobile conversation on Monday">
+          <h3 className={pf('truncate')} title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
-          </p>
+          </h3>
           <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
           <ul className={pf('list--horizontal wrap')}>
             <li className={pf('truncate_container--50 m-right--large grid')}>

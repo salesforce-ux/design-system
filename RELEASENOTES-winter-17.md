@@ -134,6 +134,7 @@ The following issues have now been resolved:
 - Added `aria-describedby` on textarea element to show error message ID
 - Added `aria-live` attribute to the stateful icon button
 - Added `aria-describedby` on select element to show error message ID
+- Added `aria-haspopup` on Activity Timeline menu buttons, and updated each list item to use an `<h3>` tag
 
 **DEPRECATED**
 

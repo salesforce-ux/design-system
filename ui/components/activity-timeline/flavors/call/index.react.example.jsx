@@ -25,9 +25,9 @@ export let states = [
         <span className={pf('assistive-text')}>Call</span>
         <MediaObject figureRight={ <TimelineActions /> }>
           <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName={pf('timeline__icon')}>
-            <p className={pf('truncate')} title="Mobile conversation on Monday">
+            <h3 className={pf('truncate')} title="Mobile conversation on Monday">
               <a href="javascript:void(0);">Mobile conversation on Monday</a>
-            </p>
+            </h3>
             <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>

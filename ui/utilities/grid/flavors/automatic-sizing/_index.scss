@@ -177,13 +177,14 @@
 
 // New in 1.0.0
 // .slds-{size}-nowrap used for responsive design
-@each $size in map-keys($grid) {
-  $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
   @each $key in $size {
     @media (min-width: #{pem($breakpoint)}) {
       .#{$css-prefix}#{$size}-nowrap {
-        @include flex-item(expand);
-        @include flex-wrap(false);
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        align-items: flex-start;
       }
     }
   }

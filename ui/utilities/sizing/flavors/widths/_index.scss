@@ -29,10 +29,14 @@ $_sizes: (
 }
 
 // Relative sizes (%)
-@include width(12);
+@include width();
 
 // Ordering helpers
-@include order(12);
+@each $i in $grid-columns {
+  .#{$css-prefix}order--#{$i} {
+    order: $i;
+  }
+}
 
 // Generate responsive Sizing Helpers
 //
@@ -41,10 +45,11 @@ $_sizes: (
 //
 // This loop generates around 500 selectors,
 // make sure to test thoroughly when editing it.
-@each $size in map-keys($grid) {
+@each $size in map-keys($breakpoints) {
   // Store nested value from map
-  $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
-  $columns: map-get(map-get($grid, $size), 'columns');
+  $breakpoint: map-get($breakpoints, $size);
+  // $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
+  // $columns: map-get(map-get($grid, $size), 'columns');
 
   @media (min-width: #{pem($breakpoint)}) {
 
@@ -58,11 +63,11 @@ $_sizes: (
 
     // Generate responsive relative (%) width names,
     // e.g. <div class="slds-medium-size--3-of-6">
-    @include width($columns, #{$size});
+    @include width($breakpoint: #{$size});
 
     // Loop through column spread and generate
     // ordering helpers, e.g. <div class="slds-medium-order--2">
-    @for $i from 1 through $columns {
+    @each $i in $grid-columns {
       .#{$css-prefix}#{$size}-order--#{$i} {
         order: $i;
       }
@@ -81,11 +86,11 @@ $_sizes: (
 
     // Generate responsive relative (%) width names (up to size),
     // e.g. <div class="slds-max-medium-size--3-of-6">
-    @include width($columns, #{$size}, true);
+    @include width($breakpoint: #{$size}, $max: true);
 
     // Loop through column spread and generate
     // ordering helpers, e.g. <div class="slds-medium-order--2">
-    @for $i from 1 through $columns {
+    @each $i in $grid-columns {
       .#{$css-prefix}max-#{$size}-order--#{$i} {
         order: $i;
       }

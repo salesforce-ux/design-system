@@ -73,7 +73,7 @@ async.series([
    */
   (done) => {
     gulp.src([
-      './README-dist.txt',
+      './README-dist.md',
       './package.json'
     ], {
       base: __PATHS__.root
@@ -339,7 +339,7 @@ async.series([
    * Add build date to README.txt
    */
   (done) => {
-    gulp.src(distPath('README-dist.txt'))
+    gulp.src(distPath('README-dist.md'))
     .pipe(gulprename('README.md'))
     .on('error', done)
     .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${process.env.SLDS_VERSION} \n`))
@@ -353,7 +353,7 @@ async.series([
    * Remove old README-dist
    */
   (done) => {
-    rimraf(distPath('README-dist.txt'), done);
+    rimraf(distPath('README-dist.md'), done);
   },
 
   /**

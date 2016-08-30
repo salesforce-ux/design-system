@@ -11,7 +11,7 @@
   display: flex;
   height: $height-context-bar;
   background-color: $color-background-context-bar;
-  border-top: $border-width-thin solid $color-border;
+  border-top: $border-width-thin solid $color-border-context-bar-item;
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-context-bar;
   position: relative;
@@ -77,7 +77,9 @@
     }
 
     &.#{$css-prefix}is-active {
-      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
+      // box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
+      border-left: $border-width-thin solid $color-border-context-bar-item;
+      border-right: $border-width-thin solid $color-border-context-bar-item;
       border-bottom-color: $color-background-context-bar-item-hover;
 
       &:before,
@@ -104,12 +106,8 @@
     }
 
     &:first-child.#{$css-prefix}is-active {
-      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border;
+      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border-context-bar-item;
     }
-
-    // &.#{$css-prefix}is-active .#{$css-prefix}context-bar__label-action {
-    //   font-weight: bold;
-    // }
 
     &--divider-left {
       border-left: $border-width-thin solid $color-border-context-bar-item;
@@ -186,7 +184,6 @@
     // Setting custom focus thats specific to context bar
     &:focus {
       box-shadow: none;
-      opacity: $opacity-8;
     }
   }
 
@@ -195,21 +192,11 @@
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border-context-bar-item;
 
-    .#{$css-prefix}context-bar__label-action {
-      opacity: $opacity-8;
-      color: $color-text-default;
-
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-    }
-
     &.#{$css-prefix}is-active,
     &:nth-child(n).#{$css-prefix}is-active {
       background-color: $color-background-context-tab-bar-item;
+      border-left: 0;
       border-bottom-color: $color-background-context-tab-bar-item;
-      box-shadow: none;
 
       &:hover {
         background-color: $color-background-context-tab-bar-item;
@@ -240,6 +227,7 @@
         left: $spacing-xxx-small;
         top: $spacing-xxx-small;
         color: $color-brand;
+        text-decoration: none;
       }
     }
   }
@@ -248,18 +236,18 @@
 // Context Bar dropdown trigger specifics
 .#{$css-prefix}context-bar__dropdown-trigger {
 
-  // Add a hoverable zone below the action so that the dropdown doesn't
-  // disappear when the mouse is between the action and the dropdown
-  &:hover:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 3px;
-  }
-
   .#{$css-prefix}dropdown {
     margin-top: 3px;
+
+    // Add a hoverable zone below the action so that the dropdown doesn't
+    // disappear when the mouse is between the action and the dropdown
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: 3px;
+    }
   }
 }
 
@@ -275,16 +263,8 @@
 .#{$css-prefix}context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
-
-  .#{$css-prefix}context-bar__label-action {
-    opacity: $opacity-8;
-    color: $color-text-default;
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
-  }
+  border-left: $border-width-thin solid $color-border-context-bar-item;
+  border-right: $border-width-thin solid $color-border-context-bar-item;
 }
 
 

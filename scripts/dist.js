@@ -94,6 +94,8 @@ async.series([
     delete packageJSON.devDependencies;
     delete packageJSON.optionalDependencies;
     delete packageJSON.engines;
+    delete packageJSON.config;
+    delete packageJSON.slds;
     fs.writeFile(
       distPath('package.json'),
       JSON.stringify(packageJSON, null, 2),

@@ -93,5 +93,5 @@ gulp.task('generate:tokens:components:sass', () =>
   ])
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
-    .pipe(concat('component-tokens.default.scss'))
+    .pipe(concat('components.default.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));

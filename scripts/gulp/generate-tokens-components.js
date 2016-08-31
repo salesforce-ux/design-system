@@ -75,22 +75,22 @@ gulp.task('generate:tokens:components:imports', (done) =>
   gulp.src(path.resolve(__PATHS__.ui, 'components/**/tokens/**/*.yml'))
     .pipe(gutil.buffer())
     .pipe(through.obj((files, enc, next) => {
-      const componentTokenFiles = { imports: [] };
+      let componentTokenFiles = 'imports:';
       files.forEach(file =>
-        componentTokenFiles.imports.push(path.relative(__PATHS__.generated, file.path))
+        componentTokenFiles = `${componentTokenFiles}\n- ${path.relative(__PATHS__.designTokens + '/dist', file.path)}`
       );
       const file = new gutil.File({
-        path: 'components.json',
-        contents: new Buffer(JSON.stringify(componentTokenFiles, null, 2))
+        path: 'components.yml',
+        contents: new Buffer(componentTokenFiles)
       });
       next(null, file);
     }))
-    .pipe(gulp.dest(__PATHS__.generated))
+    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
 );
 
 gulp.task('generate:tokens:components:concatenated:all', ['generate:tokens:components:imports'], (done) => {
   const convert = ({name, transform}, done) =>
-    gulp.src(path.resolve(__PATHS__.generated, 'components.json'))
+    gulp.src(path.resolve(__PATHS__.designTokens, 'dist', 'components.yml'))
       .pipe(theo.plugins.transform(transform))
       .pipe(theo.plugins.format(name))
       .pipe(rename(path => path.dirname = path.dirname.replace(/\/tokens$/, '')))
@@ -100,7 +100,7 @@ gulp.task('generate:tokens:components:concatenated:all', ['generate:tokens:compo
 });
 
 gulp.task('generate:tokens:components:concatenated:sass', ['generate:tokens:components:imports'], () =>
-  gulp.src(path.resolve(__PATHS__.generated, 'components.json'))
+  gulp.src(path.resolve(__PATHS__.designTokens, 'dist', 'components.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));

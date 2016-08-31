@@ -19,8 +19,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 export let UtilityBarItem = props =>
-  <li>
-    <button className={className(pf('button utility-bar__item'), props.className)}>
+  <li className={pf('utility-bar__item')}>
+    <button className={className(pf('button utility-bar__action'), props.className)}>
       <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol={ props.symbol } />
       { props.children }
     </button>

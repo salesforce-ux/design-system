@@ -23,18 +23,10 @@
     transform: translateY(0);
   }
 
-  &:hover,
-  &:focus {
-
-    .#{$css-prefix}utility-panel__header {
-      background: $color-background-inverse;
-    }
-  }
-
   &__header {
-    background: $color-background-alt-inverse;
+    background: $color-background-panel-header;
+    border-bottom: $border-width-thick solid $color-border-brand;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
-    color: $color-text-inverse;
     padding: 0 $spacing-x-small;
   }
 
@@ -48,6 +40,5 @@
   &__header-label,
   &__header-icon-action {
     padding: $spacing-x-small;
-    color: $color-text-inverse;
   }
 }

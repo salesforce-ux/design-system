@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -31,10 +32,9 @@ export let UtilityPanel = props =>
     <div className={pf('utility-panel__header grid shrink-none')}>
       <div className={pf('utility-panel__header-label')}>
         <div className={pf('media media--center')}>
-          <div className={pf('media__figure')}>
+          <div className={pf('media__figure m-right--x-small')}>
             <span className={pf('icon_container')}>
-              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-              <span className={pf('assistive-text')}>Call Icon</span>
+              <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="call" />
             </span>
           </div>
           <div className={pf('media__body')}>
@@ -43,10 +43,10 @@ export let UtilityPanel = props =>
         </div>
       </div>
       <div className={pf('utility-panel__header-icon-action col--bump-left')}>
-        <button className={pf('button button--icon button--icon-inverse')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="minimize_window" />
-          <span className={pf('assistive-text')}>Minimize</span>
-        </button>
+        <ButtonIcon
+          className={pf('button--icon')}
+          symbol="minimize_window"
+          assistiveText="Minimize Panel" />
       </div>
     </div>
     <div className={pf('utility-panel__body')}>
@@ -55,13 +55,13 @@ export let UtilityPanel = props =>
   </div>;
 
 const PanelOpen = (
-  <UtilityPanel className={pf('is-open')}>
+  <UtilityPanel className={pf('is-open')} header="Call">
     <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
   </UtilityPanel>
 );
 
 const PanelClosed = (
-  <UtilityPanel>
+  <UtilityPanel header="Call">
     <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
   </UtilityPanel>
 );

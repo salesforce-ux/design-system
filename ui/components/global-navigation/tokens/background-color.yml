@@ -1,0 +1,42 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_CONTEXT_BAR:
+    value: '{!WHITE}'
+    comment: Default context bar background color.
+  COLOR_BACKGROUND_CONTEXT_BAR_BRAND_ACCENT:
+    value: '{!CERULEAN}'
+    comment: Brand color in context bar for default theme
+  COLOR_BACKGROUND_CONTEXT_BAR_ITEM_HOVER:
+    value: '{!CATSKILL_WHITE}'
+    comment: Hovered context bar item background color.
+  COLOR_BACKGROUND_CONTEXT_BAR_ITEM_ACTIVE:
+    value: '{!CATSKILL_WHITE}'
+    comment: Active context bar item background color.
+  COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
+    value: '{!WHITE}'
+    comment: Context TAB bar item background color.
+  COLOR_BACKGROUND_CONTEXT_BAR_INVERSE_ITEM_HOVER:
+    value: '{!WHITE_TRANSPARENT_20}'
+    comment: Hovered context bar item background color.
+    deprecated: true
+  COLOR_BACKGROUND_CONTEXT_BAR_INVERSE_ITEM_ACTIVE:
+    value: '{!WHITE_TRANSPARENT_40}'
+    comment: Active context bar item background color.
+    deprecated: true
+  COLOR_BACKGROUND_CONTEXT_BAR_SHADOW:
+    value: '{!GRADIENT_SHADOW_BOTTOM}'
+    comment: A Gradient used for putting shadows on the bottom when box-shadow is not possible.
+    type: gradient
+    deprecated: true
+  COLOR_BACKGROUND_CONTEXT_BAR_ACTION_HIGHLIGHT:
+    value: '{!WHITE_TRANSPARENT_20}'
+    comment: Highlight for context bar action (hover and focus states).
+    deprecated: true

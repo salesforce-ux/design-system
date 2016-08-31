@@ -13,9 +13,6 @@ global:
   - 'padding*'
   - transform
 props:
-  HEIGHT_SALES_PATH:
-    value: 2rem
-    comment: Height of Salespath
   WIDTH_STAGE_LEFT:
     value: '88%'
   HEIGHT_FOOTER:

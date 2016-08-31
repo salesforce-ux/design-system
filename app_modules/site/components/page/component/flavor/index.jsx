@@ -123,7 +123,7 @@ class ComponentFlavor extends React.Component {
   renderBox() {
     return (
       <div className={pf('box theme--default theme--alert-texture m-top--medium')}>
-        <p>Code will be available once this component is Dev-Ready.</p>
+        <p>Code will be available when this component reaches a Dev-Ready state.</p>
       </div>
     );
   }
@@ -189,7 +189,7 @@ class ComponentFlavor extends React.Component {
     const exampleDescriptionMarkup = renderMarkdownAndReplaceGlobals(flavor.exampleDescription);
 
     return exampleDescriptionMarkup ? <div>
-            <h3 className="site-text-heading--small site-text-heading--callout">State markup changes</h3>
+            <h3 className={pf('text-heading--small m-top--large m-bottom--xx-small')}>State/Variant Information</h3>
             <div
               id={`description-${flavor.uid}`}
               className={pf('text-longform m-bottom--large')}

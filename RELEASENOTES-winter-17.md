@@ -9,7 +9,7 @@
 
 The following site enhancements are now available:
 
-- New Checkbox Toggle guidelines under Data Entry section in [App Launcher Component](/guidelines/data-entry/).
+- New Checkbox Toggle guidelines under [Data Entry section](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
 - Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icon)
@@ -145,8 +145,7 @@ The following features are being marked as deprecated in this release and will b
 
 **REMOVED**
 
-The following features are being removed in this release:
+The following features or demos are being removed in this release:
 
 - Context Bar has been removed and replaced with Global Navigation Component - [Global Navigation Component](/components/global-navigation)
-- `slsd-is-recording` class was not in use.
 - Removed inverse and state themes from examples to provide clarity of usage.

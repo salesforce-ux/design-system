@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -88,25 +89,27 @@ export let ContextBar = props =>
             <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')} aria-haspopup="true">
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item">
             <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
-              <span className={pf('assistive-text')}>Assistive text for submenu</span>
-            </button>
+            <ButtonIcon
+              className={pf('button--icon context-bar__button')}
+              symbol="chevrondown"
+              tabIndex="-1"
+              assistiveText="Open menu item submenu" />
           </div>
           { !props.hideDropdown ? contextDropdown : null }
         </li>
-        { _.times(3, i =>
-          <li className={pf('context-bar__item')} key={ i }>
-            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
-              <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
-            </a>
-          </li>
-        )}
+        { !props.children ?
+          _.times(3, i =>
+            <li className={pf('context-bar__item')} key={ i }>
+              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
+                <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+              </a>
+            </li>
+          ) : props.children }
       </ul>
     </nav>
     {/* End Secondary Section */}
@@ -123,3 +126,35 @@ export default (
     <ContextBar itemActive />
   </div>
 );
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{height: '14rem'}}>
+        <ContextBar />
+      </div>
+  },
+  {
+    id: 'item-active',
+    label: 'Item Active',
+    element:
+      <div className="demo-only" style={{height: '14rem'}}>
+        <ContextBar>
+          <li className={pf('context-bar__item is-active')}>
+            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item'}>
+              <span className={pf('truncate')}>Menu Item</span>
+            </a>
+          </li>
+          { _.times(2, i =>
+            <li className={pf('context-bar__item')} key={ i }>
+              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
+                <span className={pf('truncate')}>Menu Item</span>
+              </a>
+            </li>
+          )}
+        </ContextBar>
+      </div>
+  }
+];

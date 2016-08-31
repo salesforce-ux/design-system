@@ -130,17 +130,6 @@ props:
   COLOR_TEXT_TOGGLE_DISABLED:
     value: '{!GEYSER}'
     comment: Color for disabled toggles
-  COLOR_TEXT_CONTEXT_BAR:
-    value: '{!KASHMIR_BLUE}'
-    comment: Context bar text color
-  COLOR_TEXT_CONTEXT_BAR_INVERSE:
-    value: '{!WHITE}'
-    comment: Context bar text color on a dark background
-    deprecated: true
-  COLOR_TEXT_CONTEXT_BAR_ACTION_TRIGGER:
-    value: '{!WHITE_TRANSPARENT_40}'
-    comment: Context bar action trigger text color
-    deprecated: true
   COLOR_TEXT_BUTTON_BRAND:
     value: '{!WHITE}'
     comment: Text color for brandable primary button

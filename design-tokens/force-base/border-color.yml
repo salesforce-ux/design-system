@@ -109,29 +109,6 @@ props:
     value: '{!ENDEAVOUR}'
     specificity: builders
     comment: Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
-  COLOR_BORDER_CONTEXT_BAR_DIVIDER:
-    value: '{!WHITE_TRANSPARENT_20}'
-    comment: Divider in context bar
-    deprecated: true
-  COLOR_BORDER_CONTEXT_BAR_ITEM:
-    value: '{!BLACK_TRANSPARENT_20}'
-    comment: Border color in context bar
-  COLOR_BORDER_CONTEXT_BAR_INVERSE_ITEM:
-    value: '{!WHITE_TRANSPARENT_20}'
-    comment: Border color in context bar on dark background
-    deprecated: true
-  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT:
-    value: '{!CERULEAN}'
-    comment: Border color in context bar for default theme
-  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ALT:
-    value: '{!MYSTIC}'
-    comment: Alternate border color in context bar for default theme
-  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_HOVER:
-    value: '{!TOREA_BAY}'
-    comment: Hovered border color in context bar for default theme
-  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ACTIVE:
-    value: '{!MYSTIC}'
-    comment: Active border color in context bar for default theme
   COLOR_BORDER_ICON_INVERSE_HINT:
     value: '{!WHITE_TRANSPARENT_50}'
     comment: Border color for a button with an icon that has a parent element that has a hover state

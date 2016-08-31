@@ -93,15 +93,6 @@ props:
     value: 3.125rem
     comment: Large tap target size.
     deprecated: true
-  SQUARE_TOGGLE_SLIDER:
-    value: 1.25rem
-    comment: Slider size for toggle.
-  WIDTH_TOGGLE:
-    value: 3.375rem
-    comment: Slider width.
-  HEIGHT_TOGGLE:
-    value: 1.5rem
-    comment: Slider height.
   HEIGHT_CONTEXT_BAR:
     value: 2.5rem
     comment: Context bar height.

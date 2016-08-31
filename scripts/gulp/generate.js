@@ -25,9 +25,7 @@ import './generate-whitelist';
 gulp.task('generate', callback =>
   runSequence(
     [
-      'generate:release-notes',
-      'generate:tokens:base:all',
-      'generate:tokens:components:concatenated:all',
+      'generate:release-notes'
     ],
     [
       'generate:icons',
@@ -40,11 +38,4 @@ gulp.task('generate', callback =>
     ],
     'generate:examples',
     callback)
-);
-
-gulp.task('generate:sass', callback =>
-  runSequence([
-    'generate:tokens:base:sass',
-    'generate:tokens:components:concatenated:sass'
-  ], callback)
 );

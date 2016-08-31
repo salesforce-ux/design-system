@@ -58,7 +58,7 @@ const watchPaths = {
   sass: [
     'site/assets/styles/**/*.scss',
     'ui/**/*.scss',
-    'design-tokens/dist/**/*.scss',
+    'design-tokens/*.yml'
   ],
   pages: [
     'ui/**/*.{md,yml}',
@@ -71,7 +71,9 @@ const watchPaths = {
   ],
   tokens: [
     'ui/**/tokens/*.yml',
-    'design-tokens/**/*.yml'
+    'design-tokens/**/*.yml',
+    '!design-tokens/dist/**/*.yml',
+    '!design-tokens/components.yml'
   ]
 };
 
@@ -242,7 +244,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
-  gulp.watch(watchPaths.tokens, ['generate:tokens:base:sass', 'generate:tokens:components:concatenated:sass', 'generate:tokens:ui']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:components:imports', 'generate:tokens:ui']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(
@@ -261,12 +263,12 @@ gulp.task('serve', () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', 'generate:sass', 'styles', ['assets', 'generate'], 'serve',
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], 'serve',
   callback);
 });
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'generate:sass', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });

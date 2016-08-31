@@ -183,8 +183,8 @@
     @media (min-width: #{pem($breakpoint)}) {
       .#{$css-prefix}#{$size}-nowrap {
         flex: 1 1 auto;
-        flex-wrap: wrap;
-        align-items: flex-start;
+        flex-wrap: nowrap;
+        align-items: stretch;
       }
     }
   }

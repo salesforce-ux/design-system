@@ -88,18 +88,20 @@ export let ContextBar = props =>
             <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
+        { _.times(3, i =>
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item">
             <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
             <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
+              <SvgIcon className={pf('button__icon')} sprite="utility" symbol="chevrondown" />
               <span className={pf('assistive-text')}>Assistive text for submenu</span>
             </button>
           </div>
           { !props.hideDropdown ? contextDropdown : null }
         </li>
+        )}
         { _.times(3, i =>
           <li className={pf('context-bar__item')} key={ i }>
             <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>

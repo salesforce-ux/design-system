@@ -1,0 +1,10 @@
+global:
+  category: line-height
+  type: number
+  cssProperties:
+  - font
+  - '*height'
+props:
+  LINE_HEIGHT_TOGGLE:
+    value: 1.3rem
+    comment: Line heights for toggle buttons

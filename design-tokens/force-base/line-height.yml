@@ -17,6 +17,3 @@ props:
   LINE_HEIGHT_TAB:
     value: 2.5rem
     comment: Line heights for tabs
-  LINE_HEIGHT_TOGGLE:
-    value: 1.3rem
-    comment: Line heights for toggle buttons

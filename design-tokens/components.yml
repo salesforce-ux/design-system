@@ -1,3 +1,4 @@
+# File generated automatically, do not edit manually
 imports:
 - ../ui/components/buttons/tokens/color.yml
 - ../ui/components/buttons/tokens/line-height.yml

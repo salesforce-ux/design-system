@@ -1,0 +1,17 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_ANCHOR:
+    value: '{!LINK_WATER}'
+    deprecated: true
+    comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
+  COLOR_BACKGROUND_PAGE_HEADER:
+    value: '{!CATSKILL_WHITE}'
+    comment: Page Header background color

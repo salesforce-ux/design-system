@@ -35,10 +35,6 @@ props:
   COLOR_BACKGROUND_INVERSE:
     value: '{!DEEP_COVE}'
     comment: Default background color for dark portions of the app (like Stage Left or tooltips).
-  COLOR_BACKGROUND_ANCHOR:
-    value: '{!LINK_WATER}'
-    deprecated: true
-    comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
   COLOR_BACKGROUND_BROWSER:
     value: '{!KASHMIR_BLUE}'
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
@@ -197,9 +193,6 @@ props:
     value: '{!WHITE_TRANSPARENT_20}'
     comment: Highlight for context bar action (hover and focus states).
     deprecated: true
-  COLOR_BACKGROUND_PAGE_HEADER:
-    value: '{!CATSKILL_WHITE}'
-    comment: Page Header background color
   COLOR_BACKGROUND_MODAL_BUTTON:
     value: '{!BLACK_TRANSPARENT_07}'
     comment: Button backgrounds on modal headers

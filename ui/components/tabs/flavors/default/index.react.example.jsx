@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Tabs from 'ui/components/tabs/index.react';
-// import Menu from 'ui/components/menus/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Default as ScopedTabs } from 'ui/components/tabs/flavors/scoped/index.react.example';

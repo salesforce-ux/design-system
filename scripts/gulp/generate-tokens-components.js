@@ -75,7 +75,7 @@ gulp.task('generate:tokens:components:imports', (done) =>
   gulp.src(path.resolve(__PATHS__.ui, 'components/**/tokens/**/*.yml'))
     .pipe(gutil.buffer())
     .pipe(through.obj((files, enc, next) => {
-      const componentTokenImports = files.reduce((prev, file, i, arr) =>
+      const componentTokenImports = files.reduce((prev, file) =>
           `${prev}\n- ${path.relative(__PATHS__.designTokens + '/dist', file.path)}`
         , 'imports:');
       const file = new gutil.File({

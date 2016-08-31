@@ -123,7 +123,7 @@ class ComponentFlavor extends React.Component {
   renderBox() {
     return (
       <div className={pf('box theme--default theme--alert-texture m-top--medium')}>
-        <p>Code will be available once this component is Dev-Ready.</p>
+        <p>Code will be available when this component reaches a Dev-Ready state.</p>
       </div>
     );
   }
@@ -190,7 +190,6 @@ class ComponentFlavor extends React.Component {
 
     return <div
               id={`description-${flavor.uid}`}
-              className={pf('text-longform m-bottom--large')}
               dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />;
   }
 

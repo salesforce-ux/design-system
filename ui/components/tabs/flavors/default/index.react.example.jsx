@@ -59,9 +59,9 @@ let Overflowing = props =>
     <Tabs.Item title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More search results" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
+    <Tabs.ItemOverflow title="More tabs" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
       <a className={pf('tabs--default__link')} href="javascript:void(0);" aria-haspopup="true">
-        <span className={pf('truncate')}>More <span className={pf('assistive-text')}>search results</span></span>
+        <span className={pf('truncate')}>More <span className={pf('assistive-text')}>tabs</span></span>
         <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
       </a>
       <Menu className={pf('dropdown--right')}>

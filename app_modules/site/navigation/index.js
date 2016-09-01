@@ -53,8 +53,8 @@ export const rootNavId = (path) => {
  * Return root nav label
  */
 export const rootNavLabel = (path) => {
-  if (/touch/.test(path)) return 'Touch';
-  if (/utilities/.test(path)) return 'Utilities';
+  if (/touch/.test(path)) return 'Components › Touch';
+  if (/utilities/.test(path)) return 'Components › Utilities';
   return _.drop(getActiveNavItems(nav, path)).map(item => item.label)[0] || 'Resources';
 };
 

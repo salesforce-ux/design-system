@@ -863,18 +863,6 @@
     "ecc-jsbn": {
       "version": "0.1.1"
     },
-    "editorconfig": {
-      "version": "0.11.4",
-      "resolved": "git+https://github.com/editorconfig/editorconfig-core-js.git#50e0dba81b2f7f3e9ea4f701f2c65dd3f482cd4c",
-      "dependencies": {
-        "commander": {
-          "version": "1.1.1"
-        },
-        "lru-cache": {
-          "version": "2.0.4"
-        }
-      }
-    },
     "ee-first": {
       "version": "1.1.1"
     },
@@ -2182,7 +2170,19 @@
       "version": "2.0.0"
     },
     "lintspaces": {
-      "version": "0.3.3"
+      "version": "0.3.3",
+      "dependencies": {
+        "commander": {
+          "version": "1.1.1"
+        },
+        "editorconfig": {
+          "version": "0.11.4",
+          "resolved": "git+https://github.com/editorconfig/editorconfig-core-js.git#50e0dba81b2f7f3e9ea4f701f2c65dd3f482cd4c"
+        },
+        "lru-cache": {
+          "version": "2.0.4"
+        }
+      }
     },
     "load-json-file": {
       "version": "1.1.0",
@@ -3030,10 +3030,6 @@
           "version": "0.3.5"
         }
       }
-    },
-    "rework-rem2px": {
-      "version": "0.0.1",
-      "resolved": "git://github.com/ppowalowski/rework-rem2px.git#c0d05c5dd8b7d4c656b773f502551aed1d71892e"
     },
     "rework-visit": {
       "version": "1.0.0"

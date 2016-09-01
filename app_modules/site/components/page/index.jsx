@@ -74,7 +74,6 @@ export default React.createClass({
         <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192" />
         <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
-        <link rel="manifest" href="/favicons/manifest.json" />
         <meta name="apple-mobile-web-app-title" content="Design System" />
         <meta name="application-name" content="Design System" />
         <meta name="msapplication-TileColor" content="#ffffff" />

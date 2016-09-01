@@ -21,6 +21,6 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <p>In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.</p>
+    <p>The background overlay for the spinner is an optional element. In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.</p>
   </ComponentDocs>
 );

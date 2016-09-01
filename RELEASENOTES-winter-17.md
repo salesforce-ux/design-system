@@ -35,6 +35,7 @@ The following components are now available:
 - Image Cards - [Figure Card Component](/components/images/#flavor-figure)
 - Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
 - Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical)
+- Error state for Pills - [Pill Component](/components/pills/#flavor-base-pill-error)
 
 **ADDED**
 

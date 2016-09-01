@@ -86,3 +86,13 @@
     margin-left: $spacing-xx-small;
   }
 }
+
+// Error Styles
+.#{$css-prefix}has-error {
+  border-color: $color-border-error;
+
+  .#{$css-prefix}pill__label {
+    font-weight: $font-weight-bold;
+    color: $color-text-error;
+  }
+}

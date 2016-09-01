@@ -14,7 +14,9 @@ The following site enhancements are now available:
 
 The following components are now available:
 
--
+- Added `slds-float--none` utility.
+- Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+
 
 
 **ADDED**

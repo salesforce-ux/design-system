@@ -312,7 +312,7 @@ export const gulpRenderComponentPage = () =>
                 state.description = '';
               }
 
-              const headingClass = pf('text-heading--small m-top--large m-bottom--xx-small');
+              const headingClass = pf('slds-text-heading--small slds-m-top--large slds-m-bottom--xx-small');
               const stateDesc = state.description ?  '<h3 class="' + headingClass + '">State/Variant Information</h3>' + renderMarkdownAndReplaceGlobals(state.description) : '';
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),

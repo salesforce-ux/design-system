@@ -26,6 +26,7 @@ import through from 'through2';
 import crypto from 'crypto';
 import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
+import { prefix as pf } from 'app_modules/ui/util/component';
 
 import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
@@ -310,10 +311,13 @@ export const gulpRenderComponentPage = () =>
               if (!('description' in state)) {
                 state.description = '';
               }
+
+              const headingClass = pf('text-heading--small m-top--large m-bottom--xx-small');
+              const stateDesc = state.description ?  '<h3 class="' + headingClass + '">State/Variant Information</h3>' + renderMarkdownAndReplaceGlobals(state.description) : '';
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, renderExample(element), state.script, renderMarkdownAndReplaceGlobals(state.description))
+                  wrapExample(flavor, renderExample(element), state.script, stateDesc)
                 ),
                 base: __PATHS__.site
               }));

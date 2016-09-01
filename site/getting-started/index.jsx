@@ -107,6 +107,8 @@ export default (
             <li>Stand-alone Lightning&nbsp;app</li>
 
             <li>Lightning Out&nbsp;component</li>
+
+            <li>Lightning Components for Visualforce</li>
           </ul>
 
           <h3 className={pf('site-text-heading--label')}>

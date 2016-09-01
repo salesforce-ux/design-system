@@ -6,6 +6,7 @@ flavors:
   - checkbox
   - checkbox-toggle
   - checkbox-alternate
+  - checkbox-add-button
   - select
   - multi-select
   - horizontal-form

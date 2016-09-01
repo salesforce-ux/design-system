@@ -87,7 +87,7 @@ export let ContextBar = props =>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
             <ButtonIcon
-              className={pf('button--icon-container button--icon-x-small context-bar__button')}
+              className={pf('button--icon context-bar__button')}
               symbol="chevrondown"
               tabIndex="-1"
               assistiveText="Open menu item submenu" />
@@ -104,7 +104,7 @@ export let ContextBar = props =>
           ) : props.children }
       </ul>
     </nav>
-    
+
   </div>;
 
 //////////////////////////////////////////////

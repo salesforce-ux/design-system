@@ -103,6 +103,10 @@ classes:
     description: Customizes your checkbox to look like a button in a button group
     applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
+    class: checkbox--add-button
+    description: Customizes your checkbox to look like a plus button
+    applied: <code>&lt;div&gt;</code>
+  -
     class: radio
     description: Initializes radio button
     required: true

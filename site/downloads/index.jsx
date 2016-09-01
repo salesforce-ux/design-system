@@ -87,9 +87,9 @@ bower install salesforce-lightning-design-system --save
     </form>
 
     <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
-    <p>The unmanaged package has been deprecated.</p>
-    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments.</p>
-    <p>There <strong>are</strong> still cases where you will need to use a static resource. Current examples are — within Visualforce, when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
+    <p><strong>The unmanaged package has been deprecated.</strong></p>
+    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application, as well as when extending the SLDS template when building a standalone Lightning Application (my.app), in LC4VF, or in a component that will be used via Lightning Out. It is no longer necessary to add a static resource for Lightning Components running within these environments. Please see <a href="/platforms/lightning/">the Lightning page</a> for more information on extending the template.</p>
+    <p>There <strong>are</strong> still cases where you will need to use a static resource — specifically, within Visualforce. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>

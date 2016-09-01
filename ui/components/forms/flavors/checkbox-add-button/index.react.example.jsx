@@ -10,37 +10,40 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+let CheckboxAddButton = props =>
+  <div className={pf('checkbox--add-button')}>
+    <input className={pf('assistive-text')} type="checkbox" id="add01" disabled={props.disabled} checked={props.checked} />
+    <label htmlFor="add01" className={pf('checkbox--faux')}>
+      <span className={pf('assistive-text')}>Add product</span>
+    </label>
+  </div>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
 export let states = [
   {
-    id: 'timeline-call',
+    id: 'checkbox-add-button',
     label: 'Default',
-    element:
-      <div className="demo-only">
-        <span className={pf('assistive-text')}>Call</span>
-        <MediaObject figureRight={ <TimelineActions /> }>
-          <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName={pf('timeline__icon')}>
-            <h3 className={pf('truncate')} title="Mobile conversation on Monday">
-              <a href="javascript:void(0);">Mobile conversation on Monday</a>
-            </h3>
-            <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
-            <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Name:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
-              </li>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Assigned to:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
-              </li>
-            </ul>
-          </MediaObject>
-        </MediaObject>
-      </div>
+    element: <CheckboxAddButton />
+  },
+  {
+    id: 'checkbox-add-button-checked',
+    label: 'Checked',
+    element: <CheckboxAddButton checked />
+  },
+  {
+    id: 'checkbox-add-button-disabled',
+    label: 'Disabled',
+    element: <CheckboxAddButton disabled />
   }
 ];

@@ -217,7 +217,7 @@ export const getExampleElementAndDescription = (example, options) => {
   if (!defaultElement && _.isArray(example.states) && example.states.length) {
     if (React.isValidElement(example.states[0].element)) {
       defaultElement = example.states[0].element;
-      defaultDescription = ('description' in example.states[0]) ? example.states[0].description : '';
+      defaultDescription = ('description' in example.states[0]) ?  '<h4 class="' + pf('text-heading--small m-top--large m-bottom--xx-small') + '">State/Variant Information</h4>' + example.states[0].description : '';
     }
   }
   if (!defaultElement) {
@@ -313,7 +313,7 @@ export const gulpRenderComponentPage = () =>
               }
 
               const headingClass = pf('text-heading--small m-top--large m-bottom--xx-small');
-              const stateDesc = state.description ?  '<h3 class="' + headingClass + '">State/Variant Information</h3>' + renderMarkdownAndReplaceGlobals(state.description) : '';
+              const stateDesc = state.description ?  '<h4 class="' + headingClass + '">State/Variant Information</h4>' + renderMarkdownAndReplaceGlobals(state.description) : '';
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(

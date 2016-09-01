@@ -34,6 +34,14 @@
     }
   }
 
+  input,
+  button,
+  textarea,
+  option,
+  select,
+  label {
+    font-family: $font-family;
+  }
 
   h1,
   h2,

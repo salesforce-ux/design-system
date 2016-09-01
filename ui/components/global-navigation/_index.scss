@@ -192,11 +192,24 @@
     }
   }
 
+  // Workspace tabs
+  //
+  // Consumes tab structure but looks like gnav
+
+  &--tabs {
+
+    // Need to reset styles from default
+    .#{$css-prefix}context-bar__icon-action {
+      margin-left: auto;
+    }
+  }
+
   // Tab context bar items
   &__item--tab {
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border-context-bar-item;
 
+    // Handle active states
     &.#{$css-prefix}is-active,
     &:nth-child(n).#{$css-prefix}is-active {
       background-color: $color-background-context-tab-bar-item;
@@ -209,6 +222,8 @@
       }
     }
 
+    // Pinned state
+    // Toggles visibility of elements inside of tab
     &.#{$css-prefix}is-pinned {
       width: auto;
       padding-right: $spacing-x-small;
@@ -218,6 +233,7 @@
       }
     }
 
+    // Dirty state of tabs
     &.#{$css-prefix}is-unsaved .#{$css-prefix}context-bar__label-action {
       font-style: italic;
       position: relative;

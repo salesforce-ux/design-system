@@ -87,7 +87,7 @@ let ContextTab = props =>
 
 export let ContextTabBar = props =>
 
-  <div className={className(pf('context-bar'), props.className)}>
+  <div className={className(pf('context-bar context-bar--tabs'), props.className)}>
 
     <div className={pf('context-bar__primary')}>
       <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>

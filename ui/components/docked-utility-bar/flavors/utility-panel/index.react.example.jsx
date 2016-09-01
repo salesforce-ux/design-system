@@ -30,19 +30,17 @@ const dialingIcon = (
 export let UtilityPanel = props =>
   <div className={className(pf('utility-panel grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <div className={pf('utility-panel__header grid shrink-none')}>
-      <div className={pf('utility-panel__header-label')}>
-        <div className={pf('media media--center')}>
-          <div className={pf('media__figure m-right--x-small')}>
-            <span className={pf('icon_container')}>
-              <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="call" />
-            </span>
-          </div>
-          <div className={pf('media__body')}>
-            <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
-          </div>
+      <div className={pf('media media--center')}>
+        <div className={pf('media__figure m-right--x-small')}>
+          <span className={pf('icon_container')}>
+            <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="call" />
+          </span>
+        </div>
+        <div className={pf('media__body')}>
+          <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className={pf('utility-panel__header-icon-action col--bump-left')}>
+      <div className={pf('col--bump-left')}>
         <ButtonIcon
           className={pf('button--icon')}
           symbol="minimize_window"

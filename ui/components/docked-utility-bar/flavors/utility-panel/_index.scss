@@ -24,21 +24,16 @@
   }
 
   &__header {
-    background: $color-background-panel-header;
+    background: $color-background-docked-panel-header;
     border-bottom: $border-width-thick solid $color-border-brand;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
-    padding: 0 $spacing-x-small;
+    padding: $spacing-x-small $spacing-small;
   }
 
   &__body {
     display: flex;
     flex: 1 1 0%;
-    justify-content: center;
+    flex-direction: column;
     overflow: auto;
-  }
-
-  &__header-label,
-  &__header-icon-action {
-    padding: $spacing-x-small;
   }
 }

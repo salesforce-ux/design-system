@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
@@ -45,21 +45,9 @@ let ComposerHeader = props =>
       <h2 id="dialog-heading-id">Header</h2>
     </MediaObject>
     <div className={pf('docked-composer__actions')}>
-      <ButtonIcon
-        flavor="icon-bare,icon-inverse"
-        sprite="utility"
-        symbol="minimize_window"
-        assistiveText="Minimize window" />
-      <ButtonIcon
-        flavor="icon-bare,icon-inverse"
-        sprite="utility"
-        symbol="expand_alt"
-        assistiveText="Expand Composer" />
-      <ButtonIcon
-        flavor="icon-bare,icon-inverse"
-        sprite="utility"
-        symbol="close"
-        assistiveText="Close" />
+      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
+      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
+      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
     </div>
   </header>;
 
@@ -77,13 +65,13 @@ let ComposerFooter = props =>
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <a href="javascript:void(0);" className={pf('docked-composer--overflow__pill theme--alt-inverse')}>
+    <button className={pf('docked-composer--overflow__pill theme--alt-inverse')} aria-haspopup="true">
       <span className={pf('align-middle')}>
         <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
         <span className={pf('assistive-text')}>View other docked windows</span>
       </span>
       <span className={pf('text-body--small align-middle')}>99 +</span>
-    </a>
+    </button>
     <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
       <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
         <Menu.Item>
@@ -141,68 +129,6 @@ let Modal = props =>
     </div>
   </div>;
 
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let StateA = props =>
-  <Demo>
-    <div className={pf('docked_container')}>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
-    </div>
-  </Demo>;
-
-let StateB = props =>
-  <Demo>
-    <div className={pf('docked_container')}>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id">
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
-    </div>
-  </Demo>;
-
-let StateC = props =>
-  <Demo>
-    <Modal>
-      <DockedComposer>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
-    </Modal>
-    <div className={pf('backdrop backdrop--open')}></div>
-  </Demo>;
-
-let StateD = props =>
-  <Demo>
-    <div className={pf('docked_container')}>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
-    </div>
-  </Demo>;
-
-let StateE = props =>
-  <Demo>
-    <div className={pf('docked_container')}>
-      <ComposerOverflowMenu />
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader />
-        <ComposerBody />
-        <ComposerFooter />
-      </DockedComposer>
-    </div>
-  </Demo>;
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -211,21 +137,59 @@ export let states = [
   {
     id: 'single-composer-open',
     label: 'Open',
-    element: <StateA />
+    element:
+      <Demo>
+        <div className={pf('docked_container')}>
+          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+            <ComposerHeader />
+            <ComposerBody />
+            <ComposerFooter />
+          </DockedComposer>
+        </div>
+      </Demo>
   },
   {
     id: 'single-composer-closed',
     label: 'Closed',
-    element: <StateB />
+    element:
+      <Demo>
+        <div className={pf('docked_container')}>
+          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id">
+            <ComposerHeader />
+            <ComposerBody />
+            <ComposerFooter />
+          </DockedComposer>
+        </div>
+      </Demo>
   },
   {
     id: 'single-composer-popout',
     label: 'Popout',
-    element: <StateC />
+    element:
+      <Demo>
+        <Modal>
+          <DockedComposer>
+            <ComposerHeader />
+            <ComposerBody />
+            <ComposerFooter />
+          </DockedComposer>
+        </Modal>
+        <div className={pf('backdrop backdrop--open')}></div>
+      </Demo>
   },
   {
     id: 'multiple-composer-overflow',
     label: 'Composers with Overflow Menu',
-    element: <StateE />
+    element:
+      <Demo>
+        <div className={pf('docked_container')}>
+          <ComposerOverflowMenu />
+          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+            <ComposerHeader />
+            <ComposerBody />
+            <ComposerFooter />
+          </DockedComposer>
+        </div>
+      </Demo>
   }
 ];

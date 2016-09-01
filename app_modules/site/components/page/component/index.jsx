@@ -75,7 +75,7 @@ export default React.createClass({
           );
         }
         return (
-          <li className={pf('list__name site-states-parent')} key={flavor.uid} data-slds-status={flavor.status}>
+          <li className={pf('list__name site-states-parent')} key={flavor.uid}>
             <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
               { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }
@@ -87,7 +87,7 @@ export default React.createClass({
     return (
       <StickyNav>
         <div className={pf('site-menu--jump-links')}>
-          <h3 className="site-text-heading--label">Variants & States</h3>
+          <h3 className="site-text-heading--label docsearch-ignore">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
           </ul>
@@ -106,7 +106,7 @@ export default React.createClass({
 
   renderComponentOverviewLink() {
     let info = this.props.component.info;
-    if (info.table || info.tableYaml) {
+    if (info.tableYaml) {
       return (
         <div className={pf('align-middle')}>
           <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
@@ -129,8 +129,6 @@ export default React.createClass({
     const { component } = this.props;
     if (component.info.tableYaml) {
       return <TableYAML data={component.info.tableYaml} />;
-    } else if (component.info.table) {
-      return <div className="site-text-longform" dangerouslySetInnerHTML={component.info.table}/>;
     } else {
       return null;
     }

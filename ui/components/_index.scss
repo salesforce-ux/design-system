@@ -26,7 +26,9 @@
   // Button
   'buttons/flavors/base/index',
   'buttons/flavors/stateful/index',
-  'buttons/flavors/icon/index',
+
+  // Button Icon
+  'button-icons/flavors/base/index',
 
   // Icons
   'icons/index',
@@ -57,9 +59,6 @@
   // File selector
   'file-selector/index',
 
-  // Tooltip - This is deprecated
-  'tooltips/flavors/base/index',
-
   // Page Headers
   'page-headers/index',
   'page-headers/flavors/record-home/index',
@@ -72,14 +71,18 @@
 
   // Popovers
   'popovers/index',
-  'popovers/flavors/tooltips/index',
   'popovers/flavors/panels/index',
   'popovers/flavors/nubbins/index',
 
+  // Tooltips
+  'tooltips/index',
+
   // Menus
   'menus/index',
-  'menus/flavors/picklist/index',
   'menus/flavors/action-overflow/index',
+
+  // Picklist
+  'picklist/index',
 
   // Datepicker
   'datepickers/index',
@@ -139,6 +142,7 @@
   // Tabs
   'tabs/flavors/default/index',
   'tabs/flavors/scoped/index',
+  'tabs/flavors/scrolling/index',
 
   // Navigation
   'navigation/flavors/vertical/index',

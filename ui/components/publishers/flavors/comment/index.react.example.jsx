@@ -11,8 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -35,18 +34,10 @@ export let Publisher = props =>
       <div className={pf('publisher__actions grid grid--align-spread')}>
         <ul className={pf('grid')}>
           <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="adduser"
-              assistiveText="Add User" />
+            <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
           </li>
           <li>
-            <ButtonIcon
-              flavor="icon-container"
-              sprite="utility"
-              symbol="attach"
-              assistiveText="Attach a file" />
+            <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
           </li>
         </ul>
         <Button flavor="brand">Comment</Button>
@@ -54,30 +45,11 @@ export let Publisher = props =>
     </div>
   </MediaObject>;
 
-let PublisherActions = props =>
-  <div className={pf('publisher__actions grid grid--align-spread')}>
-    <ul className={pf('grid')}>
-      <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="adduser"
-          assistiveText="Add User" />
-      </li>
-      <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="attach"
-          assistiveText="Attach a file" />
-      </li>
-    </ul>
-    <Button flavor="brand">Comment</Button>
-  </div>;
-
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
+
+// @todo - Need to find imports and delete this part
 
 export let Default = props =>
   <Publisher />;

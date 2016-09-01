@@ -17,7 +17,7 @@ const JumpAnchor = (props) =>
     data-js-jump-anchor={props.scrollSpyActive || null}
     className={`site-jump-anchor ${props.children ? `docsearch-level-${props.level}` : ''}`}
     id={props.id}>
-    {props.children ? <span className={pf('assistive-text')} role="presentation">{props.children}</span> : null}
+    {props.children ? <span className={pf('hide')} role="presentation">{props.children}</span> : null}
   </span>;
 
 export default JumpAnchor;

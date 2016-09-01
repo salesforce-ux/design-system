@@ -27,25 +27,24 @@ export default (
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Lightning apps and
       components. It is now automatically included for Lightning Components
-      running in the Lightning Experience and Salesforce S1 mobile application
-      (via app.css). It is no longer necessary to add a static resource for
+      running in the Lightning Experience and Salesforce S1 mobile application. It is no longer necessary to add a static resource for
       Lightning Components running within these environments.
     </p>
 
     <p>
-      There <strong>are</strong> still cases where you will need to use a
-      static resource with Lightning Components, such as:
-    </p>
+      Your <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/apps_intro.htm">Lightning Application</a> automatically get the Lightning Design System
+      stylesheets and design tokens if they extend <code>force:slds</code>.
+      This is the easiest way to stay up-to-date and consistent with SLDS
+      enhancements.</p>
 
-    <ul className={pf('list--dotted')}>
-      <li>When building a standalone Lightning Application (my.app).</li>
-
-      <li>
-        In a component that will be used via Lightning Out. In this case,
-        you&rsquo;ll need
-        to <a href="https://tools.lightningdesignsystem.com/css-customizer">create a customized scoped CSS file to use</a>.
-      </li>
-    </ul>
+    <p>To extend <code>force:slds</code>, your application should look like this:</p>
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="html">{`
+      <aura:application extends="force:slds">
+      <!-- customize your application here -->
+      </aura:application>
+      `}</CodeBlock>
+    </div>
 
     <p>
       We have prepared
@@ -64,7 +63,7 @@ export default (
         When using the component sample code from the Trailhead module, be
         sure to replace all static resource paths with the Lightning resource
         URL syntax, as summarized in
-        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a>
+        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (You should no longer need to link to the CSS portion of your static resource)
       </li>
 
       <li>

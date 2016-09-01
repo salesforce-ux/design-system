@@ -10,73 +10,185 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import _ from 'lodash';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+// Props
+//  - Globals
+//    - className : classname of parent lookup
+//  - Variant
+//    - polymorphic : returns multi scope data selection display
+//  - States
+//    - showEntityDropdown : displays scope dropdown
+//    - typeahead : returns typeahead display
+//    - selection : returns selected object display
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let LookupSingle = props =>
-  <div className={className(pf('form-element lookup'), props.className)} data-select="single" data-scope="single">
-    <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control input-has-icon input-has-icon--right')}>
-      <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-      <input id={props.id} className={pf('lookup__search-input input')} type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Search Accounts" defaultValue={props.value} />
+const results = [{
+  'name': 'The Boston Consulting Group',
+  'location': 'Boston'
+}, {
+  'name': 'Acuity',
+  'location': 'Sheboygan'
+}, {
+  'name': 'SAS Insistute',
+  'location': 'Cary'
+}, {
+  'name': 'Genentech',
+  'location': 'South San Francisco'
+}, {
+  'name': 'Camden Property Trust',
+  'location': 'Houston'
+}, {
+  'name': 'Salesforce.com, Inc.',
+  'location': 'San Francisco'
+}];
+
+let LookupSearchInput = props =>
+  <div className={className(pf('form-element__control'), props.polymorphic ? pf('grid box--border') : null)}>
+    { props.polymorphic ? <LookupEntity showEntityDropdown={ props.showEntityDropdown } /> : null }
+    <div className={className(pf('input-has-icon input-has-icon--right'), props.polymorphic ? pf('grow') : null)}>
+      <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+      <input
+        id={ props.id }
+        className={className(pf('lookup__search-input'), props.polymorphic ? pf('input--bare') : pf('input'))}
+        type="search"
+        placeholder={ props.placeholder || 'Search Accounts' }
+        defaultValue={ props.typeahead ? 'salesforce' : null }
+        aria-owns={ props.id }
+        role="combobox"
+        aria-activedescendent=""
+        aria-expanded={ props.showLookupDropdown ? 'true' : 'false' }
+        aria-autocomplete="list" />
     </div>
-    {props.children}
   </div>;
 
-let LookupWithSelection = props =>
-  <div className={className(pf('form-element lookup has-selection'), props.className)} data-select="single" data-scope="single">
-    <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control')}>
-      <PillContainer>
-        <Pill label="Paddy's Pub" unlinked className={pf('size--1-of-1')}>
-          <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-            <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-            <span className={pf('assistive-text')}>Account</span>
-          </span>
-        </Pill>
-      </PillContainer>
+let LookupEntity = props =>
+  <div className={className(pf('dropdown--trigger dropdown-trigger--click align-middle m-left--xx-small shrink-none'), props.showEntityDropdown ? pf('is-open') : null)}>
+    <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
+    <ButtonIcon className={pf('button--icon button--icon-small')} symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
+    { props.showEntityDropdown ?
+      <Menu className={pf('dropdown--left')}>
+        <MenuList>
+          <MenuItem>
+            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
+            Accounts
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
+            Approvals
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
+            Lead
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
+            Opportunities
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
+            Products
+          </MenuItem>
+        </MenuList>
+      </Menu>
+    : null}
+  </div>;
+
+let LookupMenu = props => {
+  const uniqueId = _.uniqueId('lookup-option-');
+
+  return (
+    <div className={pf('lookup__menu')} id={ props.id }>
+      { !props.typeahead ? <div className={pf('lookup__item--label text-body--small')}>Recent Accounts</div> : null }
+      <ul className={pf('lookup__list')} role="listbox">
+        { props.typeahead ? <LookupMenuItemLabel symbol="search" text='"salesforce" in accounts' /> : null }
+        { props.typeahead ? <LookupMenuItem typeahead><mark>Salesforce</mark>.com, Inc.</LookupMenuItem> :
+          _.times(results.length, i =>
+            <LookupMenuItem
+              key={ i }
+              name={ results[i].name }
+              location={ results[i].location } />
+          )
+        }
+        <LookupMenuItemLabel />
+      </ul>
     </div>
-    {props.children}
+  );
+};
+
+let LookupMenuItem = props => {
+  const uniqueId = _.uniqueId('lookup-option-');
+
+  return (
+    <li role="presentation">
+      <span className={pf('lookup__item-action media media--center')} id={ uniqueId } role="option">
+        <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
+        <div className={pf('media__body')}>
+          <div className={pf('lookup__result-text')}>{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
+          <span className={pf('lookup__result-meta text-body--small')}>Account &bull; { props.location || 'San Francisco' }</span>
+        </div>
+      </span>
+    </li>
+  );
+};
+
+let LookupMenuItemLabel = props => {
+  const uniqueId = _.uniqueId('lookup-option-');
+
+  return (
+    <li role="presentation">
+      <span className={pf('lookup__item-action lookup__item-action--label')} id={ uniqueId } role="option">
+        <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol={ props.symbol || 'add' } />
+        <span className={pf('truncate')}>{ props.text || 'New Account'}</span>
+      </span>
+    </li>
+  );
+};
+
+let LookupSelection = props =>
+  <div className={pf('form-element__control')}>
+    <PillContainer>
+      <Pill label="Salesforce.com, Inc." unlinked className={pf('size--1-of-1')}>
+        <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+          <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+          <span className={pf('assistive-text')}>Account</span>
+        </span>
+      </Pill>
+    </PillContainer>
   </div>;
 
-let LookupMenu = props =>
-  <div className={pf('lookup__menu')} role="listbox">
-    {props.children}
-  </div>;
+export let Lookup = props => {
+  const uniqueId = _.uniqueId('lookup-');
 
-let LookupResults = props =>
-  <ul className={pf('lookup__list')} role="presentation">
-    {props.children}
-  </ul>;
-
-let LookupLabel = props =>
-  <div className={pf('lookup__item--label text-body--small')}>
-    {props.children}
-  </div>;
-
-let LookupAction = props =>
-  <div>
-    <a href="javascript:void(0);" className={pf('lookup__item-action lookup__item-action--label')}>
-      {props.children}
-    </a>
-  </div>;
-
-let LookupResultsItem = props =>
-  <li>
-    <a className={pf('lookup__item-action media media--center')} id={props.id} href="javascript:void(0);" role="option">
-      <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
-      <div className={pf('media__body')}>
-        {props.children}
-      </div>
-    </a>
-  </li>;
+  return (
+    <div className={className(pf('form-element lookup'), props.className, props.showLookupDropdown ? pf('is-open') : null)} data-select="single">
+      { !props.selection ?
+      <label className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
+      <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{ props.label || 'Account Name' }</span>
+      }
+      { !props.selection ?
+        <LookupSearchInput
+          id={ uniqueId }
+          placeholder={ props.placeholder }
+          typeahead={ props.typeahead }
+          polymorphic={ props.polymorphic }
+          showLookupDropdown={ props.showLookupDropdown }
+          showEntityDropdown={ props.showEntityDropdown } /> :
+        <LookupSelection />
+      }
+      <LookupMenu id={ uniqueId } typeahead={ props.typeahead } />
+    </div>
+  );
+};
 
 ///////////////////////////////////////////
 // Export
@@ -84,86 +196,29 @@ let LookupResultsItem = props =>
 
 export let states = [
   {
-    id: 'lookup-single-scope',
+    id: 'default',
     label: 'Default',
-    element: <LookupSingle label="Parent Account" id="lookup-01" selectType="single" />
+    element: <Lookup />
   },
   {
-    id: 'lookup-single-scope-active',
+    id: 'active',
     label: 'Active',
     element:
-    <div className="demo-only" style={{ height: '350px' }}>
-      <LookupSingle label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')}>
-        <LookupMenu>
-          <LookupLabel>Recent Accounts</LookupLabel>
-          <LookupResults>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>The Boston Consulting Group</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Boston</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Acuity</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Sheboygan</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>SAS Insistute</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Cary</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Genentech</div>
-              <span className={pf('lookup__result-meta text-body--small')}>South San Francisco</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Camden Property Trust</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Houston</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}>Salesforce.com Inc.</div>
-              <span className={pf('lookup__result-meta text-body--small')}>San Francisco</span>
-            </LookupResultsItem>
-          </LookupResults>
-          <LookupAction>
-            <span className={pf('lookup__item-action-label')}>
-              <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
-              <span className={pf('truncate')}>Add Account</span>
-            </span>
-          </LookupAction>
-        </LookupMenu>
-      </LookupSingle>
-    </div>
+      <div className="demo-only" style={{ height: '380px' }}>
+        <Lookup showLookupDropdown />
+      </div>
   },
   {
-    id: 'lookup-single-scope-typing',
+    id: 'typeahead',
     label: 'Typeahead',
     element:
-    <div className="demo-only" style={{ height: '230px' }}>
-      <LookupSingle label="Parent Account" id="lookup-01" selectType="single" className={pf('is-open')} value="salesforce">
-        <LookupMenu>
-          <LookupAction>
-            <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--small')} sprite="utility" symbol="search" />
-            <span className={pf('truncate')}>"salesforce" in accounts</span>
-          </LookupAction>
-          <LookupResults>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}><mark>Salesforce</mark>.com, Inc.</div>
-              <span className={pf('lookup__result-meta text-body--small')}>San Francisco</span>
-            </LookupResultsItem>
-            <LookupResultsItem>
-              <div className={pf('lookup__result-text')}><mark>Salesforce</mark>.com, Inc. - Paris</div>
-              <span className={pf('lookup__result-meta text-body--small')}>Paris</span>
-            </LookupResultsItem>
-          </LookupResults>
-          <LookupAction>
-            <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="add" />
-            <span className={pf('truncate')}>Add Account</span>
-          </LookupAction>
-        </LookupMenu>
-      </LookupSingle>
-    </div>
+      <div className="demo-only" style={{ height: '180px' }}>
+        <Lookup showLookupDropdown typeahead />
+      </div>
   },
   {
-    id: 'lookup-single-scope-selection',
+    id: 'selection',
     label: 'With selection',
-    element: <LookupWithSelection label="Parent Account" id="lookup-01" selectType="single" />
+    element: <Lookup selection />
   }
 ];

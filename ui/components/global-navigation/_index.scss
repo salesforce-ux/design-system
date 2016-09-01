@@ -13,7 +13,7 @@
   background-color: $color-background-context-bar;
   border-top: $border-width-thin solid $color-border;
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
-  color: $color-text-context-bar;
+  color: $color-text-default;
   position: relative;
   padding: 0 $spacing-medium;
 
@@ -126,7 +126,7 @@
     align-content: center;
     align-items: center;
     flex-grow: 1;
-    padding: 0 $spacing-x-small;
+    padding: 0 $spacing-small;
     min-width: 0%;
     color: inherit;
 
@@ -159,6 +159,7 @@
     align-content: center;
     padding: 0 $spacing-small;
     color: $color-text-context-bar;
+    margin-left: ($spacing-xx-small * -1);
 
     &:focus {
       outline: 0;

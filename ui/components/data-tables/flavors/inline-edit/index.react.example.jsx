@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
@@ -173,9 +173,8 @@ let RowData = (props) => {
       <Td>
         <div className={pf('grid grid--align-end cell-edit p-right--large')}>
           <ButtonIcon
-            flavor="icon-border-filled,icon-x-small"
-            iconFlavor="hint,small"
-            sprite="utility"
+            className={pf('button--icon-border-filled button--icon-x-small')}
+            iconClassName={pf('button__icon--hint button__icon--small')}
             symbol="down"
             assistiveText="Show More"
             tabIndex={props.navigationModeTabIndex} />
@@ -246,9 +245,8 @@ let RowDataStatic = props =>
     <Td>
       <div className={pf('grid grid--align-end cell-edit p-right--large')}>
         <ButtonIcon
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
+          className={pf('button--icon-border-filled button--icon-x-small')}
+          iconClassName={pf('button__icon--hint button__icon--small')}
           symbol="down"
           assistiveText="Show More"
           tabIndex={props.navigationModeTabIndex} />
@@ -281,7 +279,8 @@ export let states = [
             <RowDataStatic navigationModeTabIndex="0" />
           </tbody>
         </Table>
-      </Container>
+      </Container>,
+    description: 'Example state description for `.{{cssPrefix}}data-table-inline-edit`'
   },
   {
     id: 'data-table-inline-table-matte',

@@ -11,9 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -42,37 +40,14 @@ let PublisherActions = props =>
   <div className={pf('publisher__actions grid grid--align-spread')}>
     <ul className={pf('grid publisher__toggle-visibility')}>
       <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="adduser"
-          assistiveText="Add User" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
       </li>
       <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="attach"
-          assistiveText="Attach a file" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
       </li>
     </ul>
     <Button flavor="brand">Share</Button>
   </div>;
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Publisher>
-    <PublisherActions />
-  </Publisher>;
-
-let Active = props =>
-  <Publisher className={pf('is-active')}>
-    <PublisherActions />
-  </Publisher>;
-
 
 ///////////////////////////////////////////
 // Export
@@ -82,11 +57,17 @@ export let states = [
   {
     id: 'publisher-feed-default',
     label: 'Default',
-    element: <Default />
+    element:
+    <Publisher>
+      <PublisherActions />
+    </Publisher>
   },
   {
     id: 'publisher-feed-active',
     label: 'Active',
-    element: <Active />
+    element:
+    <Publisher className={pf('is-active')}>
+      <PublisherActions />
+    </Publisher>
   }
 ];

@@ -54,14 +54,14 @@ export let states = [
             symbol="image"
             image />
         </li>
-      <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
+      <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3  medium-show')}>
           <Image
             className={pf('image--card')}
             cropClass={pf('image__crop--16-by-9')}
             titleClass={pf('image__title--card')}
             symbol="pdf" />
         </li>
-        <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3 medium-show')}>
+        <li className={pf('col--padded grow-none size--1-of-2 medium-size--1-of-3')}>
           <Image
             className={pf('image--card')}
             cropClass={pf('image__crop--16-by-9')}

@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
-import { ButtonIcon } from 'ui/components/buttons/flavors/icon/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -59,7 +59,7 @@ export let states = [
     id: 'figure-card',
     label: 'Card',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}
@@ -71,7 +71,7 @@ export let states = [
     id: 'figure-overlay',
     label: 'Overlay',
     element:
-      <div className="demo-only" style={{ width: '50%' }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className={pf('image--card')}
           cropClass={pf('image__crop--16-by-9')}

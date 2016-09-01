@@ -1,1 +1,0 @@
-Icons can be included on either the right, left, or both sides of an option. When checkmark icons are used, they are hidden when not selected using `opacity: 0;`. When selected, `aria-selected="true"` is placed on the parent `li`.

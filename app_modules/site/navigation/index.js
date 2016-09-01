@@ -43,7 +43,23 @@ export const formatNavItem = (item, parent) => {
 };
 
 /**
- * Return true if an item contaons a path
+ * Return root nav id
+ */
+export const rootNavId = (path) => {
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.id)[0] || 'resources';
+};
+
+/**
+ * Return root nav label
+ */
+export const rootNavLabel = (path) => {
+  if (/touch/.test(path)) return 'Components › Touch';
+  if (/utilities/.test(path)) return 'Components › Utilities';
+  return _.drop(getActiveNavItems(nav, path)).map(item => item.label)[0] || 'Resources';
+};
+
+/**
+ * Return true if an item contains a path
  *
  * @param {object} item
  * @param {string} path
@@ -84,14 +100,16 @@ export const getActiveNavItems = (item, path) => {
 const utilities = {
   label: 'Utilities',
   children: getUI('utilities').map(component => ({
-    label: component.title
+    label: component.title,
+    status: component.status
   }))
 };
 
 const touch = {
   label: 'Touch',
   children: getUI('touch').map(component => ({
-    label: component.title
+    label: component.title,
+    status: component.status
   }))
 };
 
@@ -101,7 +119,7 @@ const components = getUI('components').map((component, index) => ({
   separator: index === 0
 }));
 
-export default () => formatNavItem({
+const nav = formatNavItem({
   label: 'Root',
   path: '/',
   children: [
@@ -211,3 +229,5 @@ export default () => formatNavItem({
     }
   ]
 });
+
+export default () => nav;

@@ -12,7 +12,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -20,8 +22,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 //////////////////////////////////////////////
 
-export let WaffleIcon = () =>
-  <a href="javascript:void(0);" className={pf('icon-waffle_container context-bar__button')}>
+export let WaffleIcon = props =>
+  <a href="javascript:void(0);" className={className(pf('icon-waffle_container context-bar__button'), props.className)}>
     <div className={pf('icon-waffle')}>
       <div className={pf('r1')}></div>
       <div className={pf('r2')}></div>
@@ -44,12 +46,9 @@ const contextDropdown = (
         <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="add" />
         Main action
       </MenuItem>
-    </MenuList>
-    <hr className={pf('m-vertical--xx-small')} role="presentation" />
-    <div className={pf('dropdown__header')}>
-      <span className={pf('text-title--caps')}>Menu header</span>
-    </div>
-    <MenuList>
+      <li className={pf('dropdown__header has-divider--top-space')} role="separator">
+        <span className={pf('text-title--caps')}>Menu header</span>
+      </li>
       <MenuItem>Menu Item One</MenuItem>
       <MenuItem>Menu Item Two</MenuItem>
       <MenuItem>Menu Item Three</MenuItem>
@@ -61,7 +60,7 @@ const contextDropdown = (
 //////////////////////////////////////////////
 
 export let ContextBar = props =>
-<div className="demo-only" style={{height: '16rem'}}>
+
   <div className={className(pf('context-bar'), props.className)}>
 
     {/* Primary Section */}
@@ -74,7 +73,7 @@ export let ContextBar = props =>
         </div>
         {/* App Name */}
         <span className={pf('context-bar__label-action context-bar__app-name')}>
-          <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
+          <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -87,48 +86,75 @@ export let ContextBar = props =>
       <ul className={pf('grid')}>
         <li className={pf('context-bar__item')}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Home">
-            <span className={pf('truncate')}>Home</span>
+            <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 1">
-            <span className={pf('truncate')}>Menu Item 1</span>
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')} aria-haspopup="true">
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item">
+            <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
           <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
-              <span className={pf('assistive-text')}>Assistive text for submenu</span>
-            </button>
+            <ButtonIcon
+              className={pf('button--icon context-bar__button')}
+              symbol="chevrondown"
+              tabIndex="-1"
+              assistiveText="Open menu item submenu" />
           </div>
-          { contextDropdown }
+          { !props.hideDropdown ? contextDropdown : null }
         </li>
-        <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 2">
-            <span className={pf('truncate')}>Menu Item 2</span>
-          </a>
-        </li>
-        <li className={className(pf('context-bar__item'), props.itemActive ? pf('is-active') : null)}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 3">
-            <span className={pf('truncate')}>Menu Item 3</span>
-          </a>
-        </li>
-        <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item 4">
-            <span className={pf('truncate')}>Menu Item 4</span>
-          </a>
-        </li>
+        { !props.children ?
+          _.times(3, i =>
+            <li className={pf('context-bar__item')} key={ i }>
+              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
+                <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+              </a>
+            </li>
+          ) : props.children }
       </ul>
     </nav>
     {/* End Secondary Section */}
 
     {/* Tertiary Section Goes Here */}
-  </div>
-</div>;
+  </div>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
 export default (
-  <ContextBar itemActive />
+  <div className="demo-only" style={{height: '16rem'}}>
+    <ContextBar itemActive />
+  </div>
 );
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{height: '14rem'}}>
+        <ContextBar />
+      </div>
+  },
+  {
+    id: 'item-active',
+    label: 'Item Active',
+    element:
+      <div className="demo-only" style={{height: '14rem'}}>
+        <ContextBar>
+          <li className={pf('context-bar__item is-active')}>
+            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item'}>
+              <span className={pf('truncate')}>Menu Item</span>
+            </a>
+          </li>
+          { _.times(2, i =>
+            <li className={pf('context-bar__item')} key={ i }>
+              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
+                <span className={pf('truncate')}>Menu Item</span>
+              </a>
+            </li>
+          )}
+        </ContextBar>
+      </div>
+  }
+];

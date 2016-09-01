@@ -27,9 +27,9 @@ export let states = [
       <MediaObject figureRight={ <TimelineActions /> }>
         <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
           <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
-            <p className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
+            <h3 className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
               <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
-            </p>
+            </h3>
             <ul className={pf('list--horizontal wrap')}>
               <li className={pf('m-right--large')}>
                 <span className={pf('text-title')}>Contact:</span>

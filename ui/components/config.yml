@@ -4,6 +4,7 @@ components:
   - badges
   - breadcrumbs
   - buttons
+  - button-icons
   - button-groups
   - cards
   - data-tables
@@ -26,6 +27,7 @@ components:
   - notifications
   - page-headers
   - panels
+  - picklist
   - pills
   - process
   - popovers
@@ -33,4 +35,5 @@ components:
   - spinners
   - tabs
   - tiles
+  - tooltips
   - trees

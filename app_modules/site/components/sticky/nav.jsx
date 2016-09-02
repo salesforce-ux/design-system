@@ -14,11 +14,10 @@ import path from 'path';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Sticky from './';
-import yaml from 'js-yaml';
 
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-const forceBase = yaml.safeLoad(fs.readFileSync(path.resolve(__PATHS__.designTokens, 'force-base/spacing.yml')));
+const forceBase = require(path.resolve(__PATHS__.designTokens, 'dist/force-base.common'));
 
 export default props =>
   <Sticky

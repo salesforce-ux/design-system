@@ -32,6 +32,14 @@ const nameFormats = [
   }
 ];
 
+const getHex = (rgb) => {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  return (rgb && rgb.length === 4) ? '#' +
+    ('0' + parseInt(rgb[1],10).toString(16)).slice(-2) +
+    ('0' + parseInt(rgb[2],10).toString(16)).slice(-2) +
+    ('0' + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+};
+
 const handleInputChange = (sections, event, node) => {
   const { value } = node;
   // No value, show all sections/tokens
@@ -48,7 +56,7 @@ const handleInputChange = (sections, event, node) => {
     const matches = section.tokens.filter(token => {
       const node = section.lookups.tokens.get(token);
       // Hide/show matches
-      if (isMatch(token.name)) {
+      if (isMatch(token.name) || isMatch(getHex(token.value)) || isMatch(token.rawValue) || isMatch(token.value)) {
         hide(node, false);
         return true;
       } else {

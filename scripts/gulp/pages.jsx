@@ -310,10 +310,13 @@ export const gulpRenderComponentPage = () =>
               if (!('description' in state)) {
                 state.description = '';
               }
+
+              const headingClass = 'slds-text-heading--small slds-m-top--large slds-m-bottom--xx-small';
+              const stateDesc = state.description ?  '<h3 class="' + headingClass + '">State/Variant Information</h3>' + renderMarkdownAndReplaceGlobals(state.description) : '';
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, renderExample(element), state.script, renderMarkdownAndReplaceGlobals(state.description))
+                  wrapExample(flavor, renderExample(element), state.script, stateDesc)
                 ),
                 base: __PATHS__.site
               }));

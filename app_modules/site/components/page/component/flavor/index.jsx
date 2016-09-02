@@ -188,13 +188,9 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const exampleDescriptionMarkup = renderMarkdownAndReplaceGlobals(flavor.exampleDescription);
 
-    return exampleDescriptionMarkup ? <div>
-            <h3 className={pf('text-heading--small m-top--large m-bottom--xx-small')}>State/Variant Information</h3>
-            <div
+    return <div
               id={`description-${flavor.uid}`}
-              className={pf('text-longform m-bottom--large')}
-              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />
-          </div> : null;
+              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />;
   }
 
   renderPreview() {

@@ -91,8 +91,7 @@ export default (
       {/* Toasts */}
       <div className={pf('p-vertical--xx-large')}>
         <h2 className="site-text-heading--large">Toasts</h2>
-        <p><strong>Use a toast as a feedback mechanism to communicate important, high-level information after the user takes an action.</strong></p>
-        <p>Use a toast to communicate a successful process, an unsuccessful process, or a warning.</p>
+        <p><strong>Use a toast as a feedback mechanism to communicate important, high-level information after a user creates, updates, or deletes data in the application.</strong></p>
         <figure className={pf('p-bottom--large')}>
           <img className={pf('image')} src="/assets/images/messaging/img-toasts.svg" alt="" />
         </figure>

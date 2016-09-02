@@ -27,7 +27,6 @@ The following components are now available:
 - Files - [File Components](/components/files/)
 - File selector - [File Selector](/components/file-selector)
 - Feed v2 - [Feeds Component](/components/feeds/)
-- Inline Edit Data Table - [Data Tables › Inline Edit](/components/data-tables/#flavor-inline-edit)
 - Indeterminate checkbox - [Indeterminate checkbox component](/components/forms/#flavor-checkbox)
 - Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
 - Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
@@ -45,13 +44,13 @@ The following classes are now available:
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
-- Position utilities -[Utilities › Postion](/components/utilities/position/)
+- Position utilities - [Utilities › Postion](/components/utilities/position/)
 - Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
-- Horizontal and vertical padding can now be applied to `slds-grid--padded` as `slds-grid--padded-around-{size}`
-- Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
+- Horizontal and vertical padding can now be applied to `.slds-grid--padded` as `.slds-grid--padded-around-{size}`
+- Table column borders - Add vertical column borders on a table by applying `.slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
 - Generate grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
-- Added archives to previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
+- Added archives for previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
 
 **CHANGES**
 
@@ -61,7 +60,7 @@ The following changes have been made in this release:
 - [Using SLDS in Lightning](/platforms/lightning/) has been updated to include information about Lightning Out, Lightning Components for Visualforce, and Lightning Applications.
 - Nubbins on [Popovers](/components/popovers/#flavor-nubbins) have been moved .5rem/8px closer to the respective edge of the popover to match the spec
 - [Pills](/components/pills/) have been updated with a more accessible DOM. They are no longer made from an anchor, but instead contain the anchor. Documentation is updated. (Old pills will not break)
-- Checkbox toggle has updated design with the ability to add custom words beneath - [Checkbox Toggle](/components/forms/#flavor-checkbox-toggle)
+- [Checkbox Toggle](/components/forms/#flavor-checkbox-toggle) has an updated design with the ability to add custom words below the toggle
 - [Checkbox](/components/forms/#flavor-checkbox) and [Radios](/components/forms/#flavor-radio) have been updated with a new, more accessible than ever DOM structure. (Your old DOM will not break.)
 - Brightened yellow background on `mark` element.
 - Text selected with your mouse is light blue.
@@ -78,7 +77,7 @@ The following changes have been made in this release:
 - Feeds:
   - Change post's comment metric labels to lowercase
   - Add hint-hover to post's comment action overflow icon
-  - Change post's comment "link" text to use `color-link-weak`
+  - Change post's comment "link" text to use `.slds-color-link--weak`
   - Remove dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
   - Removed truncation from preamble
@@ -99,7 +98,7 @@ The following issues have now been resolved:
   - Modify tab order of global header actions
   - Add `title` attribute to global header actions
   - Change avatar wrapper from anchor to a button
-  - Allow `slds-assistive-text` to become visible on focus if `slds-assistive-text--focus` is used
+  - Allow `.slds-assistive-text` to become visible on focus if `.slds-assistive-text--focus` is used
   - Add aria roles to global search input
   - Changed global search listbox options to be non-actionable
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers

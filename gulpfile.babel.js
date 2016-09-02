@@ -72,7 +72,6 @@ const watchPaths = {
   tokens: [
     'ui/**/tokens/*.yml',
     'design-tokens/**/*.yml',
-    '!design-tokens/dist/**/*.yml',
     '!design-tokens/components.yml'
   ]
 };

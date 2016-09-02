@@ -341,12 +341,13 @@ export const gulpRenderComponentPage = () =>
         ? `components/${component.path}`
         : component.path;
       // Create the <PageBody> for the component
+      const oldPath = component.path
       component.path = componentPath;
       const pageBody = (
         <PageBody contentClassName={false} path={`/${componentPath}`}>
           <Component
             component={decorateComponent(component)}
-            docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
+            docs={tryRequire(`ui/${oldPath}/index.docs.jsx`)} />
         </PageBody>
       );
       // Push a new HTML page

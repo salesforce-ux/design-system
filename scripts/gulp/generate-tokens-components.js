@@ -21,13 +21,14 @@ import rename from 'gulp-rename';
 import through from 'through2';
 import _ from 'lodash';
 
+// Some transforms are commented out because the use cases are lacking
 let formatTransforms = _({
   'web': [
     'styl',
     'less',
     // 'sass',
     // 'default.sass',
-    'scss',
+    // 'scss',
     'default.scss',
     'map.scss',
     // 'map.variables.scss',

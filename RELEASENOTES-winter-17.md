@@ -51,11 +51,18 @@ The following classes are now available:
 - Table column borders - Add vertical column borders on a table by applying `slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
 - Generate grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
+- Added archives to previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
 
 **CHANGES**
 
 The following changes have been made in this release:
 
+- [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer) is now only necessary when building components to be included in Visualforce
+- [Using SLDS in Lightning](/platforms/lightning/) has been updated to include information about Lightning Out, Lightning Components for Visualforce, and Lightning Applications.
+- Nubbins on [Popovers](/components/popovers/#flavor-nubbins) have been moved .5rem/8px closer to the respective edge of the popover to match the spec
+- [Pills](/components/pills/) have been updated with a more accessible DOM. They are no longer made from an anchor, but instead contain the anchor. Documentation is updated. (Old pills will not break)
+- Checkbox toggle has updated design with the ability to add custom words beneath - [Checkbox Toggle](/components/forms/#flavor-checkbox-toggle)
+- [Checkbox](/components/forms/#flavor-checkbox) and [Radios](/components/forms/#flavor-radio) have been updated with a new, more accessible than ever DOM structure. (Your old DOM will not break.)
 - Brightened yellow background on `mark` element.
 - Text selected with your mouse is light blue.
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
@@ -76,6 +83,7 @@ The following changes have been made in this release:
   - Moved URL of post's attachment to the bottom of the content ordering
   - Removed truncation from preamble
   - Reduce white space between feed items
+- Updated [Activity Timeline Email example](/components/activity-timeline/#flavor-email) to show the to and from with truncation
 
 **FIXED**
 
@@ -135,6 +143,7 @@ The following issues have now been resolved:
 - Added `aria-live` attribute to the stateful icon button
 - Added `aria-describedby` on select element to show error message ID
 - Added `aria-haspopup` on Activity Timeline menu buttons, and updated each list item to use an `<h3>` tag
+- Added hyphenation code to popovers so that long words will break and wrap
 
 **DEPRECATED**
 

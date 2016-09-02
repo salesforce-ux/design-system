@@ -20,7 +20,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let CheckboxAddButton = props =>
   <div className={pf('checkbox--add-button')}>
-    <input className={pf('assistive-text')} type="checkbox" id="add01" disabled={props.disabled} checked={props.checked} />
+    <input className={pf('assistive-text')} type="checkbox" id="add01" disabled={props.disabled} defaultChecked={props.checked} />
     <label htmlFor="add01" className={pf('checkbox--faux')}>
       <span className={pf('assistive-text')}>Add product</span>
     </label>

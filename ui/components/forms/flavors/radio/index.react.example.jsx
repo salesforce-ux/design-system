@@ -81,10 +81,10 @@ let ErrorState = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio checked>Radio Label One</Radio>
-        <Radio>Radio Label Two</Radio>
+        <Radio aria-describedby="error_01" checked>Radio Label One</Radio>
+        <Radio aria-describedby="error_01">Radio Label Two</Radio>
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

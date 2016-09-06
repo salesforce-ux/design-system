@@ -146,11 +146,6 @@ classes:
     applied: <code>&lt;div&gt;</code>
     notes: Wrap form elements in this class
   -
-    class: is-required
-    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element is required
-    applied: <code>.{{cssPrefix}}form-element</code>
-    required: true
-  -
     class: required
     description: Class used on required asterick
     applied: <code>&lt;attr&gt;</code>

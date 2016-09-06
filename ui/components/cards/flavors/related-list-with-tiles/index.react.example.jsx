@@ -36,7 +36,7 @@ export default (
     <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (3)</span></CardHeader>
     <CardBody>
       <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
               <span className={pf('truncate')} title="Type">Type:</span>
@@ -52,7 +52,7 @@ export default (
             </dd>
           </dl>
         </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
               <span className={pf('truncate')} title="Type">Type:</span>
@@ -68,7 +68,7 @@ export default (
             </dd>
           </dl>
         </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
               <span className={pf('truncate')} title="Type">Type:</span>

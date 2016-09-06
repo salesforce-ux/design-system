@@ -49,7 +49,7 @@ export default (
       {/* Additional Info */}
       <div className={pf('grid wrap grid--pull-padded')}>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-title--caps truncate')}>Billing Address</p></dt>
             <dd>
@@ -59,21 +59,21 @@ export default (
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-title--caps truncate')}>Phone</p></dt>
             <dd><a href="javascript:void(0);">212-345-3485</a></dd>
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-title--caps truncate')}>Website</p></dt>
             <dd><a href="javascript:void(0);">teslamotors.com</a></dd>
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
             <dt><p className={pf('text-title--caps truncate')}>Account Owner</p></dt>
             <dd><a href="javascript:void(0);">Jeff Maguire</a></dd>

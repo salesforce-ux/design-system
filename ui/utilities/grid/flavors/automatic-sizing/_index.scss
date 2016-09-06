@@ -33,42 +33,44 @@
   }
 }
 
-.#{$css-prefix}col,
-// Catch all for col--padded variants
-[class*="#{$css-prefix}col--padded"] {
-  @include flex-item(expand);
-}
-
-.#{$css-prefix}col--padded {
-  padding: {
-    right: $spacing-small;
-    left: $spacing-small;
+@include deprecate('4.0.0', 'Use spacing utilities instead') {
+  .#{$css-prefix}col,
+  // Catch all for col--padded variants
+  [class*="#{$css-prefix}col--padded"] {
+    @include flex-item(expand);
   }
 
-  &-medium {
+  .#{$css-prefix}col--padded {
     padding: {
-      right: $spacing-medium;
-      left: $spacing-medium;
+      right: $spacing-small;
+      left: $spacing-small;
     }
-  }
 
-  &-large {
-    padding: {
-      right: $spacing-large;
-      left: $spacing-large;
+    &-medium {
+      padding: {
+        right: $spacing-medium;
+        left: $spacing-medium;
+      }
     }
-  }
 
-  &-around {
-    padding: $spacing-small;
-  }
+    &-large {
+      padding: {
+        right: $spacing-large;
+        left: $spacing-large;
+      }
+    }
 
-  &-around-medium {
-    padding: $spacing-medium;
-  }
+    &-around {
+      padding: $spacing-small;
+    }
 
-  &-around-large {
-    padding: $spacing-large;
+    &-around-medium {
+      padding: $spacing-medium;
+    }
+
+    &-around-large {
+      padding: $spacing-large;
+    }
   }
 }
 

@@ -39,16 +39,16 @@ The following components are now available:
 
 The following classes are now available:
 
-- Text color helpers - [Text color utilities](/components/utilities/text#color)
-- Truncation containers [Truncation Container Utility](/components/utilities/truncation/#max-width)
+- Text color helpers - [Utilities › Text › Color](/components/utilities/text#color)
+- Truncation containers [Utilities › Truncation](/components/utilities/truncation/#max-width)
 - Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
-- Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
+- Text title utility - `.slds-text-title` - [Utilities › Text › Text Title](/components/utilities/text/#flavor-title)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
-- Position utilities - [Utilities › Postion](/components/utilities/position/)
-- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
-- Horizontal and vertical padding can now be applied to `.slds-grid--padded` as `.slds-grid--padded-around-{size}`
+- Position utilities - [Utilities › Position](/components/utilities/position/)
+- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
+- Horizontal and vertical padding can now be applied to `.slds-col--padded` as `.slds-col--padded-around-{size}`
 - Table column borders - Added vertical column borders on a table by applying `.slds-table--col-bordered`
-- Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
+- Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Utilities › Lists › Name Value Pair](/components/utilities/lists/#flavor-name-value-pair)
 - Generated grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
 - Added archives for previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
 
@@ -66,10 +66,9 @@ The following changes have been made in this release:
 - Text selected with your mouse is light blue.
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
-- Renamed Product Selector to List Builder - [List Builder Component](/components/list-builder/)
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
-- Improvements made to `.slds-text-link--reset` - [Text Link Reset](/components/utilities/interactions/#link-reset)
-- Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
+- Improvements made to `.slds-text-link--reset` - [Utilities › Interactions › Text Link Reset](/components/utilities/interactions/#link-reset)
+- Removed light font-weight from the text utility `.slds-text-heading--small` - [Utilities › Text › Text Heading Small](/components/utilities/text/#flavor-heading-heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
 - Added close button to error popover so a screen reader can access popover
@@ -149,11 +148,10 @@ The following issues have now been resolved:
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
 - Feeds v1 - Design has changed to v2 - [Feeds v2 Component](/components/feeds/)
-- Text heading label utility - Use Text title utilities instead - [Text Title](/components/utilities/text/#flavor-title)
+- Text heading label utility - Use Text title utilities instead - [Utilities › Text › Text Title](/components/utilities/text/#flavor-title)
 
 **REMOVED**
 
 The following features or demos are being removed in this release:
 
-- Context Bar has been removed and replaced with Global Navigation Component - [Global Navigation Component](/components/global-navigation)
 - Removed inverse and state themes from examples to provide clarity of usage.

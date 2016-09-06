@@ -37,7 +37,7 @@ let CheckboxGroup = props =>
 
 let Checkbox = props =>
   <span className={className(pf('button checkbox--button'), props.className)} htmlFor={props.id}>
-    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
+    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled}  aria-describedby={props.errorId} />
     <label className={pf('checkbox--button__label')} htmlFor={props.id}>
       <span className={pf('checkbox--faux')}>
         {props.children}
@@ -66,13 +66,13 @@ let StateB = props =>
   <Demo>
     <Fieldset className={pf('has-error')}>
       <CheckboxGroup>
-        <Checkbox id="monday">Mon</Checkbox>
-        <Checkbox id="tuesday">Tue</Checkbox>
-        <Checkbox id="wednesday">Wed</Checkbox>
-        <Checkbox id="thursday">Thu</Checkbox>
-        <Checkbox id="friday">Fri</Checkbox>
+        <Checkbox errorId="error_01" id="monday">Mon</Checkbox>
+        <Checkbox errorId="error_01" id="tuesday">Tue</Checkbox>
+        <Checkbox errorId="error_01" id="wednesday">Wed</Checkbox>
+        <Checkbox errorId="error_01" id="thursday">Thu</Checkbox>
+        <Checkbox errorId="error_01" id="friday">Fri</Checkbox>
       </CheckboxGroup>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id="error_01" className={pf('form-element__help')}>This field is required</div>
     </Fieldset>
   </Demo>;
 

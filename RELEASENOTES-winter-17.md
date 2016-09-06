@@ -45,11 +45,11 @@ The following classes are now available:
 - Text title utility - `.slds-text-title` - [Text Title](/components/utilities/text/#flavor-title)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 - Position utilities - [Utilities › Postion](/components/utilities/position/)
-- Text link utility - Make text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
+- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Text Link](/components/utilities/interactions/#flavor-text-link)
 - Horizontal and vertical padding can now be applied to `.slds-grid--padded` as `.slds-grid--padded-around-{size}`
-- Table column borders - Add vertical column borders on a table by applying `.slds-table--col-bordered`
+- Table column borders - Added vertical column borders on a table by applying `.slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Name Value Pair lists](/components/utilities/lists/#flavor-name-value-pair)
-- Generate grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
+- Generated grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
 - Added archives for previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
 
 **CHANGES**
@@ -72,58 +72,58 @@ The following changes have been made in this release:
 - Removed light font-weight from the text utility `.slds-text-heading--small` - [Text Heading Small Utility](/components/utilities/text/#heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
-- Add close button to error popover so a screen reader can access popover
-- Add animated waffle icon to Global Navigation [Global Navigation](/components/global-navigation/)
+- Added close button to error popover so a screen reader can access popover
+- Added animated waffle icon to Global Navigation [Global Navigation](/components/global-navigation/)
 - Feeds:
-  - Change post's comment metric labels to lowercase
-  - Add hint-hover to post's comment action overflow icon
-  - Change post's comment "link" text to use `.slds-color-link--weak`
-  - Remove dotted line separator from post's attachment payload
+  - Changed post's comment metric labels to lowercase
+  - Added hint-hover to post's comment action overflow icon
+  - Changed post's comment "link" text to use `.slds-color-link--weak`
+  - Removed dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
   - Removed truncation from preamble
-  - Reduce white space between feed items
+  - Reduced white space between feed items
 - Updated [Activity Timeline Email example](/components/activity-timeline/#flavor-email) to show the to and from with truncation
 
 **FIXED**
 
 The following issues have now been resolved:
 
-- Record home vertical accessibility fixes
-  - Add `aria-haspopup="true"` to action overflow buttons
-  - Add assistive text for icon
+- Recorded home vertical accessibility fixes
+  - Added `aria-haspopup="true"` to action overflow buttons
+  - Added assistive text for icon
   - Removed unnecessary aria roles from action overflow buttons
-  - Improve assistive text verbiage
-  - Make multiple value field entirely clickable to invoke dropdown
+  - Improved assistive text verbiage
+  - Made multiple value field entirely clickable to invoke dropdown
 - Global header accessibility fixes
-  - Modify tab order of global header actions
-  - Add `title` attribute to global header actions
-  - Change avatar wrapper from anchor to a button
-  - Allow `.slds-assistive-text` to become visible on focus if `.slds-assistive-text--focus` is used
-  - Add aria roles to global search input
+  - Modified tab order of global header actions
+  - Added `title` attribute to global header actions
+  - Changed avatar wrapper from anchor to a button
+  - Allowed `.slds-assistive-text` to become visible on focus if `.slds-assistive-text--focus` is used
+  - Added aria roles to global search input
   - Changed global search listbox options to be non-actionable
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
-  - Add `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
+  - Added `.slds-has-focus` to apply focus state on listbox options when keyboard interactions are used
   - Moved clear button to the right of the input to visually match tab order
 - Lookup/Global Header Search accessibility fixes
-  - Improve semantics of dropdown menus
-  - Apply `role=separator` to dropdown menu list items that do not have an actionable element
-  - Apply `role=presentation` to dropdown menu list items
+  - Improved semantics of dropdown menus
+  - Applied `role=separator` to dropdown menu list items that do not have an actionable element
+  - Applied `role=presentation` to dropdown menu list items
   - Changed `<p>` wrapping dropdown menu items text to `<span>`
-  - Dropdown menu items have a default `tabindex="-1"`, tab focused items change to a `tabindex="0"`
+  - Dropdown menu items have a default `tabindex="-1"`, tab focused items changed to a `tabindex="0"`
 - Utility bar accessibility fixes
-  - Add landmark `role="footer"` to utility bar
-  - Add `aria-label="Utility Bar"` description to utility bar
-  - Add hidden heading to utility bar
-  - Add aria `role=dialog` and `aria-labelledby` to utility bar panel
-  - Change panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
-  - Place utility bar buttons inside `<ul>`
+  - Added landmark `role="footer"` to utility bar
+  - Added `aria-label="Utility Bar"` description to utility bar
+  - Added hidden heading to utility bar
+  - Added aria `role=dialog` and `aria-labelledby` to utility bar panel
+  - Changed panel header text to be wrapped in a heading with a id to reference the `aria-labelledby`
+  - Placed utility bar buttons inside `<ul>`
 - Files accessibility fixes
-  - Fix invalid markup by moving button group outside of anchor
+  - Fixed invalid markup by moving button group outside of anchor
   - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
 - Card accessibility fixes
   - Moved `<header>` element to only contain the card header text, rather than the text and overflow menu
   - Changed `<p>` tags with truncation in related list markup to `<span>` tags
-- Make primary labels of compound fields capital
+- Made primary labels of compound fields capital
 - Dropdowns appear on icon focus within Global Navigation
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` in the app launcher component
 - Tables accessibility fixes: all tables now use the same truncation method when text is too long in a cell and show the full text when truncated text is hovered
@@ -132,12 +132,12 @@ The following issues have now been resolved:
 - Feeds accessibility fixes
   - Comments are now list items in an unordered list structure
   - The browser shows a focus ring when avatars are focused
-- Accessibility fixes to Menus and Picklist, including Menus used in composite SLDS components.
-  - Removal of `aria-expanded` on containers
-  - `role="presentation"` on list items to remove them from the accessibility tree
-  - Correct use of `menuitemcheckbox` for selectable menu items, with the use of `aria-checked` instead of `aria-selected`
-  - Correct sub heading menus which was split across multiple un-ordered lists
-  - Include line separators and sub-heading separators into the accessibility tree with `role="separator"`
+- Accessibility fixes to Menus and Picklist, including Menus used in composite SLDS components
+  - Removed of `aria-expanded` on containers
+  - `role="presentation"` added on list items to remove them from the accessibility tree
+  - Corrected use of `menuitemcheckbox` for selectable menu items, with the use of `aria-checked` instead of `aria-selected`
+  - Corrected sub heading menus which was split across multiple un-ordered lists
+  - Included line separators and sub-heading separators into the accessibility tree with `role="separator"`
 - Added `aria-describedby` on textarea element to show error message ID
 - Added `aria-live` attribute to the stateful icon button
 - Added `aria-describedby` on select element to show error message ID

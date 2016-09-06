@@ -9,7 +9,7 @@
   },
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
       "appId": "B2KKG101RI",

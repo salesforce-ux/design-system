@@ -7,6 +7,11 @@
     "name": "Spring ’17",
     "id": "206"
   },
+  "important": [
+    "'private' and 'config.slds.internal' should have the same value",
+    "to prevent any accidental public publishes on npm and on our archive server."
+  ],
+  "private": true,
   "config": {
     "slds": {
       "internal": true

@@ -136,10 +136,10 @@ let GroupError = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-        <Checkbox label="Checkbox Label" />
+        <Checkbox errorId="error_01" label="Checkbox Label" checked />
+        <Checkbox errorId="error_01" label="Checkbox Label" />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

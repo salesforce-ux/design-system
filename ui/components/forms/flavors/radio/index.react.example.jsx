@@ -41,7 +41,7 @@ export let Radio = props => {
 
   return (
     <span className={pf('radio')}>
-      <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} />
+      <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
       <label className={pf('radio__label')} htmlFor={ uniqueId }>
         <span className={pf('radio--faux')}></span>
         <span className={pf('form-element__label')}>{props.children}</span>
@@ -81,8 +81,8 @@ let ErrorState = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio aria-describedby="error_01" checked>Radio Label One</Radio>
-        <Radio aria-describedby="error_01">Radio Label Two</Radio>
+        <Radio errorId="error_01" checked>Radio Label One</Radio>
+        <Radio errorId="error_01">Radio Label Two</Radio>
       </FormElementControl>
       <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>

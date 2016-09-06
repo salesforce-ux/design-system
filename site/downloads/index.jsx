@@ -76,6 +76,13 @@ bower install salesforce-lightning-design-system --save
       </CTALink>
     </form>
 
+    <h3 className="site-text-heading--large" id="archives">Archives</h3>
+    <ul className={pf('list--dotted')}>
+      <li><CTALink href="https://archive-2_0_3.lightningdesignsystem.com" eventType="SLDS-Archives">Version 2.0.3</CTALink></li>
+      <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
+      <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
+    </ul>
+
     <h2 className="site-text-heading--large" id="ui-kit">Sketch UI Kit</h2>
     <p>
       A Sketch file of common design patterns.
@@ -218,13 +225,5 @@ bower install salesforce-lightning-design-system --save
         </form>
       </div>
     </div>
-
-    <h2 className="site-text-heading--large" id="archives">Archives</h2>
-    <ul className={pf('list--dotted')}>
-      <li><CTALink href="https://archive-2_0_3.lightningdesignsystem.com" eventType="SLDS-Archives">Version 2.0.3</CTALink></li>
-      <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
-      <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
-    </ul>
-
   </PageBody>
 );

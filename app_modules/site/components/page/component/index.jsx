@@ -34,7 +34,7 @@ export default React.createClass({
         <Anchor
           title={component.title}
           actions={this.renderComponentOverviewLink()}
-          path={`/${component.path}`} />
+          path={`/${component.sitePath}`} />
         <div className={pf('site-content grid wrap large-nowrap')}>
           {this.renderFlavorsNav()}
           <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>

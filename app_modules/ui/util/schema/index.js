@@ -37,12 +37,15 @@ export default props => {
       let id = path.basename(path.dirname(configPath));
       let title = createTitle(id);
       let config = yaml.safeLoad(fs.readFileSync(configPath).toString());
-      let localPath = path.dirname(configPath)
-        .replace(this.path, '');
+      let localPath = pathTrimStart(path.dirname(configPath).replace(this.path, ''));
+      let sitePath = /^utilities|touch/.test(localPath)
+        ? `components/${localPath}`
+        : localPath;
       return _.merge({}, {
         id,
         title,
-        path: pathTrimStart(localPath)
+        path: localPath,
+        sitePath: sitePath
       }, config);
     },
     getComponents (categoryConfig) {

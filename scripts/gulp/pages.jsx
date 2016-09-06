@@ -336,14 +336,10 @@ export const gulpRenderComponentPage = () =>
             }
           }
         });
-      // HACK: Move "touch" and "utilities" under "components"
-      const componentPath = /^utilities|touch/.test(component.path)
-        ? `components/${component.path}`
-        : component.path;
+
       // Create the <PageBody> for the component
-      component.path = componentPath;
       const pageBody = (
-        <PageBody contentClassName={false} path={`/${componentPath}`}>
+        <PageBody contentClassName={false} path={`/${component.sitePath}`}>
           <Component
             component={decorateComponent(component)}
             docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
@@ -351,7 +347,7 @@ export const gulpRenderComponentPage = () =>
       );
       // Push a new HTML page
       next(null, new gutil.File({
-        path: path.resolve(__PATHS__.site, componentPath, 'index.html'),
+        path: path.resolve(__PATHS__.site, component.sitePath, 'index.html'),
         contents: new Buffer(renderPage(pageBody)),
         base: __PATHS__.site
       }));

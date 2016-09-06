@@ -90,6 +90,8 @@ const prepare = (done) => {
     async.apply(execute, `cp -a ${__PATHS__.generated}/examples/. ${__PATHS__.build}/examples`),
     // website
     async.apply(execute, `cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`),
+    // tokens
+    async.apply(execute, `cp -a ${__PATHS__.designTokens}/dist/. ${__PATHS__.build}/design-tokens`),
     // git info
     async.apply(execute, 'git show --format="%an|%ae|%ad|%s" | head -n 1'),
     // stats
@@ -114,7 +116,8 @@ const prepare = (done) => {
     // zip
     async.apply(zip, 'dist'),
     async.apply(zip, 'examples'),
-    async.apply(zip, 'www')
+    async.apply(zip, 'www'),
+    async.apply(zip, 'design-tokens')
   ], (err, [_prepare, _dist, _examples, _website, info, stats, sha, dependencies, _zip]) => {
     if (err) return done(err);
     let result = _.assign({}, { sha, info, stats, dependencies }, {
@@ -134,7 +137,7 @@ module.exports = (done) => prepare((err, result) => {
   if (err) return done(err);
   publish({
     result,
-    zips: ['dist.zip', 'examples.zip', 'www.zip']
+    zips: ['dist.zip', 'examples.zip', 'www.zip', 'design-tokens.zip']
       .map((p) => paths.build(p)),
     project: 'design-system'
   }, done);

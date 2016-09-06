@@ -3,7 +3,7 @@
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
-## Release [2.1.1] - September 6, 2016
+## Release [2.1.2] - September 6, 2016
 
 **SITE IA/ENHANCEMENTS**
 
@@ -729,8 +729,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.1.1...winter-17
-[2.1.1]: https://github.com/salesforce-ux/design-system/compare/v2.0.3...v2.1.1
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.1.2...winter-17
+[2.1.1]: https://github.com/salesforce-ux/design-system/compare/v2.0.3...v2.1.2
 [2.0.3]: https://github.com/salesforce-ux/design-system/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/salesforce-ux/design-system/compare/v1.0.5...v2.0.1

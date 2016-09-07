@@ -102,6 +102,51 @@
         <td class="visible">Initial</td>
         <td class="visible">Initial</td>
       </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}max-large-hide</code></th>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}min-x-small-hide</code></th>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}min-small-hide</code></th>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}min-medium-hide</code></th>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
+      <tr>
+        <th><code>.{{cssPrefix}}min-large-hide</code></th>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+      </tr>
     </table>
   </div>
 </div>

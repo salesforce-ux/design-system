@@ -167,5 +167,5 @@ export let states = [
         </DockedComposerPanel>
       </div>
     </div>
-  },
+  }
 ];

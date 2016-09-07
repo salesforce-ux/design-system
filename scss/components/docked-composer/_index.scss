@@ -1,0 +1,145 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}docked_container {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 $spacing-large;
+  height: 40px;
+}
+
+.#{$css-prefix}docked-composer {
+  position: relative;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  width: 480px;
+  height: 40px;
+  float: left;
+  box-shadow: $elevation-inverse-shadow-2;
+  border: $border-width-thin solid $color-border {
+    bottom: none;
+  }
+
+  &.#{$css-prefix}is-open {
+    height: 480px;
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}docked-composer__header {
+      background: $color-background-inverse;
+    }
+  }
+
+  + .#{$css-prefix}docked-composer {
+    margin-left: $spacing-large;
+  }
+
+  &__header {
+    background: $color-background-alt-inverse;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    padding: $spacing-x-small;
+    color: $color-text-inverse;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__actions .#{$css-prefix}button {
+    margin-left: $spacing-small;
+  }
+
+  &__body {
+    background: $color-background-alt;
+  }
+
+  &__lead {
+    background: $color-background-alt;
+    padding: $spacing-medium $spacing-x-small;
+  }
+
+  &__toolbar {
+    background: $color-background;
+    padding: $spacing-xx-small $spacing-x-small;
+    max-height: 60px;
+    overflow-y: auto;
+    border: {
+      top: $border-width-thin solid $color-border;
+      bottom: $border-width-thin solid $color-border;
+    }
+  }
+
+  &__input {
+    background: $color-background-alt;
+    padding: $spacing-medium;
+    min-height: $size-xx-small;
+    resize: none;
+    overflow: hidden {
+      y: auto;
+    }
+  }
+
+  &__footer {
+    background: $color-background;
+    padding: $spacing-small $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Overflow Pills
+  &--overflow {
+    width: auto;
+  }
+
+  &--overflow__pill {
+    display: flex;
+    padding: 0 $spacing-small;
+    height: inherit;
+    white-space: nowrap;
+    border: {
+      top: {
+        left-radius: $border-radius-medium;
+        right-radius: $border-radius-medium;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-inverse;
+      text-decoration: none;
+    }
+
+    .#{$css-prefix}text-body--small {
+      color: $color-text-inverse;
+      margin-left: $spacing-x-small;
+    }
+  }
+}
+
+// Composer Modal
+.#{$css-prefix}docked-composer-modal .#{$css-prefix}docked-composer {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  float: none;
+  border-radius: 0;
+  border: 0;
+
+  &__header {
+    border-radius: 0;
+  }
+
+  &__body {
+    min-height: 260px;
+  }
+}

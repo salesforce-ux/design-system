@@ -1,0 +1,98 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+/// Sizes in rems
+/// @type map
+/// @private
+$_sizes: (
+  'xx-small': $size-xx-small,
+  'x-small': $size-x-small,
+  'small': $size-small,
+  'medium': $size-medium,
+  'large': $size-large,
+  'x-large': $size-x-large,
+  'xx-large': $size-xx-large
+);
+
+// Absolute sizes (rem)
+@each $name, $width in $_sizes {
+  .#{$css-prefix}size--#{$name} {
+    width: $width;
+  }
+}
+
+// Relative sizes (%)
+@include width();
+
+// Ordering helpers
+@for $i from 1 through 12 {
+  .#{$css-prefix}order--#{$i} {
+    order: $i;
+  }
+}
+
+// Generate responsive Sizing Helpers
+//
+// Loop through grid map checking for width name
+// Map is stored in layout dependencies
+//
+// This loop generates around 500 selectors,
+// make sure to test thoroughly when editing it.
+@each $size in map-keys($breakpoints) {
+  // Store nested value from map
+  $breakpoint: map-get($breakpoints, $size);
+
+  @media (min-width: #{pem($breakpoint)}) {
+
+    // Generate responsive absolute (rem) width names,
+    // e.g. <div class="slds-medium-size--x-small">
+    @each $name, $width in $_sizes {
+      .#{$css-prefix}#{$size}-size--#{$name} {
+        width: $width;
+      }
+    }
+
+    // Generate responsive relative (%) width names,
+    // e.g. <div class="slds-medium-size--3-of-6">
+    @include width($breakpoint: #{$size});
+
+    // Loop through column spread and generate
+    // ordering helpers, e.g. <div class="slds-medium-order--2">
+    @for $i from 1 through 12 {
+      .#{$css-prefix}#{$size}-order--#{$i} {
+        order: $i;
+      }
+    }
+  }
+
+  @media (max-width: #{pem($breakpoint)}) {
+
+    // Generate responsive absolute (rem) width names (up to size),
+    // e.g. <div class="slds-max-medium-size--x-small">
+    @each $name, $width in $_sizes {
+      .#{$css-prefix}max-#{$size}-size--#{$name} {
+        width: $width;
+      }
+    }
+
+    // Generate responsive relative (%) width names (up to size),
+    // e.g. <div class="slds-max-medium-size--3-of-6">
+    @include width($breakpoint: #{$size}, $max: true);
+
+    // Loop through column spread and generate
+    // ordering helpers, e.g. <div class="slds-max-medium-order--2">
+    @for $i from 1 through 12 {
+      .#{$css-prefix}max-#{$size}-order--#{$i} {
+        order: $i;
+      }
+    }
+  }
+}

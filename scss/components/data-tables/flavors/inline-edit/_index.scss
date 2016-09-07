@@ -1,0 +1,199 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// We are not going to expose inline edit until Spring-17 but the CSS needs to be included.
+
+.#{$css-prefix}table--edit_container {
+
+  &:focus {
+    outline: none;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: $z-index-default;
+      background-color: $color-background-backdrop-tint;
+      box-shadow: 0 0 0 4px $color-border-brand inset;
+    }
+
+    .#{$css-prefix}table--edit_container-message {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $size-medium;
+      margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+      margin-left: (($size-medium / 2) * -1);
+      background-color: $color-background-alt;
+      text-align: center;
+      z-index: $z-index-default;
+    }
+  }
+}
+
+.#{$css-prefix}table--edit_container-message {
+  display: none;
+}
+
+
+.#{$css-prefix}table--edit {
+
+  .#{$css-prefix}button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
+
+  th,
+  td { // Remove padding to place on internal node
+    padding: 0;
+  }
+
+  .#{$css-prefix}cell-edit:hover {
+      background-color: $color-background-alt;
+      box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
+                  $color-border 0 ($border-width-thin) 0 inset;
+  }
+
+  tbody tr {
+    counter-increment: row-number;
+
+    &:hover { // adds the same box-shadow border when a row is hovered
+      // scss-lint:disable SelectorDepth
+      .#{$css-prefix}cell-marker,
+      .#{$css-prefix}is-edited:not(.#{$css-prefix}has-focus) {
+        box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset, $color-border 0 ($border-width-thin) 0 inset;
+      }
+    }
+  }
+
+  .#{$css-prefix}row-number {
+
+    &:after {
+      content: counter(row-number);
+    }
+  }
+}
+
+.#{$css-prefix}cell-marker {
+  background-color: $color-background-row-hover;
+}
+
+.#{$css-prefix}cell-edit {
+  min-height: 2.3125rem; // Make contents completely fill table cell
+  padding: $spacing-x-small; // Add padding to div inside
+
+  .#{$css-prefix}button__icon--edit,
+  .#{$css-prefix}button__icon--lock {
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 1;
+
+      &:hover,
+      &:focus {
+        fill: $color-text-brand;
+      }
+    }
+
+    .#{$css-prefix}button__icon--lock {
+      opacity: 0.5;
+    }
+  }
+
+  .#{$css-prefix}cell-edit__button {
+      @include square($square-icon-utility-medium);
+      flex-shrink: 0;
+    }
+
+  &.#{$css-prefix}has-focus { // This is the focused state
+    background-color: $color-background-alt;
+    outline: 0; // @TODO: May want to add this to the `cell-edit` (tho that may be overreaching)
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+
+    .#{$css-prefix}button__icon--edit,
+    .#{$css-prefix}button__icon--lock {
+      opacity: 1;
+    }
+
+    &:hover {
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  &.#{$css-prefix}is-edited {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+
+  &.#{$css-prefix}has-error {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      border: $border-width-thin solid $color-border-error;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thin) inset;
+    }
+  }
+}
+
+.#{$css-prefix}no-cell-focus {
+
+  .#{$css-prefix}has-focus {
+    background: $color-background-row-hover;
+    border: 0;
+    box-shadow: none;
+
+    .#{$css-prefix}button__icon--edit {
+      opacity: 1;
+    }
+  }
+}
+
+.#{$css-prefix}cell-error {
+  padding-left: 0;
+}
+
+.#{$css-prefix}cell-edit__button:focus .#{$css-prefix}button__icon--edit {
+    opacity: 1;
+}
+
+.#{$css-prefix}form-element__label--edit {
+  margin: 0 $spacing-xxx-small 0;
+}
+
+.#{$css-prefix}popover--edit {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  .#{$css-prefix}popover__body {
+    padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 0;
+  }
+
+  .#{$css-prefix}form-element__help {
+    width: 100%;
+    padding-left: $spacing-small;
+  }
+}

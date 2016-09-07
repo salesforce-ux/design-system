@@ -1,0 +1,225 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+.#{$css-prefix}button--icon,
+.#{$css-prefix}button--icon-inverse,
+.#{$css-prefix}button--icon-container,
+.#{$css-prefix}button--icon-border,
+.#{$css-prefix}button--icon-border-filled,
+.#{$css-prefix}button--icon-more,
+.#{$css-prefix}button--icon-error {
+  line-height: $line-height-reset;
+  vertical-align: middle;
+  color: $color-text-icon-default;
+}
+
+@include deprecate('4.0.0', 'Use .slds-button--icon instead') {
+  .#{$css-prefix}button--icon-bare {
+    line-height: $line-height-reset;
+    vertical-align: middle;
+    color: $color-text-icon-default;
+  }
+}
+
+.#{$css-prefix}button--icon-border[disabled] {
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.#{$css-prefix}button--icon-border-filled,
+.#{$css-prefix}button--icon-border {
+  @include button-base;
+}
+
+.#{$css-prefix}button--icon-border-inverse {
+  border: $border-width-thin solid $color-border-button-default;
+}
+
+.#{$css-prefix}button--icon-container,
+.#{$css-prefix}button--icon-border,
+.#{$css-prefix}button--icon-border-filled,
+.#{$css-prefix}button--icon-border-inverse { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
+  @include square($square-icon-medium-boundary);
+}
+
+// Button icon with background
+.#{$css-prefix}button--icon-border-filled {
+  background-color: $color-background-button-default;
+
+  &[disabled] {
+    border: $border-width-thin solid $color-border-button-default;
+    background-color: $color-background-button-default-disabled;
+  }
+}
+
+// Button icon with dropdown
+.#{$css-prefix}button--icon-more {
+  line-height: $line-height-button;
+  padding: 0 $spacing-x-small;
+  vertical-align: middle;
+  border: $border-width-thin solid $color-border-button-default;
+
+  &:hover,
+  &:focus {
+    @include button-base;
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-icon-default-hover;
+    }
+  }
+
+  &:active .#{$css-prefix}button__icon {
+    fill: $color-text-icon-default-active;
+  }
+
+  &[disabled] {
+    cursor: default;
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-icon-default-disabled;
+    }
+  }
+}
+
+// Button icon on inversed background
+.#{$css-prefix}button--icon-inverse,
+.#{$css-prefix}button--icon-border-inverse {
+  color: $color-text-link-inverse;
+
+  &:hover,
+  &:focus {
+    color: $color-text-link-inverse-hover;
+  }
+
+  &:active {
+    color: $color-text-link-inverse-active;
+  }
+
+  &[disabled] {
+    color: $color-text-link-inverse-disabled;
+  }
+}
+
+// Button icon for errors
+.#{$css-prefix}button--icon-error {
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-error;
+  }
+}
+
+.#{$css-prefix}button--icon-border-inverse[disabled] {
+  border-color: $color-border-button-inverse-disabled;
+}
+
+// Stateful Button Icon
+.#{$css-prefix}button--icon-border.#{$css-prefix}is-selected {
+  @include button-brand;
+
+  .#{$css-prefix}button__icon {
+    fill: $color-text-button-brand;
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button__icon {
+      fill: $color-text-button-brand;
+    }
+  }
+}
+
+// Button icon container sizing
+.#{$css-prefix}button--icon-small {
+  @include square($square-icon-small-boundary);
+  border-radius: $border-radius-small;
+}
+
+.#{$css-prefix}button--icon-x-small {
+  @include square($square-icon-x-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .#{$css-prefix}button__icon {
+    @include square($square-icon-small-content);
+  }
+}
+
+.#{$css-prefix}button--icon-xx-small {
+  @include square($square-icon-xx-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .#{$css-prefix}button__icon {
+    @include square($square-icon-x-small-content);
+  }
+}
+
+// Sizing for icon that sits inside button--icon
+.#{$css-prefix}button__icon { // This is the icon inside the button--icon button
+  @include square($square-icon-medium-content-alt);
+  fill: currentColor;
+
+  &--large { // Usually used for the large close button
+    @include square($square-icon-utility-large);
+  }
+
+  &--small { // This creates the small down icon
+    @include square($square-icon-small-content);
+  }
+
+  &--x-small { // This creates the x-small down icon that sits next to another icon
+    @include square($square-icon-x-small-content);
+  }
+}
+
+// Button Icon Hint
+.#{$css-prefix}button__icon--hint {
+  fill: $color-text-icon-default-hint;
+}
+
+.#{$css-prefix}button__icon--inverse-hint {
+  fill: $color-text-icon-inverse-hint;
+}
+
+// Hint parent should be applied to the parent of the button
+.#{$css-prefix}hint-parent {
+
+  .#{$css-prefix}button--icon-border-inverse {
+    border-color: $color-border-icon-inverse-hint;
+
+    &:focus {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+  }
+
+  &:hover,
+  &:focus {
+
+    .#{$css-prefix}button--icon-border-inverse {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+
+    .#{$css-prefix}button__icon--hint {
+      fill: $color-text-icon-default;
+    }
+
+    .#{$css-prefix}button__icon--inverse-hint {
+      fill: $color-text-icon-inverse-hint-hover;
+    }
+  }
+}

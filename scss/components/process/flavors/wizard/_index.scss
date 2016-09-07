@@ -1,0 +1,102 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}wizard {
+  position: relative;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: auto;
+  }
+
+  &__item {
+    flex: 2 0 auto;
+    text-align: center;
+    width: 0%; // Needed for truncation due to different flex grow on items
+    user-select: none;
+
+    &:first-child {
+      text-align: left;
+      flex-grow: 1;
+    }
+
+    &:last-child {
+      text-align: right;
+      flex-grow: 1;
+    }
+
+    a:hover,
+    a:focus {
+      outline: 0;
+      text-decoration: none;
+
+      .#{$css-prefix}wizard__marker {
+        background: rgb(216, 221, 230); //@TODO - no matching token
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__marker {
+    @include square($square-icon-small-boundary);
+    border-radius: $border-radius-circle;
+    background: $color-background-shade;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__label {
+    display: block;
+    margin-top: $spacing-small;
+  }
+
+  &__progress {
+    position: absolute;
+    left: 0;
+    top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
+    height: ($square-icon-x-small-content / 2);
+    display: block;
+    width: 100%;
+    z-index: -1;
+    background: $color-background-shade;
+  }
+
+  &__progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #0076de; // @TODO: Need a token for this
+    transition: width $duration-promptly ease;
+  }
+
+  .#{$css-prefix}is-active {
+
+    .#{$css-prefix}wizard__marker {
+      background: #0076de; // @TODO: Need a token for this
+    }
+
+    a:hover,
+    a:focus {
+      // scss-lint:disable NestingDepth SelectorDepth
+
+      .#{$css-prefix}wizard__marker {
+        background: rgb(0, 95, 178); // @TODO: Need a token for this
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}grid {
+  display: flex;
+
+  &--frame {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  // New in 1.0.0
+  &--vertical-reverse {
+    flex-direction: column-reverse;
+  }
+
+  // New in 1.0.0
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@include deprecate('4.0.0', 'Use spacing utilities instead') {
+  .#{$css-prefix}col,
+  // Catch all for col--padded variants
+  [class*="#{$css-prefix}col--padded"] {
+    @include flex-item(expand);
+  }
+
+  .#{$css-prefix}col--padded {
+    padding: {
+      right: $spacing-small;
+      left: $spacing-small;
+    }
+
+    &-medium {
+      padding: {
+        right: $spacing-medium;
+        left: $spacing-medium;
+      }
+    }
+
+    &-large {
+      padding: {
+        right: $spacing-large;
+        left: $spacing-large;
+      }
+    }
+
+    &-around {
+      padding: $spacing-small;
+    }
+
+    &-around-medium {
+      padding: $spacing-medium;
+    }
+
+    &-around-large {
+      padding: $spacing-large;
+    }
+  }
+}
+
+.#{$css-prefix}grid--pull-padded {
+  margin: {
+    right: ($spacing-small * -1);
+    left: ($spacing-small * -1);
+  }
+
+  &-medium {
+    margin: {
+      right: ($spacing-medium * -1);
+      left: ($spacing-medium * -1);
+    }
+  }
+
+  &-large {
+    margin: {
+      right: ($spacing-large * -1);
+      left: ($spacing-large * -1);
+    }
+  }
+}
+
+// Deprecate for 2.0.0 - Incorrect Naming Convention
+.#{$css-prefix}col-rule {
+
+  @include deprecate('4.0.0', 'Use slds-col--rule-{position} instead') {
+
+    @include mq-large-min {
+
+      &--top {
+        border-top: 1px solid $color-border-separator;
+      }
+
+      &--right {
+        border-right: 1px solid $color-border-separator;
+      }
+
+      &--bottom {
+        border-bottom: 1px solid $color-border-separator;
+      }
+
+      &--left {
+        border-left: 1px solid $color-border-separator;
+      }
+    }
+  }
+}
+
+// New in 1.0.0
+.#{$css-prefix}col--rule {
+
+  @include mq-large-min {
+
+    &-top {
+      border-top: 1px solid $color-border-separator;
+    }
+
+    &-right {
+      border-right: 1px solid $color-border-separator;
+    }
+
+    &-bottom {
+      border-bottom: 1px solid $color-border-separator;
+    }
+
+    &-left {
+      border-left: 1px solid $color-border-separator;
+    }
+  }
+}
+
+.#{$css-prefix}wrap {
+  @include flex-wrap(true);
+}
+
+// Deprecate for 2.0.0 - Incorrect Naming Convention
+.#{$css-prefix}nowrap {
+  @include flex-item(expand);
+  @include flex-wrap(false);
+
+  @include deprecate('4.0.0') {
+    &--small {
+      @include mq-small-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
+    }
+
+    &--medium {
+      @include mq-medium-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
+    }
+
+    &--large {
+      @include mq-large-min {
+        @include flex-item(expand);
+        @include flex-wrap(false);
+      }
+    }
+  }
+}
+
+// New in 1.0.0
+// .slds-{size}-nowrap used for responsive design
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
+  @each $key in $size {
+    @media (min-width: #{pem($breakpoint)}) {
+      .#{$css-prefix}#{$size}-nowrap {
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+.#{$css-prefix}has-flexi-truncate {
+  flex: 1 1 0%;
+  min-width: 0; // For FFOX and newer browsers
+}
+
+.#{$css-prefix}no-flex {
+  flex: none;
+}
+
+.#{$css-prefix}no-space {
+  min-width: 0;
+}
+
+.#{$css-prefix}grow {
+  flex-grow: 1;
+}
+
+.#{$css-prefix}grow-none {
+  flex-grow: 0;
+}
+
+.#{$css-prefix}shrink {
+  flex-shrink: 1;
+}
+
+.#{$css-prefix}shrink-none {
+  flex-shrink: 0;
+}
+
+// Resets spacing/bullets for when grids are used on unordered lists
+.#{$css-prefix}text-longform ul.#{$css-prefix}grid {
+  margin-left: 0;
+  list-style: none;
+}

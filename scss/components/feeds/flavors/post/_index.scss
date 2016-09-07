@@ -1,0 +1,103 @@
+// Lightning Design System 2.1.2
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Container for feed item comments
+.#{$css-prefix}feed__item-comments {
+  background: $color-background-post;
+  border-top: $border-width-thin solid $color-border;
+  margin-top: $spacing-x-small;
+
+  .#{$css-prefix}comment {
+    padding: $spacing-x-small $spacing-medium;
+  }
+}
+
+.#{$css-prefix}post {
+  background: $color-background-alt;
+  padding: $spacing-small $spacing-medium;
+
+  @include mq-large-min {
+    padding: 0 $spacing-medium;
+  }
+
+  &__header {
+    margin-bottom: $spacing-small;
+  }
+
+  &__content {
+    margin-bottom: $spacing-small;
+
+    @include mq-medium-min {
+      margin-bottom: $spacing-large;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    font-size: $font-size-small;
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
+  }
+}
+
+// Post Footer Actions
+.#{$css-prefix}post__footer-actions-list {
+  justify-content: space-between;
+  text-align: center;
+  order: 1;
+
+  @include mq-medium-min {
+    order: 0;
+  }
+}
+
+// Action Items
+.#{$css-prefix}post__footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-default;
+  padding: $spacing-small 0;
+
+  @include mq-medium-min {
+    margin-right: $spacing-medium;
+    padding: 0;
+  }
+
+  .#{$css-prefix}icon {
+    margin-right: $spacing-xx-small;
+  }
+
+  &:hover,
+  &:focus,
+  &.#{$css-prefix}is-active {
+    color: $color-text-link-hover;
+    text-decoration: none;
+
+    .#{$css-prefix}icon {
+      fill: currentColor;
+    }
+  }
+}
+
+// Meta list
+.#{$css-prefix}post__footer-meta-list {
+  margin-bottom: $spacing-medium;
+
+  @include mq-medium-min {
+    margin: {
+      left: auto;
+      bottom: 0;
+    }
+  }
+}

@@ -43,10 +43,5 @@ export let states = [
       <Avatar className={pf('avatar--circle avatar--medium')}>
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
-  },
-  {
-    id: 'avatar-empty',
-    label: 'Empty',
-    element: <Avatar className={pf('avatar--empty avatar--medium')} />
   }
 ];

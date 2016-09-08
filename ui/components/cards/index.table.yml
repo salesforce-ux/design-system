@@ -31,7 +31,3 @@ classes:
     class: card--narrow
     description: Modifies styles for card in a narrow column
     applied: <code>.{{cssPrefix}}card</code>
-  -
-    class: card--compact
-    description: Modifies styles for a compact card, specific use is within Console
-    applied: <code>.{{cssPrefix}}card</code>

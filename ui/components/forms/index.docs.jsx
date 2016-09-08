@@ -37,15 +37,15 @@ export default (
   <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute required to it. Additionally, add the <CodeClass className="is-required" /> class on the <CodeClass className="form-element" /> wrapper.</p>
   <p>The native form elements, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;input type='checkbox'&gt;</code>, and <code>&lt;input type='radio'&gt;</code>, receive validation styling for <code>disabled</code>, <code>checked</code>, and <code>checked disabled</code>, if applicable.</p>
   <h3 className={pf('text-heading--small')}>Form Example</h3>
-  <form role="form" className={pf('form--stacked grid wrap grid--pull-padded-large m-top--large')}>
-    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2')}>
+  <form role="form" className={pf('form--stacked grid wrap grid--pull-padded m-top--large')}>
+    <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2')}>
       <Input label="Opportunity Name" placeholder="Moderna 10k" assistiveText="Opportunity Name" />
       <Input label="Account Name" placeholder="Moderno Bistro" assistiveText="Account Name" />
       <Input label="Contact Name" placeholder="John Smith" assistiveText="Contact Name" />
       <Input label="Contact Email" placeholder="jsmith@moderna.com" assistiveText="Contact Email" help="Example Form Element Help" />
       <Textarea label="Notes" assistiveText="textarea"></Textarea>
     </div>
-    <div className={pf('col--padded size--1-of-1 medium-size--1-of-2')}>
+    <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2')}>
       <div className={pf('form-element has-divider--bottom')}>
         <span className={pf('form-element__label')}>Opportunity Owner</span>
         <div className={pf('form-element__control')}>

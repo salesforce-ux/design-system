@@ -46,6 +46,8 @@ export default (
       `}</CodeBlock>
     </div>
 
+    <p><strong>Note:</strong> If you still need to use a static resource with the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.
+    </p>
     <p>
       We have prepared
       a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you

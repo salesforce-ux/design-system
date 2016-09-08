@@ -12,31 +12,41 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
-
-export const preview = (
-  <div className="demo-only demo-container">
-    <div className={pf('grid')}>
-      <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-      <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')} style={{marginTop: '2rem'}}>
-      <div className={pf('col--padded')}><div className={pf('box box--small theme--shade text-align--center')}>col--padded</div></div>
-      <div className={pf('col--padded')}><div className={pf('box box--small theme--shade text-align--center')}>col--padded</div></div>
-    </div>
-  </div>
-);
-
-export const code = (
-  <div className="demo-only demo-container">
-    <div className={pf('grid')}>
-      <div className={pf('col')}>col</div>
-      <div className={pf('col')}>col</div>
-    </div>
-
-    <div className={pf('grid grid--pull-padded')}>
-      <div className={pf('col--padded')}>col--padded</div>
-      <div className={pf('col--padded')}>col--padded</div>
-    </div>
-  </div>
-);
+export let states = [
+  {
+    id: 'stretch',
+    label: 'Column Stretch',
+    element:
+      <div className={pf('grid')}>
+        <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+        <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      </div>
+  },
+  {
+    id: 'stretch-gutters',
+    label: 'Column Stretch w/ Gutters',
+    element:
+      <div className={pf('grid grid--pull-padded-medium')}>
+        <div className={pf('col p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+        <div className={pf('col p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      </div>
+  },
+  {
+    id: 'no-stretch',
+    label: 'No Column Stretch',
+    element:
+      <div className={pf('grid')}>
+        <div><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+        <div><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      </div>
+  },
+  {
+    id: 'no-stretch-gutters',
+    label: 'No Column Stretch w/ Gutters',
+    element:
+      <div className={pf('grid grid--pull-padded-medium')}>
+        <div className={pf('p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+        <div className={pf('p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      </div>
+  }
+];

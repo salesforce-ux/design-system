@@ -50,7 +50,7 @@ export let Checkbox = props => {
   return (
     <span className={pf('checkbox')}>
       {props.children}
-      <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} />
+      <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
       <label className={className(pf('checkbox__label'), props.className)} htmlFor={ props.id ? props.id : uniqueId }>
         <span className={pf('checkbox--faux')}></span>
         <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
@@ -94,9 +94,9 @@ let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementControl>
-        <Checkbox label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
+        <Checkbox label="Checkbox Label" errorId="error_01"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -136,10 +136,10 @@ let GroupError = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-        <Checkbox label="Checkbox Label" />
+        <Checkbox errorId="error_01" label="Checkbox Label" checked />
+        <Checkbox errorId="error_01" label="Checkbox Label" />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

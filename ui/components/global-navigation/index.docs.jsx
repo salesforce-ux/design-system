@@ -66,7 +66,7 @@ let NavigationBarItem = props =>
 
 export const intro = (
   <p className="site-text-introduction">
-    Navigation represents a list of links that either take the user to another page or parts of the page the user is in.
+    Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
   </p>
 );
 
@@ -74,17 +74,13 @@ export default (
   <ComponentDocs>
     <h2 className={pf('site-text-heading--label')}>1.0. Building the Navigation Bar</h2>
     <NavigationBar showSections />
-    <p>The navigation bar is composed of a wrapper and 3 regions.</p>
-    <dl>
-      <dt><strong>Primary:</strong></dt>
-      <dd>App Switcher + App Name + Object Switcher</dd>
-      <dt><strong>Secondary:</strong></dt>
-      <dd>Contextual Navigation</dd>
-      <dt><strong>Tertiary:</strong></dt>
-      <dd>Contextual Actions</dd>
-    </dl>
-    <p>The markup should follow the order listed above where the Contextual Navigation, either hyperlinks or tabs, should be the last element. This will allow for proper keyboard interaction set by the 508 compliance standards.</p>
-    <p>Each region inside the wrapper of <CodeClass className="context-bar" />, will be described using ordering terms such as <strong>&ldquo;primary&rdquo;</strong>, <strong>&ldquo;secondary&rdquo;</strong>, <strong>&ldquo;tertiary&rdquo;</strong>. This will describe the markup ordering, not the visual ordering since we want the navigation last for keyboard interactions but visually displayed as adjacent to the app switcher.</p>
+    <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>  
+    <ul>
+      <li><strong>Primary,</strong> which contains the App Launcher and App Name</li>
+      <li><strong>Secondary,</strong> which contains the App Items, for navigating within the current app</li>
+      <li>And optionally, <strong>Tertiary,</strong> which includes Actions, for triggering actions specific to the current app.</li>
+    </ul> 
+    <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="slds-context-bar__primary" />. </p>
 
     <h2 className={pf('site-text-heading--label')}>1.1. Items on the Navigation Bar</h2>
     <NavigationBar showItems />

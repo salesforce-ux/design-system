@@ -91,7 +91,7 @@ const prepare = (done) => {
     // website
     async.apply(execute, `cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`),
     // tokens
-    async.apply(execute, `cp -a ${__PATHS__.designTokens}/dist/. ${__PATHS__.build}/design-tokens`),
+    async.apply(execute, `cp -a ${__PATHS__.designTokens}/. ${__PATHS__.build}/design-tokens`),
     // git info
     async.apply(execute, 'git show --format="%an|%ae|%ad|%s" | head -n 1'),
     // stats

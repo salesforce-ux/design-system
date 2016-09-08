@@ -32,25 +32,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 //////////////////////////////////////////////
 
-// Entity Add Dropdown
-const entityAddDropdown = (
-  <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '224px', top: '44px' }}>
-    <div className={pf('popover__body')}>
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor="text-input-01">Add Page by URL or ID</label>
-        <div className={pf('form-element__control grid')}>
-          <input id="text-input-01" className={pf('input')} type="text" placeholder="Placeholder Text" />
-          <button className={pf('button button--brand shrink-none m-left--small')}>Add Tab</button>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 // Context Tab
 let ContextTab = props =>
-  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null)} role="presentation">
+  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null, props.itemUnsaved ? pf('is-unsaved') : null)} role="presentation">
     <a href="javascript:void(0);" className={pf('context-bar__label-action')} role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' }>
+      { props.itemUnsaved ? <abbr className={pf('unsaved-indicator')} title="Tab Not Saved">*</abbr> : null }
       <div className={pf('icon_container')}>
         <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
         <span className={pf('assistive-text')}>Case</span>
@@ -60,7 +46,7 @@ let ContextTab = props =>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click p-left--none p-right--none'), props.actionOverflow == 'true' ? pf('is-open') : null)}>
       <ButtonIcon
         className={pf('button--icon-container button--icon-x-small')}
-        tabIndex="-1"
+        tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="chevrondown"
         aria-haspopup="true"
         assistiveText="Open tab actions menu" />
@@ -75,7 +61,7 @@ let ContextTab = props =>
     <div className={pf('context-bar__icon-action col--bump-left p-left--none toggle-visibility--pinned')}>
       <ButtonIcon
         className={pf('button--icon-container button--icon-x-small')}
-        tabIndex="-1"
+        tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="close"
         assistiveText="Close Tab" />
     </div>
@@ -128,13 +114,27 @@ export let ContextTabBar = props =>
         </Menu>
       </div>
 
-      <div className={className(pf('context-bar__item dropdown-trigger dropdown-trigger--click'), props.objectSwitcherActive ? pf('is-open') : null)}>
+      <div className={className(pf('context-bar__item dropdown-trigger dropdown-trigger--click'), props.addTabActive ? pf('is-open') : null, props.addTabClassName)}>
         <div className={pf('context-bar__icon-action')}>
           <ButtonIcon
             className={pf('button--icon-container button--icon-x-small')}
             symbol="add"
+            aria-haspopup="true"
             assistiveText="Open object switcher menu" />
         </div>
+        { props.addTabActive ?
+          <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+            <div className={pf('popover__body')}>
+              <div className={pf('form-element')}>
+                <label className={pf('form-element__label')} htmlFor="text-input-01">Add Page by URL or ID</label>
+                <div className={pf('form-element__control grid')}>
+                  <input id="text-input-01" className={pf('input')} type="text" placeholder="Placeholder Text" />
+                  <button className={pf('button button--brand shrink-none m-left--small')}>Add Tab</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        : null }
       </div>
     </div>
 
@@ -144,24 +144,6 @@ export let ContextTabBar = props =>
         { props.children }
       </ul>
     </div>
-
-    { props.showTertiary ?
-    <div className={pf('context-bar__tertiary col--bump-left')}>
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item')}>
-          <ButtonIcon
-            className={pf('button--icon context-bar__icon-action')}
-            symbol="side_list"
-            assistiveText="Toggle split view" />
-        </li>
-        <li className={pf('context-bar__item')}>
-          <ButtonIcon
-            className={pf('button--icon context-bar__icon-action')}
-            symbol="table"
-            assistiveText="Toggle split view" />
-        </li>
-      </ul>
-    </div> : null }
   </div>;
 
 //////////////////////////////////////////////
@@ -174,10 +156,32 @@ export let states = [
     label: 'Default',
     element:
       <ContextTabBar>
+        <ContextTab title="Home" itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2"  />
+      </ContextTabBar>
+  },
+  {
+    id: 'tab-active',
+    label: 'Tab - Active',
+    element:
+      <ContextTabBar>
         <ContextTab title="Home" />
         <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
+  },
+  {
+    id: 'tab-item-action-menu-open',
+    label: 'Tab - Action Overflow',
+    element:
+      <div className="demo-only" style={{height: '10rem'}}>
+        <ContextTabBar>
+          <ContextTab title="Home" />
+          <ContextTab title="Tab Item 1" itemActive actionOverflow="true" />
+          <ContextTab title="Tab Item 2" />
+        </ContextTabBar>
+      </div>
   },
   {
     id: 'pinned-tab',
@@ -190,13 +194,23 @@ export let states = [
       </ContextTabBar>
   },
   {
+    id: 'pinned-tab-active',
+    label: 'Pinned Tab - Active',
+    element:
+      <ContextTabBar>
+        <ContextTab title="Home" className={pf('is-pinned')} itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2" />
+      </ContextTabBar>
+  },
+  {
     id: 'unsaved-tab',
     label: 'Unsaved Tab',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" />
-        <ContextTab title="Tab Item 1" itemActive />
-        <ContextTab title="Tab Item 2" className={pf('is-unsaved')} />
+        <ContextTab title="Home" itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2" itemUnsaved />
       </ContextTabBar>
   },
   {
@@ -204,12 +218,12 @@ export let states = [
     label: 'Overflow Tabs',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" />
-        <ContextTab title="Tab Item 1" itemActive />
+        <ContextTab title="Home" itemActive />
+        <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')} aria-haspopup="true">
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items">
-            <span className={pf('truncate')}>More</span>
+            <span className={pf('p-left--xx-small truncate')}>More</span>
             <span className={pf('icon_container m-left--x-small')}>
               <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
             </span>
@@ -223,12 +237,12 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" />
-          <ContextTab title="Tab Item 1" itemActive />
+          <ContextTab title="Home" itemActive />
+          <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2" />
-          <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open')} aria-haspopup="true">
-            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items">
-              <span className={pf('truncate')}>More</span>
+          <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open')}>
+            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items" aria-haspopup="true">
+              <span className={pf('p-left--xx-small truncate')}>More</span>
               <span className={pf('icon_container m-left--x-small')}>
                 <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
               </span>
@@ -250,47 +264,90 @@ export let states = [
       </div>
   },
   {
+    id: 'unsaved-overflow-tabs',
+    label: 'Unsaved Overflow Tabs',
+    element:
+      <ContextTabBar>
+        <ContextTab title="Home" itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2" />
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-unsaved')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items"  aria-haspopup="true">
+            <abbr className={pf('unsaved-indicator')} title="Tab(s) within menu not saved">*</abbr>
+            <span className={pf('p-left--xx-small truncate')}>More</span>
+            <span className={pf('icon_container m-left--x-small')}>
+              <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
+            </span>
+          </a>
+        </li>
+      </ContextTabBar>
+  },
+  {
+    id: 'unsaved-overflow-tabs-open',
+    label: 'Unsaved Overflow Tabs - Open',
+    element:
+      <div className="demo-only" style={{height: '8rem'}}>
+        <ContextTabBar>
+          <ContextTab title="Home" itemActive />
+          <ContextTab title="Tab Item 1" />
+          <ContextTab title="Tab Item 2" />
+          <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open is-unsaved')}>
+            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items" aria-haspopup="true">
+              <abbr className={pf('unsaved-indicator')} title="Tab(s) within menu not saved">*</abbr>
+              <span className={pf('p-left--xx-small truncate')}>More</span>
+              <span className={pf('icon_container m-left--x-small')}>
+                <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
+              </span>
+            </a>
+            <Menu className={pf('dropdown--right')}>
+              <MenuList>
+                <MenuItem className={pf('is-unsaved')}>
+                  <abbr className={pf('unsaved-indicator')} title="Tab(s) within menu not saved">*</abbr>
+                  <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
+                  <span>Overflow Tab Item</span>
+                </MenuItem>
+                <MenuItem>
+                  <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
+                  <span>Overflow Tab Item</span>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </li>
+        </ContextTabBar>
+      </div>
+  },
+  {
     id: 'object-switcher-active',
     label: 'Object Switcher - Active',
     element:
       <ContextTabBar objectSwitchClassName={pf('is-active')}>
         <ContextTab title="Home" />
-        <ContextTab title="Tab Item 1" itemActive />
+        <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
   },
   {
     id: 'object-switcher-menu-open',
-    label: 'Object Switcher Menu - Open',
+    label: 'Object Switcher - Open',
     element:
       <div className="demo-only" style={{height: '11rem'}}>
         <ContextTabBar objectSwitchClassName={pf('is-active is-open')}>
           <ContextTab title="Home" />
-          <ContextTab title="Tab Item 1" itemActive />
+          <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2"  />
         </ContextTabBar>
       </div>
   },
   {
-    id: 'tab-item-action-menu-open',
-    label: 'Tab Item - Action Overflow',
+    id: 'add-tab-dialog-open',
+    label: 'Add Tab Dialog - Open',
     element:
-      <div className="demo-only" style={{height: '10rem'}}>
-        <ContextTabBar>
+      <div className="demo-only" style={{height: '8rem'}}>
+        <ContextTabBar addTabActive>
           <ContextTab title="Home" />
-          <ContextTab title="Tab Item 1" itemActive />
-          <ContextTab title="Tab Item 2" actionOverflow="true" />
+          <ContextTab title="Tab Item 1" />
+          <ContextTab title="Tab Item 2"  />
         </ContextTabBar>
       </div>
-  },
-  {
-    id: 'tertiary',
-    label: 'Tertiary actions',
-    element:
-      <ContextTabBar showTertiary>
-        <ContextTab title="Home" />
-        <ContextTab title="Tab Item 1" itemActive />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
   }
 ];

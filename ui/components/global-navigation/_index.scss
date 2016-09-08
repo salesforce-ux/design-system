@@ -105,7 +105,7 @@
     }
 
     &:first-child.#{$css-prefix}is-active {
-      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border-context-bar-item;
+      border-left: 0;
     }
 
     &--divider-left {
@@ -232,22 +232,24 @@
         display: none;
       }
     }
+  }
 
-    // Dirty state of tabs
-    &.#{$css-prefix}is-unsaved .#{$css-prefix}context-bar__label-action {
+  // Dirty state of tabs
+  .#{$css-prefix}is-unsaved {
+
+    .#{$css-prefix}context-bar__label-action {
       font-style: italic;
       position: relative;
-
-      &:before {
-        content: '*';
-        position: absolute;
-        left: $spacing-xxx-small;
-        top: $spacing-xxx-small;
-        color: $color-brand;
-        text-decoration: none;
-      }
+      padding-left: $spacing-x-small;
     }
   }
+}
+
+// Unsaved indicator
+.#{$css-prefix}unsaved-indicator {
+  font-size: $font-size-medium-a;
+  color: $color-brand;
+  align-self: center;
 }
 
 // Context Bar dropdown trigger specifics

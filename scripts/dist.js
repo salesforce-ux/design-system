@@ -186,7 +186,9 @@ async.series([
   (done) => {
     gulp.src([
       'assets/images/spinners/*',
-      'assets/images/avatar*'
+      'assets/images/avatar*',
+      // Used in the Global Header
+      'assets/images/logo-noname.svg'
     ], {
       base: 'site/assets/images',
       cwd: __PATHS__.site

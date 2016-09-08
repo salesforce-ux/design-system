@@ -172,6 +172,16 @@ export let states = [
       </ContextTabBar>
   },
   {
+    id: 'tab-active-focus',
+    label: 'Tab - Active Focus',
+    element:
+      <ContextTabBar>
+        <ContextTab title="Home" />
+        <ContextTab title="Tab Item 1" className={pf('has-focus')} itemActive />
+        <ContextTab title="Tab Item 2"  />
+      </ContextTabBar>
+  },
+  {
     id: 'tab-item-action-menu-open',
     label: 'Tab - Action Overflow',
     element:
@@ -199,6 +209,16 @@ export let states = [
     element:
       <ContextTabBar>
         <ContextTab title="Home" className={pf('is-pinned')} itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2" />
+      </ContextTabBar>
+  },
+  {
+    id: 'pinned-tab-active-focus',
+    label: 'Pinned Tab - Active Focus',
+    element:
+      <ContextTabBar>
+        <ContextTab title="Home" className={pf('is-pinned has-focus')} itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>

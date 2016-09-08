@@ -104,8 +104,19 @@
       }
     }
 
+    // Remove border on active due to primary section always having a right border
     &:first-child.#{$css-prefix}is-active {
       border-left: 0;
+    }
+
+    // Toggled focused class applied via JavaScript
+    &.#{$css-prefix}has-focus,
+    &.#{$css-prefix}has-focus:hover {
+
+      &:before,
+      &:after {
+        height: 4px;
+      }
     }
 
     &--divider-left {
@@ -195,7 +206,7 @@
   // Workspace tabs
   //
   // Consumes tab structure but looks like gnav
-
+  // ------------
   &--tabs {
 
     // Need to reset styles from default
@@ -245,7 +256,7 @@
   }
 }
 
-// Unsaved indicator
+// Unsaved indicator - This can probably be used in other locations as well
 .#{$css-prefix}unsaved-indicator {
   font-size: $font-size-medium-a;
   color: $color-brand;

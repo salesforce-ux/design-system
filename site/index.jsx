@@ -37,7 +37,9 @@ export default (
           Star
         </CTALink>
       </p>
-      <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink></p>
+      <p className={pf('site-releasenumber m-bottom--medium')}>
+        Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
+      </p>
     </header>
 
     <div className={pf('container--buffer container--x-large')}>

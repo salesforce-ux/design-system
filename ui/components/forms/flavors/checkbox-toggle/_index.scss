@@ -63,7 +63,7 @@
       }
     }
 
-     &:focus {
+    &:focus {
 
       & + .#{$css-prefix}checkbox--faux,
       & ~ .#{$css-prefix}checkbox--faux,

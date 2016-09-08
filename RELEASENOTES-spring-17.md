@@ -14,16 +14,14 @@ The following site enhancements are now available:
 
 The following components are now available:
 
-- Added `slds-float--none` utility.
+- Add Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
-
-
 
 **ADDED**
 
 The following classes are now available:
 
--
+- Add `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
 
 **CHANGES**
 

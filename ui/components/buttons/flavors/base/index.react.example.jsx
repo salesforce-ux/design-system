@@ -101,13 +101,11 @@ export let states = [
   {
     id: 'button',
     label: 'Reset',
-    description: 'foo',
     element: <Reset />
   },
   {
     id: 'button-neutral',
     label: 'Neutral',
-    description: 'bar',
     element: <Neutral />
   },
   {

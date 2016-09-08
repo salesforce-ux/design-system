@@ -90,6 +90,7 @@ export default React.createClass({
           <h3 className="site-text-heading--label docsearch-ignore">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
+            <li className={pf('has-divider--top p-top--xx-small')}><a className={pf('text-title--caps')} href="#overview">Documentation</a></li>
           </ul>
         </div>
       </StickyNav>

@@ -47,7 +47,7 @@ let AppLauncherModal = props =>
         </div>
         <div className={pf('section__content')}>
           <ul className={pf('grid grid--pull-padded wrap')}>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')} draggable>
                 <span className={pf('text-link')}><mark>Sales</mark> Cloud</span>
                 <p>The primary internal Salesforce org. Used to run our...<span className={pf('text-link')}>More</span></p>
@@ -67,12 +67,12 @@ let AppLauncherModal = props =>
         </div>
         <div className={pf('section__content')}>
         <ul className={pf('grid grid--pull-padded wrap')}>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="account">
               <p className={pf('truncate text-link')}><mark>Sales</mark> Invoices</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="announcement">
               <p className={pf('truncate text-link')}><mark>Sales</mark> Objects</p>
             </AppLauncherTile>

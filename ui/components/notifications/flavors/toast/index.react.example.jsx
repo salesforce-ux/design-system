@@ -54,7 +54,7 @@ let Success = props =>
       <div className={pf('notify__content grid')}>
         <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="notification" />
         <div className={pf('col align-middle')}>
-          <h2 className={pf('text-heading--small ')}>Your new contact <a href="#">Sara Smith</a> was successfully created.</h2>
+          <h2 className={pf('text-heading--small ')}>Your new contact <a href="javascript:void(0);">Sara Smith</a> was successfully created.</h2>
         </div>
       </div>
     </div>

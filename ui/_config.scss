@@ -15,7 +15,7 @@
 ///
 /// @type String
 /// @access private
-$app-version: '1.1.0';
+$app-version: '2.0.2';
 
 /// Debug mode (uncomment to activate)
 /// Turn on to output deprecation warnings during development
@@ -24,20 +24,24 @@ $app-version: '1.1.0';
 /// @type Boolean
 // $app-debug: true;
 
-/// Icon Path
-///
-/// @type String
-$static-icon-path: '/assets/icons' !default;
-
 /// Image Path
 ///
 /// @type String
-$static-image-path: '/assets/images' !default;
+$static-image-path: '../images' !default;
 
 /// Font Path
 ///
 /// @type String
-$static-font-path: '/assets/fonts/webfonts' !default;
+$static-font-path: '../fonts/webfonts' !default;
+
+/// Load webfonts
+///
+/// The Design System loads Salesforce webfonts using @font-face rules.
+/// Apps that already load webfonts or load webfonts using JavaScript
+/// should switch this setting off.
+///
+/// @type Boolean
+$slds-load-webfonts: true !default;
 
 /// Grid
 ///
@@ -72,6 +76,18 @@ $grid: (
 ///
 /// @type String
 $css-prefix: 'slds-' !default;
+
+/// nCino CSS Prefix
+/// Will prefix all nCino CSS classes
+///
+/// @example scss Compile without prefix
+///  $nds-prefix: '';
+///
+/// @example scss Use in a class name
+///  .#{$nds-prefix}foo { ... } // outputs .nds-foo { ... }
+///
+/// @type String
+$nds-prefix: 'nds-' !default;
 
 /// Reset wrapping class
 /// Wraps a version of normalize

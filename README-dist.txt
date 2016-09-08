@@ -16,10 +16,7 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
   - images/ - including spinners
   - styles/
     - salesforce-lightning-design-system.css (regular CSS)
-    - salesforce-lightning-design-system-vf.css (scoped CSS for use in Visualforce)
-    - salesforce-lightning-design-system-ltng.css (scoped CSS for use in Lightning Components)
-    - salesforce-lightning-design-system-scoped.css (scoped CSS for use with other frameworks)
-    - (This directory also includes minified versions of all the CSS files.)
+    - salesforce-lightning-design-system.min.css (minified CSS)
 * scss/ - the Sass source for the Lightning Design System CSS
 * swatches/
   - salesforce-lightning-design-system.ase

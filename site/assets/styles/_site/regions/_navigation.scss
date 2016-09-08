@@ -1,0 +1,111 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.site-navigation {
+
+  padding: {
+    top: $spacing-large;
+    bottom: $spacing-large;
+  }
+
+  // Arrow Icon
+  .icon__svg {
+    @include square($square-icon-x-small-content);
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  // Hide closed menu items
+  .is-closed ul {
+    display: none;
+  }
+
+  // Links
+  a {
+    display: block;
+    padding: $spacing-small $spacing-x-large;
+    line-height: 1.28571428571429;
+    color: $color-text-default;
+
+    &:hover {
+      background-color: rgba($color-background, 0.5);
+    }
+  }
+
+  // Active Link
+  .#{$css-prefix}is-active > a {
+    background-color: $color-background-alt-2;
+    color: $color-text-tab-label-selected;
+  }
+
+  // Open Menu Items
+  .#{$css-prefix}is-open {
+    padding-bottom: $spacing-x-small;
+  }
+
+  // Section Selected
+  .#{$css-prefix}is-selected {
+    background-color: $color-background;
+
+    a:hover {
+      background-color: darken($color-background, 2.5);
+    }
+
+    .icon__svg {
+      opacity: 1;
+    }
+  }
+
+  // Nested List
+  .#{$css-prefix}is-nested {
+    margin-left: 0;
+
+    a {
+      padding: {
+        top: $spacing-x-small;
+        bottom: $spacing-x-small;
+        left: $spacing-x-large + $spacing-large;
+      }
+    }
+
+    .#{$css-prefix}is-nested a {
+      padding-left: $spacing-x-large + ($spacing-large * 2);
+    }
+  }
+
+  @include mq-medium-min {
+    position: fixed;
+    top: $height-banner;
+    bottom: 0;
+    border-right: $border-width-thin solid $color-border-separator;
+    padding-top: 0;
+    width: $width-sidebar;
+
+    nav {
+      @include scrollbar($track: $color-background-alt);
+      position: absolute;
+      width: $width-sidebar;
+      height: 100%;
+      overflow: hidden {
+        y: auto;
+      };
+      // Remove the focus ring that appears when children are focused
+      outline: 0;
+    }
+
+    &.site-navigation--has-search nav {
+      top: $height-searchbox;
+      bottom: 0;
+      height: auto;
+    }
+    &.site-navigation--internal {
+      top: ($height-banner + $height-banner-badge);
+    }
+  }
+}

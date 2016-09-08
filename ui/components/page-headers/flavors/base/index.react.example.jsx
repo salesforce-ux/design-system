@@ -11,20 +11,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 
-import Anchor from 'ui/components/page-headers/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <SvgIcon className={pf('icon icon--large icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+  <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
 );
 
 export default (
-  <Anchor>
-    <MediaObject figureLeft={image}>
+  <div className="slds-page-header" role="banner">
+    <MediaObject flavor="center" figureLeft={image}>
       <p className={pf('page-header__title truncate align-middle')} title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>
@@ -36,5 +35,5 @@ export default (
         11/13/15
       </p>
     </MediaObject>
-  </Anchor>
+  </div>
 );

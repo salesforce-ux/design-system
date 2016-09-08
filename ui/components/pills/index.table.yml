@@ -9,12 +9,12 @@ classes:
     class: pill__label
     description: Initializes pill label
     required: true
-    applied: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>
+    applied: <code>&lt;span&gt;</code> or <code>&lt;a&gt;</code>
   -
     class: pill__icon
-    description: Initializes pill icon that sits to the left of the label
+    description: Initializes pill icon or avatar that sits to the left of the label
     required: true
-    applied: <code>&lt;svg class="icon"&gt;</code>
+    applied: <code>&lt;svg class="slds-icon"&gt;</code> or <code>.{{cssPrefix}}avatar</code>
   -
     class: pill__remove
     description: Initializes remove icon in pill that sits to the right of the label

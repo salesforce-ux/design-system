@@ -56,7 +56,7 @@ export default (
       </div>
 
       <div className={pf('site-code--content scrollable--x')}>
-        <CodeBlock language="bash">{`
+        <CodeBlock language="markup">{`
 <aura:component>
   <aura:attribute name="svgPath"        default="" type="String" description="the path for the icon in the static resource, this will be use in a SVG use tag" />
   <aura:attribute name="name"           default="" type="String" description="Symbol name of icon" />
@@ -77,7 +77,7 @@ export default (
       </div>
 
       <div className={pf('site-code--content scrollable--x')}>
-        <CodeBlock language="bash">{`
+        <CodeBlock language="javascript">{`
 ({
   renderIcon: function(component) {
     var prefix = "${g.cssPrefix}";
@@ -119,7 +119,7 @@ export default (
       </p>
 
       <div className={pf('site-code--content scrollable--x')}>
-        <CodeBlock language="bash">{`
+        <CodeBlock language="javascript">{`
 ({
   render: function(component, helper) {
     // By default, after the component finished loading data/handling events,
@@ -145,7 +145,7 @@ export default (
       </div>
 
       <div className={pf('site-code--content scrollable--x')}>
-        <CodeBlock language="bash">{`
+        <CodeBlock language="markup">{`
 <c:svgIcon svgPath="/resource/${compactVersion}/assets/icons/standard-sprite/svg/symbols.svg#user" category="standard" size="large" name="user" />
         `}</CodeBlock>
       </div>

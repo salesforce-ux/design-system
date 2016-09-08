@@ -20,25 +20,25 @@ class Heading extends React.Component {
   }
 
   render() {
-    const props = this.$propsWithoutKeys('className', 'id');
+    const props = this.$propsWithoutKeys('className', 'id', 'type');
     let c = classNames(this.props.className, 'site-jump-anchor__container');
 
     switch (this.props.type) {
     case 'h1':
       return <h1 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} />
+        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
         {this.props.children}
       </h1>;
       break;
     case 'h2':
       return <h2 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} />
+        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
         {this.props.children}
       </h2>;
       break;
     case 'h3':
       return <h3 className={pf(c)} {...props}>
-        <span id={this.props.id} className={pf('site-jump-anchor')} />
+        <span id={this.props.id} className={pf('site-jump-anchor')} tabIndex="-1" />
         {this.props.children}
       </h3>;
       break;

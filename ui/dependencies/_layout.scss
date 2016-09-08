@@ -1,0 +1,394 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+// Screen Only
+@mixin mq-screen {
+
+  @media (only-screen) {
+    @content;
+  }
+}
+
+
+
+// TINY - 320px - 20rem
+@mixin mq-x-small-min {
+
+  @media (min-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+@mixin mq-x-small-max {
+
+  @media (max-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+
+
+// SMALL - 480px - 30rem
+@mixin mq-small-min {
+
+  @media (min-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+@mixin mq-small-max {
+
+  @media (max-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+
+
+// MEDIUM - 768px - 48rem
+@mixin mq-medium-min {
+
+  @media (min-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+@mixin mq-medium-max {
+
+  @media (max-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+
+
+// LARGE - 1024px - 64rem
+@mixin mq-large-min {
+
+  @media (min-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+@mixin mq-large-max {
+
+  @media (max-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+
+
+//HUGE - 1224px - 76.5rem
+@mixin mq-huge-min {
+
+  @media (min-width: pem(1224)) {
+    @content;
+  }
+}
+
+@mixin mq-huge-max {
+
+  @media (max-width: pem(1224)) {
+    @content;
+  }
+}
+
+
+
+// SUPER - 1824px - 114rem
+@mixin mq-super-min {
+
+  @media (min-width: pem(1824)) {
+    @content;
+  }
+}
+
+@mixin mq-super-max {
+
+  @media (max-width: pem(1824)) {
+    @content;
+  }
+}
+
+
+
+// RETINA
+@mixin retina {
+
+  @media only screen and (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    @content;
+  }
+}
+
+
+
+// WEBKIT
+@mixin webkit {
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @content;
+  }
+}
+
+
+
+// Sizing Helper
+@mixin width($columns, $breakpoint: null, $max: false) {
+  $breakpoint-string: null;
+
+  // Loop through the number of columns for each denominator of our fractions.
+  @each $denominator in $columns {
+
+    @if ($breakpoint != null) {
+      $breakpoint-string: if($max, 'max-', '') + $breakpoint + '-';
+    }
+
+    // If we’re trying to make wholes, just spit a 100% width utility out one time only.
+    @if ($denominator == 1) {
+
+      .#{$css-prefix}#{$breakpoint-string}size--1-of-#{$demominator} {
+        width: 100%;
+      }
+    }
+
+    @else {
+
+      // Begin creating a numberator for our fraction up until we hit the denominator.
+      @for $numerator from 1 through $denominator {
+
+        @for $i from 1 through $numerator {
+          @if $numerator <= 8 or $numerator == 12 {
+            .#{$css-prefix}#{$breakpoint-string}size--#{$i}-of-#{$numerator} {
+              width: ($i / $numerator) * 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Order Helper
+@mixin order($regions, $breakpoint: null) {
+
+  @each $denominator in $regions {
+
+    @for $numerator from 1 to $denominator {
+
+      // Build a class in the format `.#{$css-prefix}order--1`.
+      .#{$css-prefix}#{$breakpoint}order--#{$numerator} {
+        order: $numerator;
+      }
+    }
+  }
+}
+
+
+
+// Sizing Helper
+@mixin flex-size($span: 1, $spread: 12) {
+
+  @if type-of($span) == number and unitless($span) == false {
+    flex: 0 0 rem($span);
+    max-width: rem($span);
+  }
+
+  @else {
+    $pct: percentage($span / $spread);
+    flex: 0 0 $pct;
+    max-width: $pct;
+  }
+}
+
+
+
+// Wrapping Helper
+@mixin flex-wrap($wrap: true) {
+
+  @if $wrap {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  @else {
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+}
+
+
+
+// Children - Flexbox Item
+@mixin flex-item($size: expand) {
+
+  @if (type-of($size) == 'number') {
+    @include flex-size($size, $columns);
+  }
+
+  @if ($size == shrink) {
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+
+  @else if ($size == expand) {
+    flex: 1 1 auto;
+  }
+}
+
+
+
+
+// Truncate
+@mixin truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+// Clearfix
+@mixin clearfix {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+// Spacing
+@mixin spacing($property) {
+  $prop-prefix: null;
+  $positions: top right bottom left;
+
+  @if $property == margin {
+    $prop-prefix: 'm';
+  }
+
+  @else if $property == padding {
+    $prop-prefix: 'p';
+  }
+
+  @each $token, $size in $force-base-map {
+    $token-string: inspect($token);
+
+    @if str-index($token-string, spacing) {
+      $spacing: unquote(str-replace($token, 'spacing-', ''));
+
+      @each $position in $positions {
+
+        .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
+          #{$property}-#{$position}: $size;
+        }
+      }
+
+      .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
+        #{$property}-top: $size;
+        #{$property}-bottom: $size;
+      }
+
+      .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
+        #{$property}-right: $size;
+        #{$property}-left: $size;
+      }
+
+      .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
+        #{$property}: $size;
+      }
+    }
+  }
+}
+
+
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+
+@mixin visibility($class-name, $min: null, $max: null) {
+
+  .#{$css-prefix}#{$class-name} {
+
+    &-show {
+      display: none;
+
+      @if $min {
+        @media (min-width: $min) {
+          display: block;
+
+          &--inline-block {
+            display: inline-block;
+          }
+          &--inline {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    @if $min and $max {
+
+      &-show-only {
+        display: none;
+
+        @media (min-width: $min) and (max-width: $max - 1) {
+          display: block;
+
+          &--inline-block {
+            display: inline-block;
+          }
+          &--inline {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  @if $max {
+
+    .#{$css-prefix}max-#{$class-name}-hide {
+
+      @media (max-width: $max - 1) {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin align-horizontal($children: null, $fallback: null, $mq: null) {
+  display: flex;
+
+  @if $mq != null {
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
+  }
+
+  @if $children != null {
+    > #{$children} {
+      align-self: center;
+    }
+  }
+}

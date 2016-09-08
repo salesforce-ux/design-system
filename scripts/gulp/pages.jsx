@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import assert from 'assert';
-import cheerio from 'cheerio';
 import fs from 'fs';
 import gulp from 'gulp';
 import gulpIgnore from 'gulp-ignore';
@@ -79,18 +78,10 @@ export const tryRequire = p => {
 const prettyHTML = _.memoize(html => beautify.html(html, {
   'indent_size': 2,
   'indent_char': ' ',
-  'unformatted': [],
+  'unformatted': ['a'],
   'wrap_line_length ': 78,
   'indent_inner_html': true
 }));
-
-/**
- * Return a cheerio object
- *
- * @param {string} html
- * @returns {object}
- */
-const loadHTML = html => cheerio.load(html);
 
 /**
  * Render a <PageBody /> inside a <Page /> and render as HTML
@@ -106,13 +97,13 @@ export const renderPage = (element, props) => {
   // Create page element
   const page = React.createElement(Page,
     // Get any "page" specific props from the pageBody
-    getPrefixedProps(pageBody.props, 'page')
+    _.assign(
+      getPrefixedProps(pageBody.props, 'page'),
+      { contentHTML: renderToStaticMarkup(pageBody) }
+    )
   );
   // Construct the HTML
-  const $ = loadHTML(renderToStaticMarkup(page));
-  $('#app').append(renderToStaticMarkup(pageBody));
-  $('html').before('<!DOCTYPE html>');
-  return $.html();
+  return `<!DOCTYPE html>${renderToStaticMarkup(page)}`;
 };
 
 /**
@@ -146,11 +137,10 @@ export const wrapExample = (flavor, html) => `
   <style>
     body { padding: ${ForceBase.spacingMedium}; }
   </style>
+  <meta name="robots" content="noindex" />
 </head>
 <body>
-<div id="preview">
 ${html}
-</div>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -163,7 +153,7 @@ ${html}
         name: 'component:iframe:updatePreviewMarkup',
         data: {
           flavor: '${flavor.uid}',
-          html: document.getElementById('preview').innerHTML
+          html: ${JSON.stringify(html)}
         }
       });
     }
@@ -245,7 +235,6 @@ export const gulpRenderPage = () =>
       newFile.contents = new Buffer(html);
       next(null, newFile);
     } catch (err) {
-      console.log(err.stack);
       next(err);
     }
   });
@@ -335,7 +324,6 @@ export const gulpRenderComponentPage = () =>
         base: __PATHS__.site
       }));
     } catch (err) {
-      console.log(err.stack);
       next(err);
     }
   });
@@ -355,18 +343,19 @@ export const generateComponentPages = (components, callback = _.noop) => {
     .pipe(gulpRenderComponentPage())
     .on('error', callback)
     .pipe(gulp.dest(__PATHS__.www))
+    .on('error', callback)
     .on('finish', callback);
 };
 
-gulp.task('pages:components', () =>
-  generateComponentPages(
-    _.find(generateUI(), { id: 'components' }).components
-  ));
+gulp.task('pages:components', (done) => {
+  let { components } = _.find(generateUI(), { id: 'components' });
+  generateComponentPages(components, done);
+});
 
-gulp.task('pages:components:utilities', () =>
-  generateComponentPages(
-    _.find(generateUI(), { id: 'utilities' }).components
-  ));
+gulp.task('pages:components:utilities', (done) => {
+  let { components } = _.find(generateUI(), { id: 'utilities' });
+  generateComponentPages(components, done);
+});
 
 /**
  * Return a transform stream that converts JSX to HTML and
@@ -382,8 +371,11 @@ export const generatePages = (src, callback = _.noop) =>
     .pipe(gulpRenderPage())
     .on('error', callback)
     .pipe(gulpRename({ extname: '.html' }))
+    .on('error', callback)
     .pipe(gulp.dest(__PATHS__.www))
+    .on('error', callback)
     .on('finish', callback);
 
-gulp.task('pages', ['pages:components', 'pages:components:utilities'], () =>
-  generatePages('./site/**/index.jsx'));
+gulp.task('pages', ['pages:components', 'pages:components:utilities'], (done) => {
+  generatePages('./site/**/index.jsx', done);
+});

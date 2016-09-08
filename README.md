@@ -1,6 +1,6 @@
 # Salesforce Lightning Design System
 
-[![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
+[![Build Status](https://travis-ci.com/salesforce-ux/design-system-internal.svg?token=BMXxPFKR5GZuYsqAFsEf&branch=summer-16)](https://travis-ci.com/salesforce-ux/design-system-internal)
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 
@@ -48,6 +48,7 @@ gulp lint:sass
 gulp lint:js
 gulp lint:js:test
 gulp lint:spaces
+gulp lint:html
 ```
 
 ### Compilation
@@ -60,9 +61,13 @@ gulp lint:spaces
 
 Delete temporary build and local files.
 
+### Stats
+
+`npm run stats`: Useful stats about the project's deliverables.
+
 ### Tests
 
-`npm run test`: run all tests
+`npm test`: run all tests
 
 ## Troubleshooting
 
@@ -84,7 +89,7 @@ JavaScript dependencies sometimes get out of sync and inexplicable bugs start to
 2. Re-install dependencies: `rm -Rf node_modules && npm install`
 3. `npm run gulp`
 
-If this did not work, try running `npm clean` and repeat the above steps.
+If this did not work, try running `npm cache clean` and repeat the above steps.
 
 ## Contributing to the code base
 

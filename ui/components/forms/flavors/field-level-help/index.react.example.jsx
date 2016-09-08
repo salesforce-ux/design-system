@@ -18,20 +18,20 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export default (
   <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '5rem' }}>
     <div className={pf('form-element')}>
+      <div className={pf('form-element__label')}>
+        <label className={pf('align-middle')} htmlFor="form-help">Text Label</label>
+      </div>
       <div className={pf('form-element__icon')}>
-        <a href="#void">
+        <a href="javascript:void(0);">
           <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="info" />
           <span className={pf('assistive-text')}>Help</span>
         </a>
-      </div>
-      <div className={pf('form-element__label')}>
-        <label className={pf('align-middle')} htmlFor="form-help">Text Label</label>
       </div>
       <div className={pf('form-element__control')}>
         <input id="form-help" className={pf('input')} type="text" placeholder="Field Level Help" aria-describedby="help" />
       </div>
     </div>
-    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '30px', marginLeft: '-1.5rem', width: '20rem'}}>
+    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1.5rem', width: '20rem'}}>
       <div className={pf('popover__body text-longform')}>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
       </div>

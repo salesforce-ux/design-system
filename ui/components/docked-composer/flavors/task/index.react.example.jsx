@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Lorem from 'react-lorem-component';
@@ -46,12 +46,12 @@ export default (
   <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
-      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+      <div role="dialog" aria-labelledby="dialog-heading-id" className={pf('docked-composer grid grid--vertical nowrap is-open')}>
 
         {/* Composer Header */}
-        <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+        <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={dialingIcon} flavor="center">
-            New Task
+            <h2 id="dialog-heading-id">New Task</h2>
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -70,7 +70,7 @@ export default (
               symbol="close"
               assistiveText="Close" />
           </div>
-        </div>
+        </header>
 
         {/* Composer Body */}
         <div className={pf('docked-composer__body docked-composer__body--form col grid grid--vertical nowrap')}>
@@ -89,15 +89,15 @@ export default (
 
               <div className={pf('form-element__row')}>
                 <div className={pf('form-element size--1-of-2')}>
-                  <label className={pf('form-element__label')} htmlFor="text-input-01">Assigned To</label>
+                  <label className={pf('form-element__label')} htmlFor="text-input-02">Assigned To</label>
                   <div className={pf('form-element__control')}>
-                    <input className={pf('input')} type="text" id="text-input-01" />
+                    <input className={pf('input')} type="text" id="text-input-02" />
                   </div>
                 </div>
                 <div className={pf('form-element size--1-of-2')}>
-                  <label className={pf('form-element__label')} htmlFor="text-input-01">Due Dates</label>
+                  <label className={pf('form-element__label')} htmlFor="text-input-03">Due Dates</label>
                   <div className={pf('form-element__control')}>
-                    <input className={pf('input')} type="text" id="text-input-01" />
+                    <input className={pf('input')} type="text" id="text-input-03" />
                   </div>
                 </div>
               </div>
@@ -113,13 +113,13 @@ export default (
         </div>
 
         {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none')}>
+        <footer className={pf('docked-composer__footer shrink-none')}>
 
           <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <Button flavor="brand">Save</Button>
           </div>
 
-        </div>
+        </footer>
       </div>
 
     {/*</div>*/}

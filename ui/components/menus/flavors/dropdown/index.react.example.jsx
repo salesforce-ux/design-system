@@ -38,7 +38,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" iconFlavor="hint" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 
@@ -54,7 +54,7 @@ export let MenuList = props =>
 
 export let MenuItem = props =>
   <li className={className(pf('dropdown__item'), props.className)} aria-selected={props.ariaSelected}>
-    <a href="#void" role="menuitem">
+    <a href="javascript:void(0);" role="menuitem">
       <p className={pf('truncate')}>
         { props.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }
         {props.children}

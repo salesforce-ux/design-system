@@ -19,7 +19,7 @@ import forceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
 export default props =>
   <Sticky
-    className={pf('col size--1-of-1 large-size--1-of-6 large-order--2')}
+    className={pf('site-content__bleed size--1-of-1 large-size--1-of-6 large-order--2')}
     fixedElementsBelow="footer.site-contentinfo"
     fixedContentPadding={{
       top: forceBase.spacingLarge,

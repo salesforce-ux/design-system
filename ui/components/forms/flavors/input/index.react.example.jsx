@@ -75,6 +75,21 @@ let IconRight = props =>
     </FormElement>
   </Demo>;
 
+let IconLeftRight = props =>
+  <Demo>
+    <FormElement>
+      <FormElementLabel>Input Label</FormElementLabel>
+      <FormElementControl className={pf('input-has-icon input-has-icon--left-right')}>
+        <button className={pf('input__icon input__icon--right button button--icon')}>
+          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
+          <span className={pf('assistive-text')}>Clear</span>
+        </button>
+        <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
+        <Input />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
 let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
@@ -85,14 +100,14 @@ let Required = props =>
     </FormElement>
   </Demo>;
 
-let Error = props =>
+let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
-        <Input required />
+        <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -102,9 +117,9 @@ let ErrorIcon = props =>
       <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
         <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
-        <Input required />
+        <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -152,16 +167,6 @@ let ReadOnlyFixedText = props =>
     </FormElement>
   </Demo>;
 
-let Small = props =>
-  <Demo>
-    <FormElement>
-      <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl>
-        <Input className={pf('input input--small')} />
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
-
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -183,6 +188,11 @@ export let states = [
     element: <IconRight />
   },
   {
+    id: 'input-icon-left-right',
+    label: 'With icon to the left and right',
+    element: <IconLeftRight />
+  },
+  {
     id: 'input-required',
     label: 'Required',
     element: <Required />
@@ -190,12 +200,12 @@ export let states = [
   {
     id: 'input-error',
     label: 'Error',
-    element: <Error />
+    element: <ErrorState errorId="error-message" />
   },
   {
     id: 'input-error-icon',
     label: 'Error with icon',
-    element: <ErrorIcon />
+    element: <ErrorIcon errorId="error-message" />
   },
   {
     id: 'input-disabled',
@@ -216,10 +226,5 @@ export let states = [
     id: 'input-read-only-fixed-text',
     label: 'Read only With fixed text',
     element: <ReadOnlyFixedText />
-  },
-  {
-    id: 'input-small',
-    label: 'Small Input',
-    element: <Small />
   }
 ];

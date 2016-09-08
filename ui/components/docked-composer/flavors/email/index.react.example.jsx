@@ -12,7 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import MediaObject from 'ui/components/media-objects/index.react';
+import MediaObject from 'ui/utilities/media-objects/index.react';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -29,12 +30,12 @@ export default (
   <div className="demo-only">
     {/*<div className={pf('docked-container')}>*/}
 
-      <div className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+      <div role="dialog" aria-labelledby="dialog-heading-id" className={pf('docked-composer grid grid--vertical nowrap is-open')}>
 
         {/* Composer Header */}
-        <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+        <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
           <MediaObject figureLeft={headerIcon} flavor="center">
-            New Email
+            <h2 id="dialogheading-id">New Email</h2>
           </MediaObject>
           <div className={pf('docked-composer__actions')}>
             <ButtonIcon
@@ -53,7 +54,7 @@ export default (
               symbol="close"
               assistiveText="Close" />
           </div>
-        </div>
+        </header>
 
         {/* Composer Body */}
         <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap')}>
@@ -62,11 +63,12 @@ export default (
               <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
               <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
               <div className={pf('pill_container--bare show')}>
-                <a href="#void" className={pf('pill')}>
-                  <SvgIcon className={pf('icon icon-standard-account pill__icon')} sprite="standard" symbol="account" />
-                  <span className={pf('pill__label')}>Lei Chan</span>
-                  <ButtonIcon className={pf('pill__remove')} flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove Pill" />
-                </a>
+                <Pill label="Lei Chan">
+                  <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+                    <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+                    <span className={pf('assistive-text')}>Account</span>
+                  </span>
+                </Pill>
               </div>
             </div>
             <div className={pf('grid shrink-none p-horizontal--small')}>
@@ -158,7 +160,7 @@ export default (
         </div>
 
         {/* Composer Footer */}
-        <div className={pf('docked-composer__footer shrink-none')}>
+        <footer className={pf('docked-composer__footer shrink-none')}>
 
           <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
             <ButtonIcon
@@ -189,7 +191,7 @@ export default (
             <Button flavor="brand">Send</Button>
           </div>
 
-        </div>
+        </footer>
       </div>
 
     {/*</div>*/}

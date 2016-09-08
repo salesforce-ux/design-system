@@ -1,0 +1,149 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+@import
+
+  // Activity Timeline
+  'activity-timeline/flavors/base/index',
+
+  // Breadcrumbs
+  'breadcrumbs/flavors/base/index',
+
+  // Button Groups
+  'button-groups/flavors/base/index',
+
+  // Button
+  'buttons/flavors/base/index',
+  'buttons/flavors/stateful/index',
+  'buttons/flavors/icon/index',
+
+  // Icons
+  'icons/flavors/base/index',
+  'icons/flavors/icon-colors/index',
+  'icons/flavors/background-colors/index',
+  'icons/flavors/sizes/index',
+
+  // Card
+  'cards/flavors/base/index',
+
+  // Forms
+  'forms/flavors/input/index',
+  'forms/flavors/textarea/index',
+  'forms/flavors/radio/index',
+  'forms/flavors/radio-group-alternate/index',
+  'forms/flavors/checkbox/index',
+  'forms/flavors/checkbox-toggle/index',
+  'forms/flavors/select/index',
+  'forms/flavors/nds-chosen/index',
+  'forms/flavors/checkbox-alternate/index',
+  'forms/flavors/multi-select/index',
+  'forms/flavors/edit-dialog-for-touch/index',
+  'forms/flavors/form-element/index',
+  'forms/flavors/horizontal-form/index',
+  'forms/flavors/stacked-form/index',
+  'forms/flavors/inline-form/index',
+  'forms/flavors/compound-form/index',
+
+  // Tooltip
+  'tooltips/flavors/base/index',
+
+  // Page Headers
+  'page-headers/flavors/base/index',
+  'page-headers/flavors/record-home/index',
+
+  // Panels
+  'panels/flavors/detail/index',
+
+  // Popovers
+  'popovers/flavors/base/index',
+  'popovers/flavors/tooltips/index',
+  'popovers/flavors/panels/index',
+  'popovers/flavors/nubbins/index',
+
+  // Menus
+  'menus/flavors/dropdown/index',
+  'menus/flavors/picklist/index',
+  'menus/flavors/action-overflow/index',
+  'menus/flavors/action-overflow-for-touch/index',
+
+  // Datepicker
+  'datepickers/flavors/base/index',
+  'datepickers/flavors/time/index',
+
+  // Docked Composer
+  'docked-composer/flavors/base/index',
+  'docked-composer/flavors/email/index',
+  'docked-composer/flavors/task/index',
+
+  // Publishers
+  'publishers/flavors/discussion-feed/index',
+  'publishers/flavors/comment/index',
+
+  // Discussion Feed
+  'feeds/flavors/discussion-feed/index',
+  'feeds/flavors/comment/index',
+
+  // Modal
+  'modals/flavors/base/index',
+
+  // Pills
+  'pills/flavors/base/index',
+
+  // Process
+  'process/flavors/wizard/index',
+  'process/flavors/sales-path-coach/index',
+
+  // Sections
+  'nds-sections/flavors/base/index',
+
+  // Spinners
+  'spinners/flavors/small/index',
+  'spinners/flavors/medium/index',
+  'spinners/flavors/large/index',
+  'spinners/flavors/brand-small/index',
+  'spinners/flavors/inverse-small/index',
+  'spinners/flavors/nds-inline/index',
+
+  // Title
+  'tiles/flavors/base/index',
+  'tiles/flavors/board/index',
+
+  // Tabs
+  'tabs/flavors/default/index',
+  'tabs/flavors/scoped/index',
+
+  // Navigation
+  'navigation/flavors/vertical/index',
+  'navigation/flavors/context-bar/index',
+
+  // Notifications -- Toasts & Alerts
+  'notifications/index',
+  'notifications/flavors/alert/index',
+  'notifications/flavors/prompt/index',
+  'notifications/flavors/modal-toast/index',
+  'notifications/flavors/nds-inline-toast/index',
+
+  // Lookup
+  'lookups/index',
+
+  // Images
+  'images/flavors/avatar/index',
+
+  // Badges
+  'badges/flavors/base/index',
+
+  // Tables
+  'data-tables/index',
+  'data-tables/flavors/responsive/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

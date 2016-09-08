@@ -11,6 +11,10 @@ classes:
     description: Creates a circular avatar shape
     applied: <code>.{{cssPrefix}}avatar</code>
   -
+    class: avatar--empty
+    description: Creates a dashed outline around an empty avatar
+    applied: <code>.{{cssPrefix}}avatar</code>
+  -
     class: avatar--x-small
     description: Creates a 1.5rem&times;1.5rem icon
     applied: <code>.{{cssPrefix}}avatar</code>

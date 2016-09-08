@@ -4,7 +4,7 @@ classes:
     class: button-group
     description: Initializes a grouped set of buttons
     required: true
-    applied: <code>div</cod>
+    applied: <code>div</code>
     notes: Changes the rounding and borders of buttons within to look like a group
   -
     class: button--last
@@ -15,4 +15,5 @@ classes:
     class: toggle-visibility
     description: Identifies the last icon button when it should be hidden when `[disabled]`
     applied: <code>.{{cssPrefix}}button</code>
-    notes: Only required when you want the the icon button indicating there's more data to be hidden when inactive/disabled
+    deprecated: true
+    notes: No longer required since the icon button should simply appear disabled instead of being hidden

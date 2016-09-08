@@ -13,6 +13,7 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 
+import globals from 'app_modules/global';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
@@ -87,6 +88,7 @@ export default React.createClass({
     return (
       <div>
         {this.renderBanner()}
+
         <main className="site-main" role="main">
           {this.renderInternalBanner()}
           {this.renderAnchor()}
@@ -111,14 +113,27 @@ export default React.createClass({
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
-        <div className={pf('select_container col--bump-left align-middle')}>
-          <select
-            id="status-dropdown"
-            className={pf('select')}>
-            {options}
-          </select>
-        </div>
       </div>
+    );
+  },
+
+  renderSearch() {
+    if (!globals.displaySearch) return;
+    return (
+      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox">
+        <div role="search" className="searchbox__wrapper">
+          <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
+          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
+          <button type="submit" className="slds-assistive-text">
+            Submit your search query
+          </button>
+          <button type="reset" title="Clear the search query" className="searchbox__reset hide">
+            <svg role="img" aria-label="Reset">
+              <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+            </svg>
+          </button>
+        </div>
+      </form>
     );
   },
 
@@ -146,9 +161,13 @@ export default React.createClass({
 
   renderNav() {
     return (
-      <nav id="navigation" className="site-navigation" role="navigation">
-        {this.renderNavItems(this.state.navItems)}
-      </nav>
+      <div className={classNames('site-navigation', globals.displaySearch ? 'site-navigation--has-search' : '')}>
+        {this.renderSearch()}
+
+        <nav id="navigation" role="navigation" tabIndex="-1">
+          {this.renderNavItems(this.state.navItems)}
+        </nav>
+      </div>
     );
   },
 
@@ -190,7 +209,7 @@ export default React.createClass({
   renderLink(item) {
     let label = this.renderLinkLabel(item);
     let renderAnchor = (props, content = label) =>
-      <a href="#" {...props}>{content}</a>;
+      <a href="javascript:void(0);" {...props}>{content}</a>;
     if (_.every(['url', 'path', 'hash'], key => !item[key])) {
       return renderAnchor();
     }
@@ -231,7 +250,7 @@ export default React.createClass({
     const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
       <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
-        <p className={pf('col--padded size--1-of-1 shrink-none large-size--2-of-3')}>
+        <p className={pf('p-horizontal--x-large size--1-of-1 shrink-none large-size--2-of-3')}>
           Copyright &copy; 2015-2016 <span className={pf('site-name')}>Sales<i>f</i>orce. </span>
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
@@ -239,7 +258,7 @@ export default React.createClass({
             All rights reserved
           </CTALink>. {versionDateBuildString}
         </p>
-        <p className={pf('col--padded size--1-of-1 shrink-none large-size--1-of-3')}>
+        <p className={pf('p-horizontal--x-large text-align--right size--1-of-1 shrink-none large-size--1-of-3')}>
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
           <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
           <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>

@@ -1,3 +1,5 @@
 status: 'dev-ready'
 showFormFactors:
   - small
+compatibility:
+  s1: false

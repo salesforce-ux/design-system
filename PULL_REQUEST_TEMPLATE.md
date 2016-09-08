@@ -1,18 +1,14 @@
-Changes proposed in this PR:
-- ...
-- ...
-- ...
+Changes proposed in this pull request:
+- 
+- 
+- 
 
 ### Reviewer, please refer to this "definition of done" checklist:
 
-Please confirm the following before accepting this PR:
-- [ ] Any acceptance criteria have been met
-- [ ] Functionality has been manually tested in a testing app
-- [ ] Any necessary unit, regression and integration tests have been added or updated
-- [ ] All automated tests pass including accessibility
-- [ ] No linting or build errors
-- [ ] No high priority bugs are open
-- [ ] All documentation has been updated
-- [ ] Release notes have been updated
+- [ ] Tested on **desktop** (see [supported browsers](https://www.lightningdesignsystem.com/faq/#what-browsers-are-supported))
+- [ ] Tested on **mobile** (for responsive or mobile-specific features)
+- [ ] Documentation is up to date
+- [ ] Release notes mention the changes
 
-*After accepting, please remind developer to merge code into all appropriate development branches.*
+⚠️ Once this pull request is merged, please merge the code into other development branches:<br />
+[Merge branch 'summer-16' into winter-17](https://github.com/salesforce-ux/design-system-internal/compare/winter-17...summer-16?expand=1&title=Merge branch %27summer-16%27 into winter-17)

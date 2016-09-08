@@ -13,8 +13,7 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/components/media-objects/index.react';
-import Img from 'app_modules/ui/img';
+import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
 import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -30,17 +29,17 @@ let Demo = props =>
 
 const image = (
   <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="#void" title="Jenna Davis">
-      <Img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+    <a href="javascript:void(0);" title="Jenna Davis">
+      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
     </a>
   </div>
 );
 
 let Publisher = props =>
   <div className={className(pf('publisher publisher--discussion'), props.className)}>
-    <dl className={pf('list--horizontal m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('list__item text-body--small')}>To: </dt>
-      <dd className={pf('list__item')}>My Followers</dd>
+    <dl className={pf('dl--inline m-bottom--small publisher__toggle-visibility')}>
+      <dt className={pf('dl--inline__label text-body--small')}>To: </dt>
+      <dd className={pf('dl--inline__detail')}>My Followers</dd>
     </dl>
     <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
     <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />

@@ -1,0 +1,102 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}form-element {
+  position: relative;
+
+  // Deprecated, use .form-element__label instead
+  &__helper {
+    @include deprecate('4.0.0') {
+      font-size: $font-size-small;
+    }
+  }
+
+  // Form Element Label
+  &__label {
+    display: inline-block;
+    color: $color-text-label;
+    font-size: $font-size-small;
+    line-height: $line-height-text;
+    margin-right: $spacing-small;
+    margin-bottom: $spacing-xx-small;
+
+    &:empty {
+      margin: 0;
+    }
+  }
+
+  // Form Element Control
+  //
+  // Wrapper to any form display element
+  &__control {
+
+    // Force radios and checkboxes to be on own line when there
+    // are multiples in a group
+    .#{$css-prefix}radio,
+    .#{$css-prefix}checkbox {
+      display: block;
+    }
+  }
+
+  // Form Element Icon
+  //
+  // When an icon sits within a form element wrapper
+  // and adjacent to another element inside that wrapper such as a .form-element__label
+  // This should be used as the wrapper
+  &__icon {
+    display: inline-block;
+    position: relative; // Since this container can have a tooltip
+  }
+
+  // Inline Level Help Text
+  //
+  // Sits inside .form-element__control and below the element such
+  // as <input>
+  &__help {
+    font-size: $font-size-small;
+    margin-top: $spacing-x-small;
+    display: block;
+  }
+
+  // Read Only
+  &__static {
+    display: inline-block;
+    line-height: $line-height-button;
+    min-height: calc(#{$line-height-button} + 2px); // For IE
+
+    // If read only state is longform
+    // Apply text line height
+    &.#{$css-prefix}text-longform {
+      line-height: $line-height-text;
+    }
+  }
+}
+
+// Required Star
+.#{$css-prefix}required {
+  color: $color-text-error;
+  margin: 0 $spacing-xxx-small;
+}
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}input');
+  @include form-input-error('.#{$css-prefix}textarea');
+  @include form-input-error('.#{$css-prefix}select');
+
+  .#{$css-prefix}form-element__help {
+    color: $color-text-error;
+  }
+
+  .#{$css-prefix}input__icon {
+    fill: $color-text-error;
+  }
+}

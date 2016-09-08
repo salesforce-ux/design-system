@@ -16,68 +16,74 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 export const preview = (
 <div className="demo-only">
   <div className={pf('box theme--default m-bottom--x-small')}>
-    <p>This is a <strong>default</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>default</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--shade m-bottom--x-small')}>
-    <p>This is a <strong>shade</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>shade</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--inverse m-bottom--x-small')}>
-    <p>This is an <strong>inverse</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>inverse</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--alt-inverse m-bottom--x-small')}>
-    <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--info m-bottom--x-small')}>
-    <p>This is an <strong>info</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>info</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--success m-bottom--x-small')}>
-    <p>This is a <strong>success</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>success</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--warning m-bottom--x-small')}>
-    <p>This is a <strong>warning</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>warning</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--error m-bottom--x-small')}>
-    <p>This is a <strong>error</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>error</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--offline m-bottom--x-small')}>
-    <p>This is an <strong>offline</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>offline</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--shade theme--alert-texture m-bottom--medium')}>
-    <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
+    <p>This theme has the <strong>alert texture</strong> added to the shade theme and has a <a href="javascript:void(0);">link</a>.</p>
+  </div>
+  <div className={pf('box theme--default theme--alert-texture m-bottom--medium')}>
+    <p>This theme has the <strong>alert texture</strong> added to the default theme and has a <a href="javascript:void(0);">link</a>.</p>
   </div>
 </div>
 );
 export const code = (
 <div className="demo-only">
   <div className={pf('box theme--default')}>
-    <p>This is a <strong>default</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>default</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--shade')}>
-    <p>This is a <strong>shade</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>shade</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--inverse')}>
-    <p>This is an <strong>inverse</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>inverse</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--alt-inverse')}>
-    <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>alt-inverse</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--info')}>
-    <p>This is a <strong>info</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>info</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--success')}>
-    <p>This is a <strong>success</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>success</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--warning')}>
-    <p>This is a <strong>warning</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>warning</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--error')}>
-    <p>This is a <strong>error</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is a <strong>error</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box theme--offline')}>
-    <p>This is an <strong>offline</strong> theme and here is a <a href="#">link</a>.</p>
+    <p>This is an <strong>offline</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
   </div>
   <div className={pf('box box theme--shade theme--alert-texture')}>
-    <p>This theme has the <strong>alert texture</strong> theme added to the shade them and has a <a href="#">link</a>.</p>
+    <p>This theme has the <strong>alert texture</strong> added to the shade theme and has a <a href="javascript:void(0);">link</a>.</p>
+  </div>
+  <div className={pf('box theme--default theme--alert-texture')}>
+    <p>This theme has the <strong>alert texture</strong> added to the default theme and has a <a href="javascript:void(0);">link</a>.</p>
   </div>
 </div>
 );

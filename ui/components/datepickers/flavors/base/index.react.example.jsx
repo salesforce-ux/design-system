@@ -64,12 +64,12 @@ let Weekdays = props =>
   </tr>;
 
 let Week = props =>
-  <tr className={props.className}>
+  <tr {...props}>
     {props.children}
   </tr>;
 
 let Day = props =>
-  <td className={props.className} headers={props.day} role="gridcell" aria-disabled={props.ariaDisabled} aria-selected={props.ariaSelected}>
+  <td className={props.className} headers={props.dayHeaders} role="gridcell" aria-disabled={props.ariaDisabled} aria-selected={props.ariaSelected}>
     <span className={pf('day')}>{props.children}</span>
   </td>;
 
@@ -86,53 +86,53 @@ let Default = props =>
           <Weekdays />
         </thead>
         <tbody>
-          <Week>
-            <Day className={pf('disabled-text')} day="Sunday" ariaDisabled="true">31</Day>
-            <Day day="Monday" ariaDisabled="true">1</Day>
-            <Day day="Tuesday" ariaDisabled="true">2</Day>
-            <Day day="Wednesday" ariaDisabled="true">3</Day>
-            <Day day="Thursday" ariaDisabled="true">4</Day>
-            <Day day="Friday" ariaDisabled="true">5</Day>
-            <Day day="Saturday" ariaDisabled="true">6</Day>
+          <Week id="week1">
+            <Day className={pf('disabled-text')} dayHeaders="Sunday week1" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day dayHeaders="Monday week1" ariaSelected="false">1</Day>
+            <Day dayHeaders="Tuesday week1" ariaSelected="false">2</Day>
+            <Day dayHeaders="Wednesday week1" ariaSelected="false">3</Day>
+            <Day dayHeaders="Thursday week1" ariaSelected="false">4</Day>
+            <Day dayHeaders="Friday week1" ariaSelected="false">5</Day>
+            <Day dayHeaders="Saturday week1" ariaSelected="false">6</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaDisabled="true">7</Day>
-            <Day day="Monday" ariaDisabled="true">8</Day>
-            <Day day="Tuesday" ariaDisabled="true">9</Day>
-            <Day day="Wednesday" ariaDisabled="true">10</Day>
-            <Day day="Thursday" ariaDisabled="true">11</Day>
-            <Day day="Friday" ariaDisabled="true">12</Day>
-            <Day day="Saturday" ariaDisabled="true">13</Day>
+          <Week id="week2">
+            <Day dayHeaders="Sunday week2" ariaSelected="false">7</Day>
+            <Day dayHeaders="Monday week2" ariaSelected="false">8</Day>
+            <Day dayHeaders="Tuesday week2" ariaSelected="false">9</Day>
+            <Day dayHeaders="Wednesday week2" ariaSelected="false">10</Day>
+            <Day dayHeaders="Thursday week2" ariaSelected="false">11</Day>
+            <Day dayHeaders="Friday week2" ariaSelected="false">12</Day>
+            <Day dayHeaders="Saturday week2" ariaSelected="false">13</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaDisabled="true">14</Day>
-            <Day day="Monday" ariaDisabled="true">15</Day>
-            <Day day="Tuesday" ariaDisabled="true">16</Day>
-            <Day day="Wednesday" ariaDisabled="true">17</Day>
-            <Day className={pf('is-today')} day="Thursday" ariaDisabled="true">18</Day>
-            <Day day="Friday" ariaDisabled="true">19</Day>
-            <Day day="Saturday" ariaDisabled="true">20</Day>
+          <Week id="week3">
+            <Day dayHeaders="Sunday week3" ariaSelected="false">14</Day>
+            <Day dayHeaders="Monday week3" ariaSelected="false">15</Day>
+            <Day dayHeaders="Tuesday week3" ariaSelected="false">16</Day>
+            <Day dayHeaders="Wednesday week3" ariaSelected="false">17</Day>
+            <Day className={pf('is-today')} dayHeaders="Thursday week3" ariaSelected="false">18</Day>
+            <Day dayHeaders="Friday week3" ariaSelected="false">19</Day>
+            <Day dayHeaders="Saturday week3" ariaSelected="false">20</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaDisabled="true">21</Day>
-            <Day day="Monday" ariaDisabled="true">22</Day>
-            <Day day="Tuesday" ariaDisabled="true">23</Day>
-            <Day day="Wednesday" ariaDisabled="true">24</Day>
-            <Day day="Thursday" ariaDisabled="true">25</Day>
-            <Day day="Friday" ariaDisabled="true">26</Day>
-            <Day day="Saturday" ariaDisabled="true">27</Day>
+          <Week id="week4">
+            <Day dayHeaders="Sunday week4" ariaSelected="false">21</Day>
+            <Day dayHeaders="Monday week4" ariaSelected="false">22</Day>
+            <Day dayHeaders="Tuesday week4" ariaSelected="false">23</Day>
+            <Day dayHeaders="Wednesday week4" ariaSelected="false">24</Day>
+            <Day dayHeaders="Thursday week4" ariaSelected="false">25</Day>
+            <Day dayHeaders="Friday week4" ariaSelected="false">26</Day>
+            <Day dayHeaders="Saturday week4" ariaSelected="false">27</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaDisabled="true">28</Day>
-            <Day day="Monday" ariaDisabled="true">29</Day>
-            <Day day="Tuesday" ariaDisabled="true">30</Day>
-            <Day className={pf('disabled-text')} day="Wednesday" ariaDisabled="true">1</Day>
-            <Day className={pf('disabled-text')} day="Thursday" ariaDisabled="true">2</Day>
-            <Day className={pf('disabled-text')} day="Friday" ariaDisabled="true">3</Day>
-            <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
+          <Week id="week5">
+            <Day dayHeaders="Sunday week5" ariaSelected="false">28</Day>
+            <Day dayHeaders="Monday week5" ariaSelected="false">29</Day>
+            <Day dayHeaders="Tuesday week5" ariaSelected="false">30</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Wednesday week5" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Thursday week5" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Friday week5" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Saturday week5" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0)" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -148,53 +148,53 @@ let Selected = props =>
           <Weekdays />
         </thead>
         <tbody>
-          <Week>
-            <Day className={pf('disabled-text')} day="Sunday" ariaDisabled="true">31</Day>
-            <Day day="Monday" ariaSelected="false">1</Day>
-            <Day day="Tuesday" ariaSelected="false">2</Day>
-            <Day day="Wednesday" ariaSelected="false">3</Day>
-            <Day day="Thursday" ariaSelected="false">4</Day>
-            <Day day="Friday" ariaSelected="false">5</Day>
-            <Day day="Saturday" ariaSelected="false">6</Day>
+          <Week id="week11">
+            <Day className={pf('disabled-text')} dayHeaders="Sunday week11" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day dayHeaders="Monday week11" ariaSelected="false">1</Day>
+            <Day dayHeaders="Tuesday week11" ariaSelected="false">2</Day>
+            <Day dayHeaders="Wednesday week11" ariaSelected="false">3</Day>
+            <Day dayHeaders="Thursday week11" ariaSelected="false">4</Day>
+            <Day dayHeaders="Friday week11" ariaSelected="false">5</Day>
+            <Day dayHeaders="Saturday week11" ariaSelected="false">6</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">7</Day>
-            <Day day="Monday" ariaSelected="false">8</Day>
-            <Day day="Tuesday" ariaSelected="false">9</Day>
-            <Day day="Wednesday" ariaSelected="false">10</Day>
-            <Day day="Thursday" ariaSelected="false">11</Day>
-            <Day day="Friday" ariaSelected="false">12</Day>
-            <Day day="Saturday" ariaSelected="false">13</Day>
+          <Week id="week12">
+            <Day dayHeaders="Sunday week12" ariaSelected="false">7</Day>
+            <Day dayHeaders="Monday week12" ariaSelected="false">8</Day>
+            <Day dayHeaders="Tuesday week12" ariaSelected="false">9</Day>
+            <Day dayHeaders="Wednesday week12" ariaSelected="false">10</Day>
+            <Day dayHeaders="Thursday week12" ariaSelected="false">11</Day>
+            <Day dayHeaders="Friday week12" ariaSelected="false">12</Day>
+            <Day dayHeaders="Saturday week12" ariaSelected="false">13</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">14</Day>
-            <Day day="Monday" ariaSelected="false">15</Day>
-            <Day day="Tuesday" ariaSelected="false">16</Day>
-            <Day day="Wednesday" ariaSelected="false">17</Day>
-            <Day className={pf('is-today')} day="Thursday" ariaSelected="false">18</Day>
-            <Day day="Friday" ariaSelected="false">19</Day>
-            <Day day="Saturday" ariaSelected="false">20</Day>
+          <Week id="week13">
+            <Day dayHeaders="Sunday week13" ariaSelected="false">14</Day>
+            <Day dayHeaders="Monday week13" ariaSelected="false">15</Day>
+            <Day dayHeaders="Tuesday week13" ariaSelected="false">16</Day>
+            <Day dayHeaders="Wednesday week13" ariaSelected="false">17</Day>
+            <Day className={pf('is-today')} dayHeaders="Thursday week13" ariaSelected="false">18</Day>
+            <Day dayHeaders="Friday week13" ariaSelected="false">19</Day>
+            <Day dayHeaders="Saturday week13" ariaSelected="false">20</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">21</Day>
-            <Day day="Monday" ariaSelected="false">22</Day>
-            <Day className={pf('is-selected')} day="Tuesday" ariaSelected="true">23</Day>
-            <Day day="Wednesday" ariaSelected="false">24</Day>
-            <Day day="Thursday" ariaSelected="false">25</Day>
-            <Day day="Friday" ariaSelected="false">26</Day>
-            <Day day="Saturday" ariaSelected="false">27</Day>
+          <Week id="week14">
+            <Day dayHeaders="Sunday week14" ariaSelected="false">21</Day>
+            <Day dayHeaders="Monday week14" ariaSelected="false">22</Day>
+            <Day className={pf('is-selected')} dayHeaders="Tuesday week14" ariaSelected="true">23</Day>
+            <Day dayHeaders="Wednesday week14" ariaSelected="false">24</Day>
+            <Day dayHeaders="Thursday week14" ariaSelected="false">25</Day>
+            <Day dayHeaders="Friday week14" ariaSelected="false">26</Day>
+            <Day dayHeaders="Saturday week14" ariaSelected="false">27</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">28</Day>
-            <Day day="Monday" ariaSelected="false">29</Day>
-            <Day day="Tuesday" ariaSelected="false">30</Day>
-            <Day className={pf('disabled-text')} day="Wednesday" ariaDisabled="true">1</Day>
-            <Day className={pf('disabled-text')} day="Thursday" ariaDisabled="true">2</Day>
-            <Day className={pf('disabled-text')} day="Friday" ariaDisabled="true">3</Day>
-            <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
+          <Week id="week15">
+            <Day dayHeaders="Sunday week15" ariaSelected="false">28</Day>
+            <Day dayHeaders="Monday week15" ariaSelected="false">29</Day>
+            <Day dayHeaders="Tuesday week15" ariaSelected="false">30</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Wednesday week15" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Thursday week15" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Friday week15" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Saturday week15" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0)" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -210,53 +210,53 @@ let MultiSelected = props =>
           <Weekdays />
         </thead>
         <tbody>
-          <Week>
-            <Day className={pf('disabled-text')} day="Sunday" ariaDisabled="true">31</Day>
-            <Day day="Monday" ariaSelected="false">1</Day>
-            <Day day="Tuesday" ariaSelected="false">2</Day>
-            <Day day="Wednesday" ariaSelected="false">3</Day>
-            <Day day="Thursday" ariaSelected="false">4</Day>
-            <Day day="Friday" ariaSelected="false">5</Day>
-            <Day day="Saturday" ariaSelected="false">6</Day>
+          <Week id="week21">
+            <Day className={pf('disabled-text')} dayHeaders="Sunday week21" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day dayHeaders="Monday week21" ariaSelected="false">1</Day>
+            <Day dayHeaders="Tuesday week21" ariaSelected="false">2</Day>
+            <Day dayHeaders="Wednesday week21" ariaSelected="false">3</Day>
+            <Day dayHeaders="Thursday week21" ariaSelected="false">4</Day>
+            <Day dayHeaders="Friday week21" ariaSelected="false">5</Day>
+            <Day dayHeaders="Saturday week21" ariaSelected="false">6</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">7</Day>
-            <Day day="Monday" ariaSelected="false">8</Day>
-            <Day day="Tuesday" ariaSelected="false">9</Day>
-            <Day day="Wednesday" ariaSelected="false">10</Day>
-            <Day day="Thursday" ariaSelected="false">11</Day>
-            <Day day="Friday" ariaSelected="false">12</Day>
-            <Day day="Saturday" ariaSelected="false">13</Day>
+          <Week id="week22">
+            <Day dayHeaders="Sunday week22" ariaSelected="false">7</Day>
+            <Day dayHeaders="Monday week22" ariaSelected="false">8</Day>
+            <Day dayHeaders="Tuesday week22" ariaSelected="false">9</Day>
+            <Day dayHeaders="Wednesday week22" ariaSelected="false">10</Day>
+            <Day dayHeaders="Thursday week22" ariaSelected="false">11</Day>
+            <Day dayHeaders="Friday week22" ariaSelected="false">12</Day>
+            <Day dayHeaders="Saturday week22" ariaSelected="false">13</Day>
           </Week>
-          <Week>
-            <Day day="Sunday" ariaSelected="false">14</Day>
-            <Day day="Monday" ariaSelected="false">15</Day>
-            <Day day="Tuesday" ariaSelected="false">16</Day>
-            <Day day="Wednesday" ariaSelected="false">17</Day>
-            <Day className={pf('is-today')} day="Thursday" ariaSelected="false">18</Day>
-            <Day day="Friday" ariaSelected="false">19</Day>
-            <Day day="Saturday" ariaSelected="false">20</Day>
+          <Week id="week23">
+            <Day dayHeaders="Sunday week23" ariaSelected="false">14</Day>
+            <Day dayHeaders="Monday week23" ariaSelected="false">15</Day>
+            <Day dayHeaders="Tuesday week23" ariaSelected="false">16</Day>
+            <Day dayHeaders="Wednesday week23" ariaSelected="false">17</Day>
+            <Day className={pf('is-today')} dayHeaders="Thursday week23" ariaSelected="false">18</Day>
+            <Day dayHeaders="Friday week23" ariaSelected="false">19</Day>
+            <Day dayHeaders="Saturday week23" ariaSelected="false">20</Day>
           </Week>
-          <Week className={pf('has-multi-row-selection')}>
-            <Day day="Sunday" ariaSelected="false">21</Day>
-            <Day day="Monday" ariaSelected="false">22</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Tuesday" ariaSelected="true">23</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Wednesday" ariaSelected="true">24</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Thursday" ariaSelected="true">25</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Friday" ariaSelected="true">26</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Saturday" ariaSelected="true">27</Day>
+          <Week id="week24" className={pf('has-multi-row-selection')}>
+            <Day dayHeaders="Sunday week24" ariaSelected="false">21</Day>
+            <Day dayHeaders="Monday week24" ariaSelected="false">22</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Tuesday week24" ariaSelected="true">23</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Wednesday week24" ariaSelected="true">24</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Thursday week24" ariaSelected="true">25</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Friday week24" ariaSelected="true">26</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Saturday week24" ariaSelected="true">27</Day>
           </Week>
-          <Week className={pf('has-multi-row-selection')}>
-            <Day className={pf('is-selected is-selected-multi')} day="Sunday" ariaSelected="true">28</Day>
-            <Day className={pf('is-selected is-selected-multi')} day="Monday" ariaSelected="true">29</Day>
-            <Day day="Tuesday" ariaSelected="false">30</Day>
-            <Day className={pf('disabled-text')} day="Wednesday" ariaDisabled="true">1</Day>
-            <Day className={pf('disabled-text')} day="Thursday" ariaDisabled="true">2</Day>
-            <Day className={pf('disabled-text')} day="Friday" ariaDisabled="true">3</Day>
-            <Day className={pf('disabled-text')} day="Saturday" ariaDisabled="true">4</Day>
+          <Week id="week25" className={pf('has-multi-row-selection')}>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Sunday week25" ariaSelected="true">28</Day>
+            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Monday week25" ariaSelected="true">29</Day>
+            <Day dayHeaders="Tuesday week25" ariaSelected="false">30</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Wednesday week25" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Thursday week25" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Friday week25" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className={pf('disabled-text')} dayHeaders="Saturday week25" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0)" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
           </tr>
         </tbody>
       </table>

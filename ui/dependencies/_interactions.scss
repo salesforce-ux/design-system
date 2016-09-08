@@ -1,0 +1,106 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+@mixin focus-button {
+  outline: 0;
+  box-shadow: $shadow-button-focus;
+}
+
+@mixin focus-inverse {
+  outline: none;
+  box-shadow: $shadow-button-focus-inverse;
+}
+
+
+
+@mixin placeholder($color: $color-text-placeholder, $weight: $font-weight-regular, $size: $font-size-medium) {
+  @include deprecate('4.0.0', 'Use ::placeholder instead, and prefix the output using autoprefixer') {
+    // scss-lint:disable VendorPrefix
+
+    &::-webkit-input-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-size: $size;
+    }
+
+    &::-moz-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-size: $size;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-size: $size;
+    }
+  }
+}
+
+
+@mixin calendar-selection-fill {
+  content: '';
+  position: absolute;
+  background: $color-background-button-brand-hover;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: ($square-icon-medium-boundary + $spacing-x-small);
+  transform: translateX($spacing-x-small * -1);
+  z-index: -1;
+}
+
+
+
+@mixin tree-item-hover {
+  background: $color-background-row-hover;
+  cursor: pointer;
+}
+
+
+
+@mixin tree-item-selected {
+  background: $color-background-row-selected;
+  box-shadow: $color-background-button-brand 4px 0 0 inset;
+}
+
+
+
+@mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+
+    &:window-inactive {
+      opacity: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border-radius: $border-radius-large;
+    box-shadow: $track 0 0 0 $border-width-thin inset;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+}
+
+// Enable momentum scrolling in Mobile Safari (iOS)
+// Side effect: hides scrollbars for this browser
+//
+// Fixes a bug where some zones were not scrollable:
+// https://github.com/salesforce-ux/design-system/issues/81
+@mixin enable-ios-momentum-scrolling {
+  -webkit-overflow-scrolling: touch;
+}

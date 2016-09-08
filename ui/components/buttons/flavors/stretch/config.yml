@@ -1,5 +1,0 @@
-status: 'dev-ready'
-showFormFactors:
-  - small
-  - large
-showFormFactorsDefault: 'small'

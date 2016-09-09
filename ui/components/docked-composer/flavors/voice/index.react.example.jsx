@@ -10,63 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import Button from 'ui/components/buttons/index.react';
+import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
-
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-let Demo = props =>
-  <div className={pf('demo-only')} {...props} style={{ height: '500px' }}>
-    {props.children}
-  </div>;
-
-const DialingIcon = (
-  <span className={pf('icon_container icon-standard-call')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
-);
-
-const UserImage = (
-  <span className={pf('avatar avatar--medium')}>
-    <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
-  </span>
-);
-
-let DockedComposer = props =>
-  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
-    {props.children}
-  </div>;
-
-let ComposerHeader = props =>
-  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
-    <MediaObject figureLeft={DialingIcon} flavor="center">
-      <h2 id="dialog-heading-id" aria-live="polite" aria-atomic="true">{props.children}</h2>
-    </MediaObject>
-    <div className={pf('docked-composer__actions')}>
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
-    </div>
-  </header>;
-
-let ComposerBody = props =>
-  <div className={className(pf('docked-composer__body col grid grid--vertical nowrap'), props.className)}>
-    {props.children}
-  </div>;
-
-let ComposerFooter = props =>
-  <footer className={pf('docked-composer__footer shrink-none')}>
-    {props.children}
-  </footer>;
 
 ///////////////////////////////////////////
 // Export
@@ -77,44 +27,42 @@ export let states = [
     id: 'voice-composer-queued',
     label: 'Queued',
     element:
-      <Demo>
-        <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-          <ComposerHeader>Lei Chan - Connecting...</ComposerHeader>
-          <ComposerBody className={pf('slds-grid--align-center')}>
-            <div className={pf('text-align--center scrollable--y')}>
-              <span className={pf('avatar avatar--large')}>
-                <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
-              </span>
-              <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
-              </ul>
-              <p className={pf('text-heading--medium m-top--medium')}>
-                Connecting...
-              </p>
-            </div>
-          </ComposerBody>
-          <ComposerFooter>
-            <Button flavor="destructive" className={pf('size--1-of-1')}>End Call</Button>
-          </ComposerFooter>
-        </DockedComposer>
-      </Demo>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Connecting...">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
+            <span className={pf('avatar avatar--large')}>
+              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+            </span>
+            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
+              <li className={pf('item')}>VP of Sales</li>
+              <li className={pf('item ')}>Acme Corporation</li>
+            </ul>
+            <p className={pf('text-heading--medium m-top--medium')}>
+              Connecting...
+            </p>
+          </div>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--destructive size--1-of-1')}>End Call</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
     id: 'voice-composer-ringing',
     label: 'Ringing',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Dialing...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Dialing...">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
@@ -122,59 +70,62 @@ export let states = [
               Dialing...
             </p>
           </div>
-        </ComposerBody>
-        <ComposerFooter>
-          <Button flavor="destructive" className={pf('size--1-of-1')}>End Call</Button>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--destructive size--1-of-1')}>End Call</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-connected',
+    id: 'voice-composer-connected',
     label: 'Connected',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Call in Progress</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
-            <MediaObject figureLeft={UserImage}>
-              <p className={pf('text-heading--medium')}>Lei Chan</p>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
-              </ul>
-            </MediaObject>
-            <p className={pf('text-heading--large')}>5:37</p>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Call in Progress">
+        <DockedComposerPanelBody>
+          <div className={pf('docked-composer__lead')}>
+            <div className={pf('media')}>
+              <div className={pf('media__figure')}>
+                <span className={pf('avatar avatar--medium')}>
+                  <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+                </span>
+              </div>
+              <div className={pf('media__body')}>
+                <p className={pf('text-heading--medium')}>Lei Chan</p>
+                <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
+                  <li className={pf('item')}>VP of Sales</li>
+                  <li className={pf('item ')}>Acme Corporation</li>
+                </ul>
+              </div>
+            </div>
+            <p className={pf('col--bump-left text-heading--large')}>5:37</p>
           </div>
-          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
+          <div className={pf('docked-composer__toolbar')}>
             <ButtonIcon className={pf('button--icon-border-filled button--icon-small')} symbol="unmuted" assistiveText="Mute Yourself" />
           </div>
           <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
           <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('float--right')}>
-            <Button flavor="destructive">End Call</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--destructive col--bump-left')}>End Call</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-cancelled',
+    id: 'voice-composer-cancelled',
     label: 'Cancelled',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Cancelling...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Cancelling...">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
@@ -182,24 +133,23 @@ export let states = [
               Cancelling...
             </p>
           </div>
-        </ComposerBody>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-busy',
+    id: 'voice-composer-busy',
     label: 'Busy',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Busy</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Busy">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
@@ -207,30 +157,27 @@ export let states = [
               Busy
             </p>
           </div>
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--neutral size--1-of-2')}>Follow-Up Later</Button>
+          <Button className={pf('button--brand size--1-of-2')}>Call Again</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-failed',
-    label: 'Failed',
+    id: 'voice-composer-failed',
+    label: 'Call Failed',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Call Failed</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Call Failed">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
@@ -238,30 +185,27 @@ export let states = [
               Call Failed
             </p>
           </div>
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Edit Phone Number</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--neutral size--1-of-2')}>Edit Phone Number</Button>
+          <Button className={pf('button--brand size--1-of-2')}>Call Again</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-missed',
+    id: 'voice-composer-no-answer',
     label: 'No Answer',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - No Answer">
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
@@ -269,116 +213,113 @@ export let states = [
               No Answer
             </p>
           </div>
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--neutral size--1-of-2')}>Follow Up Later</Button>
+          <Button className={pf('button--brand size--1-of-2')}>Call Again</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-finished',
-    label: 'Finished',
+    id: 'voice-composer-call-finished',
+    label: 'Call Finished',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Call Finished</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
-            <MediaObject figureLeft={UserImage}>
-              <p className={pf('text-heading--medium')}>Lei Chan</p>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
-              </ul>
-            </MediaObject>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Call Finished">
+        <DockedComposerPanelBody>
+          <div className={pf('docked-composer__lead')}>
+            <div className={pf('media')}>
+              <div className={pf('media__figure')}>
+                <span className={pf('avatar avatar--medium')}>
+                  <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+                </span>
+              </div>
+              <div className={pf('media__body')}>
+                <p className={pf('text-heading--medium')}>Lei Chan</p>
+                <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
+                  <li className={pf('item')}>VP of Sales</li>
+                  <li className={pf('item ')}>Acme Corporation</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
+          <div className={pf('docked-composer__toolbar')}>
             <ButtonIcon className={pf('button--icon-border-filled button--icon-small')} symbol="unmuted" assistiveText="Mute Yourself" />
           </div>
           <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
           <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('float--right')}>
-            <Button flavor="brand">Finished Notes</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--brand col--bump-left')}>Finish Notes</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-incoming-call',
-    label: 'Incoming Call',
+    id: 'voice-composer-call-incoming',
+    label: 'Call Incoming',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan - Incoming Call...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Incoming Call...">
+        <DockedComposerPanelBody className={pf('align--absolute-center size--1-of-1')}>
+          <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
             <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
+            <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
               <li className={pf('item')}>VP of Sales</li>
               <li className={pf('item ')}>Acme Corporation</li>
             </ul>
             <p className={pf('text-heading--medium m-top--medium')}>
               (416) 555-1234
             </p>
-            <div className={pf('p-horizontal--x-small text-align--left')}>
-              <p className={pf('m-bottom--x-small')}>Recent Activity</p>
-              <ul className={pf('has-dividers--around-space')}>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-task m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
-                  </span>
-                  Discussed New Pricing Models
-                  <span className={pf('col--bump-left')}>Yesterday</span>
-                </li>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
-                  </span>
-                  Re: Updated Proposals
-                  <span className={pf('col--bump-left')}>4 Hours Ago</span>
-                </li>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-note m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
-                  </span>
-                  Discuss Slides for Nov EBC
-                  <span className={pf('col--bump-left')}>2 Days Ago</span>
-                </li>
-              </ul>
-            </div>
           </div>
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Dismiss</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Answer</Button>
+          <div className={pf('p-horizontal--x-small text-align--left size--1-of-1')}>
+            <p className={pf('m-bottom--x-small')}>Recent Activity</p>
+            <ul className={pf('has-dividers--around-space')}>
+              <li className={pf('item theme--shade grid')}>
+                <span className={pf('icon_container icon-standard-task m-right--x-small')}>
+                  <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
+                  <span className={pf('assistive-text')}>Task Icon</span>
+                </span>
+                Discussed New Pricing Models
+                <span className={pf('col--bump-left')}>Yesterday</span>
+              </li>
+              <li className={pf('item theme--shade grid')}>
+                <span className={pf('icon_container icon-standard-email m-right--x-small')}>
+                  <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
+                  <span className={pf('assistive-text')}>Task Icon</span>
+                </span>
+                Re: Updated Proposals
+                <span className={pf('col--bump-left')}>4 Hours Ago</span>
+              </li>
+              <li className={pf('item theme--shade grid')}>
+                <span className={pf('icon_container icon-standard-note m-right--x-small')}>
+                  <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
+                  <span className={pf('assistive-text')}>Task Icon</span>
+                </span>
+                Discuss Slides for Nov EBC
+                <span className={pf('col--bump-left')}>2 Days Ago</span>
+              </li>
+            </ul>
           </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--brand col--bump-left')}>Finish Notes</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   },
   {
-    id: 'single-composer-log-call',
+    id: 'voice-composer-call-logged',
     label: 'Log a Call',
     element:
-    <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-        <ComposerHeader>Lei Chan</ComposerHeader>
-        <ComposerBody className={pf('docked-composer__body--form')}>
-          <fieldset className={pf('form--compound scrollable--y')}>
+    <div className="demo-only" style={{ height: '500px' }}>
+      <DockedComposerPanel className={pf('is-open')} header="Lei Chan">
+        <DockedComposerPanelBody className={pf('docked-composer__body--form')}>
+          <fieldset className={pf('form--compound')}>
             <legend className={pf('assistive-text')}>Log a call</legend>
             <div className={pf('form-element__group')}>
               <div className={pf('form-element__row')}>
@@ -403,13 +344,11 @@ export let states = [
               </div>
             </div>
           </fieldset>
-        </ComposerBody>
-        <ComposerFooter>
-          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
-            <Button flavor="brand">Save</Button>
-          </div>
-        </ComposerFooter>
-      </DockedComposer>
-    </Demo>
+        </DockedComposerPanelBody>
+        <DockedComposerPanelFooter>
+          <Button className={pf('button--brand col--bump-left')}>Save</Button>
+        </DockedComposerPanelFooter>
+      </DockedComposerPanel>
+    </div>
   }
 ];

@@ -10,113 +10,93 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
-import Button from 'ui/components/buttons/index.react';
+import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
+
+const composers = [{
+  'entity': 'email',
+  'title': 'Agenda for next week'
+}, {
+  'entity': 'call',
+  'title': 'Lei Chan'
+}, {
+  'entity': 'task',
+  'title': 'August 14 Meeting Notes'
+}];
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props} style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
-    {props.children}
-  </div>;
-
-const dialingIcon = (
-  <span className={pf('icon_container icon-standard-call')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
-  </span>
-);
-
-let DockedComposer = props =>
-  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
-    {props.children}
-  </div>;
-
-let ComposerHeader = props =>
-  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
-    <MediaObject figureLeft={dialingIcon} flavor="center">
-      <h2 id="dialog-heading-id">Header</h2>
-    </MediaObject>
-    <div className={pf('docked-composer__actions')}>
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
+export let DockedComposerPanel = props =>
+  <div className={className(pf('docked-composer grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <div className={pf('docked-composer__header grid shrink-none')}>
+      <div className={pf('media media--center')}>
+        <div className={pf('media__figure m-right--x-small')}>
+          <span className={pf('icon_container')}>
+            <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol={ props.headerSymbol || 'call' } />
+          </span>
+        </div>
+        <div className={pf('media__body')}>
+          <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
+        </div>
+      </div>
+      <div className={pf('col--bump-left')}>
+        <ButtonIcon
+          className={pf('button--icon')}
+          symbol="minimize_window"
+          assistiveText="Minimize Composer Panel" />
+        <ButtonIcon
+          className={pf('button--icon')}
+          symbol="expand_alt"
+          assistiveText="Expand Composer Panel" />
+        <ButtonIcon
+          className={pf('button--icon')}
+          symbol="close"
+          assistiveText="Close Composer Panel" />
+      </div>
     </div>
-  </header>;
-
-let ComposerBody = props =>
-  <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
-    {props.children}
+    { props.children }
   </div>;
 
-let ComposerFooter = props =>
-  <footer className={pf('docked-composer__footer shrink-none')}>
-    <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
-      <Button flavor="brand">Action</Button>
-    </div>
+export let DockedComposerPanelBody = props =>
+  <div className={className(pf('docked-composer__body'), props.className)}>
+    { !props.children ? <div className={pf('align--absolute-center')}>Docked Composer Panel Body</div> : props.children }
+  </div>;
+
+export let DockedComposerPanelFooter = props =>
+  <footer className={className(pf('docked-composer__footer shrink-none'), props.className)}>
+    { !props.children
+    ? <div className={pf('col--bump-left text-align--right')}>
+        <Button className={pf('button--brand')}>Action</Button>
+      </div>
+    : props.children }
   </footer>;
 
 let ComposerOverflowMenu = props =>
   <div className={pf('docked-composer docked-composer--overflow')}>
-    <button className={pf('docked-composer--overflow__pill theme--alt-inverse')} aria-haspopup="true">
-      <span className={pf('align-middle')}>
-        <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
-        <span className={pf('assistive-text')}>View other docked windows</span>
-      </span>
-      <span className={pf('text-body--small align-middle')}>99 +</span>
+    <button className={pf('button button--icon docked-composer--overflow__button')} aria-haspopup="true">
+      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="standard_objects" />
+      <span className={pf('text-body--small m-left--xx-small')}>3 <span className={pf('assistive-text')}>other docked composer panels</span></span>
     </button>
+
     <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
-      <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-            <span className={pf('assistive-text')}>Email Icon</span>
-          </span>
-          Agenda for next week
-        </Menu.Item>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
-          </span>
-          Lei Chan
-        </Menu.Item>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-task m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
-            <span className={pf('assistive-text')}>Task Icon</span>
-          </span>
-          August 14 Meeting Notes
-        </Menu.Item>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-            <span className={pf('assistive-text')}>Email Icon</span>
-          </span>
-          New Email
-        </Menu.Item>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
-          </span>
-          Janet Fitzpatrick
-        </Menu.Item>
-        <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
-          </span>
-          Call with Adam Fraser
-        </Menu.Item>
-      </Menu.List>
+      <MenuList className={pf('dropdown--length-with-icon-7')}>
+        { _.times(composers.length, i =>
+          <MenuItem key={ i }>
+            <span className={pf('icon_container icon-standard-' + composers[i].entity + ' m-right--x-small')}>
+              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol={ composers[i].entity } />
+              <span className={pf('assistive-text')}>{ composers[i].entity } Icon</span>
+            </span>
+            { composers[i].title }
+          </MenuItem>
+        )}
+      </MenuList>
     </Menu>
   </div>;
 
@@ -138,58 +118,54 @@ export let states = [
     id: 'single-composer-open',
     label: 'Open',
     element:
-      <Demo>
-        <div className={pf('docked_container')}>
-          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-            <ComposerHeader />
-            <ComposerBody />
-            <ComposerFooter />
-          </DockedComposer>
-        </div>
-      </Demo>
+    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+      <div className={pf('docked_container')}>
+        <DockedComposerPanel className={pf('is-open')}>
+          <DockedComposerPanelBody />
+          <DockedComposerPanelFooter />
+        </DockedComposerPanel>
+      </div>
+    </div>
   },
   {
     id: 'single-composer-closed',
     label: 'Closed',
     element:
-      <Demo>
-        <div className={pf('docked_container')}>
-          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id">
-            <ComposerHeader />
-            <ComposerBody />
-            <ComposerFooter />
-          </DockedComposer>
-        </div>
-      </Demo>
+    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+      <div className={pf('docked_container')}>
+        <DockedComposerPanel>
+          <DockedComposerPanelBody />
+          <DockedComposerPanelFooter />
+        </DockedComposerPanel>
+      </div>
+    </div>
   },
   {
-    id: 'single-composer-popout',
+    id: 'single-composer-popput',
     label: 'Popout',
     element:
-      <Demo>
-        <Modal>
-          <DockedComposer>
-            <ComposerHeader />
-            <ComposerBody />
-            <ComposerFooter />
-          </DockedComposer>
-        </Modal>
-        <div className={pf('backdrop backdrop--open')}></div>
-      </Demo>
+    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+      <Modal>
+        <DockedComposerPanel>
+          <DockedComposerPanelBody />
+          <DockedComposerPanelFooter />
+        </DockedComposerPanel>
+      </Modal>
+      <div className={pf('backdrop backdrop--open')}></div>
+    </div>
   },
   {
     id: 'multiple-composer-overflow',
-    label: 'Composers with Overflow Menu',
+    label: 'With Overflow Menu',
     element:
-      <Demo>
-        <div className={pf('docked_container')}>
-          <ComposerOverflowMenu />
-          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
-            <ComposerHeader />
-            <ComposerBody />
-            <ComposerFooter />
-          </DockedComposer>
-        </div>
-      </Demo>
+    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+      <div className={pf('docked_container')}>
+        <ComposerOverflowMenu />
+        <DockedComposerPanel className={pf('is-open')}>
+          <DockedComposerPanelBody />
+          <DockedComposerPanelFooter />
+        </DockedComposerPanel>
+      </div>
+    </div>
   }
 ];

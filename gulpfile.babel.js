@@ -143,7 +143,7 @@ const siteMiddleware = (req, res, next) => {
       const log = SLDSLog();
       for (const category of ui) {
         for (const component of category.components) {
-          const pattern = new RegExp(_.escapeRegExp(pathToURL(component.path)));
+          const pattern = new RegExp(_.escapeRegExp(pathToURL(component.sitePath)));
           if (pattern.test(url)) {
             return generateComponentPages([component], err => {
               if (err) console.log(err.stack);

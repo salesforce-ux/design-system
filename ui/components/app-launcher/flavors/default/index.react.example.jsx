@@ -47,37 +47,37 @@ let AppLauncherModal = props =>
         </div>
         <div className={pf('section__content')}>
           <ul className={pf('grid grid--pull-padded wrap')}>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')} draggable>
                 <span className={pf('text-link')}>Sales Cloud</span>
                 <p>The primary internal Salesforce org. Used to run our...<span className={pf('text-link')}>More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="MC" figureClass={pf('icon-custom-59')} draggable>
                 <span className={pf('text-link')}>Marketing Cloud</span>
                 <p>Salesforce Marketing Cloud lets businesses of any size...<span className={pf('text-link')}>More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')} draggable>
                 <span className={pf('text-link')}>HR Concierge</span>
                 <p>Community for managing employee benefits and time off.</p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="MM" figureClass={pf('icon-custom-6')} draggable>
                 <span className={pf('text-link')}>My Money</span>
                 <p>Manage your finances across multiple financial platforms...<span className={pf('text-link')}>More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="CC" figureClass={pf('icon-custom-91')} draggable>
                 <span className={pf('text-link')}>Call Center</span>
                 <p>The key to call center and contact center management is more...<span className={pf('text-link')}>More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('col--padded grow-none size--1-of-1 medium-size--1-of-3')}>
+            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
               <AppLauncherTile objectInitials="CS" figureClass={pf('icon-custom-50')} draggable>
                 <span className={pf('text-link')}>Customer Support Communitiy</span>
                 <p>Areas of Focus are used to track customer support for your...<span className={pf('text-link')}>More</span></p>
@@ -97,37 +97,37 @@ let AppLauncherModal = props =>
         </div>
         <div className={pf('section__content')}>
         <ul className={pf('grid grid--pull-padded wrap')}>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="account">
               <p className={pf('truncate text-link')}>Accounts</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="announcement">
               <p className={pf('truncate text-link')}>Announcements</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="approval">
               <p className={pf('truncate text-link')}>Approvals</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="campaign">
               <p className={pf('truncate text-link')}>Campaigns</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="case">
               <p className={pf('truncate text-link')}>Cases</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="coaching">
               <p className={pf('truncate text-link')}>Coaching</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('col--padded grow-none size--xx-small')}>
+          <li className={pf('p-horizontal--small size--xx-small')}>
             <AppLauncherTile flavor="small" symbol="contact">
               <p className={pf('truncate text-link')}>Contacts</p>
             </AppLauncherTile>

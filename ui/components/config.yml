@@ -19,7 +19,6 @@ components:
   - global-navigation
   - icons
   - images
-  - list-builder
   - lookups
   - menus
   - modals

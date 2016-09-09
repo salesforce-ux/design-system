@@ -34,7 +34,7 @@ export default React.createClass({
         <Anchor
           title={component.title}
           actions={this.renderComponentOverviewLink()}
-          path={`/${component.path}`} />
+          path={`/${component.sitePath}`} />
         <div className={pf('site-content grid wrap large-nowrap')}>
           {this.renderFlavorsNav()}
           <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>
@@ -90,6 +90,7 @@ export default React.createClass({
           <h3 className="site-text-heading--label docsearch-ignore">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
+            <li className={pf('has-divider--top p-top--xx-small')}><a className={pf('text-title--caps')} href="#overview">Documentation</a></li>
           </ul>
         </div>
       </StickyNav>

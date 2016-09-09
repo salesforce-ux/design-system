@@ -8,4 +8,4 @@ Stateful icons can be toggled on and off and retain their state. Like stateful b
 
 <h4 class="site-text-heading--label">Accessibility</h4>
 
-For accessibility, include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `&lt;span&gt;` inside the button will be spoken whenever it changes.
+For accessibility, include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.

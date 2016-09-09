@@ -11,7 +11,7 @@
   display: flex;
   height: $height-context-bar;
   background-color: $color-background-context-bar;
-  border-top: $border-width-thin solid $color-border-context-bar-item;
+  border-top: $border-width-thin solid $color-border;
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
@@ -37,7 +37,7 @@
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border-context-bar-item;
+    border-left: $border-width-thin solid $color-border;
   }
 
   // Any item on the horizontal axis of the context nav bar
@@ -77,21 +77,20 @@
     }
 
     &.#{$css-prefix}is-active {
-      border-left: $border-width-thin solid $color-border-context-bar-item;
-      border-right: $border-width-thin solid $color-border-context-bar-item;
+      border-left: $border-width-thin solid $color-border;
+      border-right: $border-width-thin solid $color-border;
       border-bottom-color: $color-background-context-bar-item-hover;
 
       &:before,
       &:after {
         content: '';
-        width: 100%;
         height: 3px;
         display: block;
         background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
+        left: -1px;
+        right: -1px;
       }
 
       &:after {
@@ -120,11 +119,11 @@
     }
 
     &--divider-left {
-      border-left: $border-width-thin solid $color-border-context-bar-item;
+      border-left: $border-width-thin solid $color-border;
     }
 
     &--divider-right {
-      border-right: $border-width-thin solid $color-border-context-bar-item;
+      border-right: $border-width-thin solid $color-border;
     }
   }
 
@@ -218,7 +217,7 @@
   // Tab context bar items
   &__item--tab {
     width: $size-x-small;
-    border-right: $border-width-thin solid $color-border-context-bar-item;
+    border-right: $border-width-thin solid $color-border;
 
     // Handle active states
     &.#{$css-prefix}is-active,
@@ -293,8 +292,8 @@
 .#{$css-prefix}context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
-  border-left: $border-width-thin solid $color-border-context-bar-item;
-  border-right: $border-width-thin solid $color-border-context-bar-item;
+  border-left: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid $color-border;
 }
 
 

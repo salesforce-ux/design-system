@@ -34,14 +34,14 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Context Tab
 let ContextTab = props =>
-  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null, props.itemUnsaved ? pf('is-unsaved') : null)} role="presentation">
+  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null, props.itemUnsaved ? pf('is-unsaved') : null, props.pinned ? pf('is-pinned') : null)} role="presentation">
     <a href="javascript:void(0);" className={pf('context-bar__label-action')} role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' }>
       { props.itemUnsaved ? <abbr className={pf('unsaved-indicator')} title="Tab Not Saved">*</abbr> : null }
       <div className={pf('icon_container')}>
         <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
         <span className={pf('assistive-text')}>Case</span>
       </div>
-      <span className={pf('truncate toggle-visibility--pinned')} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
+      <span className={className(pf('truncate toggle-visibility--pinned'), props.pinned ? pf('assistive-text') : null)} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
     <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click p-left--none p-right--none'), props.actionOverflow == 'true' ? pf('is-open') : null)}>
       <ButtonIcon
@@ -58,12 +58,12 @@ let ContextTab = props =>
         </MenuList>
       </Menu>
     </div>
-    <div className={pf('context-bar__icon-action col--bump-left p-left--none toggle-visibility--pinned')}>
+    <div className={className(pf('context-bar__icon-action col--bump-left p-left--none'), props.pinned ? pf('assistive-text') : null)}>
       <ButtonIcon
         className={pf('button--icon-container button--icon-x-small')}
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="close"
-        assistiveText="Close Tab" />
+        assistiveText={ 'Close ' + props.title } />
     </div>
   </li>;
 
@@ -198,7 +198,7 @@ export let states = [
     label: 'Pinned Tab',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" className={pf('is-pinned')} />
+        <ContextTab title="Home" pinned />
         <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -208,7 +208,7 @@ export let states = [
     label: 'Pinned Tab - Active',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" className={pf('is-pinned')} itemActive />
+        <ContextTab title="Home" pinned itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -218,8 +218,18 @@ export let states = [
     label: 'Pinned Tab - Active Focus',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" className={pf('is-pinned has-focus')} itemActive />
+        <ContextTab title="Home" className={pf('has-focus')} pinned itemActive />
         <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2" />
+      </ContextTabBar>
+  },
+  {
+    id: 'unsaved-pinned-tab',
+    label: 'Unsaved Pinned Tab',
+    element:
+      <ContextTabBar>
+        <ContextTab title="Home" pinned itemUnsaved />
+        <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
   },
@@ -241,9 +251,9 @@ export let states = [
         <ContextTab title="Home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
-        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')} aria-haspopup="true">
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items">
-            <span className={pf('p-left--xx-small truncate')}>More</span>
+        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
+          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items" aria-haspopup="true">
+            <span className={pf('p-left--xx-small truncate')}>More <span className={pf('assistive-text')}>Tabs</span></span>
             <span className={pf('icon_container m-left--x-small')}>
               <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
             </span>
@@ -262,7 +272,7 @@ export let states = [
           <ContextTab title="Tab Item 2" />
           <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open')}>
             <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items" aria-haspopup="true">
-              <span className={pf('p-left--xx-small truncate')}>More</span>
+              <span className={pf('p-left--xx-small truncate')}>More <span className={pf('assistive-text')}>Tabs</span></span>
               <span className={pf('icon_container m-left--x-small')}>
                 <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
               </span>
@@ -294,7 +304,7 @@ export let states = [
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-unsaved')}>
           <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items"  aria-haspopup="true">
             <abbr className={pf('unsaved-indicator')} title="Tab(s) within menu not saved">*</abbr>
-            <span className={pf('p-left--xx-small truncate')}>More</span>
+            <span className={pf('p-left--xx-small truncate')}>More <span className={pf('assistive-text')}>Tabs</span></span>
             <span className={pf('icon_container m-left--x-small')}>
               <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
             </span>
@@ -314,7 +324,7 @@ export let states = [
           <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open is-unsaved')}>
             <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="More Tab Items" aria-haspopup="true">
               <abbr className={pf('unsaved-indicator')} title="Tab(s) within menu not saved">*</abbr>
-              <span className={pf('p-left--xx-small truncate')}>More</span>
+              <span className={pf('p-left--xx-small truncate')}>More <span className={pf('assistive-text')}>Tabs</span></span>
               <span className={pf('icon_container m-left--x-small')}>
                 <SvgIcon className={pf('icon icon--xx-small icon-text-default')} sprite="utility" symbol="chevrondown" />
               </span>
@@ -351,7 +361,7 @@ export let states = [
     label: 'Object Switcher - Open',
     element:
       <div className="demo-only" style={{height: '11rem'}}>
-        <ContextTabBar objectSwitchClassName={pf('is-active is-open')}>
+        <ContextTabBar objectSwitchClassName={pf('is-open')}>
           <ContextTab title="Home" />
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2"  />

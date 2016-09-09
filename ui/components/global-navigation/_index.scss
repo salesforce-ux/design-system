@@ -239,8 +239,8 @@
       width: auto;
       padding-right: $spacing-x-small;
 
-      .#{$css-prefix}toggle-visibility--pinned {
-        display: none;
+      .#{$css-prefix}context-bar__label-action {
+        padding: 0 $spacing-x-small;
       }
     }
   }

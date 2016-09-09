@@ -87,11 +87,6 @@ classes:
     notes: Only use on tabset version
     required: true
   -
-    class: toggle-visibility--pinned
-    description: Apply on elements to hide when <code>.{{cssPrefix}}is-pinned</code> is applied to the parent tab item
-    applied: Any element inside of <code>.{{cssPrefix}}context-bar__item</code>
-    required: true
-  -
     class: is-unsaved
     description: Handles the "dirty" state of a tab, applies visual indication on the tab to inform user something on their page hasn't been saved
     applied: <code>.{{cssPrefix}}context-bar__item</code>

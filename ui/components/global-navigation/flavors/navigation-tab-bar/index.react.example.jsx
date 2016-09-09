@@ -15,6 +15,7 @@ import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/i
 import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 {/*
@@ -37,9 +38,9 @@ let ContextTab = props =>
   <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null, props.itemUnsaved ? pf('is-unsaved') : null, props.pinned ? pf('is-pinned') : null)} role="presentation">
     <a href="javascript:void(0);" className={pf('context-bar__label-action')} role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' }>
       { props.itemUnsaved ? <abbr className={pf('unsaved-indicator')} title="Tab Not Saved">*</abbr> : null }
-      <div className={pf('icon_container')}>
-        <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
-        <span className={pf('assistive-text')}>Case</span>
+      <div className={pf('icon_container')} title={ _.startCase(props.symbol) || 'Case' }>
+        <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol={ props.symbol || 'case' } />
+        <span className={pf('assistive-text')}>{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
       <span className={className(pf('truncate toggle-visibility--pinned'), props.pinned ? pf('assistive-text') : null)} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
@@ -49,7 +50,7 @@ let ContextTab = props =>
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="chevrondown"
         aria-haspopup="true"
-        assistiveText="Open tab actions menu" />
+        assistiveText={ 'Actions for ' + props.title } />
       <Menu className={pf('dropdown--right')}>
         <MenuList>
           <MenuItem>Refresh Tab</MenuItem>
@@ -156,7 +157,7 @@ export let states = [
     label: 'Default',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" itemActive />
+        <ContextTab title="Home" symbol="home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
@@ -166,7 +167,7 @@ export let states = [
     label: 'Tab - Active',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" />
+        <ContextTab title="Home" symbol="home" />
         <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
@@ -176,7 +177,7 @@ export let states = [
     label: 'Tab - Active Focus',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" />
+        <ContextTab title="Home" symbol="home" />
         <ContextTab title="Tab Item 1" className={pf('has-focus')} itemActive />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
@@ -187,7 +188,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '10rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" />
+          <ContextTab title="Home" symbol="home" />
           <ContextTab title="Tab Item 1" itemActive actionOverflow="true" />
           <ContextTab title="Tab Item 2" />
         </ContextTabBar>
@@ -198,7 +199,7 @@ export let states = [
     label: 'Pinned Tab',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" pinned />
+        <ContextTab title="Home" symbol="home" pinned />
         <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -208,7 +209,7 @@ export let states = [
     label: 'Pinned Tab - Active',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" pinned itemActive />
+        <ContextTab title="Home" symbol="home" pinned itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -218,7 +219,7 @@ export let states = [
     label: 'Pinned Tab - Active Focus',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" className={pf('has-focus')} pinned itemActive />
+        <ContextTab title="Home" symbol="home" className={pf('has-focus')} pinned itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -228,7 +229,7 @@ export let states = [
     label: 'Unsaved Pinned Tab',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" pinned itemUnsaved />
+        <ContextTab title="Home" symbol="home" pinned itemUnsaved />
         <ContextTab title="Tab Item 1" itemActive />
         <ContextTab title="Tab Item 2" />
       </ContextTabBar>
@@ -238,7 +239,7 @@ export let states = [
     label: 'Unsaved Tab',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" itemActive />
+        <ContextTab title="Home" symbol="home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" itemUnsaved />
       </ContextTabBar>
@@ -248,7 +249,7 @@ export let states = [
     label: 'Overflow Tabs',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" itemActive />
+        <ContextTab title="Home" symbol="home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click')}>
@@ -267,7 +268,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" itemActive />
+          <ContextTab title="Home" symbol="home" itemActive />
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2" />
           <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open')}>
@@ -298,7 +299,7 @@ export let states = [
     label: 'Unsaved Overflow Tabs',
     element:
       <ContextTabBar>
-        <ContextTab title="Home" itemActive />
+        <ContextTab title="Home" symbol="home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
         <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-unsaved')}>
@@ -318,7 +319,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" itemActive />
+          <ContextTab title="Home" symbol="home" itemActive />
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2" />
           <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click is-open is-unsaved')}>
@@ -351,7 +352,7 @@ export let states = [
     label: 'Object Switcher - Active',
     element:
       <ContextTabBar objectSwitchClassName={pf('is-active')}>
-        <ContextTab title="Home" />
+        <ContextTab title="Home" symbol="home" />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2"  />
       </ContextTabBar>
@@ -362,7 +363,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '11rem'}}>
         <ContextTabBar objectSwitchClassName={pf('is-open')}>
-          <ContextTab title="Home" />
+          <ContextTab title="Home" symbol="home" />
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2"  />
         </ContextTabBar>
@@ -374,7 +375,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar addTabActive>
-          <ContextTab title="Home" />
+          <ContextTab title="Home" symbol="home" />
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2"  />
         </ContextTabBar>

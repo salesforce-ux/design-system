@@ -43,17 +43,6 @@ let NavigationBar = props =>
       { props.showSections ?
         <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>Secondary</div> : null }
     </nav>
-    <div className={pf('context-bar__tertiary col--bump-left is-relative')}>
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          { props.showItems ?
-            <div className={pf('site-dimension site-dimension--absolute-box m-horizontal--xx-small')}></div> : null }
-        </li>
-      </ul>
-      { props.showSections ?
-        <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>Tertiary</div> : null }
-    </div>
   </div>
 </div>;
 
@@ -74,11 +63,10 @@ export default (
   <ComponentDocs>
     <h2 className={pf('site-text-heading--label')}>1.0. Building the Navigation Bar</h2>
     <NavigationBar showSections />
-    <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>
+    <p>The navigation bar is composed of a wrapper and 2 required regions:</p>
     <ul>
       <li><strong>Primary,</strong> which contains the App Launcher and App Name</li>
       <li><strong>Secondary,</strong> which contains the App Items, for navigating within the current app</li>
-      <li>And optionally, <strong>Tertiary,</strong> which includes Actions, for triggering actions specific to the current app.</li>
     </ul>
     <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="slds-context-bar__primary" />.</p>
 

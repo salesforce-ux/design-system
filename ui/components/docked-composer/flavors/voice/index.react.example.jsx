@@ -29,7 +29,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Connecting...">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -56,7 +56,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Dialing...">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -119,7 +119,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Cancelling...">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -143,7 +143,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Busy">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -171,7 +171,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Call Failed">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -199,7 +199,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - No Answer">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -262,7 +262,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '500px' }}>
       <DockedComposerPanel className={pf('is-open')} header="Lei Chan - Incoming Call...">
-        <DockedComposerPanelBody>
+        <DockedComposerPanelBody className={pf('align--absolute-center size--1-of-1')}>
           <div className={pf('text-align--center align-middle')}>
             <span className={pf('avatar avatar--large')}>
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
@@ -276,7 +276,7 @@ export let states = [
               (416) 555-1234
             </p>
           </div>
-          <div className={pf('p-horizontal--x-small text-align--left')}>
+          <div className={pf('p-horizontal--x-small text-align--left size--1-of-1')}>
             <p className={pf('m-bottom--x-small')}>Recent Activity</p>
             <ul className={pf('has-dividers--around-space')}>
               <li className={pf('item theme--shade grid')}>

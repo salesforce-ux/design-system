@@ -66,7 +66,7 @@ export let DockedComposerPanel = props =>
 
 export let DockedComposerPanelBody = props =>
   <div className={className(pf('docked-composer__body'), props.className)}>
-    { !props.children ? <div className={pf('text-align--center align-middle')}>Docked Composer Panel Body</div> : props.children }
+    { !props.children ? <div className={pf('align--absolute-center')}>Docked Composer Panel Body</div> : props.children }
   </div>;
 
 export let DockedComposerPanelFooter = props =>

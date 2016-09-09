@@ -54,13 +54,13 @@ export let UtilityPanel = props =>
 
 const PanelOpen = (
   <UtilityPanel className={pf('is-open')} header="Call">
-    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+    <div className={pf('align--absolute-center')}>Utility Panel Body</div>
   </UtilityPanel>
 );
 
 const PanelClosed = (
   <UtilityPanel header="Call">
-    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+    <div className={pf('align--absolute-center')}>Utility Panel Body</div>
   </UtilityPanel>
 );
 

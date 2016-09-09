@@ -31,6 +31,9 @@ The following changes have been made in this release:
 
 - Global actions icon on global header updated to have a background color
 - Change global header icon's color and size
+- Change background color of docked panels
+  - Docked Utility Panel - [Docked Utility Panel](/components/docked-utility-bar/#flavor-utility-panel)
+  - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
 
 **FIXED**
 

@@ -11,17 +11,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody contentClassName={pf('site-404 grid grid--vertical')}>
-    <div className={pf('site-404__content')}>
-      <h1>404 <span className={pf('assistive-text')}>Not found</span></h1>
+  <PageBody contentClassName="site-404 slds-grid slds-grid--vertical">
+    <div className="site-404__content">
+      <h1>404 <span className="slds-assistive-text">Not found</span></h1>
       <p>Oops, this does not seem like the page you are looking for.</p>
-      <div className={pf('site-404__images')}>
-        <img className={pf('site-404__image1')} src="/assets/images/404/tri.svg" alt="" />
-        <img className={pf('site-404__image2')} src="/assets/images/404/square.svg" alt="" />
-        <img className={pf('site-404__image3')} src="/assets/images/404/hex.svg" alt="" />
+      <div className="site-404__images">
+        <img className="site-404__image1" src="/assets/images/404/tri.svg" alt="" />
+        <img className="site-404__image2" src="/assets/images/404/square.svg" alt="" />
+        <img className="site-404__image3" src="/assets/images/404/hex.svg" alt="" />
       </div>
     </div>
   </PageBody>

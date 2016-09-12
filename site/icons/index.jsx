@@ -21,7 +21,6 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 import categories from '.generated/ui.icons';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Icons extends React.Component {
 
@@ -37,17 +36,17 @@ class Icons extends React.Component {
     return (
       <div>
         {this.renderHeader()}
-        <div className={pf('p-around--xx-large grid wrap site-content')}>
+        <div className="slds-p-around--xx-large slds-grid slds-wrap site-content">
           <StickyNav fixedElementsAbove=".site-tools">
-            <div className={pf('site-menu--jump-links')}>
+            <div className="site-menu--jump-links">
               <h3 className="site-text-heading--label">Categories</h3>
-              <ul className={pf('list--vertical has-block-links')}>
+              <ul className="slds-list--vertical slds-has-block-links">
                 {this.renderCategoryNav()}
               </ul>
             </div>
           </StickyNav>
-          <div className={pf('col col-rule--right site-text-longform size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
-            <p className={pf('site-text-introduction m-bottom--reset container--large')}>
+          <div className="slds-col slds-col-rule--right site-text-longform slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
+            <p className="site-text-introduction m-bottom--reset slds-container--large">
               Choose the icon you need from this page, then follow the implementation instructions on the <a href="/components/icons/">icon component page</a>. If you are building a Lightning Component, you may require an
               additional <CTALink href="/resources/lightning-svg-icon-component-helper" eventType="lightning-svg-icon-helper">Lightning helper component</CTALink> to use&nbsp;SVGs.
             </p>
@@ -61,18 +60,18 @@ class Icons extends React.Component {
   renderHeader() {
     return (
       <Sticky>
-        <div className={pf('site-tools grid grid--align-spread')}>
-          <div className={pf('col align-middle shrink p-vertical--medium')}>
-            <label className={pf('assistive-text')} htmlFor="find-icon-input">Find Icon</label>
+        <div className="site-tools slds-grid slds-grid--align-spread">
+          <div className="slds-col slds-align-middle slds-shrink slds-p-vertical--medium">
+            <label className="slds-assistive-text" htmlFor="find-icon-input">Find Icon</label>
             <input
-              className={pf('input')}
+              className="slds-input"
               id="find-icon-input"
               type="search"
               placeholder="Find Icon" />
           </div>
-          <div className={pf('col align-middle shrink')}>
-            <div className={pf('tabs tabs--default')} role="tablist">
-              <ul className={pf('tabs__nav')} role="presentation"></ul>
+          <div className="slds-col slds-align-middle slds-shrink">
+            <div className="tabs slds-tabs--default" role="tablist">
+              <ul className="tabs__nav" role="presentation"></ul>
             </div>
           </div>
         </div>
@@ -84,12 +83,12 @@ class Icons extends React.Component {
     return this.state.categories.map(category => {
       return (
         <div key={category.name} data-slds-icons-section>
-          <Heading textLabel={`${category.name} Icons`} type="h2" id={category.name} className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title')}>
+          <Heading textLabel={`${category.name} Icons`} type="h2" id={category.name} className="slds-p-top--xx-large site-text-heading--large site-text-heading--callout icon-group-title">
             {`${category.name} Icons`}
           </Heading>
           {/* This is only outputing text without a paragraph. Can we fix? */}
-          <div className={pf('container--large')} dangerouslySetInnerHTML={{__html: category.description}} />
-          <ul className={pf(classNames(`${category.name}__icons`,'m-top--x-large grid wrap icon-grid'))}>
+          <div className="slds-container--large" dangerouslySetInnerHTML={{__html: category.description}} />
+          <ul className={classNames(`${category.name}__icons`,'slds-m-top--x-large slds-grid slds-wrap icon-grid')}>
             {this.renderIcons(category)}
           </ul>
         </div>
@@ -101,7 +100,7 @@ class Icons extends React.Component {
     return this.state.categories.map(category => {
       const modCategory = _.upperFirst(category.name);
       return (
-        <li className={pf('list__item')} key={category.name}>
+        <li className="slds-list__item" key={category.name}>
           <a href={`#${category.name}`}>
             {modCategory}
           </a>
@@ -116,17 +115,17 @@ class Icons extends React.Component {
 
     return category.icons.map(icon => {
       const svgClassName = classNames('icon', {
-        'icon--large': !isUtility && !isAction,
-        'icon--small': isAction,
-        'icon-text-default': isUtility
+        'slds-icon--large': !isUtility && !isAction,
+        'slds-icon--small': isAction,
+        'slds-icon-text-default': isUtility
       });
       return (
-        <li className={pf('site-icon-width-container m-bottom--x-large')} key={icon.symbol} data-slds-icon={icon.symbol}>
+        <li className="site-icon-width-container slds-m-bottom--x-large" key={icon.symbol} data-slds-icon={icon.symbol}>
           <figure>
-            <span className={pf(classNames('icon_container', icon.className, {'icon_container--circle': isAction}))}>
-              <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={pf(svgClassName)} />
+            <span className={classNames('slds-icon_container', icon.className, {'slds-icon_container--circle': isAction})}>
+              <SvgIcon sprite={icon.sprite} symbol={icon.symbol} className={svgClassName} />
             </span>
-            <figcaption className={pf('p-top--x-small text-body--small')}>{icon.symbol}</figcaption>
+            <figcaption className="slds-p-top--x-small slds-text-body--small">{icon.symbol}</figcaption>
           </figure>
         </li>
       );

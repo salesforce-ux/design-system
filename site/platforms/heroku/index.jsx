@@ -14,15 +14,14 @@ import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Heroku" contentClassName={pf('grid wrap')}>
+  <PageBody anchorTitle="Heroku" contentClassName="slds-grid slds-wrap">
     <StickyNav>
-      <div className={pf('site-menu--jump-links')}>
+      <div className="site-menu--jump-links">
         <h3 className="site-text-heading--label">Steps</h3>
-        <ul className={pf('list--vertical has-block-links')}>
+        <ul className="slds-list--vertical slds-has-block-links">
           <li>
             <a href="#step-1-initialize-project">
               1. Initialize your project
@@ -62,8 +61,8 @@ export default (
       </div>
     </StickyNav>
 
-    <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--large')}>
+    <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
+      <div className="slds-container--large">
 
         <p className="site-text-introduction">
           The following tutorial will set you up with the tools you need to
@@ -79,7 +78,7 @@ export default (
         </p>
 
         <p>In this tutorial, we&rsquo;ll assume that you have some knowledge of the following:</p>
-        <ul className={pf('list--dotted')}>
+        <ul className="slds-list--dotted">
           <li>
             <a href="https://nodejs.org/" target="_blank">
               Node.js
@@ -111,7 +110,7 @@ export default (
         <Heading type="h2" id="step-1-initialize-project" className="site-text-heading--large">Step 1: Initialize your project</Heading>
         <p>Once you&rsquo;ve downloaded and installed all the necessaries for your environment, create a folder for your project.</p>
 
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ mkdir demo_slds_heroku
 $ cd demo_slds_heroku
@@ -122,7 +121,7 @@ $ cd demo_slds_heroku
           Inside of your <code>demo_slds_heroku/</code> folder, create a <code>package.json</code>.
         </p>
 
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ npm init
           `}</CodeBlock>
@@ -132,7 +131,7 @@ $ npm init
           You will get a few prompts. The only prompt that we will update here is the <code>entry point</code>. The new entry point will be <code>server.js</code> instead of <code>index.js</code>.
         </p>
 
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 name:
 version:
@@ -149,7 +148,7 @@ license: (ISC)
         <p>
           A <code>package.json</code> document will be created inside your <code>demo_slds_heroku/</code> folder and the contents should look similar to the following:
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="json">{`
 {
   "name": "demo_slds_heroku",
@@ -167,7 +166,7 @@ license: (ISC)
 
         <Heading type="h2" id="step-2-install-node-dependencies" className="site-text-heading--large">Step 2: Install node dependencies - Express</Heading>
         <p>Use npm to install Express. While in your project folder, install express via npm.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ npm install express --save
           `}</CodeBlock>
@@ -175,14 +174,14 @@ $ npm install express --save
         <p>You should now have a folder called <code>node_modules/express/</code></p>
 
         <Heading type="h2" id="step-3-create-index-html" className="site-text-heading--large">Step 3: Create <code>public/index.html</code></Heading>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ mkdir public
 $ touch public/index.html
           `}</CodeBlock>
         </div>
         <p>Copy the following markup into <code>public/index.html</code>:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
@@ -199,13 +198,13 @@ $ touch public/index.html
         </div>
 
         <Heading type="h2" id="step-4-create-server-js" className="site-text-heading--large">Step 4: Create <code>server.js</code></Heading>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ touch server.js
           `}</CodeBlock>
         </div>
         <p>Copy the following code into <code>server.js</code>. Make sure you are in the root of your project (not your <code>/public</code> folder!):</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
 var express = require('express');
 var app = express();
@@ -220,14 +219,14 @@ app.listen(port);
           `}</CodeBlock>
         </div>
         <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm run start</code> as it will yield the same results.</p>
-        <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
+        <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
+          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
         <p><a href="/downloads/">Download the {g.displayName} CSS framework</a></p>
         <p>Once you unzip the CSS framework, you need to move a few things into the correct location. Grab the <code>assets/</code> folder and put it in your <code>demo_slds_heroku/public/</code> folder. Your project should have a similar file structure to the following:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 demo_slds_heroku/
   public/
@@ -246,13 +245,13 @@ demo_slds_heroku/
 
         <Heading type="h2" id="step-6-add-components" className="site-text-heading--large">Step 6: Add components</Heading>
         <p>Add {g.displayName} styles to your <code>public/index.html</code> page by adding the following underneath the <code>title</code> tags:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
         <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look similar to the following:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
@@ -274,7 +273,7 @@ demo_slds_heroku/
           A. Use the Grid System Component (Order)
         </h3>
         <p>Replace the text inside the <code>body</code> tags with the following. You can find the markup on the <a href="/components/utilities/grid/#order" target="_blank">Grid System component page</a>.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
 <div class="slds-grid slds-wrap">
   <nav class="slds-col slds-size--1-of-1">
@@ -293,7 +292,7 @@ demo_slds_heroku/
           `}</CodeBlock>
         </div>
         <p>Your <code>public/index.html</code> file should look like the following:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
 <!DOCTYPE html>
 <html lang="en">
@@ -324,8 +323,8 @@ demo_slds_heroku/
 </html>
           `}</CodeBlock>
           </div>
-        <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
+        <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
+          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
         </figure>
 
         <h3 className="site-text-heading--medium">
@@ -335,7 +334,7 @@ demo_slds_heroku/
 
         <h3 className="site-text-heading--medium">C. Add a Fun Image</h3>
         <p>Swap the text <code>Image</code> with an image.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="markup">{`
 <img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house08.jpg" alt="Cool house." />
           `}</CodeBlock>
@@ -352,25 +351,25 @@ demo_slds_heroku/
 
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
         <p>If you feel kind of cramped, check out the <a href="/components/utilities/spacing" target="_blank">Utilities</a> page for spacing classes.</p>
-        <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
-          <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
+        <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
+          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>
         <p>Lets create a Heroku `Procfile` file. In the root of your <code>demo_slds_heroku/</code> project make a <code>Procfile</code> file.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ touch Procfile
           `}</CodeBlock>
         </div>
         <p>The contents of your <code>Procfile</code> file (yes, no filetype!) should be the following:</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 web: node server.js
           `}</CodeBlock>
         </div>
         <p>Log into your Heroku account.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ heroku login
 Email: [your@email.com]
@@ -381,7 +380,7 @@ $ heroku create [name-of-your-project]
           `}</CodeBlock>
         </div>
         <p>You should see the following information in your console.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
         Creating [name-of-your-project]... done, stack is cedar-14
         https://[name-of-your-project].herokuapp.com/ | https://git.heroku.com/[name-of-your-project]git
@@ -389,7 +388,7 @@ $ heroku create [name-of-your-project]
         </div>
         <p><strong>Sanity Checkpoint:</strong> Run <code>git remote -v</code> in your terminal to check that the <code>heroku</code> remote was added.</p>
         <p>Commit and push to Heroku.</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ git add .
 $ git commit -m "Initial commit"
@@ -397,7 +396,7 @@ $ git push heroku master
           `}</CodeBlock>
         </div>
         <p>Check out your project!</p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 $ heroku open
           `}</CodeBlock>

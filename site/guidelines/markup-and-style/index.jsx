@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 const versionNumber = process.env.SLDS_VERSION.replace(/(v|\.)/g, '');
@@ -19,14 +18,14 @@ const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 
 export default (
-  <PageBody anchorTitle="Markup and Style" contentClassName={pf('container--large')}>
+  <PageBody anchorTitle="Markup and Style" contentClassName="slds-container--large">
     <p className="site-text-introduction">
       The Salesforce Lightning Design System (SLDS) component library is actively developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
     </p>
     <p>In order to accomplish this goal, we’ve chosen to use very specific naming techniques. These allow us to keep our code base flat, with low specificity, and keeps us from fighting specificity wars that start with frustration and end with <code>!important</code>. Though we base our naming on the BEM method, we have a few additions of our own outlined below.</p>
     <h2 className="site-text-heading--large">BEM Naming</h2>
     <p><a href="https://en.bem.info/">BEM</a> is a well-known method of naming components — block, element, modifier. If you&rsquo;re comfortable with BEM, move down to the “Where we diverge from BEM” section. For those unfamiliar or who need a quick refresh, let&rsquo;s briefly look at how BEM works. As an example, we’ll build a house component.</p>
-    <img src="/assets/images/house.png" width="400" height="371" alt="gray house with pink door and gray steps" className={pf('float--left')} />
+    <img src="/assets/images/house.png" width="400" height="371" alt="gray house with pink door and gray steps" className="slds-float--left" />
     <h3 className="site-text-heading--medium">Block</h3>
     <p>A block represents the main component name. If you were building a house component, the class name would be <code>.house</code>. All of the properties you want included for all houses would be included in the base <code>.house</code> class.</p>
     <h3 className="site-text-heading--medium">Element</h3>

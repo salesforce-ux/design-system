@@ -15,72 +15,71 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody contentClassName="site-landing-page">
     {/* Hero */}
-    <header className={pf('site-masthead--landing p-around--xx-large container--buffer')}>
-      <h1 className={pf('site-text-heading--large')}>
+    <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
+      <h1 className="site-text-heading--large">
         Lightning <span className="text-no-wrap">Design System</span>
       </h1>
-      <h2 className={pf('site-text-heading--medium m-bottom--xx-large')}>
+      <h2 className="site-text-heading--medium slds-m-bottom--xx-large">
         Create the world’s best enterprise app experiences.
       </h2>
-      <p className={pf('site-cta-buttons m-bottom--medium')}>
-        <CTALink href="/downloads" className={pf('button button--neutral site-cta-download')} eventType="downloads-top">Get the Design System</CTALink>
+      <p className="site-cta-buttons slds-m-bottom--medium">
+        <CTALink href="/downloads" className="slds-button slds-button--neutral site-cta-download" eventType="downloads-top">Get the Design System</CTALink>
         <CTALink
           href="https://github.com/salesforce-ux/design-system"
-          className={pf('button button--neutral')}
+          className="slds-button slds-button--neutral"
           eventType="github-start">
-          <img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left site-cta-buttons__icon')} alt="" />
+          <img src="/assets/images/social-github-icon-only.svg" className="slds-button__icon--large slds-button__icon--left site-cta-buttons__icon" alt="" />
           Star
         </CTALink>
       </p>
-      <p className={pf('site-releasenumber m-bottom--medium')}>
+      <p className="site-releasenumber slds-m-bottom--medium">
         Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
       </p>
     </header>
 
-    <div className={pf('container--buffer container--x-large')}>
+    <div className="container--buffer slds-container--x-large">
       {/* Grid */}
-      <section className={pf('site-grid--landing p-vertical--xx-large site-text-longform')}>
+      <section className="site-grid--landing slds-p-vertical--xx-large site-text-longform">
         <div className="site-video-container">
           <div className="site-video">
             <iframe src="https://www.youtube.com/embed/inqe8D1XwrA?showinfo=0" allowFullScreen></iframe>
           </div>
         </div>
-        <ul className={pf('grid wrap grid--pull-padded-large site-grid--landing-primary')}>
-          <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
-            <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
+        <ul className="slds-grid slds-wrap slds-grid--pull-padded-large site-grid--landing-primary">
+          <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
+            <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">
               <img className="image" src="/assets/images/landing/img-icon-group.svg" alt="" />
             </p>
-            <dl className={pf('medium-size--1-of-2')}>
+            <dl className="slds-medium-size--1-of-2">
               <dt className="site-text-heading--large">Style with Ease</dt>
               <dd>With the {globals.displayName} you can build custom applications with a look and feel that is consistent with Salesforce core features &mdash; without reverse engineering our styles! Simply download our platform-agnostic CSS framework and get started today.</dd>
             </dl>
           </li>
-          <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
-            <p className={pf('size--1-of-1 medium-size--1-of-2 float--left')}>
+          <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
+            <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--left">
               <img className="image" src="/assets/images/landing/img-expertise.svg" alt="" />
             </p>
-            <dl className={pf('medium-size--1-of-2 float--right')}>
+            <dl className="slds-medium-size--1-of-2 slds-float--right">
               <dt className="site-text-heading--large">Design with Expertise</dt>
               <dd>Utilize our detailed guidelines to confidently design excellent apps that fit right into the Salesforce ecosystem. With the Design System, you get access to all of the Salesforce core visual and interaction design patterns so that you can follow established best practices and build apps that have a consistent look and feel with the Salesforce user experience.</dd>
             </dl>
           </li>
-          <li className={pf('col--padded-large p-vertical--xx-large clearfix')}>
-            <p className={pf('size--1-of-1 medium-size--1-of-2 float--right')}>
+          <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
+            <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">
               <img className="image" src="/assets/images/landing/img-opensource.svg" alt="" />
             </p>
-            <dl className={pf('medium-size--1-of-2')}>
-              <dt className={pf('site-text-heading--large')}>Contribute with Purpose</dt>
+            <dl className="slds-medium-size--1-of-2">
+              <dt className="site-text-heading--large">Contribute with Purpose</dt>
               <dd>The Design System is an <a href="https://github.com/salesforce-ux/design-system">open source project on GitHub</a>, meaning you can directly impact its evolution by filing issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</dd>
             </dl>
           </li>
         </ul>
-        <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+        <ul className="slds-grid slds-wrap slds-grid--align-spread slds-grid--pull-padded-large">
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/landing/icon-trust.svg" alt="" />
               <dl>
@@ -89,7 +88,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/landing/icon-platform.svg" alt="" />
               <dl>
@@ -98,7 +97,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/landing/icon-living.svg" alt="" />
               <dl>
@@ -110,28 +109,28 @@ export default (
         </ul>
       </section>
       {/* Resources */}
-      <footer className={pf('site-resources--landing p-vertical--xx-large')}>
-        <ul className={pf('grid wrap grid--align-spread grid--pull-padded-large')}>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
+      <footer className="site-resources--landing slds-p-vertical--xx-large">
+        <ul className="slds-grid slds-wrap slds-grid--align-spread slds-grid--pull-padded-large">
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2">
             <div className="grid-card">
-              <div className={pf('grid grid--align-spread')}>
-                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="downloads-header">Downloads</h3>
+              <div className="slds-grid slds-grid--align-spread">
+                <h3 className="site-text-heading--label-weak-large slds-align-middle" id="downloads-header">Downloads</h3>
                 <img src="/assets/images/landing/icon-download.svg" alt="" />
               </div>
               <hr className="hr hr--pink" />
               <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
-              <CTALink aria-describedby="downloads-header" className={pf('button button--neutral m-top--large')} href="/downloads" eventType="downloads-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="downloads-header" className="slds-button slds-button--neutral slds-m-top--large" href="/downloads" eventType="downloads-bottom">Learn More</CTALink>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-2')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2">
             <div className="grid-card">
-              <div className={pf('grid grid--align-spread')}>
-                <h3 className={pf('site-text-heading--label-weak-large align-middle')} id="getting-started-header">Getting started</h3>
+              <div className="slds-grid slds-grid--align-spread">
+                <h3 className="site-text-heading--label-weak-large slds-align-middle" id="getting-started-header">Getting started</h3>
                 <img src="/assets/images/landing/icon-getting-started.svg" alt="" />
               </div>
               <hr className="hr hr--orange" />
               <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
-              <CTALink aria-describedby="getting-started-header" className={pf('button button--neutral m-top--large')} href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
+              <CTALink aria-describedby="getting-started-header" className="slds-button slds-button--neutral slds-m-top--large" href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
             </div>
           </li>
         </ul>

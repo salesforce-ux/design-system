@@ -15,7 +15,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import releases from '.generated/ui.tokens';
 import categories from './_categories';
@@ -62,16 +61,16 @@ const Tokens = React.createClass({
     return (
       <div>
         {this.renderHeader()}
-        <div className={pf('p-around--xx-large grid wrap site-content')}>
+        <div className="slds-p-around--xx-large slds-grid slds-wrap site-content">
           <StickyNav fixedElementsAbove=".site-tools">
             <div className="site-menu--jump-links">
               <h3 className="site-text-heading--label">Categories</h3>
-              <ul className={pf('list--vertical has-block-links')}>
+              <ul className="slds-list--vertical slds-has-block-links">
                 {this.renderCategories()}
               </ul>
             </div>
           </StickyNav>
-          <div className={pf('col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1 site-main-content')}>
+          <div className="slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
             {this.renderInfo()}
             {this.renderTokens()}
           </div>
@@ -87,20 +86,20 @@ const Tokens = React.createClass({
     });
     const formatSelect = !process.env.INTERNAL
       ? null
-      : <div className={pf('form-element p-horizontal--medium')}>
-          <label htmlFor="slds-tokens-name-format" className={pf('slds-form-element__label')} >Format:</label>
-          <div className={pf('form-element__control')}>
-            <select className={pf('select no-flex')} id="slds-tokens-name-format" />
+      : <div className="slds-form-element slds-p-horizontal--medium">
+          <label htmlFor="slds-tokens-name-format" className="slds-form-element__label" >Format:</label>
+          <div className="slds-form-element__control">
+            <select className="slds-select slds-no-flex" id="slds-tokens-name-format" />
           </div>
         </div>;
     return (
       <Sticky>
-        <div className={pf('site-tools form--inline')}>
-          <div className={pf('form-element p-vertical--medium')}>
-            <label className={pf('assistive-text')} htmlFor="find-token-input">Find Token</label>
-            <div className={pf('form-element__control')}>
+        <div className="site-tools slds-form--inline">
+          <div className="slds-form-element slds-p-vertical--medium">
+            <label className="slds-assistive-text" htmlFor="find-token-input">Find Token</label>
+            <div className="slds-form-element__control">
               <input
-                className={pf('input')}
+                className="slds-input"
                 id="find-token-input"
                 type="search"
                 placeholder="Find Token" />
@@ -117,7 +116,7 @@ const Tokens = React.createClass({
     return categories
       .filter(category => tokensByCategory[category.key])
       .map(category =>
-        <li className={pf('list__item')} key={category.key}>
+        <li className="slds-list__item" key={category.key}>
           <a href={`#category-${category.key}`}>
             {category.label}
           </a>
@@ -128,7 +127,7 @@ const Tokens = React.createClass({
   renderInfo() {
     if (this.state.query) { return null; }
     return [
-      <div className={pf('container--large')} key="info">
+      <div className="slds-container--large" key="info">
         <p className="site-text-introduction">
           Design tokens are the visual design atoms of the design system &mdash;
           specifically, they are named entities that store visual design

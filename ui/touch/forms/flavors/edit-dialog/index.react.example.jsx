@@ -30,7 +30,7 @@ export default (
           <Input label="First Name" placeholder="Esther" assistiveText="inputNameSample2" />
           <Input label="Last Name" placeholder="Lewis" assistiveText="inputNameSample3" />
 
-          <div className="slds-m-top--medium large" data-select="multi" data-scope="single" data-typeahead="true">
+          <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
             <div className="slds-form-element">
               <label className="slds-form-element__label" htmlFor="lookup">Lookup</label>
               <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
@@ -40,7 +40,7 @@ export default (
             </div>
           </div>
 
-          <div className="slds-form-element slds-m-top--medium large">
+          <div className="slds-form-element slds-m-top--medium">
             <label className="slds-form-element__label" htmlFor="select-01">Select</label>
             <Select id="select-01">
               <option>Select an Option</option>

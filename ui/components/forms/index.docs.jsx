@@ -33,7 +33,7 @@ export default (
   <p>Because the read-only field state has no <code>&lt;input&gt;</code>, don’t use a <code>&lt;label&gt;</code> to provide better accessibility for screen readers and keyboard navigators. Instead, use a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__label" /> class. Instead of an <code>&lt;input&gt;</code>, use the <CodeClass className="form-element__static" /> class inside the <CodeClass className="form-element__control" /> wrapper.</p>
   <p>Every form field requires an associated, non-empty text <code>&lt;label&gt;</code> element, which is linked to the form field either by wrapping the <code>&lt;label&gt;</code> tag around the field or by giving the <code>&lt;label&gt;</code> a <code>for</code> attribute whose value is that input field&rsquo;s id. This association ensures that assistive technology users can tell what information to enter where.</p>
   <p>Error states alert the user when content in the form is invalid. The <CodeClass className="has-error" /> class is placed on the <code>&lt;div class=".slds-form-element"&gt;</code>. Place the error message for the user in a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__help" /> class. The <code>&lt;input&gt;</code> with the error receives an `aria-describedby` attribute that references the ID attribute of the error message in the <code>&lt;span&gt;</code>. This configuration allows screen readers to properly associate the error message with the field.</p>
-  <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute required to it. Additionally, add the <CodeClass className="is-required" /> class on the <CodeClass className="form-element" /> wrapper.</p>
+  <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute required to it.</p>
   <p>The native form elements, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;input type='checkbox'&gt;</code>, and <code>&lt;input type='radio'&gt;</code>, receive validation styling for <code>disabled</code>, <code>checked</code>, and <code>checked disabled</code>, if applicable.</p>
   <h3 className="slds-text-heading--small">Form Example</h3>
   <form role="form" className="slds-form--stacked slds-grid slds-wrap slds-grid--pull-padded slds-m-top--large">
@@ -53,7 +53,7 @@ export default (
       </div>
       <Input label="Amount" assistiveText="Amount" />
       <Input label="Probability" placeholder="100" assistiveText="Probability" />
-      <fieldset className="slds-form-element is-required">
+      <fieldset className="slds-form-element">
         <legend className="slds-form-element__legend slds-form-element__label">Options</legend>
         <div className="slds-form-element__control">
           <Radio name="options" label="Lead generation" assistiveText="lead" />

@@ -27,7 +27,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '260px' }}>
         <GlobalHeader autocomplete>
-          <div className="slds-form-element__control lookup__search-control slds-input-has-icon slds-input-has-icon--left">
+          <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
             <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
             <input
               id="global-search-01"
@@ -102,7 +102,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '310px' }}>
       <GlobalHeader autocomplete>
-        <div className="slds-form-element__control lookup__search-control slds-input-has-icon slds-input-has-icon--left-right">
+        <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left-right">
           <SvgIcon className="slds-input__icon slds-input__icon--left" sprite="utility" symbol="search" />
           <input
             id="global-search-01"

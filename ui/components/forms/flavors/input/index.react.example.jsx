@@ -91,7 +91,7 @@ let IconLeftRight = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className="is-required">
+    <FormElement>
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required />
@@ -101,7 +101,7 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className="is-required slds-has-error">
+    <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required aria-describedby={props.errorId} />
@@ -112,7 +112,7 @@ let ErrorState = props =>
 
 let ErrorIcon = props =>
   <Demo>
-    <FormElement className="is-required slds-has-error">
+    <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl className="slds-input-has-icon slds-input-has-icon--left">
         <SvgIcon className="slds-input__icon" sprite="utility" symbol="warning" />

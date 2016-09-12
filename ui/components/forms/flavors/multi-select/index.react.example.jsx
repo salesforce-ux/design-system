@@ -18,7 +18,7 @@ export default (
   <div className="slds-picklist--draggable slds-grid">
     <div className="slds-form-element">
       <span className="slds-form-element__label" aria-label="select-1">First Category</span>
-      <div className="slds-picklist picklist--multi">
+      <div className="slds-picklist">
         <ul className="slds-picklist__options slds-picklist__options--multi">
           <li draggable="true" id="po-8-0" className="slds-picklist__item" aria-selected="false" tabIndex="0" role="option">
             <span className="slds-truncate">Option One</span>
@@ -38,7 +38,7 @@ export default (
     </div>
     <div className="slds-form-element">
       <span className="slds-form-element__label" aria-label="select-1">First Category</span>
-      <div className="slds-picklist picklist--multi">
+      <div className="slds-picklist">
         <ul className="slds-picklist__options slds-picklist__options--multi"></ul>
       </div>
     </div>

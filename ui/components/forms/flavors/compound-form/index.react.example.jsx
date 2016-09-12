@@ -16,7 +16,7 @@ export default (
 <div className="demo-only" style={{width: '440px'}}>
   <fieldset className="slds-form--compound">
     <legend className="slds-form-element__label slds-text-title--caps">Location</legend>
-    <div className="form-element__group">
+    <div className="slds-form-element__group">
       <div className="slds-form-element__row">
         <div className="slds-form-element slds-size--1-of-2">
           <label className="slds-form-element__label" htmlFor="input-01">Latitude</label>
@@ -32,7 +32,7 @@ export default (
 
   <fieldset className="slds-form--compound">
     <legend className="slds-form-element__label slds-text-title--caps">Address</legend>
-    <div className="form-element__group">
+    <div className="slds-form-element__group">
       <div className="slds-form-element__row">
         <div className="slds-form-element slds-size--1-of-1">
           <label className="slds-form-element__label" htmlFor="input-03">Street</label>

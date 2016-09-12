@@ -82,7 +82,7 @@ let Indeterminate = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className="is-required">
+    <FormElement>
       <FormElementControl>
         <Checkbox label="Checkbox Label"><abbr className="slds-required" title="required">*</abbr></Checkbox>
       </FormElementControl>
@@ -91,7 +91,7 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className="is-required slds-has-error">
+    <FormElement className="slds-has-error">
       <FormElementControl>
         <Checkbox label="Checkbox Label" errorId="error_01"><abbr className="slds-required" title="required">*</abbr></Checkbox>
       </FormElementControl>
@@ -121,7 +121,7 @@ let Group = props =>
 
 let GroupRequired = props =>
   <Demo>
-    <Fieldset className="is-required">
+    <Fieldset>
       <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
         <Checkbox label="Checkbox Label" checked />
@@ -132,7 +132,7 @@ let GroupRequired = props =>
 
 let GroupError = props =>
   <Demo>
-    <Fieldset className="is-required slds-has-error">
+    <Fieldset className="slds-has-error">
       <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
         <Checkbox errorId="error_01" label="Checkbox Label" checked />

@@ -64,7 +64,7 @@ export let GlobalHeader = props =>
           <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
           { props.autocomplete ?
             props.children
-            : <div className="slds-form-element__control lookup__search-control slds-input-has-icon slds-input-has-icon--left">
+            : <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
                 <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
                 <input id="global-search-01" className="slds-input slds-lookup__search-input" type="search" placeholder="Search Salesforce" />
               </div> }

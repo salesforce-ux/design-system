@@ -66,7 +66,7 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <Fieldset className="is-required">
+    <Fieldset>
       <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
         <Radio checked>Radio Label One</Radio>
@@ -77,7 +77,7 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <Fieldset className="is-required slds-has-error">
+    <Fieldset className="slds-has-error">
       <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
         <Radio errorId="error_01" checked>Radio Label One</Radio>

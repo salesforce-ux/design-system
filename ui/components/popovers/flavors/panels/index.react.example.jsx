@@ -90,7 +90,7 @@ export default (
         </dt>
         {/* Opportunity One */}
         <dd className="slds-tile">
-          <p className="tile__title slds-truncate">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
           <div className="slds-tile__detail">
@@ -112,7 +112,7 @@ export default (
         </dd>
         {/* Opportunity Two */}
         <dd className="slds-tile">
-          <p className="tile__title slds-truncate">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <div className="slds-tile__detail">
@@ -143,7 +143,7 @@ export default (
         </dt>
         {/* Case One */}
         <dd className="slds-tile">
-          <p className="tile__title slds-truncate">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <div className="slds-tile__detail">

@@ -359,7 +359,6 @@ demo_slds_heroku/
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>
-<<<<<<< HEAD
         <p>Lets create a Heroku `Procfile` file. In the root of your <code>demo_slds_heroku/</code> project make a <code>Procfile</code> file.</p>
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
@@ -372,8 +371,6 @@ $ touch Procfile
 web: node server.js
           `}</CodeBlock>
         </div>
-=======
->>>>>>> winter-17
         <p>Log into your Heroku account.</p>
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`

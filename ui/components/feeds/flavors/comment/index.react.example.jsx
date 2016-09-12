@@ -30,7 +30,7 @@ export let Comment = props =>
   </article>;
 
 export let CommentHeader = props =>
-  <header className="comment__header slds-media slds-media--center">
+  <header className="slds-media slds-media--center">
     <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
       <p className="slds-truncate">
         <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a>

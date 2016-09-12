@@ -249,7 +249,7 @@ let IsEditing = props =>
         </PanelSection>
       </PanelBody>
       <div className="slds-panel__actions slds-has-divider--top">
-        <div className="slds-grid slds-grid--align-center x-small-buttons--horizontal">
+        <div className="slds-grid slds-grid--align-center">
           <Button type="button" flavor="neutral">Cancel</Button>
           <Button type="button" flavor="brand">Save</Button>
         </div>

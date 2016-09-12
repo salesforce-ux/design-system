@@ -30,7 +30,7 @@ const dialingIcon = (
 let LookupMulti = props =>
   <div className={className('slds-form-element slds-lookup', props.className)} data-select="multi" data-scope="multi">
     <label className="slds-form-element__label" htmlFor={props.id}>{props.label}</label>
-    <div className="slds-form-element__control lookup__search-control slds-grid slds-box--border">
+    <div className="slds-form-element__control slds-grid slds-box--border">
       <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--x-small slds-shrink-none">
         <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
         <ButtonIcon className="slds-button-space-left slds-shrink-none" flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />

@@ -61,7 +61,7 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className="is-required">
+    <FormElement>
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
         <Select>
@@ -75,7 +75,7 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className="is-required slds-has-error">
+    <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
         <Select aria-describedby="error-02">

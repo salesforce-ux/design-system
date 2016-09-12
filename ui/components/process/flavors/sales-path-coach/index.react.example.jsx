@@ -78,12 +78,12 @@ let Coachcontent2 = props =>
 let Coachcontent3 = props =>
   <div id="content-path-3" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-3">
     <div className="slds-grid slds-grid--align-spread">
-      <div className="slds-coach__keys slds-size--1-of-2 m--left-x-large">
+      <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
         <div className="slds-grid slds-grid--align-spread">
           <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
           <span className="slds-text-body--small"><a href="javascript:void(0);">Edit</a></span>
         </div>
-        <dl className="coach__list slds-dl--horizontal">
+        <dl className="slds-dl--horizontal">
           <dt className="slds-coach__item slds-dl--horizontal__label">Expected Budget</dt>
           <dd className="slds-coach__value slds-dl--horizontal__detail">$10,000</dd>
           <dt className="slds-coach__item slds-dl--horizontal__label">Lead Source</dt>
@@ -106,12 +106,12 @@ let Coachcontent3 = props =>
 let Coachcontent4 = props =>
   <div id="content-path-4" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-4">
     <div className="slds-grid slds-grid--align-spread">
-      <div className="slds-coach__keys slds-size--1-of-2 m--left-x-large">
+      <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
         <div className="slds-grid slds-grid--align-spread">
           <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
           <span className="slds-text-body--small"><a href="javascript:void(0);">Edit</a></span>
         </div>
-        <dl className="coach__list slds-dl--horizontal">
+        <dl className="slds-dl--horizontal">
           <dt className="slds-coach__item slds-dl--horizontal__label">Build State</dt>
           <dd className="slds-coach__value slds-dl--horizontal__detail">In Motion</dd>
           <dt className="slds-coach__item slds-dl--horizontal__label">Expected Sign Date</dt>

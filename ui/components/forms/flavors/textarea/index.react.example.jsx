@@ -53,7 +53,7 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className="is-required">
+    <FormElement>
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required />
@@ -63,12 +63,12 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className="is-required slds-has-error">
+    <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required aria-describedby="error-01" />
       </FormElementControl>
-      <div className="slds-form-element__help" iref="form-element__help" id="error-01">This field is required</div>
+      <div className="slds-form-element__help" id="error-01">This field is required</div>
     </FormElement>
   </Demo>;
 

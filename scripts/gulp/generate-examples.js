@@ -63,7 +63,7 @@ const flattenExamples = comps =>
 const toHtml = el =>
   prettyHTML(renderToStaticMarkup(el));
 
-gulp.task('generate:examples', ['generate:whitelist'], () => {
+gulp.task('generate:examples', () => {
   const stream = through.obj();
   const examples = flattenExamples(addExamples(getComponents()));
   examples.forEach(ex =>

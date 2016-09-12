@@ -84,7 +84,7 @@ const compJSON = component =>
     }
   });
 
-const groupName = component => 
+const groupName = component =>
   component.path.split('/')[0];
 
 const genJSON = all =>
@@ -137,4 +137,3 @@ gulp.task('generate:cmps', ['generate:examples'], () =>
   .pipe(packageWithIndex())
   .pipe(gulpzip('cmps.zip'))
   .pipe(gulp.dest(__PATHS__.www)));
-

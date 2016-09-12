@@ -27,6 +27,7 @@ export let ButtonIcon = props =>
   <button
     className={className(pf('button'), props.className, props.stateful ? props.selected ? pf('is-selected') : pf('not-selected') : null)}
     disabled={ props.disabled }
+    aria-describedby={ props['aria-describedby'] }
     aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }

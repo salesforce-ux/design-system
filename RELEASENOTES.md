@@ -3,13 +3,21 @@
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
+## [Unreleased]
+
+**FIXED**
+
+The following issues have now been resolved:
+
+- Included the logo SVG asset used in the Global header
+
 ## Release [2.1.2] - September 6, 2016
 
 **SITE IA/ENHANCEMENTS**
 
 The following site enhancements are now available:
 
-- Moves Archives section up on Downloads page, and adds a link to the section on the homepage, for better visibility.
+- Moved Archives section up on Downloads page, and added a link to the section on the homepage, for better visibility.
 - New Checkbox Toggle guidelines under [Data Entry section](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
@@ -175,6 +183,7 @@ The following issues have now been resolved:
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
 - Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)
+- Added `aria-describedby` attribute on Tooltip component trigger
 
 **CHANGES**
 

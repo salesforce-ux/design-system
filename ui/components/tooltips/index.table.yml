@@ -1,6 +1,10 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
+    class: popover
+    despcription: Initializes tooltip (popover)
+    applied: <code>&lt;div&gt;</code>
+  -
     class: popover--tooltip
     description: Modifier used to apply tooltip specific styles
     applied: <code>.{{cssPrefix}}popover</code>

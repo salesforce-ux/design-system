@@ -21,9 +21,10 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <p>A tooltip can accept the following nubbin position classes, <CodeClass className="nubbin--left"/>, <CodeClass className="nubbin--left-top"/>, <CodeClass className="nubbin--left-bottom"/>, <CodeClass className="nubbin--top-left"/>, <CodeClass className="nubbin--top-right"/>, <CodeClass className="nubbin--right-top"/>, <CodeClass className="nubbin--right-bottom"/>, <CodeClass className="nubbin--bottom-left"/>, <CodeClass className="nubbin--bottom-right"/>.</p>
+    <p>Nubbins are indicators that inform the user of the direction of the content associated with the tooltip. A tooltip can accept the following nubbin position classes, <CodeClass className="nubbin--left"/>, <CodeClass className="nubbin--left-top"/>, <CodeClass className="nubbin--left-bottom"/>, <CodeClass className="nubbin--top-left"/>, <CodeClass className="nubbin--top-right"/>, <CodeClass className="nubbin--right-top"/>, <CodeClass className="nubbin--right-bottom"/>, <CodeClass className="nubbin--bottom-left"/>, <CodeClass className="nubbin--bottom-right"/>.</p>
+    <p>Learn more about how to use them at the <a href="/components/popovers/#flavor-nubbins">Nubbins documentation</a>.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Showing the tooltip on hover or on keyboard focus ensures that all users can access it, even if they aren&rsquo;t using a mouse.
+    <p>Showing the tooltip on hover or on keyboard focus of a focusable element ensures that all users can access it, even if they aren&rsquo;t using a mouse. Examples of focusable elements include links, buttons, and inputs.
     Give the tooltip an ID and use that as the value of the <code>aria-describedby</code> attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.</p>
   </ComponentDocs>
 );

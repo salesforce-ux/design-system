@@ -11,17 +11,30 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let Tooltip = props =>
-  <div className={className(pf('popover popover--tooltip'), props.className)} role="tooltip">
+  <div className={className(pf('popover popover--tooltip'), props.className)} role="tooltip" id={props.id} style={props.style}>
     <div className={pf('popover__body')}>
       { props.children }
     </div>
   </div>;
 
 export default (
-  <Tooltip className={pf('nubbin--bottom')}>
-    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-  </Tooltip>
+  <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '5rem' }}>
+    <div className={pf('form-element')}>
+      <div className={pf('form-element__icon align-middle')}>
+        <ButtonIcon
+          className={pf('button button--icon')}
+          symbol="info"
+          aria-describedby="help"
+          assistiveText="Help"
+        />
+      </div>
+    </div>
+    <Tooltip className={pf('nubbin--bottom-left')} id="help" style={{position: 'absolute', top: '0px', left: '15px'}}>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+    </Tooltip>
+  </div>
 );

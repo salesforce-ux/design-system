@@ -10,50 +10,49 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only" style={{width: '440px'}}>
-  <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label text-title--caps')}>Location</legend>
-    <div className={pf('form-element__group')}>
-      <div className={pf('form-element__row')}>
-        <div className={pf('form-element size--1-of-2')}>
-          <label className={pf('form-element__label')} htmlFor="input-01">Latitude</label>
-          <input id="input-01" className={pf('input')} type="text" />
+  <fieldset className="slds-form--compound">
+    <legend className="slds-form-element__label slds-text-title--caps">Location</legend>
+    <div className="form-element__group">
+      <div className="slds-form-element__row">
+        <div className="slds-form-element slds-size--1-of-2">
+          <label className="slds-form-element__label" htmlFor="input-01">Latitude</label>
+          <input id="input-01" className="slds-input" type="text" />
         </div>
-        <div className={pf('form-element size--1-of-2')}>
-          <label className={pf('form-element__label')} htmlFor="input-02">Longitude</label>
-          <input id="input-02" className={pf('input')} type="text" />
+        <div className="slds-form-element slds-size--1-of-2">
+          <label className="slds-form-element__label" htmlFor="input-02">Longitude</label>
+          <input id="input-02" className="slds-input" type="text" />
         </div>
       </div>
     </div>
   </fieldset>
 
-  <fieldset className={pf('form--compound')}>
-    <legend className={pf('form-element__label text-title--caps')}>Address</legend>
-    <div className={pf('form-element__group')}>
-      <div className={pf('form-element__row')}>
-        <div className={pf('form-element size--1-of-1')}>
-          <label className={pf('form-element__label')} htmlFor="input-03">Street</label>
-          <input id="input-03" className={pf('input')} type="text" />
+  <fieldset className="slds-form--compound">
+    <legend className="slds-form-element__label slds-text-title--caps">Address</legend>
+    <div className="form-element__group">
+      <div className="slds-form-element__row">
+        <div className="slds-form-element slds-size--1-of-1">
+          <label className="slds-form-element__label" htmlFor="input-03">Street</label>
+          <input id="input-03" className="slds-input" type="text" />
         </div>
       </div>
-      <div className={pf('form-element__row')}>
-        <div className={pf('form-element size--1-of-2')}>
-          <label className={pf('form-element__label')} htmlFor="input-04">City</label>
-          <input id="input-04" className={pf('input')} type="text" />
+      <div className="slds-form-element__row">
+        <div className="slds-form-element slds-size--1-of-2">
+          <label className="slds-form-element__label" htmlFor="input-04">City</label>
+          <input id="input-04" className="slds-input" type="text" />
         </div>
-        <div className={pf('form-element size--1-of-2')}>
-          <label className={pf('form-element__label')} htmlFor="input-05">State</label>
-          <input id="input-05" className={pf('input')} type="text" />
+        <div className="slds-form-element slds-size--1-of-2">
+          <label className="slds-form-element__label" htmlFor="input-05">State</label>
+          <input id="input-05" className="slds-input" type="text" />
         </div>
       </div>
-      <div className={pf('form-element__row')}>
-        <div className={pf('form-element size--1-of-2')}>
-          <label className={pf('form-element__label')} htmlFor="input-06">ZIP Code</label>
-          <input id="input-06" className={pf('input')} type="text" />
+      <div className="slds-form-element__row">
+        <div className="slds-form-element slds-size--1-of-2">
+          <label className="slds-form-element__label" htmlFor="input-06">ZIP Code</label>
+          <input id="input-06" className="slds-input" type="text" />
         </div>
       </div>
     </div>

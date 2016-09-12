@@ -13,24 +13,23 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const headerActionOverflow = (
-  <button className={pf('button button--icon-border-filled button--icon-x-small')} aria-haspopup="true">
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-    <span className={pf('assistive-text')}>More Options</span>
+  <button className="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true">
+    <SvgIcon className="slds-button__icon" sprite="utility" symbol="down" />
+    <span className="slds-assistive-text">More Options</span>
   </button>
 );
 
 const headerAction = (
-  <button className={pf('button button--neutral')}>New</button>
+  <button className="slds-button slds-button--neutral">New</button>
 );
 
 const headerSearch = (
-  <div className={pf('input-has-icon input-has-icon--left size--1-of-3')}>
-    <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-    <label htmlFor="text-input-01" className={pf('assistive-text')}>Find in List</label>
-    <input id="text-input-01" className={pf('input')} type="text" placeholder="Find in List" />
+  <div className="slds-input-has-icon slds-input-has-icon--left slds-size--1-of-3">
+    <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
+    <label htmlFor="text-input-01" className="slds-assistive-text">Find in List</label>
+    <input id="text-input-01" className="slds-input" type="text" placeholder="Find in List" />
   </div>
 );
 
@@ -39,36 +38,36 @@ const headerSearch = (
 ///////////////////////////////////////////
 
 export let Card = props =>
-  <article className={className(pf('card'), props.className)}>
+  <article className={className('slds-card', props.className)}>
     { props.children }
   </article>;
 
 export let CardHeader = props =>
-  <div className={className(pf('card__header grid'), props.className)}>
-    <header className={className(pf('media media--center has-flexi-truncate'), props.search ? pf('size--1-of-3') : null)}>
+  <div className={className('slds-card__header slds-grid', props.className)}>
+    <header className={className('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
       { props.symbol ?
-        <div className={pf('media__figure')}>
-          <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--small')} sprite="standard" symbol={ props.symbol } />
+        <div className="slds-media__figure">
+          <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--small'} sprite="standard" symbol={ props.symbol } />
         </div> : null }
-      <div className={pf('media__body truncate')}>
+      <div className="slds-media__body slds-truncate">
         <h2>
-          <a href="javascript:void(0);" className={pf('text-link--reset')}>{ props.children }</a>
+          <a href="javascript:void(0);" className="slds-text-link--reset">{ props.children }</a>
         </h2>
       </div>
     </header>
     { props.search ? headerSearch : null }
-    <div className={className(pf('no-flex'), props.search ? pf('size--1-of-3') : null)}>
+    <div className={className('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
       { props.actions == 'overflow' ? headerActionOverflow : headerAction }
     </div>
   </div>;
 
 export let CardBody = props =>
-  <div className={className(pf('card__body'), props.className)}>
+  <div className={className('slds-card__body', props.className)}>
     { props.children }
   </div>;
 
 export let CardFooter = props =>
-  <div className={className(pf('card__footer'), props.className)}>
+  <div className={className('slds-card__footer', props.className)}>
     { props.children }
   </div>;
 
@@ -82,8 +81,8 @@ export let states = [
     label: 'Default',
     element:
       <Card>
-        <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
-        <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+        <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
+        <CardBody className="slds-text-align--center">Card Body (custom goes in here)</CardBody>
         <CardFooter>Card Footer</CardFooter>
       </Card>
   },
@@ -92,7 +91,7 @@ export let states = [
     label: 'Empty',
     element:
       <Card>
-        <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
+        <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
         <CardBody></CardBody>
         <CardFooter></CardFooter>
       </Card>

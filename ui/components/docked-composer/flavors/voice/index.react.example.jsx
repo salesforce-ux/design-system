@@ -17,54 +17,53 @@ import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props} style={{ height: '500px' }}>
+  <div className="demo-only" {...props} style={{ height: '500px' }}>
     {props.children}
   </div>;
 
 const DialingIcon = (
-  <span className={pf('icon_container icon-standard-call')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container slds-icon-standard-call">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 
 const UserImage = (
-  <span className={pf('avatar avatar--medium')}>
+  <span className="slds-avatar slds-avatar--medium">
     <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 
 let DockedComposer = props =>
-  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+  <div {...props} className={className('slds-docked-composer slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
 let ComposerHeader = props =>
-  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+  <header className="slds-docked-composer__header slds-grid slds-grid--align-spread slds-shrink-none">
     <MediaObject figureLeft={DialingIcon} flavor="center">
       <h2 id="dialog-heading-id" aria-live="polite" aria-atomic="true">{props.children}</h2>
     </MediaObject>
-    <div className={pf('docked-composer__actions')}>
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
+    <div className="slds-docked-composer__actions">
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
     </div>
   </header>;
 
 let ComposerBody = props =>
-  <div className={className(pf('docked-composer__body col grid grid--vertical nowrap'), props.className)}>
+  <div className={className('slds-docked-composer__body slds-col slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
 let ComposerFooter = props =>
-  <footer className={pf('docked-composer__footer shrink-none')}>
+  <footer className="slds-docked-composer__footer slds-shrink-none">
     {props.children}
   </footer>;
 
@@ -78,25 +77,25 @@ export let states = [
     label: 'Queued',
     element:
       <Demo>
-        <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+        <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
           <ComposerHeader>Lei Chan - Connecting...</ComposerHeader>
-          <ComposerBody className={pf('slds-grid--align-center')}>
-            <div className={pf('text-align--center scrollable--y')}>
-              <span className={pf('avatar avatar--large')}>
+          <ComposerBody className="slds-grid--align-center">
+            <div className="slds-text-align--center slds-scrollable--y">
+              <span className="slds-avatar slds-avatar--large">
                 <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
               </span>
-              <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
+              <h3 className="slds-text-heading--large">Lei Chan</h3>
+              <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+                <li className="slds-item">VP of Sales</li>
+                <li className="slds-item ">Acme Corporation</li>
               </ul>
-              <p className={pf('text-heading--medium m-top--medium')}>
+              <p className="slds-text-heading--medium slds-m-top--medium">
                 Connecting...
               </p>
             </div>
           </ComposerBody>
           <ComposerFooter>
-            <Button flavor="destructive" className={pf('size--1-of-1')}>End Call</Button>
+            <Button flavor="destructive" className="slds-size--1-of-1">End Call</Button>
           </ComposerFooter>
         </DockedComposer>
       </Demo>
@@ -106,25 +105,25 @@ export let states = [
     label: 'Ringing',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Dialing...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               Dialing...
             </p>
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <Button flavor="destructive" className={pf('size--1-of-1')}>End Call</Button>
+          <Button flavor="destructive" className="slds-size--1-of-1">End Call</Button>
         </ComposerFooter>
       </DockedComposer>
     </Demo>
@@ -134,27 +133,27 @@ export let states = [
     label: 'Connected',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Call in Progress</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-docked-composer__lead slds-grid slds-grid--align-spread slds-shrink-none slds-scrollable--y">
             <MediaObject figureLeft={UserImage}>
-              <p className={pf('text-heading--medium')}>Lei Chan</p>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
+              <p className="slds-text-heading--medium">Lei Chan</p>
+              <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+                <li className="slds-item">VP of Sales</li>
+                <li className="slds-item ">Acme Corporation</li>
               </ul>
             </MediaObject>
-            <p className={pf('text-heading--large')}>5:37</p>
+            <p className="slds-text-heading--large">5:37</p>
           </div>
-          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
-            <ButtonIcon className={pf('button--icon-border-filled button--icon-small')} symbol="unmuted" assistiveText="Mute Yourself" />
+          <div className="slds-docked-composer__toolbar slds-shrink-none slds-grid slds-grid--align-spread">
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" />
           </div>
-          <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
-          <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+          <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
+          <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('float--right')}>
+          <div className="slds-float--right">
             <Button flavor="destructive">End Call</Button>
           </div>
         </ComposerFooter>
@@ -166,19 +165,19 @@ export let states = [
     label: 'Cancelled',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Cancelling...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               Cancelling...
             </p>
           </div>
@@ -191,27 +190,27 @@ export let states = [
     label: 'Busy',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Busy</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               Busy
             </p>
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
+          <div className="slds-grid">
+            <Button flavor="neutral" className="slds-size--1-of-2">Follow-Up Later</Button>
+            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -222,27 +221,27 @@ export let states = [
     label: 'Failed',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Call Failed</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               Call Failed
             </p>
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Edit Phone Number</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
+          <div className="slds-grid">
+            <Button flavor="neutral" className="slds-size--1-of-2">Edit Phone Number</Button>
+            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -253,27 +252,27 @@ export let states = [
     label: 'No Answer',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - No Answer</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               No Answer
             </p>
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Follow-Up Later</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Call Again</Button>
+          <div className="slds-grid">
+            <Button flavor="neutral" className="slds-size--1-of-2">Follow-Up Later</Button>
+            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -284,26 +283,26 @@ export let states = [
     label: 'Finished',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Call Finished</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('docked-composer__lead grid grid--align-spread shrink-none scrollable--y')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-docked-composer__lead slds-grid slds-grid--align-spread slds-shrink-none slds-scrollable--y">
             <MediaObject figureLeft={UserImage}>
-              <p className={pf('text-heading--medium')}>Lei Chan</p>
-              <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-                <li className={pf('item')}>VP of Sales</li>
-                <li className={pf('item ')}>Acme Corporation</li>
+              <p className="slds-text-heading--medium">Lei Chan</p>
+              <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+                <li className="slds-item">VP of Sales</li>
+                <li className="slds-item ">Acme Corporation</li>
               </ul>
             </MediaObject>
           </div>
-          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
-            <ButtonIcon className={pf('button--icon-border-filled button--icon-small')} symbol="unmuted" assistiveText="Mute Yourself" />
+          <div className="slds-docked-composer__toolbar slds-shrink-none slds-grid slds-grid--align-spread">
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" />
           </div>
-          <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Take notes</label>
-          <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+          <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
+          <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('float--right')}>
+          <div className="slds-float--right">
             <Button flavor="brand">Finished Notes</Button>
           </div>
         </ComposerFooter>
@@ -315,56 +314,56 @@ export let states = [
     label: 'Incoming Call',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan - Incoming Call...</ComposerHeader>
-        <ComposerBody className={pf('slds-grid--align-center')}>
-          <div className={pf('text-align--center scrollable--y')}>
-            <span className={pf('avatar avatar--large')}>
+        <ComposerBody className="slds-grid--align-center">
+          <div className="slds-text-align--center slds-scrollable--y">
+            <span className="slds-avatar slds-avatar--large">
               <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
             </span>
-            <h3 className={pf('text-heading--large')}>Lei Chan</h3>
-            <ul className={pf('list--horizontal grid--align-center has-dividers--right text-body--small')}>
-              <li className={pf('item')}>VP of Sales</li>
-              <li className={pf('item ')}>Acme Corporation</li>
+            <h3 className="slds-text-heading--large">Lei Chan</h3>
+            <ul className="slds-list--horizontal slds-grid--align-center slds-has-dividers--right slds-text-body--small">
+              <li className="slds-item">VP of Sales</li>
+              <li className="slds-item ">Acme Corporation</li>
             </ul>
-            <p className={pf('text-heading--medium m-top--medium')}>
+            <p className="slds-text-heading--medium slds-m-top--medium">
               (416) 555-1234
             </p>
-            <div className={pf('p-horizontal--x-small text-align--left')}>
-              <p className={pf('m-bottom--x-small')}>Recent Activity</p>
-              <ul className={pf('has-dividers--around-space')}>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-task m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
+            <div className="slds-p-horizontal--x-small slds-text-align--left">
+              <p className="slds-m-bottom--x-small">Recent Activity</p>
+              <ul className="slds-has-dividers--around-space">
+                <li className="slds-item slds-theme--shade slds-grid">
+                  <span className="slds-icon_container slds-icon-standard-task slds-m-right--x-small">
+                    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="task" />
+                    <span className="slds-assistive-text">Task Icon</span>
                   </span>
                   Discussed New Pricing Models
-                  <span className={pf('col--bump-left')}>Yesterday</span>
+                  <span className="slds-col--bump-left">Yesterday</span>
                 </li>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
+                <li className="slds-item slds-theme--shade slds-grid">
+                  <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
+                    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
+                    <span className="slds-assistive-text">Task Icon</span>
                   </span>
                   Re: Updated Proposals
-                  <span className={pf('col--bump-left')}>4 Hours Ago</span>
+                  <span className="slds-col--bump-left">4 Hours Ago</span>
                 </li>
-                <li className={pf('item theme--shade grid')}>
-                  <span className={pf('icon_container icon-standard-note m-right--x-small')}>
-                    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="note" />
-                    <span className={pf('assistive-text')}>Task Icon</span>
+                <li className="slds-item slds-theme--shade slds-grid">
+                  <span className="slds-icon_container slds-icon-standard-note slds-m-right--x-small">
+                    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="note" />
+                    <span className="slds-assistive-text">Task Icon</span>
                   </span>
                   Discuss Slides for Nov EBC
-                  <span className={pf('col--bump-left')}>2 Days Ago</span>
+                  <span className="slds-col--bump-left">2 Days Ago</span>
                 </li>
               </ul>
             </div>
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('grid')}>
-            <Button flavor="neutral" className={pf('size--1-of-2')}>Dismiss</Button>
-            <Button flavor="brand" className={pf('size--1-of-2')}>Answer</Button>
+          <div className="slds-grid">
+            <Button flavor="neutral" className="slds-size--1-of-2">Dismiss</Button>
+            <Button flavor="brand" className="slds-size--1-of-2">Answer</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -375,37 +374,37 @@ export let states = [
     label: 'Log a Call',
     element:
     <Demo>
-      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+      <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
         <ComposerHeader>Lei Chan</ComposerHeader>
-        <ComposerBody className={pf('docked-composer__body--form')}>
-          <fieldset className={pf('form--compound scrollable--y')}>
-            <legend className={pf('assistive-text')}>Log a call</legend>
-            <div className={pf('form-element__group')}>
-              <div className={pf('form-element__row')}>
-                <div className={pf('form-element')}>
-                  <label className={pf('form-element__label')} htmlFor="text-input-01">Subject</label>
-                  <div className={pf('form-element__control')}>
-                    <input className={pf('input')} type="text" id="text-input-01" />
+        <ComposerBody className="slds-docked-composer__body--form">
+          <fieldset className="slds-form--compound slds-scrollable--y">
+            <legend className="slds-assistive-text">Log a call</legend>
+            <div className="slds-form-element__group">
+              <div className="slds-form-element__row">
+                <div className="slds-form-element">
+                  <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
+                  <div className="slds-form-element__control">
+                    <input className="slds-input" type="text" id="text-input-01" />
                   </div>
                 </div>
               </div>
-              <div className={pf('form-element__row')}>
-                <div className={pf('form-element')}>
-                  <label className={pf('form-element__label')} htmlFor="textarea-input-01">Comments</label>
-                  <div className={pf('form-element__control')}>
-                    <textarea className={pf('textarea')} id="textarea-input-01" />
+              <div className="slds-form-element__row">
+                <div className="slds-form-element">
+                  <label className="slds-form-element__label" htmlFor="textarea-input-01">Comments</label>
+                  <div className="slds-form-element__control">
+                    <textarea className="slds-textarea" id="textarea-input-01" />
                   </div>
                 </div>
               </div>
-              <div className={pf('form-element__row')}>
-                <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Leads" />
-                <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Accounts" />
+              <div className="slds-form-element__row">
+                <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
+                <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
               </div>
             </div>
           </fieldset>
         </ComposerBody>
         <ComposerFooter>
-          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
+          <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
             <Button flavor="brand">Save</Button>
           </div>
         </ComposerFooter>

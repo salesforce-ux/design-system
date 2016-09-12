@@ -14,14 +14,13 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={className(pf('table table--bordered'), props.className)} role="grid">
+  <table className={className('slds-table slds-table--bordered', props.className)} role="grid">
     {props.children}
   </table>;
 
@@ -35,19 +34,19 @@ let Th = (props) => {
 
   return(
     <th {...props} aria-label={props.children}>
-      <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
-        <span className={pf('assistive-text')}>Sort </span>
-        <span className={pf('truncate')} title={props.children}>{ props.children }</span>
-        <div className={pf('icon_container')}>
-          <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
+        <span className="slds-assistive-text">Sort </span>
+        <span className="slds-truncate" title={props.children}>{ props.children }</span>
+        <div className="slds-icon_container">
+          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
         </div>
-        <span className={pf('assistive-text')} aria-live="assertive" aria-atomic="true">{sortDirection}</span>
+        <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
       </a>
-      <div className={pf('resizable')}>
-        <label htmlFor={uniqueId} className={pf('assistive-text')}>{rangeLabel}</label>
-        <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id={uniqueId} />
-        <span className={pf('resizable__handle')}>
-          <span className={pf('resizable__divider')}></span>
+      <div className="slds-resizable">
+        <label htmlFor={uniqueId} className="slds-assistive-text">{rangeLabel}</label>
+        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} />
+        <span className="slds-resizable__handle">
+          <span className="slds-resizable__divider"></span>
         </span>
       </div>
     </th>
@@ -60,29 +59,29 @@ let Td = props =>
   </td>;
 
 let Checkbox = props =>
-  <label className={pf('checkbox')}>
+  <label className="slds-checkbox">
     <input type="checkbox" name="options" defaultChecked={props.checked} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('assistive-text')}>{props.label}</span>
+    <span className="slds-checkbox--faux"></span>
+    <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
 let RowData = (props) => {
   let checkboxLabel = 'Select row ' + props.title;
 
   return(
-    <tr className={className(pf('hint-parent'), props.className)} aria-selected={props.checked}>
-      <Td className={pf('cell-shrink')} data-label={checkboxLabel}><Checkbox label={checkboxLabel} checked={props.checked} /></Td>
-      <th scope="row" data-label="Opportunity Name"><div className={pf('truncate')} title={props.title}>{props.title}</div></th>
-      <Td data-label="Account Name"><div className={pf('truncate')} title="Cloudhub">Cloudhub</div></Td>
-      <Td data-label="Close Date"><div className={pf('truncate')} title="4/14/2015">4/14/2015</div></Td>
-      <Td data-label="Prospecting"><div className={pf('truncate')} title="Prospecting">Prospecting</div></Td>
-      <Td data-label="Confidence"><div className={pf('truncate')} title="20%">20%</div></Td>
-      <Td data-label="Amount"><div className={pf('truncate')} title="$25k">$25k</div></Td>
-      <Td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
-      <Td className={pf('cell-shrink')} data-label="Actions">
+    <tr className={className('slds-hint-parent', props.className)} aria-selected={props.checked}>
+      <Td className="slds-cell-shrink" data-label={checkboxLabel}><Checkbox label={checkboxLabel} checked={props.checked} /></Td>
+      <th scope="row" data-label="Opportunity Name"><div className="slds-truncate" title={props.title}>{props.title}</div></th>
+      <Td data-label="Account Name"><div className="slds-truncate" title="Cloudhub">Cloudhub</div></Td>
+      <Td data-label="Close Date"><div className="slds-truncate" title="4/14/2015">4/14/2015</div></Td>
+      <Td data-label="Prospecting"><div className="slds-truncate" title="Prospecting">Prospecting</div></Td>
+      <Td data-label="Confidence"><div className="slds-truncate" title="20%">20%</div></Td>
+      <Td data-label="Amount"><div className="slds-truncate" title="$25k">$25k</div></Td>
+      <Td data-label="Contact"><div className="slds-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
+      <Td className="slds-cell-shrink" data-label="Actions">
         <ButtonIcon
-          className={pf('button--icon-border button--icon-x-small')}
-          iconClassName={pf('button__icon--hint button__icon--small')}
+          className="slds-button--icon-border slds-button--icon-x-small"
+          iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
           assistiveText="Show More" />
       </Td>
@@ -100,18 +99,18 @@ export let states = [
     id: 'data-table-advanced',
     label: 'Default',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -124,23 +123,23 @@ export let states = [
     id: 'data-table-advanced-row-selected',
     label: 'Row Selected',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" indeterminate="true" checked /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" indeterminate="true" checked /></th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <RowData title="Cloudhub" />
-          <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
+          <RowData title="Cloudhub + Anypoint Connectors" className="slds-is-selected" checked />
         </tbody>
       </Table>
   },
@@ -148,23 +147,23 @@ export let states = [
     id: 'data-table-advanced-all-rows-selected',
     label: 'All Rows Selected',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" checked /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" checked /></th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" className={pf('is-selected')} checked />
-          <RowData title="Cloudhub + Anypoint Connectors" className={pf('is-selected')} checked />
+          <RowData title="Cloudhub" className="slds-is-selected" checked />
+          <RowData title="Cloudhub + Anypoint Connectors" className="slds-is-selected" checked />
         </tbody>
       </Table>
   },
@@ -172,18 +171,18 @@ export let states = [
     id: 'data-table-advanced-sorted-column-asc',
     label: 'Sorted Ascending',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--asc')} scope="col" aria-sort="ascending">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
+            <Th className="slds-is-sortable slds-is-resizable slds-is-sorted slds-is-sorted--asc" scope="col" aria-sort="ascending">Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -196,18 +195,18 @@ export let states = [
     id: 'data-table-advanced-sorted-column-desc',
     label: 'Sorted Descending',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable is-sorted is-sorted--desc')} scope="col" aria-sort="descending">Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
+            <Th className="slds-is-sortable slds-is-resizable slds-is-sorted slds-is-sorted--desc" scope="col" aria-sort="descending">Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -220,18 +219,18 @@ export let states = [
     id: 'data-table-advanced-resized-column',
     label: 'Column resized',
     element:
-      <Table className={pf('table--fixed-layout')}>
+      <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" /></th>
-            <Th className={pf('is-sortable is-resizable')} scope="col" style={{ width: '300px' }}>Opportunity Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Account Name</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Close Date</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Stage</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Confidence</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Amount</Th>
-            <Th className={pf('is-sortable is-resizable')} scope="col">Contact</Th>
-            <th className={pf('cell-shrink')} scope="col"></th>
+          <tr className="slds-text-title--caps">
+            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col" style={{ width: '300px' }}>Opportunity Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
+            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>

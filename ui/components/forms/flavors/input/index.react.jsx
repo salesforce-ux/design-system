@@ -20,9 +20,9 @@ class Component extends React.Component {
   }
   render() {
     return (
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
-        <div className={pf('form-element__control')}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <div className="slds-form-element__control">
           {this.renderIconInput()}
           {this.renderInput()}
           {this.renderHelp(this.props.help)}
@@ -32,7 +32,7 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName(pf('form-element__help'));
+    const className = this.$getClassName('slds-form-element__help');
     return (
       <div className={className}>
         {help}
@@ -48,16 +48,16 @@ class Component extends React.Component {
     const {sprite,symbol} = this.props;
     const props = this.$propsWithoutKeys('className', 'sprite', 'symbol');
     return (
-      <div className={pf(iconClassName)}>
-        <SvgIcon className={pf('input__icon icon-text-default')} sprite={sprite} symbol={symbol} />
-        <input id={this.props.assistiveText.replace(' ','-')} className={pf('input')} type="text" placeholder={this.props.placeholder} {...this.props} />
+      <div className={iconClassName}>
+        <SvgIcon className="slds-input__icon slds-icon-text-default" sprite={sprite} symbol={symbol} />
+        <input id={this.props.assistiveText.replace(' ','-')} className="slds-input" type="text" placeholder={this.props.placeholder} {...this.props} />
       </div>
     );
   }
   renderInput() {
     if (this.props.sprite) return null;
     return (
-      <input id={this.props.assistiveText.replace(' ','-')} className={pf('input')} type="text" placeholder={this.props.placeholder} />
+      <input id={this.props.assistiveText.replace(' ','-')} className="slds-input" type="text" placeholder={this.props.placeholder} />
     );
   }
 }

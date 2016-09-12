@@ -10,23 +10,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--align-space')}>
-    <div className={pf('p-horizontal--small')}>
-      <div className={pf('box box--small theme--shade text-align--center')}>Content determines the width unless otherwise set</div>
+  <div className="slds-grid slds-grid--align-space">
+    <div className="slds-p-horizontal--small">
+      <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">Content determines the width unless otherwise set</div>
     </div>
-    <div className={pf('p-horizontal--small')}>
-      <div className={pf('box box--small theme--shade text-align--center')}>1</div>
+    <div className="slds-p-horizontal--small">
+      <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">1</div>
     </div>
-    <div className={pf('p-horizontal--small')}>
-      <div className={pf('box box--small theme--shade text-align--center')}>2</div>
+    <div className="slds-p-horizontal--small">
+      <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">2</div>
     </div>
-    <div className={pf('p-horizontal--small')}>
-      <div className={pf('box box--small theme--shade text-align--center')}>3</div>
+    <div className="slds-p-horizontal--small">
+      <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">3</div>
     </div>
   </div>
 </div>
@@ -34,7 +33,7 @@ export const preview = (
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--align-space')}>
+  <div className="slds-grid slds-grid--align-space">
     <div>Content determines the width unless otherwise set</div>
     <div>1</div>
     <div>2</div>

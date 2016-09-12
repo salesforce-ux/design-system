@@ -21,7 +21,7 @@ class LabelHeading extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('text-title--caps'));
+    const className = this.$getClassName('slds-text-title--caps');
     return (
       <p {...this.props} className={className}>
         {this.props.children}
@@ -36,7 +36,7 @@ class MediumHeading extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('text-heading--medium'));
+    const className = this.$getClassName('slds-text-heading--medium');
     return (
       <h1 {...this.props} className={className}>
         {this.props.children}

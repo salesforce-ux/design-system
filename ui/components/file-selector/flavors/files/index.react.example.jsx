@@ -12,46 +12,45 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let FileSelector = props =>
-<div className={className(pf('form-element'), props.error ? pf('has-error') : null)}>
-  <span className={pf('form-element__label')} id="file-selector-id">Attachment</span>
-  <div className={pf('form-element__control')}>
-    <div className={className(pf('file-selector'), props.className)}>
-      <div className={className(pf('file-selector__dropzone'), props.draggover ? pf('has-drag-over') : null)}>
-        <input className={pf('file-selector__input assistive-text')} accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'file-selector-id error-01' : 'file-selector-id'} />
-        <label className={pf('file-selector__body')} htmlFor="file-upload-input-01">
-          <span className={pf('file-selector__button button button--neutral')}>
-            <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
+<div className={className('slds-form-element', props.error ? 'slds-has-error' : null)}>
+  <span className="slds-form-element__label" id="file-selector-id">Attachment</span>
+  <div className="slds-form-element__control">
+    <div className={className('slds-file-selector', props.className)}>
+      <div className={className('slds-file-selector__dropzone', props.draggover ? 'slds-has-drag-over' : null)}>
+        <input className="slds-file-selector__input slds-assistive-text" accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'file-selector-id error-01' : 'file-selector-id'} />
+        <label className="slds-file-selector__body" htmlFor="file-upload-input-01">
+          <span className="slds-file-selector__button slds-button slds-button--neutral">
+            <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
           </span>
-          <span className={pf('file-selector__text medium-show')}>or Drop {props.files ? 'Files' : 'Image'}</span>
+          <span className="slds-file-selector__text slds-medium-show">or Drop {props.files ? 'Files' : 'Image'}</span>
         </label>
       </div>
     </div>
   </div>
-  { props.error ? <div className={pf('form-element__help')} id="error-01">File type not supported</div> : null }
+  { props.error ? <div className="slds-form-element__help" id="error-01">File type not supported</div> : null }
 </div>;
 
 export let states = [
   {
     id: 'file-selector-files',
     label: 'Default',
-    element: <FileSelector files className={pf('file-selector--files')} />
+    element: <FileSelector files className="slds-file-selector--files" />
   },
   {
     id: 'file-selector-files-error',
     label: 'Error',
-    element: <FileSelector files className={pf('file-selector--files')} error />
+    element: <FileSelector files className="slds-file-selector--files" error />
   },
   {
     id: 'file-selector-files-draggover',
     label: 'Dragover',
-    element: <FileSelector files className={pf('file-selector--files')} draggover />
+    element: <FileSelector files className="slds-file-selector--files" draggover />
   },
   {
     id: 'file-selector-files-draggover-error',
     label: 'Dragover with error',
-    element: <FileSelector files className={pf('file-selector--files')} draggoverError error />
+    element: <FileSelector files className="slds-file-selector--files" draggoverError error />
   }
 ];

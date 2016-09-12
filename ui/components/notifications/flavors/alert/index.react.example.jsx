@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 let demoHeight = '2rem';
 
@@ -22,13 +21,13 @@ let demoHeight = '2rem';
 
 let Default = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--alert theme--alert-texture')} role="alert">
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
+        className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
         assistiveText="Close" />
-        <span className={pf('assistive-text')}>Info</span>
+        <span className="slds-assistive-text">Info</span>
         <h2>Base System Alert</h2>
     </div>
   </div>
@@ -36,15 +35,15 @@ let Default = props =>
 
 let Success = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--alert theme--success theme--alert-texture')} role="alert">
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--alert slds-theme--success slds-theme--alert-texture" role="alert">
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
+        className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
         assistiveText="Close" />
-      <span className={pf('assistive-text')}>Success</span>
+      <span className="slds-assistive-text">Success</span>
       <h2>
-        <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="custom" symbol="custom19" />
+        <SvgIcon className="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" sprite="custom" symbol="custom19" />
         Scheduled Maintenance Notification: Sunday March 15, 8:00 AM&ndash;10:00 PST <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>
@@ -53,15 +52,15 @@ let Success = props =>
 
 let ErrorAlert = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--alert theme--error theme--alert-texture')} role="alert">
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" role="alert">
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
+        className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
         assistiveText="Close" />
-      <span className={pf('assistive-text')}>Error</span>
+      <span className="slds-assistive-text">Error</span>
       <h2>
-        <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="ban" />
+        <SvgIcon className="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" sprite="utility" symbol="ban" />
         Your browser is currently not supported. Your Salesforce may be degraded. <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>
@@ -70,15 +69,15 @@ let ErrorAlert = props =>
 
 let Offline = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--alert theme--offline theme--alert-texture')} role="alert">
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--alert slds-theme--offline slds-theme--alert-texture" role="alert">
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
+        className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
         assistiveText="Close" />
-      <span className={pf('assistive-text')}>Offline</span>
+      <span className="slds-assistive-text">Offline</span>
       <h2>
-        <SvgIcon className={pf('icon icon-text-email icon--small m-right--x-small')} sprite="utility" symbol="offline" />
+        <SvgIcon className="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" sprite="utility" symbol="offline" />
         You are in offline mode. <a href="javascript:void(0);">More Information</a>
       </h2>
     </div>

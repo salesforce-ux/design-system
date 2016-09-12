@@ -14,31 +14,30 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 import Textarea from 'ui/components/forms/flavors/textarea/index.react';
 import Radio from 'ui/components/forms/flavors/radio/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only">
 
-  <div className={pf('form--horizontal')}>
+  <div className="slds-form--horizontal">
     <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
     <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
-    <fieldset className={pf('form-element is-required')}>
-      <legend className={pf('form-element__legend form-element__label')}>Checkbox Group label</legend>
-      <div className={pf('form-element__control')}>
+    <fieldset className="slds-form-element is-required">
+      <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
+      <div className="slds-form-element__control">
         <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
         <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
       </div>
     </fieldset>
-    <fieldset className={pf('form-element is-required')}>
-      <legend className={pf('form-element__legend form-element__label')}>Radio Group label</legend>
-      <div className={pf('form-element__control')}>
+    <fieldset className="slds-form-element is-required">
+      <legend className="slds-form-element__legend slds-form-element__label">Radio Group label</legend>
+      <div className="slds-form-element__control">
         <Radio name="options" label="Lead Generation" assistiveText="lead" />
         <Radio name="options" label="Education Leads" assistiveText="education" />
       </div>
     </fieldset>
-    <div className={pf('form-element')}>
-      <div className={pf('form-element__control')}>
+    <div className="slds-form-element">
+      <div className="slds-form-element__control">
         <Checkbox name="default" label="I agree to the Terms & Service" assistiveText="agree" />
       </div>
     </div>

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
@@ -35,8 +34,8 @@ export default (
     with <code>max-</code> to achieve this result.
   </p>
   <p>Here is an overview of our available breakpoint names:</p>
-  <div className={pf('scrollable--x m-bottom--medium')}>
-    <table className={pf('table table--bordered max-medium-table--stacked-horizontal no-row-hover')}>
+  <div className="slds-scrollable--x slds-m-bottom--medium">
+    <table className="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
       <thead>
         <tr className="site-text-heading--label">
           <th scope="col">Breakpoint Name</th>
@@ -76,7 +75,7 @@ export default (
   <p>A real world example would look like this:</p>
   <p><code>&lt;div class="{globals.cssPrefix}size--1-of-2 {globals.cssPrefix}small-size--1-of-3 {globals.cssPrefix}medium-size--1-of-4 {globals.cssPrefix}large-size--1-of-3"&gt;</code></p>
   <p>This will equate to the following width output for your element:</p>
-  <div className={pf('site-code--content scrollable--x')}>
+  <div className="site-code--content slds-scrollable--x">
     <CodeBlock language="scss">{`
 .foo {
   width: 50%;

@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
-
 import globals from 'app_modules/global';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -173,12 +172,12 @@ export default React.createClass({
   renderNavItems(items, level = 0) {
     items = items.filter(item => this.shouldShowNavItem(item)).map(item => {
       const listItemClass = item.separator ?
-        'list__item has-divider--top-space' :
-        'list__item';
+        'slds-list__item slds-has-divider--top-space' :
+        'slds-list__item';
       const className = classNames(listItemClass, {
-        'is-open': item.isOpen,
-        'is-selected': item.isSelected,
-        'is-active': item.isActive,
+        'slds-is-open': item.isOpen,
+        'slds-is-selected': item.isSelected,
+        'slds-is-active': item.isActive,
         'is-closed': !item.isOpen && item.hasChildren
       });
       const dataProps = {};
@@ -195,8 +194,8 @@ export default React.createClass({
         </li>
       );
     });
-    let classnames = classNames('list--vertical has-block-links', {
-      'is-nested': level > 0
+    let classnames = classNames('slds-list--vertical slds-has-block-links', {
+      'slds-is-nested': level > 0
     });
     return (
       <ul className={classnames}>

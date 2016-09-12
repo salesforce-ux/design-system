@@ -14,30 +14,29 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const image = (
-  <a className={pf('avatar avatar--circle avatar--medium')} href="javascript:void(0);" title="Jenna Davis">
+  <a className="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);" title="Jenna Davis">
     <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
   </a>
 );
 
 export let Publisher = props =>
-  <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
-    <div className={className(pf('publisher publisher--comment'), props.className)}>
-      <label htmlFor="comment-text-input-01" className={pf('assistive-text')}>Write a comment</label>
-      <textarea id="comment-text-input-01" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-      <div className={pf('publisher__actions grid grid--align-spread')}>
-        <ul className={pf('grid')}>
+  <MediaObject figureLeft={image} className="slds-comment slds-hint-parent">
+    <div className={className('slds-publisher slds-publisher--comment', props.className)}>
+      <label htmlFor="comment-text-input-01" className="slds-assistive-text">Write a comment</label>
+      <textarea id="comment-text-input-01" className="slds-publisher__input slds-input--bare slds-text-longform" placeholder="Write a comment&hellip;" />
+      <div className="slds-publisher__actions slds-grid slds-grid--align-spread">
+        <ul className="slds-grid">
           <li>
-            <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
+            <ButtonIcon className="slds-button--icon-container" symbol="adduser" assistiveText="Add User" />
           </li>
           <li>
-            <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
+            <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" />
           </li>
         </ul>
         <Button flavor="brand">Comment</Button>
@@ -55,10 +54,10 @@ export let Default = props =>
   <Publisher />;
 
 let Active = props =>
-  <Publisher className={pf('is-active')} />;
+  <Publisher className="slds-is-active" />;
 
 let ActiveFocus = props =>
-  <Publisher className={pf('is-active has-focus')} />;
+  <Publisher className="slds-is-active slds-has-focus" />;
 
 
 ///////////////////////////////////////////
@@ -74,11 +73,11 @@ export let states = [
   {
     id: 'publisher-comment-active',
     label: 'Active',
-    element: <Publisher className={pf('is-active')} />
+    element: <Publisher className="slds-is-active" />
   },
   {
     id: 'publisher-comment-active-focus',
     label: 'Focused',
-    element: <Publisher className={pf('is-active has-focus')} />
+    element: <Publisher className="slds-is-active slds-has-focus" />
   }
 ];

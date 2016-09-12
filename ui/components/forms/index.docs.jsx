@@ -16,7 +16,6 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 import Textarea from 'ui/components/forms/flavors/textarea/index.react';
 import Select from 'ui/components/forms/flavors/select/index.react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
@@ -36,35 +35,35 @@ export default (
   <p>Error states alert the user when content in the form is invalid. The <CodeClass className="has-error" /> class is placed on the <code>&lt;div class=".slds-form-element"&gt;</code>. Place the error message for the user in a <code>&lt;span&gt;</code> with the <CodeClass className="form-element__help" /> class. The <code>&lt;input&gt;</code> with the error receives an `aria-describedby` attribute that references the ID attribute of the error message in the <code>&lt;span&gt;</code>. This configuration allows screen readers to properly associate the error message with the field.</p>
   <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute required to it. Additionally, add the <CodeClass className="is-required" /> class on the <CodeClass className="form-element" /> wrapper.</p>
   <p>The native form elements, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;input type='checkbox'&gt;</code>, and <code>&lt;input type='radio'&gt;</code>, receive validation styling for <code>disabled</code>, <code>checked</code>, and <code>checked disabled</code>, if applicable.</p>
-  <h3 className={pf('text-heading--small')}>Form Example</h3>
-  <form role="form" className={pf('form--stacked grid wrap grid--pull-padded m-top--large')}>
-    <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2')}>
+  <h3 className="slds-text-heading--small">Form Example</h3>
+  <form role="form" className="slds-form--stacked slds-grid slds-wrap slds-grid--pull-padded slds-m-top--large">
+    <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2">
       <Input label="Opportunity Name" placeholder="Moderna 10k" assistiveText="Opportunity Name" />
       <Input label="Account Name" placeholder="Moderno Bistro" assistiveText="Account Name" />
       <Input label="Contact Name" placeholder="John Smith" assistiveText="Contact Name" />
       <Input label="Contact Email" placeholder="jsmith@moderna.com" assistiveText="Contact Email" help="Example Form Element Help" />
       <Textarea label="Notes" assistiveText="textarea"></Textarea>
     </div>
-    <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2')}>
-      <div className={pf('form-element has-divider--bottom')}>
-        <span className={pf('form-element__label')}>Opportunity Owner</span>
-        <div className={pf('form-element__control')}>
-          <span className={pf('form-element__static')}>Erin Buck</span>
+    <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2">
+      <div className="slds-form-element slds-has-divider--bottom">
+        <span className="slds-form-element__label">Opportunity Owner</span>
+        <div className="slds-form-element__control">
+          <span className="slds-form-element__static">Erin Buck</span>
         </div>
       </div>
       <Input label="Amount" assistiveText="Amount" />
       <Input label="Probability" placeholder="100" assistiveText="Probability" />
-      <fieldset className={pf('form-element is-required')}>
-        <legend className={pf('form-element__legend form-element__label')}>Options</legend>
-        <div className={pf('form-element__control')}>
+      <fieldset className="slds-form-element is-required">
+        <legend className="slds-form-element__legend slds-form-element__label">Options</legend>
+        <div className="slds-form-element__control">
           <Radio name="options" label="Lead generation" assistiveText="lead" />
           <Radio name="options" label="Education leads" assistiveText="education" />
           <Radio name="options" label="Pass to partner" assistiveText="partner" />
         </div>
       </fieldset>
-      <fieldset className={pf('form-element')}>
-        <legend className={pf('form-element__legend form-element__label')}>Default</legend>
-        <div className={pf('form-element__control')}>
+      <fieldset className="slds-form-element">
+        <legend className="slds-form-element__legend slds-form-element__label">Default</legend>
+        <div className="slds-form-element__control">
           <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
           <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
         </div>

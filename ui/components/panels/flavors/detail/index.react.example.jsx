@@ -15,55 +15,54 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only grid')} {...props} style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
+  <div className="demo-only slds-grid" {...props} style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
     {props.children}
   </div>;
 
 let Checkbox = props =>
-  <label className={className(pf('checkbox'), props.className)} htmlFor={props.id}>
+  <label className={className('slds-checkbox', props.className)} htmlFor={props.id}>
     <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('assistive-text')}>{props.label}</span>
+    <span className="slds-checkbox--faux"></span>
+    <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
 export let Panel = props =>
-  <div className={className(pf('panel grid grid--vertical nowrap'), props.className)}>
+  <div className={className('slds-panel slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
 export let PanelBody = props =>
-  <div className={className(pf('form--stacked grow scrollable--y'), props.className)}>
+  <div className={className('slds-form--stacked slds-grow slds-scrollable--y', props.className)}>
     {props.children}
   </div>;
 
 export let PanelSection = props =>
-  <div className={className(pf('panel__section'), props.className)}>
+  <div className={className('slds-panel__section', props.className)}>
     {props.children}
   </div>;
 
 let Tile = props =>
-  <div className={pf('media')}>
-    <div className={pf('media__figure')}>
+  <div className="slds-media">
+    <div className="slds-media__figure">
       <Checkbox id="completed" label="Complete Task" />
     </div>
-    <div className={pf('media__body')}>
-      <p className={pf('truncate text-heading--small')}>
+    <div className="slds-media__body">
+      <p className="slds-truncate slds-text-heading--small">
         <a href="javascript:void(0);">Follow up on '15 contact</a>
       </p>
-      <p className={pf('truncate text-body--small')}>Jun 18</p>
-      <div className={pf('button-group m-top--small')} role="group">
-        <Button flavor="neutral" className={pf('grow')}>Edit</Button>
-        <Button flavor="neutral" className={pf('grow')}>Follow Up</Button>
-        <Button flavor="neutral" className={pf('grow')}>Delete</Button>
+      <p className="slds-truncate slds-text-body--small">Jun 18</p>
+      <div className="slds-button-group slds-m-top--small" role="group">
+        <Button flavor="neutral" className="slds-grow">Edit</Button>
+        <Button flavor="neutral" className="slds-grow">Follow Up</Button>
+        <Button flavor="neutral" className="slds-grow">Delete</Button>
         <ButtonIcon
-          className={pf('button--icon-border-filled')}
+          className="slds-button--icon-border-filled"
           symbol="down"
           assistiveText="More Actions"/>
       </div>
@@ -71,59 +70,59 @@ let Tile = props =>
   </div>;
 
 let FormElementStatic = props =>
-  <div className={pf('form-element hint-parent has-divider--bottom')}>
-    <span className={pf('form-element__label')}>{props.label}</span>
-    <div className={pf('form-element__control')}>
-      <span className={pf('form-element__static')}>{props.text}</span>
+  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
+    <span className="slds-form-element__label">{props.label}</span>
+    <div className="slds-form-element__control">
+      <span className="slds-form-element__static">{props.text}</span>
     </div>
   </div>;
 
 let FormElementStaticInline = props =>
-  <div className={pf('form-element hint-parent has-divider--bottom')}>
+  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
     <ButtonIcon
-      className={pf('float--right button--icon button--icon-small')}
-      iconClassName={pf('button__icon--hint')}
+      className="slds-float--right slds-button--icon slds-button--icon-small"
+      iconClassName="slds-button__icon--hint"
       symbol="edit"
       assistiveText="Edit this Field"/>
-    <span className={pf('form-element__label')}>{props.label}</span>
-    <div className={pf('form-element__control')}>
-      <span className={pf('form-element__static')}>{props.text}</span>
+    <span className="slds-form-element__label">{props.label}</span>
+    <div className="slds-form-element__control">
+      <span className="slds-form-element__static">{props.text}</span>
     </div>
   </div>;
 
 let FormElementStaticLonform = props =>
-  <div className={pf('form-element hint-parent has-divider--bottom')}>
-    <span className={pf('form-element__label')}>{props.label}</span>
-    <div className={pf('form-element__control')}>
-      <span className={pf('form-element__static text-longform')}>{props.text}</span>
+  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
+    <span className="slds-form-element__label">{props.label}</span>
+    <div className="slds-form-element__control">
+      <span className="slds-form-element__static slds-text-longform">{props.text}</span>
     </div>
   </div>;
 
 let FormElementStaticLonformInline = props =>
-  <div className={pf('form-element hint-parent has-divider--bottom')}>
+  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
     <ButtonIcon
-      className={pf('float--right button--icon button--icon-small')}
-      iconClassName={pf('button__icon--hint')}
+      className="slds-float--right slds-button--icon slds-button--icon-small"
+      iconClassName="slds-button__icon--hint"
       symbol="edit"
       assistiveText="Edit this Field"/>
-    <span className={pf('form-element__label')}>{props.label}</span>
-    <div className={pf('form-element__control')}>
-      <span className={pf('form-element__static text-longform')}>{props.text}</span>
+    <span className="slds-form-element__label">{props.label}</span>
+    <div className="slds-form-element__control">
+      <span className="slds-form-element__static slds-text-longform">{props.text}</span>
     </div>
   </div>;
 
 let FormElement = props =>
-  <div className={pf('form-element')}>
-    <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control')}>
+  <div className="slds-form-element">
+    <label className="slds-form-element__label" htmlFor={props.id}>{props.label}</label>
+    <div className="slds-form-element__control">
       {props.children}
     </div>
   </div>;
 
 let Lookup = props =>
-  <div className={pf('form-element lookup has-selection')} data-select="single" data-scope="single" data-typeahead="false">
-    <label className={pf('form-element__label')} htmlFor={props.id}>{props.label}</label>
-    <div className={pf('form-element__control')}>
+  <div className="slds-form-element slds-lookup slds-has-selection" data-select="single" data-scope="single" data-typeahead="false">
+    <label className="slds-form-element__label" htmlFor={props.id}>{props.label}</label>
+    <div className="slds-form-element__control">
       {props.children}
     </div>
   </div>;
@@ -134,13 +133,13 @@ let Lookup = props =>
 
 let Default = props =>
   <Demo>
-    <Panel containerClassName={pf('panel_container--space')}>
+    <Panel containerClassName="panel_container--space">
       <PanelBody>
-        <PanelSection className={pf('has-divider--bottom')}>
+        <PanelSection className="slds-has-divider--bottom">
           <Tile />
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Task Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
           <FormElementStatic label="Subject" text="Follow up on '15 Contract" />
           <FormElementStatic label="Due Date" text="6/18/16" />
           <FormElementStatic label="Assigned TO" text="Jason Dewar" />
@@ -149,7 +148,7 @@ let Default = props =>
           <FormElementStaticLonform label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Additional Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
           <FormElementStatic label="Status" text="Not Started" />
           <FormElementStatic label="Priority" text="Normal" />
         </PanelSection>
@@ -159,13 +158,13 @@ let Default = props =>
 
 let HasEditing = props =>
   <Demo>
-    <Panel containerClassName={pf('panel_container--space')}>
+    <Panel containerClassName="panel_container--space">
       <PanelBody>
-        <PanelSection className={pf('has-divider--bottom')}>
+        <PanelSection className="slds-has-divider--bottom">
           <Tile />
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Task Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
           <FormElementStaticInline label="Subject" text="Follow up on '15 Contract" />
           <FormElementStaticInline label="Due Date" text="6/18/16" />
           <FormElementStaticInline label="Assigned TO" text="Jason Dewar" />
@@ -174,7 +173,7 @@ let HasEditing = props =>
           <FormElementStaticLonformInline label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Additional Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
           <FormElementStaticInline label="Status" text="Not Started" />
           <FormElementStaticInline label="Priority" text="Normal" />
         </PanelSection>
@@ -184,73 +183,73 @@ let HasEditing = props =>
 
 let IsEditing = props =>
   <Demo>
-    <Panel containerClassName={pf('panel_container--space')} className={pf('is-editing')}>
+    <Panel containerClassName="panel_container--space" className="slds-is-editing">
       <PanelBody>
-        <PanelSection className={pf('has-divider--bottom')}>
+        <PanelSection className="slds-has-divider--bottom">
           <Tile />
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Task Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
           <FormElement label="Subject" id="text-input-01">
-            <input className={pf('input')} id="text-input-01" defaultValue="Follow up on '15 Contract" />
+            <input className="slds-input" id="text-input-01" defaultValue="Follow up on '15 Contract" />
           </FormElement>
           <FormElement label="Due Date" id="date-input-01">
-            <input className={pf('input')} id="date-input-01" defaultValue="6/18/16" />
+            <input className="slds-input" id="date-input-01" defaultValue="6/18/16" />
           </FormElement>
           <Lookup label="Assigned To" id="text-input-02">
-            <div className={pf('pill_container show')}>
+            <div className="slds-pill_container slds-show">
               <Pill label="Jason Dewar">
-                <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
-                  <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
-                  <span className={pf('assistive-text')}>Person</span>
+                <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                  <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
+                  <span className="slds-assistive-text">Person</span>
                 </span>
               </Pill>
             </div>
           </Lookup>
           <Lookup label="Name" id="text-input-03">
-            <div className={pf('pill_container show')}>
+            <div className="slds-pill_container slds-show">
               <Pill label="Adam Choi">
-                <span className={pf('icon_container icon-standard-avatar pill__icon_container')}>
-                  <SvgIcon className={pf('icon')} sprite="standard" symbol="avatar" />
-                  <span className={pf('assistive-text')}>Person</span>
+                <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                  <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
+                  <span className="slds-assistive-text">Person</span>
                 </span>
               </Pill>
             </div>
           </Lookup>
           <Lookup label="Related To" id="text-input-04">
-            <div className={pf('pill_container show')}>
+            <div className="slds-pill_container slds-show">
               <Pill label="Tesla Cloudhub + Anypoint Connectors">
-                <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-                  <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-                  <span className={pf('assistive-text')}>Account</span>
+                <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+                  <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+                  <span className="slds-assistive-text">Account</span>
                 </span>
               </Pill>
             </div>
           </Lookup>
           <FormElement label="Comments" id="text-input-05">
-            <textarea className={pf('textarea')} id="text-input-05" defaultValue="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+            <textarea className="slds-textarea" id="text-input-05" defaultValue="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
           </FormElement>
         </PanelSection>
         <PanelSection>
-          <h3 className={pf('text-heading--small m-bottom--medium')}>Additional Information</h3>
+          <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
           <FormElement label="Status" id="non-text-input-01">
-            <div className={pf('select_container')}>
-              <select className={pf('select')} id="non-text-input-01">
+            <div className="slds-select_container">
+              <select className="slds-select" id="non-text-input-01">
                 <option>Not Started</option>
               </select>
             </div>
           </FormElement>
           <FormElement label="Priority" id="non-text-input-02">
-            <div className={pf('select_container')}>
-              <select className={pf('select')} id="non-text-input-02">
+            <div className="slds-select_container">
+              <select className="slds-select" id="non-text-input-02">
                 <option>Normal</option>
               </select>
             </div>
           </FormElement>
         </PanelSection>
       </PanelBody>
-      <div className={pf('panel__actions has-divider--top')}>
-        <div className={pf('grid grid--align-center x-small-buttons--horizontal')}>
+      <div className="slds-panel__actions slds-has-divider--top">
+        <div className="slds-grid slds-grid--align-center x-small-buttons--horizontal">
           <Button type="button" flavor="neutral">Cancel</Button>
           <Button type="button" flavor="brand">Save</Button>
         </div>

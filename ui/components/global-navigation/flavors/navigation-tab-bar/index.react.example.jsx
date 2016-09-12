@@ -14,7 +14,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -23,13 +22,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Entity Add Dropdown
 const entityAddDropdown = (
-  <div className={pf('popover nubbin--top')} role="dialog" style={{ position: 'absolute', left: '224px', top: '44px' }}>
-  <div className={pf('popover__body')}>
-    <div className={pf('form-element')}>
-      <label className={pf('form-element__label')} htmlFor="text-input-01">Add Page by URL or ID</label>
-      <div className={pf('form-element__control grid')}>
-        <input id="text-input-01" className={pf('input')} type="text" placeholder="Placeholder Text" />
-        <button className={pf('button button--brand shrink-none m-left--small')}>Add Tab</button>
+  <div className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '224px', top: '44px' }}>
+  <div className="slds-popover__body">
+    <div className="slds-form-element">
+      <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
+      <div className="slds-form-element__control slds-grid">
+        <input id="text-input-01" className="slds-input" type="text" placeholder="Placeholder Text" />
+        <button className="slds-button slds-button--brand slds-shrink-none slds-m-left--small">Add Tab</button>
       </div>
     </div>
   </div>
@@ -37,20 +36,20 @@ const entityAddDropdown = (
 
 // Context Tab
 let ContextTab = props =>
-  <li className={className(pf('context-bar__item context-bar__item--tab'), props.className, props.itemActive ? pf('is-active') : null)} role="presentation">
-    <a href="javascript:void(0);" className={pf('context-bar__label-action')} role="tab" title={ props.title || 'tab name'}>
-      <div className={pf('icon_container')}>
-        <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="case" />
-        <span className={pf('assistive-text')}>Case</span>
+  <li className={className('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null)} role="presentation">
+    <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={ props.title || 'tab name'}>
+      <div className="slds-icon_container">
+        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="case" />
+        <span className="slds-assistive-text">Case</span>
       </div>
-      <span className={pf('truncate')} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
+      <span className="slds-truncate" title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
-    <div className={className(pf('context-bar__icon-action context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent p-left--none'), props.contextDropdownActive ? pf('is-open') : null)}>
-      <button aria-haspopup="true" className={pf('button button--icon-container button--icon-x-small')}>
-        <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="chevrondown" />
-        <span className={pf('assistive-text')}>Assistive text for submenu</span>
+    <div className={className('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover slds-hint-parent slds-p-left--none', props.contextDropdownActive ? 'slds-is-open' : null)}>
+      <button aria-haspopup="true" className="slds-button slds-button--icon-container slds-button--icon-x-small">
+        <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol="chevrondown" />
+        <span className="slds-assistive-text">Assistive text for submenu</span>
       </button>
-      <Menu className={pf('dropdown--right')}>
+      <Menu className="slds-dropdown--right">
         <MenuList>
           <MenuItem>Refresh Tab</MenuItem>
           <MenuItem>Pin Tab</MenuItem>
@@ -58,10 +57,10 @@ let ContextTab = props =>
         </MenuList>
       </Menu>
     </div>
-    <div className={pf('context-bar__icon-action hint-parent col--bump-left')}>
-      <button className={pf('button button--icon button--icon-x-small')}>
-        <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="close" />
-        <span className={pf('assistive-text')}>Close Tab</span>
+    <div className="slds-context-bar__icon-action slds-hint-parent slds-col--bump-left">
+      <button className="slds-button slds-button--icon slds-button--icon-x-small">
+        <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol="close" />
+        <span className="slds-assistive-text">Close Tab</span>
       </button>
     </div>
   </li>;
@@ -72,51 +71,51 @@ let ContextTab = props =>
 
 export let ContextTabBar = props =>
 <div className="demo-only" style={{height: '16rem'}}>
-  <div className={className(pf('context-bar'), props.className)}>
+  <div className={className('slds-context-bar', props.className)}>
 
     {/* Primary Section */}
-    <div className={pf('context-bar__primary')}>
+    <div className="slds-context-bar__primary">
 
       {/* App Switcher */}
-      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
-        <div className={pf('context-bar__icon-action')}>
+      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
+        <div className="slds-context-bar__icon-action">
           { <WaffleIcon /> }
         </div>
 
         {/* App Name */}
-        <span className={pf('context-bar__label-action context-bar__app-name')}>
-          <span className={pf('truncate')}>{ props.appName || 'App Name' }</span>
+        <span className="slds-context-bar__label-action slds-context-bar__app-name">
+          <span className="slds-truncate">{ props.appName || 'App Name' }</span>
         </span>
       </div>
 
       {/* Object Context Switcher */}
-      <div className={pf('context-bar__vertical-divider')}></div>
-      <div className={pf('context-bar__item context-bar__object-switcher context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover hint-parent')}>
-        <a href="javascript:void(0);" title="Context" className={pf('context-bar__label-action truncate')}>
-          <span className={pf('truncate')}>Object</span>
+      <div className="slds-context-bar__vertical-divider"></div>
+      <div className="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover slds-hint-parent">
+        <a href="javascript:void(0);" title="Context" className="slds-context-bar__label-action slds-truncate">
+          <span className="slds-truncate">Object</span>
         </a>
-        <div className={pf('context-bar__icon-action')}>
-          <button aria-haspopup="true" className={pf('button button--icon-container button--icon-x-small')}>
-            <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol="chevrondown" />
-            <span className={pf('assistive-text')}>Assistive text for submenu</span>
+        <div className="slds-context-bar__icon-action">
+          <button aria-haspopup="true" className="slds-button slds-button--icon-container slds-button--icon-x-small">
+            <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol="chevrondown" />
+            <span className="slds-assistive-text">Assistive text for submenu</span>
           </button>
         </div>
-        <Menu className={pf('dropdown--right')}>
+        <Menu className="slds-dropdown--right">
           <MenuList>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />Accounts</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-case m-right--small')} sprite="standard" symbol="case" />Cases</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-insights m-right--small')} sprite="standard" symbol="insights" />Work Order</MenuItem>
-            <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-work-order m-right--small')} sprite="standard" symbol="work_order" />Insights</MenuItem>
+            <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />Accounts</MenuItem>
+            <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" sprite="standard" symbol="case" />Cases</MenuItem>
+            <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-insights slds-m-right--small" sprite="standard" symbol="insights" />Work Order</MenuItem>
+            <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-work-order slds-m-right--small" sprite="standard" symbol="work_order" />Insights</MenuItem>
           </MenuList>
         </Menu>
       </div>
 
       {/* Entity Add */}
-      <div className={className(pf('context-bar__item dropdown-trigger dropdown-trigger--click'), props.objectSwitcherActive ? pf('is-open') : null)}>
-        <div className={pf('context-bar__vertical-divider')}></div>
-        <button aria-haspopup="true" className={pf('context-bar__icon-action button button--icon context-bar__button')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="add" />
-          <span className={pf('assistive-text')}>Assistive text for submenu</span>
+      <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitcherActive ? 'slds-is-open' : null)}>
+        <div className="slds-context-bar__vertical-divider"></div>
+        <button aria-haspopup="true" className="slds-context-bar__icon-action slds-button slds-button--icon slds-context-bar__button">
+          <SvgIcon className="slds-button__icon" sprite="utility" symbol="add" />
+          <span className="slds-assistive-text">Assistive text for submenu</span>
         </button>
       </div>
 
@@ -124,19 +123,19 @@ export let ContextTabBar = props =>
     {/* End Primary */}
 
     {/* Secondary Section */}
-    <div className={pf('context-bar__secondary')}>
-      <div className={pf('context-bar__vertical-divider')}></div>
-      <ul className={pf('grid')} role="tablist">
+    <div className="slds-context-bar__secondary">
+      <div className="slds-context-bar__vertical-divider"></div>
+      <ul className="slds-grid" role="tablist">
         { props.children }
       </ul>
     </div>
     {/* End Secondary Section */}
 
     {/* Tertiary Section */}
-    <div className={pf('context-bar__tertiary col--bump-left')}>
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item')}>
-          <a className={pf('context-bar__label-action')} href="javascript:void(0);">Actions</a>
+    <div className="slds-context-bar__tertiary slds-col--bump-left">
+      <ul className="slds-grid">
+        <li className="slds-context-bar__item">
+          <a className="slds-context-bar__label-action" href="javascript:void(0);">Actions</a>
         </li>
       </ul>
     </div>
@@ -149,7 +148,7 @@ export let ContextTabBar = props =>
 //////////////////////////////////////////////
 
 export default (
-  <ContextTabBar className={pf('context-bar--theme-service')}>
+  <ContextTabBar className="context-bar--theme-service">
     <ContextTab title="Home" itemActive />
     <ContextTab title="Tab Item 1"  />
   </ContextTabBar>

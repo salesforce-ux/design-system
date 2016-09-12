@@ -11,22 +11,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Default = props =>
-<span className={pf('icon_container icon-standard-case')}>
-  <SvgIcon className={pf(`icon${props.size ? ' icon--' + props.size : ''}`)} sprite="standard" symbol="case" />
-  <span className={pf('assistive-text')}>Case icon</span>
+<span className="slds-icon_container slds-icon-standard-case">
+  <SvgIcon className={`slds-icon${props.size ? ' slds-icon--' + props.size : ''}`} sprite="standard" symbol="case" />
+  <span className="slds-assistive-text">Case icon</span>
 </span>;
 
 let XSmall = props =>
-<span className={pf('icon_container')}>
-  <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-  <span className={pf('assistive-text')}>Warning Icon</span>
+<span className="slds-icon_container">
+  <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
+  <span className="slds-assistive-text">Warning Icon</span>
 </span>;
 
 //////////////////////////////////////////////

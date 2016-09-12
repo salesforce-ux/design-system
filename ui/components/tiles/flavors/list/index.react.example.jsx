@@ -12,35 +12,34 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const icon = (
-  <SvgIcon className={pf('icon')} sprite="doctype" symbol="zip" />
+  <SvgIcon className="slds-icon" sprite="doctype" symbol="zip" />
 );
 
 export default (
-  <ul className={pf('has-dividers--bottom-space')}>
-    <li className={pf('item')}>
+  <ul className="slds-has-dividers--bottom-space">
+    <li className="slds-item">
       <TileMedia title="SLDS_038.zip" media={ icon }>
-        <ul className={pf('list--horizontal has-dividers--right')}>
-          <li className={pf('item')}>May 9th, 2015</li>
-          <li className={pf('item')}>3.6mb</li>
+        <ul className="slds-list--horizontal slds-has-dividers--right">
+          <li className="slds-item">May 9th, 2015</li>
+          <li className="slds-item">3.6mb</li>
         </ul>
       </TileMedia>
     </li>
-    <li className={pf('item')}>
+    <li className="slds-item">
     <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
+      <ul className="slds-list--horizontal slds-has-dividers--right">
+        <li className="slds-item">May 9th, 2015</li>
+        <li className="slds-item">3.6mb</li>
       </ul>
     </TileMedia>
     </li>
-    <li className={pf('item')}>
+    <li className="slds-item">
     <TileMedia title="SLDS_038.zip" media={ icon }>
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>May 9th, 2015</li>
-        <li className={pf('item')}>3.6mb</li>
+      <ul className="slds-list--horizontal slds-has-dividers--right">
+        <li className="slds-item">May 9th, 2015</li>
+        <li className="slds-item">3.6mb</li>
       </ul>
     </TileMedia>
     </li>

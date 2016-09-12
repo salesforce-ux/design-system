@@ -12,56 +12,55 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Tile = props =>
-  <div className={className(pf('tile'), props.className, props.actions ? pf('hint-parent') : null)}>
+  <div className={className('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions ?
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <h3 className={pf('truncate')} title={ props.title || 'Title' }>
+      <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <h3 className="slds-truncate" title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
-        <div className={pf('shrink-none')}>
-          <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} iconClassName={pf('button__icon--hint')} symbol="down" aria-haspopup="true" assistiveText="More options" />
+        <div className="slds-shrink-none">
+          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
         </div>
       </div>
     :
-      <h3 className={pf('truncate')} title={ props.title || 'Title' }>
+      <h3 className="slds-truncate" title={ props.title || 'Title' }>
         <a href="javascript:void(0);">{ props.title || 'Title' }</a>
       </h3>
     }
-    <div className={pf('tile__detail text-body--small')}>
+    <div className="slds-tile__detail slds-text-body--small">
       { props.children }
     </div>
   </div>;
 
 export let TileMedia = props =>
-  <div className={className(pf('tile media'), props.className, props.actions ? pf('hint-parent') : null)}>
+  <div className={className('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.media ?
-      <div className={pf('media__figure')}>
+      <div className="slds-media__figure">
         { props.media }
       </div>
     : null }
-    <div className={pf('media__body')}>
+    <div className="slds-media__body">
       { props.actions ?
-        <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-          <h3 className={pf('truncate')} title={ props.title || 'Title' }>
+        <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <h3 className="slds-truncate" title={ props.title || 'Title' }>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
-          <div className={pf('shrink-none')}>
-            <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} iconClassName={pf('button__icon--hint')} symbol="down" aria-haspopup="true" assistiveText="More options" />
+          <div className="slds-shrink-none">
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
           </div>
         </div>
       :
-        <h3 className={pf('truncate')} title={ props.title || 'Title' }>
+        <h3 className="slds-truncate" title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
       }
-      <div className={pf('tile__detail text-body--small')}>
+      <div className="slds-tile__detail slds-text-body--small">
         { props.children }
       </div>
     </div>
@@ -77,7 +76,7 @@ export let states = [
     label: 'Default',
     element:
       <Tile title="Salesforce UX">
-        <p className={pf('truncate')}>26 Members</p>
+        <p className="slds-truncate">26 Members</p>
       </Tile>
   },
   {
@@ -86,7 +85,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Salesforce UX" actions>
-          <p className={pf('truncate')}>26 Members</p>
+          <p className="slds-truncate">26 Members</p>
         </Tile>
       </div>
   }

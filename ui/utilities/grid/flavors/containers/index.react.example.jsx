@@ -10,48 +10,47 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('container--small')}>
-    <div className={pf('box box--small theme--shade')}>Max Width: 480px</div>
+  <div className="slds-container--small">
+    <div className="slds-box slds-box--small slds-theme--shade">Max Width: 480px</div>
   </div>
-  <div className={pf('container--medium')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Max Width: 768px</div>
+  <div className="slds-container--medium" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Max Width: 768px</div>
   </div>
-  <div className={pf('container--large')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Max Width: 1024px</div>
+  <div className="slds-container--large" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Max Width: 1024px</div>
   </div>
-  <div className={pf('container--x-large')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Max Width: 1280px</div>
+  <div className="slds-container--x-large" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Max Width: 1280px</div>
   </div>
-  <div className={pf('container--fluid')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Width 100%</div>
+  <div className="slds-container--fluid" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Width 100%</div>
   </div>
-  <div className={pf('container--left container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Left Aligned</div>
+  <div className="slds-container--left slds-container--small" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Left Aligned</div>
   </div>
-  <div className={pf('container--center container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Center Aligned</div>
+  <div className="slds-container--center slds-container--small" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Center Aligned</div>
   </div>
-  <div className={pf('container--right container--small')} style={{marginTop: '1rem'}}>
-    <div className={pf('box box--small theme--shade')}>Right Aligned</div>
+  <div className="slds-container--right slds-container--small" style={{marginTop: '1rem'}}>
+    <div className="slds-box slds-box--small slds-theme--shade">Right Aligned</div>
   </div>
 </div>
 );
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className={pf('container--small')}>Contents go here.</div>
-  <div className={pf('container--medium')}>Contents go here.</div>
-  <div className={pf('container--large')}>Contents go here.</div>
-  <div className={pf('container--x-large')}>Contents go here.</div>
-  <div className={pf('container--fluid')}>Contents go here.</div>
-  <div className={pf('container--left container--small')}>Contents go here.</div>
-  <div className={pf('container--center container--small')}>Contents go here.</div>
-  <div className={pf('container--right container--small')}>Contents go here.</div>
+  <div className="slds-container--small">Contents go here.</div>
+  <div className="slds-container--medium">Contents go here.</div>
+  <div className="slds-container--large">Contents go here.</div>
+  <div className="slds-container--x-large">Contents go here.</div>
+  <div className="slds-container--fluid">Contents go here.</div>
+  <div className="slds-container--left slds-container--small">Contents go here.</div>
+  <div className="slds-container--center slds-container--small">Contents go here.</div>
+  <div className="slds-container--right slds-container--small">Contents go here.</div>
 </div>
 );

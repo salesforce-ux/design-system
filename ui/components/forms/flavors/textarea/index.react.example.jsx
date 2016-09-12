@@ -11,32 +11,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let FormElement = props =>
-  <div className={className(pf('form-element'), props.className)}>
+  <div className={className('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
 let FormElementLabel = props =>
-  <label className={pf('form-element__label')} htmlFor="textarea-input-01">{props.children}</label>;
+  <label className="slds-form-element__label" htmlFor="textarea-input-01">{props.children}</label>;
 
 let FormElementControl = props =>
-  <div className={className(pf('form-element__control'), props.className)}>
+  <div className={className('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
 let Textarea = props =>
-  <textarea {...props} id="textarea-input-01" className={className(pf('textarea'), props.className)} placeholder="Placeholder Text" />;
+  <textarea {...props} id="textarea-input-01" className={className('slds-textarea', props.className)} placeholder="Placeholder Text" />;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -54,8 +53,8 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className={pf('is-required')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Textarea Label</FormElementLabel>
+    <FormElement className="is-required">
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required />
       </FormElementControl>
@@ -64,12 +63,12 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Textarea Label</FormElementLabel>
+    <FormElement className="is-required slds-has-error">
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Textarea Label</FormElementLabel>
       <FormElementControl>
         <Textarea required aria-describedby="error-01" />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help" id="error-01">This field is required</div>
+      <div className="slds-form-element__help" iref="form-element__help" id="error-01">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -86,9 +85,9 @@ let Disabled = props =>
 let ReadOnly = props =>
   <Demo>
     <FormElement>
-      <span className={pf('form-element__label')}>Textarea Label</span>
-      <FormElementControl className={pf('has-divider--bottom')}>
-        <div className={pf('form-element__static text-longform')}><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p></div>
+      <span className="slds-form-element__label">Textarea Label</span>
+      <FormElementControl className="slds-has-divider--bottom">
+        <div className="slds-form-element__static slds-text-longform"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p></div>
       </FormElementControl>
     </FormElement>
   </Demo>;

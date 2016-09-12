@@ -13,86 +13,85 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={className(pf('table table--bordered'), props.className)}>
+  <table className={className('slds-table slds-table--bordered', props.className)}>
     {props.children}
   </table>;
 
 let Checkbox = props =>
-  <label className={pf('checkbox')}>
+  <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('assistive-text')}>{props.label}</span>
+    <span className="slds-checkbox--faux"></span>
+    <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
 let HeadRowData = props =>
-  <tr className={pf('text-title--caps')}>
-    <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" checked={props.checked} /></th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Close Date">
+  <tr className="slds-text-title--caps">
+    <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" checked={props.checked} /></th>
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Close Date">
         Opportunity Name
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Account Name">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Account Name">
         Account Name
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Close Date">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Close Date">
         Close Date
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Stage">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Stage">
         Stage
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Confidence">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Confidence">
         Confidence
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Amount">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Amount">
         Amount
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('is-sortable')} scope="col">
-      <div className={pf('truncate')} title="Contact">
+    <th className="slds-is-sortable" scope="col">
+      <div className="slds-truncate" title="Contact">
         Contact
-        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
-    <th className={pf('cell-shrink')} scope="col"></th>
+    <th className="slds-cell-shrink" scope="col"></th>
   </tr>;
 
 let RowData = props =>
-  <tr className={pf('hint-parent')}>
-    <td className={pf('cell-shrink')} data-label="Select Row"><Checkbox label="Select Row" checked={props.checked} /></td>
-    <th scope="row" data-label="Opportunity Name"><div className={pf('truncate')} title={props.title}>{props.title}</div></th>
-    <td data-label="Account Name"><div className={pf('truncate')} title="Cloudhub">Cloudhub</div></td>
-    <td data-label="Close Date"><div className={pf('truncate')} title="4/14/2015">4/14/2015</div></td>
-    <td data-label="Prospecting"><div className={pf('truncate')} title="Prospecting">Prospecting</div></td>
-    <td data-label="Confidence"><div className={pf('truncate')} title="20%">20%</div></td>
-    <td data-label="Amount"><div className={pf('truncate')} title="$25k">$25k</div></td>
-    <td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></td>
-    <td className={pf('cell-shrink')} data-label="Actions">
+  <tr className="slds-hint-parent">
+    <td className="slds-cell-shrink" data-label="Select Row"><Checkbox label="Select Row" checked={props.checked} /></td>
+    <th scope="row" data-label="Opportunity Name"><div className="slds-truncate" title={props.title}>{props.title}</div></th>
+    <td data-label="Account Name"><div className="slds-truncate" title="Cloudhub">Cloudhub</div></td>
+    <td data-label="Close Date"><div className="slds-truncate" title="4/14/2015">4/14/2015</div></td>
+    <td data-label="Prospecting"><div className="slds-truncate" title="Prospecting">Prospecting</div></td>
+    <td data-label="Confidence"><div className="slds-truncate" title="20%">20%</div></td>
+    <td data-label="Amount"><div className="slds-truncate" title="$25k">$25k</div></td>
+    <td data-label="Contact"><div className="slds-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></td>
+    <td className="slds-cell-shrink" data-label="Actions">
       <ButtonIcon
-        className={pf('button--icon-border-filled button--icon-x-small')}
-        iconClassName={pf('button__icon--hint button__icon--small')}
+        className="slds-button--icon-border-filled slds-button--icon-x-small"
+        iconClassName="slds-button__icon--hint slds-button__icon--small"
         symbol="down"
         assistiveText="Show More" />
     </td>
@@ -103,7 +102,7 @@ let RowData = props =>
 //////////////////////////////////////////////
 
 let Overflow = props =>
-  <div className={pf('scrollable--x')}>
+  <div className="slds-scrollable--x">
     <Table>
       <thead>
         <HeadRowData />
@@ -116,7 +115,7 @@ let Overflow = props =>
   </div>;
 
 let Stacked = props =>
-  <Table className={pf('max-medium-table--stacked')}>
+  <Table className="slds-max-medium-table--stacked">
     <thead>
       <HeadRowData />
     </thead>
@@ -127,7 +126,7 @@ let Stacked = props =>
   </Table>;
 
 let Horizontal = props =>
-  <Table className={pf('max-medium-table--stacked-horizontal')}>
+  <Table className="slds-max-medium-table--stacked-horizontal">
     <thead>
       <HeadRowData />
     </thead>

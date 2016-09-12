@@ -16,41 +16,40 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import className from 'classnames';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let Coach = props =>
-  <div className={pf('path-coach')}>
+  <div className="slds-path-coach">
     {props.children}
   </div>;
 
 let Path = props =>
-  <div className={pf('grid')}>
+  <div className="slds-grid">
     {props.children}
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small')} symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small" symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small flip--vertical')} symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small slds-flip--vertical" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button flavor="brand" className={className(pf('path__mark-complete no-flex m-horizontal--small'), props.className)}>
+  <Button flavor="brand" className={className('slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>
     {props.children}
   </Button>;
 
 let Tabsmain = props =>
-  <div className={pf('tabs--path')} role="application">
-    <ul className={pf('tabs--path__nav')}  role="tablist">
+  <div className="slds-tabs--path" role="application">
+    <ul className="slds-tabs--path__nav"  role="tablist">
       {props.children}
     </ul>
   </div>;
@@ -58,8 +57,8 @@ let Tabsmain = props =>
 let Tab = props => {
   const uniqueId = _.uniqueId('tabs-path-');
   return (
-    <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
-      <a className={pf('tabs--path__link')} id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+    <li className={className('slds-tabs--path__item', props.className)} role="presentation">
+      <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
         {props.children}
       </a>
     </li>
@@ -67,35 +66,35 @@ let Tab = props => {
 };
 
 let Coachcontent1 = props =>
-  <div id="content-path-1" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-1">
+  <div id="content-path-1" className="slds-tabs--path__content slds-hide" role="tabpanel" aria-labelledby="tab-path-1">
     <h2>Item One Content</h2>
   </div>;
 
 let Coachcontent2 = props =>
-  <div id="content-path-2" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-2">
+  <div id="content-path-2" className="slds-tabs--path__content slds-hide" role="tabpanel" aria-labelledby="tab-path-2">
     <h2>Item Two Content</h2>
   </div>;
 
 let Coachcontent3 = props =>
-  <div id="content-path-3" className={className(pf('tabs--path__content'), props.className)} role="tabpanel" aria-labelledby="tab-path-3">
-    <div className={pf('grid grid--align-spread')}>
-      <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
-        <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
-          <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
+  <div id="content-path-3" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-3">
+    <div className="slds-grid slds-grid--align-spread">
+      <div className="slds-coach__keys slds-size--1-of-2 m--left-x-large">
+        <div className="slds-grid slds-grid--align-spread">
+          <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
+          <span className="slds-text-body--small"><a href="javascript:void(0);">Edit</a></span>
         </div>
-        <dl className={pf('coach__list dl--horizontal')}>
-          <dt className={pf('coach__item dl--horizontal__label')}>Expected Budget</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}>$10,000</dd>
-          <dt className={pf('coach__item dl--horizontal__label')}>Lead Source</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}>Marketing and Web Referral</dd>
-          <dt className={pf('coach__item dl--horizontal__label')}>Support Engineer</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}><a href="javascript:void(0);">Jack Arthur</a></dd>
+        <dl className="coach__list slds-dl--horizontal">
+          <dt className="slds-coach__item slds-dl--horizontal__label">Expected Budget</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail">$10,000</dd>
+          <dt className="slds-coach__item slds-dl--horizontal__label">Lead Source</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail">Marketing and Web Referral</dd>
+          <dt className="slds-coach__item slds-dl--horizontal__label">Support Engineer</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail"><a href="javascript:void(0);">Jack Arthur</a></dd>
         </dl>
       </div>
-      <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
-        <div className={pf('text-longform p-top--medium')}>
+      <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">
+        <h2 className="slds-text-title--caps slds-p-bottom--small slds-has-divider--bottom">Guidance for Success</h2>
+        <div className="slds-text-longform slds-p-top--medium">
           <p>Regularly cross-sell related products using <a href="javascript:void(0);">cross-sell tactics and principles</a>.</p>
           <p>Prepare demo deck using the <a href="javascript:void(0);">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
           <p>Look up <a href="javascript:void(0);">needs analysis principles</a> and review selling plan with Sales Engineer.</p>
@@ -105,25 +104,25 @@ let Coachcontent3 = props =>
   </div>;
 
 let Coachcontent4 = props =>
-  <div id="content-path-4" className={className(pf('tabs--path__content'), props.className)} role="tabpanel" aria-labelledby="tab-path-4">
-    <div className={pf('grid grid--align-spread')}>
-      <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
-        <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
-          <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
+  <div id="content-path-4" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-4">
+    <div className="slds-grid slds-grid--align-spread">
+      <div className="slds-coach__keys slds-size--1-of-2 m--left-x-large">
+        <div className="slds-grid slds-grid--align-spread">
+          <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
+          <span className="slds-text-body--small"><a href="javascript:void(0);">Edit</a></span>
         </div>
-        <dl className={pf('coach__list dl--horizontal')}>
-          <dt className={pf('coach__item dl--horizontal__label')}>Build State</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}>In Motion</dd>
-          <dt className={pf('coach__item dl--horizontal__label')}>Expected Sign Date</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}>-</dd>
-          <dt className={pf('coach__item dl--horizontal__label')}>Key Buyer</dt>
-          <dd className={pf('coach__value dl--horizontal__detail')}><a href="javascript:void(0);">-</a></dd>
+        <dl className="coach__list slds-dl--horizontal">
+          <dt className="slds-coach__item slds-dl--horizontal__label">Build State</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail">In Motion</dd>
+          <dt className="slds-coach__item slds-dl--horizontal__label">Expected Sign Date</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail">-</dd>
+          <dt className="slds-coach__item slds-dl--horizontal__label">Key Buyer</dt>
+          <dd className="slds-coach__value slds-dl--horizontal__detail"><a href="javascript:void(0);">-</a></dd>
         </dl>
       </div>
-      <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
-        <div className={pf('text-longform p-top--medium')}>
+      <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">
+        <h2 className="slds-text-title--caps slds-p-bottom--small slds-has-divider--bottom">Guidance for Success</h2>
+        <div className="slds-text-longform slds-p-top--medium">
           <p>Check out the latest Negotiation and Review tactics on our <a href="javascript:void(0);">online portal here</a>.</p>
           <p>Review Quote with the Legal and Marketing team and be sure to approve with Exec.</p>
           <p>Set up at time to delivery schedule and check with Inventory.</p>
@@ -133,13 +132,13 @@ let Coachcontent4 = props =>
   </div>;
 
 let Coachcontent5 = props =>
-  <div id="content-path-5" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-5">
+  <div id="content-path-5" className="slds-tabs--path__content slds-hide" role="tabpanel" aria-labelledby="tab-path-5">
     <h2>Item Five Content</h2>
   </div>;
 
 let Tooltip = props =>
-  <div className={pf('popover popover--tooltip nubbin--top')} role="tooltip">
-    <div className={pf('popover__body')}>10 days in Needs Analysis</div>
+  <div className="slds-popover slds-popover--tooltip slds-nubbin--top" role="tooltip">
+    <div className="slds-popover__body">10 days in Needs Analysis</div>
   </div>
 ;
 
@@ -150,40 +149,40 @@ let Tooltip = props =>
 let StateA = props =>
   <Path>
     <Tabsmain>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Contacted</span>
+        <span className="slds-tabs--path__title">Contacted</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Open</span>
+        <span className="slds-tabs--path__title">Open</span>
       </Tab>
-      <Tab className={pf('is-current')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-current">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Unqualified</span>
+        <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Nurturing</span>
+        <span className="slds-tabs--path__title">Nurturing</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Closed</span>
+        <span className="slds-tabs--path__title">Closed</span>
       </Tab>
     </Tabsmain>
-    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
     Mark Status as Complete</Action>
   </Path>;
 
@@ -191,40 +190,40 @@ let StateB = props =>
   <Path>
     <Trigger />
     <Tabsmain>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Contacted</span>
+        <span className="slds-tabs--path__title">Contacted</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Open</span>
+        <span className="slds-tabs--path__title">Open</span>
       </Tab>
-      <Tab className={pf('is-current')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-current">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Unqualified</span>
+        <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Nurturing</span>
+        <span className="slds-tabs--path__title">Nurturing</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Closed</span>
+        <span className="slds-tabs--path__title">Closed</span>
       </Tab>
     </Tabsmain>
-    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
     Mark Status as Complete</Action>
   </Path>;
 
@@ -232,61 +231,61 @@ let StateC = props =>
   <Path>
     <Trigger />
     <Tabsmain>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Contacted</span>
+        <span className="slds-tabs--path__title">Contacted</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Open</span>
+        <span className="slds-tabs--path__title">Open</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Stage Three</span>
+        <span className="slds-tabs--path__title">Stage Three</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Stage Four</span>
+        <span className="slds-tabs--path__title">Stage Four</span>
       </Tab>
-      <Tab className={pf('is-complete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-          <span className={pf('assistive-text')}>Stage Complete</span>
+      <Tab className="slds-is-complete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Stage Complete</span>
         </span>
-        <span className={pf('tabs--path__title')}>Stage Five</span>
+        <span className="slds-tabs--path__title">Stage Five</span>
       </Tab>
-      <Tab className={pf('is-current')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-current">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Unqualified</span>
+        <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Nurturing</span>
+        <span className="slds-tabs--path__title">Nurturing</span>
       </Tab>
-      <Tab className={pf('is-incomplete')}>
-        <span className={pf('tabs--path__stage')}>
-          <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+      <Tab className="slds-is-incomplete">
+        <span className="slds-tabs--path__stage">
+          <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
-        <span className={pf('tabs--path__title')}>Closed</span>
+        <span className="slds-tabs--path__title">Closed</span>
       </Tab>
     </Tabsmain>
-    <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+    <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
     Mark Status as Complete</Action>
   </Path>;
 
@@ -296,46 +295,46 @@ let StateD = props =>
       <Path>
         <Triggerup />
         <Tabsmain>
-          <Tab className={pf('is-complete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-              <span className={pf('assistive-text')}>Stage Complete</span>
+          <Tab className="slds-is-complete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
             </span>
-            <span className={pf('tabs--path__title')}>Contacted</span>
+            <span className="slds-tabs--path__title">Contacted</span>
           </Tab>
-          <Tab className={pf('is-complete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-              <span className={pf('assistive-text')}>Stage Complete</span>
+          <Tab className="slds-is-complete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
             </span>
-            <span className={pf('tabs--path__title')}>Open</span>
+            <span className="slds-tabs--path__title">Open</span>
           </Tab>
-          <Tab className={pf('is-current')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-current">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Unqualified</span>
+            <span className="slds-tabs--path__title">Unqualified</span>
           </Tab>
-          <Tab className={pf('is-incomplete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-incomplete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Nurturing</span>
+            <span className="slds-tabs--path__title">Nurturing</span>
           </Tab>
-          <Tab className={pf('is-incomplete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-incomplete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Closed</span>
+            <span className="slds-tabs--path__title">Closed</span>
           </Tab>
         </Tabsmain>
-        <Action><SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="check" />
+        <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
           Mark Status as Complete</Action>
       </Path>
       <Coachcontent1 />
       <Coachcontent2 />
-      <Coachcontent3 className={pf('slds-show')}></Coachcontent3>
-      <Coachcontent4 className={pf('slds-hide')}></Coachcontent4>
+      <Coachcontent3 className="slds-show"></Coachcontent3>
+      <Coachcontent4 className="slds-hide"></Coachcontent4>
       <Coachcontent5 />
     </Coach>
   </Demo>;
@@ -346,46 +345,46 @@ let StateE = props =>
       <Path>
         <Triggerup />
         <Tabsmain>
-          <Tab className={pf('is-complete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-              <span className={pf('assistive-text')}>Stage Complete</span>
+          <Tab className="slds-is-complete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
             </span>
-            <span className={pf('tabs--path__title')}>Contacted</span>
+            <span className="slds-tabs--path__title">Contacted</span>
           </Tab>
-          <Tab className={pf('is-complete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-              <span className={pf('assistive-text')}>Stage Complete</span>
+          <Tab className="slds-is-complete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
             </span>
-            <span className={pf('tabs--path__title')}>Open</span>
+            <span className="slds-tabs--path__title">Open</span>
           </Tab>
-          <Tab className={pf('is-current')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-current">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Unqualified</span>
+            <span className="slds-tabs--path__title">Unqualified</span>
           </Tab>
-          <Tab className={pf('is-incomplete is-active')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-incomplete slds-is-active">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Nurturing</span>
+            <span className="slds-tabs--path__title">Nurturing</span>
           </Tab>
-          <Tab className={pf('is-incomplete')}>
-            <span className={pf('tabs--path__stage')}>
-              <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+          <Tab className="slds-is-incomplete">
+            <span className="slds-tabs--path__stage">
+              <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
-            <span className={pf('tabs--path__title')}>Closed</span>
+            <span className="slds-tabs--path__title">Closed</span>
           </Tab>
         </Tabsmain>
-        <Action className={pf('path__mark-current')}>
+        <Action className="slds-path__mark-current">
           Mark as Current Stage</Action>
       </Path>
       <Coachcontent1 />
       <Coachcontent2 />
-      <Coachcontent3 className={pf('slds-hide')}></Coachcontent3>
-      <Coachcontent4 className={pf('slds-show')}></Coachcontent4>
+      <Coachcontent3 className="slds-hide"></Coachcontent3>
+      <Coachcontent4 className="slds-show"></Coachcontent4>
       <Coachcontent5 />
     </Coach>
   </Demo>;
@@ -395,37 +394,37 @@ let StateF = props =>
     <Path>
       <Trigger />
       <Tabsmain>
-        <Tab className={pf('is-incomplete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-            <span className={pf('assistive-text')}>Stage Complete</span>
+        <Tab className="slds-is-incomplete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Stage Complete</span>
           </span>
-          <span className={pf('tabs--path__title')}>Contacted</span>
+          <span className="slds-tabs--path__title">Contacted</span>
         </Tab>
-        <Tab className={pf('is-incomplete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-            <span className={pf('assistive-text')}>Stage Complete</span>
+        <Tab className="slds-is-incomplete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Stage Complete</span>
           </span>
-          <span className={pf('tabs--path__title')}>Open</span>
+          <span className="slds-tabs--path__title">Open</span>
         </Tab>
-        <Tab className={pf('is-incomplete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-incomplete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Unqualified</span>
+          <span className="slds-tabs--path__title">Unqualified</span>
         </Tab>
-        <Tab className={pf('is-incomplete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-incomplete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Nurturing</span>
+          <span className="slds-tabs--path__title">Nurturing</span>
         </Tab>
-        <Tab className={pf('is-lost')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-lost">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Closed Lost</span>
+          <span className="slds-tabs--path__title">Closed Lost</span>
         </Tab>
       </Tabsmain>
       <Action>Change Closed State</Action>
@@ -437,37 +436,37 @@ let StateG = props =>
     <Path>
       <Trigger />
       <Tabsmain>
-        <Tab className={pf('is-complete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-            <span className={pf('assistive-text')}>Stage Complete</span>
+        <Tab className="slds-is-complete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Stage Complete</span>
           </span>
-          <span className={pf('tabs--path__title')}>Contacted</span>
+          <span className="slds-tabs--path__title">Contacted</span>
         </Tab>
-        <Tab className={pf('is-complete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
-            <span className={pf('assistive-text')}>Stage Complete</span>
+        <Tab className="slds-is-complete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Stage Complete</span>
           </span>
-          <span className={pf('tabs--path__title')}>Open</span>
+          <span className="slds-tabs--path__title">Open</span>
         </Tab>
-        <Tab className={pf('is-complete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-complete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Unqualified</span>
+          <span className="slds-tabs--path__title">Unqualified</span>
         </Tab>
-        <Tab className={pf('is-complete')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-complete">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Nurturing</span>
+          <span className="slds-tabs--path__title">Nurturing</span>
         </Tab>
-        <Tab className={pf('is-complete is-won')}>
-          <span className={pf('tabs--path__stage')}>
-            <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="check" />
+        <Tab className="slds-is-complete slds-is-won">
+          <span className="slds-tabs--path__stage">
+            <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
-          <span className={pf('tabs--path__title')}>Closed Won</span>
+          <span className="slds-tabs--path__title">Closed Won</span>
         </Tab>
       </Tabsmain>
       <Action>Change Closed State</Action>

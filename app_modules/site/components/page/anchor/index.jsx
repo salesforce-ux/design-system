@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import { rootNavId, rootNavLabel } from 'app_modules/site/navigation';
 
 export default React.createClass({
@@ -26,15 +25,15 @@ export default React.createClass({
 
   render() {
     return (
-      <header className={pf('site-masthead grid wrap')}>
-        <div className={pf('site-masthead-title col has-flexi-truncate align-middle')}>
-          <div className={pf('media media--center media--responsive')}>
-            <span className={pf('media__figure')}>
+      <header className="site-masthead slds-grid slds-wrap">
+        <div className="site-masthead-title slds-col slds-has-flexi-truncate slds-align-middle">
+          <div className="slds-media slds-media--center slds-media--responsive">
+            <span className="slds-media__figure">
               <img src={`/assets/images/header-${rootNavId(this.props.path)}.svg`} alt="" />
             </span>
-            <div className={pf('media__body')}>
-              <div className={pf('grid')}>
-                <span className={pf('hide docsearch-category')}>{rootNavLabel(this.props.path)}</span>
+            <div className="slds-media__body">
+              <div className="slds-grid">
+                <span className="slds-hide docsearch-category">{rootNavLabel(this.props.path)}</span>
                 <h1 title={this.props.title}>{this.props.title}</h1>
               </div>
             </div>
@@ -48,7 +47,7 @@ export default React.createClass({
   renderBadge() {
     if (!this.props.badge) return null;
     return (
-      <span className={pf('badge m-left--medium shrink-none align-middle')}>
+      <span className="slds-badge slds-m-left--medium slds-shrink-none slds-align-middle">
         {this.props.badge}
       </span>
     );

@@ -114,7 +114,7 @@ class Icons extends React.Component {
     let isUtility = category.name === 'utility';
 
     return category.icons.map(icon => {
-      const svgClassName = classNames('icon', {
+      const svgClassName = classNames('slds-icon', {
         'slds-icon--large': !isUtility && !isAction,
         'slds-icon--small': isAction,
         'slds-icon-text-default': isUtility

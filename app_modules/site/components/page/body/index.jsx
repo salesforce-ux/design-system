@@ -17,7 +17,6 @@ import globals from 'app_modules/global';
 import Anchor from 'app_modules/site/components/page/anchor';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import CTALink from 'app_modules/site/components/cta-link';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import navigation, { getActiveNavItems } from 'app_modules/site/navigation';
 import Status from 'app_modules/site/util/component/status';
 import moment from 'moment';
@@ -81,7 +80,7 @@ export default React.createClass({
       contentClassName = '';
     } else {
       contentClassName = classNames(
-        pf('site-content p-around--xx-large'),
+        'site-content slds-p-around--xx-large',
         contentClassName
       );
     }
@@ -111,7 +110,7 @@ export default React.createClass({
       return <option value={status}>Component Status: {label}</option>;
     });
     return (
-      <div className={pf('site-banner-badge grid')}>
+      <div className="site-banner-badge slds-grid">
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
       </div>
     );
@@ -149,10 +148,10 @@ export default React.createClass({
     return (
       <header className="site-banner" role="banner">
         <a href="/">
-          <span className={pf('site-logo')}>Salesforce</span>
+          <span className="site-logo">Salesforce</span>
           Design System
         </a>
-        <div className={pf('site-skip-content')}>
+        <div className="site-skip-content">
           <a href="#navigation">Skip to Navigation</a>
         </div>
       </header>
@@ -187,7 +186,7 @@ export default React.createClass({
         dataProps['data-slds-nav-children'] = true;
       }
       return (
-        <li className={pf(className)} key={item.uid} {...dataProps}>
+        <li className={className} key={item.uid} {...dataProps}>
           {this.renderLink(item)}
           {item.hasChildren
             ? this.renderNavItems(item.children, level + 1)
@@ -200,7 +199,7 @@ export default React.createClass({
       'is-nested': level > 0
     });
     return (
-      <ul className={pf(classnames)}>
+      <ul className={classnames}>
         {items}
       </ul>
     );
@@ -215,8 +214,8 @@ export default React.createClass({
     }
     if (item.url) return renderAnchor({ href: item.url });
     let content = (
-      <span className={pf('media media--center')}>
-        <span className={pf('media__body')}>
+      <span className="slds-media slds-media--center">
+        <span className="slds-media__body">
           {label}
         </span>
         {this.renderNavItemIcons(item)}
@@ -239,7 +238,7 @@ export default React.createClass({
     if (!item.hasChildren) return null;
     let direction = item.isOpen ? 'down' : 'right';
     return (
-      <span className={pf('media__figure--reverse')}>
+      <span className="slds-media__figure--reverse">
         <SvgIcon sprite="utility" symbol={direction} className={`icon icon__svg icon-utility-${direction} icon--small icon-text-default`} />
       </span>
     );
@@ -249,16 +248,16 @@ export default React.createClass({
     const updated = moment().format('MMMM Do YYYY, h:mm a');
     const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
-      <footer className={pf('site-contentinfo grid wrap site-text-longform text-body--small')} role="contentinfo">
-        <p className={pf('p-horizontal--x-large size--1-of-1 shrink-none large-size--2-of-3')}>
-          Copyright &copy; 2015-2016 <span className={pf('site-name')}>Sales<i>f</i>orce. </span>
+      <footer className="site-contentinfo slds-grid slds-wrap site-text-longform slds-text-body--small" role="contentinfo">
+        <p className="slds-p-horizontal--x-large slds-size--1-of-1 slds-shrink-none slds-large-size--2-of-3">
+          Copyright &copy; 2015-2016 <span className="site-name">Sales<i>f</i>orce. </span>
           <CTALink
             href="http://salesforce.com/company/legal/intellectual.jsp"
             eventType="copyright">
             All rights reserved
           </CTALink>. {versionDateBuildString}
         </p>
-        <p className={pf('p-horizontal--x-large text-align--right size--1-of-1 shrink-none large-size--1-of-3')}>
+        <p className="slds-p-horizontal--x-large slds-text-align--right slds-size--1-of-1 slds-shrink-none slds-large-size--1-of-3">
           <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
           <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
           <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>

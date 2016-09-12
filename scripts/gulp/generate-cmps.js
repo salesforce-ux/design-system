@@ -10,45 +10,93 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import fs from 'fs';
+import _ from 'lodash';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import gulpzip from 'gulp-zip';
 import through from 'through2';
 import path from 'path';
+import { toHtml, getExamples } from './generate-examples';
 
-const wrapInTemplate = el =>
+const stateTitle = state =>
+  state.label || state.id;
+
+const stateTemplate = (state, html) =>
   `
-  <aura:component>
-  <aura:attribute name="examplesInLightning" type="Boolean" default="true"/>
-    <aura:if isTrue="{!v.examplesInLightning}">
+    <aura:component extends="c:baseState">
+      <aura:set attribute="title">
+        ${stateTitle(state)}
+      </aura:set>
+      <aura:set attribute="lightningExample">
+      </aura:set>
+      <aura:set attribute="htmlExample">
+        <![CDATA[
+          ${html}
+        ]]>
+      </aura:set>
+      <aura:set attribute="example">
+        ${html}
+      </aura:set>
 
-      <!-- TODO example using lightning components -->
-
-    <aura:set attribute="else">
-      <!-- HTML example -->
-
-      ${el}
-
-    </aura:set>
-    </aura:if>
-  </aura:component>
+    </aura:component>
   `;
 
-const exDir = path.resolve.bind(path, __PATHS__.generated, 'examples');
+const componentTemplate = comp =>
+  `
+    <aura:component extends="c:baseComponent">
+      <aura:set attribute="title">
+        ${comp.title}
+      </aura:set>
+      <aura:set attribute="overview">
+        ${docs(comp)}
+      </aura:set>
+    </aura:component>
+  `;
 
-const createCmps = () => {
-  let files = [];
+const tryRequire = p => {
+  const resolvedPath = path.resolve(__PATHS__.root, p);
+  try { fs.accessSync(resolvedPath); } catch (e) { return null; }
+  delete require.cache[resolvedPath];
+  return require(resolvedPath);
+};
 
-  const transform = (oldFile, enc, next) => {
-    let file = oldFile.clone();
-    file.path = file.path.replace(/html$/, 'cmp');
-    file.contents = new Buffer(wrapInTemplate(file.contents.toString()));
-    files.push(file.relative);
+const docs = component => {
+  const element = tryRequire(`ui/${component.path}/index.docs.jsx`);
+  return element && toHtml(element.default);
+};
+
+const stateJSON = state =>
+  ({[state.label || state.id]: state.uid });
+
+const flavorJSON = flavor =>
+  ({
+    [flavor.title]: {
+      variant: flavor.id,
+      states: flavor.examples.map(stateJSON)
+    }
+  });
+
+const compJSON = component =>
+  ({
+    [component.title]: {
+      component: component.id,
+      variants: component.flavors.map(flavorJSON)
+    }
+  });
+
+const groupName = component => 
+  component.path.split('/')[0];
+
+const genJSON = all =>
+  _.mapValues(_.groupBy(all, groupName), group =>
+    group.reduce((acc, x) => Object.assign(acc, compJSON(x)), {}));
+
+const packageWithIndex = () => {
+  const transform = (file, enc, next) =>
     next(null, file);
-  };
 
   const flush = function(next) {
-    const json = JSON.stringify({files});
+    const json = JSON.stringify(genJSON(getExamples()));
     this.push(new gutil.File({
       path: 'index.json',
       contents: new Buffer(json)
@@ -59,9 +107,34 @@ const createCmps = () => {
   return through.obj(transform, flush);
 };
 
+const componentFile = (stream, component) =>
+  stream.write(new gutil.File({
+    path: `${component.id}.cmp`,
+    contents: new Buffer(componentTemplate(component))
+  }));
 
+const stateFile = (stream, state) =>
+  stream.write(new gutil.File({
+    path: `${state.uid}.cmp`,
+    contents: new Buffer(stateTemplate(state, toHtml(state.element)))
+  }));
+
+const createExamples = components => {
+  const stream = through.obj();
+  components.forEach(comp => {
+    componentFile(stream, comp);
+    comp.flavors.forEach(flavor =>
+      flavor.examples.forEach(state =>
+        stateFile(stream, state)));
+  });
+  stream.end();
+  return stream;
+};
+
+//  console.log(JSON.stringify(genJSON(getExamples()), null, 2)));
 gulp.task('generate:cmps', ['generate:examples'], () =>
-  gulp.src(exDir('*'))
-  .pipe(createCmps())
+  createExamples(getExamples())
+  .pipe(packageWithIndex())
   .pipe(gulpzip('cmps.zip'))
   .pipe(gulp.dest(__PATHS__.www)));
+

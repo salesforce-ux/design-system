@@ -29,6 +29,9 @@ const prettyHTML = html => beautify.html(html, {
   'indent_inner_html': true
 });
 
+const addUID = (component, flavor, example) =>
+  assign({uid: `${component.id}_${flavor.id}_${example.id}` }, example);
+
 const toStates = (ex, k) =>
   [{ id: k, element: ex[k] }];
 
@@ -40,32 +43,38 @@ const getStates = file =>
 const requireExample = flavor =>
   require(resolve(__PATHS__.ui, flavor.examplePath));
 
-export const addExamples = comps =>
-  comps.map(c => assign(c, {
-    flavors: c.flavors
-        .filter(f => f.examplePath)
-        .map(f => assign(f, { examples: getStates(requireExample(f)) }))
-  })
+export const addExamples = components =>
+  components.map(comp =>
+    assign(comp, {
+      flavors:
+        comp.flavors
+        .filter(flavor => flavor.examplePath)
+        .map(flavor =>
+          assign(flavor, {
+            examples:
+              getStates(requireExample(flavor))
+              .map(state => addUID(comp, flavor, state))
+          }))
+    })
 );
-
-export const getComponents = schema =>
-  flatMap(generateUI(schema), 'components');
-
-const getName = (component, flavor, example) =>
-  `${component.id}_${flavor.id}_${example.id}`;
 
 const flattenExamples = comps =>
   flatMap(comps, comp =>
     flatMap(comp.flavors, flavor =>
-      flatMap(flavor.examples, ex =>
-        assign(ex, { uid: getName(comp, flavor, ex) }))));
+      flavor.examples));
 
-const toHtml = el =>
+export const getComponents = schema =>
+  flatMap(generateUI(schema), 'components');
+
+export const getExamples = () =>
+  addExamples(getComponents());
+
+export const toHtml = (el) =>
   prettyHTML(renderToStaticMarkup(el));
 
 gulp.task('generate:examples', ['generate:whitelist'], () => {
   const stream = through.obj();
-  const examples = flattenExamples(addExamples(getComponents()));
+  const examples = flattenExamples(getExamples());
   examples.forEach(ex =>
     stream.write(new gutil.File({
       path: `${ex.uid}.html`,

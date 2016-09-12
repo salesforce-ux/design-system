@@ -1,0 +1,8 @@
+global:
+  category: font
+  type: font
+  cssProperties:
+  - 'font*'
+props:
+  FONT_FAMILY:
+    value: "'Salesforce Sans', Arial, sans-serif"

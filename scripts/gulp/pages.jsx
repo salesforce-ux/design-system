@@ -24,10 +24,11 @@ import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
 import Prism from 'app_modules/site/vendor/prism';
 import through from 'through2';
 import crypto from 'crypto';
+import yaml from 'js-yaml';
 import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
-import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
+const forceBase = yaml.safeLoad(fs.readFileSync(path.resolve(__PATHS__.designTokens, 'force-base/spacing.yml')));
 
 import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
@@ -123,7 +124,7 @@ export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') =
   <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
   <link type="text/css" rel="stylesheet" href="/assets/styles/demo.css" />
   <style>
-    body { padding: ${ForceBase.spacingMedium}; }
+    body { padding: ${forceBase.spacingMedium}; }
   </style>
   <meta name="robots" content="noindex" />
   <script>

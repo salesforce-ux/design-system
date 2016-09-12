@@ -183,6 +183,7 @@ The following issues have now been resolved:
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
 - Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)
+- Added `aria-describedby` attribute on Tooltip component trigger
 
 **CHANGES**
 

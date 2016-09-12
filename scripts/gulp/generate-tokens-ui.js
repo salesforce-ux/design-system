@@ -30,8 +30,8 @@ const addPxValueProp = () =>
       contents: JSON.parse(file.contents.toString())
     };
     Object.keys(set.contents.props).forEach(prop => {
-      if (/rem$/.test(set.contents.props[prop])) {
-        set.contents.props['.pxValue'] = rem2px(set.contents.props[prop]);
+      if (/rem$/.test(set.contents.props[prop].value)) {
+        set.contents.props[prop]['.pxValue'] = rem2px(set.contents.props[prop].value);
       }
     });
     file.contents = new Buffer(JSON.stringify(set, null, 2));

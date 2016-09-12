@@ -56,6 +56,7 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
+- [Docked Form Footer](/components/forms/#flavor-docked-form-footer-docked-form-footer-with-popover) popover tooltip naming changed to popover.
 - [CSS Scoping Tool](https://tools.lightningdesignsystem.com/css-customizer) is now only necessary when building components to be included in Visualforce
 - [Using SLDS in Lightning](/platforms/lightning/) has been updated to include information about Lightning Out, Lightning Components for Visualforce, and Lightning Applications.
 - Nubbins on [Popovers](/components/popovers/#flavor-nubbins) have been moved .5rem/8px closer to the respective edge of the popover to match the spec

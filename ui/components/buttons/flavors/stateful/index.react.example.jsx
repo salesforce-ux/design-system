@@ -12,24 +12,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let StatefulButton = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-live="assertive">
-    <span className={pf('text-not-selected')}>
-      <SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />
+  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-live="assertive">
+    <span className="slds-text-not-selected">
+      <SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />
       Follow
     </span>
-    <span className={pf('text-selected')}>
-      <SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />
+    <span className="slds-text-selected">
+      <SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />
       Following
     </span>
-    <span className={pf('text-selected-focus')}>
-      <SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />
+    <span className="slds-text-selected-focus">
+      <SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />
       Unfollow
     </span>
   </button>;
@@ -42,19 +41,19 @@ export let states = [
   {
     id: 'button-neutral-stateful-not-selected',
     label: 'Neutral - Not Selected',
-    element: <StatefulButton className={pf('button--neutral not-selected')} />
+    element: <StatefulButton className="slds-button--neutral slds-not-selected" />
   },
   {
     id: 'button-neutral-stateful-selected',
     label: 'Neutral - Selected',
-    element: <StatefulButton className={pf('button--neutral is-selected')} />
+    element: <StatefulButton className="slds-button--neutral slds-is-selected" />
   },
   {
     id: 'button-inverse-stateful-not-selected',
     label: 'Inverse - Not Selected',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <StatefulButton className={pf('button--inverse not-selected')} />
+        <StatefulButton className="slds-button--inverse slds-not-selected" />
       </div>
   },
   {
@@ -62,7 +61,7 @@ export let states = [
     label: 'Inverse - Selected',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <StatefulButton className={pf('button--inverse is-selected')} />
+        <StatefulButton className="slds-button--inverse slds-is-selected" />
       </div>
   }
 ];

@@ -14,38 +14,37 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Image = props =>
-  <figure className={className(pf('image'), props.className)}>
-    <a href="javascript:void(0);" className={className(pf('image__crop'), props.cropClass)}>
-      { props.overlay ? <div className={pf('image--overlay')}></div> : null }
+  <figure className={className('slds-image', props.className)}>
+    <a href="javascript:void(0);" className={className('slds-image__crop', props.cropClass)}>
+      { props.overlay ? <div className="slds-image--overlay"></div> : null }
       { props.image ?
         <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
-        <span className={pf('image__icon icon_container')} title={ props.symbol || 'unknown file type' }>
-          <SvgIcon className={pf('icon')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-          <span className={pf('assistive-text')}>{ props.title || 'Image Title' }</span>
+        <span className="slds-image__icon slds-icon_container" title={ props.symbol || 'unknown file type' }>
+          <SvgIcon className="slds-icon" sprite="doctype" symbol={ props.symbol || 'unknown' } />
+          <span className="slds-assistive-text">{ props.title || 'Image Title' }</span>
         </span>
       }
     </a>
     { props.actions ?
-      <ButtonGroup className={pf('image__actions')}>
-        <ButtonIcon className={pf('button--icon-border-filled')} symbol="download" assistiveText="Download" />
-        <ButtonIcon className={pf('button--icon-border-filled')} symbol="down" assitiveText="More Actions" />
+      <ButtonGroup className="slds-image__actions">
+        <ButtonIcon className="slds-button--icon-border-filled" symbol="download" assistiveText="Download" />
+        <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assitiveText="More Actions" />
       </ButtonGroup> : null }
-    <figcaption className={className(pf('image__title'), props.titleClass)}>
+    <figcaption className={className('slds-image__title', props.titleClass)}>
       { props.symbol ?
-      <span className={pf('icon_container m-right--x-small')} title={ props.symbol || 'unknown file type' }>
-        <SvgIcon className={pf('icon icon--x-small')} sprite="doctype" symbol={ props.symbol || 'unknown' } />
-        <span className={pf('assistive-text')}>{ props.symbol || 'unknown file type' }</span>
+      <span className="slds-icon_container slds-m-right--x-small" title={ props.symbol || 'unknown file type' }>
+        <SvgIcon className="slds-icon slds-icon--x-small" sprite="doctype" symbol={ props.symbol || 'unknown' } />
+        <span className="slds-assistive-text">{ props.symbol || 'unknown file type' }</span>
       </span>: null }
-      <span className={pf('image__text truncate')} title={ props.title || 'Image Title' }>
+      <span className="slds-image__text slds-truncate" title={ props.title || 'Image Title' }>
         { props.title || 'Image Title' }
-        { props.overlay ? <span className={pf('assistive-text')}>more files</span> : null }
+        { props.overlay ? <span className="slds-assistive-text">more files</span> : null }
       </span>
     </figcaption>
   </figure>;
@@ -61,9 +60,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
           image />
       </div>
   },
@@ -73,9 +72,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--overlay slds-align--absolute-center slds-text-heading--large"
           title="22+"
           image
           overlay />

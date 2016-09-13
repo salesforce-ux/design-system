@@ -20,13 +20,13 @@ class Component extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('radio'));
+    const className = this.$getClassName('slds-radio');
     const inputProps = _.pick(this.props, ['onChange', 'value', 'checked', 'name']);
     return (
       <label className={className} htmlFor={this.props.assistiveText.replace(' ','-')}>
         <input type="radio" {...inputProps} id={this.props.assistiveText.replace(' ','-')} />
-        <span className={pf('radio--faux')}></span>
-        <span className={pf('form-element__label')}>{this.props.label}</span>
+        <span className="slds-radio--faux"></span>
+        <span className="slds-form-element__label">{this.props.label}</span>
       </label>
     );
   }

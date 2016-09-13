@@ -13,56 +13,55 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const dialingIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 
 export let UtilityPanel = props =>
-  <div className={className(pf('utility-panel grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className={pf('utility-panel__header grid shrink-none')}>
-      <div className={pf('utility-panel__header-label')}>
-        <div className={pf('media media--center')}>
-          <div className={pf('media__figure')}>
-            <span className={pf('icon_container')}>
-              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-              <span className={pf('assistive-text')}>Call Icon</span>
+  <div className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <div className="slds-utility-panel__header slds-grid slds-shrink-none">
+      <div className="slds-utility-panel__header-label">
+        <div className="slds-media slds-media--center">
+          <div className="slds-media__figure">
+            <span className="slds-icon_container">
+              <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+              <span className="slds-assistive-text">Call Icon</span>
             </span>
           </div>
-          <div className={pf('media__body')}>
+          <div className="slds-media__body">
             <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
           </div>
         </div>
       </div>
-      <div className={pf('utility-panel__header-icon-action col--bump-left')}>
-        <button className={pf('button button--icon button--icon-inverse')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="minimize_window" />
-          <span className={pf('assistive-text')}>Minimize</span>
+      <div className="slds-utility-panel__header-icon-action slds-col--bump-left">
+        <button className="slds-button slds-button--icon slds-button--icon-inverse">
+          <SvgIcon className="slds-button__icon" sprite="utility" symbol="minimize_window" />
+          <span className="slds-assistive-text">Minimize</span>
         </button>
       </div>
     </div>
-    <div className={pf('utility-panel__body')}>
+    <div className="slds-utility-panel__body">
       { props.children }
     </div>
   </div>;
 
 const PanelOpen = (
-  <UtilityPanel className={pf('is-open')}>
-    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+  <UtilityPanel className="slds-is-open">
+    <div className="slds-text-align--center slds-align-middle">Utility Panel Body</div>
   </UtilityPanel>
 );
 
 const PanelClosed = (
   <UtilityPanel>
-    <div className={pf('text-align--center align-middle')}>Utility Panel Body</div>
+    <div className="slds-text-align--center slds-align-middle">Utility Panel Body</div>
   </UtilityPanel>
 );
 
@@ -77,7 +76,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '540px' }}>
         <UtilityBar panel={PanelOpen}>
-          <UtilityBarItem symbol="call" className={pf('is-active')}>Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>

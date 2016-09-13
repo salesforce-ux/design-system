@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -25,9 +24,9 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
-        <Card className={pf('card--narrow')}>
-          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
-          <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+        <Card className="slds-card--narrow">
+          <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
+          <CardBody className="slds-text-align--center">Card Body (custom goes in here)</CardBody>
           <CardFooter>Card Footer</CardFooter>
         </Card>
       </div>
@@ -37,8 +36,8 @@ export let states = [
     label: 'Empty',
     element:
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
-        <Card className={pf('card--narrow')}>
-          <CardHeader symbol="contact" actions="overflow"><span className={pf('text-heading--small')}>Card Header</span></CardHeader>
+        <Card className="slds-card--narrow">
+          <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
           <CardBody></CardBody>
           <CardFooter></CardFooter>
         </Card>

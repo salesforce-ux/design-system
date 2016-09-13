@@ -17,54 +17,53 @@ import className from 'classnames';
 import { Panel } from 'ui/components/panels/flavors/detail/index.react.example';
 import { PanelBody } from 'ui/components/panels/flavors/detail/index.react.example';
 import { PanelSection } from 'ui/components/panels/flavors/detail/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only grid')} style={{ height: '800px', maxWidth: '420px', overflow: 'hidden' }}>
+  <div className="demo-only slds-grid" style={{ height: '800px', maxWidth: '420px', overflow: 'hidden' }}>
     {props.children}
   </div>;
 
 export let Filters = props =>
-  <div className={className(pf('filters'), props.className)}>
+  <div className={className('slds-filters', props.className)}>
     {props.children}
   </div>;
 
 export let FiltersHeader = props =>
-  <div className={className(pf('filters__header grid has-divider--bottom-space'), props.className)}>
+  <div className={className('slds-filters__header slds-grid slds-has-divider--bottom-space', props.className)}>
     { props.children }
   </div>;
 
 export let FiltersBody = props =>
-  <div className={pf('filters__body')}>
+  <div className="slds-filters__body">
     {props.children}
   </div>;
 
 export let FiltersFooter = props =>
-  <div className={pf('filters__footer grid shrink-none')}>
+  <div className="slds-filters__footer slds-grid slds-shrink-none">
     <a href="javascript:void(0);">Add Filter</a>
-    <a href="javascript:void(0);" className={pf('col--bump-left')}>Remove All</a>
+    <a href="javascript:void(0);" className="slds-col--bump-left">Remove All</a>
   </div>;
 
 export let FilterObject = props =>
-  <li className={pf('item hint-parent')}>
-    <div className={className(pf('filters__item grid grid--vertical-align-center'), props.className)}>
-      <a href="javascript:void(0);" className={pf('grow has-blur-focus')}>
-        {props.type ? (<p className={pf('text-body--small')}>{props.type}</p>) : null }
+  <li className="slds-item slds-hint-parent">
+    <div className={className('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
+      <a href="javascript:void(0);" className="slds-grow slds-has-blur-focus">
+        {props.type ? (<p className="slds-text-body--small">{props.type}</p>) : null }
         <p>{props.children}</p>
       </a>
       { props.removable ? removeButton : null }
     </div>
-    { props.errorMessage ? (<p className={pf('text-color--error m-top--xx-small')}>{props.errorMessage}</p>) : null }
+    { props.errorMessage ? (<p className="slds-text-color--error slds-m-top--xx-small">{props.errorMessage}</p>) : null }
   </li>;
 
 const removeButton = (
   <ButtonIcon
-    className={pf('button--icon button--icon-small')}
-    iconClassName={pf('button__icon--hint')}
+    className="slds-button--icon slds-button--icon-small"
+    iconClassName="slds-button__icon--hint"
     symbol="close"
     assistiveText="Remove" />
 );
@@ -75,22 +74,22 @@ const removeButton = (
 
 let Default = props =>
   <Demo>
-    <Panel className={pf('panel--filters')}>
-      <PanelBody className={pf('grid grid--vertical')}>
+    <Panel className="slds-panel--filters">
+      <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader>
-            <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
+            <h4 className="slds-align-middle slds-text-heading--small">Filter</h4>
             <ButtonIcon
-              className={pf('col--bump-left button--icon button--icon-small')}
+              className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
               assistiveText="Close Filter Panel" />
           </FiltersHeader>
           <FiltersBody>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className={pf('text-body--small m-vertical--x-small')}>Matching all these filters</p>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
             </ol>
@@ -103,22 +102,22 @@ let Default = props =>
 
 let NewFilter = props =>
   <Demo>
-    <Panel className={pf('panel--filters')}>
-      <PanelBody className={pf('grid grid--vertical')}>
+    <Panel className="slds-panel--filters">
+      <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
-          <FiltersHeader className={pf('grid--align-spread')}>
+          <FiltersHeader className="slds-grid--align-spread">
             <Button flavor="neutral">Cancel</Button>
             <Button flavor="brand">Save</Button>
           </FiltersHeader>
           <FiltersBody>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className={pf('text-body--small m-vertical--x-small')}>Matching all these filters</p>
-            <ul className={pf('list--vertical list--vertical-space')}>
+            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <ul className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
-              <FilterObject className={pf('is-new')} removable>New Filter</FilterObject>
+              <FilterObject className="slds-is-new" removable>New Filter</FilterObject>
             </ul>
           </FiltersBody>
           <FiltersFooter />
@@ -129,23 +128,23 @@ let NewFilter = props =>
 
 let ErrorPanel = props =>
   <Demo>
-    <Panel className={pf('panel--filters')}>
-      <PanelBody className={pf('grid grid--vertical')}>
+    <Panel className="slds-panel--filters">
+      <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
-          <FiltersHeader className={pf('grid--align-spread')}>
+          <FiltersHeader className="slds-grid--align-spread">
             <Button flavor="neutral">Cancel</Button>
             <Button flavor="brand">Save</Button>
           </FiltersHeader>
           <FiltersBody>
-            <div className={pf('text-color--error m-bottom--x-small')} aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <div className="slds-text-color--error slds-m-bottom--x-small" aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className={pf('text-body--small m-vertical--x-small')}>Matching all these filters</p>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
-              <FilterObject className={pf('has-error')} type="Stage" errorMessage="Error Message" removable>equals "Red"</FilterObject>
+              <FilterObject className="slds-has-error" type="Stage" errorMessage="Error Message" removable>equals "Red"</FilterObject>
             </ol>
           </FiltersBody>
           <FiltersFooter />
@@ -156,31 +155,31 @@ let ErrorPanel = props =>
 
 let Locked = props =>
   <Demo>
-    <Panel className={pf('panel--filters')}>
-      <PanelBody className={pf('grid grid--vertical')}>
+    <Panel className="slds-panel--filters">
+      <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader>
-            <h4 className={pf('align-middle text-heading--small')}>Filter</h4>
+            <h4 className="slds-align-middle slds-text-heading--small">Filter</h4>
             <ButtonIcon
-              className={pf('col--bump-left button--icon button--icon-small')}
+              className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
               assistiveText="Close Filter Panel" />
           </FiltersHeader>
           <FiltersBody>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className={pf('text-body--small m-vertical--x-small')}>Matching all these filters</p>
-            <ol className={pf('list--vertical list--vertical-space')}>
+            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
             </ol>
-            <p className={pf('text-body--small m-vertical--x-small grid')}>
+            <p className="slds-text-body--small slds-m-vertical--x-small slds-grid">
               Locked Filters
-              <SvgIcon className={pf('icon icon--x-small icon-text-default m-left--x-small')} sprite="utility" symbol="lock" />
+              <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-m-left--x-small" sprite="utility" symbol="lock" />
             </p>
-            <ol className={pf('list--vertical list--vertical-space')}>
-              <FilterObject className={pf('is-locked')} type="Name">equals "ACME"</FilterObject>
+            <ol className="slds-list--vertical slds-list--vertical-space">
+              <FilterObject className="slds-is-locked" type="Name">equals "ACME"</FilterObject>
             </ol>
           </FiltersBody>
           <FiltersFooter />

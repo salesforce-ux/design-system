@@ -13,27 +13,26 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 export let Pill = props =>
-  <span className={className(pf('pill'), props.className)}>
+  <span className={className('slds-pill', props.className)}>
     {props.children}
-    {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
-    : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className={pf('button--icon pill__remove')} symbol="close" assistiveText="Remove" />
+    {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
+    : <a href="javascript:void(0);" className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
+    <ButtonIcon className="slds-button--icon slds-pill__remove" symbol="close" assistiveText="Remove" />
   </span>;
 
 export let PillContainer = props =>
-  <div className={className(pf('pill_container'), props.className)}>
+  <div className={className('slds-pill_container', props.className)}>
     {props.children}
   </div>;
 
@@ -49,9 +48,9 @@ let Default = props =>
 let Icon = props =>
   <Demo>
     <Pill>
-      <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-        <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-        <span className={pf('assistive-text')}>Account</span>
+      <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+        <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+        <span className="slds-assistive-text">Account</span>
       </span>
     </Pill>
   </Demo>;
@@ -59,7 +58,7 @@ let Icon = props =>
 let Portrait = props =>
   <Demo>
     <Pill>
-      <span className={pf('pill__icon avatar avatar--circle')}>
+      <span className="slds-pill__icon slds-avatar slds-avatar--circle">
         <img src="/assets/images/avatar2.jpg" alt="" />
       </span>
     </Pill>

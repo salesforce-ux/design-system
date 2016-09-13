@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { install, prefix as pf } from 'app_modules/ui/util/component';
+import { install } from 'app_modules/ui/util/component';
 import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
 
 class Heading extends React.Component {
@@ -27,19 +27,19 @@ class Heading extends React.Component {
 
     switch (this.props.type) {
     case 'h1':
-      return <h1 className={pf(c)} {...props}>
+      return <h1 className={c} {...props}>
         <JumpAnchor id={this.props.id} level="1" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h1>;
       break;
     case 'h2':
-      return <h2 className={pf(c)} {...props}>
+      return <h2 className={c} {...props}>
         <JumpAnchor id={this.props.id} level="2" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h2>;
       break;
     case 'h3':
-      return <h3 className={pf(c)} {...props}>
+      return <h3 className={c} {...props}>
         <JumpAnchor id={this.props.id} level="3" scrollSpyActive>{this.props.textLabel}</JumpAnchor>
         {this.props.children}
       </h3>;

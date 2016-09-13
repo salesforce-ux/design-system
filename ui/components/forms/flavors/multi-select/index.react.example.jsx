@@ -11,46 +11,45 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only">
-  <div className={pf('picklist--draggable grid')}>
-    <div className={pf('form-element')}>
-      <span className={pf('form-element__label')} aria-label="select-1">First Category</span>
-      <div className={pf('picklist picklist--multi')}>
-        <ul className={pf('picklist__options picklist__options--multi')}>
-          <li draggable="true" id="po-8-0" className={pf('picklist__item')} aria-selected="false" tabIndex="0" role="option">
-            <span className={pf('truncate')}>Option One</span>
+  <div className="slds-picklist--draggable slds-grid">
+    <div className="slds-form-element">
+      <span className="slds-form-element__label" aria-label="select-1">First Category</span>
+      <div className="slds-picklist">
+        <ul className="slds-picklist__options slds-picklist__options--multi">
+          <li draggable="true" id="po-8-0" className="slds-picklist__item" aria-selected="false" tabIndex="0" role="option">
+            <span className="slds-truncate">Option One</span>
           </li>
         </ul>
       </div>
     </div>
-    <div className={pf('grid grid--vertical')}>
-      <button className={pf('button button--icon-container')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="left" />
-        <span className={pf('assistive-text')}>Arrow left</span>
+    <div className="slds-grid slds-grid--vertical">
+      <button className="slds-button slds-button--icon-container">
+        <SvgIcon className="slds-button__icon" sprite="utility" symbol="left" />
+        <span className="slds-assistive-text">Arrow left</span>
       </button>
-      <button className={pf('button button--icon-container')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="right" />
-        <span className={pf('assistive-text')}>Arrow right</span>
+      <button className="slds-button slds-button--icon-container">
+        <SvgIcon className="slds-button__icon" sprite="utility" symbol="right" />
+        <span className="slds-assistive-text">Arrow right</span>
       </button>
     </div>
-    <div className={pf('form-element')}>
-      <span className={pf('form-element__label')} aria-label="select-1">First Category</span>
-      <div className={pf('picklist picklist--multi')}>
-        <ul className={pf('picklist__options picklist__options--multi')}></ul>
+    <div className="slds-form-element">
+      <span className="slds-form-element__label" aria-label="select-1">First Category</span>
+      <div className="slds-picklist">
+        <ul className="slds-picklist__options slds-picklist__options--multi"></ul>
       </div>
     </div>
-    <div className={pf('grid grid--vertical')}>
-      <button className={pf('button button--icon-container')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="up" />
-        <span className={pf('assistive-text')}>Arrow up</span>
+    <div className="slds-grid slds-grid--vertical">
+      <button className="slds-button slds-button--icon-container">
+        <SvgIcon className="slds-button__icon" sprite="utility" symbol="up" />
+        <span className="slds-assistive-text">Arrow up</span>
       </button>
-      <button className={pf('button button--icon-container')}>
-        <SvgIcon className={pf('button__icon')} sprite="utility" symbol="down" />
-        <span className={pf('assistive-text')}>Arrow down</span>
+      <button className="slds-button slds-button--icon-container">
+        <SvgIcon className="slds-button__icon" sprite="utility" symbol="down" />
+        <span className="slds-assistive-text">Arrow down</span>
       </button>
     </div>
   </div>

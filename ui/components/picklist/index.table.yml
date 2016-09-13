@@ -1,16 +1,16 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: picklist
+    class: slds-picklist
     description: Initializes picklist
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: picklist--fluid
+    class: slds-picklist--fluid
     description: Forces width of picklist and picklist dropdown to inherit width of its content
-    applied: <code>.{{cssPrefix}}picklist</code>
+    applied: <code>.slds-picklist</code>
   -
-    class: picklist__label
+    class: slds-picklist__label
     description: Custom select
     required: true
     applied: <code>&lt;button&gt;</code>

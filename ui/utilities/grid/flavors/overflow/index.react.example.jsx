@@ -10,33 +10,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('scrollable--x')}>
-    <div className={pf('grid grid--overflow')}>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
+  <div className="slds-scrollable--x">
+    <div className="slds-grid slds-grid--overflow">
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
     </div>
-    <div className={pf('grid grid--overflow')}>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
-      <div className={pf('col')}>Contents go here.</div>
+    <div className="slds-grid slds-grid--overflow">
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
+      <div className="slds-col">Contents go here.</div>
     </div>
   </div>
 </div>
 );
 export const code = (
-<div className={pf('scrollable--x')}>
-  <div className={pf('grid grid--overflow')}>
-    <div className={pf('col')}>Contents go here.</div>
-    <div className={pf('col')}>Contents go here.</div>
+<div className="slds-scrollable--x">
+  <div className="slds-grid slds-grid--overflow">
+    <div className="slds-col">Contents go here.</div>
+    <div className="slds-col">Contents go here.</div>
   </div>
 </div>
 );

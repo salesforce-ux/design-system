@@ -13,13 +13,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Sticky from './';
 
-import { prefix as pf } from 'app_modules/ui/util/component';
-
 import forceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
 
 export default props =>
   <Sticky
-    className={pf('site-content__bleed size--1-of-1 large-size--1-of-6 large-order--2')}
+    className="site-content__bleed slds-size--1-of-1 slds-large-size--1-of-6 slds-large-order--2"
     fixedElementsBelow="footer.site-contentinfo"
     fixedContentPadding={{
       top: forceBase.spacingLarge,

@@ -12,79 +12,78 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
-    <SvgIcon className={pf('button__icon')} sprite="utility" symbol={props.symbol} />
-    <span className={pf('assistive-text')}>{props.assistiveText}</span>
+  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    <SvgIcon className="slds-button__icon" sprite="utility" symbol={props.symbol} />
+    <span className="slds-assistive-text">{props.assistiveText}</span>
   </button>;
 
 export let PostFooterActions = props =>
-  <ul className={pf('post__footer-actions-list list--horizontal')}>
-    <li className={pf('col item m-right--medium')}>
-      <a href="javascript:void(0);" title="Like this item" className={className(pf('post__footer-action'), props.liked ? pf('is-active') : null)}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="like" />
+  <ul className="slds-post__footer-actions-list slds-list--horizontal">
+    <li className="slds-col slds-item slds-m-right--medium">
+      <a href="javascript:void(0);" title="Like this item" className={className('slds-post__footer-action', props.liked ? 'slds-is-active' : null)}>
+        <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
       </a>
     </li>
-    <li className={pf('col item m-right--medium')}>
-      <a href="javascript:void(0);" title="Comment on this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share_post" /> Comment
+    <li className="slds-col slds-item slds-m-right--medium">
+      <a href="javascript:void(0);" title="Comment on this item" className="slds-post__footer-action">
+        <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="share_post" /> Comment
       </a>
     </li>
-    <li className={pf('col item m-right--medium')}>
-      <a href="javascript:void(0);" title="Share this item" className={pf('post__footer-action')}>
-        <SvgIcon className={pf('icon icon-text-default icon--x-small align-middle')} sprite="utility" symbol="share" /> Share
+    <li className="slds-col slds-item slds-m-right--medium">
+      <a href="javascript:void(0);" title="Share this item" className="slds-post__footer-action">
+        <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="share" /> Share
       </a>
     </li>
   </ul>;
 
 export let PostFooterMeta = props =>
-  <ul className={pf('post__footer-meta-list list--horizontal has-dividers--right text-title')}>
-    { props.liked ? <li className={pf('item')}>1 likes</li> : null }
-    { props.comments ? <li className={pf('item')}>{ props.comments || '0' } comments</li> : null }
-    <li className={pf('item')}>20 shares</li>
-    <li className={pf('item')}>259 views</li>
+  <ul className="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+    { props.liked ? <li className="slds-item">1 likes</li> : null }
+    { props.comments ? <li className="slds-item">{ props.comments || '0' } comments</li> : null }
+    <li className="slds-item">20 shares</li>
+    <li className="slds-item">259 views</li>
   </ul>;
 
 export let PostHeader = props =>
-  <header className={pf('post__header media media--center')}>
-    <div className={pf('media__figure')}>
-      <a href="javascript:void(0);" title="Jason Rodgers" className={pf('avatar avatar--circle avatar--large')}>
+  <header className="slds-post__header slds-media slds-media--center">
+    <div className="slds-media__figure">
+      <a href="javascript:void(0);" title="Jason Rodgers" className="slds-avatar slds-avatar--circle slds-avatar--large">
         <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
       </a>
     </div>
-    <div className={pf('media__body')}>
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+    <div className="slds-media__body">
+      <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
         <p>
           <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
         </p>
-        <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
+        <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" hasPopup="true" symbol="down" assistiveText="More Options" />
       </div>
-      <p className={pf('text-body--small')}>
-        <a href="javascript:void(0);" title="Click for single-item view of this post" className={pf('text-link--reset')}>5 days Ago</a>
+      <p className="slds-text-body--small">
+        <a href="javascript:void(0);" title="Click for single-item view of this post" className="slds-text-link--reset">5 days Ago</a>
       </p>
     </div>
   </header>;
 
 export let PostContent = props =>
-  <div className={className(pf('post__content text-longform'), props.className)}>
+  <div className={className('slds-post__content slds-text-longform', props.className)}>
     { props.children }
   </div>;
 
 export let PostFooter = props =>
-  <footer className={className(pf('post__footer'), props.className)}>
+  <footer className={className('slds-post__footer', props.className)}>
     { props.children }
   </footer>;
 
 export let Post = props =>
-  <article className={className(pf('post'), props.className)}>
+  <article className={className('slds-post', props.className)}>
     { props.children }
   </article>;
 
 export let Comments = props =>
-  <div className={pf('feed__item-comments')}>
+  <div className="slds-feed__item-comments">
     { props.children }
   </div>;
 
@@ -124,7 +123,7 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div className={pf('p-horizontal--medium p-vertical--x-small')}>
+          <div className="slds-p-horizontal--medium slds-p-vertical--x-small">
             <a href="javascript:void(0);">You</a> liked this post
           </div>
         </Comments>

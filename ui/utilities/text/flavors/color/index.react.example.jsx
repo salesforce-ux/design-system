@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
 
 let Text = props =>
-  <div className={pf(props.className)}>
+  <div className={props.className}>
     The quick brown fox jumps over the lazy dog.
   </div>;
 
@@ -30,16 +29,16 @@ export let states = [
   {
     id: 'text-color-default',
     label: 'Default',
-    element: <Text className={pf('text-color--default')} />
+    element: <Text className="slds-text-color--default" />
   },
   {
     id: 'text-color-weak',
     label: 'Weak',
-    element: <Text className={pf('text-color--weak')} />
+    element: <Text className="slds-text-color--weak" />
   },
   {
     id: 'text-color-error',
     label: 'Error',
-    element: <Text className={pf('text-color--error')} />
+    element: <Text className="slds-text-color--error" />
   }
 ];

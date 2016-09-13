@@ -14,43 +14,42 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Lorem from 'react-lorem-component';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
-    <div className={pf('backdrop backdrop--open')} />
+    <div className="slds-backdrop slds-backdrop--open" />
   </div>;
 
 export let Modal = props =>
-  <div role="dialog" tabIndex="-1" {...props} className={className(pf('modal fade-in-open'), props.className)}>
-    <div className={pf('modal__container')}>
+  <div role="dialog" tabIndex="-1" {...props} className={className('slds-modal slds-fade-in-open', props.className)}>
+    <div className="slds-modal__container">
       {props.children}
     </div>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className(pf('modal__header'), props.className)}>
+  <div className={className('slds-modal__header', props.className)}>
     { props.closeButton != 'false' ?
       <ButtonIcon
-        className={pf('modal__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-modal__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" /> : null }
     {props.children}
   </div>;
 
 export let ModalContent = props =>
-  <div className={className(pf('modal__content'), props.className)}>
+  <div className={className('slds-modal__content', props.className)}>
     {props.children}
   </div>;
 
 export let ModalFooter = props =>
-  <div className={className(pf('modal__footer'), props.className)}>
+  <div className={className('slds-modal__footer', props.className)}>
     {props.children}
   </div>;
 
@@ -62,9 +61,9 @@ let Default = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
         <Button flavor="neutral">Cancel</Button>
         <Button flavor="neutral,brand">Save</Button>
@@ -76,14 +75,14 @@ let Taglines = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
-        <p className={pf('m-top--x-small')}>
+        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <p className="slds-m-top--x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
           to you. It is allowed to <a href="javascript:void(0);">contain links or be a link</a>.
         </p>
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
         <Button flavor="neutral">Cancel</Button>
         <Button flavor="neutral,brand">Save</Button>
@@ -93,11 +92,11 @@ let Taglines = props =>
 
 let Large = props =>
   <Demo style={{height: '640px'}}>
-    <Modal className={pf('modal--large')} aria-labelledby="header43">
+    <Modal className="slds-modal--large" aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
         <Button flavor="neutral">Cancel</Button>
         <Button flavor="neutral,brand">Save</Button>
@@ -109,10 +108,10 @@ let Directional = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
-      <ModalFooter className={pf('modal__footer--directional')}>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalFooter className="slds-modal__footer--directional">
         <Button flavor="neutral">Skip This Step</Button>
         <Button flavor="neutral,brand">Save &#38; Next</Button>
       </ModalFooter>
@@ -122,9 +121,9 @@ let Directional = props =>
 let Headless = props =>
   <Demo style={{height: '640px'}}>
     <Modal>
-      <ModalHeader className={pf('modal__header modal__header--empty')}>
+      <ModalHeader className="slds-modal__header slds-modal__header--empty">
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
         <Button flavor="neutral">Cancel</Button>
         <Button flavor="neutral,brand">Save</Button>
@@ -136,9 +135,9 @@ let Footless = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className={pf('text-heading--medium')}>Modal Header</h2>
+        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className={pf('p-around--medium')}><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
     </Modal>
   </Demo>;
 

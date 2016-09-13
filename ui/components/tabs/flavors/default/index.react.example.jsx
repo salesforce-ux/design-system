@@ -14,7 +14,6 @@ import Tabs from 'ui/components/tabs/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Default as ScopedTabs } from 'ui/components/tabs/flavors/scoped/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -59,23 +58,23 @@ let Overflowing = props =>
     <Tabs.Item title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More tabs" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
-      <a className={pf('tabs--default__link')} href="javascript:void(0);" aria-haspopup="true">
-        <span className={pf('truncate')}>More <span className={pf('assistive-text')}>tabs</span></span>
-        <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    <Tabs.ItemOverflow title="More tabs" className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-tabs--default__item">
+      <a className="slds-tabs--default__link" href="javascript:void(0);" aria-haspopup="true">
+        <span className="slds-truncate">More <span className="slds-assistive-text">tabs</span></span>
+        <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
       </a>
-      <Menu className={pf('dropdown--right')}>
-        <MenuList className={pf('dropdown--length-with-icon-10')}>
+      <Menu className="slds-dropdown--right">
+        <MenuList className="slds-dropdown--length-with-icon-10">
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
             Accounts
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
             Approvals
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
             Lead
           </MenuItem>
         </MenuList>

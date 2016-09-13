@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default React.createClass({
 
@@ -36,9 +35,9 @@ export default React.createClass({
       isOn: false
     });
     return (
-      <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-3 m-bottom--xx-large')}>
+      <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3 slds-m-bottom--xx-large">
         <div
-          className={pf('site-example-tile__frame text-align--center')}
+          className="site-example-tile__frame slds-text-align--center"
           data-slds-motion-toggle-example={state}>
           <div
             className={className}
@@ -48,7 +47,7 @@ export default React.createClass({
           <div className="site-example-tile__title">
             {title}
           </div>
-          <hr className={pf('hr hr--dark-blue')} />
+          <hr className="hr hr--dark-blue" />
           <div className="site-example-tile__description">
             {description}
           </div>

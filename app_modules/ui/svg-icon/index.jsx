@@ -24,7 +24,7 @@ class SvgIcon extends React.Component {
       <svg
         {...props}
         aria-hidden={true}
-        className={pf(className)}
+        className={className}
         dangerouslySetInnerHTML={{__html: this.getUse()}} />
     );
   }

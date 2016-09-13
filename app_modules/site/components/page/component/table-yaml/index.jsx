@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import CodeClass from 'app_modules/site/components/code-class';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 class TableYAML extends React.Component {
@@ -23,31 +22,31 @@ class TableYAML extends React.Component {
       let sanitizedClass = d.class.replace(/\W/g, '');
       let required = d.required
         ? <p>
-            <SvgIcon key={`required-${index}-icon`} className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="check" />
-            <span key={`required-${index}-asst`} className={pf('assistive-text')}>Required</span>
+            <SvgIcon key={`required-${index}-icon`} className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="check" />
+            <span key={`required-${index}-asst`} className="slds-assistive-text">Required</span>
           </p>
         : <p>No, optional element or modifier</p>;
       let notes = d.notes
         ? <p dangerouslySetInnerHTML={{__html: d.notes}} />
         : <p>--</p>;
       let deprecated = d.deprecated
-        ? <span className={pf('badge shrink-none align-middle badge--deprecated')}>Deprecated</span>
+        ? <span className="slds-badge slds-shrink-none slds-align-middle badge--deprecated">Deprecated</span>
         : null;
       return (
         <tr key={`tableyaml-${sanitizedClass}-${index}`}>
-          <th className={pf('cell-shrink align-top')} scope="row">
+          <th className="slds-cell-shrink slds-align-top" scope="row">
             <CodeClass className={d.class} />
             <div>
               {deprecated}
             </div>
           </th>
-          <td className={pf('size--1-of-3 cell-wrap align-top')} scope="col">
+          <td className="slds-size--1-of-3 slds-cell-wrap slds-align-top" scope="col">
             <strong>Applied to:</strong>
             <p dangerouslySetInnerHTML={{__html: d.applied}} />
             <strong>Outcome:</strong>
             <p dangerouslySetInnerHTML={{__html: d.description}} />
           </td>
-          <td className={pf('size--1-of-3 cell-wrap align-top')} scope="col">
+          <td className="slds-size--1-of-3 slds-cell-wrap slds-align-top" scope="col">
             <strong>Required:</strong>
             {required}
             <strong>Comments:</strong>
@@ -60,17 +59,17 @@ class TableYAML extends React.Component {
 
   render() {
     const { data } = this.props;
-    return <div className={pf('site-table--overview')}>
-      <div className={pf('site-text-longform m-bottom--medium')}>
-        <h4 className={pf('p-top--xx-large site-text-heading--label')}>Usage</h4>
+    return <div className="site-table--overview">
+      <div className="site-text-longform slds-m-bottom--medium">
+        <h4 className="slds-p-top--xx-large site-text-heading--label">Usage</h4>
         <div dangerouslySetInnerHTML={{__html: data.description}} />
       </div>
-      <div className={pf('scrollable--x')}>
-        <table className={pf('table table--bordered max-medium-table--stacked no-row-hover')}>
+      <div className="slds-scrollable--x">
+        <table className="slds-table slds-table--bordered slds-max-medium-table--stacked slds-no-row-hover">
           <thead>
-            <tr className={pf('site-text-heading--label')}>
-              <th className={pf('theme--shade')}>Class Name</th>
-              <th colSpan="2" className={pf('theme--shade')}>Usage</th>
+            <tr className="site-text-heading--label">
+              <th className="slds-theme--shade">Class Name</th>
+              <th colSpan="2" className="slds-theme--shade">Usage</th>
             </tr>
           </thead>
           <tbody>

@@ -12,25 +12,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import className from 'classnames';
 import { Image } from 'ui/components/images/flavors/figure/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let AttachmentLink = props =>
-  <a href="javascript:void(0);" className={pf('media box grow text-link--reset')}>
-    <div className={pf('media__figure medium-show')}>
-      <div className={pf('image size--small')}>
-        <div className={pf('image__crop image__crop--16-by-9')}>
+  <a href="javascript:void(0);" className="slds-media slds-box slds-grow slds-text-link--reset">
+    <div className="slds-media__figure slds-medium-show">
+      <div className="slds-image slds-size--small">
+        <div className="slds-image__crop slds-image__crop--16-by-9">
           <img src="/assets/images/placeholder-img@16x9.jpg" alt={ props.title || 'Image Title' } />
         </div>
       </div>
     </div>
-    <div className={pf('media__body')}>
-      <h3 className={pf('text-heading--small')}>{ props.articleTitle || 'Article Title' }</h3>
+    <div className="slds-media__body">
+      <h3 className="slds-text-heading--small">{ props.articleTitle || 'Article Title' }</h3>
       <p>{ props.articleDescription || 'Article Description' }</p>
-      <span className={pf('text-body--small')}>{ props.articleTitle || 'http://www.linkurl.com' }</span>
+      <span className="slds-text-body--small">{ props.articleTitle || 'http://www.linkurl.com' }</span>
     </div>
   </a>;
 
@@ -53,9 +52,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
           symbol="image"
           image />
       </div>
@@ -66,9 +65,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
           symbol="pdf"
           title="Proposal.pdf" />
       </div>
@@ -79,9 +78,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
           symbol="image"
           actions
           image />

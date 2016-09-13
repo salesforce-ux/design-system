@@ -14,7 +14,6 @@ import React from 'react';
 import classNames from 'classnames';
 import createChainedFunction from './create-chained-function';
 import globals from 'app_modules/global';
-import whitelist from '.generated/whitelist';
 
 export { default as createChainedFunction } from './create-chained-function';
 
@@ -157,16 +156,6 @@ export function install(context, methods) {
   });
 }
 
-/**
- * Prefixes all classes in className with globals.cssPrefix.
- */
-export function prefix(className) {
-  return typeof className === 'string' ?
-      className.split(/\s+/).map(c => {
-        return (whitelist.indexOf(`.${c}`) >= 0) ? `${globals.cssPrefix}${c}` : c;
-      }).join(' ') : className;
-}
-
 export const PropTypes = {
 
   /**
@@ -213,7 +202,5 @@ export default {
   createChainedFunction,
   flatMapChildren,
   hasChild,
-  prefix,
   textContent
 };
-

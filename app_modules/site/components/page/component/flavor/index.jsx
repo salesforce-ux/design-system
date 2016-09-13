@@ -217,7 +217,7 @@ class ComponentFlavor extends React.Component {
       </Tabs.Content>
     );
     // Only use tabs if there are more than 1
-    const contentClassName = classNames('scrollable--x', {
+    const contentClassName = classNames('slds-scrollable--x', {
       'site-example--content': this.state.previewTabActive,
       // No form factors were specified
       'site-bleed': !this.state.previewTabActive

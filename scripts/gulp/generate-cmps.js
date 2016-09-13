@@ -62,7 +62,7 @@ const tryRequire = p => {
 
 const docs = component => {
   const element = tryRequire(`ui/${component.path}/index.docs.jsx`);
-  return element && toHtml(element.default);
+  return element && element.default && toHtml(element.default);
 };
 
 const stateJSON = state =>
@@ -131,7 +131,6 @@ const createExamples = components => {
   return stream;
 };
 
-//  console.log(JSON.stringify(genJSON(getExamples()), null, 2)));
 gulp.task('generate:cmps', ['generate:examples'], () =>
   createExamples(getExamples())
   .pipe(packageWithIndex())

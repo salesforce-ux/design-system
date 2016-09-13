@@ -10,18 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-<<<<<<< HEAD:ui/components/spinners/flavors/colors/index.react.example.jsx
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
-=======
-import Spinner from 'ui/components/spinners/index.react';
->>>>>>> spring-17:ui/components/spinners/flavors/brand-large/index.react.example.jsx
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-<<<<<<< HEAD:ui/components/spinners/flavors/colors/index.react.example.jsx
 let Demo = props =>
   <div className={className('demo-only', props.className)} style={{height: '5rem'}}>
     {props.children}
@@ -69,17 +63,16 @@ export let states = [
     id: 'inverse',
     label: 'Inverse',
     element:
-    <Demo className="slds-demo--inverse">
+    <Demo className="demo--inverse">
       <SpinnerContainer>
         <Spinner className="slds-spinner--medium spinner--inverse" />
       </SpinnerContainer>
     </Demo>
   }
 ];
-=======
+
 export default (
 <div className="demo-only" style={{height: '6.25rem'}}>
   <Spinner flavor="brand-large" className="slds-spinner--brand" />
 </div>
 );
->>>>>>> spring-17:ui/components/spinners/flavors/brand-large/index.react.example.jsx

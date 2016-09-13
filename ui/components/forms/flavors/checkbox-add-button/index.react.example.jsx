@@ -12,17 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let CheckboxAddButton = props =>
-  <div className={pf('checkbox--add-button')}>
-    <input className={pf('assistive-text')} type="checkbox" id="add01" disabled={props.disabled} defaultChecked={props.checked} />
-    <label htmlFor="add01" className={pf('checkbox--faux')}>
-      <span className={pf('assistive-text')}>Add product</span>
+  <div className="slds-checkbox--add-button">
+    <input className="slds-assistive-text" type="checkbox" id="add01" disabled={props.disabled} defaultChecked={props.checked} />
+    <label htmlFor="add01" className="slds-checkbox--faux">
+      <span className="slds-assistive-text">Add product</span>
     </label>
   </div>;
 

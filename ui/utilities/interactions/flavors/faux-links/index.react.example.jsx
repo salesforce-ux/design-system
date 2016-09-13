@@ -10,9 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className="demo-only"><span className={pf('type-focus')}>Span with faux link interactions</span></div>
+  <div className="demo-only"><span className="slds-type-focus">Span with faux link interactions</span></div>
 );

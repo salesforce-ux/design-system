@@ -13,19 +13,18 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'picklist-closed',
     label: 'Closed',
     element:
-      <div className={pf('picklist dropdown-trigger dropdown-trigger--click')}>
-        <button className={pf('button button--neutral picklist__label')} aria-haspopup="true">
-          <span className={pf('truncate')}>Select an Option</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+      <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
+        <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
+          <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
         </button>
-        <Menu className={pf('dropdown--left')}>
-          <MenuList className={pf('dropdown--length-5')}>
+        <Menu className="slds-dropdown--left">
+          <MenuList className="slds-dropdown--length-5">
             <MenuItem isSelectable>Option A</MenuItem>
             <MenuItem isSelectable>Option B</MenuItem>
             <MenuItem isSelectable>Option C</MenuItem>
@@ -41,12 +40,12 @@ export let states = [
     label: 'Open',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')}>
-          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true">
-            <span className={pf('truncate')}>Select an Option</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
+            <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
-          <Menu className={pf('dropdown--left')}>
-            <MenuList className={pf('dropdown--length-5')}>
+          <Menu className="slds-dropdown--left">
+            <MenuList className="slds-dropdown--length-5">
               <MenuItem isSelectable tabIndex="0">Option A</MenuItem>
               <MenuItem isSelectable>Option B</MenuItem>
               <MenuItem isSelectable>Option C</MenuItem>
@@ -63,13 +62,13 @@ export let states = [
     label: 'Item selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')}>
-          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true">
-            <span className={pf('truncate')}>Option A</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
+            <span className="slds-truncate">Option A</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
-          <Menu className={pf('dropdown--left')}>
-            <MenuList className={pf('dropdown--length-5')}>
-              <MenuItem className={pf('is-selected')} isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
+          <Menu className="slds-dropdown--left">
+            <MenuList className="slds-dropdown--length-5">
+              <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
               <MenuItem isSelectable>Option B</MenuItem>
               <MenuItem isSelectable>Option C</MenuItem>
               <MenuItem isSelectable>Option D</MenuItem>
@@ -85,14 +84,14 @@ export let states = [
     label: 'Multiple items selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className={pf('picklist dropdown-trigger dropdown-trigger--click is-open')}>
-          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true">
-            <span className={pf('truncate')}>2 Options selected</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
+            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
-          <Menu className={pf('dropdown--left')}>
-            <MenuList className={pf('dropdown--length-5')}>
-              <MenuItem className={pf('is-selected')} isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
-              <MenuItem className={pf('is-selected')} isSelected="true" isSelectable>Option B</MenuItem>
+          <Menu className="slds-dropdown--left">
+            <MenuList className="slds-dropdown--length-5">
+              <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
+              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option B</MenuItem>
               <MenuItem isSelectable>Option C</MenuItem>
               <MenuItem isSelectable>Option D</MenuItem>
               <MenuItem isSelectable>Option E</MenuItem>
@@ -107,14 +106,14 @@ export let states = [
     label: 'Closed - Multiple items selected',
     element:
       <div className="demo-only">
-        <div className={pf('picklist dropdown-trigger dropdown-trigger--click')}>
-          <button className={pf('button button--neutral picklist__label')} aria-haspopup="true">
-            <span className={pf('truncate')}>2 Options selected</span> <SvgIcon className={pf('icon')} sprite="utility" symbol="down" />
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
+          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
+            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
-          <Menu className={pf('dropdown--left')}>
-            <MenuList className={pf('dropdown--length-5')}>
-              <MenuItem className={pf('is-selected')} isSelected="true" isSelectable>Option A</MenuItem>
-              <MenuItem className={pf('is-selected')} isSelected="true" isSelectable>Option B</MenuItem>
+          <Menu className="slds-dropdown--left">
+            <MenuList className="slds-dropdown--length-5">
+              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option A</MenuItem>
+              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option B</MenuItem>
               <MenuItem isSelectable>Option C</MenuItem>
               <MenuItem isSelectable>Option D</MenuItem>
               <MenuItem isSelectable>Option E</MenuItem>
@@ -122,7 +121,7 @@ export let states = [
             </MenuList>
           </Menu>
         </div>
-        <PillContainer className={pf('pill_container--bare')}>
+        <PillContainer className="slds-pill_container--bare">
           <Pill label="Option A" unlinked />
           <Pill label="Option B" unlinked />
         </PillContainer>

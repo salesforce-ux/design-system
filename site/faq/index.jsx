@@ -17,7 +17,6 @@ import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import CTALink from 'app_modules/site/components/cta-link';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 class FAQ extends React.Component {
@@ -49,14 +48,14 @@ class FAQ extends React.Component {
   createContent() {
     this.addContentItem(
       `What is the ${g.displayName}?`,
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         It is collection of design patterns, components, and guidelines
         for creating unified UI in the Salesforce ecosystem.
       </p>
     );
     this.addContentItem(
       'Is any JavaScript included as part of the framework?',
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         No. The {g.displayName} is a pure CSS framework that you
         can use with any front-end development framework you’d like,
         including Salesforce-specific technologies such as Visualforce
@@ -65,7 +64,7 @@ class FAQ extends React.Component {
     );
     this.addContentItem(
       'What browsers are supported?',
-      <table className={pf('table max-medium-table--stacked-horizontal no-row-hover')}>
+      <table className="slds-table slds-max-medium-table--stacked-horizontal slds-no-row-hover">
         <thead>
           <tr className="site-text-heading--label">
             <th scope="col">Browser</th>
@@ -98,7 +97,7 @@ class FAQ extends React.Component {
     );
     this.addContentItem(
       `How can I design responsively using the ${g.displayName}?`,
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         We recommend that you make good use of our flexible and
         powerful <CTALink href="/components/utilities/grid" eventType="responsive-grid">Grid System</CTALink>,
         which will help you construct responsive layouts that
@@ -107,13 +106,13 @@ class FAQ extends React.Component {
     );
     this.addContentItem(
       `Can I use the ${g.displayName} together with Bootstrap or any other CSS framework?`,
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         Yes. All CSS selectors are prefixed with <code>.slds-</code> to prevent any collisions.
       </p>
     );
     this.addContentItem(
       'Is the Salesforce Sans font full Unicode?',
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         Salesforce Sans contains 492 Latin script characters, and supports
         a wide range of languages. It doesn’t contain non-Latin characters,
         so in that sense it’s not &ldquo;full&rdquo; Unicode.
@@ -121,7 +120,7 @@ class FAQ extends React.Component {
     );
     this.addContentItem(
       `What CSS syntax does the ${g.displayName} use? Why do you have double hyphenations and underscores in your CSS classes?`,
-      <div className={pf('container--large')}>
+      <div className="slds-container--large">
         <p>
           The {g.displayName} CSS uses a standard class naming
           convention called &ldquo;BEM&rdquo; (Block-Element-Modifier):
@@ -139,7 +138,7 @@ class FAQ extends React.Component {
     );
     this.addContentItem(
       'How do I display SVG icons with Lightning Components?',
-      <div className={pf('container--large')}>
+      <div className="slds-container--large">
         <p>
           Please review <a href="/platforms/lightning/">Getting Started with Lightning</a>.
         </p>
@@ -150,33 +149,33 @@ class FAQ extends React.Component {
     this.addContentItem(
       'How do I link to Visualforce static resources like stylesheets and icons?',
       <div>
-        <p className={pf('container--large')}>
+        <p className="slds-container--large">
           Visualforce uses a special syntax to reference your static resources, and
           you need to edit the code you cut and paste from the {g.displayName}.
           If you want to load the master stylesheet and you uploaded the {g.displayName} as
           a static resource named <code>{compactVersion}</code> then you should
           change the <code>{'<apex:stylesheet />'}</code> value to:
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">
           {`
 <apex:stylesheet value="{!URLFOR($Resource.${compactVersion}, 'assets/styles/${g.moduleName}-vf.css')}" />
           `}</CodeBlock>
         </div>
-        <p className={pf('container--large')}>
+        <p className="slds-container--large">
           This is similar for icons, for example this User one from the Standard Icons sprite:
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
-<svg aria-hidden="true" class="${pf('icon icon--large icon-standard-user')}">
+<svg aria-hidden="true" class="$"slds-icon slds-icon--large slds-icon-standard-user"">
   <use xlink:href="{!URLFOR($Resource.${compactVersion}, 'assets/icons/standard-sprite/svg/symbols.svg#user')}" />
 </svg>
           `}</CodeBlock>
         </div>
-        <p className={pf('container--large')}>
+        <p className="slds-container--large">
           <em>Note: XML namespaces are required to be added to the <code>html</code> element:</em>
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
 <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           `}</CodeBlock>
@@ -192,13 +191,13 @@ class FAQ extends React.Component {
     this.addContentItem(
       'How do I link to Lightning static resources like stylesheets and icons?',
       <div>
-        <p className={pf('container--large')}>
+        <p className="slds-container--large">
           Lightning Components also use a special syntax to reference your static resources. Since {g.displayName} is either included in platform or can be extended in other use cases, it's rare that you need to add it as a static resource. In the rare case that you do,
           you need to edit the code you cut and paste from the {g.displayName}.
           If you are adding a custom scoped file as a static resource named <code>{compactVersion}</code> then you should
           include the style sheet in this format:
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
 <ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.css"/>
           `}</CodeBlock>
@@ -213,7 +212,7 @@ class FAQ extends React.Component {
         <p>
           This is likely because the namespace needs to be added to the HTML element:
         </p>
-        <div className={pf('site-code--content scrollable--x')}>
+        <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
 <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           `}</CodeBlock>
@@ -228,7 +227,7 @@ class FAQ extends React.Component {
   render () {
     return (
       <PageBody {...this.props} anchorTitle="Frequently Asked Questions">
-        <div className={pf('site-main-content')}>
+        <div className="site-main-content">
           {this.content}
         </div>
       </PageBody>

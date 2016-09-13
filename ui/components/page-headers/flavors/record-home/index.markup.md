@@ -1,7 +1,6 @@
 Page header record home contains up to four
-compact layout fields. They're contained in the `.{{cssPrefix}}page-header__detail-row`
-div. That div contains the top and bottom spacing needed for this version of
-the page header.
+compact layout fields. They're contained in the `.{{cssPrefix}}page-header__detail-row` div.
+That div contains the top and bottom spacing needed for this version of the page header.
 
 When text is truncated, the full text should be placed in
 a tooltip on hover (currently shown in the title

@@ -16,28 +16,27 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="slds-page-header" role="banner">
-    <div className={pf('grid')}>
-      <div className={pf('col has-flexi-truncate')}>
-        <BreadCrumbs className={pf('m-bottom--xx-small')}>
+    <div className="slds-grid">
+      <div className="slds-col slds-has-flexi-truncate">
+        <BreadCrumbs className="slds-m-bottom--xx-small">
           <Crumb href="javascript:void(0);">Accounts</Crumb>
           <Crumb href="javascript:void(0);">Company One</Crumb>
         </BreadCrumbs>
-        <h1 className={pf('page-header__title truncate')} title="Contacts (will truncate)">Contacts (will truncate)
+        <h1 className="slds-page-header__title slds-truncate" title="Contacts (will truncate)">Contacts (will truncate)
         </h1>
       </div>
-      <div className={pf('col no-flex grid align-top')}>
-        <div className={pf('button-group')}>
+      <div className="slds-col slds-no-flex slds-grid slds-align-top">
+        <div className="slds-button-group">
           <Button flavor="neutral">
             Add Contact
           </Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
             <ButtonIcon
-              className={pf('button--icon-border-filled')}
+              className="slds-button--icon-border-filled"
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions" />
@@ -45,30 +44,30 @@ export default (
         </div>
       </div>
     </div>
-    <div className={pf('grid')}>
-      <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
+    <div className="slds-grid">
+      <div className="slds-col slds-align-bottom">
+        <p className="slds-text-body--small">10 items &bull; sorted by name</p>
       </div>
-      <div className={pf('col no-flex grid align-bottom')}>
-        <div className={pf('dropdown-trigger dropdown-trigger--click')} aria-expanded="false">
+      <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="false">
           <ButtonIcon
-            className={pf('button--icon-more')}
+            className="slds-button--icon-more"
             symbol="table"
             hasDropdown
             assistiveText="Change view" />
         </div>
-        <div className={pf('button-group m-left--xx-small')} role="group">
+        <div className="slds-button-group slds-m-left--xx-small" role="group">
           <ButtonIcon
-            className={pf('button--icon-border')}
+            className="slds-button--icon-border"
             symbol="chart"
             assistiveText="Chart" />
           <ButtonIcon
-            className={pf('button--icon-border')}
+            className="slds-button--icon-border"
             symbol="filterList"
             assistiveText="Filter List" />
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
             <ButtonIcon
-              className={pf('button--icon-more')}
+              className="slds-button--icon-more"
               symbol="sort"
               hasDropdown
               assistiveText="Sort" />

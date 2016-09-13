@@ -25,7 +25,7 @@ class Button extends React.Component {
   }
 
   render() {
-    const className = this.$getClassNameWithFlavor(pf('button'));
+    const className = this.$getClassNameWithFlavor('slds-button');
     const click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
     const props = _.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
     return (

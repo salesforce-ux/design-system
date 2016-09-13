@@ -11,15 +11,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'popover',
     label: 'Default',
     element:
-      <div className={pf('popover nubbin--left')} role="dialog">
-        <div className={pf('popover__body')}>
+      <div className="slds-popover slds-nubbin--left" role="dialog">
+        <div className="slds-popover__body">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
         </div>
       </div>
@@ -28,9 +27,9 @@ export let states = [
     id: 'popover-close',
     label: 'Close',
     element:
-      <div className={pf('popover nubbin--left')} role="dialog">
-        <ButtonIcon className={pf('button--icon button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
-        <div className={pf('popover__body')}>
+      <div className="slds-popover slds-nubbin--left" role="dialog">
+        <ButtonIcon className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" />
+        <div className="slds-popover__body">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
         </div>
       </div>

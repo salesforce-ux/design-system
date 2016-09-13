@@ -12,20 +12,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const Image = (
-  <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+  <SvgIcon className="slds-icon slds-icon-standard-opportunity" sprite="standard" symbol="opportunity" />
 );
 
 const Button = (
-  <button className={pf('button button--neutral')}>New</button>
+  <button className="slds-button slds-button--neutral">New</button>
 );
 
 export default (
   <div className="slds-page-header" role="banner">
     <MediaObject flavor="center" figureLeft={Image} figureRight={Button}>
-      <p className={pf('page-header__title truncate')} title="Rohde Corp - 80,000 Widgets">
+      <p className="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">
         Opportunities
       </p>
     </MediaObject>

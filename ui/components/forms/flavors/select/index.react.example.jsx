@@ -11,33 +11,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let FormElement = props =>
-  <div className={className(pf('form-element'), props.className)}>
+  <div className={className('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
 let FormElementLabel = props =>
-  <label className={pf('form-element__label')} htmlFor="select-01">{props.children}</label>;
+  <label className="slds-form-element__label" htmlFor="select-01">{props.children}</label>;
 
 let FormElementControl = props =>
-  <div className={className(pf('form-element__control'), props.className)}>
+  <div className={className('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
 export let Select = props =>
-  <div className={pf('select_container')}>
-    <select id="select-01" className={className(pf('select'), props.className)} disabled={props.disabled} multiple={props.multiple} aria-describedby={ props['aria-describedby'] }>
+  <div className="slds-select_container">
+    <select id="select-01" className={className('slds-select', props.className)} disabled={props.disabled} multiple={props.multiple} aria-describedby={ props['aria-describedby'] }>
       {props.children}
     </select>
   </div>;
@@ -62,8 +61,8 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className={pf('is-required')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
+    <FormElement>
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
         <Select>
           <option>Option One</option>
@@ -76,8 +75,8 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Select Label</FormElementLabel>
+    <FormElement className="slds-has-error">
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
         <Select aria-describedby="error-02">
           <option>Option One</option>
@@ -85,7 +84,7 @@ let ErrorState = props =>
           <option>Option Three</option>
         </Select>
       </FormElementControl>
-      <div className={pf('form-element__help')} id="error-02">This field is required</div>
+      <div className="slds-form-element__help" id="error-02">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -108,7 +107,7 @@ let Multiple = props =>
     <FormElement>
       <FormElementLabel>Select Label</FormElementLabel>
       <FormElementControl>
-        <select id="select-01" className={pf('select')} multiple>
+        <select id="select-01" className="slds-select" multiple>
           <option>Option One</option>
           <option>Option Two</option>
           <option>Option Three</option>

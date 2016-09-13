@@ -11,19 +11,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
 <div style={{height: '240px'}}>
-  <div className={pf('scrollable--y text-longform')}>
+  <div className="slds-scrollable--y slds-text-longform">
     <Lorem count={7} />
   </div>
 </div>
 );
 
 export const code = (
-<div className={pf('scrollable--y')}>
+<div className="slds-scrollable--y">
   Scrollable Content Here
 </div>
 );

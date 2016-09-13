@@ -1,0 +1,12 @@
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BORDER_PATH_DIVIDER:
+    value: '{!WHITE}'
+    comment: Used as a separator between dark colors like the stages of salespath.

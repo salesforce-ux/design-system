@@ -10,19 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--vertical-align-center grid--align-center')} style={{height: '250px'}}>
-    <div className={pf('box box--small theme--shade text-align--center')}>Content determines the width unless otherwise set</div>
+  <div className="slds-grid slds-grid--vertical-align-center slds-grid--align-center" style={{height: '250px'}}>
+    <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">Content determines the width unless otherwise set</div>
   </div>
 </div>
 );
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--vertical-align-center grid--align-center')}>
+  <div className="slds-grid slds-grid--vertical-align-center slds-grid--align-center">
     <div>Content determines the width unless otherwise set</div>
   </div>
 </div>

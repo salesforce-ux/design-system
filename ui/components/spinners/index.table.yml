@@ -1,12 +1,12 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different scroller looks.
 classes:
   -
-    class: spinner
+    class: slds-spinner
     description: This is the gray base class for spinner
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: spinner_container
+    class: slds-spinner_container
     description: This container creates a full overlay to dim the page when needed
     applied: outer <code>&lt;div&gt;</code>
   -
@@ -16,30 +16,30 @@ classes:
   -
     class: spinner--small
     description: This is the small spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
-    class: spinner--medium
+    class: slds-spinner--medium
     description: This is the medium spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
-    class: spinner--large
+    class: slds-spinner--large
     description: This is the large spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
-    class: spinner--brand
+    class: slds-spinner--brand
     description: This creates the blue brand spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
-    class: spinner--inverse
+    class: slds-spinner--inverse
     description: This is the inverse spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
-    class: spinner__dot-a
+    class: slds-spinner__dot-a
     description: This creates two of the circles
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: spinner__dot-b
+    class: slds-spinner__dot-b
     description: This creates two of the circles
     required: true
     applied: <code>&lt;div&gt;</code>

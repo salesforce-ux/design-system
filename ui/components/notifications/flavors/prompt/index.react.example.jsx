@@ -14,7 +14,6 @@ import ReactDOM from 'react-dom';
 import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>
@@ -24,20 +23,20 @@ export default (
       role="alertdialog"
       aria-labelledby="prompt-heading-id"
       aria-describedby="prompt-message-wrapper"
-      className={pf('modal--prompt')}
+      className="slds-modal--prompt"
     >
 
-      <Modal.Header className={pf('theme--error theme--alert-texture')} closeButton={false}>
-        <h2 className={pf('text-heading--medium')} id="prompt-heading-id">
+      <Modal.Header className="slds-theme--error slds-theme--alert-texture" closeButton={false}>
+        <h2 className="slds-text-heading--medium" id="prompt-heading-id">
           Service Unavailable
         </h2>
       </Modal.Header>
 
-      <Modal.Body className={pf('p-around--medium')}>
+      <Modal.Body className="slds-p-around--medium">
         <Lorem count={1} paragraphLowerBound={2} />
       </Modal.Body>
 
-      <Modal.Footer className={pf('theme--default')}>
+      <Modal.Footer className="slds-theme--default">
         <Button flavor="neutral">Okay</Button>
       </Modal.Footer>
     </Modal>

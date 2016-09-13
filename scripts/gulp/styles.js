@@ -28,7 +28,7 @@ Number.prototype.toKB = function () {
   return (this / 1024).toFixed(2);
 };
 
-gulp.task('stylestats', done => {
+gulp.task('stylestats', ['styles'], done => {
   const localFile = '.www/assets/styles/slds.css';
   const remoteFile = 'https://www.lightningdesignsystem.com/assets/styles/slds.css';
 
@@ -63,7 +63,7 @@ gulp.task('stylestats', done => {
   });
 });
 
-gulp.task('styles', () =>
+gulp.task('styles', ['generate:tokens:sass'], () =>
   gulp
     .src('site/assets/styles/*.scss')
     .pipe(plumber())

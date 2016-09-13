@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -24,7 +23,7 @@ let Demo = props =>
   </div>;
 
 export let Button = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled}>
+  <button className={className('slds-button', props.className)} disabled={props.disabled}>
     {props.children}
   </button>;
 
@@ -39,58 +38,58 @@ let Reset = props =>
 
 let Neutral = props =>
   <Demo>
-    <Button className={pf('button--neutral')}>Button Neutral</Button>
+    <Button className="slds-button--neutral">Button Neutral</Button>
   </Demo>;
 
 let NeutralIconLeft = props =>
   <Demo>
-    <Button className={pf('button--neutral')}>
-      <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol="download" />
+    <Button className="slds-button--neutral">
+      <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="download" />
       Button Neutral
     </Button>
   </Demo>;
 
 let NeutralIconRight = props =>
   <Demo>
-    <Button className={pf('button--neutral')}>
+    <Button className="slds-button--neutral">
       Button Neutral
-      <SvgIcon className={pf('button__icon button__icon--right')} sprite="utility" symbol="down" />
+      <SvgIcon className="slds-button__icon slds-button__icon--right" sprite="utility" symbol="down" />
     </Button>
   </Demo>;
 
 let NeutralDisabled = props =>
   <Demo>
-    <Button className={pf('button--neutral')} disabled>Button Neutral</Button>
+    <Button className="slds-button--neutral" disabled>Button Neutral</Button>
   </Demo>;
 
 let Brand = props =>
   <Demo>
-    <Button className={pf('button--brand')}>Button Brand</Button>
+    <Button className="slds-button--brand">Button Brand</Button>
   </Demo>;
 
 let BrandDisabled = props =>
   <Demo>
-    <Button className={pf('button--brand')} disabled>Button Brand</Button>
+    <Button className="slds-button--brand" disabled>Button Brand</Button>
   </Demo>;
 
 let Destructive = props =>
   <Demo>
-    <Button className={pf('button--destructive')}>Button Destructive</Button>
+    <Button className="slds-button--destructive">Button Destructive</Button>
   </Demo>;
 
 let DestructiveDisabled = props =>
   <Demo>
-    <Button className={pf('button--destructive')} disabled>Button Destructive</Button>
+    <Button className="slds-button--destructive" disabled>Button Destructive</Button>
   </Demo>;
 
 let Inverse = props =>
   <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
-    <Button className={pf('button--inverse')}>Button Inverse</Button>
+    <Button className="slds-button--inverse">Button Inverse</Button>
   </Demo>;
 
 let InverseDisabled = props =>
   <Demo style={{ padding: '0.5rem', background: '#16325c' }}>
-    <Button className={pf('button--inverse')} disabled>Button Inverse</Button>
+    <Button className="slds-button--inverse" disabled>Button Inverse</Button>
   </Demo>;
 
 ///////////////////////////////////////////

@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Available props in ui/components/lookups/flavors/single/index.react.example.jsx
 

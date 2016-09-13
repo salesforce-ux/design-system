@@ -19,12 +19,12 @@ class Component extends React.Component {
     componentUtil.install(this);
   }
   render() {
-    const className = this.$getClassName(pf('select'));
+    const className = this.$getClassName('slds-select');
     return (
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
-        <div className={pf('form-element__control')}>
-          <div className={pf('select_container')}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <div className="slds-form-element__control">
+          <div className="slds-select_container">
             <select id={this.props.assistiveText.replace(' ','-')} className={className}>
               {this.props.children}
             </select>
@@ -36,7 +36,7 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName(pf('form-element__help'));
+    const className = this.$getClassName('slds-form-element__help');
     return (
       <div className={className}>
         {help}

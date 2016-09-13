@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -20,16 +19,16 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 let Default = props =>
   <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border')} symbol="chart" assistiveText="Charts" />
-    <ButtonIcon className={pf('button--icon-border')} symbol="filterList" assistiveText="Filter List" />
-    <ButtonIcon className={pf('button--icon-more')} hasDropdown assitiveText="More Actions" />
+    <ButtonIcon className="slds-button--icon-border" symbol="chart" assistiveText="Charts" />
+    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" />
+    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" />
   </ButtonGroup>;
 
 let Selected = props =>
   <ButtonGroup>
-    <ButtonIcon className={pf('button--icon-border is-selected')} symbol="chart" assistiveText="Charts" />
-    <ButtonIcon className={pf('button--icon-border')} symbol="filterList" assistiveText="Filter List" />
-    <ButtonIcon className={pf('button--icon-more')} hasDropdown assitiveText="More Actions" />
+    <ButtonIcon className="slds-button--icon-border slds-is-selected" symbol="chart" assistiveText="Charts" />
+    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" />
+    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" />
   </ButtonGroup>;
 
 ///////////////////////////////////////////

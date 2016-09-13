@@ -15,14 +15,13 @@ import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.exampl
 import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const moreIcon = (
-  <ButtonIcon className={pf('button--icon-border-filled button--icon-x-small')} sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
 );
 
 //////////////////////////////////////////////
@@ -30,9 +29,9 @@ const moreIcon = (
 //////////////////////////////////////////////
 
 export default (
-<div className={pf('demo-only')} style={{height: '165px'}}>
-  <Trigger className={pf('is-open')} triggerIcon={moreIcon}>
-    <Menu className={pf('dropdown--left dropdown--actions')}>
+<div className="demo-only" style={{height: '165px'}}>
+  <Trigger className="slds-is-open" triggerIcon={moreIcon}>
+    <Menu className="slds-dropdown--left slds-dropdown--actions">
       <MenuList>
         <MenuItem tabIndex="0">Action One</MenuItem>
         <MenuItem>Action Two</MenuItem>

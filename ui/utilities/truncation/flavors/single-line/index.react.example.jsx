@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only">
-    <dl className={pf('size--1-of-2')}>
-      <dt className={pf('text-title--caps')}>Field 4</dt>
-      <dd><p className={pf('truncate')} title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.">Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.</p></dd>
+    <dl className="slds-size--1-of-2">
+      <dt className="slds-text-title--caps">Field 4</dt>
+      <dd><p className="slds-truncate" title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.">Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.</p></dd>
     </dl>
   </div>
 );

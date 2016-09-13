@@ -13,22 +13,21 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Pill = props =>
-  <span className={className(pf('pill'), props.className)}>
+  <span className={className('slds-pill', props.className)}>
     {props.children}
-    {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
-    : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className={pf('button--icon pill__remove')} symbol="close" assistiveText="Remove" />
+    {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
+    : <a href="javascript:void(0);" className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
+    <ButtonIcon className="slds-button--icon slds-pill__remove" symbol="close" assistiveText="Remove" />
   </span>;
 
 export let PillContainer = props =>
-  <div className={className(pf('pill_container'), props.className)}>
+  <div className={className('slds-pill_container', props.className)}>
     {props.children}
   </div>;
 
@@ -47,9 +46,9 @@ export let states = [
     label: 'With icon',
     element:
       <Pill>
-        <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-          <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-          <span className={pf('assistive-text')}>Account</span>
+        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+          <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+          <span className="slds-assistive-text">Account</span>
         </span>
       </Pill>
   },
@@ -58,7 +57,7 @@ export let states = [
     label: 'With portrait',
     element:
       <Pill>
-        <span className={pf('pill__icon avatar avatar--circle')}>
+        <span className="slds-pill__icon slds-avatar slds-avatar--circle">
           <img src="/assets/images/avatar2.jpg" alt="" />
         </span>
       </Pill>
@@ -72,7 +71,7 @@ export let states = [
     id: 'pill-truncated',
     label: 'Truncated',
     element:
-      <div className={pf('demo-only')} style={{ width: '220px' }}>
+      <div className="demo-only" style={{ width: '220px' }}>
         <PillContainer>
           <Pill label="Pill label that is longer than the area that contains it" />
         </PillContainer>
@@ -92,10 +91,10 @@ export let states = [
     id: 'pill-error',
     label: 'Error',
     element:
-      <Pill className={pf('has-error')}>
-        <span className={pf('icon_container pill__icon_container m-left--xx-small')}>
-          <SvgIcon className={pf('icon-error icon--x-small icon-text-error')} sprite="utility" symbol="warning" />
-          <span className={pf('assistive-text')}>Warning</span>
+      <Pill className="slds-has-error">
+        <span className="slds-icon_container slds-pill__icon_container slds-m-left--xx-small">
+          <SvgIcon className="icon-error slds-icon--x-small slds-icon-text-error" sprite="utility" symbol="warning" />
+          <span className="slds-assistive-text">Warning</span>
         </span>
       </Pill>
   }

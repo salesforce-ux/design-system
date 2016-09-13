@@ -14,7 +14,6 @@ import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 class Spinner extends React.Component {
   constructor(props) {
@@ -34,11 +33,11 @@ class Spinner extends React.Component {
     });
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
-      <div className={pf('spinner_container')}>
+      <div className="slds-spinner_container">
         <div className={classnames} {...props} role="alert">
-          <span className={pf('assistive-text')}>Loading</span>
-          <div className={pf('spinner__dot-a')}></div>
-          <div className={pf('spinner__dot-b')}></div>
+          <span className="slds-assistive-text">Loading</span>
+          <div className="slds-spinner__dot-a"></div>
+          <div className="slds-spinner__dot-b"></div>
         </div>
         {children}
       </div>

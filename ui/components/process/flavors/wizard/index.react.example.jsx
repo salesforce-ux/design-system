@@ -10,45 +10,44 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only">
-    <div className={pf('wizard')} role="navigation">
-      <ol className={pf('wizard__list')}>
-        <li className={pf('wizard__item is-active')}>
-          <a href="javascript:void(0);" className={pf('wizard__link')}>
-            <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-title--caps truncate')}>Navigation</span>
+    <div className="slds-wizard" role="navigation">
+      <ol className="slds-wizard__list">
+        <li className="slds-wizard__item slds-is-active">
+          <a href="javascript:void(0);" className="slds-wizard__link">
+            <span className="slds-wizard__marker"></span>
+            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Navigation</span>
           </a>
         </li>
-        <li className={pf('wizard__item is-active')}>
-          <a href="javascript:void(0);" className={pf('wizard__link')}>
-            <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-title--caps truncate')}>Actions</span>
+        <li className="slds-wizard__item slds-is-active">
+          <a href="javascript:void(0);" className="slds-wizard__link">
+            <span className="slds-wizard__marker"></span>
+            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Actions</span>
           </a>
         </li>
-        <li className={pf('wizard__item is-active')}>
-          <a href="javascript:void(0);" className={pf('wizard__link')}>
-            <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-title--caps truncate')}>Compact Layout</span>
+        <li className="slds-wizard__item slds-is-active">
+          <a href="javascript:void(0);" className="slds-wizard__link">
+            <span className="slds-wizard__marker"></span>
+            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Compact Layout</span>
           </a>
         </li>
-        <li className={pf('wizard__item')}>
-          <a href="javascript:void(0);" className={pf('wizard__link')}>
-            <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-title--caps truncate')}>Review</span>
+        <li className="slds-wizard__item">
+          <a href="javascript:void(0);" className="slds-wizard__link">
+            <span className="slds-wizard__marker"></span>
+            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Review</span>
           </a>
         </li>
-        <li className={pf('wizard__item')}>
-          <a href="javascript:void(0);" className={pf('wizard__link')}>
-            <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-title--caps truncate')}>Invite</span>
+        <li className="slds-wizard__item">
+          <a href="javascript:void(0);" className="slds-wizard__link">
+            <span className="slds-wizard__marker"></span>
+            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Invite</span>
           </a>
         </li>
       </ol>
-      <span className={pf('wizard__progress')}>
-        <span className={pf('wizard__progress-bar')} style={{ width: '50%' }}></span>
+      <span className="slds-wizard__progress">
+        <span className="slds-wizard__progress-bar" style={{ width: '50%' }}></span>
       </span>
     </div>
   </div>

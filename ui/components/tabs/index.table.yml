@@ -53,26 +53,26 @@ classes:
   -
     class: slds-tabs__item--overflow
     description: Styles an overflow tab item
-    applied: <code>.{{cssPrefix}}tabs__item</code>
+    applied: <code>.slds-tabs__item</code>
     notes: This is used on a tab containing an overflow dropdown menu
   -
     class: slds-dropdown-trigger
     description: Initializes tab item as menu
     required: true
-    applied: <code>.{{cssPrefix}}tabs__item--overflow</code>
+    applied: <code>.slds-tabs__item--overflow</code>
   -
     class: slds-active
     description: Applies the active state to a tab list item
     required: true
-    applied: <code>.{{cssPrefix}}tabs__item</code>
+    applied: <code>.slds-tabs__item</code>
     notes: Required on the <code>&lt;li&gt;</code> element that is associated with the active tab panel
   -
     class: slds-show
     description: Shows the tab panel
     required: true
-    applied: <code>.{{cssPrefix}}tabs__content</code>
+    applied: <code>.slds-tabs__content</code>
   -
     class: slds-hide
     description: Hide the tab panel
     required: true
-    applied: <code>.{{cssPrefix}}tabs__content</code>
+    applied: <code>.slds-tabs__content</code>

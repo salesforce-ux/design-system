@@ -5,13 +5,13 @@ classes:
     description: Initializes datepicker
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: If datepicker is a dropdown, apply <code>.{{cssPrefix}}dropdown</code>
+    notes: If datepicker is a dropdown, apply <code>.slds-dropdown</code>
   -
     class: slds-datepicker__filter
     description: Aligns filter items horizontally
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Needs <code>.{{cssPrefix}}grid</code> class
+    notes: Needs <code>.slds-grid</code> class
   -
     class: slds-datepicker__filter--month
     description: Spaces out month filter

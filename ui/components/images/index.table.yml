@@ -9,27 +9,27 @@ classes:
   -
     class: slds-avatar--circle
     description: Creates a circular avatar shape
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-avatar--empty
     description: Creates a dashed outline around an empty avatar
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-avatar--x-small
     description: Creates a 1.5rem&times;1.5rem icon
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-avatar--small
     description: Creates a 2.25rem&times;2.25rem icon
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-avatar--medium
     description: Creates a 3rem&times;3rem icon
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-avatar--large
     description: Creates a 5rem&times;5rem icon
-    applied: <code>.{{cssPrefix}}avatar</code>
+    applied: <code>.slds-avatar</code>
   -
     class: slds-image
     description: Image wrapper, not intended to wrap icons
@@ -38,7 +38,7 @@ classes:
   -
     class: slds-image--card
     description: Adds styles to give image a "card" look
-    applied: <code>.{{cssPrefix}}image</code>
+    applied: <code>.slds-image</code>
     required: true
   -
     class: slds-image__crop
@@ -47,15 +47,15 @@ classes:
   -
     class: slds-image__crop--16x9
     description: Crop image at a 16x9 ratio, contrained to the parents width
-    applied: <code>.{{cssPrefix}}image__crop</code>
+    applied: <code>.slds-image__crop</code>
   -
     class: slds-image__crop--4x3
     description: Crop image at a 4x3 ratio, contrained to the parents width
-    applied: <code>.{{cssPrefix}}image__crop</code>
+    applied: <code>.slds-image__crop</code>
   -
     class: slds-image__crop--1x1
     description: Crop image at a 1x1 ratio, contrained to the parents width
-    applied: <code>.{{cssPrefix}}image__crop</code>
+    applied: <code>.slds-image__crop</code>
   -
     class: slds-image__title
     description: Image title
@@ -63,20 +63,20 @@ classes:
   -
     class: slds-image__title--overlay
     description: Text overlay on top of image, has opaque overlay
-    applied: <code>.{{cssPrefix}}image__title</code>
+    applied: <code>.slds-image__title</code>
   -
     class: slds-image__icon
     description: If file is missing an image, an icon should replace it. This class helps with the positioning of that icon.
-    applied: <code>.{{cssPrefix}}icon_container</code>
+    applied: <code>.slds-icon_container</code>
   -
     class: slds-image__actions
     description: If file has actions, then this class helps with the positioning of those actions
-    applied: <code>.{{cssPrefix}}button-group</code>
+    applied: <code>.slds-button-group</code>
   -
     class: slds-image--overlay
     description: Applies overlay to an image
     applied: <code>div</code>
   -
     class: slds-image__text
-    description: Text inside of <code>.{{cssPrefix}}image__title</code>
+    description: Text inside of <code>.slds-image__title</code>
     applied: <code>span</code>

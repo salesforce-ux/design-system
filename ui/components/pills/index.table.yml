@@ -14,12 +14,12 @@ classes:
     class: slds-pill__icon
     description: Initializes pill icon or avatar that sits to the left of the label
     required: true
-    applied: <code>&lt;svg class="slds-icon"&gt;</code> or <code>.{{cssPrefix}}avatar</code>
+    applied: <code>&lt;svg class="slds-icon"&gt;</code> or <code>.slds-avatar</code>
   -
     class: slds-pill__remove
     description: Initializes remove icon in pill that sits to the right of the label
     required: true
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
   -
     class: slds-pill_container
     description: Container to hold pill(s) with borders
@@ -32,7 +32,7 @@ classes:
   -
     class: slds-pill--bare
     description: Modifier that removes border and background from a pill
-    applied: <code>.{{cssPrefix}}pill</code>
+    applied: <code>.slds-pill</code>
   -
     class: slds-pill-container
     description: Container to hold pills(s)

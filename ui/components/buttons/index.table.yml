@@ -10,24 +10,24 @@ classes:
     class: slds-button--small
     deprecated: true
     description: Deprecated.
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
   -
     class: slds-button--neutral
     description: Creates the gray border with white background default style
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
   -
     class: slds-button--brand
     description: Creates the brand blue Salesforce style
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
   -
     class: slds-button--destructive
     description: Creates a red button style
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
     notes: The use case for this button is things like delete, cancel, and end call rather than errors.
   -
     class: slds-button--inverse
     description: Creates the inverse style for dark backgrounds
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
   -
     class: slds-button__icon
     description: Sets the size and color of the icon inside a button
@@ -36,40 +36,40 @@ classes:
     class: slds-button__icon--stateful
     description: This makes the icon the same color as the text in the button
     applied: <code>svg</code>
-    notes: This is not used in addition to <code>.{{cssPrefix}}button__icon</code> but instead of
+    notes: This is not used in addition to <code>.slds-button__icon</code> but instead of
   -
     class: slds-button__icon--left
     description: Puts the icon on the left side of the button
-    applied: <code>.{{cssPrefix}}button__icon</code>
+    applied: <code>.slds-button__icon</code>
   -
     class: slds-button__icon--right
     description: Puts the icon on the right side of the button
-    applied: <code>.{{cssPrefix}}button__icon</code>
+    applied: <code>.slds-button__icon</code>
   -
     class: slds-button__icon--x-small
     description: Creates a .5rem (8px) size icon
-    applied: <code>.{{cssPrefix}}button__icon</code>
-    notes: This is added to the icon inside the <code>.{{cssPrefix}}button</code>, not the button itself
+    applied: <code>.slds-button__icon</code>
+    notes: This is added to the icon inside the <code>.slds-button</code>, not the button itself
   -
     class: slds-button__icon--small
     description: Creates a .75rem (12px) size icon
-    applied: <code>.{{cssPrefix}}button__icon</code>
+    applied: <code>.slds-button__icon</code>
   -
     class: slds-button__icon--large
     description: Creates a 1.5rem (24px) size icon
-    applied: <code>.{{cssPrefix}}button__icon</code>
+    applied: <code>.slds-button__icon</code>
   -
     class: slds-button__icon--hint
     description: Creates a grayed out icon until the parent is hovered
-    applied: <code>.{{cssPrefix}}button__icon</code>
-    notes: The parent must have the <code>.{{cssPrefix}}hint-parent</code> class applied
+    applied: <code>.slds-button__icon</code>
+    notes: The parent must have the <code>.slds-hint-parent</code> class applied
   -
     class: slds-button__icon--inverse-hint
     description: Creates a grayed out icon until the parent is hovered for inversed dark backgrounds
-    applied: <code>.{{cssPrefix}}button__icon</code>
-    notes: The parent must have the <code>.{{cssPrefix}}hint-parent</code> class applied
+    applied: <code>.slds-button__icon</code>
+    notes: The parent must have the <code>.slds-hint-parent</code> class applied
   -
     class: slds-button-space-left
     description: Adds space on the left of a button wrapped in a parent
     applied: <code>button</code> parent
-    notes: Only required if the <code>.{{cssPrefix}}button</code> is wrapped. ie- to include a dropdown
+    notes: Only required if the <code>.slds-button</code> is wrapped. ie- to include a dropdown

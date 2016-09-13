@@ -8,7 +8,7 @@ classes:
   -
     class: slds-picklist--fluid
     description: Forces width of picklist and picklist dropdown to inherit width of its content
-    applied: <code>.{{cssPrefix}}picklist</code>
+    applied: <code>.slds-picklist</code>
   -
     class: slds-picklist__label
     description: Custom select

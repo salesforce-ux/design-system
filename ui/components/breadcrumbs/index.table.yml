@@ -5,7 +5,7 @@ classes:
     description: Initializes a breadcrumb component
     applied: <code>&lt;ol&gt;</code>
     required: true
-    notes: This class allows the <code>.{{cssPrefix}}list__item</code> to display in the breadcrumb style
+    notes: This class allows the <code>.slds-list__item</code> to display in the breadcrumb style
   -
     class: slds-breadcrumb__item
     description: Item of the breadcrumb list

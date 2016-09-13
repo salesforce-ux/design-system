@@ -19,7 +19,7 @@ classes:
     class: slds-global-header__item--search
     description: Region that contains the search input, handles sizing
     required: true
-    applied: <code>.{{cssPrefix}}global-header__item</code>
+    applied: <code>.slds-global-header__item</code>
   -
     class: slds-global-header__logo
     description: Container of the global header logo

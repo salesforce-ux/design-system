@@ -8,25 +8,25 @@ classes:
   -
     class: slds-table--bordered
     description: Adds borders to the table
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
   -
     class: slds-table--col-bordered
     description: Adds vertical lines between columns
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
     notes: Used in tables where each column represents a record, for example when mapping fields. Do not use for tables where a row is a record.
   -
     class: slds-table--striped
     description: Adds stripes to alternating rows
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
     notes: Used to increase the readability of some tables, especially when printing.
   -
     class: slds-table--fixed-layout
     description: Styles for resizeable columns
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
   -
     class: slds-table--compact
     description: Styles for compact version
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
   -
     class: slds-is-selected
     description: Changes row to selected state
@@ -79,7 +79,7 @@ classes:
   -
     class: slds-no-row-hover
     description: Removes hover state on row
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
     notes: Rows have a hover state by default
   -
     class: slds-scrollable--x
@@ -88,11 +88,11 @@ classes:
   -
     class: slds-max-medium-table--stacked
     description: Modifies table layout by stacking cells to accommodate smaller viewports
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
   -
     class: slds-max-medium-table--stacked-horizontal
     description: Modifies table layout by displaying the header and row data side by side for smaller viewports
-    applied: <code>.{{cssPrefix}}table</code>
+    applied: <code>.slds-table</code>
   -
     class: slds-hint-parent
     description: Highlights action overflow ribbons on row hover

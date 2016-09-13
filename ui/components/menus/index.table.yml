@@ -16,7 +16,7 @@ classes:
     class: slds-dropdown-trigger--click
     description: Modifier that enables dropdown to show on click
     applied: any element
-    notes: Forces <code>display:none</code> on dropdown, applying <code>.{{cssPrefix}}is-open</code> to <code>.{{cssPrefix}}dropdown-trigger</code> will show the dropdown
+    notes: Forces <code>display:none</code> on dropdown, applying <code>.slds-is-open</code> to <code>.slds-dropdown-trigger</code> will show the dropdown
   -
     class: slds-dropdown__item
     description: Initializes dropdown item
@@ -25,54 +25,54 @@ classes:
   -
     class: slds-dropdown--bottom
     description: Positions dropdown to above target
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown--left
     description: Positions dropdown to left side of target
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown--right
     description: Positions dropdown to right side of target
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown--small
     description: Sets min-width of 15rem/240px
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown--medium
     description: Sets min-width of 20rem/320px
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown--large
     description: Sets min-width of 25rem/400px
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
   -
     class: slds-dropdown__header
     description: Adds padding to area above dropdown menu list
   -
     class: slds-nubbin--top
     description: Triangle that points upwards which is horizontally centered
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-nubbin--top-left
     description: Triangle that points upwards which is left aligned
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-nubbin--top-right
     description: Triangle that points upwards which is right aligned
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-nubbin--bottom
     description: Triangle that points downwards which is horizontally centered
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-nubbin--bottom-left
     description: Triangle that points downwards which is left aligned
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-nubbin--bottom-right
     description: Triangle that points downwards which is right aligned
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>
   -
     class: slds-dropdown--length-5
     description: Forces overflow scrolling after 5 list items
@@ -103,29 +103,29 @@ classes:
   -
     class: slds-is-selected
     description: Applies selected state to dropdown item
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
-    notes: Class modifies the visibility of <code>.{{cssPrefix}}icon-selected</code>
+    applied: <code>.slds-dropdown__item</code>
+    notes: Class modifies the visibility of <code>.slds-icon-selected</code>
   -
     class: slds-icon--selected
-    description: Creates icon when a user selects a <code>.{{cssPrefix}}dropdown__item</code>
+    description: Creates icon when a user selects a <code>.slds-dropdown__item</code>
     applied: <code>&lt;svg&gt;</code>
   -
     class: slds-dropdown--nubbin-top
     description: Applies triangle indicator pointing at content
-    applied: <code>.{{cssPrefix}}dropdown</code>
+    applied: <code>.slds-dropdown</code>
     notes: Deprecated
   -
     class: slds-has-icon
     description: Lets dropdown item know how to position icon
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
+    applied: <code>.slds-dropdown__item</code>
     notes: Deprecated
   -
     class: slds-has-icon--left
     description: Position icon in dropdown item to the left
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
+    applied: <code>.slds-dropdown__item</code>
     notes: Deprecated
   -
     class: slds-has-icon--right
     description: Position icon in dropdown item to the right
-    applied: <code>.{{cssPrefix}}dropdown__item</code>
+    applied: <code>.slds-dropdown__item</code>
     notes: Deprecated

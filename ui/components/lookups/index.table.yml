@@ -35,7 +35,7 @@ classes:
   -
     class: slds-lookup__item-action--label
     description: Actionable element inside of a lookup item that's output is single line text
-    applied: <code>.{{cssPrefix}}lookup__item-action</code>
+    applied: <code>.slds-lookup__item-action</code>
   -
     class: slds-lookup__result-text
     description: Primary entity name within lookup item
@@ -51,4 +51,4 @@ classes:
   -
     class: slds-has-focus
     description: Lookup options aren't actionable so this class provides focus for keyboard interactions
-    applied: <code>.{{cssPrefix}}lookup__item</code>
+    applied: <code>.slds-lookup__item</code>

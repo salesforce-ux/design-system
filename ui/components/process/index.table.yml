@@ -30,29 +30,29 @@ classes:
     description: Contains the check mark when the stage is completed
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.slds-tabs--path__link</code>
   -
     class: slds-tabs--path__title
     description: Contains the name of the stage
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.slds-tabs--path__link</code>
   -
     class: slds-is-complete
     description: Creates the completed stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
     class: slds-is-current
     description: Creates the current stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
     class: slds-is-incomplete
     description: Creates the incomplete stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
     class: slds-is-active
     description: Creates the active stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
     notes: This class must be placed on the item programatically when the guidance section is used
   -
     class: slds-wizard

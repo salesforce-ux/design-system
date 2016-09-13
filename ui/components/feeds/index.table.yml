@@ -30,7 +30,7 @@ classes:
   -
     class: slds-post--card
     description: Styles for card look on a post
-    applied: <code>.{{cssPrefix}}post</code>
+    applied: <code>.slds-post</code>
   -
     class: slds-post__header
     description: Header region of a feed post
@@ -65,7 +65,7 @@ classes:
     description: Comment content goes in this element
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: <code>.{{cssPrefix}}comment__content</code> needs the <code>.{{cssPrefix}}text-longform</code> utility
+    notes: <code>.slds-comment__content</code> needs the <code>.slds-text-longform</code> utility
   -
     class: slds-comment__replies
     description: List of children comments

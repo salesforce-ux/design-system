@@ -12,23 +12,23 @@ classes:
   -
     class: slds-spinner--small
     description: This is the small spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner--medium
     description: This is the medium spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner--large
     description: This is the large spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner--brand
     description: This creates the blue brand spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner--inverse
     description: This is the inverse spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner__dot-a
     description: This creates two of the circles

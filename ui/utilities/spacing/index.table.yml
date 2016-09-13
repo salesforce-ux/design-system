@@ -1,4 +1,4 @@
-description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. An * represents the portion of the class that can differ &mdash; such as <code>.{{cssPrefix}}p-around</code> and <code>.{{cssPrefix}}m-bottom</code>.
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. An * represents the portion of the class that can differ &mdash; such as <code>.slds-p-around</code> and <code>.slds-m-bottom</code>.
 classes:
   -
     class: slds-'*--none'

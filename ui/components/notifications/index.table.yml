@@ -16,7 +16,7 @@ classes:
     class: slds-notify--toast
     description: Initializes toast notification
     required: true
-    applied: <code>.{{cssPrefix}}notify</code>
+    applied: <code>.slds-notify</code>
     notes: Required for toast notifications
   -
     class: slds-notify--alert
@@ -37,8 +37,8 @@ classes:
     class: slds-modal--prompt
     description: Initializes Prompt style notification
     required: true
-    applied: <code>.{{cssPrefix}}modal</code>
-    notes: Themes can be added to the <code>.{{cssPrefix}}modal__header</code> to create the alert style required
+    applied: <code>.slds-modal</code>
+    notes: Themes can be added to the <code>.slds-modal__header</code> to create the alert style required
   -
     class: slds-notify-container
     description: Initializes notification container

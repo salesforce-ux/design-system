@@ -9,12 +9,12 @@ classes:
     class: slds-show
     description: Shows the element by setting display property to <code>block</code>
     applied: the hidden element
-    notes: This is toggled on the element. <code>.{{cssPrefix}}hide</code> class is removed and <code>.{{cssPrefix}}show</code> is added.
+    notes: This is toggled on the element. <code>.slds-hide</code> class is removed and <code>.slds-show</code> is added.
   -
     class: slds-show--inline-block
     description: Shows the element by setting display to <code>inline-block</code>
     applied: the hidden element
-    notes: This is toggled on the element. <code>.{{cssPrefix}}hide</code> class is removed and <code>.{{cssPrefix}}show--inline-block</code> is added.
+    notes: This is toggled on the element. <code>.slds-hide</code> class is removed and <code>.slds-show--inline-block</code> is added.
   -
     class: slds-hidden
     description: Hides an element from the page by setting the visibility property to <code>hidden</code>
@@ -24,17 +24,17 @@ classes:
     class: slds-visible
     description: Shows the element by setting the visibility property to <code>visible</code>
     applied: the hidden element
-    notes: This is toggled on the element. <code>.{{cssPrefix}}hidden</code> class is removed and <code>.{{cssPrefix}}visible</code> is added.
+    notes: This is toggled on the element. <code>.slds-hidden</code> class is removed and <code>.slds-visible</code> is added.
   -
     class: slds-transition-hide
     description: Hides an element from the page by setting the opacity property set to <code>0</code>
     applied: any element
-    notes: This works like the <code>.{{cssPrefix}}hidden</code> class and reserves the space but allows you to add the <code>transition</code> property to transition the speed that it is shown or hidden.
+    notes: This works like the <code>.slds-hidden</code> class and reserves the space but allows you to add the <code>transition</code> property to transition the speed that it is shown or hidden.
   -
     class: slds-transition-show
     description: Shows the element using the opacity property set to <code>1</code>
     applied: the hidden element
-    notes: This is toggled on the element. <code>.{{cssPrefix}}transition-hide</code> class is removed and <code>.{{cssPrefix}}transition-show</code> is added.
+    notes: This is toggled on the element. <code>.slds-transition-hide</code> class is removed and <code>.slds-transition-show</code> is added.
   -
     class: slds-is-collapsed
     description: Hides elements inside a parent
@@ -62,5 +62,5 @@ classes:
     notes: This should be used over other methods when you don't want to hide from screenreaders
   -
     class: slds-assistive-text--focus
-    description: Enables <code>.{{cssPrefix}}assistive-text</code> to become visible on focus
-    applied: <code>.{{cssPrefix}}assistive-text</code>
+    description: Enables <code>.slds-assistive-text</code> to become visible on focus
+    applied: <code>.slds-assistive-text</code>

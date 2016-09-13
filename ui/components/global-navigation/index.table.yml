@@ -44,8 +44,8 @@ classes:
   -
     class: slds-context-bar__dropdown-trigger
     description: Submenu / dropdown trigger area
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
-    notes: Requires <code>.{{cssPrefix}}dropdown-trigger</code> and <code>.{{cssPrefix}}dropdown-trigger--hover</code>
+    applied: <code>.slds-context-bar__item</code>
+    notes: Requires <code>.slds-dropdown-trigger</code> and <code>.slds-dropdown-trigger--hover</code>
   -
     class: slds-context-bar__vertical-divider
     description: Add a vertical divider between elements
@@ -61,10 +61,10 @@ classes:
   -
     class: slds-context-bar__app-name
     description: Styles for application name region
-    applied: <code>.{{cssPrefix}}context-bar__label-action</code>
+    applied: <code>.slds-context-bar__label-action</code>
     required: true
   -
     class: slds-context-bar__object-switcher
     description: Styles for object switcher region
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     required: true

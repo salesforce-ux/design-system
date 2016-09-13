@@ -9,7 +9,7 @@ classes:
   -
     class: slds-navigation-list--vertical-inverse
     description: Inverses the interactions of the default vertical navigation list
-    applied: <code>.{{cssPrefix}}navigation-list--vertical</code>
+    applied: <code>.slds-navigation-list--vertical</code>
   -
     class: slds-navigation-list--vertical__action
     description: Hyperlink inside navigation's list items

@@ -26,8 +26,8 @@ classes:
   -
     class: slds-card__tile
     description: Use class if card consumes any form of a tile
-    applied: <code>.{{cssPrefix}}tile</code>
+    applied: <code>.slds-tile</code>
   -
     class: slds-card--narrow
     description: Modifies styles for card in a narrow column
-    applied: <code>.{{cssPrefix}}card</code>
+    applied: <code>.slds-card</code>

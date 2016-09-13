@@ -105,53 +105,53 @@ classes:
   -
     class: slds-has-dividers--top
     description: Adds 1px border divider above list items
-    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
+    applied: Any element, children elements require <code>.slds-item</code>
   -
     class: slds-has-dividers--bottom
     description: Adds 1px border divider below list items
-    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
+    applied: Any element, children elements require <code>.slds-item</code>
   -
     class: slds-has-dividers--top-space
     description: Adds 1px border divider above list items and 0.5rem padding between items
-    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
+    applied: Any element, children elements require <code>.slds-item</code>
   -
     class: slds-has-dividers--bottom-space
     description: Adds 1px border divider below list items and 0.5rem padding between items
-    applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
+    applied: Any element, children elements require <code>.slds-item</code>
   -
     class: slds-has-dividers--left
     description: Adds dot separators to the left of horizontal list items
-    applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
+    applied: <code>.slds-list--horizontal</code>, children elements require <code>.slds-item</code>
   -
     class: slds-has-dividers--right
     description: Adds dot separators to the right of horizontal list items
-    applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
+    applied: <code>.slds-list--horizontal</code>, children elements require <code>.slds-item</code>
   -
     class: slds-has-list-interactions
     description: Adds hover and selected styles to list items
-    applied: <code>.{{cssPrefix}}item</code>
-    notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via JavaScript
+    applied: <code>.slds-item</code>
+    notes: the selected class <code>.slds-is-selected</code> needs to be applied via JavaScript
   -
     class: slds-list__item
     description: Marks a list item
     applied: <code>li</code>
-    notes: Please use <code>.{{cssPrefix}}item</code> instead
+    notes: Please use <code>.slds-item</code> instead
     deprecated: true
   -
     class: slds-has-dividers
     description: Adds spacing and dividers between list items
-    applied: <code>.{{cssPrefix}}list--vertical</code><br /><code>.{{cssPrefix}}list--horizontal</code>
+    applied: <code>.slds-list--vertical</code><br /><code>.slds-list--horizontal</code>
     notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br />On vertical lists a border is added. Horizontal lists are separated by a dot.
     deprecated: true
   -
     class: slds-has-cards
     description:  Adds 1px border around list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
+    applied: <code>.slds-list--vertical</code>
     deprecated: true
-    notes: Please use <code>.{{cssPrefix}}has-dividers--around</code> instead
+    notes: Please use <code>.slds-has-dividers--around</code> instead
   -
     class: slds-has-cards--space
     description:  Adds 1px border around list items and 0.5rem padding inside list items
-    applied: <code>.{{cssPrefix}}list--vertical</code>
+    applied: <code>.slds-list--vertical</code>
     deprecated: true
-    notes: Please use <code>.{{cssPrefix}}has-dividers--around-space</code> instead
+    notes: Please use <code>.slds-has-dividers--around-space</code> instead

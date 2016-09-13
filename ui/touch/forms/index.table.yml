@@ -3,4 +3,4 @@ classes:
   -
     class: slds-modal--form
     description: Modal becomes full width and height of the viewport to accomodate the form within.
-    applied: <code>.{{cssPrefix}}modal</code>
+    applied: <code>.slds-modal</code>

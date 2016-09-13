@@ -8,29 +8,29 @@ classes:
   -
     class: slds-fade-in-open
     description: Allows the modal to be visible.
-    applied: <code>.{{cssPrefix}}modal</code>
+    applied: <code>.slds-modal</code>
     required: true
     notes: Apply this class to a modal with JavaScript to make it visible.
   -
     class: slds-modal--large
     description: Widens the modal to take more horizontal space
-    applied: <code>.{{cssPrefix}}modal</code>
+    applied: <code>.slds-modal</code>
   -
     class: slds-modal__container
     description: Centers and sizes the modal horizontally and confines modal within viewport height
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal</code> with nothing else nested on the same level.
+    notes: This should be nested immediately inside <code>.slds-modal</code> with nothing else nested on the same level.
   -
     class: slds-modal__header
     description: Creates the Modal Header container.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal__container</code> as the first element.
+    notes: This should be nested immediately inside <code>.slds-modal__container</code> as the first element.
   -
     class: slds-modal__close
     description: Positions the close button to the top right outside of the modal.
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
     required: true
     notes: Use JavaScript to make clicking this button remove the modal. This button contains a Close Action Icon.
   -
@@ -38,30 +38,30 @@ classes:
     description: Creates the scrollable content area for the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Either <code>.{{cssPrefix}}modal__content</code> or <code>.{{cssPrefix}}modal__menu</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+    notes: Either <code>.slds-modal__content</code> or <code>.slds-modal__menu</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.slds-modal_container</code> and immediately after <code>.slds-modal__header</code>.
   -
     class: slds-modal__menu
     description: Creates the shaded menu area for the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Either <code>.{{cssPrefix}}modal__menu</code> or <code>.{{cssPrefix}}modal__content</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__header</code>.
+    notes: Either <code>.slds-modal__menu</code> or <code>.slds-modal__content</code> must be used. If you&rsquo;re using this class, you do not need the other. This should be nested immediately inside <code>.slds-modal_container</code> and immediately after <code>.slds-modal__header</code>.
   -
     class: slds-modal__footer
     description: Creates the Modal Footer container.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should be nested immediately inside <code>.{{cssPrefix}}modal_container</code> and immediately after <code>.{{cssPrefix}}modal__container</code>. Nothing should follow it. Note that by default, elements will be aligned to the right.
+    notes: This should be nested immediately inside <code>.slds-modal_container</code> and immediately after <code>.slds-modal__container</code>. Nothing should follow it. Note that by default, elements will be aligned to the right.
   -
     class: slds-modal__footer--directional
     description: Makes buttons inside the footer spread to both left and right.
-    applied: <code>.{{cssPrefix}}modal__footer</code>
+    applied: <code>.slds-modal__footer</code>
     notes: This is only needed when you have two buttons that indicate a back and forward navigation.
   -
     class: slds-backdrop
     description: Creates the shaded backdrop used behind the modal.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: This should follow after the <code>.{{cssPrefix}}modal</code> as an empty element.
+    notes: This should follow after the <code>.slds-modal</code> as an empty element.
   -
     class: slds-modal-backdrop
     description: Creates the shaded backdrop used behind the modal.
@@ -71,12 +71,12 @@ classes:
   -
     class: slds-backdrop--open
     description: Allows the backdrop to be visible.
-    applied: <code>.{{cssPrefix}}modal-backdrop</code>
+    applied: <code>.slds-modal-backdrop</code>
     required: true
     notes: Apply this class to a modal backdrop with JavaScript to make it visible.
   -
     class: slds-modal-backdrop--open
     description: Allows the backdrop to be visible.
-    applied: <code>.{{cssPrefix}}modal-backdrop</code>
+    applied: <code>.slds-modal-backdrop</code>
     required: true
     notes: Deprecated

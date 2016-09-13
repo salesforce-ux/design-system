@@ -7,4 +7,4 @@ classes:
   -
     class: slds-popover--tooltip
     description: Modifier used to apply tooltip specific styles
-    applied: <code>.{{cssPrefix}}popover</code>
+    applied: <code>.slds-popover</code>

@@ -1,157 +1,157 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: form-element
+    class: slds-form-element
     description: Initializes form element
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: form-element__label
+    class: slds-form-element__label
     description: Initializes form element label
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: form-element__control
+    class: slds-form-element__control
     description: Initializes form element control
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Control can contain an <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>
   -
-    class: form-element__icon
+    class: slds-form-element__icon
     description: The icon wrapper for an icon within a form element, this icon is usually used to indicate an error or field level help
     applied: <code>&lt;div&gt;</code>
   -
-    class: input
+    class: slds-input
     description: Initializes text input
     required: true
     applied: <code>&lt;input&gt;</code>
   -
-    class: input--small
+    class: slds-input--small
     description: Applies styles for a smaller text input
     deprecated: true
     applied: <code>.{{cssPrefix}}input</code>
     notes: Removed in version 2.0.0
   -
-    class: input--bare
+    class: slds-input--bare
     description: Removes background and border from text input
     applied: <code>.{{cssPrefix}}input</code>
   -
-    class: input-has-icon
+    class: slds-input-has-icon
     description: Lets text input know how to position <code>.{{cssPrefix}}input__icon</code>
     applied: <code>&lt;div&gt;</code> around <code>&lt;input&gt;</code>
     notes: The <code>&lt;div&gt;</code> contains both the <code>&lt;svg&gt;</code> and the <code>&lt;input&gt;</code>
   -
-    class: input__icon
+    class: slds-input__icon
     description: Hook for <code>.{{cssPrefix}}input-has-icon</code>
     applied: <code>&lt;svg&gt;</code>
   -
-    class: input__icon--left
+    class: slds-input__icon--left
     description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
     applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
   -
-    class: input__icon--right
+    class: slds-input__icon--right
     description: Hook for <code>.{{cssPrefix}}input-has-icon--left-right</code>
     applied: <code>&lt;svg&gt;</code> or <code>&lt;button&gt;</code>
   -
-    class: input-has-icon--left
+    class: slds-input-has-icon--left
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the left of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
-    class: input-has-icon--right
+    class: slds-input-has-icon--right
     description: Positions <code>.{{cssPrefix}}input__icon</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
-    class: input-has-icon--left-right
+    class: slds-input-has-icon--left-right
     description: Positions <code>.{{cssPrefix}}input__icon--left</code> to the left of the text input and <code>.{{cssPrefix}}input__icon--right</code> to the right of the text input
     applied: <code>.{{cssPrefix}}input-has-icon</code>
   -
-    class: input-has-fixed-addon
+    class: slds-input-has-fixed-addon
     description: Use on input container to let it know there is fixed text to the left or right of the input
     applied: The <code>&lt;div&gt;</code> contains both the <code>.{{cssPrefix}}form-element__addon</code> and the <code>&lt;input&gt;</code>
   -
-    class: form-element__addon
+    class: slds-form-element__addon
     description: Class for fixed text that sits to the left or right of an <code>&lt;input&gt;</code>
     applied: any element
   -
-    class: textarea
+    class: slds-textarea
     description: Initializes textarea
     required: true
     applied: <code>&lt;textarea&gt;</code>
   -
-    class: select
+    class: slds-select
     description: Initializes select
     required: true
     applied: <code>&lt;select&gt;</code>
   -
-    class: checkbox
+    class: slds-checkbox
     description: Initializes checkbox
     required: true
     applied: <code>&lt;label&gt;</code>
     notes: Label wraps the faux checkbox and text, <code>&lt;input&gt;</code> requires <code>[type=checkbox]</code>
   -
-    class: checkbox--faux
+    class: slds-checkbox--faux
     description: Creates a custom styled checkbox
     required: true
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}checkbox</code>
   -
-    class: checkbox--button-group
+    class: slds-checkbox--button-group
     description: Container for a group of checkbox that look like a button group
     applied: <code>&lt;div&gt;</code>
   -
-    class: checkbox--button
+    class: slds-checkbox--button
     description: Customizes your checkbox to look like a button in a button group
     applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
-    class: radio
+    class: slds-radio
     description: Initializes radio button
     required: true
     applied: <code>&lt;label&gt;</code>
     notes: Label wraps the faux radio and text, <code>&lt;input&gt;</code> requires <code>[type=radio]</code>
   -
-    class: radio--faux
+    class: slds-radio--faux
     description: Creates a custom styled radio button
     required: true
     applied: <code>&lt;span&gt;</code>
     notes: Apply to <code>&lt;span&gt;</code> inside <code>.{{cssPrefix}}radio</code>
   -
-    class: radio--button-group
+    class: slds-radio--button-group
     description: Container for a group of radio that look like a button group
     applied: <code>&lt;div&gt;</code>
   -
-    class: radio--button
+    class: slds-radio--button
     description: Customizes your radio to look like a button in a button group
     applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
-    class: form--horizontal
+    class: slds-form--horizontal
     description: Horizontally aligns a single form label and control on the same line
     applied: <code>&lt;form&gt;</code>
   -
-    class: form--stacked
+    class: slds-form--stacked
     description: Vertically aligns form label and control, provides spacing between form elements
     applied: <code>&lt;form&gt;</code>
     notes: This is the default
   -
-    class: form--inline
+    class: slds-form--inline
     description: Horizontally align multiple form elements on the same axis
     applied: <code>&lt;form&gt;</code>
   -
-    class: form--compound
+    class: slds-form--compound
     description: Creates a form that consists of multiple form groups
     applied: <code>&lt;form&gt;</code>
     notes: Groups are placed in fieldsets and small labels are used for inputs
   -
-    class: form-element__row
+    class: slds-form-element__row
     description: Use to create rows of form elements in a compound form
     applied: <code>&lt;div&gt;</code>
     notes: Wrap form elements in this class
   -
-    class: required
+    class: slds-required
     description: Class used on required asterick
     applied: <code>&lt;attr&gt;</code>
     required: true
   -
-    class: has-error
+    class: slds-has-error
     description: Applied to <code>.{{cssPrefix}}form-element</code> when form element has errors
     applied: <code>.{{cssPrefix}}form-element</code>
     required: true

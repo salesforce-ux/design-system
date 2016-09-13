@@ -1,53 +1,53 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: tile
+    class: slds-tile
     description: Initializes tile
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tile__detail
+    class: slds-tile__detail
     required: true
     applied: <code>&lt;div&gt;</code> or <code>&lt;ul&gt;</code>
   -
-    class: tile__meta
+    class: slds-tile__meta
     description: Applies text color change
     applied: Any element inside <code>.{{cssPrefix}}tile__detail</code>
   -
-    class: media
+    class: slds-media
     description: Layout helper that aligns image and text
     applied: <code>.{{cssPrefix}}tile</code>
     notes: Use on tiles with Icons, Actions and Badges
   -
-    class: media__body
+    class: slds-media__body
     description: Layout helper
     applied: <code>&lt;div&gt;</code>
     notes: Wraps <code>.{{cssPrefix}}tile__title</code> and <code>.{{cssPrefix}}tile__detail</code> inside a <code>.{{cssPrefix}}media</code> object.
   -
-    class: truncate
+    class: slds-truncate
     description: Applies overflow truncation to tile detail items
     notes: Can be applied to anything that needs truncation
   -
-    class: list--horizontal
+    class: slds-list--horizontal
     description: Horizontally aligns list items
     applied: <code>&lt;ul&gt;</code>
   -
-    class: has-dividers--right
+    class: slds-has-dividers--right
     description: Adds dotted dividers in a horizontal list
     applied: <code>.{{cssPrefix}}list--horizontal</code>
   -
-    class: grid
+    class: slds-grid
     description: Initializes a grid layout
     notes: Wrap <code>.{{cssPrefix}}tile__title</code> and icon/badge element
   -
-    class: grid--align-spread
+    class: slds-grid--align-spread
     description: Spreads the elements on each end of the same axis
     applied: <code>.{{cssPrefix}}grid</code>
   -
-    class: has-flexi-truncate
+    class: slds-has-flexi-truncate
     description: Layout helper applied to a parent <code>.{{cssPrefix}}grid</code> when <code>.{{cssPrefix}}truncate</code> is within a flex element
     applied: <code>.{{cssPrefix}}col</code>
   -
-    class: hint-parent
+    class: slds-hint-parent
     description: Highlights dimmed action overflow icons on tile hover
     applied: <code>.{{cssPrefix}}tile</code>

@@ -1,131 +1,131 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: dropdown
+    class: slds-dropdown
     description: Initializes dropdown
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Applies positioning and container styles, by default, dropdown appears below and center of target
   -
-    class: dropdown-trigger
+    class: slds-dropdown-trigger
     description: Enables dropdown to show on hover
     deprecated: true
     applied: <code>&lt;div&gt;</code>
     notes: The target HTML element and dropdown need to be wrapped in this class
   -
-    class: dropdown-trigger--click
+    class: slds-dropdown-trigger--click
     description: Modifier that enables dropdown to show on click
     applied: any element
     notes: Forces <code>display:none</code> on dropdown, applying <code>.{{cssPrefix}}is-open</code> to <code>.{{cssPrefix}}dropdown-trigger</code> will show the dropdown
   -
-    class: dropdown__item
+    class: slds-dropdown__item
     description: Initializes dropdown item
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: dropdown--bottom
+    class: slds-dropdown--bottom
     description: Positions dropdown to above target
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown--left
+    class: slds-dropdown--left
     description: Positions dropdown to left side of target
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown--right
+    class: slds-dropdown--right
     description: Positions dropdown to right side of target
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown--small
+    class: slds-dropdown--small
     description: Sets min-width of 15rem/240px
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown--medium
+    class: slds-dropdown--medium
     description: Sets min-width of 20rem/320px
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown--large
+    class: slds-dropdown--large
     description: Sets min-width of 25rem/400px
     applied: <code>.{{cssPrefix}}dropdown</code>
   -
-    class: dropdown__header
+    class: slds-dropdown__header
     description: Adds padding to area above dropdown menu list
   -
-    class: nubbin--top
+    class: slds-nubbin--top
     description: Triangle that points upwards which is horizontally centered
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: nubbin--top-left
+    class: slds-nubbin--top-left
     description: Triangle that points upwards which is left aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: nubbin--top-right
+    class: slds-nubbin--top-right
     description: Triangle that points upwards which is right aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: nubbin--bottom
+    class: slds-nubbin--bottom
     description: Triangle that points downwards which is horizontally centered
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: nubbin--bottom-left
+    class: slds-nubbin--bottom-left
     description: Triangle that points downwards which is left aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: nubbin--bottom-right
+    class: slds-nubbin--bottom-right
     description: Triangle that points downwards which is right aligned
     applied: <code>.{{cssPrefix}}popover</code>
   -
-    class: dropdown--length-5
+    class: slds-dropdown--length-5
     description: Forces overflow scrolling after 5 list items
     applied: <code>&lt;ul&gt;</code>
   -
-    class: dropdown--length-7
+    class: slds-dropdown--length-7
     description: Forces overflow scrolling after 7 list items
     applied: <code>&lt;ul&gt;</code>
   -
-    class: dropdown--length-10
+    class: slds-dropdown--length-10
     description: Forces overflow scrolling after 10 list items
     applied: <code>&lt;ul&gt;</code>
   -
-    class: dropdown--length-with-icon-5
+    class: slds-dropdown--length-with-icon-5
     description: Forces overflow scrolling after 5 list items
     applied: <code>&lt;ul&gt;</code>
     notes: Use if an icon is within the list items
   -
-    class: dropdown--length-with-icon-7
+    class: slds-dropdown--length-with-icon-7
     description: Forces overflow scrolling after 7 list items
     applied: <code>&lt;ul&gt;</code>
     notes: Use if an icon is within the list items
   -
-    class: dropdown--length-with-icon-7
+    class: slds-dropdown--length-with-icon-7
     description: Forces overflow scrolling after 10 list items
     applied: <code>&lt;ul&gt;</code>
     notes: Use if an icon is within the list items
   -
-    class: is-selected
+    class: slds-is-selected
     description: Applies selected state to dropdown item
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Class modifies the visibility of <code>.{{cssPrefix}}icon-selected</code>
   -
-    class: icon--selected
+    class: slds-icon--selected
     description: Creates icon when a user selects a <code>.{{cssPrefix}}dropdown__item</code>
     applied: <code>&lt;svg&gt;</code>
   -
-    class: dropdown--nubbin-top
+    class: slds-dropdown--nubbin-top
     description: Applies triangle indicator pointing at content
     applied: <code>.{{cssPrefix}}dropdown</code>
     notes: Deprecated
   -
-    class: has-icon
+    class: slds-has-icon
     description: Lets dropdown item know how to position icon
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Deprecated
   -
-    class: has-icon--left
+    class: slds-has-icon--left
     description: Position icon in dropdown item to the left
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Deprecated
   -
-    class: has-icon--right
+    class: slds-has-icon--right
     description: Position icon in dropdown item to the right
     applied: <code>.{{cssPrefix}}dropdown__item</code>
     notes: Deprecated

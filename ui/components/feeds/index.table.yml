@@ -1,104 +1,104 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: feed
+    class: slds-feed
     description: Initializes feed
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: feed__list
+    class: slds-feed__list
     description: Initializes feed list
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: feed__item
+    class: slds-feed__item
     description: Initializes feed list item
     required: true
     applied: <code>&lt;li&gt;</code>
     notes: Applies padding and border separator
   -
-    class: feed__item-comments
+    class: slds-feed__item-comments
     description: Container for feed item comments
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Contains comment replies and publisher
   -
-    class: post
+    class: slds-post
     description: Primary content in feed item
     applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
     required: true
   -
-    class: post--card
+    class: slds-post--card
     description: Styles for card look on a post
     applied: <code>.{{cssPrefix}}post</code>
   -
-    class: post__header
+    class: slds-post__header
     description: Header region of a feed post
     applied: <code>&lt;header&gt;</code>
   -
-    class: post__content
+    class: slds-post__content
     description: Content region of a feed post
     applied: <code>&lt;div&gt;</code>
   -
-    class: post__footer
+    class: slds-post__footer
     description: Footer region of a feed post
     applied: <code>&lt;footer&gt;</code>
   -
-    class: post__footer-actions-list
+    class: slds-post__footer-actions-list
     description: Footer region that contains quick action items for post
     applied: <code>&lt;div&gt;</code>
   -
-    class: post__footer-meta-list
+    class: slds-post__footer-meta-list
     description: Footer region that contains read only items for post
     applied: <code>&lt;div&gt;</code>
   -
-    class: post__footer-action
+    class: slds-post__footer-action
     description: Action items within the feed post footer
     applied: <code>&lt;a&gt;</code>
   -
-    class: comment
+    class: slds-comment
     description: Initializes comment
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: comment__content
+    class: slds-comment__content
     description: Comment content goes in this element
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: <code>.{{cssPrefix}}comment__content</code> needs the <code>.{{cssPrefix}}text-longform</code> utility
   -
-    class: comment__replies
+    class: slds-comment__replies
     description: List of children comments
     applied: <code>&lt;ul&gt;</code>
     required: true
     deprecated: true
   -
-    class: tags
+    class: slds-tags
     description: Container for comment "tags" or "topics"
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: Required if comment has "tags" or "topics" associated
     deprecated: true
   -
-    class: tags__list
+    class: slds-tags__list
     description: List for comment "tags" or "topics"
     applied: <code>&lt;ul&gt;</code>
     required: true
     deprecated: true
   -
-    class: tags__item
+    class: slds-tags__item
     description: Individual "tag" or "topic" item
     applied: <code>&lt;li&gt;</code>
     required: true
     deprecated: true
   -
-    class: attachments
+    class: slds-attachments
     description: Container for attachments to a comment
     applied: <code>&lt;div&gt;</code>
     required: true
     deprecated: true
   -
-    class: attachments__item
+    class: slds-attachments__item
     description: Individual attachment, can be more than one
     applied: <code>&lt;div&gt;</code>
     required: true

@@ -1,19 +1,19 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: has-blur-focus
+    class: slds-has-blur-focus
     description: Blur focus is an accessibility class that will add a blurred border to an element when it is focused.
     applied: any element
   -
-    class: type-focus
+    class: slds-type-focus
     description: Creates a faux link with interactions
     applied: container
     notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
   -
-    class: text-link--reset
+    class: slds-text-link--reset
     description: Makes links and buttons appear as regular text
     applied: <code>&lt;a&gt;</code> or <code>.{{cssPrefix}}button</code>
   -
-    class: text-link
+    class: slds-text-link
     description: Makes text inside of <code>.{{cssPrefix}}text-link--reset</code> to appear as a link.
     applied: any element

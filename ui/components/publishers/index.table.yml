@@ -1,42 +1,42 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: publisher
+    class: slds-publisher
     description: Initializes publisher
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: publisher--discussion
+    class: slds-publisher--discussion
     description: Modifier that alters the interactions of the publisher, specific to the discussion feed publisher
     applied: <code>.{{cssPrefix}}publisher</code>
   -
-    class: publisher--comment
+    class: slds-publisher--comment
     description: Modifier that alters the interactions of the publisher, specific to the comment publisher
     applied: <code>.{{cssPrefix}}publisher</code>
   -
-    class: publisher__input
+    class: slds-publisher__input
     description: Abstraction of the text input styles
     applied: <code>.{{cssPrefix}}textarea</code> or <code>.{{cssPrefix}}input--bare</code>
     required: true
   -
-    class: publisher__actions
+    class: slds-publisher__actions
     description: Bottom row of actionable items
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: attachments
+    class: slds-attachments
     description: Container for content attachment functionality and aesthetics
     applied: <code>&lt;div&gt;</code>
     required: true
     notes: Only required if you have content attachment enabled
   -
-    class: is-active
+    class: slds-is-active
     description: Opens publisher container to display additional functionality
     applied: <code>.{{cssPrefix}}publisher</code>
     required: true
     notes: Added through JavaScript
   -
-    class: has-focus
+    class: slds-has-focus
     description: Applies focus to comment publisher container when inside <code>textarea</code>
     applied: <code>.{{cssPrefix}}publisher</code>
     required: true

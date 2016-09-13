@@ -1,78 +1,78 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
 classes:
   -
-    class: tabs--default
+    class: slds-tabs--default
     description: Initializes default tabset
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs--default__nav
+    class: slds-tabs--default__nav
     description: Creates the container for the default tabs
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: tabs--default__item
+    class: slds-tabs--default__item
     description: Styles each list item as a single tab
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: tabs--default__link
+    class: slds-tabs--default__link
     description: Styles each <code>&lt;a&gt;</code> element in the <code>&lt;li&gt;</code>
     required: true
     applied: <code>&lt;a&gt;</code>
   -
-    class: tabs--default__content
+    class: slds-tabs--default__content
     description: Styles each tab content wrapper
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs--scoped
+    class: slds-tabs--scoped
     description: Initializes scoped tabset
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs--scoped__nav
+    class: slds-tabs--scoped__nav
     description: Creates the container for the tabs
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: tabs--scoped__item
+    class: slds-tabs--scoped__item
     description: Styles each list item as a single tab
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: tabs--scoped__link
+    class: slds-tabs--scoped__link
     description: Styles each <code>&lt;a&gt;</code> element in the <code>&lt;li&gt;</code>
     required: true
     applied: <code>&lt;a&gt;</code>
   -
-    class: tabs--scoped__content
+    class: slds-tabs--scoped__content
     description: Styles each tab content wrapper
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs__item--overflow
+    class: slds-tabs__item--overflow
     description: Styles an overflow tab item
     applied: <code>.{{cssPrefix}}tabs__item</code>
     notes: This is used on a tab containing an overflow dropdown menu
   -
-    class: dropdown-trigger
+    class: slds-dropdown-trigger
     description: Initializes tab item as menu
     required: true
     applied: <code>.{{cssPrefix}}tabs__item--overflow</code>
   -
-    class: active
+    class: slds-active
     description: Applies the active state to a tab list item
     required: true
     applied: <code>.{{cssPrefix}}tabs__item</code>
     notes: Required on the <code>&lt;li&gt;</code> element that is associated with the active tab panel
   -
-    class: show
+    class: slds-show
     description: Shows the tab panel
     required: true
     applied: <code>.{{cssPrefix}}tabs__content</code>
   -
-    class: hide
+    class: slds-hide
     description: Hide the tab panel
     required: true
     applied: <code>.{{cssPrefix}}tabs__content</code>

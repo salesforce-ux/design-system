@@ -1,45 +1,45 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. The theme modifiers are found in <a href="/components/utilities/themes#color">themes</a>.
 classes:
   -
-    class: notify
+    class: slds-notify
     description: Initializes notification
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Applys to alerts and toasts
   -
-    class: notify_container
+    class: slds-notify_container
     description: Initializes notification container
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Wraps around notification for positioning
   -
-    class: notify--toast
+    class: slds-notify--toast
     description: Initializes toast notification
     required: true
     applied: <code>.{{cssPrefix}}notify</code>
     notes: Required for toast notifications
   -
-    class: notify--alert
+    class: slds-notify--alert
     description: Initializes alert notification
     required: true
     notes: Required for alert notifications
   -
-    class: notify__close
+    class: slds-notify__close
     description: Positions close icon
     required: true
     applied: <code>&lt;button&gt;</code>
   -
-    class: notify__content
+    class: slds-notify__content
     description: Initializes notification content
     required: false
     applied: <code>&lt;div&gt;</code>
   -
-    class: modal--prompt
+    class: slds-modal--prompt
     description: Initializes Prompt style notification
     required: true
     applied: <code>.{{cssPrefix}}modal</code>
     notes: Themes can be added to the <code>.{{cssPrefix}}modal__header</code> to create the alert style required
   -
-    class: notify-container
+    class: slds-notify-container
     description: Initializes notification container
     deprecated: true

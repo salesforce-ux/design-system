@@ -1,50 +1,50 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component. An * represents the portion of the class that can differ &mdash; such as <code>.{{cssPrefix}}p-around</code> and <code>.{{cssPrefix}}m-bottom</code>.
 classes:
   -
-    class: '*--none'
+    class: slds-'*--none'
     description: Adds 0 margin or padding to the side specified
     applied: any element
   -
-    class: '*--xxx-small'
+    class: slds-'*--xxx-small'
     description: Adds .125rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--xx-small'
+    class: slds-'*--xx-small'
     description: Adds .25rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--x-small'
+    class: slds-'*--x-small'
     description: Adds .5rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--small'
+    class: slds-'*--small'
     description: Adds .75rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--medium'
+    class: slds-'*--medium'
     description: Adds 1rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--large'
+    class: slds-'*--large'
     description: Adds 1.5rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--x-large'
+    class: slds-'*--x-large'
     description: Adds 2rem margin or padding to the side specified
     applied: any element
   -
-    class: '*--xx-large'
+    class: slds-'*--xx-large'
     description: Adds 3rem margin or padding to the side specified
     applied: any element
   -
-    class: '*-vertical--*'
+    class: slds-'*-vertical--*'
     description: Adds the specified margin or padding to both top and bottom
     applied: any element
   -
-    class: '*-horizontal--*'
+    class: slds-'*-horizontal--*'
     description: Adds the specified margin or padding to both sides
     applied: any element
   -
-    class: '*-around--*'
+    class: slds-'*-around--*'
     description: Adds the specified margin or padding all the way around the element
     applied: any element

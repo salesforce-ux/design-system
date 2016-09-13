@@ -1,6 +1,6 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: modal--form
+    class: slds-modal--form
     description: Modal becomes full width and height of the viewport to accomodate the form within.
     applied: <code>.{{cssPrefix}}modal</code>

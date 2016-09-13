@@ -1,39 +1,39 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: pill
+    class: slds-pill
     description: Initializes pill
     required: true
     applied: <code>&lt;span&gt;</code>
   -
-    class: pill__label
+    class: slds-pill__label
     description: Initializes pill label
     required: true
     applied: <code>&lt;span&gt;</code> or <code>&lt;a&gt;</code>
   -
-    class: pill__icon
+    class: slds-pill__icon
     description: Initializes pill icon or avatar that sits to the left of the label
     required: true
     applied: <code>&lt;svg class="slds-icon"&gt;</code> or <code>.{{cssPrefix}}avatar</code>
   -
-    class: pill__remove
+    class: slds-pill__remove
     description: Initializes remove icon in pill that sits to the right of the label
     required: true
     applied: <code>.{{cssPrefix}}button</code>
   -
-    class: pill_container
+    class: slds-pill_container
     description: Container to hold pill(s) with borders
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: pill_container--bare
+    class: slds-pill_container--bare
     description: Container to hold pill(s) with no borders
     applied: <code>&lt;div&gt;</code>
   -
-    class: pill--bare
+    class: slds-pill--bare
     description: Modifier that removes border and background from a pill
     applied: <code>.{{cssPrefix}}pill</code>
   -
-    class: pill-container
+    class: slds-pill-container
     description: Container to hold pills(s)
     deprecated: true

@@ -1,156 +1,156 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: list--dotted
+    class: slds-list--dotted
     description: Creates an unordered list with markers
     applied: <code>ul</code>
     notes: Our application framework takes away default list styling. This recreates it
   -
-    class: list--ordered
+    class: slds-list--ordered
     description: Creates an ordered list with decimals
     applied: <code>ol</code>
     notes: Our application framework removes default list styling. This recreates it
   -
-    class: list--vertical
+    class: slds-list--vertical
     description: Marks a vertical list
     applied: Any element
   -
-    class: list--horizontal
+    class: slds-list--horizontal
     description: Causes items of a list to display horizontally
     applied: Any element
     notes: This lists stacks in a mobile context. The output differs on the name-value variant, name-value display horizontally but stacks after each name-value
   -
-    class: list--inline
+    class: slds-list--inline
     description: Causes items of a list to display horizontally
     applied: Any element
   -
-    class: item
+    class: slds-item
     description: Marks a list item
     applied: Any element
     notes: All lists use this class. Different CSS applies depending on the parent class.
   -
-    class: dl--inline
+    class: slds-dl--inline
     description: Causes description list to display horizontally with <code>dt</code> followed immediately by the <code>dd</code>.
     applied: <code>dl</code>
     notes: This lists stacks in a mobile context
   -
-    class: dl--inline__label
+    class: slds-dl--inline__label
     description: Marks a term
     applied: <code>dt</code>
   -
-    class: dl--inline__detail
+    class: slds-dl--inline__detail
     description: Marks a description
     applied: <code>dd</code>
   -
-    class: dl--horizontal
+    class: slds-dl--horizontal
     description: Causes description list to display horizontally with <code>dt</code> consuming 33% of the space and the <code>dd</code> taking up the rest.
     applied: <code>dl</code>
     notes: This lists stacks in a mobile context. It can also take different sizing utilities to change the widths (which must always total 100%).
   -
-    class: dl--horizontal__label
+    class: slds-dl--horizontal__label
     description: Marks a term
     applied: <code>dt</code>
   -
-    class: dl--horizontal__detail
+    class: slds-dl--horizontal__detail
     description: Marks a description
     applied: <code>dd</code>
   -
-    class: item--label
+    class: slds-item--label
     description: Label of the name-value pair variant. Layout is modified by its parent class.
     applied: <code>div</code>
   -
-    class: item--detail
+    class: slds-item--detail
     description: Detail of the name-value pair variant. Layout is modified by its parent class.
     applied: <code>div</code>
   -
-    class: has-divider--top
+    class: slds-has-divider--top
     description: Adds 1px border divider above an HTML element
     applied: Any element
   -
-    class: has-divider--top-space
+    class: slds-has-divider--top-space
     description: Adds 1px border divider above an HTML element with a 0.5rem separation between the item above it
     applied: Any element
   -
-    class: has-divider--bottom
+    class: slds-has-divider--bottom
     description: Adds 1px border divider below an HTML element
     applied: Any element
   -
-    class: has-divider--bottom-space
+    class: slds-has-divider--bottom-space
     description: Adds 1px border divider below an HTML element with a 0.5rem separation between the item below it
     applied: Any element
   -
-    class: has-divider--right
+    class: slds-has-divider--right
     description: Adds dot separator to the right of an HTML element
     applied: Any element
   -
-    class: has-divider--left
+    class: slds-has-divider--left
     description: Adds dot separator to the left of an HTML element
     applied: Any element
   -
-    class: has-block-links
+    class: slds-has-block-links
     description: Gives the anchors within the list block styling
     applied: Any element
   -
-    class: has-inline-block-links
+    class: slds-has-inline-block-links
     description: Gives the anchors within the list inline-block styling
     applied: Any element
   -
-    class: has-block-links--space
+    class: slds-has-block-links--space
     description: Gives the anchors within the list block styling with 0.5rem padding
     applied: Any element
   -
-    class: has-inline-block-links--space
+    class: slds-has-inline-block-links--space
     description: Gives the anchors within the list inline-block styling with 0.5rem padding
     applied: Any element
   -
-    class: has-dividers--top
+    class: slds-has-dividers--top
     description: Adds 1px border divider above list items
     applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-dividers--bottom
+    class: slds-has-dividers--bottom
     description: Adds 1px border divider below list items
     applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-dividers--top-space
+    class: slds-has-dividers--top-space
     description: Adds 1px border divider above list items and 0.5rem padding between items
     applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-dividers--bottom-space
+    class: slds-has-dividers--bottom-space
     description: Adds 1px border divider below list items and 0.5rem padding between items
     applied: Any element, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-dividers--left
+    class: slds-has-dividers--left
     description: Adds dot separators to the left of horizontal list items
     applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-dividers--right
+    class: slds-has-dividers--right
     description: Adds dot separators to the right of horizontal list items
     applied: <code>.{{cssPrefix}}list--horizontal</code>, children elements require <code>.{{cssPrefix}}item</code>
   -
-    class: has-list-interactions
+    class: slds-has-list-interactions
     description: Adds hover and selected styles to list items
     applied: <code>.{{cssPrefix}}item</code>
     notes: the selected class <code>.{{cssPrefix}}is-selected</code> needs to be applied via JavaScript
   -
-    class: list__item
+    class: slds-list__item
     description: Marks a list item
     applied: <code>li</code>
     notes: Please use <code>.{{cssPrefix}}item</code> instead
     deprecated: true
   -
-    class: has-dividers
+    class: slds-has-dividers
     description: Adds spacing and dividers between list items
     applied: <code>.{{cssPrefix}}list--vertical</code><br /><code>.{{cssPrefix}}list--horizontal</code>
     notes: Deprecated - Both vertical and horizontal lists use this class when separators are needed.<br />On vertical lists a border is added. Horizontal lists are separated by a dot.
     deprecated: true
   -
-    class: has-cards
+    class: slds-has-cards
     description:  Adds 1px border around list items
     applied: <code>.{{cssPrefix}}list--vertical</code>
     deprecated: true
     notes: Please use <code>.{{cssPrefix}}has-dividers--around</code> instead
   -
-    class: has-cards--space
+    class: slds-has-cards--space
     description:  Adds 1px border around list items and 0.5rem padding inside list items
     applied: <code>.{{cssPrefix}}list--vertical</code>
     deprecated: true

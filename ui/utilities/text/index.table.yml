@@ -1,107 +1,107 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: text-body--regular
+    class: slds-text-body--regular
     description: Creates the 13px regular body copy
     notes: This is the base body font size and is rarely needed
   -
-    class: text-body--small
+    class: slds-text-body--small
     description: Creates a more pale-colored 12px copy
     notes: Typically used as supportive text
   -
-    class: text-heading--large
+    class: slds-text-heading--large
     description: Very large 28px heading
     applied: Any heading
     notes: These are rarely used in the app and are reserved for extremely large text to showcase data (such as totals or stats).
   -
-    class: text-heading--medium
+    class: slds-text-heading--medium
     description: Large 20px heading
     applied: Any heading
     notes: Typically the largest heading on a page
   -
-    class: text-heading--small
+    class: slds-text-heading--small
     description: Smaller 16px heading
     applied: Any heading
     notes: Used for smaller content areas such as list sections or card titles
   -
-    class: text-title
+    class: slds-text-title
     description: 12px heading that is not all caps
     applied: Any heading
     notes: Usually labels small content areas like list sections.
   -
-    class: text-title--caps
+    class: slds-text-title--caps
     description: All caps 12px heading
     applied: Any heading
     notes: Usually labels small content areas like tabs and page header titles.
   -
-    class: text-longform
+    class: slds-text-longform
     description: Adds default spacing and list styling within a wrapper
     applied: <code>div</code>
     notes: Our application framework removes default text styling. This adds in margins to large areas
   -
-    class: text-align--left
+    class: slds-text-align--left
     description: Aligns text left
     applied: Any text
   -
-    class: text-align--center
+    class: slds-text-align--center
     description: Aligns text center
     applied: Any text
   -
-    class: text-align--right
+    class: slds-text-align--right
     description: Aligns text right
     applied: Any text
   -
-    class: text-color--default
+    class: slds-text-color--default
     description: Default color of text
     applied: Any text
   -
-    class: text-color--weak
+    class: slds-text-color--weak
     description: Weak color of text
     applied: Any text
   -
-    class: text-color--error
+    class: slds-text-color--error
     description: Error color of text
     applied: Any text
   -
-    class: section
+    class: slds-section
     description: Container for a collapsable sub section through interaction with the section title
     required: true
     notes: These are typically on a form, if content exists to be expanded, applying the <code>.{{cssPrefix}}is-open</code> will expand <code>.{{cssPrefix}}section__content</code>
   -
-    class: section__title
+    class: slds-section__title
     description: Title of a section, can contain an interactive button icon to expand/collapse sub section(s)
     required: true
   -
-    class: section__title-action
+    class: slds-section__title-action
     description: Interactive titles with icons that open and close sections
     required: true
   -
-    class: section__content
+    class: slds-section__content
     description: Content of a section that can be expanded/collapse through interaction with the <code>.{{cssPrefix}}section__title-action</code>
     required: true
   -
-    class: section-title
+    class: slds-section-title
     description: Interactive titles with icons that open and close sections
     notes: These are typically on a form
     deprecated: true
   -
-    class: section-title--divider
+    class: slds-section-title--divider
     description: Titles that also act as a divider with a grey background
     notes: These are typically on a form
     deprecated: true
   -
-    class: type-focus
+    class: slds-type-focus
     description: Creates a faux link with interactions
     applied: container
     notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
   -
-    class: text-heading--label
+    class: slds-text-heading--label
     description: All caps 12px heading
     applied: Any heading
     notes: Usually labels small content areas like tabs and page header titles
     deprecated: true
   -
-    class: text-heading--label-normal
+    class: slds-text-heading--label-normal
     description: 12px heading that is not all caps
     applied: Any heading
     notes: Usually labels small content areas like list sections.

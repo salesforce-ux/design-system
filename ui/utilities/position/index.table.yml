@@ -5,7 +5,7 @@ classes:
     description: Used to contain children if children are absolutely positioned and out of flow. Also used to position element without changing layout.
     applied: any element
   -
-    class: is-fixed
+    class: slds-is-fixed
     description: Used to position an element relative to the viewport.
     applied: any element
   -

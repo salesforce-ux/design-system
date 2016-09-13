@@ -48,3 +48,7 @@ classes:
     class: lookup__search-input
     description: Styles for a lookup's form input
     applied: <code>&lt;input&gt;</code>
+  -
+    class: has-focus
+    description: Lookup options aren't actionable so this class provides focus for keyboard interactions
+    applied: <code>.{{cssPrefix}}lookup__item</code>

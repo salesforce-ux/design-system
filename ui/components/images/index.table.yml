@@ -30,3 +30,53 @@ classes:
     class: avatar--large
     description: Creates a 5rem&times;5rem icon
     applied: <code>.{{cssPrefix}}avatar</code>
+  -
+    class: image
+    description: Image wrapper, not intended to wrap icons
+    applied: <code>div</code>
+    required: true
+  -
+    class: image--card
+    description: Adds styles to give image a "card" look
+    applied: <code>.{{cssPrefix}}image</code>
+    required: true
+  -
+    class: image__crop
+    description: Optional if you need to crop image at a specific ratio
+    applied: <code>div</code>
+  -
+    class: image__crop--16x9
+    description: Crop image at a 16x9 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__crop--4x3
+    description: Crop image at a 4x3 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__crop--1x1
+    description: Crop image at a 1x1 ratio, contrained to the parents width
+    applied: <code>.{{cssPrefix}}image__crop</code>
+  -
+    class: image__title
+    description: Image title
+    applied: <code>figcaption</code> or <code>div</code>
+  -
+    class: image__title--overlay
+    description: Text overlay on top of image, has opaque overlay
+    applied: <code>.{{cssPrefix}}image__title</code>
+  -
+    class: image__icon
+    description: If file is missing an image, an icon should replace it. This class helps with the positioning of that icon.
+    applied: <code>.{{cssPrefix}}icon_container</code>
+  -
+    class: image__actions
+    description: If file has actions, then this class helps with the positioning of those actions
+    applied: <code>.{{cssPrefix}}button-group</code>
+  -
+    class: image--overlay
+    description: Applies overlay to an image
+    applied: <code>div</code>
+  -
+    class: image__text
+    description: Text inside of <code>.{{cssPrefix}}image__title</code>
+    applied: <code>span</code>

@@ -2,3 +2,5 @@ status: 'dev-ready'
 flavors:
   - avatar
   - avatar-size
+  - figure
+  - figure-ratio

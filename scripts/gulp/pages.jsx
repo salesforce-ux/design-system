@@ -21,12 +21,18 @@ import path from 'path';
 import beautify from 'js-beautify';
 import React from 'react';
 import ReactDOMServer, { renderToStaticMarkup } from 'react-dom/server';
+import Prism from 'app_modules/site/vendor/prism';
 import through from 'through2';
+import crypto from 'crypto';
+import yaml from 'js-yaml';
+import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
+import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
-import ForceBase from '@salesforce-ux/design-tokens/dist/force-base.common';
+const forceBase = yaml.safeLoad(fs.readFileSync(path.resolve(__PATHS__.designTokens, 'force-base/spacing.yml')));
 
 import decorateComponent from 'app_modules/site/util/component/decorate';
 import { generateUI } from './generate-ui';
+
 
 /**
  * Return true if a file path contains a directory prefixed with an underscore
@@ -37,25 +43,7 @@ import { generateUI } from './generate-ui';
 export const excludeUnderscore = file =>
   file.relative
     .split(path.sep)
-    .filter(part => /^_/.test(part))
-    .reduce(() => true, false);
-
-/**
- * Return a props object with only props prefixed and then strip the prefix
- *
- * @params {object} props
- * @params {string} prefix
- * @returns {object}
- */
-export const getPrefixedProps = (props, prefix) => {
-  assert.ok(_.isObject(props), 'props must be an object');
-  assert.ok(_.isString(prefix), 'prefix must be a string');
-  const pattern = new RegExp(`^${_.escapeRegExp(prefix)}`);
-  const prefixedProps = _.pick(props, _.keys(props).filter(key => pattern.test(key)));
-  return _.mapKeys(prefixedProps, (value, key) => {
-    return _.camelCase(key.replace(pattern, ''));
-  });
-};
+    .some(part => /^_/.test(part));
 
 /**
  * Try to requre a module
@@ -96,11 +84,7 @@ export const renderPage = (element, props) => {
   const pageBody = React.cloneElement(element, _.assign({}, props));
   // Create page element
   const page = React.createElement(Page,
-    // Get any "page" specific props from the pageBody
-    _.assign(
-      getPrefixedProps(pageBody.props, 'page'),
-      { contentHTML: renderToStaticMarkup(pageBody) }
-    )
+    { contentHTML: renderToStaticMarkup(pageBody) }
   );
   // Construct the HTML
   return `<!DOCTYPE html>${renderToStaticMarkup(page)}`;
@@ -122,9 +106,14 @@ export const renderExample = element => {
  *
  * @param {object} flavor
  * @param {string} html
+ * @param {string} script
+ * @param {string} descriptionMarkup
  * @returns {string}
  */
-export const wrapExample = (flavor, html) => `
+export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') => {
+  const markupId = crypto.createHash('sha1').update('markup').digest('hex');
+  const descriptionId = `description-${markupId}`;
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,7 +124,7 @@ export const wrapExample = (flavor, html) => `
   <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
   <link type="text/css" rel="stylesheet" href="/assets/styles/demo.css" />
   <style>
-    body { padding: ${ForceBase.spacingMedium}; }
+    body { padding: ${forceBase.spacingMedium}; }
   </style>
   <meta name="robots" content="noindex" />
   <script>
@@ -145,6 +134,13 @@ export const wrapExample = (flavor, html) => `
 </head>
 <body>
 ${html}
+<script type="text/javascript">
+${script}
+</script>
+<script type="text/template" id="${markupId}">${highlightMarkup(html)}</script>
+<script type="text/template" id="${descriptionId}">
+${descriptionMarkup}
+</script>
 <script>
   (function() {
     function iframe () { try { return window.self !== window.top; } catch (e) { return true; } }
@@ -154,10 +150,11 @@ ${html}
     // Update the markup
     if (!/initial/.test(window.location.search)) {
       parent.__eventQueue.push({
-        name: 'component:iframe:updatePreviewMarkup',
+        name: 'component:iframe:updatePreview',
         data: {
           flavor: '${flavor.uid}',
-          html: ${JSON.stringify(html)}
+          html: document.getElementById('${markupId}').textContent,
+          description: document.getElementById('${descriptionId}').textContent
         }
       });
     }
@@ -183,14 +180,16 @@ ${html}
 </script>
 </body>
 </html>`.trim();
+};
 
 /**
  * Return the example element for the current flavor
  *
+ * @param {object} example
  * @param {object} options
  * @returns {ReactElement|null}
  */
-export const getExampleElement = (example, options) => {
+export const getExampleElementAndDescription = (example, options) => {
   options = _.defaults({}, options, {
     // The keys (in order) that will be checked for a ReactElement
     keys: ['preview', 'default'],
@@ -199,6 +198,8 @@ export const getExampleElement = (example, options) => {
     // The state to be rendered
     state: null
   });
+  let defaultDescription = '';
+
   // Get the first valid ReactElement
   let defaultElement = _(options.keys)
     .filter(key => _.has(example, key))
@@ -206,19 +207,38 @@ export const getExampleElement = (example, options) => {
     .filter(React.isValidElement)
     .first();
   // Exit early if no state is needed
-  if (options.renderState === false) return defaultElement;
+  if (options.renderState === false) {
+    return {
+      element: defaultElement,
+      description: ''
+    };
+  }
   // If no element was found, check to see if states exist
   if (!defaultElement && _.isArray(example.states) && example.states.length) {
     if (React.isValidElement(example.states[0].element)) {
       defaultElement = example.states[0].element;
+      defaultDescription = ('description' in example.states[0]) ? example.states[0].description : '';
     }
   }
-  if (!defaultElement) return null;
-  if (!options.state) return defaultElement;
-  if (React.isValidElement(options.state.element)) {
-    return options.state.element;
+  if (!defaultElement) {
+    return {
+      element: null,
+      description: ''
+    };
   }
-  return defaultElement;
+  if (!options.state) {
+    return {
+      element: defaultElement,
+      description: defaultDescription
+    };
+  }
+  if (React.isValidElement(options.state.element)) {
+    defaultElement = options.state.element;
+  }
+  return {
+    element: defaultElement,
+    description: defaultDescription
+  };
 };
 
 /**
@@ -259,14 +279,16 @@ export const gulpRenderComponentPage = () =>
       component.flavors.forEach(flavor => {
         let example = tryRequire(`ui/${flavor.path}/index.react.example.jsx`);
         if (example) {
-          const exampleElement = getExampleElement(example);
-          const exampleCodeElement = getExampleElement(example, {
+          const exampleElement = getExampleElementAndDescription(example).element;
+          const exampleDescription = getExampleElementAndDescription(example).description;
+          const exampleCodeElement = getExampleElementAndDescription(example, {
             keys: ['code', 'default'],
             renderState: false
-          });
+          }).element;
           flavor.example = example;
           flavor.exampleMarkup = renderExample(exampleCodeElement
             ? exampleCodeElement : exampleElement);
+          flavor.exampleDescription = exampleDescription;
         }
       });
       // Render example markup for each flavor and push a corresponding HTML
@@ -279,24 +301,30 @@ export const gulpRenderComponentPage = () =>
           if (flavor.example.states) {
             // Push a new file for each state
             flavor.example.states.forEach((state, index) => {
-              const element = getExampleElement(flavor.example, { state });
+              const element = getExampleElementAndDescription(flavor.example, { state }).element;
               ['id', 'label'].forEach(key => {
                 invariant(
                   _.isString(state[key]),
                   `state ${index} of "${flavor.uid}" is missing property "${key}"`
                 );
               });
+              if (!('description' in state)) {
+                state.description = '';
+              }
+
+              const headingClass = 'slds-text-heading--small slds-m-top--large slds-m-bottom--xx-small';
+              const stateDesc = state.description ?  '<h3 class="' + headingClass + '">State/Variant Information</h3>' + renderMarkdownAndReplaceGlobals(state.description) : '';
               this.push(new gutil.File({
                 path: path.resolve(__PATHS__.site, flavor.path, `_${state.id}.html`),
                 contents: new Buffer(
-                  wrapExample(flavor, renderExample(element))
+                  wrapExample(flavor, renderExample(element), state.script, stateDesc)
                 ),
                 base: __PATHS__.site
               }));
             });
           } else {
             // No states were found, just get the single example
-            const element = getExampleElement(flavor.example);
+            const element = getExampleElementAndDescription(flavor.example).element;
             if (element) {
               // Push a new file for the single example
               this.push(new gutil.File({
@@ -309,13 +337,10 @@ export const gulpRenderComponentPage = () =>
             }
           }
         });
-      // HACK: Move "utilities" under "components"
-      const componentPath = /^utilities/.test(component.path)
-        ? `components/${component.path}`
-        : component.path;
+
       // Create the <PageBody> for the component
       const pageBody = (
-        <PageBody contentClassName={false} path={`/${componentPath}`}>
+        <PageBody contentClassName={false} path={`/${component.sitePath}`}>
           <Component
             component={decorateComponent(component)}
             docs={tryRequire(`ui/${component.path}/index.docs.jsx`)} />
@@ -323,7 +348,7 @@ export const gulpRenderComponentPage = () =>
       );
       // Push a new HTML page
       next(null, new gutil.File({
-        path: path.resolve(__PATHS__.site, componentPath, 'index.html'),
+        path: path.resolve(__PATHS__.site, component.sitePath, 'index.html'),
         contents: new Buffer(renderPage(pageBody)),
         base: __PATHS__.site
       }));
@@ -356,10 +381,16 @@ gulp.task('pages:components', (done) => {
   generateComponentPages(components, done);
 });
 
+gulp.task('pages:components:touch', (done) => {
+  let { components } = _.find(generateUI(), { id: 'touch' });
+  generateComponentPages(components, done);
+});
+
 gulp.task('pages:components:utilities', (done) => {
   let { components } = _.find(generateUI(), { id: 'utilities' });
   generateComponentPages(components, done);
 });
+
 
 /**
  * Return a transform stream that converts JSX to HTML and
@@ -380,6 +411,6 @@ export const generatePages = (src, callback = _.noop) =>
     .on('error', callback)
     .on('finish', callback);
 
-gulp.task('pages', ['pages:components', 'pages:components:utilities'], (done) => {
+gulp.task('pages', ['pages:components', 'pages:components:touch', 'pages:components:utilities'], (done) => {
   generatePages('./site/**/index.jsx', done);
 });

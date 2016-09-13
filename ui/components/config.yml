@@ -1,15 +1,22 @@
 components:
   - activity-timeline
+  - app-launcher
   - badges
   - breadcrumbs
   - buttons
+  - button-icons
   - button-groups
   - cards
   - data-tables
   - datepickers
   - docked-composer
+  - docked-utility-bar
   - feeds
+  - files
+  - file-selector
   - forms
+  - global-header
+  - global-navigation
   - icons
   - images
   - lookups
@@ -19,6 +26,7 @@ components:
   - notifications
   - page-headers
   - panels
+  - picklist
   - pills
   - process
   - popovers
@@ -26,4 +34,5 @@ components:
   - spinners
   - tabs
   - tiles
+  - tooltips
   - trees

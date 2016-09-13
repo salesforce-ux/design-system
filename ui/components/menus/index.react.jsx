@@ -56,7 +56,7 @@ class DropdownTitle extends React.Component {
 
   render() {
     return (
-        <span className={pf('text-heading--label')}>{ this.props.children }</span>
+        <span className={pf('text-title--caps')}>{ this.props.children }</span>
       );
   }
 }
@@ -132,7 +132,7 @@ class DropdownItem extends React.Component {
 
     return (
         <li id={this.id} onClick={this.selectedItem.bind(this)} { ...this.props }
-            className={className} onFocus={this.itemFocused.bind(this)}>
+            className={className} role="presentation" onFocus={this.itemFocused.bind(this)}>
           <a href="javascript:void(0);" aria-disabled={ this.props.disabled } role={aRole}>
             <p className={pf('truncate')}>{ this.context.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }{ this.boldSearchText(this.props.children) }</p>
           </a>

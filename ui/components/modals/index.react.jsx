@@ -13,7 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 const PT = React.PropTypes;
 
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import AccessibleDialogContainer from 'ui/components/lib/accessible-dialog-container.react';
 import globals from 'app_modules/global';
 const cssPrefix = globals.cssPrefix;
@@ -70,11 +70,8 @@ class ModalHeader extends React.Component {
       <div { ...this.props } className={this.$getClassName(pf('modal__header'))}>
         { this.props.closeButton ?
             <ButtonIcon
-              onClick={this.context.onRequestClose}
-              flavor="icon-inverse"
-              iconFlavor="large"
-              className={pf('modal__close')}
-              sprite="action"
+              className={pf('modal__close button--icon-inverse')}
+              iconClassName={pf('button__icon--large')}
               symbol="close"
               assistiveText="Close" />
             : null
@@ -176,7 +173,7 @@ class ModalWrapper extends React.Component {
   render() {
     const {renderInline} = this.props;
     return renderInline
-      ? <Modal {...this.props} tabindex="-1" />
+      ? <Modal {...this.props} tabIndex="-1" />
       : null;
   }
   renderModal(props) {

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -25,9 +25,8 @@ let TreeItem = props =>
 <div className={pf('tree__item')}>
   <ButtonIcon
     disabled
-    className={pf('m-right--x-small is-disabled')}
-    iconFlavor="small"
-    sprite="utility"
+    className={pf('button--icon m-right--x-small is-disabled')}
+    iconClassName={pf('button__icon--small')}
     symbol="chevronright"
     assistiveText="Toggle" />
   <a href="javascript:void(0);" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
@@ -38,9 +37,8 @@ let TreeBranch = props =>
 <div className={pf('tree__item')}>
   <ButtonIcon
     aria-controls={props.ariaControls}
-    className={pf('m-right--x-small')}
-    iconFlavor="small"
-    sprite="utility"
+    className={pf('button--icon m-right--x-small')}
+    iconClassName="button__icon--small"
     symbol="chevronright"
     assistiveText="Toggle" />
   <a
@@ -146,7 +144,7 @@ let AdditionalItems = props =>
 
 let Default = props =>
 <div className={pf('tree_container')} role="application">
-  <h4 className={pf('text-heading--label')} id="treeheading">Tree Group Header</h4>
+  <h4 className={pf('text-title--caps')} id="treeheading">Tree Group Header</h4>
 
   <ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
 

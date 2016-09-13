@@ -24,15 +24,15 @@ classes:
     applied: Any heading
     notes: Used for smaller content areas such as list sections or card titles
   -
-    class: text-heading--label
-    description: All caps 12px heading
-    applied: Any heading
-    notes: Usually labels small content areas like tabs and page header titles
-  -
-    class: text-heading--label-normal
+    class: text-title
     description: 12px heading that is not all caps
     applied: Any heading
     notes: Usually labels small content areas like list sections.
+  -
+    class: text-title--caps
+    description: All caps 12px heading
+    applied: Any heading
+    notes: Usually labels small content areas like tabs and page header titles.
   -
     class: text-longform
     description: Adds default spacing and list styling within a wrapper
@@ -49,6 +49,18 @@ classes:
   -
     class: text-align--right
     description: Aligns text right
+    applied: Any text
+  -
+    class: text-color--default
+    description: Default color of text
+    applied: Any text
+  -
+    class: text-color--weak
+    description: Weak color of text
+    applied: Any text
+  -
+    class: text-color--error
+    description: Error color of text
     applied: Any text
   -
     class: section
@@ -82,3 +94,15 @@ classes:
     description: Creates a faux link with interactions
     applied: container
     notes: This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
+  -
+    class: text-heading--label
+    description: All caps 12px heading
+    applied: Any heading
+    notes: Usually labels small content areas like tabs and page header titles
+    deprecated: true
+  -
+    class: text-heading--label-normal
+    description: 12px heading that is not all caps
+    applied: Any heading
+    notes: Usually labels small content areas like list sections.
+    deprecated: true

@@ -20,7 +20,7 @@ export default (
     <CardBody>
       <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
         <thead>
-          <tr className={pf('text-heading--label')}>
+          <tr className={pf('text-title--caps')}>
             <th scope="col"><div className={pf('truncate')} title="Name">Name</div></th>
             <th scope="col"><div className={pf('truncate')} title="Company">Company</div></th>
             <th scope="col"><div className={pf('truncate')} title="Title">Title</div></th>

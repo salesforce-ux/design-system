@@ -1,0 +1,199 @@
+// Figure Stenciling
+// scss-lint:disable ImportantRule
+$stencil-light: #d3dde7 !default;
+$stencil-dark:  #a8b8d0 !default;
+
+.site-stencil {
+  text-align: left !important; // needed to override centering on small form factor
+  color: $stencil-dark !important;
+  letter-spacing: -2px !important;
+
+  [disabled] {
+
+    &,
+    & + [class*='faux'] {
+
+      &:not([class*='stencil__background']) {
+        background-color: #fff !important;
+        cursor: default !important;
+      }
+    }
+  }
+
+  * {
+    &,
+    &:hover {
+      cursor: default !important;
+    }
+
+    box-shadow: none !important;
+  }
+
+  &__border {
+
+    &-light {
+      border-color: $stencil-light !important;
+    }
+
+    &-dark {
+      border-color: $stencil-dark !important;
+
+      // To trigger the pseudo elements I went with specific class naming
+      &-top-after::after {
+        border-top-color: $stencil-dark !important;
+      }
+
+      &-bottom {
+
+        &-before::before,
+        &-after::after {
+          border-bottom-color: $stencil-dark !important;
+        }
+      }
+
+      &-left-after::after {
+        border-left-color: $stencil-dark !important;
+      }
+    }
+  }
+
+  &__background {
+
+    &-light,
+    &-hover-parent:hover * {
+      background: $stencil-light !important;
+    }
+
+    &-dark {
+
+      &,
+      &-after::after {
+        background: $stencil-dark !important;
+      }
+    }
+
+    &-none {
+
+      &,
+      &-hover:hover,
+      &-hover-parent:hover * {
+        background: none !important;
+      }
+    }
+  }
+
+  &__color {
+
+    &-light {
+      color: $stencil-light !important;
+    }
+
+    &-dark {
+      color: $stencil-dark !important;
+
+      // This has to be separate from the above rule or it won't work
+      &-placeholder::-webkit-input-placeholder {
+        color: $stencil-dark !important;
+      }
+    }
+
+    &-white {
+      color: #fff !important;
+    }
+  }
+
+  &__fill {
+
+    &-light {
+      fill: $stencil-light !important;
+    }
+
+    &-dark {
+      fill: $stencil-dark !important;
+    }
+  }
+
+  &__squeeze {
+    letter-spacing: -2px;
+  }
+}
+
+.list--reset {
+  // Should this be a utility?
+  list-style: none !important;
+}
+
+.site-dimension {
+  margin-top: $spacing-large;
+  font-size: $font-size-small;
+  text-align: center;
+  color: #16325c;
+  letter-spacing: 0 !important;
+
+  &__line {
+    position: relative;
+    height: $border-width-thin;
+
+    &,
+    &::before,
+    &::after {
+      background-color: #16325c;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: -$spacing-x-small;
+      display: block;
+      width: $border-width-thin;
+      height: $spacing-x-small * 2;
+      content: ' ';
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__line--red {
+
+    &,
+    &::before,
+    &::after {
+      background-color: #c23934;
+    }
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &--absolute-box {
+    position: absolute;
+    top: -0.25rem;
+    left: 0;
+    right: 0;
+    bottom: -0.25rem;
+    border: 1px solid #c23934;
+    margin-top: 0;
+  }
+}
+
+.docs-example {
+
+  ul,
+  ol,
+  p,
+  dl,
+  figure,
+  table {
+    margin: inherit; // If I'm using a component inside of the component docs
+  }
+}

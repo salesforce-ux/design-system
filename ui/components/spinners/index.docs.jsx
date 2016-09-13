@@ -15,12 +15,13 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const intro = (
   <p className="site-text-introduction">
-    Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations.
+    Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations. In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.
   </p>
 );
 
 export default (
   <ComponentDocs>
-    <p>In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.</p>
+    <p>To use the spinner in a component, the parent of the spinner should be set to <code>position:relative</code>. You can use the utility class <code>.slds-is-relative</code> or add the declaration to your custom component CSS. If you are using the spinner in an <code>iframe</code> and dynamically loading DOM nodes after the page has loaded, it is recommended that you set the <code>.slds-spinner_container</code> to <code>position:fixed</code> so that it remains centered in the viewport.</p>
+    <p>The background overlay for the spinner is an optional element.</p>
   </ComponentDocs>
 );

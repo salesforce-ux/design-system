@@ -34,7 +34,7 @@ export default React.createClass({
         <Anchor
           title={component.title}
           actions={this.renderComponentOverviewLink()}
-          path={`/${component.path}`} />
+          path={`/${component.sitePath}`} />
         <div className={pf('site-content grid wrap large-nowrap')}>
           {this.renderFlavorsNav()}
           <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>
@@ -75,7 +75,7 @@ export default React.createClass({
           );
         }
         return (
-          <li className={pf('list__name site-states-parent')} key={flavor.uid} data-slds-status={flavor.status}>
+          <li className={pf('list__name site-states-parent')} key={flavor.uid}>
             <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
               { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }
@@ -90,6 +90,7 @@ export default React.createClass({
           <h3 className="site-text-heading--label docsearch-ignore">Variants & States</h3>
           <ul className={pf('list--vertical has-block-links--space')}>
             {flavors}
+            <li className={pf('has-divider--top p-top--xx-small')}><a className={pf('text-title--caps')} href="#overview">Documentation</a></li>
           </ul>
         </div>
       </StickyNav>
@@ -106,7 +107,7 @@ export default React.createClass({
 
   renderComponentOverviewLink() {
     let info = this.props.component.info;
-    if (info.table || info.tableYaml) {
+    if (info.tableYaml) {
       return (
         <div className={pf('align-middle')}>
           <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
@@ -129,8 +130,6 @@ export default React.createClass({
     const { component } = this.props;
     if (component.info.tableYaml) {
       return <TableYAML data={component.info.tableYaml} />;
-    } else if (component.info.table) {
-      return <div className="site-text-longform" dangerouslySetInnerHTML={component.info.table}/>;
     } else {
       return null;
     }

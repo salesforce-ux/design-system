@@ -42,13 +42,13 @@
         &:hover,
         &:focus {
           text-decoration: none;
-          border-color: $color-text-tab-label-selected;
+          border-color: $color-border-tab-selected;
           color: $color-text-action-label-active;
         }
       }
 
       &.#{$css-prefix}active a {
-        border-color: $color-text-tab-label-selected;
+        border-color: $color-border-tab-selected;
         color: $color-text-action-label-active;
 
         &:focus {
@@ -70,7 +70,7 @@
 .#{$css-prefix}tabs--default__item {
 
   &.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
-    border-color: $color-text-tab-label-selected;
+    border-color: $color-border-tab-selected;
     color: $color-text-action-label-active;
 
     &:focus {
@@ -104,6 +104,6 @@
 
   &:focus {
     border-bottom-width: ($border-width-thick + 1px);
-    border-color: $color-text-tab-label-selected;
+    border-color: $color-border-tab-selected;
   }
 }

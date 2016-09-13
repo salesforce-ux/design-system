@@ -6,6 +6,7 @@ flavors:
   - checkbox
   - checkbox-toggle
   - checkbox-alternate
+  - checkbox-add-button
   - select
   - multi-select
   - horizontal-form
@@ -13,5 +14,4 @@ flavors:
   - inline-form
   - compound-form
   - field-level-help
-  - inline-level-help
-  - edit-dialog-for-touch
+  - docked-form-footer

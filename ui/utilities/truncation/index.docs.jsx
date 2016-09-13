@@ -25,5 +25,7 @@ export default (
   <p>
     If problems occur when using truncation with elements that use flexbox, you might need to add the <CodeClass className="has-flexi-truncate" /> class on the flexbox child node ( <CodeClass className="col" /> or <CodeClass className="col--padded" /> elements) that contains the truncated text.
   </p>
+  <p><strong>Note:</strong> There is an iOS bug that is triggered when you add a component from Visualforce into S1 using an iFrame. The truncated element does not recognize its width.
+  </p>
 </ComponentDocs>
 );

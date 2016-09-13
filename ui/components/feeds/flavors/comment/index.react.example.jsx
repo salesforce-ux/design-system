@@ -10,245 +10,57 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
-import { Default as Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
-// Export used in discussion feeds
 export let Comment = props =>
-  <article className={pf('media comment hint-parent')}>
+  <article className={className(pf('comment media hint-parent'), props.className)}>
     <div className={pf('media__figure')}>
-      {MediumAvatar}
-    </div>
-    <div className={pf('media__body')}>
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('truncate')}>
-          <a href="javascript:void(0);" title="Design Systems">Design Systems</a> - <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a>
-        </p>
-        <ButtonIcon
-          className={pf('shrink-none')}
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
-          symbol="down"
-          assistiveText="Show More" />
-      </div>
-      <p className={pf('text-body--small')}>
-        <a href="javascript:void(0);" title="Click for single-item view of this post">18hr Ago</a>
-      </p>
-      {props.children}
-    </div>
-  </article>;
-
-let CommentMinimal = props =>
-  <article className={pf('media comment hint-parent')}>
-    <div className={pf('media__figure')}>
-      {SmallAvatar}
-    </div>
-    <div className={pf('media__body')}>
-      <div className={pf('grid grid--align-spread has-flexi-truncate')}>
-        <p className={pf('truncate')}>
-          <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a> - <span className={pf('text-body--small')}>16hr Ago</span>
-        </p>
-        <ButtonIcon
-          className={pf('shrink-none')}
-          flavor="icon-border-filled,icon-x-small"
-          iconFlavor="hint,small"
-          sprite="utility"
-          symbol="down"
-          assistiveText="Show More" />
-      </div>
-      {props.children}
-    </div>
-  </article>;
-
-// Export used in discussion feeds
-export let CommentLongform = props =>
-  <div className={pf('comment__content text-longform')}>
-    {props.children}
-  </div>;
-
-let CommentEntityTags = props =>
-  <div className={pf('tags text-body--small p-bottom--x-small')}>
-    <span>Topics:</span>
-    <ul className={pf('tags__list')}>
-      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Powerpoint">Powerpoint</a></li>
-      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Sales Presentation">Sales Presentation</a></li>
-      <li className={pf('tags__item')}><a href="javascript:void(0);" title="Todo">Todo</a></li>
-      <li className={pf('tags__item')}>and <a href="javascript:void(0);" title="Show the remaining topics">3 more</a></li>
-    </ul>
-  </div>;
-
-// Export used in discussion feeds
-export let CommentFooter = props =>
-  <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
-    <li className={pf('item')}>
-      <a href="javascript:void(0);" title="Like this item">
-        { props.showLikeButton ? LikeButton : null }Like
+      <a href="javascript:void(0);" title="Jenna Davis" className={pf('avatar avatar--circle avatar--medium')}>
+        <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
       </a>
-    </li>
-    <li className={pf('item')}>{props.likes} Likes</li>
-  </ul>;
-
-// Export used within publisher
-export let Attachments = props =>
-  <div className={pf('attachments')}>
-    <div className={pf('attachments__item box box--x-small theme--shade')}>
-      <div className={pf('grid grid--align-spread')}>
-        <MediaObject figureLeft={SmallIcon}>
-          <a href="javascript:void(0);" title="filename.ppt">filename.ppt</a>
-        </MediaObject>
-        <ButtonIcon
-          flavor="icon-bare"
-          sprite="utility"
-          symbol="close"
-          assistiveText="Remove this attachment" />
-      </div>
     </div>
+    <div className={pf('media__body')}>
+      { props.children }
+    </div>
+  </article>;
+
+export let CommentHeader = props =>
+  <header className={pf('comment__header media media--center')}>
+    <div className={pf('grid grid--align-spread has-flexi-truncate')}>
+      <p className={pf('truncate')}>
+        <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a>
+      </p>
+      <ButtonIcon className={pf('button--icon-border button--icon-x-small')} hasPopup="true" symbol="down" assistiveText="More Options" />
+    </div>
+  </header>;
+
+export let CommentContent = props =>
+  <div className={className(pf('comment__content text-longform'), props.className)}>
+    { props.children }
   </div>;
 
-const MediumAvatar = (
-  <div className={pf('avatar avatar--circle avatar--medium')}>
-    <a href="javascript:void(0);" title="Jason Rodgers">
-      <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
-    </a>
-  </div>
-);
-
-const SmallAvatar = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0);" title="Jenna Davis">
-      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
-);
-
-const SmallIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="doctype" symbol="ppt" />
-    <span className={pf('assistive-text')}>Powerpoint</span>
-  </span>
-);
-
-const LikeButton = (
-  <ButtonIcon
-    flavor="icon-border,icon-small"
-    className="m-right--small"
-    sprite="utility"
-    symbol="like"
-    assistiveText="Like" />
-);
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Comment>
-    <CommentLongform>
-      <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-    </CommentLongform>
-    <CommentEntityTags />
-    <CommentFooter showLikeButton likes="21" />
-  </Comment>;
-
-let Minimal = props =>
-  <CommentMinimal>
-    <CommentLongform>
-      <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
-    </CommentLongform>
-    <CommentFooter likes="21" />
-  </CommentMinimal>;
-
-let WithAttachment = props =>
-  <Comment>
-    <CommentLongform>
-      <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-    </CommentLongform>
-    <Attachments />
-    <CommentEntityTags />
-    <CommentFooter showLikeButton likes="21" />
-  </Comment>;
-
-let WithPublisher = props =>
-  <Demo>
-    <Comment>
-      <CommentLongform>
-        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-      </CommentLongform>
-      <CommentEntityTags />
-      <CommentFooter showLikeButton likes="21" />
-    </Comment>
-    <ul className={pf('comment__replies')}>
-      <li>
-        <Publisher />
+export let CommentFooter = props =>
+  <footer>
+    <ul className={pf('list--horizontal has-dividers--right text-body--small')}>
+      <li className={pf('item')}>
+        <a className={pf('text-color--weak')} href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>
       </li>
+      { props.liked ? <li className={pf('item')}>1 Like</li> : null }
+      <li className={pf('item')}>16hr Ago</li>
     </ul>
-  </Demo>;
+  </footer>;
 
-let WithReplies = props =>
-  <Demo>
-    <Comment>
-      <CommentLongform>
-        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-      </CommentLongform>
-      <CommentEntityTags />
-      <CommentFooter showLikeButton likes="21" />
-    </Comment>
-    <ul className={pf('comment__replies')}>
-      <li>
-        <CommentMinimal>
-          <CommentLongform>
-            <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
-          </CommentLongform>
-          <CommentFooter likes="13" />
-        </CommentMinimal>
-      </li>
-      <li>
-        <Publisher />
-      </li>
-    </ul>
-  </Demo>;
-
-let WithOverflow = props =>
-  <Demo>
-    <Comment>
-      <CommentLongform>
-        <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-      </CommentLongform>
-      <CommentEntityTags />
-      <CommentFooter showLikeButton likes="21" />
-    </Comment>
-    <ul className={pf('comment__replies')}>
-      <li className={pf('comment__overflow')}>
-        <Button className={pf('button--neutral')}>3 more comments</Button>
-      </li>
-      <li>
-        <CommentMinimal>
-          <CommentLongform>
-            <p><a href="javascript:void(0);" title="Jason Rodgers">@Jason Rodgers</a> I left you some feedback!</p>
-          </CommentLongform>
-          <CommentFooter likes="13" />
-        </CommentMinimal>
-      </li>
-      <li>
-        <Publisher />
-      </li>
-    </ul>
-  </Demo>;
+let ButtonIcon = props =>
+  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+    <SvgIcon className={pf('button__icon button__icon--hint')} sprite="utility" symbol={props.symbol} />
+    <span className={pf('assistive-text')}>{props.assistiveText}</span>
+  </button>;
 
 ///////////////////////////////////////////
 // Export
@@ -258,31 +70,25 @@ export let states = [
   {
     id: 'comment',
     label: 'Default',
-    element: <Default />
+    element:
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter />
+      </Comment>
   },
   {
-    id: 'comment-minimal',
-    label: 'Minimal',
-    element: <Minimal />
-  },
-  {
-    id: 'comment-with-attachment',
-    label: 'With attachment',
-    element: <WithAttachment />
-  },
-  {
-    id: 'comment-with-publisher',
-    label: 'With publisher',
-    element: <WithPublisher />
-  },
-  {
-    id: 'comment-with-replies',
-    label: 'With replies',
-    element: <WithReplies />
-  },
-  {
-    id: 'comment-with-overflow',
-    label: 'With overflow',
-    element: <WithOverflow />
+    id: 'comment-liked',
+    label: 'Like',
+    element:
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter liked />
+      </Comment>
   }
 ];

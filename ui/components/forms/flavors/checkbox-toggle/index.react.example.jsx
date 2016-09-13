@@ -36,7 +36,7 @@ let LabelWrapper = props =>
   </div>;
 
 let Label = props =>
-  <label className={className(pf('checkbox--toggle grid grid--vertical-align-center'), props.className)} htmlFor={props.id}>
+  <label className={className(pf('checkbox--toggle grid'), props.className)} htmlFor={props.id}>
     {props.children}
   </label>;
 
@@ -44,10 +44,14 @@ let FauxLabel = props =>
   <span className={pf('form-element__label m-bottom--none')}>{props.children}</span>;
 
 let Checkbox = props =>
-  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
+  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} aria-describedby="toggle-desc" />;
 
 let Toggle = props =>
-  <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;
+  <span id="toggle-desc" className={className(pf('checkbox--faux_container'), props.className)} aria-live="assertive">
+    <span className={pf('checkbox--faux')}></span>
+    <span className={className(pf('checkbox--on'), props.className)}>Enabled</span>
+    <span className={className(pf('checkbox--off'), props.className)}>Disabled</span>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -85,40 +89,6 @@ let StateC = props =>
     </LabelWrapper>
   </Demo>;
 
-let StateD = props =>
-  <Demo>
-    <Fieldset>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>North East Sales Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-    </Fieldset>
-  </Demo>;
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -138,10 +108,5 @@ export let states = [
     id: 'checkbox-toggle-disabled',
     label: 'Disabled',
     element: <StateC />
-  },
-  {
-    id: 'checkbox-toggle-group',
-    label: 'Grouped',
-    element: <StateD />
   }
 ];

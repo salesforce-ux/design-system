@@ -26,18 +26,18 @@
   }
 
   .site-side-by-side {
+
     > div {
+
       @include mq-medium-min {
         padding-right: $spacing-xx-large;
       }
     }
 
-    &--img-left {
-      > div {
-        @include mq-medium-min {
-          padding-right: 0;
-          padding-left: $spacing-xx-large;
-        }
+    &--img-left > div {
+      @include mq-medium-min {
+        padding-right: 0;
+        padding-left: $spacing-xx-large;
       }
     }
   }
@@ -68,7 +68,9 @@
   .site-diagram-section-top,
   .site-diagram-section-middle,
   .site-diagram-section-bottom {
+
     @include mq-large-min {
+
       &:before {
         content: '';
         position: absolute;
@@ -77,6 +79,7 @@
   }
 
   .site-diagram-section-middle {
+
     @include mq-large-min {
       position: absolute;
       padding-left: $spacing-xx-large;
@@ -95,13 +98,16 @@
 
   .site-diagram-section-top,
   .site-diagram-section-bottom {
+
     @include mq-large-min {
       padding-left: 40%;
     }
   }
 
   .site-diagram-section-top {
+
     @include mq-large-min {
+
       &:before {
         width: 120px;
         height: 160px;
@@ -114,8 +120,11 @@
       }
     }
   }
+
   .site-diagram-section-bottom {
+
     @include mq-large-min {
+
       &:before {
         width: 120px;
         height: 140px;
@@ -129,9 +138,7 @@
     }
   }
 
-  .site-scale-example {
-    p {
-      line-height: 1.5;
-    }
+  .site-scale-example p {
+    line-height: 1.5;
   }
 }

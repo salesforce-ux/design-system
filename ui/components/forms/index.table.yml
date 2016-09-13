@@ -103,6 +103,10 @@ classes:
     description: Customizes your checkbox to look like a button in a button group
     applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
   -
+    class: checkbox--add-button
+    description: Customizes your checkbox to look like a plus button
+    applied: <code>&lt;div&gt;</code>
+  -
     class: radio
     description: Initializes radio button
     required: true
@@ -145,11 +149,6 @@ classes:
     description: Use to create rows of form elements in a compound form
     applied: <code>&lt;div&gt;</code>
     notes: Wrap form elements in this class
-  -
-    class: is-required
-    description: Applied to <code>.{{cssPrefix}}form-element</code> when form element is required
-    applied: <code>.{{cssPrefix}}form-element</code>
-    required: true
   -
     class: required
     description: Class used on required asterick

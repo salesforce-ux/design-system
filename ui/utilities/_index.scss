@@ -20,6 +20,7 @@
   'grid/flavors/horizontal-alignment-space/index',
   'grid/flavors/horizontal-alignment-spread/index',
   'grid/flavors/horizontal-alignment-end/index',
+  'grid/flavors/vertical-alignment-start/index',
   'grid/flavors/vertical-alignment-center/index',
   'grid/flavors/vertical-alignment-end/index',
   'grid/flavors/vertical-alignment-item/index',
@@ -43,12 +44,14 @@
   // Floats
   'floats/flavors/float-left/index',
   'floats/flavors/float-right/index',
+  'floats/flavors/float-none/index',
   'floats/flavors/clearfix/index',
 
   // Interactions
+  'interactions/flavors/text-link-reset/index',
+  'interactions/flavors/text-link/index',
   'interactions/flavors/blur-focus/index',
   'interactions/flavors/faux-links/index',
-  'interactions/flavors/link-reset/index',
 
   // Lists
   'lists/index',
@@ -58,22 +61,25 @@
   'lists/flavors/horizontal-dividers/index',
   'lists/flavors/single-divider/index',
   'lists/flavors/description-list/index',
+  'lists/flavors/name-value-pair/index',
 
   // Truncation
   'truncation/flavors/single-line/index',
+  'truncation/flavors/max-width/index',
+
+  // Hyphenation
+  'hyphenation/flavors/base/index',
 
   // Theme
   'themes/flavors/box/index',
   'themes/flavors/color/index',
 
   // Text
-  'text/flavors/base/index',
-  'text/flavors/heading-large/index',
-  'text/flavors/heading-medium/index',
-  'text/flavors/heading-small/index',
-  'text/flavors/heading-label/index',
-  'text/flavors/heading-label-normal/index',
-  'text/flavors/body-small/index',
+  'text/flavors/body/index',
+  'text/flavors/heading/index',
+  'text/flavors/title/index',
+  'text/flavors/line-height-reset/index',
+  'text/flavors/color/index',
   'text/flavors/alignment/index',
   'text/flavors/longform/index',
   'text/flavors/section-title/index',

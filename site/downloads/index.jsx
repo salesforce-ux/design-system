@@ -62,6 +62,8 @@ bower install salesforce-lightning-design-system --save
       and icons to include in your project. See
       the <CTALink href="/release-notes" eventType="release-notes-top">release notes</CTALink> for
       details on the latest updates.
+      </p>
+      <p><strong>Note:</strong> If you need to use the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>
     </p>
     <p>
       All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
@@ -74,10 +76,29 @@ bower install salesforce-lightning-design-system --save
       </CTALink>
     </form>
 
+    <h3 className="site-text-heading--large" id="archives">Archives</h3>
+    <ul className={pf('list--dotted')}>
+      <li><CTALink href="https://archive-2_0_3.lightningdesignsystem.com" eventType="SLDS-Archives">Version 2.0.3</CTALink></li>
+      <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
+      <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
+    </ul>
+
+    <h2 className="site-text-heading--large" id="ui-kit">Sketch UI Kit</h2>
+    <p>
+      A Sketch file of common design patterns.
+    </p>
+    <form action={'/assets/downloads/salesforce-lightning-design-system-ui-kit.zip'}>
+      <CTALink eventName="Download" eventType="uikit">
+        <button className={pf('button button--neutral')}>
+          Download the Sketch UI Kit
+        </button>
+      </CTALink>
+    </form>
+
     <h2 className="site-text-heading--large" id="unmanaged">Design System Unmanaged Package</h2>
-    <p>The unmanaged package has been deprecated.</p>
-    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments.</p>
-    <p>There <strong>are</strong> still cases where you will need to use a static resource. Current examples are — within Visualforce, when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
+    <p><strong>The unmanaged package has been deprecated.</strong></p>
+    <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application, as well as when extending the SLDS template when building a standalone Lightning Application (my.app), in LC4VF, or in a component that will be used via Lightning Out. It is no longer necessary to add a static resource for Lightning Components running within these environments. Please see <a href="/platforms/lightning/">the Lightning page</a> for more information on extending the template.</p>
+    <p>There <strong>are</strong> still cases where you will need to use a static resource — specifically, within Visualforce. In this case, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>.</p>
 
     <h2 className="site-text-heading--large" id="icons">Icons</h2>
     <p>
@@ -98,7 +119,7 @@ bower install salesforce-lightning-design-system --save
 
     <h2 className="site-text-heading--large" id="design-tokens">Design Tokens</h2>
     <p>
-      <CTALink href="/tokens" eventType="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
+      <CTALink href="/design-tokens" eventType="design-tokens-link-click">Design Tokens</CTALink> are available in multiple
       formats depending on which technology your application uses. For
       web-based applications, you can use our tokens
       as <CTALink href="http://alistapart.com/article/getting-started-with-sass#section4" eventType="alistapart-link-click">variables</CTALink> through
@@ -109,6 +130,10 @@ bower install salesforce-lightning-design-system --save
     <p>
       For native applications, our tokens are available in XML and JSON
       formats for the Android and iOS platforms, respectively.
+    </p>
+    <p>
+      Using Lightning Components? Read the Developer Guide
+      on <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm">Styling with Design Tokens</a>.
     </p>
     <div className={pf('grid wrap')}>
 
@@ -200,12 +225,5 @@ bower install salesforce-lightning-design-system --save
         </form>
       </div>
     </div>
-
-    <h2 className="site-text-heading--large" id="archives">Archives</h2>
-    <ul className={pf('list--dotted')}>
-      <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
-      <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>
-    </ul>
-
   </PageBody>
 );

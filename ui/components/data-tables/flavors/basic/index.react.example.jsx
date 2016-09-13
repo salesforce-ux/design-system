@@ -10,8 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -25,7 +23,7 @@ let Table = props =>
   </table>;
 
 let HeadRowData = props =>
-  <tr className={pf('text-heading--label')}>
+  <tr className={pf('text-title--caps')}>
     <th scope="col"><div className={pf('truncate')} title="Opportunity Name">Opportunity Name</div></th>
     <th scope="col"><div className={pf('truncate')} title="Account Name">Account Name</div></th>
     <th scope="col"><div className={pf('truncate')} title="Close Date">Close Date</div></th>
@@ -85,6 +83,20 @@ export let states = [
     label: 'With no row hovers',
     element:
       <Table className={pf('no-row-hover')}>
+        <thead>
+          <HeadRowData />
+        </thead>
+        <tbody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+        </tbody>
+      </Table>
+  },
+  {
+    id: 'data-table-vertical-borders',
+    label: 'With vertical borders',
+    element:
+      <Table className={pf('table--col-bordered')}>
         <thead>
           <HeadRowData />
         </thead>

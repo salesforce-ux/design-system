@@ -25,6 +25,7 @@ import runSequence from 'run-sequence';
 import url from 'url';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
+import express from 'express';
 
 import { pathToURL } from 'app_modules/util/string';
 
@@ -56,15 +57,22 @@ nconf
 const watchPaths = {
   sass: [
     'site/assets/styles/**/*.scss',
-    'ui/**/*.scss'
+    'ui/**/*.scss',
+    'design-tokens/*.yml'
   ],
   pages: [
-    'ui/**/*.{md,yml}'
+    'ui/**/*.{md,yml}',
+    '!ui/**/tokens/*.yml'
   ],
   js: [
     'app_modules/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     'site/**/*.{js,jsx}'
+  ],
+  tokens: [
+    'ui/**/tokens/*.yml',
+    'design-tokens/**/*.yml',
+    '!design-tokens/components.yml'
   ]
 };
 
@@ -135,7 +143,7 @@ const siteMiddleware = (req, res, next) => {
       const log = SLDSLog();
       for (const category of ui) {
         for (const component of category.components) {
-          const pattern = new RegExp(_.escapeRegExp(pathToURL(component.path)));
+          const pattern = new RegExp(_.escapeRegExp(pathToURL(component.sitePath)));
           if (pattern.test(url)) {
             return generateComponentPages([component], err => {
               if (err) console.log(err.stack);
@@ -167,31 +175,41 @@ const siteMiddleware = (req, res, next) => {
   }
 };
 
-gulp.task('clean', del.bind(null, [
+gulp.task('clean', () => del.sync([
   __PATHS__.www,
   __PATHS__.generated,
   __PATHS__.tmp,
   __PATHS__.dist,
   __PATHS__.logs,
-  __PATHS__.build
+  __PATHS__.build,
+  path.join(__PATHS__.designTokens, 'dist')
 ]));
 
 gulp.task('serve', () => {
   const webpackConfig = getWebpackConfig();
   const webpackCompiler = webpack(webpackConfig);
+
+  // Use Express instead of Connect for BrowserSync
+  const app = express();
+
+  app.use(
+    webpackDevMiddleware(
+      webpackCompiler, {
+        publicPath: webpackConfig.output.publicPath,
+        quiet: nconf.get('webpack:quiet')
+      }
+    )
+  );
+  app.use(siteMiddleware);
+
+  // Show a different favicon during development
+  app.use('/favicons/*.png', (req, res, next) =>
+    res.redirect('/favicon-dev.png'));
+
   const browserSyncConfig = {
     server: {
       baseDir: __PATHS__.www,
-      middleware: [
-        // Serve /site pages on demand
-        siteMiddleware,
-        // Use webpackDevMiddleware instead of gulp.watch because webpack can figure out
-        // when dependencies have changed and then rebuild
-        webpackDevMiddleware(webpackCompiler, {
-          publicPath: webpackConfig.output.publicPath,
-          quiet: nconf.get('webpack:quiet')
-        })
-      ]
+      middleware: [app]
     },
     notify: false,
     open: nconf.get('browsersync:open'),
@@ -225,6 +243,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:components:imports', 'generate:tokens:ui']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(
@@ -243,12 +262,12 @@ gulp.task('serve', () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], 'serve',
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], 'serve',
   callback);
 });
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });

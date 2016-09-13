@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Lorem from 'react-lorem-component';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -34,14 +34,13 @@ export let Modal = props =>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className(pf('modal__header'), props.className)} {...props}>
-    <ButtonIcon className={pf('modal__close')}
-      flavor="icon-inverse"
-      iconFlavor="large"
-      sprite="action"
-      symbol="close"
-      assistiveText="Close">
-    </ButtonIcon>
+  <div className={className(pf('modal__header'), props.className)}>
+    { props.closeButton != 'false' ?
+      <ButtonIcon
+        className={pf('modal__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
+        symbol="close"
+        assistiveText="Close" /> : null }
     {props.children}
   </div>;
 

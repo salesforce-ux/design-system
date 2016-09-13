@@ -11,90 +11,55 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import className from 'classnames';
-import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0);" title="Jenna Davis">
-      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
+  <a className={pf('avatar avatar--circle avatar--medium')} href="javascript:void(0);" title="Jenna Davis">
+    <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+  </a>
 );
 
-let Publisher = props =>
+export let Publisher = props =>
   <MediaObject figureLeft={image} className={pf('comment hint-parent')}>
     <div className={className(pf('publisher publisher--comment'), props.className)}>
       <label htmlFor="comment-text-input-01" className={pf('assistive-text')}>Write a comment</label>
       <textarea id="comment-text-input-01" className={pf('publisher__input input--bare text-longform')} placeholder="Write a comment&hellip;" />
-      {props.children}
+      <div className={pf('publisher__actions grid grid--align-spread')}>
+        <ul className={pf('grid')}>
+          <li>
+            <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
+          </li>
+          <li>
+            <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
+          </li>
+        </ul>
+        <Button flavor="brand">Comment</Button>
+      </div>
     </div>
   </MediaObject>;
-
-let PublisherActions = props =>
-  <div className={pf('publisher__actions grid grid--align-spread')}>
-    <ul className={pf('grid')}>
-      <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="adduser"
-          assistiveText="Add User" />
-      </li>
-      <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="attach"
-          assistiveText="Attach a file" />
-      </li>
-    </ul>
-    <Button flavor="brand">Comment</Button>
-  </div>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
 ///////////////////////////////////////////
 
+// @todo - Need to find imports and delete this part
+
 export let Default = props =>
-  <Publisher>
-    <PublisherActions />
-  </Publisher>;
+  <Publisher />;
 
 let Active = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
+  <Publisher className={pf('is-active')} />;
 
 let ActiveFocus = props =>
-  <Demo>
-    <Publisher className={pf('is-active has-focus')}>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
+  <Publisher className={pf('is-active has-focus')} />;
 
-let Attachment = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <Attachments />
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -104,21 +69,16 @@ export let states = [
   {
     id: 'publisher-comment-default',
     label: 'Default',
-    element: <Default />
+    element: <Publisher />
   },
   {
     id: 'publisher-comment-active',
     label: 'Active',
-    element: <Active />
+    element: <Publisher className={pf('is-active')} />
   },
   {
     id: 'publisher-comment-active-focus',
     label: 'Focused',
-    element: <ActiveFocus />
-  },
-  {
-    id: 'publisher-comment-with-attachment',
-    label: 'With attachment(s)',
-    element: <Attachment />
+    element: <Publisher className={pf('is-active has-focus')} />
   }
 ];

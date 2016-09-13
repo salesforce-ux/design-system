@@ -26,9 +26,11 @@
   @import
 
     // Resets
+    'vendor/normalize',
     'core/core-ltng',
 
     // Framework
+    'touch/index',
     'components/index',
     'utilities/index',
 

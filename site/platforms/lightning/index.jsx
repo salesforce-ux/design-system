@@ -24,32 +24,76 @@ const lightningTutorialUrl = 'https://developer.salesforce.com/trailhead/project
 
 export default (
   <PageBody anchorTitle="Lightning Apps and Components" contentClassName={pf('container--large')}>
-
     <p className="site-text-introduction">
-      The {g.displayName} is ready to use in your Lightning apps and components.
+      The {g.displayName} is ready to use in your Lightning apps and
+      components. It is now automatically included for Lightning Components
+      running in the Lightning Experience and Salesforce S1 mobile application. It is no longer necessary to add a static resource for
+      Lightning Components running within these environments.
     </p>
 
-      <p>The Lightning Design System CSS is now automatically included for Lightning Components running in the Lightning Experience and Salesforce S1 mobile application (via app.css). It is no longer necessary to add a static resource for Lightning Components running within these environments.</p>
-      <p>There <strong>are</strong> still cases where you will need to use a static resource with Lightning Components. Current examples are —  when building a standalone Lightning Application (my.app), or in a component that will be used via Lightning Out. In this case, you'll need to <a href="https://tools.lightningdesignsystem.com/css-customizer">create a customized scoped CSS file to use</a>.</p>
     <p>
-      We have prepared a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you through installation, usage, and examples. It includes details on how to use the Design System SVG spritemap icons in Lightning components.
+      Your <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/apps_intro.htm">Lightning Application</a> automatically get the Lightning Design System
+      stylesheets and design tokens if they extend <code>force:slds</code>.
+      This is the easiest way to stay up-to-date and consistent with SLDS
+      enhancements.</p>
+
+    <p>To extend <code>force:slds</code>, your application should look like this:</p>
+    <div className={pf('site-code--content scrollable--x')}>
+      <CodeBlock language="html">{`
+      <aura:application extends="force:slds">
+      <!-- customize your application here -->
+      </aura:application>
+      `}</CodeBlock>
+    </div>
+
+    <p><strong>Note:</strong> If you still need to use a static resource with the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.
     </p>
     <p>
-      Please note the following when using the Lightning Design System with Lightning components:
+      We have prepared
+      a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you
+      through installation, usage, and examples. It includes details on how to
+      use the Design System SVG spritemap icons in Lightning components.
     </p>
+
+    <p>
+      Please note the following when using the Lightning Design System with
+      Lightning components:
+    </p>
+
     <ul className={pf('list--dotted')}>
-      <li>When using the component sample code from the Trailhead module, be sure to replace all static resource paths with the Lightning resource URL syntax, as summarized in the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a></li>
       <li>
-        For details on how to use the Design System SVG spritemap icons in Lightning components, please review the <a href={lightningTutorialUrl}>tutorial</a> which covers this in detail.  Also note that when using SVG spritemap image icons with MSIE you will need to use a small script called <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a>
+        When using the component sample code from the Trailhead module, be
+        sure to replace all static resource paths with the Lightning resource
+        URL syntax, as summarized in
+        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (You should no longer need to link to the CSS portion of your static resource)
+      </li>
+
+      <li>
+        For details on how to use the Design System SVG spritemap icons in
+        Lightning components, please review
+        the <a href={lightningTutorialUrl}>tutorial</a> which covers this in
+        detail. Also note that when using SVG spritemap image icons with MSIE
+        you will need to use a small script
+        called <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a>
+      </li>
+
+      <li>
+        For details on how to use Design Tokens, read our documentation
+        on <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm">Styling with Design Tokens</a>.
+      </li>
+
+      <li>
+        You can also find a range of open-sourced sample components in
+        the <a href="https://github.com/ForceDotComLabs/sldsx">ForceDotComLabs/sldsx</a> project
+        on GitHub.
       </li>
     </ul>
 
     <p>
-      You can also find a range of open-sourced sample components in the <a href="https://github.com/ForceDotComLabs/sldsx">ForceDotComLabs/sldsx</a> project on github.
-    </p>
-    <p>
-      Finally, we’d love to hear your feedback. Share your thoughts about any aspect of this
-      tutorial or the {g.displayName} in general via our <a href="https://github.com/salesforce-ux/design-system/issues">GitHub issues</a>.
+      Finally, we’d love to hear your feedback. Share your thoughts about any
+      aspect of this
+      tutorial or the {g.displayName} in general via
+      our <a href="https://github.com/salesforce-ux/design-system/issues">GitHub issues</a>.
     </p>
   </PageBody>
 );

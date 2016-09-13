@@ -33,11 +33,13 @@ export default (
           href="https://github.com/salesforce-ux/design-system"
           className={pf('button button--neutral')}
           eventType="github-start">
-          <img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left')} alt="" />
+          <img src="/assets/images/social-github-icon-only.svg" className={pf('button__icon--large button__icon--left site-cta-buttons__icon')} alt="" />
           Star
         </CTALink>
       </p>
-      <p className={pf('site-releasenumber m-bottom--medium')}>Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink></p>
+      <p className={pf('site-releasenumber m-bottom--medium')}>
+        Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
+      </p>
     </header>
 
     <div className={pf('container--buffer container--x-large')}>

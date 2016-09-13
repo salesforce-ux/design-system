@@ -15,13 +15,9 @@
   &__title {
     font: {
       weight: $font-weight-regular;
-      size: $font-size-medium;
+      size: $font-size-large;
     }
     line-height: $line-height-heading;
-  }
-
-  .#{$css-prefix}text-body--small {
-    line-height: $line-height-reset;
   }
 
   @include mq-medium-min {

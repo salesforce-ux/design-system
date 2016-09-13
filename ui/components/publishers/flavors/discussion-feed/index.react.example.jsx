@@ -11,28 +11,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { Attachments } from 'ui/components/feeds/flavors/comment/index.react.example';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 const image = (
-  <div className={pf('avatar avatar--circle avatar--small')}>
-    <a href="javascript:void(0);" title="Jenna Davis">
-      <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
-    </a>
-  </div>
+  <a className={pf('avatar avatar--circle avatar--small')} href="javascript:void(0);" title="Jenna Davis">
+    <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+  </a>
 );
 
 let Publisher = props =>
@@ -50,48 +40,14 @@ let PublisherActions = props =>
   <div className={pf('publisher__actions grid grid--align-spread')}>
     <ul className={pf('grid publisher__toggle-visibility')}>
       <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="adduser"
-          assistiveText="Add User" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
       </li>
       <li>
-        <ButtonIcon
-          flavor="icon-container"
-          sprite="utility"
-          symbol="attach"
-          assistiveText="Attach a file" />
+        <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
       </li>
     </ul>
     <Button flavor="brand">Share</Button>
   </div>;
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <Publisher>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
-
-let Active = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
-
-let Attachment = props =>
-  <Demo>
-    <Publisher className={pf('is-active')}>
-      <Attachments />
-      <PublisherActions />
-    </Publisher>
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -101,16 +57,17 @@ export let states = [
   {
     id: 'publisher-feed-default',
     label: 'Default',
-    element: <Default />
+    element:
+    <Publisher>
+      <PublisherActions />
+    </Publisher>
   },
   {
     id: 'publisher-feed-active',
     label: 'Active',
-    element: <Active />
-  },
-  {
-    id: 'publisher-feed-with-attachment',
-    label: 'With attachment(s)',
-    element: <Attachment />
+    element:
+    <Publisher className={pf('is-active')}>
+      <PublisherActions />
+    </Publisher>
   }
 ];

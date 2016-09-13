@@ -37,7 +37,7 @@ let FormElementControl = props =>
   </div>;
 
 let Input = props =>
-  <input id="text-input-01" className={className(pf('input'), props.className)} type="text" placeholder="Placeholder Text" {...props} />;
+  <input id="text-input-01" className={className(pf('input'), props.className)} type={props.type || 'text'} placeholder="Placeholder Text" {...props} />;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -80,12 +80,12 @@ let IconLeftRight = props =>
     <FormElement>
       <FormElementLabel>Input Label</FormElementLabel>
       <FormElementControl className={pf('input-has-icon input-has-icon--left-right')}>
+        <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
+        <Input type="search" />
         <button className={pf('input__icon input__icon--right button button--icon')}>
           <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
           <span className={pf('assistive-text')}>Clear</span>
         </button>
-        <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
-        <Input />
       </FormElementControl>
     </FormElement>
   </Demo>;

@@ -36,51 +36,51 @@ export default (
     <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (3)</span></CardHeader>
     <CardBody>
       <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile col--padded grow-none size--1-of-1 small-size--1-of-2 medium-size--1-of-3 large-size--1-of-4')}>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
           <dl className={pf('dl--horizontal')}>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Type">Type:</p>
+              <span className={pf('truncate')} title="Type">Type:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="Visit">Visit</p>
+              <span className={pf('truncate')} title="Visit">Visit</span>
             </dd>
             <dt className={pf('dl--horizontal__label')}>
-              <p className={pf('truncate')} title="Date">Date:</p>
+              <span className={pf('truncate')} title="Date">Date:</span>
             </dt>
             <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <p className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</p>
+              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </TileMedia>

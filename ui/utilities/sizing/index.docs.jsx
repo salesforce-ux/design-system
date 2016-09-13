@@ -26,9 +26,9 @@ export const intro = (
 export default (
 <ComponentDocs>
   <p>Our sizing class names are set up in a human-readable format, e.g. <CodeClass className="size--1-of-2" />. This equates to a width of 50%.</p>
-  <p>By default, a group of sizing helpers are created based on standard grid column spans of &ndash;2, 3, 4, 5, 6, and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class <CodeClass className="size--1-of-3" /> on each element. This will make each card take up 33.333% of containing section.</p>
-  <p>Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. <CodeClass className="medium-size--1-of-3" /> you will output a width at the specified breakpoint name.
-  </p>
+  <p>By default, a group of sizing helpers are created based on standard grid column spans of &ndash; 2, 3, 4, 5, 6, 7, 8 and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class <CodeClass className="size--1-of-3" /> on each element. This will make each card take up 33.333% of containing section.</p>
+  <p>Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. <CodeClass className="medium-size--1-of-3" /> you will output a width at the specified breakpoint name.</p>
+  <p>Absolute sizing helpers are also available (where widths are declared in <code>rem</code> units): <code>xx-small</code>, <code>x-small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code> and <code>xx-large</code> as defined in the <a href="/design-tokens/#category-sizing">sizing category of the Design Tokens</a>. e.g. <CodeClass className="size--large" /></p>
   <p>
     In some uncommon cases, you may need a sizing helper that is up to a
     certain breakpoint. For these, use the classes prefixed

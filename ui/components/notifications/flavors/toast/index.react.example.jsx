@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -26,10 +26,8 @@ let Default = props =>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Info</span>
       <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="large"
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content')}>
@@ -45,10 +43,8 @@ let Success = props =>
     <div className={pf('notify notify--toast theme--success')} role="alert">
       <span className={pf('assistive-text')}>Success</span>
       <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="large"
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>
@@ -67,9 +63,8 @@ let Warning = props =>
     <div className={pf('notify notify--toast theme--warning')} role="alert">
       <span className={pf('assistive-text')}>Warning</span>
       <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="large"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content')}>
@@ -85,10 +80,8 @@ let ErrorToast = props =>
     <div className={pf('notify notify--toast theme--error')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="large"
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>
@@ -107,10 +100,8 @@ let ErrorWithDetails = props =>
     <div className={pf('notify notify--toast')} role="alert">
       <span className={pf('assistive-text')}>Error</span>
       <ButtonIcon
-        className={pf('notify__close')}
-        iconFlavor="large"
-        flavor="icon-inverse"
-        sprite="utility"
+        className={pf('notify__close button--icon-inverse')}
+        iconClassName={pf('button__icon--large')}
         symbol="close"
         assistiveText="Close" />
       <div className={pf('notify__content grid')}>

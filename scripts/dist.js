@@ -36,6 +36,10 @@ const isNpm = argv.npm === true;
 
 const MODULE_NAME = globals.moduleName;
 
+const myTest = function(foo) {
+  return foo;
+};
+
 ///////////////////////////////////////////////////////////////
 // Helpers
 ///////////////////////////////////////////////////////////////
@@ -69,7 +73,7 @@ async.series([
    */
   (done) => {
     gulp.src([
-      './README-dist.txt',
+      './README-dist.md',
       './package.json'
     ], {
       base: __PATHS__.root
@@ -87,8 +91,11 @@ async.series([
     packageJSON.name = '@salesforce-ux/design-system';
     delete packageJSON.scripts;
     delete packageJSON.dependencies;
-    delete packageJSON.gitDependencies;
     delete packageJSON.devDependencies;
+    delete packageJSON.optionalDependencies;
+    delete packageJSON.engines;
+    delete packageJSON.config;
+    delete packageJSON.slds;
     fs.writeFile(
       distPath('package.json'),
       JSON.stringify(packageJSON, null, 2),
@@ -179,7 +186,9 @@ async.series([
   (done) => {
     gulp.src([
       'assets/images/spinners/*',
-      'assets/images/avatar*'
+      'assets/images/avatar*',
+      // Used in the Global Header
+      'assets/images/logo-noname.svg'
     ], {
       base: 'site/assets/images',
       cwd: __PATHS__.site
@@ -222,37 +231,19 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Inline the design-tokens
+   * Move component design tokens
    */
   (done) => {
-    const pattern = /\'(.*?)\'(?=[,;])/g;
-    gulp.src(distPath('scss/_design-tokens.scss'))
-    .pipe(through.obj(function(file, enc, next) {
-      const newFile = file.clone();
-      let sassImports = [];
-      let contents = newFile.contents.toString();
-      let match;
-      // Collect the @import paths
-      while ((match = pattern.exec(contents)) !== null) {
-        sassImports.push(match[1]);
-      }
-      // Convert the array of paths to an array of file contents
-      sassImports = sassImports.map(i => {
-        return path.resolve(__dirname, '../node_modules', i);
-      }).filter(i => {
-        return fs.existsSync(i);
-      }).map(i => {
-        return fs.readFileSync(i).toString();
-      });
-      // Replace @import "dep/a", "dep/b"; with the inlined tokens
-      contents = contents.replace(/\@import[\s\S]*?;/, () => {
-        return sassImports.join('\n');
-      });
-      newFile.contents = new Buffer(contents);
-      next(null, newFile);
-    }))
-    .on('error', done)
-    .pipe(gulp.dest(distPath('scss')))
+    // Bundle everything in the npm package
+    // but only sources and Sass files in the zip
+    // because it would make the zip too large to be imported
+    // as a Static Resource in a Salesforce Org (limited to 5MB)
+    const src = isNpm ? '**/*.*' : ['**/*.yml', '**/*.scss'];
+    gulp.src(src, {
+      base: `${__PATHS__.designTokens}`,
+      cwd: `${__PATHS__.designTokens}`
+    })
+    .pipe(gulp.dest(distPath('design-tokens')))
     .on('error', done)
     .on('finish', done);
   },
@@ -334,7 +325,7 @@ async.series([
    * Add build date to README.txt
    */
   (done) => {
-    gulp.src(distPath('README-dist.txt'))
+    gulp.src(distPath('README-dist.md'))
     .pipe(gulprename('README.md'))
     .on('error', done)
     .pipe(gulpinsert.prepend(`# ${globals.displayName} \n# Version: ${process.env.SLDS_VERSION} \n`))
@@ -348,7 +339,7 @@ async.series([
    * Remove old README-dist
    */
   (done) => {
-    rimraf(distPath('README-dist.txt'), done);
+    rimraf(distPath('README-dist.md'), done);
   },
 
   /**

@@ -1,10 +1,6 @@
-status: 'prototype'
+status: 'dev-ready'
 flavors:
-  - base
   - record-home
+  - record-home-vertical
   - object-home
   - related-list
-dependencies:
-  - core/icons
-  - components/buttons
-  - components/button-group

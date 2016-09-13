@@ -113,13 +113,6 @@ export default React.createClass({
     return (
       <div className={pf('site-banner-badge grid')}>
         <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
-        <div className={pf('select_container col--bump-left align-middle')}>
-          <select
-            id="status-dropdown"
-            className={pf('select')}>
-            {options}
-          </select>
-        </div>
       </div>
     );
   },
@@ -189,7 +182,7 @@ export default React.createClass({
         'is-active': item.isActive,
         'is-closed': !item.isOpen && item.hasChildren
       });
-      const dataProps = {'data-slds-status': item.status};
+      const dataProps = {};
       if (item.hasChildren) {
         dataProps['data-slds-nav-children'] = true;
       }

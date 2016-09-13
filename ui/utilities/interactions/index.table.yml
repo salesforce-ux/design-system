@@ -13,3 +13,7 @@ classes:
     class: text-link--reset
     description: Makes links and buttons appear as regular text
     applied: <code>&lt;a&gt;</code> or <code>.{{cssPrefix}}button</code>
+  -
+    class: text-link
+    description: Makes text inside of <code>.{{cssPrefix}}text-link--reset</code> to appear as a link.
+    applied: any element

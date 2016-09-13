@@ -10,8 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
@@ -31,7 +29,7 @@ export default (
         <input id="form-help" className={pf('input')} type="text" placeholder="Field Level Help" aria-describedby="help" />
       </div>
     </div>
-    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1.5rem', width: '20rem'}}>
+    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}>
       <div className={pf('popover__body text-longform')}>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
       </div>

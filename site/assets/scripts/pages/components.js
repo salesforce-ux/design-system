@@ -11,50 +11,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import fastdom from 'fastdom';
 import Status from 'app_modules/site/util/component/status';
-import Prism from 'app_modules/site/vendor/prism';
 import svg4everybody from 'app_modules/site/vendor/svg4everybody';
+import { set as setPreference } from '../shared/preferences';
 
 import { $, setClassName } from '../framework/dom';
 import { updateScrollSpy } from '../shared/nav';
 
 /**
- * Return a string of highlighed HTML
- */
-const highlight = (() => {
-  // Remove wrapping tag if it has the ".demo-only" class in it
-  // Note: this will also remove other classes too on that tag! :)
-  const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
-  const cache = {};
-  return code => {
-    code = code.trim().replace(demoPattern, (match, tag, content) => content);
-    const lines = code.split('\n');
-    // If first line is empty, look at the second one instead
-    const firstLine = lines[0].length === 0 ? lines[1] : '';
-    // Figure out the number of spaces for that first line
-    const offsetMatch = firstLine.match(/^\s*/);
-    // How many spaces?
-    const offset = offsetMatch ? offsetMatch[0].length : 0;
-    const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-
-    let cached = cache[codeTrimmed];
-    if (cached) return cached;
-    cached = cache[codeTrimmed] = Prism.highlight(
-      codeTrimmed,
-      Prism.languages.markup
-    );
-    return cached;
-  };
-})();
-
-/**
  * Update a flavor's markup
  *
  * @param {string} flavor
- * @param {string} code
+ * @param {string} html
+ * @param {string} description
  */
-const updateComponentPreviewMarkup = ({ flavor, html }) => {
+const updateComponentPreview = ({ flavor, html, description }) => {
   fastdom.mutate(() => {
-    document.getElementById(`code-${flavor}`).innerHTML = highlight(html);
+    document.getElementById(`code-${flavor}`).innerHTML = html;
+    document.getElementById(`description-${flavor}`).innerHTML = description;
     updateScrollSpy();
   });
 };
@@ -114,6 +87,27 @@ const onHashChange = () => {
  */
 const updateComponentPreviewSVG = document => svg4everybody(document);
 
+// always show when developing local or a pr app
+const alwaysShowPrototypeForHref = href =>
+  href.match('localhost') || href.match(/pr-(\d+)/);
+
+const handleFlavorStatusChange = () => {
+
+  if (alwaysShowPrototypeForHref(window.location.href)) {
+    return setPreference('status', 'prototype');
+  }
+
+  // show if someone has a link
+  if (window.location.hash) {
+    const askedFlavorOrState = window.location.hash;
+    const section = $(`[data-slds-status="prototype"] ${askedFlavorOrState}`);
+
+    if (section.length > 0) {
+      setPreference('status', 'prototype');
+    }
+  }
+};
+
 /**
  * Called when a form factor tab is selected
  */
@@ -132,8 +126,8 @@ const updateFormFactor = ({tab, panel}) => {
 export default () => ({
   hooks: {
     listen_event: emitter => {
-      emitter.on('component:iframe:updatePreviewMarkup',
-        updateComponentPreviewMarkup);
+      emitter.on('component:iframe:updatePreview',
+        updateComponentPreview);
       emitter.on('component:iframe:updatePreviewHeight',
         updateComponentPreviewHeight);
       emitter.on('component:iframe:updatePreviewSVG',

@@ -44,19 +44,6 @@
     }
   }
 
-  // Selected Cell
-  td.#{$css-prefix}is-selected,
-  td.#{$css-prefix}is-selected:hover,
-  th.#{$css-prefix}is-selected,
-  th.#{$css-prefix}is-selected:hover {
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
-  }
-
-  // Deal with truncation
-  .#{$css-prefix}truncate {
-    max-width: $size-small;
-  }
-
   // By default, nowrap is applied
   .#{$css-prefix}cell-wrap {
     white-space: normal;
@@ -105,8 +92,8 @@
   }
 
   // Cells
-  td,
-  th {
+  tbody td,
+  tbody th {
     border-top: $border-width-thin solid $color-border;
   }
 
@@ -122,6 +109,17 @@
   &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th:not(.#{$css-prefix}is-selected) {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
                 $color-border 0 ($border-width-thin) 0 inset;
+  }
+}
+
+// Add column borders
+.#{$css-prefix}table--col-bordered {
+
+  td + td,
+  th + th,
+  th + td,
+  td + th {
+    border-left: $border-width-thin solid $color-border;
   }
 }
 
@@ -230,7 +228,7 @@ th.#{$css-prefix}is-sortable {
 
   &__divider {
     position: absolute;
-    left: 50%;
+    right: 0;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;
@@ -248,6 +246,10 @@ th.#{$css-prefix}is-sortable {
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
+
+  thead {
+    background-color: $color-background-alt;
+  }
 
   .#{$css-prefix}cell-shrink {
     width: $square-icon-large-boundary;

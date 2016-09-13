@@ -1,0 +1,48 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
+classes:
+  -
+    class: global-header_container
+    description: Container that fixes the global header to the top of the viewport, contains global header element
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: global-header
+    description: White bar that contains the regions of the global header
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: global-header__item
+    description: A region within the global header
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: global-header__item--search
+    description: Region that contains the search input, handles sizing
+    required: true
+    applied: <code>.{{cssPrefix}}global-header__item</code>
+  -
+    class: global-header__logo
+    description: Container of the global header logo
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: global-header__button--icon
+    description: Button icons on the global header
+    required: true
+    applied: <code>&lt;button&gt;</code>
+  -
+    class: global-header__button--icon-actions
+    description: Button icon specifically for global actions
+    required: true
+    applied: <code>&lt;button&gt;</code>
+    notes: This class adds styles to differentiate itself from the other icons
+  -
+    class: global-header__icon
+    description: Deal with sizing for global header icons
+    required: true
+    applied: <code>&lt;svg&gt;</code>
+  -
+    class: global-header__icon-actions
+    description: Deal with sizing for "global actions" icon on global header
+    equired: true
+    applied: <code>&lt;svg&gt;</code>

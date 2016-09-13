@@ -21,7 +21,7 @@
   }
 
   ::selection {
-    background: $color-background-highlight;
+    background: $color-background-selection;
     text-shadow: none;
     color: $color-text-default;
   }
@@ -112,7 +112,8 @@
   }
 
   mark {
-    background-color: $color-background-highlight;
+    background-color: $color-background-highlight-search;
+    color: $color-text-default;
   }
 
   abbr[title] {

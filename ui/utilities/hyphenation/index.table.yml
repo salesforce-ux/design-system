@@ -1,0 +1,7 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: hyphenate
+    description: Creates hyphenated text
+    applied: any element
+    notes: Hyphenation will occur at the parent width if a width is not specified

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -19,72 +19,18 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
-    {props.children}
-  </div>;
-
 export let Pill = props =>
   <span className={className(pf('pill'), props.className)}>
     {props.children}
     {props.unlinked ? <span className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
     : <a href="javascript:void(0);" className={pf('pill__label')} title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className={pf('pill__remove')} flavor="icon" sprite="utility" symbol="close" assistiveText="Remove" />
+    <ButtonIcon className={pf('button--icon pill__remove')} symbol="close" assistiveText="Remove" />
   </span>;
 
 export let PillContainer = props =>
   <div className={className(pf('pill_container'), props.className)}>
     {props.children}
   </div>;
-
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <Pill />
-  </Demo>;
-
-let Icon = props =>
-  <Demo>
-    <Pill>
-      <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-        <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-        <span className={pf('assistive-text')}>Account</span>
-      </span>
-    </Pill>
-  </Demo>;
-
-let Portrait = props =>
-  <Demo>
-    <Pill>
-      <span className={pf('pill__icon avatar avatar--circle')}>
-        <img src="/assets/images/avatar2.jpg" alt="" />
-      </span>
-    </Pill>
-  </Demo>;
-
-let Unlinked = props =>
-  <Demo>
-    <Pill unlinked />
-  </Demo>;
-
-let Truncated = props =>
-  <Demo style={{ width: '220px' }}>
-    <PillContainer>
-      <Pill label="Pill label that is longer than the area that contains it" />
-    </PillContainer>
-  </Demo>;
-
-let Container = props =>
-  <Demo>
-    <PillContainer>
-      <Pill />
-      <Pill />
-      <Pill />
-    </PillContainer>
-  </Demo>;
 
 ///////////////////////////////////////////
 // Export
@@ -94,31 +40,63 @@ export let states = [
   {
     id: 'pill',
     label: 'Default',
-    element: <Default />
+    element: <Pill />
   },
   {
     id: 'pill-with-icon',
     label: 'With icon',
-    element: <Icon />
+    element:
+      <Pill>
+        <span className={pf('icon_container icon-standard-account pill__icon_container')}>
+          <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
+          <span className={pf('assistive-text')}>Account</span>
+        </span>
+      </Pill>
   },
   {
     id: 'pill-with-portrait',
     label: 'With portrait',
-    element: <Portrait />
+    element:
+      <Pill>
+        <span className={pf('pill__icon avatar avatar--circle')}>
+          <img src="/assets/images/avatar2.jpg" alt="" />
+        </span>
+      </Pill>
   },
   {
     id: 'pill-unlinked',
     label: 'Unlinked',
-    element: <Unlinked />
+    element: <Pill unlinked />
   },
   {
     id: 'pill-truncated',
     label: 'Truncated',
-    element: <Truncated />
+    element:
+      <div className={pf('demo-only')} style={{ width: '220px' }}>
+        <PillContainer>
+          <Pill label="Pill label that is longer than the area that contains it" />
+        </PillContainer>
+      </div>
   },
   {
     id: 'pill-container',
     label: 'Pill with Container',
-    element: <Container />
+    element:
+      <PillContainer>
+        <Pill />
+        <Pill />
+        <Pill />
+      </PillContainer>
+  },
+  {
+    id: 'pill-error',
+    label: 'Error',
+    element:
+      <Pill className={pf('has-error')}>
+        <span className={pf('icon_container pill__icon_container m-left--xx-small')}>
+          <SvgIcon className={pf('icon-error icon--x-small icon-text-error')} sprite="utility" symbol="warning" />
+          <span className={pf('assistive-text')}>Warning</span>
+        </span>
+      </Pill>
   }
 ];

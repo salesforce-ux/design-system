@@ -13,10 +13,9 @@ import React from 'react';
 import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
-import StatefulClass from 'ui/components/lib/stateful.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -36,11 +35,11 @@ export default (
           <Button flavor="neutral">
             Add Contact
           </Button>
-          <div className={pf('button--last')}>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
             <ButtonIcon
-              flavor="icon-border-filled"
-              sprite="utility"
+              className={pf('button--icon-border-filled')}
               symbol="down"
+              aria-haspopup="true"
               assistiveText="More Actions" />
           </div>
         </div>
@@ -48,35 +47,32 @@ export default (
     </div>
     <div className={pf('grid')}>
       <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small page-header__info')}>10 items • sorted by name</p>
+        <p className={pf('text-body--small')}>10 items &bull; sorted by name</p>
       </div>
       <div className={pf('col no-flex grid align-bottom')}>
-        <Button flavor="icon-more" aria-haspopup="true">
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="table" />
-          <span className={pf('assistive-text')}>Table</span>
-          <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-        </Button>
-        <div className={pf('button-group')}>
-          <StatefulClass>
+        <div className={pf('dropdown-trigger dropdown-trigger--click')} aria-expanded="false">
           <ButtonIcon
-            flavor="icon-border"
-            sprite="utility"
+            className={pf('button--icon-more')}
+            symbol="table"
+            hasDropdown
+            assistiveText="Change view" />
+        </div>
+        <div className={pf('button-group m-left--xx-small')} role="group">
+          <ButtonIcon
+            className={pf('button--icon-border')}
             symbol="chart"
             assistiveText="Chart" />
-          </StatefulClass>
-          <StatefulClass>
           <ButtonIcon
-            flavor="icon-border"
-            sprite="utility"
+            className={pf('button--icon-border')}
             symbol="filterList"
             assistiveText="Filter List" />
-          </StatefulClass>
-          <Button flavor="icon-more">
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="sort" />
-            <span className={pf('assistive-text')}>Sort</span>
-            <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
-            <span className={pf('assistive-text')}>More</span>
-          </Button>
+          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')} aria-expanded="false">
+            <ButtonIcon
+              className={pf('button--icon-more')}
+              symbol="sort"
+              hasDropdown
+              assistiveText="Sort" />
+          </div>
         </div>
       </div>
     </div>

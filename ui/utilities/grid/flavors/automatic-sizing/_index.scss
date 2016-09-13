@@ -33,29 +33,43 @@
   }
 }
 
-.#{$css-prefix}col,
-// Catch all for col--padded variants
-[class*="#{$css-prefix}col--padded"] {
-  @include flex-item(expand);
-}
-
-.#{$css-prefix}col--padded {
-  padding: {
-    right: $spacing-small;
-    left: $spacing-small;
+@include deprecate('4.0.0', 'Use spacing utilities instead') {
+  .#{$css-prefix}col,
+  // Catch all for col--padded variants
+  [class*="#{$css-prefix}col--padded"] {
+    @include flex-item(expand);
   }
 
-  &-medium {
+  .#{$css-prefix}col--padded {
     padding: {
-      right: $spacing-medium;
-      left: $spacing-medium;
+      right: $spacing-small;
+      left: $spacing-small;
     }
-  }
 
-  &-large {
-    padding: {
-      right: $spacing-large;
-      left: $spacing-large;
+    &-medium {
+      padding: {
+        right: $spacing-medium;
+        left: $spacing-medium;
+      }
+    }
+
+    &-large {
+      padding: {
+        right: $spacing-large;
+        left: $spacing-large;
+      }
+    }
+
+    &-around {
+      padding: $spacing-small;
+    }
+
+    &-around-medium {
+      padding: $spacing-medium;
+    }
+
+    &-around-large {
+      padding: $spacing-large;
     }
   }
 }
@@ -165,13 +179,14 @@
 
 // New in 1.0.0
 // .slds-{size}-nowrap used for responsive design
-@each $size in map-keys($grid) {
-  $breakpoint: map-get(map-get($grid, $size), 'breakpoint');
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
   @each $key in $size {
     @media (min-width: #{pem($breakpoint)}) {
       .#{$css-prefix}#{$size}-nowrap {
-        @include flex-item(expand);
-        @include flex-wrap(false);
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        align-items: stretch;
       }
     }
   }

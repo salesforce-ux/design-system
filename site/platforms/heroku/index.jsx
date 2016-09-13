@@ -188,6 +188,7 @@ $ touch public/index.html
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
   </head>
@@ -219,7 +220,7 @@ console.log('Served: http://localhost:' + port);
 app.listen(port);
           `}</CodeBlock>
         </div>
-        <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm run start</code> as it will yield the same results.</p>
+        <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm start</code> as it will yield the same results.</p>
         <figure className={pf('large-size--2-of-2 order--1 large-order--2')}>
           <img className={pf('image tutorial-image')} src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
@@ -258,6 +259,7 @@ demo_slds_heroku/
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
@@ -299,6 +301,7 @@ demo_slds_heroku/
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
@@ -347,8 +350,8 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">E. Use the Activity Timeline Component</h3>
         <p>Swap the <code>H2</code> tags and its contents <code>Item One Content</code> with the markup from the example on the <a href="/components/activity-timeline#base" target="_blank">Activity Timeline component page</a>.</p>
 
-        <h3 className="site-text-heading--medium">F. Use the Card Component (Base)</h3>
-        <p>Swap the text <code>Card Component</code> with the markup from the example on the <a href="/components/cards#base" target="_blank">Card component page</a>.</p>
+        <h3 className="site-text-heading--medium">F. Use the Card Component (Related List With Table)</h3>
+        <p>Swap the text <code>Card Component</code> with the markup from the example on the <a href="/components/cards/#flavor-related-list-with-table" target="_blank">Card component page</a>.</p>
 
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
         <p>If you feel kind of cramped, check out the <a href="/components/utilities/spacing" target="_blank">Utilities</a> page for spacing classes.</p>
@@ -357,18 +360,6 @@ demo_slds_heroku/
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>
-        <p>Lets create a Heroku `Procfile` file. In the root of your <code>demo_slds_heroku/</code> project make a <code>Procfile</code> file.</p>
-        <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
-$ touch Procfile
-          `}</CodeBlock>
-        </div>
-        <p>The contents of your <code>Procfile</code> file (yes, no filetype!) should be the following:</p>
-        <div className={pf('site-code--content scrollable--x')}>
-          <CodeBlock language="bash">{`
-web: node server.js
-          `}</CodeBlock>
-        </div>
         <p>Log into your Heroku account.</p>
         <div className={pf('site-code--content scrollable--x')}>
           <CodeBlock language="bash">{`

@@ -4,5 +4,4 @@ flavors:
   - alert
   - toast
   - prompt
-  - prompt-for-touch
   - modal-toast

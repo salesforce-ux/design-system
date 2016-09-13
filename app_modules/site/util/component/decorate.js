@@ -9,18 +9,14 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import _ from 'lodash';
 import fs from 'fs';
-import jsYaml from 'js-yaml';
 import path from 'path';
+import _ from 'lodash';
+import yaml from 'js-yaml';
 import markdown from 'markdown-it';
+import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import globals from 'app_modules/global';
-
-const md = markdown({
-  html: true,
-  linkify: true
-});
 
 /**
  * Check of a directory has a file of a specified type
@@ -60,25 +56,14 @@ const getIndex = (dir, ext, success, error) =>
 const addInfo = component => {
   component.info = {};
 
-  const replaceGlobals = string =>
-    string.replace(/\{\{(\w+)\}\}/g, (match, p1) => {
-      return globals[p1] || p1;
-    });
-
   const getMarkdown = indexPath =>
-    md.render(replaceGlobals(fs.readFileSync(indexPath).toString()));
+    renderMarkdownAndReplaceGlobals(fs.readFileSync(indexPath).toString());
 
   const getYaml = indexPath =>
-    jsYaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
+    yaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
 
   getIndex(component.path, 'markup.md', indexPath => {
     component.info.markup = {
-      __html: getMarkdown(indexPath)
-    };
-  });
-
-  getIndex(component.path, 'table.md', indexPath => {
-    component.info.table = {
       __html: getMarkdown(indexPath)
     };
   });

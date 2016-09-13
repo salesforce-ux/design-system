@@ -11,55 +11,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import Prism from 'app_modules/site/vendor/prism';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { prefix as pf } from 'app_modules/ui/util/component';
 import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
+import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
+import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 
 import Heading from 'app_modules/site/components/page/heading';
 import JumpAnchor from 'app_modules/site/components/page/jump-anchor';
 import Tabs from 'ui/components/tabs/index.react';
 
-import globals from 'app_modules/global';
-import whitelistUtilities from '.generated/whitelist-utilities.js';
 
-/**
- * Custom Prism addition to the markup syntax that adds a "utility-class" class
- * to any attribute value tokens that are contained in whitelistUtilities
- */
-Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
-  .map(c => c.replace(/^\./, ''))
-  .map(c => `${globals.cssPrefix}${c}`)
-  .map(c => new RegExp(_.escapeRegExp(c)));
-
-// Remove wrapping tag if it has the ".demo-only" class in it
-// Note: this will also remove other classes too on that tag! :)
-const demoPattern = /^\<([a-z]*?)[\s\S]*?class\=\"[^"]*demo-only[^"]*\"[\s\S]*?\>([\s\S]*?)\<\/\1\>$/;
-
-/**
- * Highlight a string of text based on the language
- *
- * @param {string} code
- * @param {string} language
- * @returns {string}
- */
-function highlight(code, language) {
-  code = code.trim().replace(demoPattern, (match, tag, content) => content);
-  const lines = code.split('\n');
-  // If first line is empty, look at the second one instead
-  const firstLine = lines[0].length === 0 ? lines[1] : '';
-  // Figure out the number of spaces for that first line
-  const offsetMatch = firstLine.match(/^\s*/);
-  // How many spaces?
-  const offset = offsetMatch ? offsetMatch[0].length : 0;
-  const codeTrimmed = lines.map(line => line.slice(offset)).join('\n').trim();
-
-  return Prism.highlight(
-    codeTrimmed,
-    Prism.languages[language]
-  );
-}
 
 /**
  * Return a list of tab objects for the "preview" section
@@ -118,13 +81,19 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
+    const codeStyles = {};
+    const boxStyles = {};
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
-      statesIds = flavor.example.states.map(state => <JumpAnchor id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
+      statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
+
+    flavor.status === 'prototype' ? codeStyles.display = 'none' : boxStyles.display = 'none';
+
     return (
-      <section className={pf('m-bottom--xx-large p-top--x-large')} data-slds-status={flavor.status}>
+      <section
+        className={pf('m-bottom--xx-large p-top--x-large')} >
         <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
           {statesIds}
           {flavor.title}
@@ -137,12 +106,25 @@ class ComponentFlavor extends React.Component {
           <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
             {this.renderPreview()}
             <h3 className={pf('assistive-text')}>Code</h3>
-            {this.renderCode()}
+            {this.renderDesc()}
+            <div className="show-for-proto" style={boxStyles} data-slds-status={flavor.status}>
+              {this.renderBox()}
+            </div>
+            <div style={codeStyles} data-slds-status={flavor.status}>
+              {this.renderCode()}
+            </div>
             {this.renderInfo()}
           </div>
         </div>
-
       </section>
+    );
+  }
+
+  renderBox() {
+    return (
+      <div className={pf('box theme--default theme--alert-texture m-top--medium')}>
+        <p>Code will be available when this component reaches a Dev-Ready state.</p>
+      </div>
     );
   }
 
@@ -195,15 +177,20 @@ class ComponentFlavor extends React.Component {
   renderInfo() {
     const { flavor } = this.props;
 
-    if (flavor.info.markup) {
-      flavor.info.markup['__html'] = flavor.info.markup['__html'].replace(/<h3/g, '<h3 class="site-text-heading--medium"');
-    }
-
     return flavor.info.markup ? (
       <div
         className="slds-text-longform"
         dangerouslySetInnerHTML={flavor.info.markup} />
     ) : null;
+  }
+
+  renderDesc() {
+    const { flavor } = this.props;
+    const exampleDescriptionMarkup = renderMarkdownAndReplaceGlobals(flavor.exampleDescription);
+
+    return <div
+              id={`description-${flavor.uid}`}
+              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />;
   }
 
   renderPreview() {
@@ -284,7 +271,7 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const className = 'language-markup';
     const code = flavor.exampleMarkup
-      ? highlight(flavor.exampleMarkup, 'markup') : null;
+      ? highlightMarkup(flavor.exampleMarkup) : null;
     return (
       <div className={pf('site-code--content scrollable--x')}>
         <pre className={className}>

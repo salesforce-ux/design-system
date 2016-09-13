@@ -14,14 +14,14 @@
   bottom: 0;
   right: 0;
   padding: 0 $spacing-large;
-  height: 40px;
+  height: $height-docked-bar;
 }
 
 .#{$css-prefix}docked-composer {
   position: relative;
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   width: 480px;
-  height: 40px;
+  height: $height-docked-bar;
   float: left;
   box-shadow: $elevation-inverse-shadow-2;
   border: $border-width-thin solid $color-border {
@@ -32,27 +32,15 @@
     height: 480px;
   }
 
-  &:hover,
-  &:focus {
-
-    .#{$css-prefix}docked-composer__header {
-      background: $color-background-inverse;
-    }
-  }
-
   + .#{$css-prefix}docked-composer {
     margin-left: $spacing-large;
   }
 
   &__header {
-    background: $color-background-alt-inverse;
+    background: $color-background-docked-panel-header;
+    border-bottom: $border-width-thick solid $color-border-brand;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
-    padding: $spacing-x-small;
-    color: $color-text-inverse;
-
-    &:hover {
-      cursor: pointer;
-    }
+    padding: $spacing-x-small $spacing-small;
   }
 
   &__actions .#{$css-prefix}button {
@@ -60,10 +48,19 @@
   }
 
   &__body {
-    background: $color-background-alt;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  &__body--form {
+    justify-content: flex-start;
+    padding: $spacing-medium;
   }
 
   &__lead {
+    display: flex;
     background: $color-background-alt;
     padding: $spacing-medium $spacing-x-small;
   }
@@ -84,12 +81,14 @@
     padding: $spacing-medium;
     min-height: $size-xx-small;
     resize: none;
+    line-height: $line-height-text;
     overflow: hidden {
       y: auto;
     }
   }
 
   &__footer {
+    display: flex;
     background: $color-background;
     padding: $spacing-small $spacing-x-small;
     border-top: $border-width-thin solid $color-border;
@@ -100,53 +99,58 @@
     width: auto;
   }
 
-  &--overflow__pill {
+  &--overflow__button {
     display: flex;
+    background: $color-background-docked-panel-header;
     padding: 0 $spacing-small;
     height: inherit;
     white-space: nowrap;
     border: {
-      top: {
-        left-radius: $border-radius-medium;
-        right-radius: $border-radius-medium;
+      bottom: {
+        left-radius: 0;
+        right-radius: 0;
       }
-    }
-
-    &:hover,
-    &:focus {
-      color: $color-text-inverse;
-      text-decoration: none;
-    }
-
-    .#{$css-prefix}text-body--small {
-      color: $color-text-inverse;
-      margin-left: $spacing-x-small;
     }
   }
 
-  // Recording
-  &.#{$css-prefix}is-recording {
+  @include deprecate('4.0.0', 'Use docked-composer--overflow__button instead') {
+    &--overflow__pill {
+      display: flex;
+      padding: 0 $spacing-small;
+      height: inherit;
+      white-space: nowrap;
+      border: {
+        bottom: {
+          left-radius: $border-radius-medium;
+          right-radius: $border-radius-medium;
+        }
+      }
 
-    .#{$css-prefix}icon-record .#{$css-prefix}button__icon {
-      fill: $color-background-notification-badge;
+      &:hover,
+      &:focus {
+        color: $color-text-inverse;
+        text-decoration: none;
+      }
+
+      .#{$css-prefix}text-body--small {
+        color: $color-text-inverse;
+        margin-left: $spacing-x-small;
+      }
     }
   }
 }
 
 // Composer Modal
-.#{$css-prefix}docked-composer-modal .#{$css-prefix}docked-composer {
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  float: none;
-  border-radius: 0;
-  border: 0;
+.#{$css-prefix}docked-composer-modal {
 
-  &__header {
-    border-radius: 0;
+  .#{$css-prefix}modal__content {
+    flex: 1 1 0%;
+    border-radius: $border-radius-medium;
   }
 
-  &__body {
-    min-height: 260px;
+  .#{$css-prefix}docked-composer {
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 }

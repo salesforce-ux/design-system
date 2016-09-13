@@ -23,7 +23,7 @@ const headerActionOverflow = (
 );
 
 const headerAction = (
-  <button className={pf('button button--neutral col--bump-left')}>New</button>
+  <button className={pf('button button--neutral')}>New</button>
 );
 
 const headerSearch = (
@@ -44,8 +44,8 @@ export let Card = props =>
   </article>;
 
 export let CardHeader = props =>
-  <header className={className(pf('card__header grid'), props.className)}>
-    <div className={className(pf('media media--center has-flexi-truncate'), props.search ? pf('size--1-of-3') : null)}>
+  <div className={className(pf('card__header grid'), props.className)}>
+    <header className={className(pf('media media--center has-flexi-truncate'), props.search ? pf('size--1-of-3') : null)}>
       { props.symbol ?
         <div className={pf('media__figure')}>
           <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--small')} sprite="standard" symbol={ props.symbol } />
@@ -55,12 +55,12 @@ export let CardHeader = props =>
           <a href="javascript:void(0);" className={pf('text-link--reset')}>{ props.children }</a>
         </h2>
       </div>
-    </div>
+    </header>
     { props.search ? headerSearch : null }
     <div className={className(pf('no-flex'), props.search ? pf('size--1-of-3') : null)}>
       { props.actions == 'overflow' ? headerActionOverflow : headerAction }
     </div>
-  </header>;
+  </div>;
 
 export let CardBody = props =>
   <div className={className(pf('card__body'), props.className)}>

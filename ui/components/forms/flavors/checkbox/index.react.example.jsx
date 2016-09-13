@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -43,13 +44,20 @@ let FormElementControl = props =>
     {props.children}
   </div>;
 
-let Checkbox = props =>
-  <label className={pf('checkbox')}>
-    {props.children}
-    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('form-element__label')}>{props.label}</span>
-  </label>;
+export let Checkbox = props => {
+  const uniqueId = _.uniqueId('checkbox-');
+
+  return (
+    <span className={pf('checkbox')}>
+      {props.children}
+      <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
+      <label className={className(pf('checkbox__label'), props.className)} htmlFor={ props.id ? props.id : uniqueId }>
+        <span className={pf('checkbox--faux')}></span>
+        <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{props.label}</span>
+      </label>
+    </span>
+  );
+};
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -59,7 +67,16 @@ let Default = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" checked />
+      </FormElementControl>
+    </FormElement>
+  </Demo>;
+
+let Indeterminate = props =>
+  <Demo>
+    <FormElement>
+      <FormElementControl>
+        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -68,7 +85,7 @@ let Required = props =>
   <Demo>
     <FormElement className={pf('is-required')}>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
+        <Checkbox label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -77,9 +94,9 @@ let ErrorState = props =>
   <Demo>
     <FormElement className={pf('is-required has-error')}>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
+        <Checkbox label="Checkbox Label" errorId="error_01"><abbr className={pf('required')} title="required">*</abbr></Checkbox>
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -87,7 +104,7 @@ let Disabled = props =>
   <Demo>
     <FormElement>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" disabled />
+        <Checkbox label="Checkbox Label" disabled />
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -97,8 +114,8 @@ let Group = props =>
     <Fieldset>
       <Legend>Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
-        <Checkbox id="checkbox-02" label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" checked />
+        <Checkbox label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
   </Demo>;
@@ -108,8 +125,8 @@ let GroupRequired = props =>
     <Fieldset className={pf('is-required')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
-        <Checkbox id="checkbox-02" label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" checked />
+        <Checkbox label="Checkbox Label" />
       </FormElementControl>
     </Fieldset>
   </Demo>;
@@ -119,10 +136,10 @@ let GroupError = props =>
     <Fieldset className={pf('is-required has-error')}>
       <Legend><abbr className={pf('required')} title="required">*</abbr> Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" />
-        <Checkbox id="checkbox-02" label="Checkbox Label" />
+        <Checkbox errorId="error_01" label="Checkbox Label" checked />
+        <Checkbox errorId="error_01" label="Checkbox Label" />
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className={pf('form-element__help')} iref="form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 
@@ -131,8 +148,8 @@ let GroupDisabled = props =>
     <Fieldset>
       <Legend>Checkbox Group Label</Legend>
       <FormElementControl>
-        <Checkbox id="checkbox-01" label="Checkbox Label" disabled></Checkbox>
-        <Checkbox id="checkbox-02" label="Checkbox Label" disabled></Checkbox>
+        <Checkbox label="Checkbox Label" disabled></Checkbox>
+        <Checkbox label="Checkbox Label" disabled></Checkbox>
       </FormElementControl>
     </Fieldset>
   </Demo>;
@@ -146,6 +163,15 @@ export let states = [
     id: 'checkbox',
     label: 'Default',
     element: <Default />
+  },
+  {
+    id: 'checkbox-indeterminate',
+    label: 'Indeterminate',
+    element: <Indeterminate />,
+    script: `
+      var checkbox = document.getElementById('checkbox-indeterminate-01')
+      checkbox.indeterminate = true
+    `
   },
   {
     id: 'checkbox-required',

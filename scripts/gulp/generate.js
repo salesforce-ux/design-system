@@ -10,24 +10,34 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import gulp from 'gulp';
+import runSequence from 'run-sequence';
 
 import './generate-icons';
 import './generate-release-notes';
 import './generate-tokens-zip';
-import './generate-tokens';
 import './generate-cmps';
+import './generate-tokens-components';
+import './generate-tokens-ui';
+import './generate-ui-kit-zip';
 import './generate-ui';
 import './generate-examples';
 import './generate-whitelist';
 
-gulp.task('generate', [
-  'generate:icons',
-  'generate:release-notes',
-  'generate:tokens:zip',
-  'generate:tokens',
-  'generate:ui',
-  'generate:examples',
-  'generate:cmps',
-  'generate:whitelist',
-  'generate:whitelist-utilities'
-]);
+gulp.task('generate', callback =>
+  runSequence(
+    [
+      'generate:release-notes'
+    ],
+    [
+      'generate:icons',
+      'generate:tokens:zip',
+      'generate:tokens:ui',
+      'generate:ui-kit:zip',
+      'generate:ui',
+      'generate:whitelist',
+      'generate:whitelist-utilities'
+    ],
+    'generate:examples',
+    'generate:cmps',
+    callback)
+);

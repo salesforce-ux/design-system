@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -32,47 +32,48 @@ let Checkbox = props =>
   </label>;
 
 let HeadRowData = props =>
-  <tr className={pf('text-heading--label')}>
+  <tr className={pf('text-title--caps')}>
     <th className={pf('cell-shrink')} scope="col"><Checkbox label="Select All" checked={props.checked} /></th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Close Date">
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        Opportunity Name
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Account Name">
         Account Name
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Close Date">
         Close Date
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Stage">
         Stage
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Confidence">
         Confidence
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Amount">
         Amount
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('is-sortable')} scope="col">
       <div className={pf('truncate')} title="Contact">
         Contact
-        <ButtonIcon flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} symbol="arrowdown" assistiveText="Sort" />
       </div>
     </th>
     <th className={pf('cell-shrink')} scope="col"></th>
@@ -90,9 +91,8 @@ let RowData = props =>
     <td data-label="Contact"><div className={pf('truncate')} title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></td>
     <td className={pf('cell-shrink')} data-label="Actions">
       <ButtonIcon
-        flavor="icon-border-filled,icon-x-small"
-        iconFlavor="hint,small"
-        sprite="utility"
+        className={pf('button--icon-border-filled button--icon-x-small')}
+        iconClassName={pf('button__icon--hint button__icon--small')}
         symbol="down"
         assistiveText="Show More" />
     </td>

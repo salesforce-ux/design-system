@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
@@ -37,8 +37,8 @@ const ListIcon = (
 );
 
 export let Trigger = props =>
-  <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)} aria-expanded={ props.ariaExpanded || 'true' }>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon flavor="icon-border-filled" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+  <div className={className(pf('dropdown-trigger dropdown-trigger--click'), props.className)}>
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={pf('button--icon-border-filled')} symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 
@@ -53,12 +53,12 @@ export let MenuList = props =>
   </ul>;
 
 export let MenuItem = props =>
-  <li className={className(pf('dropdown__item'), props.className)} aria-selected={props.ariaSelected}>
-    <a href="javascript:void(0);" role="menuitem">
-      <p className={pf('truncate')}>
+  <li {...props} className={className(pf('dropdown__item'), props.className)} role="presentation">
+    <a href="javascript:void(0);" role={ props.isSelectable ? 'menuitemcheckbox' : 'menuitem' } aria-checked={props.isSelected} tabIndex={ props.tabIndex || '-1' }>
+      <span className={pf('truncate')}>
         { props.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }
         {props.children}
-      </p>
+      </span>
       { props.iconRight ? props.iconRight : null }
     </a>
   </li>;
@@ -72,10 +72,11 @@ let Default = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <MenuItem className={pf('has-divider--top-space')}>Menu Item Four</MenuItem>
+          <li className={pf('has-divider--top-space')} role="separator"></li>
+          <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </Trigger>
@@ -86,10 +87,11 @@ let Small = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <MenuItem className={pf('has-divider--top-space')}>Menu Item Four</MenuItem>
+          <li className={pf('has-divider--top-space')} role="separator"></li>
+          <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </Trigger>
@@ -100,10 +102,11 @@ let Medium = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--medium')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <MenuItem className={pf('has-divider--top-space')}>Menu Item Four</MenuItem>
+          <li className={pf('has-divider--top-space')} role="separator"></li>
+          <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </Trigger>
@@ -114,10 +117,11 @@ let Large = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--large')}>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <MenuItem className={pf('has-divider--top-space')}>Menu Item Four</MenuItem>
+          <li className={pf('has-divider--top-space')} role="separator"></li>
+          <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </Trigger>
@@ -127,17 +131,15 @@ let SubHeader = props =>
   <Demo style={{height: '260px'}}>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
-        <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
-        </div>
         <MenuList>
-          <MenuItem>Menu Item One</MenuItem>
+          <li className={pf('dropdown__header')} role="separator">
+            <span className={pf('text-title--caps')}>Menu Sub Heading</span>
+          </li>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
-        </MenuList>
-        <div className={pf('dropdown__header')}>
-          <span className={pf('text-heading--label')}>Menu Sub Heading</span>
-        </div>
-        <MenuList>
+          <li className={pf('dropdown__header')} role="separator">
+            <span className={pf('text-title--caps')}>Menu Sub Heading</span>
+          </li>
           <MenuItem>Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
         </MenuList>
@@ -150,7 +152,7 @@ let IconLeft = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList>
-          <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable>Menu Item One</MenuItem>
+          <MenuItem className={pf('is-selected')} isSelected="true" isSelectable tabIndex="0">Menu Item One</MenuItem>
           <MenuItem isSelectable>Menu Item Two</MenuItem>
           <MenuItem isSelectable>Menu Item Three</MenuItem>
         </MenuList>
@@ -163,7 +165,7 @@ let DoubleIcon = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList>
-          <MenuItem className={pf('is-selected')} ariaSelected="true" isSelectable iconRight={TableIcon}>Table View</MenuItem>
+          <MenuItem className={pf('is-selected')} isSelected="true" isSelectable iconRight={TableIcon} tabIndex="0">Table View</MenuItem>
           <MenuItem isSelectable iconRight={KanbanIcon}>Kanban Board</MenuItem>
           <MenuItem isSelectable iconRight={ListIcon}>List View</MenuItem>
         </MenuList>
@@ -176,7 +178,7 @@ let IconRight = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList>
-          <MenuItem iconRight={TableIcon}>Table View</MenuItem>
+          <MenuItem iconRight={TableIcon} tabIndex="0">Table View</MenuItem>
           <MenuItem iconRight={KanbanIcon}>Kanban Board</MenuItem>
           <MenuItem iconRight={ListIcon}>List View</MenuItem>
         </MenuList>

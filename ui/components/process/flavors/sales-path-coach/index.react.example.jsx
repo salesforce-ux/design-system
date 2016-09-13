@@ -11,10 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
 import className from 'classnames';
+import _ from 'lodash';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
@@ -37,10 +38,10 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small')} sprite="utility" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small')} symbol="chevrondown" assistiveText="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon flavor="icon-border-filled" className={pf('path__trigger no-flex m-horizontal--small flip--vertical')} sprite="utility" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon className={pf('button--icon-border-filled path__trigger no-flex m-horizontal--small flip--vertical')} symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
   <Button flavor="brand" className={className(pf('path__mark-complete no-flex m-horizontal--small'), props.className)}>
@@ -54,12 +55,16 @@ let Tabsmain = props =>
     </ul>
   </div>;
 
-let Tab = props =>
-  <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
-    <a className={pf('tabs--path__link')} id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
-      {props.children}
-    </a>
-  </li>;
+let Tab = props => {
+  const uniqueId = _.uniqueId('tabs-path-');
+  return (
+    <li className={className(pf('tabs--path__item'), props.className)} role="presentation">
+      <a className={pf('tabs--path__link')} id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+        {props.children}
+      </a>
+    </li>
+  );
+};
 
 let Coachcontent1 = props =>
   <div id="content-path-1" className={pf('tabs--path__content slds-hide')} role="tabpanel" aria-labelledby="tab-path-1">
@@ -76,7 +81,7 @@ let Coachcontent3 = props =>
     <div className={pf('grid grid--align-spread')}>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
+          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
           <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
@@ -89,7 +94,7 @@ let Coachcontent3 = props =>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
+        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
           <p>Regularly cross-sell related products using <a href="javascript:void(0);">cross-sell tactics and principles</a>.</p>
           <p>Prepare demo deck using the <a href="javascript:void(0);">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
@@ -104,7 +109,7 @@ let Coachcontent4 = props =>
     <div className={pf('grid grid--align-spread')}>
       <div className={pf('coach__keys size--1-of-2 m--left-x-large')}>
         <div className={pf('grid grid--align-spread')}>
-          <h2 className={pf('text-heading--label p-bottom--small')}>Key Fields This Stage</h2>
+          <h2 className={pf('text-title--caps p-bottom--small')}>Key Fields This Stage</h2>
           <span className={pf('text-body--small')}><a href="javascript:void(0);">Edit</a></span>
         </div>
         <dl className={pf('coach__list dl--horizontal')}>
@@ -117,7 +122,7 @@ let Coachcontent4 = props =>
         </dl>
       </div>
       <div className={pf('coach__guidance size--1-of-2 m-left--x-large')}>
-        <h2 className={pf('text-heading--label p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
+        <h2 className={pf('text-title--caps p-bottom--small has-divider--bottom')}>Guidance for Success</h2>
         <div className={pf('text-longform p-top--medium')}>
           <p>Check out the latest Negotiation and Review tactics on our <a href="javascript:void(0);">online portal here</a>.</p>
           <p>Review Quote with the Legal and Marketing team and be sure to approve with Exec.</p>

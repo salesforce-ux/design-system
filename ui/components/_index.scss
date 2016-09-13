@@ -26,7 +26,9 @@
   // Button
   'buttons/flavors/base/index',
   'buttons/flavors/stateful/index',
-  'buttons/flavors/icon/index',
+
+  // Button Icon
+  'button-icons/flavors/base/index',
 
   // Icons
   'icons/index',
@@ -35,6 +37,7 @@
 
   // Card
   'cards/index',
+  'cards/flavors/base-compact/index',
 
   // Forms
   'forms/index',
@@ -46,34 +49,41 @@
   'forms/flavors/checkbox-toggle/index',
   'forms/flavors/select/index',
   'forms/flavors/checkbox-alternate/index',
+  'forms/flavors/checkbox-add-button/index',
   'forms/flavors/multi-select/index',
-  'forms/flavors/edit-dialog-for-touch/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
   'forms/flavors/inline-form/index',
   'forms/flavors/compound-form/index',
+  'forms/flavors/docked-form-footer/index',
 
-  // Tooltip - This is deprecated
-  'tooltips/flavors/base/index',
+  // File selector
+  'file-selector/index',
 
   // Page Headers
   'page-headers/index',
   'page-headers/flavors/record-home/index',
+  'page-headers/flavors/record-home-vertical/index',
+  'page-headers/flavors/object-home/index',
 
   // Panels
   'panels/index',
+  'panels/flavors/filtering/index',
 
   // Popovers
   'popovers/index',
-  'popovers/flavors/tooltips/index',
   'popovers/flavors/panels/index',
   'popovers/flavors/nubbins/index',
 
+  // Tooltips
+  'tooltips/index',
+
   // Menus
   'menus/index',
-  'menus/flavors/picklist/index',
   'menus/flavors/action-overflow/index',
-  'menus/flavors/action-overflow-for-touch/index',
+
+  // Picklist
+  'picklist/index',
 
   // Datepicker
   'datepickers/index',
@@ -82,7 +92,16 @@
   // Docked Composer
   'docked-composer/index',
   'docked-composer/flavors/email/index',
-  'docked-composer/flavors/task/index',
+
+  // Docked Utility Bar
+  'docked-utility-bar/flavors/utility-bar/index',
+  'docked-utility-bar/flavors/utility-panel/index',
+
+  // Global Header
+  'global-header/flavors/base/index',
+
+  // Global Navigation
+  'global-navigation/index',
 
   // Publishers
   'publishers/index',
@@ -90,11 +109,16 @@
   'publishers/flavors/comment/index',
 
   // Discussion Feed
-  'feeds/flavors/discussion-feed/index',
+  'feeds/flavors/feed-list/index',
   'feeds/flavors/comment/index',
+  'feeds/flavors/post/index',
+  'feeds/flavors/post-with-attachments/index',
 
   // Modal
   'modals/index',
+
+  // App Launcher
+  'app-launcher/index',
 
   // Pills
   'pills/index',
@@ -118,10 +142,10 @@
   // Tabs
   'tabs/flavors/default/index',
   'tabs/flavors/scoped/index',
+  'tabs/flavors/scrolling/index',
 
   // Navigation
   'navigation/flavors/vertical/index',
-  'navigation/flavors/context-bar/index',
 
   // Notifications -- Toasts & Alerts
   'notifications/index',
@@ -134,10 +158,13 @@
 
   // Images
   'images/flavors/avatar/index',
+  'images/flavors/figure/index',
 
   // Tables
   'data-tables/index',
   'data-tables/flavors/responsive/index',
+  'data-tables/flavors/inline-edit/index',
+  'data-tables/flavors/fixed-header/index',
 
   // Tree (Order matters)
   'trees/flavors/base/index',

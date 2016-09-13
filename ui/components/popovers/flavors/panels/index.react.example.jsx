@@ -12,8 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import Button from 'ui/components/buttons/index.react';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 
@@ -45,15 +43,15 @@ export default (
     <div className={pf('popover__header')}>
 
       <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <a href="javascript:void(0);" className={pf('text-heading--medium')}>Tesla Motors</a>
+        <p className={pf('text-heading--medium hyphenate')}><a href="javascript:void(0);">Tesla Motors</a></p>
       </MediaObject>
 
       {/* Additional Info */}
       <div className={pf('grid wrap grid--pull-padded')}>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Billing Address</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Billing Address</p></dt>
             <dd>
               <p className={pf('truncate')}>3500 Deer Creek Rd.</p>
               <p className={pf('truncate')}>Palo Alto, CA 94304</p>
@@ -61,23 +59,23 @@ export default (
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Phone</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Phone</p></dt>
             <dd><a href="javascript:void(0);">212-345-3485</a></dd>
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Website</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Website</p></dt>
             <dd><a href="javascript:void(0);">teslamotors.com</a></dd>
           </dl>
         </div>
 
-        <div className={pf('col--padded size--1-of-2 p-bottom--x-small')}>
+        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
           <dl>
-            <dt><p className={pf('text-heading--label truncate')}>Account Owner</p></dt>
+            <dt><p className={pf('text-title--caps truncate')}>Account Owner</p></dt>
             <dd><a href="javascript:void(0);">Jeff Maguire</a></dd>
           </dl>
         </div>
@@ -88,7 +86,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <p className={pf('text-heading--small')}>Opportunities (2+)</p>
+            <p className={pf('text-heading--small hyphenate')}>Opportunities (2+)</p>
           </MediaObject>
         </dt>
         {/* Opportunity One */}
@@ -141,7 +139,7 @@ export default (
       <dl className={pf('popover__body-list')}>
         <dt className={pf('m-bottom--small')}>
           <MediaObject figureLeft={iconCases} flavor="center">
-            <p className={pf('text-heading--small')}>Cases (1)</p>
+            <p className={pf('text-heading--small hyphenate')}>Cases (1)</p>
           </MediaObject>
         </dt>
         {/* Case One */}

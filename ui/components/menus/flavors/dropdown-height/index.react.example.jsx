@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import ButtonIcon from 'ui/components/buttons/flavors/icon/index.react';
 import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
@@ -27,7 +26,7 @@ let Length5 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-5')}>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
           <MenuItem>Menu Item Four</MenuItem>
@@ -47,7 +46,7 @@ let Length7 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-7')}>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
           <MenuItem>Menu Item Four</MenuItem>
@@ -67,7 +66,7 @@ let Length10 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-10')}>
-          <MenuItem>Menu Item One</MenuItem>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
           <MenuItem>Menu Item Four</MenuItem>
@@ -87,7 +86,7 @@ let IconLength5 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-with-icon-5')}>
-          <MenuItem>
+          <MenuItem tabIndex="0">
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>
@@ -137,7 +136,7 @@ let IconLength7 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-with-icon-7')}>
-          <MenuItem>
+          <MenuItem tabIndex="0">
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>
@@ -187,7 +186,7 @@ let IconLength10 = props =>
     <Trigger className={pf('is-open')}>
       <Menu className={pf('dropdown--left dropdown--small')}>
         <MenuList className={pf('dropdown--length-with-icon-10')}>
-          <MenuItem>
+          <MenuItem tabIndex="0">
             <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>

@@ -36,12 +36,14 @@ let RadioGroup = props =>
   </div>;
 
 let Radio = props =>
-  <label className={className(pf('button radio--button'), props.className)} htmlFor={props.id}>
-    <input name="radio" type="radio" id={props.id} disabled={props.disabled} />
-    <span className={pf('radio--faux')}>
-      {props.children}
-    </span>
-  </label>;
+  <span className={className(pf('button radio--button'), props.className)}>
+    <input name="radio" type="radio" id={props.id} disabled={props.disabled} aria-describedby={props.errorId} />
+    <label className={pf('radio--button__label')} htmlFor={props.id}>
+      <span className={pf('radio--faux')}>
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -64,13 +66,13 @@ let StateB = props =>
   <Demo>
     <Fieldset className={pf('has-error')}>
       <RadioGroup>
-        <Radio id="monday">Mon</Radio>
-        <Radio id="tuesday">Tue</Radio>
-        <Radio id="wednesday">Wed</Radio>
-        <Radio id="thursday">Thu</Radio>
-        <Radio id="friday">Fri</Radio>
+        <Radio errorId="error_01" id="monday">Mon</Radio>
+        <Radio errorId="error_01" id="tuesday">Tue</Radio>
+        <Radio errorId="error_01" id="wednesday">Wed</Radio>
+        <Radio errorId="error_01" id="thursday">Thu</Radio>
+        <Radio errorId="error_01" id="friday">Fri</Radio>
       </RadioGroup>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id="error_01" className={pf('form-element__help')}>This field is required</div>
     </Fieldset>
   </Demo>;
 
@@ -99,12 +101,12 @@ export let states = [
   },
   {
     id: 'radio-group-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'radio-group-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

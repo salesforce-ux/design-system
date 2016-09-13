@@ -15,7 +15,7 @@
 ///
 /// @type String
 /// @access private
-$app-version: '2.0.3';
+$app-version: '2.2.0';
 
 /// Debug mode (uncomment to activate)
 /// Turn on to output deprecation warnings during development
@@ -43,27 +43,20 @@ $static-font-path: '../fonts/webfonts' !default;
 /// @type Boolean
 $slds-load-webfonts: true !default;
 
-/// Grid
+/// Breakpoints
 ///
 /// @type map
-$grid: (
-  'x-small': (
-    'breakpoint': $mq-x-small,
-    'columns': 4,
-  ),
-  'small': (
-    'breakpoint': $mq-small,
-    'columns': 8,
-  ),
-  'medium': (
-    'breakpoint': $mq-medium,
-    'columns': 12,
-  ),
-  'large': (
-    'breakpoint': $mq-large,
-    'columns': 12
-  )
+$breakpoints: (
+  'x-small': $mq-x-small,
+  'small': $mq-small,
+  'medium': $mq-medium,
+  'large': $mq-large
 ) !default;
+
+/// Grid Column Support
+///
+/// @type list
+$grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
 
 /// CSS Prefix
 /// Will prefix all CSS classes

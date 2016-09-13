@@ -19,31 +19,31 @@ export default (
         <li className={pf('wizard__item is-active')}>
           <a href="javascript:void(0);" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-heading--label truncate')}>Navigation</span>
+            <span className={pf('wizard__label text-title--caps truncate')}>Navigation</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
           <a href="javascript:void(0);" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-heading--label truncate')}>Actions</span>
+            <span className={pf('wizard__label text-title--caps truncate')}>Actions</span>
           </a>
         </li>
         <li className={pf('wizard__item is-active')}>
           <a href="javascript:void(0);" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-heading--label truncate')}>Compact Layout</span>
+            <span className={pf('wizard__label text-title--caps truncate')}>Compact Layout</span>
           </a>
         </li>
         <li className={pf('wizard__item')}>
           <a href="javascript:void(0);" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-heading--label truncate')}>Review</span>
+            <span className={pf('wizard__label text-title--caps truncate')}>Review</span>
           </a>
         </li>
         <li className={pf('wizard__item')}>
           <a href="javascript:void(0);" className={pf('wizard__link')}>
             <span className={pf('wizard__marker')}></span>
-            <span className={pf('wizard__label text-heading--label truncate')}>Invite</span>
+            <span className={pf('wizard__label text-title--caps truncate')}>Invite</span>
           </a>
         </li>
       </ol>

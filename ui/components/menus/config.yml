@@ -3,7 +3,4 @@ flavors:
   - dropdown
   - dropdown-positioning
   - dropdown-height
-  - picklist
-  - search-overflow
   - action-overflow
-  - action-overflow-for-touch

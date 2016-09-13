@@ -13,11 +13,15 @@ import gulp from 'gulp';
 import gulpIgnore from 'gulp-ignore';
 import gutil from 'gulp-util';
 import path from 'path';
+import async from 'async';
 import zip from 'gulp-zip';
 
 const zipTokens = (ext, name = ext) =>
   gulp
-    .src(path.resolve(__PATHS__.node_modules, `@salesforce-ux/design-tokens/dist/*.${ext}`))
+    .src([
+      path.resolve(__PATHS__.designTokens, `dist/*.${ext}`),
+      path.resolve(__PATHS__.generated, `design-tokens/**/*.${ext}`),
+    ])
     .pipe(gulpIgnore.exclude(/analytics|marketing/))
     .pipe(zip(`salesforce_design_tokens_${name}.zip`))
     .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads/design-tokens')));

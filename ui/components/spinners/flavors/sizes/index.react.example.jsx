@@ -10,17 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Spinner from 'ui/components/spinners/index.react';
 import className from 'classnames';
 import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
-// State Constructor(s)
+// Partials
 //////////////////////////////////////////////
 
-let Sizes = props =>
-  <div className="demo-only" style={{height: '6.25rem'}}>
-    <Spinner flavor="brand-small" className={pf('spinner--brand')} />
+let Demo = props =>
+  <div className={pf('demo-only')} style={{height: '6.25rem'}}>
+    {props.children}
+  </div>;
+
+let SpinnerContainer = props =>
+  <div className={pf('spinner_container')}>
+    {props.children}
+  </div>;
+
+let Spinner = props =>
+  <div role="alert" className={className(pf('spinner'), props.className)}>
+    <span className={pf('assistive-text')}>Loading</span>
+    <div className={pf('spinner__dot-a')}></div>
+    <div className={pf('spinner__dot-b')}></div>
   </div>;
 
 //////////////////////////////////////////////
@@ -29,8 +40,44 @@ let Sizes = props =>
 
 export let states = [
   {
+    id: 'x-small',
+    label: 'X-small',
+    description: 'The extra small spinner can be positioned over the end of an input to indicate loading.',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className={pf('spinner--x-small')} />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
     id: 'small',
     label: 'Small',
-    element: <Sizes />
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className={pf('spinner--small')} />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'medium',
+    label: 'Medium',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className={pf('spinner--medium')} />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'large',
+    label: 'Large',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className={pf('spinner--large')} />
+        </SpinnerContainer>
+      </Demo>
   }
 ];

@@ -18,12 +18,12 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={className(pf('demo-only'), props.className)} style={{height: '5rem'}}>
+  <div className={className(pf('demo-only'), props.className)} style={{height: '6rem'}}>
     {props.children}
   </div>;
 
 export let SpinnerContainer = props =>
-  <div className={pf('spinner_container')}>
+  <div className={className(pf('spinner_container'), props.className)}>
     {props.children}
   </div>;
 
@@ -41,32 +41,33 @@ export let Spinner = props =>
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
+    id: 'without-container',
+    label: 'Without Container',
+    description: 'A container is not required to use the spinner. Here, it is placed on a dark background to illustrate there is nothing there. The spinner will position itself to the closest positioned parent. So if you want it to spin over a single component, the class <code>.slds-is-relative</code> can be added to the parent.',
     element:
-      <Demo>
+    <Demo className={pf('demo--inverse')}>
+        <Spinner className={pf('spinner--medium')} />
+    </Demo>
+  },
+  {
+    id: 'with-container',
+    label: 'With Container',
+    description: 'Here, the regular spinner container is used making the dark background look lighter. The spinner container will position itself to the closest positioned parent. So if you want it to spin over a single component, the class <code>.slds-is-relative</code> can be added to the parent.',
+    element:
+      <Demo className={pf('demo--inverse')}>
         <SpinnerContainer>
           <Spinner className={pf('spinner--medium')} />
         </SpinnerContainer>
       </Demo>
   },
   {
-    id: 'brand',
-    label: 'Brand',
-    element:
-    <Demo>
-      <SpinnerContainer>
-        <Spinner className={pf('spinner--medium spinner--brand')} />
-      </SpinnerContainer>
-    </Demo>
-  },
-  {
-    id: 'inverse',
-    label: 'Inverse',
+    id: 'fixed-container',
+    label: 'Fixed Container',
+    description: 'The spinner container may be used with a container with fixed positioning by adding the <code>.slds-is-fixed</code> class to the container. This may be needed if you are dynamically loading portions of a component after the spinner is showing.',
     element:
     <Demo className={pf('demo--inverse')}>
-      <SpinnerContainer>
-        <Spinner className={pf('spinner--medium spinner--inverse')} />
+      <SpinnerContainer className={pf('is-fixed')}>
+        <Spinner className={pf('spinner--medium')} />
       </SpinnerContainer>
     </Demo>
   }

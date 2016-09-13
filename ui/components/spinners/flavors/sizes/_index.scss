@@ -10,7 +10,7 @@
 
 
 .#{$css-prefix}spinner--x-small {
-  width: 0.5rem;
+  width: 1rem;
 
   &.#{$css-prefix}spinner:before,
   &.#{$css-prefix}spinner:after,
@@ -18,8 +18,8 @@
   .#{$css-prefix}spinner__dot-b:before,
   .#{$css-prefix}spinner__dot-a:after,
   .#{$css-prefix}spinner__dot-b:after {
-    width: 0.125rem;
-    height: 0.125rem;
+    width: 0.25rem;
+    height: 0.25rem;
   }
 
   &.#{$css-prefix}spinner:before,

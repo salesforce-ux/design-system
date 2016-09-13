@@ -10,13 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only" style={{height: '225px'}}>
-  <div className={pf('dropdown dropdown--left datepicker--time')} aria-hidden="false" data-selection="time">
-    <ul className={pf('datepicker--time__list')}>
+  <div className="slds-dropdown slds-dropdown--left slds-datepicker--time" aria-hidden="false" data-selection="time">
+    <ul className="slds-datepicker--time__list">
       <li aria-selected="false">12:00am</li>
       <li aria-selected="false">12:30am</li>
       <li aria-selected="false">1:00am</li>

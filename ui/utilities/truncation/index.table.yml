@@ -1,12 +1,12 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: truncate
+    class: slds-truncate
     description: Creates truncated text
     applied: any element
     notes: Truncation will occur at the parent width if a width is not specified
   -
-    class: has-flexi-truncate
+    class: slds-has-flexi-truncate
     description: Allows truncation in nested flexbox containers
-    applied: <code>.{{cssPrefix}}col</code><br /><code>.{{cssPrefix}}col--padded</code>
-    notes: This class is placed on a parent element that contains a flexbox element containing <code>.{{cssPrefix}}truncate</code>. For example &mdash; for a media object that is nested in a grid column and contains truncation &mdash; the grid column would require this class.
+    applied: <code>.slds-col</code><br /><code>.slds-col--padded</code>
+    notes: This class is placed on a parent element that contains a flexbox element containing <code>.slds-truncate</code>. For example &mdash; for a media object that is nested in a grid column and contains truncation &mdash; the grid column would require this class.

@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -23,7 +22,7 @@ export let states = [
     label: 'No border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className={pf('button--icon-container')} />
+        <ButtonIcon className="slds-button--icon-container" />
       </div>
   },
   {
@@ -31,7 +30,7 @@ export let states = [
     label: 'With border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className={pf('button--icon-border')} />
+        <ButtonIcon className="slds-button--icon-border" />
       </div>
   },
   {
@@ -39,7 +38,7 @@ export let states = [
     label: 'Filled — with border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className={pf('button--icon-border-filled')} />
+        <ButtonIcon className="slds-button--icon-border-filled" />
       </div>
   },
   {
@@ -47,7 +46,7 @@ export let states = [
     label: 'Inverse - with border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon inverse className={pf('button--icon-border-inverse')} />
+        <ButtonIcon inverse className="slds-button--icon-border-inverse" />
       </div>
   }
 ];

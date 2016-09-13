@@ -14,7 +14,6 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -22,25 +21,25 @@ export let states = [
     label: 'Default',
     element:
     <div className="demo-only">
-      <span className={pf('assistive-text')}>Event</span>
+      <span className="slds-assistive-text">Event</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--event')} figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName={pf('timeline__icon')}>
-          <h3 className={pf('truncate')} title="Company One — EBC Meeting">
+        <MediaObject className="slds-media--timeline slds-timeline__media--event" figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName="slds-timeline__icon">
+          <h3 className="slds-truncate" title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
           </h3>
-          <p className={pf('truncate')}>Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
-          <ul className={pf('list--horizontal wrap')}>
-            <li className={pf('m-right--large')}>
-              <span className={pf('text-title')}>Time:</span>
-              <span className={pf('text-body--small')}><a href="javascript:void(0);">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
+          <p className="slds-truncate">Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
+          <ul className="slds-list--horizontal slds-wrap">
+            <li className="slds-m-right--large">
+              <span className="slds-text-title">Time:</span>
+              <span className="slds-text-body--small"><a href="javascript:void(0);">Feb 23, 2015 11:00am&ndash;12:00pm</a></span>
             </li>
-            <li className={pf('m-right--large')}>
-              <span className={pf('text-title')}>Location:</span>
-              <span className={pf('text-body--small')}><a href="javascript:void(0);">300 Pike St, San Francisco CA</a></span>
+            <li className="slds-m-right--large">
+              <span className="slds-text-title">Location:</span>
+              <span className="slds-text-body--small"><a href="javascript:void(0);">300 Pike St, San Francisco CA</a></span>
             </li>
-            <li className={pf('m-right--large')}>
-              <span className={pf('text-title')}>Name:</span>
-              <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a>, <a href="javascript:void(0);">Jason Dewar</a>, <a href="javascript:void(0);">Gwen Jones</a> and <a href="javascript:void(0);">Pete Schaffer</a></span>
+            <li className="slds-m-right--large">
+              <span className="slds-text-title">Name:</span>
+              <span className="slds-text-body--small"><a href="javascript:void(0);">Lei Chan</a>, <a href="javascript:void(0);">Jason Dewar</a>, <a href="javascript:void(0);">Gwen Jones</a> and <a href="javascript:void(0);">Pete Schaffer</a></span>
             </li>
           </ul>
         </MediaObject>

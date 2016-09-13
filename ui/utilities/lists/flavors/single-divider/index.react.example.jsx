@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -20,7 +19,7 @@ export let states = [
       <ul>
         <li>List Item</li>
         <li>List Item</li>
-        <li className={pf('has-divider--top')}>List Item</li>
+        <li className="slds-has-divider--top">List Item</li>
       </ul>
   },
   {
@@ -30,16 +29,16 @@ export let states = [
       <ul>
         <li>List Item</li>
         <li>List Item</li>
-        <li className={pf('has-divider--top-space')}>List Item</li>
+        <li className="slds-has-divider--top-space">List Item</li>
       </ul>
   },
   {
     id: 'divider-right',
     label: 'Right',
     element:
-      <ul className={pf('list--horizontal')}>
+      <ul className="slds-list--horizontal">
         <li>List Item</li>
-        <li className={pf('has-divider--right')}>List Item</li>
+        <li className="slds-has-divider--right">List Item</li>
         <li>List Item</li>
       </ul>
   },
@@ -50,7 +49,7 @@ export let states = [
       <ul>
         <li>List Item</li>
         <li>List Item</li>
-        <li className={pf('has-divider--bottom')}>List Item</li>
+        <li className="slds-has-divider--bottom">List Item</li>
       </ul>
   },
   {
@@ -60,16 +59,16 @@ export let states = [
       <ul>
         <li>List Item</li>
         <li>List Item</li>
-        <li className={pf('has-divider--bottom-space')}>List Item</li>
+        <li className="slds-has-divider--bottom-space">List Item</li>
       </ul>
   },
   {
     id: 'divider-left',
     label: 'Left',
     element:
-      <ul className={pf('list--horizontal')}>
+      <ul className="slds-list--horizontal">
         <li>List Item</li>
-        <li className={pf('has-divider--left')}>List Item</li>
+        <li className="slds-has-divider--left">List Item</li>
         <li>List Item</li>
       </ul>
   }

@@ -18,34 +18,33 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const image = (
-  <div className={pf('icon_container icon-standard-lead')}>
-    <SvgIcon className={pf('icon')} sprite="standard" symbol="lead" />
-    <span className={pf('assistive-text')}>Lead</span>
+  <div className="slds-icon_container slds-icon-standard-lead">
+    <SvgIcon className="slds-icon" sprite="standard" symbol="lead" />
+    <span className="slds-assistive-text">Lead</span>
   </div>
 );
 
 export default (
   <div className="demo-only" style={{width: '300px'}}>
     <div className="slds-page-header--vertical" role="banner">
-      <div className={pf('grid grid--vertical')}>
+      <div className="slds-grid slds-grid--vertical">
         <div>
-          <MediaObject flavor="center" figureLeft={image} className={pf('no-space has-divider--bottom-space')}>
-            <h1 className={pf('page-header__title align-middle')}>Record Title</h1>
+          <MediaObject flavor="center" figureLeft={image} className="slds-no-space slds-has-divider--bottom-space">
+            <h1 className="slds-page-header__title slds-align-middle">Record Title</h1>
           </MediaObject>
         </div>
-        <div className={pf('has-divider--bottom-space')}>
+        <div className="slds-has-divider--bottom-space">
           <StatefulClass>
-            <Button flavor="neutral" className={pf('not-selected')} aria-live="assertive">
-              <span className={pf('text-not-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="add" />Follow</span>
-              <span className={pf('text-selected')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="check" />Following</span>
-              <span className={pf('text-selected-focus')}><SvgIcon className={pf('button__icon--stateful button__icon--left')} sprite="utility" symbol="close" />Unfollow</span>
+            <Button flavor="neutral" className="slds-not-selected" aria-live="assertive">
+              <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
+              <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
+              <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
             </Button>
           </StatefulClass>
-          <div className={pf('button-group m-left--none m-top--x-small')} role="group">
+          <div className="slds-button-group slds-m-left--none slds-m-top--x-small" role="group">
             <Button flavor="neutral">
               Convert
             </Button>
@@ -55,9 +54,9 @@ export default (
             <Button flavor="neutral">
               Edit
             </Button>
-            <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
+            <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
               <ButtonIcon
-                className={pf('button--icon-border-filled')}
+                className="slds-button--icon-border-filled"
                 symbol="down"
                 aria-haspopup="true"
                 assistiveText="More Actions" />
@@ -65,52 +64,52 @@ export default (
           </div>
         </div>
       </div>
-      <ul className={pf('list--vertical-space-medium m-left--xx-small')}>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>Field 1</div>
-          <div className={pf('text-body--regular')} title="Description that demonstrates truncation with a long text field">
+      <ul className="slds-list--vertical-space-medium slds-m-left--xx-small">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">Field 1</div>
+          <div className="slds-text-body--regular" title="Description that demonstrates truncation with a long text field">
             Description that demonstrates a long text field and will eventually wrap.
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>Field 2</div>
-          <div className={pf('text-body--regular')} title="Hyperlink">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">Field 2</div>
+          <div className="slds-text-body--regular" title="Hyperlink">
             <a href="javascript:void(0);">Hyperlink</a>
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>Field 3</div>
-          <div className={pf('truncate')} title="Description">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">Field 3</div>
+          <div className="slds-truncate" title="Description">
             Description
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>
-            <button className={pf('slds-button slds-text-link--reset')} aria-haspopup="true">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">
+            <button className="slds-button slds-text-link--reset" aria-haspopup="true">
               Field 4 (3)
-              <SvgIcon className={pf('button__icon button__icon--small')} sprite="utility" symbol="down" />
+              <SvgIcon className="slds-button__icon slds-button__icon--small" sprite="utility" symbol="down" />
             </button>
           </div>
-          <div className={pf('text-body--regular')}>
+          <div className="slds-text-body--regular">
             <div>1 Market St</div>
             <div>San Francisco, CA 94105</div>
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>Field 5</div>
-          <div className={pf('text-body--regular')} title="Description">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">Field 5</div>
+          <div className="slds-text-body--regular" title="Description">
             Description
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title m-bottom--xx-small')}>Field 6</div>
-          <div className={pf('text-body--regular')} title="Description">
+        <li className="slds-item">
+          <div className="slds-text-title slds-m-bottom--xx-small">Field 6</div>
+          <div className="slds-text-body--regular" title="Description">
             Description
           </div>
         </li>
-        <li className={pf('item')}>
-          <div className={pf('text-title truncate m-bottom--xx-small')}>Field 7</div>
-          <div className={pf('text-body--regular')} title="Description">
+        <li className="slds-item">
+          <div className="slds-text-title slds-truncate slds-m-bottom--xx-small">Field 7</div>
+          <div className="slds-text-body--regular" title="Description">
             Description
           </div>
         </li>

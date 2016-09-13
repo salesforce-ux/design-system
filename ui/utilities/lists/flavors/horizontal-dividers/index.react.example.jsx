@@ -10,67 +10,66 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'horizontal-list-left',
     label: 'Left',
     element:
-      <ul className={pf('list--horizontal has-dividers--left')}>
-        <li className={pf('item')}>Horizontal List with dot dividers to the left</li>
-        <li className={pf('item')}>List Item</li>
-        <li className={pf('item')}>List Item</li>
+      <ul className="slds-list--horizontal slds-has-dividers--left">
+        <li className="slds-item">Horizontal List with dot dividers to the left</li>
+        <li className="slds-item">List Item</li>
+        <li className="slds-item">List Item</li>
       </ul>
   },
   {
     id: 'horizontal-list-link-left',
     label: 'Left with link',
     element:
-      <ul className={pf('list--horizontal has-dividers--left has-block-links')}>
-        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with block level links and dot dividers</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      <ul className="slds-list--horizontal slds-has-dividers--left slds-has-block-links">
+        <li className="slds-item"><a href="javascript:void(0);">Horizontal List with block level links and dot dividers</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
       </ul>
   },
   {
     id: 'horizontal-list-link-space-left',
     label: 'Left with link space',
     element:
-      <ul className={pf('list--horizontal has-dividers--left has-block-links--space')}>
-        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with block level links and dot dividers with space</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      <ul className="slds-list--horizontal slds-has-dividers--left slds-has-block-links--space">
+        <li className="slds-item"><a href="javascript:void(0);">Horizontal List with block level links and dot dividers with space</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
       </ul>
   },
   {
     id: 'horizontal-list-right',
     label: 'Right',
     element:
-      <ul className={pf('list--horizontal has-dividers--right')}>
-        <li className={pf('item')}>Horizontal List with dot dividers to the right</li>
-        <li className={pf('item')}>List Item</li>
-        <li className={pf('item')}>List Item</li>
+      <ul className="slds-list--horizontal slds-has-dividers--right">
+        <li className="slds-item">Horizontal List with dot dividers to the right</li>
+        <li className="slds-item">List Item</li>
+        <li className="slds-item">List Item</li>
       </ul>
   },
   {
     id: 'horizontal-list-link-right',
     label: 'Right with link',
     element:
-      <ul className={pf('list--horizontal has-dividers--right has-block-links')}>
-        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with block level links and dot dividers</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      <ul className="slds-list--horizontal slds-has-dividers--right slds-has-block-links">
+        <li className="slds-item"><a href="javascript:void(0);">Horizontal List with block level links and dot dividers</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
       </ul>
   },
   {
     id: 'horizontal-list-link-space-right',
     label: 'Right with link space',
     element:
-      <ul className={pf('list--horizontal has-dividers--right has-block-links--space')}>
-        <li className={pf('item')}><a href="javascript:void(0);">Horizontal List with block level links and dot dividers with space</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
-        <li className={pf('item')}><a href="javascript:void(0);">List Item</a></li>
+      <ul className="slds-list--horizontal slds-has-dividers--right slds-has-block-links--space">
+        <li className="slds-item"><a href="javascript:void(0);">Horizontal List with block level links and dot dividers with space</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
+        <li className="slds-item"><a href="javascript:void(0);">List Item</a></li>
       </ul>
   }
 ];

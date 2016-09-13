@@ -16,7 +16,6 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import ComponentFlavor from './flavor';
 import TableYAML from './table-yaml';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import { pathToURL } from 'app_modules/util/string';
 import classNames from 'classnames';
 
@@ -35,12 +34,12 @@ export default React.createClass({
           title={component.title}
           actions={this.renderComponentOverviewLink()}
           path={`/${component.sitePath}`} />
-        <div className={pf('site-content grid wrap large-nowrap')}>
+        <div className="site-content slds-grid slds-wrap slds-large-nowrap">
           {this.renderFlavorsNav()}
-          <div className={pf('site-main-content col col--rule-right size--1-of-1 large-size--5-of-6 large-order--1')}>
+          <div className="site-main-content slds-col slds-col--rule-right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
             {this.renderIntro()}
             {this.renderFlavors()}
-            <h3 id="overview" className={pf('site-text-heading--large p-top--x-large')}>Component Overview</h3>
+            <h3 id="overview" className="site-text-heading--large slds-p-top--x-large">Component Overview</h3>
             {this.renderDocs()}
             {this.renderInfoTable()}
           </div>
@@ -55,10 +54,10 @@ export default React.createClass({
         let states = null;
         if (flavor.example && _.isArray(flavor.example.states)) {
           states = (
-            <ul className={pf('site-states list--vertical')}>
+            <ul className="site-states slds-list--vertical">
               {flavor.example.states.map((state, index) => {
                 const className = classNames('list__name', {
-                  [pf('is-active')]: index === 0
+                  'slds-is-active': index === 0
                 });
                 return (
                   <li className={className} key={state.id}>
@@ -75,10 +74,10 @@ export default React.createClass({
           );
         }
         return (
-          <li className={pf('list__name site-states-parent')} key={flavor.uid}>
+          <li className="list__name site-states-parent" key={flavor.uid}>
             <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
-              { states ? <SvgIcon className={pf('icon icon-text-default icon__svg align-middle col--bump-left')} sprite="utility" symbol="down" /> : null }
+              { states ? <SvgIcon className="slds-icon slds-icon-text-default icon__svg slds-align-middle slds-col--bump-left" sprite="utility" symbol="down" /> : null }
             </a>
             {states}
           </li>
@@ -86,11 +85,11 @@ export default React.createClass({
       });
     return (
       <StickyNav>
-        <div className={pf('site-menu--jump-links')}>
+        <div className="site-menu--jump-links">
           <h3 className="site-text-heading--label docsearch-ignore">Variants & States</h3>
-          <ul className={pf('list--vertical has-block-links--space')}>
+          <ul className="slds-list--vertical slds-has-block-links--space">
             {flavors}
-            <li className={pf('has-divider--top p-top--xx-small')}><a className={pf('text-title--caps')} href="#overview">Documentation</a></li>
+            <li className="slds-has-divider--top slds-p-top--xx-small"><a className="slds-text-title--caps" href="#overview">Documentation</a></li>
           </ul>
         </div>
       </StickyNav>
@@ -109,8 +108,8 @@ export default React.createClass({
     let info = this.props.component.info;
     if (info.tableYaml) {
       return (
-        <div className={pf('align-middle')}>
-          <a className={pf('button button--inverse')} href="#overview">Component Overview</a>
+        <div className="slds-align-middle">
+          <a className="slds-button slds-button--inverse" href="#overview">Component Overview</a>
         </div>
       );
     } else {

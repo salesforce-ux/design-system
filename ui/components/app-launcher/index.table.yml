@@ -1,56 +1,56 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: app-launcher
+    class: slds-app-launcher
     description: Initializes app launcher modal
-    applied: <code>.{{cssPrefix}}modal</code>
+    applied: <code>.slds-modal</code>
     required: true
   -
-    class: app-launcher__header
+    class: slds-app-launcher__header
     description: Defines the header region of the app launcher modal
-    applied: <code>.{{cssPrefix}}modal__header</code>
+    applied: <code>.slds-modal__header</code>
     required: true
   -
-    class: app-launcher__header-search
+    class: slds-app-launcher__header-search
     description: Sets styles to search box, things like width and such
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: app-launcher__content
+    class: slds-app-launcher__content
     description: Defines the body region of the app launcher modal
-    applied: <code>.{{cssPrefix}}modal__content</code>
+    applied: <code>.slds-modal__content</code>
     required: true
   -
-    class: app-launcher__tile
+    class: slds-app-launcher__tile
     description: Tile cards that contains the app information, the icon and description
     applied: <code>&lt;a&gt;</code>
     required: true
   -
-    class: app-launcher__tile-figure
+    class: slds-app-launcher__tile-figure
     description: App image or icon
     appliled: <code>&lt;div&gt;</code>
     required: true
   -
-    class: app-launcher__tile-body
+    class: slds-app-launcher__tile-body
     description: App title and description
     appliled: <code>&lt;div&gt;</code>
     required: true
   -
-    class: app-launcher__tile--small
+    class: slds-app-launcher__tile--small
     description: Tile card that containes the just app icon and title
-    applied: <code>.{{cssPrefix}}app-launcher__tile</code>
+    applied: <code>.slds-app-launcher__tile</code>
     required: true
   -
-    class: app-launcher__tile-figure--small
+    class: slds-app-launcher__tile-figure--small
     description: App image or icon of a small tile
-    applied: <code>.{{cssPrefix}}app-launcher__tile-figure</code>
+    applied: <code>.slds-app-launcher__tile-figure</code>
     required: true
   -
-    class: app-launcher__tile-body--small
+    class: slds-app-launcher__tile-body--small
     description: App title, no description
-    applied: <code>.{{cssPrefix}}app-launcher__body</code>
+    applied: <code>.slds-app-launcher__body</code>
     required: true
   -
-    class: is-draggable
+    class: slds-is-draggable
     description: Add styles associated with drag and drop of a tile
-    appliled: <code>.{{cssPrefix}}app-launcher__tile</code>
+    appliled: <code>.slds-app-launcher__tile</code>

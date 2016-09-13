@@ -14,7 +14,6 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import StatefulClass from 'ui/components/lib/stateful.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -22,33 +21,33 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let TreeItem = props =>
-<div className={pf('tree__item')}>
+<div className="slds-tree__item">
   <ButtonIcon
     disabled
-    className={pf('button--icon m-right--x-small is-disabled')}
-    iconClassName={pf('button__icon--small')}
+    className="slds-button--icon slds-m-right--x-small slds-is-disabled"
+    iconClassName="slds-button__icon--small"
     symbol="chevronright"
     assistiveText="Toggle" />
-  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Item</a>
+  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Item</a>
   {props.children}
 </div>;
 
 let TreeBranch = props =>
-<div className={pf('tree__item')}>
+<div className="slds-tree__item">
   <ButtonIcon
     aria-controls={props.ariaControls}
-    className={pf('button--icon m-right--x-small')}
-    iconClassName="button__icon--small"
+    className="slds-button--icon slds-m-right--x-small"
+    iconClassName="slds-button__icon--small"
     symbol="chevronright"
     assistiveText="Toggle" />
   <a
     id={props.ariaControls + '__label'}
-    href="javascript:void(0);" tabIndex="-1" role="presentation" className={pf('truncate')}>Tree Branch</a>
+    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Branch</a>
 </div>;
 
 let Pill = props =>
-<span className={pf('pill shrink-none align-middle')}>
-  <span className={pf('pill__label')}>Label</span>
+<span className="slds-pill slds-shrink-none slds-align-middle">
+  <span className="slds-pill__label">Label</span>
 </span>;
 
 let AdditionalItems = props =>
@@ -56,7 +55,7 @@ let AdditionalItems = props =>
 
   <TreeBranch ariaControls="tree0-node1-1" />
 
-  <ul className={pf('is-expanded')} role="group" aria-labelledby="tree0-node1-1__label">
+  <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1__label">
 
     <li id="tree0-node1-1-0" role="treeitem" aria-level="3">
       <TreeItem />
@@ -70,7 +69,7 @@ let AdditionalItems = props =>
 
       <TreeBranch ariaControls="tree0-node1-1-2" />
 
-      <ul className={pf('is-collapsed')} role="group" aria-labelledby="tree0-node1-1-2__label">
+      <ul className="slds-is-collapsed" role="group" aria-labelledby="tree0-node1-1-2__label">
 
         <li id="tree0-node1-1-2-0" role="treeitem" aria-level="4">
           <TreeItem />
@@ -91,7 +90,7 @@ let AdditionalItems = props =>
 
       <TreeBranch ariaControls="tree0-node1-1-3" />
 
-      <ul className={pf('is-expanded')} role="group" aria-labelledby="tree0-node1-1-3__label">
+      <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1-3__label">
 
         <li id="tree0-node1-1-3-1" role="treeitem" aria-level="4">
           <TreeItem />
@@ -109,7 +108,7 @@ let AdditionalItems = props =>
 
           <TreeBranch ariaControls="tree0-node1-1-3-4" />
 
-          <ul className={pf('is-expanded')} role="group" aria-labelledby="tree0-node1-1-3-4__label">
+          <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1-3-4__label">
 
             <li id="tree0-node1-1-3-4-1" role="treeitem" aria-level="5">
               <TreeItem />
@@ -143,10 +142,10 @@ let AdditionalItems = props =>
 //////////////////////////////////////////////
 
 let Default = props =>
-<div className={pf('tree_container')} role="application">
-  <h4 className={pf('text-title--caps')} id="treeheading">Tree Group Header</h4>
+<div className="slds-tree_container" role="application">
+  <h4 className="slds-text-title--caps" id="treeheading">Tree Group Header</h4>
 
-  <ul className={pf('tree')} role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
+  <ul className="slds-tree" role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
 
     <li id="tree0-node0" role="treeitem" aria-level="1">
       <TreeItem>{props.itemContent}</TreeItem>
@@ -155,7 +154,7 @@ let Default = props =>
     <li id="tree0-node1" role="treeitem" aria-level="1" aria-expanded={props.isExpanded ? true : false}>
       <TreeBranch ariaControls="tree0-node1" />
 
-      <ul className={props.isExpanded ? pf('is-expanded') : pf('is-collapsed')} role="group" aria-labelledby="tree0-node1__label">
+      <ul className={props.isExpanded ? 'slds-is-expanded' : 'slds-is-collapsed'} role="group" aria-labelledby="tree0-node1__label">
 
         <li id="tree0-node1-0" role="treeitem" aria-level="2">
           <TreeItem />
@@ -167,7 +166,7 @@ let Default = props =>
     <li id="tree0-node2" role="treeitem" aria-level="1">
       <TreeBranch ariaControls="tree0-node2" />
 
-      <ul className={pf('is-collapsed')} role="group" aria-labelledby="tree0-node2__label">
+      <ul className="slds-is-collapsed" role="group" aria-labelledby="tree0-node2__label">
 
         <li id="tree0-node2-0" role="treeitem" aria-level="2">
           <TreeItem />

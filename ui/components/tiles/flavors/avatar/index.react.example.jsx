@@ -13,10 +13,9 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const avatar = (
-  <span className={pf('avatar avatar--circle avatar--small')}>
+  <span className="slds-avatar slds-avatar--circle slds-avatar--small">
     <img src="/assets/images/avatar2.jpg" alt="Person's name" />
   </span>
 );
@@ -32,9 +31,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="Lexee L. Jackson" media={ avatar }>
-          <ul className={pf('list--horizontal has-dividers--right')}>
-            <li className={pf('item')}>VP, Marketing</li>
-            <li className={pf('item')}>Decision Maker</li>
+          <ul className="slds-list--horizontal slds-has-dividers--right">
+            <li className="slds-item">VP, Marketing</li>
+            <li className="slds-item">Decision Maker</li>
           </ul>
         </TileMedia>
       </div>
@@ -45,9 +44,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="Lexee L. Jackson" media={ avatar } actions>
-          <ul className={pf('list--horizontal has-dividers--right')}>
-            <li className={pf('item')}>VP, Marketing</li>
-            <li className={pf('item')}>Decision Maker</li>
+          <ul className="slds-list--horizontal slds-has-dividers--right">
+            <li className="slds-item">VP, Marketing</li>
+            <li className="slds-item">Decision Maker</li>
           </ul>
         </TileMedia>
       </div>

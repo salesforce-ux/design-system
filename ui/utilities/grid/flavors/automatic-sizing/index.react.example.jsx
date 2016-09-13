@@ -10,43 +10,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'stretch',
     label: 'Column Stretch',
     element:
-      <div className={pf('grid')}>
-        <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-        <div className={pf('col')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      <div className="slds-grid">
+        <div className="slds-col"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
+        <div className="slds-col"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
       </div>
   },
   {
     id: 'stretch-gutters',
     label: 'Column Stretch w/ Gutters',
     element:
-      <div className={pf('grid grid--pull-padded-medium')}>
-        <div className={pf('col p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-        <div className={pf('col p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      <div className="slds-grid slds-grid--pull-padded-medium">
+        <div className="slds-col slds-p-horizontal--medium"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
+        <div className="slds-col slds-p-horizontal--medium"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
       </div>
   },
   {
     id: 'no-stretch',
     label: 'No Column Stretch',
     element:
-      <div className={pf('grid')}>
-        <div><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-        <div><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      <div className="slds-grid">
+        <div><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
+        <div><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
       </div>
   },
   {
     id: 'no-stretch-gutters',
     label: 'No Column Stretch w/ Gutters',
     element:
-      <div className={pf('grid grid--pull-padded-medium')}>
-        <div className={pf('p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
-        <div className={pf('p-horizontal--medium')}><div className={pf('box box--small theme--shade text-align--center')}>col</div></div>
+      <div className="slds-grid slds-grid--pull-padded-medium">
+        <div className="slds-p-horizontal--medium"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
+        <div className="slds-p-horizontal--medium"><div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">col</div></div>
       </div>
   }
 ];

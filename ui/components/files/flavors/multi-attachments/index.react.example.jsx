@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import className from 'classnames';
 import { Image } from 'ui/components/images/flavors/figure/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Export
@@ -23,20 +22,20 @@ export let states = [
     id: 'multi-attachments',
     label: 'Files',
     element:
-      <ul className={pf('grid grid--pull-padded')}>
-        <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+      <ul className="slds-grid slds-grid--pull-padded">
+        <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
           <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
+            className="slds-image--card"
+            cropClass="slds-image__crop--16-by-9"
+            titleClass="slds-image__title--card"
             symbol="image"
             image />
         </li>
-        <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+        <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
           <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
+            className="slds-image--card"
+            cropClass="slds-image__crop--16-by-9"
+            titleClass="slds-image__title--card"
             symbol="pdf" />
         </li>
       </ul>
@@ -45,27 +44,27 @@ export let states = [
     id: 'multi-attachments-overflow',
     label: 'With overflow',
     element:
-      <ul className={pf('grid grid--pull-padded')}>
-        <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+      <ul className="slds-grid slds-grid--pull-padded">
+        <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
           <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
+            className="slds-image--card"
+            cropClass="slds-image__crop--16-by-9"
+            titleClass="slds-image__title--card"
             symbol="image"
             image />
         </li>
-      <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3  medium-show')}>
+      <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3  slds-medium-show">
           <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--card')}
+            className="slds-image--card"
+            cropClass="slds-image__crop--16-by-9"
+            titleClass="slds-image__title--card"
             symbol="pdf" />
         </li>
-        <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+        <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
           <Image
-            className={pf('image--card')}
-            cropClass={pf('image__crop--16-by-9')}
-            titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+            className="slds-image--card"
+            cropClass="slds-image__crop--16-by-9"
+            titleClass="slds-image__title--overlay slds-align--absolute-center slds-text-heading--large"
             title="22+"
             image
             overlay />

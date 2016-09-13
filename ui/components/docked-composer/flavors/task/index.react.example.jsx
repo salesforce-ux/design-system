@@ -15,46 +15,45 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{ height: '500px' }}>
-    <DockedComposerPanel className={pf('is-open')} header="New Task" headerSymbol="task">
-      <DockedComposerPanelBody className={pf('docked-composer__body--form')}>
-        <fieldset className={pf('form--compound')}>
-          <legend className={pf('assistive-text')}>Log new task</legend>
-          <div className={pf('form-element__group')}>
-            <div className={pf('form-element__row')}>
-              <div className={pf('form-element')}>
-                <label className={pf('form-element__label')} htmlFor="text-input-01">Subject</label>
-                <div className={pf('form-element__control')}>
-                  <input className={pf('input')} type="text" id="text-input-01" />
+    <DockedComposerPanel className="slds-is-open" header="New Task" headerSymbol="task">
+      <DockedComposerPanelBody className="slds-docked-composer__body--form">
+        <fieldset className="slds-form--compound">
+          <legend className="slds-assistive-text">Log new task</legend>
+          <div className="form-element__group">
+            <div className="slds-form-element__row">
+              <div className="slds-form-element">
+                <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-01" />
                 </div>
               </div>
             </div>
-            <div className={pf('form-element__row')}>
-              <div className={pf('form-element size--1-of-2')}>
-                <label className={pf('form-element__label')} htmlFor="text-input-02">Assigned To</label>
-                <div className={pf('form-element__control')}>
-                  <input className={pf('input')} type="text" id="text-input-02" />
+            <div className="slds-form-element__row">
+              <div className="slds-form-element slds-size--1-of-2">
+                <label className="slds-form-element__label" htmlFor="text-input-02">Assigned To</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-02" />
                 </div>
               </div>
-              <div className={pf('form-element size--1-of-2')}>
-                <label className={pf('form-element__label')} htmlFor="text-input-03">Due Dates</label>
-                <div className={pf('form-element__control')}>
-                  <input className={pf('input')} type="text" id="text-input-03" />
+              <div className="slds-form-element slds-size--1-of-2">
+                <label className="slds-form-element__label" htmlFor="text-input-03">Due Dates</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-03" />
                 </div>
               </div>
             </div>
-            <div className={pf('form-element__row')}>
-              <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Leads" />
-              <Lookup className={pf('size--1-of-2')} polymorphic label="Name" placeholder="Search Accounts" />
+            <div className="slds-form-element__row">
+              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
+              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
             </div>
           </div>
         </fieldset>
       </DockedComposerPanelBody>
       <DockedComposerPanelFooter>
-        <Button className={pf('button--brand col--bump-left')}>Save</Button>
+        <Button className="slds-button--brand slds-col--bump-left">Save</Button>
       </DockedComposerPanelFooter>
     </DockedComposerPanel>
   </div>

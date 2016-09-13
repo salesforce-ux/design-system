@@ -13,37 +13,36 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const image = (
-  <a className={pf('avatar avatar--circle avatar--small')} href="javascript:void(0);" title="Jenna Davis">
+  <a className="slds-avatar slds-avatar--circle slds-avatar--small" href="javascript:void(0);" title="Jenna Davis">
     <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
   </a>
 );
 
 let Publisher = props =>
-  <div className={className(pf('publisher publisher--discussion'), props.className)}>
-    <dl className={pf('dl--inline m-bottom--small publisher__toggle-visibility')}>
-      <dt className={pf('dl--inline__label text-body--small')}>To: </dt>
-      <dd className={pf('dl--inline__detail')}>My Followers</dd>
+  <div className={className('slds-publisher slds-publisher--discussion', props.className)}>
+    <dl className="slds-dl--inline slds-m-bottom--small slds-publisher__toggle-visibility">
+      <dt className="slds-dl--inline__label slds-text-body--small">To: </dt>
+      <dd className="slds-dl--inline__detail">My Followers</dd>
     </dl>
-    <label htmlFor="comment-text-input2" className={pf('assistive-text')}>Write a comment</label>
-    <textarea id="comment-text-input2" className={pf('publisher__input textarea text-longform')} placeholder="Write a comment&hellip;" />
+    <label htmlFor="comment-text-input2" className="slds-assistive-text">Write a comment</label>
+    <textarea id="comment-text-input2" className="slds-publisher__input slds-textarea slds-text-longform" placeholder="Write a comment&hellip;" />
     {props.children}
   </div>;
 
 let PublisherActions = props =>
-  <div className={pf('publisher__actions grid grid--align-spread')}>
-    <ul className={pf('grid publisher__toggle-visibility')}>
+  <div className="slds-publisher__actions slds-grid slds-grid--align-spread">
+    <ul className="slds-grid slds-publisher__toggle-visibility">
       <li>
-        <ButtonIcon className={pf('button--icon-container')} symbol="adduser" assistiveText="Add User" />
+        <ButtonIcon className="slds-button--icon-container" symbol="adduser" assistiveText="Add User" />
       </li>
       <li>
-        <ButtonIcon className={pf('button--icon-container')} symbol="attach" assistiveText="Attach a file" />
+        <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" />
       </li>
     </ul>
     <Button flavor="brand">Share</Button>
@@ -66,7 +65,7 @@ export let states = [
     id: 'publisher-feed-active',
     label: 'Active',
     element:
-    <Publisher className={pf('is-active')}>
+    <Publisher className="slds-is-active">
       <PublisherActions />
     </Publisher>
   }

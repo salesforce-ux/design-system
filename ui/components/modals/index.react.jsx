@@ -30,7 +30,7 @@ class ModalFooter extends React.Component {
   }
 
   render() {
-    const className = this.$getClassNameWithFlavor(pf('modal__footer'));
+    const className = this.$getClassNameWithFlavor('slds-modal__footer');
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (
       <div { ...props } className={className}>
@@ -52,7 +52,7 @@ class ModalBody extends React.Component {
 
   render() {
     return (
-      <div { ...this.props } className={this.$getClassName(pf('modal__content'))}>
+      <div { ...this.props } className={this.$getClassName('slds-modal__content')}>
         { this.props.children }
       </div>
     );
@@ -67,11 +67,11 @@ class ModalHeader extends React.Component {
 
   render() {
     return (
-      <div { ...this.props } className={this.$getClassName(pf('modal__header'))}>
+      <div { ...this.props } className={this.$getClassName('slds-modal__header')}>
         { this.props.closeButton ?
             <ButtonIcon
-              className={pf('modal__close button--icon-inverse')}
-              iconClassName={pf('button__icon--large')}
+              className="slds-modal__close slds-button--icon-inverse"
+              iconClassName="slds-button__icon--large"
               symbol="close"
               assistiveText="Close" />
             : null
@@ -116,23 +116,23 @@ class Modal extends React.Component {
     return false;
   }
   render() {
-    const flavorName = this.$getClassNameWithFlavor(pf('modal'));
+    const flavorName = this.$getClassNameWithFlavor('slds-modal');
     const className = classNames(flavorName, {
       [`${cssPrefix}fade-in-open`]: this.props.isOpen && !this.props.edit,
       [`${cssPrefix}slide-up-open`]: this.props.isOpen && this.props.edit
     });
-    const classNameModalContainer = this.$getClassName(pf('modal__container'), {
+    const classNameModalContainer = this.$getClassName('slds-modal__container', {
       [`${cssPrefix}slide-up-saving`]: this.props.saving,
       [`${cssPrefix}slide-down-cancel`]: this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
     });
-    const classNameModalBackdrop = classNames(pf('backdrop'), {
+    const classNameModalBackdrop = classNames('slds-backdrop', {
       [`${cssPrefix}backdrop--open`]: this.props.isOpen
     });
     const role = this.props.role ? this.props.role : 'dialog';
     return (
       <AccessibleDialogContainer onEsc={this.onClick.bind(this)}>
         <div aria-hidden={!this.props.isOpen} aria-labelledby={this.props['aria-labelledby']} aria-describedby={this.props['aria-describedby']} role={role} className={className} onClick={ this.onClick.bind(this) }>
-          <ClassNameTransitionGroup transitionName={pf('modal__container')} timeout={100}>
+          <ClassNameTransitionGroup transitionName="slds-modal__container" timeout={100}>
             <div className={classNameModalContainer} role="document" id={this.props['aria-describedby']} tabIndex="0" onClick={ this.onContentClick.bind(this) } key="content">
               { this.props.children }
             </div>

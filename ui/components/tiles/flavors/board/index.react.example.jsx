@@ -12,34 +12,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{ width: '320px' }}>
-    <ul className={pf('has-dividers--around-space')}>
-      <li className={pf('item')}>
-        <Tile title="Anypoint Connectors" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$500,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company One</a></p>
-          <p className={pf('truncate')}>Closing 9/30/2015</p>
+    <ul className="slds-has-dividers--around-space">
+      <li className="slds-item">
+        <Tile title="Anypoint Connectors" className="slds-tile--board">
+          <p className="slds-text-heading--medium">$500,000</p>
+          <p className="slds-truncate"><a href="javascript:void(0);">Company One</a></p>
+          <p className="slds-truncate">Closing 9/30/2015</p>
         </Tile>
       </li>
-      <li className={pf('item')}>
-        <Tile title="Cloudhub" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$185,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company Two</a></p>
-          <p className={pf('truncate has-alert')}>Closing 12/15/2015</p>
-          <span className={pf('icon_container tile--board__icon')}>
-            <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-            <span className={pf('assistive-text')}>Warning Icon</span>
+      <li className="slds-item">
+        <Tile title="Cloudhub" className="slds-tile--board">
+          <p className="slds-text-heading--medium">$185,000</p>
+          <p className="slds-truncate"><a href="javascript:void(0);">Company Two</a></p>
+          <p className="slds-truncate slds-has-alert">Closing 12/15/2015</p>
+          <span className="slds-icon_container slds-tile--board__icon">
+            <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
+            <span className="slds-assistive-text">Warning Icon</span>
           </span>
         </Tile>
       </li>
-      <li className={pf('item')}>
-        <Tile title="600 Widgets" className={pf('tile--board')}>
-          <p className={pf('text-heading--medium')}>$35,000</p>
-          <p className={pf('truncate')}><a href="javascript:void(0);">Company Three</a></p>
-          <p className={pf('truncate')}>Closing 10/12/2015</p>
+      <li className="slds-item">
+        <Tile title="600 Widgets" className="slds-tile--board">
+          <p className="slds-text-heading--medium">$35,000</p>
+          <p className="slds-truncate"><a href="javascript:void(0);">Company Three</a></p>
+          <p className="slds-truncate">Closing 10/12/2015</p>
         </Tile>
       </li>
     </ul>

@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -21,7 +20,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className={pf('file-selector--images')} />
+        <FileSelector className="slds-file-selector--images" />
       </div>
   },
   {
@@ -29,7 +28,7 @@ export let states = [
     label: 'Error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className={pf('file-selector--images')} error />
+        <FileSelector className="slds-file-selector--images" error />
       </div>
   },
   {
@@ -37,7 +36,7 @@ export let states = [
     label: 'Dragover',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className={pf('file-selector--images')} draggover />
+        <FileSelector className="slds-file-selector--images" draggover />
       </div>
   },
   {
@@ -45,7 +44,7 @@ export let states = [
     label: 'Dragover with error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className={pf('file-selector--images')} draggoverError error />
+        <FileSelector className="slds-file-selector--images" draggoverError error />
       </div>
   }
 ];

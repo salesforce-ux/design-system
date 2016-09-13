@@ -12,15 +12,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Tabs from 'ui/components/tabs/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 export let Scroller = props =>
-  <div className={pf('tabs__nav-scroller has-overflow')}>
-    <div className={pf('tabs__nav-scroller--inner')}>
+  <div className="slds-tabs__nav-scroller slds-has-overflow">
+    <div className="slds-tabs__nav-scroller--inner">
       {props.children}
     </div>
   </div>;
@@ -62,8 +61,8 @@ export let states = [
             role="presentation"><a className="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabIndex="-1" aria-selected="false" aria-controls="tab-default-12" id="tab-default-12__item">Item Twelve</a></li>
         </ul>
         <div className="slds-tab__scroll-controls">
-          <ButtonIcon className={pf('button--icon-border')} symbol="chevronleft" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs left" />
-          <ButtonIcon className={pf('button--icon-border')} symbol="chevronright" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs right" />
+          <ButtonIcon className="slds-button--icon-border" symbol="chevronleft" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs left" />
+          <ButtonIcon className="slds-button--icon-border" symbol="chevronright" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs right" />
         </div>
       </Scroller>
       <div id="tab-default-1" className="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
@@ -111,8 +110,8 @@ export let states = [
             role="presentation"><a className="slds-tabs--scoped__link" href="javascript:void(0);" role="tab" tabIndex="-1" aria-selected="false" aria-controls="tab-scoped-12" id="tab-scoped-12__item">Item Twelve</a></li>
         </ul>
         <div className="slds-tab__scroll-controls">
-          <ButtonIcon className={pf('button--icon-border')} symbol="chevronleft" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs left" />
-          <ButtonIcon className={pf('button--icon-border')} symbol="chevronright" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs right" />
+          <ButtonIcon className="slds-button--icon-border" symbol="chevronleft" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs left" />
+          <ButtonIcon className="slds-button--icon-border" symbol="chevronright" aria-hidden="true" tabIndex="-1" assistiveText="Scroll tabs right" />
         </div>
       </Scroller>
       <div id="tab-scoped-1" className="slds-tabs--scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item">Item One Content</div>

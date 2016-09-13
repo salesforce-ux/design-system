@@ -16,43 +16,42 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Search = props =>
-  <div className={pf('p-vertical--x-small p-horizontal--large shrink-none theme--shade')}>
-    <label className={pf('assistive-text')} htmlFor="search-text-input-product">Search Products</label>
-    <div className={pf('size--1-of-1 m-bottom--x-small input-has-icon input-has-icon--left')}>
-      <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
-      <input id="search-text-input-product" className={pf('input')} type="search" placeholder="Search Products" />
+  <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
+    <label className="slds-assistive-text" htmlFor="search-text-input-product">Search Products</label>
+    <div className="slds-size--1-of-1 slds-m-bottom--x-small slds-input-has-icon slds-input-has-icon--left">
+      <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
+      <input id="search-text-input-product" className="slds-input" type="search" placeholder="Search Products" />
     </div>
-    <span className={pf('text-title')} aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
+    <span className="slds-text-title" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
   </div>;
 
 let Th = props =>
   <th {...props} aria-label={props.children}>
-    <a href="javascript:void(0);" className={pf('th__action text-link--reset')}>
-      <span className={pf('assistive-text')}>Sort Column</span>
-      <span className={pf('truncate')} title={props.children}>{props.children}</span>
-      <div className={pf('icon_container')} title="Sort Column">
-        <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+    <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
+      <span className="slds-assistive-text">Sort Column</span>
+      <span className="slds-truncate" title={props.children}>{props.children}</span>
+      <div className="slds-icon_container" title="Sort Column">
+        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
       </div>
     </a>
   </th>;
 
 let ProductList = props =>
-  <div className={pf('scrollable grow')}>
-    <table role="grid" className={pf('table table--fixed-layout table--bordered no-row-hover table--cell-buffer')}>
+  <div className="slds-scrollable slds-grow">
+    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
       <thead>
-        <tr className={pf('text-title--caps')} >
-          <th className={pf('cell-shrink')} scope="col"></th>
-          <Th className={pf('is-sortable')} scope="col">Name</Th>
-          <Th className={pf('is-sortable')} scope="col">Product Code</Th>
-          <Th className={pf('is-sortable')} scope="col">List Price</Th>
-          <Th className={pf('is-sortable')} scope="col">Product Family</Th>
+        <tr className="slds-text-title--caps" >
+          <th className="slds-cell-shrink" scope="col"></th>
+          <Th className="slds-is-sortable" scope="col">Name</Th>
+          <Th className="slds-is-sortable" scope="col">Product Code</Th>
+          <Th className="slds-is-sortable" scope="col">List Price</Th>
+          <Th className="slds-is-sortable" scope="col">Product Family</Th>
         </tr>
       </thead>
       <tbody>
@@ -71,72 +70,72 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className={pf('modal--large')}>
+        <Modal className="slds-modal--large">
           <ModalHeader>
-            <h2 className={pf('text-heading--medium')}>Add Products</h2>
-            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
           </ModalHeader>
-          <ModalContent className={pf('grid nowrap')}>
-            <div className={pf('col grid grid--vertical nowrap')}>
+          <ModalContent className="slds-grid slds-nowrap">
+            <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
               <Search />
               <ProductList>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family A">Family A</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family A">Family A</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="3460.00">3460.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="3460.00">3460.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2230.00">2230.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2230.00">2230.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="750.00">750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="750.00">750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>
           </ModalContent>
-          <ModalFooter className={pf('modal__footer--directional')}>
+          <ModalFooter className="slds-modal__footer--directional">
             <Button flavor="neutral">Cancel</Button>
             <Button flavor="neutral,brand">Next</Button>
           </ModalFooter>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   },
   {
@@ -144,72 +143,72 @@ export let states = [
     label: 'Items selected',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className={pf('modal--large')}>
+        <Modal className="slds-modal--large">
           <ModalHeader>
-            <h2 className={pf('text-heading--medium')}>Add Products</h2>
-            <p className={pf('m-top--x-small')}>Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
           </ModalHeader>
-          <ModalContent className={pf('grid nowrap')}>
-            <div className={pf('col grid grid--vertical nowrap')}>
+          <ModalContent className="slds-grid slds-nowrap">
+            <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
               <Search itemsSelected="2" />
               <ProductList>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family A">Family A</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,750.00">2,750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family A">Family A</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="MRKT">MRKT</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="3,460.00">3,460.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="3,460.00">3,460.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="SRVC">SRVC</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="2,230.00">2,230.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,230.00">2,230.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
                 <tr>
-                  <td className={pf('cell-shrink')} role="gridcell">
+                  <td className="slds-cell-shrink" role="gridcell">
                     <ButtonIcon
-                      className={pf('button--icon-border button--icon-small')}
+                      className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
                       assistiveText="Add Product" />
                   </td>
-                  <th scope="row" data-label="Name"><div className={pf('truncate')} title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className={pf('truncate')} title="CLASS">CLASS</div></td>
-                  <td data-label="List Price" role="gridcell"><div className={pf('truncate')} title="750.00">750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className={pf('truncate')} title="Family B">Family B</div></td>
+                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
+                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>
+                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="750.00">750.00</div></td>
+                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
                 </tr>
               </ProductList>
             </div>
           </ModalContent>
-          <ModalFooter className={pf('modal__footer--directional')}>
+          <ModalFooter className="slds-modal__footer--directional">
             <Button flavor="neutral">Cancel</Button>
             <Button flavor="neutral,brand">Next</Button>
           </ModalFooter>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   }
 ];

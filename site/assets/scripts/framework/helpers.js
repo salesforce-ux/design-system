@@ -15,16 +15,6 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import method from 'lodash/method';
 
 import globals from 'app_modules/global';
-import whitelistUtilities from '.generated/whitelist-utilities.js';
-
-/**
- * Custom Prism addition to the markup syntax that adds a "utility-class" class
- * to any attribute value tokens that are contained in whitelistUtilities
- */
-Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
-  .map(c => c.replace(/^\./, ''))
-  .map(c => `${globals.cssPrefix}${c}`)
-  .map(c => new RegExp(escapeRegExp(c)));
 
 /**
  * Re-export gloabals

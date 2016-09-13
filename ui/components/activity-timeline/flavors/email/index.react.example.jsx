@@ -14,7 +14,6 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -22,21 +21,21 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only">
-        <span className={pf('assistive-text')}>Email</span>
+        <span className="slds-assistive-text">Email</span>
         <MediaObject figureRight={ <TimelineActions /> }>
-          <MediaObject className={pf('media--timeline timeline__media--email')} figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName={pf('timeline__icon')}>
-            <h3 className={pf('truncate')} title="Mobile conversation on Monday">
+          <MediaObject className="slds-media--timeline slds-timeline__media--email" figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName="slds-timeline__icon">
+            <h3 className="slds-truncate" title="Mobile conversation on Monday">
               <a href="javascript:void(0);">Mobile conversation on Monday</a>
             </h3>
-            <p className={pf('truncate')}>Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
-            <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('truncate_container--50 m-right--large grid')}>
-                <span className={pf('text-title')}>To:</span>
-                <span className={pf('text-body--small m-left--xx-small truncate')}><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className={pf('no-flex text-body--small')}> + 44 more</span>
+            <p className="slds-truncate">Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it&rsquo;s truncated.</p>
+            <ul className="slds-list--horizontal slds-wrap">
+              <li className="slds-truncate_container--50 slds-m-right--large slds-grid">
+                <span className="slds-text-title">To:</span>
+                <span className="slds-text-body--small slds-m-left--xx-small slds-truncate"><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className="slds-no-flex slds-text-body--small"> + 44 more</span>
               </li>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>From:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Jason Dewar</a></span>
+              <li className="slds-m-right--large">
+                <span className="slds-text-title">From:</span>
+                <span className="slds-text-body--small"><a href="javascript:void(0);">Jason Dewar</a></span>
               </li>
             </ul>
           </MediaObject>

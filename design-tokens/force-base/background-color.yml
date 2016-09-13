@@ -62,6 +62,9 @@ props:
   COLOR_BACKGROUND_INDICATOR_DOT:
     value: '{!BISCAY}'
     comment: Color of the indicator dot.
+  COLOR_BACKGROUND_SPINNER_DOT:
+    value: '{!CASPER}'
+    comment: Color of the spinner dot.
   COLOR_BACKGROUND_MODAL:
     value: '{!WHITE}'
     comment: Standard modal header

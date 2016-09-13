@@ -73,12 +73,12 @@ export default (
   <ComponentDocs>
     <h2 className="site-text-heading--label">1.0. Building the Navigation Bar</h2>
     <NavigationBar showSections />
-    <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>  
+    <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>
     <ul>
       <li><strong>Primary,</strong> which contains the App Launcher and App Name</li>
       <li><strong>Secondary,</strong> which contains the App Items, for navigating within the current app</li>
       <li>And optionally, <strong>Tertiary,</strong> which includes Actions, for triggering actions specific to the current app.</li>
-    </ul> 
+    </ul>
     <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="slds-context-bar__primary" />. </p>
 
     <h2 className="site-text-heading--label">1.1. Items on the Navigation Bar</h2>

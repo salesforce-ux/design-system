@@ -132,7 +132,7 @@ class ComponentFlavor extends React.Component {
     const words = _.words(status).join(' ');
     const statusBadgeType = _.words(status).join('-');
     const className = classNames(
-      'badge slds-m-left--medium slds-shrink-none slds-align-middle',
+      'slds-badge slds-m-left--medium slds-shrink-none slds-align-middle',
       `badge--${statusBadgeType}`
     );
     return (

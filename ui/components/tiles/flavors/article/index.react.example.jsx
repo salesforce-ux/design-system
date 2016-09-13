@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -27,9 +26,9 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
-          <ul className={pf('list--horizontal has-dividers--right tile__meta')}>
-            <li className={pf('item')}>Breaking News</li>
-            <li className={pf('item')}>1 day ago</li>
+          <ul className="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+            <li className="slds-item">Breaking News</li>
+            <li className="slds-item">1 day ago</li>
           </ul>
         </Tile>
       </div>
@@ -41,19 +40,19 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>...an introduction for beginners about climbing ropes and how they can use...</p>
-          <ul className={pf('list--horizontal has-dividers--right m-top--xx-small')}>
-            <li className={pf('item')}>000001296</li>
-            <li className={pf('item')}>Published</li>
-            <li className={pf('item')}>How to Guide</li>
+          <ul className="slds-list--horizontal slds-has-dividers--right slds-m-top--xx-small">
+            <li className="slds-item">000001296</li>
+            <li className="slds-item">Published</li>
+            <li className="slds-item">How to Guide</li>
           </ul>
           <p>Last Modified: 1/14/16</p>
-          <ul className={pf('list--horizontal m-top--xx-small')}>
+          <ul className="slds-list--horizontal slds-m-top--xx-small">
             <li>
-              <button className={pf('button button--icon-border button--icon-x-small')}>
-                <SvgIcon className={pf('button__icon')} sprite="utility" symbol="like" />
-                <span className={pf('assistive-text')}>Upvote</span>
+              <button className="slds-button slds-button--icon-border slds-button--icon-x-small">
+                <SvgIcon className="slds-button__icon" sprite="utility" symbol="like" />
+                <span className="slds-assistive-text">Upvote</span>
               </button>
-              <span className={pf('align-middle')}>1320</span>
+              <span className="slds-align-middle">1320</span>
             </li>
           </ul>
         </Tile>

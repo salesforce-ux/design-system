@@ -11,11 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Spinner from 'ui/components/spinners/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only" style={{height: '3.75rem'}}>
-  <Spinner flavor="small" className={pf('spinner--brand')} />
+  <Spinner flavor="small" className="slds-spinner--brand" />
 </div>
 );

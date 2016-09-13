@@ -10,34 +10,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
   <div className="demo-only demo-container">
-    <div className={pf('grid wrap grid--pull-padded')}>
-      <div className={pf('p-horizontal--small size--1-of-1 p-bottom--large')}>
-        <div className={pf('box box--small theme--shade text-align--center')}>1</div>
+    <div className="slds-grid slds-wrap slds-grid--pull-padded">
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-p-bottom--large">
+        <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">1</div>
       </div>
-      <div className={pf('p-horizontal--small size--1-of-2 medium-size--5-of-6 large-size--8-of-12 p-bottom--large')}>
-        <div className={pf('box box--small theme--shade text-align--center')}>2</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--5-of-6 slds-large-size--8-of-12 slds-p-bottom--large">
+        <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">2</div>
       </div>
-      <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-6 large-size--4-of-12 p-bottom--large')}>
-        <div className={pf('box box--small theme--shade text-align--center')}>3</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-bottom--large">
+        <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">3</div>
       </div>
-      <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2 large-size--1-of-3 p-bottom--large')}>
-        <div className={pf('box box--small theme--shade text-align--center')}>4</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3 slds-p-bottom--large">
+        <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">4</div>
       </div>
-      <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2 large-size--1-of-3 p-bottom--large')}>
-        <div className={pf('box box--small theme--shade text-align--center')}>5</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3 slds-p-bottom--large">
+        <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">5</div>
       </div>
-      <div className={pf('p-horizontal--small size--1-of-1 large-size--1-of-3')}>
-        <div className={pf('grid wrap grid--pull-padded')}>
-          <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-1 large-size--1-of-2 p-bottom--large')}>
-            <div className={pf('box box--small theme--shade text-align--center')}>6</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-large-size--1-of-3">
+        <div className="slds-grid slds-wrap slds-grid--pull-padded">
+          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2 slds-p-bottom--large">
+            <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">6</div>
           </div>
-          <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-1 large-size--1-of-2 p-bottom--large')}>
-            <div className={pf('box box--small theme--shade text-align--center')}>7</div>
+          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2 slds-p-bottom--large">
+            <div className="slds-box slds-box--small slds-theme--shade slds-text-align--center">7</div>
           </div>
         </div>
       </div>
@@ -47,16 +46,16 @@ export const preview = (
 
 export const code = (
   <div className="demo-only demo-container">
-    <div className={pf('grid wrap grid--pull-padded')}>
-      <div className={pf('p-horizontal--small size--1-of-1')}>1</div>
-      <div className={pf('p-horizontal--small size--1-of-2 medium-size--5-of-6 large-size--8-of-12')}>2</div>
-      <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-6 large-size--4-of-12')}>3</div>
-      <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>4</div>
-      <div className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-2 large-size--1-of-3')}>5</div>
-      <div className={pf('p-horizontal--small size--1-of-1 large-size--1-of-3')}>
-        <div className={pf('grid wrap grid--pull-padded')}>
-          <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>6</div>
-          <div className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-1 large-size--1-of-2')}>7</div>
+    <div className="slds-grid slds-wrap slds-grid--pull-padded">
+      <div className="slds-p-horizontal--small slds-size--1-of-1">1</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--5-of-6 slds-large-size--8-of-12">2</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12">3</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">4</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">5</div>
+      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-large-size--1-of-3">
+        <div className="slds-grid slds-wrap slds-grid--pull-padded">
+          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2">6</div>
+          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2">7</div>
         </div>
       </div>
     </div>

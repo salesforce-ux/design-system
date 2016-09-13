@@ -11,14 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <img src="/assets/images/avatar2.jpg" className={pf('avatar--large')} alt="Placeholder" />
+  <img src="/assets/images/avatar2.jpg" className="slds-avatar--large" alt="Placeholder" />
 );
 
 export default (
-  <div className={`demo-only ${pf('size--3-of-4')}`}>
+  <div className="demo-only slds-size--3-of-4">
     <MediaObject figureLeft={image} flavor="responsive">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.</p>
     </MediaObject>

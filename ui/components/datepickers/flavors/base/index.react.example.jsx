@@ -13,35 +13,34 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import { Select as Select } from 'ui/components/forms/flavors/select/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let Datepicker = props =>
-  <div className={className(pf('datepicker'), props.className)} aria-hidden="false">
+  <div className={className('slds-datepicker', props.className)} aria-hidden="false">
     {props.children}
   </div>;
 
 let DatepickerHeader = props =>
-  <div className={pf('datepicker__filter grid')}>
-    <div className={pf('datepicker__filter--month grid grid--align-spread grow')}>
-      <div className={pf('align-middle')}>
-        <ButtonIcon className={pf('button--icon-container')} symbol="left" assistiveText="Previous Month" />
+  <div className="slds-datepicker__filter slds-grid">
+    <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+      <div className="slds-align-middle">
+        <ButtonIcon className="slds-button--icon-container" symbol="left" assistiveText="Previous Month" />
       </div>
-      <h2 id="month" className={pf('align-middle')} aria-live="assertive" aria-atomic="true">June</h2>
-      <div className={pf('align-middle')}>
-        <ButtonIcon className={pf('button--icon-container')} symbol="right" assistiveText="Next Month" />
+      <h2 id="month" className="slds-align-middle" aria-live="assertive" aria-atomic="true">June</h2>
+      <div className="slds-align-middle">
+        <ButtonIcon className="slds-button--icon-container" symbol="right" assistiveText="Next Month" />
       </div>
     </div>
-    <div className={pf('shrink-none')}>
-      <label className={pf('assistive-text')} htmlFor="select-01">Pick a Year</label>
+    <div className="slds-shrink-none">
+      <label className="slds-assistive-text" htmlFor="select-01">Pick a Year</label>
       <Select>
         <option>2014</option>
         <option>2015</option>
@@ -68,7 +67,7 @@ let Week = props =>
 
 let Day = props =>
   <td className={props.className} headers={props.dayHeaders} role="gridcell" aria-disabled={props.ariaDisabled} aria-selected={props.ariaSelected}>
-    <span className={pf('day')}>{props.children}</span>
+    <span className="slds-day">{props.children}</span>
   </td>;
 
 ///////////////////////////////////////////
@@ -77,15 +76,15 @@ let Day = props =>
 
 let Default = props =>
   <Demo style={{height: '330px'}}>
-    <Datepicker className={pf('dropdown dropdown--left')}>
+    <Datepicker className="slds-dropdown slds-dropdown--left">
       <DatepickerHeader />
-      <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
+      <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
         <thead>
           <Weekdays />
         </thead>
         <tbody>
           <Week id="week1">
-            <Day className={pf('disabled-text')} dayHeaders="Sunday week1" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day className="slds-disabled-text" dayHeaders="Sunday week1" ariaDisabled="true" ariaSelected="false">31</Day>
             <Day dayHeaders="Monday week1" ariaSelected="false">1</Day>
             <Day dayHeaders="Tuesday week1" ariaSelected="false">2</Day>
             <Day dayHeaders="Wednesday week1" ariaSelected="false">3</Day>
@@ -107,7 +106,7 @@ let Default = props =>
             <Day dayHeaders="Monday week3" ariaSelected="false">15</Day>
             <Day dayHeaders="Tuesday week3" ariaSelected="false">16</Day>
             <Day dayHeaders="Wednesday week3" ariaSelected="false">17</Day>
-            <Day className={pf('is-today')} dayHeaders="Thursday week3" ariaSelected="false">18</Day>
+            <Day className="slds-is-today" dayHeaders="Thursday week3" ariaSelected="false">18</Day>
             <Day dayHeaders="Friday week3" ariaSelected="false">19</Day>
             <Day dayHeaders="Saturday week3" ariaSelected="false">20</Day>
           </Week>
@@ -124,13 +123,13 @@ let Default = props =>
             <Day dayHeaders="Sunday week5" ariaSelected="false">28</Day>
             <Day dayHeaders="Monday week5" ariaSelected="false">29</Day>
             <Day dayHeaders="Tuesday week5" ariaSelected="false">30</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Wednesday week5" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Thursday week5" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Friday week5" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Saturday week5" ariaDisabled="true" ariaSelected="false">4</Day>
+            <Day className="slds-disabled-text" dayHeaders="Wednesday week5" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className="slds-disabled-text" dayHeaders="Thursday week5" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className="slds-disabled-text" dayHeaders="Friday week5" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className="slds-disabled-text" dayHeaders="Saturday week5" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -139,15 +138,15 @@ let Default = props =>
 
 let Selected = props =>
   <Demo style={{height: '330px'}}>
-    <Datepicker className={pf('dropdown dropdown--left')}>
+    <Datepicker className="slds-dropdown slds-dropdown--left">
       <DatepickerHeader />
-      <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
+      <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
         <thead>
           <Weekdays />
         </thead>
         <tbody>
           <Week id="week11">
-            <Day className={pf('disabled-text')} dayHeaders="Sunday week11" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day className="slds-disabled-text" dayHeaders="Sunday week11" ariaDisabled="true" ariaSelected="false">31</Day>
             <Day dayHeaders="Monday week11" ariaSelected="false">1</Day>
             <Day dayHeaders="Tuesday week11" ariaSelected="false">2</Day>
             <Day dayHeaders="Wednesday week11" ariaSelected="false">3</Day>
@@ -169,14 +168,14 @@ let Selected = props =>
             <Day dayHeaders="Monday week13" ariaSelected="false">15</Day>
             <Day dayHeaders="Tuesday week13" ariaSelected="false">16</Day>
             <Day dayHeaders="Wednesday week13" ariaSelected="false">17</Day>
-            <Day className={pf('is-today')} dayHeaders="Thursday week13" ariaSelected="false">18</Day>
+            <Day className="slds-is-today" dayHeaders="Thursday week13" ariaSelected="false">18</Day>
             <Day dayHeaders="Friday week13" ariaSelected="false">19</Day>
             <Day dayHeaders="Saturday week13" ariaSelected="false">20</Day>
           </Week>
           <Week id="week14">
             <Day dayHeaders="Sunday week14" ariaSelected="false">21</Day>
             <Day dayHeaders="Monday week14" ariaSelected="false">22</Day>
-            <Day className={pf('is-selected')} dayHeaders="Tuesday week14" ariaSelected="true">23</Day>
+            <Day className="slds-is-selected" dayHeaders="Tuesday week14" ariaSelected="true">23</Day>
             <Day dayHeaders="Wednesday week14" ariaSelected="false">24</Day>
             <Day dayHeaders="Thursday week14" ariaSelected="false">25</Day>
             <Day dayHeaders="Friday week14" ariaSelected="false">26</Day>
@@ -186,13 +185,13 @@ let Selected = props =>
             <Day dayHeaders="Sunday week15" ariaSelected="false">28</Day>
             <Day dayHeaders="Monday week15" ariaSelected="false">29</Day>
             <Day dayHeaders="Tuesday week15" ariaSelected="false">30</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Wednesday week15" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Thursday week15" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Friday week15" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Saturday week15" ariaDisabled="true" ariaSelected="false">4</Day>
+            <Day className="slds-disabled-text" dayHeaders="Wednesday week15" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className="slds-disabled-text" dayHeaders="Thursday week15" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className="slds-disabled-text" dayHeaders="Friday week15" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className="slds-disabled-text" dayHeaders="Saturday week15" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
           </tr>
         </tbody>
       </table>
@@ -201,15 +200,15 @@ let Selected = props =>
 
 let MultiSelected = props =>
   <Demo style={{height: '330px'}}>
-    <Datepicker className={pf('dropdown dropdown--left')}>
+    <Datepicker className="slds-dropdown slds-dropdown--left">
       <DatepickerHeader />
-      <table className={pf('datepicker__month')} role="grid" aria-labelledby="month">
+      <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
         <thead>
           <Weekdays />
         </thead>
         <tbody>
           <Week id="week21">
-            <Day className={pf('disabled-text')} dayHeaders="Sunday week21" ariaDisabled="true" ariaSelected="false">31</Day>
+            <Day className="slds-disabled-text" dayHeaders="Sunday week21" ariaDisabled="true" ariaSelected="false">31</Day>
             <Day dayHeaders="Monday week21" ariaSelected="false">1</Day>
             <Day dayHeaders="Tuesday week21" ariaSelected="false">2</Day>
             <Day dayHeaders="Wednesday week21" ariaSelected="false">3</Day>
@@ -231,30 +230,30 @@ let MultiSelected = props =>
             <Day dayHeaders="Monday week23" ariaSelected="false">15</Day>
             <Day dayHeaders="Tuesday week23" ariaSelected="false">16</Day>
             <Day dayHeaders="Wednesday week23" ariaSelected="false">17</Day>
-            <Day className={pf('is-today')} dayHeaders="Thursday week23" ariaSelected="false">18</Day>
+            <Day className="slds-is-today" dayHeaders="Thursday week23" ariaSelected="false">18</Day>
             <Day dayHeaders="Friday week23" ariaSelected="false">19</Day>
             <Day dayHeaders="Saturday week23" ariaSelected="false">20</Day>
           </Week>
-          <Week id="week24" className={pf('has-multi-row-selection')}>
+          <Week id="week24" className="slds-has-multi-row-selection">
             <Day dayHeaders="Sunday week24" ariaSelected="false">21</Day>
             <Day dayHeaders="Monday week24" ariaSelected="false">22</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Tuesday week24" ariaSelected="true">23</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Wednesday week24" ariaSelected="true">24</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Thursday week24" ariaSelected="true">25</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Friday week24" ariaSelected="true">26</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Saturday week24" ariaSelected="true">27</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Tuesday week24" ariaSelected="true">23</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Wednesday week24" ariaSelected="true">24</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Thursday week24" ariaSelected="true">25</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Friday week24" ariaSelected="true">26</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Saturday week24" ariaSelected="true">27</Day>
           </Week>
-          <Week id="week25" className={pf('has-multi-row-selection')}>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Sunday week25" ariaSelected="true">28</Day>
-            <Day className={pf('is-selected is-selected-multi')} dayHeaders="Monday week25" ariaSelected="true">29</Day>
+          <Week id="week25" className="slds-has-multi-row-selection">
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Sunday week25" ariaSelected="true">28</Day>
+            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Monday week25" ariaSelected="true">29</Day>
             <Day dayHeaders="Tuesday week25" ariaSelected="false">30</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Wednesday week25" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Thursday week25" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Friday week25" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className={pf('disabled-text')} dayHeaders="Saturday week25" ariaDisabled="true" ariaSelected="false">4</Day>
+            <Day className="slds-disabled-text" dayHeaders="Wednesday week25" ariaDisabled="true" ariaSelected="false">1</Day>
+            <Day className="slds-disabled-text" dayHeaders="Thursday week25" ariaDisabled="true" ariaSelected="false">2</Day>
+            <Day className="slds-disabled-text" dayHeaders="Friday week25" ariaDisabled="true" ariaSelected="false">3</Day>
+            <Day className="slds-disabled-text" dayHeaders="Saturday week25" ariaDisabled="true" ariaSelected="false">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className={pf('show--inline-block p-bottom--x-small')}>Today</a></td>
+            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
           </tr>
         </tbody>
       </table>

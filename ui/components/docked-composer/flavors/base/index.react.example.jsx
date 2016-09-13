@@ -16,7 +16,6 @@ import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/i
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const composers = [{
   'entity': 'email',
@@ -34,29 +33,29 @@ const composers = [{
 ///////////////////////////////////////////
 
 export let DockedComposerPanel = props =>
-  <div className={className(pf('docked-composer grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className={pf('docked-composer__header grid shrink-none')}>
-      <div className={pf('media media--center')}>
-        <div className={pf('media__figure m-right--x-small')}>
-          <span className={pf('icon_container')}>
-            <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol={ props.headerSymbol || 'call' } />
+  <div className={className('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <div className="slds-docked-composer__header slds-grid slds-shrink-none">
+      <div className="slds-media slds-media--center">
+        <div className="slds-media__figure slds-m-right--x-small">
+          <span className="slds-icon_container">
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
           </span>
         </div>
-        <div className={pf('media__body')}>
+        <div className="slds-media__body">
           <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className={pf('col--bump-left')}>
+      <div className="slds-col--bump-left">
         <ButtonIcon
-          className={pf('button--icon')}
+          className="slds-button--icon"
           symbol="minimize_window"
           assistiveText="Minimize Composer Panel" />
         <ButtonIcon
-          className={pf('button--icon')}
+          className="slds-button--icon"
           symbol="expand_alt"
           assistiveText="Expand Composer Panel" />
         <ButtonIcon
-          className={pf('button--icon')}
+          className="slds-button--icon"
           symbol="close"
           assistiveText="Close Composer Panel" />
       </div>
@@ -65,33 +64,33 @@ export let DockedComposerPanel = props =>
   </div>;
 
 export let DockedComposerPanelBody = props =>
-  <div className={className(pf('docked-composer__body'), props.className)}>
-    { !props.children ? <div className={pf('align--absolute-center')}>Docked Composer Panel Body</div> : props.children }
+  <div className={className('slds-docked-composer__body', props.className)}>
+    { !props.children ? <div className="slds-align--absolute-center">Docked Composer Panel Body</div> : props.children }
   </div>;
 
 export let DockedComposerPanelFooter = props =>
-  <footer className={className(pf('docked-composer__footer shrink-none'), props.className)}>
+  <footer className={className('slds-docked-composer__footer slds-shrink-none', props.className)}>
     { !props.children
-    ? <div className={pf('col--bump-left text-align--right')}>
-        <Button className={pf('button--brand')}>Action</Button>
+    ? <div className="slds-col--bump-left slds-text-align--right">
+        <Button className="slds-button--brand">Action</Button>
       </div>
     : props.children }
   </footer>;
 
 let ComposerOverflowMenu = props =>
-  <div className={pf('docked-composer docked-composer--overflow')}>
-    <button className={pf('button button--icon docked-composer--overflow__button')} aria-haspopup="true">
-      <SvgIcon className={pf('button__icon')} sprite="utility" symbol="standard_objects" />
-      <span className={pf('text-body--small m-left--xx-small')}>3 <span className={pf('assistive-text')}>other docked composer panels</span></span>
+  <div className="slds-docked-composer slds-docked-composer--overflow">
+    <button className="slds-button slds-button--icon docked-composer--overflow__button" aria-haspopup="true">
+      <SvgIcon className="slds-button__icon" sprite="utility" symbol="standard_objects" />
+      <span className="slds-text-body--small slds-m-left--xx-small">3 <span className="slds-assistive-text">other docked composer panels</span></span>
     </button>
 
-    <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
-      <MenuList className={pf('dropdown--length-with-icon-7')}>
+    <Menu className="slds-dropdown--left slds-dropdown--bottom slds-dropdown--medium slds-nubbin--bottom-left">
+      <MenuList className="slds-dropdown--length-with-icon-7">
         { _.times(composers.length, i =>
           <MenuItem key={ i }>
-            <span className={pf('icon_container icon-standard-' + composers[i].entity + ' m-right--x-small')}>
-              <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol={ composers[i].entity } />
-              <span className={pf('assistive-text')}>{ composers[i].entity } Icon</span>
+            <span className={'slds-icon_container slds-icon-standard-' + composers[i].entity + ' slds-m-right--x-small'}>
+              <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={ composers[i].entity } />
+              <span className="slds-assistive-text">{ composers[i].entity } Icon</span>
             </span>
             { composers[i].title }
           </MenuItem>
@@ -101,9 +100,9 @@ let ComposerOverflowMenu = props =>
   </div>;
 
 let Modal = props =>
-  <div aria-hidden="false" role="dialog" className={pf('modal fade-in-open docked-composer-modal')}>
-    <div className={pf('modal__container')}>
-      <div className={pf('modal__content')}>
+  <div aria-hidden="false" role="dialog" className="slds-modal slds-fade-in-open slds-docked-composer-modal">
+    <div className="slds-modal__container">
+      <div className="slds-modal__content">
         {props.children}
       </div>
     </div>
@@ -119,8 +118,8 @@ export let states = [
     label: 'Open',
     element:
     <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
-      <div className={pf('docked_container')}>
-        <DockedComposerPanel className={pf('is-open')}>
+      <div className="slds-docked_container">
+        <DockedComposerPanel className="slds-is-open">
           <DockedComposerPanelBody />
           <DockedComposerPanelFooter />
         </DockedComposerPanel>
@@ -132,7 +131,7 @@ export let states = [
     label: 'Closed',
     element:
     <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
-      <div className={pf('docked_container')}>
+      <div className="slds-docked_container">
         <DockedComposerPanel>
           <DockedComposerPanelBody />
           <DockedComposerPanelFooter />
@@ -151,7 +150,7 @@ export let states = [
           <DockedComposerPanelFooter />
         </DockedComposerPanel>
       </Modal>
-      <div className={pf('backdrop backdrop--open')}></div>
+      <div className="slds-backdrop slds-backdrop--open"></div>
     </div>
   },
   {
@@ -159,9 +158,9 @@ export let states = [
     label: 'With Overflow Menu',
     element:
     <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
-      <div className={pf('docked_container')}>
+      <div className="slds-docked_container">
         <ComposerOverflowMenu />
-        <DockedComposerPanel className={pf('is-open')}>
+        <DockedComposerPanel className="slds-is-open">
           <DockedComposerPanelBody />
           <DockedComposerPanelFooter />
         </DockedComposerPanel>

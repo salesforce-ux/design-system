@@ -10,11 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only" style={{width: '200px'}}>
-    <p className={pf('text-heading--small hyphenate')}>A long heading might be supercalifragilisticexpiallidocious.</p>
+    <p className="slds-text-heading--small slds-hyphenate">A long heading might be supercalifragilisticexpiallidocious.</p>
   </div>
 );

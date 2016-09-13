@@ -16,7 +16,6 @@ import classNames from 'classnames';
 import Heading from 'app_modules/site/components/page/heading';
 import RowHeader from './row-header';
 import Row from './row';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default class CategorySection extends React.Component {
 
@@ -30,22 +29,22 @@ export default class CategorySection extends React.Component {
     if (!tokens.length) return null;
     return (
       <section
-        className={pf(`site-tokens ${category.key}`)}
+        className={`site-tokens ${category.key}`}
         data-slds-tokens-section={category.key}>
         <Heading
           textLabel={category.label}
           type="h2"
           id={`category-${category.key}`}
-          className={pf('p-top--xx-large site-text-heading--large site-text-heading--callout')}>
-          <span className={pf('grid wrap')}>
-            <span className={pf('col align-bottom')}>{category.label}</span>
+          className="slds-p-top--xx-large site-text-heading--large site-text-heading--callout">
+          <span className="slds-grid slds-wrap">
+            <span className="slds-col slds-align-bottom">{category.label}</span>
           </span>
         </Heading>
         {!category.description ? null : <p className="slds-m-bottom--x-large">
           {category.description}
         </p>}
-        <div className={pf('scrollable--x')}>
-          <table className={pf('table max-medium-table--stacked')}>
+        <div className="slds-scrollable--x">
+          <table className="slds-table slds-max-medium-table--stacked">
             <RowHeader key={`${category.key}-header`} />
             <tbody>
               {this.renderRows()}

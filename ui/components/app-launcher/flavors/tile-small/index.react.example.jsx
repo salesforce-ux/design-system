@@ -14,7 +14,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -23,8 +22,8 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>
-    <AppLauncherTile flavor="small" objectInitials="SC" figureClass={pf('icon-custom-27')}>
-      <span className={pf('truncate text-link')}>Sales Cloud</span>
+    <AppLauncherTile flavor="small" objectInitials="SC" figureClass="slds-icon-custom-27">
+      <span className="slds-truncate slds-text-link">Sales Cloud</span>
     </AppLauncherTile>
   </div>
 );

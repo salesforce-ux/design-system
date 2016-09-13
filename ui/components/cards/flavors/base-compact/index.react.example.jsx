@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -21,11 +20,11 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
-    <Card className={pf('card--compact')}>
-      <CardHeader className={pf('has-divider--top')} actions="overflow">
-        <span className={pf('text-heading--small')}>Card Header</span>
+    <Card className="slds-card--compact">
+      <CardHeader className="slds-has-divider--top" actions="overflow">
+        <span className="slds-text-heading--small">Card Header</span>
       </CardHeader>
-      <CardBody className={pf('text-align--center')}>Card Body (custom goes in here)</CardBody>
+      <CardBody className="slds-text-align--center">Card Body (custom goes in here)</CardBody>
     </Card>
   </div>
 );

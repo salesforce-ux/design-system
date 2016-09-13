@@ -13,7 +13,6 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -26,13 +25,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
-          <ModalContent className={pf('modal__menu')}>
+          <ModalContent className="slds-modal__menu">
             <Button flavor="neutral">Upload from Device</Button>
             <Button flavor="neutral">Select a Salesforce File</Button>
             <Button flavor="neutral">Cancel</Button>
           </ModalContent>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   },
   {
@@ -42,9 +41,9 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <h2 className={pf('text-heading--medium')}>Select a New Record Type</h2>
+            <h2 className="slds-text-heading--medium">Select a New Record Type</h2>
           </ModalHeader>
-          <ModalContent className={pf('modal__menu')}>
+          <ModalContent className="slds-modal__menu">
             <Button flavor="neutral">Simple</Button>
             <Button flavor="neutral">Advanced</Button>
             <Button flavor="neutral">Partner</Button>
@@ -52,7 +51,7 @@ export let states = [
             <Button flavor="neutral">Cancel</Button>
           </ModalContent>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   },
   {
@@ -62,15 +61,15 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <h2 className={pf('text-heading--medium')}>Delete Account</h2>
-            <p className={pf('m-top--x-small')}>Are you sure you want to delete this account?</p>
+            <h2 className="slds-text-heading--medium">Delete Account</h2>
+            <p className="slds-m-top--x-small">Are you sure you want to delete this account?</p>
           </ModalHeader>
-          <ModalContent className={pf('modal__menu')}>
+          <ModalContent className="slds-modal__menu">
             <Button flavor="destructive">Delete</Button>
             <Button flavor="neutral">Cancel</Button>
           </ModalContent>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   },
   {
@@ -80,20 +79,20 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <span className={pf('icon_container p-around--x-small icon-action-share-thanks m-bottom--x-small')}>
-              <SvgIcon className={pf('icon icon-action-share-thanks icon--medium')} sprite="action" symbol="share_thanks" />
-              <span className={pf('assistive-text')}>Share Thanks</span>
+            <span className="slds-icon_container slds-p-around--x-small slds-icon-action-share-thanks slds-m-bottom--x-small">
+              <SvgIcon className="slds-icon slds-icon-action-share-thanks slds-icon--medium" sprite="action" symbol="share_thanks" />
+              <span className="slds-assistive-text">Share Thanks</span>
             </span>
-            <h2 className={pf('text-heading--medium')}>Your Feedback is Valuable</h2>
-            <p className={pf('m-top--x-small')}>We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your input helps drive our products. Would you mind taking a moment to give us feedback through the App Store? We really appreciate your support.</p>
+            <h2 className="slds-text-heading--medium">Your Feedback is Valuable</h2>
+            <p className="slds-m-top--x-small">We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your input helps drive our products. Would you mind taking a moment to give us feedback through the App Store? We really appreciate your support.</p>
           </ModalHeader>
-          <ModalContent className={pf('modal__menu')}>
+          <ModalContent className="slds-modal__menu">
             <Button flavor="neutral">Upload from Device</Button>
             <Button flavor="neutral">Select a Salesforce File</Button>
             <Button flavor="neutral">Cancel</Button>
           </ModalContent>
         </Modal>
-        <div className={pf('backdrop backdrop--open')} />
+        <div className="slds-backdrop slds-backdrop--open" />
       </div>
   }
 ];

@@ -20,7 +20,6 @@ import './generate-tokens-ui';
 import './generate-ui-kit-zip';
 import './generate-ui';
 import './generate-examples';
-import './generate-whitelist';
 
 gulp.task('generate', callback =>
   runSequence(
@@ -32,9 +31,7 @@ gulp.task('generate', callback =>
       'generate:tokens:zip',
       'generate:tokens:ui',
       'generate:ui-kit:zip',
-      'generate:ui',
-      'generate:whitelist',
-      'generate:whitelist-utilities'
+      'generate:ui'
     ],
     'generate:examples',
     callback)

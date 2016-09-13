@@ -15,7 +15,6 @@ import className from 'classnames';
 import { Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -80,9 +79,9 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div className={pf('p-horizontal--medium p-vertical--x-small grid')}>
+          <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
             <a href="javascript:void(0);">More comments</a>
-            <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
+            <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
           </div>
           <CommentList />
           <Publisher />
@@ -105,12 +104,12 @@ export let states = [
           </PostFooter>
         </Post>
         <Comments>
-          <div className={pf('p-horizontal--medium p-vertical--x-small grid')}>
+          <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
             <a href="javascript:void(0);">More comments</a>
-            <span className={pf('text-body--small col--bump-left')}>1 of 8</span>
+            <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
           </div>
           <CommentList />
-          <Publisher className={pf('is-active has-focus')} />
+          <Publisher className="slds-is-active slds-has-focus" />
         </Comments>
       </div>
   }

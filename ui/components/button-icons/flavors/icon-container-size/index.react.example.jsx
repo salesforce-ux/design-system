@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -23,21 +22,21 @@ export let states = [
   {
     id: 'button-icon-container-size-default',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon-border')} symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" />
   },
   {
     id: 'button-icon-container-size-small',
     label: 'Small',
-    element: <ButtonIcon className={pf('button--icon-border button--icon-small')} symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
   },
   {
     id: 'button-icon-container-size-x-small',
     label: 'x-Small',
-    element: <ButtonIcon className={pf('button--icon-border button--icon-x-small')} symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
   },
   {
     id: 'button-icon-container-size-xx-small',
     label: 'xX-Small',
-    element: <ButtonIcon className={pf('button--icon-border button--icon-xx-small')} symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-xx-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
   }
 ];

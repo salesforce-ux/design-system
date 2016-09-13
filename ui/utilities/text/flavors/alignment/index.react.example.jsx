@@ -10,18 +10,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only">
-    <div className={pf('text-align--left')}>
+    <div className="slds-text-align--left">
       The quick brown fox jumps over the lazy dog.
     </div>
-    <div className={pf('text-align--center')}>
+    <div className="slds-text-align--center">
       The quick brown fox jumps over the lazy dog.
     </div>
-    <div className={pf('text-align--right')}>
+    <div className="slds-text-align--right">
       The quick brown fox jumps over the lazy dog.
     </div>
   </div>

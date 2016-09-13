@@ -13,13 +13,12 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 let Checkbox = props =>
-  <label className={pf('checkbox')}>
+  <label className="slds-checkbox">
     <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('form-element__label assistive-text')}>{props.label}</span>
+    <span className="slds-checkbox--faux"></span>
+    <span className="slds-form-element__label slds-assistive-text">{props.label}</span>
   </label>;
 
 ///////////////////////////////////////////
@@ -33,7 +32,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> }>
-          <p className={pf('truncate')}>Assignee</p>
+          <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>
   },
@@ -43,7 +42,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> } actions>
-          <p className={pf('truncate')}>Assignee</p>
+          <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>
   }

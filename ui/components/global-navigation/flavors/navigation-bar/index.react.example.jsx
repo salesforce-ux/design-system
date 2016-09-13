@@ -15,7 +15,6 @@ import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/i
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -23,31 +22,31 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 export let WaffleIcon = props =>
-  <a href="javascript:void(0);" className={className(pf('icon-waffle_container context-bar__button'), props.className)}>
-    <div className={pf('icon-waffle')}>
-      <div className={pf('r1')}></div>
-      <div className={pf('r2')}></div>
-      <div className={pf('r3')}></div>
-      <div className={pf('r4')}></div>
-      <div className={pf('r5')}></div>
-      <div className={pf('r6')}></div>
-      <div className={pf('r7')}></div>
-      <div className={pf('r8')}></div>
-      <div className={pf('r9')}></div>
+  <a href="javascript:void(0);" className={className('slds-icon-waffle_container slds-context-bar__button', props.className)}>
+    <div className="slds-icon-waffle">
+      <div className="slds-r1"></div>
+      <div className="slds-r2"></div>
+      <div className="slds-r3"></div>
+      <div className="slds-r4"></div>
+      <div className="slds-r5"></div>
+      <div className="slds-r6"></div>
+      <div className="slds-r7"></div>
+      <div className="slds-r8"></div>
+      <div className="slds-r9"></div>
     </div>
-    <span className={pf('assistive-text')}>Open App Launcher</span>
+    <span className="slds-assistive-text">Open App Launcher</span>
   </a>;
 
 // Context Item Dropdown
 const contextDropdown = (
-  <Menu className={pf('dropdown--right')}>
+  <Menu className="slds-dropdown--right">
     <MenuList>
       <MenuItem>
-        <SvgIcon className={pf('icon icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="add" />
+        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="add" />
         Main action
       </MenuItem>
-      <li className={pf('dropdown__header has-divider--top-space')} role="separator">
-        <span className={pf('text-title--caps')}>Menu header</span>
+      <li className="slds-dropdown__header slds-has-divider--top-space" role="separator">
+        <span className="slds-text-title--caps">Menu header</span>
       </li>
       <MenuItem>Menu Item One</MenuItem>
       <MenuItem>Menu Item Two</MenuItem>
@@ -61,19 +60,19 @@ const contextDropdown = (
 
 export let ContextBar = props =>
 
-  <div className={className(pf('context-bar'), props.className)}>
+  <div className={className('slds-context-bar', props.className)}>
 
     {/* Primary Section */}
-    <div className={pf('context-bar__primary context-bar__item--divider-right')}>
+    <div className="slds-context-bar__primary slds-context-bar__item--divider-right">
 
       {/* App Switcher */}
-      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover')}>
-        <div className={pf('context-bar__icon-action')}>
+      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
+        <div className="slds-context-bar__icon-action">
           <WaffleIcon />
         </div>
         {/* App Name */}
-        <span className={pf('context-bar__label-action context-bar__app-name')}>
-          <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
+        <span className="slds-context-bar__label-action slds-context-bar__app-name">
+          <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -81,21 +80,21 @@ export let ContextBar = props =>
     {/* End Primary */}
 
     {/* Secondary Section */}
-    <nav className={pf('context-bar__secondary')} role="navigation">
+    <nav className="slds-context-bar__secondary" role="navigation">
 
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item')}>
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Home">
-            <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
+      <ul className="slds-grid">
+        <li className="slds-context-bar__item">
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Home">
+            <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--hover')} aria-haspopup="true">
-          <a href="javascript:void(0);" className={pf('context-bar__label-action')} title="Menu Item">
-            <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover" aria-haspopup="true">
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Menu Item">
+            <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
-          <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
+          <div className="slds-context-bar__icon-action slds-p-left--none" tabIndex="0">
             <ButtonIcon
-              className={pf('button--icon context-bar__button')}
+              className="slds-button--icon slds-context-bar__button"
               symbol="chevrondown"
               tabIndex="-1"
               assistiveText="Open menu item submenu" />
@@ -104,9 +103,9 @@ export let ContextBar = props =>
         </li>
         { !props.children ?
           _.times(3, i =>
-            <li className={pf('context-bar__item')} key={ i }>
-              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
-                <span className={pf('truncate')}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+            <li className="slds-context-bar__item" key={ i }>
+              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
+                <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
               </a>
             </li>
           ) : props.children }
@@ -142,15 +141,15 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '14rem'}}>
         <ContextBar>
-          <li className={pf('context-bar__item is-active')}>
-            <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item'}>
-              <span className={pf('truncate')}>Menu Item</span>
+          <li className="slds-context-bar__item slds-is-active">
+            <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
+              <span className="slds-truncate">Menu Item</span>
             </a>
           </li>
           { _.times(2, i =>
-            <li className={pf('context-bar__item')} key={ i }>
-              <a href="javascript:void(0);" className={pf('context-bar__label-action')} title={ 'Menu Item ' + i }>
-                <span className={pf('truncate')}>Menu Item</span>
+            <li className="slds-context-bar__item" key={ i }>
+              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
+                <span className="slds-truncate">Menu Item</span>
               </a>
             </li>
           )}

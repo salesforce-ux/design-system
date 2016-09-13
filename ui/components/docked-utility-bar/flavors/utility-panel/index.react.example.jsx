@@ -14,53 +14,52 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const dialingIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 
 export let UtilityPanel = props =>
-  <div className={className(pf('utility-panel grid grid--vertical'), props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className={pf('utility-panel__header grid shrink-none')}>
-      <div className={pf('media media--center')}>
-        <div className={pf('media__figure m-right--x-small')}>
-          <span className={pf('icon_container')}>
-            <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="standard" symbol="call" />
+  <div className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <div className="slds-utility-panel__header slds-grid slds-shrink-none">
+      <div className="slds-media slds-media--center">
+        <div className="slds-media__figure slds-m-right--x-small">
+          <span className="slds-icon_container">
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="call" />
           </span>
         </div>
-        <div className={pf('media__body')}>
+        <div className="slds-media__body">
           <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className={pf('col--bump-left')}>
+      <div className="slds-col--bump-left">
         <ButtonIcon
-          className={pf('button--icon')}
+          className="slds-button--icon"
           symbol="minimize_window"
           assistiveText="Minimize Panel" />
       </div>
     </div>
-    <div className={pf('utility-panel__body')}>
+    <div className="slds-utility-panel__body">
       { props.children }
     </div>
   </div>;
 
 const PanelOpen = (
-  <UtilityPanel className={pf('is-open')} header="Call">
-    <div className={pf('align--absolute-center')}>Utility Panel Body</div>
+  <UtilityPanel className="slds-is-open" header="Call">
+    <div className="slds-align--absolute-center">Utility Panel Body</div>
   </UtilityPanel>
 );
 
 const PanelClosed = (
   <UtilityPanel header="Call">
-    <div className={pf('align--absolute-center')}>Utility Panel Body</div>
+    <div className="slds-align--absolute-center">Utility Panel Body</div>
   </UtilityPanel>
 );
 
@@ -75,7 +74,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '540px' }}>
         <UtilityBar panel={PanelOpen}>
-          <UtilityBarItem symbol="call" className={pf('is-active')}>Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>

@@ -15,7 +15,6 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>
@@ -26,28 +25,28 @@ export default (
     >
 
       <Modal.Header>
-        <div className={pf('notify_container')}>
-          <div className={pf('notify notify--toast theme--error')} role="alert">
-            <span className={pf('assistive-text')}>Error</span>
+        <div className="slds-notify_container">
+          <div className="slds-notify slds-notify--toast slds-theme--error" role="alert">
+            <span className="slds-assistive-text">Error</span>
             <ButtonIcon
-              className={pf('notify__close button--icon-inverse')}
-              iconClassName={pf('button__icon--large')}
+              className="slds-notify__close slds-button--icon-inverse"
+              iconClassName="slds-button__icon--large"
               symbol="close"
               assistiveText="Close" />
-            <div className={pf('notify__content grid')}>
-              <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
-              <div className={pf('col align-middle')}>
-                <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
+            <div className="slds-notify__content slds-grid">
+              <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
+              <div className="slds-col slds-align-middle">
+                <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
               </div>
             </div>
           </div>
         </div>
-        <h2 className={pf('text-heading--medium')}>
+        <h2 className="slds-text-heading--medium">
           Modal Header
         </h2>
       </Modal.Header>
 
-      <Modal.Body className={pf('p-around--medium')}>
+      <Modal.Body className="slds-p-around--medium">
         <Lorem count={2} paragraphLowerBound={5} />
       </Modal.Body>
 

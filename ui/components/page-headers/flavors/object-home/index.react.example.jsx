@@ -16,29 +16,28 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const icon = (
-    <SvgIcon className={pf('button__icon button__icon--right no-flex')} sprite="utility" symbol="down" assistiveText="Down" />
+    <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
 );
 
 const image = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon-standard-lead')} sprite="standard" symbol="lead" />
+  <span className="slds-icon_container">
+    <SvgIcon className="slds-icon slds-icon-standard-lead" sprite="standard" symbol="lead" />
   </span>
 );
 
 export default (
-  <div className={pf('page-header page-header--object-home')} role="banner">
-    <div className={pf('grid')}>
+  <div className="slds-page-header slds-page-header--object-home" role="banner">
+    <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
-      <div className={pf('col has-flexi-truncate')}>
-        <MediaObject figureLeft={image} className={pf('no-space grow')}>
-          <Heading className={pf('line-height--reset')} flavor="label">Leads</Heading>
-          <button className={pf('button type-focus m-right--small grid truncate')} aria-haspopup="true">
-            <div className={pf('grid grid--vertical-align-center truncate')}>
-              <h1 className={pf('page-header__title truncate')} title="this should match My Leads">My Leads</h1>
+      <div className="slds-col slds-has-flexi-truncate">
+        <MediaObject figureLeft={image} className="slds-no-space slds-grow">
+          <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
+          <button className="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+            <div className="slds-grid slds-grid--vertical-align-center slds-truncate">
+              <h1 className="slds-page-header__title slds-truncate" title="this should match My Leads">My Leads</h1>
               {icon}
             </div>
           </button>
@@ -46,17 +45,17 @@ export default (
       </div>
       {/* Close Col */}
       {/* Open Right Aligned Icon Grouping */}
-      <div className={pf('col no-flex grid align-top p-bottom--xx-small')}>
-        <div className={pf('button-group')} role="group">
+      <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+        <div className="slds-button-group" role="group">
           <Button flavor="neutral">
             New Lead
           </Button>
           <Button flavor="neutral">
             Import Leads
           </Button>
-          <div className={pf('button--last')}>
+          <div className="slds-button--last">
             <ButtonIcon
-              className={pf('button--icon-border-filled')}
+              className="slds-button--icon-border-filled"
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions" />
@@ -67,41 +66,41 @@ export default (
       {/* Close Col */}
     </div>
     {/* Close Grid */}
-    <div className={pf('grid')}>
-      <div className={pf('col align-bottom')}>
-        <p className={pf('text-body--small')}>10 items &bull; Sorted by Name</p>
+    <div className="slds-grid">
+      <div className="slds-col slds-align-bottom">
+        <p className="slds-text-body--small">10 items &bull; Sorted by Name</p>
       </div>
-      <div className={pf('col no-flex grid align-bottom')}>
-        <div className={pf('dropdown-trigger dropdown-trigger--click m-left--x-small')} aria-expanded="false">
+      <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small" aria-expanded="false">
           <ButtonIcon
-            className={pf('button--icon-more')}
+            className="slds-button--icon-more"
             symbol="settings"
             hasDropdown
             assistiveText="List View Controls" />
         </div>
-        <Button className={pf('hide m-left--xx-small')} flavor="brand" aria-hidden="true">Save List</Button>
-        <div className={pf('dropdown-trigger dropdown-trigger--click m-left--xx-small')} aria-expanded="false">
+        <Button className="slds-hide slds-m-left--xx-small" flavor="brand" aria-hidden="true">Save List</Button>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
-            className={pf('button--icon-more')}
+            className="slds-button--icon-more"
             symbol="table"
             hasDropdown
             assistiveText="Change view" />
         </div>
         <ButtonIcon
-          className={pf('m-left--xx-small button--icon-border')}
+          className="slds-m-left--xx-small slds-button--icon-border"
           symbol="edit"
           assistiveText="Edit List" />
         <ButtonIcon
-          className={pf('m-left--xx-small button--icon-border')}
+          className="slds-m-left--xx-small slds-button--icon-border"
           symbol="refresh"
           assistiveText="Refresh" />
-        <div className={pf('button-group')} role="group">
+        <div className="slds-button-group" role="group">
           <ButtonIcon
-            className={pf('button--icon-border')}
+            className="slds-button--icon-border"
             symbol="chart"
             assistiveText="Charts" />
           <ButtonIcon
-            className={pf('button--icon-border')}
+            className="slds-button--icon-border"
             symbol="filterList"
             assistiveText="Filters" />
         </div>

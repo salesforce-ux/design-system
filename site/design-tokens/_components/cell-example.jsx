@@ -11,11 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default props =>
   <div
     {...props}
-    className={pf(classNames('cell-wrap', props.className))}>
+    className={classNames('cell-wrap', props.className)}>
     {props.children}
   </div>;

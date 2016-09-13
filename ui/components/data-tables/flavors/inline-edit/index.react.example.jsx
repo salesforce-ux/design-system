@@ -14,36 +14,35 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Container = props =>
-  <div className={pf('table--edit_container is-relative')} tabIndex={props.tabIndex} id={props.id}>
+  <div className="slds-table--edit_container slds-is-relative" tabIndex={props.tabIndex} id={props.id}>
     {props.children}
   </div>;
 
 let Table = props =>
-  <table className={className(pf('table table--edit table--bordered table--fixed-layout'), props.className)} role="grid">
+  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid">
     {props.children}
   </table>;
 
 let Thead = props =>
   <thead>
-    <tr className={pf('text-title--caps')}>
-      <th scope="col" style={{ width: '2.75rem' }}><span className={pf('slds-assistive-text')}>Errors</span></th>
-      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><div className={pf('p-horizontal--x-small')}><Checkbox label="Select All" /></div></th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
-      <Th className={pf('is-sortable is-resizable')} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
+    <tr className="slds-text-title--caps">
+      <th scope="col" style={{ width: '2.75rem' }}><span className="slds-assistive-text">Errors</span></th>
+      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><div className="slds-p-horizontal--x-small"><Checkbox label="Select All" /></div></th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
+      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
       <th scope="col" style={{ width: '3.25rem' }}>
-        <span className={pf('truncate assistive-text p-right--large')} title="Actions">Actions</span></th>
+        <span className="slds-truncate slds-assistive-text slds-p-right--large" title="Actions">Actions</span></th>
     </tr>
   </thead>;
 
@@ -57,19 +56,19 @@ let Th = (props) => {
 
   return(
     <th {...props} aria-label={props.children}>
-      <a href="javascript:void(0);" className={pf('th__action text-link--reset')} tabIndex={props.navigationModeTabIndex}>
-        <span className={pf('assistive-text')}>Sort </span>
-        <span className={pf('truncate')} title={props.children}>{props.children}</span>
-        <div className={pf('icon_container')}>
-          <SvgIcon className={pf('icon icon--x-small icon-text-default is-sortable__icon')} sprite="utility" symbol="arrowdown" />
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={props.navigationModeTabIndex}>
+        <span className="slds-assistive-text">Sort </span>
+        <span className="slds-truncate" title={props.children}>{props.children}</span>
+        <div className="slds-icon_container">
+          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
         </div>
-        <span className={pf('assistive-text')} aria-live="assertive" aria-atomic="true">{sortDirection}</span>
+        <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
       </a>
-      <div className={pf('resizable')}>
-        <label htmlFor={uniqueId} className={pf('assistive-text')}>{rangeLabel}</label>
-        <input className={pf('resizable__input assistive-text')} type="range" min="20" max="1000" id={uniqueId} tabIndex={props.navigationModeTabIndex} />
-        <span className={pf('resizable__handle')}>
-          <span className={pf('resizable__divider')}></span>
+      <div className="slds-resizable">
+        <label htmlFor={uniqueId} className="slds-assistive-text">{rangeLabel}</label>
+        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={props.navigationModeTabIndex} />
+        <span className="slds-resizable__handle">
+          <span className="slds-resizable__divider"></span>
         </span>
       </div>
     </th>
@@ -82,99 +81,99 @@ let Td = props =>
   </td>;
 
 let Checkbox = props =>
-  <label className={pf('checkbox')}>
+  <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
-    <span className={pf('checkbox--faux')}></span>
-    <span className={pf('assistive-text')}>{props.label}</span>
+    <span className="slds-checkbox--faux"></span>
+    <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
 let ButtonEdit = props =>
-  <button className={pf('button button--icon cell-edit__button m-left--x-small')} tabIndex={props.tabIndex || '-1'} disabled={props.disabled} id={props.id}>
-    <span className={pf('assistive-text')}>{props.alt}</span>
-    <SvgIcon className={className(pf('button__icon button__icon--hint'), props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
+  <button className="slds-button slds-button--icon slds-cell-edit__button slds-m-left--x-small" tabIndex={props.tabIndex || '-1'} disabled={props.disabled} id={props.id}>
+    <span className="slds-assistive-text">{props.alt}</span>
+    <SvgIcon className={className('slds-button__icon slds-button__icon--hint', props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
   </button>;
 
 let EditPanel = props =>
-  <div className={pf('popover popover--edit')} role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
+  <div className="slds-popover slds-popover--edit" role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
     <span id="form-start" tabIndex="0"></span>
-    <div className={pf('popover__body')}>
+    <div className="slds-popover__body">
       { props.children }
     </div>
     <span id="form-end" tabIndex="0"></span>
   </div>;
 
 let TableFocusInfo = props =>
-  <div className={pf('box table--edit_container-message')}>
+  <div className="slds-box slds-table--edit_container-message">
     <p>To access the list, press Enter.</p>
     <p>To exit the list, press Esc.</p>
   </div>;
 
 let ErrorPanel = props =>
-  <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}>
-    <div className={pf('popover__body')}>Company encountered an error.</div>
+  <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}>
+    <div className="slds-popover__body">Company encountered an error.</div>
 </div>;
 
 let RowData = (props) => {
   let checkboxLabel = 'Select row ' + props.title;
 
   return(
-    <tr className={pf('hint-parent')}>
+    <tr className="slds-hint-parent">
       <td tabIndex={props.errorindex} aria-selected={props.errorSelected}>
-        <div id={props.cellID} className={className(pf('cell-edit cell-error'), props.editName)}>
-          <button className={className(pf('button button--icon button--icon-error'), props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
-            <span className={pf('assistive-text')}>Row has errors</span>
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
+        <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
+          <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
+            <span className="slds-assistive-text">Row has errors</span>
+            <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
           </button>
-          <span className={pf('row-number text-body--small')}></span>
+          <span className="slds-row-number slds-text-body--small"></span>
         </div>
       </td>
       <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
-        <div className={className(pf('cell-edit'), props.checkClass)}>
+        <div className={className('slds-cell-edit', props.checkClass)}>
           <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
         </div>
       </Td>
       <th aria-selected={props.defaultSelected} scope="row">
-        <span className={className(pf('grid grid--align-spread cell-edit'), props.thClassName)}>
-          <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
+        <span className={className('slds-grid slds-grid--align-spread slds-cell-edit', props.thClassName)}>
+          <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
       { props.children }
       <Td>
-        <span className={pf('grid grid--align-spread cell-edit')}>
-          <span className={pf('truncate grow')} title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
+        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+          <span className="slds-truncate slds-grow" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
         </span>
       </Td>
       <Td>
-        <span className={pf('grid grid--align-spread cell-edit')}>
-          <span className={pf('truncate grow')} title="jdoe@acme.com">jdoe@acme.com</span>
+        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+          <span className="slds-truncate slds-grow" title="jdoe@acme.com">jdoe@acme.com</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
         </span>
       </Td>
       <Td aria-readonly="true">
-        <span className={pf('grid grid--align-spread cell-edit')}>
-          <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
+        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+          <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
           <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
         </span>
       </Td>
       <Td>
-        <span className={pf('grid grid--align-spread cell-edit')}>
-          <span className={pf('truncate grow')} title="Contacted">Contacted</span>
+        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+          <span className="slds-truncate slds-grow" title="Contacted">Contacted</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
         </span>
       </Td>
       <Td>
-        <span className={pf('grid grid--align-spread cell-edit')}>
-          <span className={pf('truncate grow text-align--right')} title="60%">60%</span>
+        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+          <span className="slds-truncate slds-grow slds-text-align--right" title="60%">60%</span>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
         </span>
       </Td>
       <Td>
-        <div className={pf('grid grid--align-end cell-edit p-right--large')}>
+        <div className="slds-grid slds-grid--align-end slds-cell-edit slds-p-right--large">
           <ButtonIcon
-            className={pf('button--icon-border-filled button--icon-x-small')}
-            iconClassName={pf('button__icon--hint button__icon--small')}
+            className="slds-button--icon-border-filled slds-button--icon-x-small"
+            iconClassName="slds-button__icon--hint slds-button__icon--small"
             symbol="down"
             assistiveText="Show More"
             tabIndex={props.navigationModeTabIndex} />
@@ -185,68 +184,68 @@ let RowData = (props) => {
 };
 
 let RowDataStatic = props =>
-  <tr className={pf('hint-parent')}>
+  <tr className="slds-hint-parent">
     <td>
-      <div id={props.cellID} className={className(pf('cell-edit cell-error'), props.editName)}>
-        <button className={pf('hidden button button--icon button--icon-error')} tabIndex={props.navigationModeTabIndex} aria-hidden="true">
-          <span className={pf('assistive-text')}>Row has no errors</span>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="warning" />
+      <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
+        <button className="slds-hidden slds-button slds-button--icon slds-button--icon-error" tabIndex={props.navigationModeTabIndex} aria-hidden="true">
+          <span className="slds-assistive-text">Row has no errors</span>
+          <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>
-        <span className={pf('row-number text-body--small')}></span>
+        <span className="slds-row-number slds-text-body--small"></span>
       </div>
     </td>
     <Td>
-      <div className={pf('cell-edit')}>
+      <div className="slds-cell-edit">
         <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>
     <th scope="row">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <a href="javascript:void()" className={pf('truncate')} tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
       </span>
     </th>
     <Td>
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')} title="Rohde Corp">Rohde Corp</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow" title="Rohde Corp">Rohde Corp</span>
             <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
       </span>
     </Td>
     <Td>
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')} title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow" title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
       </span>
     </Td>
     <Td>
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')} title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow" title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
       </span>
     </Td>
     <Td aria-readonly="true">
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')} title="800-555-1212">800-555-1212</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
         <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
     <Td>
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow')} title="New">New</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow" title="New">New</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
       </span>
     </Td>
     <Td>
-      <span className={pf('grid grid--align-spread cell-edit')}>
-        <span className={pf('truncate grow text-align--right')} title="20%">20%</span>
+      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-truncate slds-grow slds-text-align--right" title="20%">20%</span>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
       </span>
     </Td>
     <Td>
-      <div className={pf('grid grid--align-end cell-edit p-right--large')}>
+      <div className="slds-grid slds-grid--align-end slds-cell-edit slds-p-right--large">
         <ButtonIcon
-          className={pf('button--icon-border-filled button--icon-x-small')}
-          iconClassName={pf('button__icon--hint button__icon--small')}
+          className="slds-button--icon-border-filled slds-button--icon-x-small"
+          iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
           assistiveText="Show More"
           tabIndex={props.navigationModeTabIndex} />
@@ -265,13 +264,13 @@ export let states = [
     label: 'Default',
     element:
       <Container>
-        <Table className={pf('no-cell-focus')}>
+        <Table className="slds-no-cell-focus">
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible={pf('hidden')} thClassName={pf('cell-marker')}>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -286,13 +285,13 @@ export let states = [
     label: 'Table container focused',
     element:
       <Container tabIndex="1" id="table-edit-01">
-        <Table className={pf('no-cell-focus')}>
+        <Table className="slds-no-cell-focus">
           <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="-1">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-focus">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -324,10 +323,10 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} thClassName={pf('has-focus')} linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" thClassName="slds-has-focus" linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -348,10 +347,10 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} checkClass={pf('has-focus')} checkSelected="true" navigationModeTabIndex="0" defaultSelected="true">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" checkClass="slds-has-focus" checkSelected="true" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -372,10 +371,10 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className={pf('grid grid--align-spread cell-edit has-focus')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-focus">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -396,19 +395,19 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className={pf('grid grid--align-spread cell-edit')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
-                  <div className={pf('form-element grid')}>
-                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-                      <span className={pf('assistive-text')}>Company</span>
+                  <div className="slds-form-element slds-grid">
+                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                      <span className="slds-assistive-text">Company</span>
                     </label>
-                    <div className={pf('form-element__control grow')}>
-                      <input id="company-01" className={pf('input')} type="text" defaultValue="Acme Enterprises" />
+                    <div className="slds-form-element__control slds-grow">
+                      <input id="company-01" className="slds-input" type="text" defaultValue="Acme Enterprises" />
                     </div>
                   </div>
                 </EditPanel>
@@ -431,20 +430,20 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className={pf('grid grid--align-spread cell-edit is-editing')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-editing">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
-                  <div className={pf('form-element grid')}>
-                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-                      <abbr className={pf('slds-required')} title="required">*</abbr>
-                      <span className={pf('assistive-text')}>Company</span>
+                  <div className="slds-form-element slds-grid">
+                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                      <abbr className="slds-required" title="required">*</abbr>
+                      <span className="slds-assistive-text">Company</span>
                     </label>
-                    <div className={pf('form-element__control grow')}>
-                      <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required />
+                    <div className="slds-form-element__control slds-grow">
+                      <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme Enterprises" required />
                     </div>
                   </div>
                 </EditPanel>
@@ -467,22 +466,22 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className={pf('grid grid--align-spread cell-edit is-editing')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-editing">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
-                  <div className={pf('form-element has-error grid wrap')}>
-                    <label className={pf('form-element__label form-element__label--edit no-flex')} htmlFor="company-01">
-                      <abbr className={pf('slds-required')} title="required">*</abbr>
-                      <span className={pf('assistive-text')}>Company</span>
+                  <div className="slds-form-element slds-has-error slds-grid slds-wrap">
+                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                      <abbr className="slds-required" title="required">*</abbr>
+                      <span className="slds-assistive-text">Company</span>
                     </label>
-                    <div className={pf('form-element__control grow')}>
-                      <input id="company-01" className={pf('input input--required')} type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
+                    <div className="slds-form-element__control slds-grow">
+                      <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
                     </div>
-                  <div id="error-message-01" className={pf('form-element__help')}>This field is required</div>
+                  <div id="error-message-01" className="slds-form-element__help">This field is required</div>
                   </div>
                 </EditPanel>
               </Td>
@@ -504,10 +503,10 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible={pf('hidden')} navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit is-edited')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-edited">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
@@ -527,8 +526,8 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-error">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
@@ -549,10 +548,10 @@ export let states = [
         <Table>
           <Thead navigationModeTabIndex="0" />
           <tbody>
-            <RowData editName={pf('has-focus')} errorindex="0" title="Acme Enterprises" navigationModeTabIndex="0">
+            <RowData editName="slds-has-focus" errorindex="0" title="Acme Enterprises" navigationModeTabIndex="0">
               <Td>
-                <span className={pf('grid grid--align-spread cell-edit has-error')}>
-                  <span className={pf('truncate grow')} title="Acme Enterprises">Acme Enterprises</span>
+                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-error">
+                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>

@@ -41,7 +41,7 @@ const _category = () => ({
    * @returns {string}
    */
   getClassName(spriteName, symbolName) {
-    return `icon-${symbolName}`;
+    return `slds-icon-${symbolName}`;
   },
   /**
    * Description displayed on the page
@@ -64,7 +64,7 @@ const categories = {
       return _.camelCase('action' + _.capitalize(icon.symbol));
     },
     getClassName(spriteName, symbolName) {
-      return `icon-${spriteName}-${symbolName}`;
+      return `slds-icon-${spriteName}-${symbolName}`;
     },
     description: 'Actions can be seen throughout the interface and represent actions a user can take on any given screen.',
     props: require('design-tokens/dist/bg-actions.common.js')
@@ -74,7 +74,7 @@ const categories = {
     getClassName(spriteName, symbolName) {
       // The desired format is: `icon-custom-custom27`, following the icon names displayed on the page
       // below each icon, and be consistent with the class names in other sets
-      return `icon-${spriteName}-${symbolName.replace(/[^a-z0-9]/g, '')}`;
+      return `slds-icon-${spriteName}-${symbolName.replace(/[^a-z0-9]/g, '')}`;
     },
     description: 'Custom icons are available for the identity of user created objects.',
     props: require('design-tokens/dist/bg-custom.common.js')
@@ -90,7 +90,7 @@ const categories = {
 
   standard: () => _.assign(_category(), {
     getClassName(spriteName, symbolName) {
-      return `icon-${spriteName}-${symbolName}`;
+      return `slds-icon-${spriteName}-${symbolName}`;
     },
     description: 'Standard icons represent entities and objects within Salesforce.',
     props: require('design-tokens/dist/bg-standard.common.js')
@@ -132,7 +132,7 @@ const generate = () => {
       if (category.props) {
         const name = category.getPropName(icon);
         if (!category.props[name]) {
-          icon.className += ' icon__svg--default';
+          icon.className += ' slds-icon__svg--default';
         }
       }
       if (category.filter(icon)) {

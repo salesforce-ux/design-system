@@ -34,10 +34,10 @@ class DropdownFilter extends React.Component {
 
   render() {
     return (
-        <div { ...this.props } className={this.$getClassName(pf('input-has-icon input-has-icon--left m-bottom--x-small'))}>
-          <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-          <label className={pf('assistive-text')} htmlFor="input__filter">{this.props.placeholder}</label>
-          <input id="input__filter" className={pf('input')} type="text" placeholder={ this.props.placeholder } onChange={ this.context.termChanged } />
+        <div { ...this.props } className={this.$getClassName('slds-input-has-icon slds-input-has-icon--left slds-m-bottom--x-small')}>
+          <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
+          <label className="slds-assistive-text" htmlFor="input__filter">{this.props.placeholder}</label>
+          <input id="input__filter" className="slds-input" type="text" placeholder={ this.props.placeholder } onChange={ this.context.termChanged } />
         </div>
     );
   }
@@ -56,7 +56,7 @@ class DropdownTitle extends React.Component {
 
   render() {
     return (
-        <span className={pf('text-title--caps')}>{ this.props.children }</span>
+        <span className="slds-text-title--caps">{ this.props.children }</span>
       );
   }
 }
@@ -134,7 +134,7 @@ class DropdownItem extends React.Component {
         <li id={this.id} onClick={this.selectedItem.bind(this)} { ...this.props }
             className={className} role="presentation" onFocus={this.itemFocused.bind(this)}>
           <a href="javascript:void(0);" aria-disabled={ this.props.disabled } role={aRole}>
-            <p className={pf('truncate')}>{ this.context.isSelectable ? <SvgIcon className={pf('icon icon--selected icon--x-small icon-text-default m-right--x-small')} sprite="utility" symbol="check" /> : null }{ this.boldSearchText(this.props.children) }</p>
+            <p className="slds-truncate">{ this.context.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }{ this.boldSearchText(this.props.children) }</p>
           </a>
         </li>
       );

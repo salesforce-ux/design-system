@@ -10,19 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Popover = props =>
-<div className={pf(`popover nubbin--${props.nubbinPosition}`)} role="dialog">
-  <div className={pf('popover__body')}>
+<div className={`slds-popover slds-nubbin--${props.nubbinPosition}`} role="dialog">
+  <div className="slds-popover__body">
     <code>
-      {pf('popover')}
+      "slds-popover"
       <br />
-      {pf(`nubbin--${props.nubbinPosition}`)}
+      {`slds-nubbin--${props.nubbinPosition}`}
     </code>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
   </div>

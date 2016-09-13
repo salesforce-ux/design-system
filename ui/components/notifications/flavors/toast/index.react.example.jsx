@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 let demoHeight = '4rem';
 
@@ -22,16 +21,16 @@ let demoHeight = '4rem';
 
 let Default = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast')} role="alert">
-      <span className={pf('assistive-text')}>Info</span>
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--toast" role="alert">
+      <span className="slds-assistive-text">Info</span>
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-notify__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" />
-      <div className={pf('notify__content')}>
-        <h2 className={pf('text-heading--small')}>Base Toast</h2>
+      <div className="slds-notify__content">
+        <h2 className="slds-text-heading--small">Base Toast</h2>
       </div>
     </div>
   </div>
@@ -39,18 +38,18 @@ let Default = props =>
 
 let Success = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast theme--success')} role="alert">
-      <span className={pf('assistive-text')}>Success</span>
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--toast slds-theme--success" role="alert">
+      <span className="slds-assistive-text">Success</span>
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-notify__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" />
-      <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="notification" />
-        <div className={pf('col align-middle')}>
-          <h2 className={pf('text-heading--small ')}>Your new contact <a href="javascript:void(0);">Sara Smith</a> was successfully created.</h2>
+      <div className="slds-notify__content slds-grid">
+        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="notification" />
+        <div className="slds-col slds-align-middle">
+          <h2 className="slds-text-heading--small ">Your new contact <a href="javascript:void(0);">Sara Smith</a> was successfully created.</h2>
         </div>
       </div>
     </div>
@@ -59,16 +58,16 @@ let Success = props =>
 
 let Warning = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast theme--warning')} role="alert">
-      <span className={pf('assistive-text')}>Warning</span>
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--toast slds-theme--warning" role="alert">
+      <span className="slds-assistive-text">Warning</span>
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-notify__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" />
-      <div className={pf('notify__content')}>
-        <h2 className={pf('text-heading--small')}>Oops, you've missed some required form inputs.</h2>
+      <div className="slds-notify__content">
+        <h2 className="slds-text-heading--small">Oops, you've missed some required form inputs.</h2>
       </div>
     </div>
   </div>
@@ -76,18 +75,18 @@ let Warning = props =>
 
 let ErrorToast = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast theme--error')} role="alert">
-      <span className={pf('assistive-text')}>Error</span>
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--toast slds-theme--error" role="alert">
+      <span className="slds-assistive-text">Error</span>
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-notify__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" />
-      <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
-        <div className={pf('col align-middle')}>
-          <h2 className={pf('text-heading--small')}>You encountered some errors when trying to save edits to Samuel Smith.</h2>
+      <div className="slds-notify__content slds-grid">
+        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
+        <div className="slds-col slds-align-middle">
+          <h2 className="slds-text-heading--small">You encountered some errors when trying to save edits to Samuel Smith.</h2>
         </div>
       </div>
     </div>
@@ -96,18 +95,18 @@ let ErrorToast = props =>
 
 let ErrorWithDetails = props =>
 <div className="demo-only" style={{height: demoHeight}}>
-  <div className={pf('notify_container')}>
-    <div className={pf('notify notify--toast')} role="alert">
-      <span className={pf('assistive-text')}>Error</span>
+  <div className="slds-notify_container">
+    <div className="slds-notify slds-notify--toast" role="alert">
+      <span className="slds-assistive-text">Error</span>
       <ButtonIcon
-        className={pf('notify__close button--icon-inverse')}
-        iconClassName={pf('button__icon--large')}
+        className="slds-notify__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
         symbol="close"
         assistiveText="Close" />
-      <div className={pf('notify__content grid')}>
-        <SvgIcon className={pf('icon icon--small m-right--small col no-flex')} sprite="utility" symbol="warning" />
-        <div className={pf('col align-middle')}>
-          <h2 className={pf('text-heading--small')}>You've encountered some errors when trying to save edits to Samuel Smith.</h2>
+      <div className="slds-notify__content slds-grid">
+        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
+        <div className="slds-col slds-align-middle">
+          <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
           <p>Here's some detail of what happened, being very descriptive and transparent.</p>
         </div>
       </div>

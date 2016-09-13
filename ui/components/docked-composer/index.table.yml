@@ -1,58 +1,58 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: docked_container
+    class: slds-docked_container
     description: Container that is fixed to the bottom of the viewport, can contain multiple docked composers
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: docked-composer
+    class: slds-docked-composer
     description: Intializes docked composer containter window
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Each docked composer window receives this class, by default the docked composer is collapsed, adding <code>.{{cssPrefix}}is-open</code> expands the composer
+    notes: Each docked composer window receives this class, by default the docked composer is collapsed, adding <code>.slds-is-open</code> expands the composer
   -
-    class: docked-composer__header
+    class: slds-docked-composer__header
     description: Bar at the top of the composer that contains actionable items to invoke, such as minimizing, popping out the composer and removing the composer.
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Has additional utility classes to handle layout such as <code>.{{cssPrefix}}grid</code>, <code>.{{cssPrefix}}grid--align-spread</code> and  <code>.{{cssPrefix}}shrink-none</code>
+    notes: Has additional utility classes to handle layout such as <code>.slds-grid</code>, <code>.slds-grid--align-spread</code> and  <code>.slds-shrink-none</code>
   -
-    class: docked-composer__actions
-    description: Actionable items with <code>.{{cssPrefix}}docked-composer__header</code>
+    class: slds-docked-composer__actions
+    description: Actionable items with <code>.slds-docked-composer__header</code>
     applied: <code>&lt;div&gt;</code>
     deprecated: true
   -
-    class: docked-composer__body
+    class: slds-docked-composer__body
     description: Primary area within docked composer that contains specific task
     applied: <code>&lt;div&gt;</code>
     required: true
-    notes: Has additional utility classes to handle layout such as <code>.{{cssPrefix}}col</code>, <code>.{{cssPrefix}}grid</code>, <code>.{{cssPrefix}}grid--vertical</code>, <code>.{{cssPrefix}}nowrap</code> and <code>.{{cssPrefix}}size--1-of-1</code>
+    notes: Has additional utility classes to handle layout such as <code>.slds-col</code>, <code>.slds-grid</code>, <code>.slds-grid--vertical</code>, <code>.slds-nowrap</code> and <code>.slds-size--1-of-1</code>
   -
-    class: docked-composer__footer
+    class: slds-docked-composer__footer
     description: Bar at the bottom of the composer that contains actionable items to invoke, such as saving, associating relationships and adding content.
     applied:
     required: true
-    notes: Has additional utility classes to handle layout such as <code>.{{cssPrefix}}shrink-none</code>
+    notes: Has additional utility classes to handle layout such as <code>.slds-shrink-none</code>
   -
-    class: docked-composer__lead
+    class: slds-docked-composer__lead
     description: Within the docked composer body, the lead is the first region
     applied: <code>&lt;div&gt;</code>
   -
-    class: docked-composer__toolbar
+    class: slds-docked-composer__toolbar
     description: The toolbar contains actionable items to invoke, usually rich text editor controls
     applied: <code>&lt;div&gt;</code>
   -
-    class: docked-composer__input
+    class: slds-docked-composer__input
     description: The text input field of the docked composer
     applied: <code>&lt;textarea&gt;</code>
   -
-    class: docked-composer--overflow
+    class: slds-docked-composer--overflow
     description: When the number of docked composer exceed the width of the viewport, this class modifies the docked composer styles
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: docked-composer--overflow__button
+    class: slds-docked-composer--overflow__button
     description: An indicator that displays the number of docked composers not shown on screen, user can select to display another docked composer from this pill
     applied: <code>&lt;a&gt;</code>
     deprecated: true

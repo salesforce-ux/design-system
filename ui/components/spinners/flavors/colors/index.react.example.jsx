@@ -28,7 +28,7 @@ export let SpinnerContainer = props =>
 
 
 export let Spinner = props =>
-  <div role="alert" className={className(pf('spinner'), props.className)}>
+  <div role="alert" className={className('slds-spinner', props.className)}>
     <span className="slds-assistive-text">Loading</span>
     <div className="slds-spinner__dot-a"></div>
     <div className="slds-spinner__dot-b"></div>
@@ -55,7 +55,7 @@ export let states = [
     element:
     <Demo>
       <SpinnerContainer>
-        <Spinner className="slds-spinner--medium spinner--brand" />
+        <Spinner className="slds-spinner--medium slds-spinner--brand" />
       </SpinnerContainer>
     </Demo>
   },
@@ -65,7 +65,7 @@ export let states = [
     element:
     <Demo className="demo--inverse">
       <SpinnerContainer>
-        <Spinner className="slds-spinner--medium spinner--inverse" />
+        <Spinner className="slds-spinner--medium slds-spinner--inverse" />
       </SpinnerContainer>
     </Demo>
   }

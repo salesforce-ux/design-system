@@ -27,6 +27,7 @@ class Spinner extends React.Component {
     var { className, flavor, children } = this.props;
     const classnames = classNames(className, {
       [`${cssPrefix}spinner`]: true,
+      [`${cssPrefix}spinner--x-small`]: flavor === 'x-small' || flavor === 'brand-x-small' || flavor === 'inverse-x-small',
       [`${cssPrefix}spinner--small`]: flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
       [`${cssPrefix}spinner--medium`]: flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
       [`${cssPrefix}spinner--large`]: flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
@@ -47,9 +48,9 @@ class Spinner extends React.Component {
 
 Spinner.propTypes = {
   flavor: componentUtil.PropTypes.flavor(
-    'small', 'medium', 'large',
-    'brand-small', 'brand-medium', 'brand-large',
-    'inverse-small', 'inverse-medium', 'inverse-large'
+    'x-small', 'small', 'medium', 'large',
+    'brand-x-small', 'brand-small', 'brand-medium', 'brand-large',
+    'inverse-x-small', 'inverse-small', 'inverse-medium', 'inverse-large'
   )
 };
 

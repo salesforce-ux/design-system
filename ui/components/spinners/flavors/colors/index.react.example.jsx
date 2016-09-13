@@ -18,21 +18,21 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={className(pf('demo-only'), props.className)} style={{height: '5rem'}}>
+  <div className={className('demo-only', props.className)} style={{height: '5rem'}}>
     {props.children}
   </div>;
 
 export let SpinnerContainer = props =>
-  <div className={pf('spinner_container')}>
+  <div className="slds-spinner_container">
     {props.children}
   </div>;
 
 
 export let Spinner = props =>
   <div role="alert" className={className(pf('spinner'), props.className)}>
-    <span className={pf('assistive-text')}>Loading</span>
-    <div className={pf('spinner__dot-a')}></div>
-    <div className={pf('spinner__dot-b')}></div>
+    <span className="slds-assistive-text">Loading</span>
+    <div className="slds-spinner__dot-a"></div>
+    <div className="slds-spinner__dot-b"></div>
   </div>;
 
 //////////////////////////////////////////////
@@ -46,7 +46,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className={pf('spinner--medium')} />
+          <Spinner className="slds-spinner--medium" />
         </SpinnerContainer>
       </Demo>
   },
@@ -56,7 +56,7 @@ export let states = [
     element:
     <Demo>
       <SpinnerContainer>
-        <Spinner className={pf('spinner--medium spinner--brand')} />
+        <Spinner className="slds-spinner--medium spinner--brand" />
       </SpinnerContainer>
     </Demo>
   },
@@ -64,9 +64,9 @@ export let states = [
     id: 'inverse',
     label: 'Inverse',
     element:
-    <Demo className={pf('demo--inverse')}>
+    <Demo className="slds-demo--inverse">
       <SpinnerContainer>
-        <Spinner className={pf('spinner--medium spinner--inverse')} />
+        <Spinner className="slds-spinner--medium spinner--inverse" />
       </SpinnerContainer>
     </Demo>
   }

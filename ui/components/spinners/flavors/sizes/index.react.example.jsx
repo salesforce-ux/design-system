@@ -11,27 +11,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Partials
 //////////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} style={{height: '6.25rem'}}>
+  <div className="demo-only" style={{height: '6.25rem'}}>
     {props.children}
   </div>;
 
 let SpinnerContainer = props =>
-  <div className={pf('spinner_container')}>
+  <div className="slds-spinner_container">
     {props.children}
   </div>;
 
 let Spinner = props =>
-  <div role="alert" className={className(pf('spinner'), props.className)}>
-    <span className={pf('assistive-text')}>Loading</span>
-    <div className={pf('spinner__dot-a')}></div>
-    <div className={pf('spinner__dot-b')}></div>
+  <div role="alert" className={className('slds-spinner', props.className)}>
+    <span className="slds-assistive-text">Loading</span>
+    <div className="slds-spinner__dot-a"></div>
+    <div className="slds-spinner__dot-b"></div>
   </div>;
 
 //////////////////////////////////////////////
@@ -46,7 +45,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className={pf('spinner--x-small')} />
+          <Spinner className="slds-spinner--x-small" />
         </SpinnerContainer>
       </Demo>
   },
@@ -56,7 +55,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className={pf('spinner--small')} />
+          <Spinner className="slds-spinner--small" />
         </SpinnerContainer>
       </Demo>
   },
@@ -66,7 +65,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className={pf('spinner--medium')} />
+          <Spinner className="slds-spinner--medium" />
         </SpinnerContainer>
       </Demo>
   },
@@ -76,7 +75,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className={pf('spinner--large')} />
+          <Spinner className="slds-spinner--large" />
         </SpinnerContainer>
       </Demo>
   }

@@ -80,8 +80,6 @@
       }
     }
 
-
-
     &.#{$css-prefix}is-active {
       box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
       border-bottom-color: $color-background-context-bar-item-hover;

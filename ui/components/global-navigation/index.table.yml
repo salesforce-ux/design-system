@@ -71,24 +71,24 @@ classes:
     notes: Only use on tabset version
     required: true
   -
-    class: has-focus
+    class: slds-has-focus
     description: Toggled class that gets applied via JavaScript
     applied: <code>.slds-context-bar__item</code>
     notes: Only needed on tabset version
     required: true
   -
-    class: is-pinned
+    class: slds-is-pinned
     description: A state of tabs, user can pin commonly used or favorite tabs
     applied: <code>.slds-context-bar__item</code>
     notes: Only use on tabset version
     required: true
   -
-    class: is-unsaved
+    class: slds-is-unsaved
     description: Handles the "dirty" state of a tab, applies visual indication on the tab to inform user something on their page hasn't been saved
     applied: <code>.slds-context-bar__item</code>
     required: true
   -
-    class: unsaved-indicator
+    class: slds-unsaved-indicator
     description: Asterisk that is injected into the markup if a tab state is dirty
     applied: <code>&lt;abbr&gt;</code>
     required: true

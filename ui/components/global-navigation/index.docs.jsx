@@ -26,7 +26,7 @@ let NavigationBar = props =>
         <div className="slds-context-bar__icon-action">
           <WaffleIcon />
         </div>
-        <span className="slds-context-bar__label-action slds-context-bar__app-name slds-site-stencil__squeeze slds-is-relative">
+        <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
           <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
         </span>
       </div>
@@ -47,10 +47,10 @@ let NavigationBar = props =>
 </div>;
 
 let NavigationBarItem = props =>
-  <li className="context-bar__item is-relative" { ...props }>
-    <a className="context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+  <li className="slds-context-bar__item slds-is-relative" { ...props }>
+    <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
     { props.showItems ?
-      <div className="site-dimension site-dimension--absolute-box m-horizontal--xx-small"></div> : null }
+      <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
   </li>;
 
 export const intro = (
@@ -78,7 +78,7 @@ export default (
 
     <h2 className="site-text-heading--label">1.2. Building the Navigation Bar Item</h2>
 
-    <div className="docs-example m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -87,7 +87,7 @@ export default (
       </div>
     </div>
 
-    <div className="docs-example m-bottom--xx-large m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>

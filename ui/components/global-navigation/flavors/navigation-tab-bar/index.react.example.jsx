@@ -252,7 +252,7 @@ export let states = [
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
         <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
-          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true" role="button">
             <span className="slds-p-left--xx-small slds-truncate">More <span className="slds-assistive-text">Tabs</span></span>
             <span className="slds-icon_container slds-m-left--x-small">
               <SvgIcon className="slds-icon slds-icon--xx-small slds-icon-text-default" sprite="utility" symbol="chevrondown" />
@@ -271,7 +271,7 @@ export let states = [
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2" />
           <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-            <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+            <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true" role="button">
               <span className="slds-p-left--xx-small slds-truncate">More <span className="slds-assistive-text">Tabs</span></span>
               <span className="slds-icon_container slds-m-left--x-small">
                 <SvgIcon className="slds-icon slds-icon--xx-small slds-icon-text-default" sprite="utility" symbol="chevrondown" />
@@ -302,7 +302,7 @@ export let states = [
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2" />
         <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-unsaved">
-          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items"  aria-haspopup="true">
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items"  aria-haspopup="true" role="button">
             <abbr className="slds-unsaved-indicator" title="Tab(s) within menu not saved">*</abbr>
             <span className="slds-p-left--xx-small slds-truncate">More <span className="slds-assistive-text">Tabs</span></span>
             <span className="slds-icon_container slds-m-left--x-small">
@@ -322,7 +322,7 @@ export let states = [
           <ContextTab title="Tab Item 1" />
           <ContextTab title="Tab Item 2" />
           <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-is-unsaved">
-            <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+            <a href="javascript:void(0);" className="slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true" role="button">
               <abbr className="slds-unsaved-indicator" title="Tab(s) within menu not saved">*</abbr>
               <span className="slds-p-left--xx-small slds-truncate">More <span className="slds-assistive-text">Tabs</span></span>
               <span className="slds-icon_container slds-m-left--x-small">

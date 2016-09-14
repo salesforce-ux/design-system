@@ -12,6 +12,11 @@ The following issues have now been resolved:
 - Included the logo SVG asset used in the Global header
 - Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
 
+**DEPRECATED**
+
+Customizing the CSS class names by customizing `$css-prefix` is deprecated and will be removed in version 2.2.
+As an alternative, please use this PostCSS plugin to customize class name prefixes: [postcss-slds-prefix](https://github.com/salesforce-ux/postcss-slds-prefix).
+
 ## Release [2.1.2] - September 6, 2016
 
 **SITE IA/ENHANCEMENTS**

@@ -363,12 +363,10 @@ export default (
                     <li key={`item-${i}`}>
                       <a className="slds-lookup__item-action slds-media slds-media--center site-stencil__color-dark site-stencil__background-none-hover" href="javascript:void(0);" tabIndex="-1">
                         <SvgIcon className={'icon icon-standard-account icon--small media__figure site-stencil__background-light'} />
-
                         <div className="slds-media__body">
                           <div className="slds-lookup__result-text">
                             🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                           </div>
-
                           <span className="slds-lookup__result-meta slds-text-body--small site-stencil__color-light">
                             🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                           </span>

@@ -14,7 +14,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
 
-
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
@@ -60,17 +59,51 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <div className="slds-global-header__item slds-global-header__item--search">
-        <div className={className('slds-form-element slds-lookup', props.autocomplete ? 'slds-is-open': null)}>
+        <div className={className('slds-form-element lookup', props.autocomplete ? 'slds-is-open': null)}>
           <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
           { props.autocomplete ?
             props.children
-            : <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+            : <div className="slds-form-element__control lookup__search-control slds-input-has-icon slds-input-has-icon--left">
                 <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
                 <input id="global-search-01" className="slds-input slds-lookup__search-input" type="search" placeholder="Search Salesforce" />
               </div> }
         </div>
       </div>
       <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-around--xx-small', props.actions ? 'slds-is-open': null)}>
+          <ButtonIcon
+            className="slds-button--icon slds-button--icon-small slds-button--icon-container global-header__button--icon-actions"
+            iconClassName="global-header__icon-actions"
+            hasPopup
+            symbol="add"
+            assistiveText="Global Actions" />
+          { props.actions ? ActionsDropdown : null}
+        </li>
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.help ? 'slds-is-open': null)}>
+          <ButtonIcon
+            className="slds-button--icon slds-button--icon-container global-header__button--icon"
+            iconClassName="global-header__icon"
+            hasPopup
+            symbol="question"
+            assistiveText="Help and Training" />
+        </li>
+        <li className={className('slds-dropdown-trigger dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
+          <ButtonIcon
+            className="slds-button--icon slds-button--icon-container global-header__button--icon"
+            iconClassName="global-header__icon"
+            hasPopup
+            symbol="setup"
+            assistiveText="Setup" />
+          { props.setup ? SetupDropdown : null}
+        </li>
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
+          <ButtonIcon
+            className="slds-button--icon slds-button--icon-container global-header__button--icon"
+            iconClassName="global-header__icon"
+            hasPopup
+            symbol="notification"
+            assistiveText="Setup" />
+        </li>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
           <button className="slds-button" title="person name" aria-haspopup="true">
             <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
@@ -86,8 +119,29 @@ export let GlobalHeader = props =>
 // Export
 //////////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ height: '60px' }}>
-    <GlobalHeader />
-  </div>
-);
+export let states = [
+  {
+    id: 'global-header',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ height: '60px' }}>
+        <GlobalHeader />
+      </div>
+  },
+  {
+    id: 'global-header-actions-active',
+    label: 'Global actions active',
+    element:
+      <div className="demo-only" style={{ height: '190px' }}>
+        <GlobalHeader actions />
+      </div>
+  },
+  {
+    id: 'global-header-setup-active',
+    label: 'Setup active',
+    element:
+      <div className="demo-only" style={{ height: '190px' }}>
+        <GlobalHeader setup />
+      </div>
+  }
+];

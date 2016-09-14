@@ -18,8 +18,8 @@ import className from 'classnames';
 ///////////////////////////////////////////
 
 export let UtilityBarItem = props =>
-  <li>
-    <button className={className('slds-button slds-utility-bar__item', props.className)}>
+  <li className="slds-utility-bar__item">
+    <button className={className('slds-button slds-utility-bar__action', props.className)}>
       <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol={ props.symbol } />
       { props.children }
     </button>

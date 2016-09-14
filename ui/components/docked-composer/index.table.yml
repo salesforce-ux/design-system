@@ -21,7 +21,7 @@ classes:
     class: slds-docked-composer__actions
     description: Actionable items with <code>.slds-docked-composer__header</code>
     applied: <code>&lt;div&gt;</code>
-    required: true
+    deprecated: true
   -
     class: slds-docked-composer__body
     description: Primary area within docked composer that contains specific task
@@ -52,7 +52,12 @@ classes:
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: slds-docked-composer__overflow-pill
+    class: slds-docked-composer--overflow__button
     description: An indicator that displays the number of docked composers not shown on screen, user can select to display another docked composer from this pill
     applied: <code>&lt;a&gt;</code>
-    required: true
+    deprecated: true
+  -
+    class: docked-composer--overflow__pill
+    description: An indicator that displays the number of docked composers not shown on screen, user can select to display another docked composer from this pill
+    applied: <code>&lt;a&gt;</code>
+    deprecated: true

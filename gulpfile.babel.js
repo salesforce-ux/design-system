@@ -57,15 +57,22 @@ nconf
 const watchPaths = {
   sass: [
     'site/assets/styles/**/*.scss',
-    'ui/**/*.scss'
+    'ui/**/*.scss',
+    'design-tokens/*.yml'
   ],
   pages: [
-    'ui/**/*.{md,yml}'
+    'ui/**/*.{md,yml}',
+    '!ui/**/tokens/*.yml'
   ],
   js: [
     'app_modules/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     'site/**/*.{js,jsx}'
+  ],
+  tokens: [
+    'ui/**/tokens/*.yml',
+    'design-tokens/**/*.yml',
+    '!design-tokens/components.yml'
   ]
 };
 
@@ -168,13 +175,14 @@ const siteMiddleware = (req, res, next) => {
   }
 };
 
-gulp.task('clean', del.bind(null, [
+gulp.task('clean', () => del.sync([
   __PATHS__.www,
   __PATHS__.generated,
   __PATHS__.tmp,
   __PATHS__.dist,
   __PATHS__.logs,
-  __PATHS__.build
+  __PATHS__.build,
+  path.join(__PATHS__.designTokens, 'dist')
 ]));
 
 gulp.task('serve', () => {
@@ -235,6 +243,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(watchPaths.sass, ['styles']);
+  gulp.watch(watchPaths.tokens, ['generate:tokens:components:imports', 'generate:tokens:ui']);
 
   // Only lint every 10s so tasks don't take CPU time away from compilation tasks
   gulp.watch(
@@ -253,12 +262,12 @@ gulp.task('serve', () => {
 
 gulp.task('default', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], 'serve',
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], 'serve',
   callback);
 });
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
+    'clean', 'generate:tokens:all', 'styles', ['assets', 'generate'], ['pages', 'webpack'], ['links'],
   callback);
 });

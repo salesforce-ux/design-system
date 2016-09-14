@@ -18,11 +18,6 @@ import className from 'classnames';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>;
-
 export let Pill = props =>
   <span className={className('slds-pill', props.className)}>
     {props.children}
@@ -37,55 +32,6 @@ export let PillContainer = props =>
   </div>;
 
 ///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Default = props =>
-  <Demo>
-    <Pill />
-  </Demo>;
-
-let Icon = props =>
-  <Demo>
-    <Pill>
-      <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
-        <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
-        <span className="slds-assistive-text">Account</span>
-      </span>
-    </Pill>
-  </Demo>;
-
-let Portrait = props =>
-  <Demo>
-    <Pill>
-      <span className="slds-pill__icon slds-avatar slds-avatar--circle">
-        <img src="/assets/images/avatar2.jpg" alt="" />
-      </span>
-    </Pill>
-  </Demo>;
-
-let Unlinked = props =>
-  <Demo>
-    <Pill unlinked />
-  </Demo>;
-
-let Truncated = props =>
-  <Demo style={{ width: '220px' }}>
-    <PillContainer>
-      <Pill label="Pill label that is longer than the area that contains it" />
-    </PillContainer>
-  </Demo>;
-
-let Container = props =>
-  <Demo>
-    <PillContainer>
-      <Pill />
-      <Pill />
-      <Pill />
-    </PillContainer>
-  </Demo>;
-
-///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
@@ -93,31 +39,63 @@ export let states = [
   {
     id: 'pill',
     label: 'Default',
-    element: <Default />
+    element: <Pill />
   },
   {
     id: 'pill-with-icon',
     label: 'With icon',
-    element: <Icon />
+    element:
+      <Pill>
+        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+          <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+          <span className="slds-assistive-text">Account</span>
+        </span>
+      </Pill>
   },
   {
     id: 'pill-with-portrait',
     label: 'With portrait',
-    element: <Portrait />
+    element:
+      <Pill>
+        <span className="slds-pill__icon slds-avatar slds-avatar--circle">
+          <img src="/assets/images/avatar2.jpg" alt="" />
+        </span>
+      </Pill>
   },
   {
     id: 'pill-unlinked',
     label: 'Unlinked',
-    element: <Unlinked />
+    element: <Pill unlinked />
   },
   {
     id: 'pill-truncated',
     label: 'Truncated',
-    element: <Truncated />
+    element:
+      <div className="demo-only" style={{ width: '220px' }}>
+        <PillContainer>
+          <Pill label="Pill label that is longer than the area that contains it" />
+        </PillContainer>
+      </div>
   },
   {
     id: 'pill-container',
     label: 'Pill with Container',
-    element: <Container />
+    element:
+      <PillContainer>
+        <Pill />
+        <Pill />
+        <Pill />
+      </PillContainer>
+  },
+  {
+    id: 'pill-error',
+    label: 'Error',
+    element:
+      <Pill className="slds-has-error">
+        <span className="slds-icon_container slds-pill__icon_container slds-m-left--xx-small">
+          <SvgIcon className="icon-error slds-icon--x-small slds-icon-text-error" sprite="utility" symbol="warning" />
+          <span className="slds-assistive-text">Warning</span>
+        </span>
+      </Pill>
   }
 ];

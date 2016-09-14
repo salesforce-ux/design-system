@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import className from 'classnames';
 
 ///////////////////////////////////////////
@@ -28,24 +29,21 @@ const dialingIcon = (
 export let UtilityPanel = props =>
   <div className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <div className="slds-utility-panel__header slds-grid slds-shrink-none">
-      <div className="slds-utility-panel__header-label">
-        <div className="slds-media slds-media--center">
-          <div className="slds-media__figure">
-            <span className="slds-icon_container">
-              <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
-              <span className="slds-assistive-text">Call Icon</span>
-            </span>
-          </div>
-          <div className="slds-media__body">
-            <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
-          </div>
+      <div className="slds-media slds-media--center">
+        <div className="slds-media__figure slds-m-right--x-small">
+          <span className="slds-icon_container">
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="call" />
+          </span>
+        </div>
+        <div className="slds-media__body">
+          <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className="slds-utility-panel__header-icon-action slds-col--bump-left">
-        <button className="slds-button slds-button--icon slds-button--icon-inverse">
-          <SvgIcon className="slds-button__icon" sprite="utility" symbol="minimize_window" />
-          <span className="slds-assistive-text">Minimize</span>
-        </button>
+      <div className="slds-col--bump-left">
+        <ButtonIcon
+          className="slds-button--icon"
+          symbol="minimize_window"
+          assistiveText="Minimize Panel" />
       </div>
     </div>
     <div className="slds-utility-panel__body">
@@ -54,14 +52,14 @@ export let UtilityPanel = props =>
   </div>;
 
 const PanelOpen = (
-  <UtilityPanel className="slds-is-open">
-    <div className="slds-text-align--center slds-align-middle">Utility Panel Body</div>
+  <UtilityPanel className="slds-is-open" header="Call">
+    <div className="slds-align--absolute-center">Utility Panel Body</div>
   </UtilityPanel>
 );
 
 const PanelClosed = (
-  <UtilityPanel>
-    <div className="slds-text-align--center slds-align-middle">Utility Panel Body</div>
+  <UtilityPanel header="Call">
+    <div className="slds-align--absolute-center">Utility Panel Body</div>
   </UtilityPanel>
 );
 

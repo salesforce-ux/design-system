@@ -10,106 +10,51 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
+import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import Input from 'ui/components/forms/flavors/input/index.react';
-import Lorem from 'react-lorem-component';
+import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
 import className from 'classnames';
 
-
-const dialingIcon = (
-  <span className="slds-icon_container slds-icon-standard-task">
-    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="task" />
-    <span className="slds-assistive-text">Task Icon</span>
-  </span>
-);
-
-let LookupMulti = props =>
-  <div className={className('slds-form-element slds-lookup', props.className)} data-select="multi" data-scope="multi">
-    <label className="slds-form-element__label" htmlFor={props.id}>{props.label}</label>
-    <div className="slds-form-element__control slds-grid slds-box--border">
-      <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--x-small slds-shrink-none">
-        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
-        <ButtonIcon className="slds-button-space-left slds-shrink-none" flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
-      </div>
-      <div className="slds-grid slds-grow">
-        <input id={props.id} className="slds-lookup__search-input slds-input--bare slds-grow" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder={props.placeholder} defaultValue={props.value} />
-      </div>
-    </div>
-    {props.children}
-  </div>;
-
 export default (
-  <div className="demo-only">
-    {/*<div className="docked-container">*/}
-
-      <div role="dialog" aria-labelledby="dialog-heading-id" className="slds-docked-composer slds-grid slds-grid--vertical slds-nowrap slds-is-open">
-
-        {/* Composer Header */}
-        <header className="slds-docked-composer__header slds-grid slds-grid--align-spread slds-shrink-none">
-          <MediaObject figureLeft={dialingIcon} flavor="center">
-            <h2 id="dialog-heading-id">New Task</h2>
-          </MediaObject>
-          <div className="slds-docked-composer__actions">
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
-          </div>
-        </header>
-
-        {/* Composer Body */}
-        <div className="slds-docked-composer__body slds-docked-composer__body--form slds-col slds-grid slds-grid--vertical slds-nowrap">
-
-          <fieldset className="slds-form--compound">
-            <legend className="slds-assistive-text">Log new task</legend>
-            <div className="slds-form-element__group">
-              <div className="slds-form-element__row">
-                <div className="slds-form-element">
-                  <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
-                  <div className="slds-form-element__control">
-                    <input className="slds-input" type="text" id="text-input-01" />
-                  </div>
+  <div className="demo-only" style={{ height: '500px' }}>
+    <DockedComposerPanel className="slds-is-open" header="New Task" headerSymbol="task">
+      <DockedComposerPanelBody className="slds-docked-composer__body--form">
+        <fieldset className="slds-form--compound">
+          <legend className="slds-assistive-text">Log new task</legend>
+          <div className="form-element__group">
+            <div className="slds-form-element__row">
+              <div className="slds-form-element">
+                <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-01" />
                 </div>
               </div>
-
-              <div className="slds-form-element__row">
-                <div className="slds-form-element slds-size--1-of-2">
-                  <label className="slds-form-element__label" htmlFor="text-input-02">Assigned To</label>
-                  <div className="slds-form-element__control">
-                    <input className="slds-input" type="text" id="text-input-02" />
-                  </div>
-                </div>
-                <div className="slds-form-element slds-size--1-of-2">
-                  <label className="slds-form-element__label" htmlFor="text-input-03">Due Dates</label>
-                  <div className="slds-form-element__control">
-                    <input className="slds-input" type="text" id="text-input-03" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="slds-form-element__row">
-                <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
-                <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
-              </div>
-
             </div>
-          </fieldset>
-
-        </div>
-
-        {/* Composer Footer */}
-        <footer className="slds-docked-composer__footer slds-shrink-none">
-
-          <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
-            <Button flavor="brand">Save</Button>
+            <div className="slds-form-element__row">
+              <div className="slds-form-element slds-size--1-of-2">
+                <label className="slds-form-element__label" htmlFor="text-input-02">Assigned To</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-02" />
+                </div>
+              </div>
+              <div className="slds-form-element slds-size--1-of-2">
+                <label className="slds-form-element__label" htmlFor="text-input-03">Due Dates</label>
+                <div className="slds-form-element__control">
+                  <input className="slds-input" type="text" id="text-input-03" />
+                </div>
+              </div>
+            </div>
+            <div className="slds-form-element__row">
+              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
+              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
+            </div>
           </div>
-
-        </footer>
-      </div>
-
-    {/*</div>*/}
+        </fieldset>
+      </DockedComposerPanelBody>
+      <DockedComposerPanelFooter>
+        <Button className="slds-button--brand slds-col--bump-left">Save</Button>
+      </DockedComposerPanelFooter>
+    </DockedComposerPanel>
   </div>
 );

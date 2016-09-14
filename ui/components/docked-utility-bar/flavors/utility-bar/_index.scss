@@ -17,12 +17,17 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: $height-docked-bar;
   background: $color-background;
   box-shadow: $shadow-docked;
   z-index: $z-index-overlay; // Better token - more specific to docked stuff
 
-  // Button that invokes utility panel
   &__item {
+    display: flex;
+  }
+
+  // Button that invokes utility panel
+  &__action {
     position: relative;
     padding: 0 $spacing-small;
     border-radius: 0;
@@ -45,7 +50,7 @@
     }
 
     &:focus:after {
-      background: $color-background-utility-bar-active;
+      background: $color-border-brand;
     }
 
     &:hover,
@@ -59,7 +64,7 @@
       color: inherit;
 
       &:after {
-        background: $color-background-utility-bar-active;
+        background: $color-border-brand;
       }
     }
   }

@@ -7,28 +7,53 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+//-----------------------------------------------------------------------------
+// Token Overrides
+// Should get removed ASAP from spring-17 to use component-specific tokens
+//-----------------------------------------------------------------------------
+
+// Global header icon
+$square-icon-global-identity-icon: 1.25rem;
+
+// Docked Panel
+$height-docked-bar: 2.5rem;
+$color-background-docked-panel-header: #f7f9fb;
+
+
+//-----------------------------------------------------------------------------
+// Imports
+//-----------------------------------------------------------------------------
+
 // The Sass importer needs the extension to be explicit when multiple files have the same name
 // scss-lint:disable ImportPath
 
 @import
-  '@salesforce-ux/design-tokens/dist/s1-base-large.default.scss',
-  '@salesforce-ux/design-tokens/dist/s1-base.default.scss',
-  '@salesforce-ux/design-tokens/dist/force-base.default.scss',
-  '@salesforce-ux/design-tokens/dist/force-base.map.scss',
-  '@salesforce-ux/design-tokens/dist/bg-actions.default.scss',
-  '@salesforce-ux/design-tokens/dist/bg-custom.default.scss',
-  '@salesforce-ux/design-tokens/dist/bg-standard.default.scss',
-  '@salesforce-ux/design-tokens/dist/bg-actions.map.scss',
-  '@salesforce-ux/design-tokens/dist/bg-custom.map.scss',
-  '@salesforce-ux/design-tokens/dist/bg-standard.map.scss';
+  '../design-tokens/dist/components.default.scss',
+  '../design-tokens/dist/s1-base-large.default.scss',
+  '../design-tokens/dist/s1-base.default.scss',
+  '../design-tokens/dist/force-base.default.scss',
+  '../design-tokens/dist/force-base.map.scss',
+  '../design-tokens/dist/bg-actions.default.scss',
+  '../design-tokens/dist/bg-custom.default.scss',
+  '../design-tokens/dist/bg-standard.default.scss',
+  '../design-tokens/dist/bg-actions.map.scss',
+  '../design-tokens/dist/bg-custom.map.scss',
+  '../design-tokens/dist/bg-standard.map.scss';
 
 
-// TODO: Add to Design Tokens
+//-----------------------------------------------------------------------------
+// Temporary tokens
+// Should get removed ASAP from spring-17 to use component-specific tokens
+//-----------------------------------------------------------------------------
+
 $color-border-tab-active: #fff; // WHITE
 $color-border-toggle-checked: #fff; // WHITE
-$width-toggle: 3rem; // Change value for current $width-toggle due to spec change
 
-// MQ
+
+//-----------------------------------------------------------------------------
+// Media Queries
+//-----------------------------------------------------------------------------
+
 $mq-x-small: 320px !default;
 $mq-small: 480px !default;
 $mq-medium: 768px !default;

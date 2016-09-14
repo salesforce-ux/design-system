@@ -52,7 +52,7 @@ export let MenuList = props =>
   </ul>;
 
 export let MenuItem = props =>
-  <li className={className('slds-dropdown__item', props.className)} role="presentation">
+  <li {...props} className={className('slds-dropdown__item', props.className)} role="presentation">
     <a href="javascript:void(0);" role={ props.isSelectable ? 'menuitemcheckbox' : 'menuitem' } aria-checked={props.isSelected} tabIndex={ props.tabIndex || '-1' }>
       <span className="slds-truncate">
         { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }

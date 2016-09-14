@@ -10,6 +10,7 @@
 The following issues have now been resolved:
 
 - Included the logo SVG asset used in the Global header
+- Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
 
 ## Release [2.1.2] - September 6, 2016
 

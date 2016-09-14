@@ -68,12 +68,16 @@
       width: 100%;
       height: 3px;
       display: block;
-      background: rgba(0, 0, 0, 0.75);
-      mix-blend-mode: soft-light;
+      background: rgba(0, 0, 0, 0.25);
       position: absolute;
       bottom: -3px;
       left: 0;
       right: 0;
+
+      @supports (mix-blend-mode: soft-light) {
+        background: rgba(0, 0, 0, 0.75);
+        mix-blend-mode: soft-light;
+      }
     }
 
     &.#{$css-prefix}is-active {
@@ -94,8 +98,12 @@
       }
 
       &:after {
-        background: rgba(0, 0, 0, 0.75);
-        mix-blend-mode: soft-light;
+        background: rgba(0, 0, 0, 0.25);
+
+        @supports (mix-blend-mode: soft-light) {
+          background: rgba(0, 0, 0, 0.75);
+          mix-blend-mode: soft-light;
+        }
       }
 
       &:hover {

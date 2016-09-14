@@ -1,0 +1,12 @@
+global:
+  type: opacity
+  category: opacity
+  cssProperties:
+  - opacity
+props:
+  OPACITY_5:
+    value: '0.5'
+    comment: '50% transparency of an element'
+  OPACITY_8:
+    value: '0.8'
+    comment: '80% transparency of an element'

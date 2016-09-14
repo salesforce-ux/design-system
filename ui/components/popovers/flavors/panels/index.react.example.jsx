@@ -12,123 +12,122 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const iconHeader = (
-  <span className={pf('icon_container icon-standard-account')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="account" />
-    <span className={pf('assistive-text')}>Tesla Motors</span>
+  <span className="slds-icon_container slds-icon-standard-account">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
+    <span className="slds-assistive-text">Tesla Motors</span>
   </span>
 );
 const iconOpportunity = (
-  <span className={pf('icon_container icon-standard-opportunity')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="opportunity" />
-    <span className={pf('assistive-text')}>Opportunities</span>
+  <span className="slds-icon_container slds-icon-standard-opportunity">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="opportunity" />
+    <span className="slds-assistive-text">Opportunities</span>
   </span>
 );
 const iconCases = (
-  <span className={pf('icon_container icon-standard-case')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="case" />
-    <span className={pf('assistive-text')}>Cases</span>
+  <span className="slds-icon_container slds-icon-standard-case">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="case" />
+    <span className="slds-assistive-text">Cases</span>
   </span>
 );
 
 const ViewAll = () =>
-  <dd className={pf('m-top--x-small text-align--right')}><a href="javascript:void(0);" title="View all Opportunities">View All</a></dd>;
+  <dd className="slds-m-top--x-small slds-text-align--right"><a href="javascript:void(0);" title="View all Opportunities">View All</a></dd>;
 
 export default (
-  <div className={pf('popover popover--panel nubbin--left-top')} role="dialog">
+  <div className="slds-popover slds-popover--panel slds-nubbin--left-top" role="dialog">
 
-    <div className={pf('popover__header')}>
+    <div className="slds-popover__header">
 
-      <MediaObject figureLeft={iconHeader} flavor="center" className={pf('m-bottom--small')}>
-        <p className={pf('text-heading--medium hyphenate')}><a href="javascript:void(0);">Tesla Motors</a></p>
+      <MediaObject figureLeft={iconHeader} flavor="center" className="slds-m-bottom--small">
+        <p className="slds-text-heading--medium slds-hyphenate"><a href="javascript:void(0);">Tesla Motors</a></p>
       </MediaObject>
 
       {/* Additional Info */}
-      <div className={pf('grid wrap grid--pull-padded')}>
+      <div className="slds-grid slds-wrap slds-grid--pull-padded">
 
-        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
+        <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className={pf('text-title--caps truncate')}>Billing Address</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate">Billing Address</p></dt>
             <dd>
-              <p className={pf('truncate')}>3500 Deer Creek Rd.</p>
-              <p className={pf('truncate')}>Palo Alto, CA 94304</p>
+              <p className="slds-truncate">3500 Deer Creek Rd.</p>
+              <p className="slds-truncate">Palo Alto, CA 94304</p>
             </dd>
           </dl>
         </div>
 
-        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
+        <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className={pf('text-title--caps truncate')}>Phone</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate">Phone</p></dt>
             <dd><a href="javascript:void(0);">212-345-3485</a></dd>
           </dl>
         </div>
 
-        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
+        <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className={pf('text-title--caps truncate')}>Website</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate">Website</p></dt>
             <dd><a href="javascript:void(0);">teslamotors.com</a></dd>
           </dl>
         </div>
 
-        <div className={pf('p-horizontal--small size--1-of-2 p-bottom--x-small')}>
+        <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className={pf('text-title--caps truncate')}>Account Owner</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate">Account Owner</p></dt>
             <dd><a href="javascript:void(0);">Jeff Maguire</a></dd>
           </dl>
         </div>
 
       </div>
     </div>
-    <div className={pf('popover__body')}>
-      <dl className={pf('popover__body-list')}>
-        <dt className={pf('m-bottom--small')}>
+    <div className="slds-popover__body">
+      <dl className="slds-popover__body-list">
+        <dt className="slds-m-bottom--small">
           <MediaObject figureLeft={iconOpportunity} flavor="center">
-            <p className={pf('text-heading--small hyphenate')}>Opportunities (2+)</p>
+            <p className="slds-text-heading--small slds-hyphenate">Opportunities (2+)</p>
           </MediaObject>
         </dt>
         {/* Opportunity One */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
+        <dd className="slds-tile">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
+          <div className="slds-tile__detail">
+            <dl className="slds-dl--horizontal slds-text-body--small">
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Value</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$500,000</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">$500,000</p>
               </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Close Date</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Dec 15, 2015</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">Dec 15, 2015</p>
               </dd>
             </dl>
           </div>
         </dd>
         {/* Opportunity Two */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
+        <dd className="slds-tile">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
+          <div className="slds-tile__detail">
+            <dl className="slds-dl--horizontal slds-text-body--small">
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Value</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$60,000</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">$60,000</p>
               </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Close Date</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Jan 15, 2016</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">Jan 15, 2016</p>
               </dd>
             </dl>
           </div>
@@ -136,30 +135,30 @@ export default (
         <ViewAll />
       </dl>
 
-      <dl className={pf('popover__body-list')}>
-        <dt className={pf('m-bottom--small')}>
+      <dl className="slds-popover__body-list">
+        <dt className="slds-m-bottom--small">
           <MediaObject figureLeft={iconCases} flavor="center">
-            <p className={pf('text-heading--small hyphenate')}>Cases (1)</p>
+            <p className="slds-text-heading--small slds-hyphenate">Cases (1)</p>
           </MediaObject>
         </dt>
         {/* Case One */}
-        <dd className={pf('tile')}>
-          <p className={pf('tile__title truncate')}>
+        <dd className="slds-tile">
+          <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
-          <div className={pf('tile__detail')}>
-            <dl className={pf('dl--horizontal text-body--small')}>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Value</p>
+          <div className="slds-tile__detail">
+            <dl className="slds-dl--horizontal slds-text-body--small">
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Value</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>$60,000</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">$60,000</p>
               </dd>
-              <dt className={pf('dl--horizontal__label')}>
-                <p className={pf('truncate')}>Close Date</p>
+              <dt className="slds-dl--horizontal__label">
+                <p className="slds-truncate">Close Date</p>
               </dt>
-              <dd className={pf('dl--horizontal__detail tile__meta')}>
-                <p className={pf('truncate')}>Jan 15, 2016</p>
+              <dd className="slds-dl--horizontal__detail slds-tile__meta">
+                <p className="slds-truncate">Jan 15, 2016</p>
               </dd>
             </dl>
           </div>

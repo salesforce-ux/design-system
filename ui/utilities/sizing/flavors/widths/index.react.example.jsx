@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 
 const cssPrefix = globals.cssPrefix;
 
 let SizePreviewExample = props =>
-<div className={pf(`size--${props.size}`)}>
-  <div className={pf('box box--x-small text-align--center m-around--x-small')}>.{cssPrefix}size--{props.size}</div>
+<div className={`slds-size--${props.size}`}>
+  <div className="slds-box slds-box--x-small slds-text-align--center slds-m-around--x-small">.{cssPrefix}size--{props.size}</div>
 </div>;
 
 export let states = [
@@ -25,7 +24,7 @@ export let states = [
     id: 'two-column',
     label: '2 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-2" />
       <SizePreviewExample size="1-of-2" />
       <SizePreviewExample size="2-of-2" />
@@ -35,7 +34,7 @@ export let states = [
     id: 'three-column',
     label: '3 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-3" />
       <SizePreviewExample size="1-of-3" />
       <SizePreviewExample size="1-of-3" />
@@ -48,7 +47,7 @@ export let states = [
     id: 'four-column',
     label: '4 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-4" />
       <SizePreviewExample size="1-of-4" />
       <SizePreviewExample size="1-of-4" />
@@ -64,7 +63,7 @@ export let states = [
     id: 'five-column',
     label: '5 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-5" />
       <SizePreviewExample size="1-of-5" />
       <SizePreviewExample size="1-of-5" />
@@ -81,7 +80,7 @@ export let states = [
     id: 'six-column',
     label: '6 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-6" />
       <SizePreviewExample size="1-of-6" />
       <SizePreviewExample size="1-of-6" />
@@ -99,7 +98,7 @@ export let states = [
     id: '7-column',
     label: '7 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-7" />
       <SizePreviewExample size="1-of-7" />
       <SizePreviewExample size="1-of-7" />
@@ -118,7 +117,7 @@ export let states = [
     id: '8-column',
     label: '8 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-8" />
       <SizePreviewExample size="1-of-8" />
       <SizePreviewExample size="1-of-8" />
@@ -140,7 +139,7 @@ export let states = [
     id: '12-column',
     label: '12 Column Span',
     element:
-    <div className={pf('demo-only demo-only--sizing grid wrap')}>
+    <div className="demo-only demo-only--sizing slds-grid slds-wrap">
       <SizePreviewExample size="1-of-12" />
       <SizePreviewExample size="1-of-12" />
       <SizePreviewExample size="1-of-12" />

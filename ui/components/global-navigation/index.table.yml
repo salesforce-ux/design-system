@@ -1,91 +1,91 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
 classes:
   -
-    class: context-bar
+    class: slds-context-bar
     description: Context bar wrapper
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__primary
+    class: slds-context-bar__primary
     description: Primary zone
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__secondary
+    class: slds-context-bar__secondary
     description: Secondary zone
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__item
+    class: slds-context-bar__item
     description: Item on the horizontal axis of the context bar
     required: true
     applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
   -
-    class: context-bar__item--tab
+    class: slds-context-bar__item--tab
     description: Tab item on the horizontal axis of the context bar
     applied: <code>&lt;li&gt;</code>
   -
-    class: context-bar__label-action
+    class: slds-context-bar__label-action
     description: Text hyperlink
     applied: <code>&lt;a&gt;</code>
     required: true
   -
-    class: context-bar__icon-action
+    class: slds-context-bar__icon-action
     description: Container for actionable area of SVG icon or button icon
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__button
+    class: slds-context-bar__button
     description: Styles for buttons
     applied: <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>
   -
-    class: context-bar__dropdown-trigger
+    class: slds-context-bar__dropdown-trigger
     description: Submenu / dropdown trigger area
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
-    notes: Requires <code>.{{cssPrefix}}dropdown-trigger</code> and <code>.{{cssPrefix}}dropdown-trigger--hover</code>
+    applied: <code>.slds-context-bar__item</code>
+    notes: Requires <code>.slds-dropdown-trigger</code> and <code>.slds-dropdown-trigger--hover</code>
   -
-    class: context-bar__vertical-divider
+    class: slds-context-bar__vertical-divider
     description: Add a vertical divider between elements
     applied: <code>&lt;div&gt;</code>
   -
-    class: context-bar__item--divider-left
+    class: slds-context-bar__item--divider-left
     description: Add a left border to a context bar item
     applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
   -
-    class: context-bar__item--divider-right
+    class: slds-context-bar__item--divider-right
     description: Add a right border to a context bar item
     applied: <code>&lt;div&gt;</code> or <code>&lt;li&gt;</code>
   -
-    class: context-bar__app-name
+    class: slds-context-bar__app-name
     description: Styles for application name region
-    applied: <code>.{{cssPrefix}}context-bar__label-action</code>
+    applied: <code>.slds-context-bar__label-action</code>
     required: true
   -
-    class: context-bar__object-switcher
+    class: slds-context-bar__object-switcher
     description: Styles for object switcher region
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     required: true
   -
-    class: context-bar__item--tab
+    class: slds-context-bar__item--tab
     description: Tab modifier when using a tabset
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     notes: Only use on tabset version
     required: true
   -
     class: has-focus
     description: Toggled class that gets applied via JavaScript
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     notes: Only needed on tabset version
     required: true
   -
     class: is-pinned
     description: A state of tabs, user can pin commonly used or favorite tabs
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     notes: Only use on tabset version
     required: true
   -
     class: is-unsaved
     description: Handles the "dirty" state of a tab, applies visual indication on the tab to inform user something on their page hasn't been saved
-    applied: <code>.{{cssPrefix}}context-bar__item</code>
+    applied: <code>.slds-context-bar__item</code>
     required: true
   -
     class: unsaved-indicator

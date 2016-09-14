@@ -14,7 +14,6 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -22,21 +21,21 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only">
-        <span className={pf('assistive-text')}>Call</span>
+        <span className="slds-assistive-text">Call</span>
         <MediaObject figureRight={ <TimelineActions /> }>
-          <MediaObject className={pf('media--timeline timeline__media--call')} figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName={pf('timeline__icon')}>
-            <h3 className={pf('truncate')} title="Mobile conversation on Monday">
+          <MediaObject className="slds-media--timeline slds-timeline__media--call" figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName="slds-timeline__icon">
+            <h3 className="slds-truncate" title="Mobile conversation on Monday">
               <a href="javascript:void(0);">Mobile conversation on Monday</a>
             </h3>
-            <p className={pf('truncate')}>Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
-            <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Name:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
+            <p className="slds-truncate">Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
+            <ul className="slds-list--horizontal slds-wrap">
+              <li className="slds-m-right--large">
+                <span className="slds-text-title">Name:</span>
+                <span className="slds-text-body--small"><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Assigned to:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
+              <li className="slds-m-right--large">
+                <span className="slds-text-title">Assigned to:</span>
+                <span className="slds-text-body--small"><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
           </MediaObject>

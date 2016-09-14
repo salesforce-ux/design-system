@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -21,11 +20,11 @@ export let states = [
   {
     id: 'button-icon-stateful-not-selected',
     label: 'Not Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful assertive symbol="like" assistiveText="Like" />
+    element: <ButtonIcon className="slds-button--icon-border" stateful assertive symbol="like" assistiveText="Like" />
   },
   {
     id: 'button-icon-stateful-selected',
     label: 'Selected',
-    element: <ButtonIcon className={pf('button--icon-border')} stateful selected assertive symbol="like" assistiveText="Liked" />
+    element: <ButtonIcon className="slds-button--icon-border" stateful selected assertive symbol="like" assistiveText="Liked" />
   }
 ];

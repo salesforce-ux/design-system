@@ -1,0 +1,38 @@
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+props:
+  BORDER_WIDTH_THIN:
+    value: 1px
+  BORDER_WIDTH_THICK:
+    value: 2px
+  SPACING_NONE:
+    value: '0'
+  SPACING_XXX_SMALL:
+    value: 0.125rem
+  SPACING_XX_SMALL:
+    value: 0.25rem
+  SPACING_X_SMALL:
+    value: 0.5rem
+  SPACING_SMALL:
+    value: 0.75rem
+  SPACING_MEDIUM:
+    value: 1rem
+  SPACING_LARGE:
+    value: 1.5rem
+  SPACING_X_LARGE:
+    value: 2rem
+  SPACING_XX_LARGE:
+    value: 3rem

@@ -12,24 +12,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let UtilityBarItem = props =>
-  <li>
-    <button className={className(pf('button utility-bar__item'), props.className)}>
-      <SvgIcon className={pf('button__icon button__icon--left')} sprite="utility" symbol={ props.symbol } />
+  <li className="slds-utility-bar__item">
+    <button className={className('slds-button slds-utility-bar__action', props.className)}>
+      <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol={ props.symbol } />
       { props.children }
     </button>
   </li>;
 
 export let UtilityBar = props =>
-  <footer className={pf('utility-bar_container')} role="footer" aria-label="Utility Bar">
-    <h2 className={pf('assistive-text')}>Utility Bar</h2>
-    <ul className={pf('utility-bar')}>
+  <footer className="slds-utility-bar_container" role="footer" aria-label="Utility Bar">
+    <h2 className="slds-assistive-text">Utility Bar</h2>
+    <ul className="slds-utility-bar">
       { props.children }
     </ul>
     { props.panel }
@@ -59,7 +58,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '40px' }}>
         <UtilityBar>
-          <UtilityBarItem symbol="call" className={pf('is-active')}>Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>

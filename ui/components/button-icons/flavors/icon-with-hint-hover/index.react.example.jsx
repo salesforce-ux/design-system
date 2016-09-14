@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -23,8 +22,8 @@ export let states = [
     label: 'Default with no border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--hint')} />
+        <div className="slds-hint-parent">
+          <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--hint" />
         </div>
       </div>
   },
@@ -33,8 +32,8 @@ export let states = [
     label: 'Container with border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon-border')} iconClassName={pf('button__icon--hint')} />
+        <div className="slds-hint-parent">
+          <ButtonIcon className="slds-button--icon-border" iconClassName="slds-button__icon--hint" />
         </div>
       </div>
   },
@@ -43,8 +42,8 @@ export let states = [
     label: 'Inverse with no border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <div className={pf('hint-parent')}>
-          <ButtonIcon className={pf('button--icon-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
+        <div className="slds-hint-parent">
+          <ButtonIcon className="slds-button--icon-inverse" iconClassName="slds-button__icon--inverse-hint" />
         </div>
       </div>
   },
@@ -53,8 +52,8 @@ export let states = [
     label: 'Inverse container with border',
     element:
     <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-      <div className={pf('hint-parent')}>
-        <ButtonIcon className={pf('button--icon-border-inverse')} iconClassName={pf('button__icon--inverse-hint')} />
+      <div className="slds-hint-parent">
+        <ButtonIcon className="slds-button--icon-border-inverse" iconClassName="slds-button__icon--inverse-hint" />
       </div>
     </div>
   }

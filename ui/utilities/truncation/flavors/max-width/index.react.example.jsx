@@ -11,22 +11,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')}>
+  <div className="demo-only">
     {props.children}
   </div>;
 
 let ListItem = props =>
-  <li className={className(pf('list__item m-right--large grid'), props.className)}>
+  <li className={className('slds-list__item slds-m-right--large slds-grid', props.className)}>
     <span>To:</span>
-    <span className={pf('m-left--xx-small truncate')}>{props.children}</span>
-    <span className={pf('m-left--xx-small no-flex')}> + 44 more</span>
+    <span className="slds-m-left--xx-small slds-truncate">{props.children}</span>
+    <span className="slds-m-left--xx-small slds-no-flex"> + 44 more</span>
   </li>;
 
 const longestName = (
@@ -49,13 +48,13 @@ const shortName = (
 let StateA = props =>
   <Demo>
     <ul>
-      <ListItem  className={pf('truncate_container--25')}>
+      <ListItem  className="slds-truncate_container--25">
         {shortName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--25')}>
+      <ListItem  className="slds-truncate_container--25">
         {longName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--25')}>
+      <ListItem  className="slds-truncate_container--25">
         {longestName}
       </ListItem>
     </ul>
@@ -64,13 +63,13 @@ let StateA = props =>
 let StateB = props =>
   <Demo>
     <ul>
-      <ListItem  className={pf('truncate_container--33')}>
+      <ListItem  className="slds-truncate_container--33">
         {shortName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--33')}>
+      <ListItem  className="slds-truncate_container--33">
         {longName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--33')}>
+      <ListItem  className="slds-truncate_container--33">
         {longestName}
       </ListItem>
     </ul>
@@ -79,13 +78,13 @@ let StateB = props =>
 let StateC = props =>
   <Demo>
     <ul>
-      <ListItem  className={pf('truncate_container--50')}>
+      <ListItem  className="slds-truncate_container--50">
         {shortName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--50')}>
+      <ListItem  className="slds-truncate_container--50">
         {longName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--50')}>
+      <ListItem  className="slds-truncate_container--50">
         {longestName}
       </ListItem>
     </ul>
@@ -94,13 +93,13 @@ let StateC = props =>
 let StateD = props =>
   <Demo>
     <ul>
-      <ListItem  className={pf('truncate_container--66')}>
+      <ListItem  className="slds-truncate_container--66">
         {shortName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--66')}>
+      <ListItem  className="slds-truncate_container--66">
         {longName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--66')}>
+      <ListItem  className="slds-truncate_container--66">
         {longestName}
       </ListItem>
     </ul>
@@ -109,13 +108,13 @@ let StateD = props =>
 let StateE = props =>
   <Demo>
     <ul>
-      <ListItem  className={pf('truncate_container--75')}>
+      <ListItem  className="slds-truncate_container--75">
         {shortName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--75')}>
+      <ListItem  className="slds-truncate_container--75">
         {longName}
       </ListItem>
-      <ListItem  className={pf('truncate_container--75')}>
+      <ListItem  className="slds-truncate_container--75">
         {longestName}
       </ListItem>
     </ul>

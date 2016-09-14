@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -23,7 +22,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className={pf('button--icon-more')} assistiveText="More options" />
+        <ButtonIcon hasDropdown className="slds-button--icon-more" assistiveText="More options" />
       </div>
   },
   {
@@ -31,7 +30,7 @@ export let states = [
     label: 'Inverse',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className={pf('button--icon-inverse button--icon-more')} assistiveText="More options" />
+        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-more" assistiveText="More options" />
       </div>
   }
 ];

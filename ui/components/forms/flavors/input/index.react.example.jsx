@@ -12,32 +12,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let FormElement = props =>
-  <div className={className(pf('form-element'), props.className)}>
+  <div className={className('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
 let FormElementLabel = props =>
-  <label className={pf('form-element__label')} htmlFor="text-input-01">{props.children}</label>;
+  <label className="slds-form-element__label" htmlFor="text-input-01">{props.children}</label>;
 
 let FormElementControl = props =>
-  <div className={className(pf('form-element__control'), props.className)}>
+  <div className={className('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
 let Input = props =>
-  <input id="text-input-01" className={className(pf('input'), props.className)} type={props.type || 'text'} placeholder="Placeholder Text" {...props} />;
+  <input id="text-input-01" className={className('slds-input', props.className)} type={props.type || 'text'} placeholder="Placeholder Text" {...props} />;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -57,8 +56,8 @@ let IconLeft = props =>
   <Demo>
     <FormElement>
       <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
-        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
+      <FormElementControl className="slds-input-has-icon slds-input-has-icon--left">
+        <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
         <Input />
       </FormElementControl>
     </FormElement>
@@ -68,8 +67,8 @@ let IconRight = props =>
   <Demo>
     <FormElement>
       <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl className={pf('input-has-icon input-has-icon--right')}>
-        <SvgIcon className={pf('input__icon icon-text-default')} sprite="utility" symbol="search" />
+      <FormElementControl className="slds-input-has-icon slds-input-has-icon--right">
+        <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
         <Input />
       </FormElementControl>
     </FormElement>
@@ -79,12 +78,12 @@ let IconLeftRight = props =>
   <Demo>
     <FormElement>
       <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl className={pf('input-has-icon input-has-icon--left-right')}>
-        <SvgIcon className={pf('input__icon input__icon--left icon-text-default')} sprite="utility" symbol="search" />
+      <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right">
+        <SvgIcon className="slds-input__icon slds-input__icon--left slds-icon-text-default" sprite="utility" symbol="search" />
         <Input type="search" />
-        <button className={pf('input__icon input__icon--right button button--icon')}>
-          <SvgIcon className={pf('button__icon')} sprite="utility" symbol="clear" />
-          <span className={pf('assistive-text')}>Clear</span>
+        <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+          <SvgIcon className="slds-button__icon" sprite="utility" symbol="clear" />
+          <span className="slds-assistive-text">Clear</span>
         </button>
       </FormElementControl>
     </FormElement>
@@ -92,8 +91,8 @@ let IconLeftRight = props =>
 
 let Required = props =>
   <Demo>
-    <FormElement className={pf('is-required')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
+    <FormElement>
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required />
       </FormElementControl>
@@ -102,24 +101,24 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
+    <FormElement className="slds-has-error">
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
       <FormElementControl>
         <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className="slds-form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
 let ErrorIcon = props =>
   <Demo>
-    <FormElement className={pf('is-required has-error')}>
-      <FormElementLabel><abbr className={pf('required')} title="required">*</abbr> Input Label</FormElementLabel>
-      <FormElementControl className={pf('input-has-icon input-has-icon--left')}>
-        <SvgIcon className={pf('input__icon')} sprite="utility" symbol="warning" />
+    <FormElement className="slds-has-error">
+      <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
+      <FormElementControl className="slds-input-has-icon slds-input-has-icon--left">
+        <SvgIcon className="slds-input__icon" sprite="utility" symbol="warning" />
         <Input required aria-describedby={props.errorId} />
       </FormElementControl>
-      <div id={props.errorId} className={pf('form-element__help')}>This field is required</div>
+      <div id={props.errorId} className="slds-form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -136,9 +135,9 @@ let Disabled = props =>
 let ReadOnly = props =>
   <Demo>
     <FormElement>
-      <span className={pf('form-element__label')}>Input Label</span>
-      <FormElementControl className={pf('has-divider--bottom')}>
-        <span className={pf('form-element__static')}>Read Only</span>
+      <span className="slds-form-element__label">Input Label</span>
+      <FormElementControl className="slds-has-divider--bottom">
+        <span className="slds-form-element__static">Read Only</span>
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -147,10 +146,10 @@ let FixedText = props =>
   <Demo>
     <FormElement>
       <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl className={pf('input-has-fixed-addon')}>
-        <span className={pf('form-element__addon')}>$</span>
+      <FormElementControl className="slds-input-has-fixed-addon">
+        <span className="slds-form-element__addon">$</span>
         <Input />
-        <span className={pf('form-element__addon')}>%</span>
+        <span className="slds-form-element__addon">%</span>
       </FormElementControl>
     </FormElement>
   </Demo>;
@@ -158,11 +157,11 @@ let FixedText = props =>
 let ReadOnlyFixedText = props =>
   <Demo>
     <FormElement>
-      <span className={pf('form-element__label')}>Input Label</span>
-      <FormElementControl className={pf('has-divider--bottom')}>
-        <span className={pf('form-element__addon')}>$</span>
-        <span className={pf('form-element__static')}>Read Only</span>
-        <span className={pf('form-element__addon')}>%</span>
+      <span className="slds-form-element__label">Input Label</span>
+      <FormElementControl className="slds-has-divider--bottom">
+        <span className="slds-form-element__addon">$</span>
+        <span className="slds-form-element__static">Read Only</span>
+        <span className="slds-form-element__addon">%</span>
       </FormElementControl>
     </FormElement>
   </Demo>;

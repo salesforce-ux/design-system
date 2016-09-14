@@ -14,15 +14,14 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import ToggleExample from 'app_modules/site/components/motion-and-animation/toggle-example';
 import Button from 'ui/components/buttons/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Motion" contentClassName={pf('site-guidelines site-guidelines-motion')}>
-    <div className={pf('container--x-large')}>
-      <div className={pf('m-bottom--xx-large')}>
+  <PageBody anchorTitle="Motion" contentClassName="site-guidelines site-guidelines-motion">
+    <div className="slds-container--x-large">
+      <div className="slds-m-bottom--xx-large">
         <h2 className="site-text-heading--large">Key Principles</h2>
-        <ul className={pf('site-motion-principle-list grid wrap grid--pull-padded-large text-align--center')}>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+        <ul className="site-motion-principle-list slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center">
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/motion/img-timing.svg" alt="Timing Image" />
               <dl>
@@ -33,7 +32,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/motion/img-elevation.svg" alt="Elevation Image" />
               <dl>
@@ -42,7 +41,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 large-size--1-of-3')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">
               <img src="/assets/images/motion/img-effects.svg" alt="Effects Image" style={{height: '60px'}} />
               <dl>
@@ -53,10 +52,10 @@ export default (
           </li>
         </ul>
       </div>
-      <div className={pf('m-bottom--xx-large')}>
+      <div className="slds-m-bottom--xx-large">
         <h2 className="site-text-heading--large">Type of Animation</h2>
-        <ul className={pf('site-motion-principle-list grid wrap grid--pull-padded-large text-align--center')}>
-          <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
+        <ul className="site-motion-principle-list slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center">
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
             <div className="grid-card">
               <img src="/assets/images/motion/img-enter-exit.svg" alt="Enter then Exit Image" />
               <dl>
@@ -67,7 +66,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
             <div className="grid-card">
               <img src="/assets/images/motion/img-emphasis.svg" alt="Emphasis Image" />
               <dl>
@@ -76,7 +75,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
             <div className="grid-card">
               <img src="/assets/images/motion/img-transitional.svg" alt="Transitional Image" />
               <dl>
@@ -85,7 +84,7 @@ export default (
               </dl>
             </div>
           </li>
-          <li className={pf('col--padded-large size--1-of-1 medium-size--1-of-2 large-size--1-of-4')}>
+          <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
             <div className="grid-card">
               <img src="/assets/images/motion/img-personality.svg" alt="Personality and Branding Image" />
               <dl>
@@ -97,8 +96,8 @@ export default (
         </ul>
       </div>
 
-      <div className={pf('grid wrap grid--pull-padded-large p-bottom--xx-large')}>
-        <div className={pf('col--padded-large size--1-of-1 large-size--1-of-2 p-top--large')}>
+      <div className="slds-grid slds-wrap slds-grid--pull-padded-large slds-p-bottom--xx-large">
+        <div className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2 slds-p-top--large">
           <h2 className="site-text-heading--large">Physical Mass</h2>
           <p>Objects in the physical world have mass, thus they speed up from a
             standstill and slow down to a stop. When choose easing:</p>
@@ -109,7 +108,7 @@ export default (
             <li>use <strong>linear</strong> for opacity or color changes</li>
           </ul>
         </div>
-        <div className={pf('col--padded-large size--1-of-1 large-size--1-of-2 p-top--large')}>
+        <div className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2 slds-p-top--large">
           <h2 className="site-text-heading--large">Other Considerations</h2>
           <p>The object being moved or animated should abide by these guiding principles:</p>
           <ul>
@@ -119,9 +118,9 @@ export default (
           </ul>
         </div>
       </div>
-      <div className={pf('site-side-by-side grid wrap m-bottom--xx-large')}>
-        <div className={pf('size--1-of-1 medium-size--1-of-2 grow-none')}>
-          <h2 className={pf('site-text-heading--large p-top--xx-large')}>Elevation</h2>
+      <div className="site-side-by-side slds-grid slds-wrap slds-m-bottom--xx-large">
+        <div className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-grow-none">
+          <h2 className="site-text-heading--large slds-p-top--xx-large">Elevation</h2>
             <p>Elevation suggests a conceptual hierarchy that makes use of box shadows
               to indicate visual hierarchy. The actual Z-index is up to the developer
               to maintain the correct shadows.</p>
@@ -136,13 +135,13 @@ export default (
               box shadows. The amount of elevation is <em>not</em> the same as the Z-index, rather
               its relative elevation which aids in rendering the shadow.</p>
         </div>
-        <figure className={pf('size--1-of-1 medium-size--1-of-2 shrink-none text-align--left')}>
-          <img className={pf('image')} src="/assets/images/motion/img-elevation-perspective.svg" alt="Elevation Perspective Image" />
+        <figure className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-shrink-none slds-text-align--left">
+          <img className="slds-image" src="/assets/images/motion/img-elevation-perspective.svg" alt="Elevation Perspective Image" />
         </figure>
       </div>
 
-      <div className={pf('p-vertical--xx-large')}>
-        <div className={pf('atmosphere-graph')}>
+      <div className="slds-p-vertical--xx-large">
+        <div className="atmosphere-graph">
           <div className="atmosphere-vertical-ruler" />
 
           <div className="atmosphere-hline" style={{bottom: '26rem'}} />
@@ -205,11 +204,11 @@ export default (
         </div>
       </div>
 
-      <div className={pf('p-vertical--xx-large')}>
+      <div className="slds-p-vertical--xx-large">
         To implement the shadows in code there are <a href="/design-tokens/#category-atmosphere">Design Tokens</a> you
         can include in the CSS <code>box-shadow</code> attribute.
       </div>
-      <div className={pf('p-bottom--xx-large')}>
+      <div className="slds-p-bottom--xx-large">
         <h2 className="site-text-heading--large">Timing</h2>
         <p>Timings are a set of duration values. Values are calculated as even
           multiples of <code>100ms</code>, which is 6 frames at 60 frames-per-second (3 frames at 30 frames-per-second).</p>
@@ -218,7 +217,7 @@ export default (
       <div>
         <h2 className="site-text-heading--large">Named Animations</h2>
         <p>This is a vocabulary of animations. Click to run individual demos:</p>
-        <ul className={pf('grid wrap grid--pull-padded-large')}>
+        <ul className="slds-grid slds-wrap slds-grid--pull-padded-large">
           <ToggleExample which="fade" toggle={true} title="fade out, fade in" description="opacity change" />
           <ToggleExample which="color" toggle={true} title="color" description="color transition" />
           <ToggleExample which="grow" toggle={true} title="grow" description="scale increase" />

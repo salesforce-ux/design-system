@@ -1,0 +1,20 @@
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_TEXT_CONTEXT_BAR:
+    value: '{!KASHMIR_BLUE}'
+    comment: Context bar text color
+  COLOR_TEXT_CONTEXT_BAR_INVERSE:
+    value: '{!WHITE}'
+    comment: Context bar text color on a dark background
+    deprecated: true
+  COLOR_TEXT_CONTEXT_BAR_ACTION_TRIGGER:
+    value: '{!WHITE_TRANSPARENT_40}'
+    comment: Context bar action trigger text color
+    deprecated: true

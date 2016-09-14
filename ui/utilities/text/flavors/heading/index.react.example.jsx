@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 ///////////////////////////////////////////
@@ -19,7 +18,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 let Text = props =>
-  <div className={pf(props.className)}>
+  <div className={props.className}>
     The quick brown fox jumps over the lazy dog.
   </div>;
 
@@ -32,16 +31,16 @@ export let states = [
   {
     id: 'heading-large',
     label: 'Large',
-    element: <Text className={pf('text-heading--large')} />
+    element: <Text className="slds-text-heading--large" />
   },
   {
     id: 'heading-medium',
     label: 'Medium',
-    element: <Text className={pf('text-heading--medium')} />
+    element: <Text className="slds-text-heading--medium" />
   },
   {
     id: 'heading-small',
     label: 'Small',
-    element: <Text className={pf('text-heading--small')} />
+    element: <Text className="slds-text-heading--small" />
   }
 ];

@@ -1,103 +1,103 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: tabs--path
+    class: slds-tabs--path
     description: Initializes default tabset
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs--path__nav
+    class: slds-tabs--path__nav
     description: Creates the container for the default tabs
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: tabs--path__item
+    class: slds-tabs--path__item
     description: Styles each list item as a single tab
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: tabs--path__link
+    class: slds-tabs--path__link
     description: Styles each <code>&lt;a&gt;</code> element in the <code>&lt;li&gt;</code>
     required: true
     applied: <code>&lt;a&gt;</code>
   -
-    class: tabs--path__content
+    class: slds-tabs--path__content
     description: Styles each tab content wrapper
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tabs--path__stage
+    class: slds-tabs--path__stage
     description: Contains the check mark when the stage is completed
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.slds-tabs--path__link</code>
   -
-    class: tabs--path__title
+    class: slds-tabs--path__title
     description: Contains the name of the stage
     required: true
     applied: <code>&lt;span&gt;</code>
-    notes: This class is only required in the sales path tabs and is contained inside the <code>.{{cssPrefix}}tabs--path__link</code>
+    notes: This class is only required in the sales path tabs and is contained inside the <code>.slds-tabs--path__link</code>
   -
-    class: is-complete
+    class: slds-is-complete
     description: Creates the completed stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
-    class: is-current
+    class: slds-is-current
     description: Creates the current stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
-    class: is-incomplete
+    class: slds-is-incomplete
     description: Creates the incomplete stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
   -
-    class: is-active
+    class: slds-is-active
     description: Creates the active stage of the sales path
-    applied: <code>.{{cssPrefix}}tabs--path__item</code>
+    applied: <code>.slds-tabs--path__item</code>
     notes: This class must be placed on the item programatically when the guidance section is used
   -
-    class: wizard
+    class: slds-wizard
     description: Initializes popover
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: wizard__list
+    class: slds-wizard__list
     description: An ordered list containing steps of a process
     required: true
     applied: <code>&lt;ol&gt;</code>
   -
-    class: wizard__item
+    class: slds-wizard__item
     description: A list item for each step of the process
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: wizard__link
+    class: slds-wizard__link
     description: Hyperlink of the list item, user can jump between steps
     required: true
     applied: <code>&lt;a&gt;</code>
   -
-    class: wizard__marker
+    class: slds-wizard__marker
     description: Dot indicator for each step
     required: true
     applied: <code>&lt;span&gt;</code>
   -
-    class: wizard__label
+    class: slds-wizard__label
     description: Text description for each step
     required: true
     applied: <code>&lt;span class="{{cssPrefix}}text-heading--label&gt;</code>
   -
-    class: wizard__progress
+    class: slds-wizard__progress
     description: Container for progress bar
     required: true
     applied: <code>&lt;span&gt;</code>
     notes: <code>&lt;span&gt;</code> sits outside of <code>&lt;ol&gt;</code>
   -
-    class: wizard__progress-bar
+    class: slds-wizard__progress-bar
     description: Bar showcasing which step of the process a user is on
     required: true
     applied: <code>&lt;span&gt;</code>
     notes: Inline width styles should be modified with JavaScript
   -
-    class: is-active
+    class: slds-is-active
     description: Stateful class that turns dot indicator and progress bar blue
     required: true
     applied: <code>{{cssPrefix}}wizard__item</code>

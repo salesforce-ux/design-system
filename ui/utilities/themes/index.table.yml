@@ -1,28 +1,28 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: box
+    class: slds-box
     description: Provides 1rem base padding and borders
     applied: parent element
   -
-    class: box--x-small
+    class: slds-box--x-small
     description: Changes padding to .5rem
-    applied: <code>.{{cssPrefix}}box</code>
+    applied: <code>.slds-box</code>
   -
-    class: box--small
+    class: slds-box--small
     description: Changes padding to .75rem
-    applied: <code>.{{cssPrefix}}box</code>
+    applied: <code>.slds-box</code>
   -
-    class: theme--default
+    class: slds-theme--default
     description: Sets the background color to white
-    applied: <code>.{{cssPrefix}}box</code>
-    notes: Use in conjunction with <code>.{{cssPrefix}}box</code>
+    applied: <code>.slds-box</code>
+    notes: Use in conjunction with <code>.slds-box</code>
   -
-    class: theme--shade
+    class: slds-theme--shade
     description: Sets a light gray background color
-    applied: <code>.{{cssPrefix}}box</code>
-    notes: Use in conjunction with <code>.{{cssPrefix}}box</code>
+    applied: <code>.slds-box</code>
+    notes: Use in conjunction with <code>.slds-box</code>
   -
-    class: theme--alert-texture
+    class: slds-theme--alert-texture
     description: Adds striped background
-    notes: Added to any <code>.{{cssPrefix}}theme--*</code> class to give it the striped look
+    notes: Added to any <code>.slds-theme--*</code> class to give it the striped look

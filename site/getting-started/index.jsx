@@ -12,11 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import globals from 'app_modules/global';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <PageBody anchorTitle="Getting Started">
-    <div className={pf('container--large site-guidelines')}>
+    <div className="slds-container--large site-guidelines">
       <p className="site-text-introduction">
         The Salesforce Lightning Design System includes the resources to
         create user interfaces consistent with the Salesforce Lightning
@@ -41,10 +40,10 @@ export default (
 
 
 
-      <div className={pf('grid grid--pull-padded wrap')}>
+      <div className="slds-grid slds-grid--pull-padded slds-wrap">
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-2 small-order--1 large-order--2')}>
-          <h2 className={pf('site-text-heading--large p-top--xx-large')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2 slds-small-order--1 slds-large-order--2">
+          <h2 className="site-text-heading--large slds-p-top--xx-large">
             Designers
           </h2>
 
@@ -65,8 +64,8 @@ export default (
           </ol>
         </div>
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-2 small-order--2 large-order--1')}>
-          <h2 className={pf('site-text-heading--large p-top--xx-large')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2 slds-small-order--2 slds-large-order--1">
+          <h2 className="site-text-heading--large slds-p-top--xx-large">
             Developers
           </h2>
 
@@ -111,7 +110,7 @@ export default (
             <li>Lightning Components for Visualforce</li>
           </ul>
 
-          <h3 className={pf('site-text-heading--label')}>
+          <h3 className="site-text-heading--label">
             Visualforce
           </h3>
 
@@ -119,7 +118,7 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/visualforce">Visualforce</a>.
           </p>
-          <h3 className={pf('site-text-heading--label')}>
+          <h3 className="site-text-heading--label">
             Heroku
           </h3>
 

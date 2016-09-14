@@ -10,6 +10,7 @@
 The following issues have now been resolved:
 
 - Included the logo SVG asset used in the Global header
+- Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
 
 ## Release [2.1.2] - September 6, 2016
 
@@ -184,6 +185,7 @@ The following issues have now been resolved:
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
 - Fixed an issue where `<legend>` were bold in visual force - Fixes [#216](https://github.com/salesforce-ux/design-system/pull/216)
+- Added `aria-describedby` attribute on Tooltip component trigger
 
 **CHANGES**
 

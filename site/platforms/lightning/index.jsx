@@ -13,7 +13,6 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import g from 'app_modules/global';
 
@@ -23,7 +22,7 @@ const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 const lightningTutorialUrl = 'https://developer.salesforce.com/trailhead/project/slds-lightning-components-workshop';
 
 export default (
-  <PageBody anchorTitle="Lightning Apps and Components" contentClassName={pf('container--large')}>
+  <PageBody anchorTitle="Lightning Apps and Components" contentClassName="slds-container--large">
     <p className="site-text-introduction">
       The {g.displayName} is ready to use in your Lightning apps and
       components. It is now automatically included for Lightning Components
@@ -38,7 +37,7 @@ export default (
       enhancements.</p>
 
     <p>To extend <code>force:slds</code>, your application should look like this:</p>
-    <div className={pf('site-code--content scrollable--x')}>
+    <div className="site-code--content slds-scrollable--x">
       <CodeBlock language="html">{`
       <aura:application extends="force:slds">
       <!-- customize your application here -->
@@ -60,7 +59,7 @@ export default (
       Lightning components:
     </p>
 
-    <ul className={pf('list--dotted')}>
+    <ul className="slds-list--dotted">
       <li>
         When using the component sample code from the Trailhead module, be
         sure to replace all static resource paths with the Lightning resource

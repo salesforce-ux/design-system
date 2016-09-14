@@ -16,52 +16,51 @@ import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import _ from 'lodash';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 let NavigationBar = props =>
-<div className={pf('docs-example m-bottom--xx-large')}>
-  <div className={pf('context-bar site-stencil__color-dark')}>
-    <div className={pf('context-bar__primary context-bar__item--divider-right is-relative')}>
-      <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover is-relative')}>
-        <div className={pf('context-bar__icon-action')}>
+<div className="docs-example slds-m-bottom--xx-large">
+  <div className="slds-context-bar site-stencil__color-dark">
+    <div className="slds-context-bar__primary slds-context-bar__item--divider-right slds-is-relative">
+      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
+        <div className="slds-context-bar__icon-action">
           <WaffleIcon />
         </div>
-        <span className={pf('context-bar__label-action context-bar__app-name site-stencil__squeeze is-relative')}>
-          <span className={pf('truncate')}>🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
+        <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
+          <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
         </span>
       </div>
       { props.showSections ?
-        <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>Primary</div> : null }
+        <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>Primary</div> : null }
     </div>
-    <nav className={pf('context-bar__secondary is-relative')} role="navigation">
-      <ul className={pf('grid')}>
+    <nav className="slds-context-bar__secondary slds-is-relative" role="navigation">
+      <ul className="slds-grid">
         { _.times(6, i =>
 
           <NavigationBarItem key={i} showItems={ props.showItems } />
         )}
       </ul>
       { props.showSections ?
-        <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>Secondary</div> : null }
+        <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>Secondary</div> : null }
     </nav>
-    <div className={pf('context-bar__tertiary col--bump-left is-relative')}>
-      <ul className={pf('grid')}>
-        <li className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+    <div className="slds-context-bar__tertiary slds-col--bump-left slds-is-relative">
+      <ul className="slds-grid">
+        <li className="slds-context-bar__item slds-is-relative">
+          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
           { props.showItems ?
-            <div className={pf('site-dimension site-dimension--absolute-box m-horizontal--xx-small')}></div> : null }
+            <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
         </li>
       </ul>
       { props.showSections ?
-        <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>Tertiary</div> : null }
+        <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>Tertiary</div> : null }
     </div>
   </div>
 </div>;
 
 let NavigationBarItem = props =>
-  <li className={pf('context-bar__item is-relative')} { ...props }>
-    <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+  <li className="slds-context-bar__item slds-is-relative" { ...props }>
+    <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
     { props.showItems ?
-      <div className={pf('site-dimension site-dimension--absolute-box m-horizontal--xx-small')}></div> : null }
+      <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
   </li>;
 
 export const intro = (
@@ -72,7 +71,7 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <h2 className={pf('site-text-heading--label')}>1.0. Building the Navigation Bar</h2>
+    <h2 className="site-text-heading--label">1.0. Building the Navigation Bar</h2>
     <NavigationBar showSections />
     <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>
     <ul>
@@ -82,34 +81,34 @@ export default (
     </ul>
     <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="slds-context-bar__primary" />. </p>
 
-    <h2 className={pf('site-text-heading--label')}>1.1. Items on the Navigation Bar</h2>
+    <h2 className="site-text-heading--label">1.1. Items on the Navigation Bar</h2>
     <NavigationBar showItems />
     <p>Every item that sits on the horizontal axis of the navigation bar should receive the class <CodeClass className="context-bar__item" />.</p>
     <p>This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" /> to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.</p>
     <p>Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as <code>.slds-order--[#]</code>.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.2. Building the Navigation Bar Item</h2>
+    <h2 className="site-text-heading--label">1.2. Building the Navigation Bar Item</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>1</div>
+    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-is-relative">
+          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+          <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>1</div>
         </div>
       </div>
     </div>
 
-    <div className={pf('docs-example m-bottom--xx-large m-left--large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
-              <span className={pf('assistive-text')}>Assistive text for submenu</span>
+    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-is-relative">
+          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+          <div className="slds-context-bar__icon-action slds-p-left--none" tabIndex="0">
+            <button aria-haspopup="true" className="slds-button slds-button--icon slds-context-bar__button" tabIndex="-1">
+              <SvgIcon className="slds-button__icon slds-button__icon--hint slds-button__icon--small" sprite="utility" symbol="chevrondown" />
+              <span className="slds-assistive-text">Assistive text for submenu</span>
             </button>
           </div>
-          <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div>2</div>
+          <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>2</div>
         </div>
       </div>
     </div>
@@ -123,18 +122,18 @@ export default (
     <p>The <CodeClass className="context-bar__icon-action" /> class handles the alignment and coloring of the icons based on interactions such as <code>:hover</code>, <code>:focus</code> and <code>:active</code>. This is a required if you have an actionable icon area adjacent to an actionable text area.</p>
     <p>The markup structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as <code>.slds-order--[#]</code>.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.3. Building the Icons in the Navigation Bar</h2>
+    <h2 className="site-text-heading--label">1.3. Building the Icons in the Navigation Bar</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large m-left--large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          <div className={pf('context-bar__icon-action p-left--none is-relative')} tabIndex="0">
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
-              <span className={pf('assistive-text')}>Assistive text for submenu</span>
+    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-is-relative">
+          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+          <div className="slds-context-bar__icon-action slds-p-left--none slds-is-relative" tabIndex="0">
+            <button aria-haspopup="true" className="slds-button slds-button--icon slds-context-bar__button" tabIndex="-1">
+              <SvgIcon className="slds-button__icon slds-button__icon--hint slds-button__icon--small" sprite="utility" symbol="chevrondown" />
+              <span className="slds-assistive-text">Assistive text for submenu</span>
             </button>
-            <div className={pf('site-dimension site-dimension--absolute p-horizontal')}><div className="site-dimension__line site-dimension__line--red"></div></div>
+            <div className="site-dimension site-dimension--absolute p-horizontal"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
         </div>
       </div>
@@ -146,19 +145,19 @@ export default (
     <p>The <CodeClass className="context-bar__icon-action" /> styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class <CodeClass className="p-left--none" />.</p>
     <p>If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class <CodeClass className="hint-parent" /> to the hover region, most cases would be <CodeClass className="context-bar__icon-action" /> element.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.4. Menu trigger area on Navigation Bar Items</h2>
+    <h2 className="site-text-heading--label">1.4. Menu trigger area on Navigation Bar Items</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large m-left--large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item is-relative')}>
-          <a className={pf('context-bar__label-action site-stencil__squeeze')} href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          <div className={pf('context-bar__icon-action p-left--none')} tabIndex="0">
-            <button aria-haspopup="true" className={pf('button button--icon context-bar__button')} tabIndex="-1">
-              <SvgIcon className={pf('button__icon button__icon--hint button__icon--small')} sprite="utility" symbol="chevrondown" />
-              <span className={pf('assistive-text')}>Assistive text for submenu</span>
+    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-is-relative">
+          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+          <div className="slds-context-bar__icon-action slds-p-left--none" tabIndex="0">
+            <button aria-haspopup="true" className="slds-button slds-button--icon slds-context-bar__button" tabIndex="-1">
+              <SvgIcon className="slds-button__icon slds-button__icon--hint slds-button__icon--small" sprite="utility" symbol="chevrondown" />
+              <span className="slds-assistive-text">Assistive text for submenu</span>
             </button>
           </div>
-          <div className={pf('site-dimension site-dimension--absolute p-horizontal--x-small')}><div className="site-dimension__line site-dimension__line--red"></div></div>
+          <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div></div>
         </div>
       </div>
     </div>
@@ -167,39 +166,39 @@ export default (
     <ol>
       <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn&rsquo;t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar</li>
       <li><CodeClass className="dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
-      <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Switcher Waffle icon.</li>
+      <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.</li>
     </ol>
     <p>If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" />. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the <CodeClass className="context-bar__icon-action" />.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.5. Specifics of the Navigation Bar - App Switcher</h2>
+    <h2 className="site-text-heading--label">1.5. Specifics of the Navigation Bar - App Launcher</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover is-relative')}>
-          <div className={pf('context-bar__icon-action is-relative')}>
+    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
+          <div className="slds-context-bar__icon-action slds-is-relative">
             <WaffleIcon />
-            <div className={pf('site-dimension site-dimension--absolute')}><div className="site-dimension__line site-dimension__line--red"></div></div>
+            <div className="site-dimension site-dimension--absolute"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
-          <span className={pf('context-bar__label-action context-bar__app-name site-stencil__squeeze is-relative')}>
-            <span className={pf('truncate')}>🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
+          <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
+            <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
           </span>
         </div>
       </div>
     </div>
 
-    <p>The app switcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app switcher dropdown. Please use JavaScript to accommodate this requirement.</p>
+    <p>The app launcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app launcher dropdown. Please use JavaScript to accommodate this requirement.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.6. Specifics of the Navigation Bar - App Name</h2>
+    <h2 className="site-text-heading--label">1.6. Specifics of the Navigation Bar - App Name</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover is-relative')}>
-          <div className={pf('context-bar__icon-action is-relative')}>
+    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
+          <div className="slds-context-bar__icon-action slds-is-relative">
             <WaffleIcon />
           </div>
-          <span className={pf('context-bar__label-action context-bar__app-name site-stencil__squeeze is-relative')}>
-            <span className={pf('truncate')}>🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
-            <div className={pf('site-dimension site-dimension--absolute')}><div className="site-dimension__line site-dimension__line--red"></div></div>
+          <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
+            <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
+            <div className="site-dimension site-dimension--absolute"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </span>
         </div>
       </div>
@@ -207,19 +206,19 @@ export default (
 
     <p>The application name needs to receive the <CodeClass className="context-bar__app-name" /> class. This class will handle such things as its unique font sizing and truncation widths.</p>
 
-    <h2 className={pf('site-text-heading--label')}>1.7. Specifics of the Navigation Bar - Divider</h2>
+    <h2 className="site-text-heading--label">1.7. Specifics of the Navigation Bar - Divider</h2>
 
-    <div className={pf('docs-example m-bottom--xx-large')} style={{ display: 'inline-flex' }}>
-      <div className={pf('context-bar site-stencil__color-dark')}>
-        <div className={pf('context-bar__item context-bar__dropdown-trigger dropdown-trigger dropdown-trigger--click no-hover is-relative')}>
-          <div className={pf('context-bar__icon-action is-relative')}>
+    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+      <div className="slds-context-bar site-stencil__color-dark">
+        <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
+          <div className="slds-context-bar__icon-action slds-is-relative">
             <WaffleIcon />
           </div>
-          <span className={pf('context-bar__label-action context-bar__app-name site-stencil__squeeze is-relative')}>
-            <span className={pf('truncate')}>🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
+          <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
+            <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
           </span>
-          <div className={pf('context-bar__vertical-divider is-relative')} style={{ overflow: 'visible', width: '0.625rem' }}>
-            <div className={pf('site-dimension site-dimension--absolute')} style={{ left: '-0.625rem' }}><div className="site-dimension__line site-dimension__line--red"></div></div>
+          <div className="slds-context-bar__vertical-divider slds-is-relative" style={{ overflow: 'visible', width: '0.625rem' }}>
+            <div className="site-dimension site-dimension--absolute" style={{ left: '-0.625rem' }}><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
         </div>
       </div>

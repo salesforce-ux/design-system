@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -28,22 +27,22 @@ export let states = [
     id: 'description-list-inline',
     label: 'Inline',
     element:
-      <dl className={pf('dl--inline')}>
-        <dt className={pf('dl--inline__label')}>First Label:</dt>
-        <dd className={pf('dl--inline__detail')}>Description for first label</dd>
-        <dt className={pf('dl--inline__label')}>Second Label:</dt>
-        <dd className={pf('dl--inline__detail')}>Description for second label</dd>
+      <dl className="slds-dl--inline">
+        <dt className="slds-dl--inline__label">First Label:</dt>
+        <dd className="slds-dl--inline__detail">Description for first label</dd>
+        <dt className="slds-dl--inline__label">Second Label:</dt>
+        <dd className="slds-dl--inline__detail">Description for second label</dd>
       </dl>
   },
   {
     id: 'description-list-horizontal',
     label: 'Horizontal',
     element:
-      <dl className={pf('dl--horizontal')}>
-        <dt className={pf('dl--horizontal__label')}>First Label:</dt>
-        <dd className={pf('dl--horizontal__detail')}>Description for first label</dd>
-        <dt className={pf('dl--horizontal__label')}>Second Label:</dt>
-        <dd className={pf('dl--horizontal__detail')}>Second description</dd>
+      <dl className="slds-dl--horizontal">
+        <dt className="slds-dl--horizontal__label">First Label:</dt>
+        <dd className="slds-dl--horizontal__detail">Description for first label</dd>
+        <dt className="slds-dl--horizontal__label">Second Label:</dt>
+        <dd className="slds-dl--horizontal__detail">Second description</dd>
       </dl>
   }
 ];

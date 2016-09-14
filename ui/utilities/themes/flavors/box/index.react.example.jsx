@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'default',
     label: 'Default',
     element:
-      <div className={pf('box')}>
+      <div className="slds-box">
         <p>This is a regular-sized box.</p>
       </div>
   },
@@ -25,7 +24,7 @@ export let states = [
     id: 'small',
     label: 'Small',
     element:
-      <div className={pf('box box--small')}>
+      <div className="slds-box slds-box--small">
         <p>This is a small box.</p>
       </div>
   },
@@ -33,7 +32,7 @@ export let states = [
     id: 'x-small',
     label: 'X-Small',
     element:
-      <div className={pf('box box--x-small')}>
+      <div className="slds-box slds-box--x-small">
         <p>This is an extra-small box.</p>
       </div>
   }

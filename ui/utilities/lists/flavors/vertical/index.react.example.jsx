@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -27,7 +26,7 @@ export let states = [
     id: 'unordered-list-decimal',
     label: 'Dotted',
     element:
-      <ul className={pf('list--dotted')}>
+      <ul className="slds-list--dotted">
         <li>Basic ordered list</li>
         <li>List Item</li>
         <li>List Item</li>
@@ -37,7 +36,7 @@ export let states = [
     id: 'ordered-list-decimal',
     label: 'Decimal',
     element:
-      <ol className={pf('list--ordered')}>
+      <ol className="slds-list--ordered">
         <li>Basic ordered list</li>
         <li>List Item</li>
         <li>List Item</li>
@@ -57,7 +56,7 @@ export let states = [
     id: 'vertical-list-block-links',
     label: 'Block links',
     element:
-      <ul className={pf('has-block-links')}>
+      <ul className="slds-has-block-links">
         <li><a href="javascript:void(0);">Vertical List with block links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -67,7 +66,7 @@ export let states = [
     id: 'vertical-list-block-links-space',
     label: 'Block links with space',
     element:
-      <ul className={pf('has-block-links--space')}>
+      <ul className="slds-has-block-links--space">
         <li><a href="javascript:void(0);">Vertical List with block links with space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -77,7 +76,7 @@ export let states = [
     id: 'vertical-list-inline-block-links',
     label: 'Inline block links',
     element:
-      <ul className={pf('has-inline-block-links')}>
+      <ul className="slds-has-inline-block-links">
         <li><a href="javascript:void(0);">Vertical List with inline-block links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -87,7 +86,7 @@ export let states = [
     id: 'vertical-list-inline-block-links-space',
     label: 'Inline block links with space',
     element:
-      <ul className={pf('has-inline-block-links--space')}>
+      <ul className="slds-has-inline-block-links--space">
         <li><a href="javascript:void(0);">Vertical List with inline-block links with space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -101,11 +100,11 @@ export let states = [
         <li>Vertical List with nested vertical lists</li>
         <li>List Item</li>
         <li>
-          <ul className={pf('is-nested')}>
+          <ul className="slds-is-nested">
             <li>Nested Vertical List</li>
             <li>List Item</li>
             <li>
-              <ul className={pf('is-nested')}>
+              <ul className="slds-is-nested">
                 <li>Nested Vertical List</li>
                 <li>List Item</li>
                 <li>List Item</li>

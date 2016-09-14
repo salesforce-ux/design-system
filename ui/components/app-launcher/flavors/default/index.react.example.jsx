@@ -14,7 +14,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -22,114 +21,114 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 let AppLauncherModal = props =>
-  <Modal className={pf('modal--large app-launcher')} aria-labelledby="header43">
-    <ModalHeader className={pf('app-launcher__header grid grid--align-spread grid--vertical-align-center')}>
-      <h2 id="header43" className={pf('text-heading--medium')}>App Launcher</h2>
-      <div className={pf('app-launcher__header-search')}>
-        <div className={pf('form-element')}>
-          <label htmlFor="app-launcher-search" className={pf('form-element__label assistive-text')}>Find an app</label>
-          <div className={pf('form-element__control input-has-icon input-has-icon--left')}>
-            <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-            <input type="search" className={pf('input')} id="app-launcher-search" placeholder="Find an app" />
+  <Modal className="slds-modal--large slds-app-launcher" aria-labelledby="header43">
+    <ModalHeader className="slds-app-launcher__header slds-grid slds-grid--align-spread slds-grid--vertical-align-center">
+      <h2 id="header43" className="slds-text-heading--medium">App Launcher</h2>
+      <div className="slds-app-launcher__header-search">
+        <div className="slds-form-element">
+          <label htmlFor="app-launcher-search" className="slds-form-element__label slds-assistive-text">Find an app</label>
+          <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+            <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
+            <input type="search" className="slds-input" id="app-launcher-search" placeholder="Find an app" />
           </div>
         </div>
       </div>
-      <button className={pf('button button--neutral')}>App Exchange</button>
+      <button className="slds-button slds-button--neutral">App Exchange</button>
     </ModalHeader>
-    <ModalContent className={pf('app-launcher__content p-around--medium')}>
-      <div className={pf('section is-open')}>
-        <div className={pf('section__title')}>
-          <button className={pf('button button--icon m-right--small')}>
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
-            <span className={pf('assistive-text')}>Toggle visibility of section</span>
+    <ModalContent className="slds-app-launcher__content slds-p-around--medium">
+      <div className="slds-section slds-is-open">
+        <div className="slds-section__title">
+          <button className="slds-button slds-button--icon slds-m-right--small">
+            <SvgIcon className="slds-button__icon" sprite="utility" symbol="switch" />
+            <span className="slds-assistive-text">Toggle visibility of section</span>
           </button>
           <h3>All Apps</h3>
         </div>
-        <div className={pf('section__content')}>
-          <ul className={pf('grid grid--pull-padded wrap')}>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')} draggable>
-                <span className={pf('text-link')}>Sales Cloud</span>
-                <p>The primary internal Salesforce org. Used to run our...<span className={pf('text-link')}>More</span></p>
+        <div className="slds-section__content">
+          <ul className="slds-grid slds-grid--pull-padded slds-wrap">
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
+                <span className="slds-text-link">Sales Cloud</span>
+                <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="MC" figureClass={pf('icon-custom-59')} draggable>
-                <span className={pf('text-link')}>Marketing Cloud</span>
-                <p>Salesforce Marketing Cloud lets businesses of any size...<span className={pf('text-link')}>More</span></p>
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="MC" figureClass="slds-icon-custom-59" draggable>
+                <span className="slds-text-link">Marketing Cloud</span>
+                <p>Salesforce Marketing Cloud lets businesses of any size...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="HR" figureClass={pf('icon-custom-10')} draggable>
-                <span className={pf('text-link')}>HR Concierge</span>
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="HR" figureClass="slds-icon-custom-10" draggable>
+                <span className="slds-text-link">HR Concierge</span>
                 <p>Community for managing employee benefits and time off.</p>
               </AppLauncherTile>
             </li>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="MM" figureClass={pf('icon-custom-6')} draggable>
-                <span className={pf('text-link')}>My Money</span>
-                <p>Manage your finances across multiple financial platforms...<span className={pf('text-link')}>More</span></p>
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="MM" figureClass="slds-icon-custom-6" draggable>
+                <span className="slds-text-link">My Money</span>
+                <p>Manage your finances across multiple financial platforms...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="CC" figureClass={pf('icon-custom-91')} draggable>
-                <span className={pf('text-link')}>Call Center</span>
-                <p>The key to call center and contact center management is more...<span className={pf('text-link')}>More</span></p>
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="CC" figureClass="slds-icon-custom-91" draggable>
+                <span className="slds-text-link">Call Center</span>
+                <p>The key to call center and contact center management is more...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
-            <li className={pf('p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-              <AppLauncherTile objectInitials="CS" figureClass={pf('icon-custom-50')} draggable>
-                <span className={pf('text-link')}>Customer Support Communitiy</span>
-                <p>Areas of Focus are used to track customer support for your...<span className={pf('text-link')}>More</span></p>
+            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+              <AppLauncherTile objectInitials="CS" figureClass="slds-icon-custom-50" draggable>
+                <span className="slds-text-link">Customer Support Communitiy</span>
+                <p>Areas of Focus are used to track customer support for your...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
           </ul>
         </div>
       </div>
       <hr />
-      <div className={pf('section is-open')}>
-        <div className={pf('section__title')}>
-          <button className={pf('button button--icon m-right--small')}>
-            <SvgIcon className={pf('button__icon')} sprite="utility" symbol="switch" />
-            <span className={pf('assistive-text')}>Toggle visibility of section</span>
+      <div className="slds-section slds-is-open">
+        <div className="slds-section__title">
+          <button className="slds-button slds-button--icon slds-m-right--small">
+            <SvgIcon className="slds-button__icon" sprite="utility" symbol="switch" />
+            <span className="slds-assistive-text">Toggle visibility of section</span>
           </button>
           <h3>All Items</h3>
         </div>
-        <div className={pf('section__content')}>
-        <ul className={pf('grid grid--pull-padded wrap')}>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+        <div className="slds-section__content">
+        <ul className="slds-grid slds-grid--pull-padded slds-wrap">
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="account">
-              <p className={pf('truncate text-link')}>Accounts</p>
+              <p className="slds-truncate slds-text-link">Accounts</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="announcement">
-              <p className={pf('truncate text-link')}>Announcements</p>
+              <p className="slds-truncate slds-text-link">Announcements</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="approval">
-              <p className={pf('truncate text-link')}>Approvals</p>
+              <p className="slds-truncate slds-text-link">Approvals</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="campaign">
-              <p className={pf('truncate text-link')}>Campaigns</p>
+              <p className="slds-truncate slds-text-link">Campaigns</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="case">
-              <p className={pf('truncate text-link')}>Cases</p>
+              <p className="slds-truncate slds-text-link">Cases</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="coaching">
-              <p className={pf('truncate text-link')}>Coaching</p>
+              <p className="slds-truncate slds-text-link">Coaching</p>
             </AppLauncherTile>
           </li>
-          <li className={pf('p-horizontal--small size--xx-small')}>
+          <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="contact">
-              <p className={pf('truncate text-link')}>Contacts</p>
+              <p className="slds-truncate slds-text-link">Contacts</p>
             </AppLauncherTile>
           </li>
         </ul>
@@ -145,6 +144,6 @@ let AppLauncherModal = props =>
 export default (
   <div className="demo-only" style={{ height: '800px' }}>
     <AppLauncherModal />
-    <div className={pf('backdrop backdrop--open')} />
+    <div className="slds-backdrop slds-backdrop--open" />
   </div>
 );

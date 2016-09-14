@@ -14,14 +14,13 @@ import Heading from 'app_modules/site/components/page/heading';
 import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="iOS" contentClassName={pf('grid wrap')}>
+  <PageBody anchorTitle="iOS" contentClassName="slds-grid slds-wrap">
     <StickyNav>
-      <div className={pf('site-menu--jump-links')}>
-        <ul className={pf('list--vertical has-block-links')}>
+      <div className="site-menu--jump-links">
+        <ul className="slds-list--vertical slds-has-block-links">
           <li><a href="#setup">Setup</a></li>
           <li>
             <a href="#usage">Usage</a>
@@ -35,8 +34,8 @@ export default (
       </div>
     </StickyNav>
 
-    <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--5-of-6 large-order--1')}>
-      <div className={pf('container--large')}>
+    <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
+      <div className="slds-container--large">
 
         <p className="site-text-introduction">
           Use our iOS integration to style your native iOS applications
@@ -52,14 +51,14 @@ export default (
           <li>Helper Classes</li>
         </ul>
 
-        <Heading textLabel="Setup" type="h2" id="setup" className={pf('site-text-heading--large')}>
+        <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
           Setup
         </Heading>
 
         <p>Add this to your Podfile:</p>
       </div>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 
 pod 'DesignSystem'
@@ -67,11 +66,11 @@ pod 'DesignSystem'
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--large')}>
+      <div className="slds-container--large">
         <p>Then run:</p>
       </div>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 
 pod install
@@ -79,8 +78,8 @@ pod install
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--large')}>
-        <Heading textLabel="Usage" type="h2" id="usage" className={pf('site-text-heading--large')}>
+      <div className="slds-container--large">
+        <Heading textLabel="Usage" type="h2" id="usage" className="site-text-heading--large">
           Usage
         </Heading>
 
@@ -90,13 +89,13 @@ pod install
         of design tokens or icons.</p>
       </div>
 
-      <Heading textLabel="Colors" type="h3" id="colors" className={pf('site-text-heading--medium')}>
+      <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
         Colors
       </Heading>
 
       <h4 className="site-text-heading--label">Text Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -108,7 +107,7 @@ UIColor* c = [UIColor sldsColorText:SLDSColorTextInverse];
 
       <h4 className="site-text-heading--label">Background Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -120,7 +119,7 @@ UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
 
       <h4 className="site-text-heading--label">Border Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -132,7 +131,7 @@ UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
 
       <h4 className="site-text-heading--label">Button Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -144,7 +143,7 @@ UIColor* c = [UIColor sldsButtonColor:SLDSColorBtnBackgroundButtonBrand];
 
       <h4 className="site-text-heading--label">Input Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -157,7 +156,7 @@ UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
 
       <h4 className="site-text-heading--label">Messaging Colors</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -167,11 +166,11 @@ UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
         `}</CodeBlock>
       </div>
 
-      <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className={pf('site-text-heading--medium')}>
+      <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
         Fonts and Text Sizes
       </Heading>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -185,13 +184,13 @@ UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
         `}</CodeBlock>
       </div>
 
-      <Heading textLabel="Icons" type="h3" id="icons" className={pf('site-text-heading--medium')}>
+      <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
         Icons
       </Heading>
 
       <h4 className="site-text-heading--label">Action Icons</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -203,7 +202,7 @@ UIImage* actionIcon = [UIImage sldsIconAction:SLDSIconActionApproval withSize:SL
 
       <h4 className="site-text-heading--label">Custom Icons</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -215,7 +214,7 @@ UIImage* customIcon = [UIImage sldsIconCustom:SLDSIconCustom1 withSize:SLDSSquar
 
       <h4 className="site-text-heading--label">Standard Icons</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
@@ -227,7 +226,7 @@ UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSi
 
       <h4 className="site-text-heading--label">Utility Icons</h4>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 

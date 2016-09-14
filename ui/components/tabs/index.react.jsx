@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 const PT = React.PropTypes;
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import componentUtil from 'app_modules/ui/util/component';
 
 const {createChainedFunction, flatMapChildren} = componentUtil;
 import AccessibleList from 'ui/components/lib/accessible-list.react';
@@ -27,10 +27,10 @@ class TabContent extends React.Component {
   render() {
     const className = classNames(
       this.props.className,
-      pf(classNames(`tabs--${this.props.flavor}__content`, {
-        show: this.props.current,
-        hide: !this.props.current
-      }))
+      classNames(`slds-tabs--${this.props.flavor}__content`, {
+        'slds-show': this.props.current,
+        'slds-hide': !this.props.current
+      })
     );
     const props = this.$propsWithoutKeys('className');
     return (
@@ -65,7 +65,7 @@ class TabItem extends React.Component {
     return React.cloneElement(this.props.content, {
       onClick: this.props.onClick.bind(this),
       tabIndex: tabIndex,
-      className: pf(`tabs--${this.props.flavor}__link`),
+      className: `slds-tabs--${this.props.flavor}__link`,
       'aria-selected': this.props.current,
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
@@ -74,7 +74,7 @@ class TabItem extends React.Component {
   renderDefault(tabIndex) {
     return (
       <a
-        className={pf(`tabs--${this.props.flavor}__link`)}
+        className={`slds-tabs--${this.props.flavor}__link`}
         onClick={this.props.onClick.bind(this)}
         href="javascript:void(0);" role="tab"
         tabIndex={tabIndex}
@@ -90,9 +90,9 @@ class TabItem extends React.Component {
     const props = this.$propsWithoutKeys('className', 'id', 'role', 'content');
     const className = classNames(
       this.props.className,
-      pf(classNames(`tabs--${this.props.flavor}__item`, 'text-title--caps', {
-        active: this.props.current
-      }))
+      classNames(`slds-tabs--${this.props.flavor}__item`, 'slds-text-title--caps', {
+        'slds-active': this.props.current
+      })
     );
     const tabIndex = this.props.current ? 0 : -1;
     return (
@@ -121,9 +121,9 @@ class TabItemOverflow extends React.Component {
     const props = this.$propsWithoutKeys('className', 'id', 'role');
     const className = classNames(
       this.props.className,
-      pf(classNames('tabs__item--overflow text-title--caps', {
-        active: this.props.current
-      }))
+      classNames('slds-tabs__item--overflow slds-text-title--caps', {
+        'slds-active': this.props.current
+      })
     );
     const tabIndex = this.props.current ? 0 : -1;
     const contents = React.Children.map(this.props.children, function(c,i) {
@@ -197,14 +197,14 @@ class Tabs extends React.Component {
     const props = this.$propsWithoutKeys('className', 'flavor');
     const className = classNames(
       this.props.className,
-      pf(`tabs--${this.props.flavor}`)
+      `slds-tabs--${this.props.flavor}`
     );
     return (
       <div {...props} className={className}>
         <AccessibleList
           selector="a"
           click={true}
-          className={pf(`tabs--${this.props.flavor}__nav`)}
+          className={`slds-tabs--${this.props.flavor}__nav`}
           role="tablist"
           selectedIndex={this.props.selectedIndex}>
         {this.tabs()}

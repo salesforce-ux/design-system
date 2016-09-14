@@ -20,10 +20,10 @@ class Component extends React.Component {
   }
   render() {
     return (
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
-        <div className={pf('form-element__control')}>
-          <textarea id={this.props.assistiveText.replace(' ','-')} className={pf('textarea')} placeholder={this.props.placeholder}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <div className="slds-form-element__control">
+          <textarea id={this.props.assistiveText.replace(' ','-')} className="slds-textarea" placeholder={this.props.placeholder}>
             {this.props.children}
           </textarea>
           {this.renderHelp(this.props.help)}
@@ -33,7 +33,7 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName(pf('form-element__help'));
+    const className = this.$getClassName('slds-form-element__help');
     return (
       <div className={className}>
         {help}

@@ -16,103 +16,102 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props} style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+  <div className="demo-only" {...props} style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
     {props.children}
   </div>;
 
 const dialingIcon = (
-  <span className={pf('icon_container icon-standard-call')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container slds-icon-standard-call">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 
 let DockedComposer = props =>
-  <div {...props} className={className(pf('docked-composer grid grid--vertical nowrap'), props.className)}>
+  <div {...props} className={className('slds-docked-composer slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
 let ComposerHeader = props =>
-  <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+  <header className="slds-docked-composer__header slds-grid slds-grid--align-spread slds-shrink-none">
     <MediaObject figureLeft={dialingIcon} flavor="center">
       <h2 id="dialog-heading-id">Header</h2>
     </MediaObject>
-    <div className={pf('docked-composer__actions')}>
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
+    <div className="slds-docked-composer__actions">
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
     </div>
   </header>;
 
 let ComposerBody = props =>
-  <div className={pf('docked-composer__body col grid grid--vertical nowrap size--1-of-1')}>
+  <div className="slds-docked-composer__body slds-col slds-grid slds-grid--vertical slds-nowrap slds-size--1-of-1">
     {props.children}
   </div>;
 
 let ComposerFooter = props =>
-  <footer className={pf('docked-composer__footer shrink-none')}>
-    <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
+  <footer className="slds-docked-composer__footer slds-shrink-none">
+    <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
       <Button flavor="brand">Action</Button>
     </div>
   </footer>;
 
 let ComposerOverflowMenu = props =>
-  <div className={pf('docked-composer docked-composer--overflow')}>
-    <button className={pf('docked-composer--overflow__pill theme--alt-inverse')} aria-haspopup="true">
-      <span className={pf('align-middle')}>
-        <SvgIcon className={pf('icon icon--x-small')} sprite="utility" symbol="standard_objects" />
-        <span className={pf('assistive-text')}>View other docked windows</span>
+  <div className="slds-docked-composer slds-docked-composer--overflow">
+    <button className="slds-docked-composer--overflow__pill slds-theme--alt-inverse" aria-haspopup="true">
+      <span className="slds-align-middle">
+        <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="standard_objects" />
+        <span className="slds-assistive-text">View other docked windows</span>
       </span>
-      <span className={pf('text-body--small align-middle')}>99 +</span>
+      <span className="slds-text-body--small slds-align-middle">99 +</span>
     </button>
-    <Menu className={pf('dropdown--left dropdown--bottom dropdown--medium nubbin--bottom-left')}>
-      <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-7')}>
+    <Menu className="slds-dropdown--left slds-dropdown--bottom slds-dropdown--medium slds-nubbin--bottom-left">
+      <Menu.List isSelectable={false} className="slds-dropdown--length-with-icon-7">
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-            <span className={pf('assistive-text')}>Email Icon</span>
+          <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
+            <span className="slds-assistive-text">Email Icon</span>
           </span>
           Agenda for next week
         </Menu.Item>
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
+          <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+            <span className="slds-assistive-text">Call Icon</span>
           </span>
           Lei Chan
         </Menu.Item>
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-task m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="task" />
-            <span className={pf('assistive-text')}>Task Icon</span>
+          <span className="slds-icon_container slds-icon-standard-task slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="task" />
+            <span className="slds-assistive-text">Task Icon</span>
           </span>
           August 14 Meeting Notes
         </Menu.Item>
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-email m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-            <span className={pf('assistive-text')}>Email Icon</span>
+          <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
+            <span className="slds-assistive-text">Email Icon</span>
           </span>
           New Email
         </Menu.Item>
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
+          <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+            <span className="slds-assistive-text">Call Icon</span>
           </span>
           Janet Fitzpatrick
         </Menu.Item>
         <Menu.Item>
-          <span className={pf('icon_container icon-standard-call m-right--x-small')}>
-            <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="call" />
-            <span className={pf('assistive-text')}>Call Icon</span>
+          <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
+            <span className="slds-assistive-text">Call Icon</span>
           </span>
           Call with Adam Fraser
         </Menu.Item>
@@ -121,9 +120,9 @@ let ComposerOverflowMenu = props =>
   </div>;
 
 let Modal = props =>
-  <div aria-hidden="false" role="dialog" className={pf('modal fade-in-open docked-composer-modal')}>
-    <div className={pf('modal__container')}>
-      <div className={pf('modal__content')}>
+  <div aria-hidden="false" role="dialog" className="slds-modal slds-fade-in-open slds-docked-composer-modal">
+    <div className="slds-modal__container">
+      <div className="slds-modal__content">
         {props.children}
       </div>
     </div>
@@ -139,8 +138,8 @@ export let states = [
     label: 'Open',
     element:
       <Demo>
-        <div className={pf('docked_container')}>
-          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+        <div className="slds-docked_container">
+          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
             <ComposerHeader />
             <ComposerBody />
             <ComposerFooter />
@@ -153,7 +152,7 @@ export let states = [
     label: 'Closed',
     element:
       <Demo>
-        <div className={pf('docked_container')}>
+        <div className="slds-docked_container">
           <DockedComposer role="dialog" aria-labelledby="dialog-heading-id">
             <ComposerHeader />
             <ComposerBody />
@@ -174,7 +173,7 @@ export let states = [
             <ComposerFooter />
           </DockedComposer>
         </Modal>
-        <div className={pf('backdrop backdrop--open')}></div>
+        <div className="slds-backdrop slds-backdrop--open"></div>
       </Demo>
   },
   {
@@ -182,9 +181,9 @@ export let states = [
     label: 'Composers with Overflow Menu',
     element:
       <Demo>
-        <div className={pf('docked_container')}>
+        <div className="slds-docked_container">
           <ComposerOverflowMenu />
-          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className={pf('is-open')}>
+          <DockedComposer role="dialog" aria-labelledby="dialog-heading-id" className="slds-is-open">
             <ComposerHeader />
             <ComposerBody />
             <ComposerFooter />

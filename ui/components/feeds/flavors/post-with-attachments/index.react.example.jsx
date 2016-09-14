@@ -15,7 +15,6 @@ import className from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
 import { Image } from 'ui/components/images/flavors/figure/index.react.example';
 import { AttachmentLink } from 'ui/components/files/flavors/attachment/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 ///////////////////////////////////////////
@@ -32,7 +31,7 @@ export let states = [
         <PostContent>
           <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
         </PostContent>
-        <div className={pf('post__payload')}>
+        <div className="slds-post__payload">
           <AttachmentLink
             articleTitle="Maui By Air The Best Way Around The Island"
             articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt." />
@@ -52,28 +51,28 @@ export let states = [
         <PostContent>
           <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
         </PostContent>
-        <div className={pf('post__payload')}>
-          <ul className={pf('grid grid--pull-padded')}>
-          <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+        <div className="slds-post__payload">
+          <ul className="slds-grid slds-grid--pull-padded">
+          <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
               <Image
-                className={pf('image--card')}
-                cropClass={pf('image__crop--16-by-9')}
-                titleClass={pf('image__title--card')}
+                className="slds-image--card"
+                cropClass="slds-image__crop--16-by-9"
+                titleClass="slds-image__title--card"
                 symbol="image"
                 image />
           </li>
-          <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3 medium-show')}>
+          <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show">
               <Image
-                className={pf('image--card')}
-                cropClass={pf('image__crop--16-by-9')}
-                titleClass={pf('image__title--card')}
+                className="slds-image--card"
+                cropClass="slds-image__crop--16-by-9"
+                titleClass="slds-image__title--card"
                 symbol="pdf" />
             </li>
-            <li className={pf('p-horizontal--small size--1-of-2 medium-size--1-of-3')}>
+            <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
               <Image
-                className={pf('image--card')}
-                cropClass={pf('image__crop--16-by-9')}
-                titleClass={pf('image__title--overlay align--absolute-center text-heading--large')}
+                className="slds-image--card"
+                cropClass="slds-image__crop--16-by-9"
+                titleClass="slds-image__title--overlay slds-align--absolute-center slds-text-heading--large"
                 title="22+"
                 image
                 overlay />

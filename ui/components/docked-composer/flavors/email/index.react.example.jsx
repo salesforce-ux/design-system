@@ -16,150 +16,149 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 const headerIcon = (
-  <span className={pf('icon_container icon-standard-email')}>
-    <SvgIcon className={pf('icon icon--small')} sprite="standard" symbol="email" />
-    <span className={pf('assistive-text')}>Email Icon</span>
+  <span className="slds-icon_container slds-icon-standard-email">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
+    <span className="slds-assistive-text">Email Icon</span>
   </span>
 );
 
 export default (
   <div className="demo-only">
-    {/*<div className={pf('docked-container')}>*/}
+    {/*<div className="docked-container">*/}
 
-      <div role="dialog" aria-labelledby="dialog-heading-id" className={pf('docked-composer grid grid--vertical nowrap is-open')}>
+      <div role="dialog" aria-labelledby="dialog-heading-id" className="slds-docked-composer slds-grid slds-grid--vertical slds-nowrap slds-is-open">
 
         {/* Composer Header */}
-        <header className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+        <header className="slds-docked-composer__header slds-grid slds-grid--align-spread slds-shrink-none">
           <MediaObject figureLeft={headerIcon} flavor="center">
             <h2 id="dialogheading-id">New Email</h2>
           </MediaObject>
-          <div className={pf('docked-composer__actions')}>
-            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-            <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
+          <div className="slds-docked-composer__actions">
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
           </div>
         </header>
 
         {/* Composer Body */}
-        <div className={pf('docked-composer__body docked-composer__body--email col grid grid--vertical nowrap')}>
-          <div className={pf('grid grid--align-spread')}>
-            <div className={pf('grid grow p-horizontal--small')}>
-              <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerTo">To</label>
-              <input className={pf('input--bare input--height hide')} id="emailComposerTo" type="text" />
-              <div className={pf('pill_container--bare show')}>
+        <div className="slds-docked-composer__body slds-docked-composer__body--email slds-col slds-grid slds-grid--vertical slds-nowrap">
+          <div className="slds-grid slds-grid--align-spread">
+            <div className="slds-grid slds-grow slds-p-horizontal--small">
+              <label className="slds-email-composer__label slds-align-middle" htmlFor="emailComposerTo">To</label>
+              <input className="slds-input--bare slds-input--height slds-hide" id="emailComposerTo" type="text" />
+              <div className="slds-pill_container--bare slds-show">
                 <Pill label="Lei Chan">
-                  <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-                    <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-                    <span className={pf('assistive-text')}>Account</span>
+                  <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+                    <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+                    <span className="slds-assistive-text">Account</span>
                   </span>
                 </Pill>
               </div>
             </div>
-            <div className={pf('grid shrink-none p-horizontal--small')}>
+            <div className="slds-grid slds-shrink-none slds-p-horizontal--small">
               <Button>Cc</Button>
               <Button>Bcc</Button>
             </div>
           </div>
-          <div className={pf('grid p-horizontal--small')}>
-            <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerCc">Cc</label>
-            <input className={pf('input--bare input--height')} id="emailComposerCc" type="text" />
-            <div className={pf('pill_container--bare hide')}></div>
+          <div className="slds-grid slds-p-horizontal--small">
+            <label className="slds-email-composer__label slds-align-middle" htmlFor="emailComposerCc">Cc</label>
+            <input className="slds-input--bare slds-input--height" id="emailComposerCc" type="text" />
+            <div className="slds-pill_container--bare slds-hide"></div>
           </div>
-          <div className={pf('grid p-horizontal--small hide')}>
-            <label className={pf('email-composer__label align-middle')} htmlFor="emailComposerBcc">Bcc</label>
-            <input className={pf('input--bare input--height')} id="emailComposerBcc" type="text" />
-            <div className={pf('pill_container--bare hide')}></div>
+          <div className="slds-grid slds-p-horizontal--small slds-hide">
+            <label className="slds-email-composer__label slds-align-middle" htmlFor="emailComposerBcc">Bcc</label>
+            <input className="slds-input--bare slds-input--height" id="emailComposerBcc" type="text" />
+            <div className="slds-pill_container--bare slds-hide"></div>
           </div>
 
           {/* Subject Line */}
-          <label className={pf('assistive-text')} htmlFor="subject-1">Enter subject</label>
-          <input id="subject-1" className={pf('input')} placeholder="Enter Subject" />
+          <label className="slds-assistive-text" htmlFor="subject-1">Enter subject</label>
+          <input id="subject-1" className="slds-input" placeholder="Enter Subject" />
 
           {/* Toolbar */}
-          <div className={pf('docked-composer__toolbar shrink-none grid grid--align-spread')}>
-            <div className={pf('grid')}>
-              <div className={pf('button-group picklist picklist--fluid shrink-none')}>
-                <button className={pf('button button--neutral picklist__label picklist__label--small')}>
-                  Font <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
+          <div className="slds-docked-composer__toolbar slds-shrink-none slds-grid slds-grid--align-spread">
+            <div className="slds-grid">
+              <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
+                <button className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
+                  Font <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
                 </button>
               </div>
-              <div className={pf('button-group picklist picklist--fluid shrink-none')}>
-                <button className={pf('button button--neutral picklist__label picklist__label--small')}>
-                  14 <SvgIcon className={pf('icon icon--small')} sprite="utility" symbol="down" />
+              <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
+                <button className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
+                  14 <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
                 </button>
               </div>
-              <div className={pf('button-group')} role="group">
+              <div className="slds-button-group" role="group">
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="bold"
                   assistiveText="Bold" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="italic"
                   assistiveText="Italic" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="underline"
                   assistiveText="Underline" />
               </div>
-              <div className={pf('button-group')} role="group">
+              <div className="slds-button-group" role="group">
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="richtextnumberedlist"
                   assistiveText="Numbered List" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="richtextbulletedlist"
                   assistiveText="Bulleted List" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="left_align_text"
                   assistiveText="Left Align Text" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="center_align_text"
                   assistiveText="Center Align Text" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="right_align_text"
                   assistiveText="Right Align Text" />
                 <ButtonIcon
-                  className={pf('button--icon-border-filled')}
+                  className="slds-button--icon-border-filled"
                   symbol="link"
                   assistiveText="Link" />
               </div>
             </div>
           </div>
-          <label className={pf('assistive-text')} htmlFor="composer-text-input-1">Compose email</label>
-          <textarea id="composer-text-input-1" className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Compose email..." />
+          <label className="slds-assistive-text" htmlFor="composer-text-input-1">Compose email</label>
+          <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Compose email..." />
         </div>
 
         {/* Composer Footer */}
-        <footer className={pf('docked-composer__footer shrink-none')}>
+        <footer className="slds-docked-composer__footer slds-shrink-none">
 
-          <div className={pf('float--right grid grid--align-end size--1-of-2 text-align--right')}>
+          <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
             <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="link"
                 assistiveText="Attach File" />
             <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="insert_template"
                 assistiveText="Insert Template" />
             <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="insert_tag_field"
                 assistiveText="Insert HTML" />
             <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="preview"
                 assistiveText="Preview" />
             <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="delete"
                 assistiveText="Delete" />
             <Button flavor="brand">Send</Button>

@@ -15,7 +15,6 @@ import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -23,21 +22,21 @@ export let states = [
     label: 'Default',
     element:
     <div className="demo-only">
-      <span className={pf('assistive-text')}>Task</span>
+      <span className="slds-assistive-text">Task</span>
       <MediaObject figureRight={ <TimelineActions /> }>
-        <MediaObject className={pf('media--timeline timeline__media--task')} figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName={pf('timeline__icon')}>
+        <MediaObject className="slds-media--timeline slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
           <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
-            <h3 className={pf('truncate')} title="Review proposals for EBC deck with larger team and have marketing review this">
+            <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">
               <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
             </h3>
-            <ul className={pf('list--horizontal wrap')}>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Contact:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Lei Chan</a></span>
+            <ul className="slds-list--horizontal slds-wrap">
+              <li className="slds-m-right--large">
+                <span className="slds-text-title">Contact:</span>
+                <span className="slds-text-body--small"><a href="javascript:void(0);">Lei Chan</a></span>
               </li>
-              <li className={pf('m-right--large')}>
-                <span className={pf('text-title')}>Assigned to:</span>
-                <span className={pf('text-body--small')}><a href="javascript:void(0);">Betty Mason</a></span>
+              <li className="slds-m-right--large">
+                <span className="slds-text-title">Assigned to:</span>
+                <span className="slds-text-body--small"><a href="javascript:void(0);">Betty Mason</a></span>
               </li>
             </ul>
           </MediaObject>

@@ -12,30 +12,29 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Section = props =>
-  <div className={className(pf('section'), props.className)}>
+  <div className={className('slds-section', props.className)}>
     {props.children}
   </div>;
 
 let SectionContent = props =>
-  <div className={className(pf('section__content'), props.className)}>
+  <div className={className('slds-section__content', props.className)}>
     {props.children}
   </div>;
 
 let SectionTitle = props =>
-  <h3 className={className(pf('section__title'), props.className)}>
+  <h3 className={className('slds-section__title', props.className)}>
     {props.children}
   </h3>;
 
 let SectionTitleAction = props =>
-  <button className={pf('button section__title-action')}>
-    <SvgIcon className={pf('section__title-action-icon button__icon slds-button__icon--left')} sprite="utility" symbol="switch" />
+  <button className="slds-button slds-section__title-action">
+    <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
     {props.children}
   </button>;
 
@@ -64,7 +63,7 @@ export let states = [
     id: 'section-title-open',
     label: 'Open',
     element:
-      <Section className={pf('is-open')}>
+      <Section className="slds-is-open">
         <SectionTitle>
           <SectionTitleAction>Section Title</SectionTitleAction>
         </SectionTitle>

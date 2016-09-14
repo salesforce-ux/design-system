@@ -11,14 +11,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Avatar = props =>
-  <span className={className(pf('avatar'), props.className)}>
+  <span className={className('slds-avatar', props.className)}>
     { props.children }
   </span>;
 
@@ -32,7 +31,7 @@ export let states = [
     id: 'avatar-square',
     label: 'Square',
     element:
-      <Avatar className={pf('avatar--medium')}>
+      <Avatar className="slds-avatar--medium">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   },
@@ -40,7 +39,7 @@ export let states = [
     id: 'avatar-circle',
     label: 'Circle',
     element:
-      <Avatar className={pf('avatar--circle avatar--medium')}>
+      <Avatar className="slds-avatar--circle slds-avatar--medium">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   }

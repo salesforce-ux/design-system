@@ -14,16 +14,15 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const icon = (
-  <div className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon-standard-contact icon--small')} sprite="standard" symbol="contact" />
-    <span className={pf('assistive-text')}>Contact</span>
+  <div className="slds-icon_container">
+    <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small" sprite="standard" symbol="contact" />
+    <span className="slds-assistive-text">Contact</span>
   </div>
 );
 
@@ -33,59 +32,59 @@ const icon = (
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (3)</span></CardHeader>
+    <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Contacts (3)</span></CardHeader>
     <CardBody>
-      <div className={pf('card__body--inner grid wrap grid--pull-padded')}>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
+      <div className="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
             </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-            </dd>
-          </dl>
-        </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
-            </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
-            </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
-            </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className={pf('card__tile p-horizontal--small size--1-of-1 medium-size--1-of-3')}>
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
             </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            </dd>
+          </dl>
+        </TileMedia>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
+            </dt>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
+            </dd>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
+            </dt>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </TileMedia>
       </div>
     </CardBody>
-    <CardFooter><a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+    <CardFooter><a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a></CardFooter>
   </Card>
 );

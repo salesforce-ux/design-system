@@ -16,7 +16,6 @@ import className from 'classnames';
 import _ from 'lodash';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 // Props
 //  - Globals
@@ -53,13 +52,13 @@ const results = [{
 }];
 
 let LookupSearchInput = props =>
-  <div className={className(pf('form-element__control'), props.polymorphic ? pf('grid box--border') : null)}>
+  <div className={className('slds-form-element__control', props.polymorphic ? 'slds-grid slds-box--border' : null)}>
     { props.polymorphic ? <LookupEntity showEntityDropdown={ props.showEntityDropdown } /> : null }
-    <div className={className(pf('input-has-icon input-has-icon--right'), props.polymorphic ? pf('grow') : null)}>
-      <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
+    <div className={className('slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grow' : null)}>
+      <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
       <input
         id={ props.id }
-        className={className(pf('lookup__search-input'), props.polymorphic ? pf('input--bare') : pf('input'))}
+        className={className('slds-lookup__search-input', props.polymorphic ? 'slds-input--bare' : 'slds-input')}
         type="search"
         placeholder={ props.placeholder || 'Search Accounts' }
         defaultValue={ props.typeahead ? 'salesforce' : null }
@@ -72,30 +71,30 @@ let LookupSearchInput = props =>
   </div>;
 
 let LookupEntity = props =>
-  <div className={className(pf('dropdown--trigger dropdown-trigger--click align-middle m-left--xx-small shrink-none'), props.showEntityDropdown ? pf('is-open') : null)}>
-    <SvgIcon className={pf('icon icon-standard-account icon--small')} sprite="standard" symbol="account" />
-    <ButtonIcon className={pf('button--icon button--icon-small')} symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
+  <div className={className('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
+    <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
+    <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
     { props.showEntityDropdown ?
-      <Menu className={pf('dropdown--left')}>
+      <Menu className="slds-dropdown--left">
         <MenuList>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
             Accounts
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
             Approvals
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
             Lead
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
             Opportunities
           </MenuItem>
           <MenuItem>
-            <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
             Products
           </MenuItem>
         </MenuList>
@@ -107,9 +106,9 @@ let LookupMenu = props => {
   const uniqueId = _.uniqueId('lookup-option-');
 
   return (
-    <div className={pf('lookup__menu')} id={ props.id }>
-      { !props.typeahead ? <div className={pf('lookup__item--label text-body--small')}>Recent Accounts</div> : null }
-      <ul className={pf('lookup__list')} role="listbox">
+    <div className="slds-lookup__menu" id={ props.id }>
+      { !props.typeahead ? <div className="slds-lookup__item--label slds-text-body--small">Recent Accounts</div> : null }
+      <ul className="slds-lookup__list" role="listbox">
         { props.typeahead ? <LookupMenuItemLabel symbol="search" text='"salesforce" in accounts' /> : null }
         { props.typeahead ? <LookupMenuItem typeahead><mark>Salesforce</mark>.com, Inc.</LookupMenuItem> :
           _.times(results.length, i =>
@@ -130,11 +129,11 @@ let LookupMenuItem = props => {
 
   return (
     <li role="presentation">
-      <span className={pf('lookup__item-action media media--center')} id={ uniqueId } role="option">
-        <SvgIcon className={pf('icon icon-standard-account icon--small media__figure')} sprite="standard" symbol="account" />
-        <div className={pf('media__body')}>
-          <div className={pf('lookup__result-text')}>{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
-          <span className={pf('lookup__result-meta text-body--small')}>Account &bull; { props.location || 'San Francisco' }</span>
+      <span className="slds-lookup__item-action slds-media slds-media--center" id={ uniqueId } role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <div className="slds-media__body">
+          <div className="slds-lookup__result-text">{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
+          <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; { props.location || 'San Francisco' }</span>
         </div>
       </span>
     </li>
@@ -146,21 +145,21 @@ let LookupMenuItemLabel = props => {
 
   return (
     <li role="presentation">
-      <span className={pf('lookup__item-action lookup__item-action--label')} id={ uniqueId } role="option">
-        <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol={ props.symbol || 'add' } />
-        <span className={pf('truncate')}>{ props.text || 'New Account'}</span>
+      <span className="slds-lookup__item-action slds-lookup__item-action--label" id={ uniqueId } role="option">
+        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol={ props.symbol || 'add' } />
+        <span className="slds-truncate">{ props.text || 'New Account'}</span>
       </span>
     </li>
   );
 };
 
 let LookupSelection = props =>
-  <div className={pf('form-element__control')}>
+  <div className="slds-form-element__control">
     <PillContainer>
-      <Pill label="Salesforce.com, Inc." unlinked className={pf('size--1-of-1')}>
-        <span className={pf('icon_container icon-standard-account pill__icon_container')}>
-          <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-          <span className={pf('assistive-text')}>Account</span>
+      <Pill label="Salesforce.com, Inc." unlinked className="slds-size--1-of-1">
+        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+          <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+          <span className="slds-assistive-text">Account</span>
         </span>
       </Pill>
     </PillContainer>
@@ -170,10 +169,10 @@ export let Lookup = props => {
   const uniqueId = _.uniqueId('lookup-');
 
   return (
-    <div className={className(pf('form-element lookup'), props.className, props.showLookupDropdown ? pf('is-open') : null)} data-select="single">
+    <div className={className('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null)} data-select="single">
       { !props.selection ?
-      <label className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
-      <span className={className(pf('form-element__label'), props.hideLabel ? pf('assistive-text') : null)}>{ props.label || 'Account Name' }</span>
+      <label className={className('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
+      <span className={className('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
       }
       { !props.selection ?
         <LookupSearchInput

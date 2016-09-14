@@ -14,7 +14,6 @@ import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem, Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 ///////////////////////////////////////////
@@ -22,7 +21,7 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 ///////////////////////////////////////////
 
 export let ButtonGroup = props =>
-  <div className={className(pf('button-group'), props.className)} role="group">
+  <div className={className('slds-button-group', props.className)} role="group">
     {props.children}
   </div>;
 
@@ -36,9 +35,9 @@ export let states = [
     label: 'Default',
     element:
       <ButtonGroup>
-        <Button className={pf('button--neutral')}>Refresh</Button>
-        <Button className={pf('button--neutral')}>Edit</Button>
-        <Button className={pf('button--neutral')}>Save</Button>
+        <Button className="slds-button--neutral">Refresh</Button>
+        <Button className="slds-button--neutral">Edit</Button>
+        <Button className="slds-button--neutral">Save</Button>
       </ButtonGroup>
   },
   {
@@ -46,9 +45,9 @@ export let states = [
     label: 'Default Disabled',
     element:
       <ButtonGroup>
-        <Button className={pf('button--neutral')}>Refresh</Button>
-        <Button className={pf('button--neutral')}>Edit</Button>
-        <Button className={pf('button--neutral')} disabled>Save</Button>
+        <Button className="slds-button--neutral">Refresh</Button>
+        <Button className="slds-button--neutral">Edit</Button>
+        <Button className="slds-button--neutral" disabled>Save</Button>
       </ButtonGroup>
   },
   {
@@ -56,10 +55,10 @@ export let states = [
     label: 'More Icon',
     element:
       <ButtonGroup>
-        <Button className={pf('button--neutral')}>Refresh</Button>
-        <Button className={pf('button--neutral')}>Edit</Button>
-        <Button className={pf('button--neutral')}>Save</Button>
-        <Trigger className={pf('button--last')} ariaExpanded="false" />
+        <Button className="slds-button--neutral">Refresh</Button>
+        <Button className="slds-button--neutral">Edit</Button>
+        <Button className="slds-button--neutral">Save</Button>
+        <Trigger className="slds-button--last" ariaExpanded="false" />
       </ButtonGroup>
   },
   {
@@ -68,11 +67,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
-          <Button className={pf('button--neutral')}>Refresh</Button>
-          <Button className={pf('button--neutral')}>Edit</Button>
-          <Button className={pf('button--neutral')}>Save</Button>
-          <Trigger className={pf('button--last is-open')}>
-            <Menu className={pf('dropdown--right')}>
+          <Button className="slds-button--neutral">Refresh</Button>
+          <Button className="slds-button--neutral">Edit</Button>
+          <Button className="slds-button--neutral">Save</Button>
+          <Trigger className="slds-button--last slds-is-open">
+            <Menu className="slds-dropdown--right">
               <MenuList>
                 <MenuItem tabIndex="0">Overflow Item One</MenuItem>
                 <MenuItem>Overflow Item Two</MenuItem>
@@ -88,11 +87,11 @@ export let states = [
     label: 'More Icon Disabled',
     element:
       <ButtonGroup>
-        <Button className={pf('button--neutral')}>Refresh</Button>
-        <Button className={pf('button--neutral')}>Edit</Button>
-        <Button className={pf('button--neutral')}>Save</Button>
-        <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
-          <ButtonIcon className={pf('button--icon-border')} assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
+        <Button className="slds-button--neutral">Refresh</Button>
+        <Button className="slds-button--neutral">Edit</Button>
+        <Button className="slds-button--neutral">Save</Button>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+          <ButtonIcon className="slds-button--icon-border" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
         </div>
       </ButtonGroup>
   },
@@ -102,11 +101,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className={pf('button--inverse')}>Refresh</Button>
-          <Button className={pf('button--inverse')}>Edit</Button>
-          <Button className={pf('button--inverse')}>Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
-            <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+          <Button className="slds-button--inverse">Refresh</Button>
+          <Button className="slds-button--inverse">Edit</Button>
+          <Button className="slds-button--inverse">Save</Button>
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>
       </div>
@@ -117,11 +116,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className={pf('button--inverse')}>Refresh</Button>
-          <Button className={pf('button--inverse')} disabled>Edit</Button>
-          <Button className={pf('button--inverse')} >Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
-            <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+          <Button className="slds-button--inverse">Refresh</Button>
+          <Button className="slds-button--inverse" disabled>Edit</Button>
+          <Button className="slds-button--inverse" >Save</Button>
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>
       </div>
@@ -132,11 +131,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className={pf('button--inverse')}>Refresh</Button>
-          <Button className={pf('button--inverse')}>Edit</Button>
-          <Button className={pf('button--inverse')}>Save</Button>
-          <div className={pf('dropdown-trigger dropdown-trigger--click button--last')}>
-            <ButtonIcon className={pf('button--icon-border-inverse')} assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
+          <Button className="slds-button--inverse">Refresh</Button>
+          <Button className="slds-button--inverse">Edit</Button>
+          <Button className="slds-button--inverse">Save</Button>
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
           </div>
         </ButtonGroup>
       </div>

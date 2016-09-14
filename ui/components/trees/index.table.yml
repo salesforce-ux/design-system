@@ -1,33 +1,33 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: tree_container
+    class: slds-tree_container
     description: Sets <code>min-</code> and <code>max-width</code> on tree
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: tree
+    class: slds-tree
     description: Initializes tree
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: tree__item
+    class: slds-tree__item
     description: Initializes tree item
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Contains the icon and the action that toggles the nested branch
   -
-    class: is-disabled
+    class: slds-is-disabled
     description: Creates the indentation space to match rows with children
     required: true
     applied: <code>.slds-button</code>
   -
-    class: table--tree
+    class: slds-table--tree
     description: Initializes the tree grid item
     required: true
     applied: <code>&lt;table&gt;</code>
   -
-    class: table--tree__toggle
+    class: slds-table--tree__toggle
     description: Used on the main tree grid toggle button
     required: true
     applied: <code>.slds-button</code>

@@ -15,78 +15,77 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const dialingIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon-text-call icon--small')} sprite="utility" symbol="call" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container">
+    <SvgIcon className="slds-icon icon-text-call slds-icon--small" sprite="utility" symbol="call" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 const image = (
-  <span className={pf('avatar avatar--circle avatar--medium')}>
+  <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
     <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
   </span>
 );
 const recordIcon = (
-  <span className={pf('icon_container')}>
-    <SvgIcon className={pf('icon icon-text-questions_and_answers')} sprite="utility" symbol="questions_and_answers" />
-    <span className={pf('assistive-text')}>Call Icon</span>
+  <span className="slds-icon_container">
+    <SvgIcon className="slds-icon icon-text-questions_and_answers" sprite="utility" symbol="questions_and_answers" />
+    <span className="slds-assistive-text">Call Icon</span>
   </span>
 );
 
 export default (
   <div className="demo-only">
-    {/*<div className={pf('docked-container')}>*/}
-      <div className={pf('docked grid grid--vertical nowrap is-open')}>
+    {/*<div className="docked-container">*/}
+      <div className="docked slds-grid slds-grid--vertical slds-nowrap slds-is-open">
 
-        <div className={pf('docked-composer')}>
-          <div className={pf('docked-composer__header grid grid--align-spread shrink-none')}>
+        <div className="slds-docked-composer">
+          <div className="slds-docked-composer__header slds-grid slds-grid--align-spread slds-shrink-none">
             <MediaObject figureLeft={dialingIcon}>
               Lei Chan - Connected
             </MediaObject>
-            <div className={pf('docked-composer__actions')}>
-              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="minimize_window" assistiveText="Minimize window" />
-              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="expand_alt" assistiveText="Expand Composer" />
-              <ButtonIcon className={pf('button--icon button--icon-inverse')} symbol="close" assistiveText="Close" />
+            <div className="slds-docked-composer__actions">
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
             </div>
           </div>
-          <div className={pf('docked-composer__body grow grid grid--vertical nowrap')}>
-            <div className={pf('docked-composer__lead grid grid--align-spread shrink-none')}>
+          <div className="slds-docked-composer__body slds-grow slds-grid slds-grid--vertical slds-nowrap">
+            <div className="slds-docked-composer__lead slds-grid slds-grid--align-spread slds-shrink-none">
               <MediaObject figureLeft={image}>
-                <p className={pf('text-heading--medium')}>Lei Chan</p>
+                <p className="slds-text-heading--medium">Lei Chan</p>
                 <p>Connected</p>
               </MediaObject>
               <MediaObject figureLeft={recordIcon} flavor="center">
-                <p className={pf('text-heading--large')}>5:37</p>
+                <p className="slds-text-heading--large">5:37</p>
               </MediaObject>
             </div>
-            <div className={pf('docked-composer__contacts grid grid--align-spread')}>
-              <div className={pf('pill_container')}>
-                <span className={pf('pill')}>
-                  <a href="javascript:void(0);" className={pf('pill__label')}>Lei Chan</a>
+            <div className="docked-composer__contacts slds-grid slds-grid--align-spread">
+              <div className="slds-pill_container">
+                <span className="slds-pill">
+                  <a href="javascript:void(0);" className="slds-pill__label">Lei Chan</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
-                <span className={pf('pill')}>
-                  <a href="javascript:void(0);" className={pf('pill__label')}>Tesla Motors</a>
+                <span className="slds-pill">
+                  <a href="javascript:void(0);" className="slds-pill__label">Tesla Motors</a>
                   <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
                 </span>
               </div>
               <ButtonIcon
-                className={pf('button--icon-container shrink-none')}
+                className="slds-button--icon-container slds-shrink-none"
                 symbol="add"
                 assistiveText="Add user" />
             </div>
-            <textarea className={pf('docked-composer__input input--bare text-longform grow')} placeholder="Jot down notes here..." />
+            <textarea className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
           </div>
-          <div className={pf('docked-composer__footer shrink-none grid grid--align-spread')}>
+          <div className="slds-docked-composer__footer slds-shrink-none slds-grid slds-grid--align-spread">
             <div>
               <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="chat"
                 assistiveText="Chat" />
               <ButtonIcon
-                className={pf('button--icon-container')}
+                className="slds-button--icon-container"
                 symbol="settings"
                 assistiveText="Settings" />
             </div>

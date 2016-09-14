@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { Avatar } from 'ui/components/images/flavors/avatar/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Export
@@ -23,7 +22,7 @@ export let states = [
     id: 'avatar-x-small',
     label: 'X Small',
     element:
-      <Avatar className={pf('avatar--x-small')}>
+      <Avatar className="slds-avatar--x-small">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   },
@@ -31,7 +30,7 @@ export let states = [
     id: 'avatar-small',
     label: 'Small',
     element:
-      <Avatar className={pf('avatar--small')}>
+      <Avatar className="slds-avatar--small">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   },
@@ -39,7 +38,7 @@ export let states = [
     id: 'avatar-medium',
     label: 'Medium',
     element:
-      <Avatar className={pf('avatar--medium')}>
+      <Avatar className="slds-avatar--medium">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   },
@@ -47,7 +46,7 @@ export let states = [
     id: 'avatar-large',
     label: 'Large',
     element:
-      <Avatar className={pf('avatar--large')}>
+      <Avatar className="slds-avatar--large">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
   }

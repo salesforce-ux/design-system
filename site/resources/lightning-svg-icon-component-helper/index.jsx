@@ -13,18 +13,17 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import g from 'app_modules/global';
 
 let compactVersion = `${g.abbreviatedName.toLowerCase()}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
 
 export default (
-  <PageBody anchorTitle="Lightning SVG Icon Component Helper" contentClassName={pf('grid wrap')}>
+  <PageBody anchorTitle="Lightning SVG Icon Component Helper" contentClassName="slds-grid slds-wrap">
     <StickyNav>
-      <div className={pf('site-menu--jump-links')}>
+      <div className="site-menu--jump-links">
         <h3 className="site-text-heading--label">Steps</h3>
-        <ul className={pf('list--vertical has-block-links')}>
+        <ul className="slds-list--vertical slds-has-block-links">
           <li><a href="#step-1">Create the Lightning Component</a></li>
           <li><a href="#step-2">Paste the Following Code</a></li>
           <li><a href="#step-3">Use the New Component</a></li>
@@ -32,8 +31,8 @@ export default (
       </div>
     </StickyNav>
 
-    <div className={pf('site-main-content col col-rule--right size--1-of-1 large-size--4-of-6 large-order--1')}>
-      <div className={pf('container--large')}>
+    <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
+      <div className="slds-container--large">
         <p className="site-text-introduction">Currently, you will need to install a helper Lightning Component to render the {g.displayName} sprited icons. This is for several reasons:</p>
         <ul>
           <li>Sprited non-inline SVGs are not supported in Lightning yet</li>
@@ -55,7 +54,7 @@ export default (
         </p>
       </div>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="markup">{`
 <aura:component>
   <aura:attribute name="svgPath"        default="" type="String" description="the path for the icon in the static resource, this will be use in a SVG use tag" />
@@ -72,11 +71,11 @@ export default (
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--large')}>
+      <div className="slds-container--large">
         <p>Click on the <strong>HELPER</strong> tab, then paste:</p>
       </div>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="javascript">{`
 ({
   renderIcon: function(component) {
@@ -114,11 +113,11 @@ export default (
         `}</CodeBlock>
         </div>
 
-      <p className={pf('container--large')}>
+      <p className="slds-container--large">
         Click on the <strong>RENDERER</strong> tab, then paste:
       </p>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="javascript">{`
 ({
   render: function(component, helper) {
@@ -135,7 +134,7 @@ export default (
         `}</CodeBlock>
       </div>
 
-      <div className={pf('container--large')}>
+      <div className="slds-container--large">
 
         <h2 id="step-3" className="site-text-heading--large">Step 3: Use the New Component</h2>
         <p>
@@ -144,7 +143,7 @@ export default (
         </p>
       </div>
 
-      <div className={pf('site-code--content scrollable--x')}>
+      <div className="site-code--content slds-scrollable--x">
         <CodeBlock language="markup">{`
 <c:svgIcon svgPath="/resource/${compactVersion}/assets/icons/standard-sprite/svg/symbols.svg#user" category="standard" size="large" name="user" />
         `}</CodeBlock>

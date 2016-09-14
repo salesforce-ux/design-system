@@ -11,6 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
+import { SpinnerContainer } from 'ui/components/spinners/flavors/containers/index.react.example';
+import { Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
 
 //////////////////////////////////////////////
 // Partials
@@ -21,17 +23,6 @@ let Demo = props =>
     {props.children}
   </div>;
 
-let SpinnerContainer = props =>
-  <div className="slds-spinner_container">
-    {props.children}
-  </div>;
-
-let Spinner = props =>
-  <div role="alert" className={className('slds-spinner', props.className)}>
-    <span className="slds-assistive-text">Loading</span>
-    <div className="slds-spinner__dot-a"></div>
-    <div className="slds-spinner__dot-b"></div>
-  </div>;
 
 //////////////////////////////////////////////
 // Export

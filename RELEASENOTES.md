@@ -9,7 +9,7 @@
 
 The following issues have now been resolved:
 
-- Included the logo SVG asset used in the Global header
+- Included the logo SVG asset used in the Global header
 - Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
 
 ## Release [2.1.2] - September 6, 2016
@@ -22,40 +22,40 @@ The following site enhancements are now available:
 - New Checkbox Toggle guidelines under [Data Entry section](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
-- Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icon)
-- Picklist component has been moved out of Menus and into its own category [Picklist](/components/picklist)
+- Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icon/)
+- Picklist component has been moved out of Menus and into its own category [Picklist](/components/picklist/)
 
 **NEW COMPONENTS AND VARIANTS**
 
 The following components are now available:
 
 - App Launcher - [App Launcher Component](/components/app-launcher/)
-- Global Navigation - Standard context bar - [Global Navigation Component](/components/global-navigation)
-- Global Header - [Global Header Component](/components/global-header)
-- Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/#utility-bar)
-- Filtering panel - [Filtering Panel Component](/components/panels/#filtering)
+- Global Navigation - Standard context bar - [Global Navigation Component](/components/global-navigation/)
+- Global Header - [Global Header Component](/components/global-header/)
+- Docked Utility Bar - [Docked Utility Bar Component](/components/docked-utility-bar/)
+- Filtering panel - [Filtering Panel Component](/components/panels/#flavor-filtering)
 - Files - [File Components](/components/files/)
-- File selector - [File Selector](/components/file-selector)
+- File selector - [File Selector](/components/file-selector/)
 - Feed v2 - [Feeds Component](/components/feeds/)
 - Indeterminate checkbox - [Indeterminate checkbox component](/components/forms/#flavor-checkbox)
-- Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/buttons/#icon-container)
-- Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/buttons/#icon-with-hint-hover)
-- Button Icon Error - [Button Icon Error](/components/buttons/#flavor-icon)
-- Image Cards - [Figure Card Component](/components/images/#flavor-figure)
-- Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure)
-- Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical)
+- Button Icon Inverse - Bordered - [Button Icon Inverse with Border](/components/button-icons/#flavor-icon-container-button-icon-border)
+- Button Icon Inverse - Hint Hover - [Button Icon with Hint Hover](/components/button-icons/#flavor-icon-with-hint-hover)
+- Button Icon Error - [Button Icon Error](/components/button-icons/#flavor-base-button-icon-error)
+- Image Cards - [Figure Card Component](/components/images/#flavor-figure-figure-card)
+- Image Ratios - [Figure Ratio Component](/components/images/#flavor-figure-ratio)
+- Vertical Navigation color variation - [Vertical Navigation](/components/navigation/#flavor-vertical-inverse)
 
 **ADDED**
 
 The following classes are now available:
 
-- Text color helpers - [Utilities › Text › Color](/components/utilities/text#color)
-- Truncation containers [Utilities › Truncation](/components/utilities/truncation/#max-width)
-- Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
+- Text color helpers - [Utilities › Text › Color](/components/utilities/text/#flavor-color)
 - Text title utility - `.slds-text-title` - [Utilities › Text › Text Title](/components/utilities/text/#flavor-title)
+- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
+- Truncation containers [Utilities › Truncation](/components/utilities/truncation/#flavor-max-width)
+- Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 - Position utilities - [Utilities › Position](/components/utilities/position/)
-- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
 - Table column borders - Added vertical column borders on a table by applying `.slds-table--col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Utilities › Lists › Name Value Pair](/components/utilities/lists/#flavor-name-value-pair)
 - Generated grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints

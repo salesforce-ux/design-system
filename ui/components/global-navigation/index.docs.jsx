@@ -166,11 +166,11 @@ export default (
     <ol>
       <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn&rsquo;t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar</li>
       <li><CodeClass className="dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
-      <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Switcher Waffle icon.</li>
+      <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.</li>
     </ol>
     <p>If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" />. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the <CodeClass className="context-bar__icon-action" />.</p>
 
-    <h2 className="site-text-heading--label">1.5. Specifics of the Navigation Bar - App Switcher</h2>
+    <h2 className="site-text-heading--label">1.5. Specifics of the Navigation Bar - App Launcher</h2>
 
     <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
@@ -186,7 +186,7 @@ export default (
       </div>
     </div>
 
-    <p>The app switcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app switcher dropdown. Please use JavaScript to accommodate this requirement.</p>
+    <p>The app launcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app launcher dropdown. Please use JavaScript to accommodate this requirement.</p>
 
     <h2 className="site-text-heading--label">1.6. Specifics of the Navigation Bar - App Name</h2>
 

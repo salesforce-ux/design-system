@@ -39,8 +39,8 @@ export let states = [
       </div>
   },
   {
-    id: 'docked-form-footer-with-tooltip',
-    label: 'With error tooltip',
+    id: 'docked-form-footer-with-popover',
+    label: 'With error popover',
     element:
       <div className="demo-only" style={{ height: '180px' }}>
         <div className="slds-docked-form-footer">

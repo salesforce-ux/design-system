@@ -59,9 +59,3 @@ export let states = [
     </Demo>
   }
 ];
-
-export default (
-<div className="demo-only" style={{height: '6.25rem'}}>
-  <Spinner flavor="brand-large" className="slds-spinner--brand" />
-</div>
-);

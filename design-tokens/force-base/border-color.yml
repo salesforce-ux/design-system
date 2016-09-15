@@ -66,6 +66,9 @@ props:
   COLOR_BORDER_TAB_SELECTED:
     value: '{!SCIENCE_BLUE}'
     comment: Border color for a selected tab in a tab group.
+  COLOR_BORDER_TAB_ACTIVE:
+    value: "{!WHITE}"
+    comment: Border color for an active tab.
   COLOR_BORDER_SEPARATOR:
     value: '{!LINK_WATER}'
     comment: Lightest separator color - used as default separator on white backgrounds.
@@ -139,3 +142,6 @@ props:
   COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
     value: '{!WHITE}'
     comment: The borders to create the checkmark
+  COLOR_BORDER_TOGGLE_CHECKED:
+    value: '{!WHITE}'
+    comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.

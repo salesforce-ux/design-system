@@ -42,10 +42,5 @@ export let states = [
       <Avatar className="slds-avatar--circle slds-avatar--medium">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
       </Avatar>
-  },
-  {
-    id: 'avatar-empty',
-    label: 'Empty',
-    element: <Avatar className="slds-avatar--empty slds-avatar--medium" />
   }
 ];

@@ -15,7 +15,7 @@
   }
 
   // Arrow Icon
-  .icon__svg {
+  .slds-icon__svg {
     @include square($square-icon-x-small-content);
     display: inline-block;
     opacity: 0.5;
@@ -57,7 +57,7 @@
       background-color: darken($color-background, 2.5);
     }
 
-    .icon__svg {
+    .slds-icon__svg {
       opacity: 1;
     }
   }

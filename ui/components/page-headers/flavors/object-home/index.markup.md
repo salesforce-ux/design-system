@@ -1,5 +1,5 @@
 The title for the Object Home page header is sorting component.
-The `.{{cssPrefix}}text-focus` class is placed on the media object that
+The `.slds-text-focus` class is placed on the media object that
 contains the title and down icon to simulate a hover and
 focus state of a link.
 

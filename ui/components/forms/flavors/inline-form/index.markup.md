@@ -1,1 +1,1 @@
-To horizontally align form elements on the same axis, use `.{{cssPrefix}}form--inline` on the form wrapper.
+To horizontally align form elements on the same axis, use `.slds-form--inline` on the form wrapper.

@@ -12,7 +12,7 @@ classes:
   -
     class: slds-spinner--x-small
     description: This is the x-small spinner
-    applied: <code>.{{cssPrefix}}spinner</code>
+    applied: <code>.slds-spinner</code>
   -
     class: slds-spinner--small
     description: This is the small spinner

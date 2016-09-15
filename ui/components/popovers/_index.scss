@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}popover {
+.slds-popover {
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
 

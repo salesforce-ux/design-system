@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}dropdown {
+.slds-dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
   left: 50%;
@@ -85,11 +85,11 @@
     background-color: transparent;
   }
 
-  &[class*="#{$css-prefix}nubbin--top"] {
+  &[class*="slds-nubbin--top"] {
     margin-top: ($square-tooltip-nubbin / 2);
   }
 
-  &[class*="#{$css-prefix}nubbin--bottom"] {
+  &[class*="slds-nubbin--bottom"] {
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
@@ -110,7 +110,7 @@
         z-index: -1;
       }
 
-      &.#{$css-prefix}dropdown--left {
+      &.slds-dropdown--left {
         left: ($spacing-medium * -1);
 
         &:before,
@@ -120,7 +120,7 @@
         }
       }
 
-      &.#{$css-prefix}dropdown--right {
+      &.slds-dropdown--right {
         right: ($spacing-medium * -1);
 
         &:before,
@@ -171,12 +171,12 @@
       }
     }
 
-    .#{$css-prefix}icon--selected {
+    .slds-icon--selected {
       opacity: 0;
       transition: opacity $duration-immediately ease;
     }
 
-    &.#{$css-prefix}is-selected .#{$css-prefix}icon--selected {
+    &.slds-is-selected .slds-icon--selected {
       fill: $color-text-icon-default-hover;
       opacity: 1;
     }
@@ -184,7 +184,7 @@
 
   @include deprecate('4.0.0') {
 
-    .#{$css-prefix}has-icon {
+    .slds-has-icon {
       position: relative;
 
       &--left > a,
@@ -205,7 +205,7 @@
         }
       }
 
-      .#{$css-prefix}icon {
+      .slds-icon {
         @include square($square-icon-medium-content);
         position: absolute;
         top: 50%;
@@ -224,21 +224,21 @@
   } // Deprecate has-icon
 }
 
-.#{$css-prefix}dropdown-trigger {
+.slds-dropdown-trigger {
   position: relative;
   display: inline-block;
 
-  .#{$css-prefix}dropdown {
+  .slds-dropdown {
     top: 100%;
   }
 
-  .#{$css-prefix}dropdown--bottom {
+  .slds-dropdown--bottom {
     top: auto;
   }
 
   @include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
 
-    .#{$css-prefix}dropdown {
+    .slds-dropdown {
       visibility: hidden;
       opacity: 0;
       transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
@@ -248,7 +248,7 @@
     &:focus {
       outline: 0;
 
-      .#{$css-prefix}dropdown {
+      .slds-dropdown {
         visibility: visible;
         opacity: 1;
         transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
@@ -258,7 +258,7 @@
 
   &--hover {
 
-    .#{$css-prefix}dropdown {
+    .slds-dropdown {
       visibility: hidden;
       opacity: 0;
       transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
@@ -268,7 +268,7 @@
     &:focus {
       outline: 0;
 
-      .#{$css-prefix}dropdown {
+      .slds-dropdown {
         visibility: visible;
         opacity: 1;
         transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
@@ -279,11 +279,11 @@
   // If someone is using javascript for click to toggle - this modifier will help
   &--click {
 
-    .#{$css-prefix}dropdown {
+    .slds-dropdown {
       display: none;
     }
 
-    &.#{$css-prefix}is-open .#{$css-prefix}dropdown {
+    &.slds-is-open .slds-dropdown {
       display: block;
       visibility: visible;
       opacity: 1;
@@ -291,13 +291,13 @@
   }
 
   // Deal with positioning when target is just an icon
-  > [class*="#{$css-prefix}button--icon"] {
+  > [class*="slds-button--icon"] {
 
-    ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
+    ~ .slds-dropdown--left[class*="slds-nubbin"] {
       left: ($spacing-x-small * -1);
     }
 
-    ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
+    ~ .slds-dropdown--right[class*="slds-nubbin"] {
       right: ($spacing-x-small * -1);
     }
   }

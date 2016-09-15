@@ -9,16 +9,16 @@
 
 
 
-.#{$css-prefix}form--horizontal {
+.slds-form--horizontal {
 
   @include mq-medium-min {
     text-align: right;
   }
 
-  .#{$css-prefix}form-element {
+  .slds-form-element {
 
-    > .#{$css-prefix}form-element__legend,
-    > .#{$css-prefix}form-element__label {
+    > .slds-form-element__legend,
+    > .slds-form-element__label {
 
       @include mq-medium-min {
         float: left;
@@ -35,12 +35,12 @@
       }
     }
 
-    + .#{$css-prefix}form-element {
+    + .slds-form-element {
       @include form-element-vertical-spacing;
     }
   }
 
-  .#{$css-prefix}form-element__control {
+  .slds-form-element__control {
     width: 100%;
 
     @include mq-medium-min {

@@ -7,9 +7,9 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}checkbox--add-button {
+.slds-checkbox--add-button {
 
-  .#{$css-prefix}checkbox--faux {
+  .slds-checkbox--faux {
     @include square($square-icon-medium-boundary);
     position: relative;
     display: inline-block;
@@ -50,8 +50,8 @@
 
   input[type=checkbox]:checked {
 
-    ~ .#{$css-prefix}checkbox--faux,
-    + .#{$css-prefix}checkbox--faux {
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
       border-color: transparent;
       background: $color-background-success;
 
@@ -80,8 +80,8 @@
 
   input[type=checkbox]:focus {
 
-    ~ .#{$css-prefix}checkbox--faux,
-    + .#{$css-prefix}checkbox--faux {
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
       @include focus-button;
       border-color: $color-border-input-active;
     }
@@ -89,8 +89,8 @@
 
   input[type=checkbox][disabled] {
 
-    ~ .#{$css-prefix}checkbox--faux,
-    + .#{$css-prefix}checkbox--faux {
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
       background-color: $color-background-button-brand-disabled;
       border-color: $color-border-button-brand-disabled;
       color: $color-text-button-brand-disabled;

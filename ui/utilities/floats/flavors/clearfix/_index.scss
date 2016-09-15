@@ -9,10 +9,10 @@
 
 
 
-.#{$css-prefix}clearfix {
+.slds-clearfix {
   @include clearfix;
 }
 
-.#{$css-prefix}clear {
+.slds-clear {
   clear: both;
 }

@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}button {
+.slds-button {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -59,16 +59,16 @@
   &:active,
   &[disabled] {
 
-    .#{$css-prefix}button__icon {
+    .slds-button__icon {
       fill: currentColor;
     }
   }
 
-  & + .#{$css-prefix}button-group {
+  & + .slds-button-group {
     margin-left: $spacing-xx-small;
   }
 
-  & + .#{$css-prefix}button {
+  & + .slds-button {
 
     @include deprecate('4.0.0') {
       margin-left: $spacing-xx-small;
@@ -76,14 +76,14 @@
   }
 }
 
-.#{$css-prefix}button-space-left {
+.slds-button-space-left {
 
   @include deprecate('4.0.0', 'Use spacing utilities instead') {
     margin-left: $spacing-xx-small;
   }
 }
 
-a.#{$css-prefix}button {
+a.slds-button {
   text-align: center;
 
   &:focus {
@@ -92,15 +92,15 @@ a.#{$css-prefix}button {
 }
 
 // Deal with button spacing
-.#{$css-prefix}button__icon--left {
+.slds-button__icon--left {
   margin-right: $spacing-x-small;
 }
 
-.#{$css-prefix}button__icon--right {
+.slds-button__icon--right {
   margin-left: $spacing-x-small;
 }
 
-.#{$css-prefix}button--small {
+.slds-button--small {
   line-height: $line-height-button-small;
   // Force icon-only buttons to be the same
   // height as small buttons since they're SVG
@@ -109,7 +109,7 @@ a.#{$css-prefix}button {
 }
 
 // Neutral Button
-.#{$css-prefix}button--neutral {
+.slds-button--neutral {
   @include button;
   @include button-base;
   background-color: $color-background-button-default;
@@ -120,7 +120,7 @@ a.#{$css-prefix}button {
   }
 }
 
-.#{$css-prefix}button--hint {
+.slds-button--hint {
   color: $color-text-button-default-hint;
 
   &:hover,
@@ -131,21 +131,21 @@ a.#{$css-prefix}button {
 }
 
 // A parent class must be put on anything that contains
-// a .#{$css-prefix}button--hint so that the child reacts
+// a .slds-button--hint so that the child reacts
 // when the parent is hovered.
-.#{$css-prefix}hint-parent {
+.slds-hint-parent {
 
   &:hover,
   &:focus {
 
-    .#{$css-prefix}button--hint {
+    .slds-button--hint {
       color: $color-text-button-default;
     }
   }
 }
 
 // Brand Buttons
-.#{$css-prefix}button--brand {
+.slds-button--brand {
   @include button;
   @include button-brand;
 
@@ -157,7 +157,7 @@ a.#{$css-prefix}button {
 }
 
 // Inverse Buttons
-.#{$css-prefix}button--inverse {
+.slds-button--inverse {
   @include button;
   @include button-base;
   background-color: $color-background-button-inverse;
@@ -168,8 +168,8 @@ a.#{$css-prefix}button {
   }
 }
 
-.#{$css-prefix}button--inverse,
-.#{$css-prefix}button-group .#{$css-prefix}button--icon-inverse {
+.slds-button--inverse,
+.slds-button-group .slds-button--icon-inverse {
 
   &,
   &:link,
@@ -193,12 +193,12 @@ a.#{$css-prefix}button {
   }
 }
 
-a.#{$css-prefix}button--inverse:focus {
+a.slds-button--inverse:focus {
   @include focus-inverse;
 }
 
 // Destructive Button
-.#{$css-prefix}button--destructive {
+.slds-button--destructive {
   @include button;
   @include button-destructive;
 

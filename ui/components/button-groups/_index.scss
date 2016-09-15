@@ -9,14 +9,14 @@
 
 
 
-.#{$css-prefix}button-group {
+.slds-button-group {
   display: flex;
 
-  .#{$css-prefix}button {
+  .slds-button {
     border-radius: 0;
 
-    + .#{$css-prefix}button,
-    + .#{$css-prefix}button--last .#{$css-prefix}button {
+    + .slds-button,
+    + .slds-button--last .slds-button {
       margin-left: (-1 * $border-width-thin);
     }
 
@@ -37,8 +37,8 @@
     }
   }
 
-  & + .#{$css-prefix}button-group,
-  & + .#{$css-prefix}button {
+  & + .slds-button-group,
+  & + .slds-button {
     margin-left: $spacing-xx-small;
   }
 
@@ -72,8 +72,8 @@
   //
   // The end of the story of button-groups.
 
-  .#{$css-prefix}button--last .#{$css-prefix}button,
-  .#{$css-prefix}button.#{$css-prefix}button--last {
+  .slds-button--last .slds-button,
+  .slds-button.slds-button--last {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 }

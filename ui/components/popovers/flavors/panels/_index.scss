@@ -9,29 +9,29 @@
 
 
 
-.#{$css-prefix}popover--panel {
+.slds-popover--panel {
 
-  .#{$css-prefix}popover__header {
+  .slds-popover__header {
     background: $color-background;
     padding: $spacing-large $spacing-large $spacing-small;
     border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
     border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
   }
 
-  .#{$css-prefix}popover__body {
+  .slds-popover__body {
     padding: 0;
   }
 
-  .#{$css-prefix}popover__body-list {
+  .slds-popover__body-list {
     padding: $spacing-medium $spacing-large;
     border-top: $border-width-thin solid $color-border;
   }
 
   // Deal with Nubbin Color
-  &.#{$css-prefix}nubbin--left-top,
-  &.#{$css-prefix}nubbin--right-top,
-  &.#{$css-prefix}nubbin--top-left,
-  &.#{$css-prefix}nubbin--top-right {
+  &.slds-nubbin--left-top,
+  &.slds-nubbin--right-top,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin--top-right {
 
     &:before,
     &:after {
@@ -40,8 +40,8 @@
   }
 
   // Align nubbin to the icon
-  &.#{$css-prefix}nubbin--left-top,
-  &.#{$css-prefix}nubbin--right-top {
+  &.slds-nubbin--left-top,
+  &.slds-nubbin--right-top {
 
     &:before,
     &:after {

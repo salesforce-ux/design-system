@@ -194,7 +194,12 @@ const nav = formatNavItem({
     {
       route: 'components',
       label: 'Components',
-      children: [utilities, touch].concat(components)
+      children: [
+        {
+          path: '/components-overview',
+          label: 'Overview'
+        }
+      ].concat([utilities, touch]).concat(components)
     },
     {
       label: 'Design Tokens'

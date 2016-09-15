@@ -8,17 +8,17 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Container for feed item comments
-.#{$css-prefix}feed__item-comments {
+.slds-feed__item-comments {
   background: $color-background-post;
   border-top: $border-width-thin solid $color-border;
   margin-top: $spacing-x-small;
 
-  .#{$css-prefix}comment {
+  .slds-comment {
     padding: $spacing-x-small $spacing-medium;
   }
 }
 
-.#{$css-prefix}post {
+.slds-post {
   background: $color-background-alt;
   padding: $spacing-small $spacing-medium;
 
@@ -50,7 +50,7 @@
 }
 
 // Post Footer Actions
-.#{$css-prefix}post__footer-actions-list {
+.slds-post__footer-actions-list {
   justify-content: space-between;
   text-align: center;
   order: 1;
@@ -61,7 +61,7 @@
 }
 
 // Action Items
-.#{$css-prefix}post__footer-action {
+.slds-post__footer-action {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,24 +73,24 @@
     padding: 0;
   }
 
-  .#{$css-prefix}icon {
+  .slds-icon {
     margin-right: $spacing-xx-small;
   }
 
   &:hover,
   &:focus,
-  &.#{$css-prefix}is-active {
+  &.slds-is-active {
     color: $color-text-link-hover;
     text-decoration: none;
 
-    .#{$css-prefix}icon {
+    .slds-icon {
       fill: currentColor;
     }
   }
 }
 
 // Meta list
-.#{$css-prefix}post__footer-meta-list {
+.slds-post__footer-meta-list {
   margin-bottom: $spacing-medium;
 
   @include mq-medium-min {

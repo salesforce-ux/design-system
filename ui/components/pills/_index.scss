@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}pill {
+.slds-pill {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   position: relative;
   min-height: $height-pill;
 
-  + .#{$css-prefix}pill {
+  + .slds-pill {
     margin-left: $spacing-xxx-small;
   }
 
@@ -77,7 +77,7 @@
     @include square($square-icon-x-small-boundary);
     margin-right: $spacing-xx-small;
 
-    .#{$css-prefix}icon {
+    .slds-icon {
       @include square($square-icon-x-small-boundary);
     }
   }
@@ -88,10 +88,10 @@
 }
 
 // Error Styles
-.#{$css-prefix}has-error {
+.slds-has-error {
   border-color: $color-border-error;
 
-  .#{$css-prefix}pill__label {
+  .slds-pill__label {
     font-weight: $font-weight-bold;
     color: $color-text-error;
   }

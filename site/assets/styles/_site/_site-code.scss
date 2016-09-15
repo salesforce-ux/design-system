@@ -19,7 +19,7 @@ code {
   padding: $spacing-medium 0;
   margin: $spacing-medium 0;
 
-  &.#{$css-prefix}scrollable--x {
+  &.slds-scrollable--x {
     @include scrollbar;
   }
 
@@ -28,11 +28,11 @@ code {
     display: block;
   }
 
-  .#{$css-prefix}container--medium + & {
+  .slds-container--medium + & {
     margin-top: $spacing-medium;
   }
 
-  & + .#{$css-prefix}container--medium p:first-child {
+  & + .slds-container--medium p:first-child {
     padding-top: $spacing-medium;
   }
 }

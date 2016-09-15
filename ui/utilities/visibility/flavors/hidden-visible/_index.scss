@@ -9,10 +9,10 @@
 
 
 
-.#{$css-prefix}hidden {
+.slds-hidden {
   visibility: hidden;
 }
 
-.#{$css-prefix}visible {
+.slds-visible {
   visibility: visible; // @TODO - This may need !important;
 }

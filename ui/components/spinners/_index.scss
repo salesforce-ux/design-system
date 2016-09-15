@@ -8,7 +8,7 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-.#{$css-prefix}spinner_container {
+.slds-spinner_container {
   position: absolute;
   top: 0;
   right: 0;
@@ -22,44 +22,44 @@
   transition-delay: 0s, 0.3s;
 }
 
-.#{$css-prefix}spinner_container.is-hidden {
+.slds-spinner_container.is-hidden {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s ease, visibility 0s;
   transition-delay: 0s, 0s;
 }
 
-.#{$css-prefix}spinner_container.hide {
+.slds-spinner_container.hide {
   display: none;
 }
 
-.#{$css-prefix}spinner {
+.slds-spinner {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.#{$css-prefix}spinner,
-.#{$css-prefix}spinner__dot-a,
-.#{$css-prefix}spinner__dot-b {
+.slds-spinner,
+.slds-spinner__dot-a,
+.slds-spinner__dot-b {
   transform-origin: 50% 50%;
 }
 
-.#{$css-prefix}spinner__dot-a,
-.#{$css-prefix}spinner__dot-b {
+.slds-spinner__dot-a,
+.slds-spinner__dot-b {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.#{$css-prefix}spinner:before,
-.#{$css-prefix}spinner:after,
-.#{$css-prefix}spinner__dot-a:before,
-.#{$css-prefix}spinner__dot-b:before,
-.#{$css-prefix}spinner__dot-a:after,
-.#{$css-prefix}spinner__dot-b:after {
+.slds-spinner:before,
+.slds-spinner:after,
+.slds-spinner__dot-a:before,
+.slds-spinner__dot-b:before,
+.slds-spinner__dot-a:after,
+.slds-spinner__dot-b:after {
   position: absolute;
   content: '';
   background: $color-background-spinner-dot;
@@ -68,34 +68,34 @@
   animation-iteration-count: infinite;
 }
 
-.#{$css-prefix}spinner__dot-a {
+.slds-spinner__dot-a {
   transform: rotate(60deg) translateY(0);
 }
 
-.#{$css-prefix}spinner__dot-b {
+.slds-spinner__dot-b {
   transform: rotate(120deg) translateY(0);
 }
 
-.#{$css-prefix}spinner:before {
+.slds-spinner:before {
   animation-delay: -83.33333ms;
 }
 
-.#{$css-prefix}spinner__dot-a:before {
+.slds-spinner__dot-a:before {
   animation-delay: 83.33333ms;
 }
 
-.#{$css-prefix}spinner__dot-b:before {
+.slds-spinner__dot-b:before {
   animation-delay: 250ms;
 }
 
-.#{$css-prefix}spinner:after {
+.slds-spinner:after {
   animation-delay: 416.66667ms;
 }
 
-.#{$css-prefix}spinner__dot-a:after {
+.slds-spinner__dot-a:after {
   animation-delay: 583.33333ms;
 }
 
-.#{$css-prefix}spinner__dot-b:after {
+.slds-spinner__dot-b:after {
   animation-delay: 750ms;
 }

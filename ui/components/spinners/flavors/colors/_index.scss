@@ -9,26 +9,26 @@
 
 
 
-.#{$css-prefix}spinner--brand {
+.slds-spinner--brand {
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     background-color: $color-brand;
   }
 }
 
-.#{$css-prefix}spinner--inverse {
+.slds-spinner--inverse {
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     background-color: $color-background-alt;
   }
 }

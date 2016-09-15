@@ -80,7 +80,7 @@
   }
 
   &[disabled],
-  &.#{$css-prefix}is-disabled {
+  &.slds-is-disabled {
     @include form-input-disabled;
   }
 }

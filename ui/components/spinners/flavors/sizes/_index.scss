@@ -9,30 +9,30 @@
 
 
 
-.#{$css-prefix}spinner--x-small {
+.slds-spinner--x-small {
   width: 1rem;
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     width: 0.25rem;
     height: 0.25rem;
   }
 
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
     top: -0.125rem;
     left: -0.125rem;
     animation-name: dotsBounceBefore-extraSmall;
   }
 
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     top: -0.125rem;
     right: -0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
@@ -67,30 +67,30 @@
   }
 }
 
-.#{$css-prefix}spinner--small {
+.slds-spinner--small {
   width: 1.25rem;
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     width: 0.25rem;
     height: 0.25rem;
   }
 
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
     top: -0.125rem;
     left: -0.125rem;
     animation-name: dotsBounceBefore-small;
   }
 
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     top: -0.125rem;
     right: -0.125rem;
     animation-name: dotsBounceAfter-small;
@@ -125,30 +125,30 @@
   }
 }
 
-.#{$css-prefix}spinner--medium {
+.slds-spinner--medium {
   width: 2rem;
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     width: 0.5rem;
     height: 0.5rem;
   }
 
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.25rem;
     left: -0.25rem;
   }
 
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.25rem;
     right: -0.25rem;
@@ -183,30 +183,30 @@
   }
 }
 
-.#{$css-prefix}spinner--large {
+.slds-spinner--large {
   width: 2.75rem;
 
-  &.#{$css-prefix}spinner:before,
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     width: 0.625rem;
     height: 0.625rem;
   }
 
-  &.#{$css-prefix}spinner:before,
-  .#{$css-prefix}spinner__dot-a:before,
-  .#{$css-prefix}spinner__dot-b:before {
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.3125rem;
     left: -0.3125rem;
   }
 
-  &.#{$css-prefix}spinner:after,
-  .#{$css-prefix}spinner__dot-a:after,
-  .#{$css-prefix}spinner__dot-b:after {
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.3125rem;
     right: -0.3125rem;

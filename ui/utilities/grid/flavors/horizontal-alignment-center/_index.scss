@@ -9,11 +9,11 @@
 
 
 
-.#{$css-prefix}grid--align-center {
+.slds-grid--align-center {
   justify-content: center;
 
-  .#{$css-prefix}col,
-  [class*="#{$css-prefix}col--padded"] {
+  .slds-col,
+  [class*="slds-col--padded"] {
     flex-grow: 0;
   }
 }

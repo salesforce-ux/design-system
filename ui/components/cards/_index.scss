@@ -9,10 +9,10 @@
 
 
 
-.#{$css-prefix}card {
+.slds-card {
   @include box($theme: shade, $padding: 0, $borders: around);
 
-  + .#{$css-prefix}card {
+  + .slds-card {
     margin-top: $spacing-medium;
   }
 
@@ -41,22 +41,22 @@
 
   &--narrow {
 
-    .#{$css-prefix}card__header {
+    .slds-card__header {
       padding-top: $spacing-large;
       margin-bottom: $spacing-large;
     }
-    .#{$css-prefix}card__footer {
+    .slds-card__footer {
       padding-bottom: $spacing-medium;
     }
   }
 
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
-    .#{$css-prefix}card--empty .#{$css-prefix}card__body {
+    .slds-card--empty .slds-card__body {
       text-align: center;
     }
   }
 }
 
-.#{$css-prefix}card__tile {
+.slds-card__tile {
   margin-top: $spacing-x-small;
 }

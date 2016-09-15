@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}assistive-text {
+.slds-assistive-text {
   // scss-lint:disable ImportantRule
   position: absolute !important;
   margin: -1px !important;
@@ -21,7 +21,7 @@
   clip: rect(0 0 0 0) !important;
 }
 
-.#{$css-prefix}assistive-text--focus {
+.slds-assistive-text--focus {
   // scss-lint:disable ImportantRule
   &:focus {
     margin: inherit !important;

@@ -39,18 +39,18 @@
   }
 
   // Active Link
-  .#{$css-prefix}is-active > a {
+  .slds-is-active > a {
     background-color: $color-background-alt-2;
     color: $color-text-tab-label-selected;
   }
 
   // Open Menu Items
-  .#{$css-prefix}is-open {
+  .slds-is-open {
     padding-bottom: $spacing-x-small;
   }
 
   // Section Selected
-  .#{$css-prefix}is-selected {
+  .slds-is-selected {
     background-color: $color-background;
 
     a:hover {
@@ -63,7 +63,7 @@
   }
 
   // Nested List
-  .#{$css-prefix}is-nested {
+  .slds-is-nested {
     margin-left: 0;
 
     a {
@@ -74,7 +74,7 @@
       }
     }
 
-    .#{$css-prefix}is-nested a {
+    .slds-is-nested a {
       padding-left: $spacing-x-large + ($spacing-large * 2);
     }
   }

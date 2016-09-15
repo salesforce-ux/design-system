@@ -9,16 +9,16 @@
 
 
 
-.#{$css-prefix}icon--x-small {
+.slds-icon--x-small {
   line-height: $line-height-reset;
   @include square($square-icon-utility-small);
 }
 
-.#{$css-prefix}icon--small {
+.slds-icon--small {
   line-height: $line-height-reset;
   @include square($square-icon-small-boundary);
 }
 
-.#{$css-prefix}icon--large {
+.slds-icon--large {
   @include square($square-icon-large-boundary);
 }

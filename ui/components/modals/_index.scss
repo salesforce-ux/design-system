@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}modal {
+.slds-modal {
   opacity: 0;
   visibility: hidden;
   transition: transform $duration-quickly linear,
@@ -64,7 +64,7 @@
     padding: $spacing-medium;
     text-align: center;
 
-    + .#{$css-prefix}modal__menu {
+    + .slds-modal__menu {
       border-top: {
         left-radius: 0;
         right-radius: 0;
@@ -77,7 +77,7 @@
     border-bottom: 0;
   }
 
-  &__header--empty + .#{$css-prefix}modal__content {
+  &__header--empty + .slds-modal__content {
       border: {
       top: {
         right-radius: $border-radius-medium;
@@ -108,7 +108,7 @@
 
     @include mq-medium-max {
 
-      .#{$css-prefix}button {
+      .slds-button {
         width: 100%;
         margin: $spacing-xxx-small 0;
       }
@@ -128,11 +128,11 @@
     text-align: right;
     box-shadow: $shadow-drop-down;
 
-    &--directional .#{$css-prefix}button:first-child {
+    &--directional .slds-button:first-child {
       float: left;
     }
 
-    .#{$css-prefix}button + .#{$css-prefix}button {
+    .slds-button + .slds-button {
       margin-left: $spacing-x-small;
     }
   }
@@ -166,7 +166,7 @@
   }
 }
 
-.#{$css-prefix}modal--large .#{$css-prefix}modal__container {
+.slds-modal--large .slds-modal__container {
 
   // TODO: We'll want to readdress this to do the .99 thing
   @include mq-medium-min {
@@ -177,40 +177,40 @@
 }
 
 // old class
-.#{$css-prefix}modal-backdrop {
+.slds-modal-backdrop {
 
   @include deprecate('4.0.0') {
     @include backdrop;
   }
 }
 
-.#{$css-prefix}backdrop {
+.slds-backdrop {
   // new class
   @include backdrop;
 }
 
 
 
-.#{$css-prefix}fade-in-open {
+.slds-fade-in-open {
   opacity: 1;
   visibility: visible;
   transition: opacity $duration-quickly linear;
 
-  .#{$css-prefix}modal__container-reset {
+  .slds-modal__container-reset {
     opacity: 1;
     visibility: visible;
     transform: translate(0, 0);
   }
 }
 
-.#{$css-prefix}slide-up-open {
+.slds-slide-up-open {
   opacity: 1;
   visibility: visible;
   transform: translate(0, 0);
   transition: opacity $duration-quickly linear,
               transform $duration-promptly linear;
 
-  .#{$css-prefix}modal__container-reset {
+  .slds-modal__container-reset {
     opacity: 0;
     visibility: hidden;
     transform: translate(0, $spacing-medium);
@@ -219,14 +219,14 @@
   }
 }
 
-.#{$css-prefix}slide-up-saving {
+.slds-slide-up-saving {
   opacity: 1;
   visibility: visible;
   transform: translate(0, -$spacing-medium);
 }
 
 
-.#{$css-prefix}slide-down-cancel {
+.slds-slide-down-cancel {
   opacity: 1;
   visibility: visible;
   transform: translate(0, $spacing-medium);

@@ -62,7 +62,7 @@ let Table = props =>
     <thead>
       <tr className="slds-text-title--caps">
         <th scope="col">
-          <div className="slds-truncate">{props.title}</div>
+          <a href={`/components/${props.component.id}`} className="slds-truncate">{props.title}</a>
         </th>
         {headings.map(h =>
           <th scope="col">
@@ -75,7 +75,9 @@ let Table = props =>
       {props.component.flavors.map(flavor =>
         <tr>
           <td>
-            <span className="slds-p-left--medium">{flavor.title}</span>
+            <a href={`/components/${props.component.id}/#flavor-${flavor.id}`} className="slds-p-left--medium">
+              {flavor.title}
+            </a>
           </td>
           {headings.map(h => {
             let c = check(h, props.component, flavor);

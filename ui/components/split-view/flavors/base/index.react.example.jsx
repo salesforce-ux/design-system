@@ -35,35 +35,80 @@ const results = [{
   'leadScore': '92',
   'company': 'Case Management Solutions - San Francisco',
   'status': 'Contacted'
+}, {
+  'objectName': 'This is a super long entity name',
+  'leadScore': 'This column text is long too and should truncate',
+  'company': 'Case Management Solutions - San Francisco',
+  'status': 'Contacted'
+}, {
+  'objectName': 'This is a super long entity name that will force a truncation at the end of the line',
+  'leadScore': '99',
+  'company': 'Case Management Solutions - San Francisco',
+  'status': 'Something with a longer title'
+}, {
+  'objectName': 'Riley Shultz',
+  'leadScore': 'This column text is long too and should truncate',
+  'company': 'Case Management Solutions - San Francisco',
+  'status': 'Contacted'
 }];
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
+// let Row = props =>
+//   <tr className={ className('slds-split-view__item', props.className) } role="row" key={ props.key }>
+//     <th scope="row" role="rowheader" className="slds-grow slds-has-flexi-truncate">
+//       <div className="slds-grid slds-wrap">
+//         <span className="slds-grow slds-truncate slds-split-view__row-heading" title={ props.name || 'Object Name' }>
+//           <a href="javascript:void(0);">{ props.name || 'Object Name' }</a>
+//         </span>
+//         <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>{ props.colTwo || 'Column 2' }</span>
+//       </div>
+//       <div className="slds-grid slds-wrap">
+//         <span className="slds-grow slds-truncate" title={ props.colThree || 'Column 3' }>{ props.colThree || 'Column 3' }</span>
+//         <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colFour || 'Column 4' }>{ props.colFour || 'Column 4' }</span>
+//       </div>
+//     </th>
+//     <td role="gridcell" className="slds-flex-none slds-p-left--medium">
+//       <ButtonIcon
+//         className="slds-button--icon-border-inverse slds-button--icon-x-small"
+//         symbol="down"
+//         aria-haspopup="true"
+//         assistiveText="More options"
+//       />
+//     </td>
+//   </tr>;
+
 let Row = props =>
-  <tr className={ className('slds-split-view__item', props.className) } role="row" key={ props.key }>
-    <th scope="row" role="gridcell" className="slds-grow slds-has-flexi-truncate">
+  <li className={ className('slds-split-view__list-item', props.className) } role="row" key={ props.key }>
+    <a href="javascript:void(0);" role="gridcell" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate">
       <div className="slds-grid slds-wrap">
-        <span className="slds-grow slds-truncate slds-split-view__row-heading" title={ props.name || 'Object Name' }>
-          <a href="javascript:void(0);">{ props.name || 'Object Name' }</a>
+        <span role="rowheader" className="slds-grow slds-truncate slds-split-view__row-heading" title={ props.name || 'Object Name' }>
+          { props.name || 'Object Name' }
         </span>
-        <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>{ props.colTwo || 'Column 2' }</span>
+        <span className="slds-shrink-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>
+          { props.colTwo || 'Column 2' }
+        </span>
       </div>
       <div className="slds-grid slds-wrap">
-        <span className="slds-grow slds-truncate" title={ props.colThree || 'Column 3' }>{ props.colThree || 'Column 3' }</span>
-        <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colFour || 'Column 4' }>{ props.colFour || 'Column 4' }</span>
+        <span className="slds-grow" title={ props.colThree || 'Column 3' }>
+          { props.colThree || 'Column 3' }
+        </span>
+        <span className="slds-shrink-none slds-col--bump-left" title={ props.colFour || 'Column 4' }>
+          { props.colFour || 'Column 4' }
+        </span>
       </div>
-    </th>
-    <td role="gridcell" className="slds-flex-none slds-p-left--medium">
+    </a>
+    {/*<div role="gridcell" className="slds-flex-none slds-p-left--medium">
       <ButtonIcon
         className="slds-button--icon-border-inverse slds-button--icon-x-small"
         symbol="down"
         aria-haspopup="true"
         assistiveText="More options"
       />
-    </td>
-  </tr>;
+    </div>*/}
+  </li>;
 
 ///////////////////////////////////////////
 // Export
@@ -74,7 +119,7 @@ export default (
     <div className="slds-split-view slds-grid slds-grid--vertical">
 
       <div className="slds-split-view__header" role="banner">
-        <div className="slds-grid">
+        <div className="slds-grid slds-m-bottom--x-small">
           <div className="slds-media slds-media--center">
             <div className="slds-media__figure">
               <div className="slds-icon_container slds-icon-standard-lead">
@@ -100,19 +145,19 @@ export default (
           </div>
         </div>
         <div className="slds-grid">
-          <p className="slds-text-title">42 items &bull; Updated just now</p>
+          <p>42 items &bull; Updated just now</p>
           <ButtonIcon
-            className="slds-button--icon-inverse slds-button--icon-x-small slds-col--bump-left"
+            className="slds-button--icon-inverse slds-button--icon-small slds-col--bump-left"
             symbol="refresh"
             assistiveText="Refresh Results"
           />
         </div>
       </div>
-      <table className="slds-table--fixed-layout" role="grid">
+      {/*<table className="slds-table--fixed-layout" role="grid">
         <thead>
           <tr>
-            <th scope="col">Lead Score</th>
-            <th scope="col">Filter</th>
+            <th scope="col" role="columnheader">Lead Score</th>
+            <th scope="col" role="columnheader">Filter</th>
           </tr>
         </thead>
         <tbody>
@@ -126,7 +171,31 @@ export default (
             />
           )}
         </tbody>
-      </table>
+      </table>*/}
+      <div role="grid" aria-readonly="true">
+        <div className="slds-split-view__list-header slds-grid" role="row">
+          <div role="columnheader">Lead Score</div>
+          <div className="slds-col--bump-left" role="columnheader">
+            <ButtonIcon
+              hasDropdown
+              className="slds-button--icon-inverse"
+              symbol="sort"
+              assistiveText="Sort by"
+            />
+          </div>
+        </div>
+        <ul role="presentation">
+          { _.times(results.length, i =>
+            <Row
+              key={ i }
+              name={ results[i].objectName }
+              colTwo={ results[i].leadScore }
+              colThree={ results[i].company }
+              colFour={ results[i].status }
+            />
+          )}
+        </ul>
+      </div>
     </div>
   </div>
 );

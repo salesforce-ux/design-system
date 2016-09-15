@@ -8,18 +8,20 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 $color-background-split-view: #333e4f !default;
-$color-text-inverse-alt: #5d6b83 !default;
+$color-text-inverse-alt: #a8b8d0 !default;
+$color-background-alt-inverse-row-hover: $color-background-inverse !default;
 
 @mixin inverse-text {
   color: $color-text-inverse;
 
   a,
   .#{$css-prefix}button {
-    color: $color-text-link-inverse;
+    color: currentColor;
 
     &:hover,
     &:focus {
       color: $color-text-link-inverse-hover;
+      text-decoration: none;
       outline: 0;
     }
 
@@ -35,24 +37,37 @@ $color-text-inverse-alt: #5d6b83 !default;
 
 .#{$css-prefix}split-view {
   @include inverse-text;
-  background: $color-background-split-view;
+  background: $color-background-alt-inverse;
 }
 
 .#{$css-prefix}split-view__header {
   padding: $spacing-medium $spacing-medium $spacing-x-small;
 }
 
-.#{$css-prefix}split-view__item {
+.#{$css-prefix}split-view__list-header {
+  padding: $spacing-x-small $spacing-medium;
+}
+
+.#{$css-prefix}split-view__list-item {
   display: flex;
   padding: $spacing-small $spacing-medium;
   color: $color-text-inverse-alt;
-  box-shadow: darken($color-background-split-view, 4%) 0 1px 0 inset;
 
-  &:hover {
-    background: darken($color-background-split-view, 4%);
+  &:hover,
+  &:focus {
+    background: $color-background-alt-inverse-row-hover;
+  }
+}
+
+.#{$css-prefix}split-view__list-item-action {
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
   }
 }
 
 .#{$css-prefix}split-view__row-heading {
+  color: $color-text-inverse;
   font-weight: $font-weight-bold;
 }

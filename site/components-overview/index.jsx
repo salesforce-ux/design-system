@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import _ from 'lodash';
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
 import ui from '.generated/ui';
@@ -33,21 +34,21 @@ let isAdaptive = (c, f) => {
   return touchFlavor;
 };
 
+let checkIcon = <SvgIcon sprite="utility" symbol="check" className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />;
+
 let check = (h, c, f) => {
   switch (h) {
   case 'responsive':
     if (isResponsive(c, f)) {
       return {
-        style: { background: '#c1e9c1' },
-        icon: '✅'
+        icon: checkIcon
       };
     }
     break;
   case 'adaptive':
     if (isAdaptive(c, f)) {
       return {
-        style: { background: '#c1e9c1' },
-        icon: '✅'
+        icon: checkIcon
       };
     }
     break;
@@ -57,12 +58,12 @@ let check = (h, c, f) => {
   return {};
 };
 
-let Table = props =>
+let Table = ({ component }) =>
   <table className="slds-table slds-table--bordered slds-table--cell-buffer slds-table--col-bordered slds-m-bottom--xx-large">
     <thead>
       <tr className="slds-text-title--caps">
         <th scope="col">
-          <a href={`/components/${props.component.id}`} className="slds-truncate">{props.title}</a>
+          <a href={`/components/${component.id}`} className="slds-truncate">{component.title}</a>
         </th>
         {headings.map(h =>
           <th scope="col">
@@ -72,25 +73,20 @@ let Table = props =>
       </tr>
     </thead>
     <tbody>
-      {props.component.flavors.map(flavor =>
+      {component.flavors.map(flavor =>
         <tr>
           <td>
-            <a href={`/components/${props.component.id}/#flavor-${flavor.id}`} className="slds-p-left--medium">
+            <a href={`/components/${component.id}/#flavor-${flavor.id}`} className="slds-p-left--medium">
               {flavor.title}
             </a>
           </td>
           {headings.map(h => {
-            let c = check(h, props.component, flavor);
+            let c = check(h, component, flavor);
             return <td className="slds-text-align--center" style={{ position: 'relative' }} width="120">
               <div style={_.assign({}, {
                 display: 'flex',
-                'align-items': 'center',
-                position: 'absolute',
-                top: '2px',
-                right: '2px',
-                bottom: '2px',
-                left: '2px'
-              }, c.style)}>
+                'align-items': 'center'
+              })}>
                 <span style={{ margin: 'auto' }}>{c.icon}</span>
               </div>
             </td>;
@@ -102,8 +98,8 @@ let Table = props =>
 
 export default (
   <PageBody anchorTitle="Component Overview">
-    {components.map(c =>
-      <Table title={c.title} component={c} />
+    {components.map(component =>
+      <Table component={component} />
     )}
   </PageBody>
 );

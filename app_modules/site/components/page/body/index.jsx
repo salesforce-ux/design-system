@@ -238,7 +238,7 @@ export default React.createClass({
     let direction = item.isOpen ? 'down' : 'right';
     return (
       <span className="slds-media__figure--reverse">
-        <SvgIcon sprite="utility" symbol={direction} className={`icon icon__svg icon-utility-${direction} icon--small icon-text-default`} />
+        <SvgIcon sprite="utility" symbol={direction} className={`slds-icon slds-icon__svg slds-icon-utility-${direction} slds-icon--small slds-icon-text-default`} />
       </span>
     );
   },

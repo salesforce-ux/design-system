@@ -134,8 +134,10 @@
     align-items: center;
     flex-grow: 1;
     padding: 0 $spacing-small;
+    border-radius: 0;
     min-width: 0%;
     color: inherit;
+    font-size: $font-size-medium;
 
     &:focus,
     &:focus:hover {
@@ -163,10 +165,10 @@
     display: flex;
     align-items: center;
     align-content: center;
-    border-radius: 0;
-    padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
     margin-left: ($spacing-xx-small * -1);
+    padding: 0 $spacing-x-small;
+    border-radius: 0;
 
     &:focus {
       outline: 0;
@@ -222,9 +224,9 @@
     // Handle active states
     &.#{$css-prefix}is-active,
     &:nth-child(n).#{$css-prefix}is-active {
-      background-color: $color-background-context-tab-bar-item;
       border-left: 0;
       border-bottom-color: $color-background-context-tab-bar-item;
+      background-color: $color-background-context-tab-bar-item;
 
       &:hover {
         background-color: $color-background-context-tab-bar-item;
@@ -248,18 +250,18 @@
   .#{$css-prefix}is-unsaved {
 
     .#{$css-prefix}context-bar__label-action {
-      font-style: italic;
       position: relative;
       padding-left: $spacing-x-small;
+      font-style: italic;
     }
   }
 }
 
 // Unsaved indicator - This can probably be used in other locations as well
-.#{$css-prefix}unsaved-indicator {
-  font-size: $font-size-medium-a;
+.#{$css-prefix}indicator--unsaved {
   color: $color-brand;
   align-self: center;
+  font-size: $font-size-medium-a;
 }
 
 // Context Bar dropdown trigger specifics

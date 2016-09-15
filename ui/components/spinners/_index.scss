@@ -63,7 +63,7 @@
 .#{$css-prefix}spinner__dot-b:after {
   position: absolute;
   content: '';
-  background: $color-background-indicator-dot;
+  background: $color-background-spinner-dot;
   border-radius: $border-radius-circle;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;

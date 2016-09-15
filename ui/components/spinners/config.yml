@@ -1,11 +1,5 @@
 status: 'dev-ready'
 flavors:
-  - small
-  - medium
-  - large
-  - brand-small
-  - brand-medium
-  - brand-large
-  - inverse-small
-  - inverse-medium
-  - inverse-large
+  - colors
+  - sizes
+  - containers

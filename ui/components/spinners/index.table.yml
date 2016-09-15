@@ -10,6 +10,10 @@ classes:
     description: This container creates a full overlay to dim the page when needed
     applied: outer <code>&lt;div&gt;</code>
   -
+    class: slds-spinner--x-small
+    description: This is the x-small spinner
+    applied: <code>.{{cssPrefix}}spinner</code>
+  -
     class: slds-spinner--small
     description: This is the small spinner
     applied: <code>.slds-spinner</code>

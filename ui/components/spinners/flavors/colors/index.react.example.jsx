@@ -10,11 +10,52 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Spinner from 'ui/components/spinners/index.react';
+import className from 'classnames';
+import { SpinnerContainer } from 'ui/components/spinners/flavors/containers/index.react.example';
+import { Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
 
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
 
-export default (
-<div className="demo-only" style={{height: '3.75rem'}}>
-  <Spinner flavor="small" className="slds-spinner--brand" />
-</div>
-);
+let Demo = props =>
+  <div className={className('demo-only', props.className)} style={{height: '5rem'}}>
+    {props.children}
+  </div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--medium" />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'brand',
+    label: 'Brand',
+    element:
+    <Demo>
+      <SpinnerContainer>
+        <Spinner className="slds-spinner--medium slds-spinner--brand" />
+      </SpinnerContainer>
+    </Demo>
+  },
+  {
+    id: 'inverse',
+    label: 'Inverse',
+    element:
+    <Demo className="demo--inverse">
+      <SpinnerContainer>
+        <Spinner className="slds-spinner--medium slds-spinner--inverse" />
+      </SpinnerContainer>
+    </Demo>
+  }
+];

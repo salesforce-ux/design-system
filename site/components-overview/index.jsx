@@ -36,17 +36,17 @@ let isAdaptive = (c, f) => {
 
 let checkIcon = <SvgIcon sprite="utility" symbol="check" className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />;
 
-let check = (h, c, f) => {
-  switch (h) {
+let check = (heading, component, flavor) => {
+  switch (heading) {
   case 'responsive':
-    if (isResponsive(c, f)) {
+    if (isResponsive(component, flavor)) {
       return {
         icon: checkIcon
       };
     }
     break;
   case 'adaptive':
-    if (isAdaptive(c, f)) {
+    if (isAdaptive(component, flavor)) {
       return {
         icon: checkIcon
       };
@@ -65,9 +65,9 @@ let Table = ({ component }) =>
         <th scope="col">
           <a href={`/components/${component.id}`} className="slds-truncate">{component.title}</a>
         </th>
-        {headings.map(h =>
+        {headings.map(heading =>
           <th scope="col">
-            <div className="slds-truncate">{h}</div>
+            <div className="slds-truncate">{heading}</div>
           </th>
         )}
       </tr>
@@ -80,14 +80,14 @@ let Table = ({ component }) =>
               {flavor.title}
             </a>
           </td>
-          {headings.map(h => {
-            let c = check(h, component, flavor);
+          {headings.map(heading => {
+            let result = check(heading, component, flavor);
             return <td className="slds-text-align--center" style={{ position: 'relative' }} width="120">
               <div style={_.assign({}, {
                 display: 'flex',
                 'align-items': 'center'
               })}>
-                <span style={{ margin: 'auto' }}>{c.icon}</span>
+                <span style={{ margin: 'auto' }}>{result.icon}</span>
               </div>
             </td>;
           })}

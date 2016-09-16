@@ -9,18 +9,18 @@
 
 // This size is for internal use only - it's for temp overrides in the force:icon changes
 .#{$css-prefix}icon--xx-small {
-  line-height: $line-height-reset;
   @include square($square-icon-xx-small-content);
+  line-height: $line-height-reset;
 }
 
 .#{$css-prefix}icon--x-small {
-  line-height: $line-height-reset;
   @include square($square-icon-utility-small);
+  line-height: $line-height-reset;
 }
 
 .#{$css-prefix}icon--small {
-  line-height: $line-height-reset;
   @include square($square-icon-small-boundary);
+  line-height: $line-height-reset;
 }
 
 .#{$css-prefix}icon--large {

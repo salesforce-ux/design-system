@@ -83,12 +83,15 @@ props:
   SQUARE_ICON_X_SMALL_BOUNDARY:
     value: 1.25rem
     comment: Very small icon button boundary.
-  SQUARE_ICON_XX_SMALL_BOUNDARY:
-    value: 1rem
-    comment: Very very small icon button boundary.
   SQUARE_ICON_X_SMALL_CONTENT:
     value: .5rem
     comment: Very small icons in icon buttons.
+  SQUARE_ICON_XX_SMALL_BOUNDARY:
+    value: 1rem
+    comment: Very very small icon button boundary.
+  SQUARE_ICON_XX_SMALL_CONTENT:
+    value: .875rem
+    comment: Very small icons to replace force font with temporary override.
   SQUARE_ICON_LARGE:
     value: 3.125rem
     comment: Large tap target size.

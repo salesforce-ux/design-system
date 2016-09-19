@@ -68,6 +68,7 @@ $grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
 ///  .#{$css-prefix}foo { ... } // outputs .slds-foo { ... }
 ///
 /// @type String
+/// @deprecated Use postcss-slds-prefix instead
 $css-prefix: 'slds-' !default;
 
 /// Reset wrapping class

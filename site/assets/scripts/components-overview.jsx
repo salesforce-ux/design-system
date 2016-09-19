@@ -182,18 +182,18 @@ let Table = ({ component }) => {
     <thead>
       <tr className="slds-text-title--caps">
         <th scope="col">
-          <a href={`/components/${component.id}`} className="slds-truncate">
+          <a href={`/components/${component.id}`}>
             {component.title}
           </a>
           {component.lightning ?
-            <a href={component.lightning.url} className="slds-truncate">
+            <a href={component.lightning.url}>
               <LightningIcon />
             </a>
           : null}
         </th>
         {componentColumns.map(column =>
           <th scope="col" key={column.label} width="120">
-            <div className="slds-truncate">
+            <div>
               {column.label}
             </div>
           </th>
@@ -208,7 +208,7 @@ let Table = ({ component }) => {
               {flavor.title}
             </a>
             {flavor.lightning ?
-              <a href={flavor.lightning.url} className="slds-truncate">
+              <a href={flavor.lightning.url}>
                 <LightningIcon />
               </a>
             : null}

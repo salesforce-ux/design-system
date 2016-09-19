@@ -26,7 +26,7 @@ let filters = {
   isLightning: (component, flavor) =>
     flavor.lightning,
   isNotS1Compatible: (component, flavor) =>
-    flavor.compatibility && flavor.compatibility.s1 == false,
+    flavor.compatibility && flavor.compatibility.s1 === false,
   isNotMobile: (component, flavor) =>
     !filters.isResponsive(component, flavor) && !filters.isAdaptive(component, flavor)
 };

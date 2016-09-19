@@ -170,11 +170,11 @@ let CheckIcon = () =>
     className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />;
 
 let LightningIcon = () =>
-  <span className="slds-icon_container slds-icon-custom-custom9 slds-m-left--medium">
+  <span className="slds-icon_container slds-icon--x-small slds-icon-custom-custom9 slds-m-left--medium">
     <SvgIcon
       sprite="custom"
       symbol="custom9"
-      className="slds-icon slds-icon--small" />
+      className="slds-icon slds-icon--x-small" />
   </span>;
 
 let Table = ({ component }) => {

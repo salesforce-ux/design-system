@@ -85,7 +85,7 @@ TokenLint.prototype.tokenNameLint = function (tokenName) {
   let errors = [];
 
   if (this.options.prefix && !prefixLint(tokenName)) {
-    errors.push('Token names should be prefixed appropriately LINK TO PREFIX DOCUMENTATION');
+    errors.push('Token names should be prefixed appropriately (see https://github.com/salesforce-ux/design-system/wiki/Design-Tokens#token-naming--organization)');
   }
   if (this.options.uppercase && tokenName.toUpperCase() !== tokenName) {
     errors.push('Token names should be uppercase');

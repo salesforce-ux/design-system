@@ -2,8 +2,11 @@
 imports:
 - ../ui/components/buttons/tokens/color.yml
 - ../ui/components/buttons/tokens/line-height.yml
+- ../ui/components/docked-composer/tokens/color.yml
+- ../ui/components/docked-composer/tokens/sizing.yml
 - ../ui/components/forms/tokens/line-height.yml
 - ../ui/components/forms/tokens/sizing.yml
+- ../ui/components/global-header/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/background-color.yml
 - ../ui/components/global-navigation/tokens/border-color.yml
 - ../ui/components/global-navigation/tokens/sizing.yml

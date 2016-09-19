@@ -15,6 +15,6 @@ import PageBody from 'app_modules/site/components/page/body';
 export default (
   <PageBody anchorTitle="Component Overview">
     <div id="components-overview" />
-    <script src="/assets/scripts/components-overview.js" />
+    <script src="/assets/scripts/components-overview.js" async />
   </PageBody>
 );

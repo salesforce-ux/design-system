@@ -9,7 +9,7 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import { assign, find, some, intersection, every } from 'lodash';
+import { assign, find, some, intersection, every, escapeRegExp } from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
@@ -18,15 +18,116 @@ import classNames from 'classnames';
 
 import ui from '.generated/ui';
 
-let headings = [{
+let filters = {
+  isResponsive: (component, flavor) =>
+    flavor.isResponsive,
+  isAdaptive: (component, flavor) =>
+    flavor.isAdaptive,
+  isLightning: (component, flavor) =>
+  flavor.lightning,
+  isNotS1Compatible: (component, flavor) =>
+    flavor.compatibility && flavor.compatibility.s1 == false,
+  isNotMobile: (component, flavor) =>
+    !filters.isResponsive(component, flavor) && !filters.isAdaptive(component, flavor)
+};
+
+let pageFilters = [{
   label: 'Responsive',
-  prop: 'isResponsive'
-}, {
+  key: 'isResponsive'
+},{
   label: 'Adaptive',
-  prop: 'isAdaptive'
+  key: 'isAdaptive'
 }, {
   label: 'Lightning',
-  prop: 'isLightning'
+  key: 'isLightning'
+}, {
+  label: 'Not S1',
+  key: 'isNotS1Compatible'
+}, {
+  label: 'Not Mobile',
+  key: 'isNotMobile'
+}];
+
+let componentColumns = [{
+  label: 'Responsive',
+  filter: 'isResponsive'
+}, {
+  label: 'Adaptive',
+  filter: 'isAdaptive'
+}];
+
+let lightningComponents = [{
+  component: 'badges',
+  component: 'lightning:badge',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.html'
+},{
+  component: 'buttons',
+  namespace: 'lightning:button',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm'
+},{
+  component: 'button-groups',
+  namespace: 'lightning:buttonGroup',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm'
+},{
+  component: 'button-icons',
+  namespace: 'lightning:buttonIcon',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm'
+}, {
+  namespace: 'lightning:buttonMenu',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm'
+}, {
+  component: 'cards',
+  namespace: 'lightning:card',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_card.htm'
+}, {
+  namespace: 'lightning:formattedDateTime',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_formattedDateTime.htm'
+}, {
+  namespace: 'lightning:formattedNumber',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_formattedNumber.htm'
+}, {
+  component: 'icons',
+  namespace: 'lightning:icon',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm'
+}, {
+  namespace: 'forms',
+  flavor: 'input',
+  namespace: 'lightning:input',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm'
+}, {
+  namespace: 'lightning:layout',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm'
+}, {
+  namespace: 'lightning:layoutItem',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layoutItem.htm'
+}, {
+  namespace: 'lightning:menutItem',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_menuItem.htm'
+}, {
+  component: 'forms',
+  flavor: 'select',
+  namespace: 'lightning:select',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_select.htm'
+}, {
+  component: 'spinners',
+  namespace: 'lightning:spinner',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm'
+}, {
+  component: 'tabs',
+  namespace: 'lightning:tab',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tab.htm'
+}, {
+  namespace: 'lightning:tabset',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm'
+}, {
+  component: 'forms',
+  flavor: 'textarea',
+  namespace: 'lightning:textarea',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm'
+}, {
+  component: 'tooltips',
+  namespace: 'lightning:tooltip',
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tooltip.htm'
 }];
 
 let { components: _components } = find(ui, { id: 'components' });
@@ -45,12 +146,18 @@ let isAdaptive = (component, flavor) => {
 };
 
 let components = _components.map(component => {
+  let lightning = _.find(lightningComponents, { component: component.id });
   return assign({}, component, {
+    lightning: lightning && !_.has(lightning, 'flavor')
+      ? lightning : undefined,
     flavors: component.flavors.map(flavor => {
       return assign({}, flavor, {
         isResponsive: isResponsive(component, flavor),
         isAdaptive: isAdaptive(component, flavor),
-        isLightning: false
+        lightning: _.find(lightningComponents, {
+          component: component.id,
+          flavor: flavor.id
+        }),
       });
     })
   });
@@ -62,41 +169,60 @@ let CheckIcon = () =>
     symbol="check"
     className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />;
 
-let Table = ({ component, filters }) => {
-  let filteredFlavors = component.flavors.filter(flavor =>
-    filters.every(filter => flavor[filter]));
-  if (!filteredFlavors.length) return null;
+let LightningIcon = () =>
+  <span className="slds-icon_container slds-icon-custom-custom9 slds-m-left--medium">
+    <SvgIcon
+      sprite="custom"
+      symbol="custom9"
+      className="slds-icon slds-icon--small" />
+  </span>;
+
+let Table = ({ component }) => {
   return <table className="slds-table slds-table--bordered slds-table--cell-buffer slds-table--col-bordered slds-m-bottom--xx-large">
     <thead>
       <tr className="slds-text-title--caps">
         <th scope="col">
-          <a href={`/components/${component.id}`} className="slds-truncate">{component.title}</a>
+          <a href={`/components/${component.id}`} className="slds-truncate">
+            {component.title}
+          </a>
+          {component.lightning ?
+            <a href={component.lightning.url} className="slds-truncate">
+              <LightningIcon />
+            </a>
+          : null}
         </th>
-        {headings.map(heading =>
-          <th scope="col" key={heading.label}>
-            <div className="slds-truncate">{heading.label}</div>
+        {componentColumns.map(column =>
+          <th scope="col" key={column.label} width="120">
+            <div className="slds-truncate">
+              {column.label}
+            </div>
           </th>
         )}
       </tr>
     </thead>
     <tbody>
-      {filteredFlavors.map(flavor =>
+      {component.flavors.map(flavor =>
         <tr key={`${component.id}:${flavor.id}`}>
           <td>
             <a href={`/components/${component.id}/#flavor-${flavor.id}`} className="slds-p-left--medium">
               {flavor.title}
             </a>
+            {flavor.lightning ?
+              <a href={flavor.lightning.url} className="slds-truncate">
+                <LightningIcon />
+              </a>
+            : null}
           </td>
-          {headings.map(heading => {
+          {componentColumns.map(column => {
             return <td
-              key={heading.label}
-              className="slds-text-align--center" width="120">
+              key={column.label}
+              className="slds-text-align--center">
               <div style={assign({}, {
                 display: 'flex',
                 'alignItems': 'center'
               })}>
                 <span style={{ margin: 'auto' }}>
-                  {flavor[heading.prop] ? <CheckIcon /> : null}
+                  {filters[column.filter](component, flavor) ? <CheckIcon /> : null}
                 </span>
               </div>
             </td>;
@@ -110,6 +236,7 @@ let Table = ({ component, filters }) => {
 let App = React.createClass({
   getInitialState() {
     return {
+      query: '',
       filters: Immutable.Set()
     };
   },
@@ -121,40 +248,87 @@ let App = React.createClass({
     });
   },
   render() {
+    let predicates = this.state.filters.map(k => filters[k]);
+    let query = new RegExp(escapeRegExp(this.state.query), 'i');
+    let filteredComponents = components
+      .map(component => {
+        return assign({}, component, {
+          flavors: component.flavors.filter(flavor =>
+            predicates.every(predicate => predicate(component, flavor)))
+        });
+      })
+      .filter(component => query.test(component.title))
+      .filter(component => {
+        if (component.flavors.length === 0) {
+          if (this.state.filters.has('isLightning') && component.lightning) {
+            // Lightning filter can include top-level components
+            // so allow an empty table when this filter is applied
+          } else {
+            return false;
+          }
+        }
+        return true;
+      });
+    let counts = {
+      components: filteredComponents
+        .filter(c => c.flavors.length).length,
+      flavors: filteredComponents
+        .reduce((count, c) => count + c.flavors.length, 0)
+    };
     return (
       <div>
-        <header className="slds-grid slds-m-bottom--large">
-          {headings.map(heading =>
-            <div className="slds-form-element slds-m-right--medium" key={heading.label}>
-              <label className="slds-checkbox--toggle slds-grid slds-grid--vertical">
-                <div
-                  className="slds-form-element__label slds-m-bottom--m">
-                  {heading.label}
-                </div>
-                <input
-                  name="checkbox"
-                  type="checkbox"
-                  value={heading.prop}
-                  checked={this.state.filters.has(heading.prop)}
-                  aria-describedby={`filter-${heading.label}`}
-                  onChange={this.updateFilter} />
-                  <div
-                    id={`filter-${heading.label}`}
-                    className="slds-checkbox--faux_container"
-                    aria-live="assertive">
-                    <span className="slds-checkbox--faux"></span>
-                    <span className="slds-checkbox--on slds-assistive-text">Enabled</span>
-                    <span className="slds-checkbox--off slds-assistive-text">Disabled</span>
-                  </div>
-              </label>
+        <header className="slds-grid slds-grid--vertical slds-m-bottom--large">
+          <div className="slds-grid slds-m-bottom--medium">
+            <div className="slds-text-heading--large">
+              {`${counts.components} Components, ${counts.flavors} Flavors`}
             </div>
-          )}
+          </div>
+          <div className="slds-grid slds-grid--align-spread">
+            <div className="slds-form-element">
+              <div className="slds-form-element__control">
+                <input
+                  className="slds-input"
+                  type="text"
+                  value={this.state.query}
+                  onChange={e => this.setState({
+                    query: e.target.value
+                  })}
+                  placeholder="Filter" />
+              </div>
+            </div>
+            <div className="slds-grid">
+              {pageFilters.map(filter =>
+                <div className="slds-form-element slds-m-left--medium" key={filter.label}>
+                  <label className="slds-checkbox--toggle slds-grid slds-grid--vertical">
+                    <div
+                      className="slds-form-element__label slds-m-bottom--m">
+                      {filter.label}
+                    </div>
+                    <input
+                      name="checkbox"
+                      type="checkbox"
+                      value={filter.key}
+                      checked={this.state.filters.has(filter.key)}
+                      aria-describedby={`filter-${filter.label}`}
+                      onChange={this.updateFilter} />
+                      <div
+                        id={`filter-${filter.label}`}
+                        className="slds-checkbox--faux_container"
+                        aria-live="assertive">
+                        <span className="slds-checkbox--faux"></span>
+                        <span className="slds-checkbox--on slds-assistive-text">Enabled</span>
+                        <span className="slds-checkbox--off slds-assistive-text">Disabled</span>
+                      </div>
+                  </label>
+                </div>
+              )}
+            </div>
+          </div>
         </header>
-        {components.map(component =>
+        {filteredComponents.map(component =>
           <Table
             key={component.id}
-            component={component}
-            filters={this.state.filters} />
+            component={component} />
         )}
       </div>
     );

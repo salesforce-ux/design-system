@@ -270,8 +270,7 @@ let App = React.createClass({
         return true;
       });
     let counts = {
-      components: filteredComponents
-        .filter(c => c.flavors.length).length,
+      components: filteredComponents.length,
       flavors: filteredComponents
         .reduce((count, c) => count + c.flavors.length, 0)
     };

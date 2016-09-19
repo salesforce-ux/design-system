@@ -9,7 +9,7 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import { assign, find, some, intersection, every, escapeRegExp } from 'lodash';
+import { assign, find, some, intersection, every, escapeRegExp, has } from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
@@ -58,7 +58,7 @@ let componentColumns = [{
 
 let lightningComponents = [{
   component: 'badges',
-  component: 'lightning:badge',
+  namespace: 'lightning:badge',
   url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.html'
 },{
   component: 'buttons',
@@ -90,7 +90,7 @@ let lightningComponents = [{
   namespace: 'lightning:icon',
   url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm'
 }, {
-  namespace: 'forms',
+  component: 'forms',
   flavor: 'input',
   namespace: 'lightning:input',
   url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm'
@@ -146,18 +146,18 @@ let isAdaptive = (component, flavor) => {
 };
 
 let components = _components.map(component => {
-  let lightning = _.find(lightningComponents, { component: component.id });
+  let lightning = find(lightningComponents, { component: component.id });
   return assign({}, component, {
-    lightning: lightning && !_.has(lightning, 'flavor')
+    lightning: lightning && !has(lightning, 'flavor')
       ? lightning : undefined,
     flavors: component.flavors.map(flavor => {
       return assign({}, flavor, {
         isResponsive: isResponsive(component, flavor),
         isAdaptive: isAdaptive(component, flavor),
-        lightning: _.find(lightningComponents, {
+        lightning: find(lightningComponents, {
           component: component.id,
           flavor: flavor.id
-        }),
+        })
       });
     })
   });

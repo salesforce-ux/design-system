@@ -1,4 +1,4 @@
-- **Extra-small** (`.{{cssPrefix}}icon--x-small`): typically used for small alert icons, with no background color.
-- **Small** (`.{{cssPrefix}}icon--small`): 1.5rem&times;1.5rem (for icons with a background color).
+- **Extra-small** (`.slds-icon--x-small`): typically used for small alert icons, with no background color.
+- **Small** (`.slds-icon--small`): 1.5rem&times;1.5rem (for icons with a background color).
 - **Medium** (default - requires no additional class): 2rem&times;2rem.
-- **Large** (`.{{cssPrefix}}icon--large`): 3rem&times;3rem.
+- **Large** (`.slds-icon--large`): 3rem&times;3rem.

@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}scrollable {
+.slds-scrollable {
   @include enable-ios-momentum-scrolling;
   overflow: auto;
 }

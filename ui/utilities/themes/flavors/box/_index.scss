@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}box {
+.slds-box {
   @include box($borders: around);
 
   &--x-small {

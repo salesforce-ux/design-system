@@ -1,0 +1,9 @@
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+props:
+  SQUARE_ICON_GLOBAL_IDENTITY_ICON:
+    value: 1.25rem
+    comment: Global identity icon size.

@@ -15,6 +15,7 @@ import runSequence from 'run-sequence';
 import './generate-icons';
 import './generate-release-notes';
 import './generate-tokens-zip';
+import './generate-cmps';
 import './generate-tokens-components';
 import './generate-tokens-ui';
 import './generate-ui-kit-zip';
@@ -34,5 +35,6 @@ gulp.task('generate', callback =>
       'generate:ui'
     ],
     'generate:examples',
+    'generate:cmps',
     callback)
 );

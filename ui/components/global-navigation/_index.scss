@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}context-bar {
+.slds-context-bar {
   display: flex;
   height: $height-context-bar;
   background-color: $color-background-context-bar;
@@ -52,8 +52,8 @@
     position: relative;
     max-width: $size-small;
 
-    &:not(.#{$css-prefix}no-hover):hover,
-    &.#{$css-prefix}is-active {
+    &:not(.slds-no-hover):hover,
+    &.slds-is-active {
       outline: 0;
       border-radius: 0;
       background-color: $color-background-context-bar-item-hover;
@@ -63,7 +63,7 @@
       cursor: pointer;
     }
 
-    &:not(.#{$css-prefix}no-hover):hover:after {
+    &:not(.slds-no-hover):hover:after {
       content: '';
       width: 100%;
       height: 3px;
@@ -80,7 +80,7 @@
       }
     }
 
-    &.#{$css-prefix}is-active {
+    &.slds-is-active {
       border-left: $border-width-thin solid $color-border;
       border-right: $border-width-thin solid $color-border;
       border-bottom-color: $color-background-context-bar-item-hover;
@@ -112,13 +112,13 @@
     }
 
     // Remove border on active due to primary section always having a right border
-    &:first-child.#{$css-prefix}is-active {
+    &:first-child.slds-is-active {
       border-left: 0;
     }
 
     // Toggled focused class applied via JavaScript
-    &.#{$css-prefix}has-focus,
-    &.#{$css-prefix}has-focus:hover {
+    &.slds-has-focus,
+    &.slds-has-focus:hover {
 
       &:before,
       &:after {
@@ -181,11 +181,11 @@
     &:focus {
       outline: 0;
 
-      .#{$css-prefix}context-bar__button {
+      .slds-context-bar__button {
         @include focus-button;
       }
 
-      ~ .#{$css-prefix}dropdown {
+      ~ .slds-dropdown {
         visibility: visible;
         opacity: 1;
       }
@@ -202,7 +202,7 @@
   }
 
   // Button inside of actionable container
-  .#{$css-prefix}context-bar__button {
+  .slds-context-bar__button {
     color: inherit;
 
     // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
@@ -219,7 +219,7 @@
   &--tabs {
 
     // Need to reset styles from default
-    .#{$css-prefix}context-bar__icon-action {
+    .slds-context-bar__icon-action {
       margin-left: auto;
     }
   }
@@ -230,8 +230,8 @@
     border-right: $border-width-thin solid $color-border;
 
     // Handle active states
-    &.#{$css-prefix}is-active,
-    &:nth-child(n).#{$css-prefix}is-active {
+    &.slds-is-active,
+    &:nth-child(n).slds-is-active {
       border-left: 0;
       border-bottom-color: $color-background-context-tab-bar-item;
       background-color: $color-background-context-tab-bar-item;
@@ -244,20 +244,20 @@
 
     // Pinned state
     // Toggles visibility of elements inside of tab
-    &.#{$css-prefix}is-pinned {
+    &.slds-is-pinned {
       width: auto;
       padding-right: $spacing-x-small;
 
-      .#{$css-prefix}context-bar__label-action {
+      .slds-context-bar__label-action {
         padding: 0 $spacing-x-small;
       }
     }
   }
 
   // Dirty state of tabs
-  .#{$css-prefix}is-unsaved {
+  .slds-is-unsaved {
 
-    .#{$css-prefix}context-bar__label-action {
+    .slds-context-bar__label-action {
       position: relative;
       padding-left: $spacing-x-small;
       font-style: italic;
@@ -266,16 +266,16 @@
 }
 
 // Unsaved indicator - This can probably be used in other locations as well
-.#{$css-prefix}indicator--unsaved {
+.slds-indicator--unsaved {
   color: $color-brand;
   align-self: center;
   font-size: $font-size-medium-a;
 }
 
 // Context Bar dropdown trigger specifics
-.#{$css-prefix}context-bar__dropdown-trigger {
+.slds-context-bar__dropdown-trigger {
 
-  .#{$css-prefix}dropdown {
+  .slds-dropdown {
     margin-top: 3px;
 
     // Add a hoverable zone below the action so that the dropdown doesn't
@@ -291,7 +291,7 @@
 }
 
 // app-name
-.#{$css-prefix}context-bar__app-name {
+.slds-context-bar__app-name {
   padding: 0 $spacing-large 0 0;
   font-size: rem(18px); // @todo tokenize
   font-weight: $font-weight-light;
@@ -299,7 +299,7 @@
 }
 
 // object-switcher
-.#{$css-prefix}context-bar__object-switcher {
+.slds-context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
   border-left: $border-width-thin solid $color-border;
@@ -311,14 +311,14 @@
 // Using mixin to determine text color and interactive states
 //
 // Marketing - temp
-.#{$css-prefix}context-bar--theme-marketing {
+.slds-context-bar--theme-marketing {
   border-bottom-color: #f59331;
 
-  .#{$css-prefix}context-bar__item:not(.#{$css-prefix}no-hover):hover {
+  .slds-context-bar__item:not(.slds-no-hover):hover {
     border-bottom-color: #f59331;
   }
 
-  .#{$css-prefix}context-bar__item.#{$css-prefix}is-active {
+  .slds-context-bar__item.slds-is-active {
 
     &:before {
       background: #f59331;
@@ -331,16 +331,16 @@
 }
 
 // Waffle Icon + animation
-.#{$css-prefix}icon-waffle_container {
+.slds-icon-waffle_container {
   outline: 0;
 }
 
-.#{$css-prefix}icon-waffle {
+.slds-icon-waffle {
   @include square(rem(21px));
   position: relative;
 }
 
-.#{$css-prefix}icon-waffle div {
+.slds-icon-waffle div {
   @include square(rem(5px));
   background: $color-background-icon-waffle;
   display: inline-block;
@@ -350,137 +350,137 @@
   transform-origin: 50% 50%;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r1 {
+.slds-icon-waffle .slds-r1 {
   top: 0;
   left: 0;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r2 {
+.slds-icon-waffle .slds-r2 {
   top: 0;
   left: rem(8px);
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
+.slds-icon-waffle .slds-r3 {
   top: 0;
   right: 0;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+.slds-icon-waffle .slds-r4 {
   top: rem(8px);
   left: 0;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r5 {
+.slds-icon-waffle .slds-r5 {
   top: rem(8px);
   left: rem(8px);
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r6 {
+.slds-icon-waffle .slds-r6 {
   top: rem(8px);
   right: 0;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+.slds-icon-waffle .slds-r7 {
   bottom: 0;
   left: 0;
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+.slds-icon-waffle .slds-r8 {
   bottom: 0;
   left: rem(8px);
 }
 
-.#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+.slds-icon-waffle .slds-r9 {
   bottom: 0;
   right: 0;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle {
+.slds-icon-waffle_container:hover .slds-icon-waffle,
+.slds-icon-waffle_container:focus .slds-icon-waffle {
   cursor: pointer;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r1,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r1,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r1,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r2,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r3,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r1,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r2,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r3 {
   background: #418fde;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r7,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r4,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r5,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r7,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r4,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r5,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r7 {
   background: #ed8b00;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r9,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r6,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r8,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r9,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r6,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r8,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r9 {
   background: #ffb60f;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r4,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r2,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r4,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r2,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r4 {
   transition-delay: 50ms;
   animation-delay: 50ms;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle div,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle div {
+.slds-icon-waffle_container:hover .slds-icon-waffle div,
+.slds-icon-waffle_container:focus .slds-icon-waffle div {
   animation: throb 2 200ms alternate;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r7,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r3,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r5,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r7,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r3,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r5,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r7 {
   transition-delay: 100ms;
   animation-delay: 100ms;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r8,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r6,
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r8,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r6,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r8 {
   transition-delay: 150ms;
   animation-delay: 150ms;
 }
 
-.#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle .#{$css-prefix}r9,
-.#{$css-prefix}icon-waffle_container:focus .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
+.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r9,
+.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r9 {
   transition-delay: 200ms;
   animation-delay: 200ms;
 }
 
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r1 {
+.slds-icon-waffle_container .slds-icon-waffle .slds-r1 {
   transition-delay: 200ms;
 }
 
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r2,
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
+.slds-icon-waffle_container .slds-icon-waffle .slds-r2,
+.slds-icon-waffle_container .slds-icon-waffle .slds-r4 {
   transition-delay: 150ms;
 }
 
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r3,
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r5,
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
+.slds-icon-waffle_container .slds-icon-waffle .slds-r3,
+.slds-icon-waffle_container .slds-icon-waffle .slds-r5,
+.slds-icon-waffle_container .slds-icon-waffle .slds-r7 {
   transition-delay: 100ms;
 }
 
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r6,
-.#{$css-prefix}icon-waffle_container .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
+.slds-icon-waffle_container .slds-icon-waffle .slds-r6,
+.slds-icon-waffle_container .slds-icon-waffle .slds-r8 {
   transition-delay: 50ms;
 }
 

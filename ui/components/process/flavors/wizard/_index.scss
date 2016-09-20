@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}wizard {
+.slds-wizard {
   position: relative;
 
   &__list {
@@ -38,7 +38,7 @@
       outline: 0;
       text-decoration: none;
 
-      .#{$css-prefix}wizard__marker {
+      .slds-wizard__marker {
         background: rgb(216, 221, 230); //@TODO - no matching token
       }
     }
@@ -83,9 +83,9 @@
     transition: width $duration-promptly ease;
   }
 
-  .#{$css-prefix}is-active {
+  .slds-is-active {
 
-    .#{$css-prefix}wizard__marker {
+    .slds-wizard__marker {
       background: #0076de; // @TODO: Need a token for this
     }
 
@@ -93,7 +93,7 @@
     a:focus {
       // scss-lint:disable NestingDepth SelectorDepth
 
-      .#{$css-prefix}wizard__marker {
+      .slds-wizard__marker {
         background: rgb(0, 95, 178); // @TODO: Need a token for this
       }
     }

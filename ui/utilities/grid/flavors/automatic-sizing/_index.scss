@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}grid {
+.slds-grid {
   display: flex;
 
   &--frame {
@@ -34,13 +34,13 @@
 }
 
 @include deprecate('4.0.0', 'Use spacing utilities instead') {
-  .#{$css-prefix}col,
+  .slds-col,
   // Catch all for col--padded variants
-  [class*="#{$css-prefix}col--padded"] {
+  [class*="slds-col--padded"] {
     @include flex-item(expand);
   }
 
-  .#{$css-prefix}col--padded {
+  .slds-col--padded {
     padding: {
       right: $spacing-small;
       left: $spacing-small;
@@ -74,7 +74,7 @@
   }
 }
 
-.#{$css-prefix}grid--pull-padded {
+.slds-grid--pull-padded {
   margin: {
     right: ($spacing-small * -1);
     left: ($spacing-small * -1);
@@ -96,7 +96,7 @@
 }
 
 // Deprecate for 2.0.0 - Incorrect Naming Convention
-.#{$css-prefix}col-rule {
+.slds-col-rule {
 
   @include deprecate('4.0.0', 'Use slds-col--rule-{position} instead') {
 
@@ -122,7 +122,7 @@
 }
 
 // New in 1.0.0
-.#{$css-prefix}col--rule {
+.slds-col--rule {
 
   @include mq-large-min {
 
@@ -144,12 +144,12 @@
   }
 }
 
-.#{$css-prefix}wrap {
+.slds-wrap {
   @include flex-wrap(true);
 }
 
 // Deprecate for 2.0.0 - Incorrect Naming Convention
-.#{$css-prefix}nowrap {
+.slds-nowrap {
   @include flex-item(expand);
   @include flex-wrap(false);
 
@@ -183,7 +183,7 @@
   $breakpoint: map-get($breakpoints, $size);
   @each $key in $size {
     @media (min-width: #{pem($breakpoint)}) {
-      .#{$css-prefix}#{$size}-nowrap {
+      .slds-#{$size}-nowrap {
         flex: 1 1 auto;
         flex-wrap: nowrap;
         align-items: stretch;
@@ -192,37 +192,37 @@
   }
 }
 
-.#{$css-prefix}has-flexi-truncate {
+.slds-has-flexi-truncate {
   flex: 1 1 0%;
   min-width: 0; // For FFOX and newer browsers
 }
 
-.#{$css-prefix}no-flex {
+.slds-no-flex {
   flex: none;
 }
 
-.#{$css-prefix}no-space {
+.slds-no-space {
   min-width: 0;
 }
 
-.#{$css-prefix}grow {
+.slds-grow {
   flex-grow: 1;
 }
 
-.#{$css-prefix}grow-none {
+.slds-grow-none {
   flex-grow: 0;
 }
 
-.#{$css-prefix}shrink {
+.slds-shrink {
   flex-shrink: 1;
 }
 
-.#{$css-prefix}shrink-none {
+.slds-shrink-none {
   flex-shrink: 0;
 }
 
 // Resets spacing/bullets for when grids are used on unordered lists
-.#{$css-prefix}text-longform ul.#{$css-prefix}grid {
+.slds-text-longform ul.slds-grid {
   margin-left: 0;
   list-style: none;
 }

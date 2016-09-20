@@ -9,14 +9,14 @@
 
 
 
-.#{$css-prefix}icon-text-default {
+.slds-icon-text-default {
   fill: $color-text-icon-default; // @TODO - should we use currentcolor?
 }
 
-.#{$css-prefix}icon-text-warning {
+.slds-icon-text-warning {
   fill: $color-text-warning;
 }
 
-.#{$css-prefix}icon-text-error {
+.slds-icon-text-error {
   fill: $color-text-error;
 }

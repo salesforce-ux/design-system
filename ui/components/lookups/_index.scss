@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}lookup {
+.slds-lookup {
   position: relative;
   width: 100%; // Fill up parent container
 
@@ -52,7 +52,7 @@
           text-decoration: none;
         }
 
-        .#{$css-prefix}icon {
+        .slds-icon {
           margin-right: $spacing-x-small;
         }
       }
@@ -78,7 +78,7 @@
 
     &:hover,
     &:focus,
-    &.#{$css-prefix}has-focus {
+    &.slds-has-focus {
       outline: 0;
       cursor: pointer;
       background-color: $color-background-row-hover;
@@ -87,7 +87,7 @@
     }
 
     // Icon in results, here so it doesn't need to be repeated in DOM
-    .#{$css-prefix}icon {
+    .slds-icon {
       margin-right: $spacing-x-small;
     }
   }
@@ -95,7 +95,7 @@
   &__item-action--label {
     padding: $spacing-x-small $spacing-small;
 
-    .#{$css-prefix}icon {
+    .slds-icon {
       margin-right: $spacing-small;
     }
   }
@@ -127,19 +127,19 @@
   }
 
   // Deal with Lookup when user activates the lookup
-  &.#{$css-prefix}is-open {
+  &.slds-is-open {
 
     // Show and remove border and border radius
-    .#{$css-prefix}lookup__menu {
+    .slds-lookup__menu {
       display: block;
     }
   }
 
   // Deal with lookup if selection has been made
-  &.#{$css-prefix}has-selection {
+  &.slds-has-selection {
 
     // If developer needs to keep the input in the DOM and not able to remove it
-    .#{$css-prefix}lookup__search-input {
+    .slds-lookup__search-input {
       display: none;
     }
   }
@@ -149,21 +149,21 @@
   &[data-select="multi"] {
 
     // Stretch pill 100% of container
-    .#{$css-prefix}pill {
+    .slds-pill {
       display: flex;
     }
 
     // Send close button to the end of the pill
-    .#{$css-prefix}pill__remove {
+    .slds-pill__remove {
       margin-left: auto;
     }
   }
 
   @include deprecate('4.0.0', '.slds-has-selection now removes the selector .slds-lookup__search-input instead of .slds-input') {
-    &.#{$css-prefix}has-selection {
+    &.slds-has-selection {
 
-      .#{$css-prefix}input,
-      .#{$css-prefix}input__icon {
+      .slds-input,
+      .slds-input__icon {
         display: none;
       }
     }

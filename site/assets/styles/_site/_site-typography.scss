@@ -62,7 +62,7 @@ cite {
     margin-top: 0;
   }
 
-  .site-code--content + .#{$css-prefix}container--medium &:first-child {
+  .site-code--content + .slds-container--medium &:first-child {
     margin-top: $spacing-xx-large;
   }
 }
@@ -70,7 +70,7 @@ cite {
 .site-text-heading--large {
   font-size: $site-font-size-x-large;
 
-  .#{$css-prefix}select {
+  .slds-select {
     font-size: $site-font-size-medium;
   }
 }
@@ -80,7 +80,7 @@ cite {
 }
 
 [class*="text-heading--label"],
-.#{$css-prefix}max-medium-table--stacked-horizontal td:before {
+.slds-max-medium-table--stacked-horizontal td:before {
   font-size: $site-font-size-small;
   text-transform: uppercase;
 }
@@ -127,8 +127,8 @@ cite {
 .site-guidelines,
 .site-release-notes {
 
-  ul:not(.#{$css-prefix}grid),
-  ol:not(.#{$css-prefix}grid) {
+  ul:not(.slds-grid),
+  ol:not(.slds-grid) {
     @include mq-small-min {
       margin-left: $spacing-x-large;
     }
@@ -138,11 +138,11 @@ cite {
     }
   }
 
-  ul:not(.#{$css-prefix}grid) {
+  ul:not(.slds-grid) {
     @include list-has-bullets;
   }
 
-  ol:not(.#{$css-prefix}grid) {
+  ol:not(.slds-grid) {
     @include list-has-numbers;
   }
 }
@@ -165,13 +165,13 @@ cite {
     margin-bottom: 0;
   }
 
-  .#{$css-prefix}tabs--default__nav:not(.#{$css-prefix}grid) {
+  .slds-tabs--default__nav:not(.slds-grid) {
     margin-left: 0;
     list-style: none;
   }
 }
 
-.#{$css-prefix}no-row-hover:not(.#{$css-prefix}table--bordered) tr {
+.slds-no-row-hover:not(.slds-table--bordered) tr {
 
   > th,
   > td {
@@ -186,7 +186,7 @@ cite {
   }
 }
 
-.#{$css-prefix}tabs--default__nav {
+.slds-tabs--default__nav {
   margin-bottom: 0;
 }
 

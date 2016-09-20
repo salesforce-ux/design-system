@@ -9,24 +9,24 @@
 
 
 
-.#{$css-prefix}is-collapsed {
+.slds-is-collapsed {
   height: 0;
   overflow: hidden;
 }
 
-.#{$css-prefix}collapsed {
+.slds-collapsed {
   @include deprecate('4.0.0') {
     height: 0;
     overflow: hidden;
   }
 }
 
-.#{$css-prefix}is-expanded {
+.slds-is-expanded {
   height: auto;
   overflow: visible;
 }
 
-.#{$css-prefix}expanded {
+.slds-expanded {
   @include deprecate('4.0.0') {
     height: auto;
     overflow: visible;

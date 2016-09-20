@@ -47,7 +47,7 @@
       text-align: left;
 
       // Remove max width from truncate definition
-      &.#{$css-prefix}truncate {
+      &.slds-truncate {
         max-width: 100%;
       }
 
@@ -64,7 +64,7 @@
       padding: $spacing-small;
     }
 
-    &:not(.#{$css-prefix}no-row-hover) tbody tr:hover {
+    &:not(.slds-no-row-hover) tbody tr:hover {
 
       // scss-lint:disable ImportantRule
       td,
@@ -74,11 +74,11 @@
       }
     }
 
-    .#{$css-prefix}is-interactive .#{$css-prefix}button {
+    .slds-is-interactive .slds-button {
       visibility: visible;
     }
 
-    .#{$css-prefix}cell-shrink {
+    .slds-cell-shrink {
       width: auto;
     }
   }

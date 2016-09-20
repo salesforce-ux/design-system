@@ -7,10 +7,10 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}docked-composer__body--email {
+.slds-docked-composer__body--email {
   justify-content: flex-start;
 
-  .#{$css-prefix}input {
+  .slds-input {
     border-radius: 0;
 
     &:focus {
@@ -25,19 +25,19 @@
     }
   }
 
-  .#{$css-prefix}picklist__label {
+  .slds-picklist__label {
     padding: {
       left: $spacing-small;
       right: $spacing-large;
     }
 
-    .#{$css-prefix}icon {
+    .slds-icon {
       right: $spacing-x-small;
     }
   }
 }
 
-.#{$css-prefix}email-composer__label {
+.slds-email-composer__label {
   width: $spacing-x-large;
   font-size: $font-size-small;
 }

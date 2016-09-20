@@ -7,41 +7,41 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}list--horizontal {
+.slds-list--horizontal {
 
-  .#{$css-prefix}item--label {
+  .slds-item--label {
     width: 30%;
     padding-right: $spacing-small;
   }
 
-  .#{$css-prefix}item--detail {
+  .slds-item--detail {
     width: 70%;
   }
 }
 
-.#{$css-prefix}list--vertical {
+.slds-list--vertical {
 
-  .#{$css-prefix}item--label,
-  .#{$css-prefix}item--detail {
+  .slds-item--label,
+  .slds-item--detail {
     display: block;
   }
 }
 
-.#{$css-prefix}list--inline {
+.slds-list--inline {
   display: inline-flex;
   max-width: 100%;
 
-  .#{$css-prefix}item--label {
+  .slds-item--label {
     max-width: 180px;
     padding-right: $spacing-small;
     flex-shrink: 0;
 
-    ~ .#{$css-prefix}item--label {
+    ~ .slds-item--label {
       padding-left: $spacing-medium;
     }
   }
 
-  .#{$css-prefix}item--detail {
+  .slds-item--detail {
     min-width: 0; // Respect width
   }
 }

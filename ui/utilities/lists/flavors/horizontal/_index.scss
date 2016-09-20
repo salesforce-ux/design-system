@@ -9,13 +9,13 @@
 
 
 
-.#{$css-prefix}list--horizontal {
-  @include align-horizontal('.#{$css-prefix}list__item', true);
+.slds-list--horizontal {
+  @include align-horizontal('.slds-list__item', true);
 }
 
-.#{$css-prefix}list--horizontal-large {
+.slds-list--horizontal-large {
 
-  > .#{$css-prefix}list__item > a {
+  > .slds-list__item > a {
     padding: $spacing-small $spacing-medium;
   }
 }

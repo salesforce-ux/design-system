@@ -10,11 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Spinner from 'ui/components/spinners/index.react';
+import ReactDOM from 'react-dom';
 
+import App from './components/components-overview';
 
-export default (
-<div className="demo-only" style={{height: '5rem'}}>
-  <Spinner flavor="brand-medium" className="slds-spinner--brand" />
-</div>
+ReactDOM.render(
+  React.createElement(App),
+  document.getElementById('components-overview')
 );

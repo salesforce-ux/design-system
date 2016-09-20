@@ -138,7 +138,7 @@ const siteMiddleware = (req, res, next) => {
     // Clean the URL
     const url = req.url.replace(/^\//, '').replace(/\.html$/, '');
     // First, check for /components/*
-    if (/components/.test(url)) {
+    if (/components\//.test(url)) {
       const ui = generateUI();
       const log = SLDSLog();
       for (const category of ui) {

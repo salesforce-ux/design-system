@@ -27,6 +27,7 @@ import crypto from 'crypto';
 import yaml from 'js-yaml';
 import highlightMarkup from 'app_modules/site/util/component/highlight-markup';
 import { renderMarkdownAndReplaceGlobals } from 'app_modules/site/util/component/render-markdown';
+import { sentryScript } from 'app_modules/site/components/page';
 
 const forceBase = yaml.safeLoad(fs.readFileSync(path.resolve(__PATHS__.designTokens, 'force-base/spacing.yml')));
 
@@ -128,7 +129,7 @@ export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') =
   </style>
   <meta name="robots" content="noindex" />
   <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js"></script>
-  <script>Raven.config('https://da9c494a510541bb98b5a8f51181f5de@sentry.io/98830').install()</script>
+  <script>${sentryScript}</script>
 </head>
 <body>
 ${html}

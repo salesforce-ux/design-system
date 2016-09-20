@@ -15,6 +15,13 @@ import globals from 'app_modules/global';
 const LOCALYTICS_ID = '2a6dc90c85e5991e50f752a-f8539a44-1e85-11e5-44ef-006918dcf667';
 const GOOGLE_ANALYTICS_ID = 'UA-45076517-7';
 
+export const sentryScript = `
+  Raven.config(
+    'https://da9c494a510541bb98b5a8f51181f5de@sentry.io/98830',
+    { whitelistUrls: [ /https?:\\/\\/(.*\\.)?lightningdesignsystem\\.com/ ] }
+  ).install();
+`;
+
 export default React.createClass({
 
   propTypes: {
@@ -81,7 +88,7 @@ export default React.createClass({
         <meta name="theme-color" content="#ffffff" />
         {this.renderAnalytics()}
         <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js" />
-        <script dangerouslySetInnerHTML={{__html: 'Raven.config(\'https://da9c494a510541bb98b5a8f51181f5de@sentry.io/98830\').install()'}} />
+        <script dangerouslySetInnerHTML={{__html: sentryScript}} />
       </head>
     );
   },

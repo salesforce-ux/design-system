@@ -10,6 +10,7 @@ updatedependencies:
 	npm run build
 	npm test
 	git add npm-shrinkwrap.json package.json
-	@echo "Dependency tree updated, ready to commit!"
+	@echo "Dependency tree updated!"
+	@echo "To commit, type: git commit -m 'Update dependencies'"
 
 .PHONY: updatedependencies

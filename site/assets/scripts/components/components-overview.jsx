@@ -180,10 +180,13 @@ let components = _components.map(component => {
 });
 
 let CheckIcon = () =>
-  <SvgIcon
-    sprite="utility"
-    symbol="check"
-    className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />;
+  <span className="slds-icon_container">
+    <SvgIcon
+      sprite="utility"
+      symbol="check"
+      className="slds-icon slds-icon__svg slds-icon-utility-check slds-icon--small slds-icon-text-default" />
+    <span className="slds-assistive-text">Checkmark</span>
+  </span>;
 
 let LightningIcon = () =>
   <span className="slds-icon_container slds-icon--x-small slds-icon-custom-custom9 slds-m-left--medium">
@@ -191,6 +194,7 @@ let LightningIcon = () =>
       sprite="custom"
       symbol="custom9"
       className="slds-icon slds-icon--x-small" />
+    <span className="slds-assistive-text">Lightning Component</span>
   </span>;
 
 let Table = ({ component }) => {
@@ -301,7 +305,11 @@ export default React.createClass({
           <div className="slds-grid slds-grid--align-spread">
             <div className="slds-form-element">
               <div className="slds-form-element__control">
+                <label class="slds-form-element__label" for="components-overview-filter-input">
+                  Filter Components
+                </label>
                 <input
+                  id="components-overview-filter-input"
                   className="slds-input"
                   type="text"
                   value={this.state.query}
@@ -316,7 +324,7 @@ export default React.createClass({
                 <div className="slds-form-element slds-m-left--medium" key={filter.label}>
                   <label className="slds-checkbox--toggle slds-grid slds-grid--vertical">
                     <div
-                      className="slds-form-element__label slds-m-bottom--m">
+                      className="slds-form-element__label slds-m-bottom--x-small">
                       {filter.label}
                     </div>
                     <input

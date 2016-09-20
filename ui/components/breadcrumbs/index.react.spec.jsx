@@ -13,7 +13,6 @@ import React from 'react';
 import BreadCrumbs from './index.react';
 const {Crumb} = BreadCrumbs;
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 import {
   isCompositeComponent,
@@ -39,7 +38,7 @@ describe('React', () => {
       expect(node).length.to.be(1);
     });
     it('renders its items', () => {
-      const node = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}breadcrumb__item`);
+      const node = scryRenderedDOMComponentsWithClass(cmp, 'slds-breadcrumb__item');
       expect(node).length.to.be(2);
     });
     it('adds its aria-label', () => {

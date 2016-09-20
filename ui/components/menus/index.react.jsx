@@ -20,7 +20,6 @@ import componentUtil, { prefix as pf, textContent, hasChild } from 'app_modules/
 import globals from 'app_modules/global';
 
 const PT = React.PropTypes;
-const cssPrefix = globals.cssPrefix;
 
 const defaultFilter = (term, item) => {
   return textContent(item.props.children).match(new RegExp(_.escapeRegExp(term), 'ig'));
@@ -70,7 +69,7 @@ class DropdownHeader extends React.Component {
 
   render() {
     return (
-        <div { ...this.props } className={this.$getClassName(`${cssPrefix}dropdown__header`)}>
+        <div { ...this.props } className={this.$getClassName('slds-dropdown__header')}>
           { this.props.children }
         </div>
       );
@@ -125,8 +124,8 @@ class DropdownItem extends React.Component {
   }
 
   renderItem() {
-    const className = this.$getClassName(`${cssPrefix}dropdown__item`, {
-      [`${cssPrefix}is-selected`]: this.isSelected()
+    const className = this.$getClassName('slds-dropdown__item', {
+      'slds-is-selected': this.isSelected()
     });
     const aRole = this.context.isSelectable ? 'menuitemradio' : 'menuitem';
 
@@ -181,7 +180,7 @@ class DropdownList extends React.Component {
 
   render() {
     return (
-        <AccessibleList { ...this.props } className={this.$getClassName(`${cssPrefix}dropdown__list`)}
+        <AccessibleList { ...this.props } className={this.$getClassName('slds-dropdown__list')}
             role="menu">
           { this.children() }
         </AccessibleList>
@@ -212,10 +211,10 @@ class Dropdown extends React.Component {
   }
 
   menuClassName() {
-    return classNames(`${cssPrefix}dropdown`, this.props.className, {
-      [`${cssPrefix}dropdown--menu`]: !this.hasFilter,
-      [`${cssPrefix}dropdown--search`]: this.hasFilter,
-      [`${cssPrefix}hide`]: this.props.hidden
+    return classNames('slds-dropdown', this.props.className, {
+      'slds-dropdown--menu': !this.hasFilter,
+      'slds-dropdown--search': this.hasFilter,
+      'slds-hide': this.props.hidden
     } );
   }
 

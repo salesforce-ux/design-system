@@ -22,7 +22,7 @@ const handleNavClick = (event, node) => {
   event.preventDefault();
   const isOpen = /is-open/.test(node.parentElement.className);
   setClassName(node.parentElement, {
-    [`${globals.cssPrefix}is-open`]: !isOpen,
+    'slds-is-open': !isOpen,
     'is-closed': isOpen
   });
 };

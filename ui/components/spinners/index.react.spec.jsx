@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from './index.react';
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 import {
   renderIntoDocument
@@ -22,11 +21,11 @@ import {
 describe('React', () => {
   describe('Spinner', () => {
     var tests = [
-      { flavor: 'small', expectedClass: `${cssPrefix}spinner--small`},
-      { flavor: 'medium', expectedClass: `${cssPrefix}spinner--medium`},
-      { flavor: 'large', expectedClass: `${cssPrefix}spinner--large`},
-      { flavor: 'brand-small', expectedClass: `${cssPrefix}spinner--small`},
-      { flavor: 'inverse-medium', expectedClass: `${cssPrefix}spinner--medium`}
+      { flavor: 'small', expectedClass: 'slds-spinner--small' },
+      { flavor: 'medium', expectedClass: 'slds-spinner--medium' },
+      { flavor: 'large', expectedClass: 'slds-spinner--large' },
+      { flavor: 'brand-small', expectedClass: 'slds-spinner--small' },
+      { flavor: 'inverse-medium', expectedClass: 'slds-spinner--medium' }
     ];
 
     tests.forEach( (test) => {
@@ -61,7 +60,7 @@ describe('React', () => {
       });
 
       it('should be a small size', () => {
-        expect($cmp.firstChild.className).to.include(`${cssPrefix}spinner`);
+        expect($cmp.firstChild.className).to.include('slds-spinner');
       });
     });
 
@@ -69,7 +68,7 @@ describe('React', () => {
       it('should be a small size', () => {
         const cmp = renderIntoDocument(React.createElement(Spinner, { className: 'foo bar' }));
         const $cmp = ReactDOM.findDOMNode(cmp);
-        expect($cmp.firstChild.className).to.include(`foo bar ${cssPrefix}spinner`);
+        expect($cmp.firstChild.className).to.include('foo bar slds-spinner');
       });
     });
   });

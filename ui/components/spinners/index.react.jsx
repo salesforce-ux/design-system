@@ -13,7 +13,6 @@ import React from 'react';
 import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 class Spinner extends React.Component {
   constructor(props) {
@@ -25,10 +24,10 @@ class Spinner extends React.Component {
   render() {
     var { className, flavor, children } = this.props;
     const classnames = classNames(className, {
-      [`${cssPrefix}spinner`]: true,
-      [`${cssPrefix}spinner--small`]: flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
-      [`${cssPrefix}spinner--medium`]: flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
-      [`${cssPrefix}spinner--large`]: flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
+      'slds-spinner': true,
+      'slds-spinner--small': flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
+      'slds-spinner--medium': flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
+      'slds-spinner--large': flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
     });
     const props = this.$propsWithoutKeys('className', 'flavor');
     return (

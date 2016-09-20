@@ -83,7 +83,7 @@ classes:
     class: slds-wizard__label
     description: Text description for each step
     required: true
-    applied: <code>&lt;span class="{{cssPrefix}}text-heading--label&gt;</code>
+    applied: <code>&lt;span class="slds-text-heading--label&gt;</code>
   -
     class: slds-wizard__progress
     description: Container for progress bar
@@ -100,5 +100,5 @@ classes:
     class: slds-is-active
     description: Stateful class that turns dot indicator and progress bar blue
     required: true
-    applied: <code>{{cssPrefix}}wizard__item</code>
+    applied: <code>slds-wizard__item</code>
     notes: Class should be applied thought JavaScript

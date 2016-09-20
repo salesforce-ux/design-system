@@ -15,8 +15,6 @@ import classNames from 'classnames/dedupe';
 import globals from 'app_modules/global';
 import _ from 'lodash';
 
-const cssPrefix = globals.cssPrefix;
-
 function addClass(element, className) {
   if (element.classList) {
     element.classList.add(className);
@@ -101,9 +99,9 @@ class StateClass extends React.Component {
 }
 
 StateClass.events = [
-  {on: 'onMouseEnter', off: 'onMouseLeave', className: `${cssPrefix}is-hovered`},
-  {on: 'onFocus', off: 'onBlur', className: `${cssPrefix}is-focused`},
-  {toggle: 'onClick', className: `${cssPrefix}is-selected`, classNameOff: `${cssPrefix}not-selected`}
+  {on: 'onMouseEnter', off: 'onMouseLeave', className: 'slds-is-hovered'},
+  {on: 'onFocus', off: 'onBlur', className: 'slds-is-focused'},
+  {toggle: 'onClick', className: 'slds-is-selected', classNameOff: 'slds-not-selected'}
 ];
 
 export default StateClass;

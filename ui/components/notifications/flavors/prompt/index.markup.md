@@ -1,4 +1,4 @@
-A prompt uses the base modal component and then adds the class `.{{cssPrefix}}modal--prompt` to the overall `.{{cssPrefix}}modal`. The utilities > themes > colors class is placed on the `.{{cssPrefix}}modal__head` to create the color of the header. In the example, we illustrate using `.{{cssPrefix}}theme--error`. The class `.{{cssPrefix}}theme--alert-texture` should be applied to create the striped gradient. The `.{{cssPrefix}}modal__footer` receives the class `.{{cssPrefix}}theme--default`.
+A prompt uses the base modal component and then adds the class `.slds-modal--prompt` to the overall `.slds-modal`. The utilities > themes > colors class is placed on the `.slds-modal__head` to create the color of the header. In the example, we illustrate using `.slds-theme--error`. The class `.slds-theme--alert-texture` should be applied to create the striped gradient. The `.slds-modal__footer` receives the class `.slds-theme--default`.
 
 <h4 class="site-text-heading--label">Accessibility</h4>
 

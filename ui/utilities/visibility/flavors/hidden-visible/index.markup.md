@@ -1,1 +1,1 @@
-You can hide an element but reserve the space on the page for when the element is made visible again. To hide the element, use the  `{{cssPrefix}}hidden` class. To make it visible again, use the `{{cssPrefix}}visible` class.
+You can hide an element but reserve the space on the page for when the element is made visible again. To hide the element, use the  `slds-hidden` class. To make it visible again, use the `slds-visible` class.

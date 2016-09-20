@@ -12,11 +12,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import globals from 'app_modules/global';
 
-const cssPrefix = globals.cssPrefix;
-
 let SizePreviewExample = props =>
 <div className={`slds-size--${props.size}`}>
-  <div className="slds-box slds-box--x-small slds-text-align--center slds-m-around--x-small">.{cssPrefix}size--{props.size}</div>
+  <div className="slds-box slds-box--x-small slds-text-align--center slds-m-around--x-small">.slds-size--{props.size}</div>
 </div>;
 
 export let states = [

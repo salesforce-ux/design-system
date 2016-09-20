@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^1.4.0",
-    "@salesforce-ux/icons": "6.0.0",
+    "@salesforce-ux/icons": "5.2.0",
     "@salesforce-ux/design-system-ui-kit": "github:salesforce-ux/design-system-ui-kit#v1.0.1",
     "app-module-path": "1.1.0",
     "async": "2.0.1",

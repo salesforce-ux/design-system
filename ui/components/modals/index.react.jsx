@@ -16,7 +16,6 @@ const PT = React.PropTypes;
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import AccessibleDialogContainer from 'ui/components/lib/accessible-dialog-container.react';
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 import classNames from 'classnames';
 import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
@@ -118,15 +117,15 @@ class Modal extends React.Component {
   render() {
     const flavorName = this.$getClassNameWithFlavor('slds-modal');
     const className = classNames(flavorName, {
-      [`${cssPrefix}fade-in-open`]: this.props.isOpen && !this.props.edit,
-      [`${cssPrefix}slide-up-open`]: this.props.isOpen && this.props.edit
+      'slds-fade-in-open': this.props.isOpen && !this.props.edit,
+      'slds-slide-up-open': this.props.isOpen && this.props.edit
     });
     const classNameModalContainer = this.$getClassName('slds-modal__container', {
-      [`${cssPrefix}slide-up-saving`]: this.props.saving,
-      [`${cssPrefix}slide-down-cancel`]: this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
+      'slds-slide-up-saving': this.props.saving,
+      'slds-slide-down-cancel': this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
     });
     const classNameModalBackdrop = classNames('slds-backdrop', {
-      [`${cssPrefix}backdrop--open`]: this.props.isOpen
+      'slds-backdrop--open': this.props.isOpen
     });
     const role = this.props.role ? this.props.role : 'dialog';
     return (

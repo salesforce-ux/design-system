@@ -13,7 +13,6 @@ import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeBlock from 'app_modules/ui/code-block';
 
-import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
@@ -73,7 +72,7 @@ export default (
   <p>Our responsive sizing helpers are built upon a mobile first approach. To achieve the desired outcome of this approach, you will need to append responsive sizing helpers to an element that overrides the previous breakpoint. A default sizing helper is <strong>required</strong> and responsive sizing helpers are additive. The following example demonstrates the class name position for each breakpoint:</p>
   <p><code>&lt;div class="[default] [small size override] [medium size override] [large size override]"&gt;</code></p>
   <p>A real world example would look like this:</p>
-  <p><code>&lt;div class="{globals.cssPrefix}size--1-of-2 {globals.cssPrefix}small-size--1-of-3 {globals.cssPrefix}medium-size--1-of-4 {globals.cssPrefix}large-size--1-of-3"&gt;</code></p>
+  <p><code>&lt;div class="slds-size--1-of-2 slds-small-size--1-of-3 slds-medium-size--1-of-4 slds-large-size--1-of-3"&gt;</code></p>
   <p>This will equate to the following width output for your element:</p>
   <div className="site-code--content slds-scrollable--x">
     <CodeBlock language="scss">{`

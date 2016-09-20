@@ -4,11 +4,11 @@ The ability to style checkboxes with CSS varies across browsers. To ensure that 
 
 Groups of checkboxes should be marked up using the fieldset and legend element. This helps someone using assistive technology to understand the question they're answering with the group of checkboxes. The fieldset is placed around the whole group and the legend contains the question.
 
-Custom checkboxes are created by applying the `.{{cssPrefix}}checkbox` class to a `<label>` element. To remain accessible to all user agents, place `<input>` with `type="checkbox"` inside the `<label>` element.  The `<input>` is then visually hidden, and the styling is placed on a span with the `.{{cssPrefix}}checkbox--faux` class. The styling of the span changes based on whether the checkbox is selected or focused by using a pseudo-element. A second span with `.{{cssPrefix}}form-element__label` contains the label text.
+Custom checkboxes are created by applying the `.slds-checkbox` class to a `<label>` element. To remain accessible to all user agents, place `<input>` with `type="checkbox"` inside the `<label>` element.  The `<input>` is then visually hidden, and the styling is placed on a span with the `.slds-checkbox--faux` class. The styling of the span changes based on whether the checkbox is selected or focused by using a pseudo-element. A second span with `.slds-form-element__label` contains the label text.
 
 When a single checkbox is required, `<div class="slds-checkbox">` should get `<abbr class="required" title="required">*</abbr>` added to the DOM, directly before the `<input type="checkbox" />` for visual indication that the checkbox is required.
 
-When a checkbox group is required, the `<fieldset>` should receive the class `.{{cssPrefix}}is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
+When a checkbox group is required, the `<fieldset>` should receive the class `.slds-is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
 
 As SLDS checkboxes rely on the :checked psuedo selector, and the indeterminate state is only accessible via JavaScript, the use of a CSS class on the input will be necessary to implement this in SLDS. Use JavaScript to add the class when the indeterminate property is set to true on the input.
 

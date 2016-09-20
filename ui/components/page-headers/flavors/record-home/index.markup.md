@@ -1,11 +1,11 @@
 Page header record home contains up to four
-compact layout fields. They're contained in the `.{{cssPrefix}}page-header__detail-row` div.
+compact layout fields. They're contained in the `.slds-page-header__detail-row` div.
 That div contains the top and bottom spacing needed for this version of the page header.
 
 When text is truncated, the full text should be placed in
 a tooltip on hover (currently shown in the title
 attribute). One line truncation is created by using the
-`.{{cssPrefix}}truncate` class. Two line truncation must be achieved
+`.slds-truncate` class. Two line truncation must be achieved
 using JavaScript.
 
 The page header is located at the top of every record home. It includes the record title and compact layout for a record. Excluding the title, the page header displays 4 compact layout fields. Similar data types can be rolled up and be displayed as a single field.
@@ -21,4 +21,4 @@ As shown in Field 3, web addresses and email addresses should be parsed and disp
 
 When text is truncated, display full field text in browser tooltip on hover.
 
-Display addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.{{cssPrefix}}truncate` class. Display the full address via browser tooltip.
+Display addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.slds-truncate` class. Display the full address via browser tooltip.

@@ -65,7 +65,7 @@ export default (
   <aura:attribute name="size"           default="" type="String" description="Size of icon-- small, medium, large" />
   <aura:attribute name="assistiveText"  default="" type="String" description="Description name of icon" />
   <span aura:id="container" class="{!v.containerClass}">
-    <span aura:id="assistiveText" class="${g.cssPrefix}assistive-text">{!v.assistiveText}</span>
+    <span aura:id="assistiveText" class="slds-assistive-text">{!v.assistiveText}</span>
   </span>
 </aura:component>
         `}</CodeBlock>
@@ -79,7 +79,7 @@ export default (
         <CodeBlock language="javascript">{`
 ({
   renderIcon: function(component) {
-    var prefix = "${g.cssPrefix}";
+    var prefix = "slds-";
     var svgns = "http://www.w3.org/2000/svg";
     var xlinkns = "http://www.w3.org/1999/xlink";
     var size = component.get("v.size");

@@ -15,7 +15,7 @@
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
-  padding: 0 $spacing-medium;
+  padding: 0 0 0 $spacing-medium;
 
   &__primary,
   &__secondary,
@@ -37,7 +37,7 @@
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border-context-bar-item;
+    border-left: $border-width-thin solid $color-border;
   }
 
   // Any item on the horizontal axis of the context nav bar
@@ -81,20 +81,20 @@
     }
 
     &.slds-is-active {
-      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border, inset $border-width-thin 0 0 $color-border;
+      border-left: $border-width-thin solid $color-border;
+      border-right: $border-width-thin solid $color-border;
       border-bottom-color: $color-background-context-bar-item-hover;
 
       &:before,
       &:after {
         content: '';
-        width: 100%;
         height: 3px;
         display: block;
         background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
+        left: -1px;
+        right: -1px;
       }
 
       &:after {
@@ -111,20 +111,27 @@
       }
     }
 
+    // Remove border on active due to primary section always having a right border
     &:first-child.slds-is-active {
-      box-shadow: inset ($border-width-thin * -1) 0 0 $color-border;
+      border-left: 0;
     }
 
-    &.slds-is-active .slds-context-bar__label-action {
-      font-weight: bold;
+    // Toggled focused class applied via JavaScript
+    &.slds-has-focus,
+    &.slds-has-focus:hover {
+
+      &:before,
+      &:after {
+        height: 4px;
+      }
     }
 
     &--divider-left {
-      border-left: $border-width-thin solid $color-border-context-bar-item;
+      border-left: $border-width-thin solid $color-border;
     }
 
     &--divider-right {
-      border-right: $border-width-thin solid $color-border-context-bar-item;
+      border-right: $border-width-thin solid $color-border;
     }
   }
 
@@ -135,17 +142,18 @@
     align-items: center;
     flex-grow: 1;
     padding: 0 $spacing-small;
+    border-radius: 0;
     min-width: 0%;
     color: inherit;
+    font-size: $font-size-medium;
 
-    &:focus {
+    &:focus,
+    &:focus:hover {
       outline: 0;
       text-decoration: underline;
-      opacity: $opacity-8;
     }
 
-    &:hover,
-    &:focus:hover {
+    &:hover {
       text-decoration: none;
     }
 
@@ -165,12 +173,17 @@
     display: flex;
     align-items: center;
     align-content: center;
-    padding: 0 $spacing-small;
     color: $color-text-context-bar;
     margin-left: ($spacing-xx-small * -1);
+    padding: 0 $spacing-x-small;
+    border-radius: 0;
 
     &:focus {
       outline: 0;
+
+      .slds-context-bar__button {
+        @include focus-button;
+      }
 
       ~ .slds-dropdown {
         visibility: visible;
@@ -196,47 +209,84 @@
     // Setting custom focus thats specific to context bar
     &:focus {
       box-shadow: none;
-      opacity: $opacity-8;
+    }
+  }
+
+  // Workspace tabs
+  //
+  // Consumes tab structure but looks like gnav
+  // ------------
+  &--tabs {
+
+    // Need to reset styles from default
+    .slds-context-bar__icon-action {
+      margin-left: auto;
     }
   }
 
   // Tab context bar items
   &__item--tab {
     width: $size-x-small;
-    border-right: $border-width-thin solid $color-border-context-bar-item;
+    border-right: $border-width-thin solid $color-border;
 
-    .slds-context-bar__icon-action {
-      padding: 0 $spacing-xx-small;
-    }
-
-    &.slds-is-active {
-      background-color: $color-background-context-tab-bar-item;
+    // Handle active states
+    &.slds-is-active,
+    &:nth-child(n).slds-is-active {
+      border-left: 0;
       border-bottom-color: $color-background-context-tab-bar-item;
-      box-shadow: none;
+      background-color: $color-background-context-tab-bar-item;
 
       &:hover {
         background-color: $color-background-context-tab-bar-item;
         border-bottom-color: transparent;
       }
     }
+
+    // Pinned state
+    // Toggles visibility of elements inside of tab
+    &.slds-is-pinned {
+      width: auto;
+      padding-right: $spacing-x-small;
+
+      .slds-context-bar__label-action {
+        padding: 0 $spacing-x-small;
+      }
+    }
   }
+
+  // Dirty state of tabs
+  .slds-is-unsaved {
+
+    .slds-context-bar__label-action {
+      position: relative;
+      padding-left: $spacing-x-small;
+      font-style: italic;
+    }
+  }
+}
+
+// Unsaved indicator - This can probably be used in other locations as well
+.slds-indicator--unsaved {
+  color: $color-brand;
+  align-self: center;
+  font-size: $font-size-medium-a;
 }
 
 // Context Bar dropdown trigger specifics
 .slds-context-bar__dropdown-trigger {
 
-  // Add a hoverable zone below the action so that the dropdown doesn't
-  // disappear when the mouse is between the action and the dropdown
-  &:hover:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 3px;
-  }
-
   .slds-dropdown {
     margin-top: 3px;
+
+    // Add a hoverable zone below the action so that the dropdown doesn't
+    // disappear when the mouse is between the action and the dropdown
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: 3px;
+    }
   }
 }
 
@@ -252,6 +302,8 @@
 .slds-context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
+  border-left: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid $color-border;
 }
 
 

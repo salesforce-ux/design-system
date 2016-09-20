@@ -18,7 +18,7 @@ import AccessibleDialogContainer from 'ui/components/lib/accessible-dialog-conta
 import globals from 'app_modules/global';
 
 import classNames from 'classnames';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
+import componentUtil from 'app_modules/ui/util/component';
 
 import ClassNameTransitionGroup from 'ui/components/lib/classname-transition-group.react';
 

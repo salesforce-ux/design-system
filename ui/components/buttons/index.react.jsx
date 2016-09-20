@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { prefix as pf, createChainedFunction } from 'app_modules/ui/util/component';
+import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
 import _ from 'lodash';
 
 class Button extends React.Component {

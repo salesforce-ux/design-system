@@ -16,7 +16,7 @@ import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import AccessibleList from 'ui/components/lib/accessible-list.react';
 import Helper from 'ui/components/lib/dom-helpers';
-import componentUtil, { prefix as pf, textContent, hasChild } from 'app_modules/ui/util/component';
+import componentUtil, { textContent, hasChild } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 
 const PT = React.PropTypes;

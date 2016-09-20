@@ -10,13 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import PageBody from 'app_modules/site/components/page/body';
+import ReactDOM from 'react-dom';
 
-import ComponentsOverview from 'site/assets/scripts/components/components-overview';
+import App from './components/components-overview';
 
-export default (
-  <PageBody anchorTitle="Component Overview">
-    <ComponentsOverview />
-    <script src="/assets/scripts/components-overview.js" async />
-  </PageBody>
+ReactDOM.render(
+  React.createElement(App),
+  document.getElementById('components-overview')
 );

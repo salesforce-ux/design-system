@@ -9,12 +9,20 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import { assign, find, some, intersection, every, escapeRegExp, has } from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
+
+import assign from 'lodash/assign';
+import find from 'lodash/find';
+import some from 'lodash/some';
+import intersection from 'lodash/intersection';
+import every from 'lodash/every';
+import escapeRegExp from 'lodash/escapeRegExp';
+import has from 'lodash/has';
+import keys from 'lodash/keys';
 
 import ui from '.generated/ui';
 
@@ -23,6 +31,8 @@ let filters = {
     flavor.isResponsive,
   isAdaptive: (component, flavor) =>
     flavor.isAdaptive,
+  isPrototype: (component, flavor) =>
+    flavor.status === 'prototype',
   isLightning: (component, flavor) =>
     flavor.lightning,
   isNotS1Compatible: (component, flavor) =>
@@ -34,9 +44,12 @@ let filters = {
 let pageFilters = [{
   label: 'Responsive',
   key: 'isResponsive'
-},{
+}, {
   label: 'Adaptive',
   key: 'isAdaptive'
+}, {
+  label: 'Prototype',
+  key: 'isPrototype'
 }, {
   label: 'Lightning',
   key: 'isLightning'
@@ -54,6 +67,9 @@ let componentColumns = [{
 }, {
   label: 'Adaptive',
   filter: 'isAdaptive'
+}, {
+  label: 'Prototype',
+  filter: 'isPrototype'
 }];
 
 let lightningComponents = [{
@@ -233,7 +249,7 @@ let Table = ({ component }) => {
   </table>;
 };
 
-let App = React.createClass({
+export default React.createClass({
   getInitialState() {
     return {
       query: '',
@@ -275,7 +291,7 @@ let App = React.createClass({
         .reduce((count, c) => count + c.flavors.length, 0)
     };
     return (
-      <div>
+      <div id="components-overview">
         <header className="slds-grid slds-grid--vertical slds-m-bottom--large">
           <div className="slds-grid slds-m-bottom--medium">
             <div className="slds-text-heading--large">
@@ -333,5 +349,3 @@ let App = React.createClass({
     );
   }
 });
-
-ReactDOM.render(<App />, document.getElementById('components-overview'));

@@ -305,7 +305,7 @@ export default React.createClass({
           <div className="slds-grid slds-grid--align-spread">
             <div className="slds-form-element">
               <div className="slds-form-element__control">
-                <label class="slds-form-element__label" for="components-overview-filter-input">
+                <label className="slds-form-element__label" htmlFor="components-overview-filter-input">
                   Filter Components
                 </label>
                 <input

@@ -141,6 +141,9 @@ export default () => ({
     listen_dom: delegate => {
       window.addEventListener('hashchange', onHashChange, false);
       onHashChange();
+    },
+    after_listen_dom: () => {
+      handleFlavorStatusChange();
     }
   }
 });

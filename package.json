@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.1.2-dev",
+  "version": "2.1.3-dev",
   "author": "Salesforce",
   "slds": {
     "name": "Winter ’17",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^1.3.6",
-    "@salesforce-ux/design-tokens": "3.7.0",
+    "@salesforce-ux/design-tokens": "3.8.0",
     "@salesforce-ux/icons": "5.2.0",
     "@salesforce-ux/design-system-ui-kit": "github:salesforce-ux/design-system-ui-kit#v1.0.1",
     "app-module-path": "1.1.0",

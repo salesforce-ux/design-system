@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-const pf = componentUtil.prefix;
 
 class Component extends React.Component {
   constructor(props) {

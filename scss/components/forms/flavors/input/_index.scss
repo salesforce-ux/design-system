@@ -1,0 +1,118 @@
+// Lightning Design System 2.1.3
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}input {
+  @include form-states;
+  display: inline-block;
+  padding: 0 $spacing-medium 0 $spacing-small;
+  line-height: $height-input;
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+
+  // Input bare
+  //
+  // Removes aesthetic nature from an input
+  &--bare {
+    background-color: transparent;
+    border: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+      left: $spacing-small;
+    }
+    color: $color-text-default;
+    line-height: $height-input;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
+  // Input Height
+  //
+  // Used to apply an <input> size to another element thats a non <input>
+  // Because sometimes I need elements the same height as inputs
+  &--height {
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+  }
+}
+
+// Modifier if text input has svg icon adjacent to <input>
+.#{$css-prefix}input-has-icon {
+  position: relative;
+
+  .#{$css-prefix}input__icon {
+    @include square($square-icon-medium-content);
+    position: absolute;
+    top: 50%;
+    margin-top: (($square-icon-medium-content / 2) * -1);
+
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+      fill: $color-text-icon-default;
+    }
+  }
+
+  &--left {
+    .#{$css-prefix}input__icon {
+      left: $spacing-small;
+    }
+
+    .#{$css-prefix}input,
+    .#{$css-prefix}input--bare {
+      padding-left: $spacing-x-large;
+    }
+  }
+
+  &--right {
+    .#{$css-prefix}input__icon {
+      right: $spacing-small;
+    }
+
+    .#{$css-prefix}input,
+    .#{$css-prefix}input--bare {
+      padding-right: $spacing-x-large;
+    }
+  }
+
+  &--left-right {
+
+    .#{$css-prefix}input__icon--left {
+      left: $spacing-small;
+    }
+
+    .#{$css-prefix}input__icon--right {
+      right: $spacing-small;
+    }
+
+    .#{$css-prefix}input,
+    .#{$css-prefix}input--bare {
+      padding: 0 $spacing-x-large;
+    }
+  }
+}
+
+.#{$css-prefix}input-has-fixed-addon {
+  display: flex;
+}
+
+.#{$css-prefix}form-element__addon {
+  display: inline-block;
+  margin: 0 $spacing-x-small;
+  align-self: center;
+}
+
+// Error Styles
+.#{$css-prefix}has-error {
+  @include form-input-error('.#{$css-prefix}input');
+
+  .#{$css-prefix}input__icon {
+    fill: $color-text-error;
+  }
+}

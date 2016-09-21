@@ -1,0 +1,293 @@
+// Lightning Design System 2.1.3
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// New in 0.12.0
+
+.#{$css-prefix}tabs--path {
+  @include tabs;
+
+  &__nav {
+    @include tabs-nav;
+  }
+
+  .#{$css-prefix}is-complete {
+    background-color: $color-background-path-complete;
+
+    .#{$css-prefix}tabs--path__stage {
+      transform: rotateX(0deg);
+    }
+
+    .#{$css-prefix}tabs--path__title {
+      transform: rotateX(180deg);
+    }
+
+    &:hover {
+      background-color: $color-background-path-complete-hover;
+
+      .#{$css-prefix}tabs--path__stage {
+        transform: rotateX(-180deg);
+      }
+
+      .#{$css-prefix}tabs--path__title {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+
+  .#{$css-prefix}is-current {
+    background-color: $color-background-path-current;
+
+    &:hover {
+      background-color: $color-background-path-current-hover;
+    }
+
+    + .#{$css-prefix}is-incomplete:before {
+      background-color: $color-background-path-current;
+    }
+
+    &:hover + .#{$css-prefix}is-incomplete:before {
+      background-color: $color-background-path-current-hover;
+    }
+  }
+
+  .#{$css-prefix}is-incomplete {
+    background-color: $color-background-path-incomplete;
+
+    &:hover {
+      background-color: $color-background-path-incomplete-hover;
+    }
+
+    .#{$css-prefix}tabs--path__link {
+      color: $color-text-default;
+    }
+  }
+  // This class must be added to the "closed" stage with JS when the Sales Path is over by losing the opportunity
+  .#{$css-prefix}is-lost,
+  .#{$css-prefix}is-lost:hover {
+    background-color: $color-background-path-lost;
+  }
+
+  .#{$css-prefix}is-current,
+  .#{$css-prefix}is-complete,
+  .#{$css-prefix}is-lost {
+
+    .#{$css-prefix}tabs--path__link {
+      color: $color-text-inverse;
+    }
+  }
+
+  .#{$css-prefix}is-active { // This class must be added with JS when a section of the sales path is clicked on to see the coaching information
+    background-color: $color-background-inverse;
+
+    .#{$css-prefix}tabs--path__link {
+      color: $color-text-inverse;
+    }
+
+    &:hover {
+      background-color: $color-background-alt-inverse;
+
+      + .#{$css-prefix}tabs--path__item:before {
+        background-color: $color-background-alt-inverse;
+      }
+    }
+
+    + .#{$css-prefix}tabs--path__item:before {
+      background-color: $color-background-inverse;
+    }
+  }
+
+  .#{$css-prefix}is-active,
+  .#{$css-prefix}is-won {
+
+    .#{$css-prefix}tabs--path__title {
+      transform: rotateX(0deg);
+    }
+
+    .#{$css-prefix}tabs--path__stage {
+      transform: rotateX(-180deg);
+    }
+  }
+}
+
+.#{$css-prefix}tabs--path__item {
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 5rem;
+  text-align: center;
+  perspective: 500;
+  transition:
+    transform 0.1s ease-in-out,
+    background-color 0.1s linear;
+
+  &:first-child {
+    border-radius: $border-radius-pill 0 0 $border-radius-pill;
+  }
+
+  &:last-child {
+    border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    border-right: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $border-width-thick;
+    left: (($height-sales-path / 2) * -1);
+    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    border: $border-width-thick solid $color-border-path-divider;
+    border-left: 0;
+    border-bottom: 0;
+    background-clip: padding-box;
+    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
+    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
+  + .#{$css-prefix}is-complete:before,
+  + .#{$css-prefix}is-current:before {
+    background-color: $color-background-path-complete;
+  }
+
+  &:hover + .#{$css-prefix}is-complete:before,
+  &:hover + .#{$css-prefix}is-current:before {
+    background-color: $color-background-path-complete-hover;
+  }
+
+  + .#{$css-prefix}is-incomplete:before,
+  + .#{$css-prefix}is-lost:before {
+    background-color: $color-background-path-incomplete;
+  }
+
+  &:hover + .#{$css-prefix}is-incomplete:before,
+  &:hover + .#{$css-prefix}is-lost:before {
+    background-color: $color-background-path-incomplete-hover;
+  }
+}
+
+.#{$css-prefix}tabs--path__title,
+.#{$css-prefix}tabs--path__stage {
+  display: block;
+  transition: transform 0.2s linear;
+  // we should be able to get rid of this prefix once this issue is fixed
+  // https://github.com/postcss/autoprefixer/issues/653
+  // scss-lint:disable VendorPrefix
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.#{$css-prefix}tabs--path__title {
+  @include truncate;
+}
+
+.#{$css-prefix}tabs--path__stage {
+  position: absolute;
+  top: 50%;
+  left: ($square-icon-medium-content / 2);
+  width: 100%;
+  margin-top: (($square-icon-medium-content - $spacing-xx-small) * -1);
+  transform: rotateX(-180deg);
+}
+
+.#{$css-prefix}tabs--path__link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
+  line-height: $line-height-salespath;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// New in 1.0
+
+.#{$css-prefix}path-coach {
+  border: $color-border $border-width-thin solid;
+  border-top: 0;
+  padding-bottom: $spacing-medium;
+}
+
+.#{$css-prefix}path__trigger {
+  border-radius: $border-radius-circle;
+  transition: $duration-quickly transform ease-in-out;
+}
+
+// @TODO: Move to global utility?
+.#{$css-prefix}flip--vertical {
+  transform: rotateX(180deg);
+}
+
+.#{$css-prefix}flip--horizontal {
+  transform: rotateY(180deg);
+}
+
+.#{$css-prefix}path__mark-complete {
+  border-radius: $border-radius-pill;
+}
+
+.#{$css-prefix}path__mark-current {
+  border-color: $color-border-inverse;
+  background-color: $color-background-inverse;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-alt-inverse;
+  }
+}
+
+.#{$css-prefix}tabs--path__content {
+  position: relative;
+  padding-left: $spacing-large;
+  padding-right: $spacing-medium;
+}
+
+.#{$css-prefix}coach__keys,
+.#{$css-prefix}coach__guidance {
+  margin-top: $spacing-medium;
+  padding-top: $spacing-medium;
+  padding-right: $spacing-large;
+}
+
+.#{$css-prefix}coach__keys {
+  padding-left: $spacing-small;
+}
+
+.#{$css-prefix}coach__guidance {
+  padding-left: $spacing-large;
+  padding-bottom: $spacing-xx-small;
+  background-color: $color-background-guidance;
+}
+
+.#{$css-prefix}coach__item {
+  border-top: $color-border $border-width-thin solid;
+  padding: $spacing-medium 0;
+  color: $color-text-weak;
+}
+
+.#{$css-prefix}coach__value {
+  border-top: $color-border $border-width-thin solid;
+  padding-top: $spacing-medium;
+  color: $color-text-default;
+}

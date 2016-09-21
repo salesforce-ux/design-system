@@ -1,0 +1,1554 @@
+// Lightning Design System 2.1.3
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// The Sass importer needs the extension to be explicit when multiple files have the same name
+// scss-lint:disable ImportPath
+
+$font-size-small: 0.75rem !default;
+$font-size-medium: 0.8125rem !default;
+$font-size-medium-a: 0.875rem !default;
+$font-size-large: 1rem !default;
+$font-size-x-large: 1.25rem !default;
+$font-size-xx-large: 1.75rem !default;
+$line-height-text: 1.5 !default;
+$width-stage-left-collapsed: 4rem !default;
+$width-stage-left-expanded: 15rem !default;
+$height-header: 3.125rem !default;
+$square-icon-medium: 2rem !default;
+$color-background-path-complete: rgb(75, 202, 129) !default;
+$color-background-path-complete-hover: rgb(4, 132, 75) !default;
+$color-background-path-current: rgb(0, 112, 210) !default;
+$color-background-path-current-hover: rgb(0, 95, 178) !default;
+$color-background-path-incomplete: rgb(224, 229, 238) !default;
+$color-background-path-incomplete-hover: rgb(216, 221, 230) !default;
+$color-background-path-lost: rgb(194, 57, 52) !default;
+$color-background-guidance: rgb(250, 250, 251) !default;
+$color-border-path-divider: rgb(255, 255, 255) !default;
+$line-height-salespath: 1.5rem !default;
+$duration-slide: 0.25s !default;
+$height-sales-path: 2rem !default;
+$width-stage-left: 88% !default;
+$height-footer: 3.75rem !default;
+$height-header: 2.75rem !default;
+$height-input: 1.875rem !default;
+$height-overflow-start: 144px !default;
+$max-height-action-overflow-menu: 628px !default;
+$max-height-card-media: 144px !default;
+$max-height-header-brand: 32px !default;
+$max-width-action-bar: 600px !default;
+$max-width-action-bar-item: 120px !default;
+$max-width-action-bar-with-labels: 320px !default;
+$max-width-action-overflow-menu: 512px !default;
+$max-width-header-brand: 156px !default;
+$square-record-anchor-pic: 3rem !default;
+$square-tappable: 2.75rem !default;
+$flex-master-panel: 7 !default;
+$square-tooltip: 1.25rem !default;
+$square-tooltip-nubbin: 1rem !default;
+$flex-detail-panel: 3 !default;
+$elevation-3-below: -3 !default;
+$elevation-0: 0 !default;
+$elevation-2: 2 !default;
+$elevation-4: 4 !default;
+$elevation-8: 8 !default;
+$elevation-16: 16 !default;
+$elevation-32: 32 !default;
+$color-background: rgb(244, 246, 249) !default;
+$color-background-alt: rgb(255, 255, 255) !default;
+$color-background-alt-2: rgb(238, 241, 246) !default;
+$color-background-alt-inverse: rgb(22, 50, 92) !default;
+$color-background-row-hover: rgb(244, 246, 249) !default;
+$color-background-row-active: rgb(238, 241, 246) !default;
+$color-background-row-selected: rgb(240, 248, 252) !default;
+$color-background-row-new: rgb(217, 255, 223) !default;
+$color-background-inverse: rgb(6, 28, 63) !default;
+$color-background-anchor: rgb(244, 246, 249) !default;
+$color-background-browser: rgb(84, 105, 141) !default;
+$color-background-chrome-mobile: rgb(0, 112, 210) !default;
+$color-background-chrome-desktop: rgb(255, 255, 255) !default;
+$color-background-customer: rgb(255, 154, 60) !default;
+$color-background-highlight: rgb(250, 255, 189) !default;
+$color-background-highlight-search: rgb(255, 240, 63) !default;
+$color-background-selection: rgb(216, 237, 255) !default;
+$color-background-actionbar-icon-utility: rgb(84, 105, 141) !default;
+$color-background-indicator-dot: rgb(22, 50, 92) !default;
+$color-background-spinner-dot: rgb(159, 170, 181) !default;
+$color-background-modal: rgb(255, 255, 255) !default;
+$color-background-modal-brand: rgb(0, 112, 210) !default;
+$color-background-notification-badge: rgb(194, 57, 52) !default;
+$color-background-notification-badge-hover: rgb(0, 95, 178) !default;
+$color-background-notification-badge-focus: rgb(0, 95, 178) !default;
+$color-background-notification-badge-active: rgb(0, 57, 107) !default;
+$color-background-notification: rgb(255, 255, 255) !default;
+$color-background-notification-new: rgb(240, 248, 252) !default;
+$color-background-org-switcher-arrow: rgb(6, 28, 63) !default;
+$color-background-payload: rgb(244, 246, 249) !default;
+$color-background-post: rgb(247, 249, 251) !default;
+$color-background-utility-bar-hover: rgb(224, 229, 238) !default;
+$color-background-utility-bar-active: rgb(21, 137, 238) !default;
+$color-background-shade: rgb(224, 229, 238) !default;
+$color-background-shade-dark: rgb(216, 221, 230) !default;
+$color-background-stencil: rgb(238, 241, 246) !default;
+$color-background-stencil-alt: rgb(224, 229, 238) !default;
+$color-background-temp-modal: rgba(126, 140, 153, 0.8) !default;
+$color-background-temp-modal-tint: rgba(126, 140, 153, 0.8) !default;
+$color-background-temp-modal-tint-alt: rgba(255, 255, 255, 0.75) !default;
+$color-background-backdrop: rgba(255, 255, 255, 0.75) !default;
+$color-background-backdrop-tint: rgba(240, 248, 252, 0.75) !default;
+$color-background-scrollbar: rgb(224, 229, 238) !default;
+$color-background-scrollbar-track: rgb(168, 183, 199) !default;
+$color-brand: rgb(21, 137, 238) !default;
+$color-brand-dark: rgb(0, 112, 210) !default;
+$color-brand-darker: rgb(0, 95, 178) !default;
+$color-background-toggle: rgb(159, 170, 181) !default;
+$color-background-toggle-disabled: rgb(159, 170, 181) !default;
+$color-background-toggle-hover: rgb(126, 140, 153) !default;
+$color-background-toggle-active: rgb(0, 112, 210) !default;
+$color-background-toggle-active-hover: rgb(0, 95, 178) !default;
+$color-background-context-bar: rgb(255, 255, 255) !default;
+$color-background-context-bar-brand-accent: rgb(0, 161, 223) !default;
+$color-background-context-bar-item-hover: rgb(247, 249, 251) !default;
+$color-background-context-bar-item-active: rgb(247, 249, 251) !default;
+$color-background-context-tab-bar-item: rgb(255, 255, 255) !default;
+$color-background-context-bar-inverse-item-hover: rgba(255, 255, 255, 0.2) !default;
+$color-background-context-bar-inverse-item-active: rgba(255, 255, 255, 0.4) !default;
+$color-background-context-bar-shadow: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%) !default;
+$color-background-context-bar-action-highlight: rgba(255, 255, 255, 0.2) !default;
+$color-background-page-header: rgb(247, 249, 251) !default;
+$color-background-button-brand: rgb(0, 112, 210) !default;
+$color-background-button-brand-active: rgb(0, 57, 107) !default;
+$color-background-button-brand-hover: rgb(0, 95, 178) !default;
+$color-background-button-brand-disabled: rgb(224, 229, 238) !default;
+$color-background-button-default: rgb(255, 255, 255) !default;
+$color-background-button-default-hover: rgb(244, 246, 249) !default;
+$color-background-button-default-focus: rgb(244, 246, 249) !default;
+$color-background-button-default-active: rgb(238, 241, 246) !default;
+$color-background-button-default-disabled: rgb(255, 255, 255) !default;
+$color-background-button-icon: rgba(0, 0, 0, 0) !default;
+$color-background-button-icon-hover: rgb(244, 246, 249) !default;
+$color-background-button-icon-focus: rgb(244, 246, 249) !default;
+$color-background-button-icon-active: rgb(238, 241, 246) !default;
+$color-background-button-icon-disabled: rgb(255, 255, 255) !default;
+$color-background-button-inverse: rgba(0, 0, 0, 0) !default;
+$color-background-button-inverse-active: rgba(0, 0, 0, 0.24) !default;
+$color-background-button-inverse-disabled: rgba(0, 0, 0, 0) !default;
+$color-background-modal-button: rgba(0, 0, 0, 0.07) !default;
+$color-background-modal-button-active: rgba(0, 0, 0, 0.16) !default;
+$color-background-input: rgb(255, 255, 255) !default;
+$color-background-input-active: rgb(255, 255, 255) !default;
+$color-background-input-checkbox: rgb(255, 255, 255) !default;
+$color-background-input-checkbox-disabled: rgb(216, 221, 230) !default;
+$color-background-input-checkbox-selected: rgb(21, 137, 238) !default;
+$color-background-input-disabled: rgb(224, 229, 238) !default;
+$color-background-input-error: rgb(255, 221, 225) !default;
+$color-background-input-search: rgba(0, 0, 0, 0.16) !default;
+$color-background-pill: rgb(255, 255, 255) !default;
+$color-background-image-overlay: rgba(0, 0, 0, 0.4) !default;
+$color-background-destructive: rgb(194, 57, 52) !default;
+$color-background-destructive-hover: rgb(166, 26, 20) !default;
+$color-background-destructive-active: rgb(135, 5, 0) !default;
+$color-background-info: rgb(84, 105, 141) !default;
+$color-background-error: rgb(212, 80, 76) !default;
+$color-background-error-dark: rgb(194, 57, 52) !default;
+$color-background-error-alt: rgb(234, 130, 136) !default;
+$color-background-offline: rgb(68, 68, 68) !default;
+$color-background-success: rgb(75, 202, 129) !default;
+$color-background-success-dark: rgb(4, 132, 75) !default;
+$color-background-toast: rgb(84, 105, 141) !default;
+$color-background-toast-success: rgb(4, 132, 75) !default;
+$color-background-toast-error: rgb(194, 57, 52) !default;
+$color-background-warning: rgb(255, 183, 93) !default;
+$color-background-icon-waffle: rgb(84, 105, 141) !default;
+$color-border: rgb(216, 221, 230) !default;
+$color-border-brand: rgb(21, 137, 238) !default;
+$color-border-brand-dark: rgb(0, 112, 210) !default;
+$color-border-customer: rgb(255, 154, 60) !default;
+$color-border-destructive: rgb(194, 57, 52) !default;
+$color-border-destructive-hover: rgb(166, 26, 20) !default;
+$color-border-destructive-active: rgb(135, 5, 0) !default;
+$color-border-info: rgb(84, 105, 141) !default;
+$color-border-error: rgb(194, 57, 52) !default;
+$color-border-error-alt: rgb(234, 130, 136) !default;
+$color-border-error-dark: rgb(234, 130, 136) !default;
+$color-border-offline: rgb(68, 68, 68) !default;
+$color-border-success: rgb(75, 202, 129) !default;
+$color-border-success-dark: rgb(4, 132, 75) !default;
+$color-border-warning: rgb(255, 183, 93) !default;
+$color-border-inverse: rgb(6, 28, 63) !default;
+$color-border-tab-selected: rgb(0, 112, 210) !default;
+$color-border-separator: rgb(244, 246, 249) !default;
+$color-border-separator-alt: rgb(216, 221, 230) !default;
+$color-border-separator-alt-2: rgb(168, 183, 199) !default;
+$color-border-separator-inverse: rgb(42, 66, 108) !default;
+$color-border-row-selected: rgb(0, 112, 210) !default;
+$color-border-row-selected-hover: rgb(21, 137, 238) !default;
+$color-border-hint: rgb(42, 66, 108) !default;
+$color-border-selection: rgb(0, 112, 210) !default;
+$color-border-selection-hover: rgb(21, 137, 238) !default;
+$color-border-selection-active: rgb(244, 246, 249) !default;
+$color-border-canvas-element-selection: rgb(94, 180, 255) !default;
+$color-border-canvas-element-selection-hover: rgb(0, 95, 178) !default;
+$color-border-context-bar-divider: rgba(255, 255, 255, 0.2) !default;
+$color-border-context-bar-item: rgba(0, 0, 0, 0.2) !default;
+$color-border-context-bar-inverse-item: rgba(255, 255, 255, 0.2) !default;
+$color-border-context-bar-theme-default: rgb(0, 161, 223) !default;
+$color-border-context-bar-theme-default-alt: rgb(223, 228, 238) !default;
+$color-border-context-bar-theme-default-hover: rgb(11, 35, 153) !default;
+$color-border-context-bar-theme-default-active: rgb(223, 228, 238) !default;
+$color-border-icon-inverse-hint: rgba(255, 255, 255, 0.5) !default;
+$color-border-icon-inverse-hint-hover: rgba(255, 255, 255, 0.75) !default;
+$color-border-button-brand: rgb(0, 112, 210) !default;
+$color-border-button-brand-disabled: rgba(0, 0, 0, 0) !default;
+$color-border-button-default: rgb(216, 221, 230) !default;
+$color-border-button-inverse-disabled: rgba(255, 255, 255, 0.15) !default;
+$color-border-input: rgb(216, 221, 230) !default;
+$color-border-input-active: rgb(21, 137, 238) !default;
+$color-border-input-disabled: rgb(168, 183, 199) !default;
+$color-border-input-checkbox-selected-checkmark: rgb(255, 255, 255) !default;
+$color-border-tab-active: rgb(255, 255, 255) !default;
+$color-border-toggle-checked: rgb(255, 255, 255) !default;
+$border-radius-small: .125rem !default;
+$border-radius-medium: .25rem !default;
+$border-radius-large: .5rem !default;
+$border-radius-pill: 15rem !default;
+$border-radius-circle: 50% !default;
+$font-family: 'Salesforce Sans', Arial, sans-serif !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
+$font-size-x-small: 0.625rem !default;
+$font-size-small: 0.875rem !default;
+$font-size-medium: 1rem !default;
+$font-size-medium-a: 1.125rem !default;
+$font-size-large: 1.25rem !default;
+$font-size-x-large: 1.5rem !default;
+$font-size-x-large-a: 1.57rem !default;
+$font-size-xx-large: 2rem !default;
+$line-height-heading: 1.25 !default;
+$line-height-text: 1.375 !default;
+$line-height-reset: 1 !default;
+$line-height-tab: 2.5rem !default;
+$line-height-button: 1.875rem !default;
+$line-height-button-small: 1.75rem !default;
+$line-height-toggle: 1.3rem !default;
+$opacity-5: 0.5 !default;
+$opacity-8: 0.8 !default;
+$elevation-shadow-3-below: inset 0px 3px 3px 0px rgba(0,0,0,.16) !default;
+$elevation-shadow-0: none !default;
+$elevation-shadow-2: 0px 2px 2px 0px rgba(0,0,0,.16) !default;
+$elevation-shadow-4: 0px 4px 4px 0px rgba(0,0,0,.16) !default;
+$elevation-shadow-8: 0px 8px 8px 0px rgba(0,0,0,.16) !default;
+$elevation-shadow-16: 0px 16px 16px 0px rgba(0,0,0,.16) !default;
+$elevation-shadow-32: 0px 32px 32px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-3-below: inset 0px -3px 3px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-0: none !default;
+$elevation-inverse-shadow-2: 0px -2px 2px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-4: 0px -4px 4px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-8: 0px -8px 8px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-16: 0px -16px 16px 0px rgba(0,0,0,.16) !default;
+$elevation-inverse-shadow-32: 0px -32px 32px 0px rgba(0,0,0,.16) !default;
+$shadow-action-overflow-footer: 0 -2px 4px #F4F6F9 !default;
+$shadow-overlay: 0 -2px 4px rgba(0,0,0,.07) !default;
+$shadow-drag: 0px 2px 4px 0px rgba(0,0,0,.40) !default;
+$shadow-drop-down: 0px 2px 3px 0px rgba(0,0,0,.16) !default;
+$shadow-header: 0 2px 4px rgba(0,0,0,.07) !default;
+$shadow-button: 0px 1px 1px 0px rgba(0,0,0,.05) !default;
+$shadow-button-focus: 0 0 3px #0070D2 !default;
+$shadow-button-focus-inverse: 0 0 3px #E0E5EE !default;
+$shadow-inline-edit: 0 2px 4px 4px rgba(0,0,0,.16) !default;
+$shadow-focus-inset: 0 0 2px 2px inset #1589EE !default;
+$shadow-docked: 0 -2px 2px 0 rgba(0,0,0,.16) !default;
+$shadow-image: 0 1px 1px rgba(0,0,0,.16) !default;
+$size-xx-small: 6rem !default;
+$size-x-small: 12rem !default;
+$size-small: 15rem !default;
+$size-medium: 20rem !default;
+$size-large: 25rem !default;
+$size-x-large: 40rem !default;
+$size-xx-large: 60rem !default;
+$square-icon-utility-small: 1rem !default;
+$square-icon-utility-medium: 1.25rem !default;
+$square-icon-utility-large: 1.5rem !default;
+$square-icon-large-boundary: 3rem !default;
+$square-icon-large-boundary-alt: 5rem !default;
+$square-icon-large-content: 2rem !default;
+$square-icon-medium: 2.375rem !default;
+$square-icon-medium-boundary: 2rem !default;
+$square-icon-medium-boundary-alt: 2.25rem !default;
+$square-icon-medium-content: 1rem !default;
+$square-icon-medium-content-alt: 0.875rem !default;
+$square-icon-small: 1rem !default;
+$square-icon-small-boundary: 1.5rem !default;
+$square-icon-small-content: .75rem !default;
+$square-icon-x-small-boundary: 1.25rem !default;
+$square-icon-xx-small-boundary: 1rem !default;
+$square-icon-xx-small-content: .875rem !default;
+$square-icon-x-small-content: .5rem !default;
+$square-icon-large: 3.125rem !default;
+$square-toggle-slider: 1.25rem !default;
+$width-toggle: 3rem !default;
+$height-toggle: 1.5rem !default;
+$height-context-bar: 2.5rem !default;
+$height-pill: 1.625rem !default;
+$border-width-thin: 1px !default;
+$border-width-thick: 2px !default;
+$spacing-none: 0 !default;
+$spacing-xxx-small: 0.125rem !default;
+$spacing-xx-small: 0.25rem !default;
+$spacing-x-small: 0.5rem !default;
+$spacing-small: 0.75rem !default;
+$spacing-medium: 1rem !default;
+$spacing-large: 1.5rem !default;
+$spacing-x-large: 2rem !default;
+$spacing-xx-large: 3rem !default;
+$color-text-action-label: rgb(84, 105, 141) !default;
+$color-text-action-label-active: rgb(22, 50, 92) !default;
+$color-text-brand: rgb(21, 137, 238) !default;
+$color-text-browser: rgb(255, 255, 255) !default;
+$color-text-browser-active: rgba(0, 0, 0, 0.4) !default;
+$color-text-customer: rgb(255, 154, 60) !default;
+$color-text-default: rgb(22, 50, 92) !default;
+$color-text-error: rgb(194, 57, 52) !default;
+$color-text-input-disabled: rgb(84, 105, 141) !default;
+$color-text-input-focus-inverse: rgb(22, 50, 92) !default;
+$color-text-input-icon: rgb(159, 170, 181) !default;
+$color-text-inverse: rgb(255, 255, 255) !default;
+$color-text-inverse-weak: rgb(159, 170, 181) !default;
+$color-text-inverse-active: rgb(94, 180, 255) !default;
+$color-text-inverse-hover: rgb(159, 170, 181) !default;
+$color-text-link: rgb(0, 112, 210) !default;
+$color-text-link-active: rgb(0, 57, 107) !default;
+$color-text-link-disabled: rgb(22, 50, 92) !default;
+$color-text-link-focus: rgb(0, 95, 178) !default;
+$color-text-link-hover: rgb(0, 95, 178) !default;
+$color-text-link-inverse: rgb(255, 255, 255) !default;
+$color-text-link-inverse-hover: rgba(255, 255, 255, 0.75) !default;
+$color-text-link-inverse-active: rgba(255, 255, 255, 0.5) !default;
+$color-text-link-inverse-disabled: rgba(255, 255, 255, 0.15) !default;
+$color-text-modal: rgb(255, 255, 255) !default;
+$color-text-modal-button: rgb(84, 105, 141) !default;
+$color-text-stage-left: rgb(224, 229, 238) !default;
+$color-text-tab-label: rgb(22, 50, 92) !default;
+$color-text-tab-label-selected: rgb(0, 112, 210) !default;
+$color-text-tab-label-hover: rgb(0, 95, 178) !default;
+$color-text-tab-label-focus: rgb(0, 95, 178) !default;
+$color-text-tab-label-active: rgb(0, 57, 107) !default;
+$color-text-tab-label-disabled: rgb(224, 229, 238) !default;
+$color-text-toast: rgb(224, 229, 238) !default;
+$color-text-warning: rgb(255, 183, 93) !default;
+$color-text-warning-alt: rgb(132, 72, 0) !default;
+$color-text-weak: rgb(84, 105, 141) !default;
+$color-text-icon-brand: rgb(0, 112, 210) !default;
+$color-text-icon-utility: rgb(159, 170, 181) !default;
+$color-text-toggle-disabled: rgb(216, 221, 230) !default;
+$color-text-context-bar: rgb(84, 105, 141) !default;
+$color-text-context-bar-inverse: rgb(255, 255, 255) !default;
+$color-text-context-bar-action-trigger: rgba(255, 255, 255, 0.4) !default;
+$color-text-button-brand: rgb(255, 255, 255) !default;
+$color-text-button-brand-hover: rgb(255, 255, 255) !default;
+$color-text-button-brand-active: rgb(255, 255, 255) !default;
+$color-text-button-brand-disabled: rgb(255, 255, 255) !default;
+$color-text-button-default: rgb(0, 112, 210) !default;
+$color-text-button-default-hover: rgb(0, 112, 210) !default;
+$color-text-button-default-active: rgb(0, 112, 210) !default;
+$color-text-button-default-disabled: rgb(216, 221, 230) !default;
+$color-text-button-default-hint: rgb(159, 170, 181) !default;
+$color-text-button-inverse: rgb(224, 229, 238) !default;
+$color-text-button-inverse-disabled: rgba(255, 255, 255, 0.15) !default;
+$color-text-icon-default: rgb(84, 105, 141) !default;
+$color-text-icon-default-hint: rgb(159, 170, 181) !default;
+$color-text-icon-inverse-hint: rgba(255, 255, 255, 0.5) !default;
+$color-text-icon-default-hint-borderless: rgb(224, 229, 238) !default;
+$color-text-icon-default-hover: rgb(0, 112, 210) !default;
+$color-text-icon-default-active: rgb(0, 57, 107) !default;
+$color-text-icon-default-disabled: rgb(216, 221, 230) !default;
+$color-text-icon-inverse: rgb(255, 255, 255) !default;
+$color-text-icon-inverse-hover: rgb(255, 255, 255) !default;
+$color-text-icon-inverse-active: rgb(255, 255, 255) !default;
+$color-text-icon-inverse-disabled: rgba(255, 255, 255, 0.15) !default;
+$color-text-icon-inverse-hint-hover: rgba(255, 255, 255, 0.75) !default;
+$color-text-label: rgb(84, 105, 141) !default;
+$color-text-placeholder: rgb(84, 105, 141) !default;
+$color-text-placeholder-inverse: rgb(224, 229, 238) !default;
+$color-text-required: rgb(194, 57, 52) !default;
+$color-text-pill: rgb(0, 112, 210) !default;
+$color-text-success: rgb(2, 128, 72) !default;
+$duration-instantly: 0s !default;
+$duration-immediately: 0.05s !default;
+$duration-quickly: 0.1s !default;
+$duration-promptly: 0.2s !default;
+$duration-slowly: 0.4s !default;
+$duration-paused: 3.2s !default;
+$duration-toast-short: 4.8s !default;
+$duration-toast-medium: 9.6s !default;
+$z-index-toast: 10000 !default;
+$z-index-modal: 9000 !default;
+$z-index-overlay: 8000 !default;
+$z-index-dropdown: 7000 !default;
+$z-index-dialog: 6000 !default;
+$z-index-popup: 5000 !default;
+$z-index-default: 1 !default;
+$z-index-deepdive: -99999 !default;
+$force-base-map: (
+  "elevation-3-below": (-3),
+  "elevation-0": (0),
+  "elevation-2": (2),
+  "elevation-4": (4),
+  "elevation-8": (8),
+  "elevation-16": (16),
+  "elevation-32": (32),
+  "color-background": (rgb(244, 246, 249)),
+  "color-background-alt": (rgb(255, 255, 255)),
+  "color-background-alt-2": (rgb(238, 241, 246)),
+  "color-background-alt-inverse": (rgb(22, 50, 92)),
+  "color-background-row-hover": (rgb(244, 246, 249)),
+  "color-background-row-active": (rgb(238, 241, 246)),
+  "color-background-row-selected": (rgb(240, 248, 252)),
+  "color-background-row-new": (rgb(217, 255, 223)),
+  "color-background-inverse": (rgb(6, 28, 63)),
+  "color-background-anchor": (rgb(244, 246, 249)),
+  "color-background-browser": (rgb(84, 105, 141)),
+  "color-background-chrome-mobile": (rgb(0, 112, 210)),
+  "color-background-chrome-desktop": (rgb(255, 255, 255)),
+  "color-background-customer": (rgb(255, 154, 60)),
+  "color-background-highlight": (rgb(250, 255, 189)),
+  "color-background-highlight-search": (rgb(255, 240, 63)),
+  "color-background-selection": (rgb(216, 237, 255)),
+  "color-background-actionbar-icon-utility": (rgb(84, 105, 141)),
+  "color-background-indicator-dot": (rgb(22, 50, 92)),
+  "color-background-spinner-dot": (rgb(159, 170, 181)),
+  "color-background-modal": (rgb(255, 255, 255)),
+  "color-background-modal-brand": (rgb(0, 112, 210)),
+  "color-background-notification-badge": (rgb(194, 57, 52)),
+  "color-background-notification-badge-hover": (rgb(0, 95, 178)),
+  "color-background-notification-badge-focus": (rgb(0, 95, 178)),
+  "color-background-notification-badge-active": (rgb(0, 57, 107)),
+  "color-background-notification": (rgb(255, 255, 255)),
+  "color-background-notification-new": (rgb(240, 248, 252)),
+  "color-background-org-switcher-arrow": (rgb(6, 28, 63)),
+  "color-background-payload": (rgb(244, 246, 249)),
+  "color-background-post": (rgb(247, 249, 251)),
+  "color-background-utility-bar-hover": (rgb(224, 229, 238)),
+  "color-background-utility-bar-active": (rgb(21, 137, 238)),
+  "color-background-shade": (rgb(224, 229, 238)),
+  "color-background-shade-dark": (rgb(216, 221, 230)),
+  "color-background-stencil": (rgb(238, 241, 246)),
+  "color-background-stencil-alt": (rgb(224, 229, 238)),
+  "color-background-temp-modal": (rgba(126, 140, 153, 0.8)),
+  "color-background-temp-modal-tint": (rgba(126, 140, 153, 0.8)),
+  "color-background-temp-modal-tint-alt": (rgba(255, 255, 255, 0.75)),
+  "color-background-backdrop": (rgba(255, 255, 255, 0.75)),
+  "color-background-backdrop-tint": (rgba(240, 248, 252, 0.75)),
+  "color-background-scrollbar": (rgb(224, 229, 238)),
+  "color-background-scrollbar-track": (rgb(168, 183, 199)),
+  "color-brand": (rgb(21, 137, 238)),
+  "color-brand-dark": (rgb(0, 112, 210)),
+  "color-brand-darker": (rgb(0, 95, 178)),
+  "color-background-toggle": (rgb(159, 170, 181)),
+  "color-background-toggle-disabled": (rgb(159, 170, 181)),
+  "color-background-toggle-hover": (rgb(126, 140, 153)),
+  "color-background-toggle-active": (rgb(0, 112, 210)),
+  "color-background-toggle-active-hover": (rgb(0, 95, 178)),
+  "color-background-context-bar": (rgb(255, 255, 255)),
+  "color-background-context-bar-brand-accent": (rgb(0, 161, 223)),
+  "color-background-context-bar-item-hover": (rgb(247, 249, 251)),
+  "color-background-context-bar-item-active": (rgb(247, 249, 251)),
+  "color-background-context-tab-bar-item": (rgb(255, 255, 255)),
+  "color-background-context-bar-inverse-item-hover": (rgba(255, 255, 255, 0.2)),
+  "color-background-context-bar-inverse-item-active": (rgba(255, 255, 255, 0.4)),
+  "color-background-context-bar-shadow": (linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%)),
+  "color-background-context-bar-action-highlight": (rgba(255, 255, 255, 0.2)),
+  "color-background-page-header": (rgb(247, 249, 251)),
+  "color-background-button-brand": (rgb(0, 112, 210)),
+  "color-background-button-brand-active": (rgb(0, 57, 107)),
+  "color-background-button-brand-hover": (rgb(0, 95, 178)),
+  "color-background-button-brand-disabled": (rgb(224, 229, 238)),
+  "color-background-button-default": (rgb(255, 255, 255)),
+  "color-background-button-default-hover": (rgb(244, 246, 249)),
+  "color-background-button-default-focus": (rgb(244, 246, 249)),
+  "color-background-button-default-active": (rgb(238, 241, 246)),
+  "color-background-button-default-disabled": (rgb(255, 255, 255)),
+  "color-background-button-icon": (rgba(0, 0, 0, 0)),
+  "color-background-button-icon-hover": (rgb(244, 246, 249)),
+  "color-background-button-icon-focus": (rgb(244, 246, 249)),
+  "color-background-button-icon-active": (rgb(238, 241, 246)),
+  "color-background-button-icon-disabled": (rgb(255, 255, 255)),
+  "color-background-button-inverse": (rgba(0, 0, 0, 0)),
+  "color-background-button-inverse-active": (rgba(0, 0, 0, 0.24)),
+  "color-background-button-inverse-disabled": (rgba(0, 0, 0, 0)),
+  "color-background-modal-button": (rgba(0, 0, 0, 0.07)),
+  "color-background-modal-button-active": (rgba(0, 0, 0, 0.16)),
+  "color-background-input": (rgb(255, 255, 255)),
+  "color-background-input-active": (rgb(255, 255, 255)),
+  "color-background-input-checkbox": (rgb(255, 255, 255)),
+  "color-background-input-checkbox-disabled": (rgb(216, 221, 230)),
+  "color-background-input-checkbox-selected": (rgb(21, 137, 238)),
+  "color-background-input-disabled": (rgb(224, 229, 238)),
+  "color-background-input-error": (rgb(255, 221, 225)),
+  "color-background-input-search": (rgba(0, 0, 0, 0.16)),
+  "color-background-pill": (rgb(255, 255, 255)),
+  "color-background-image-overlay": (rgba(0, 0, 0, 0.4)),
+  "color-background-destructive": (rgb(194, 57, 52)),
+  "color-background-destructive-hover": (rgb(166, 26, 20)),
+  "color-background-destructive-active": (rgb(135, 5, 0)),
+  "color-background-info": (rgb(84, 105, 141)),
+  "color-background-error": (rgb(212, 80, 76)),
+  "color-background-error-dark": (rgb(194, 57, 52)),
+  "color-background-error-alt": (rgb(234, 130, 136)),
+  "color-background-offline": (rgb(68, 68, 68)),
+  "color-background-success": (rgb(75, 202, 129)),
+  "color-background-success-dark": (rgb(4, 132, 75)),
+  "color-background-toast": (rgb(84, 105, 141)),
+  "color-background-toast-success": (rgb(4, 132, 75)),
+  "color-background-toast-error": (rgb(194, 57, 52)),
+  "color-background-warning": (rgb(255, 183, 93)),
+  "color-background-icon-waffle": (rgb(84, 105, 141)),
+  "color-border": (rgb(216, 221, 230)),
+  "color-border-brand": (rgb(21, 137, 238)),
+  "color-border-brand-dark": (rgb(0, 112, 210)),
+  "color-border-customer": (rgb(255, 154, 60)),
+  "color-border-destructive": (rgb(194, 57, 52)),
+  "color-border-destructive-hover": (rgb(166, 26, 20)),
+  "color-border-destructive-active": (rgb(135, 5, 0)),
+  "color-border-info": (rgb(84, 105, 141)),
+  "color-border-error": (rgb(194, 57, 52)),
+  "color-border-error-alt": (rgb(234, 130, 136)),
+  "color-border-error-dark": (rgb(234, 130, 136)),
+  "color-border-offline": (rgb(68, 68, 68)),
+  "color-border-success": (rgb(75, 202, 129)),
+  "color-border-success-dark": (rgb(4, 132, 75)),
+  "color-border-warning": (rgb(255, 183, 93)),
+  "color-border-inverse": (rgb(6, 28, 63)),
+  "color-border-tab-selected": (rgb(0, 112, 210)),
+  "color-border-separator": (rgb(244, 246, 249)),
+  "color-border-separator-alt": (rgb(216, 221, 230)),
+  "color-border-separator-alt-2": (rgb(168, 183, 199)),
+  "color-border-separator-inverse": (rgb(42, 66, 108)),
+  "color-border-row-selected": (rgb(0, 112, 210)),
+  "color-border-row-selected-hover": (rgb(21, 137, 238)),
+  "color-border-hint": (rgb(42, 66, 108)),
+  "color-border-selection": (rgb(0, 112, 210)),
+  "color-border-selection-hover": (rgb(21, 137, 238)),
+  "color-border-selection-active": (rgb(244, 246, 249)),
+  "color-border-canvas-element-selection": (rgb(94, 180, 255)),
+  "color-border-canvas-element-selection-hover": (rgb(0, 95, 178)),
+  "color-border-context-bar-divider": (rgba(255, 255, 255, 0.2)),
+  "color-border-context-bar-item": (rgba(0, 0, 0, 0.2)),
+  "color-border-context-bar-inverse-item": (rgba(255, 255, 255, 0.2)),
+  "color-border-context-bar-theme-default": (rgb(0, 161, 223)),
+  "color-border-context-bar-theme-default-alt": (rgb(223, 228, 238)),
+  "color-border-context-bar-theme-default-hover": (rgb(11, 35, 153)),
+  "color-border-context-bar-theme-default-active": (rgb(223, 228, 238)),
+  "color-border-icon-inverse-hint": (rgba(255, 255, 255, 0.5)),
+  "color-border-icon-inverse-hint-hover": (rgba(255, 255, 255, 0.75)),
+  "color-border-button-brand": (rgb(0, 112, 210)),
+  "color-border-button-brand-disabled": (rgba(0, 0, 0, 0)),
+  "color-border-button-default": (rgb(216, 221, 230)),
+  "color-border-button-inverse-disabled": (rgba(255, 255, 255, 0.15)),
+  "color-border-input": (rgb(216, 221, 230)),
+  "color-border-input-active": (rgb(21, 137, 238)),
+  "color-border-input-disabled": (rgb(168, 183, 199)),
+  "color-border-input-checkbox-selected-checkmark": (rgb(255, 255, 255)),
+  "color-border-tab-active": (rgb(255, 255, 255)),
+  "color-border-toggle-checked": (rgb(255, 255, 255)),
+  "border-radius-small": (.125rem),
+  "border-radius-medium": (.25rem),
+  "border-radius-large": (.5rem),
+  "border-radius-pill": (15rem),
+  "border-radius-circle": (50%),
+  "font-family": ('Salesforce Sans', Arial, sans-serif),
+  "font-weight-light": (300),
+  "font-weight-regular": (400),
+  "font-weight-bold": (700),
+  "font-size-x-small": (0.625rem),
+  "font-size-small": (0.875rem),
+  "font-size-medium": (1rem),
+  "font-size-medium-a": (1.125rem),
+  "font-size-large": (1.25rem),
+  "font-size-x-large": (1.5rem),
+  "font-size-x-large-a": (1.57rem),
+  "font-size-xx-large": (2rem),
+  "line-height-heading": (1.25),
+  "line-height-text": (1.375),
+  "line-height-reset": (1),
+  "line-height-tab": (2.5rem),
+  "line-height-button": (1.875rem),
+  "line-height-button-small": (1.75rem),
+  "line-height-toggle": (1.3rem),
+  "opacity-5": (0.5),
+  "opacity-8": (0.8),
+  "elevation-shadow-3-below": (inset 0px 3px 3px 0px rgba(0,0,0,.16)),
+  "elevation-shadow-0": (none),
+  "elevation-shadow-2": (0px 2px 2px 0px rgba(0,0,0,.16)),
+  "elevation-shadow-4": (0px 4px 4px 0px rgba(0,0,0,.16)),
+  "elevation-shadow-8": (0px 8px 8px 0px rgba(0,0,0,.16)),
+  "elevation-shadow-16": (0px 16px 16px 0px rgba(0,0,0,.16)),
+  "elevation-shadow-32": (0px 32px 32px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-3-below": (inset 0px -3px 3px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-0": (none),
+  "elevation-inverse-shadow-2": (0px -2px 2px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-4": (0px -4px 4px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-8": (0px -8px 8px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-16": (0px -16px 16px 0px rgba(0,0,0,.16)),
+  "elevation-inverse-shadow-32": (0px -32px 32px 0px rgba(0,0,0,.16)),
+  "shadow-action-overflow-footer": (0 -2px 4px #F4F6F9),
+  "shadow-overlay": (0 -2px 4px rgba(0,0,0,.07)),
+  "shadow-drag": (0px 2px 4px 0px rgba(0,0,0,.40)),
+  "shadow-drop-down": (0px 2px 3px 0px rgba(0,0,0,.16)),
+  "shadow-header": (0 2px 4px rgba(0,0,0,.07)),
+  "shadow-button": (0px 1px 1px 0px rgba(0,0,0,.05)),
+  "shadow-button-focus": (0 0 3px #0070D2),
+  "shadow-button-focus-inverse": (0 0 3px #E0E5EE),
+  "shadow-inline-edit": (0 2px 4px 4px rgba(0,0,0,.16)),
+  "shadow-focus-inset": (0 0 2px 2px inset #1589EE),
+  "shadow-docked": (0 -2px 2px 0 rgba(0,0,0,.16)),
+  "shadow-image": (0 1px 1px rgba(0,0,0,.16)),
+  "size-xx-small": (6rem),
+  "size-x-small": (12rem),
+  "size-small": (15rem),
+  "size-medium": (20rem),
+  "size-large": (25rem),
+  "size-x-large": (40rem),
+  "size-xx-large": (60rem),
+  "square-icon-utility-small": (1rem),
+  "square-icon-utility-medium": (1.25rem),
+  "square-icon-utility-large": (1.5rem),
+  "square-icon-large-boundary": (3rem),
+  "square-icon-large-boundary-alt": (5rem),
+  "square-icon-large-content": (2rem),
+  "square-icon-medium": (2.375rem),
+  "square-icon-medium-boundary": (2rem),
+  "square-icon-medium-boundary-alt": (2.25rem),
+  "square-icon-medium-content": (1rem),
+  "square-icon-medium-content-alt": (0.875rem),
+  "square-icon-small": (1rem),
+  "square-icon-small-boundary": (1.5rem),
+  "square-icon-small-content": (.75rem),
+  "square-icon-x-small-boundary": (1.25rem),
+  "square-icon-xx-small-boundary": (1rem),
+  "square-icon-xx-small-content": (.875rem),
+  "square-icon-x-small-content": (.5rem),
+  "square-icon-large": (3.125rem),
+  "square-toggle-slider": (1.25rem),
+  "width-toggle": (3rem),
+  "height-toggle": (1.5rem),
+  "height-context-bar": (2.5rem),
+  "height-pill": (1.625rem),
+  "border-width-thin": (1px),
+  "border-width-thick": (2px),
+  "spacing-none": (0),
+  "spacing-xxx-small": (0.125rem),
+  "spacing-xx-small": (0.25rem),
+  "spacing-x-small": (0.5rem),
+  "spacing-small": (0.75rem),
+  "spacing-medium": (1rem),
+  "spacing-large": (1.5rem),
+  "spacing-x-large": (2rem),
+  "spacing-xx-large": (3rem),
+  "color-text-action-label": (rgb(84, 105, 141)),
+  "color-text-action-label-active": (rgb(22, 50, 92)),
+  "color-text-brand": (rgb(21, 137, 238)),
+  "color-text-browser": (rgb(255, 255, 255)),
+  "color-text-browser-active": (rgba(0, 0, 0, 0.4)),
+  "color-text-customer": (rgb(255, 154, 60)),
+  "color-text-default": (rgb(22, 50, 92)),
+  "color-text-error": (rgb(194, 57, 52)),
+  "color-text-input-disabled": (rgb(84, 105, 141)),
+  "color-text-input-focus-inverse": (rgb(22, 50, 92)),
+  "color-text-input-icon": (rgb(159, 170, 181)),
+  "color-text-inverse": (rgb(255, 255, 255)),
+  "color-text-inverse-weak": (rgb(159, 170, 181)),
+  "color-text-inverse-active": (rgb(94, 180, 255)),
+  "color-text-inverse-hover": (rgb(159, 170, 181)),
+  "color-text-link": (rgb(0, 112, 210)),
+  "color-text-link-active": (rgb(0, 57, 107)),
+  "color-text-link-disabled": (rgb(22, 50, 92)),
+  "color-text-link-focus": (rgb(0, 95, 178)),
+  "color-text-link-hover": (rgb(0, 95, 178)),
+  "color-text-link-inverse": (rgb(255, 255, 255)),
+  "color-text-link-inverse-hover": (rgba(255, 255, 255, 0.75)),
+  "color-text-link-inverse-active": (rgba(255, 255, 255, 0.5)),
+  "color-text-link-inverse-disabled": (rgba(255, 255, 255, 0.15)),
+  "color-text-modal": (rgb(255, 255, 255)),
+  "color-text-modal-button": (rgb(84, 105, 141)),
+  "color-text-stage-left": (rgb(224, 229, 238)),
+  "color-text-tab-label": (rgb(22, 50, 92)),
+  "color-text-tab-label-selected": (rgb(0, 112, 210)),
+  "color-text-tab-label-hover": (rgb(0, 95, 178)),
+  "color-text-tab-label-focus": (rgb(0, 95, 178)),
+  "color-text-tab-label-active": (rgb(0, 57, 107)),
+  "color-text-tab-label-disabled": (rgb(224, 229, 238)),
+  "color-text-toast": (rgb(224, 229, 238)),
+  "color-text-warning": (rgb(255, 183, 93)),
+  "color-text-warning-alt": (rgb(132, 72, 0)),
+  "color-text-weak": (rgb(84, 105, 141)),
+  "color-text-icon-brand": (rgb(0, 112, 210)),
+  "color-text-icon-utility": (rgb(159, 170, 181)),
+  "color-text-toggle-disabled": (rgb(216, 221, 230)),
+  "color-text-context-bar": (rgb(84, 105, 141)),
+  "color-text-context-bar-inverse": (rgb(255, 255, 255)),
+  "color-text-context-bar-action-trigger": (rgba(255, 255, 255, 0.4)),
+  "color-text-button-brand": (rgb(255, 255, 255)),
+  "color-text-button-brand-hover": (rgb(255, 255, 255)),
+  "color-text-button-brand-active": (rgb(255, 255, 255)),
+  "color-text-button-brand-disabled": (rgb(255, 255, 255)),
+  "color-text-button-default": (rgb(0, 112, 210)),
+  "color-text-button-default-hover": (rgb(0, 112, 210)),
+  "color-text-button-default-active": (rgb(0, 112, 210)),
+  "color-text-button-default-disabled": (rgb(216, 221, 230)),
+  "color-text-button-default-hint": (rgb(159, 170, 181)),
+  "color-text-button-inverse": (rgb(224, 229, 238)),
+  "color-text-button-inverse-disabled": (rgba(255, 255, 255, 0.15)),
+  "color-text-icon-default": (rgb(84, 105, 141)),
+  "color-text-icon-default-hint": (rgb(159, 170, 181)),
+  "color-text-icon-inverse-hint": (rgba(255, 255, 255, 0.5)),
+  "color-text-icon-default-hint-borderless": (rgb(224, 229, 238)),
+  "color-text-icon-default-hover": (rgb(0, 112, 210)),
+  "color-text-icon-default-active": (rgb(0, 57, 107)),
+  "color-text-icon-default-disabled": (rgb(216, 221, 230)),
+  "color-text-icon-inverse": (rgb(255, 255, 255)),
+  "color-text-icon-inverse-hover": (rgb(255, 255, 255)),
+  "color-text-icon-inverse-active": (rgb(255, 255, 255)),
+  "color-text-icon-inverse-disabled": (rgba(255, 255, 255, 0.15)),
+  "color-text-icon-inverse-hint-hover": (rgba(255, 255, 255, 0.75)),
+  "color-text-label": (rgb(84, 105, 141)),
+  "color-text-placeholder": (rgb(84, 105, 141)),
+  "color-text-placeholder-inverse": (rgb(224, 229, 238)),
+  "color-text-required": (rgb(194, 57, 52)),
+  "color-text-pill": (rgb(0, 112, 210)),
+  "color-text-success": (rgb(2, 128, 72)),
+  "duration-instantly": (0s),
+  "duration-immediately": (0.05s),
+  "duration-quickly": (0.1s),
+  "duration-promptly": (0.2s),
+  "duration-slowly": (0.4s),
+  "duration-paused": (3.2s),
+  "duration-toast-short": (4.8s),
+  "duration-toast-medium": (9.6s),
+  "z-index-toast": (10000),
+  "z-index-modal": (9000),
+  "z-index-overlay": (8000),
+  "z-index-dropdown": (7000),
+  "z-index-dialog": (6000),
+  "z-index-popup": (5000),
+  "z-index-default": (1),
+  "z-index-deepdive": (-99999)
+);
+$action-change-owner: rgb(84, 105, 141) !default;
+$action-share: rgb(84, 105, 141) !default;
+$action-info: rgb(84, 105, 141) !default;
+$action-upload: rgb(84, 105, 141) !default;
+$action-change-record-type: rgb(84, 105, 141) !default;
+$action-check: rgb(84, 105, 141) !default;
+$action-download: rgb(84, 105, 141) !default;
+$action-edit-relationship: rgb(29, 204, 191) !default;
+$action-freeze-user: rgb(84, 105, 141) !default;
+$action-manage-perm-sets: rgb(84, 105, 141) !default;
+$action-password-unlock: rgb(84, 105, 141) !default;
+$action-refresh: rgb(84, 105, 141) !default;
+$action-remove: rgb(84, 105, 141) !default;
+$action-reset-password: rgb(84, 105, 141) !default;
+$action-user-activation: rgb(84, 105, 141) !default;
+$action-add-contact: rgb(160, 148, 237) !default;
+$action-approval: rgb(0, 198, 183) !default;
+$action-canvas: rgb(129, 153, 175) !default;
+$action-goal: rgb(86, 170, 223) !default;
+$action-opportunity-competitor: rgb(252, 185, 91) !default;
+$action-opportunity-line-item: rgb(252, 185, 91) !default;
+$action-opportunity-team-member: rgb(252, 185, 91) !default;
+$action-question-post-action: rgb(50, 175, 92) !default;
+$action-quote: rgb(136, 198, 81) !default;
+$action-reject: rgb(0, 198, 183) !default;
+$action-social-post: rgb(234, 116, 162) !default;
+$action-fallback: rgb(152, 149, 238) !default;
+$action-edit: rgb(29, 204, 191) !default;
+$action-delete: rgb(230, 113, 124) !default;
+$action-clone: rgb(108, 161, 233) !default;
+$action-follow: rgb(49, 185, 248) !default;
+$action-following: rgb(125, 207, 100) !default;
+$action-join-group: rgb(119, 158, 242) !default;
+$action-leave-group: rgb(243, 158, 88) !default;
+$action-edit-groups: rgb(52, 190, 205) !default;
+$action-share-post: rgb(101, 202, 228) !default;
+$action-user: rgb(101, 202, 228) !default;
+$action-share-file: rgb(186, 172, 147) !default;
+$action-new-task: rgb(75, 192, 118) !default;
+$action-new-contact: rgb(160, 148, 237) !default;
+$action-new-opportunity: rgb(252, 185, 91) !default;
+$action-new-case: rgb(242, 207, 91) !default;
+$action-new-lead: rgb(248, 137, 98) !default;
+$action-share-thanks: rgb(233, 105, 110) !default;
+$action-share-link: rgb(122, 154, 230) !default;
+$action-share-poll: rgb(105, 155, 225) !default;
+$action-new-event: rgb(235, 112, 146) !default;
+$action-new-child-case: rgb(250, 151, 92) !default;
+$action-log-a-call: rgb(72, 195, 204) !default;
+$action-new-note: rgb(230, 212, 120) !default;
+$action-new: rgb(51, 188, 231) !default;
+$action-filter: rgb(253, 144, 181) !default;
+$action-sort: rgb(250, 185, 165) !default;
+$action-description: rgb(125, 195, 125) !default;
+$action-defer: rgb(239, 126, 173) !default;
+$action-update: rgb(129, 180, 214) !default;
+$action-log-this-event: rgb(235, 112, 146) !default;
+$action-email: rgb(149, 174, 197) !default;
+$action-dial-in: rgb(139, 154, 227) !default;
+$action-map: rgb(118, 198, 238) !default;
+$action-call: rgb(31, 202, 160) !default;
+$action-google-news: rgb(245, 103, 91) !default;
+$action-web-link: rgb(86, 170, 223) !default;
+$action-submit-for-approval: rgb(80, 204, 122) !default;
+$action-search: rgb(72, 173, 235) !default;
+$action-close: rgb(239, 110, 100) !default;
+$action-back: rgb(13, 194, 217) !default;
+$action-office-365: rgb(255, 128, 65) !default;
+$action-concur: rgb(76, 195, 199) !default;
+$action-dropbox: rgb(82, 174, 249) !default;
+$action-evernote: rgb(134, 200, 111) !default;
+$action-docusign: rgb(80, 128, 219) !default;
+$action-more: rgb(98, 183, 237) !default;
+$action-notebook: rgb(230, 212, 120) !default;
+$action-new-notebook: rgb(230, 212, 120) !default;
+$action-preview: rgb(127, 141, 225) !default;
+$action-priority: rgb(251, 180, 57) !default;
+$action-default-custom-object: rgb(129, 153, 175) !default;
+$action-new-custom-object: rgb(167, 212, 77) !default;
+$action-lead-convert: rgb(248, 137, 98) !default;
+$action-new-account: rgb(127, 141, 225) !default;
+$action-new-person-account: rgb(127, 141, 225) !default;
+$action-new-campaign: rgb(244, 151, 86) !default;
+$action-new-group: rgb(131, 182, 255) !default;
+$action-update-status: rgb(30, 199, 190) !default;
+$action-new-custom-1: rgb(255, 123, 132) !default;
+$action-new-custom-2: rgb(207, 208, 92) !default;
+$action-new-custom-3: rgb(236, 180, 108) !default;
+$action-new-custom-4: rgb(225, 217, 81) !default;
+$action-new-custom-5: rgb(159, 219, 102) !default;
+$action-new-custom-6: rgb(84, 196, 115) !default;
+$action-new-custom-7: rgb(106, 137, 229) !default;
+$action-new-custom-8: rgb(80, 206, 185) !default;
+$action-new-custom-9: rgb(107, 158, 226) !default;
+$action-new-custom-10: rgb(100, 136, 227) !default;
+$action-new-custom-11: rgb(135, 132, 234) !default;
+$action-new-custom-12: rgb(220, 113, 209) !default;
+$action-new-custom-13: rgb(223, 97, 132) !default;
+$action-new-custom-14: rgb(60, 194, 179) !default;
+$action-new-custom-15: rgb(247, 126, 117) !default;
+$action-new-custom-16: rgb(233, 175, 103) !default;
+$action-new-custom-17: rgb(172, 211, 96) !default;
+$action-new-custom-18: rgb(77, 202, 118) !default;
+$action-new-custom-19: rgb(58, 190, 177) !default;
+$action-new-custom-20: rgb(72, 199, 200) !default;
+$action-new-custom-21: rgb(138, 122, 237) !default;
+$action-new-custom-22: rgb(139, 133, 249) !default;
+$action-new-custom-23: rgb(176, 112, 230) !default;
+$action-new-custom-24: rgb(229, 103, 152) !default;
+$action-new-custom-25: rgb(228, 111, 190) !default;
+$action-new-custom-26: rgb(118, 152, 240) !default;
+$action-new-custom-27: rgb(90, 176, 210) !default;
+$action-new-custom-28: rgb(137, 192, 89) !default;
+$action-new-custom-29: rgb(189, 210, 95) !default;
+$action-new-custom-30: rgb(245, 159, 113) !default;
+$action-new-custom-31: rgb(235, 104, 127) !default;
+$action-new-custom-32: rgb(56, 195, 147) !default;
+$action-new-custom-33: rgb(151, 207, 93) !default;
+$action-new-custom-34: rgb(213, 138, 106) !default;
+$action-new-custom-35: rgb(233, 99, 126) !default;
+$action-new-custom-36: rgb(212, 114, 212) !default;
+$action-new-custom-37: rgb(140, 137, 242) !default;
+$action-new-custom-38: rgb(83, 182, 215) !default;
+$action-new-custom-39: rgb(79, 190, 117) !default;
+$action-new-custom-40: rgb(131, 199, 94) !default;
+$action-new-custom-41: rgb(67, 181, 181) !default;
+$action-new-custom-42: rgb(207, 208, 91) !default;
+$action-new-custom-43: rgb(127, 147, 249) !default;
+$action-new-custom-44: rgb(200, 202, 88) !default;
+$action-new-custom-45: rgb(217, 88, 121) !default;
+$action-new-custom-46: rgb(103, 165, 231) !default;
+$action-new-custom-47: rgb(95, 204, 100) !default;
+$action-new-custom-48: rgb(239, 105, 127) !default;
+$action-new-custom-49: rgb(226, 92, 128) !default;
+$action-new-custom-50: rgb(73, 188, 211) !default;
+$action-new-custom-51: rgb(216, 199, 96) !default;
+$action-new-custom-52: rgb(238, 142, 111) !default;
+$action-new-custom-53: rgb(243, 110, 131) !default;
+$action-new-custom-54: rgb(234, 112, 177) !default;
+$action-new-custom-55: rgb(214, 110, 224) !default;
+$action-new-custom-56: rgb(113, 141, 235) !default;
+$action-new-custom-57: rgb(90, 156, 221) !default;
+$action-new-custom-58: rgb(52, 181, 157) !default;
+$action-new-custom-59: rgb(227, 208, 103) !default;
+$action-new-custom-60: rgb(191, 90, 136) !default;
+$action-new-custom-61: rgb(245, 115, 118) !default;
+$action-new-custom-62: rgb(107, 146, 220) !default;
+$action-new-custom-63: rgb(124, 207, 96) !default;
+$action-new-custom-64: rgb(97, 143, 216) !default;
+$action-new-custom-65: rgb(242, 121, 171) !default;
+$action-new-custom-66: rgb(216, 190, 95) !default;
+$action-new-custom-67: rgb(248, 125, 118) !default;
+$action-new-custom-68: rgb(242, 105, 121) !default;
+$action-new-custom-69: rgb(237, 99, 135) !default;
+$action-new-custom-70: rgb(231, 105, 180) !default;
+$action-new-custom-71: rgb(227, 110, 227) !default;
+$action-new-custom-72: rgb(141, 155, 251) !default;
+$action-new-custom-73: rgb(103, 158, 240) !default;
+$action-new-custom-74: rgb(65, 200, 160) !default;
+$action-new-custom-75: rgb(205, 159, 101) !default;
+$action-new-custom-76: rgb(219, 109, 122) !default;
+$action-new-custom-77: rgb(181, 93, 91) !default;
+$action-new-custom-78: rgb(90, 149, 221) !default;
+$action-new-custom-79: rgb(142, 211, 99) !default;
+$action-new-custom-80: rgb(101, 154, 213) !default;
+$action-new-custom-81: rgb(218, 98, 127) !default;
+$action-new-custom-82: rgb(209, 91, 151) !default;
+$action-new-custom-83: rgb(231, 128, 111) !default;
+$action-new-custom-84: rgb(246, 112, 123) !default;
+$action-new-custom-85: rgb(242, 104, 145) !default;
+$action-new-custom-86: rgb(226, 96, 171) !default;
+$action-new-custom-87: rgb(216, 118, 229) !default;
+$action-new-custom-88: rgb(153, 111, 230) !default;
+$action-new-custom-89: rgb(62, 153, 190) !default;
+$action-new-custom-90: rgb(34, 164, 138) !default;
+$action-new-custom-91: rgb(191, 123, 102) !default;
+$action-new-custom-92: rgb(81, 126, 130) !default;
+$action-new-custom-93: rgb(144, 77, 76) !default;
+$action-new-custom-94: rgb(67, 156, 186) !default;
+$action-new-custom-95: rgb(139, 207, 106) !default;
+$action-new-custom-96: rgb(109, 157, 227) !default;
+$action-new-custom-97: rgb(221, 96, 133) !default;
+$action-new-custom-98: rgb(225, 190, 92) !default;
+$action-new-custom-99: rgb(240, 133, 110) !default;
+$action-new-custom-100: rgb(225, 93, 118) !default;
+$action-apex: rgb(105, 110, 113) !default;
+$action-flow: rgb(0, 121, 188) !default;
+$action-announcement: rgb(254, 143, 96) !default;
+$action-record: rgb(125, 195, 125) !default;
+$action-log-event: rgb(108, 161, 233) !default;
+$action-add-relationship: rgb(98, 183, 237) !default;
+$action-remove-relationship: rgb(239, 110, 100) !default;
+$action-view-relationship: rgb(60, 151, 221) !default;
+$custom-1: rgb(255, 123, 132) !default;
+$custom-2: rgb(207, 208, 92) !default;
+$custom-3: rgb(236, 180, 108) !default;
+$custom-4: rgb(225, 217, 81) !default;
+$custom-5: rgb(159, 219, 102) !default;
+$custom-6: rgb(84, 196, 115) !default;
+$custom-7: rgb(106, 137, 229) !default;
+$custom-8: rgb(80, 206, 185) !default;
+$custom-9: rgb(107, 158, 226) !default;
+$custom-10: rgb(100, 136, 227) !default;
+$custom-11: rgb(135, 132, 234) !default;
+$custom-12: rgb(220, 113, 209) !default;
+$custom-13: rgb(223, 97, 132) !default;
+$custom-14: rgb(60, 194, 179) !default;
+$custom-15: rgb(247, 126, 117) !default;
+$custom-16: rgb(233, 175, 103) !default;
+$custom-17: rgb(172, 211, 96) !default;
+$custom-18: rgb(77, 202, 118) !default;
+$custom-19: rgb(58, 190, 177) !default;
+$custom-20: rgb(72, 199, 200) !default;
+$custom-21: rgb(138, 122, 237) !default;
+$custom-22: rgb(139, 133, 249) !default;
+$custom-23: rgb(176, 112, 230) !default;
+$custom-24: rgb(229, 103, 152) !default;
+$custom-25: rgb(228, 111, 190) !default;
+$custom-26: rgb(118, 152, 240) !default;
+$custom-27: rgb(90, 176, 210) !default;
+$custom-28: rgb(137, 192, 89) !default;
+$custom-29: rgb(189, 210, 95) !default;
+$custom-30: rgb(245, 159, 113) !default;
+$custom-31: rgb(235, 104, 127) !default;
+$custom-32: rgb(56, 195, 147) !default;
+$custom-33: rgb(151, 207, 93) !default;
+$custom-34: rgb(213, 138, 106) !default;
+$custom-35: rgb(233, 99, 126) !default;
+$custom-36: rgb(212, 114, 212) !default;
+$custom-37: rgb(140, 137, 242) !default;
+$custom-38: rgb(83, 182, 215) !default;
+$custom-39: rgb(79, 190, 117) !default;
+$custom-40: rgb(131, 199, 94) !default;
+$custom-41: rgb(67, 181, 181) !default;
+$custom-42: rgb(207, 208, 91) !default;
+$custom-43: rgb(127, 147, 249) !default;
+$custom-44: rgb(200, 202, 88) !default;
+$custom-45: rgb(217, 88, 121) !default;
+$custom-46: rgb(103, 165, 231) !default;
+$custom-47: rgb(95, 204, 100) !default;
+$custom-48: rgb(239, 105, 127) !default;
+$custom-49: rgb(226, 92, 128) !default;
+$custom-50: rgb(73, 188, 211) !default;
+$custom-51: rgb(216, 199, 96) !default;
+$custom-52: rgb(238, 142, 111) !default;
+$custom-53: rgb(243, 110, 131) !default;
+$custom-54: rgb(234, 112, 177) !default;
+$custom-55: rgb(214, 110, 224) !default;
+$custom-56: rgb(113, 141, 235) !default;
+$custom-57: rgb(90, 156, 221) !default;
+$custom-58: rgb(52, 181, 157) !default;
+$custom-59: rgb(227, 208, 103) !default;
+$custom-60: rgb(191, 90, 136) !default;
+$custom-61: rgb(245, 115, 118) !default;
+$custom-62: rgb(107, 146, 220) !default;
+$custom-63: rgb(124, 207, 96) !default;
+$custom-64: rgb(97, 143, 216) !default;
+$custom-65: rgb(242, 121, 171) !default;
+$custom-66: rgb(216, 190, 95) !default;
+$custom-67: rgb(248, 125, 118) !default;
+$custom-68: rgb(242, 105, 121) !default;
+$custom-69: rgb(237, 99, 135) !default;
+$custom-70: rgb(231, 105, 180) !default;
+$custom-71: rgb(227, 110, 227) !default;
+$custom-72: rgb(141, 155, 251) !default;
+$custom-73: rgb(103, 158, 240) !default;
+$custom-74: rgb(65, 200, 160) !default;
+$custom-75: rgb(205, 159, 101) !default;
+$custom-76: rgb(219, 109, 122) !default;
+$custom-77: rgb(181, 93, 91) !default;
+$custom-78: rgb(90, 149, 221) !default;
+$custom-79: rgb(142, 211, 99) !default;
+$custom-80: rgb(101, 154, 213) !default;
+$custom-81: rgb(218, 98, 127) !default;
+$custom-82: rgb(209, 91, 151) !default;
+$custom-83: rgb(231, 128, 111) !default;
+$custom-84: rgb(246, 112, 123) !default;
+$custom-85: rgb(242, 104, 145) !default;
+$custom-86: rgb(226, 96, 171) !default;
+$custom-87: rgb(216, 118, 229) !default;
+$custom-88: rgb(153, 111, 230) !default;
+$custom-89: rgb(62, 153, 190) !default;
+$custom-90: rgb(34, 164, 138) !default;
+$custom-91: rgb(191, 123, 102) !default;
+$custom-92: rgb(81, 126, 130) !default;
+$custom-93: rgb(144, 77, 76) !default;
+$custom-94: rgb(67, 156, 186) !default;
+$custom-95: rgb(139, 207, 106) !default;
+$custom-96: rgb(109, 157, 227) !default;
+$custom-97: rgb(221, 96, 133) !default;
+$custom-98: rgb(225, 190, 92) !default;
+$custom-99: rgb(240, 133, 110) !default;
+$custom-100: rgb(225, 93, 118) !default;
+$log-a-call: rgb(72, 195, 204) !default;
+$document: rgb(186, 172, 147) !default;
+$environment-hub: rgb(84, 105, 141) !default;
+$flow: rgb(84, 105, 141) !default;
+$sossession: rgb(84, 105, 141) !default;
+$process: rgb(84, 105, 141) !default;
+$news: rgb(127, 141, 225) !default;
+$home: rgb(239, 126, 173) !default;
+$account: rgb(127, 141, 225) !default;
+$apps-admin: rgb(152, 149, 238) !default;
+$announcement: rgb(98, 183, 237) !default;
+$person-account: rgb(127, 141, 225) !default;
+$social: rgb(234, 116, 162) !default;
+$campaign-members: rgb(244, 151, 86) !default;
+$article: rgb(242, 207, 91) !default;
+$answer-public: rgb(242, 207, 91) !default;
+$answer-private: rgb(242, 207, 91) !default;
+$answer-best: rgb(242, 207, 91) !default;
+$avatar-loading: rgb(184, 195, 206) !default;
+$campaign: rgb(244, 151, 86) !default;
+$calibration: rgb(71, 207, 210) !default;
+$avatar: rgb(98, 183, 237) !default;
+$approval: rgb(80, 204, 122) !default;
+$apps: rgb(60, 151, 221) !default;
+$user: rgb(52, 190, 205) !default;
+$evernote: rgb(134, 200, 111) !default;
+$coaching: rgb(246, 117, 148) !default;
+$connected-apps: rgb(152, 149, 238) !default;
+$drafts: rgb(108, 161, 233) !default;
+$email: rgb(149, 174, 197) !default;
+$email-iq: rgb(160, 148, 237) !default;
+$endorsement: rgb(139, 154, 227) !default;
+$event: rgb(235, 112, 146) !default;
+$dropbox: rgb(82, 174, 249) !default;
+$concur: rgb(76, 195, 199) !default;
+$email-chatter: rgb(242, 207, 91) !default;
+$case-transcript: rgb(242, 207, 91) !default;
+$case-email: rgb(242, 207, 91) !default;
+$case-log-a-call: rgb(242, 207, 91) !default;
+$case-comment: rgb(242, 207, 91) !default;
+$case-change-status: rgb(242, 207, 91) !default;
+$work-order: rgb(80, 227, 194) !default;
+$work-order-item: rgb(51, 168, 220) !default;
+$client: rgb(0, 210, 190) !default;
+$contract: rgb(110, 192, 110) !default;
+$dashboard: rgb(239, 110, 100) !default;
+$case: rgb(242, 207, 91) !default;
+$empty: rgb(129, 153, 175) !default;
+$default: rgb(129, 153, 175) !default;
+$custom: rgb(129, 153, 175) !default;
+$canvas: rgb(129, 153, 175) !default;
+$contact: rgb(160, 148, 237) !default;
+$portal: rgb(174, 199, 112) !default;
+$product: rgb(183, 129, 211) !default;
+$pricebook: rgb(183, 129, 211) !default;
+$feed: rgb(98, 183, 237) !default;
+$feedback: rgb(109, 161, 234) !default;
+$file: rgb(186, 172, 147) !default;
+$goals: rgb(86, 170, 223) !default;
+$groups: rgb(119, 158, 242) !default;
+$household: rgb(0, 175, 160) !default;
+$hierarchy: rgb(52, 190, 205) !default;
+$insights: rgb(236, 148, 237) !default;
+$investment-account: rgb(75, 192, 118) !default;
+$performance: rgb(248, 177, 86) !default;
+$link: rgb(122, 154, 230) !default;
+$metrics: rgb(86, 170, 223) !default;
+$note: rgb(230, 212, 120) !default;
+$lead: rgb(248, 137, 98) !default;
+$opportunity: rgb(252, 185, 91) !default;
+$call: rgb(242, 207, 91) !default;
+$call-history: rgb(242, 207, 91) !default;
+$orders: rgb(118, 158, 217) !default;
+$post: rgb(101, 202, 228) !default;
+$poll: rgb(105, 155, 225) !default;
+$photo: rgb(215, 209, 209) !default;
+$people: rgb(52, 190, 205) !default;
+$generic-loading: rgb(184, 195, 206) !default;
+$group-loading: rgb(184, 195, 206) !default;
+$recent: rgb(108, 161, 233) !default;
+$solution: rgb(143, 201, 114) !default;
+$record: rgb(125, 195, 125) !default;
+$question-best: rgb(242, 207, 91) !default;
+$question-feed: rgb(242, 207, 91) !default;
+$related-list: rgb(89, 188, 171) !default;
+$skill-entity: rgb(139, 154, 227) !default;
+$scan-card: rgb(243, 158, 88) !default;
+$report: rgb(46, 203, 190) !default;
+$quotes: rgb(136, 198, 81) !default;
+$task: rgb(75, 192, 118) !default;
+$task-2: rgb(75, 192, 118) !default;
+$team-member: rgb(242, 207, 91) !default;
+$thanks: rgb(233, 105, 110) !default;
+$reward: rgb(233, 105, 110) !default;
+$thanks-loading: rgb(184, 195, 206) !default;
+$today: rgb(239, 126, 173) !default;
+$topic: rgb(86, 170, 223) !default;
+$unmatched: rgb(98, 183, 237) !default;
+$marketing-actions: rgb(107, 189, 110) !default;
+$relationship: rgb(60, 151, 221) !default;
+$folder: rgb(139, 154, 227) !default;
+$service-contract: rgb(138, 118, 240) !default;
+$merge: rgb(242, 207, 91) !default;
+$forecasts: rgb(107, 189, 110) !default;
+$entitlements: rgb(183, 129, 211) !default;
+$sales-path: rgb(42, 115, 158) !default;
+$bg-actions-map: (
+  "action-change-owner": (rgb(84, 105, 141)),
+  "action-share": (rgb(84, 105, 141)),
+  "action-info": (rgb(84, 105, 141)),
+  "action-upload": (rgb(84, 105, 141)),
+  "action-change-record-type": (rgb(84, 105, 141)),
+  "action-check": (rgb(84, 105, 141)),
+  "action-download": (rgb(84, 105, 141)),
+  "action-edit-relationship": (rgb(29, 204, 191)),
+  "action-freeze-user": (rgb(84, 105, 141)),
+  "action-manage-perm-sets": (rgb(84, 105, 141)),
+  "action-password-unlock": (rgb(84, 105, 141)),
+  "action-refresh": (rgb(84, 105, 141)),
+  "action-remove": (rgb(84, 105, 141)),
+  "action-reset-password": (rgb(84, 105, 141)),
+  "action-user-activation": (rgb(84, 105, 141)),
+  "action-add-contact": (rgb(160, 148, 237)),
+  "action-approval": (rgb(0, 198, 183)),
+  "action-canvas": (rgb(129, 153, 175)),
+  "action-goal": (rgb(86, 170, 223)),
+  "action-opportunity-competitor": (rgb(252, 185, 91)),
+  "action-opportunity-line-item": (rgb(252, 185, 91)),
+  "action-opportunity-team-member": (rgb(252, 185, 91)),
+  "action-question-post-action": (rgb(50, 175, 92)),
+  "action-quote": (rgb(136, 198, 81)),
+  "action-reject": (rgb(0, 198, 183)),
+  "action-social-post": (rgb(234, 116, 162)),
+  "action-fallback": (rgb(152, 149, 238)),
+  "action-edit": (rgb(29, 204, 191)),
+  "action-delete": (rgb(230, 113, 124)),
+  "action-clone": (rgb(108, 161, 233)),
+  "action-follow": (rgb(49, 185, 248)),
+  "action-following": (rgb(125, 207, 100)),
+  "action-join-group": (rgb(119, 158, 242)),
+  "action-leave-group": (rgb(243, 158, 88)),
+  "action-edit-groups": (rgb(52, 190, 205)),
+  "action-share-post": (rgb(101, 202, 228)),
+  "action-user": (rgb(101, 202, 228)),
+  "action-share-file": (rgb(186, 172, 147)),
+  "action-new-task": (rgb(75, 192, 118)),
+  "action-new-contact": (rgb(160, 148, 237)),
+  "action-new-opportunity": (rgb(252, 185, 91)),
+  "action-new-case": (rgb(242, 207, 91)),
+  "action-new-lead": (rgb(248, 137, 98)),
+  "action-share-thanks": (rgb(233, 105, 110)),
+  "action-share-link": (rgb(122, 154, 230)),
+  "action-share-poll": (rgb(105, 155, 225)),
+  "action-new-event": (rgb(235, 112, 146)),
+  "action-new-child-case": (rgb(250, 151, 92)),
+  "action-log-a-call": (rgb(72, 195, 204)),
+  "action-new-note": (rgb(230, 212, 120)),
+  "action-new": (rgb(51, 188, 231)),
+  "action-filter": (rgb(253, 144, 181)),
+  "action-sort": (rgb(250, 185, 165)),
+  "action-description": (rgb(125, 195, 125)),
+  "action-defer": (rgb(239, 126, 173)),
+  "action-update": (rgb(129, 180, 214)),
+  "action-log-this-event": (rgb(235, 112, 146)),
+  "action-email": (rgb(149, 174, 197)),
+  "action-dial-in": (rgb(139, 154, 227)),
+  "action-map": (rgb(118, 198, 238)),
+  "action-call": (rgb(31, 202, 160)),
+  "action-google-news": (rgb(245, 103, 91)),
+  "action-web-link": (rgb(86, 170, 223)),
+  "action-submit-for-approval": (rgb(80, 204, 122)),
+  "action-search": (rgb(72, 173, 235)),
+  "action-close": (rgb(239, 110, 100)),
+  "action-back": (rgb(13, 194, 217)),
+  "action-office-365": (rgb(255, 128, 65)),
+  "action-concur": (rgb(76, 195, 199)),
+  "action-dropbox": (rgb(82, 174, 249)),
+  "action-evernote": (rgb(134, 200, 111)),
+  "action-docusign": (rgb(80, 128, 219)),
+  "action-more": (rgb(98, 183, 237)),
+  "action-notebook": (rgb(230, 212, 120)),
+  "action-new-notebook": (rgb(230, 212, 120)),
+  "action-preview": (rgb(127, 141, 225)),
+  "action-priority": (rgb(251, 180, 57)),
+  "action-default-custom-object": (rgb(129, 153, 175)),
+  "action-new-custom-object": (rgb(167, 212, 77)),
+  "action-lead-convert": (rgb(248, 137, 98)),
+  "action-new-account": (rgb(127, 141, 225)),
+  "action-new-person-account": (rgb(127, 141, 225)),
+  "action-new-campaign": (rgb(244, 151, 86)),
+  "action-new-group": (rgb(131, 182, 255)),
+  "action-update-status": (rgb(30, 199, 190)),
+  "action-new-custom-1": (rgb(255, 123, 132)),
+  "action-new-custom-2": (rgb(207, 208, 92)),
+  "action-new-custom-3": (rgb(236, 180, 108)),
+  "action-new-custom-4": (rgb(225, 217, 81)),
+  "action-new-custom-5": (rgb(159, 219, 102)),
+  "action-new-custom-6": (rgb(84, 196, 115)),
+  "action-new-custom-7": (rgb(106, 137, 229)),
+  "action-new-custom-8": (rgb(80, 206, 185)),
+  "action-new-custom-9": (rgb(107, 158, 226)),
+  "action-new-custom-10": (rgb(100, 136, 227)),
+  "action-new-custom-11": (rgb(135, 132, 234)),
+  "action-new-custom-12": (rgb(220, 113, 209)),
+  "action-new-custom-13": (rgb(223, 97, 132)),
+  "action-new-custom-14": (rgb(60, 194, 179)),
+  "action-new-custom-15": (rgb(247, 126, 117)),
+  "action-new-custom-16": (rgb(233, 175, 103)),
+  "action-new-custom-17": (rgb(172, 211, 96)),
+  "action-new-custom-18": (rgb(77, 202, 118)),
+  "action-new-custom-19": (rgb(58, 190, 177)),
+  "action-new-custom-20": (rgb(72, 199, 200)),
+  "action-new-custom-21": (rgb(138, 122, 237)),
+  "action-new-custom-22": (rgb(139, 133, 249)),
+  "action-new-custom-23": (rgb(176, 112, 230)),
+  "action-new-custom-24": (rgb(229, 103, 152)),
+  "action-new-custom-25": (rgb(228, 111, 190)),
+  "action-new-custom-26": (rgb(118, 152, 240)),
+  "action-new-custom-27": (rgb(90, 176, 210)),
+  "action-new-custom-28": (rgb(137, 192, 89)),
+  "action-new-custom-29": (rgb(189, 210, 95)),
+  "action-new-custom-30": (rgb(245, 159, 113)),
+  "action-new-custom-31": (rgb(235, 104, 127)),
+  "action-new-custom-32": (rgb(56, 195, 147)),
+  "action-new-custom-33": (rgb(151, 207, 93)),
+  "action-new-custom-34": (rgb(213, 138, 106)),
+  "action-new-custom-35": (rgb(233, 99, 126)),
+  "action-new-custom-36": (rgb(212, 114, 212)),
+  "action-new-custom-37": (rgb(140, 137, 242)),
+  "action-new-custom-38": (rgb(83, 182, 215)),
+  "action-new-custom-39": (rgb(79, 190, 117)),
+  "action-new-custom-40": (rgb(131, 199, 94)),
+  "action-new-custom-41": (rgb(67, 181, 181)),
+  "action-new-custom-42": (rgb(207, 208, 91)),
+  "action-new-custom-43": (rgb(127, 147, 249)),
+  "action-new-custom-44": (rgb(200, 202, 88)),
+  "action-new-custom-45": (rgb(217, 88, 121)),
+  "action-new-custom-46": (rgb(103, 165, 231)),
+  "action-new-custom-47": (rgb(95, 204, 100)),
+  "action-new-custom-48": (rgb(239, 105, 127)),
+  "action-new-custom-49": (rgb(226, 92, 128)),
+  "action-new-custom-50": (rgb(73, 188, 211)),
+  "action-new-custom-51": (rgb(216, 199, 96)),
+  "action-new-custom-52": (rgb(238, 142, 111)),
+  "action-new-custom-53": (rgb(243, 110, 131)),
+  "action-new-custom-54": (rgb(234, 112, 177)),
+  "action-new-custom-55": (rgb(214, 110, 224)),
+  "action-new-custom-56": (rgb(113, 141, 235)),
+  "action-new-custom-57": (rgb(90, 156, 221)),
+  "action-new-custom-58": (rgb(52, 181, 157)),
+  "action-new-custom-59": (rgb(227, 208, 103)),
+  "action-new-custom-60": (rgb(191, 90, 136)),
+  "action-new-custom-61": (rgb(245, 115, 118)),
+  "action-new-custom-62": (rgb(107, 146, 220)),
+  "action-new-custom-63": (rgb(124, 207, 96)),
+  "action-new-custom-64": (rgb(97, 143, 216)),
+  "action-new-custom-65": (rgb(242, 121, 171)),
+  "action-new-custom-66": (rgb(216, 190, 95)),
+  "action-new-custom-67": (rgb(248, 125, 118)),
+  "action-new-custom-68": (rgb(242, 105, 121)),
+  "action-new-custom-69": (rgb(237, 99, 135)),
+  "action-new-custom-70": (rgb(231, 105, 180)),
+  "action-new-custom-71": (rgb(227, 110, 227)),
+  "action-new-custom-72": (rgb(141, 155, 251)),
+  "action-new-custom-73": (rgb(103, 158, 240)),
+  "action-new-custom-74": (rgb(65, 200, 160)),
+  "action-new-custom-75": (rgb(205, 159, 101)),
+  "action-new-custom-76": (rgb(219, 109, 122)),
+  "action-new-custom-77": (rgb(181, 93, 91)),
+  "action-new-custom-78": (rgb(90, 149, 221)),
+  "action-new-custom-79": (rgb(142, 211, 99)),
+  "action-new-custom-80": (rgb(101, 154, 213)),
+  "action-new-custom-81": (rgb(218, 98, 127)),
+  "action-new-custom-82": (rgb(209, 91, 151)),
+  "action-new-custom-83": (rgb(231, 128, 111)),
+  "action-new-custom-84": (rgb(246, 112, 123)),
+  "action-new-custom-85": (rgb(242, 104, 145)),
+  "action-new-custom-86": (rgb(226, 96, 171)),
+  "action-new-custom-87": (rgb(216, 118, 229)),
+  "action-new-custom-88": (rgb(153, 111, 230)),
+  "action-new-custom-89": (rgb(62, 153, 190)),
+  "action-new-custom-90": (rgb(34, 164, 138)),
+  "action-new-custom-91": (rgb(191, 123, 102)),
+  "action-new-custom-92": (rgb(81, 126, 130)),
+  "action-new-custom-93": (rgb(144, 77, 76)),
+  "action-new-custom-94": (rgb(67, 156, 186)),
+  "action-new-custom-95": (rgb(139, 207, 106)),
+  "action-new-custom-96": (rgb(109, 157, 227)),
+  "action-new-custom-97": (rgb(221, 96, 133)),
+  "action-new-custom-98": (rgb(225, 190, 92)),
+  "action-new-custom-99": (rgb(240, 133, 110)),
+  "action-new-custom-100": (rgb(225, 93, 118)),
+  "action-apex": (rgb(105, 110, 113)),
+  "action-flow": (rgb(0, 121, 188)),
+  "action-announcement": (rgb(254, 143, 96)),
+  "action-record": (rgb(125, 195, 125)),
+  "action-log-event": (rgb(108, 161, 233)),
+  "action-add-relationship": (rgb(98, 183, 237)),
+  "action-remove-relationship": (rgb(239, 110, 100)),
+  "action-view-relationship": (rgb(60, 151, 221))
+);
+$bg-custom-map: (
+  "custom-1": (rgb(255, 123, 132)),
+  "custom-2": (rgb(207, 208, 92)),
+  "custom-3": (rgb(236, 180, 108)),
+  "custom-4": (rgb(225, 217, 81)),
+  "custom-5": (rgb(159, 219, 102)),
+  "custom-6": (rgb(84, 196, 115)),
+  "custom-7": (rgb(106, 137, 229)),
+  "custom-8": (rgb(80, 206, 185)),
+  "custom-9": (rgb(107, 158, 226)),
+  "custom-10": (rgb(100, 136, 227)),
+  "custom-11": (rgb(135, 132, 234)),
+  "custom-12": (rgb(220, 113, 209)),
+  "custom-13": (rgb(223, 97, 132)),
+  "custom-14": (rgb(60, 194, 179)),
+  "custom-15": (rgb(247, 126, 117)),
+  "custom-16": (rgb(233, 175, 103)),
+  "custom-17": (rgb(172, 211, 96)),
+  "custom-18": (rgb(77, 202, 118)),
+  "custom-19": (rgb(58, 190, 177)),
+  "custom-20": (rgb(72, 199, 200)),
+  "custom-21": (rgb(138, 122, 237)),
+  "custom-22": (rgb(139, 133, 249)),
+  "custom-23": (rgb(176, 112, 230)),
+  "custom-24": (rgb(229, 103, 152)),
+  "custom-25": (rgb(228, 111, 190)),
+  "custom-26": (rgb(118, 152, 240)),
+  "custom-27": (rgb(90, 176, 210)),
+  "custom-28": (rgb(137, 192, 89)),
+  "custom-29": (rgb(189, 210, 95)),
+  "custom-30": (rgb(245, 159, 113)),
+  "custom-31": (rgb(235, 104, 127)),
+  "custom-32": (rgb(56, 195, 147)),
+  "custom-33": (rgb(151, 207, 93)),
+  "custom-34": (rgb(213, 138, 106)),
+  "custom-35": (rgb(233, 99, 126)),
+  "custom-36": (rgb(212, 114, 212)),
+  "custom-37": (rgb(140, 137, 242)),
+  "custom-38": (rgb(83, 182, 215)),
+  "custom-39": (rgb(79, 190, 117)),
+  "custom-40": (rgb(131, 199, 94)),
+  "custom-41": (rgb(67, 181, 181)),
+  "custom-42": (rgb(207, 208, 91)),
+  "custom-43": (rgb(127, 147, 249)),
+  "custom-44": (rgb(200, 202, 88)),
+  "custom-45": (rgb(217, 88, 121)),
+  "custom-46": (rgb(103, 165, 231)),
+  "custom-47": (rgb(95, 204, 100)),
+  "custom-48": (rgb(239, 105, 127)),
+  "custom-49": (rgb(226, 92, 128)),
+  "custom-50": (rgb(73, 188, 211)),
+  "custom-51": (rgb(216, 199, 96)),
+  "custom-52": (rgb(238, 142, 111)),
+  "custom-53": (rgb(243, 110, 131)),
+  "custom-54": (rgb(234, 112, 177)),
+  "custom-55": (rgb(214, 110, 224)),
+  "custom-56": (rgb(113, 141, 235)),
+  "custom-57": (rgb(90, 156, 221)),
+  "custom-58": (rgb(52, 181, 157)),
+  "custom-59": (rgb(227, 208, 103)),
+  "custom-60": (rgb(191, 90, 136)),
+  "custom-61": (rgb(245, 115, 118)),
+  "custom-62": (rgb(107, 146, 220)),
+  "custom-63": (rgb(124, 207, 96)),
+  "custom-64": (rgb(97, 143, 216)),
+  "custom-65": (rgb(242, 121, 171)),
+  "custom-66": (rgb(216, 190, 95)),
+  "custom-67": (rgb(248, 125, 118)),
+  "custom-68": (rgb(242, 105, 121)),
+  "custom-69": (rgb(237, 99, 135)),
+  "custom-70": (rgb(231, 105, 180)),
+  "custom-71": (rgb(227, 110, 227)),
+  "custom-72": (rgb(141, 155, 251)),
+  "custom-73": (rgb(103, 158, 240)),
+  "custom-74": (rgb(65, 200, 160)),
+  "custom-75": (rgb(205, 159, 101)),
+  "custom-76": (rgb(219, 109, 122)),
+  "custom-77": (rgb(181, 93, 91)),
+  "custom-78": (rgb(90, 149, 221)),
+  "custom-79": (rgb(142, 211, 99)),
+  "custom-80": (rgb(101, 154, 213)),
+  "custom-81": (rgb(218, 98, 127)),
+  "custom-82": (rgb(209, 91, 151)),
+  "custom-83": (rgb(231, 128, 111)),
+  "custom-84": (rgb(246, 112, 123)),
+  "custom-85": (rgb(242, 104, 145)),
+  "custom-86": (rgb(226, 96, 171)),
+  "custom-87": (rgb(216, 118, 229)),
+  "custom-88": (rgb(153, 111, 230)),
+  "custom-89": (rgb(62, 153, 190)),
+  "custom-90": (rgb(34, 164, 138)),
+  "custom-91": (rgb(191, 123, 102)),
+  "custom-92": (rgb(81, 126, 130)),
+  "custom-93": (rgb(144, 77, 76)),
+  "custom-94": (rgb(67, 156, 186)),
+  "custom-95": (rgb(139, 207, 106)),
+  "custom-96": (rgb(109, 157, 227)),
+  "custom-97": (rgb(221, 96, 133)),
+  "custom-98": (rgb(225, 190, 92)),
+  "custom-99": (rgb(240, 133, 110)),
+  "custom-100": (rgb(225, 93, 118))
+);
+$bg-standard-map: (
+  "log-a-call": (rgb(72, 195, 204)),
+  "document": (rgb(186, 172, 147)),
+  "environment-hub": (rgb(84, 105, 141)),
+  "flow": (rgb(84, 105, 141)),
+  "sossession": (rgb(84, 105, 141)),
+  "process": (rgb(84, 105, 141)),
+  "news": (rgb(127, 141, 225)),
+  "home": (rgb(239, 126, 173)),
+  "account": (rgb(127, 141, 225)),
+  "apps-admin": (rgb(152, 149, 238)),
+  "announcement": (rgb(98, 183, 237)),
+  "person-account": (rgb(127, 141, 225)),
+  "social": (rgb(234, 116, 162)),
+  "campaign-members": (rgb(244, 151, 86)),
+  "article": (rgb(242, 207, 91)),
+  "answer-public": (rgb(242, 207, 91)),
+  "answer-private": (rgb(242, 207, 91)),
+  "answer-best": (rgb(242, 207, 91)),
+  "avatar-loading": (rgb(184, 195, 206)),
+  "campaign": (rgb(244, 151, 86)),
+  "calibration": (rgb(71, 207, 210)),
+  "avatar": (rgb(98, 183, 237)),
+  "approval": (rgb(80, 204, 122)),
+  "apps": (rgb(60, 151, 221)),
+  "user": (rgb(52, 190, 205)),
+  "evernote": (rgb(134, 200, 111)),
+  "coaching": (rgb(246, 117, 148)),
+  "connected-apps": (rgb(152, 149, 238)),
+  "drafts": (rgb(108, 161, 233)),
+  "email": (rgb(149, 174, 197)),
+  "email-iq": (rgb(160, 148, 237)),
+  "endorsement": (rgb(139, 154, 227)),
+  "event": (rgb(235, 112, 146)),
+  "dropbox": (rgb(82, 174, 249)),
+  "concur": (rgb(76, 195, 199)),
+  "email-chatter": (rgb(242, 207, 91)),
+  "case-transcript": (rgb(242, 207, 91)),
+  "case-email": (rgb(242, 207, 91)),
+  "case-log-a-call": (rgb(242, 207, 91)),
+  "case-comment": (rgb(242, 207, 91)),
+  "case-change-status": (rgb(242, 207, 91)),
+  "work-order": (rgb(80, 227, 194)),
+  "work-order-item": (rgb(51, 168, 220)),
+  "client": (rgb(0, 210, 190)),
+  "contract": (rgb(110, 192, 110)),
+  "dashboard": (rgb(239, 110, 100)),
+  "case": (rgb(242, 207, 91)),
+  "empty": (rgb(129, 153, 175)),
+  "default": (rgb(129, 153, 175)),
+  "custom": (rgb(129, 153, 175)),
+  "canvas": (rgb(129, 153, 175)),
+  "contact": (rgb(160, 148, 237)),
+  "portal": (rgb(174, 199, 112)),
+  "product": (rgb(183, 129, 211)),
+  "pricebook": (rgb(183, 129, 211)),
+  "feed": (rgb(98, 183, 237)),
+  "feedback": (rgb(109, 161, 234)),
+  "file": (rgb(186, 172, 147)),
+  "goals": (rgb(86, 170, 223)),
+  "groups": (rgb(119, 158, 242)),
+  "household": (rgb(0, 175, 160)),
+  "hierarchy": (rgb(52, 190, 205)),
+  "insights": (rgb(236, 148, 237)),
+  "investment-account": (rgb(75, 192, 118)),
+  "performance": (rgb(248, 177, 86)),
+  "link": (rgb(122, 154, 230)),
+  "metrics": (rgb(86, 170, 223)),
+  "note": (rgb(230, 212, 120)),
+  "lead": (rgb(248, 137, 98)),
+  "opportunity": (rgb(252, 185, 91)),
+  "call": (rgb(242, 207, 91)),
+  "call-history": (rgb(242, 207, 91)),
+  "orders": (rgb(118, 158, 217)),
+  "post": (rgb(101, 202, 228)),
+  "poll": (rgb(105, 155, 225)),
+  "photo": (rgb(215, 209, 209)),
+  "people": (rgb(52, 190, 205)),
+  "generic-loading": (rgb(184, 195, 206)),
+  "group-loading": (rgb(184, 195, 206)),
+  "recent": (rgb(108, 161, 233)),
+  "solution": (rgb(143, 201, 114)),
+  "record": (rgb(125, 195, 125)),
+  "question-best": (rgb(242, 207, 91)),
+  "question-feed": (rgb(242, 207, 91)),
+  "related-list": (rgb(89, 188, 171)),
+  "skill-entity": (rgb(139, 154, 227)),
+  "scan-card": (rgb(243, 158, 88)),
+  "report": (rgb(46, 203, 190)),
+  "quotes": (rgb(136, 198, 81)),
+  "task": (rgb(75, 192, 118)),
+  "task-2": (rgb(75, 192, 118)),
+  "team-member": (rgb(242, 207, 91)),
+  "thanks": (rgb(233, 105, 110)),
+  "reward": (rgb(233, 105, 110)),
+  "thanks-loading": (rgb(184, 195, 206)),
+  "today": (rgb(239, 126, 173)),
+  "topic": (rgb(86, 170, 223)),
+  "unmatched": (rgb(98, 183, 237)),
+  "marketing-actions": (rgb(107, 189, 110)),
+  "relationship": (rgb(60, 151, 221)),
+  "folder": (rgb(139, 154, 227)),
+  "service-contract": (rgb(138, 118, 240)),
+  "merge": (rgb(242, 207, 91)),
+  "forecasts": (rgb(107, 189, 110)),
+  "entitlements": (rgb(183, 129, 211)),
+  "sales-path": (rgb(42, 115, 158))
+);
+
+// MQ
+$mq-x-small: 320px !default;
+$mq-small: 480px !default;
+$mq-medium: 768px !default;
+$mq-large: 1024px !default;
+$mq-x-large: 1280px !default;

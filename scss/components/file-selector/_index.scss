@@ -1,0 +1,147 @@
+// Lightning Design System 2.1.3
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}file-selector {
+  display: inline-flex;
+}
+
+.#{$css-prefix}file-selector__dropzone {
+  padding: $spacing-xxx-small;
+  border: $border-width-thin dashed $color-border;
+  border-radius: $border-radius-medium;
+
+  &.#{$css-prefix}has-drag-over {
+    outline: 0;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+    border-style: solid;
+  }
+}
+
+.#{$css-prefix}file-selector__input {
+
+  &:focus ~ .#{$css-prefix}file-selector__body > .#{$css-prefix}file-selector__button {
+    box-shadow: $shadow-button-focus;
+  }
+
+  &[disabled] ~ .#{$css-prefix}file-selector__body {
+    color: $color-text-button-default-disabled;
+
+    > .#{$css-prefix}file-selector__button {
+      background: $color-background-button-brand-disabled;
+      border-color: $color-border-button-brand-disabled;
+      color: $color-text-button-brand-disabled;
+    }
+
+    > .#{$css-prefix}file-selector__body-icon {
+      fill: currentColor;
+    }
+  }
+}
+
+.#{$css-prefix}file-selector__button {
+  display: inline-flex;
+  align-items: center;
+}
+
+// Modifications based on context
+//
+// Single Line
+// Dedicated dropzone when there are multiple dropzones in the form or when
+// the input is positioned among other form inputs.
+.#{$css-prefix}file-selector--files {
+
+  .#{$css-prefix}file-selector__body {
+    display: flex;
+    align-items: center;
+  }
+
+  .#{$css-prefix}file-selector__button {
+    max-height: $height-pill;
+    line-height: $height-pill;
+  }
+
+  .#{$css-prefix}file-selector__text {
+    margin-left: $spacing-x-small;
+    margin-right: $spacing-small;
+  }
+}
+
+// Multi Line / Image
+// Use as a dedicated dropzone for image files only. May require a
+// cropping control.
+.#{$css-prefix}file-selector--images {
+  display: block;
+
+  .#{$css-prefix}file-selector__dropzone {
+    @include absolute-center;
+
+    // Maintains a 1:1 ratio based on the width
+    &:after {
+      content: '';
+      padding-top: 100%;
+      display: table; // FF issue
+    }
+  }
+
+  .#{$css-prefix}file-selector__body {
+    text-align: center;
+  }
+
+  .#{$css-prefix}file-selector__text {
+    margin-top: $spacing-small;
+  }
+}
+
+// Invisible Dropzone (Container)
+// Use when an entire container should be droppable.
+// The container should have a visible boundary, like a modal, composer, or page.
+.#{$css-prefix}file-selector--integrated {
+  @include square(100%);
+  position: relative;
+  display: block;
+}
+
+.#{$css-prefix}file-selector__dropzone--integrated {
+  @include absolute-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  opacity: 0;
+  z-index: -1;
+
+  &.#{$css-prefix}has-drag {
+    background: $color-background-backdrop;
+    opacity: 1;
+    z-index: $z-index-overlay;
+  }
+
+  &.#{$css-prefix}has-drag-over {
+    background: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
+  }
+}
+
+.#{$css-prefix}file-selector__body--integrated {
+  @include square($size-x-small);
+  @include absolute-center;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  flex-direction: column;
+}
+
+.#{$css-prefix}file-selector__text--integrated {
+  margin-top: $spacing-small;
+}

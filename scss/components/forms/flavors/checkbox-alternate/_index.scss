@@ -1,0 +1,103 @@
+// Lightning Design System 2.1.3
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.#{$css-prefix}checkbox--button-group {
+  display: inline-flex;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+.#{$css-prefix}checkbox--button {
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+
+  .#{$css-prefix}checkbox--faux {
+    @include button;
+    position: relative;
+    background-color: $color-background-button-default;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $color-background-button-default-hover;
+    }
+  }
+
+  .#{$css-prefix}checkbox--button__label .#{$css-prefix}checkbox--faux,
+  [type="checkbox"]:checked + .#{$css-prefix}checkbox--button__label .#{$css-prefix}checkbox--faux {
+    background-color: transparent;
+  }
+
+  // Apply left borders to anything checkbox button
+  // after the first button
+  + .#{$css-prefix}checkbox--button {
+    border-left: $border-width-thin solid $color-border;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  // Dealing with box shadows on specific n children
+  // of the button group
+  &:first-child > .#{$css-prefix}checkbox--faux,
+  &:first-child > .#{$css-prefix}checkbox--button__label {
+    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  }
+
+  &:last-child > .#{$css-prefix}checkbox--faux,
+  .#{$css-prefix}button--last > .#{$css-prefix}checkbox--faux,
+  &:last-child > .#{$css-prefix}checkbox--button__label {
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  }
+
+  // Hide input and style checkbox--faux
+  [type="checkbox"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    // Checked State with Interactions
+    &:checked + .#{$css-prefix}checkbox--faux,
+    &:checked ~ .#{$css-prefix}checkbox--faux,
+    &:checked + .#{$css-prefix}checkbox--button__label {
+      background-color: $color-background-button-brand;
+      color: $color-text-button-brand;
+
+      // Need something stronger when the input is checked
+      &:hover,
+      &:focus {
+        background-color: $color-background-button-brand;
+      }
+    }
+
+    // Focus State
+    &:focus + .#{$css-prefix}checkbox--faux,
+    &:focus ~ .#{$css-prefix}checkbox--faux,
+    &:focus + .#{$css-prefix}checkbox--button__label {
+      @include focus-button;
+      z-index: $z-index-default; // Raises box shadow above adjacent buttons
+    }
+
+    // Disabled State
+    &[disabled] +.#{$css-prefix}checkbox--faux,
+    &[disabled] ~ .#{$css-prefix}checkbox--faux,
+    &[disabled] + .#{$css-prefix}checkbox--button__label {
+      background-color: $color-background-button-default-disabled;
+      color: $color-text-button-default-disabled;
+      cursor: default;
+    }
+  }
+}

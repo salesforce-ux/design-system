@@ -39,7 +39,7 @@ export let Publisher = props =>
             <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" />
           </li>
         </ul>
-        <Button flavor="brand">Comment</Button>
+        <Button className="slds-button slds-button--brand">Comment</Button>
       </div>
     </div>
   </MediaObject>;

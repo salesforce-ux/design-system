@@ -11,34 +11,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Modal from 'ui/components/modals/index.react';
 import Button from 'ui/components/buttons/index.react';
 import Lorem from 'react-lorem-component';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>
     <Modal
-      isOpen={true}
-      renderInline={true}
       role="alertdialog"
       aria-labelledby="prompt-heading-id"
       aria-describedby="prompt-message-wrapper"
       className="slds-modal--prompt"
     >
-
-      <Modal.Header className="slds-theme--error slds-theme--alert-texture" closeButton={false}>
+      <ModalHeader className="slds-theme--error slds-theme--alert-texture" closeButton={false}>
         <h2 className="slds-text-heading--medium" id="prompt-heading-id">
           Service Unavailable
         </h2>
-      </Modal.Header>
+      </ModalHeader>
 
-      <Modal.Body className="slds-p-around--medium">
+      <ModalContent className="slds-p-around--medium">
         <Lorem count={1} paragraphLowerBound={2} />
-      </Modal.Body>
+      </ModalContent>
 
-      <Modal.Footer className="slds-theme--default">
-        <Button flavor="neutral">Okay</Button>
-      </Modal.Footer>
+      <ModalFooter className="slds-theme--default">
+        <Button className="slds-button slds-button--neutral">Okay</Button>
+      </ModalFooter>
     </Modal>
+    <div className="slds-backdrop slds-backdrop--open" />
   </div>
 );

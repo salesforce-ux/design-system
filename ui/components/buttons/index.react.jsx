@@ -10,45 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { createChainedFunction } from 'app_modules/ui/util/component';
-import _ from 'lodash';
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-    this.state = {};
-  };
-
-  onClick(e) {
-    this.setState({ active: !this.state.active });
-  }
-
-  render() {
-    const className = this.$getClassNameWithFlavor('slds-button');
-    const click = createChainedFunction(this.props.onClick, this.onClick.bind(this));
-    const props = _.assign(this.$propsWithoutKeys('className', 'flavor'), {onClick: click});
-    return (
-      <button className={className} {...props}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-Button.propTypes = {
-  flavor: componentUtil.PropTypes.flavor(
-    'neutral',
-    'brand',
-    'inverse',
-    'destructive',
-    'neutral-selected',
-    'inverse-selected',
-    'hint',
-    'more',
-    'icon-more'
-  )
-};
-
+const Button = props =>
+  <button {...props}>
+    {props.children}
+  </button>;
 
 export default Button;

@@ -34,7 +34,7 @@ export let Modal = props =>
 
 export let ModalHeader = props =>
   <div className={className('slds-modal__header', props.className)}>
-    { props.closeButton != 'false' ?
+    {props.closeButton != 'false' ?
       <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
@@ -65,8 +65,8 @@ let Default = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -84,8 +84,8 @@ let Taglines = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -98,8 +98,8 @@ let Large = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -112,8 +112,8 @@ let Directional = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter className="slds-modal__footer--directional">
-        <Button flavor="neutral">Skip This Step</Button>
-        <Button flavor="neutral,brand">Save &#38; Next</Button>
+        <Button className="slds-button slds-button--neutral">Skip This Step</Button>
+        <Button className="slds-button slds-button--brand">Save &#38; Next</Button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -125,8 +125,8 @@ let Headless = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </ModalFooter>
     </Modal>
   </Demo>;

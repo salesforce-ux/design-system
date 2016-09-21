@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Modal from 'ui/components/modals/index.react';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -18,13 +18,8 @@ import Lorem from 'react-lorem-component';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>
-    <Modal
-      isOpen={true}
-      renderInline={true}
-      flavor="large"
-    >
-
-      <Modal.Header>
+    <Modal className="slds-modal--large">
+      <ModalHeader>
         <div className="slds-notify_container">
           <div className="slds-notify slds-notify--toast slds-theme--error" role="alert">
             <span className="slds-assistive-text">Error</span>
@@ -44,16 +39,17 @@ export default (
         <h2 className="slds-text-heading--medium">
           Modal Header
         </h2>
-      </Modal.Header>
+      </ModalHeader>
 
-      <Modal.Body className="slds-p-around--medium">
+      <ModalContent className="slds-p-around--medium">
         <Lorem count={2} paragraphLowerBound={5} />
-      </Modal.Body>
+      </ModalContent>
 
-      <Modal.Footer>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
-      </Modal.Footer>
+      <ModalFooter>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
+      </ModalFooter>
     </Modal>
+    <div className="slds-backdrop slds-backdrop--open" />
   </div>
 );

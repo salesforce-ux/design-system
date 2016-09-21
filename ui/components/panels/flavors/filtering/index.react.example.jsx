@@ -106,8 +106,8 @@ let NewFilter = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="brand">Save</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
+            <Button className="slds-button slds-button--brand">Save</Button>
           </FiltersHeader>
           <FiltersBody>
             <ol className="slds-list--vertical slds-list--vertical-space">
@@ -132,8 +132,8 @@ let ErrorPanel = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="brand">Save</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
+            <Button className="slds-button slds-button--brand">Save</Button>
           </FiltersHeader>
           <FiltersBody>
             <div className="slds-text-color--error slds-m-bottom--x-small" aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>

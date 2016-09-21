@@ -36,21 +36,25 @@ export let states = [
   {
     id: 'x-small',
     label: 'Extra Small',
+    description: 'Extra-small - (`.{{cssPrefix}}icon--x-small`) - is typically used for small alert icons, with no background color.',
     element: <XSmall />
   },
   {
     id: 'small',
     label: 'Small',
+    description: 'Small - (`.{{cssPrefix}}icon--small`) - 1.5rem&times;1.5rem (for icons with a background color).',
     element: <Default size="small" />
   },
   {
     id: 'medium',
     label: 'Medium (default)',
+    description: 'Medium - (this default size requires no additional class) - 2rem&times;2rem.',
     element: <Default />
   },
   {
     id: 'large',
     label: 'Large',
+    description: 'Large - (`.{{cssPrefix}}icon--large`) - 3rem&times;3rem.',
     element: <Default size="large" />
   }
 ];

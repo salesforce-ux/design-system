@@ -58,9 +58,9 @@ let Tile = props =>
       </p>
       <p className="slds-truncate slds-text-body--small">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
-        <Button className="slds-button slds-button--neutral" className="slds-grow">Edit</Button>
-        <Button className="slds-button slds-button--neutral" className="slds-grow">Follow Up</Button>
-        <Button className="slds-button slds-button--neutral" className="slds-grow">Delete</Button>
+        <Button className="slds-button slds-button--neutral slds-grow">Edit</Button>
+        <Button className="slds-button slds-button--neutral slds-grow">Follow Up</Button>
+        <Button className="slds-button slds-button--neutral slds-grow">Delete</Button>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"

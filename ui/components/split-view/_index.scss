@@ -8,14 +8,14 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 $color-background-split-view: #333e4f !default;
-$color-text-inverse-alt: #a8b8d0 !default;
+$color-text-weak-inverse: #a8b8d0 !default;
 $color-background-alt-inverse-row-hover: $color-background-inverse !default;
 
 @mixin inverse-text {
   color: $color-text-inverse;
 
   a,
-  .#{$css-prefix}button {
+  .slds-button {
     color: currentColor;
 
     &:hover,
@@ -35,31 +35,36 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
   }
 }
 
-.#{$css-prefix}split-view {
+.slds-split-view {
   @include inverse-text;
-  background: $color-background-alt-inverse;
+  background: $color-background-inverse;
 }
 
-.#{$css-prefix}split-view__header {
+.slds-split-view__header {
   padding: $spacing-medium $spacing-medium $spacing-x-small;
 }
 
-.#{$css-prefix}split-view__list-header {
+.slds-split-view__list-header {
   padding: $spacing-x-small $spacing-medium;
 }
 
-.#{$css-prefix}split-view__list-item {
+.slds-split-view__list-item {
   display: flex;
   padding: $spacing-small $spacing-medium;
-  color: $color-text-inverse-alt;
+  color: $color-text-weak-inverse;
 
   &:hover,
   &:focus {
-    background: $color-background-alt-inverse-row-hover;
+    // background: $color-background-alt-inverse-row-hover;
+
+  }
+
+  &.slds-is-active {
+    background-color: $color-background-alt-inverse;
   }
 }
 
-.#{$css-prefix}split-view__list-item-action {
+.slds-split-view__list-item-action {
 
   &:hover,
   &:focus {
@@ -67,7 +72,16 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
   }
 }
 
-.#{$css-prefix}split-view__row-heading {
+// .slds-split-view__row-heading {
+//   color: $color-text-inverse;
+//   font-weight: $font-weight-bold;
+// }
+
+//////// GLOBALS
+.slds-text-color--inverse {
   color: $color-text-inverse;
-  font-weight: $font-weight-bold;
+}
+
+.slds-text-color--weak-inverse {
+  color: $color-text-weak-inverse;
 }

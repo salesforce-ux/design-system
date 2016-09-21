@@ -84,7 +84,7 @@ let Row = props =>
   <li className={ className('slds-split-view__list-item', props.className) } role="row" key={ props.key }>
     <a href="javascript:void(0);" role="gridcell" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate">
       <div className="slds-grid slds-wrap">
-        <span role="rowheader" className="slds-grow slds-truncate slds-split-view__row-heading" title={ props.name || 'Object Name' }>
+        <span role="rowheader" className="slds-grow slds-truncate slds-text-color--inverse" title={ props.name || 'Object Name' }>
           { props.name || 'Object Name' }
         </span>
         <span className="slds-shrink-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>
@@ -117,20 +117,19 @@ let Row = props =>
 export default (
   <div className="demo-only" style={{ width: '20rem' }}>
     <div className="slds-split-view slds-grid slds-grid--vertical">
-
-      <div className="slds-split-view__header" role="banner">
+      <div className="slds-split-view__header slds-text-color--weak-inverse" role="banner">
         <div className="slds-grid slds-m-bottom--x-small">
           <div className="slds-media slds-media--center">
             <div className="slds-media__figure">
               <div className="slds-icon_container slds-icon-standard-lead">
-                <SvgIcon className="slds-icon" sprite="standard" symbol="lead" />
+                <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="lead" />
                 <span className="slds-assistive-text">Lead</span>
               </div>
             </div>
             <div className="slds-media__body">
               <button className="slds-button slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
                 <div className="slds-grid slds-grid--vertical-align-center slds-truncate">
-                  <h1 className="slds-page-header__title slds-truncate" title="My Leads">My Leads</h1>
+                  <h1 className="slds-text-heading--small slds-text-color--inverse slds-truncate" title="My Leads">My Leads</h1>
                   <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
                 </div>
               </button>

@@ -6,11 +6,11 @@ imports:
 - ../ui/components/docked-composer/tokens/sizing.yml
 - ../ui/components/forms/tokens/line-height.yml
 - ../ui/components/forms/tokens/sizing.yml
-- ../ui/components/global-header/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/background-color.yml
 - ../ui/components/global-navigation/tokens/border-color.yml
 - ../ui/components/global-navigation/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/text-color.yml
+- ../ui/components/global-header/tokens/sizing.yml
 - ../ui/components/page-headers/tokens/background-color.yml
 - ../ui/components/process/tokens/background-color.yml
 - ../ui/components/process/tokens/border-color.yml

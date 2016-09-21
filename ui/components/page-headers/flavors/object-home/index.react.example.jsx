@@ -47,10 +47,10 @@ export default (
       {/* Open Right Aligned Icon Grouping */}
       <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
         <div className="slds-button-group" role="group">
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             New Lead
           </Button>
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             Import Leads
           </Button>
           <div className="slds-button--last">
@@ -78,7 +78,7 @@ export default (
             hasDropdown
             assistiveText="List View Controls" />
         </div>
-        <Button className="slds-hide slds-m-left--xx-small" flavor="brand" aria-hidden="true">Save List</Button>
+        <Button className="slds-hide slds-m-left--xx-small" className="slds-button slds-button--brand" aria-hidden="true">Save List</Button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
             className="slds-button--icon-more"

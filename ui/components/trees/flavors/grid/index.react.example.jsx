@@ -14,7 +14,6 @@ import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
-import StatefulClass from 'ui/components/lib/stateful.react';
 
 //////////////////////////////////////////////
 // State Constructor(s)

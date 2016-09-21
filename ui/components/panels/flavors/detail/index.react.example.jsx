@@ -58,9 +58,9 @@ let Tile = props =>
       </p>
       <p className="slds-truncate slds-text-body--small">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
-        <Button flavor="neutral" className="slds-grow">Edit</Button>
-        <Button flavor="neutral" className="slds-grow">Follow Up</Button>
-        <Button flavor="neutral" className="slds-grow">Delete</Button>
+        <Button className="slds-button slds-button--neutral" className="slds-grow">Edit</Button>
+        <Button className="slds-button slds-button--neutral" className="slds-grow">Follow Up</Button>
+        <Button className="slds-button slds-button--neutral" className="slds-grow">Delete</Button>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"
@@ -250,8 +250,8 @@ let IsEditing = props =>
       </PanelBody>
       <div className="slds-panel__actions slds-has-divider--top">
         <div className="slds-grid slds-grid--align-center">
-          <Button type="button" flavor="neutral">Cancel</Button>
-          <Button type="button" flavor="brand">Save</Button>
+          <Button type="button" className="slds-button slds-button--neutral">Cancel</Button>
+          <Button type="button" className="slds-button slds-button--brand">Save</Button>
         </div>
       </div>
     </Panel>

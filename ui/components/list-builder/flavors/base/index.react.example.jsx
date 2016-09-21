@@ -131,8 +131,8 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter className="slds-modal__footer--directional">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Next</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
+            <Button className="slds-button slds-button--brand">Next</Button>
           </ModalFooter>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />
@@ -204,8 +204,8 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter className="slds-modal__footer--directional">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Next</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
+            <Button className="slds-button slds-button--brand">Next</Button>
           </ModalFooter>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />

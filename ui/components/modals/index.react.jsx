@@ -10,187 +10,58 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-const PT = React.PropTypes;
+import classNames from 'classnames';
 
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import AccessibleDialogContainer from 'ui/components/lib/accessible-dialog-container.react';
-import globals from 'app_modules/global';
 
-import classNames from 'classnames';
-import componentUtil from 'app_modules/ui/util/component';
+const ModalFooter = props =>
+  <div {...props} className={classNames('slds-modal__footer', props.className)}>
+    {props.children}
+  </div>;
 
-import ClassNameTransitionGroup from 'ui/components/lib/classname-transition-group.react';
+const ModalBody = props =>
+  <div {...props} className={classNames('slds-modal__content', props.className)}>
+    {props.children}
+  </div>;
 
-class ModalFooter extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
+const ModalHeader = props =>
+  <div { ...props } className={classNames('slds-modal__header', props.className)}>
+    {props.closeButton ?
+      <ButtonIcon
+        className="slds-modal__close slds-button--icon-inverse"
+        iconClassName="slds-button__icon--large"
+        symbol="close"
+        assistiveText="Close" />
+      : null}
+    {props.children}
+  </div>;
 
-  render() {
-    const className = this.$getClassNameWithFlavor('slds-modal__footer');
-    const props = this.$propsWithoutKeys('className', 'flavor');
-    return (
-      <div { ...props } className={className}>
-        { this.props.children }
-      </div>
-    );
-  }
-}
-
-ModalFooter.propTypes = {
-  flavor: componentUtil.PropTypes.flavor('directional')
-};
-
-class ModalBody extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
-  render() {
-    return (
-      <div { ...this.props } className={this.$getClassName('slds-modal__content')}>
-        { this.props.children }
-      </div>
-    );
-  }
-}
-
-class ModalHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
-  render() {
-    return (
-      <div { ...this.props } className={this.$getClassName('slds-modal__header')}>
-        { this.props.closeButton ?
-            <ButtonIcon
-              className="slds-modal__close slds-button--icon-inverse"
-              iconClassName="slds-button__icon--large"
-              symbol="close"
-              assistiveText="Close" />
-            : null
-        }
-        { this.props.children }
-      </div>
-    );
-  }
-}
-
-ModalHeader.propTypes = { closeButton: PT.bool };
+ModalHeader.propTypes = { closeButton: React.PropTypes.bool };
 ModalHeader.defaultProps = { closeButton: true };
-ModalHeader.contextTypes = { onRequestClose: PT.func };
 
-class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
-  getChildContext() {
-    return { onRequestClose: this.onClick.bind(this) };
-  }
-
-  onClick() {
-    if (this.props.onRequestClose) {
-      this.props.onRequestClose();
-    }
-  }
-  onContentClick(e) {
-    e.stopPropagation();
-  }
-  isModalChild(t) {
-    let container = ReactDOM.findDOMNode(this);
-    let node = t.parentNode;
-    while (node !== null) {
-      if (node === container) {
-        return true;
-      }
-      node = node.parentNode;
-    }
-    return false;
-  }
-  render() {
-    const flavorName = this.$getClassNameWithFlavor('slds-modal');
-    const className = classNames(flavorName, {
-      'slds-fade-in-open': this.props.isOpen && !this.props.edit,
-      'slds-slide-up-open': this.props.isOpen && this.props.edit
-    });
-    const classNameModalContainer = this.$getClassName('slds-modal__container', {
-      'slds-slide-up-saving': this.props.saving,
-      'slds-slide-down-cancel': this.props.edit && !(this.props.isOpen && this.props.edit) && !(this.props.isOpen && !this.props.edit) && !this.props.saving
-    });
-    const classNameModalBackdrop = classNames('slds-backdrop', {
-      'slds-backdrop--open': this.props.isOpen
-    });
-    const role = this.props.role ? this.props.role : 'dialog';
-    return (
-      <AccessibleDialogContainer onEsc={this.onClick.bind(this)}>
-        <div aria-hidden={!this.props.isOpen} aria-labelledby={this.props['aria-labelledby']} aria-describedby={this.props['aria-describedby']} role={role} className={className} onClick={ this.onClick.bind(this) }>
-          <ClassNameTransitionGroup transitionName="slds-modal__container" timeout={100}>
-            <div className={classNameModalContainer} role="document" id={this.props['aria-describedby']} tabIndex="0" onClick={ this.onContentClick.bind(this) } key="content">
-              { this.props.children }
-            </div>
-          </ClassNameTransitionGroup>
+const Modal = props =>
+  <div>
+    <div
+      aria-hidden={!props.isOpen}
+      aria-labelledby={props['aria-labelledby']}
+      aria-describedby={props['aria-describedby']}
+      role={props.role || 'dialog'}
+      className={'slds-modal'}>
+      <div className="slds-modal__container">
+        <div
+          role="document"
+          id={props['aria-describedby']}
+          tabIndex="0"
+          key="content">
+          {props.children}
         </div>
-        <div className={classNameModalBackdrop} />
-      </AccessibleDialogContainer>
-    );
-  }
-}
+      </div>
+    </div>
+    <div className="slds-backdrop--open" />
+  </div>;
 
-Modal.childContextTypes = { onRequestClose: PT.func };
-
-class ModalWrapper extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-    const {renderInline} = this.props;
-    const hasDOM = document && document.createElement;
-    if (!renderInline && hasDOM) {
-      this.__node = document.createElement('div');
-      document.body.appendChild(this.__node);
-      this.renderModal(this.props);
-    }
-  }
-  componentWillUnmount() {
-    if (this.__node) {
-      ReactDOM.unmountComponentAtNode(this.__node);
-      document.body.removeChild(this.__node);
-    }
-  }
-  componentWillReceiveProps(nextProps) {
-    this.renderModal(nextProps);
-  }
-  render() {
-    const {renderInline} = this.props;
-    return renderInline
-      ? <Modal {...this.props} tabIndex="-1" />
-      : null;
-  }
-  renderModal(props) {
-    if (this.__node) {
-      this.__modal = ReactDOM.render(
-        React.createElement(Modal, props),
-        this.__node
-      );
-    }
-  }
-}
-ModalWrapper.propTypes = {
-  isOpen: React.PropTypes.bool.isRequired,
-  onRequestClose: React.PropTypes.func,
-  renderInline: React.PropTypes.bool
-};
-
-ModalWrapper.defaultProps = { renderInline: false };
+const ModalWrapper = props =>
+  <Modal {...props} />;
 
 ModalWrapper.displayName = 'Modal';
 

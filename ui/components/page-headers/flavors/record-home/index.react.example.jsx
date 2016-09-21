@@ -33,19 +33,19 @@ export default (
         </MediaObject>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
-        <Button flavor="neutral" className="slds-not-selected" aria-live="assertive">
+        <Button className="slds-button slds-button--neutral slds-not-selected" aria-live="assertive">
           <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
           <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
           <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
         </Button>
         <div className="slds-button-group" role="group">
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             Edit
           </Button>
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             Delete
           </Button>
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             Clone
           </Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">

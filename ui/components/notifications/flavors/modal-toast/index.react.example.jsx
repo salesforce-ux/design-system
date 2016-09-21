@@ -51,8 +51,8 @@ export default (
       </Modal.Body>
 
       <Modal.Footer>
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </Modal.Footer>
     </Modal>
   </div>

@@ -20,7 +20,7 @@ export default (
     <Input label="Name" assistiveText="name" />
     <Input label="Email" assistiveText="email" />
     <div className="slds-form-element">
-      <Button type="button" flavor="brand">Send</Button>
+      <Button type="button" className="slds-button slds-button--brand">Send</Button>
     </div>
   </form>
 </div>

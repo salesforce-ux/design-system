@@ -137,8 +137,8 @@ export default (
         </div>
       </ModalContent>
       <ModalFooter className="slds-modal__footer--directional">
-        <Button flavor="neutral">Cancel</Button>
-        <Button flavor="neutral,brand">Save</Button>
+        <Button className="slds-button slds-button--neutral">Cancel</Button>
+        <Button className="slds-button slds-button--brand">Save</Button>
       </ModalFooter>
     </Modal>
     <div className="slds-backdrop slds-backdrop--open" />

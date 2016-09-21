@@ -45,7 +45,7 @@ let PublisherActions = props =>
         <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" />
       </li>
     </ul>
-    <Button flavor="brand">Share</Button>
+    <Button className="slds-button slds-button--brand">Share</Button>
   </div>;
 
 ///////////////////////////////////////////

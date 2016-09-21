@@ -37,7 +37,7 @@ export default (
       </Modal.Body>
 
       <Modal.Footer className="slds-theme--default">
-        <Button flavor="neutral">Okay</Button>
+        <Button className="slds-button slds-button--neutral">Okay</Button>
       </Modal.Footer>
     </Modal>
   </div>

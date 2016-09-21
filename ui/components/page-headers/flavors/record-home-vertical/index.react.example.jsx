@@ -17,8 +17,6 @@ import Heading from 'ui/components/heading/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
-
 
 const image = (
   <div className="slds-icon_container slds-icon-standard-lead">
@@ -37,21 +35,19 @@ export default (
           </MediaObject>
         </div>
         <div className="slds-has-divider--bottom-space">
-          <StatefulClass>
-            <Button flavor="neutral" className="slds-not-selected" aria-live="assertive">
-              <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
-              <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
-              <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
-            </Button>
-          </StatefulClass>
+          <Button className="slds-button slds-button--neutral slds-not-selected" aria-live="assertive">
+            <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
+            <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
+            <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
+          </Button>
           <div className="slds-button-group slds-m-left--none slds-m-top--x-small" role="group">
-            <Button flavor="neutral">
+            <Button className="slds-button slds-button--neutral">
               Convert
             </Button>
-            <Button flavor="neutral">
+            <Button className="slds-button slds-button--neutral">
               Clone
             </Button>
-            <Button flavor="neutral">
+            <Button className="slds-button slds-button--neutral">
               Edit
             </Button>
             <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">

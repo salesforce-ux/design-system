@@ -126,9 +126,9 @@ export default (
       </div>
     </Modal.Body>
 
-    <Modal.Footer flavor="directional">
-      <Button flavor="neutral">Cancel</Button>
-      <Button flavor="neutral">New Account</Button>
+    <Modal.Footer className="slds-modal__footer--directional">
+      <Button className="slds-button slds-button--neutral">Cancel</Button>
+      <Button className="slds-button slds-button--neutral">New Account</Button>
     </Modal.Footer>
   </Modal>
 </div>

@@ -10,46 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-import globals from 'app_modules/global';
 
-class Spinner extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-    this.state = {};
-  };
-
-  render() {
-    var { className, flavor, children } = this.props;
-    const classnames = classNames(className, {
-      'slds-spinner': true,
-      'slds-spinner--x-small': flavor === 'x-small' || flavor === 'brand-x-small' || flavor === 'inverse-x-small',
-      'slds-spinner--small': flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
-      'slds-spinner--medium': flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
-      'slds-spinner--large': flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
-    });
-    const props = this.$propsWithoutKeys('className', 'flavor');
-    return (
-      <div className="slds-spinner_container">
-        <div className={classnames} {...props} role="alert">
-          <span className="slds-assistive-text">Loading</span>
-          <div className="slds-spinner__dot-a"></div>
-          <div className="slds-spinner__dot-b"></div>
-        </div>
-        {children}
-      </div>
-    );
-  }
-}
-
-Spinner.propTypes = {
-  flavor: componentUtil.PropTypes.flavor(
-    'x-small', 'small', 'medium', 'large',
-    'brand-x-small', 'brand-small', 'brand-medium', 'brand-large',
-    'inverse-x-small', 'inverse-small', 'inverse-medium', 'inverse-large'
-  )
-};
+const Spinner = props =>
+  <div className="slds-spinner_container">
+    <div {...props} className={classNames('slds-spinner', props.className)} role="alert">
+      <span className="slds-assistive-text">Loading</span>
+      <div className="slds-spinner__dot-a"></div>
+      <div className="slds-spinner__dot-b"></div>
+    </div>
+    {props.children}
+  </div>;
 
 export default Spinner;

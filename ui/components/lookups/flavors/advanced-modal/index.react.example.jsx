@@ -15,20 +15,16 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Menu from 'ui/components/menus/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Modal from 'ui/components/modals/index.react';
-
+import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 
 export default (
 <div className="demo-only" style={{height: '640px'}}>
-  <Modal
-    isOpen={true}
-    renderInline={true}
-    className="slds-modal--large">
-    <Modal.Header>
+  <Modal className="slds-modal--large">
+    <ModalHeader>
       <h2 className="slds-text-heading--medium">Account Name</h2>
-    </Modal.Header>
+    </ModalHeader>
 
-    <Modal.Body>
+    <ModalContent>
       <div className="slds-lookup" data-select="multi" data-scope="single" data-typeahead="true">
         <div className="slds-form-element slds-p-top--medium slds-p-horizontal--medium slds-m-bottom--small">
           <label className="slds-form-element__label" htmlFor="lookup">Accounts</label>
@@ -124,12 +120,13 @@ export default (
           </tbody>
         </table>
       </div>
-    </Modal.Body>
+    </ModalContent>
 
-    <Modal.Footer className="slds-modal__footer--directional">
+    <ModalFooter className="slds-modal__footer--directional">
       <Button className="slds-button slds-button--neutral">Cancel</Button>
       <Button className="slds-button slds-button--neutral">New Account</Button>
-    </Modal.Footer>
+    </ModalFooter>
   </Modal>
+  <div className="slds-backdrop slds-backdrop--open" />
 </div>
 );

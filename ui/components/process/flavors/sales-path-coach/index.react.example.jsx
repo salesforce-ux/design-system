@@ -42,7 +42,7 @@ let Triggerup = props =>
   <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small slds-flip--vertical" symbol="chevrondown" assistiveText="Close" />;
 
 let Action = props =>
-  <Button className="slds-button slds-button--brand" className={className('slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>
+  <Button className={className('slds-button slds-button--brand slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>
     {props.children}
   </Button>;
 

@@ -34,7 +34,7 @@ export let Modal = props =>
 
 export let ModalHeader = props =>
   <div className={className('slds-modal__header', props.className)}>
-    { props.closeButton != 'false' ?
+    {props.closeButton != 'false' ?
       <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"

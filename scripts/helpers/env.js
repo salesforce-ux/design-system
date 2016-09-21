@@ -16,7 +16,8 @@ export const WebpackDefineKeys = [
   'INTERNAL_RELEASE_NAME',
   'SLDS_VERSION',
   'SEARCH_APP_ID',
-  'SEARCH_API_KEY'
+  'SEARCH_API_KEY',
+  'NODE_ENV'
 ];
 
 // NOTE: scripts/npm/postinstall.js modifies process.env if running on Heroku

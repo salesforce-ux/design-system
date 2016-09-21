@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}tabs--scoped {
+.slds-tabs--scoped {
   @include tabs;
 
   &__nav {
@@ -21,11 +21,11 @@
 
   @include deprecate('4.0.0') {
 
-    .#{$css-prefix}tabs__item {
+    .slds-tabs__item {
       position: relative;
       margin-bottom: ($border-width-thin * -1);
 
-      + .#{$css-prefix}tabs__item {
+      + .slds-tabs__item {
         margin-left: ($border-width-thin * -1);
       }
 
@@ -54,7 +54,7 @@
         }
       }
 
-      .#{$css-prefix}active > a {
+      .slds-active > a {
         background-color: $color-background-alt;
         color: $color-text-link;
         border-color: $color-border;
@@ -65,7 +65,7 @@
       }
     }
 
-    > .#{$css-prefix}tabs__content {
+    > .slds-tabs__content {
       background-color: $color-background-alt;
       border: $border-width-thin solid $color-border-button-default;
       border-top: 0;
@@ -75,21 +75,21 @@
   }
 }
 
-.#{$css-prefix}tabs--scoped__item {
+.slds-tabs--scoped__item {
   position: relative;
   margin-bottom: ($border-width-thin * -1);
 
-  + .#{$css-prefix}tabs--scoped__item {
+  + .slds-tabs--scoped__item {
     margin-left: ($border-width-thin * -1);
   }
 
-  &:first-child .#{$css-prefix}tabs--scoped__link {
+  &:first-child .slds-tabs--scoped__link {
     border-left: 0;
     border-radius: $border-radius-medium 0 0 0;
   }
 }
 
-.#{$css-prefix}tabs--scoped__content {
+.slds-tabs--scoped__content {
   background-color: $color-background-alt;
   border: $border-width-thin solid $color-border-button-default;
   border-top: 0;
@@ -97,7 +97,7 @@
   padding: $spacing-medium;
 }
 
-.#{$css-prefix}tabs--scoped__link {
+.slds-tabs--scoped__link {
   @include tabs-link;
   height: $line-height-tab;
   line-height: $line-height-tab;
@@ -117,7 +117,7 @@
   }
 }
 
-.#{$css-prefix}active .#{$css-prefix}tabs--scoped__link {
+.slds-active .slds-tabs--scoped__link {
   background-color: $color-background-alt;
   color: $color-text-link;
   border-color: $color-border;

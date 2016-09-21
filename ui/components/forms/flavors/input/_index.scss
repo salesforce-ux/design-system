@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}input {
+.slds-input {
   @include form-states;
   display: inline-block;
   padding: 0 $spacing-medium 0 $spacing-small;
@@ -44,10 +44,10 @@
 }
 
 // Modifier if text input has svg icon adjacent to <input>
-.#{$css-prefix}input-has-icon {
+.slds-input-has-icon {
   position: relative;
 
-  .#{$css-prefix}input__icon {
+  .slds-input__icon {
     @include square($square-icon-medium-content);
     position: absolute;
     top: 50%;
@@ -59,59 +59,59 @@
   }
 
   &--left {
-    .#{$css-prefix}input__icon {
+    .slds-input__icon {
       left: $spacing-small;
     }
 
-    .#{$css-prefix}input,
-    .#{$css-prefix}input--bare {
+    .slds-input,
+    .slds-input--bare {
       padding-left: $spacing-x-large;
     }
   }
 
   &--right {
-    .#{$css-prefix}input__icon {
+    .slds-input__icon {
       right: $spacing-small;
     }
 
-    .#{$css-prefix}input,
-    .#{$css-prefix}input--bare {
+    .slds-input,
+    .slds-input--bare {
       padding-right: $spacing-x-large;
     }
   }
 
   &--left-right {
 
-    .#{$css-prefix}input__icon--left {
+    .slds-input__icon--left {
       left: $spacing-small;
     }
 
-    .#{$css-prefix}input__icon--right {
+    .slds-input__icon--right {
       right: $spacing-small;
     }
 
-    .#{$css-prefix}input,
-    .#{$css-prefix}input--bare {
+    .slds-input,
+    .slds-input--bare {
       padding: 0 $spacing-x-large;
     }
   }
 }
 
-.#{$css-prefix}input-has-fixed-addon {
+.slds-input-has-fixed-addon {
   display: flex;
 }
 
-.#{$css-prefix}form-element__addon {
+.slds-form-element__addon {
   display: inline-block;
   margin: 0 $spacing-x-small;
   align-self: center;
 }
 
 // Error Styles
-.#{$css-prefix}has-error {
-  @include form-input-error('.#{$css-prefix}input');
+.slds-has-error {
+  @include form-input-error('.slds-input');
 
-  .#{$css-prefix}input__icon {
+  .slds-input__icon {
     fill: $color-text-error;
   }
 }

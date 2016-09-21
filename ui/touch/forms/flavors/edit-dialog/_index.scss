@@ -7,27 +7,27 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}modal--form {
+.slds-modal--form {
 
-  .#{$css-prefix}modal__header,
-  .#{$css-prefix}modal__content:last-child {
+  .slds-modal__header,
+  .slds-modal__content:last-child {
     border-radius: 0;
     box-shadow: none;
   }
 
-  .#{$css-prefix}modal__container {
+  .slds-modal__container {
     margin: 0;
     padding: 0;
   }
 
-  .#{$css-prefix}modal__header .#{$css-prefix}text-heading--medium {
+  .slds-modal__header .slds-text-heading--medium {
     // Unfortunately necessary to line up text with buttons
     line-height: $line-height-text;
   }
 
 
 
-  .#{$css-prefix}modal__header .#{$css-prefix}button {
+  .slds-modal__header .slds-button {
     display: inline-block;
     width: auto;
 
@@ -35,7 +35,7 @@
       float: left;
       margin-right: $spacing-x-small;
 
-      + .#{$css-prefix}button {
+      + .slds-button {
         float: right;
         margin: {
           top: 0;

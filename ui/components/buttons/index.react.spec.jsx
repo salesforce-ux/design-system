@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from 'ui/components/buttons/index.react';
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 import {
   isCompositeComponent,
@@ -35,12 +34,12 @@ describe('React', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
     it('includes the flavor', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}button--brand`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-button--brand');
       expect(nodes).length.to.be(1);
     });
     it('contains the correct className', () => {
       const classNames = $cmp.className.split(' ').filter(name => {
-        return new RegExp(`^${cssPrefix}button(--)?`).test(name);
+        return new RegExp('^slds-button(--)?').test(name);
       });
       expect(classNames).to.have.length.above(0);
     });

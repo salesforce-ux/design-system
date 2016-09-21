@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}table {
+.slds-table {
   // scss-lint:disable SelectorDepth
   background-color: $color-background-alt;
 
@@ -27,7 +27,7 @@
   }
 
   // Default Table Row Hover
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover {
+  &:not(.slds-no-row-hover) tbody tr:hover {
     > td,
     > th {
       background-color: $color-background-row-hover;
@@ -35,8 +35,8 @@
   }
 
   // Selected Table Row + Hover
-  tbody tr.#{$css-prefix}is-selected,
-  &:not(.#{$css-prefix}no-row-hover) tr.#{$css-prefix}is-selected:hover {
+  tbody tr.slds-is-selected,
+  &:not(.slds-no-row-hover) tr.slds-is-selected:hover {
 
     > td,
     > th {
@@ -45,35 +45,35 @@
   }
 
   // Selected Cell
-  td.#{$css-prefix}is-selected,
-  td.#{$css-prefix}is-selected:hover,
-  th.#{$css-prefix}is-selected,
-  th.#{$css-prefix}is-selected:hover {
+  td.slds-is-selected,
+  td.slds-is-selected:hover,
+  th.slds-is-selected,
+  th.slds-is-selected:hover {
     box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
   }
 
   // By default, nowrap is applied
-  .#{$css-prefix}cell-wrap {
+  .slds-cell-wrap {
     white-space: normal;
   }
 
   // Reduce cell to the width of its content, if space is available
-  .#{$css-prefix}cell-shrink {
+  .slds-cell-shrink {
     width: 1%;
   }
 
   // Use to add a left padding buffer to cells, @todo will need to reset for responsive
-  .#{$css-prefix}cell-buffer--left {
+  .slds-cell-buffer--left {
     padding-left: $spacing-large;
   }
 
-  .#{$css-prefix}cell-buffer--right {
+  .slds-cell-buffer--right {
     padding-right: $spacing-large;
   }
 }
 
 // Add left and right padding to the first and last cells of a table
-.#{$css-prefix}table--cell-buffer {
+.slds-table--cell-buffer {
 
   tr > th:first-child,
   tr > td:first-child {
@@ -87,7 +87,7 @@
 }
 
 // Add vertical borders to a table
-.#{$css-prefix}table--bordered {
+.slds-table--bordered {
   // scss-lint:disable SelectorDepth
   border: {
     top: $border-width-thin solid $color-border;
@@ -113,15 +113,15 @@
   // This retains the selected state when a row is hovered
   //
   // Box shadow used to eliminate jumpiness on hover
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > td:not(.#{$css-prefix}is-selected),
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th:not(.#{$css-prefix}is-selected) {
+  &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+  &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
                 $color-border 0 ($border-width-thin) 0 inset;
   }
 }
 
 // Add alternating strips to rows
-.#{$css-prefix}table--striped {
+.slds-table--striped {
 
   tr:nth-of-type(even) > td {
     background-color: $color-background-row-hover;
@@ -129,15 +129,15 @@
 }
 
 // Applies move cursor to moveable cell
-.#{$css-prefix}is-sortable {
+.slds-is-sortable {
   cursor: pointer;
 
-  .#{$css-prefix}button {
+  .slds-button {
     visibility: hidden;
     margin-left: $spacing-x-small;
   }
 
-  .#{$css-prefix}button__icon {
+  .slds-button__icon {
     fill: $color-text-link;
   }
 
@@ -145,7 +145,7 @@
     background-color: $color-background-row-hover;
     color: $color-text-link;
 
-    .#{$css-prefix}button {
+    .slds-button {
       visibility: visible;
     }
   }
@@ -154,12 +154,12 @@
 // Resizable data table columns
 //
 // Set table to use fixed layout for width and truncation purposes
-.#{$css-prefix}table--fixed-layout {
+.slds-table--fixed-layout {
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
 
-  .#{$css-prefix}cell-shrink {
+  .slds-cell-shrink {
     width: $square-icon-large-boundary;
 
     &:nth-child(n) {
@@ -181,12 +181,12 @@
   }
 }
 
-.#{$css-prefix}is-resizable:hover {
+.slds-is-resizable:hover {
   box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
 }
 
 // Resizable handle
-.#{$css-prefix}resizable {
+.slds-resizable {
   max-width: 100%;
 
   &__handle {
@@ -220,7 +220,7 @@
   }
 }
 
-.#{$css-prefix}table--compact {
+.slds-table--compact {
 
   th,
   td {

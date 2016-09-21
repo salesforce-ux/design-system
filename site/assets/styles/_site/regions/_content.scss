@@ -75,7 +75,7 @@
   }
 
   // Deal with open states
-  .#{$css-prefix}is-open {
+  .slds-is-open {
 
     .site-states {
       display: block;
@@ -144,7 +144,7 @@
     }
 
     // When component variant is selected
-    .#{$css-prefix}is-selected {
+    .slds-is-selected {
       background-color: $color-background;
 
       a:hover {
@@ -168,7 +168,7 @@
       padding-left: $spacing-x-large;
     }
 
-    .#{$css-prefix}is-active a {
+    .slds-is-active a {
       color: $color-text-tab-label-selected;
       background-color: $color-background-alt-2;
     }

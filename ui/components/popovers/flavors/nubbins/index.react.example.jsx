@@ -19,7 +19,7 @@ let Popover = props =>
 <div className={`slds-popover slds-nubbin--${props.nubbinPosition}`} role="dialog">
   <div className="slds-popover__body">
     <code>
-      "slds-popover"
+      slds-popover
       <br />
       {`slds-nubbin--${props.nubbinPosition}`}
     </code>

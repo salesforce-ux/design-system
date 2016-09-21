@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}theme {
+.slds-theme {
 
   &--default {
     @include theme(default);
@@ -43,7 +43,7 @@
     background-color: $color-background-warning;
     color: $color-text-default;
 
-    .#{$css-prefix}button__icon {
+    .slds-button__icon {
       fill: $color-text-icon-default;
     }
   }
@@ -77,7 +77,7 @@
   &--offline,
   &--alert-texture,
   &--inverse-text {
-    .#{$css-prefix}text-body--small {
+    .slds-text-body--small {
       color: inherit;
     }
   }

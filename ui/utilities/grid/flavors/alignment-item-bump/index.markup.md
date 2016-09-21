@@ -1,1 +1,1 @@
-To "bump" a single grid item or a grid item plus the precedding grid items that follow, apply the class `.{{cssPrefix}}col--bump-{direction}`, with `{direction}` being either `left`, `right`, `top` or `bottom` to a grid item.
+To "bump" a single grid item or a grid item plus the precedding grid items that follow, apply the class `.slds-col--bump-{direction}`, with `{direction}` being either `left`, `right`, `top` or `bottom` to a grid item.

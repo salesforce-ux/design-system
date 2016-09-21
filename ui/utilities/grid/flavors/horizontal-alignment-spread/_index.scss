@@ -9,11 +9,11 @@
 
 
 
-.#{$css-prefix}grid--align-spread {
+.slds-grid--align-spread {
   justify-content: space-between;
 
-  .#{$css-prefix}col,
-  [class*="#{$css-prefix}col--padded"] {
+  .slds-col,
+  [class*="slds-col--padded"] {
     flex-grow: 0;
   }
 }

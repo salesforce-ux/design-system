@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}media--timeline {
+.slds-media--timeline {
   padding-bottom: $spacing-large;
   @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
 
@@ -18,7 +18,7 @@
   }
 }
 
-.#{$css-prefix}timeline__title {
+.slds-timeline__title {
   @include deprecate('4.0.0', 'No longer in use.') {
     position: relative;
 
@@ -42,7 +42,7 @@
   }
 }
 
-.#{$css-prefix}timeline {
+.slds-timeline {
 
   &__icon {
     margin-top: ($spacing-small * -1);

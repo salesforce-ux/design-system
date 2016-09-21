@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'ui/components/modals/index.react';
 import globals from 'app_modules/global';
-const cssPrefix = globals.cssPrefix;
 
 import {
   isCompositeComponent,
@@ -89,11 +88,11 @@ describe('React', () => {
       expect(isCompositeComponent(cmp)).to.be.true;
     });
     it('contains the correct className', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal');
       expect(nodes).to.have.length.above(0);
     });
     it('contains the correct className on the content', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__container`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__container');
       expect(nodes).to.have.length.above(0);
     });
     it('handles onClick', () => {
@@ -125,7 +124,7 @@ describe('React', () => {
     it('stops event propagation when the content is clicked', () => {
       const spyA = sinon.spy(cmp.onClick);
       const spyB = sinon.spy(cmp.onContentClick);
-      const content = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__container`)[0];
+      const content = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__container')[0];
       Simulate.click(content);
       requestAnimationFrame(() => {
         expect(spyA.called).to.be.false;
@@ -133,19 +132,19 @@ describe('React', () => {
       });
     });
     it('renders the header', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__header`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__header');
       expect(nodes).length.to.be(1);
     });
     it('includes the close button', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__close`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__close');
       expect(nodes).length.to.be(1);
     });
     it('renders the body', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__content`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__content');
       expect(nodes).length.to.be(1);
     });
     it('renders the footer with flavor', () => {
-      const nodes = scryRenderedDOMComponentsWithClass(cmp, `${cssPrefix}modal__footer--directional`);
+      const nodes = scryRenderedDOMComponentsWithClass(cmp, 'slds-modal__footer--directional');
       expect(nodes).length.to.be(1);
     });
   });

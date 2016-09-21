@@ -72,7 +72,7 @@ export const hook = (obj, name, ...args) => ['before_', '', 'after_']
   .map(name => method(`hooks.${name}`, ...args)(obj));
 
 /**
- * Return a function that will return true if all term segments matche all
+ * Return a function that will return true if all term segments match all
  * query segments
  *
  * @param {string} query

@@ -43,7 +43,7 @@
 @mixin inverse-links {
   color: $color-text-inverse;
 
-  a:not(.#{$css-prefix}button--neutral) {
+  a:not(.slds-button--neutral) {
     color: $color-text-link-inverse;
     text-decoration: underline;
 

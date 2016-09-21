@@ -10,11 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Spinner from 'ui/components/spinners/index.react';
+import PageBody from 'app_modules/site/components/page/body';
 
+import ComponentsOverview from 'site/assets/scripts/components/components-overview';
 
 export default (
-<div className="demo-only demo--inverse" style={{height: '5rem'}}>
-  <Spinner flavor="inverse-medium" className="slds-spinner--inverse" />
-</div>
+  <PageBody anchorTitle="Component Overview">
+    <ComponentsOverview />
+    <script src="/assets/scripts/components-overview.js" async />
+  </PageBody>
 );

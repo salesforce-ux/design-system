@@ -101,7 +101,7 @@ classes:
   -
     class: slds-checkbox--button
     description: Customizes your checkbox to look like a button in a button group
-    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+    applied: <code>&lt;label class="slds-button"&gt;</code>
   -
     class: slds-checkbox--add-button
     description: Customizes your checkbox to look like a plus button
@@ -125,7 +125,7 @@ classes:
   -
     class: slds-radio--button
     description: Customizes your radio to look like a button in a button group
-    applied: <code>&lt;label class="{{cssPrefix}}button"&gt;</code>
+    applied: <code>&lt;label class="slds-button"&gt;</code>
   -
     class: slds-form--horizontal
     description: Horizontally aligns a single form label and control on the same line

@@ -154,7 +154,7 @@
     }
 
     @for $i from 1 through $denominator {
-      .#{$css-prefix}#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
+      .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
         width: ($i / $denominator) * 100%;
       }
     }
@@ -168,8 +168,8 @@
 
     @for $numerator from 1 to $denominator {
 
-      // Build a class in the format `.#{$css-prefix}order--1`.
-      .#{$css-prefix}#{$breakpoint}order--#{$numerator} {
+      // Build a class in the format `.slds-order--1`.
+      .slds-#{$breakpoint}order--#{$numerator} {
         order: $numerator;
       }
     }
@@ -282,27 +282,27 @@
       // scss-lint:disable ImportantRule
       @each $position in $positions {
         @if $size == 0 {
-          .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
+          .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
             #{$property}-#{$position}: 0 !important;
           }
         }
 
-        .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
+        .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
           #{$property}-#{$position}: $size;
         }
       }
 
-      .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
+      .slds-#{$prop-prefix}-vertical--#{$spacing} {
         #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
 
-      .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
+      .slds-#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
         #{$property}-left: $size;
       }
 
-      .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
+      .slds-#{$prop-prefix}-around--#{$spacing} {
         #{$property}: $size;
       }
     }
@@ -319,7 +319,7 @@
 
 @mixin visibility($class-name, $min: null, $max: null) {
 
-  .#{$css-prefix}#{$class-name} {
+  .slds-#{$class-name} {
 
     &-show {
       display: none;
@@ -358,7 +358,7 @@
   }
   @if $max {
 
-    .#{$css-prefix}max-#{$class-name}-hide {
+    .slds-max-#{$class-name}-hide {
 
       @media (max-width: $max - 1) {
         display: none;

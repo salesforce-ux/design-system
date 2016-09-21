@@ -11,10 +11,10 @@
 
 @include mq-medium-max {
 
-  .#{$css-prefix}media--responsive {
+  .slds-media--responsive {
     display: block;
 
-    .#{$css-prefix}media__figure {
+    .slds-media__figure {
       margin: 0 0 $spacing-small;
     }
   }

@@ -49,7 +49,8 @@ export function getConfig (options) {
   const config = {
     context: __PATHS__.root,
     entry: {
-      site: './site/assets/scripts/main.js'
+      site: './site/assets/scripts/main.js',
+      'components-overview': './site/assets/scripts/components-overview.js'
     },
     devtool: 'source-map',
     output: {

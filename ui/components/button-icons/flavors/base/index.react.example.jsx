@@ -31,6 +31,7 @@ export let ButtonIcon = props =>
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
+    title={ props.title }
     tabIndex={ props.tabIndex } >
     <SvgIcon
       className={className('slds-button__icon', props.iconClassName)}

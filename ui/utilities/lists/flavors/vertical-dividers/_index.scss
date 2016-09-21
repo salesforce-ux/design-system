@@ -8,15 +8,15 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Top dividers
-.#{$css-prefix}has-dividers--top {
+.slds-has-dividers--top {
 
-  > .#{$css-prefix}list__item,
-  > .#{$css-prefix}item {
+  > .slds-list__item,
+  > .slds-item {
     @include border(top);
   }
 
-  &-space > .#{$css-prefix}list__item,
-  &-space > .#{$css-prefix}item {
+  &-space > .slds-list__item,
+  &-space > .slds-item {
     @include border(top);
     padding: $spacing-small;
 
@@ -27,15 +27,15 @@
 }
 
 // Bottom dividers
-.#{$css-prefix}has-dividers--bottom {
+.slds-has-dividers--bottom {
 
-  > .#{$css-prefix}list__item,
-  > .#{$css-prefix}item {
+  > .slds-list__item,
+  > .slds-item {
     @include border(bottom);
   }
 
-  &-space > .#{$css-prefix}list__item,
-  &-space > .#{$css-prefix}item {
+  &-space > .slds-list__item,
+  &-space > .slds-item {
     @include border(bottom);
     padding: $spacing-small;
 
@@ -46,19 +46,19 @@
 }
 
 // Dividers around items
-.#{$css-prefix}has-dividers--around {
+.slds-has-dividers--around {
 
-  > .#{$css-prefix}item {
+  > .slds-item {
     @include border(around, $border-radius-medium);
 
-    + .#{$css-prefix}item {
+    + .slds-item {
       margin-top: $spacing-x-small;
     }
   }
 
   &-space {
 
-    > .#{$css-prefix}item {
+    > .slds-item {
       @include border(around, $border-radius-medium);
       padding: $spacing-small;
 
@@ -66,7 +66,7 @@
         padding: $spacing-x-small;
       }
 
-      + .#{$css-prefix}item {
+      + .slds-item {
         margin-top: $spacing-x-small;
       }
     }
@@ -74,10 +74,10 @@
 }
 
 // Interactions on items
-.#{$css-prefix}has-list-interactions {
+.slds-has-list-interactions {
 
-  > .#{$css-prefix}list__item,
-  > .#{$css-prefix}item {
+  > .slds-list__item,
+  > .slds-item {
     @include list-has-hovers;
     @include list-has-selections;
   }
@@ -85,7 +85,7 @@
 
 // Deprecate for directional dividers
 @include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
-  .#{$css-prefix}list--vertical.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
+  .slds-list--vertical.slds-has-dividers > .slds-list__item {
     @include box($padding: $spacing-x-small, $border-radius: null, $borders: bottom);
     @include list-has-hovers;
     @include list-has-selections;
@@ -94,19 +94,19 @@
 
 // Deprecate for has-dividers--around instead
 @include deprecate('4.0.0', 'Use has-dividers--around instead') {
-  .#{$css-prefix}has-cards {
+  .slds-has-cards {
 
-    > .#{$css-prefix}list__item {
+    > .slds-list__item {
       @include border(around, $border-radius-medium);
 
-      + .#{$css-prefix}list__item {
+      + .slds-list__item {
         margin-top: $spacing-x-small;
       }
     }
 
     &--space {
 
-      > .#{$css-prefix}list__item {
+      > .slds-list__item {
         @include border(around, $border-radius-medium);
         padding: $spacing-small;
 
@@ -114,7 +114,7 @@
           padding: $spacing-x-small;
         }
 
-        + .#{$css-prefix}list__item {
+        + .slds-list__item {
           margin-top: $spacing-x-small;
         }
       }

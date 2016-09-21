@@ -10,11 +10,64 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Spinner from 'ui/components/spinners/index.react';
+import className from 'classnames';
+import { SpinnerContainer } from 'ui/components/spinners/flavors/containers/index.react.example';
+import { Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
+
+//////////////////////////////////////////////
+// Partials
+//////////////////////////////////////////////
+
+let Demo = props =>
+  <div className="demo-only" style={{height: '6.25rem'}}>
+    {props.children}
+  </div>;
 
 
-export default (
-<div className="demo-only" style={{height: '3.75rem'}}>
-  <Spinner flavor="small" className="slds-spinner--brand" />
-</div>
-);
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
+
+export let states = [
+  {
+    id: 'x-small',
+    label: 'X-small',
+    description: 'The extra small spinner can be positioned over the end of an input to indicate loading.',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--x-small" />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'small',
+    label: 'Small',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--small" />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'medium',
+    label: 'Medium',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--medium" />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
+    id: 'large',
+    label: 'Large',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--large" />
+        </SpinnerContainer>
+      </Demo>
+  }
+];

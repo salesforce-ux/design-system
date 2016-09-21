@@ -40,7 +40,7 @@
     }
   }
 
-  .#{$css-prefix}button {
+  .slds-button {
     border: 0;
   }
 
@@ -243,7 +243,7 @@
   margin-left: -1 * ($spacing-medium / 2);
   margin-right: -1 * ($spacing-medium / 2);
 
-  .#{$css-prefix}button {
+  .slds-button {
     margin-left: ($spacing-medium / 2);
     margin-right: ($spacing-medium / 2);
 

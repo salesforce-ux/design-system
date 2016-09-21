@@ -9,7 +9,7 @@
 
 
 // Stacked row with stacked cells
-.#{$css-prefix}max-medium-table--stacked {
+.slds-max-medium-table--stacked {
   @include table-stacked;
 
   @include mq-medium-max {
@@ -22,7 +22,7 @@
 }
 
 // Stacked rows with horizontal cells
-.#{$css-prefix}max-medium-table--stacked-horizontal {
+.slds-max-medium-table--stacked-horizontal {
   @include table-stacked;
 
   @include mq-medium-max {
@@ -36,7 +36,7 @@
     }
 
     // Revert max-width: $size-small;
-    .#{$css-prefix}truncate {
+    .slds-truncate {
       max-width: 100%;
     }
   }

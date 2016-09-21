@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}tabs--default {
+.slds-tabs--default {
   @include tabs;
 
   &__nav {
@@ -19,9 +19,9 @@
 
   @include deprecate('4.0.0') {
 
-    .#{$css-prefix}tabs__item {
+    .slds-tabs__item {
 
-      + .#{$css-prefix}tabs__item {
+      + .slds-tabs__item {
         @include mq-medium-min {
           margin-left: $spacing-large;
         }
@@ -47,7 +47,7 @@
         }
       }
 
-      &.#{$css-prefix}active a {
+      &.slds-active a {
         border-color: $color-border-tab-selected;
         color: $color-text-action-label-active;
 
@@ -57,19 +57,19 @@
       }
     }
 
-    > .#{$css-prefix}tabs__content {
+    > .slds-tabs__content {
       @include tabs-content;
     }
   }
 
-  .#{$css-prefix}tabs__item--overflow {
+  .slds-tabs__item--overflow {
     overflow: visible;
   }
 }
 
-.#{$css-prefix}tabs--default__item {
+.slds-tabs--default__item {
 
-  &.#{$css-prefix}active .#{$css-prefix}tabs--default__link {
+  &.slds-active .slds-tabs--default__link {
     border-color: $color-border-tab-selected;
     color: $color-text-action-label-active;
 
@@ -80,11 +80,11 @@
   }
 }
 
-.#{$css-prefix}tabs--default__content {
+.slds-tabs--default__content {
   @include tabs-content;
 }
 
-.#{$css-prefix}tabs--default__link {
+.slds-tabs--default__link {
   @include tabs-link;
   height: $line-height-tab;
   line-height: $line-height-tab;

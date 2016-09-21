@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}button--neutral.#{$css-prefix}is-selected {
+.slds-button--neutral.slds-is-selected {
   border-color: transparent;
   background-color: transparent;
 
@@ -25,31 +25,31 @@
 }
 
 // Icon modifier for stateful buttons
-.#{$css-prefix}button__icon--stateful {
+.slds-button__icon--stateful {
   @include square($square-icon-small-content);
   fill: currentColor;
 }
 
 // Inverse Button
-.#{$css-prefix}button--inverse.#{$css-prefix}is-selected {
+.slds-button--inverse.slds-is-selected {
   border-color: transparent;
 }
 
 // These styles show/hide text based on interaction
-.#{$css-prefix}text-not-selected,
-.#{$css-prefix}text-selected,
-.#{$css-prefix}text-selected-focus,
-.#{$css-prefix}is-selected[disabled]:hover .#{$css-prefix}text-selected,
-.#{$css-prefix}is-selected[disabled]:focus .#{$css-prefix}text-selected {
+.slds-text-not-selected,
+.slds-text-selected,
+.slds-text-selected-focus,
+.slds-is-selected[disabled]:hover .slds-text-selected,
+.slds-is-selected[disabled]:focus .slds-text-selected {
   display: block;
 }
 
-.#{$css-prefix}not-selected .#{$css-prefix}text-selected,
-.#{$css-prefix}not-selected .#{$css-prefix}text-selected-focus,
-.#{$css-prefix}is-selected .#{$css-prefix}text-not-selected,
-.#{$css-prefix}is-selected:not(:hover):not(:focus) .#{$css-prefix}text-selected-focus,
-.#{$css-prefix}is-selected[disabled]:hover .#{$css-prefix}text-selected-focus,
-.#{$css-prefix}is-selected:hover .#{$css-prefix}text-selected,
-.#{$css-prefix}is-selected:focus .#{$css-prefix}text-selected {
+.slds-not-selected .slds-text-selected,
+.slds-not-selected .slds-text-selected-focus,
+.slds-is-selected .slds-text-not-selected,
+.slds-is-selected:not(:hover):not(:focus) .slds-text-selected-focus,
+.slds-is-selected[disabled]:hover .slds-text-selected-focus,
+.slds-is-selected:hover .slds-text-selected,
+.slds-is-selected:focus .slds-text-selected {
   display: none;
 }

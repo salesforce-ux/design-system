@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}docked_container {
+.slds-docked_container {
   display: flex;
   align-items: flex-end;
   position: fixed;
@@ -17,7 +17,7 @@
   height: $height-docked-bar;
 }
 
-.#{$css-prefix}docked-composer {
+.slds-docked-composer {
   position: relative;
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   width: 480px;
@@ -28,11 +28,11 @@
     bottom: none;
   }
 
-  &.#{$css-prefix}is-open {
+  &.slds-is-open {
     height: 480px;
   }
 
-  + .#{$css-prefix}docked-composer {
+  + .slds-docked-composer {
     margin-left: $spacing-large;
   }
 
@@ -43,7 +43,7 @@
     padding: $spacing-x-small $spacing-small;
   }
 
-  &__actions .#{$css-prefix}button {
+  &__actions .slds-button {
     margin-left: $spacing-small;
   }
 
@@ -132,7 +132,7 @@
         text-decoration: none;
       }
 
-      .#{$css-prefix}text-body--small {
+      .slds-text-body--small {
         color: $color-text-inverse;
         margin-left: $spacing-x-small;
       }
@@ -141,14 +141,14 @@
 }
 
 // Composer Modal
-.#{$css-prefix}docked-composer-modal {
+.slds-docked-composer-modal {
 
-  .#{$css-prefix}modal__content {
+  .slds-modal__content {
     flex: 1 1 0%;
     border-radius: $border-radius-medium;
   }
 
-  .#{$css-prefix}docked-composer {
+  .slds-docked-composer {
     width: 100%;
     height: 100%;
     border: 0;

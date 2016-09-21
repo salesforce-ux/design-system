@@ -9,22 +9,22 @@
 
 
 
-.#{$css-prefix}align-top {
+.slds-align-top {
   vertical-align: top;
   align-self: flex-start;
 }
 
-.#{$css-prefix}align-middle {
+.slds-align-middle {
   vertical-align: middle;
   align-self: center;
 }
 
-.#{$css-prefix}align-bottom {
+.slds-align-bottom {
   vertical-align: bottom;
   align-self: flex-end;
 }
 
-.#{$css-prefix}align-content-center {
+.slds-align-content-center {
   @include deprecate('4.0.0') {
     flex: 1;
     align-self: center;

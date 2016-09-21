@@ -80,15 +80,11 @@ class ComponentFlavor extends React.Component {
 
   render() {
     const { flavor } = this.props;
-    const codeStyles = {};
-    const boxStyles = {};
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
       statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
-
-    flavor.status === 'prototype' ? codeStyles.display = 'none' : boxStyles.display = 'none';
 
     return (
       <section
@@ -106,12 +102,8 @@ class ComponentFlavor extends React.Component {
             {this.renderPreview()}
             <h3 className="slds-assistive-text">Code</h3>
             {this.renderDesc()}
-            <div className="show-for-proto" style={boxStyles} data-slds-status={flavor.status}>
-              {this.renderBox()}
-            </div>
-            <div style={codeStyles} data-slds-status={flavor.status}>
-              {this.renderCode()}
-            </div>
+            {this.renderNotDevReadyCodeAlert(flavor.status)}
+            {this.renderCode(flavor, flavor.status)}
             {this.renderInfo()}
           </div>
         </div>
@@ -119,12 +111,14 @@ class ComponentFlavor extends React.Component {
     );
   }
 
-  renderBox() {
-    return (
-      <div className="slds-box slds-theme--default slds-theme--alert-texture slds-m-top--medium">
-        <p>Code will be available when this component reaches a Dev-Ready state.</p>
+  renderNotDevReadyCodeAlert(status) {
+    return (status !== 'dev-ready') ? (
+      <div className="js-show-for-proto" data-slds-status={status}>
+        <div className="slds-box slds-theme--default slds-theme--alert-texture slds-m-vertical--medium">
+          <p>Code will be available when this component reaches a Dev-Ready state.</p>
+        </div>
       </div>
-    );
+    ) : null;
   }
 
   renderBadge(status) {
@@ -266,13 +260,15 @@ class ComponentFlavor extends React.Component {
     });
   }
 
-  renderCode() {
-    const { flavor } = this.props;
+  renderCode(flavor, status) {
     const className = 'language-markup';
     const code = flavor.exampleMarkup
       ? highlightMarkup(flavor.exampleMarkup) : null;
     return (
-      <div className="site-code--content slds-scrollable--x">
+      <div
+        className="site-code--content slds-scrollable--x"
+        data-slds-status={status}
+        style={status !== 'dev-ready' ? { display: 'none' } : null }>
         <pre className={className}>
           <code
             id={`code-${flavor.uid}`}

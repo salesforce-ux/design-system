@@ -31,27 +31,12 @@ export default (
     </p>
 
     <p>
-      Your <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/apps_intro.htm">Lightning Application</a> automatically get the Lightning Design System
-      stylesheets and design tokens if they extend <code>force:slds</code>.
+      Your <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/lightning_out_dependencies.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/apps_slds.htm">Lightning Application</a> automatically get the Lightning Design System
+      stylesheets and design tokens by using the linked instructions to each.
       This is the easiest way to stay up-to-date and consistent with SLDS
       enhancements.</p>
 
-    <p>To extend <code>force:slds</code>, your application should look like this:</p>
-    <div className="site-code--content slds-scrollable--x">
-      <CodeBlock language="html">{`
-      <aura:application extends="force:slds">
-      <!-- customize your application here -->
-      </aura:application>
-      `}</CodeBlock>
-    </div>
-
     <p><strong>Note:</strong> If you still need to use a static resource with the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.
-    </p>
-    <p>
-      We have prepared
-      a <a href={lightningTutorialUrl}>self-guided workshop</a> to guide you
-      through installation, usage, and examples. It includes details on how to
-      use the Design System SVG spritemap icons in Lightning components.
     </p>
 
     <p>
@@ -61,19 +46,7 @@ export default (
 
     <ul className="slds-list--dotted">
       <li>
-        When using the component sample code from the Trailhead module, be
-        sure to replace all static resource paths with the Lightning resource
-        URL syntax, as summarized in
-        the <a href="/faq#how-do-i-link-to-lightning-static-resources-like-stylesheets-and-icons">FAQ</a> (You should no longer need to link to the CSS portion of your static resource)
-      </li>
-
-      <li>
-        For details on how to use the Design System SVG spritemap icons in
-        Lightning components, please review
-        the <a href={lightningTutorialUrl}>tutorial</a> which covers this in
-        detail. Also note that when using SVG spritemap image icons with MSIE
-        you will need to use a small script
-        called <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a>
+        The Design System uses SVG icons. You can use them in your Lightning components by using one of the new Base Lightning Components called <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm?search_text=lightning:">lightning:icon</a>. You can explore the other Base Components in the Reference section of the Developer Guide.
       </li>
 
       <li>

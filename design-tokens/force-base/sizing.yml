@@ -89,6 +89,9 @@ props:
   SQUARE_ICON_X_SMALL_CONTENT:
     value: .5rem
     comment: Very small icons in icon buttons.
+  SQUARE_ICON_XX_SMALL_CONTENT:
+    value: 0.875rem
+    comment: Very small icons to replace force font with temporary override.
   SQUARE_ICON_LARGE:
     value: 3.125rem
     comment: Large tap target size.

@@ -10,21 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
+import omit from 'lodash/omit';
 
 class SvgIcon extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassName();
-    const props = this.$propsWithoutKeys('className', 'sprite', 'symbol');
+    const props = omit(this.props, ['className', 'sprite', 'symbol']);
     return (
       <svg
         {...props}
         aria-hidden={true}
-        className={className}
+        className={this.props.className}
         dangerouslySetInnerHTML={{__html: this.getUse()}} />
     );
   }

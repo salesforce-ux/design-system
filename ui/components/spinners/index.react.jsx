@@ -14,12 +14,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 class Spinner extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-    this.state = {};
-  };
-
   render() {
     let { flavor, children } = this.props;
     const className = classNames(this.props.className, {

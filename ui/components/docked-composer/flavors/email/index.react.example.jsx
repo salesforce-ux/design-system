@@ -59,8 +59,8 @@ export default (
               </div>
             </div>
             <div className="slds-grid slds-shrink-none slds-p-horizontal--small">
-              <Button>Cc</Button>
-              <Button>Bcc</Button>
+              <Button className="slds-button">Cc</Button>
+              <Button className="slds-button">Bcc</Button>
             </div>
           </div>
           <div className="slds-grid slds-p-horizontal--small">
@@ -161,7 +161,7 @@ export default (
                 className="slds-button--icon-container"
                 symbol="delete"
                 assistiveText="Delete" />
-            <Button flavor="brand">Send</Button>
+            <Button className="slds-button slds-button--brand">Send</Button>
           </div>
 
         </footer>

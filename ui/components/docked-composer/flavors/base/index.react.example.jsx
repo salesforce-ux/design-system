@@ -58,7 +58,7 @@ let ComposerBody = props =>
 let ComposerFooter = props =>
   <footer className="slds-docked-composer__footer slds-shrink-none">
     <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
-      <Button flavor="brand">Action</Button>
+      <Button className="slds-button slds-button--brand">Action</Button>
     </div>
   </footer>;
 

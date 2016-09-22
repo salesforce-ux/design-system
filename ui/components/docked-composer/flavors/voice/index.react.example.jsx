@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
 import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
@@ -95,7 +94,7 @@ export let states = [
             </div>
           </ComposerBody>
           <ComposerFooter>
-            <Button flavor="destructive" className="slds-size--1-of-1">End Call</Button>
+            <Button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</Button>
           </ComposerFooter>
         </DockedComposer>
       </Demo>
@@ -123,7 +122,7 @@ export let states = [
           </div>
         </ComposerBody>
         <ComposerFooter>
-          <Button flavor="destructive" className="slds-size--1-of-1">End Call</Button>
+          <Button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</Button>
         </ComposerFooter>
       </DockedComposer>
     </Demo>
@@ -154,7 +153,7 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-float--right">
-            <Button flavor="destructive">End Call</Button>
+            <Button className="slds-button slds-button--destructive">End Call</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -209,8 +208,8 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-grid">
-            <Button flavor="neutral" className="slds-size--1-of-2">Follow-Up Later</Button>
-            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
+            <Button className="slds-button slds-button--neutral slds-size--1-of-2">Follow-Up Later</Button>
+            <Button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -240,8 +239,8 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-grid">
-            <Button flavor="neutral" className="slds-size--1-of-2">Edit Phone Number</Button>
-            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
+            <Button className="slds-button slds-button--neutral slds-size--1-of-2">Edit Phone Number</Button>
+            <Button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -271,8 +270,8 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-grid">
-            <Button flavor="neutral" className="slds-size--1-of-2">Follow-Up Later</Button>
-            <Button flavor="brand" className="slds-size--1-of-2">Call Again</Button>
+            <Button className="slds-button slds-button--neutral slds-size--1-of-2">Follow-Up Later</Button>
+            <Button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -303,7 +302,7 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-float--right">
-            <Button flavor="brand">Finished Notes</Button>
+            <Button className="slds-button slds-button--brand">Finished Notes</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -362,8 +361,8 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-grid">
-            <Button flavor="neutral" className="slds-size--1-of-2">Dismiss</Button>
-            <Button flavor="brand" className="slds-size--1-of-2">Answer</Button>
+            <Button className="slds-button slds-button--neutral slds-size--1-of-2">Dismiss</Button>
+            <Button className="slds-button slds-button--brand slds-size--1-of-2">Answer</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>
@@ -405,7 +404,7 @@ export let states = [
         </ComposerBody>
         <ComposerFooter>
           <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
-            <Button flavor="brand">Save</Button>
+            <Button className="slds-button slds-button--brand">Save</Button>
           </div>
         </ComposerFooter>
       </DockedComposer>

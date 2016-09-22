@@ -33,7 +33,7 @@ let LookupMulti = props =>
     <div className="slds-form-element__control slds-grid slds-box--border">
       <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--x-small slds-shrink-none">
         <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
-        <ButtonIcon className="slds-button-space-left slds-shrink-none" flavor="icon-bare" sprite="utility" symbol="down" assistiveText="Filter" />
+        <ButtonIcon className="slds-button-space-left slds-shrink-none" sprite="utility" symbol="down" assistiveText="Filter" />
       </div>
       <div className="slds-grid slds-grow">
         <input id={props.id} className="slds-lookup__search-input slds-input--bare slds-grow" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder={props.placeholder} defaultValue={props.value} />
@@ -104,7 +104,7 @@ export default (
         <footer className="slds-docked-composer__footer slds-shrink-none">
 
           <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
-            <Button flavor="brand">Save</Button>
+            <Button className="slds-button slds-button--brand">Save</Button>
           </div>
 
         </footer>

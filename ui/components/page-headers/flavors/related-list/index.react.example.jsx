@@ -31,7 +31,7 @@ export default (
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
         <div className="slds-button-group">
-          <Button flavor="neutral">
+          <Button className="slds-button slds-button--neutral">
             Add Contact
           </Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">

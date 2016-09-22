@@ -26,9 +26,9 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalContent className="slds-modal__menu">
-            <Button flavor="neutral">Upload from Device</Button>
-            <Button flavor="neutral">Select a Salesforce File</Button>
-            <Button flavor="neutral">Cancel</Button>
+            <Button className="slds-button slds-button--neutral">Upload from Device</Button>
+            <Button className="slds-button slds-button--neutral">Select a Salesforce File</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
           </ModalContent>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />
@@ -44,11 +44,11 @@ export let states = [
             <h2 className="slds-text-heading--medium">Select a New Record Type</h2>
           </ModalHeader>
           <ModalContent className="slds-modal__menu">
-            <Button flavor="neutral">Simple</Button>
-            <Button flavor="neutral">Advanced</Button>
-            <Button flavor="neutral">Partner</Button>
-            <Button flavor="neutral">Person Accounts</Button>
-            <Button flavor="neutral">Cancel</Button>
+            <Button className="slds-button slds-button--neutral">Simple</Button>
+            <Button className="slds-button slds-button--neutral">Advanced</Button>
+            <Button className="slds-button slds-button--neutral">Partner</Button>
+            <Button className="slds-button slds-button--neutral">Person Accounts</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
           </ModalContent>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />
@@ -65,8 +65,8 @@ export let states = [
             <p className="slds-m-top--x-small">Are you sure you want to delete this account?</p>
           </ModalHeader>
           <ModalContent className="slds-modal__menu">
-            <Button flavor="destructive">Delete</Button>
-            <Button flavor="neutral">Cancel</Button>
+            <Button className="slds-button slds-button--destructive">Delete</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
           </ModalContent>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />
@@ -87,9 +87,9 @@ export let states = [
             <p className="slds-m-top--x-small">We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your input helps drive our products. Would you mind taking a moment to give us feedback through the App Store? We really appreciate your support.</p>
           </ModalHeader>
           <ModalContent className="slds-modal__menu">
-            <Button flavor="neutral">Upload from Device</Button>
-            <Button flavor="neutral">Select a Salesforce File</Button>
-            <Button flavor="neutral">Cancel</Button>
+            <Button className="slds-button slds-button--neutral">Upload from Device</Button>
+            <Button className="slds-button slds-button--neutral">Select a Salesforce File</Button>
+            <Button className="slds-button slds-button--neutral">Cancel</Button>
           </ModalContent>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Menu from 'ui/components/menus/index.react';
+import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
@@ -58,7 +58,7 @@ let ComposerBody = props =>
 let ComposerFooter = props =>
   <footer className="slds-docked-composer__footer slds-shrink-none">
     <div className="slds-float--right slds-grid slds-grid--align-end slds-size--1-of-2 slds-text-align--right">
-      <Button flavor="brand">Action</Button>
+      <Button className="slds-button slds-button--brand">Action</Button>
     </div>
   </footer>;
 
@@ -72,50 +72,50 @@ let ComposerOverflowMenu = props =>
       <span className="slds-text-body--small slds-align-middle">99 +</span>
     </button>
     <Menu className="slds-dropdown--left slds-dropdown--bottom slds-dropdown--medium slds-nubbin--bottom-left">
-      <Menu.List isSelectable={false} className="slds-dropdown--length-with-icon-7">
-        <Menu.Item>
+      <MenuList isSelectable={false} className="slds-dropdown--length-with-icon-7">
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
             <span className="slds-assistive-text">Email Icon</span>
           </span>
           Agenda for next week
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
             <span className="slds-assistive-text">Call Icon</span>
           </span>
           Lei Chan
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-task slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="task" />
             <span className="slds-assistive-text">Task Icon</span>
           </span>
           August 14 Meeting Notes
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
             <span className="slds-assistive-text">Email Icon</span>
           </span>
           New Email
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
             <span className="slds-assistive-text">Call Icon</span>
           </span>
           Janet Fitzpatrick
-        </Menu.Item>
-        <Menu.Item>
+        </MenuItem>
+        <MenuItem>
           <span className="slds-icon_container slds-icon-standard-call slds-m-right--x-small">
             <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="call" />
             <span className="slds-assistive-text">Call Icon</span>
           </span>
           Call with Adam Fraser
-        </Menu.Item>
-      </Menu.List>
+        </MenuItem>
+      </MenuList>
     </Menu>
   </div>;
 

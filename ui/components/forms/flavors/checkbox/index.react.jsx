@@ -10,16 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
-
+import classNames from 'classnames';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassName('slds-checkbox');
+    const className = classNames('slds-checkbox', this.props.className);
     return (
       <label className={className} htmlFor={this.props.assistiveText.replace(' ','-')}>
         <input name={this.props.name} type="checkbox" id={this.props.assistiveText.replace(' ','-')} />
@@ -29,7 +24,7 @@ class Component extends React.Component {
     );
   }
   renderLabel(label, assistiveText) {
-    let className = this.$getClassName('slds-form-element__label');
+    let className = classNames('slds-form-element__label', this.props.className);
     if (label) {
       return (
         <span className={className}>

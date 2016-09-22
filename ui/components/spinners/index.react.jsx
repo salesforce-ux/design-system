@@ -9,30 +9,23 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-import globals from 'app_modules/global';
 
 class Spinner extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-    this.state = {};
-  };
-
   render() {
-    var { className, flavor, children } = this.props;
-    const classnames = classNames(className, {
+    let { flavor, children } = this.props;
+    const className = classNames(this.props.className, {
       'slds-spinner': true,
       'slds-spinner--small': flavor === 'small' || flavor === 'brand-small' || flavor === 'inverse-small',
       'slds-spinner--medium': flavor === 'medium' || flavor === 'brand-medium' || flavor === 'inverse-medium',
       'slds-spinner--large': flavor === 'large' || flavor === 'brand-large' || flavor === 'inverse-large'
     });
-    const props = this.$propsWithoutKeys('className', 'flavor');
+    const props = _.omit(this.props, ['className', 'flavor']);
     return (
       <div className="slds-spinner_container">
-        <div className={classnames} {...props} role="alert">
+        <div className={className} {...props} role="alert">
           <span className="slds-assistive-text">Loading</span>
           <div className="slds-spinner__dot-a"></div>
           <div className="slds-spinner__dot-b"></div>
@@ -44,11 +37,11 @@ class Spinner extends React.Component {
 }
 
 Spinner.propTypes = {
-  flavor: componentUtil.PropTypes.flavor(
+  flavor: React.PropTypes.oneOf([
     'small', 'medium', 'large',
     'brand-small', 'brand-medium', 'brand-large',
     'inverse-small', 'inverse-medium', 'inverse-large'
-  )
+  ])
 };
 
 export default Spinner;

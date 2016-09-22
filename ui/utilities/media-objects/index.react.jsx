@@ -10,16 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassNameWithFlavor('slds-media');
+    const className = classNames('slds-media', this.props.className, {
+      [`slds-media--${this.props.flavor}`]: this.props.flavor
+    });
     return (
       <div className={className}>
         {this.renderFigure(

@@ -11,12 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import React from 'react';
-
-import {
-  createChainedFunction,
-  flatMapChildren
-} from 'app_modules/ui/util/component';
-
 import classNames from 'classnames';
 
 const PT = React.PropTypes;

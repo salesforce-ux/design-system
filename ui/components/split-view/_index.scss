@@ -7,9 +7,10 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$color-background-split-view: #333e4f !default;
+// $color-background-split-view: #333e4f !default;
 $color-text-weak-inverse: #a8b8d0 !default;
-$color-background-alt-inverse-row-hover: $color-background-inverse !default;
+// $color-background-alt-inverse-row-hover: $color-background-inverse !default;
+
 
 @mixin inverse-text {
   color: $color-text-inverse;
@@ -33,6 +34,11 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
       color: $color-text-link-inverse-disabled;
     }
   }
+
+  .slds-text-title,
+  .slds-text-title--caps {
+    color: $color-text-weak-inverse;
+  }
 }
 
 .slds-split-view {
@@ -45,6 +51,7 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
 }
 
 .slds-split-view__list-header {
+  border-top: $border-width-thin solid $color-border-separator-inverse;
   padding: $spacing-x-small $spacing-medium;
 }
 
@@ -52,11 +59,11 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
   display: flex;
   padding: $spacing-small $spacing-medium;
   color: $color-text-weak-inverse;
+  border-top: $border-width-thin solid $color-border-separator-inverse;
 
   &:hover,
   &:focus {
-    // background: $color-background-alt-inverse-row-hover;
-
+    box-shadow: $color-border-separator-inverse 3px 0 0 inset;
   }
 
   &.slds-is-active {
@@ -71,11 +78,6 @@ $color-background-alt-inverse-row-hover: $color-background-inverse !default;
     text-decoration: none;
   }
 }
-
-// .slds-split-view__row-heading {
-//   color: $color-text-inverse;
-//   font-weight: $font-weight-bold;
-// }
 
 //////// GLOBALS
 .slds-text-color--inverse {

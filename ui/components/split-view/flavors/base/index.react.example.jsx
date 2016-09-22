@@ -33,52 +33,28 @@ const results = [{
 }, {
   'objectName': 'Jason A. - VP of Sales',
   'leadScore': '92',
-  'company': 'Case Management Solutions - San Francisco',
+  'company': 'Case Management Solutions',
   'status': 'Contacted'
 }, {
   'objectName': 'This is a super long entity name',
-  'leadScore': 'This column text is long too and should truncate',
-  'company': 'Case Management Solutions - San Francisco',
+  'leadScore': '89',
+  'company': 'Acme, Inc.',
   'status': 'Contacted'
 }, {
   'objectName': 'This is a super long entity name that will force a truncation at the end of the line',
-  'leadScore': '99',
-  'company': 'Case Management Solutions - San Francisco',
-  'status': 'Something with a longer title'
+  'leadScore': '86',
+  'company': 'Salesforce, Inc.',
+  'status': 'Closing'
 }, {
   'objectName': 'Riley Shultz',
-  'leadScore': 'This column text is long too and should truncate',
-  'company': 'Case Management Solutions - San Francisco',
+  'leadScore': '74',
+  'company': 'Tesla',
   'status': 'Contacted'
 }];
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
-
-// let Row = props =>
-//   <tr className={ className('slds-split-view__item', props.className) } role="row" key={ props.key }>
-//     <th scope="row" role="rowheader" className="slds-grow slds-has-flexi-truncate">
-//       <div className="slds-grid slds-wrap">
-//         <span className="slds-grow slds-truncate slds-split-view__row-heading" title={ props.name || 'Object Name' }>
-//           <a href="javascript:void(0);">{ props.name || 'Object Name' }</a>
-//         </span>
-//         <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>{ props.colTwo || 'Column 2' }</span>
-//       </div>
-//       <div className="slds-grid slds-wrap">
-//         <span className="slds-grow slds-truncate" title={ props.colThree || 'Column 3' }>{ props.colThree || 'Column 3' }</span>
-//         <span className="slds-flex-none slds-truncate slds-col--bump-left" title={ props.colFour || 'Column 4' }>{ props.colFour || 'Column 4' }</span>
-//       </div>
-//     </th>
-//     <td role="gridcell" className="slds-flex-none slds-p-left--medium">
-//       <ButtonIcon
-//         className="slds-button--icon-border-inverse slds-button--icon-x-small"
-//         symbol="down"
-//         aria-haspopup="true"
-//         assistiveText="More options"
-//       />
-//     </td>
-//   </tr>;
 
 let Row = props =>
   <li className={ className('slds-split-view__list-item', props.className) } role="row" key={ props.key }>
@@ -127,9 +103,9 @@ export default (
               </div>
             </div>
             <div className="slds-media__body">
-              <button className="slds-button slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
-                <div className="slds-grid slds-grid--vertical-align-center slds-truncate">
-                  <h1 className="slds-text-heading--small slds-text-color--inverse slds-truncate" title="My Leads">My Leads</h1>
+              <button className="slds-button slds-m-right--small slds-grid" aria-haspopup="true">
+                <div className="slds-grid">
+                  <h1 className="slds-text-heading--small slds-text-color--inverse slds-truncate" title="My Leads">My LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy Leads</h1>
                   <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
                 </div>
               </button>
@@ -152,28 +128,9 @@ export default (
           />
         </div>
       </div>
-      {/*<table className="slds-table--fixed-layout" role="grid">
-        <thead>
-          <tr>
-            <th scope="col" role="columnheader">Lead Score</th>
-            <th scope="col" role="columnheader">Filter</th>
-          </tr>
-        </thead>
-        <tbody>
-          { _.times(results.length, i =>
-            <Row
-              key={ i }
-              name={ results[i].objectName }
-              colTwo={ results[i].leadScore }
-              colThree={ results[i].company }
-              colFour={ results[i].status }
-            />
-          )}
-        </tbody>
-      </table>*/}
       <div role="grid" aria-readonly="true">
-        <div className="slds-split-view__list-header slds-grid" role="row">
-          <div role="columnheader">Lead Score</div>
+        <div className="slds-split-view__list-header slds-grid slds-text-title--caps" role="row">
+          <div role="columnheader">Lead Score <SvgIcon className="slds-icon slds-icon--x-small slds-text-icon-default" sprite="utility" symbol="arrowdown" assistiveText="Descending" /></div>
           <div className="slds-col--bump-left" role="columnheader">
             <ButtonIcon
               hasDropdown

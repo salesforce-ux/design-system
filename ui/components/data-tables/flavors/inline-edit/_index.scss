@@ -70,7 +70,7 @@
     }
 
     .slds-button__icon--lock {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 
@@ -128,6 +128,22 @@
 }
 
 .slds-table--edit {
+
+  thead {
+    background-color: $color-background-alt;
+
+    th {
+      position: static;
+    }
+  }
+
+  // .slds-resizable__divider {
+  //   display: none; // I don't think we need this once the position:static is added it disappears
+  // }
+
+  tbody {
+    transform: translateZ(0); // this makes the gpu handle the rendering when scrolling and speeds scrolling by 10-15 fps
+  }
 
   .slds-cell-error {
     padding-left: 0;

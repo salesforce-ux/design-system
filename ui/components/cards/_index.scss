@@ -8,9 +8,17 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
 .slds-card {
-  @include box($theme: shade, $padding: 0, $borders: around);
+  padding: 0;
+  background: $card-color-background;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+  margin: $spacing-small;
+
+  @include mq-large-min {
+    margin: auto;
+  }
 
   + .slds-card {
     margin-top: $spacing-medium;
@@ -19,13 +27,22 @@
   &__header,
   &__footer,
   &__body--inner {
-    padding-left: $spacing-large;
-    padding-right: $spacing-large;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+
+    @include mq-large-min {
+      padding-left: $spacing-large;
+      padding-right: $spacing-large;
+    }
   }
 
   &__header {
     padding-top: $spacing-small;
     margin-bottom: $spacing-small;
+  }
+
+  &__header-link {
+    color: inherit;
   }
 
   &__body:empty,
@@ -42,11 +59,20 @@
   &--narrow {
 
     .slds-card__header {
-      padding-top: $spacing-large;
-      margin-bottom: $spacing-large;
+      padding-top: $spacing-small;
+      margin-bottom: $spacing-small;
+
+      @include mq-large-min {
+        padding-top: $spacing-large;
+        margin-bottom: $spacing-large;
+      }
     }
     .slds-card__footer {
-      padding-bottom: $spacing-medium;
+      padding-bottom: $spacing-small;
+
+      @include mq-large-min {
+        padding-bottom: $spacing-medium;
+      }
     }
   }
 

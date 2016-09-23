@@ -70,7 +70,7 @@
     }
 
     .slds-button__icon--lock {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
 
@@ -141,10 +141,6 @@
   //   display: none; // I don't think we need this once the position:static is added it disappears
   // }
 
-  tbody {
-    transform: translateZ(0); // this makes the gpu handle the rendering when scrolling and speeds scrolling by 10-15 fps
-  }
-
   .slds-cell-error {
     padding-left: 0;
   }
@@ -175,8 +171,12 @@
     fill: $color-text-brand;
   }
 
-  tbody tr {
-    counter-increment: row-number;
+  tbody {
+    transform: translateZ(0); // this makes the gpu handle the rendering when scrolling and speeds scrolling by 10-15 fps
+
+    tr {
+      counter-increment: row-number;
+    }
   }
 
   .slds-row-number {

@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Lorem from 'react-lorem-component';
 import className from 'classnames';
@@ -65,8 +64,8 @@ let Default = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -84,8 +83,8 @@ let Taglines = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -98,8 +97,8 @@ let Large = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -112,8 +111,8 @@ let Directional = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter className="slds-modal__footer--directional">
-        <Button className="slds-button slds-button--neutral">Skip This Step</Button>
-        <Button className="slds-button slds-button--brand">Save &#38; Next</Button>
+        <button className="slds-button slds-button--neutral">Skip This Step</button>
+        <button className="slds-button slds-button--brand">Save &#38; Next</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -125,8 +124,8 @@ let Headless = props =>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;

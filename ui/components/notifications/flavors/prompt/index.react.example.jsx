@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from 'ui/components/buttons/index.react';
 import Lorem from 'react-lorem-component';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 
@@ -34,7 +33,7 @@ export default (
       </ModalContent>
 
       <ModalFooter className="slds-theme--default">
-        <Button className="slds-button slds-button--neutral">Okay</Button>
+        <button className="slds-button slds-button--neutral">Okay</button>
       </ModalFooter>
     </Modal>
     <div className="slds-backdrop slds-backdrop--open" />

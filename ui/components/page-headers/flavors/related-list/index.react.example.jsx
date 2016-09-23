@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import Heading from 'ui/components/heading/index.react';
@@ -31,9 +30,9 @@ export default (
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
         <div className="slds-button-group">
-          <Button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button--neutral">
             Add Contact
-          </Button>
+          </button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
             <ButtonIcon
               className="slds-button--icon-border-filled"

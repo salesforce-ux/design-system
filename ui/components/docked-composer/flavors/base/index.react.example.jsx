@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -77,7 +76,7 @@ export let DockedComposerPanelFooter = props =>
   <footer className={className('slds-docked-composer__footer slds-shrink-none', props.className)}>
     { !props.children
     ? <div className="slds-col--bump-left slds-text-align--right">
-        <Button className="slds-button--brand">Action</Button>
+        <button className="slds-button slds-button--brand">Action</button>
       </div>
     : props.children }
   </footer>;

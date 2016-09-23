@@ -49,8 +49,7 @@
   background-color: $color-background-row-hover;
 }
 
-.slds-cell-edit {
-  outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
+.slds-hint-parent .slds-cell-edit {
 
   .slds-button__icon--edit,
   .slds-button__icon--lock {
@@ -61,11 +60,12 @@
   &:focus {
 
     .slds-button__icon--edit {
-      opacity: 1;
+      opacity: 0.5;
 
       &:hover,
       &:focus {
         fill: $color-text-brand;
+        opacity: 1;
       }
     }
 
@@ -73,6 +73,17 @@
       opacity: 0.5;
     }
   }
+
+  &.slds-has-focus .slds-button__icon--edit {
+    fill: $color-text-icon-default;
+    opacity: 1;
+  }
+}
+
+
+.slds-cell-edit {
+  outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
+
 
   .slds-cell-edit__button {
       @include square($square-icon-utility-medium);

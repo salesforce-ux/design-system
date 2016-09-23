@@ -32,6 +32,7 @@ The following changes have been made in this release:
 - Change background color of docked panels
   - Docked Utility Panel - [Docked Utility Panel](/components/docked-utility-bar/#flavor-utility-panel)
   - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
+- Cards are now responsive - [Cards](/components/cards/)
 
 **FIXED**
 

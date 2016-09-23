@@ -45,51 +45,12 @@
   display: none;
 }
 
-
-.slds-table--edit {
-
-  .slds-button__icon--edit:focus {
-    fill: $color-text-brand;
-  }
-
-  th,
-  td { // Remove padding to place on internal node
-    padding: 0;
-  }
-
-  .slds-cell-edit:hover {
-      background-color: $color-background-alt;
-      box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
-                  $color-border 0 ($border-width-thin) 0 inset;
-  }
-
-  tbody tr {
-    counter-increment: row-number;
-
-    &:hover { // adds the same box-shadow border when a row is hovered
-      // scss-lint:disable SelectorDepth
-      .slds-cell-marker,
-      .slds-is-edited:not(.slds-has-focus) {
-        box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset, $color-border 0 ($border-width-thin) 0 inset;
-      }
-    }
-  }
-
-  .slds-row-number {
-
-    &:after {
-      content: counter(row-number);
-    }
-  }
-}
-
 .slds-cell-marker {
   background-color: $color-background-row-hover;
 }
 
 .slds-cell-edit {
-  min-height: 2.3125rem; // Make contents completely fill table cell
-  padding: $spacing-x-small; // Add padding to div inside
+  outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
 
   .slds-button__icon--edit,
   .slds-button__icon--lock {
@@ -120,7 +81,6 @@
 
   &.slds-has-focus { // This is the focused state
     background-color: $color-background-alt;
-    outline: 0; // @TODO: May want to add this to the `cell-edit` (tho that may be overreaching)
     box-shadow: $color-border-selection 0 0 0 1px inset;
 
     .slds-button__icon--edit,
@@ -151,8 +111,51 @@
     &,
     &:hover {
       background-color: $color-background-highlight;
-      border: $border-width-thin solid $color-border-error;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thin) inset;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+}
+
+.slds-table--edit {
+
+  .slds-cell-error {
+    padding-left: 0;
+  }
+
+  // scss-lint:disable SelectorDepth
+  &.slds-table tbody tr:hover > .slds-cell-edit {
+
+    &:hover {
+      background-color: $color-background-alt;
+    }
+
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+
+    &.slds-is-edited {
+      background-color: $color-background-highlight;
+    }
+
+    &.slds-has-error {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+
+  .slds-button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
+
+  tbody tr {
+    counter-increment: row-number;
+  }
+
+  .slds-row-number {
+
+    &:after {
+      content: counter(row-number);
     }
   }
 }
@@ -161,17 +164,12 @@
 
   .slds-has-focus {
     background: $color-background-row-hover;
-    border: 0;
     box-shadow: none;
 
     .slds-button__icon--edit {
       opacity: 1;
     }
   }
-}
-
-.slds-cell-error {
-  padding-left: 0;
 }
 
 .slds-cell-edit__button:focus .slds-button__icon--edit {

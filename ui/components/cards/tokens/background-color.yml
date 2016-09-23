@@ -1,0 +1,13 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_CARD:
+    value: '{!WHITE}'
+    comment: Default Card component background color.

@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
@@ -19,7 +18,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 const icon = (
-    <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
+  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
 );
 
 const image = (
@@ -47,12 +46,12 @@ export default (
       {/* Open Right Aligned Icon Grouping */}
       <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
         <div className="slds-button-group" role="group">
-          <Button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button--neutral">
             New Lead
-          </Button>
-          <Button className="slds-button slds-button--neutral">
+          </button>
+          <button className="slds-button slds-button--neutral">
             Import Leads
-          </Button>
+          </button>
           <div className="slds-button--last">
             <ButtonIcon
               className="slds-button--icon-border-filled"
@@ -61,7 +60,7 @@ export default (
               assistiveText="More Actions" />
           </div>
         </div>
-        {/* Close Button Group */}
+        {/* Close button Group */}
       </div>
       {/* Close Col */}
     </div>
@@ -78,7 +77,7 @@ export default (
             hasDropdown
             assistiveText="List View Controls" />
         </div>
-        <Button className="slds-hide slds-m-left--xx-small" className="slds-button slds-button--brand" aria-hidden="true">Save List</Button>
+        <button className="slds-hide slds-m-left--xx-small" className="slds-button slds-button--brand" aria-hidden="true">Save List</button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
             className="slds-button--icon-more"

@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -31,6 +30,11 @@ const composers = [{
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
+
+let Demo = props =>
+  <div className="demo-only" {...props} style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+    {props.children}
+  </div>;
 
 export let DockedComposerPanel = props =>
   <div className={className('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
@@ -72,7 +76,7 @@ export let DockedComposerPanelFooter = props =>
   <footer className={className('slds-docked-composer__footer slds-shrink-none', props.className)}>
     { !props.children
     ? <div className="slds-col--bump-left slds-text-align--right">
-        <Button className="slds-button--brand">Action</Button>
+        <button className="slds-button slds-button--brand">Action</button>
       </div>
     : props.children }
   </footer>;
@@ -117,33 +121,33 @@ export let states = [
     id: 'single-composer-open',
     label: 'Open',
     element:
-    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+    <Demo>
       <div className="slds-docked_container">
         <DockedComposerPanel className="slds-is-open">
           <DockedComposerPanelBody />
           <DockedComposerPanelFooter />
         </DockedComposerPanel>
       </div>
-    </div>
+    </Demo>
   },
   {
     id: 'single-composer-closed',
     label: 'Closed',
     element:
-    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+    <Demo>
       <div className="slds-docked_container">
         <DockedComposerPanel>
           <DockedComposerPanelBody />
           <DockedComposerPanelFooter />
         </DockedComposerPanel>
       </div>
-    </div>
+    </Demo>
   },
   {
-    id: 'single-composer-popput',
+    id: 'single-composer-popout',
     label: 'Popout',
     element:
-    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+    <Demo>
       <Modal>
         <DockedComposerPanel>
           <DockedComposerPanelBody />
@@ -151,13 +155,13 @@ export let states = [
         </DockedComposerPanel>
       </Modal>
       <div className="slds-backdrop slds-backdrop--open"></div>
-    </div>
+    </Demo>
   },
   {
     id: 'multiple-composer-overflow',
     label: 'With Overflow Menu',
     element:
-    <div className="demo-only" style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+    <Demo>
       <div className="slds-docked_container">
         <ComposerOverflowMenu />
         <DockedComposerPanel className="slds-is-open">
@@ -165,6 +169,6 @@ export let states = [
           <DockedComposerPanelFooter />
         </DockedComposerPanel>
       </div>
-    </div>
+    </Demo>
   }
 ];

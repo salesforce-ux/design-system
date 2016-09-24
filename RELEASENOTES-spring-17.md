@@ -22,6 +22,9 @@ The following components are now available:
 The following classes are now available:
 
 - Add `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
+- Add design token: `FONT_FAMILY_TEXT`
+- Add design token: `FONT_FAMILY_HEADING`
+- Add design token alias: `SANS_SERIF`
 
 **CHANGES**
 
@@ -44,7 +47,7 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
--
+- Design token: `FONT_FAMILY`
 
 **REMOVED**
 

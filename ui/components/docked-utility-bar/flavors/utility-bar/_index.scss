@@ -50,7 +50,7 @@
     }
 
     &:focus:after {
-      background: $color-border-brand;
+      background: $color-brand;
     }
 
     &:hover,
@@ -64,7 +64,7 @@
       color: inherit;
 
       &:after {
-        background: $color-border-brand;
+        background: $color-brand;
       }
     }
   }

@@ -29,7 +29,7 @@
       height: rem(14px);
       width: rem(2px);
       margin: auto;
-      background: $color-text-link;
+      background: $color-brand-dark;
     }
 
     &:after {
@@ -97,7 +97,7 @@
 
       &:before,
       &:after {
-        background: $color-text-button-brand-disabled;
+        background: $color-background-alt;
       }
     }
   }

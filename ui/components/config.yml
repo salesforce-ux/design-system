@@ -29,6 +29,7 @@ components:
   - picklist
   - pills
   - process
+  - progress-indicator
   - popovers
   - publishers
   - spinners

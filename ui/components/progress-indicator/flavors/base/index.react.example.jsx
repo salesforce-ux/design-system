@@ -12,6 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
+
+{/*
+  States
+    - default
+    - step 1 - active
+    - step 2 - active
+    - tooltip - active
+*/}
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -27,60 +37,64 @@ let Progress = props =>
 
 let Step = props =>
   <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-done' : null) } role="presentation">
-    <button className="slds-button slds-progress__marker" tabIndex={ props.active ? '0' : '-1' }>
-      <span className="slds-assistive-text">{ props.children }</span>
-    </button>
+    { props.done
+      ? <ButtonIcon
+          className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
+          symbol="success"
+          tabIndex="-1"
+          aria-describedby={ props['aria-describedby'] }
+          assistiveText="Step Completed"
+        />
+      : <button className="slds-button slds-progress__marker" tabIndex={ props.active ? '0' : '-1' } aria-describedby={ props['aria-describedby'] }>
+          <span className="slds-assistive-text">{ props.children }</span>
+        </button>
+    }
   </li>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
-export default (
-  <Progress amount="25">
-    <Step done>Step 1</Step>
-    <Step active>Step 2</Step>
-    <Step>Step 3</Step>
-    <Step>Step 4</Step>
-    <Step>Step 5</Step>
-  </Progress>
-  // <div className="demo-only">
-  //   <div className="slds-wizard" role="navigation">
-  //     <ol className="slds-wizard__list">
-  //       <li className="slds-wizard__item slds-is-active">
-  //         <a href="javascript:void(0);" className="slds-wizard__link">
-  //           <span className="slds-wizard__marker"></span>
-  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Navigation</span>
-  //         </a>
-  //       </li>
-  //       <li className="slds-wizard__item slds-is-active">
-  //         <a href="javascript:void(0);" className="slds-wizard__link">
-  //           <span className="slds-wizard__marker"></span>
-  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Actions</span>
-  //         </a>
-  //       </li>
-  //       <li className="slds-wizard__item slds-is-active">
-  //         <a href="javascript:void(0);" className="slds-wizard__link">
-  //           <span className="slds-wizard__marker"></span>
-  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Compact Layout</span>
-  //         </a>
-  //       </li>
-  //       <li className="slds-wizard__item">
-  //         <a href="javascript:void(0);" className="slds-wizard__link">
-  //           <span className="slds-wizard__marker"></span>
-  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Review</span>
-  //         </a>
-  //       </li>
-  //       <li className="slds-wizard__item">
-  //         <a href="javascript:void(0);" className="slds-wizard__link">
-  //           <span className="slds-wizard__marker"></span>
-  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Invite</span>
-  //         </a>
-  //       </li>
-  //     </ol>
-  //     <span className="slds-wizard__progress">
-  //       <span className="slds-wizard__progress-bar" style={{ width: '50%' }}></span>
-  //     </span>
-  //   </div>
-  // </div>
-);
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <Progress>
+        <Step active>Step 1</Step>
+        <Step>Step 2</Step>
+        <Step>Step 3</Step>
+        <Step>Step 4</Step>
+        <Step>Step 5</Step>
+      </Progress>
+  },
+  {
+    id: 'next-step',
+    label: 'Next Step',
+    element:
+      <Progress amount="25">
+        <Step done>Step 1</Step>
+        <Step active>Step 2</Step>
+        <Step>Step 3</Step>
+        <Step>Step 4</Step>
+        <Step>Step 5</Step>
+      </Progress>
+  },
+  {
+    id: 'tooltip',
+    label: 'Tooltip',
+    element:
+      <div className="demo-only" style={{ paddingTop: '3rem' }}>
+        <Progress amount="50">
+          <Step done>Step 1</Step>
+          <Step done>Step 2</Step>
+          <Step active aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step>Step 4</Step>
+          <Step>Step 5</Step>
+        </Progress>
+        <Tooltip className="slds-nubbin--bottom" id="step-3-tooltip" style={{position: 'absolute', top: '0px', left: 'calc(50% + 7px)', transform: 'translateX(-50%)'}}>
+          Verify Email
+        </Tooltip>
+      </div>
+  }
+];

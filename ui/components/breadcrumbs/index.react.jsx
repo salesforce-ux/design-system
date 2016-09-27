@@ -10,39 +10,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
 
-
-class Crumb extends React.Component {
-
-  render() {
-    const text = this.props.children;
-    return (
-      <li className="slds-breadcrumb__item slds-text-title--caps">
-        <a href={this.props.href}>{text}</a>
-      </li>
-    );
-  }
-}
+const Crumb = props =>
+  <li className="slds-breadcrumb__item slds-text-title--caps">
+    <a href={props.href}>{props.children}</a>
+  </li>;
 
 Crumb.propTypes = { href: React.PropTypes.string };
 
-class BreadCrumbs extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
-  render() {
-    return (
-      <nav {...this.props} role="navigation" aria-label="Breadcrumbs">
-        <ol className="slds-breadcrumb slds-list--horizontal">
-          {this.props.children}
-        </ol>
-      </nav>
-    );
-  }
-}
+const BreadCrumbs = props =>
+  <nav {...props} role="navigation" aria-label="Breadcrumbs">
+    <ol className="slds-breadcrumb slds-list--horizontal">
+      {props.children}
+    </ol>
+  </nav>;
 
 BreadCrumbs.Crumb = Crumb;
+
 export default BreadCrumbs;

@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -58,9 +57,9 @@ let Tile = props =>
       </p>
       <p className="slds-truncate slds-text-body--small">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
-        <Button flavor="neutral" className="slds-grow">Edit</Button>
-        <Button flavor="neutral" className="slds-grow">Follow Up</Button>
-        <Button flavor="neutral" className="slds-grow">Delete</Button>
+        <button className="slds-button slds-button--neutral slds-grow">Edit</button>
+        <button className="slds-button slds-button--neutral slds-grow">Follow Up</button>
+        <button className="slds-button slds-button--neutral slds-grow">Delete</button>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"
@@ -250,8 +249,8 @@ let IsEditing = props =>
       </PanelBody>
       <div className="slds-panel__actions slds-has-divider--top">
         <div className="slds-grid slds-grid--align-center">
-          <Button type="button" flavor="neutral">Cancel</Button>
-          <Button type="button" flavor="brand">Save</Button>
+          <button type="button" className="slds-button slds-button--neutral">Cancel</button>
+          <button type="button" className="slds-button slds-button--brand">Save</button>
         </div>
       </div>
     </Panel>

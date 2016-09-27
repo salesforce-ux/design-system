@@ -22,7 +22,7 @@ let Demo = props =>
     {props.children}
   </div>;
 
-export let Button = props =>
+let Button = props =>
   <button className={className('slds-button', props.className)} disabled={props.disabled}>
     {props.children}
   </button>;

@@ -3,6 +3,17 @@ global:
   category: sizing
   cssProperties:
   - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
 props:
   SQUARE_ICON_GLOBAL_IDENTITY_ICON:
     value: 1.25rem

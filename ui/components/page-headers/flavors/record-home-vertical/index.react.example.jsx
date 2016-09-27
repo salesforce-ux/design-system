@@ -10,15 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-
-import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import Heading from 'ui/components/heading/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import StatefulClass from 'ui/components/lib/stateful.react';
-
 
 const image = (
   <div className="slds-icon_container slds-icon-standard-lead">
@@ -37,23 +33,21 @@ export default (
           </MediaObject>
         </div>
         <div className="slds-has-divider--bottom-space">
-          <StatefulClass>
-            <Button flavor="neutral" className="slds-not-selected" aria-live="assertive">
-              <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
-              <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
-              <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
-            </Button>
-          </StatefulClass>
+          <button className="slds-button slds-button--neutral slds-not-selected" aria-live="assertive">
+            <span className="slds-text-not-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />Follow</span>
+            <span className="slds-text-selected"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="check" />Following</span>
+            <span className="slds-text-selected-focus"><SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="close" />Unfollow</span>
+          </button>
           <div className="slds-button-group slds-m-left--none slds-m-top--x-small" role="group">
-            <Button flavor="neutral">
+            <button className="slds-button slds-button--neutral">
               Convert
-            </Button>
-            <Button flavor="neutral">
+            </button>
+            <button className="slds-button slds-button--neutral">
               Clone
-            </Button>
-            <Button flavor="neutral">
+            </button>
+            <button className="slds-button slds-button--neutral">
               Edit
-            </Button>
+            </button>
             <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
               <ButtonIcon
                 className="slds-button--icon-border-filled"

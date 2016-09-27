@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
@@ -44,7 +43,7 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--destructive slds-size--1-of-1">End Call</Button>
+          <button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -71,7 +70,7 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--destructive slds-size--1-of-1">End Call</Button>
+          <button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -107,7 +106,7 @@ export let states = [
           <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--destructive slds-col--bump-left">End Call</Button>
+          <button className="slds-button slds-button--destructive slds-col--bump-left">End Call</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -158,8 +157,8 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--neutral slds-size--1-of-2">Follow-Up Later</Button>
-          <Button className="slds-button--brand slds-size--1-of-2">Call Again</Button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2">Follow-Up Later</button>
+          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -186,8 +185,8 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--neutral slds-size--1-of-2">Edit Phone Number</Button>
-          <Button className="slds-button--brand slds-size--1-of-2">Call Again</Button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2">Edit Phone Number</button>
+          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -214,8 +213,8 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--neutral slds-size--1-of-2">Follow Up Later</Button>
-          <Button className="slds-button--brand slds-size--1-of-2">Call Again</Button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2">Follow Up Later</button>
+          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -250,7 +249,7 @@ export let states = [
           <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--brand slds-col--bump-left">Finish Notes</Button>
+          <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -306,7 +305,7 @@ export let states = [
           </div>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--brand slds-col--bump-left">Finish Notes</Button>
+          <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>
@@ -345,7 +344,7 @@ export let states = [
           </fieldset>
         </DockedComposerPanelBody>
         <DockedComposerPanelFooter>
-          <Button className="slds-button--brand slds-col--bump-left">Save</Button>
+          <button className="slds-button slds-button--brand slds-col--bump-left">Save</button>
         </DockedComposerPanelFooter>
       </DockedComposerPanel>
     </div>

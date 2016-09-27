@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
@@ -131,8 +130,8 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter className="slds-modal__footer--directional">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Next</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Next</button>
           </ModalFooter>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />
@@ -204,8 +203,8 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter className="slds-modal__footer--directional">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="neutral,brand">Next</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Next</button>
           </ModalFooter>
         </Modal>
         <div className="slds-backdrop slds-backdrop--open" />

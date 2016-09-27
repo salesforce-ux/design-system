@@ -9,21 +9,13 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+import _ from 'lodash';
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
-
-const {createChainedFunction, flatMapChildren} = componentUtil;
-import AccessibleList from 'ui/components/lib/accessible-list.react';
 import classNames from 'classnames';
 
+const PT = React.PropTypes;
+
 class TabContent extends React.Component {
-
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
   render() {
     const className = classNames(
       this.props.className,
@@ -32,10 +24,9 @@ class TabContent extends React.Component {
         'slds-hide': !this.props.current
       })
     );
-    const props = this.$propsWithoutKeys('className');
     return (
       <div
-        {...props}
+        {...this.props}
         className={className}
         role="tabpanel"
         aria-labelledby={`${this.props.id}__item`}>
@@ -43,39 +34,28 @@ class TabContent extends React.Component {
       </div>
     );
   }
-
 }
+
 TabContent.propTypes = {
   current: PT.bool,
-  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 TabContent.defaultProps = { current: true };
 
-
-
 class TabItem extends React.Component {
-
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
   renderCustom(tabIndex) {
     return React.cloneElement(this.props.content, {
-      onClick: this.props.onClick.bind(this),
       tabIndex: tabIndex,
       className: `slds-tabs--${this.props.flavor}__link`,
       'aria-selected': this.props.current,
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
-
   renderDefault(tabIndex) {
     return (
       <a
         className={`slds-tabs--${this.props.flavor}__link`}
-        onClick={this.props.onClick.bind(this)}
         href="javascript:void(0);" role="tab"
         tabIndex={tabIndex}
         aria-selected={this.props.current}
@@ -85,9 +65,8 @@ class TabItem extends React.Component {
       </a>
     );
   }
-
   render() {
-    const props = this.$propsWithoutKeys('className', 'id', 'role', 'content');
+    const props = _.omit(this.props, ['className', 'id', 'role', 'content']);
     const className = classNames(
       this.props.className,
       classNames(`slds-tabs--${this.props.flavor}__item`, 'slds-text-title--caps', {
@@ -107,18 +86,12 @@ class TabItem extends React.Component {
 TabItem.propTypes = {
   title: PT.string,
   content: PT.node,
-  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 class TabItemOverflow extends React.Component {
-
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
   render() {
-    const props = this.$propsWithoutKeys('className', 'id', 'role');
+    const props = _.omit(this.props, ['className', 'id', 'role']);
     const className = classNames(
       this.props.className,
       classNames('slds-tabs__item--overflow slds-text-title--caps', {
@@ -130,46 +103,32 @@ class TabItemOverflow extends React.Component {
       return React.cloneElement(c);
     });
     return (
-      <li className={className} {...props} role="presentation" onClick={null}>
+      <li className={className} {...props} role="presentation">
         {contents}
       </li>
     );
   }
-
 }
+
 TabItemOverflow.propTypes = {
   title: PT.string,
   content: PT.node,
-  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
-
 class Tabs extends React.Component {
-
   constructor(props) {
     super(props);
-    componentUtil.install(this);
-    this.state = {currentTab: this.props.selectedIndex};
+    this.state = { currentTab: this.props.selectedIndex };
   }
-
-  onClick(index, e) {
-    this.setState({currentTab: index});
-    e.preventDefault();
-    e.stopPropagation();
-  }
-
   tabs() {
     return React.Children.map(this.props.children, (c, i) => {
       return React.cloneElement(c, {
         current: this.state.currentTab === i,
-        flavor: this.props.flavor,
-        onClick: createChainedFunction(
-          c.props.onClick, this.onClick.bind(this, i)
-        )
+        flavor: this.props.flavor
       });
     });
   }
-
   currentPanel() {
     return React.Children.map(this.props.children, (c, i) => {
       if (c.type === TabItemOverflow) {
@@ -192,32 +151,28 @@ class Tabs extends React.Component {
       }
     });
   }
-
   render() {
-    const props = this.$propsWithoutKeys('className', 'flavor');
+    const props = _.omit(this.props, ['className', 'flavor']);
     const className = classNames(
       this.props.className,
       `slds-tabs--${this.props.flavor}`
     );
     return (
       <div {...props} className={className}>
-        <AccessibleList
-          selector="a"
-          click={true}
+        <ul
           className={`slds-tabs--${this.props.flavor}__nav`}
-          role="tablist"
-          selectedIndex={this.props.selectedIndex}>
+          role="tablist">
         {this.tabs()}
-        </AccessibleList>
-        { this.props.panel ? this.props.panel : this.currentPanel() }
+        </ul>
+        {this.props.panel ? this.props.panel : this.currentPanel()}
       </div>
     );
   }
-
 }
+
 Tabs.propTypes = {
   selectedIndex: PT.number,
-  flavor: componentUtil.PropTypes.flavor('scoped', 'default', 'path')
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 Tabs.defaultProps = {

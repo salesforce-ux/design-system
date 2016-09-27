@@ -51,7 +51,7 @@ export let CardHeader = props =>
         </div> : null }
       <div className="slds-media__body slds-truncate">
         <h2>
-          <a href="javascript:void(0);" className="slds-text-link--reset">{ props.children }</a>
+          <a href="javascript:void(0);" className="slds-card__header-link">{ props.children }</a>
         </h2>
       </div>
     </header>

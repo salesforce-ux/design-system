@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem, Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
@@ -35,9 +34,9 @@ export let states = [
     label: 'Default',
     element:
       <ButtonGroup>
-        <Button className="slds-button--neutral">Refresh</Button>
-        <Button className="slds-button--neutral">Edit</Button>
-        <Button className="slds-button--neutral">Save</Button>
+        <button className="slds-button slds-button--neutral">Refresh</button>
+        <button className="slds-button slds-button--neutral">Edit</button>
+        <button className="slds-button slds-button--neutral">Save</button>
       </ButtonGroup>
   },
   {
@@ -45,9 +44,9 @@ export let states = [
     label: 'Default Disabled',
     element:
       <ButtonGroup>
-        <Button className="slds-button--neutral">Refresh</Button>
-        <Button className="slds-button--neutral">Edit</Button>
-        <Button className="slds-button--neutral" disabled>Save</Button>
+        <button className="slds-button slds-button--neutral">Refresh</button>
+        <button className="slds-button slds-button--neutral">Edit</button>
+        <button className="slds-button slds-button--neutral" disabled>Save</button>
       </ButtonGroup>
   },
   {
@@ -55,9 +54,9 @@ export let states = [
     label: 'More Icon',
     element:
       <ButtonGroup>
-        <Button className="slds-button--neutral">Refresh</Button>
-        <Button className="slds-button--neutral">Edit</Button>
-        <Button className="slds-button--neutral">Save</Button>
+        <button className="slds-button slds-button--neutral">Refresh</button>
+        <button className="slds-button slds-button--neutral">Edit</button>
+        <button className="slds-button slds-button--neutral">Save</button>
         <Trigger className="slds-button--last" ariaExpanded="false" />
       </ButtonGroup>
   },
@@ -67,9 +66,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
-          <Button className="slds-button--neutral">Refresh</Button>
-          <Button className="slds-button--neutral">Edit</Button>
-          <Button className="slds-button--neutral">Save</Button>
+          <button className="slds-button slds-button--neutral">Refresh</button>
+          <button className="slds-button slds-button--neutral">Edit</button>
+          <button className="slds-button slds-button--neutral">Save</button>
           <Trigger className="slds-button--last slds-is-open">
             <Menu className="slds-dropdown--right">
               <MenuList>
@@ -87,9 +86,9 @@ export let states = [
     label: 'More Icon Disabled',
     element:
       <ButtonGroup>
-        <Button className="slds-button--neutral">Refresh</Button>
-        <Button className="slds-button--neutral">Edit</Button>
-        <Button className="slds-button--neutral">Save</Button>
+        <button className="slds-button slds-button--neutral">Refresh</button>
+        <button className="slds-button slds-button--neutral">Edit</button>
+        <button className="slds-button slds-button--neutral">Save</button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
           <ButtonIcon className="slds-button--icon-border" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
         </div>
@@ -101,9 +100,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className="slds-button--inverse">Refresh</Button>
-          <Button className="slds-button--inverse">Edit</Button>
-          <Button className="slds-button--inverse">Save</Button>
+          <button className="slds-button slds-button--inverse">Refresh</button>
+          <button className="slds-button slds-button--inverse">Edit</button>
+          <button className="slds-button slds-button--inverse">Save</button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
@@ -116,9 +115,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className="slds-button--inverse">Refresh</Button>
-          <Button className="slds-button--inverse" disabled>Edit</Button>
-          <Button className="slds-button--inverse" >Save</Button>
+          <button className="slds-button slds-button--inverse">Refresh</button>
+          <button className="slds-button slds-button--inverse" disabled>Edit</button>
+          <button className="slds-button slds-button--inverse" >Save</button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
           </div>
@@ -131,9 +130,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroup>
-          <Button className="slds-button--inverse">Refresh</Button>
-          <Button className="slds-button--inverse">Edit</Button>
-          <Button className="slds-button--inverse">Save</Button>
+          <button className="slds-button slds-button--inverse">Refresh</button>
+          <button className="slds-button slds-button--inverse">Edit</button>
+          <button className="slds-button slds-button--inverse">Save</button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
           </div>

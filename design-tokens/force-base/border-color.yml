@@ -20,6 +20,7 @@ props:
     - 'border*'
     - box-shadow
     - outline
+    - outline-color
     comment: Our product brand blue.
   COLOR_BORDER_BRAND_DARK:
     value: '{!SCIENCE_BLUE}'

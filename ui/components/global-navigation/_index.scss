@@ -267,7 +267,7 @@
 
 // Unsaved indicator - This can probably be used in other locations as well
 .slds-indicator--unsaved {
-  color: $color-brand;
+  color: $color-text-brand;
   align-self: center;
   font-size: $font-size-medium-a;
 }
@@ -340,6 +340,7 @@
   position: relative;
 }
 
+// scss-lint:disable MergeableSelector
 .slds-icon-waffle div {
   @include square(rem(5px));
   background: $color-background-icon-waffle;
@@ -400,37 +401,37 @@
   cursor: pointer;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r1,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r2,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r3,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r1,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r2,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r3 {
+.slds-icon-waffle_container:hover .slds-r1,
+.slds-icon-waffle_container:hover .slds-r2,
+.slds-icon-waffle_container:hover .slds-r3,
+.slds-icon-waffle_container:focus .slds-r1,
+.slds-icon-waffle_container:focus .slds-r2,
+.slds-icon-waffle_container:focus .slds-r3 {
   background: #418fde;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r4,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r5,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r7,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r4,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r5,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r7 {
+.slds-icon-waffle_container:hover .slds-r4,
+.slds-icon-waffle_container:hover .slds-r5,
+.slds-icon-waffle_container:hover .slds-r7,
+.slds-icon-waffle_container:focus .slds-r4,
+.slds-icon-waffle_container:focus .slds-r5,
+.slds-icon-waffle_container:focus .slds-r7 {
   background: #ed8b00;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r6,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r8,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r9,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r6,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r8,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r9 {
+.slds-icon-waffle_container:hover .slds-r6,
+.slds-icon-waffle_container:hover .slds-r8,
+.slds-icon-waffle_container:hover .slds-r9,
+.slds-icon-waffle_container:focus .slds-r6,
+.slds-icon-waffle_container:focus .slds-r8,
+.slds-icon-waffle_container:focus .slds-r9 {
   background: #ffb60f;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r2,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r4,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r2,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r4 {
+.slds-icon-waffle_container:hover .slds-r2,
+.slds-icon-waffle_container:hover .slds-r4,
+.slds-icon-waffle_container:focus .slds-r2,
+.slds-icon-waffle_container:focus .slds-r4 {
   transition-delay: 50ms;
   animation-delay: 50ms;
 }
@@ -440,47 +441,47 @@
   animation: throb 2 200ms alternate;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r3,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r5,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r7,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r3,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r5,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r7 {
+.slds-icon-waffle_container:hover .slds-r3,
+.slds-icon-waffle_container:hover .slds-r5,
+.slds-icon-waffle_container:hover .slds-r7,
+.slds-icon-waffle_container:focus .slds-r3,
+.slds-icon-waffle_container:focus .slds-r5,
+.slds-icon-waffle_container:focus .slds-r7 {
   transition-delay: 100ms;
   animation-delay: 100ms;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r6,
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r8,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r6,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r8 {
+.slds-icon-waffle_container:hover .slds-r6,
+.slds-icon-waffle_container:hover .slds-r8,
+.slds-icon-waffle_container:focus .slds-r6,
+.slds-icon-waffle_container:focus .slds-r8 {
   transition-delay: 150ms;
   animation-delay: 150ms;
 }
 
-.slds-icon-waffle_container:hover .slds-icon-waffle .slds-r9,
-.slds-icon-waffle_container:focus .slds-icon-waffle .slds-r9 {
+.slds-icon-waffle_container:hover .slds-r9,
+.slds-icon-waffle_container:focus .slds-r9 {
   transition-delay: 200ms;
   animation-delay: 200ms;
 }
 
-.slds-icon-waffle_container .slds-icon-waffle .slds-r1 {
+.slds-icon-waffle_container .slds-r1 {
   transition-delay: 200ms;
 }
 
-.slds-icon-waffle_container .slds-icon-waffle .slds-r2,
-.slds-icon-waffle_container .slds-icon-waffle .slds-r4 {
+.slds-icon-waffle_container .slds-r2,
+.slds-icon-waffle_container .slds-r4 {
   transition-delay: 150ms;
 }
 
-.slds-icon-waffle_container .slds-icon-waffle .slds-r3,
-.slds-icon-waffle_container .slds-icon-waffle .slds-r5,
-.slds-icon-waffle_container .slds-icon-waffle .slds-r7 {
+.slds-icon-waffle_container .slds-r3,
+.slds-icon-waffle_container .slds-r5,
+.slds-icon-waffle_container .slds-r7 {
   transition-delay: 100ms;
 }
 
-.slds-icon-waffle_container .slds-icon-waffle .slds-r6,
-.slds-icon-waffle_container .slds-icon-waffle .slds-r8 {
+.slds-icon-waffle_container .slds-r6,
+.slds-icon-waffle_container .slds-r8 {
   transition-delay: 50ms;
 }
 

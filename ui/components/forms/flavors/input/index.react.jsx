@@ -10,20 +10,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
+import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
     return (
       <div className="slds-form-element">
-        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <label
+          className="slds-form-element__label"
+          htmlFor={this.props.assistiveText.replace(' ','-')}>
+          {this.props.label}
+        </label>
         <div className="slds-form-element__control">
-          {this.renderIconInput()}
           {this.renderInput()}
           {this.renderHelp(this.props.help)}
         </div>
@@ -32,32 +31,21 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName('slds-form-element__help');
+    const className = classNames('slds-form-element__help', this.props.className);
     return (
       <div className={className}>
         {help}
       </div>
     );
   }
-  renderIconInput() {
-    if (!this.props.sprite) return null;
-    const iconClassName = this.$getClassNameWithFlavor('input-has-icon', {
-      prop: 'iconFlavor',
-      includeClassName: false
-    });
-    const {sprite,symbol} = this.props;
-    const props = this.$propsWithoutKeys('className', 'sprite', 'symbol');
-    return (
-      <div className={iconClassName}>
-        <SvgIcon className="slds-input__icon slds-icon-text-default" sprite={sprite} symbol={symbol} />
-        <input id={this.props.assistiveText.replace(' ','-')} className="slds-input" type="text" placeholder={this.props.placeholder} {...this.props} />
-      </div>
-    );
-  }
   renderInput() {
     if (this.props.sprite) return null;
     return (
-      <input id={this.props.assistiveText.replace(' ','-')} className="slds-input" type="text" placeholder={this.props.placeholder} />
+      <input
+        id={this.props.assistiveText.replace(' ','-')}
+        className="slds-input"
+        type="text"
+        placeholder={this.props.placeholder} />
     );
   }
 }
@@ -68,9 +56,9 @@ Component.propTypes = {
   placeholder: React.PropTypes.node,
   assistiveText: React.PropTypes.string.isRequired,
   help: React.PropTypes.node,
-  iconFlavor: componentUtil.PropTypes.flavor(
+  iconFlavor: React.PropTypes.oneOf([
     'left', 'right'
-  ),
+  ]),
   sprite: React.PropTypes.string,
   symbol: React.PropTypes.string
 };

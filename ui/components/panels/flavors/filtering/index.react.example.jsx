@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
@@ -106,8 +105,8 @@ let NewFilter = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="brand">Save</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Save</button>
           </FiltersHeader>
           <FiltersBody>
             <ol className="slds-list--vertical slds-list--vertical-space">
@@ -132,8 +131,8 @@ let ErrorPanel = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button flavor="neutral">Cancel</Button>
-            <Button flavor="brand">Save</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Save</button>
           </FiltersHeader>
           <FiltersBody>
             <div className="slds-text-color--error slds-m-bottom--x-small" aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>

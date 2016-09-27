@@ -125,10 +125,10 @@ let RowData = (props) => {
         </button>
         <span className="slds-row-number slds-text-body--small"></span>
       </td>
-      <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected} className={className('', props.checkClass)}>
+      <Td aria-selected={props.checkSelected} className={className('', props.checkClass)}>
         <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
       </Td>
-      <th aria-selected={props.defaultSelected} scope="row" className={className('slds-cell-edit', props.thClassName)}>
+      <th tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} scope="row" className={className('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
           <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
@@ -257,13 +257,13 @@ export let states = [
     element:
       <Container>
         <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
               <Td>
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -271,41 +271,6 @@ export let states = [
           </tbody>
         </Table>
       </Container>
-  },
-  {
-    id: 'data-table-inline-table-matte',
-    label: 'Table container focused',
-    element:
-      <Container tabIndex="1" id="table-edit-01">
-        <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="-1" />
-          <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td className="slds-has-focus">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-          </tbody>
-        </Table>
-        <TableFocusInfo />
-      </Container>,
-    script: `
-      document.getElementById('table-edit-01').focus()
-    `
   },
   {
     id: 'data-table-inline-edit-with-link',

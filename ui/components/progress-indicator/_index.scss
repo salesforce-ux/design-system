@@ -40,6 +40,7 @@
   border-radius: $border-radius-circle;
   background: $color-background-shade-dark;
   border: 4px solid $color-background-alt; // wrong
+  vertical-align: middle;
 }
 
 
@@ -62,6 +63,10 @@
   }
 
   &[value]::-webkit-progress-value {
+    background: rgba($color-brand, 0.3);
+  }
+
+  &[value]::-moz-progress-bar {
     background: rgba($color-brand, 0.3);
   }
 }

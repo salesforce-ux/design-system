@@ -134,6 +134,12 @@
 
     th {
       position: static;
+
+      // @TODO - Wait to check this with Jason's fixed headers after merge
+      // &.slds-has-focus { // This is the focused state of headers
+      //   background-color: $color-background-alt;
+      //   box-shadow: $color-border-selection 0 0 0 1px inset;
+      // }
     }
   }
 

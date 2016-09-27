@@ -17,50 +17,70 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 // Partial(s)
 //////////////////////////////////////////////
 
+let Progress = props =>
+  <div className={ className('slds-progress', props.className) }>
+    <ol className="slds-progress__list">
+      { props.children }
+    </ol>
+    <progress className="slds-progress-bar" value={ props.amount || '0' } max="100">{ props.amount + '%' || '0%' }</progress>
+  </div>;
 
+let Step = props =>
+  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-done' : null) } role="presentation">
+    <button className="slds-button slds-progress__marker" tabIndex={ props.active ? '0' : '-1' }>
+      <span className="slds-assistive-text">{ props.children }</span>
+    </button>
+  </li>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
 export default (
-  <div className="demo-only">
-    <div className="slds-wizard" role="navigation">
-      <ol className="slds-wizard__list">
-        <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
-            <span className="slds-wizard__marker"></span>
-            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Navigation</span>
-          </a>
-        </li>
-        <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
-            <span className="slds-wizard__marker"></span>
-            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Actions</span>
-          </a>
-        </li>
-        <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
-            <span className="slds-wizard__marker"></span>
-            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Compact Layout</span>
-          </a>
-        </li>
-        <li className="slds-wizard__item">
-          <a href="javascript:void(0);" className="slds-wizard__link">
-            <span className="slds-wizard__marker"></span>
-            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Review</span>
-          </a>
-        </li>
-        <li className="slds-wizard__item">
-          <a href="javascript:void(0);" className="slds-wizard__link">
-            <span className="slds-wizard__marker"></span>
-            <span className="slds-wizard__label slds-text-title--caps slds-truncate">Invite</span>
-          </a>
-        </li>
-      </ol>
-      <span className="slds-wizard__progress">
-        <span className="slds-wizard__progress-bar" style={{ width: '50%' }}></span>
-      </span>
-    </div>
-  </div>
+  <Progress amount="25">
+    <Step done>Step 1</Step>
+    <Step active>Step 2</Step>
+    <Step>Step 3</Step>
+    <Step>Step 4</Step>
+    <Step>Step 5</Step>
+  </Progress>
+  // <div className="demo-only">
+  //   <div className="slds-wizard" role="navigation">
+  //     <ol className="slds-wizard__list">
+  //       <li className="slds-wizard__item slds-is-active">
+  //         <a href="javascript:void(0);" className="slds-wizard__link">
+  //           <span className="slds-wizard__marker"></span>
+  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Navigation</span>
+  //         </a>
+  //       </li>
+  //       <li className="slds-wizard__item slds-is-active">
+  //         <a href="javascript:void(0);" className="slds-wizard__link">
+  //           <span className="slds-wizard__marker"></span>
+  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Actions</span>
+  //         </a>
+  //       </li>
+  //       <li className="slds-wizard__item slds-is-active">
+  //         <a href="javascript:void(0);" className="slds-wizard__link">
+  //           <span className="slds-wizard__marker"></span>
+  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Compact Layout</span>
+  //         </a>
+  //       </li>
+  //       <li className="slds-wizard__item">
+  //         <a href="javascript:void(0);" className="slds-wizard__link">
+  //           <span className="slds-wizard__marker"></span>
+  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Review</span>
+  //         </a>
+  //       </li>
+  //       <li className="slds-wizard__item">
+  //         <a href="javascript:void(0);" className="slds-wizard__link">
+  //           <span className="slds-wizard__marker"></span>
+  //           <span className="slds-wizard__label slds-text-title--caps slds-truncate">Invite</span>
+  //         </a>
+  //       </li>
+  //     </ol>
+  //     <span className="slds-wizard__progress">
+  //       <span className="slds-wizard__progress-bar" style={{ width: '50%' }}></span>
+  //     </span>
+  //   </div>
+  // </div>
 );

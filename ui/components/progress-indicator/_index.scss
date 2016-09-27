@@ -7,95 +7,154 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.slds-wizard {
+.slds-progress {
   position: relative;
 
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin: auto;
-  }
-
-  &__item {
-    flex: 2 0 auto;
-    text-align: center;
-    width: 0%; // Needed for truncation due to different flex grow on items
-    user-select: none;
-
-    &:first-child {
-      text-align: left;
-      flex-grow: 1;
-    }
-
-    &:last-child {
-      text-align: right;
-      flex-grow: 1;
-    }
-
-    a:hover,
-    a:focus {
-      outline: 0;
-      text-decoration: none;
-
-      .slds-wizard__marker {
-        background: rgb(216, 221, 230); //@TODO - no matching token
-      }
-    }
-  }
-
-  &__link {
-    display: block;
-  }
-
-  &__marker {
-    @include square($square-icon-small-boundary);
-    border-radius: $border-radius-circle;
-    background: $color-background-shade;
-    display: inline-block;
-    vertical-align: middle;
-    z-index: 1;
-    position: relative;
-  }
-
-  &__label {
-    display: block;
-    margin-top: $spacing-small;
-  }
-
-  &__progress {
+  .slds-progress-bar[value] {
     position: absolute;
-    left: 0;
-    top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
-    height: ($square-icon-x-small-content / 2);
-    display: block;
-    width: 100%;
-    z-index: -1;
-    background: $color-background-shade;
-  }
-
-  &__progress-bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: #0076de; // @TODO: Need a token for this
-    transition: width $duration-promptly ease;
-  }
-
-  .slds-is-active {
-
-    .slds-wizard__marker {
-      background: #0076de; // @TODO: Need a token for this
-    }
-
-    a:hover,
-    a:focus {
-      // scss-lint:disable NestingDepth SelectorDepth
-
-      .slds-wizard__marker {
-        background: rgb(0, 95, 178); // @TODO: Need a token for this
-      }
-    }
+    top: 50%;
+    margin-top: ((0.125rem / 2) * -1);
   }
 }
+
+.slds-progress__list {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  position: relative;
+  z-index: $z-index-default;
+}
+
+.slds-progress__item {
+
+  &.slds-is-done .slds-progress__marker,
+  &.slds-is-active .slds-progress__marker {
+    background: $color-background-alt;
+    border-color: $color-border-brand;
+  }
+}
+
+.slds-progress__marker {
+  @include square($square-icon-utility-small);
+  position: relative;
+  border-radius: $border-radius-circle;
+  background: $color-background-shade-dark;
+  border: 4px solid $color-background-alt; // wrong
+}
+
+
+// Another Component
+.slds-progress-bar {
+  display: block;
+  width: 100%;
+
+  &[value] {
+    background: $color-background-shade-dark;
+    color: rgba($color-brand, 0.3);
+    border: 0;
+    appearance: none;
+    height: 0.125rem;
+    position: relative;
+  }
+
+  &[value]::-webkit-progress-bar {
+    background-color: $color-background-shade-dark;
+  }
+
+  &[value]::-webkit-progress-value {
+    background: rgba($color-brand, 0.3);
+  }
+}
+
+// .slds-wizard {
+//   position: relative;
+//
+//   &__list {
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     margin: auto;
+//   }
+//
+//   &__item {
+//     flex: 2 0 auto;
+//     text-align: center;
+//     width: 0%; // Needed for truncation due to different flex grow on items
+//     user-select: none;
+//
+//     &:first-child {
+//       text-align: left;
+//       flex-grow: 1;
+//     }
+//
+//     &:last-child {
+//       text-align: right;
+//       flex-grow: 1;
+//     }
+//
+//     a:hover,
+//     a:focus {
+//       outline: 0;
+//       text-decoration: none;
+//
+//       .slds-wizard__marker {
+//         background: rgb(216, 221, 230); //@TODO - no matching token
+//       }
+//     }
+//   }
+//
+//   &__link {
+//     display: block;
+//   }
+//
+//   &__marker {
+//     @include square($square-icon-small-boundary);
+//     border-radius: $border-radius-circle;
+//     background: $color-background-shade;
+//     display: inline-block;
+//     vertical-align: middle;
+//     z-index: 1;
+//     position: relative;
+//   }
+//
+//   &__label {
+//     display: block;
+//     margin-top: $spacing-small;
+//   }
+//
+//   &__progress {
+//     position: absolute;
+//     left: 0;
+//     top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
+//     height: ($square-icon-x-small-content / 2);
+//     display: block;
+//     width: 100%;
+//     z-index: -1;
+//     background: $color-background-shade;
+//   }
+//
+//   &__progress-bar {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     height: 100%;
+//     background: #0076de; // @TODO: Need a token for this
+//     transition: width $duration-promptly ease;
+//   }
+//
+//   .slds-is-active {
+//
+//     .slds-wizard__marker {
+//       background: #0076de; // @TODO: Need a token for this
+//     }
+//
+//     a:hover,
+//     a:focus {
+//       // scss-lint:disable NestingDepth SelectorDepth
+//
+//       .slds-wizard__marker {
+//         background: rgb(0, 95, 178); // @TODO: Need a token for this
+//       }
+//     }
+//   }
+// }

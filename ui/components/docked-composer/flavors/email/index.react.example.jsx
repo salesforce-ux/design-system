@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
@@ -34,8 +33,8 @@ export default (
             <input className="slds-input--bare slds-input--height" id="emailComposerTo" type="text" />
           </div>
           <div className="slds-grid slds-col--bump-left slds-shrink-none slds-p-horizontal--small">
-            <Button>Cc</Button>
-            <Button>Bcc</Button>
+            <button className="slds-button">Cc</button>
+            <button className="slds-button">Bcc</button>
           </div>
         </div>
         <div className="slds-grid slds-p-horizontal--small">
@@ -129,7 +128,7 @@ export default (
             className="slds-button--icon-container"
             symbol="delete"
             assistiveText="Delete" />
-          <Button className="slds-button--brand">Send</Button>
+          <button className="slds-button slds-button--brand">Send</button>
         </div>
       </DockedComposerPanelFooter>
     </DockedComposerPanel>

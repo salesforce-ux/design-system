@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Button } from 'ui/components/buttons/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
@@ -53,7 +52,7 @@ export default (
         </fieldset>
       </DockedComposerPanelBody>
       <DockedComposerPanelFooter>
-        <Button className="slds-button--brand slds-col--bump-left">Save</Button>
+        <button className="slds-button slds-button--brand slds-col--bump-left">Save</button>
       </DockedComposerPanelFooter>
     </DockedComposerPanel>
   </div>

@@ -20,8 +20,9 @@ The following site enhancements are now available:
 
 The following components are now available:
 
-- Add Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
-- Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
+- Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 
 **ADDED**
 
@@ -54,6 +55,7 @@ The following issues have now been resolved:
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
 - Design token: `FONT_FAMILY`
+- Process › Wizard - Please use the new Progress Indicator instead [Progress Indicator](/components/progress-indicator/)
 
 **REMOVED**
 

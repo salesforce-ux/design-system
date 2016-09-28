@@ -83,7 +83,7 @@
     }
 
     &:focus {
-      box-shadow: $progress-color-background 0 0 0 4px, 0 0 3px 4px #0070D2;
+      box-shadow: $progress-color-background 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark;
     }
   }
 }

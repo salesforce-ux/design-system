@@ -97,7 +97,7 @@ let SplitView = props =>
         </div>
         <div className="slds-grid slds-grid--vertical-align-center">
           <p className="slds-text-body--small slds-text-color--inverse-weak">42 items &bull; Updated just now</p>
-          <div className="slds-col--bump-left">
+          <div className="slds-no-flex slds-col--bump-left">
             <ButtonIcon
               hasDropdown
               className="slds-button--icon-inverse slds-button--icon-container-more"

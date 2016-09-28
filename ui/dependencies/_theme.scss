@@ -67,6 +67,43 @@
   }
 }
 
+// Inverse Text with better support
+@mixin inverse-text($support) {
+  $link-selector: 'a';
+
+  @for $i from 1 through length($support) {
+    @if nth($support, $i) == 'text-utilities' {
+      .slds-text-title,
+      .slds-text-title--caps {
+        color: $color-text-inverse-weak;
+      }
+    }
+    @else if nth($support, $i) == 'buttons' {
+      $link-selector: 'a:not(.slds-button--neutral)';
+    }
+  }
+
+  color: $color-text-inverse;
+
+  #{$link-selector} {
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-text-link-inverse-hover;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    &:active {
+      color: $color-text-link-inverse-active;
+    }
+
+    &[disabled] {
+      color: $color-text-link-inverse-disabled;
+    }
+  }
+}
 
 
 // Border Helper

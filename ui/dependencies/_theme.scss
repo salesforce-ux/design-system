@@ -67,7 +67,11 @@
   }
 }
 
-// Inverse Text with better support
+/// Inverse text mixin
+///
+/// The inverse-text mixin determines what selectors to change when on an inversed background
+///
+/// @param {List} $support (null) - Set to `true` to scope root styles in the mixin's wrapper class when `$globals` is `true`
 @mixin inverse-text($support) {
   $link-selector: 'a';
 

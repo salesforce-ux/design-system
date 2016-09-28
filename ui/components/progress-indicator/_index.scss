@@ -32,7 +32,7 @@
         box-shadow: $progress-color-background-shade 0 0 0 4px; // Adds whitespace around indicator
 
         &:focus {
-          box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px #0070D2; // Keeps white space and add blue focus ring
+          box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark; // Keeps white space and add blue focus ring
         }
       }
 

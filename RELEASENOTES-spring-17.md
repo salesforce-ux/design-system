@@ -31,7 +31,17 @@ The following classes are now available:
 - Add `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
 - Add design token: `FONT_FAMILY_TEXT`
 - Add design token: `FONT_FAMILY_HEADING`
+- Add design token: `PROGRESS_COLOR_BACKGROUND`
+- Add design token: `PROGRESS_COLOR_BACKGROUND_SHADE`
+- Add design token: `PROGRESS_COLOR_BORDER`
+- Add design token: `PROGRESS_COLOR_BORDER_SHADE`
+- Add design token: `PROGRESS_COLOR_BORDER_HOVER`
+- Add design token: `PROGRESS_COLOR_BORDER_ACTIVE`
+- Add design token: `PROGRESS_BAR_HEIGHT`
+- Add design token: `PROGRESS_BAR_COLOR_BACKGROUND`
+- Add design token: `PROGRESS_BAR_COLOR_BACKGROUND_FILL`
 - Add design token alias: `SANS_SERIF`
+- Add design token alias: `MALIBU`
 
 **CHANGES**
 

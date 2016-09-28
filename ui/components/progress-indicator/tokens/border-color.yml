@@ -7,6 +7,15 @@ global:
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 props:
-  COLOR_BORDER_PATH_DIVIDER:
+  PROGRESS_COLOR_BORDER:
     value: '{!WHITE}'
-    comment: Used as a separator between dark colors like the stages of salespath.
+    comment: Borders of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_SHADE:
+    value: '{!LINK_WATER}'
+    comment: Shaded borders of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    comment: Hovered border color of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_ACTIVE:
+    value: '{!AZURE}'
+    comment: Active border color of each indicator item within the Progress Indicator

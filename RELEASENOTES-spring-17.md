@@ -16,15 +16,24 @@ The following components are now available:
 
 - Add Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Split View - Compact List - [Split View](/components/split-view/)
 
 **ADDED**
 
 The following classes are now available:
 
 - Add `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
+- Add `slds-button--icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
+- Add `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
+- Add `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 - Add design token: `FONT_FAMILY_TEXT`
 - Add design token: `FONT_FAMILY_HEADING`
+- Add design token: `SPLIT_VIEW_COLOR_BACKGROUND`
+- Add design token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
 - Add design token alias: `SANS_SERIF`
+- Add design token alias: `EBONY_CLAY`
+- Add design token alias: `OXFORD_BLUE`
+- Add design token alias: `RIVER_BED`
 
 **CHANGES**
 
@@ -36,6 +45,7 @@ The following changes have been made in this release:
   - Docked Utility Panel - [Docked Utility Panel](/components/docked-utility-bar/#flavor-utility-panel)
   - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
 - Cards are now responsive - [Cards](/components/cards/)
+- Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
 
 **FIXED**
 

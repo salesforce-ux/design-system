@@ -15,143 +15,219 @@ import className from 'classnames';
 import _ from 'lodash';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
-/*
-Structure
------
-Container
-Page Header
-Sort Header
-Unordered List
- - Tiles
-*/
-
 const results = [{
-  'objectName': 'Riley Shultz',
-  'leadScore': '99',
-  'company': 'Biotech, Inc.',
-  'status': 'Nurturing'
+  'unread': true,
+  'colOne': 'Riley Shultz',
+  'colTwo': '99',
+  'colThree': 'Biotech, Inc.',
+  'colFour': 'Nurturing'
 }, {
-  'objectName': 'Jason A. - VP of Sales',
-  'leadScore': '92',
-  'company': 'Case Management Solutions',
-  'status': 'Contacted'
+  'unread': true,
+  'colOne': 'Jason A. - VP of Sales',
+  'colTwo': '92',
+  'colThree': 'Case Management Solutions',
+  'colFour': 'Contacted'
 }, {
-  'objectName': 'This is a super long entity name',
-  'leadScore': '89',
-  'company': 'Acme, Inc.',
-  'status': 'Contacted'
+  'unread': true,
+  'colOne': 'Josh Smith',
+  'colTwo': '90',
+  'colThree': 'Acme, Inc.',
+  'colFour': 'Contacted'
 }, {
-  'objectName': 'This is a super long entity name that will force a truncation at the end of the line',
-  'leadScore': '86',
-  'company': 'Salesforce, Inc.',
-  'status': 'Closing'
+  'unread': true,
+  'colOne': 'Bobby Tree',
+  'colTwo': '89',
+  'colThree': 'Salesforce, Inc.',
+  'colFour': 'Closing'
 }, {
-  'objectName': 'Riley Shultz',
-  'leadScore': '74',
-  'company': 'Tesla',
-  'status': 'Contacted'
+  'colOne': 'Riley Shultz',
+  'colTwo': '74',
+  'colThree': 'Tesla',
+  'colFour': 'Contacted'
+}, {
+  'unread': true,
+  'colOne': 'Andy Smith',
+  'colTwo': '72',
+  'colThree': 'Universal Technologies',
+  'colFour': 'New'
+}, {
+  'colOne': 'Jim Steele',
+  'colTwo': '71',
+  'colThree': 'BigList, Inc.',
+  'colFour': 'New'
+}, {
+  'colOne': 'John Gardner',
+  'colTwo': '70',
+  'colThree': '3C Systems',
+  'colFour': 'Contacted'
+}, {
+  'colOne': 'Sarah Loehr',
+  'colTwo': '68',
+  'colThree': 'MedLife, Inc.',
+  'colFour': 'New'
 }];
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
+let SplitView = props =>
+  <div className={ className('slds-split-view_container', props.hidden ? 'slds-panel-closed' : 'slds-panel-open') }>
+    <div className={ className('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }>
+      <div className="slds-split-view__header" role="banner">
+        <div className="slds-grid">
+          <div className="slds-has-flexi-truncate">
+            <div className="slds-media slds-media--center slds-m-bottom--x-small">
+              <div className="slds-media__figure">
+                <div className="slds-icon_container slds-icon-standard-lead">
+                  <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="lead" />
+                  <span className="slds-assistive-text">Leads</span>
+                </div>
+              </div>
+              <div className="slds-media__body">
+                <button className="slds-button slds-p-right--x-small slds-truncate slds-type-focus" aria-haspopup="true">
+                  <div className="slds-grid slds-grid--vertical-align-center slds-has-flexi-truncate ">
+                    <h1 className="slds-text-heading--small slds-truncate" title="My Leads">My Leads</h1>
+                    <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="slds-grid slds-grid--vertical-align-center">
+          <p className="slds-text-body--small slds-text-color--inverse-weak">42 items &bull; Updated just now</p>
+          <div className="slds-col--bump-left">
+            <ButtonIcon
+              hasDropdown
+              className="slds-button--icon-inverse slds-button--icon-container-more"
+              symbol="side_list"
+              assistiveText="Change View"
+            />
+            <ButtonIcon
+              className="slds-button--icon-inverse slds-button--icon-container"
+              symbol="refresh"
+              assistiveText="Refresh Results"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="slds-grid slds-grid--vertical" role="grid" aria-readonly="true">
+        <div className="slds-split-view__list-header slds-grid slds-text-title--caps" role="row">
+          <div role="columnheader">Lead Score <SvgIcon className="slds-icon slds-icon--xx-small slds-text-icon-default slds-align-top" sprite="utility" symbol="arrowdown" assistiveText="Descending" /></div>
+        </div>
+        <ul className="slds-scrollable--y" role="presentation">
+          { props.children }
+        </ul>
+      </div>
+    </div>
+    <ButtonIcon
+      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-panel-closed' : 'slds-panel-open') }
+      iconClassName="slds-button__icon--x-small"
+      symbol="left"
+      assistiveText={ props.hidden ? 'Open Panel' : 'Close Panel' }
+    />
+  </div>;
+
 let Row = props =>
-  <li className={ className('slds-split-view__list-item', props.className) } role="row" key={ props.key }>
+  <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="row" key={ props.key }>
     <a href="javascript:void(0);" role="gridcell" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate">
       <div className="slds-grid slds-wrap">
-        <span role="rowheader" className="slds-grow slds-truncate slds-text-color--inverse" title={ props.name || 'Object Name' }>
-          { props.name || 'Object Name' }
+        <span role="rowheader" className="slds-truncate slds-text-body--regular slds-text-color--inverse" title={ props.name || 'Object Name' }>
+          { props.colOne || 'Column 1' }
         </span>
-        <span className="slds-shrink-none slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>
+        <span className="slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>
           { props.colTwo || 'Column 2' }
         </span>
       </div>
       <div className="slds-grid slds-wrap">
-        <span className="slds-grow" title={ props.colThree || 'Column 3' }>
+        <span className="slds-truncate" title={ props.colThree || 'Column 3' }>
           { props.colThree || 'Column 3' }
         </span>
-        <span className="slds-shrink-none slds-col--bump-left" title={ props.colFour || 'Column 4' }>
+        <span className="slds-truncate slds-col--bump-left" title={ props.colFour || 'Column 4' }>
           { props.colFour || 'Column 4' }
         </span>
       </div>
     </a>
-    {/*<div role="gridcell" className="slds-flex-none slds-p-left--medium">
-      <ButtonIcon
-        className="slds-button--icon-border-inverse slds-button--icon-x-small"
-        symbol="down"
-        aria-haspopup="true"
-        assistiveText="More options"
-      />
-    </div>*/}
   </li>;
 
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ width: '20rem' }}>
-    <div className="slds-split-view slds-grid slds-grid--vertical">
-      <div className="slds-split-view__header slds-text-color--weak-inverse" role="banner">
-        <div className="slds-grid slds-m-bottom--x-small">
-          <div className="slds-media slds-media--center">
-            <div className="slds-media__figure">
-              <div className="slds-icon_container slds-icon-standard-lead">
-                <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="lead" />
-                <span className="slds-assistive-text">Lead</span>
-              </div>
-            </div>
-            <div className="slds-media__body">
-              <button className="slds-button slds-m-right--small slds-grid" aria-haspopup="true">
-                <div className="slds-grid">
-                  <h1 className="slds-text-heading--small slds-text-color--inverse slds-truncate" title="My Leads">My LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy LeadsMy Leads</h1>
-                  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
-                </div>
-              </button>
-            </div>
-          </div>
-          <div className="slds-col--bump-left">
-            <ButtonIcon
-              className="slds-button--icon slds-button--icon-border-inverse"
-              aria-haspopup="true"
-              symbol="down"
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+      <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
+        <SplitView>
+          { _.times(5, i =>
+            <Row
+              key={ i }
+              colOne={ results[i].colOne }
+              colTwo={ results[i].colTwo }
+              colThree={ results[i].colThree }
+              colFour={ results[i].colFour }
             />
-          </div>
-        </div>
-        <div className="slds-grid">
-          <p>42 items &bull; Updated just now</p>
-          <ButtonIcon
-            className="slds-button--icon-inverse slds-button--icon-small slds-col--bump-left"
-            symbol="refresh"
-            assistiveText="Refresh Results"
-          />
-        </div>
+          )}
+        </SplitView>
       </div>
-      <div role="grid" aria-readonly="true">
-        <div className="slds-split-view__list-header slds-grid slds-text-title--caps" role="row">
-          <div role="columnheader">Lead Score <SvgIcon className="slds-icon slds-icon--x-small slds-text-icon-default" sprite="utility" symbol="arrowdown" assistiveText="Descending" /></div>
-          <div className="slds-col--bump-left" role="columnheader">
-            <ButtonIcon
-              hasDropdown
-              className="slds-button--icon-inverse"
-              symbol="sort"
-              assistiveText="Sort by"
-            />
-          </div>
-        </div>
-        <ul role="presentation">
+  },
+  {
+    id: 'overflow',
+    label: 'Overflow',
+    element:
+      <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
+        <SplitView>
           { _.times(results.length, i =>
             <Row
               key={ i }
-              name={ results[i].objectName }
-              colTwo={ results[i].leadScore }
-              colThree={ results[i].company }
-              colFour={ results[i].status }
+              colOne={ results[i].colOne }
+              colTwo={ results[i].colTwo }
+              colThree={ results[i].colThree }
+              colFour={ results[i].colFour }
             />
           )}
-        </ul>
+        </SplitView>
       </div>
-    </div>
-  </div>
-);
+  },
+  {
+    id: 'unread',
+    label: 'Unread Items',
+    element:
+      <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
+        <SplitView>
+          { _.times(results.length, i =>
+            <Row
+              key={ i }
+              unread={ results[i].unread }
+              colOne={ results[i].colOne }
+              colTwo={ results[i].colTwo }
+              colThree={ results[i].colThree }
+              colFour={ results[i].colFour }
+            />
+          )}
+        </SplitView>
+      </div>
+  },
+  {
+    id: 'panel-collapsed',
+    label: 'Collapsed Panel',
+    element:
+      <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
+        <SplitView hidden>
+          { _.times(results.length, i =>
+            <Row
+              key={ i }
+              unread={ results[i].unread }
+              colOne={ results[i].colOne }
+              colTwo={ results[i].colTwo }
+              colThree={ results[i].colThree }
+              colFour={ results[i].colFour }
+            />
+          )}
+        </SplitView>
+      </div>
+  }
+];

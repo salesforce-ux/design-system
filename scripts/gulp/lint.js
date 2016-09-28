@@ -133,6 +133,6 @@ gulp.task('lint:tokens:aliases', () =>
     .pipe(tokenlint.report('verbose'))
 );
 
-gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:components', 'lint:tokens:aliases']);
+gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:aliases']);
 
 gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tokens']);

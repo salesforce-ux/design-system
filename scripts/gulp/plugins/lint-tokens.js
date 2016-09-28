@@ -57,7 +57,7 @@ const TokenLint = function (tokens, pluginOptions = {}) {
   }
 
   self.options = _.defaults(pluginOptions || {}, {
-    prefix: true,
+    prefix: false, // TODO: update prefix
     uppercase: true,
     characterRange: true
   });

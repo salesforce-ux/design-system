@@ -15,6 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
+import packageJSON from '../package.json';
 
 let hero = (
   <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
@@ -25,10 +26,10 @@ let hero = (
       Create the world’s best enterprise app experiences.
     </h2>
     <p className="site-cta-buttons slds-m-bottom--medium">
-      <CTALink href="/downloads" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
+      <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
     </p>
     <p className="site-releasenumber slds-m-bottom--medium">
-      Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
+      Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>
     </p>
     <div className="site-dreamforce-banner container--buffer">
       <div className="site-dreamforce-title slds-m-bottom--xx-small">Visit Salesforce UX at Dreamforce 2016!</div>

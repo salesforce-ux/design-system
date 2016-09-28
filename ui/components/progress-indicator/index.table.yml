@@ -33,13 +33,13 @@ classes:
     notes: <code>&lt;span&gt;</code> sits outside of <code>&lt;ol&gt;</code>
   -
     class: slds-is-active
-    description: Stateful class that turns dot indicator and progress bar blue
+    description: Stateful class for the active step
     required: true
-    applied: <code>slds-wizard__item</code>
+    applied: <code>slds-progress__item</code>
     notes: Class should be applied thought JavaScript
   -
     class: slds-is-completed
-    description: Stateful class that turns dot indicator and progress bar blue
+    description: Stateful class for a completed step, <code>.slds-progress__item</code> should receive a success icon at this point
     required: true
-    applied: <code>slds-wizard__item</code>
+    applied: <code>slds-progress__item</code>
     notes: Class should be applied thought JavaScript

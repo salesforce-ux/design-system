@@ -45,6 +45,10 @@
     color: inherit;
   }
 
+  &__body {
+    margin-bottom: $spacing-small;
+  }
+
   &__body:empty,
   &__footer:empty {
     display: none;

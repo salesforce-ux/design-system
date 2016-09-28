@@ -34,7 +34,13 @@ let hero = (
     <div className="site-dreamforce-banner container--buffer">
       <div className="site-dreamforce-title slds-m-bottom--xx-small">Visit Salesforce UX at Dreamforce 2016!</div>
       <div className="site-dreamforce-subtitle">Find us at Camp Design System in the Developer Forest, or guiding your path to Lightning in the Lightning Zone.</div>
-      <img className="site-dreamforce-astro" src="/assets/images/landing/astro-lightning.svg" alt="" />
+      <img
+        className="site-dreamforce-astro"
+        src="/assets/images/landing/astro-lightning.svg"
+        alt=""
+        style={{
+          animation: 'floater-1 20s linear .5s infinite'
+        }} />
     </div>
   </header>
 );

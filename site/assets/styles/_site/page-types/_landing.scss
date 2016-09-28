@@ -104,7 +104,7 @@
     bottom: -50px;
     max-width: none;
     height: 180px;
-    animation: floater-1 10s linear .5s infinite;
+    animation: floater-1 10s linear 0.5s infinite;
   }
   &-title {
     font-size: $site-font-size-large;

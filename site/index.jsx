@@ -78,6 +78,9 @@ export default (
             </dl>
           </li>
         </ul>
+        <div className="site-tagline slds-m-bottom--xx-large slds-p-vertical--x-large slds-text-align--center">
+          Easy to do the right thing. Hard to do the wrong thing.
+        </div>
         <ul className="slds-grid slds-wrap slds-grid--align-spread slds-grid--pull-padded-large">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
             <div className="grid-card">

@@ -87,10 +87,12 @@
 
 // Dreamforce
 .site-dreamforce {
+
   &-banner {
     position: relative;
     padding-right: 150px;
     background: $color-background-alt-inverse;
+
     @include mq-medium-min {
       position: absolute;
       right: 0;
@@ -98,20 +100,23 @@
       left: 0;
     }
   }
+
   &-astro {
     position: absolute;
-    left: 100%;
     bottom: -50px;
+    left: 100%;
     max-width: none;
     height: 180px;
     animation: floater-1 10s linear 0.5s infinite;
   }
+
   &-title {
     font-size: $site-font-size-large;
   }
+
   &-subtitle {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     font-size: $site-font-size-medium;
     color: rgba(255, 255, 255, 0.5);
   }

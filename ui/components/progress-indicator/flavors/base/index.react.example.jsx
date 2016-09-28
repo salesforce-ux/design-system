@@ -27,16 +27,16 @@ import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example
 // Partial(s)
 //////////////////////////////////////////////
 
-let Progress = props =>
+export let Progress = props =>
   <div className={ className('slds-progress', props.className) }>
     <ol className="slds-progress__list">
       { props.children }
     </ol>
-    <progress className="slds-progress-bar" value={ props.amount || '0' } max="100">{ props.amount + '%' || '0%' }</progress>
+    <progress className="slds-progress-bar" value={ props.amount || '0' } max="100">{ props.amount + '%' }</progress>
   </div>;
 
-let Step = props =>
-  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-done' : null) } role="presentation">
+export let Step = props =>
+  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null) } role="presentation">
     { props.done
       ? <ButtonIcon
           className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
@@ -60,18 +60,21 @@ export let states = [
     id: 'default',
     label: 'Default',
     element:
-      <Progress>
+    <div className="demo-only" style={{ padding: '1rem' }}>
+      <Progress amount="0">
         <Step active>Step 1</Step>
         <Step>Step 2</Step>
         <Step>Step 3</Step>
         <Step>Step 4</Step>
         <Step>Step 5</Step>
       </Progress>
+    </div>
   },
   {
     id: 'next-step',
     label: 'Next Step',
     element:
+    <div className="demo-only" style={{ padding: '1rem' }}>
       <Progress amount="25">
         <Step done>Step 1</Step>
         <Step active>Step 2</Step>
@@ -79,12 +82,13 @@ export let states = [
         <Step>Step 4</Step>
         <Step>Step 5</Step>
       </Progress>
+    </div>
   },
   {
     id: 'tooltip',
     label: 'Tooltip',
     element:
-      <div className="demo-only" style={{ paddingTop: '3rem' }}>
+      <div className="demo-only" style={{ padding: '3rem 1rem 0' }}>
         <Progress amount="50">
           <Step done>Step 1</Step>
           <Step done>Step 2</Step>

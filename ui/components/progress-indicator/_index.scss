@@ -8,14 +8,49 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 $progress-color-background: #fff;
+$progress-color-background-shade: #f4f6f9;
+$progress-color-border: #fff;
+$progress-color-border-shade: #f4f6f9;
 $progress-color-border-hover: #0070d2;
 $progress-color-border-active: #1589ee;
 $progress-bar-height: 0.125rem;
 $progress-bar-color-background: #d8dde6;
-$progress-bar-color-background-fill: #83C3FB;
+$progress-bar-color-background-fill: #83c3fb;
 
 .slds-progress {
   position: relative;
+  max-width: 70%;
+  flex: 1 1 auto;
+  margin: auto;
+
+  // When on a shaded background such as the modal footer
+  &--shade {
+
+    .slds-progress__item {
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      &.slds-is-completed .slds-progress__marker,
+      &.slds-is-active .slds-progress__marker {
+        background: $progress-color-background-shade;
+      }
+
+      &.slds-is-completed .slds-progress__marker--icon {
+        border-color: $progress-color-background-shade;
+      }
+
+      &.slds-is-active .slds-progress__marker {
+        box-shadow: $progress-color-background-shade 0 0 0 4px; // Adds whitespace around indicator
+
+        &:focus {
+          box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px #0070D2; // Keeps white space and add blue focus ring
+        }
+      }
+
+      .slds-progress__marker {
+        border-color: $progress-color-border-shade; // wrong
+      }
+    }
+  }
 
   .slds-progress-bar[value] {
     position: absolute;
@@ -27,20 +62,24 @@ $progress-bar-color-background-fill: #83C3FB;
 .slds-progress__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
   margin: auto;
   position: relative;
   z-index: $z-index-default;
 }
 
 .slds-progress__item {
+  display: inline-flex;
+  align-self: center;
 
-  &.slds-is-done .slds-progress__marker,
+  &.slds-is-completed .slds-progress__marker,
   &.slds-is-active .slds-progress__marker {
     background: $progress-color-background;
     border-color: $progress-color-border-active;
   }
 
-  &.slds-is-done .slds-progress__marker--icon {
+  &.slds-is-completed .slds-progress__marker--icon {
     border-color: $progress-color-background;
     color: $progress-bar-color-background-fill;
   }
@@ -64,7 +103,7 @@ $progress-bar-color-background-fill: #83C3FB;
   position: relative;
   border-radius: $border-radius-circle;
   background: $progress-bar-color-background;
-  border: 4px solid $progress-color-background; // wrong
+  border: 4px solid $progress-color-border;
   vertical-align: middle;
 
   &--icon {
@@ -99,96 +138,3 @@ $progress-bar-color-background-fill: #83C3FB;
     background: $progress-bar-color-background-fill;
   }
 }
-
-// .slds-wizard {
-//   position: relative;
-//
-//   &__list {
-//     display: flex;
-//     justify-content: space-between;
-//     position: relative;
-//     margin: auto;
-//   }
-//
-//   &__item {
-//     flex: 2 0 auto;
-//     text-align: center;
-//     width: 0%; // Needed for truncation due to different flex grow on items
-//     user-select: none;
-//
-//     &:first-child {
-//       text-align: left;
-//       flex-grow: 1;
-//     }
-//
-//     &:last-child {
-//       text-align: right;
-//       flex-grow: 1;
-//     }
-//
-//     a:hover,
-//     a:focus {
-//       outline: 0;
-//       text-decoration: none;
-//
-//       .slds-wizard__marker {
-//         background: rgb(216, 221, 230); //@TODO - no matching token
-//       }
-//     }
-//   }
-//
-//   &__link {
-//     display: block;
-//   }
-//
-//   &__marker {
-//     @include square($square-icon-small-boundary);
-//     border-radius: $border-radius-circle;
-//     background: $color-background-shade;
-//     display: inline-block;
-//     vertical-align: middle;
-//     z-index: 1;
-//     position: relative;
-//   }
-//
-//   &__label {
-//     display: block;
-//     margin-top: $spacing-small;
-//   }
-//
-//   &__progress {
-//     position: absolute;
-//     left: 0;
-//     top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
-//     height: ($square-icon-x-small-content / 2);
-//     display: block;
-//     width: 100%;
-//     z-index: -1;
-//     background: $color-background-shade;
-//   }
-//
-//   &__progress-bar {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     height: 100%;
-//     background: #0076de; // @TODO: Need a token for this
-//     transition: width $duration-promptly ease;
-//   }
-//
-//   .slds-is-active {
-//
-//     .slds-wizard__marker {
-//       background: #0076de; // @TODO: Need a token for this
-//     }
-//
-//     a:hover,
-//     a:focus {
-//       // scss-lint:disable NestingDepth SelectorDepth
-//
-//       .slds-wizard__marker {
-//         background: rgb(0, 95, 178); // @TODO: Need a token for this
-//       }
-//     }
-//   }
-// }

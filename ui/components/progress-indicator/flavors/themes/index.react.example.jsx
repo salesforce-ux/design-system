@@ -10,16 +10,39 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
+import { Progress, Step } from 'ui/components/progress-indicator/flavors/base/index.react.example';
 
-export const intro = (
-  <p className="site-text-introduction">
-    A progress indicator component communicates to the user the progress of a particular process.
-  </p>
-);
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
-export default (
-  <ComponentDocs>
-  </ComponentDocs>
-);
+export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    element:
+    <div className="demo-only" style={{ padding: '1rem' }}>
+      <Progress amount="25">
+        <Step done>Step 1</Step>
+        <Step active>Step 2</Step>
+        <Step>Step 3</Step>
+        <Step>Step 4</Step>
+        <Step>Step 5</Step>
+      </Progress>
+    </div>
+  },
+  {
+    id: 'shade',
+    label: 'Shade',
+    element:
+      <div className="demo-only" style={{ background: '#f4f6f9', padding: '1rem' }}>
+        <Progress className="slds-progress--shade" amount="25">
+          <Step done>Step 1</Step>
+          <Step active>Step 2</Step>
+          <Step>Step 3</Step>
+          <Step>Step 4</Step>
+          <Step>Step 5</Step>
+        </Progress>
+      </div>
+  }
+];

@@ -1,0 +1,14 @@
+global:
+  category: fill
+  type: color
+  cssProperties:
+  - 'fill'
+imports:
+- ./aliases/color.yml
+props:
+  FILL_HEADER_BUTTON:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Header button icon color'
+  FILL_HEADER_BUTTON_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: 'Hovered header button icon color'

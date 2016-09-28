@@ -9,6 +9,12 @@
 
 The following site enhancements are now available:
 
+**TOKENS**
+
+- `force-base/fill.json`
+  - Add token `FILL_HEADER_BUTTON`    
+  - Add token `FILL_HEADER_BUTTON_HOVER`
+
 
 **NEW COMPONENTS AND VARIANTS**
 

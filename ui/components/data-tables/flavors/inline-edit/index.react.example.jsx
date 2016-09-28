@@ -33,7 +33,7 @@ let Thead = props =>
   <thead>
     <tr className="slds-text-title--caps">
       <th scope="col" style={{ width: '2.75rem' }}><span className="slds-assistive-text">Errors</span></th>
-      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><div className="slds-p-horizontal--x-small"><Checkbox label="Select All" /></div></th>
+      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><Checkbox label="Select All" /></th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
@@ -75,11 +75,6 @@ let Th = (props) => {
   );
 };
 
-let Td = props =>
-  <td {...props} role="gridcell">
-    { props.children }
-  </td>;
-
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
@@ -113,64 +108,65 @@ let ErrorPanel = props =>
     <div className="slds-popover__body">Company encountered an error.</div>
 </div>;
 
+let Td = props =>
+  <td {...props} role="gridcell" className={className('slds-cell-edit', props.className)}>
+    { props.children }
+  </td>;
+
 let RowData = (props) => {
   let checkboxLabel = 'Select row ' + props.title;
 
   return(
     <tr className="slds-hint-parent">
-      <td tabIndex={props.errorindex} aria-selected={props.errorSelected}>
-        <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
-          <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
-            <span className="slds-assistive-text">Row has errors</span>
-            <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
-          </button>
-          <span className="slds-row-number slds-text-body--small"></span>
-        </div>
+      <td id={props.cellID} tabIndex={props.errorindex} aria-selected={props.errorSelected}className={className('slds-cell-edit slds-cell-error', props.editName)}>
+        <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
+          <span className="slds-assistive-text">Row has errors</span>
+          <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
+        </button>
+        <span className="slds-row-number slds-text-body--small"></span>
       </td>
-      <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
-        <div className={className('slds-cell-edit', props.checkClass)}>
-          <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
-        </div>
+      <Td aria-selected={props.checkSelected} className={className('', props.checkClass)}>
+        <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
       </Td>
-      <th aria-selected={props.defaultSelected} scope="row">
-        <span className={className('slds-grid slds-grid--align-spread slds-cell-edit', props.thClassName)}>
+      <th tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} scope="row" className={className('slds-cell-edit', props.thClassName)}>
+        <span className="slds-grid slds-grid--align-spread">
           <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
       { props.children }
       <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate slds-grow" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
         </span>
       </Td>
       <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate slds-grow" title="jdoe@acme.com">jdoe@acme.com</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
         </span>
       </Td>
       <Td aria-readonly="true">
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
-          <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+          <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
         </span>
       </Td>
       <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate slds-grow" title="Contacted">Contacted</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
         </span>
       </Td>
       <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+        <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate slds-grow slds-text-align--right" title="60%">60%</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
         </span>
       </Td>
       <Td>
-        <div className="slds-grid slds-grid--align-end slds-cell-edit slds-p-right--large">
+        <div className="slds-p-right--large">
           <ButtonIcon
             className="slds-button--icon-border-filled slds-button--icon-x-small"
             iconClassName="slds-button__icon--hint slds-button__icon--small"
@@ -185,64 +181,60 @@ let RowData = (props) => {
 
 let RowDataStatic = props =>
   <tr className="slds-hint-parent">
-    <td>
-      <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
-        <button className="slds-hidden slds-button slds-button--icon slds-button--icon-error" tabIndex={props.navigationModeTabIndex} aria-hidden="true">
-          <span className="slds-assistive-text">Row has no errors</span>
-          <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
-        </button>
-        <span className="slds-row-number slds-text-body--small"></span>
-      </div>
+    <td id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
+      <button className="slds-hidden slds-button slds-button--icon slds-button--icon-error" tabIndex={props.navigationModeTabIndex} aria-hidden="true">
+        <span className="slds-assistive-text">Row has no errors</span>
+        <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
+      </button>
+      <span className="slds-row-number slds-text-body--small"></span>
     </td>
     <Td>
-      <div className="slds-cell-edit">
-        <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
-      </div>
+      <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
     </Td>
-    <th scope="row">
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+    <th scope="row"className="slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
+        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
       </span>
     </th>
     <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow" title="Rohde Corp">Rohde Corp</span>
-            <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
       </span>
     </Td>
     <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow" title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
+        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
       </span>
     </Td>
     <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow" title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
+        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
       </span>
     </Td>
     <Td aria-readonly="true">
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
-        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+        <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
       </span>
     </Td>
     <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow" title="New">New</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
+        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
       </span>
     </Td>
     <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+      <span className="slds-grid slds-grid--align-spread">
         <span className="slds-truncate slds-grow slds-text-align--right" title="20%">20%</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
+        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
       </span>
     </Td>
     <Td>
-      <div className="slds-grid slds-grid--align-end slds-cell-edit slds-p-right--large">
+      <div className="slds-p-right--large">
         <ButtonIcon
           className="slds-button--icon-border-filled slds-button--icon-x-small"
           iconClassName="slds-button__icon--hint slds-button__icon--small"
@@ -265,13 +257,13 @@ export let states = [
     element:
       <Container>
         <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
               <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -279,41 +271,6 @@ export let states = [
           </tbody>
         </Table>
       </Container>
-  },
-  {
-    id: 'data-table-inline-table-matte',
-    label: 'Table container focused',
-    element:
-      <Container tabIndex="1" id="table-edit-01">
-        <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="-1" />
-          <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-focus">
-                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-          </tbody>
-        </Table>
-        <TableFocusInfo />
-      </Container>,
-    script: `
-      document.getElementById('table-edit-01').focus()
-    `
   },
   {
     id: 'data-table-inline-edit-with-link',
@@ -325,9 +282,9 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" thClassName="slds-has-focus" linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -349,9 +306,9 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" checkClass="slds-has-focus" checkSelected="true" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -372,10 +329,10 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
-              <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-focus">
+              <Td aria-selected="true" className="slds-has-focus">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -397,9 +354,9 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
                   <div className="slds-form-element slds-grid">
@@ -432,9 +389,9 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-editing">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
                   <div className="slds-form-element slds-grid">
@@ -468,9 +425,9 @@ export let states = [
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
               <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-editing">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
                   <div className="slds-form-element slds-has-error slds-grid slds-wrap">
@@ -504,10 +461,10 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-is-edited">
+              <Td className="slds-is-edited">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
@@ -525,10 +482,10 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData title="Acme Enterprises" navigationModeTabIndex="0">
-              <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-error">
+              <Td aria-selected="true" className="slds-has-error">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
                 </span>
               </Td>
             </RowData>
@@ -549,10 +506,10 @@ export let states = [
           <Thead navigationModeTabIndex="0" />
           <tbody>
             <RowData editName="slds-has-focus" errorindex="0" title="Acme Enterprises" navigationModeTabIndex="0">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit slds-has-error">
+              <Td className="slds-has-error">
+                <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>

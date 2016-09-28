@@ -16,39 +16,33 @@ import PageBody from 'app_modules/site/components/page/body';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
 
-export default (
-  <PageBody contentClassName="site-landing-page">
-    {/* Hero */}
-    <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
-      <h1 className="site-text-heading--large">
-        Lightning <span className="text-no-wrap">Design System</span>
-      </h1>
-      <h2 className="site-text-heading--medium slds-m-bottom--xx-large">
-        Create the world’s best enterprise app experiences.
-      </h2>
-      <p className="site-cta-buttons slds-m-bottom--medium">
-        <CTALink href="/downloads" className="slds-button slds-button--neutral site-cta-download" eventType="downloads-top">Get the Design System</CTALink>
-        <CTALink
-          href="https://github.com/salesforce-ux/design-system"
-          className="slds-button slds-button--neutral"
-          eventType="github-start">
-          <img src="/assets/images/social-github-icon-only.svg" className="slds-button__icon--large slds-button__icon--left site-cta-buttons__icon" alt="" />
-          Star
-        </CTALink>
-      </p>
-      <p className="site-releasenumber slds-m-bottom--medium">
-        Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
-      </p>
-    </header>
+let hero = (
+  <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
+    <h1 className="site-text-heading--large">
+      Lightning <span className="text-no-wrap">Design System</span>
+    </h1>
+    <h2 className="site-text-heading--medium slds-m-bottom--xx-large">
+      Create the world’s best enterprise app experiences.
+    </h2>
+    <p className="site-cta-buttons slds-m-bottom--medium">
+      <CTALink href="/downloads" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
+    </p>
+    <p className="site-releasenumber slds-m-bottom--medium">
+      Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
+    </p>
+    <div className="site-dreamforce-banner container--buffer">
+      <div className="site-dreamforce-title slds-m-bottom--xx-small">Visit Salesforce UX at Dreamforce 2016!</div>
+      <div className="site-dreamforce-subtitle">Find us at Camp Design System in the Developer Forest, or guiding your path to Lightning in the Lightning Zone.</div>
+      <img className="site-dreamforce-astro" src="/assets/images/landing/astro-lightning.svg" alt="" />
+    </div>
+  </header>
+);
 
+export default (
+  <PageBody anchor={hero} contentClassName="site-landing-page">
     <div className="container--buffer slds-container--x-large">
       {/* Grid */}
       <section className="site-grid--landing slds-p-vertical--xx-large site-text-longform">
-        <div className="site-video-container">
-          <div className="site-video">
-            <iframe src="https://www.youtube.com/embed/inqe8D1XwrA?showinfo=0" allowFullScreen></iframe>
-          </div>
-        </div>
         <ul className="slds-grid slds-wrap slds-grid--pull-padded-large site-grid--landing-primary">
           <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
             <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">
@@ -137,6 +131,6 @@ export default (
       </footer>
     </div>
     {/* Shapes */}
-    <DynamicShapes x={1170} y={330} />
+    <DynamicShapes x={1050} y={330} />
   </PageBody>
 );

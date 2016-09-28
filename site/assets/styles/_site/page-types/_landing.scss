@@ -11,8 +11,7 @@
 
 // Page
 .site-landing-page {
-  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top,
-              url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
+  background: url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
                 size: auto rem(560px);
               }
   @include mq-medium-max {
@@ -29,15 +28,24 @@
 
 // Hero
 .site-masthead--landing {
+  position: relative;
+  overflow: hidden;
+  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top {
+                size: auto rem(560px);
+                color: $color-brand-dark;
+              };
+
+  @include mq-medium-max {
+    background-size: auto rem(360px);
+  }
+
   @include inverse-links;
-  margin-top: -$spacing-xx-large;
-  padding-bottom: ($spacing-xx-large * 3);
 
   @include mq-medium-min {
     padding: {
       top: $spacing-x-large;
-      bottom: $spacing-x-large * 11;
     }
+    min-height: 560px;
   }
 
   .#{$css-prefix}button {
@@ -77,18 +85,39 @@
   }
 }
 
-
+// Dreamforce
+.site-dreamforce {
+  &-banner {
+    position: relative;
+    padding-right: 150px;
+    background: $color-background-alt-inverse;
+    @include mq-medium-min {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &-astro {
+    position: absolute;
+    right: 20px;
+    bottom: -28px;
+  }
+  &-title {
+    font-size: $site-font-size-large;
+  }
+  &-subtitle {
+    font-size: $site-font-size-medium;
+    opacity: 0.75;
+  }
+}
 
 // Grid
 .site-grid--landing {
-  margin-top: (($spacing-xx-large * 3) * -1);
+  margin-top: (($spacing-xx-large * 2) * -1);
 
   .site-text-heading--large {
     font-size: $site-font-size-xx-large;
-  }
-
-  @include mq-medium-min {
-    margin-top: ($spacing-xx-large * 4) * -1;
   }
 
   .grid-card {
@@ -214,23 +243,23 @@
 }
 
 // Now we make shapes appear one at a time
-@media (min-width: 73em) { // The first shape is in the viewport
+@media (min-width: 65em) { // The first shape is in the viewport
   .site-shapes,
   [data-slds-shape=cub] {
     display: block;
   }
 }
-@media (min-width: 80em) { // The triangular prism appears
+@media (min-width: 72em) { // The triangular prism appears
   [data-slds-shape="tri"] {
     display: block;
   }
 }
-@media (min-width: 90em) { // Now to the rectangular prism
+@media (min-width: 82em) { // Now to the rectangular prism
   [data-slds-shape="rect"] {
     display: block;
   }
 }
-@media (min-width: 100em) {
+@media (min-width: 92em) {
   [data-slds-shape="dten"] { // Finishing with the decahedron
     display: block;
   }

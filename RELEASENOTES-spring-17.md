@@ -47,7 +47,7 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
-- Removed custom styled scrollbar mixin from `slds--scrollable-` helpers
+- Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
 
 **DEPRECATED**
 
@@ -60,3 +60,4 @@ The following features are being marked as deprecated in this release and will b
 The following features are being removed in this release:
 
 - `$css-prefix` is no longer available to change the prefix of `slds-` class names to something of your choice. As an alternative, please use this PostCSS plugin to customize class name prefixes: [postcss-slds-prefix](https://github.com/salesforce-ux/postcss-slds-prefix).
+- Removed custom styled scrollbar mixin from `slds--scrollable-` helpers

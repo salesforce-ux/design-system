@@ -14,11 +14,6 @@
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
-  margin: $spacing-small;
-
-  @include mq-large-min {
-    margin: auto;
-  }
 
   + .slds-card {
     margin-top: $spacing-medium;
@@ -71,6 +66,7 @@
         margin-bottom: $spacing-large;
       }
     }
+
     .slds-card__footer {
       padding-bottom: $spacing-small;
 

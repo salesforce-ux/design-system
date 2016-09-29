@@ -201,9 +201,12 @@ export let RteAlignText = props =>
   </ButtonGroupList>;
 
 export let RteInsertContent = props =>
-  <ButtonGroupList aria-label="Insert content" {...props}>
-    <li>
+  <ButtonGroupList
+    role={ props.overflow ? 'presentation' : null }
+    aria-label={ !props.overflow ? 'Insert content' : null}>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="emoji"
         className="slds-button--icon-border-filled"
@@ -212,8 +215,9 @@ export let RteInsertContent = props =>
         assistiveText="Add Emoji" />
     </li>
 
-    <li>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="image"
         className="slds-button--icon-border-filled"
@@ -222,8 +226,9 @@ export let RteInsertContent = props =>
         assistiveText="Add Image" />
     </li>
 
-    <li>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="link"
         className="slds-button--icon-border-filled"
@@ -247,9 +252,12 @@ export let RteInsertUser = props =>
   </ButtonGroupList>;
 
 export let RteClearFormatting = props =>
-  <ButtonGroupList aria-label="Remove Formatting">
-    <li>
+  <ButtonGroupList
+    role={ props.overflow ? 'presentation' : null }
+    aria-label={ !props.overflow ? 'Remove Formatting' : null}>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="remove_formatting"
@@ -273,9 +281,9 @@ export let RteOverflow = props =>
     </ButtonGroupList>
 
     <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36', right: '0'}}>
-      <RteInsertContent role="presentation" />
+      <RteInsertContent overflow />
 
-      <RteClearFormatting role="presentation" />
+      <RteClearFormatting overflow />
     </div>
   </div>;
 

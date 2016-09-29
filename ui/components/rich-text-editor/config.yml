@@ -1,5 +1,5 @@
 classBase: 'rich-text-editor'
-status: 'prototype'
+status: 'dev-ready'
 flavors:
   - base
   - feed

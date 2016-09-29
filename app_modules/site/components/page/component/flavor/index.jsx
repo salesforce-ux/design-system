@@ -89,13 +89,20 @@ class ComponentFlavor extends React.Component {
     return (
       <section
         className="slds-m-bottom--xx-large slds-p-top--x-large" >
-        <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
-          {statesIds}
-          {flavor.title}
-          {this.renderBadge(flavor.status)}
-          {this.renderBadge(flavor.formFactorStatus)}
-          {this.renderCompatiblityBadges()}
-        </Heading>
+        <div className="slds-grid slds-wrap">
+          <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6">
+            <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
+              {statesIds}
+              {flavor.title}
+              {this.renderBadge(flavor.status)}
+              {this.renderBadge(flavor.formFactorStatus)}
+              {this.renderCompatiblityBadges()}
+            </Heading>
+          </div>
+
+          <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
+            <a href="#">Developer Guide</a>
+          </div>
         <div className="slds-grid slds-wrap slds-grid--vertical-stretch">
           <h3 className="slds-assistive-text">Preview</h3>
           <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-component-example">

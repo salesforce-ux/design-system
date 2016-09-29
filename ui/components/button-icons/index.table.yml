@@ -59,6 +59,10 @@ classes:
     applied: <code>.slds-button</code>
     notes: This is usually an icon with a down arrow icon next to it. Each svg within is sized separately
   -
+    class: slds-button--icon-more-filled
+    description: Adds a white background to <code>.{{cssPrefix}}button--icon-more</code>
+    applied: <code>.{{cssPrefix}}button--icon-more</code>
+  -
     class: slds-button__icon
     description: Sets the size and color of the icon inside a button
     applied: <code>svg</code>

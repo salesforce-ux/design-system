@@ -11,21 +11,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-
 import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-    You can group buttons together to create a navigation bar.
+    The Rich Text Editor is a textarea with added capabilities for use in
+    various publishers.
   </p>
 );
 
 export default (
   <ComponentDocs>
-    <p>Buttons in a group are surrounded by a parent with the <CodeClass className="button-group" /> class, unless they are in a list (in which case they use <CodeClass className="button-group-list" />. If the last button is an icon, like the down triangle, use the <CodeClass className="button--icon-border-filled"/> class when accompanying a <CodeClass className="button--neutral"/> group.</p>
-
-    <p>If the last button in a group needs to be wrapped in another element (for example, a drop-down trigger), add the <CodeClass className="button--last"/> class to the wrapper element to create proper spacing and borders.</p>
+    <p>
+      At a high-level, the buttons in RTE are organized into four groupings:
+      “format text”, “format body”, “insert content”, and “clear formatting”.
+    </p>
+    <p>
+      The “clear formatting” button always stays at the end of the buttons set,
+      regardless of which rich text editor variant is used. It should always
+      stand by itself.
+    </p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Unless you are using the list version, include the Aria role <code>role="group"</code> so that assistive technologies are alerted to the grouping.</p>
+    <p>Ensure that there is a single tab key stop for the button groups in the toolbar, and that left and right arrows are used to navigate through each button.</p>
   </ComponentDocs>
 );

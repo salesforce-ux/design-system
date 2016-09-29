@@ -69,6 +69,10 @@
   vertical-align: middle;
   border: $border-width-thin solid $color-border-button-default;
 
+  &-filled {
+    background-color: $color-background-button-default;
+  }
+
   &:hover,
   &:focus {
     @include button-base;

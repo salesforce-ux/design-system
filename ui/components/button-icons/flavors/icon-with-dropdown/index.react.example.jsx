@@ -34,6 +34,14 @@ export let states = [
       </div>
   },
   {
+    id: 'button-icon-with-dropdown-filled',
+    label: 'Filled',
+    element:
+      <div className="demo-only" style={{ padding: '0.5rem' }}>
+        <ButtonIcon hasDropdown className="slds-button--icon-more slds-button--icon-more-filled" assistiveText="More options" />
+      </div>
+  },
+  {
     id: 'button-icon-with-dropdown-inverse',
     label: 'Inverse',
     element:

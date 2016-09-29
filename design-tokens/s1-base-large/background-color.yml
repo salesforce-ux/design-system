@@ -8,6 +8,6 @@ global:
 imports:
 - "../force-base/aliases/color.yml"
 props:
-  COLOR_BACKGROUND_CARD:
+  CARD_COLOR_BACKGROUND:
     value: '{!LINK_WATER}'
     comment: Default Card component background color.

@@ -2,3 +2,4 @@ status: 'dev-ready'
 flavors:
   - base
   - icon-group
+  - list

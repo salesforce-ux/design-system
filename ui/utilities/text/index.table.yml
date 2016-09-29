@@ -63,6 +63,14 @@ classes:
     description: Error color of text
     applied: Any text
   -
+    class: slds-text-color--inverse
+    description: Default color of text on inversed background
+    applied: Any text
+  -
+    class: slds-text-color--inverse-weak
+    description: Weak color of text on inversed background
+    applied: Any text
+  -
     class: slds-section
     description: Container for a collapsable sub section through interaction with the section title
     required: true

@@ -95,6 +95,12 @@
   }
 }
 
+.slds-button--icon-container-more {
+  line-height: $line-height-button;
+  padding: 0 $spacing-x-small;
+  vertical-align: middle;
+}
+
 // Button icon on inversed background
 .slds-button--icon-inverse,
 .slds-button--icon-border-inverse {

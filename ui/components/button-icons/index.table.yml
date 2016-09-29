@@ -50,7 +50,12 @@ classes:
     applied: <code>.slds-button</code>
   -
     class: slds-button--icon-more
-    description: Used for the style where only two icons are in a button
+    description: Used for the style where only two icons are in a button, applies border by default
+    applied: <code>.slds-button</code>
+    notes: This is usually an icon with a down arrow icon next to it. Each svg within is sized separately
+  -
+    class: slds-button--icon-container-more
+    description: Used for the style where only two icons are in a button, has no border by default
     applied: <code>.slds-button</code>
     notes: This is usually an icon with a down arrow icon next to it. Each svg within is sized separately
   -

@@ -72,7 +72,7 @@ const results = [{
 ///////////////////////////////////////////
 
 let SplitView = props =>
-  <div className={ className('slds-split-view_container', props.hidden ? 'slds-panel-closed' : 'slds-panel-open') }>
+  <div className={ className('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
     <div className={ className('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }>
       <div className="slds-split-view__header" role="banner">
         <div className="slds-grid">
@@ -122,7 +122,7 @@ let SplitView = props =>
       </div>
     </div>
     <ButtonIcon
-      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-panel-closed' : 'slds-panel-open') }
+      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
       iconClassName="slds-button__icon--x-small"
       symbol="left"
       assistiveText={ props.hidden ? 'Open Panel' : 'Close Panel' }

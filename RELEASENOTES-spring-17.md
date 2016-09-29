@@ -14,26 +14,18 @@ The following site enhancements are now available:
 
 The following components are now available:
 
-- Add Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
+- Added Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
-- Split View - Compact List - [Split View](/components/split-view/)
+- Added Split View - Compact List - [Split View](/components/split-view/)
 
 **ADDED**
 
 The following classes are now available:
 
-- Add `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
-- Add `slds-button--icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
-- Add `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
-- Add `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
-- Add design token: `FONT_FAMILY_TEXT`
-- Add design token: `FONT_FAMILY_HEADING`
-- Add design token: `SPLIT_VIEW_COLOR_BACKGROUND`
-- Add design token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
-- Add design token alias: `SANS_SERIF`
-- Add design token alias: `EBONY_CLAY`
-- Add design token alias: `OXFORD_BLUE`
-- Add design token alias: `RIVER_BED`
+- Added `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
+- Added `slds-button--icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
+- Added `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
+- Added `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 
 **CHANGES**
 
@@ -57,10 +49,22 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
-- Design token: `FONT_FAMILY`
-
 **REMOVED**
 
 The following features are being removed in this release:
 
 - `$css-prefix` is no longer available to change the prefix of `slds-` class names to something of your choice. As an alternative, please use this PostCSS plugin to customize class name prefixes: [postcss-slds-prefix](https://github.com/salesforce-ux/postcss-slds-prefix).
+
+**TOKENS**
+
+The following tokens have been add/removed/deprecated in this release:
+
+- Added: `FONT_FAMILY_TEXT`
+- Added: `FONT_FAMILY_HEADING`
+- Added: `SPLIT_VIEW_COLOR_BACKGROUND`
+- Added: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
+- Added alias: `SANS_SERIF`
+- Added alias: `EBONY_CLAY`
+- Added alias: `OXFORD_BLUE`
+- Added alias: `RIVER_BED`
+- Deprecated `FONT_FAMILY`

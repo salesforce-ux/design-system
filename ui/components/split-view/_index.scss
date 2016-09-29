@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
 
-  &.slds-panel-open {
+  &.slds-is-open {
     flex: 1 1 auto;
   }
 }
@@ -101,7 +101,7 @@
   }
 
   // We just rotate the left arrow icon on close
-  &.slds-panel-closed .slds-button__icon {
+  &.slds-is-closed .slds-button__icon {
     transform: rotate(180deg);
   }
 }

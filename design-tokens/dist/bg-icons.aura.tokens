@@ -1,0 +1,3 @@
+<aura:tokens>
+  <aura:token name="folder" value="rgb(99, 163, 238)" property="background,background-color" />
+</aura:tokens>

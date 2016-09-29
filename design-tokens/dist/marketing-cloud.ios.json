@@ -1,0 +1,333 @@
+{
+  "properties": [
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "300",
+      "comment": "Use for large headings only.",
+      "name": "fontWeightLight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "comment": "Most all body copy.",
+      "name": "fontWeightRegular"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "700",
+      "comment": "Used sparingly for emphasized text within regular body copy.",
+      "name": "fontWeightBold"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "deprecated": true,
+      "name": "fontSizeXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "14",
+      "deprecated": true,
+      "name": "fontSizeSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "16",
+      "deprecated": true,
+      "name": "fontSizeMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "deprecated": true,
+      "name": "fontSizeMediumA"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "20",
+      "deprecated": true,
+      "name": "fontSizeLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "24",
+      "deprecated": true,
+      "name": "fontSizeXLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "25.12",
+      "deprecated": true,
+      "name": "fontSizeXLargeA"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "32",
+      "deprecated": true,
+      "name": "fontSizeXxLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "comment": "Extra extra small text.",
+      "name": "fontSizeTextXxSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "12",
+      "comment": "Extra small body text.",
+      "name": "fontSizeTextXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "13",
+      "comment": "Small body text.",
+      "name": "fontSizeTextSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "16",
+      "comment": "Medium body text.",
+      "name": "fontSizeTextMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "comment": "Large body text.",
+      "name": "fontSizeTextLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "20",
+      "comment": "Extra large body text.",
+      "name": "fontSizeTextXLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "comment": "Extra Extra small headings.",
+      "name": "fontSizeHeadingXxSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "12",
+      "comment": "Extra small headings.",
+      "name": "fontSizeHeadingXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "14",
+      "comment": "Small headings.",
+      "name": "fontSizeHeadingSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "comment": "Medium headings.",
+      "name": "fontSizeHeadingMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "24",
+      "comment": "Large headings.",
+      "name": "fontSizeHeadingLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "32",
+      "comment": "Extra large headings.",
+      "name": "fontSizeHeadingXLarge"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1.25",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightHeading"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightText"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1",
+      "comment": "Remove extra leading. Unitless line-heights for reusability",
+      "name": "lineHeightReset"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "40",
+      "comment": "Line heights for tabs",
+      "name": "lineHeightTab"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "deprecated": true,
+      "comment": "Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.",
+      "name": "fontFamily"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "name": "fontFamilyText"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "name": "fontFamilyHeading"
+    }
+  ]
+}

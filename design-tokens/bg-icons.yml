@@ -1,0 +1,9 @@
+global:
+  category: background-color
+  type: color
+  cssProperties:
+  - background
+  - background-color
+props:
+  FOLDER:
+    value: '#63A3EE'

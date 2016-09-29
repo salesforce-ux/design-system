@@ -1,0 +1,14 @@
+<aura:tokens>
+  <aura:token name="cardColorBackground" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="widthStageLeftCollapsed" value="4rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="widthStageLeftExpanded" value="15rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightHeader" value="3.125rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="squareIconMedium" value="2rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="fontSizeSmall" value="0.75rem" property="font,font-size" />
+  <aura:token name="fontSizeMedium" value="0.8125rem" property="font,font-size" />
+  <aura:token name="fontSizeMediumA" value="0.875rem" property="font,font-size" />
+  <aura:token name="fontSizeLarge" value="1rem" property="font,font-size" />
+  <aura:token name="fontSizeXLarge" value="1.25rem" property="font,font-size" />
+  <aura:token name="fontSizeXxLarge" value="1.75rem" property="font,font-size" />
+  <aura:token name="lineHeightText" value="1.5" property="font,*height" />
+</aura:tokens>

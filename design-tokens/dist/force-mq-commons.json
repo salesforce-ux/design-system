@@ -1,0 +1,8 @@
+{
+  "MQ_SMALL": "only screen and (max-width: 47.9375em)",
+  "MQ_MEDIUM": "only screen and (min-width: 48em)",
+  "MQ_MEDIUM_LANDSCAPE": "only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)",
+  "MQ_LARGE": "only screen and (min-width: 64.0625em)",
+  "MQ_HIGH_RES": "only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)",
+  "MQ_SINGLE_COLUMN_RECORD_LAYOUT": "(max-width: 599px)"
+}

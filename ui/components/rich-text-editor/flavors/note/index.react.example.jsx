@@ -27,11 +27,8 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -47,11 +44,8 @@ export let states = [
         <RichTextEditor className="slds-has-focus">
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -67,11 +61,8 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -87,15 +78,13 @@ export let states = [
         <RichTextEditor className="slds-has-error">
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteClearFormatting />
           </RteToolbar>
 
-          <RteTextarea placeholder="Compose Note..." />
+          <RteTextarea placeholder="Compose Note..." aria-describedby="rte-error-01" />
+          <div id="rte-error-01" className="slds-form-element__help slds-p-around--small">This field is required</div>
         </RichTextEditor>
       </Demo>
   },
@@ -107,11 +96,8 @@ export let states = [
         <RichTextEditor>
           <RteToolbar disabledButtons disabledLabel="disabled">
             <RteFormatText tabIndexSetting="0" disabledButtons />
-
             <RteFormatBody disabledButtons />
-
             <RteInsertContent disabledButtons />
-
             <RteClearFormatting disabledButtons />
           </RteToolbar>
 
@@ -127,11 +113,8 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -151,11 +134,8 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteInsertContent />
-
             <RteOverflow />
           </RteToolbar>
 

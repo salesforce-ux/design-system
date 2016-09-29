@@ -103,6 +103,8 @@ class ComponentFlavor extends React.Component {
           <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
             <a href="#">Developer Guide</a>
           </div>
+        </div>
+
         <div className="slds-grid slds-wrap slds-grid--vertical-stretch">
           <h3 className="slds-assistive-text">Preview</h3>
           <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-component-example">

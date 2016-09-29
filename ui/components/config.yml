@@ -31,6 +31,7 @@ components:
   - process
   - popovers
   - publishers
+  - rich-text-editor
   - spinners
   - tabs
   - tiles

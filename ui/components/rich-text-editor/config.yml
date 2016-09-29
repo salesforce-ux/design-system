@@ -1,0 +1,7 @@
+classBase: 'rich-text-editor'
+status: 'prototype'
+flavors:
+  - base
+  - feed
+  - note
+  - email

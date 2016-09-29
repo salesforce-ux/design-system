@@ -64,11 +64,12 @@
     }
   }
 
-  & + .slds-button-group {
+  + .slds-button-group,
+  + .slds-button-group-list {
     margin-left: $spacing-xx-small;
   }
 
-  & + .slds-button {
+  + .slds-button {
 
     @include deprecate('4.0.0') {
       margin-left: $spacing-xx-small;

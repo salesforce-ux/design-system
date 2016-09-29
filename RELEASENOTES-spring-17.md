@@ -20,8 +20,12 @@ The following site enhancements are now available:
 
 The following components are now available:
 
+- Add [Button Group List](compoments/button-groups/#flavor-list) - the new recommended way to mark up button groups.
+- Add `slds-float--none` utility.
+- Add `slds-button--icon-more-filled` for more buttons that require a background.
 - Add Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
-- Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Add Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Add Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
 
 **ADDED**
 

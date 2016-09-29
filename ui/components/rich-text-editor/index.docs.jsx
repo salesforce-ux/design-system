@@ -10,35 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import ComponentDocs from 'app_modules/site/components/page/component/docs';
+import CodeClass from 'app_modules/site/components/code-class';
 
-///////////////////////////////////////////
-// Export
-///////////////////////////////////////////
+export const intro = (
+  <p className="site-text-introduction">
+    The Rich Text Editor is a textarea with added capabilities for use in
+    various publishers.
+  </p>
+);
 
-export let states = [
-  {
-    id: 'button-icon-with-dropdown',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-more" assistiveText="More options" />
-      </div>
-  },
-  {
-    id: 'button-icon-with-dropdown-filled',
-    label: 'Filled',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-more slds-button--icon-more-filled" assistiveText="More options" />
-      </div>
-  },
-  {
-    id: 'button-icon-with-dropdown-inverse',
-    label: 'Inverse',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-more" assistiveText="More options" />
-      </div>
-  }
-];
+export default (
+  <ComponentDocs>
+    <p>
+      At a high-level, the buttons in RTE are organized into four groupings:
+      “format text”, “format body”, “insert content”, and “clear formatting”.
+    </p>
+    <p>
+      The “clear formatting” button always stays at the end of the buttons set,
+      regardless of which rich text editor variant is used. It should always
+      stand by itself.
+    </p>
+    <h4 className="site-text-heading--label">Accessibility</h4>
+    <p>Ensure that there is a single tab key stop for the button groups in the toolbar, and that left and right arrows are used to navigate through each button.</p>
+  </ComponentDocs>
+);

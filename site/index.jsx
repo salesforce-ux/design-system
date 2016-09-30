@@ -19,7 +19,7 @@ import packageJSON from '../package.json';
 
 let hero = (
   <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
-    <div className="slds-grid slds-grid--vertical-align-start">
+    <div className="slds-grid slds-grid--vertical-align-start slds-wrap slds-medium-nowrap">
       <img
         className="site-masthead--landing-logo"
         src="/assets/images/landing/logo-lightning.svg"
@@ -31,9 +31,9 @@ let hero = (
         <h2 className="site-masthead--landing-tagline slds-m-bottom--xx-large">
           Create the world’s best enterprise app experiences.
         </h2>
-        <div className="slds-grid slds-grid--vertical-align-center">
+        <div className="slds-grid slds-grid--vertical-align-center slds-wrap slds-small-nowrap">
           <div className="site-cta-buttons">
-            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
+            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small text-no-wrap" eventType="downloads-top">Get Started</CTALink>
           </div>
           <div className="site-releasenumber">
             Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>

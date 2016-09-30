@@ -86,11 +86,15 @@ class ComponentFlavor extends React.Component {
       statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
 
+    let lightning = (component.lightning && flavor.id === 'base' ? component.lightning : null) || flavor.lightning;
+
     return (
       <section
         className="slds-m-bottom--xx-large slds-p-top--x-large" >
         <div className="slds-grid slds-wrap">
-          <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6">
+          <div className={classNames('slds-col slds-size--1-of-1', {
+            'slds-large-size--5-of-6': lightning
+          })}>
             <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
               {statesIds}
               {flavor.title}
@@ -99,17 +103,11 @@ class ComponentFlavor extends React.Component {
               {this.renderCompatiblityBadges()}
             </Heading>
           </div>
-          {(() => {
-            let { component } = this.props;
-            let lightning = (component.lightning && flavor.id === 'base' ? component.lightning : null) || flavor.lightning;
-            if (lightning) {
-              return (
-                <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
-                  <a href={lightning.url}>Developer Guide</a>
-                </div>
-              );
-            }
-          })()}
+          {lightning ?
+            <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
+              <a href={lightning.url}>Developer Guide</a>
+            </div> : null
+          }
         </div>
 
         <div className="slds-grid slds-wrap slds-grid--vertical-stretch">

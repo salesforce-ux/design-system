@@ -13,10 +13,15 @@
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
 
-  &__body {
+  &__body,
+  &__footer {
     @include hyphenate;
     position: relative;
     padding: $spacing-x-small $spacing-small;
+  }
+
+  &__footer {
+    border-top: $border-width-thin solid $color-border;
   }
 
   &__close {

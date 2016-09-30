@@ -60,8 +60,3 @@
 .#{$css-prefix}card__tile {
   margin-top: $spacing-x-small;
 }
-
-// @Todo - this is a temp override till but in BLC is fixed post-DF
-.#{$css-prefix}card .#{$css-prefix}card__body {
-   text-align: left;
-}

@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "2.2.0-dev",
+  "version": "2.2.0-alpha.3",
   "dependencies": {
     "abab": {
       "version": "1.0.3"

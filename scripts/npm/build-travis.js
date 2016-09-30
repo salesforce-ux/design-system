@@ -27,7 +27,7 @@ const setEnvironment = () => {
   if (process.env.npm_package_config_slds_internal === 'true') {
     process.env.INTERNAL = process.env.npm_package_config_slds_internal;
     process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_name;
-    process.env.SLDS_VERSION = `${process.env.npm_package_version} (${process.env.INTERNAL_RELEASE_NAME})`;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version}`;
   } else {
     // If the value isn't "true", then delete the variables
     // because the code checks like:

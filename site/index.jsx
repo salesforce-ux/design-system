@@ -15,6 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
+import packageJSON from '../package.json';
 
 export default (
   <PageBody contentClassName="site-landing-page">
@@ -37,7 +38,7 @@ export default (
         </CTALink>
       </p>
       <p className="site-releasenumber slds-m-bottom--medium">
-        Current release: <CTALink href="/release-notes" eventType="release-notes-top">{process.env.SLDS_VERSION}</CTALink> | <a href="/downloads#archives">Archives</a>
+        Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>
       </p>
     </header>
 

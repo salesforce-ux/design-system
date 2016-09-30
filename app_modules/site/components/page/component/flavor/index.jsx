@@ -105,7 +105,7 @@ class ComponentFlavor extends React.Component {
           </div>
           {lightning ?
             <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
-              <a href={lightning.url}>Developer Guide</a>
+              <a href={lightning.url}>Lightning Components Developer Guide</a>
             </div> : null
           }
         </div>

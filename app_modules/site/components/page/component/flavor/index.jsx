@@ -79,7 +79,7 @@ class ComponentFlavor extends React.Component {
   }
 
   render() {
-    const { flavor } = this.props;
+    const { flavor, component } = this.props;
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {

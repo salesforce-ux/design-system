@@ -27,11 +27,6 @@
     white-space: nowrap;
   }
 
-  .slds-form-element {
-    position: static;
-  }
-
-  .slds-form-element,
   .slds-textarea {
     border-bottom: {
       left-radius: $border-radius-medium;
@@ -72,6 +67,11 @@
     &:active {
       box-shadow: none;
     }
+  }
+
+  textarea[disabled] ~ .slds-textarea {
+    cursor: not-allowed;
+    user-select: none;
   }
 
   &.slds-has-focus {

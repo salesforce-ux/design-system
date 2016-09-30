@@ -15,6 +15,7 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 import className from 'classnames';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -201,9 +202,12 @@ export let RteAlignText = props =>
   </ButtonGroupList>;
 
 export let RteInsertContent = props =>
-  <ButtonGroupList aria-label="Insert content" {...props}>
-    <li>
+  <ButtonGroupList
+    role={ props.overflow ? 'presentation' : null }
+    aria-label={ !props.overflow ? 'Insert content' : null}>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="emoji"
         className="slds-button--icon-border-filled"
@@ -212,8 +216,9 @@ export let RteInsertContent = props =>
         assistiveText="Add Emoji" />
     </li>
 
-    <li>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="image"
         className="slds-button--icon-border-filled"
@@ -222,8 +227,9 @@ export let RteInsertContent = props =>
         assistiveText="Add Image" />
     </li>
 
-    <li>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         aria-describedby="link"
         className="slds-button--icon-border-filled"
@@ -247,9 +253,12 @@ export let RteInsertUser = props =>
   </ButtonGroupList>;
 
 export let RteClearFormatting = props =>
-  <ButtonGroupList aria-label="Remove Formatting">
-    <li>
+  <ButtonGroupList
+    role={ props.overflow ? 'presentation' : null }
+    aria-label={ !props.overflow ? 'Remove Formatting' : null}>
+    <li role={ props.overflow ? 'presentation' : null }>
       <ButtonIcon
+        role={ props.overflow ? 'menuitem' : null }
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="remove_formatting"
@@ -273,30 +282,35 @@ export let RteOverflow = props =>
     </ButtonGroupList>
 
     <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36', right: '0'}}>
-      <RteInsertContent role="presentation" />
+      <RteInsertContent overflow />
 
-      <RteClearFormatting role="presentation" />
+      <RteClearFormatting overflow />
     </div>
   </div>;
 
-export let RteTextarea = props =>
-  <div className="slds-form-element">
-    <label className="slds-assistive-text" htmlFor="composer-text-input-1">Compose text</label>
+export let RteTextarea = props => {
+  const uniqueId = _.uniqueId('composer-text-input-');
 
-    <div className="slds-form-element__control">
-      <textarea {...props} id="composer-text-input-1" className="slds-assistive-text" />
+  return (
+    <div className="slds-rich-text-editor__textarea">
+      <label className="slds-assistive-text" htmlFor={ uniqueId }>Compose text</label>
+      <textarea
+        id={ uniqueId }
+        className="slds-assistive-text"
+        aria-describedby={ props['aria-describedby'] }
+        disabled={ props.disabled } />
 
-      <div tabIndex="0" {...props} className="slds-textarea slds-p-around--medium slds-text-longform slds-grow">
+      <div tabIndex={ !props.disabled ? '0' : '-1' } className="slds-textarea slds-p-around--medium slds-text-longform slds-grid slds-grow">
         { props.text ?
-          <div contentEditable>{props.text}</div> :
-
-          <div contentEditable className="slds-text-color--weak">
+          <div contentEditable={ !props.disabled ? 'true' : null } className="slds-grow">{props.text}</div> :
+          <div contentEditable={ !props.disabled ? 'true' : null } className="slds-text-color--weak slds-grow">
             {props.placeholder}
           </div>
         }
       </div>
     </div>
-  </div>;
+  );
+};
 
 ///////////////////////////////////////////
 // Export
@@ -311,9 +325,7 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -329,9 +341,7 @@ export let states = [
         <RichTextEditor className="slds-has-focus">
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -347,9 +357,7 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -365,13 +373,13 @@ export let states = [
         <RichTextEditor className="slds-has-error">
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteClearFormatting />
           </RteToolbar>
 
-          <RteTextarea placeholder="Compose text..." />
+          <RteTextarea placeholder="Compose text..." aria-describedby="rte-error-01" />
+          <div id="rte-error-01" className="slds-form-element__help slds-p-around--small">This field is required</div>
+
         </RichTextEditor>
       </Demo>
   },
@@ -383,9 +391,7 @@ export let states = [
         <RichTextEditor>
           <RteToolbar disabledButtons disabledLabel="disabled">
             <RteFormatText tabIndexSetting="0" disabledButtons />
-
             <RteFormatBody disabledButtons />
-
             <RteClearFormatting disabledButtons />
           </RteToolbar>
 
@@ -401,9 +407,7 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
-
             <RteFormatBody />
-
             <RteClearFormatting />
           </RteToolbar>
 
@@ -412,6 +416,7 @@ export let states = [
           <Tooltip className="slds-nubbin--top-left" id="bold" style={{position: 'absolute', top: '48px', left: '2px'}}>
             Bold <kbd>cmd+b</kbd>
           </Tooltip>
+
         </RichTextEditor>
       </Demo>
   },
@@ -423,9 +428,7 @@ export let states = [
       <RichTextEditor>
         <RteToolbar>
           <RteFormatText tabIndexSetting="0" />
-
           <RteFormatBody />
-
           <RteOverflow />
         </RteToolbar>
 

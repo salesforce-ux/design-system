@@ -99,10 +99,17 @@ class ComponentFlavor extends React.Component {
               {this.renderCompatiblityBadges()}
             </Heading>
           </div>
-
-          <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
-            <a href="#">Developer Guide</a>
-          </div>
+          {(() => {
+            let { component } = this.props;
+            let lightning = (component.lightning && flavor.id === 'base' ? component.lightning : null) || flavor.lightning;
+            if (lightning) {
+              return (
+                <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
+                  <a href={lightning.url}>Developer Guide</a>
+                </div>
+              );
+            }
+          })()}
         </div>
 
         <div className="slds-grid slds-wrap slds-grid--vertical-stretch">

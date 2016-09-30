@@ -44,5 +44,10 @@ classes:
   -
     class: global-header__icon-actions
     description: Deal with sizing for "global actions" icon on global header
-    equired: true
+    required: true
     applied: <code>&lt;svg&gt;</code>
+  -
+    class: global-header__notification
+    description: Handles styling for notification item interactions
+    required: true
+    applied: <code>&lt;div&gt;</code>

@@ -11,6 +11,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import className from 'classnames';
+
+//////////////////////////////////////////////
+// Partial(s)
+//////////////////////////////////////////////
+
+export let Popover = props =>
+  <div className={className('slds-popover', props.className)} role="dialog">
+    <div className="slds-popover__body">
+      {props.children}
+    </div>
+  </div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
 export let states = [
   {

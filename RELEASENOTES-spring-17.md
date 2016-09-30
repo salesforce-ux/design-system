@@ -18,6 +18,7 @@ The following components are now available:
 - Added Split View - Compact List - [Split View](/components/split-view/)
 - Added Button Group List - [Button Group List](compoments/button-groups/#flavor-list) - the new recommended way to mark up button groups.
 - Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
+- Added Global Header Notifications - [Global Header Notifications](/components/global/#flavor-notifications)
 
 **ADDED**
 

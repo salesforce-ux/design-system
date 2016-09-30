@@ -83,6 +83,15 @@
       bottom: $spacing-xx-large;
     }
   }
+
+  &-tagline {
+    font-size: $font-size-xx-large;
+  }
+
+  &-logo {
+    margin-top: $spacing-large;
+    margin-right: $spacing-x-large;
+  }
 }
 
 // Dreamforce
@@ -300,12 +309,6 @@
     }
   }
 }
-
-// Align the icon correctly in the middle of the button
-.site-cta-buttons__icon {
-  vertical-align: -0.5rem;
-}
-
 
 // Keep "Design System" on same line
 .text-no-wrap {

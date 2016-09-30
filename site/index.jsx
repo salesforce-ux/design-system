@@ -19,18 +19,28 @@ import packageJSON from '../package.json';
 
 let hero = (
   <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
-    <h1 className="site-text-heading--large">
-      Lightning <span className="text-no-wrap">Design System</span>
-    </h1>
-    <h2 className="site-text-heading--medium slds-m-bottom--xx-large">
-      Create the world’s best enterprise app experiences.
-    </h2>
-    <p className="site-cta-buttons slds-m-bottom--medium">
-      <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
-    </p>
-    <p className="site-releasenumber slds-m-bottom--medium">
-      Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>
-    </p>
+    <div className="slds-grid slds-grid--vertical-align-start">
+      <img
+        className="site-masthead--landing-logo"
+        src="/assets/images/landing/logo-lightning.svg"
+        alt="" />
+      <div>
+        <h1 className="site-text-heading--large">
+          Lightning <span className="text-no-wrap">Design System</span>
+        </h1>
+        <h2 className="site-masthead--landing-tagline slds-m-bottom--xx-large">
+          Create the world’s best enterprise app experiences.
+        </h2>
+        <div className="slds-grid slds-grid--vertical-align-center">
+          <div className="site-cta-buttons">
+            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small" eventType="downloads-top">Get Started</CTALink>
+          </div>
+          <div className="site-releasenumber">
+            Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div className="site-dreamforce-banner container--buffer">
       <div className="site-dreamforce-title slds-m-bottom--xx-small">Visit Salesforce UX at Dreamforce 2016!</div>
       <span className="site-dreamforce-subtitle">
@@ -139,7 +149,5 @@ export default (
         </ul>
       </footer>
     </div>
-    {/* Shapes */}
-    <DynamicShapes x={1050} y={330} />
   </PageBody>
 );

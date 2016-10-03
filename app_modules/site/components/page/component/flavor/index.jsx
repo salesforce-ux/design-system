@@ -79,23 +79,37 @@ class ComponentFlavor extends React.Component {
   }
 
   render() {
-    const { flavor } = this.props;
+    const { flavor, component } = this.props;
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
       statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
 
+    let lightning = (component.lightning && flavor.id === 'base' ? component.lightning : null) || flavor.lightning;
+
     return (
       <section
         className="slds-m-bottom--xx-large slds-p-top--x-large" >
-        <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
-          {statesIds}
-          {flavor.title}
-          {this.renderBadge(flavor.status)}
-          {this.renderBadge(flavor.formFactorStatus)}
-          {this.renderCompatiblityBadges()}
-        </Heading>
+        <div className="slds-grid slds-wrap">
+          <div className={classNames('slds-col slds-size--1-of-1', {
+            'slds-large-size--5-of-6': lightning
+          })}>
+            <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
+              {statesIds}
+              {flavor.title}
+              {this.renderBadge(flavor.status)}
+              {this.renderBadge(flavor.formFactorStatus)}
+              {this.renderCompatiblityBadges()}
+            </Heading>
+          </div>
+          {lightning ?
+            <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
+              <a href={lightning.url}>Lightning Components Developer Guide</a>
+            </div> : null
+          }
+        </div>
+
         <div className="slds-grid slds-wrap slds-grid--vertical-stretch">
           <h3 className="slds-assistive-text">Preview</h3>
           <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-component-example">

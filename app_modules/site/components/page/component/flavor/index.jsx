@@ -93,7 +93,7 @@ class ComponentFlavor extends React.Component {
         className="slds-m-bottom--xx-large slds-p-top--x-large" >
         <div className="slds-grid slds-wrap">
           <div className={classNames('slds-col slds-size--1-of-1', {
-            'slds-large-size--5-of-6': lightning
+            'slds-large-size--4-of-6': lightning
           })}>
             <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
               {statesIds}
@@ -104,7 +104,7 @@ class ComponentFlavor extends React.Component {
             </Heading>
           </div>
           {lightning ?
-            <div className="slds-col slds-size--1-of-1 slds-large-size--1-of-6 slds-text-align--right">
+            <div className="slds-col slds-size--1-of-1 slds-large-size--2-of-6 slds-text-align--right">
               <a href={lightning.url}>Lightning Components Developer Guide</a>
             </div> : null
           }

@@ -95,7 +95,7 @@ class ComponentFlavor extends React.Component {
           <div className={classNames('slds-col slds-size--1-of-1', {
             'slds-large-size--4-of-6': lightning
           })}>
-            <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
+            <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout slds-p-bottom--medium">
               {statesIds}
               {flavor.title}
               {this.renderBadge(flavor.status)}

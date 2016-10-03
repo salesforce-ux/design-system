@@ -148,7 +148,6 @@ export default React.createClass({
       <header className="site-banner" role="banner">
         <a href="/">
           <span className="site-logo">Salesforce</span>
-          Design System
         </a>
         <div className="site-skip-content">
           <a href="#navigation">Skip to Navigation</a>

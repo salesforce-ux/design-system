@@ -24,7 +24,7 @@ export default (
       <CardHeader className="slds-has-divider--top" actions="overflow">
         <span className="slds-text-heading--small">Card Header</span>
       </CardHeader>
-      <CardBody className="slds-text-align--center">Card Body (custom goes in here)</CardBody>
+      <CardBody>Card Body (custom goes in here)</CardBody>
     </Card>
   </div>
 );

@@ -29,6 +29,11 @@ body {
   .#{$css-prefix}notify--alert {
     margin: $spacing-x-small 0;
   }
+
+  // @TODO - this is temporarily here as a fix till BLC is fixed and DF is completed
+  .#{$css-prefix}card__body {
+    text-align: center;
+  }
 }
 
 .demo-only--top {

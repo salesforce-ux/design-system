@@ -13,6 +13,7 @@ The following issues have now been resolved:
 
 - Included the logo SVG asset used in the Global header
 - Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
+- Removed the demo style `.slds-text-align--center` from `.slds-card__body`
 
 **DEPRECATED**
 

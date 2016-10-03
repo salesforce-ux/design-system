@@ -4,7 +4,7 @@ classes:
     class: slds-button
     description: Initializes a 2rem (32px) height button
     required: true
-    applied: <code>button</code> or <code>link</code>
+    applied: <code>button</code> or <code>a</code>
     notes: This neutralizes all the base styles making it look like a text link
   -
     class: slds-button--small

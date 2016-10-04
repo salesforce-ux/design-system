@@ -43,7 +43,7 @@ let hero = (
     </div>
     <div className="site-dreamforce-banner container--buffer">
       <div className="site-dreamforce-title slds-m-bottom--xx-small">
-        SalesforceUX is at Dreamforce ’16! October 4-7 in San Francisco.
+        Salesforce UX is at Dreamforce ’16! October 4-7 in San Francisco.
       </div>
       <span className="site-dreamforce-subtitle">
         Visit us at Moscone West in Lightning Lookout and in the Developer Forest, or attend one of our <a href="http://dreamforce-ux.herokuapp.com">sessions</a>.

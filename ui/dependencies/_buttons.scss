@@ -9,8 +9,8 @@
 
 @mixin button {
   padding: {
-    left: $spacing-medium;
-    right: $spacing-medium;
+    #{$left}: $spacing-medium;
+    #{$right}: $spacing-medium;
   }
   text-align: center;
   vertical-align: middle;

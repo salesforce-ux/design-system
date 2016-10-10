@@ -10,7 +10,7 @@
 
 .#{$css-prefix}tabs__nav-scroller.#{$css-prefix}has-overflow {
   position: relative;
-  padding-right: 4.7rem; // Allow for controls
+  padding-#{$right}: 4.7rem; // Allow for controls
 }
 
 .#{$css-prefix}tab__scroll-controls {
@@ -31,7 +31,7 @@
   .#{$css-prefix}tab__scroll-controls {
     display: flex; // This works to remove the whitespace between buttons
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     top: 0;
     bottom: 0;
     background-color: $color-background-alt;

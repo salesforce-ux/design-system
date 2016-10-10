@@ -17,15 +17,15 @@
 
     + .#{$css-prefix}button,
     + .#{$css-prefix}button--last .#{$css-prefix}button {
-      margin-left: (-1 * $border-width-thin);
+      margin-#{$left}: (-1 * $border-width-thin);
     }
 
     &:first-child {
-      border-radius: $border-radius-medium 0 0 $border-radius-medium;
+      border-radius: corner-values($border-radius-medium 0 0 $border-radius-medium);
     }
 
     &:last-child {
-      border-radius: 0 $border-radius-medium $border-radius-medium 0;
+      border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
     }
 
     &:focus { // @TODO: not sure this is doing anything anymore?
@@ -39,7 +39,7 @@
 
   & + .#{$css-prefix}button-group,
   & + .#{$css-prefix}button {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
 
   // This class should be placed on the wrapper
@@ -74,6 +74,6 @@
 
   .#{$css-prefix}button--last .#{$css-prefix}button,
   .#{$css-prefix}button.#{$css-prefix}button--last {
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
   }
 }

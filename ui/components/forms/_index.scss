@@ -25,7 +25,7 @@
     color: $color-text-label;
     font-size: $font-size-small;
     line-height: $line-height-text;
-    margin-right: $spacing-small;
+    margin-#{$right}: $spacing-small;
     margin-bottom: $spacing-xx-small;
 
     &:empty {

@@ -127,12 +127,12 @@
     background-color 0.1s linear;
 
   &:first-child {
-    border-radius: $border-radius-pill 0 0 $border-radius-pill;
+    border-radius: corner-values($border-radius-pill 0 0 $border-radius-pill);
   }
 
   &:last-child {
-    border-radius: 0 $border-radius-pill $border-radius-pill 0;
-    border-right: 0;
+    border-radius: corner-values(0 $border-radius-pill $border-radius-pill 0);
+    border-#{$right}: 0;
   }
 
   &:before {
@@ -140,14 +140,14 @@
     display: block;
     position: absolute;
     top: $border-width-thick;
-    left: (($height-sales-path / 2) * -1);
+    #{$left}: (($height-sales-path / 2) * -1);
     width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
     border: $border-width-thick solid $color-border-path-divider;
-    border-left: 0;
+    border-#{$left}: 0;
     border-bottom: 0;
     background-clip: padding-box;
-    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
+    transform: scale3d(0.8, 1.1, 1) rotate(if-ltr(45deg, -45deg));
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;
   }
 
@@ -195,7 +195,7 @@
 .#{$css-prefix}tabs--path__stage {
   position: absolute;
   top: 50%;
-  left: ($square-icon-medium-content / 2);
+  #{$left}: ($square-icon-medium-content / 2);
   width: 100%;
   margin-top: (($square-icon-medium-content - $spacing-xx-small) * -1);
   transform: rotateX(-180deg);
@@ -205,7 +205,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
+  padding: side-values($spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small));
   line-height: $line-height-salespath;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
@@ -258,23 +258,23 @@
 
 .#{$css-prefix}tabs--path__content {
   position: relative;
-  padding-left: $spacing-large;
-  padding-right: $spacing-medium;
+  padding-#{$left}: $spacing-large;
+  padding-#{$right}: $spacing-medium;
 }
 
 .#{$css-prefix}coach__keys,
 .#{$css-prefix}coach__guidance {
   margin-top: $spacing-medium;
   padding-top: $spacing-medium;
-  padding-right: $spacing-large;
+  padding-#{$right}: $spacing-large;
 }
 
 .#{$css-prefix}coach__keys {
-  padding-left: $spacing-small;
+  padding-#{$left}: $spacing-small;
 }
 
 .#{$css-prefix}coach__guidance {
-  padding-left: $spacing-large;
+  padding-#{$left}: $spacing-large;
   padding-bottom: $spacing-xx-small;
   background-color: $color-background-guidance;
 }

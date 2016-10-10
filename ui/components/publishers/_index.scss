@@ -37,7 +37,7 @@
   }
 
   &__actions > .#{$css-prefix}button {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 
   .#{$css-prefix}publisher__toggle-visibility {

@@ -44,7 +44,7 @@
       clear: both;
       white-space: normal;
       overflow: hidden;
-      text-align: left;
+      text-align: $left;
 
       // Remove max width from truncate definition
       &.#{$css-prefix}truncate {

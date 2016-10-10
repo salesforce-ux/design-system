@@ -37,7 +37,7 @@
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border-context-bar-item;
+    border-#{$left}: $border-width-thin solid $color-border-context-bar-item;
   }
 
   // Any item on the horizontal axis of the context nav bar
@@ -71,8 +71,8 @@
       background: rgba(0, 0, 0, 0.25);
       position: absolute;
       bottom: -3px;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
 
       @supports (mix-blend-mode: soft-light) {
         background: rgba(0, 0, 0, 0.75);
@@ -93,8 +93,8 @@
         background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
+        #{$left}: 0;
+        #{$right}: 0;
       }
 
       &:after {
@@ -120,11 +120,11 @@
     }
 
     &--divider-left {
-      border-left: $border-width-thin solid $color-border-context-bar-item;
+      border-#{$left}: $border-width-thin solid $color-border-context-bar-item;
     }
 
     &--divider-right {
-      border-right: $border-width-thin solid $color-border-context-bar-item;
+      border-#{$right}: $border-width-thin solid $color-border-context-bar-item;
     }
   }
 
@@ -167,7 +167,7 @@
     align-content: center;
     padding: 0 $spacing-small;
     color: $color-text-context-bar;
-    margin-left: ($spacing-xx-small * -1);
+    margin-#{$left}: ($spacing-xx-small * -1);
 
     &:focus {
       outline: 0;
@@ -203,7 +203,7 @@
   // Tab context bar items
   &__item--tab {
     width: $size-x-small;
-    border-right: $border-width-thin solid $color-border-context-bar-item;
+    border-#{$right}: $border-width-thin solid $color-border-context-bar-item;
 
     .#{$css-prefix}context-bar__icon-action {
       padding: 0 $spacing-xx-small;
@@ -242,7 +242,7 @@
 
 // app-name
 .#{$css-prefix}context-bar__app-name {
-  padding: 0 $spacing-large 0 0;
+  padding: side-values(0 $spacing-large 0 0);
   font-size: rem(18px); // @todo tokenize
   font-weight: $font-weight-light;
   line-height: $line-height-heading;
@@ -300,47 +300,47 @@
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r1 {
   top: 0;
-  left: 0;
+  #{$left}: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r2 {
   top: 0;
-  left: rem(8px);
+  #{$left}: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r3 {
   top: 0;
-  right: 0;
+  #{$right}: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r4 {
   top: rem(8px);
-  left: 0;
+  #{$left}: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r5 {
   top: rem(8px);
-  left: rem(8px);
+  #{$left}: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r6 {
   top: rem(8px);
-  right: 0;
+  #{$right}: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r7 {
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r8 {
   bottom: 0;
-  left: rem(8px);
+  #{$left}: rem(8px);
 }
 
 .#{$css-prefix}icon-waffle .#{$css-prefix}r9 {
   bottom: 0;
-  right: 0;
+  #{$right}: 0;
 }
 
 .#{$css-prefix}icon-waffle_container:hover .#{$css-prefix}icon-waffle,

@@ -11,7 +11,7 @@
 
   .#{$css-prefix}item--label {
     width: 30%;
-    padding-right: $spacing-small;
+    padding-#{$right}: $spacing-small;
   }
 
   .#{$css-prefix}item--detail {
@@ -33,11 +33,11 @@
 
   .#{$css-prefix}item--label {
     max-width: 180px;
-    padding-right: $spacing-small;
+    padding-#{$right}: $spacing-small;
     flex-shrink: 0;
 
     ~ .#{$css-prefix}item--label {
-      padding-left: $spacing-medium;
+      padding-#{$left}: $spacing-medium;
     }
   }
 

@@ -131,5 +131,5 @@
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] + .#{$css-prefix}checkbox--faux,
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] ~ .#{$css-prefix}checkbox--faux,
 .#{$css-prefix}form-element .#{$css-prefix}checkbox [type="checkbox"] + .#{$css-prefix}checkbox__label .#{$css-prefix}checkbox--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }

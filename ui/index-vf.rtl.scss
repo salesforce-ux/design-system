@@ -11,6 +11,9 @@
 
 // Lightning Design System - Visualforce
 
+// Override default value for $dir in directional.scss
+$dir: rtl;
+
 // Non-Scoped
 @import
 

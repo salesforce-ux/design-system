@@ -16,10 +16,10 @@
     height: 100%;
     width: $rule-width;
     position: absolute;
-    left: ($rule-position / 2);
+    #{$left}: ($rule-position / 2);
     top: 0;
     bottom: 0;
-    margin-left: (($rule-width / 2) * -1);
+    margin-#{$left}: (($rule-width / 2) * -1);
     z-index: -1;
   }
 }

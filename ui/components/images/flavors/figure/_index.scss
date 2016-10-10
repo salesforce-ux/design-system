@@ -21,8 +21,8 @@
     img {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
+      #{$left}: 50%;
+      transform: translate3d(if-ltr(-50%, 50%), -50%, 0);
       max-width: 200%; // This value helps with the positioning of large elements
     }
 
@@ -53,8 +53,8 @@
       color: $color-text-inverse;
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
       bottom: 0;
 
       .#{$css-prefix}image__text {
@@ -66,8 +66,8 @@
       background: $color-background;
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
     }
   }
 
@@ -77,8 +77,8 @@
     color: $color-text-inverse;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     bottom: 0;
     z-index: 1;
   }
@@ -92,14 +92,14 @@
   &__icon {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    #{$left}: 50%;
+    transform: translate3d(if-ltr(-50%, 50%), -50%, 0);
     margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
   }
 
   &__actions {
     position: absolute;
     top: $spacing-x-small;
-    right: $spacing-x-small;
+    #{$right}: $spacing-x-small;
   }
 }

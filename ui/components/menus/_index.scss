@@ -12,8 +12,8 @@
 .#{$css-prefix}dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
-  left: 50%;
-  float: left;
+  #{$left}: 50%;
+  float: $left;
   min-width: $size-xx-small;
   max-width: $size-medium;
   margin-top: $spacing-xxx-small;
@@ -23,16 +23,16 @@
   font-size: $font-size-small;
   background: $color-background-alt;
   box-shadow: $shadow-drop-down;
-  transform: translateX(-50%);
+  transform: translateX(if-ltr(-50%, 50%));
 
   &--left {
-    left: 0;
+    #{$left}: 0;
     transform: translateX(0);
   }
 
   &--right {
-    left: auto;
-    right: 0;
+    #{$left}: auto;
+    #{$right}: 0;
     transform: translateX(0);
   }
 
@@ -111,23 +111,23 @@
       }
 
       &.#{$css-prefix}dropdown--left {
-        left: ($spacing-medium * -1);
+        #{$left}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: $spacing-large;
-          margin-left: 0;
+          #{$left}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
 
       &.#{$css-prefix}dropdown--right {
-        right: ($spacing-medium * -1);
+        #{$right}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: auto;
-          right: $spacing-large;
-          margin-left: 0;
+          #{$left}: auto;
+          #{$right}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
     }
@@ -189,19 +189,19 @@
 
       &--left > a,
       &--left > span {
-        padding-left: $spacing-x-large;
+        padding-#{$left}: $spacing-x-large;
       }
 
       &--right > a,
       &--right > span {
-        padding-right: $spacing-x-large;
+        padding-#{$right}: $spacing-x-large;
       }
 
       &--left-right > a,
       &--left-right > span {
         padding: {
-          left: $spacing-x-large;
-          right: $spacing-x-large;
+          #{$left}: $spacing-x-large;
+          #{$right}: $spacing-x-large;
         }
       }
 
@@ -213,11 +213,11 @@
         fill: $color-text-icon-default;
 
         &--left {
-          left: $spacing-small;
+          #{$left}: $spacing-small;
         }
 
         &--right {
-          right: $spacing-small;
+          #{$right}: $spacing-small;
         }
       }
     }
@@ -294,11 +294,11 @@
   > [class*="#{$css-prefix}button--icon"] {
 
     ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
-      left: ($spacing-x-small * -1);
+      #{$left}: ($spacing-x-small * -1);
     }
 
     ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
-      right: ($spacing-x-small * -1);
+      #{$right}: ($spacing-x-small * -1);
     }
   }
 }

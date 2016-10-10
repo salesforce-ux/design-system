@@ -16,9 +16,9 @@
                 opacity $duration-quickly linear;
   position: fixed;
   top: 0;
-  right: 0;
+  #{$right}: 0;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   z-index: ($z-index-modal + 1);
 
   &__container {
@@ -125,15 +125,15 @@
     }
     padding: $spacing-small $spacing-medium;
     background-color: $color-background;
-    text-align: right;
+    text-align: $right;
     box-shadow: $shadow-drop-down;
 
     &--directional .#{$css-prefix}button:first-child {
-      float: left;
+      float: $left;
     }
 
     .#{$css-prefix}button + .#{$css-prefix}button {
-      margin-left: $spacing-x-small;
+      margin-#{$left}: $spacing-x-small;
     }
   }
 
@@ -141,7 +141,7 @@
     @include square($square-icon-medium-boundary);
     position: absolute;
     top: ($square-icon-medium-boundary * -1.25);
-    right: ((($square-icon-medium-boundary - $square-icon-medium-content) / 2) * -1);
+    #{$right}: ((($square-icon-medium-boundary - $square-icon-medium-content) / 2) * -1);
   }
 }
 
@@ -153,9 +153,9 @@
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: 0;
+  #{$right}: 0;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   background: $color-background-temp-modal-tint;
   z-index: $z-index-modal;
 

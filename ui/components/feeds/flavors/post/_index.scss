@@ -69,12 +69,12 @@
   padding: $spacing-small 0;
 
   @include mq-medium-min {
-    margin-right: $spacing-medium;
+    margin-#{$right}: $spacing-medium;
     padding: 0;
   }
 
   .#{$css-prefix}icon {
-    margin-right: $spacing-xx-small;
+    margin-#{$right}: $spacing-xx-small;
   }
 
   &:hover,
@@ -95,7 +95,7 @@
 
   @include mq-medium-min {
     margin: {
-      left: auto;
+      #{$left}: auto;
       bottom: 0;
     }
   }

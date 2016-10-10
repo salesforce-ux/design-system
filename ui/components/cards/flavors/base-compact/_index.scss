@@ -15,9 +15,9 @@
   .#{$css-prefix}card__header,
   .#{$css-prefix}card__body,
   .#{$css-prefix}card__footer {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-#{$left}: 0;
+    margin-#{$right}: 0;
+    padding-#{$left}: 0;
+    padding-#{$right}: 0;
   }
 }

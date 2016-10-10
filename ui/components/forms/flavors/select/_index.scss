@@ -32,8 +32,8 @@
       -moz-appearance: none;
       -webkit-appearance: none;
       padding: {
-        left: $spacing-x-small;
-        right: $spacing-large;
+        #{$left}: $spacing-x-small;
+        #{$right}: $spacing-large;
       }
 
       &::-ms-expand {
@@ -46,11 +46,11 @@
       position: absolute;
       content: '';
       display: block;
-      right: $spacing-x-small;
+      #{$right}: $spacing-x-small;
       width: 0;
       height: 0;
-      border-left: 3px solid transparent;
-      border-right: 3px solid transparent;
+      border-#{$left}: 3px solid transparent;
+      border-#{$right}: 3px solid transparent;
     }
 
     &:before {

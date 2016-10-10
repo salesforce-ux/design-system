@@ -69,16 +69,32 @@
     .#{$css-prefix}is-selected-multi:last-child > .#{$css-prefix}day:after {
       @include calendar-selection-fill;
     }
-    // re-calculate for first child
-    .#{$css-prefix}is-selected-multi:first-child > .#{$css-prefix}day:before {
-      left: 0;
-      transform: translateX($spacing-xx-small * -1);
+    @include if-ltr {
+      // re-calculate for first child
+      .#{$css-prefix}is-selected-multi:first-child > .#{$css-prefix}day:before {
+        #{$left}: 0;
+        transform: translateX($spacing-xx-small * -1);
+      }
+      // re-calculate for last child
+      .#{$css-prefix}is-selected-multi:last-child > .#{$css-prefix}day:after {
+        #{$left}: auto;
+        #{$right}: 0;
+        transform: translateX($spacing-xx-small);
+      }
     }
-    // re-calculate for last child
-    .#{$css-prefix}is-selected-multi:last-child > .#{$css-prefix}day:after {
-      left: auto;
-      right: 0;
-      transform: translateX($spacing-xx-small);
+    @include if-rtl {
+      // re-calculate for first child
+      .#{$css-prefix}is-selected-multi:last-child > .#{$css-prefix}day:after {
+        #{$right}: auto;
+        #{$left}: 0;
+        transform: translateX($spacing-xx-small);
+      }
+      // re-calculate for last child
+      .#{$css-prefix}is-selected-multi:first-child > .#{$css-prefix}day:before {
+        #{$right}: 0;
+        #{$left}: auto;
+        transform: translateX($spacing-xx-small * -1);
+      }
     }
   }
 
@@ -88,6 +104,10 @@
 
   &__filter--month {
     padding: 0 $spacing-xx-small 0 0;
+
+    @include if-rtl {
+      flex-direction: row-reverse;
+    }
   }
 }
 

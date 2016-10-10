@@ -17,26 +17,26 @@
     background-color: $color;
 
     @if $position == top {
-      left: 50%;
+      #{$left}: 50%;
       top: (($size / 2) * -1);
-      margin-left: (($size / 2) * -1);
+      margin-#{$left}: (($size / 2) * -1);
     }
 
     @elseif $position == bottom {
-      left: 50%;
+      #{$left}: 50%;
       bottom: (($size / 2) * -1);
-      margin-left: (($size / 2) * -1);
+      margin-#{$left}: (($size / 2) * -1);
     }
 
     @elseif $position == left  {
       top: 50%;
-      left: (($size / 2) * -1);
+      #{$left}: (($size / 2) * -1);
       margin-top: (($size / 2) * -1);
     }
 
     @elseif $position == right  {
       top: 50%;
-      right: (($size / 2) * -1);
+      #{$right}: (($size / 2) * -1);
       margin-top: (($size / 2) * -1);
     }
   }
@@ -71,7 +71,7 @@
 
     &:before,
     &:after {
-      left: $spacing-large;
+      #{$left}: $spacing-large;
       top: (($square-tooltip-nubbin / 2) * -1);
     }
   }
@@ -90,10 +90,10 @@
 
     &:before,
     &:after {
-      left: auto;
-      right: $spacing-large;
+      #{$left}: auto;
+      #{$right}: $spacing-large;
       top: (($square-tooltip-nubbin / 2) * -1);
-      margin-right: (($square-tooltip-nubbin / 2) * -1);
+      margin-#{$right}: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 
@@ -124,7 +124,7 @@
 
     &:before,
     &:after {
-      left: $spacing-large;
+      #{$left}: $spacing-large;
       top: 100%;
       margin-top: (($square-tooltip-nubbin / 2) * -1);
     }
@@ -144,11 +144,11 @@
 
     &:before,
     &:after {
-      left: auto;
-      right: $spacing-large;
+      #{$left}: auto;
+      #{$right}: $spacing-large;
       top: 100%;
       margin-top: (($square-tooltip-nubbin / 2) * -1);
-      margin-right: (($square-tooltip-nubbin / 2) * -1);
+      margin-#{$right}: (($square-tooltip-nubbin / 2) * -1);
     }
   }
 
@@ -159,7 +159,12 @@
       @include nubbin(left, $color: $color);
 
       &:after {
-        box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }
@@ -172,7 +177,12 @@
       @include nubbin(left, $color: $color);
 
       &:after {
-        box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }
@@ -194,7 +204,12 @@
       }
 
       &:after {
-        box-shadow: -1px 2px 3px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: -1px 2px 3px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }
@@ -213,7 +228,12 @@
       @include nubbin(right, $color: $color);
 
       &:after {
-        box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }
@@ -226,7 +246,12 @@
       @include nubbin(right, $color: $color);
 
       &:after {
-        box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }
@@ -248,7 +273,12 @@
       }
 
       &:after {
-        box-shadow: 2px -1px 3px 0 rgba(0, 0, 0, 0.16);
+        @include if-ltr {
+          box-shadow: 2px -1px 3px 0 rgba(0, 0, 0, 0.16);
+        }
+        @include if-rtl {
+          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        }
         z-index: -1;
       }
     }

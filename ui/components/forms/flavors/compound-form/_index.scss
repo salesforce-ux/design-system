@@ -24,7 +24,7 @@
     width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
 
     + .#{$css-prefix}form-element {
-      padding-left: $spacing-x-small;
+      padding-#{$left}: $spacing-x-small;
     }
   }
 
@@ -33,7 +33,7 @@
       position: relative;
 
       + .#{$css-prefix}form-element__control {
-        padding-left: $spacing-x-small;
+        padding-#{$left}: $spacing-x-small;
       }
     }
   }

@@ -22,7 +22,7 @@
   white-space: nowrap;
 
   + .#{$css-prefix}badge {
-    margin-left: $spacing-x-small;
+    margin-#{$left}: $spacing-x-small;
   }
 
   &:empty {

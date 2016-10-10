@@ -64,11 +64,11 @@
 
   // Use to add a left padding buffer to cells, @todo will need to reset for responsive
   .#{$css-prefix}cell-buffer--left {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   .#{$css-prefix}cell-buffer--right {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }
 
@@ -77,12 +77,12 @@
 
   tr > th:first-child,
   tr > td:first-child {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   tr > th:last-child,
   tr > td:last-child {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }
 
@@ -134,7 +134,7 @@
 
   .#{$css-prefix}button {
     visibility: hidden;
-    margin-left: $spacing-x-small;
+    margin-#{$left}: $spacing-x-small;
   }
 
   .#{$css-prefix}button__icon {
@@ -164,19 +164,19 @@
 
     &:nth-child(n) {
       padding: {
-        left: 0;
-        right: 0;
+        #{$left}: 0;
+        #{$right}: 0;
       }
     }
 
     &:first-child {
-      text-align: right;
-      padding-right: $spacing-x-small;
+      text-align: $right;
+      padding-#{$right}: $spacing-x-small;
     }
 
     &:last-child {
-      text-align: left;
-      padding-left: $spacing-x-small;
+      text-align: $left;
+      padding-#{$left}: $spacing-x-small;
     }
   }
 }
@@ -191,7 +191,7 @@
 
   &__handle {
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     top: 0;
     width: $spacing-xx-small;
     height: 100%;
@@ -207,13 +207,13 @@
     }
 
     &--indicator {
-      right: auto;
+      #{$right}: auto;
     }
   }
 
   &__divider {
     position: absolute;
-    left: 50%;
+    #{$left}: 50%;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;

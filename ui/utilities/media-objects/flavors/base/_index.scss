@@ -15,7 +15,7 @@
 
   &__figure {
     flex-shrink: 0;
-    margin-right: $spacing-small;
+    margin-#{$right}: $spacing-small;
   }
 
   &__body {
@@ -30,19 +30,19 @@
 }
 
 .#{$css-prefix}media--small .#{$css-prefix}media__figure {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
 }
 
 .#{$css-prefix}media--large .#{$css-prefix}media__figure {
-  margin-right: $spacing-large;
+  margin-#{$right}: $spacing-large;
 }
 
 .#{$css-prefix}media--small .#{$css-prefix}media__figure--reverse {
-  margin-left: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
 }
 
 .#{$css-prefix}media--large .#{$css-prefix}media__figure--reverse {
-  margin-left: $spacing-large;
+  margin-#{$left}: $spacing-large;
 }
 
 .#{$css-prefix}media--center {
@@ -62,7 +62,7 @@
     }
 
     &.#{$css-prefix}media--small .#{$css-prefix}media__figure {
-      margin-left: $spacing-xx-small;
+      margin-#{$left}: $spacing-xx-small;
     }
   }
 

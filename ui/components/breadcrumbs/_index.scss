@@ -18,7 +18,7 @@
     &:before {
       content: '\003E';
       position: absolute;
-      left: (($spacing-x-small / 2) * -1);
+      #{$left}: (($spacing-x-small / 2) * -1);
     }
 
     > a {
@@ -33,7 +33,7 @@
     &:first-child {
 
       > a {
-        padding-left: 0;
+        padding-#{$left}: 0;
       }
 
       &:before {

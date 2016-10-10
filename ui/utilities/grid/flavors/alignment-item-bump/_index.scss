@@ -15,14 +15,14 @@
   }
 
   &-right {
-    margin-right: auto;
+    margin-#{$right}: auto;
   }
 
   &-bottom {
-    margin-right: auto;
+    margin-#{$right}: auto;
   }
 
   &-left {
-    margin-left: auto;
+    margin-#{$left}: auto;
   }
 }

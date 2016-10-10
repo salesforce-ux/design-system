@@ -12,7 +12,7 @@
   align-items: flex-end;
   position: fixed;
   bottom: 0;
-  right: 0;
+  #{$right}: 0;
   padding: 0 $spacing-large;
   height: 40px;
 }
@@ -22,7 +22,7 @@
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   width: 480px;
   height: 40px;
-  float: left;
+  float: $left;
   box-shadow: $elevation-inverse-shadow-2;
   border: $border-width-thin solid $color-border {
     bottom: none;
@@ -41,7 +41,7 @@
   }
 
   + .#{$css-prefix}docked-composer {
-    margin-left: $spacing-large;
+    margin-#{$left}: $spacing-large;
   }
 
   &__header {
@@ -56,7 +56,7 @@
   }
 
   &__actions .#{$css-prefix}button {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 
   &__body {
@@ -120,7 +120,7 @@
 
     .#{$css-prefix}text-body--small {
       color: $color-text-inverse;
-      margin-left: $spacing-x-small;
+      margin-#{$left}: $spacing-x-small;
     }
   }
 }

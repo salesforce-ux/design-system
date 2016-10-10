@@ -18,7 +18,7 @@
   // Comment with replies
   .#{$css-prefix}comment__replies {
     padding-top: $spacing-medium;
-    margin-left: ($square-icon-large-boundary + $spacing-small);
+    margin-#{$left}: ($square-icon-large-boundary + $spacing-small);
 
     > :last-child,
     > :last-child .#{$css-prefix}comment {
@@ -49,7 +49,7 @@
     }
 
     &__item {
-      margin-left: $spacing-xx-small;
+      margin-#{$left}: $spacing-xx-small;
 
       &:after {
         content: ', ';

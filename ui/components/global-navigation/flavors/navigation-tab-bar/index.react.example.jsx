@@ -105,7 +105,7 @@ export let ContextTabBar = props =>
       <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className={ props.splitViewActive ? "slds-button--icon-container slds-button--icon-small slds-is-selected" : "slds-button--icon-container slds-button--icon-small slds-not-selected"}
+            className={ props.splitViewActive ? 'slds-button--icon-container slds-button--icon-small slds-is-selected' : 'slds-button--icon-container slds-button--icon-small slds-not-selected'}
             symbol="side_list"
             aria-haspopup="true"
             assistiveText="Toggle split view" />

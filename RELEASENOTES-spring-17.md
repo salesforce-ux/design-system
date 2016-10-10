@@ -54,6 +54,7 @@ The following changes have been made in this release:
 - Cards are now responsive - [Cards](/components/cards/)
 - Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
 - Avatars now support initials.
+- Stateful icon buttons are now compatible with `slds-button--icon-container`
 
 **FIXED**
 

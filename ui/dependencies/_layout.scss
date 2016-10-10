@@ -289,13 +289,29 @@
         // Only apply !important to spacing--none utilities
         @if $size == 0 {
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
-            #{$property}-#{$position}: 0 !important;
+            @if ($position == left) {
+              #{$property}-#{$left}: 0 !important;
+            }
+            @else if ($position == right) {
+              #{$property}-#{$right}: 0 !important;
+            }
+            @else {
+              #{$property}-#{$position}: 0 !important;
+            }
           }
         }
         // Generate directional spacing utilities
         @else {
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
-            #{$property}-#{$position}: $size;
+            @if ($position == left) {
+              #{$property}-#{$left}: $size;
+            }
+            @else if ($position == right) {
+              #{$property}-#{$right}: $size;
+            }
+            @else {
+              #{$property}-#{$position}: $size;
+            }
           }
         }
       }

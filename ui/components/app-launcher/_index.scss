@@ -52,7 +52,7 @@
     padding: $spacing-small;
     color: $color-text-inverse;
     background: $color-background-alt;
-    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    border-radius: corner-values($border-radius-medium 0 0 $border-radius-medium);
     text-align: center;
   }
 
@@ -60,7 +60,7 @@
     flex: 1 1 auto;
     background: $color-background-alt-2;
     padding: $spacing-x-small $spacing-small;
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
   }
 
   &__tile--small {

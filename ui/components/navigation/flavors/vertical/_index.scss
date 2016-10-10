@@ -30,7 +30,7 @@
 .slds-navigation-list--vertical__action {
   display: block;
   border: {
-    left: $spacing-xx-small solid transparent;
+    #{$left}:$spacing-xx-small solid transparent;
     top: $border-width-thin solid transparent;
     bottom: $border-width-thin solid transparent;
   }

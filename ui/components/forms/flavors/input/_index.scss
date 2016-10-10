@@ -10,7 +10,7 @@
 .slds-input {
   @include form-states;
   display: inline-block;
-  padding: 0 $spacing-medium 0 $spacing-small;
+  padding: side-values(0 $spacing-medium 0 $spacing-small);
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
@@ -27,7 +27,7 @@
     padding: {
       top: 0;
       bottom: 0;
-      left: $spacing-small;
+      #{$left}:$spacing-small;
     }
     color: $color-text-default;
     line-height: $height-input;
@@ -64,34 +64,34 @@
 
   &--left {
     .slds-input__icon {
-      left: ($spacing-medium + $spacing-xx-small);
+      #{$left}:($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
     .slds-input--bare {
-      padding-left: $spacing-xx-large;
+      padding-#{$left}:$spacing-xx-large;
     }
   }
 
   &--right {
     .slds-input__icon {
-      right: ($spacing-medium + $spacing-xx-small);
+      #{$right}:($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
     .slds-input--bare {
-      padding-right: $spacing-xx-large;
+      padding-#{$right}:$spacing-xx-large;
     }
   }
 
   &--left-right {
 
     .slds-input__icon--left {
-      left: ($spacing-medium + $spacing-xx-small);
+      #{$left}:($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input__icon--right {
-      right: ($spacing-medium + $spacing-xx-small);
+      #{$right}:($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,

@@ -13,7 +13,7 @@
   padding: $spacing-small $spacing-large;
   min-width: rem(480px);
   display: inline-block;
-  text-align: left;
+  text-align: $left;
 
   .slds-notify__close {
     transform: translate3d($spacing-x-small, 0, 0);

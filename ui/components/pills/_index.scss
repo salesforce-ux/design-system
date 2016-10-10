@@ -20,7 +20,7 @@
   min-height: $height-pill;
 
   + .slds-pill {
-    margin-left: $spacing-xxx-small;
+    margin-#{$left}:$spacing-xxx-small;
   }
 
   &:hover {
@@ -81,7 +81,7 @@
   &__icon,
   &__icon_container {
     @include square($square-icon-x-small-boundary);
-    margin-right: $spacing-xx-small;
+    margin-#{$right}:$spacing-xx-small;
 
     .slds-icon {
       @include square($square-icon-x-small-boundary);
@@ -89,7 +89,7 @@
   }
 
   &__remove {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}:$spacing-xx-small;
   }
 }
 

@@ -22,12 +22,12 @@
   &__header,
   &__footer,
   &__body--inner {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-#{$left}:$spacing-small;
+    padding-#{$right}:$spacing-small;
 
     @include mq-large-min {
-      padding-left: $card-spacing-large;
-      padding-right: $card-spacing-large;
+      padding-#{$left}:$card-spacing-large;
+      padding-#{$right}:$card-spacing-large;
     }
   }
 
@@ -52,7 +52,7 @@
   &__footer {
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;
-    text-align: right;
+    text-align: $right;
   }
 
   &--narrow {

@@ -37,7 +37,7 @@
   }
 
   &__actions > .slds-button {
-    margin-left: $spacing-small;
+    margin-#{$left}:$spacing-small;
   }
 
   .slds-publisher__toggle-visibility {

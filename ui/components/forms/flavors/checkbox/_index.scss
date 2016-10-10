@@ -52,7 +52,7 @@
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
         border-bottom: $border-width-thick solid $color-brand;
-        border-left: $border-width-thick solid $color-brand;
+        border-left :$border-width-thick solid $color-brand;
       }
     }
 
@@ -131,5 +131,5 @@
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}:$spacing-x-small;
 }

@@ -13,13 +13,13 @@
   @include mq-medium-min {
 
     &__label {
-      float: left;
-      clear: left;
+      float: $left;
+      clear: $left;
     }
 
     &__detail {
-      float: left;
-      padding-left: $spacing-xx-small;
+      float: $left;
+      padding-#{$left}:$spacing-xx-small;
     }
   }
 }
@@ -32,7 +32,7 @@
 
     &__label {
       width: 30%;
-      padding-right: $spacing-small;
+      padding-#{$right}:$spacing-small;
     }
 
     &__detail {

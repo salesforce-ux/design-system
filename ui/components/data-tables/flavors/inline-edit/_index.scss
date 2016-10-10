@@ -18,9 +18,9 @@
       content: ' ';
       position: absolute;
       top: 0;
-      right: 0;
+      #{$right}:0;
       bottom: 0;
-      left: 0;
+      #{$left}:0;
       z-index: $z-index-default;
       background-color: $color-background-backdrop-tint;
       box-shadow: 0 0 0 4px $color-border-brand inset;
@@ -30,10 +30,10 @@
       display: block;
       position: absolute;
       top: 50%;
-      left: 50%;
+      #{$left}:50%;
       width: $size-medium;
       margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
-      margin-left: (($size-medium / 2) * -1);
+      margin-#{$left}:(($size-medium / 2) * -1);
       background-color: $color-background-alt;
       text-align: center;
       z-index: $z-index-default;
@@ -55,7 +55,7 @@
   }
 
   .slds-cell-error {
-    padding-left: 0;
+    padding-#{$left}:0;
   }
 
   // Check if slds-no-cell-focus is on the table element, if not then find
@@ -278,11 +278,11 @@
   border-top-right-radius: 0;
 
   .slds-popover__body {
-    padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 0;
+    padding: side-values($spacing-xx-small $spacing-xx-small $spacing-xx-small 0);
   }
 
   .slds-form-element__help {
     width: 100%;
-    padding-left: $spacing-small;
+    padding-#{$left}:$spacing-small;
   }
 }

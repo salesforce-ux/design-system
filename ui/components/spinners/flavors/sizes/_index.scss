@@ -26,7 +26,7 @@
   .slds-spinner__dot-a:before,
   .slds-spinner__dot-b:before {
     top: -0.125rem;
-    left: -0.125rem;
+    #{$left}:-0.125rem;
     animation-name: dotsBounceBefore-extraSmall;
   }
 
@@ -34,7 +34,7 @@
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
     top: -0.125rem;
-    right: -0.125rem;
+    #{$right}:-0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
   }
 }
@@ -84,7 +84,7 @@
   .slds-spinner__dot-a:before,
   .slds-spinner__dot-b:before {
     top: -0.125rem;
-    left: -0.125rem;
+    #{$left}:-0.125rem;
     animation-name: dotsBounceBefore-small;
   }
 
@@ -92,7 +92,7 @@
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
     top: -0.125rem;
-    right: -0.125rem;
+    #{$right}:-0.125rem;
     animation-name: dotsBounceAfter-small;
   }
 }
@@ -143,7 +143,7 @@
   .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.25rem;
-    left: -0.25rem;
+    #{$left}:-0.25rem;
   }
 
   &.slds-spinner:after,
@@ -151,7 +151,7 @@
   .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.25rem;
-    right: -0.25rem;
+    #{$right}:-0.25rem;
   }
 }
 
@@ -201,7 +201,7 @@
   .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.3125rem;
-    left: -0.3125rem;
+    #{$left}:-0.3125rem;
   }
 
   &.slds-spinner:after,
@@ -209,7 +209,7 @@
   .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.3125rem;
-    right: -0.3125rem;
+    #{$right}:-0.3125rem;
   }
 }
 

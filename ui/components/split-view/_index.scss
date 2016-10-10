@@ -30,7 +30,7 @@
 //
 // Contains elements such as the list filter, view switcher and refresh button
 .slds-split-view__header {
-  padding: $spacing-medium $spacing-medium $spacing-x-small $spacing-large;
+  padding: side-values($spacing-medium $spacing-medium $spacing-x-small $spacing-large);
 }
 
 // Column headers
@@ -39,7 +39,7 @@
     top: $border-width-thin solid $split-view-color-border;
     bottom: $border-width-thin solid $split-view-color-border;
   }
-  padding: $spacing-x-small $spacing-medium $spacing-x-small $spacing-large;
+  padding: side-values($spacing-x-small $spacing-medium $spacing-x-small $spacing-large);
 }
 
 // List Item
@@ -64,7 +64,7 @@
     @include square(8px);
     position: absolute;
     top: $spacing-medium;
-    left: $spacing-x-small;
+    #{$left}:$spacing-x-small;
     border-radius: $border-radius-circle;
     display: block;
     background: $color-background-alt;
@@ -73,7 +73,7 @@
 
 // The whole row is clickable
 .slds-split-view__list-item-action {
-  padding: $spacing-small $spacing-medium $spacing-small $spacing-large;
+  padding: side-values($spacing-small $spacing-medium $spacing-small $spacing-large);
 
   &:hover,
   &:focus {
@@ -84,7 +84,7 @@
 // Expand/Collapse button
 .slds-split-view__toggle-button {
   position: absolute;
-  right: (0.75rem * -1);
+  #{$right}:(0.75rem * -1);
   top: 50%;
   margin-top: (($size-xx-small / 2) * -1);
   height: $size-xx-small;

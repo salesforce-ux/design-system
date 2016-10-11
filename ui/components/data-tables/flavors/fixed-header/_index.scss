@@ -13,15 +13,13 @@
   padding-top: 2rem; // This matches the height of the hover state w/border
   border-top: $border-width-thin solid $color-border;
   background-color: $color-background-alt;
-  background-image: linear-gradient(
-    to bottom,
-    $color-background-alt,
-    $color-background-alt 1.9375rem,
-    $color-border 1.9375rem,
-    $color-border 2rem,
-    $color-background-alt 2rem,
-    $color-background-alt
-    ); // Creates line below th for faux fixed headers
+    &::before {
+      border-bottom: $border-width-thin solid $color-border;
+      content: ' ';
+      display: block;
+      position: relative;
+      width: 100%;
+    }
 }
 
 .slds-cell-fixed {

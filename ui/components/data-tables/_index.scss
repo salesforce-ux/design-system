@@ -162,6 +162,7 @@ th.slds-is-sortable {
 .slds-th__action {
   display: flex;
   padding: $spacing-x-small;
+  height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
   &:hover {

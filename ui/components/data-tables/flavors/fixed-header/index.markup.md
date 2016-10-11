@@ -1,1 +1,1 @@
-We are not currently exposing fixed header or inline edit, but the CSS needs to be included.
+Javascript must be used to scroll the table headers as the table body scrolls.

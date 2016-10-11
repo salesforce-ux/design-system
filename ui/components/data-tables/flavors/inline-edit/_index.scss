@@ -45,6 +45,25 @@
   display: none;
 }
 
+.slds-has-focus {
+  .slds-th__action{
+    background-color: $color-background-alt;
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+}
+
+.slds-is-resizable.slds-has-focus {
+  .slds-th__action{
+    background-color: $color-background-alt;
+    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -.25rem 0 0 inset;
+  }
+}
+
+.slds-no-cell-focus .slds-has-focus .slds-th__action{
+  background-color: $color-background;
+  box-shadow: none;
+}
+
 .slds-cell-marker {
   background-color: $color-background-row-hover;
 }

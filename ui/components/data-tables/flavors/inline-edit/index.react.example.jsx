@@ -259,7 +259,7 @@ export let states = [
         <Table className="slds-no-cell-focus">
           <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible="slds-hidden" thClassName="slds-cell-marker">
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible="slds-hidden" thClassName="slds-has-focus">
               <Td>
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>

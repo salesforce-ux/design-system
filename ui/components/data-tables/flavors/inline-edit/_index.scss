@@ -173,11 +173,6 @@
       background-color: $color-background-alt;
     }
 
-    &.slds-has-focus { // This is the focused state
-      background-color: $color-background-alt;
-      box-shadow: $color-border-selection 0 0 0 1px inset;
-    }
-
     &.slds-is-edited {
       background-color: $color-background-highlight;
     }

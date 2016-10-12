@@ -36,7 +36,7 @@ let Thead = props =>
     <tr className="slds-text-title--caps">
       <th scope="col" style={{ width: '2.75rem' }}><div style={{ width: '2.75rem' }} className="slds-cell-fixed"><span className="slds-assistive-text">Errors</span></div></th>
       <th scope="col" style={{ width: '2rem' }}><div className="slds-cell-fixed" style={{ width: '2rem' }}><div className="slds-th__action slds-p-around--x-small"><Checkbox label="Select All" /></div></div></th>
-      <Th className={className("slds-is-sortable slds-is-resizable",props.thClassName)} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
+      <Th className={className('slds-is-sortable slds-is-resizable',props.thClassName)} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company Name</Th>
       <Th className="slds-is-sortable slds-is-resizable slds-is-sorted slds-is-sorted--dsc" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
@@ -273,7 +273,7 @@ export let states = [
     label: 'Header focused',
     element:
       <Container>
-        <Table className="">
+        <Table>
           <Thead navigationModeTabIndex="0"  thClassName="slds-has-focus" />
           <tbody>
             <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible="slds-hidden" thClassName="">

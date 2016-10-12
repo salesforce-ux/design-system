@@ -1,1 +1,1 @@
-Javascript must be used to scroll the table headers as the table body scrolls.
+JavaScript must be used to scroll the table headers as the table body scrolls.

@@ -46,16 +46,18 @@
 }
 
 .slds-has-focus {
-  .slds-th__action{
+
+  .slds-th__action {
     background-color: $color-background-alt;
     box-shadow: $color-border-selection 0 0 0 1px inset;
   }
 }
 
 .slds-is-resizable.slds-has-focus {
-  .slds-th__action{
+
+  .slds-th__action {
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -.25rem 0 0 inset;
+    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
   }
 }
 
@@ -63,21 +65,21 @@
 
   .slds-has-focus {
 
-    .slds-th__action{
+    .slds-th__action {
       background-color: $color-background;
       box-shadow: none;
     }
 
-    &.slds-is-resizable:hover .slds-th__action{
+    &.slds-is-resizable:hover .slds-th__action {
       background-color: $color-background;
-      box-shadow: #d8dde6 -.25rem 0 0 inset;
+      box-shadow: #d8dde6 -0.25rem 0 0 inset;
     }
   }
 
   .slds-is-sortable.slds-has-focus:not(:hover) {
     color: inherit;
 
-    .slds-is-sortable__icon{
+    .slds-is-sortable__icon {
       display: none;
     }
   }

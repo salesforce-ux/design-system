@@ -267,7 +267,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>
@@ -278,17 +278,17 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" thClassName="slds-has-focus" linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
               <Td>
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -302,9 +302,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" checkClass="slds-has-focus" checkSelected="true" navigationModeTabIndex="0" defaultSelected="true">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" checkClass="slds-has-focus" checkSelected="true" navigationModeTabIndex="-1" defaultSelected="true">
               <Td>
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -312,7 +312,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -326,9 +326,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true" className="slds-has-focus">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -336,7 +336,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -350,9 +350,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -370,7 +370,7 @@ export let states = [
                 </EditPanel>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -385,9 +385,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate " title="Acme Enterprises">Acme Enterprises</span>
@@ -406,7 +406,7 @@ export let states = [
                 </EditPanel>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -421,9 +421,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate " title="Acme Enterprises">Acme Enterprises</span>
@@ -443,7 +443,7 @@ export let states = [
                 </EditPanel>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -458,9 +458,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td className="slds-is-edited">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -468,7 +468,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>
@@ -479,9 +479,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData title="Acme Enterprises" navigationModeTabIndex="0">
+            <RowData title="Acme Enterprises" navigationModeTabIndex="-1">
               <Td aria-selected="true" className="slds-has-error">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -489,7 +489,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
       </Container>,
@@ -503,9 +503,9 @@ export let states = [
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0" />
+          <Thead navigationModeTabIndex="-1" />
           <tbody>
-            <RowData editName="slds-has-focus" errorindex="0" title="Acme Enterprises" navigationModeTabIndex="0">
+            <RowData editName="slds-has-focus" errorindex="0" title="Acme Enterprises" navigationModeTabIndex="-1">
               <Td className="slds-has-error">
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
@@ -513,7 +513,7 @@ export let states = [
                 </span>
               </Td>
             </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
           </tbody>
         </Table>
         <ErrorPanel />

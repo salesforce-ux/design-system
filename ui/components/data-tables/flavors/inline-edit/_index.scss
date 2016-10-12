@@ -59,9 +59,28 @@
   }
 }
 
-.slds-no-cell-focus .slds-has-focus .slds-th__action{
-  background-color: $color-background;
-  box-shadow: none;
+.slds-no-cell-focus {
+
+  .slds-has-focus {
+
+    .slds-th__action{
+      background-color: $color-background;
+      box-shadow: none;
+    }
+
+    &.slds-is-resizable:hover .slds-th__action{
+      background-color: $color-background;
+      box-shadow: #d8dde6 -.25rem 0 0 inset;
+    }
+  }
+
+  .slds-is-sortable.slds-has-focus:not(:hover) {
+    color: inherit;
+
+    .slds-is-sortable__icon{
+      display: none;
+    }
+  }
 }
 
 .slds-hint-parent .slds-cell-edit {

@@ -147,6 +147,7 @@ th.slds-is-sortable {
       fill: $color-text-link;
     }
 
+    .slds-th__action:focus,
     &:hover,
     &.slds-has-focus {
       background-color: $color-background-row-hover;
@@ -174,10 +175,6 @@ th.slds-is-sortable {
   &:hover {
     outline: 0;
     background-color: $color-background-row-hover;
-
-    .slds-is-sortable__icon {
-      display: inline-block;
-    }
   }
 }
 

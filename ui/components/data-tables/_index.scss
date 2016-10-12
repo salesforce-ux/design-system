@@ -147,12 +147,17 @@ th.slds-is-sortable {
       fill: $color-text-link;
     }
 
-    &:hover {
+    &:hover,
+    &.slds-has-focus {
       background-color: $color-background-row-hover;
       color: $color-text-link;
 
       .slds-button {
         visibility: visible;
+      }
+
+      .slds-is-sortable__icon{
+        display: inline-block;
       }
     }
   }

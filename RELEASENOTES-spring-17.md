@@ -48,6 +48,7 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
+- Data Table - Inline edit now has full support
 
 **DEPRECATED**
 

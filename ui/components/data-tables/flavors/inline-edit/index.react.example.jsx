@@ -33,7 +33,7 @@ let Thead = props =>
   <thead>
     <tr className="slds-text-title--caps">
       <th scope="col" style={{ width: '2.75rem' }}><span className="slds-assistive-text">Errors</span></th>
-      <th role="gridcell" scope="col" style={{ width: '2.2rem' }}><Checkbox label="Select All" /></th>
+      <th role="gridcell" scope="col" style={{ width: '2rem' }}><Checkbox label="Select All" /></th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>

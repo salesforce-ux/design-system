@@ -1,6 +1,5 @@
 .body-content {
   margin-bottom: $spacing-medium;
-  z-index: $z-index-default;
 
   .content-heading {
     @include border($borders: top left right);

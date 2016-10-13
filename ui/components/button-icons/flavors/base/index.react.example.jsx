@@ -29,6 +29,7 @@ export let ButtonIcon = props =>
     role={ props.role }
     aria-describedby={ props['aria-describedby'] }
     aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
+    aria-expanded={ props['aria-expanded'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }

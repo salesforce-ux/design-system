@@ -278,6 +278,38 @@ export let states = [
       </Container>
   },
   {
+    id: 'data-table-fixed-header-cell-focus',
+    label: 'Default focused',
+    element:
+      <Container>
+        <Table>
+          <Thead navigationModeTabIndex="0" />
+          <tbody>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" thClassName="slds-has-focus">
+              <Td>
+                <span className="slds-grid slds-grid--align-spread">
+                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic navigationModeTabIndex="0" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+            <RowDataStatic navigationModeTabIndex="-1" />
+          </tbody>
+        </Table>
+      </Container>
+  },
+  {
     id: 'data-table-fixed-header-focus',
     label: 'Header focused',
     element:
@@ -286,14 +318,6 @@ export let states = [
           <Thead navigationModeTabIndex="0"  thClassName="slds-has-focus" testClassName={TESTING ? 'slds-has-focus' : ''} />
           <tbody>
             <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" testClassName={TESTING ? 'slds-has-focus' : ''}>
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0">
               <Td>
                 <span className="slds-grid slds-grid--align-spread">
                   <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>

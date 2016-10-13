@@ -15,10 +15,11 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
 
+const TESTING = false; //Set this to `true` to test all the possible states of the grid.
+
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
-const TESTING = false; //Set this to `true` to test all the possible states of the grid.
 
 let Container = props =>
   <div className="slds-table--header-fixed_container" tabIndex={props.tabIndex} id={props.id}>

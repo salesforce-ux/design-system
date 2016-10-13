@@ -6,7 +6,6 @@
   overflow: hidden;
   text-transform: capitalize;
   background: $color-background-alt;
-  z-index: $z-index-default;
 
   .item {
     @include tabs-link;

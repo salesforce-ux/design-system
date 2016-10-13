@@ -72,15 +72,32 @@
 
     &.slds-is-resizable:hover .slds-th__action {
       background-color: $color-background;
-      box-shadow: #d8dde6 -0.25rem 0 0 inset;
+      box-shadow: $color-border -0.25rem 0 0 inset;
     }
   }
 
-  .slds-is-sortable.slds-has-focus:not(:hover) {
+  .slds-is-sortable.slds-has-focus {
     color: inherit;
 
     .slds-is-sortable__icon {
       display: none;
+    }
+
+    &.slds-is-sorted {
+
+      .slds-is-sortable__icon {
+        display: inline-block;
+        fill: $color-text-icon-default;
+      }
+    }
+
+    &:hover {
+      color: $color-text-link;
+
+      .slds-is-sortable__icon {
+        display: inline-block;
+        fill: $color-text-link;
+      }
     }
   }
 }
@@ -184,6 +201,14 @@
   }
 
   // scss-lint:disable SelectorDepth
+  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
   &.slds-table tbody tr:hover > .slds-cell-edit {
 
     &:hover {
@@ -224,10 +249,27 @@
 
   .slds-has-focus {
     background: $color-background-row-hover;
-    box-shadow: none;
+    box-shadow: none ;
 
     .slds-button__icon--edit {
       opacity: 1;
+    }
+  }
+
+  .slds-is-edited {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+
+  .slds-has-error {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
     }
   }
 }

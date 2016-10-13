@@ -25,7 +25,7 @@ let Container = props =>
   </div>;
 
 let Table = props =>
-  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid">
+  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '65.75rem' }}>
     {props.children}
   </table>;
 
@@ -42,7 +42,7 @@ let Thead = props =>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
       <th scope="col" style={{ width: '3.25rem' }}>
-        <span className="slds-truncate slds-assistive-text slds-p-right--large" title="Actions">Actions</span></th>
+        <span className="slds-assistive-text">Actions</span></th>
     </tr>
   </thead>;
 

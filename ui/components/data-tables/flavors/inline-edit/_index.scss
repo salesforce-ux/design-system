@@ -76,29 +76,28 @@
     }
   }
 
-  // scss-lint:disable SelectorDepth
   .slds-is-sortable.slds-has-focus {
     color: inherit;
 
     .slds-is-sortable__icon {
       display: none;
     }
+  }
 
-    &.slds-is-sorted {
+  .slds-has-focus.slds-is-sorted {
 
-      .slds-is-sortable__icon {
-        display: inline-block;
-        fill: $color-text-icon-default;
-      }
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-icon-default;
     }
+  }
 
-    &:hover {
-      color: $color-text-link;
+  .slds-has-focus:hover {
+    color: $color-text-link;
 
-      .slds-is-sortable__icon {
-        display: inline-block;
-        fill: $color-text-link;
-      }
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-link;
     }
   }
 }

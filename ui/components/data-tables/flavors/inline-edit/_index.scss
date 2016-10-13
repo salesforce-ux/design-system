@@ -76,6 +76,7 @@
     }
   }
 
+  // scss-lint:disable SelectorDepth
   .slds-is-sortable.slds-has-focus {
     color: inherit;
 
@@ -249,7 +250,7 @@
 
   .slds-has-focus {
     background: $color-background-row-hover;
-    box-shadow: none ;
+    box-shadow: none;
 
     .slds-button__icon--edit {
       opacity: 1;

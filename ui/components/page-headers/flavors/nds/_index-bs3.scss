@@ -5,7 +5,7 @@
   box-shadow: $elevation-shadow-1;
 
   @at-root .zen .zen-moreTabs ul {
-    z-index: $z-index-default + 2;
+    z-index: $z-index-dropdown + 1;
   }
 
   // Alerts

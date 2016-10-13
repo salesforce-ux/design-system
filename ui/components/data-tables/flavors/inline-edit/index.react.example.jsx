@@ -390,7 +390,7 @@ export let states = [
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true">
                 <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate " title="Acme Enterprises">Acme Enterprises</span>
+                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>
@@ -426,7 +426,7 @@ export let states = [
             <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
               <Td aria-selected="true">
                 <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate " title="Acme Enterprises">Acme Enterprises</span>
+                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
                   <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
                 </span>
                 <EditPanel>

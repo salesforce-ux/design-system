@@ -25,7 +25,7 @@ const image = (
 
 export default (
   <div className="demo-only" style={{width: '300px'}}>
-    <div className="slds-page-header--vertical" role="banner">
+    <div className="slds-page-header--vertical">
       <div className="slds-grid slds-grid--vertical">
         <div>
           <MediaObject flavor="center" figureLeft={image} className="slds-no-space slds-has-divider--bottom-space">

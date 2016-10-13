@@ -101,6 +101,14 @@ a.slds-button {
   margin-left: $spacing-x-small;
 }
 
+.slds-button--reset {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: 0;
+}
+
 .slds-button--small {
   line-height: $line-height-button-small;
   // Force icon-only buttons to be the same

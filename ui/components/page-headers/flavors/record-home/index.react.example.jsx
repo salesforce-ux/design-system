@@ -22,7 +22,7 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header" role="banner">
+  <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">

@@ -28,7 +28,7 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header slds-page-header--object-home" role="banner">
+  <div className="slds-page-header slds-page-header--object-home">
     <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className="slds-col slds-has-flexi-truncate">

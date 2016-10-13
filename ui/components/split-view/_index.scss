@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 
   &.slds-is-open {
     flex: 1 1 auto;

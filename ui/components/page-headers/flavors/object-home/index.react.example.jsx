@@ -78,7 +78,6 @@ export default (
             hasDropdown
             assistiveText="List View Controls" />
         </div>
-        <Button className="slds-hide slds-m-left--xx-small" className="slds-button slds-button--brand" aria-hidden="true">Save List</Button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
             className="slds-button--icon-more"

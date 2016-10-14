@@ -45,8 +45,61 @@
   display: none;
 }
 
-.slds-cell-marker {
-  background-color: $color-background-row-hover;
+.slds-has-focus {
+
+  .slds-th__action {
+    background-color: $color-background-alt;
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+}
+
+.slds-is-resizable.slds-has-focus {
+
+  .slds-th__action {
+    background-color: $color-background-alt;
+    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
+  }
+}
+
+.slds-no-cell-focus {
+
+  .slds-has-focus {
+
+    .slds-th__action {
+      background-color: $color-background;
+      box-shadow: none;
+    }
+
+    &.slds-is-resizable:hover .slds-th__action {
+      background-color: $color-background;
+      box-shadow: $color-border -0.25rem 0 0 inset;
+    }
+  }
+
+  .slds-is-sortable.slds-has-focus {
+    color: inherit;
+
+    .slds-is-sortable__icon {
+      display: none;
+    }
+  }
+
+  .slds-is-sorted.slds-has-focus {
+
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-icon-default;
+    }
+  }
+
+  .slds-has-focus:hover {
+    color: $color-text-link;
+
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-link;
+    }
+  }
 }
 
 .slds-hint-parent .slds-cell-edit {
@@ -148,15 +201,18 @@
   }
 
   // scss-lint:disable SelectorDepth
+  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
   &.slds-table tbody tr:hover > .slds-cell-edit {
 
     &:hover {
       background-color: $color-background-alt;
-    }
-
-    &.slds-has-focus { // This is the focused state
-      background-color: $color-background-alt;
-      box-shadow: $color-border-selection 0 0 0 1px inset;
     }
 
     &.slds-is-edited {
@@ -197,6 +253,23 @@
 
     .slds-button__icon--edit {
       opacity: 1;
+    }
+  }
+
+  .slds-is-edited {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+
+  .slds-has-error {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
     }
   }
 }

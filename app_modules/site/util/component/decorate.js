@@ -74,10 +74,6 @@ let lightningComponents = [{
   component: 'tabs',
   namespace: 'lightning:tabset',
   url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm'
-},{
-  component: 'tooltips',
-  namespace: 'lightning:tooltip',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tooltip.htm'
 }];
 
 /**

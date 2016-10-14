@@ -80,7 +80,7 @@ export let states = [
     id: 'card',
     label: 'Default',
     element:
-      <div className="demo-only">
+      <div className="demo-only demo-only--center-card-body">
         <Card>
           <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
           <CardBody>Card Body (custom goes in here)</CardBody>
@@ -92,12 +92,10 @@ export let states = [
     id: 'card-empty',
     label: 'Empty',
     element:
-      <div className="demo-only">
-        <Card>
-          <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
-          <CardBody></CardBody>
-          <CardFooter></CardFooter>
-        </Card>
-      </div>
+      <Card>
+        <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
+        <CardBody></CardBody>
+        <CardFooter></CardFooter>
+      </Card>
   }
 ];

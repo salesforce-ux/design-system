@@ -29,11 +29,11 @@ body {
   .slds-notify--alert {
     margin: $spacing-x-small 0;
   }
+}
 
-  // @TODO - this is temporarily here as a fix till BLC is fixed and DF is completed
-  .#{$css-prefix}card__body {
-    text-align: center;
-  }
+// @TODO - this is temporarily here as a fix till BLC is fixed and DF is completed - @Stef
+.demo-only--center-card-body .#{$css-prefix}card__body {
+  text-align: center;
 }
 
 .demo-only--top {

@@ -15,6 +15,8 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
 
+const TESTING = false;
+
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
@@ -31,12 +33,12 @@ let Table = props =>
 
 let Thead = props =>
   <thead>
-    <tr className="slds-text-title--caps">
+    <tr className="slds-line-height--reset">
       <th scope="col" style={{ width: '2.75rem' }}><span className="slds-assistive-text">Errors</span></th>
-      <th role="gridcell" scope="col" style={{ width: '2rem' }}><Checkbox label="Select All" /></th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
+      <th scope="col" style={{ width: '2rem' }}><Checkbox label="Select All" /></th>
+      <Th className={className('slds-is-sortable slds-is-resizable',props.thClassName)} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
+      <Th className="slds-is-sortable slds-is-resizable slds-is-sorted" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
       <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
@@ -55,8 +57,8 @@ let Th = (props) => {
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
   return(
-    <th {...props} aria-label={props.children}>
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={props.navigationModeTabIndex}>
+    <th {...props} aria-label={props.children} style={{ width: '8.25rem' }}>
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={props.navigationModeTabIndex}>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={props.children}>{props.children}</span>
         <div className="slds-icon_container">
@@ -517,6 +519,49 @@ export let states = [
           </tbody>
         </Table>
         <ErrorPanel />
+      </Container>
+  },
+  {
+    id: 'data-table-fixed-header-focus',
+    label: 'Header focused',
+    element:
+      <Container>
+        <Table>
+          <Thead navigationModeTabIndex="0"  thClassName="slds-has-focus" testClassName={TESTING ? 'slds-has-focus' : ''} />
+          <tbody>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" testClassName={TESTING ? 'slds-has-focus' : ''}>
+              <Td>
+                <span className="slds-grid slds-grid--align-spread">
+                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic navigationModeTabIndex="0" />
+          </tbody>
+        </Table>
+        {TESTING ? <ErrorPanel /> : ''}
+      </Container>
+  },
+  {
+    id: 'data-table-fixed-header-mark',
+    label: 'Header marked',
+    element:
+      <Container>
+        <Table className="slds-no-cell-focus">
+          <Thead navigationModeTabIndex="0" thClassName="slds-has-focus" testClassName={TESTING ? 'slds-has-focus' : ''} />
+          <tbody>
+            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" testClassName={TESTING ? 'slds-has-focus' : ''}>
+              <Td>
+                <span className="slds-grid slds-grid--align-spread">
+                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
+                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
+                </span>
+              </Td>
+            </RowData>
+            <RowDataStatic navigationModeTabIndex="0" />
+          </tbody>
+        </Table>
       </Container>
   }
 ];

@@ -23,8 +23,10 @@ const TESTING = false; //Set this to `true` to test all the possible states of t
 
 let Container = props =>
   <div className="slds-table--header-fixed_container" tabIndex={props.tabIndex} id={props.id}>
-    <div className="table--header-fixed_container--inner slds-table--edit_container slds-scrollable" style={{height: '100px'}}>
-      {props.children}
+    <div className="slds-scrollable" style={{height: '100px', position: 'static'}}>
+      <div className="table--header-fixed_container--inner slds-table--edit_container">
+        {props.children}
+      </div>
     </div>
   </div>;
 

@@ -72,8 +72,20 @@ const results = [{
 ///////////////////////////////////////////
 
 let SplitView = props =>
-  <article className={ className('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
-    <div className={ className('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }>
+  <div className={ className('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
+    <ButtonIcon
+      aria-controls="split-view-id"
+      aria-expanded={ props.hidden ? 'false' : 'true' }
+      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
+      iconClassName="slds-button__icon--x-small"
+      symbol="left"
+      assistiveText={ props.hidden ? 'Open Split View' : 'Close Split View' }
+    />
+    <article
+      aria-hidden={ props.hidden ? 'true' : 'false' }
+      id="split-view-id"
+      className={ className('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }
+    >
       <header className="slds-split-view__header">
         <div className="slds-grid">
           <div className="slds-has-flexi-truncate">
@@ -85,10 +97,12 @@ let SplitView = props =>
                 </div>
               </div>
               <div className="slds-media__body">
-                <h1 className="slds-text-heading--small slds-has-flexi-truncate">
-                  <button className="slds-button slds-button--reset slds-p-right--x-small slds-type-focus slds-truncate slds-grid" aria-haspopup="true" title="My Leads">
-                    <span className="slds-truncate">My Leads</span>
-                    <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
+                <h1 className="slds-text-heading--small">
+                  <button className="slds-button slds-button--reset slds-p-right--x-small slds-type-focus slds-truncate" aria-haspopup="true" title="My Leads">
+                    <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+                      <span className="slds-truncate">My Leads</span>
+                      <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
+                    </span>
                   </button>
                 </h1>
               </div>
@@ -115,22 +129,15 @@ let SplitView = props =>
       <div className="slds-grid slds-grid--vertical">
         <div className="slds-split-view__list-header slds-grid slds-text-title--caps">
           <span className="slds-assistive-text">Sorted by:</span>
-          Lead Score
-          <SvgIcon className="slds-icon slds-icon--xx-small slds-text-icon-default slds-align-top" sprite="utility" symbol="arrowdown" />
+          <span>Lead Score <SvgIcon className="slds-icon slds-icon--xx-small slds-text-icon-default slds-align-top" sprite="utility" symbol="arrowdown" /></span>
           <span className="slds-assistive-text">- Descending</span>
         </div>
         <ul aria-multiselectable="true" className="slds-scrollable--y" role="listbox" aria-label="My Leads - Select a lead to load it in a new workspace tab">
           { props.children }
         </ul>
       </div>
-    </div>
-    <ButtonIcon
-      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
-      iconClassName="slds-button__icon--x-small"
-      symbol="left"
-      assistiveText={ props.hidden ? 'Open Split View' : 'Close Split View' }
-    />
-  </article>;
+    </article>
+  </div>;
 
 let Row = props =>
   <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation" key={ props.key }>

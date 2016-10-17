@@ -108,7 +108,7 @@ bower install salesforce-lightning-design-system --save
     <p>
       All icons are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>.
     </p>
-    <form action="/assets/downloads/salesforce-lightning-design-system-icons.zip">
+    <form action="/assets/downloads/salesforce_icons.zip">
       <CTALink eventName="Download" eventType="icons">
         <button className="slds-button slds-button--neutral">
           Download Icons

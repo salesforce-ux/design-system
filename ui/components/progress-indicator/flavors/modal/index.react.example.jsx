@@ -25,12 +25,12 @@ export default (
       </ModalHeader>
       <ModalContent className="slds-grow slds-p-around--medium" />
       <ModalFooter className="slds-grid slds-grid--align-spread">
-        <Progress className="slds-progress--shade slds-order--2" amount="25">
-          <Step done>Step 1</Step>
-          <Step active>Step 2</Step>
-          <Step>Step 3</Step>
-          <Step>Step 4</Step>
-          <Step>Step 5</Step>
+        <Progress className="slds-progress--shade slds-order--2" value="25">
+          <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+          <Step active aria-describedby="step-2-tooltip">Step 2 - Active</Step>
+          <Step aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
         </Progress>
         <button className="slds-button slds-button--neutral slds-order--1">Cancel</button>
         <button className="slds-button slds-button--brand slds-order--3">Save</button>

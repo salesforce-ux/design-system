@@ -22,12 +22,12 @@ export let states = [
     label: 'Default',
     element:
     <div className="demo-only" style={{ padding: '1rem' }}>
-      <Progress amount="25">
-        <Step done>Step 1</Step>
-        <Step active>Step 2</Step>
-        <Step>Step 3</Step>
-        <Step>Step 4</Step>
-        <Step>Step 5</Step>
+      <Progress value="25">
+        <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+        <Step active aria-describedby="step-2-tooltip">Step 2 - Active</Step>
+        <Step aria-describedby="step-3-tooltip">Step 3</Step>
+        <Step aria-describedby="step-4-tooltip">Step 4</Step>
+        <Step aria-describedby="step-5-tooltip">Step 5</Step>
       </Progress>
     </div>
   },
@@ -36,12 +36,12 @@ export let states = [
     label: 'Shade',
     element:
       <div className="demo-only" style={{ background: '#f4f6f9', padding: '1rem' }}>
-        <Progress className="slds-progress--shade" amount="25">
-          <Step done>Step 1</Step>
-          <Step active>Step 2</Step>
-          <Step>Step 3</Step>
-          <Step>Step 4</Step>
-          <Step>Step 5</Step>
+        <Progress className="slds-progress--shade" value="25">
+          <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+          <Step active aria-describedby="step-2-tooltip">Step 2 - Active</Step>
+          <Step aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
         </Progress>
       </div>
   }

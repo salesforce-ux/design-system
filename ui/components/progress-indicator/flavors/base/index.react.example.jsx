@@ -15,14 +15,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 
-{/*
-  States
-    - default
-    - step 1 - active
-    - step 2 - active
-    - tooltip - active
-*/}
-
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
@@ -32,20 +24,23 @@ export let Progress = props =>
     <ol className="slds-progress__list">
       { props.children }
     </ol>
-    <progress className="slds-progress-bar" value={ props.amount || '0' } max="100">{ props.amount + '%' }</progress>
+    <div className="slds-progress-bar">
+      <span className="slds-progress-bar__value" style={{ width: props.value + '%' }}>
+        <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
+      </span>
+    </div>
   </div>;
 
 export let Step = props =>
-  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null) } role="presentation">
+  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null) }>
     { props.done
       ? <ButtonIcon
           className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
           symbol="success"
-          tabIndex="-1"
           aria-describedby={ props['aria-describedby'] }
-          assistiveText="Step Completed"
+          assistiveText="Step - Completed"
         />
-      : <button className="slds-button slds-progress__marker" tabIndex={ props.active ? '0' : '-1' } aria-describedby={ props['aria-describedby'] }>
+      : <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>
           <span className="slds-assistive-text">{ props.children }</span>
         </button>
     }
@@ -60,41 +55,41 @@ export let states = [
     id: 'default',
     label: 'Default',
     element:
-    <div className="demo-only" style={{ padding: '1rem' }}>
-      <Progress amount="0">
-        <Step active>Step 1</Step>
-        <Step>Step 2</Step>
-        <Step>Step 3</Step>
-        <Step>Step 4</Step>
-        <Step>Step 5</Step>
-      </Progress>
-    </div>
+      <div className="demo-only" style={{ padding: '1rem' }}>
+        <Progress value="0">
+          <Step active aria-describedby="step-1-tooltip">Step 1 - Active</Step>
+          <Step aria-describedby="step-2-tooltip">Step 2</Step>
+          <Step aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
+        </Progress>
+      </div>
   },
   {
     id: 'next-step',
     label: 'Next Step',
     element:
-    <div className="demo-only" style={{ padding: '1rem' }}>
-      <Progress amount="25">
-        <Step done>Step 1</Step>
-        <Step active>Step 2</Step>
-        <Step>Step 3</Step>
-        <Step>Step 4</Step>
-        <Step>Step 5</Step>
-      </Progress>
-    </div>
+      <div className="demo-only" style={{ padding: '1rem' }}>
+        <Progress value="25">
+          <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+          <Step active aria-describedby="step-2-tooltip">Step 2 - Active</Step>
+          <Step aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
+        </Progress>
+      </div>
   },
   {
     id: 'tooltip',
     label: 'Tooltip',
     element:
       <div className="demo-only" style={{ padding: '3rem 1rem 0' }}>
-        <Progress amount="50">
-          <Step done>Step 1</Step>
-          <Step done>Step 2</Step>
-          <Step active aria-describedby="step-3-tooltip">Step 3</Step>
-          <Step>Step 4</Step>
-          <Step>Step 5</Step>
+        <Progress value="50">
+          <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+          <Step done aria-describedby="step-2-tooltip">Step 2</Step>
+          <Step active aria-describedby="step-3-tooltip">Step 3 - Active</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
         </Progress>
         <Tooltip className="slds-nubbin--bottom" id="step-3-tooltip" style={{position: 'absolute', top: '0px', left: 'calc(50% + 7px)', transform: 'translateX(-50%)'}}>
           Verify Email

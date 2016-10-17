@@ -42,7 +42,7 @@
     }
   }
 
-  .slds-progress-bar[value] {
+  .slds-progress-bar {
     position: absolute;
     top: 50%;
     margin-top: (($progress-bar-height / 2) * -1);
@@ -102,29 +102,19 @@
 }
 
 
-// Another Component
+// Progress bar value amount
 .slds-progress-bar {
   display: block;
   width: 100%;
+  background: $progress-bar-color-background;
+  border: 0;
+  appearance: none;
+  height: $progress-bar-height;
+  position: relative;
 
-  &[value] {
-    background: $progress-bar-color-background;
-    color: $progress-bar-color-background-fill;
-    border: 0;
-    appearance: none;
+  .slds-progress-bar__value {
+    display: block;
+    background: $progress-bar-color-background-fill;
     height: $progress-bar-height;
-    position: relative;
-  }
-
-  &[value]::-webkit-progress-bar {
-    background-color: $progress-bar-color-background;
-  }
-
-  &[value]::-webkit-progress-value {
-    background: $progress-bar-color-background-fill;
-  }
-
-  &[value]::-moz-progress-bar {
-    background: $progress-bar-color-background-fill;
   }
 }

@@ -1,0 +1,8 @@
+<aura:tokens>
+  <aura:token name="mqSmall" value="only screen and (max-width: 47.9375em)"  />
+  <aura:token name="mqMedium" value="only screen and (min-width: 48em)"  />
+  <aura:token name="mqMediumLandscape" value="only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)"  />
+  <aura:token name="mqLarge" value="only screen and (min-width: 64.0625em)"  />
+  <aura:token name="mqHighRes" value="only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)"  />
+  <aura:token name="mqSingleColumnRecordLayout" value="(max-width: 599px)"  />
+</aura:tokens>

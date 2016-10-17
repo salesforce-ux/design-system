@@ -1,0 +1,32 @@
+<aura:tokens>
+  <aura:token name="fontWeightLight" value="300" property="font,font-weight" />
+  <aura:token name="fontWeightRegular" value="400" property="font,font-weight" />
+  <aura:token name="fontWeightBold" value="700" property="font,font-weight" />
+  <aura:token name="fontSizeXSmall" value="0.625rem" property="font,font-size" />
+  <aura:token name="fontSizeSmall" value="0.875rem" property="font,font-size" />
+  <aura:token name="fontSizeMedium" value="1rem" property="font,font-size" />
+  <aura:token name="fontSizeMediumA" value="1.125rem" property="font,font-size" />
+  <aura:token name="fontSizeLarge" value="1.25rem" property="font,font-size" />
+  <aura:token name="fontSizeXLarge" value="1.5rem" property="font,font-size" />
+  <aura:token name="fontSizeXLargeA" value="1.57rem" property="font,font-size" />
+  <aura:token name="fontSizeXxLarge" value="2rem" property="font,font-size" />
+  <aura:token name="fontSizeTextXxSmall" value=".625rem" property="font,font-size" />
+  <aura:token name="fontSizeTextXSmall" value=".75rem" property="font,font-size" />
+  <aura:token name="fontSizeTextSmall" value=".8125rem" property="font,font-size" />
+  <aura:token name="fontSizeTextMedium" value="1rem" property="font,font-size" />
+  <aura:token name="fontSizeTextLarge" value="1.125rem" property="font,font-size" />
+  <aura:token name="fontSizeTextXLarge" value="1.25rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingXxSmall" value=".625rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingXSmall" value=".75rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingSmall" value=".875rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingMedium" value="1.125rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingLarge" value="1.5rem" property="font,font-size" />
+  <aura:token name="fontSizeHeadingXLarge" value="2rem" property="font,font-size" />
+  <aura:token name="lineHeightHeading" value="1.25" property="font,*height" />
+  <aura:token name="lineHeightText" value="1.375" property="font,*height" />
+  <aura:token name="lineHeightReset" value="1" property="font,*height" />
+  <aura:token name="lineHeightTab" value="2.5rem" property="font,*height" />
+  <aura:token name="fontFamily" value="'Salesforce Sans', Arial, sans-serif" property="font,font-family" />
+  <aura:token name="fontFamilyText" value="'Salesforce Sans', Arial, sans-serif" property="font,font-family" />
+  <aura:token name="fontFamilyHeading" value="'Salesforce Sans', Arial, sans-serif" property="font,font-family" />
+</aura:tokens>

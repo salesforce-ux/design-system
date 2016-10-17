@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="WIDTH_STAGE_LEFT" category="sizing">250px</property>
+</resources>

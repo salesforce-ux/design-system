@@ -38,10 +38,10 @@ export let Step = props =>
           className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
           symbol="success"
           aria-describedby={ props['aria-describedby'] }
-          assistiveText="Step - Completed"
+          assistiveText={ props.done ? props.children + ' - Completed' : null }
         />
       : <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>
-          <span className="slds-assistive-text">{ props.children }</span>
+          <span className="slds-assistive-text">{ props.children } { props.active ? '- Active' : null }</span>
         </button>
     }
   </li>;
@@ -57,7 +57,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '1rem' }}>
         <Progress value="0">
-          <Step active aria-describedby="step-1-tooltip">Step 1 - Active</Step>
+          <Step active aria-describedby="step-1-tooltip">Step 1</Step>
           <Step aria-describedby="step-2-tooltip">Step 2</Step>
           <Step aria-describedby="step-3-tooltip">Step 3</Step>
           <Step aria-describedby="step-4-tooltip">Step 4</Step>
@@ -72,7 +72,7 @@ export let states = [
       <div className="demo-only" style={{ padding: '1rem' }}>
         <Progress value="25">
           <Step done aria-describedby="step-1-tooltip">Step 1</Step>
-          <Step active aria-describedby="step-2-tooltip">Step 2 - Active</Step>
+          <Step active aria-describedby="step-2-tooltip">Step 2</Step>
           <Step aria-describedby="step-3-tooltip">Step 3</Step>
           <Step aria-describedby="step-4-tooltip">Step 4</Step>
           <Step aria-describedby="step-5-tooltip">Step 5</Step>
@@ -87,7 +87,7 @@ export let states = [
         <Progress value="50">
           <Step done aria-describedby="step-1-tooltip">Step 1</Step>
           <Step done aria-describedby="step-2-tooltip">Step 2</Step>
-          <Step active aria-describedby="step-3-tooltip">Step 3 - Active</Step>
+          <Step active aria-describedby="step-3-tooltip">Step 3</Step>
           <Step aria-describedby="step-4-tooltip">Step 4</Step>
           <Step aria-describedby="step-5-tooltip">Step 5</Step>
         </Progress>

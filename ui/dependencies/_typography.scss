@@ -8,21 +8,24 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+/// Font-face rule for modern browsers
+///
+/// @param {String} $font-face-setting [Regular] - One of: Thin, ThinItalic, Light, LightItalic, Regular, Italic, Bold, BoldItalic
+/// @param {String} $font-style-setting [null] - italic or null
+/// @param {String | Number} $font-weight-setting [null] - A string (e.g. lighter, normal, bold) or a numerical value (e.g. 200, 400, 700)
+///
+/// @require $static-font-path - See _config.scss where this setting is defined
 @mixin font-face($font-face-setting: Regular, $font-style-setting: null, $font-weight-setting: null) {
-  $font-file: 'SalesforceSans';
-  $font-path: '#{$static-font-path}/';
+  $font-path: '#{$static-font-path}/SalesforceSans-#{$font-face-setting}';
 
   @font-face {
     font-family: 'Salesforce Sans';
 
-    src: url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff2') format('woff2'),
-    url('#{$font-path}#{$font-file}-#{$font-face-setting}.woff') format('woff');
+    src: url('#{$font-path}.woff2') format('woff2'),
+    url('#{$font-path}.woff') format('woff');
 
-    font: {
-      style: $font-style-setting;
-      weight: $font-weight-setting;
-    }
+    font-style: $font-style-setting;
+    font-weight: $font-weight-setting;
   }
 }
 

@@ -64,11 +64,12 @@
     }
   }
 
-  & + .slds-button-group {
+  + .slds-button-group,
+  + .slds-button-group-list {
     margin-left: $spacing-xx-small;
   }
 
-  & + .slds-button {
+  + .slds-button {
 
     @include deprecate('4.0.0') {
       margin-left: $spacing-xx-small;
@@ -98,6 +99,15 @@ a.slds-button {
 
 .slds-button__icon--right {
   margin-left: $spacing-x-small;
+}
+
+.slds-button--reset {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: 0;
+  text-align: inherit;
 }
 
 .slds-button--small {

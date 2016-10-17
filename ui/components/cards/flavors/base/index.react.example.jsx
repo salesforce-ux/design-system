@@ -80,11 +80,13 @@ export let states = [
     id: 'card',
     label: 'Default',
     element:
-      <Card>
-        <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
-        <CardBody className="slds-text-align--center">Card Body (custom goes in here)</CardBody>
-        <CardFooter>Card Footer</CardFooter>
-      </Card>
+      <div className="demo-only demo-only--center-card-body">
+        <Card>
+          <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
+          <CardBody>Card Body (custom goes in here)</CardBody>
+          <CardFooter>Card Footer</CardFooter>
+        </Card>
+      </div>
   },
   {
     id: 'card-empty',

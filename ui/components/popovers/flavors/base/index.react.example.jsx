@@ -11,6 +11,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import className from 'classnames';
+
+//////////////////////////////////////////////
+// Partial(s)
+//////////////////////////////////////////////
+
+export let Popover = props =>
+  <div className={className('slds-popover', props.className)} role="dialog">
+    <div className="slds-popover__body">
+      {props.children}
+    </div>
+  </div>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
 export let states = [
   {
@@ -32,6 +48,19 @@ export let states = [
         <div className="slds-popover__body">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
         </div>
+      </div>
+  },
+  {
+    id: 'popover-footer',
+    label: 'Footer',
+    element:
+      <div className="slds-popover slds-nubbin--left" role="dialog">
+        <div className="slds-popover__body slds-scrollable--y" style={{ height: '200px' }}>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <footer className="slds-popover__footer slds-shrink-none">
+          <p>Footer Item</p>
+        </footer>
       </div>
   }
 ];

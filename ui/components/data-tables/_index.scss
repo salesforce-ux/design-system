@@ -147,12 +147,19 @@ th.slds-is-sortable {
       fill: $color-text-link;
     }
 
-    &:hover {
+    .slds-th__action:focus,
+    &:hover,
+    &.slds-has-focus {
       background-color: $color-background-row-hover;
       color: $color-text-link;
 
       .slds-button {
         visibility: visible;
+      }
+
+      .slds-is-sortable__icon {
+        display: inline-block;
+        fill: $color-text-link;
       }
     }
   }
@@ -162,15 +169,12 @@ th.slds-is-sortable {
 .slds-th__action {
   display: flex;
   padding: $spacing-x-small;
+  height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
   &:hover {
     outline: 0;
     background-color: $color-background-row-hover;
-
-    .slds-is-sortable__icon {
-      display: inline-block;
-    }
   }
 }
 

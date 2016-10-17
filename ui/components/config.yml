@@ -32,7 +32,9 @@ components:
   - progress-indicator
   - popovers
   - publishers
+  - rich-text-editor
   - spinners
+  - split-view
   - tabs
   - tiles
   - tooltips

@@ -49,7 +49,7 @@ let ButtonIcon = props =>
   </button>;
 
 export let GlobalHeader = props =>
-  <header className="slds-global-header_container">
+  <header className={className('slds-global-header_container', props.className)}>
     <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
     <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
     <div className="slds-global-header slds-grid slds-grid--align-spread">
@@ -102,7 +102,7 @@ export let GlobalHeader = props =>
             iconClassName="slds-global-header__icon"
             hasPopup
             symbol="notification"
-            assistiveText="Setup" />
+            assistiveText="Notifications" />
         </li>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
           <button className="slds-button" title="person name" aria-haspopup="true">
@@ -113,6 +113,7 @@ export let GlobalHeader = props =>
         </li>
       </ul>
     </div>
+    { props.popoverMenu ? props.children : null }
   </header>;
 
 //////////////////////////////////////////////

@@ -7,7 +7,7 @@ imports:
 - ./aliases/color.yml
 props:
   FILL_HEADER_BUTTON:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!CASPER}'
     comment: 'Header button icon color'
   FILL_HEADER_BUTTON_HOVER:
     value: '{!ENDEAVOUR}'

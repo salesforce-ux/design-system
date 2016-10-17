@@ -75,7 +75,7 @@ The Salesforce Lightning Design System uses `npm` to manage dependencies. Please
 
 ### Ruby dependencies
 
-Ruby comes pre-installed on Mac OS X. For other systems, check <https://www.ruby-lang.org>.
+Ruby comes pre-installed on macOS. For other systems, check <https://www.ruby-lang.org>.
 
 If `gem install bundler` fails, run `sudo gem install bundler` and try running `npm install` again.
 

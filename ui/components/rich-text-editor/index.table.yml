@@ -1,0 +1,12 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: rich-text-editor
+    description: Container for Rich Text Editor
+    applied: <code>&lt;div&gt;</code>
+    required: true
+  -
+    class: rich-text-editor__toolbar
+    description: Container for Rich Text Editor Toolbar
+    applied: <code>&lt;div&gt;</code>
+    required: true

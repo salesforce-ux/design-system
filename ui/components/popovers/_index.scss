@@ -13,15 +13,33 @@
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
 
-  &__body {
+  &__body,
+  &__footer {
     @include hyphenate;
     position: relative;
     padding: $spacing-x-small $spacing-small;
   }
 
+  &__footer {
+    border-top: $border-width-thin solid $color-border;
+  }
+
   &__close {
     position: relative;
     z-index: ($z-index-dialog + 1);
+  }
+
+  &--small {
+    min-width: $size-small;
+  }
+
+  &--medium {
+    min-width: $size-medium;
+  }
+
+  &--large {
+    min-width: $size-large;
+    max-width: $max-width-action-overflow-menu;
   }
 
   &[class*="theme--"] {

@@ -28,18 +28,20 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header slds-page-header--object-home" role="banner">
+  <div className="slds-page-header slds-page-header--object-home">
     <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className="slds-col slds-has-flexi-truncate">
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">
           <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
-          <button className="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
-            <div className="slds-grid slds-grid--vertical-align-center slds-truncate">
-              <h1 className="slds-page-header__title slds-truncate" title="this should match My Leads">My Leads</h1>
-              {icon}
-            </div>
-          </button>
+          <h1 className="slds-page-header__title">
+            <button className="slds-button slds-button--reset slds-p-right--x-small slds-type-focus slds-truncate" aria-haspopup="true" title="this should match My Leads">
+              <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+                <span className="slds-truncate">My Leads</span>
+                {icon}
+              </span>
+            </button>
+          </h1>
         </MediaObject>
       </div>
       {/* Close Col */}
@@ -77,7 +79,6 @@ export default (
             hasDropdown
             assistiveText="List View Controls" />
         </div>
-        <button className="slds-hide slds-m-left--xx-small" className="slds-button slds-button--brand" aria-hidden="true">Save List</button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
             className="slds-button--icon-more"

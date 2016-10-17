@@ -18,7 +18,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 export default (
-  <div className="slds-page-header" role="banner">
+  <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <BreadCrumbs className="slds-m-bottom--xx-small">

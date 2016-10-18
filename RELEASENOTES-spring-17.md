@@ -72,6 +72,7 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
+- Added token: `Z_INDEX_STICKY`
 - Added alias: `SANS_SERIF`
 - Added alias: `EBONY_CLAY`
 - Added alias: `OXFORD_BLUE`

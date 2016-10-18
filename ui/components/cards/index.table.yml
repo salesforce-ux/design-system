@@ -3,7 +3,7 @@ classes:
   -
     class: slds-card
     description: Initializes card
-    applied: <code>&lt;div&gt;</code>
+    applied: <code>&lt;article&gt;</code>
     required: true
   -
     class: slds-card__header

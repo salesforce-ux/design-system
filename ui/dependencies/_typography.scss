@@ -22,7 +22,7 @@
     font-family: 'Salesforce Sans';
 
     src: url('#{$font-path}.woff2') format('woff2'),
-    url('#{$font-path}.woff') format('woff');
+      url('#{$font-path}.woff') format('woff');
 
     font-style: $font-style-setting;
     font-weight: $font-weight-setting;

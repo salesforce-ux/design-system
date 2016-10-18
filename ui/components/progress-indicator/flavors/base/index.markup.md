@@ -1,0 +1,3 @@
+The progress indicator communicates to the user which step of a process they may be on. The length of the progress bar can be changed by modifying the value on `<progress class="slds-progress-bar" />` with JavaScript. The `.slds-progress-bar` accepts a range from 0% to 100%.
+
+When a step becomes active, the `.slds-progress__item` should get the class `.slds-is-active`. This class should be applied through JavaScript. When the step is completed, the `.slds-is-active` class should be replaced with the class `.slds-is-completed` on `.slds-progress__item`. At that point, the `.slds-progress__item` element should receive a "success" icon, providing feedback that the step has been completed.

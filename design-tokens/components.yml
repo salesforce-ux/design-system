@@ -17,5 +17,8 @@ imports:
 - ../ui/components/process/tokens/border-color.yml
 - ../ui/components/process/tokens/line-height.yml
 - ../ui/components/process/tokens/sizing.yml
+- ../ui/components/progress-indicator/tokens/background-color.yml
+- ../ui/components/progress-indicator/tokens/border-color.yml
+- ../ui/components/progress-indicator/tokens/sizing.yml
 - ../ui/components/split-view/tokens/background-color.yml
 - ../ui/components/split-view/tokens/border-color.yml

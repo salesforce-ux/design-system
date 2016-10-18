@@ -20,6 +20,7 @@ The following components are now available:
 - Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
 - Added Global Header Notifications - [Global Header Notifications](/components/global/#flavor-notifications)
 - Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
+- Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 
 **ADDED**
 
@@ -54,6 +55,8 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
+- Process › Wizard - Please use the new Progress Indicator instead [Progress Indicator](/components/progress-indicator/)
+
 **REMOVED**
 
 The following features are being removed in this release:
@@ -72,6 +75,19 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
+- Added token: `FONT_FAMILY_TEXT`
+- Added token: `FONT_FAMILY_HEADING`
+- Added token: `PROGRESS_COLOR_BACKGROUND`
+- Added token: `PROGRESS_COLOR_BACKGROUND_SHADE`
+- Added token: `PROGRESS_COLOR_BORDER`
+- Added token: `PROGRESS_COLOR_BORDER_SHADE`
+- Added token: `PROGRESS_COLOR_BORDER_HOVER`
+- Added token: `PROGRESS_COLOR_BORDER_ACTIVE`
+- Added token: `PROGRESS_BAR_HEIGHT`
+- Added token: `PROGRESS_BAR_COLOR_BACKGROUND`
+- Added token: `PROGRESS_BAR_COLOR_BACKGROUND_FILL`
+- Added alias: `SANS_SERIF`
+- Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`
 - Added alias: `EBONY_CLAY`
 - Added alias: `OXFORD_BLUE`

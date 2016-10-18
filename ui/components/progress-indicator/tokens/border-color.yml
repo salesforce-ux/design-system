@@ -1,0 +1,21 @@
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  PROGRESS_COLOR_BORDER:
+    value: '{!WHITE}'
+    comment: Borders of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_SHADE:
+    value: '{!LINK_WATER}'
+    comment: Shaded borders of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    comment: Hovered border color of each indicator item within the Progress Indicator
+  PROGRESS_COLOR_BORDER_ACTIVE:
+    value: '{!AZURE}'
+    comment: Active border color of each indicator item within the Progress Indicator

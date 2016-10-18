@@ -2,6 +2,8 @@ global:
   category: fill
   type: color
   cssProperties:
+  - 'background'
+  - 'color'
   - 'fill'
 imports:
 - ./aliases/color.yml

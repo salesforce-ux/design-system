@@ -73,7 +73,7 @@ export let GlobalHeader = props =>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-around--xx-small', props.actions ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-global-header__button--icon-actions"
-            iconClassName="slds-global-header__icon-actions"
+            iconClassName="slds-global-header__icon"
             hasPopup
             symbol="add"
             assistiveText="Global Actions" />

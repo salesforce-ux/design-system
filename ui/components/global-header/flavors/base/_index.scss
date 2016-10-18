@@ -13,6 +13,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: $z-index-sticky;
 
   // Position for when assistive text becomes into focus
   .slds-assistive-text--focus {
@@ -25,6 +26,7 @@
   background: $color-background-alt;
   box-shadow: $shadow-header;
   padding: $spacing-x-small 0;
+  height: $height-header;
   align-items: center;
 
   &__item {
@@ -42,31 +44,28 @@
 
   &__button--icon {
     margin: 0 $spacing-xxx-small;
-    color: $color-text-icon-utility;
+    color: $fill-header-button;
 
     &:hover,
     &:focus {
-      color: $color-text-link-hover;
+      color: $fill-header-button-hover;
     }
   }
 
   &__button--icon-actions {
-    background: $color-background-alt-inverse;
+    background: $fill-header-button;
     border-radius: $border-radius-medium;
     color: $color-text-icon-inverse;
 
     &:hover,
     &:focus {
-      background-color: $color-background-button-brand-hover;
+      background-color: $fill-header-button-hover;
       color: $color-text-icon-inverse;
     }
   }
 
-  &__icon {
+  &__icon,
+  .slds-button__icon {
     @include square($square-icon-global-identity-icon);
-  }
-
-  &__icon-actions {
-    @include square($square-icon-medium-content);
   }
 }

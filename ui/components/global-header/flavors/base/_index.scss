@@ -65,7 +65,8 @@
   }
 
   &__icon,
-  &__icon > .slds-button__icon {
+  &__icon .slds-icon,
+  &__icon .slds-button__icon {
     @include square($square-icon-global-identity-icon);
   }
 }

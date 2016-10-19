@@ -22,6 +22,9 @@ props:
   Z_INDEX_POPUP:
     value: '5000'
     comment: Popup
+  Z_INDEX_STICKY:
+    value: '100'
+    comment: Stickied element
   Z_INDEX_DEFAULT:
     value: '1'
     comment: Default

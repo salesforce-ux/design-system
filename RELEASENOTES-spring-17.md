@@ -75,6 +75,7 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
+- Added token: `Z_INDEX_STICKY`
 - Added token: `FONT_FAMILY_TEXT`
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `PROGRESS_COLOR_BACKGROUND`
@@ -86,6 +87,16 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `PROGRESS_BAR_HEIGHT`
 - Added token: `PROGRESS_BAR_COLOR_BACKGROUND`
 - Added token: `PROGRESS_BAR_COLOR_BACKGROUND_FILL`
+- Added token: `COLOR_STROKE_BRAND`
+- Added token: `COLOR_STROKE_BRAND_HOVER`
+- Added token: `COLOR_STROKE_BRAND_ACTIVE`
+- Added token: `COLOR_STROKE_DISABLED`
+- Added token: `COLOR_STROKE_HEADER_BUTTON`
+- Added token: `FILL_BRAND`
+- Added token: `FILL_BRAND_HOVER`
+- Added token: `FILL_BRAND_ACTIVE`
+- Added token: `BORDER_STROKE_WIDTH_THIN`
+- Added token: `BORDER_STROKE_WIDTH_THICK`
 - Added alias: `SANS_SERIF`
 - Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`

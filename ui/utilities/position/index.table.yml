@@ -10,7 +10,7 @@ classes:
     applied: any element
   -
     class: slds-is-absolute
-    description: Used to position an element relative to its parent container with relative positioning.
+    description: Used to position an element relative to its closet ancestor with relative positioning.
     applied: any element
   -
     class: slds-is-static

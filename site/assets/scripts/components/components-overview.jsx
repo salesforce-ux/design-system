@@ -72,80 +72,6 @@ let componentColumns = [{
   filter: 'isPrototype'
 }];
 
-let lightningComponents = [{
-  component: 'badges',
-  namespace: 'lightning:badge',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.html'
-},{
-  component: 'buttons',
-  namespace: 'lightning:button',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm'
-},{
-  component: 'button-groups',
-  namespace: 'lightning:buttonGroup',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm'
-},{
-  component: 'button-icons',
-  namespace: 'lightning:buttonIcon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm'
-}, {
-  namespace: 'lightning:buttonMenu',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm'
-}, {
-  component: 'cards',
-  namespace: 'lightning:card',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_card.htm'
-}, {
-  namespace: 'lightning:formattedDateTime',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_formattedDateTime.htm'
-}, {
-  namespace: 'lightning:formattedNumber',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_formattedNumber.htm'
-}, {
-  component: 'icons',
-  namespace: 'lightning:icon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm'
-}, {
-  component: 'forms',
-  flavor: 'input',
-  namespace: 'lightning:input',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm'
-}, {
-  namespace: 'lightning:layout',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm'
-}, {
-  namespace: 'lightning:layoutItem',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layoutItem.htm'
-}, {
-  namespace: 'lightning:menutItem',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_menuItem.htm'
-}, {
-  component: 'forms',
-  flavor: 'select',
-  namespace: 'lightning:select',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_select.htm'
-}, {
-  component: 'spinners',
-  namespace: 'lightning:spinner',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm'
-}, {
-  component: 'tabs',
-  namespace: 'lightning:tab',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tab.htm'
-}, {
-  namespace: 'lightning:tabset',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm'
-}, {
-  component: 'forms',
-  flavor: 'textarea',
-  namespace: 'lightning:textarea',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm'
-}, {
-  component: 'tooltips',
-  namespace: 'lightning:tooltip',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tooltip.htm'
-}];
-
 let { components: _components } = find(ui, { id: 'components' });
 let { components: _touch } = find(ui, { id: 'touch' });
 
@@ -162,18 +88,11 @@ let isAdaptive = (component, flavor) => {
 };
 
 let components = _components.map(component => {
-  let lightning = find(lightningComponents, { component: component.id });
   return assign({}, component, {
-    lightning: lightning && !has(lightning, 'flavor')
-      ? lightning : undefined,
     flavors: component.flavors.map(flavor => {
       return assign({}, flavor, {
         isResponsive: isResponsive(component, flavor),
-        isAdaptive: isAdaptive(component, flavor),
-        lightning: find(lightningComponents, {
-          component: component.id,
-          flavor: flavor.id
-        })
+        isAdaptive: isAdaptive(component, flavor)
       });
     })
   });

@@ -176,6 +176,10 @@ th.slds-is-sortable {
     outline: 0;
     background-color: $color-background-row-hover;
   }
+
+  &--form {
+    display: inline-flex; // Allows for alignment of form element, such as a checkbox
+  }
 }
 
 // Icon inside sortable th
@@ -200,6 +204,7 @@ th.slds-is-sortable {
 
 // Provide an indicator that resizing is available
 .slds-is-resizable {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 
   .slds-th__action:hover,
   .slds-th__action:focus {
@@ -253,6 +258,10 @@ th.slds-is-sortable {
 
   thead {
     background-color: $color-background-alt;
+  }
+
+  thead th {
+    padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
   }
 
   .slds-cell-shrink {

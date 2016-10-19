@@ -106,12 +106,12 @@ export default (
       <thead>
         <tr className="slds-line-height--reset">
           <th scope="col" style={{ width: '2.75rem' }}>
-            <div style={{ width: '2.75rem' }} className="slds-cell-fixed">
+            <div style={{ width: '2.75rem' }} className="slds-th__action slds-cell-fixed">
               <span className="slds-assistive-text">Errors</span>
             </div>
           </th>
           <th scope="col" style={{ width: '2rem' }}>
-            <div style={{ width: '2rem' }} className="slds-cell-fixed slds-p-around--x-small">
+            <div style={{ width: '2rem' }} className="slds-th__action slds-cell-fixed slds-p-around--x-small">
               <Checkbox label="Select All" />
             </div>
           </th>
@@ -119,7 +119,7 @@ export default (
             <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
           )}
           <th scope="col" style={{ width: '3.25rem' }}>
-            <div style={{ width: '2.75rem' }} className="slds-cell-fixed">
+            <div style={{ width: '2.75rem' }} className="slds-th__action slds-cell-fixed">
               <span className="slds-assistive-text">Actions</span>
             </div>
           </th>

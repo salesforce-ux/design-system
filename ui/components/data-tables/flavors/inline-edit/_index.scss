@@ -45,20 +45,81 @@
   display: none;
 }
 
-.slds-has-focus {
+// Inline Edit Table
+//
+// This class goes on the table and deals with some items inside
+.slds-table--edit {
 
-  .slds-th__action {
+  thead {
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+
+  thead th {
+    padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
+  }
+
+  .slds-cell-error {
+    padding-left: 0;
+  }
+
+  // Check if slds-no-cell-focus is on the table element, if not then find
+  // our editable cell and make sure the focus style persists on row hover
+  // scss-lint:disable SelectorDepth
+  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
+  &.slds-table tbody tr:hover > .slds-cell-edit {
+
+    &:hover {
+      background-color: $color-background-alt;
+    }
+
+    &.slds-is-edited {
+      background-color: $color-background-highlight;
+    }
+
+    &.slds-has-error {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+
+  .slds-button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
+
+  tbody {
+    // Start the counter
+    tr {
+      counter-increment: row-number;
+    }
+  }
+
+  .slds-row-number {
+    // Add the counter number
+    &:after {
+      content: counter(row-number);
+    }
   }
 }
 
-.slds-is-resizable.slds-has-focus {
-
-  .slds-th__action {
-    background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
-  }
+// Table Heading cell focus styles
+//
+// Requires .slds-th__action inside the <th>
+th.slds-has-focus .slds-th__action,
+th.slds-has-focus .slds-th__action:focus,
+th.slds-has-focus .slds-th__action:hover,
+th.slds-has-focus .slds-th__action:focus:hover,
+th.slds-is-resizable .slds-th__action:focus,
+th.slds-is-resizable .slds-th__action:focus:hover {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
 }
 
 .slds-no-cell-focus {
@@ -133,7 +194,6 @@
   }
 }
 
-
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
 
@@ -176,66 +236,6 @@
     &:hover {
       background-color: $color-background-highlight;
       box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
-    }
-  }
-}
-
-// Inline Edit Table
-//
-// This class goes on the table and deals with some items inside
-.slds-table--edit {
-
-  thead {
-    background-color: $color-background-alt;
-  }
-
-  .slds-cell-error {
-    padding-left: 0;
-  }
-
-  // Check if slds-no-cell-focus is on the table element, if not then find
-  // our editable cell and make sure the focus style persists on row hover
-  // scss-lint:disable SelectorDepth
-  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
-
-    &.slds-has-focus { // This is the focused state
-      background-color: $color-background-alt;
-      box-shadow: $color-border-selection 0 0 0 1px inset;
-    }
-  }
-
-  // scss-lint:disable SelectorDepth
-  &.slds-table tbody tr:hover > .slds-cell-edit {
-
-    &:hover {
-      background-color: $color-background-alt;
-    }
-
-    &.slds-is-edited {
-      background-color: $color-background-highlight;
-    }
-
-    &.slds-has-error {
-      background-color: $color-background-highlight;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
-    }
-  }
-
-  .slds-button__icon--edit:focus {
-    fill: $color-text-brand;
-  }
-
-  tbody {
-    // Start the counter
-    tr {
-      counter-increment: row-number;
-    }
-  }
-
-  .slds-row-number {
-    // Add the counter number
-    &:after {
-      content: counter(row-number);
     }
   }
 }

@@ -83,11 +83,11 @@ export let Th = props => {
 };
 
 let RowData = props => {
-  let checkboxLabel = 'Select row ' + props.accountName;
+  let checkboxLabel = 'Select item ' + props.index;
 
   return(
     <tr className={className('slds-hint-parent', props.className)} aria-selected={ props.checked }>
-      <td className="slds-cell-shrink" data-label={ checkboxLabel }>
+      <td role="gridcell" className="slds-text-align--right" style={{ width: '3.25rem' }}>
         <Checkbox label={ checkboxLabel } checked={ props.checked } hideLabel />
       </td>
       <th scope="row">
@@ -113,9 +113,9 @@ let RowData = props => {
       <td role="gridcell">
         <div className="slds-truncate" title={ props.contact }><a href="javascript:void(0);">{ props.contact }</a></div>
       </td>
-      <td role="gridcell" className="slds-cell-shrink">
+      <td role="gridcell" style={{ width: '3.25rem' }}>
         <ButtonIcon
-          className="slds-button--icon-border slds-button--icon-x-small"
+          className="slds-button--icon-border-filled slds-button--icon-x-small"
           iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
           assistiveText="Show More"
@@ -138,19 +138,28 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } />
+              <Th key={ i }
+                columnName={ columns[i] }
+                focusable />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
               closeDate={ rows[i].closeDate }
@@ -169,19 +178,28 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" checked hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" checked hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } />
+              <Th key={ i }
+                columnName={ columns[i] }
+                focusable />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               className={ (i===1) ? 'slds-is-selected' : null }
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
@@ -202,19 +220,28 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" checked hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" checked hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } />
+              <Th key={ i }
+                columnName={ columns[i] }
+                focusable />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               className="slds-is-selected"
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
@@ -235,23 +262,31 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
               <Th key={ i }
                 className={ (i===1) ? 'slds-is-sorted slds-is-sorted--asc' : null }
                 aria-sort={ (i===1) ? 'ascending' : null }
                 columnName={ columns[i] }
+                focusable
               />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
               closeDate={ rows[i].closeDate }
@@ -270,23 +305,31 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
               <Th key={ i }
                 className={ (i===1) ? 'slds-is-sorted slds-is-sorted--desc' : null }
                 aria-sort={ (i===1) ? 'descending' : null }
                 columnName={ columns[i] }
+                focusable
               />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.reverse(_.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
               closeDate={ rows[i].closeDate }
@@ -305,22 +348,30 @@ export let states = [
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
-          <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col">
-              <Checkbox label="Select All" hideLabel />
+          <tr className="slds-line-height--reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+              <div className="slds-th__action slds-th__action--form">
+                <Checkbox label="Select All" hideLabel />
+              </div>
             </th>
             { _.times(columns.length, i =>
               <Th key={ i }
                 style={{ width: (i===0) ? '300px' : null }}
                 columnName={ columns[i] }
+                focusable
               />
             )}
-            <th className="slds-cell-shrink" scope="col"></th>
+            <th scope="col" style={{ width: '3.25rem' }}>
+              <div className="slds-th__action">
+                <span className="slds-assistive-text">Actions</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           { _.times(rows.length, i =>
             <RowData key={ i }
+              index={ i + 1 }
               recordName={ rows[i].recordName }
               accountName={ rows[i].accountName }
               closeDate={ rows[i].closeDate }

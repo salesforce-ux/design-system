@@ -62,14 +62,20 @@ let Thead = props =>
   <thead>
     <tr className="slds-line-height--reset">
       <th scope="col" style={{ width: '2.75rem' }}>
-        <span className="slds-assistive-text">Errors</span>
+        <div className="slds-th__action">
+          <span className="slds-assistive-text">Errors</span>
+        </div>
       </th>
       <th scope="col" style={{ width: '2rem' }}>
-        <Checkbox label="Select All" />
+        <div className="slds-th__action slds-th__action--form">
+          <Checkbox label="Select All" />
+        </div>
       </th>
       { props.children }
       <th scope="col" style={{ width: '3.25rem' }}>
-        <span className="slds-assistive-text">Actions</span>
+        <div className="slds-th__action">
+          <span className="slds-assistive-text">Actions</span>
+        </div>
       </th>
     </tr>
   </thead>;
@@ -108,7 +114,7 @@ let ErrorPanel = props =>
   </div>;
 
 export let RowData = props => {
-  let checkboxLabel = 'Select row ' + props.accountName;
+  let checkboxLabel = 'Select item ' + props.index;
 
   return(
     <tr className="slds-hint-parent" aria-selected={ props.checked }>
@@ -127,49 +133,49 @@ export let RowData = props => {
           <a href="javascript:void()" className="slds-truncate" tabIndex={ !props.focusable ? '-1' : '0' } id={ props.linkId } title={ props.recordName }>
             { props.recordName }
           </a>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Name: ' + props.recordName } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ props.initialCellTabIndex } alt={ 'Edit Name: Item ' + props.index } />
         </span>
       </th>
       { !props.children ?
           <td role="gridcell" className="slds-cell-edit">
             <span className="slds-grid slds-grid--align-spread">
               <span className="slds-truncate" title={ props.accountName }>{ props.accountName }</span>
-              <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Account Name: ' + props.accountName } />
+              <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Account Name: Item ' + props.index } />
             </span>
           </td>
         : props.children }
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Close Date: ' + props.closeDate } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Close Date: Item ' + props.index } />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate" title={ props.stage }>{ props.stage }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Stage: ' + props.stage } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Stage: Item ' + props.index } />
         </span>
       </td>
-      <td role="gridcell" className="slds-cell-edit">
+      <td role="gridcell" className="slds-cell-edit" aria-readonly="true">
         <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate" title={ props.confidence }>{ props.confidence }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Confidence: ' + props.confidence } />
+          <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" symbol="lock" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Confidence: Item ' + props.index } disabled />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate" title={ props.amount }>{ props.amount }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Amount: ' + props.amount } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Amount: Item ' + props.index } />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
           <span className="slds-truncate" title={ props.contact }>{ props.contact }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Contact: ' + props.contact } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Contact: Item ' + props.index } />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
-        <div className="slds-p-right--large">
+        <div className="slds-p-right--medium">
           <ButtonIcon
             className="slds-button--icon-border slds-button--icon-x-small"
             iconClassName="slds-button__icon--hint slds-button__icon--small"
@@ -202,6 +208,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -232,6 +239,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -242,7 +250,7 @@ export let states = [
                 initialCellTabIndex={ (i===0) ? '0' : '-1' }
                 thClassName={ (i===0) ? 'slds-has-focus' : null }
                 buttonInvisible="slds-hidden"
-                focusable={ (i===0) ? true : null }
+
                 linkId={ (i===0) ? 'link-01' : null }
                 defaultSelected={ (i===0) ? true : null }
               />
@@ -268,6 +276,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -303,6 +312,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -343,6 +353,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -393,6 +404,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -444,6 +456,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -496,6 +509,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -532,6 +546,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -541,7 +556,7 @@ export let states = [
                 contact={ rows[i].contact }
                 buttonInvisible={ (i!=0) ? 'slds-hidden' : null }>
                 { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error slds-has-focus">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: {field error} Edited: Acme" />
@@ -571,6 +586,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -614,6 +630,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }
@@ -646,6 +663,7 @@ export let states = [
           <tbody>
             { _.times(rows.length, i =>
               <RowData key={ i }
+                index={ i + 1 }
                 recordName={ rows[i].recordName }
                 accountName={ rows[i].accountName }
                 closeDate={ rows[i].closeDate }

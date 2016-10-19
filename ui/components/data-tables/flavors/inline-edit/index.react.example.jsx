@@ -11,11 +11,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
 
-const TESTING = false;
+const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
+
+const rows = [{
+  'recordName': 'Acme - 1,200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '4/10/15',
+  'stage': 'Value Proposition',
+  'confidence': '30%',
+  'amount': '$25,000,000',
+  'contact': 'jrogers@acme.com'
+}, {
+  'recordName': 'Acme - 200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '1/31/15',
+  'stage': 'Prospecting',
+  'confidence': '60%',
+  'amount': '$5,000,000',
+  'contact': 'bob@acme.com'
+}, {
+  'recordName': 'salesforce.com - 1,000 Widgets',
+  'accountName': 'salesforce.com',
+  'closeDate': '1/31/15 3:45PM',
+  'stage': 'Id. Decision Makers',
+  'confidence': '70%',
+  'amount': '$25,000',
+  'contact': 'nathan@salesforce.com'
+}];
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -26,7 +53,7 @@ let Container = props =>
     {props.children}
   </div>;
 
-let Table = props =>
+export let Table = props =>
   <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '65.75rem' }}>
     {props.children}
   </table>;
@@ -34,48 +61,18 @@ let Table = props =>
 let Thead = props =>
   <thead>
     <tr className="slds-line-height--reset">
-      <th scope="col" style={{ width: '2.75rem' }}><span className="slds-assistive-text">Errors</span></th>
-      <th scope="col" style={{ width: '2rem' }}><Checkbox label="Select All" /></th>
-      <Th className={className('slds-is-sortable slds-is-resizable',props.thClassName)} scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
-      <Th className="slds-is-sortable slds-is-resizable slds-is-sorted" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
+      <th scope="col" style={{ width: '2.75rem' }}>
+        <span className="slds-assistive-text">Errors</span>
+      </th>
+      <th scope="col" style={{ width: '2rem' }}>
+        <Checkbox label="Select All" />
+      </th>
+      { props.children }
       <th scope="col" style={{ width: '3.25rem' }}>
-        <span className="slds-assistive-text">Actions</span></th>
+        <span className="slds-assistive-text">Actions</span>
+      </th>
     </tr>
   </thead>;
-
-let Th = (props) => {
-  const rangeLabel = props.children + ' column width';
-  let sortDirection;
-  if(props['aria-sort']) {
-    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
-  }
-  const uniqueId = _.uniqueId('cell-resize-handle-');
-
-  return(
-    <th {...props} aria-label={props.children} style={{ width: '8.25rem' }}>
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={props.navigationModeTabIndex}>
-        <span className="slds-assistive-text">Sort </span>
-        <span className="slds-truncate" title={props.children}>{props.children}</span>
-        <div className="slds-icon_container">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
-        </div>
-        <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
-      </a>
-      <div className="slds-resizable">
-        <label htmlFor={uniqueId} className="slds-assistive-text">{rangeLabel}</label>
-        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={props.navigationModeTabIndex} />
-        <span className="slds-resizable__handle">
-          <span className="slds-resizable__divider"></span>
-        </span>
-      </div>
-    </th>
-  );
-};
 
 let Checkbox = props =>
   <label className="slds-checkbox">
@@ -108,145 +105,83 @@ let TableFocusInfo = props =>
 let ErrorPanel = props =>
   <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}>
     <div className="slds-popover__body">Company encountered an error.</div>
-</div>;
+  </div>;
 
-let Td = props =>
-  <td {...props} role="gridcell" className={className('slds-cell-edit', props.className)}>
-    { props.children }
-  </td>;
-
-let RowData = (props) => {
-  let checkboxLabel = 'Select row ' + props.title;
+export let RowData = props => {
+  let checkboxLabel = 'Select row ' + props.accountName;
 
   return(
-    <tr className="slds-hint-parent">
-      <td id={props.cellID} tabIndex={props.errorindex} aria-selected={props.errorSelected}className={className('slds-cell-edit slds-cell-error', props.editName)}>
-        <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
+    <tr className="slds-hint-parent" aria-selected={ props.checked }>
+      <td id={ props.cellID } tabIndex={ props.errorindex } aria-selected={ props.errorSelected } className={className('slds-cell-edit slds-cell-error', props.editName)}>
+        <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={ !props.focusable ? '-1' : '0' } aria-hidden="true">
           <span className="slds-assistive-text">Row has errors</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>
         <span className="slds-row-number slds-text-body--small"></span>
       </td>
-      <Td aria-selected={props.checkSelected} className={className('', props.checkClass)}>
-        <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
-      </Td>
-      <th tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} scope="row" className={className('slds-cell-edit', props.thClassName)}>
+      <td role="gridcell" className={ className('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
+        <Checkbox label={ checkboxLabel } tabIndex={ !props.focusable ? '-1' : '0' } checkID="checkbox-01" />
+      </td>
+      <th scope="row" tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} className={className('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
-          <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
+          <a href="javascript:void()" className="slds-truncate" tabIndex={ !props.focusable ? '-1' : '0' } id={ props.linkId } title={ props.recordName }>
+            { props.recordName }
+          </a>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Name: ' + props.recordName } />
         </span>
       </th>
-      { props.children }
-      <Td>
+      { !props.children ?
+          <td role="gridcell" className="slds-cell-edit">
+            <span className="slds-grid slds-grid--align-spread">
+              <span className="slds-truncate" title={ props.accountName }>{ props.accountName }</span>
+              <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Account Name: ' + props.accountName } />
+            </span>
+          </td>
+        : props.children }
+      <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
+          <span className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Close Date: ' + props.closeDate } />
         </span>
-      </Td>
-      <Td>
+      </td>
+      <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title="jdoe@acme.com">jdoe@acme.com</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
+          <span className="slds-truncate" title={ props.stage }>{ props.stage }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Stage: ' + props.stage } />
         </span>
-      </Td>
-      <Td aria-readonly="true">
+      </td>
+      <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title="800-555-1212">800-555-1212</span>
-          <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
+          <span className="slds-truncate" title={ props.confidence }>{ props.confidence }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Confidence: ' + props.confidence } />
         </span>
-      </Td>
-      <Td>
+      </td>
+      <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title="Contacted">Contacted</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
+          <span className="slds-truncate" title={ props.amount }>{ props.amount }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Amount: ' + props.amount } />
         </span>
-      </Td>
-      <Td>
+      </td>
+      <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate slds-text-align--right" title="60%">60%</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
+          <span className="slds-truncate" title={ props.contact }>{ props.contact }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Contact: ' + props.contact } />
         </span>
-      </Td>
-      <Td>
+      </td>
+      <td role="gridcell" className="slds-cell-edit">
         <div className="slds-p-right--large">
           <ButtonIcon
-            className="slds-button--icon-border-filled slds-button--icon-x-small"
+            className="slds-button--icon-border slds-button--icon-x-small"
             iconClassName="slds-button__icon--hint slds-button__icon--small"
             symbol="down"
             assistiveText="Show More"
-            tabIndex={props.navigationModeTabIndex} />
+            tabIndex={ !props.focusable ? '-1' : '0' }
+          />
         </div>
-      </Td>
+      </td>
     </tr>
   );
 };
-
-let RowDataStatic = props =>
-  <tr className="slds-hint-parent">
-    <td id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
-      <button className="slds-hidden slds-button slds-button--icon slds-button--icon-error" tabIndex={props.navigationModeTabIndex} aria-hidden="true">
-        <span className="slds-assistive-text">Row has no errors</span>
-        <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
-      </button>
-      <span className="slds-row-number slds-text-body--small"></span>
-    </td>
-    <Td>
-      <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
-    </Td>
-    <th scope="row"className="slds-cell-edit">
-      <span className="slds-grid slds-grid--align-spread">
-        <a href="javascript:void()" className="slds-truncate" tabIndex={props.navigationModeTabIndex} title="John Dodecahedron">John Dodecahedron</a>
-        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Dodecahedron" />
-      </span>
-    </th>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate" title="Rohde Corp">Rohde Corp</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate" title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
-        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate" title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
-        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
-      </span>
-    </Td>
-    <Td aria-readonly="true">
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate" title="800-555-1212">800-555-1212</span>
-        <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate" title="New">New</span>
-        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread">
-        <span className="slds-truncate slds-text-align--right" title="20%">20%</span>
-        <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
-      </span>
-    </Td>
-    <Td>
-      <div className="slds-p-right--large">
-        <ButtonIcon
-          className="slds-button--icon-border-filled slds-button--icon-x-small"
-          iconClassName="slds-button__icon--hint slds-button__icon--small"
-          symbol="down"
-          assistiveText="Show More"
-          tabIndex={props.navigationModeTabIndex} />
-      </div>
-    </Td>
-  </tr>;
-
 
 //////////////////////////////////////////////
 // Export
@@ -254,43 +189,64 @@ let RowDataStatic = props =>
 
 export let states = [
   {
-    id: 'data-table-inline-edit',
+    id: 'default',
     label: 'Default',
     element:
       <Container>
         <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="-1" buttonInvisible="slds-hidden" thClassName="slds-has-focus">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                initialCellTabIndex={ (i===0) ? '0' : '-1' }
+                thClassName={ (i===0) ? 'slds-has-focus' : null }
+                buttonInvisible="slds-hidden"
+              />
+            )}
           </tbody>
         </Table>
       </Container>
   },
   {
-    id: 'data-table-inline-edit-with-link',
+    id: 'with-link',
     label: 'Cell focused - Link',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" thClassName="slds-has-focus" linkId="link-01" navigationModeTabIndex="0" defaultSelected="true">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                initialCellTabIndex={ (i===0) ? '0' : '-1' }
+                thClassName={ (i===0) ? 'slds-has-focus' : null }
+                buttonInvisible="slds-hidden"
+                focusable={ (i===0) ? true : null }
+                linkId={ (i===0) ? 'link-01' : null }
+                defaultSelected={ (i===0) ? true : null }
+              />
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -299,22 +255,33 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-checkbox',
+    id: 'checkbox',
     label: 'Cell focused - Checkbox',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" checkClass="slds-has-focus" checkSelected="true" navigationModeTabIndex="-1" defaultSelected="true">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                initialCellTabIndex={ (i===0) ? '0' : '-1' }
+                checkClass={ (i===0) ? 'slds-has-focus' : null }
+                checkSelected={ (i===0) ? true : null }
+                buttonInvisible="slds-hidden"
+                defaultSelected={ (i===0) ? true : null }
+              />
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -323,22 +290,38 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-focused',
+    id: 'focused',
     label: 'Cell focused',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td aria-selected="true" className="slds-has-focus">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden"
+                defaultSelected={ (i===0) ? true : null }>
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-focus">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
+                    </span>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -347,32 +330,47 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-basic',
+    id: 'edit',
     label: 'Cell edit',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-                <EditPanel>
-                  <div className="slds-form-element slds-grid">
-                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
-                      <span className="slds-assistive-text">Company</span>
-                    </label>
-                    <div className="slds-form-element__control slds-grow">
-                      <input id="company-01" className="slds-input" type="text" defaultValue="Acme Enterprises" />
-                    </div>
-                  </div>
-                </EditPanel>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden">
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
+                    </span>
+                    <EditPanel>
+                      <div className="slds-form-element slds-grid">
+                        <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                          <span className="slds-assistive-text">Company</span>
+                        </label>
+                        <div className="slds-form-element__control slds-grow">
+                          <input id="company-01" className="slds-input" type="text" defaultValue="Acme Enterprises" />
+                        </div>
+                      </div>
+                    </EditPanel>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -382,33 +380,48 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-required',
+    id: 'required',
     label: 'Cell edit — Required',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-                <EditPanel>
-                  <div className="slds-form-element slds-grid">
-                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
-                      <abbr className="slds-required" title="required">*</abbr>
-                      <span className="slds-assistive-text">Company</span>
-                    </label>
-                    <div className="slds-form-element__control slds-grow">
-                      <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme Enterprises" required />
-                    </div>
-                  </div>
-                </EditPanel>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden">
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
+                    </span>
+                    <EditPanel>
+                      <div className="slds-form-element slds-grid">
+                        <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                          <abbr className="slds-required" title="required">*</abbr>
+                          <span className="slds-assistive-text">Company</span>
+                        </label>
+                        <div className="slds-form-element__control slds-grow">
+                          <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme" required />
+                        </div>
+                      </div>
+                    </EditPanel>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -418,34 +431,49 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-error',
+    id: 'error',
     label: 'Cell edit — Error',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td aria-selected="true">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-                <EditPanel>
-                  <div className="slds-form-element slds-has-error slds-grid slds-wrap">
-                    <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
-                      <abbr className="slds-required" title="required">*</abbr>
-                      <span className="slds-assistive-text">Company</span>
-                    </label>
-                    <div className="slds-form-element__control slds-grow">
-                      <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme Enterprises" required aria-describedby="error-message-01" />
-                    </div>
-                  <div id="error-message-01" className="slds-form-element__help">This field is required</div>
-                  </div>
-                </EditPanel>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden">
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
+                    </span>
+                    <EditPanel>
+                      <div className="slds-form-element slds-has-error slds-grid slds-wrap">
+                        <label className="slds-form-element__label slds-form-element__label--edit slds-no-flex" htmlFor="company-01">
+                          <abbr className="slds-required" title="required">*</abbr>
+                          <span className="slds-assistive-text">Company</span>
+                        </label>
+                        <div className="slds-form-element__control slds-grow">
+                          <input id="company-01" className="slds-input input--required" type="text" defaultValue="Acme" required aria-describedby="error-message-01" />
+                        </div>
+                      <div id="error-message-01" className="slds-form-element__help">This field is required</div>
+                      </div>
+                    </EditPanel>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -455,43 +483,73 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-edited',
+    id: 'edited',
     label: 'Cell edited',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" buttonInvisible="slds-hidden" navigationModeTabIndex="-1">
-              <Td className="slds-is-edited">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden">
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-is-edited">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
+                    </span>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>
   },
   {
-    id: 'data-table-inline-edit-row-error',
+    id: 'row-error',
     label: 'Error - Row level on save',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Acme Enterprises" navigationModeTabIndex="-1">
-              <Td aria-selected="true" className="slds-has-error">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: {field error} Edited: Acme Enterprises" id="button-01" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible={ (i!=0) ? 'slds-hidden' : null }>
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: {field error} Edited: Acme" />
+                    </span>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
       </Container>,
@@ -500,66 +558,104 @@ export let states = [
     `
   },
   {
-    id: 'data-table-inline-edit-row-error-focus',
+    id: 'row-error-focused',
     label: 'Error indicator - Focused',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="-1" />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData editName="slds-has-focus" errorindex="0" title="Acme Enterprises" navigationModeTabIndex="-1">
-              <Td className="slds-has-error">
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="-1" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                editName={ (i===0) ? 'slds-has-focus' : null }
+                errorindex={ (i===0) ? '0' : null }
+                buttonInvisible={ (i!=0) ? 'slds-hidden' : null }>
+                { (i===0) ?
+                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
+                    <span className="slds-grid slds-grid--align-spread">
+                      <span className="slds-truncate" title="Acme">Acme</span>
+                      <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: {field error} Edited: Acme" />
+                    </span>
+                  </td>
+                : null }
+              </RowData>
+            )}
           </tbody>
         </Table>
         <ErrorPanel />
       </Container>
   },
   {
-    id: 'data-table-fixed-header-focus',
-    label: 'Header focused',
+    id: 'header-cell-focused',
+    label: 'Header cell focused',
     element:
       <Container>
         <Table>
-          <Thead navigationModeTabIndex="0"  thClassName="slds-has-focus" testClassName={TESTING ? 'slds-has-focus' : ''} />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th key={ i }
+                className={ (i===0) ? 'slds-has-focus' : null }
+                columnName={ columns[i] }
+                focusable
+                style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" testClassName={TESTING ? 'slds-has-focus' : ''}>
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden"
+              />
+            )}
           </tbody>
         </Table>
-        {TESTING ? <ErrorPanel /> : ''}
       </Container>
   },
   {
-    id: 'data-table-fixed-header-mark',
-    label: 'Header marked',
+    id: 'header-cell-marked',
+    label: 'Header cell marked',
     element:
       <Container>
         <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="0" thClassName="slds-has-focus" testClassName={TESTING ? 'slds-has-focus' : ''} />
+          <Thead>
+            { _.times(columns.length, i =>
+              <Th key={ i }
+                className={ (i===0) ? 'slds-has-focus' : null }
+                columnName={ columns[i] }
+                focusable
+                style={{ width: '8.75rem' }} />
+            )}
+          </Thead>
           <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" testClassName={TESTING ? 'slds-has-focus' : ''}>
-              <Td>
-                <span className="slds-grid slds-grid--align-spread">
-                  <span className="slds-truncate" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
+            { _.times(rows.length, i =>
+              <RowData key={ i }
+                recordName={ rows[i].recordName }
+                accountName={ rows[i].accountName }
+                closeDate={ rows[i].closeDate }
+                stage={ rows[i].stage }
+                confidence={ rows[i].confidence }
+                amount={ rows[i].amount }
+                contact={ rows[i].contact }
+                buttonInvisible="slds-hidden"
+              />
+            )}
           </tbody>
         </Table>
       </Container>

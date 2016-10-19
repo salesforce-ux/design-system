@@ -180,28 +180,24 @@
   }
 }
 
+// Inline Edit Table
+//
+// This class goes on the table and deals with some items inside
 .slds-table--edit {
 
   thead {
     background-color: $color-background-alt;
-
-    th {
-      position: static;
-
-      // @TODO - Wait to check this with Jason's fixed headers after merge
-      // &.slds-has-focus { // This is the focused state of headers
-      //   background-color: $color-background-alt;
-      //   box-shadow: $color-border-selection 0 0 0 1px inset;
-      // }
-    }
   }
 
   .slds-cell-error {
     padding-left: 0;
   }
 
+  // Check if slds-no-cell-focus is on the table element, if not then find
+  // our editable cell and make sure the focus style persists on row hover
   // scss-lint:disable SelectorDepth
   &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+
     &.slds-has-focus { // This is the focused state
       background-color: $color-background-alt;
       box-shadow: $color-border-selection 0 0 0 1px inset;
@@ -230,15 +226,14 @@
   }
 
   tbody {
-    transform: translateZ(0); // this makes the gpu handle the rendering when scrolling and speeds scrolling by 10-15 fps
-
+    // Start the counter
     tr {
       counter-increment: row-number;
     }
   }
 
   .slds-row-number {
-
+    // Add the counter number
     &:after {
       content: counter(row-number);
     }

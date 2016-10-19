@@ -11,9 +11,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 import _ from 'lodash';
+
+const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
+
+const rows = [{
+  'recordName': 'Acme - 1,200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '4/10/15',
+  'stage': 'Value Proposition',
+  'confidence': '30%',
+  'amount': '$25,000,000',
+  'contact': 'jrogers@acme.com'
+}, {
+  'recordName': 'Acme - 200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '1/31/15',
+  'stage': 'Prospecting',
+  'confidence': '60%',
+  'amount': '$5,000,000',
+  'contact': 'bob@acme.com'
+}, {
+  'recordName': 'salesforce.com - 1,000 Widgets',
+  'accountName': 'salesforce.com',
+  'closeDate': '1/31/15 3:45PM',
+  'stage': 'Id. Decision Makers',
+  'confidence': '70%',
+  'amount': '$25,000',
+  'contact': 'nathan@salesforce.com'
+}];
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -24,27 +53,27 @@ let Table = props =>
     {props.children}
   </table>;
 
-let Th = (props) => {
-  const rangeLabel = props.children + ' column width';
+export let Th = props => {
+
+  const uniqueId = _.uniqueId('cell-resize-handle-');
   let sortDirection;
   if (props['aria-sort']) {
     sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
   }
-  const uniqueId = _.uniqueId('cell-resize-handle-');
 
-  return(
-    <th {...props} aria-label={props.children}>
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
+  return (
+    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} aria-label={props.columnName}>
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={ !props.focusable ? '-1' : '0' }>
         <span className="slds-assistive-text">Sort </span>
-        <span className="slds-truncate" title={props.children}>{ props.children }</span>
+        <span className="slds-truncate" title={props.columnName || 'Column Name'}>{ props.columnName || 'Column Name' }</span>
         <div className="slds-icon_container">
           <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
         </div>
         <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
       </a>
       <div className="slds-resizable">
-        <label htmlFor={uniqueId} className="slds-assistive-text">{rangeLabel}</label>
-        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} />
+        <label htmlFor={uniqueId} className="slds-assistive-text">{ props.columnName || 'Column Name' } column width</label>
+        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ !props.focusable ? '-1' : '0' } />
         <span className="slds-resizable__handle">
           <span className="slds-resizable__divider"></span>
         </span>
@@ -53,41 +82,49 @@ let Th = (props) => {
   );
 };
 
-let Td = props =>
-  <td role="gridcell" {...props}>
-    { props.children }
-  </td>;
-
-let Checkbox = props =>
-  <label className="slds-checkbox">
-    <input type="checkbox" name="options" defaultChecked={props.checked} />
-    <span className="slds-checkbox--faux"></span>
-    <span className="slds-assistive-text">{props.label}</span>
-  </label>;
-
-let RowData = (props) => {
-  let checkboxLabel = 'Select row ' + props.title;
+let RowData = props => {
+  let checkboxLabel = 'Select row ' + props.accountName;
 
   return(
-    <tr className={className('slds-hint-parent', props.className)} aria-selected={props.checked}>
-      <Td className="slds-cell-shrink" data-label={checkboxLabel}><Checkbox label={checkboxLabel} checked={props.checked} /></Td>
-      <th scope="row" data-label="Opportunity Name"><div className="slds-truncate" title={props.title}>{props.title}</div></th>
-      <Td data-label="Account Name"><div className="slds-truncate" title="Cloudhub">Cloudhub</div></Td>
-      <Td data-label="Close Date"><div className="slds-truncate" title="4/14/2015">4/14/2015</div></Td>
-      <Td data-label="Prospecting"><div className="slds-truncate" title="Prospecting">Prospecting</div></Td>
-      <Td data-label="Confidence"><div className="slds-truncate" title="20%">20%</div></Td>
-      <Td data-label="Amount"><div className="slds-truncate" title="$25k">$25k</div></Td>
-      <Td data-label="Contact"><div className="slds-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div></Td>
-      <Td className="slds-cell-shrink" data-label="Actions">
+    <tr className={className('slds-hint-parent', props.className)} aria-selected={ props.checked }>
+      <td className="slds-cell-shrink" data-label={ checkboxLabel }>
+        <Checkbox label={ checkboxLabel } checked={ props.checked } hideLabel />
+      </td>
+      <th scope="row" data-label="Opportunity Name">
+        <div className="slds-truncate" title={ props.recordName }>
+          <a href="javascript:void(0);">{ props.recordName }</a>
+        </div>
+      </th>
+      <td role="gridcell" data-label="Account Name">
+        <div className="slds-truncate" title={ props.accountName }>{ props.accountName }</div>
+      </td>
+      <td role="gridcell" data-label="Close Date">
+        <div className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</div>
+      </td>
+      <td role="gridcell" data-label="Prospecting">
+        <div className="slds-truncate" title={ props.stage }>{ props.stage }</div>
+      </td>
+      <td role="gridcell" data-label="Confidence">
+        <div className="slds-truncate" title={ props.confidence }>{ props.confidence }</div>
+      </td>
+      <td role="gridcell" data-label="Amount">
+        <div className="slds-truncate" title={ props.amount }>{ props.amount }</div>
+      </td>
+      <td role="gridcell" data-label="Contact">
+        <div className="slds-truncate" title={ props.contact }><a href="javascript:void(0);">{ props.contact }</a></div>
+      </td>
+      <td role="gridcell" className="slds-cell-shrink" data-label="Actions">
         <ButtonIcon
           className="slds-button--icon-border slds-button--icon-x-small"
           iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
-          assistiveText="Show More" />
-      </Td>
+          assistiveText="Show More"
+        />
+      </td>
     </tr>
   );
 };
+
 
 
 //////////////////////////////////////////////
@@ -96,146 +133,203 @@ let RowData = (props) => {
 
 export let states = [
   {
-    id: 'data-table-advanced',
+    id: 'default',
     label: 'Default',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Cloudhub + Anypoint Connectors" />
+          { _.times(rows.length, i =>
+            <RowData key={ i }
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+            />
+          )}
         </tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-row-selected',
+    id: 'row-selected',
     label: 'Row Selected',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" indeterminate="true" checked /></th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" checked hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Cloudhub + Anypoint Connectors" className="slds-is-selected" checked />
+          { _.times(rows.length, i =>
+            <RowData key={ i }
+              className={ (i===1) ? 'slds-is-selected' : null }
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+              checked={ (i===1) ? true : null }
+            />
+          )}
         </tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-all-rows-selected',
+    id: 'all-row-selected',
     label: 'All Rows Selected',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" checked /></th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" checked hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th columnName={ columns[i] } key={ i } />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" className="slds-is-selected" checked />
-          <RowData title="Cloudhub + Anypoint Connectors" className="slds-is-selected" checked />
+          { _.times(rows.length, i =>
+            <RowData key={ i }
+              className="slds-is-selected"
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+              checked
+            />
+          )}
         </tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-sorted-column-asc',
+    id: 'sorted-column-asc',
     label: 'Sorted Ascending',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
-            <Th className="slds-is-sortable slds-is-resizable slds-is-sorted slds-is-sorted--asc" scope="col" aria-sort="ascending">Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th key={ i }
+                className={ (i===1) ? 'slds-is-sorted slds-is-sorted--asc' : null }
+                aria-sort={ (i===1) ? 'ascending' : null }
+                columnName={ columns[i] }
+              />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Anypoint Connectors" />
-          <RowData title="Cloudhub" />
+          { _.times(rows.length, i =>
+            <RowData key={ i }
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+            />
+          )}
         </tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-sorted-column-desc',
+    id: 'sorted-column-desc',
     label: 'Sorted Descending',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
-            <Th className="slds-is-sortable slds-is-resizable slds-is-sorted slds-is-sorted--desc" scope="col" aria-sort="descending">Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th key={ i }
+                className={ (i===1) ? 'slds-is-sorted slds-is-sorted--desc' : null }
+                aria-sort={ (i===1) ? 'descending' : null }
+                columnName={ columns[i] }
+              />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Anypoint Connectors" />
+          { _.reverse(_.times(rows.length, i =>
+            <RowData key={ i }
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+            />
+          ))}
         </tbody>
       </Table>
   },
   {
-    id: 'data-table-advanced-resized-column',
+    id: 'resized-column',
     label: 'Column resized',
     element:
       <Table className="slds-table--fixed-layout">
         <thead>
           <tr className="slds-text-title--caps">
-            <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" /></th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col" style={{ width: '300px' }}>Opportunity Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Account Name</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Close Date</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Stage</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Confidence</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Amount</Th>
-            <Th className="slds-is-sortable slds-is-resizable" scope="col">Contact</Th>
+            <th className="slds-cell-shrink" scope="col">
+              <Checkbox label="Select All" hideLabel />
+            </th>
+            { _.times(columns.length, i =>
+              <Th key={ i }
+                style={{ width: (i===0) ? '300px' : null }}
+                columnName={ columns[i] }
+              />
+            )}
             <th className="slds-cell-shrink" scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Anypoint Connectors" />
+          { _.times(rows.length, i =>
+            <RowData key={ i }
+              recordName={ rows[i].recordName }
+              accountName={ rows[i].accountName }
+              closeDate={ rows[i].closeDate }
+              stage={ rows[i].stage }
+              confidence={ rows[i].confidence }
+              amount={ rows[i].amount }
+              contact={ rows[i].contact }
+            />
+          )}
         </tbody>
       </Table>
   }

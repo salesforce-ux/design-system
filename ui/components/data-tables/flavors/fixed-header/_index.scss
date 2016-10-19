@@ -13,10 +13,11 @@
   padding-top: 2rem; // This matches the height of the hover state w/border
   border-top: $border-width-thin solid $color-border;
   background-color: $color-background-alt;
+  overflow: hidden;
 
-  &::before {
+  &:before {
     border-bottom: $border-width-thin solid $color-border;
-    content: ' ';
+    content: '';
     display: block;
     position: relative;
     width: 100%;

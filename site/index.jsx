@@ -13,7 +13,6 @@ import React from 'react';
 import CTALink from 'app_modules/site/components/cta-link';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
-import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
 import packageJSON from '../package.json';
 
@@ -31,7 +30,7 @@ let hero = (
         <h2 className="site-masthead--landing-tagline slds-m-bottom--xx-large">
           Create the world’s best enterprise app experiences.
         </h2>
-        <div className="slds-grid slds-grid--vertical-align-center slds-wrap slds-small-nowrap">
+        <div className="slds-grid slds-grid--vertical-align-center slds-wrap slds-small-nowrap site-masthead--landing-cta">
           <div className="site-cta-buttons">
             <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small text-no-wrap" eventType="downloads-top">Get Started</CTALink>
           </div>
@@ -40,18 +39,6 @@ let hero = (
           </div>
         </div>
       </div>
-    </div>
-    <div className="site-dreamforce-banner container--buffer">
-      <div className="site-dreamforce-title slds-m-bottom--xx-small">
-        Salesforce UX is at Dreamforce ’16! October 4-7 in San Francisco.
-      </div>
-      <span className="site-dreamforce-subtitle">
-        Visit us at Moscone West in Lightning Lookout and in the Developer Forest, or attend one of our <a href="http://dreamforce-ux.herokuapp.com">sessions</a>.
-        <img
-          className="site-dreamforce-astro"
-          src="/assets/images/landing/astro-lightning.svg"
-          alt="" />
-      </span>
     </div>
   </header>
 );

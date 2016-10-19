@@ -66,7 +66,7 @@ let Th = props => {
   }
 
   return (
-    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} aria-label={props.columnName} style={{ width: '8.75rem' }}>
+    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} scope="col" style={{ width: '8.75rem' }}>
       <div className="slds-cell-fixed" style={{ width: '8.75rem' }}>
         <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={ !props.focusable ? '-1' : '0' }>
           <span className="slds-assistive-text">Sort </span>

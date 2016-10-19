@@ -62,7 +62,7 @@ export let Th = props => {
   }
 
   return (
-    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} aria-label={props.columnName}>
+    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} scope="col">
       <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={ !props.focusable ? '-1' : '0' }>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={props.columnName || 'Column Name'}>{ props.columnName || 'Column Name' }</span>
@@ -90,30 +90,30 @@ let RowData = props => {
       <td className="slds-cell-shrink" data-label={ checkboxLabel }>
         <Checkbox label={ checkboxLabel } checked={ props.checked } hideLabel />
       </td>
-      <th scope="row" data-label="Opportunity Name">
+      <th scope="row">
         <div className="slds-truncate" title={ props.recordName }>
           <a href="javascript:void(0);">{ props.recordName }</a>
         </div>
       </th>
-      <td role="gridcell" data-label="Account Name">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.accountName }>{ props.accountName }</div>
       </td>
-      <td role="gridcell" data-label="Close Date">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</div>
       </td>
-      <td role="gridcell" data-label="Prospecting">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.stage }>{ props.stage }</div>
       </td>
-      <td role="gridcell" data-label="Confidence">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.confidence }>{ props.confidence }</div>
       </td>
-      <td role="gridcell" data-label="Amount">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.amount }>{ props.amount }</div>
       </td>
-      <td role="gridcell" data-label="Contact">
+      <td role="gridcell">
         <div className="slds-truncate" title={ props.contact }><a href="javascript:void(0);">{ props.contact }</a></div>
       </td>
-      <td role="gridcell" className="slds-cell-shrink" data-label="Actions">
+      <td role="gridcell" className="slds-cell-shrink">
         <ButtonIcon
           className="slds-button--icon-border slds-button--icon-x-small"
           iconClassName="slds-button__icon--hint slds-button__icon--small"

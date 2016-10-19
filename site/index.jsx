@@ -13,7 +13,6 @@ import React from 'react';
 import CTALink from 'app_modules/site/components/cta-link';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
-import DynamicShapes from 'app_modules/site/components/dynamic-shapes';
 import globals from 'app_modules/global';
 import packageJSON from '../package.json';
 

@@ -145,7 +145,7 @@ class FAQ extends React.Component {
       </div>
     );
 
-    let compactVersion = `${g.abbreviatedName.toLowerCase()}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
+    let compactVersion = `${g.abbreviatedName}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
     this.addContentItem(
       'How do I link to Visualforce static resources like stylesheets and icons?',
       <div>

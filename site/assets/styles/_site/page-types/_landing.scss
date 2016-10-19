@@ -44,6 +44,7 @@
   @include mq-medium-min {
     padding: {
       top: $spacing-x-large;
+      bottom: $spacing-xx-large;
     }
   }
 
@@ -66,6 +67,10 @@
       font-size: rem(56px);
     }
 
+    @include mq-medium-max {
+      text-align: center;
+    }
+
     @include mq-medium-min {
       font-size: $site-font-size-xxx-large;
     }
@@ -85,6 +90,10 @@
 
   &-tagline {
     font-size: $font-size-xx-large;
+
+    @include mq-medium-max {
+      text-align: center;
+    }
   }
 
   &-logo {
@@ -95,45 +104,10 @@
       margin: $spacing-large $spacing-x-large 0 0;
     }
   }
-}
 
-// Dreamforce
-.site-dreamforce {
-
-  &-banner {
-    position: relative;
-    padding-right: 150px;
-    background: $color-background-alt-inverse;
-    margin: $spacing-large ($spacing-large * -1) ($spacing-large * -1);
-
-    @include mq-large-min {
-      margin-left: (($spacing-x-large * 3) * -1);
-    }
-  }
-
-  &-astro {
-    position: absolute;
-    bottom: -50px;
-    left: 100%;
-    max-width: none;
-    height: 180px;
-    animation: floater-1 10s linear 0.5s infinite;
-  }
-
-  &-title {
-    font-size: $site-font-size-large;
-  }
-
-  &-subtitle {
-    position: relative;
-    display: inline-block;
-    font-size: $site-font-size-medium;
-    color: rgba(255, 255, 255, 0.6) !important;
-    a {
-      color: rgba(255, 255, 255, 0.7) !important;
-      &:hover {
-        color: rgba(255, 255, 255, 0.9) !important;
-      }
+  &-cta {
+    @include mq-medium-max {
+      justify-content: center;
     }
   }
 }
@@ -261,24 +235,6 @@
   }
   &--dark-blue {
     @include gradient-horizontal(#284f8a, #16325c)
-  }
-}
-
-// CTA Buttons
-// - centered / full-width on mobile
-// - horizontally aligned with space in between on larger screens
-.site-cta-buttons {
-  margin-left: -1 * ($spacing-medium / 2);
-  margin-right: -1 * ($spacing-medium / 2);
-
-  .#{$css-prefix}button {
-    margin-left: ($spacing-medium / 2);
-    margin-right: ($spacing-medium / 2);
-
-    @include mq-x-small-max {
-      display: block;
-      margin-bottom: $spacing-small;
-    }
   }
 }
 

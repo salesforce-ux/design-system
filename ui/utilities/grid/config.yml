@@ -18,3 +18,6 @@ flavors:
   - containers
 dependencies:
   - helpers/sizing
+lightning:
+  namespace: lightning:layout
+  url: https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm

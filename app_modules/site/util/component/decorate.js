@@ -18,64 +18,6 @@ import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/sit
 
 import globals from 'app_modules/global';
 
-let lightningComponents = [{
-  component: 'badges',
-  namespace: 'lightning:badge',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.html'
-},{
-  component: 'buttons',
-  namespace: 'lightning:button',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm'
-},{
-  component: 'button-groups',
-  namespace: 'lightning:buttonGroup',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm'
-},{
-  component: 'button-icons',
-  namespace: 'lightning:buttonIcon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm'
-}, {
-  component: 'menus',
-  flavor: 'dropdown',
-  namespace: 'lightning:buttonMenu',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm'
-}, {
-  component: 'cards',
-  namespace: 'lightning:card',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_card.htm'
-}, {
-  component: 'icons',
-  namespace: 'lightning:icon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm'
-}, {
-  component: 'forms',
-  flavor: 'input',
-  namespace: 'lightning:input',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm'
-}, {
-  component: 'forms',
-  flavor: 'select',
-  namespace: 'lightning:select',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_select.htm'
-}, {
-  component: 'forms',
-  flavor: 'textarea',
-  namespace: 'lightning:textarea',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm'
-}, {
-  component: 'grid',
-  namespace: 'lightning:layout',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm'
-}, {
-  component: 'spinners',
-  namespace: 'lightning:spinner',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm'
-}, {
-  component: 'tabs',
-  namespace: 'lightning:tabset',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm'
-}];
-
 /**
  * Check of a directory has a file of a specified type
  *
@@ -131,20 +73,6 @@ const addInfo = component => {
   });
 };
 
-const addLightning = (component) => {
-  let lightning = _.find(lightningComponents, { component: component.id });
-  if (!lightning) return;
-  if (!_.has(lightning, 'flavor')) {
-    component.lightning = lightning;
-  }
-  component.flavors.forEach(flavor => {
-    flavor.lightning = _.find(lightningComponents, {
-      component: component.id,
-      flavor: flavor.id
-    });
-  });
-};
-
 /**
  * Create a new component definition
  *
@@ -153,7 +81,6 @@ const addLightning = (component) => {
  */
 export default component => {
   addInfo(component);
-  addLightning(component);
   component.flavors.forEach(flavor => {
     _.defaults(flavor, {
       showFormFactors: [],

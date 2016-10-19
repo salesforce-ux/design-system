@@ -5,3 +5,6 @@ flavors:
   - icon-colors
   - background-colors
   - sizes
+lightning:
+  namespace: lightning:icon
+  url: https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm

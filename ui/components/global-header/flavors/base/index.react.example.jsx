@@ -70,6 +70,14 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null)}>
+          <ButtonIcon
+            className={ className('slds-button--icon slds-button--icon-container slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null) }
+            iconClassName="slds-global-header__icon"
+            hasPopup
+            symbol="favorite"
+            assistiveText="View Favorites" />
+        </li>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-around--xx-small', props.actions ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-global-header__button--icon-actions"
@@ -122,7 +130,7 @@ export let GlobalHeader = props =>
 
 export let states = [
   {
-    id: 'global-header',
+    id: 'default',
     label: 'Default',
     element:
       <div className="demo-only" style={{ height: '60px' }}>
@@ -130,7 +138,15 @@ export let states = [
       </div>
   },
   {
-    id: 'global-header-actions-active',
+    id: 'favorites-selected',
+    label: 'Favorites selected',
+    element:
+      <div className="demo-only" style={{ height: '190px' }}>
+        <GlobalHeader favoritesSelected />
+      </div>
+  },
+  {
+    id: 'actions-active',
     label: 'Global actions active',
     element:
       <div className="demo-only" style={{ height: '190px' }}>

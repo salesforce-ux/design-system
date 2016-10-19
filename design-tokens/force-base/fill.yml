@@ -8,6 +8,15 @@ global:
 imports:
 - ./aliases/color.yml
 props:
+  FILL_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Brand fill color'
+  FILL_BRAND_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: 'Brand hover fill color'
+  FILL_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    comment: 'Brand active fill color'
   FILL_HEADER_BUTTON:
     value: '{!CASPER}'
     comment: 'Header button icon color'

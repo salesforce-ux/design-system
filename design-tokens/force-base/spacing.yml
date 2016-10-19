@@ -13,10 +13,15 @@ global:
   - '*width'
   - '*height'
   - box-shadow
+  - stroke
 props:
   BORDER_WIDTH_THIN:
     value: 1px
   BORDER_WIDTH_THICK:
+    value: 2px
+  BORDER_STROKE_WIDTH_THIN:
+    value: 1px
+  BORDER_STROKE_WIDTH_THICK:
     value: 2px
   SPACING_NONE:
     value: '0'

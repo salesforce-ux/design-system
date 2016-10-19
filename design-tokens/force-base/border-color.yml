@@ -146,3 +146,28 @@ props:
   COLOR_BORDER_TOGGLE_CHECKED:
     value: '{!WHITE}'
     comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
+  COLOR_STROKE_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Our product brand blue.
+  COLOR_STROKE_BRAND_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Hover stroke color for our product brand blue.
+  COLOR_STROKE_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    cssProperties:
+    - stroke
+    comment: Active stroke color for our product brand blue.
+  COLOR_STROKE_DISABLED:
+    value: '{!STEAM}'
+    cssProperties:
+    - stroke
+    comment: Disabled stroke color.
+  COLOR_STROKE_HEADER_BUTTON:
+    value: '{!CASPER}'
+    cssProperties:
+    - stroke
+    comment: Stroke color for our global header buttons.

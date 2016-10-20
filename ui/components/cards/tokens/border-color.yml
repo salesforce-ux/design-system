@@ -1,0 +1,12 @@
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  CARD_COLOR_BORDER:
+    value: '{!GEYSER}'
+    comment: Default border color for card component.

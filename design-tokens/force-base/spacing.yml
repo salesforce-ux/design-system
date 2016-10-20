@@ -14,6 +14,8 @@ global:
   - '*height'
   - box-shadow
   - stroke
+imports:
+- ./aliases/spacing.yml
 props:
   BORDER_WIDTH_THIN:
     value: 1px
@@ -24,20 +26,20 @@ props:
   BORDER_STROKE_WIDTH_THICK:
     value: 2px
   SPACING_NONE:
-    value: '0'
+    value: '{!SPACING_NONE}'
   SPACING_XXX_SMALL:
-    value: 0.125rem
+    value: '{!SPACING_XXX_SMALL}'
   SPACING_XX_SMALL:
-    value: 0.25rem
+    value: '{!SPACING_XX_SMALL}'
   SPACING_X_SMALL:
-    value: 0.5rem
+    value: '{!SPACING_X_SMALL}'
   SPACING_SMALL:
-    value: 0.75rem
+    value: '{!SPACING_SMALL}'
   SPACING_MEDIUM:
-    value: 1rem
+    value: '{!SPACING_MEDIUM}'
   SPACING_LARGE:
-    value: 1.5rem
+    value: '{!SPACING_LARGE}'
   SPACING_X_LARGE:
-    value: 2rem
+    value: '{!SPACING_X_LARGE}'
   SPACING_XX_LARGE:
-    value: 3rem
+    value: '{!SPACING_XX_LARGE}'

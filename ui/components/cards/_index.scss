@@ -11,29 +11,29 @@
 .slds-card {
   padding: 0;
   background: $card-color-background;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
 
   + .slds-card {
-    margin-top: $spacing-medium;
+    margin-top: $card-spacing-medium;
   }
 
   &__header,
   &__footer,
   &__body--inner {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-left: $card-spacing-small;
+    padding-right: $card-spacing-small;
 
     @include mq-large-min {
-      padding-left: $spacing-large;
-      padding-right: $spacing-large;
+      padding-left: $card-spacing-large;
+      padding-right: $card-spacing-large;
     }
   }
 
   &__header {
-    padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
+    padding-top: $card-spacing-small;
+    margin-bottom: $card-spacing-small;
   }
 
   &__header-link {
@@ -41,7 +41,7 @@
   }
 
   &__body {
-    margin-bottom: $spacing-small;
+    margin-bottom: $card-spacing-small;
   }
 
   &__body:empty,
@@ -50,28 +50,28 @@
   }
 
   &__footer {
-    margin-top: $spacing-small;
-    padding-bottom: $spacing-small;
+    margin-top: $card-spacing-small;
+    padding-bottom: $card-spacing-small;
     text-align: right;
   }
 
   &--narrow {
 
     .slds-card__header {
-      padding-top: $spacing-small;
-      margin-bottom: $spacing-small;
+      padding-top: $card-spacing-small;
+      margin-bottom: $card-spacing-small;
 
       @include mq-large-min {
-        padding-top: $spacing-large;
-        margin-bottom: $spacing-large;
+        padding-top: $card-spacing-large;
+        margin-bottom: $card-spacing-large;
       }
     }
 
     .slds-card__footer {
-      padding-bottom: $spacing-small;
+      padding-bottom: $card-spacing-small;
 
       @include mq-large-min {
-        padding-bottom: $spacing-medium;
+        padding-bottom: $card-spacing-medium;
       }
     }
   }

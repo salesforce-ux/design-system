@@ -110,7 +110,7 @@
 // Requires .slds-th__action inside the <th>
 .slds-has-focus .slds-th__action {
   background-color: $color-background-alt;
-  box-shadow: $color-border-selection 0 0 0 1px inset
+  box-shadow: $color-border-selection 0 0 0 1px inset;
 }
 
 // Handles focus for resizable columns

@@ -72,6 +72,8 @@ The following tokens have been add/removed/deprecated in this release:
 - Added `force-base/fill.json`
   - Added token `FILL_HEADER_BUTTON`    
   - Added token `FILL_HEADER_BUTTON_HOVER`
+- Added `force-base/text-transform.json`
+  - Added token `TEXT_TRANSFORM`
 - Added token: `FONT_FAMILY_TEXT`
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND`

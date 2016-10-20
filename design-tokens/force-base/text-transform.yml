@@ -1,0 +1,9 @@
+global:
+  type: text-transform
+  category: text-transform
+  cssProperties:
+  - text-transform
+props:
+  TEXT_TRANSFORM:
+    value: 'none'
+    comment: Default value for text-transform

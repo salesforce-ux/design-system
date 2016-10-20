@@ -11,6 +11,7 @@ imports:
 - ./force-base/background-color.yml
 - ./force-base/box-shadow.yml
 - ./force-base/text-color.yml
+- ./force-base/text-transform.yml
 - ./force-base/opacity.yml
 - ./force-base/duration.yml
 - ./force-base/z-index.yml

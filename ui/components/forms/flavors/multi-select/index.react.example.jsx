@@ -24,7 +24,7 @@ const MultiSelect = (props) => {
       <div className="slds-assistive-text" id="dragLiveRegion" aria-live="assertive">{ props.dataSet.liveRegionText }</div>
       <div className="slds-assistive-text" id="optionDragLabel">{ props.dataSet.optionDragLabel }</div>
       <SelectionGroup group={ props.dataSet.selectionGroups[0] }></SelectionGroup>
-      <MoveButtons direction="horizontal"></MoveButtons>
+      <MoveButtons direction="horizontal" targetA={ props.dataSet.selectionGroups[0].label } targetB={ props.dataSet.selectionGroups[1].label }></MoveButtons>
       <SelectionGroup group={ props.dataSet.selectionGroups[1] }></SelectionGroup>
       <MoveButtons direction="vertical"></MoveButtons>
     </div>
@@ -35,11 +35,11 @@ const MoveButtons = props =>
   <div className="slds-grid slds-grid--vertical">
     <button className="slds-button slds-button--icon-container">
       <SvgIcon className="slds-button__icon" sprite="utility" symbol={ (props.direction === 'vertical') ? 'up' : 'right' } />
-      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Up' : 'Right' }</span>
+      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB }</span>
     </button>
     <button className="slds-button slds-button--icon-container">
       <SvgIcon className="slds-button__icon" sprite="utility" symbol={ (props.direction === 'vertical') ? 'down' : 'left' } />
-      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Down' : 'Left' }</span>
+      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA }</span>
     </button>
   </div>;
 

@@ -104,19 +104,5 @@ export let states = [
           <RowData title="Cloudhub + Anypoint Connectors" />
         </tbody>
       </Table>
-  },
-  {
-    id: 'data-table-fixed-layout',
-    label: 'With a fixed layout',
-    element:
-      <Table className="slds-table--fixed-layout">
-        <thead>
-          <HeadRowData />
-        </thead>
-        <tbody>
-          <RowData title="Short name" />
-          <RowData title="Long names get truncated" />
-        </tbody>
-      </Table>
   }
 ];

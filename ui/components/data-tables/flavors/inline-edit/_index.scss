@@ -45,31 +45,103 @@
   display: none;
 }
 
-.slds-has-focus {
+// Inline Edit Table
+//
+// This class goes on the table and deals with some items inside
+.slds-table--edit {
 
-  .slds-th__action {
+  thead {
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+
+  .slds-cell-error {
+    padding-left: 0;
+  }
+
+  // Check if slds-no-cell-focus is on the table element, if not then find
+  // our editable cell and make sure the focus style persists on row hover
+  // scss-lint:disable SelectorDepth
+  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
+  &.slds-table tbody tr:hover > .slds-cell-edit {
+
+    &:hover {
+      background-color: $color-background-alt;
+    }
+
+    &.slds-is-edited {
+      background-color: $color-background-highlight;
+    }
+
+    &.slds-has-error {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+
+  .slds-button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
+
+  tbody {
+    // Start the counter
+    tr {
+      counter-increment: row-number;
+    }
+  }
+
+  .slds-row-number {
+    // Add the counter number
+    &:after {
+      content: counter(row-number);
+    }
   }
 }
 
-.slds-is-resizable.slds-has-focus {
-
-  .slds-th__action {
-    background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
-  }
+// Table Heading cell focus styles
+//
+// Requires .slds-th__action inside the <th>
+.slds-has-focus .slds-th__action {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset;
 }
 
+// Handles focus for resizable columns
+.slds-has-focus.slds-is-resizable .slds-th__action,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus,
+.slds-has-focus.slds-is-resizable .slds-th__action:hover,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
+.slds-is-resizable .slds-th__action:focus,
+.slds-is-resizable .slds-th__action:focus:hover {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
+}
+
+// .slds-no-cell-focus is applied to the table element
+//
+// Handles children of the table where we don't want any focusable cells
 .slds-no-cell-focus {
 
+  // Target the .slds-has-focus class on our <th>
   .slds-has-focus {
 
-    .slds-th__action {
+    .slds-th__action,
+    .slds-th__action:hover,
+    .slds-th__action:focus,
+    .slds-th__action:focus:hover {
+      color: inherit;
       background-color: $color-background;
       box-shadow: none;
     }
 
+    // Handle the difference on resizeable columns
     &.slds-is-resizable:hover .slds-th__action {
       background-color: $color-background;
       box-shadow: $color-border -0.25rem 0 0 inset;
@@ -77,7 +149,6 @@
   }
 
   .slds-is-sortable.slds-has-focus {
-    color: inherit;
 
     .slds-is-sortable__icon {
       display: none;
@@ -92,7 +163,7 @@
     }
   }
 
-  .slds-has-focus:hover {
+  thead .slds-has-focus:hover {
     color: $color-text-link;
 
     .slds-is-sortable__icon {
@@ -133,15 +204,13 @@
   }
 }
 
-
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
 
-
   .slds-cell-edit__button {
-      @include square($square-icon-utility-medium);
-      flex-shrink: 0;
-    }
+    @include square($square-icon-utility-medium);
+    flex-shrink: 0;
+  }
 
   &.slds-has-focus { // This is the focused state
     background-color: $color-background-alt;
@@ -176,71 +245,6 @@
     &:hover {
       background-color: $color-background-highlight;
       box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
-    }
-  }
-}
-
-.slds-table--edit {
-
-  thead {
-    background-color: $color-background-alt;
-
-    th {
-      position: static;
-
-      // @TODO - Wait to check this with Jason's fixed headers after merge
-      // &.slds-has-focus { // This is the focused state of headers
-      //   background-color: $color-background-alt;
-      //   box-shadow: $color-border-selection 0 0 0 1px inset;
-      // }
-    }
-  }
-
-  .slds-cell-error {
-    padding-left: 0;
-  }
-
-  // scss-lint:disable SelectorDepth
-  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
-    &.slds-has-focus { // This is the focused state
-      background-color: $color-background-alt;
-      box-shadow: $color-border-selection 0 0 0 1px inset;
-    }
-  }
-
-  // scss-lint:disable SelectorDepth
-  &.slds-table tbody tr:hover > .slds-cell-edit {
-
-    &:hover {
-      background-color: $color-background-alt;
-    }
-
-    &.slds-is-edited {
-      background-color: $color-background-highlight;
-    }
-
-    &.slds-has-error {
-      background-color: $color-background-highlight;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
-    }
-  }
-
-  .slds-button__icon--edit:focus {
-    fill: $color-text-brand;
-  }
-
-  tbody {
-    transform: translateZ(0); // this makes the gpu handle the rendering when scrolling and speeds scrolling by 10-15 fps
-
-    tr {
-      counter-increment: row-number;
-    }
-  }
-
-  .slds-row-number {
-
-    &:after {
-      content: counter(row-number);
     }
   }
 }

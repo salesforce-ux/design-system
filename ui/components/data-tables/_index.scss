@@ -24,6 +24,10 @@
   // Table Heading Cells
   th {
     font-weight: $font-weight-regular;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   // Default Table Row Hover
@@ -132,35 +136,20 @@
   }
 }
 
-// Applies move cursor to moveable cell
-th.slds-is-sortable {
-  cursor: pointer;
-  padding: 0; // Reset padding so actionable link bleeds to edge
+// If the column is sortable than lets handle the actionable region of the <th> cell
+.slds-is-sortable {
 
-  @include deprecate('4.0.0', 'The entire cell is hyperlinked now, no need for the button') {
-    .slds-button {
-      visibility: hidden;
-      margin-left: $spacing-x-small;
-    }
+  .slds-th__action:hover,
+  .slds-th__action:focus,
+  &.slds-has-focus .slds-th__action,
+  &.slds-has-focus .slds-th__action:hover,
+  &.slds-has-focus .slds-th__action:focus {
+    background-color: $color-background-row-hover;
+    color: $color-text-link;
 
-    .slds-button__icon {
+    .slds-icon {
+      display: inline-block;
       fill: $color-text-link;
-    }
-
-    .slds-th__action:focus,
-    &:hover,
-    &.slds-has-focus {
-      background-color: $color-background-row-hover;
-      color: $color-text-link;
-
-      .slds-button {
-        visibility: visible;
-      }
-
-      .slds-is-sortable__icon {
-        display: inline-block;
-        fill: $color-text-link;
-      }
     }
   }
 }
@@ -175,6 +164,10 @@ th.slds-is-sortable {
   &:hover {
     outline: 0;
     background-color: $color-background-row-hover;
+  }
+
+  &--form {
+    display: inline-flex; // Allows for alignment of form element, such as a checkbox
   }
 }
 
@@ -200,6 +193,7 @@ th.slds-is-sortable {
 
 // Provide an indicator that resizing is available
 .slds-is-resizable {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 
   .slds-th__action:hover,
   .slds-th__action:focus {
@@ -253,6 +247,10 @@ th.slds-is-sortable {
 
   thead {
     background-color: $color-background-alt;
+
+    th {
+      padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
+    }
   }
 
   .slds-cell-shrink {

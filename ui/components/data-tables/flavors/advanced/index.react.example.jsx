@@ -62,8 +62,8 @@ export let Th = props => {
   }
 
   return (
-    <th {...props} className={className('slds-is-sortable slds-is-resizable', props.className)} scope="col">
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset slds-text-title--caps" tabIndex={ !props.focusable ? '-1' : '0' }>
+    <th {...props} className={className('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={props.columnName || 'Column Name'}>{ props.columnName || 'Column Name' }</span>
         <div className="slds-icon_container">

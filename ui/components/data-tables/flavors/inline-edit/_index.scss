@@ -136,6 +136,7 @@
     .slds-th__action:hover,
     .slds-th__action:focus,
     .slds-th__action:focus:hover {
+      color: inherit;
       background-color: $color-background;
       box-shadow: none;
     }
@@ -148,7 +149,6 @@
   }
 
   .slds-is-sortable.slds-has-focus {
-    color: inherit;
 
     .slds-is-sortable__icon {
       display: none;
@@ -163,7 +163,7 @@
     }
   }
 
-  .slds-has-focus:hover {
+  thead .slds-has-focus:hover {
     color: $color-text-link;
 
     .slds-is-sortable__icon {

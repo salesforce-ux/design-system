@@ -87,7 +87,7 @@ const Option = props =>
 
 const DefaultSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press spacebar to move within list',
+  'optionDragLabel': 'Press space bar to move within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -139,7 +139,7 @@ const DefaultSnapShot = {
 
 const SelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press spacebar to move within list',
+  'optionDragLabel': 'Press space bar to move within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -191,7 +191,7 @@ const SelectedSnapShot = {
 
 const MultiSelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press spacebar to move within list',
+  'optionDragLabel': 'Press space bar to move within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -347,7 +347,7 @@ const MovedInSnapShot = {
 
 const DroppedSnapShot = {
   'liveRegionText': 'Option 3: final position 2 of 4.',
-  'optionDragLabel': 'Press spacebar to move within list',
+  'optionDragLabel': 'Press space bar to move within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -399,7 +399,7 @@ const DroppedSnapShot = {
 
 const MoveToSnapShot = {
   'liveRegionText': 'Option 3: Moved to Second Category.',
-  'optionDragLabel': 'Press spacebar to move within list',
+  'optionDragLabel': 'Press space bar to move within the list',
   'selectionGroups': [
     {
       'label': 'First Category',

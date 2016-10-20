@@ -108,25 +108,39 @@
 // Table Heading cell focus styles
 //
 // Requires .slds-th__action inside the <th>
-th.slds-has-focus .slds-th__action,
-th.slds-has-focus .slds-th__action:focus,
-th.slds-has-focus .slds-th__action:hover,
-th.slds-has-focus .slds-th__action:focus:hover,
-th.slds-is-resizable .slds-th__action:focus,
-th.slds-is-resizable .slds-th__action:focus:hover {
+.slds-has-focus .slds-th__action {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset
+}
+
+// Handles focus for resizable columns
+.slds-has-focus.slds-is-resizable .slds-th__action,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus,
+.slds-has-focus.slds-is-resizable .slds-th__action:hover,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
+.slds-is-resizable .slds-th__action:focus,
+.slds-is-resizable .slds-th__action:focus:hover {
   background-color: $color-background-alt;
   box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
 }
 
+// .slds-no-cell-focus is applied to the table element
+//
+// Handles children of the table where we don't want any focusable cells
 .slds-no-cell-focus {
 
+  // Target the .slds-has-focus class on our <th>
   .slds-has-focus {
 
-    .slds-th__action {
+    .slds-th__action,
+    .slds-th__action:hover,
+    .slds-th__action:focus,
+    .slds-th__action:focus:hover {
       background-color: $color-background;
       box-shadow: none;
     }
 
+    // Handle the difference on resizeable columns
     &.slds-is-resizable:hover .slds-th__action {
       background-color: $color-background;
       box-shadow: $color-border -0.25rem 0 0 inset;
@@ -193,11 +207,10 @@ th.slds-is-resizable .slds-th__action:focus:hover {
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
 
-
   .slds-cell-edit__button {
-      @include square($square-icon-utility-medium);
-      flex-shrink: 0;
-    }
+    @include square($square-icon-utility-medium);
+    flex-shrink: 0;
+  }
 
   &.slds-has-focus { // This is the focused state
     background-color: $color-background-alt;

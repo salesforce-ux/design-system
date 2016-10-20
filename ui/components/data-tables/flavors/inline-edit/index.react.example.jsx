@@ -177,7 +177,7 @@ export let RowData = props => {
       <td role="gridcell" className="slds-cell-edit">
         <div className="slds-p-right--medium">
           <ButtonIcon
-            className="slds-button--icon-border slds-button--icon-x-small"
+            className="slds-button--icon-border-filled slds-button--icon-x-small"
             iconClassName="slds-button__icon--hint slds-button__icon--small"
             symbol="down"
             assistiveText="Show More"

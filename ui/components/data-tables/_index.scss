@@ -24,6 +24,10 @@
   // Table Heading Cells
   th {
     font-weight: $font-weight-regular;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   // Default Table Row Hover

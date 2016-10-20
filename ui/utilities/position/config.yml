@@ -2,4 +2,5 @@ status: 'dev-ready'
 flavors:
   - relative
   - fixed
+  - absolute
   - static

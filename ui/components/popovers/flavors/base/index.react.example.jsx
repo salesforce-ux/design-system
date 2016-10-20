@@ -30,7 +30,7 @@ export let Popover = props =>
 
 export let states = [
   {
-    id: 'popover',
+    id: 'default',
     label: 'Default',
     element:
       <div className="slds-popover slds-nubbin--left" role="dialog">
@@ -40,8 +40,8 @@ export let states = [
       </div>
   },
   {
-    id: 'popover-close',
-    label: 'Close',
+    id: 'with-close',
+    label: 'With Close',
     element:
       <div className="slds-popover slds-nubbin--left" role="dialog">
         <ButtonIcon className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" />
@@ -51,8 +51,21 @@ export let states = [
       </div>
   },
   {
-    id: 'popover-footer',
-    label: 'Footer',
+    id: 'header',
+    label: 'With Header',
+    element:
+      <div className="slds-popover slds-nubbin--left" role="dialog">
+        <header className="slds-popover__header">
+          Header
+        </header>
+        <div className="slds-popover__body slds-scrollable--y" style={{ height: '200px' }}>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+  },
+  {
+    id: 'footer',
+    label: 'With Footer',
     element:
       <div className="slds-popover slds-nubbin--left" role="dialog">
         <div className="slds-popover__body slds-scrollable--y" style={{ height: '200px' }}>

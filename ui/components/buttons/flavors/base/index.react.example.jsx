@@ -151,5 +151,10 @@ export let states = [
     id: 'button-inverse-disabled',
     label: 'Inverse disabled',
     element: <InverseDisabled />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Button className="slds-button--success">Button Success</Button>
   }
 ];

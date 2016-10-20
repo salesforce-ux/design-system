@@ -21,6 +21,8 @@ The following components are now available:
 - Added Global Header Notifications - [Global Header Notifications](/components/global/#flavor-notifications)
 - Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
+- Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
+- Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
 
 **ADDED**
 
@@ -98,6 +100,9 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `FILL_BRAND_ACTIVE`
 - Added token: `BORDER_STROKE_WIDTH_THIN`
 - Added token: `BORDER_STROKE_WIDTH_THICK`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE`
 - Added alias: `SANS_SERIF`
 - Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`

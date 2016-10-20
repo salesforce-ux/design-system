@@ -19,9 +19,19 @@ import className from 'classnames';
 
 export let Popover = props =>
   <div className={className('slds-popover', props.className)} role="dialog">
+    { props.header ?
+      <header className="slds-popover__header">
+        { props.header }
+      </header>
+    : null }
     <div className="slds-popover__body">
       {props.children}
     </div>
+    { props.footer ?
+      <footer className="slds-popover__footer">
+        { props.footer }
+      </footer>
+    : null}
   </div>;
 
 //////////////////////////////////////////////

@@ -244,3 +244,12 @@ props:
   COLOR_BACKGROUND_WARNING:
     value: '{!KOROMIKO}'
     comment: Color for UI elements that have to do with warning.
+  COLOR_BACKGROUND_BUTTON_SUCCESS:
+    value: '{!EMERALD}'
+    comment: Background color for success buttons
+  COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER:
+    value: '{!SALEM}'
+    comment: Hovered background color for success buttons
+  COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE:
+    value: '{!SALEM}'
+    comment: Active background color for success buttons

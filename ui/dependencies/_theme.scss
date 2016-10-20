@@ -72,7 +72,7 @@
 /// The inverse-text mixin determines what selectors to change when on an inversed background
 ///
 /// @param {List} $support (null) - Set to `true` to scope root styles in the mixin's wrapper class when `$globals` is `true`
-@mixin inverse-text($support) {
+@mixin inverse-text($support: null) {
   $link-selector: 'a';
 
   @for $i from 1 through length($support) {
@@ -84,6 +84,14 @@
     }
     @else if nth($support, $i) == 'buttons' {
       $link-selector: 'a:not(.slds-button--neutral)';
+    }
+    @else if nth($support, $i) == 'borders' {
+      border-color: $color-border-inverse;
+    }
+    @else if nth($support, $i) == 'icons' {
+      .slds-icon {
+        fill: currentColor;
+      }
     }
   }
 

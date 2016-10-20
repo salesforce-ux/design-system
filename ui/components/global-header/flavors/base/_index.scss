@@ -7,12 +7,12 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 .slds-global-header_container {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: $z-index-sticky;
 
   // Position for when assistive text becomes into focus
   .slds-assistive-text--focus {
@@ -25,6 +25,7 @@
   background: $color-background-alt;
   box-shadow: $shadow-header;
   padding: $spacing-x-small 0;
+  height: $height-header;
   align-items: center;
 
   &__item {
@@ -42,31 +43,89 @@
 
   &__button--icon {
     margin: 0 $spacing-xxx-small;
-    color: $color-text-icon-utility;
+    color: $fill-header-button;
+
+    .slds-icon {
+      fill: $fill-header-button; // backwards compatible for old implementations
+    }
 
     &:hover,
     &:focus {
-      color: $color-text-link-hover;
+      color: $fill-header-button-hover;
+    }
+
+    &:hover .slds-icon,
+    &:focus .slds-icon {
+      fill: $fill-header-button-hover; // backwards compatible for old implementations
     }
   }
 
   &__button--icon-actions {
-    background: $color-background-alt-inverse;
+    background: $fill-header-button;
     border-radius: $border-radius-medium;
     color: $color-text-icon-inverse;
 
     &:hover,
     &:focus {
-      background-color: $color-background-button-brand-hover;
+      background-color: $fill-header-button-hover;
       color: $color-text-icon-inverse;
     }
   }
 
-  &__icon {
-    @include square($square-icon-global-identity-icon);
+  &__button--icon-favorites {
+    margin: 0 $spacing-x-small;
+    color: $color-text-icon-inverse;
+
+    .slds-icon,
+    .slds-button__icon {
+      color: $color-text-icon-inverse;
+      stroke: $color-stroke-header-button;
+      stroke-width: $border-stroke-width-thick;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    &:hover .slds-icon,
+    &:hover .slds-button__icon,
+    &:focus .slds-icon,
+    &:focus .slds-button__icon {
+      color: $color-text-icon-inverse;
+      stroke: $color-stroke-brand-hover;
+    }
+
+    &:active .slds-icon,
+    &:active .slds-button__icon {
+      stroke: $color-stroke-brand-active;
+    }
+
+    &.slds-is-selected {
+
+      .slds-icon,
+      .slds-button__icon {
+        color: $fill-brand;
+        stroke: $color-stroke-brand;
+        stroke-width: $border-stroke-width-thin;
+      }
+
+      &:hover .slds-icon,
+      &:hover .slds-button__icon,
+      &:focus .slds-icon,
+      &:focus .slds-button__icon {
+        color: $fill-brand-hover;
+        stroke: $color-stroke-brand-hover;
+      }
+
+      &:active .slds-icon,
+      &:active .slds-button__icon {
+        color: $fill-brand-active;
+        stroke: $color-stroke-brand-active;
+      }
+    }
   }
 
-  &__icon-actions {
-    @include square($square-icon-medium-content);
+  &__icon,
+  &__icon .slds-icon,
+  &__icon .slds-button__icon {
+    @include square($square-icon-global-identity-icon);
   }
 }

@@ -457,37 +457,37 @@ export let states = [
       <MultiSelect dataSet={ DefaultSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-selected-item',
+    id: 'multi-select-selected-item',
     label: 'Selected Item',
     element:
       <MultiSelect dataSet={ SelectedSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-multi-selected-items',
+    id: 'multi-select-multi-selected-items',
     label: 'Multiple Selected Items',
     element:
       <MultiSelect dataSet={ MultiSelectedSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-grabbed',
+    id: 'multi-select-grabbed',
     label: 'Grabbed',
     element:
       <MultiSelect dataSet={ GrabbedSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-moved-in',
+    id: 'multi-select-moved-in',
     label: 'Moved in list',
     element:
       <MultiSelect dataSet={ MovedInSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-dropped',
+    id: 'multi-select-dropped',
     label: 'Dropped',
     element:
       <MultiSelect dataSet={ DroppedSnapShot }></MultiSelect>
   },
   {
-    id: 'Multi-select-moved-to',
+    id: 'multi-select-moved-to',
     label: 'Moved to list',
     element:
       <MultiSelect dataSet={ MoveToSnapShot }></MultiSelect>

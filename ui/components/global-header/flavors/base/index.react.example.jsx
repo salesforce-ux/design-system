@@ -73,6 +73,7 @@ export let GlobalHeader = props =>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null)}>
           <ButtonIcon
             className={ className('slds-button--icon slds-button--icon-container slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null) }
+            disabled={ props.favoritesDisabled }
             iconClassName="slds-global-header__icon"
             hasPopup
             symbol="favorite"
@@ -143,6 +144,14 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '190px' }}>
         <GlobalHeader favoritesSelected />
+      </div>
+  },
+  {
+    id: 'favorites-disabled',
+    label: 'Favorites disabled',
+    element:
+      <div className="demo-only" style={{ height: '190px' }}>
+        <GlobalHeader favoritesDisabled />
       </div>
   },
   {

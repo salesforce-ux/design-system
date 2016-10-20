@@ -121,6 +121,11 @@
         stroke: $color-stroke-brand-active;
       }
     }
+
+    &:disabled .slds-icon,
+    &:disabled .slds-button__icon {
+      stroke: $color-stroke-disabled;
+    }
   }
 
   &__icon,

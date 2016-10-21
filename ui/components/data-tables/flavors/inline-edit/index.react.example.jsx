@@ -61,7 +61,7 @@ export let Table = props =>
 let Thead = props =>
   <thead>
     <tr className="slds-line-height--reset">
-      <th scope="col" style={{ width: '2.75rem' }}>
+      <th scope="col" style={{ width: '3.75rem' }}>
         <div className="slds-th__action">
           <span className="slds-assistive-text">Errors</span>
         </div>
@@ -119,7 +119,7 @@ export let RowData = props => {
   return(
     <tr className="slds-hint-parent" aria-selected={ props.checked }>
       <td id={ props.cellID } tabIndex={ props.errorindex } aria-selected={ props.errorSelected } className={className('slds-cell-edit slds-cell-error', props.editName)}>
-        <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={ !props.focusable ? '-1' : '0' } aria-hidden="true">
+        <button className={className('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)} tabIndex={ !props.focusable ? '-1' : '0' } aria-hidden="true">
           <span className="slds-assistive-text">Row has errors</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>

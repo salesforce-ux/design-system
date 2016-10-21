@@ -59,10 +59,12 @@ const ListBox = props =>
     role="application"
   >
     <ul
+      aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}
       aria-multiselectable="true"
       className="slds-picklist__options slds-picklist__options--multi"
       role="listbox"
+      tabIndex="0"
     >
       { props.options.map(option =>
         <Option key={ _.uniqueId('cell-resize-handle-') } option={ option }></Option>
@@ -72,7 +74,6 @@ const ListBox = props =>
 
 const Option = props =>
   <li
-    aria-labelledby="option-drag-label"
     aria-selected={ props.option.isSelected }
     className={className('slds-picklist__item slds-is-draggable', props.option.isGrabbed ? 'slds-is-grabbed' : null)}
     draggable="true"
@@ -88,7 +89,7 @@ const Option = props =>
 
 const DefaultSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar to move within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -140,7 +141,7 @@ const DefaultSnapShot = {
 
 const SelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar to move within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -192,7 +193,7 @@ const SelectedSnapShot = {
 
 const MultiSelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar to move within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -348,7 +349,7 @@ const MovedInSnapShot = {
 
 const DroppedSnapShot = {
   'liveRegionText': 'Option 3: final position 2 of 4.',
-  'optionDragLabel': 'Press space bar to move within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -400,7 +401,7 @@ const DroppedSnapShot = {
 
 const MoveToSnapShot = {
   'liveRegionText': 'Option 3: Moved to Second Category.',
-  'optionDragLabel': 'Press space bar to move within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
   'selectionGroups': [
     {
       'label': 'First Category',

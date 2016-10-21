@@ -21,8 +21,8 @@ import _ from 'lodash';
 const MultiSelect = (props) => {
   return(
     <div className="slds-picklist--draggable slds-grid">
-      <div className="slds-assistive-text" id="dragLiveRegion" aria-live="assertive">{ props.dataSet.liveRegionText }</div>
-      <div className="slds-assistive-text" id="optionDragLabel">{ props.dataSet.optionDragLabel }</div>
+      <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">{ props.dataSet.liveRegionText }</div>
+      <div className="slds-assistive-text" id="option-drag-label">{ props.dataSet.optionDragLabel }</div>
       <SelectionGroup group={ props.dataSet.selectionGroups[0] }></SelectionGroup>
       <MoveButtons direction="horizontal" targetA={ props.dataSet.selectionGroups[0].label } targetB={ props.dataSet.selectionGroups[1].label }></MoveButtons>
       <SelectionGroup group={ props.dataSet.selectionGroups[1] }></SelectionGroup>
@@ -60,6 +60,7 @@ const ListBox = props =>
   >
     <ul
       aria-labelledby={props.ariaLabelledby}
+      aria-multiselectable="true"
       className="slds-picklist__options slds-picklist__options--multi"
       role="listbox"
     >
@@ -71,7 +72,7 @@ const ListBox = props =>
 
 const Option = props =>
   <li
-    aria-labelledby="optionDragLabel"
+    aria-labelledby="option-drag-label"
     aria-selected={ props.option.isSelected }
     className={className('slds-picklist__item slds-is-draggable', props.option.isGrabbed ? 'slds-is-grabbed' : null)}
     draggable="true"

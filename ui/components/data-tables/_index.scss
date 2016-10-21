@@ -201,6 +201,12 @@
   }
 }
 
+[role="gridcell"]:focus,
+[role="gridcell"].slds-has-focus {
+  outline: 0;
+  box-shadow: $color-border-selection 0 0 0 1px inset;
+}
+
 // Resizable handle
 .slds-resizable {
   max-width: 100%;

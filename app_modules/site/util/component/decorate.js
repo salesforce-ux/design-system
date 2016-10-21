@@ -21,7 +21,7 @@ import globals from 'app_modules/global';
 let lightningComponents = [{
   component: 'badges',
   namespace: 'lightning:badge',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.html'
+  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.htm'
 },{
   component: 'buttons',
   namespace: 'lightning:button',

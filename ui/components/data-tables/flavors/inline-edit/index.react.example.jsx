@@ -118,7 +118,7 @@ export let RowData = props => {
 
   return(
     <tr className="slds-hint-parent" aria-selected={ props.checked }>
-      <td id={ props.cellID } tabIndex={ props.errorindex } aria-selected={ props.errorSelected } className={className('slds-cell-edit slds-cell-error', props.editName)}>
+      <td id={ props.cellID } tabIndex={ props.errorindex } aria-selected={ props.errorSelected } role="gridcell" className={className('slds-cell-edit slds-cell-error', props.editName)}>
         <button className={className('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)} tabIndex={ !props.focusable ? '-1' : '0' } aria-hidden="true">
           <span className="slds-assistive-text">Row has errors</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />

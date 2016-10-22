@@ -201,9 +201,11 @@
   }
 }
 
-[role="gridcell"]:focus,
-[role="gridcell"].slds-has-focus {
+[role="gridcell"]:focus {
   outline: 0;
+}
+
+[role="gridcell"].slds-has-focus {
   box-shadow: $color-border-selection 0 0 0 1px inset;
 }
 

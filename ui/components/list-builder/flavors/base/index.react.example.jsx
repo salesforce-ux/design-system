@@ -14,6 +14,7 @@ import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/mod
 import { CheckboxAddButton } from 'ui/components/forms/flavors/checkbox-add-button/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import className from 'classnames';
 import _ from 'lodash';
 
@@ -67,9 +68,9 @@ const rows = [{
 
 let ProductListHeader = props =>
   <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
-    <Lookup className="slds-m-bottom--x-small" hideLabel showLookupDropdown={ props.showLookupDropdown } />
+    <Lookup hideLabel showLookupDropdown={ props.showLookupDropdown } />
     { props.selectedFilters ? props.selectedFilters : null }
-    <span className="slds-text-title" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
+    <span className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
   </div>;
 
 let ProductList = props =>
@@ -114,6 +115,12 @@ let RowData = props => {
     </tr>
   );
 };
+
+let FilteredItems = props =>
+  <PillContainer className="slds-pill_container--bare">
+    <Pill label="Option A" unlinked />
+    <Pill label="Option B" unlinked />
+  </PillContainer>;
 
 ///////////////////////////////////////////
 // Export
@@ -228,4 +235,36 @@ export let states = [
         <div className="slds-backdrop slds-backdrop--open" />
       </div>
   },
+  {
+    id: 'filtered',
+    label: 'Filtered Results',
+    element:
+      <div className="demo-only" style={{height: '640px'}}>
+        <Modal className="slds-modal--large">
+          <ModalHeader>
+            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+          </ModalHeader>
+          <ModalContent className="slds-grid slds-grow">
+            <div className="slds-grid slds-grid--vertical">
+              <ProductListHeader selectedFilters={ <FilteredItems /> } />
+              <ProductList>
+                <RowData
+                  index={ 1 }
+                  name={ rows[0].name }
+                  productCode={ rows[0].productCode }
+                  listPrice={ rows[0].listPrice }
+                  productFamily={ rows[0].productFamily }
+                />
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Next</button>
+          </ModalFooter>
+        </Modal>
+        <div className="slds-backdrop slds-backdrop--open" />
+      </div>
+  }
 ];

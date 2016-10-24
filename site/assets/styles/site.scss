@@ -13,7 +13,7 @@
   'ui/config';
 
 // Site-wide variables
-$height-searchfield: calc($line-height-button-small + #{$border-width-thin * 2}); // Height of a text input
+$height-searchfield: calc(#{$line-height-button-small} + #{$border-width-thin * 2}); // Height of a text input
 $height-searchbox: calc(#{$line-height-button-small + $spacing-small} + #{$border-width-thin * 2});
 
 @import

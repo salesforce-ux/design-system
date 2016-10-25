@@ -205,8 +205,13 @@
   outline: 0;
 }
 
+[role="gridcell"]:focus,
 [role="gridcell"].slds-has-focus {
   box-shadow: $color-border-selection 0 0 0 1px inset;
+}
+
+[role="gridcell"]:active {
+  box-shadow: initial;
 }
 
 // Resizable handle

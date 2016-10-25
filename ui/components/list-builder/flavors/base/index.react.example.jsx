@@ -70,7 +70,7 @@ let ProductListHeader = props =>
   <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
     <Lookup hideLabel showLookupDropdown={ props.showLookupDropdown } />
     { props.selectedFilters ? props.selectedFilters : null }
-    <span className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
+    <div className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</div>
   </div>;
 
 let ProductList = props =>
@@ -135,7 +135,7 @@ export let states = [
         <Modal className="slds-modal--large">
           <ModalHeader>
             <h2 className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
             <div className="slds-grid slds-grid--vertical">
@@ -170,7 +170,7 @@ export let states = [
       <Modal className="slds-modal--large">
         <ModalHeader>
           <h2 className="slds-text-heading--medium">Add Products</h2>
-          <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+          <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
         </ModalHeader>
         <ModalContent className="slds-grid slds-nowrap">
           <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
@@ -206,7 +206,7 @@ export let states = [
         <Modal className="slds-modal--large">
           <ModalHeader>
             <h2 className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
             <div className="slds-grid slds-grid--vertical">
@@ -243,7 +243,7 @@ export let states = [
         <Modal className="slds-modal--large">
           <ModalHeader>
             <h2 className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
             <div className="slds-grid slds-grid--vertical">

@@ -80,6 +80,27 @@
     left: ($spacing-small * -1);
   }
 
+  &-xxx-small {
+    margin: {
+      right: ($spacing-xxx-small * -1);
+      left: ($spacing-xxx-small * -1);
+    }
+  }
+
+  &-xx-small {
+    margin: {
+      right: ($spacing-xx-small * -1);
+      left: ($spacing-xx-small * -1);
+    }
+  }
+
+  &-x-small {
+    margin: {
+      right: ($spacing-x-small * -1);
+      left: ($spacing-x-small * -1);
+    }
+  }
+
   &-medium {
     margin: {
       right: ($spacing-medium * -1);

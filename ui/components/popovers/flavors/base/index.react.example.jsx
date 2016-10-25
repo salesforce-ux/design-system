@@ -27,6 +27,7 @@ export let Popover = props => {
       className={ className('slds-popover', props.className) }
       role="dialog"
       aria-labelledby={ !props.header && props.headerTitle ? headingUniqueId : props.headingId }
+      aria-label={ !props.header && !props.headerTitle ? props.title : null }
       aria-describedby={ bodyUniqueId }>
       { props.closeButton ?
         <ButtonIcon

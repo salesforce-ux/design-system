@@ -120,6 +120,7 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--top-left"
+        title="Action dialog"
         closeButton
         inverse>
         <div className="slds-p-vertical--small slds-grid slds-grid--vertical-align-center">

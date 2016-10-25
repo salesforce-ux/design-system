@@ -19,12 +19,6 @@ import className from 'classnames';
 // Partial(s)
 //////////////////////////////////////////////
 
-let Header = props =>
-  <div className="slds-p-vertical--small">
-    <ButtonIcon className="slds-button--icon slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" />
-    <h2 className="slds-text-heading--small">Manage your channels</h2>
-  </div>;
-
 let Footer = props =>
   <div className="slds-grid slds-grid--vertical-align-center slds-p-vertical--x-small">
     <span className="slds-text-title">Step 2 of 4</span>
@@ -50,9 +44,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--left"
-        header={ <Header /> }
-        footer={ <Footer nextButton /> }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        headerClassName="slds-p-vertical--small"
+        headerTitle="Manage your channels"
+        footer={ <Footer nextButton /> }
+        closeButton
+        inverse>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
   {
@@ -61,9 +58,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--left"
-        header={ <Header /> }
-        footer={ <Footer setupButton nextButton /> }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        headerClassName="slds-p-vertical--small"
+        headerTitle="Manage your channels"
+        footer={ <Footer setupButton nextButton /> }
+        closeButton
+        inverse>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
   {
@@ -72,9 +72,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--left"
-        header={ <Header /> }
-        footer={ <Footer skipButton setupButton /> }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        headerClassName="slds-p-vertical--small"
+        headerTitle="Manage your channels"
+        footer={ <Footer skipButton setupButton /> }
+        closeButton
+        inverse>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
   {
@@ -83,9 +86,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--left"
-        header={ <Header /> }
-        footer={ <Footer skipButton /> }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        headerClassName="slds-p-vertical--small"
+        headerTitle="Manage your channels"
+        footer={ <Footer skipButton /> }
+        closeButton
+        inverse>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
   {
@@ -94,9 +100,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover--walkthrough slds-nubbin--left"
-        header={ <Header /> }
-        footer={ <Footer skipButton nextButton /> }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        headerClassName="slds-p-vertical--small"
+        headerTitle="Manage your channels"
+        footer={ <Footer skipButton nextButton /> }
+        closeButton
+        inverse>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="slds-form-element slds-p-top--small">
           <label className="slds-form-element__label slds-assistive-text" htmlFor="email-text-input-01">Email Address</label>
           <div className="slds-form-element__control">
@@ -110,7 +119,9 @@ export let states = [
     label: 'Action Popover',
     element:
       <Popover
-        className="slds-popover--walkthrough slds-nubbin--top-left">
+        className="slds-popover--walkthrough slds-nubbin--top-left"
+        closeButton
+        inverse>
         <div className="slds-p-vertical--small slds-grid slds-grid--vertical-align-center">
           <span className="slds-icon_container slds-m-right--small" title="description of icon when needed">
             <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="touch_action" />

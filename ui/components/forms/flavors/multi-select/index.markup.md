@@ -18,7 +18,7 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
   - `ctrl + space` toggles selection on the focused option, in addition to previous selections
   - `ctrl + a` selects all options in the list
   - `cmd/ctrl + right` and `cmd/ctrl + left` Moves selected items between lists
-  - `space` toggles "Drag and Drop" mode. When in "Drag and Drop mode:
+  - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
     - Up and Down arrows move the selected items _within_ the current list
 
 **Updating Operation and State**

@@ -1,4 +1,2 @@
 imports:
 - ./console-base/spacing.yml
-- ./console-base/border-color.yml
-- ./console-base/background-color.yml

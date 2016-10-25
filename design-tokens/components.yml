@@ -5,6 +5,7 @@ imports:
 - ../ui/components/cards/tokens/background-color.yml
 - ../ui/components/cards/tokens/border-color.yml
 - ../ui/components/cards/tokens/spacing.yml
+- ../ui/components/data-tables/tokens/spacing.yml
 - ../ui/components/docked-composer/tokens/color.yml
 - ../ui/components/docked-composer/tokens/sizing.yml
 - ../ui/components/forms/tokens/line-height.yml

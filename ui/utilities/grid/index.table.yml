@@ -52,16 +52,28 @@ classes:
     applied: <code>.slds-grid</code>
     notes: Grid items will stretch the height of the parent grid container by default, unless <code>&lt;wrap&gt;</code> is used
   -
+    class: slds-grid--pull-padded-xxx-small
+    description: Normalizes the 0.125rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--xxx-small</code>
+    applied: <code>.slds-grid</code>
+  -
+    class: slds-grid--pull-padded-xx-small
+    description: Normalizes the 0.25rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--xx-small</code>
+    applied: <code>.slds-grid</code>
+  -
+    class: slds-grid--pull-padded-x-small
+    description: Normalizes the 0.5rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--x-small</code>
+    applied: <code>.slds-grid</code>
+  -
     class: slds-grid--pull-padded
-    description: Normalizes the 0.75rem of padding when nesting a grid in a <code>.slds-col--padded</code>
+    description: Normalizes the 0.75rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--small</code>
     applied: <code>.slds-grid</code>
   -
     class: slds-grid--pull-padded-medium
-    description: Normalizes the 1rem of padding when nesting a grid in a <code>.slds-col--padded-medium</code>
+    description: Normalizes the 1rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--medium</code>
     applied: <code>.slds-grid</code>
   -
     class: slds-grid--pull-padded-large
-    description: Normalizes the 1.5rem of padding when nesting a grid in a <code>.slds-col--padded-large</code>
+    description: Normalizes the 1.5rem of padding when nesting a grid in a region with <code>.slds-p-horizontal--large</code>
     applied: <code>.slds-grid</code>
   -
     class: slds-col

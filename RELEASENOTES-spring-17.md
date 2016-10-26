@@ -35,6 +35,7 @@ The following classes are now available:
 - Added `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
 - Added `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 - Added `slds-is-absolute` utility for overriding a components default positioning - [Utilities › Position › Absolute](/components/utilities/position/#flavor-absolute)
+- Added addtional spacing support for normalizing padding on a grid region
 
 **CHANGES**
 

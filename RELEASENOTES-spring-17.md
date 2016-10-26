@@ -24,7 +24,7 @@ The following components are now available:
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 - Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
 - Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
-- Added Subtabs - [Subtabs](/components/tabs/#flavor-subtabs)
+- Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
 
 **ADDED**
 

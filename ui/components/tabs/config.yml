@@ -2,7 +2,7 @@ status: 'dev-ready'
 flavors:
   - default
   - scoped
-  - subtabs
+  - sub-tabs
 
 lightning:
   namespace: lightning:tabset

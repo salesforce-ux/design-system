@@ -58,13 +58,13 @@ gulp.task('generate:tokens:all', ['generate:tokens:components:imports'], (done) 
   async.each(formatTransforms, convert, done);
 });
 
-gulp.task('generate:tokens:sass:default', ['generate:tokens:components:imports'], () =>
+gulp.task('generate:tokens:sass:default', () =>
   gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
     .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
 
-gulp.task('generate:tokens:sass:map', ['generate:tokens:components:imports'], () =>
+gulp.task('generate:tokens:sass:map', () =>
   gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('map.scss'))

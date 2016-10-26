@@ -218,3 +218,9 @@ props:
     value: '#B781D3'
   SALES_PATH:
     value: '#2A739E'
+  CUSTOM_NOTIFICATION:
+    value: '#6BB7E4'
+  DATADOTCOM:
+    value: '#1589EE'
+  RTC_PRESENCE:
+    value: '#47CFD2'

@@ -21,7 +21,7 @@ import className from 'classnames';
 export let Pill = props =>
   <span className={className('slds-pill', props.className)}>
     {props.children}
-    {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>Pill Label</span>
+    {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</span>
     : <a href="javascript:void(0);" className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
     <ButtonIcon className="slds-button--icon slds-pill__remove" symbol="close" assistiveText="Remove" />
   </span>;

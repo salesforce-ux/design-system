@@ -82,6 +82,7 @@ let ProductList = props =>
           { _.times(columns.length, i =>
             <Th key={ i }
               columnName={ columns[i] }
+              aria-label={columns[i]}
             />
           )}
         </tr>
@@ -132,9 +133,9 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large">
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
             <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
@@ -167,9 +168,9 @@ export let states = [
     label: 'Items selected',
     element:
     <div className="demo-only" style={{height: '640px'}}>
-      <Modal className="slds-modal--large">
+      <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
         <ModalHeader>
-          <h2 className="slds-text-heading--medium">Add Products</h2>
+          <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
           <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
         </ModalHeader>
         <ModalContent className="slds-grid slds-nowrap">
@@ -203,9 +204,9 @@ export let states = [
     label: 'Searching',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large">
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
             <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
@@ -240,14 +241,14 @@ export let states = [
     label: 'Filtered Results',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large">
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 className="slds-text-heading--medium">Add Products</h2>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
             <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
             <div className="slds-grid slds-grid--vertical">
-              <ProductListHeader selectedFilters={ <FilteredItems /> } />
+              <ProductListHeader selectedFilters={ <FilteredItems /> } itemsSelected="2" />
               <ProductList>
                 <RowData
                   index={ 1 }

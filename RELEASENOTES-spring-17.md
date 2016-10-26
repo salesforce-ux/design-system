@@ -24,6 +24,7 @@ The following components are now available:
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 - Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
 - Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
+- Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
 
 **ADDED**
 
@@ -36,6 +37,10 @@ The following classes are now available:
 - Added `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 - Added `slds-is-absolute` utility for overriding a components default positioning - [Utilities › Position › Absolute](/components/utilities/position/#flavor-absolute)
 - Added addtional spacing support for normalizing padding on a grid region
+- Added `slds-border--bottom` utility [Utilities › Borders › Border Bottom](/components/utilities/borders/#flavor-border-bottom)
+- Added `slds-border--left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
+- Added `slds-border--right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
+- Added `slds-border--top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
 
 **CHANGES**
 

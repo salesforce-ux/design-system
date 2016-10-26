@@ -1,5 +1,6 @@
 components:
   - alignment
+  - borders
   - floats
   - grid
   - hyphenation

@@ -68,14 +68,52 @@
 }
 
 .slds-tabs--default__item {
+  color: $color-text-action-label;
+  position: relative;
+  padding: 0 $spacing-small;
 
-  &.slds-active .slds-tabs--default__link {
-    border-color: $color-border-tab-selected;
+  &:after {
+    display: block;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: $border-width-thick;
+  }
+
+  &.slds-active,
+  &.slds-is-active {
     color: $color-text-action-label-active;
 
-    &:focus {
-      border-bottom-width: ($border-width-thick + 1px);
-      color: $color-text-tab-label-selected;
+    &:after {
+      background-color: $color-border-tab-selected;
+    }
+
+    .slds-tabs--default__link {
+
+      &:hover {
+        color: $color-text-action-label-active;
+      }
+
+    }
+  }
+
+  &:hover {
+
+    &:after {
+      background-color: $color-border-tab-selected;
+    }
+  }
+
+  &:focus,
+  &.slds-has-focus {
+    outline: 0;
+    color: $color-text-tab-label-selected;
+
+    &:after {
+      height: ($border-width-thick + 1);
+      background-color: $color-text-tab-label-selected;
     }
   }
 }
@@ -88,22 +126,10 @@
   @include tabs-link;
   height: $line-height-tab;
   line-height: $line-height-tab;
-  border-bottom: $border-width-thick solid transparent;
-  padding: 0 $spacing-x-small;
-  color: $color-text-action-label;
-
-  @include mq-medium-min {
-    padding: 0 $spacing-medium;
-  }
+  color: currentColor;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $color-text-tab-label-selected;
-  }
-
-  &:focus {
-    border-bottom-width: ($border-width-thick + 1px);
-    border-color: $color-border-tab-selected;
   }
 }

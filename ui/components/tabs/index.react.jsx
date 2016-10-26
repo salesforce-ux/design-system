@@ -69,7 +69,7 @@ class TabItem extends React.Component {
     const props = _.omit(this.props, ['className', 'id', 'role', 'content']);
     const className = classNames(
       this.props.className,
-      classNames(`slds-tabs--${this.props.flavor}__item`, 'slds-text-title--caps', {
+      classNames(`slds-tabs--${this.props.flavor}__item`, {
         'slds-active': this.props.current
       })
     );
@@ -94,7 +94,7 @@ class TabItemOverflow extends React.Component {
     const props = _.omit(this.props, ['className', 'id', 'role']);
     const className = classNames(
       this.props.className,
-      classNames('slds-tabs__item--overflow slds-text-title--caps', {
+      classNames('slds-tabs__item--overflow', {
         'slds-active': this.props.current
       })
     );

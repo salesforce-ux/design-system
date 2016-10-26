@@ -7,52 +7,16 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.slds-popover--walkthrough {
+  @include inverse-text($support: ('borders', 'text-utilities', 'icons'));
+  background: $color-background-inverse;
 
-
-.slds-popover {
-  @include popover($shadow: $shadow-drop-down);
-  border: $border-width-thin solid $color-border;
-
-  &__body,
-  &__header,
-  &__footer {
-    @include hyphenate;
-    position: relative;
-    padding: $spacing-x-small $spacing-small;
+  .slds-popover__header {
+    background: $color-background-alt-inverse;
+    border-color: inherit;
   }
 
-  &__header {
-    border-bottom: $border-width-thin solid $color-border;
-  }
-
-  &__footer {
-    border-top: $border-width-thin solid $color-border;
-  }
-
-  &__close {
-    position: relative;
-    margin: $spacing-xx-small;
-    z-index: ($z-index-dialog + 1);
-  }
-
-  &--small {
-    min-width: $size-small;
-  }
-
-  &--medium {
-    min-width: $size-medium;
-  }
-
-  &--large {
-    min-width: $size-large;
-    max-width: $max-width-action-overflow-menu;
-  }
-
-  &[class*="theme--"] {
+  .slds-popover__footer {
     border: 0;
-  }
-
-  *:last-child {
-    margin-bottom: 0;
   }
 }

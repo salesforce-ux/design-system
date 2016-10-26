@@ -1,0 +1,7 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: slds-popover--walkthrough
+    description: Sets styles for walkthrough specific popovers
+    required: true
+    applied: <code>.slds-popover</code>

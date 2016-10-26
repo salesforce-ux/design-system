@@ -74,3 +74,26 @@
     border-color: $color-border-destructive-active;
   }
 }
+
+@mixin button-success {
+  background-color: $color-background-button-success;
+  border: $border-width-thin solid $color-border-success;
+  color: $color-text-inverse;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-inverse;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-success-hover;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: $color-background-button-success-active;
+    border-color: $color-border-success-dark;
+  }
+}

@@ -218,3 +218,9 @@ a.slds-button--inverse:focus {
     color: $color-text-button-brand-disabled;
   }
 }
+
+// Success Button
+.slds-button--success {
+  @include button;
+  @include button-success;
+}

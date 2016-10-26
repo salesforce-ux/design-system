@@ -257,6 +257,7 @@
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
+  border-collapse: separate;
 
   thead {
     background-color: $color-background-alt;
@@ -264,6 +265,10 @@
     th {
       padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
     }
+  }
+
+  tbody {
+    transform: translateZ(0);
   }
 
   .slds-cell-shrink {

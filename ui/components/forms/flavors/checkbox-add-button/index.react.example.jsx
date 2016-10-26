@@ -12,18 +12,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let CheckboxAddButton = props =>
-  <div className="slds-checkbox--add-button">
-    <input className="slds-assistive-text" type="checkbox" id="add01" disabled={props.disabled} defaultChecked={props.checked} />
-    <label htmlFor="add01" className="slds-checkbox--faux">
-      <span className="slds-assistive-text">Add product</span>
-    </label>
-  </div>;
+export let CheckboxAddButton = props => {
+  const uniqueId = _.uniqueId('add-checkbox-');
+
+  return (
+    <div className="slds-checkbox--add-button">
+      <input className="slds-assistive-text" type="checkbox" id={ uniqueId } disabled={ props.disabled } defaultChecked={ props.checked } tabIndex={ props.tabIndex }/>
+      <label htmlFor={ uniqueId } className="slds-checkbox--faux">
+        <span className="slds-assistive-text">{ props.label || 'Add product' }</span>
+      </label>
+    </div>
+  );
+};
 
 ///////////////////////////////////////////
 // Export

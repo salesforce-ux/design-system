@@ -13,3 +13,7 @@
   @include enable-ios-momentum-scrolling;
   overflow: auto;
 }
+
+.slds-scrollable--none {
+  overflow: hidden;
+}

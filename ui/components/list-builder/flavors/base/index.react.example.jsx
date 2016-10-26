@@ -10,47 +10,81 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
+import { CheckboxAddButton } from 'ui/components/forms/flavors/checkbox-add-button/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
+import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import className from 'classnames';
+import _ from 'lodash';
+
+const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
+
+const rows = [{
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}, {
+  'name': 'Analytics',
+  'productCode': 'ANTLY',
+  'listPrice': '5000.00',
+  'productFamily': 'Analytics Product'
+}];
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
-let Search = props =>
+let ProductListHeader = props =>
   <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
-    <label className="slds-assistive-text" htmlFor="search-text-input-product">Search Products</label>
-    <div className="slds-size--1-of-1 slds-m-bottom--x-small slds-input-has-icon slds-input-has-icon--left">
-      <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
-      <input id="search-text-input-product" className="slds-input" type="search" placeholder="Search Products" />
-    </div>
-    <span className="slds-text-title" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</span>
+    <Lookup hideLabel showLookupDropdown={ props.showLookupDropdown } />
+    { props.selectedFilters ? props.selectedFilters : null }
+    <div className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</div>
   </div>;
-
-let Th = props =>
-  <th {...props} aria-label={props.children}>
-    <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
-      <span className="slds-assistive-text">Sort Column</span>
-      <span className="slds-truncate" title={props.children}>{props.children}</span>
-      <div className="slds-icon_container" title="Sort Column">
-        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
-      </div>
-    </a>
-  </th>;
 
 let ProductList = props =>
   <div className="slds-scrollable slds-grow">
-    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-no-row-hover slds-scrollable--none">
       <thead>
-        <tr className="slds-text-title--caps" >
-          <th className="slds-cell-shrink" scope="col"></th>
-          <Th className="slds-is-sortable" scope="col">Name</Th>
-          <Th className="slds-is-sortable" scope="col">Product Code</Th>
-          <Th className="slds-is-sortable" scope="col">List Price</Th>
-          <Th className="slds-is-sortable" scope="col">Product Family</Th>
+        <tr className="slds-line-height--reset">
+          <th scope="col" style={{ width: '3.75rem' }}></th>
+          { _.times(columns.length, i =>
+            <Th key={ i }
+              columnName={ columns[i] }
+              aria-label={columns[i]}
+            />
+          )}
         </tr>
       </thead>
       <tbody>
@@ -59,77 +93,69 @@ let ProductList = props =>
     </table>
   </div>;
 
+let RowData = props => {
+  let checkboxLabel = 'Select item ' + props.index;
+
+  return(
+    <tr className={className('slds-hint-parent', props.className)} aria-selected={ props.checked }>
+      <td role="gridcell" tabIndex={ (props.index === 1) ? '0': '-1' } className="slds-text-align--right" style={{ width: '3.75rem' }}>
+        <CheckboxAddButton label={ checkboxLabel } checked={ props.checked } tabIndex="-1" />
+      </td>
+      <th scope="row">
+        <div className="slds-truncate" title={ props.name }>{ props.name }</div>
+      </th>
+      <td role="gridcell">
+        <div className="slds-truncate" title={ props.productCode }>{ props.productCode }</div>
+      </td>
+      <td role="gridcell">
+        <div className="slds-truncate" title={ props.listPrice }>{ props.listPrice }</div>
+      </td>
+      <td role="gridcell">
+        <div className="slds-truncate" title={ props.productFamily }>{ props.productFamily }</div>
+      </td>
+    </tr>
+  );
+};
+
+let FilteredItems = props =>
+  <PillContainer className="slds-pill_container--bare">
+    <Pill label="Option A" unlinked />
+    <Pill label="Option B" unlinked />
+  </PillContainer>;
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
 export let states = [
   {
-    id: 'list-builder',
+    id: 'default',
     label: 'Default',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large">
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
-          <ModalContent className="slds-grid slds-nowrap">
-            <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
-              <Search />
+          <ModalContent className="slds-grid slds-grow">
+            <div className="slds-grid slds-grid--vertical">
+              <ProductListHeader />
               <ProductList>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family A">Family A</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="3460.00">3460.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2230.00">2230.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="750.00">750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
+                { _.times(rows.length, i =>
+                  <RowData
+                    key={ i }
+                    index={ i+1 }
+                    name={ rows[i].name }
+                    productCode={ rows[i].productCode }
+                    listPrice={ rows[i].listPrice }
+                    productFamily={ rows[i].productFamily }
+                  />
+                )}
               </ProductList>
             </div>
           </ModalContent>
-          <ModalFooter className="slds-modal__footer--directional">
+          <ModalFooter>
             <button className="slds-button slds-button--neutral">Cancel</button>
             <button className="slds-button slds-button--brand">Next</button>
           </ModalFooter>
@@ -138,71 +164,103 @@ export let states = [
       </div>
   },
   {
-    id: 'list-builder-items-selected',
+    id: 'items-selected',
     label: 'Items selected',
     element:
+    <div className="demo-only" style={{height: '640px'}}>
+      <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+        <ModalHeader>
+          <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
+          <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+        </ModalHeader>
+        <ModalContent className="slds-grid slds-nowrap">
+          <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
+            <ProductListHeader itemsSelected="1" />
+            <ProductList>
+              { _.times(rows.length, i =>
+                <RowData
+                  key={ i }
+                  index={ i+1 }
+                  checked={ (i===0) ? true : null }
+                  name={ rows[i].name }
+                  productCode={ rows[i].productCode }
+                  listPrice={ rows[i].listPrice }
+                  productFamily={ rows[i].productFamily }
+                />
+              )}
+            </ProductList>
+          </div>
+        </ModalContent>
+        <ModalFooter>
+          <button className="slds-button slds-button--neutral">Cancel</button>
+          <button className="slds-button slds-button--brand">Next</button>
+        </ModalFooter>
+      </Modal>
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  },
+  {
+    id: 'searching',
+    label: 'Searching',
+    element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large">
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products <a href="javascript:void(0);">(Change)</a></p>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
-          <ModalContent className="slds-grid slds-nowrap">
-            <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
-              <Search itemsSelected="2" />
+          <ModalContent className="slds-grid slds-grow">
+            <div className="slds-grid slds-grid--vertical">
+              <ProductListHeader
+                showLookupDropdown
+              />
               <ProductList>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,750.00">2,750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family A">Family A</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="3,460.00">3,460.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="2,230.00">2,230.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
-                <tr>
-                  <td className="slds-cell-shrink" role="gridcell">
-                    <ButtonIcon
-                      className="slds-button--icon-border slds-button--icon-small"
-                      symbol="add"
-                      assistiveText="Add Product" />
-                  </td>
-                  <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
-                  <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>
-                  <td data-label="List Price" role="gridcell"><div className="slds-truncate" title="750.00">750.00</div></td>
-                  <td data-label="Product Family" role="gridcell"><div className="slds-truncate" title="Family B">Family B</div></td>
-                </tr>
+                { _.times(rows.length, i =>
+                  <RowData
+                    key={ i }
+                    index={ i+1 }
+                    name={ rows[i].name }
+                    productCode={ rows[i].productCode }
+                    listPrice={ rows[i].listPrice }
+                    productFamily={ rows[i].productFamily }
+                  />
+                )}
               </ProductList>
             </div>
           </ModalContent>
-          <ModalFooter className="slds-modal__footer--directional">
+          <ModalFooter>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Next</button>
+          </ModalFooter>
+        </Modal>
+        <div className="slds-backdrop slds-backdrop--open" />
+      </div>
+  },
+  {
+    id: 'filtered',
+    label: 'Filtered Results',
+    element:
+      <div className="demo-only" style={{height: '640px'}}>
+        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+          <ModalHeader>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
+            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+          </ModalHeader>
+          <ModalContent className="slds-grid slds-grow">
+            <div className="slds-grid slds-grid--vertical">
+              <ProductListHeader selectedFilters={ <FilteredItems /> } itemsSelected="2" />
+              <ProductList>
+                <RowData
+                  index={ 1 }
+                  name={ rows[0].name }
+                  productCode={ rows[0].productCode }
+                  listPrice={ rows[0].listPrice }
+                  productFamily={ rows[0].productFamily }
+                />
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter>
             <button className="slds-button slds-button--neutral">Cancel</button>
             <button className="slds-button slds-button--brand">Next</button>
           </ModalFooter>

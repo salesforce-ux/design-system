@@ -105,8 +105,8 @@ export default (
     <Table className="slds-no-cell-focus slds-table--header-fixed">
       <thead>
         <tr className="slds-line-height--reset">
-          <th scope="col" style={{ width: '2.75rem' }}>
-            <div style={{ width: '2.75rem' }} className="slds-th__action slds-cell-fixed">
+          <th scope="col" style={{ width: '3.75rem' }}>
+            <div style={{ width: '3.75rem' }} className="slds-th__action slds-cell-fixed">
               <span className="slds-assistive-text">Errors</span>
             </div>
           </th>

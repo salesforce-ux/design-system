@@ -42,7 +42,6 @@
   }
 
   &__button--icon {
-    margin: 0 $spacing-xxx-small;
     color: $fill-header-button;
 
     .slds-icon {
@@ -73,7 +72,6 @@
   }
 
   &__button--icon-favorites {
-    margin: 0 $spacing-x-small;
     color: $color-text-icon-inverse;
 
     .slds-icon,
@@ -128,9 +126,13 @@
     }
   }
 
-  &__icon,
-  &__icon .slds-icon,
-  &__icon .slds-button__icon {
+  &__button--icon-favorites-menu {
+    margin-right: $spacing-x-small;
+  }
+
+  & .slds-global-header__icon,
+  & .slds-global-header__icon .slds-icon,
+  & .slds-global-header__icon .slds-button__icon {
     @include square($square-icon-global-identity-icon);
   }
 }

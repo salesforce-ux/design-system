@@ -49,12 +49,12 @@
       fill: $fill-header-button; // backwards compatible for old implementations
     }
 
-    &:hover,
+    &:hover:not(:disabled),
     &:focus {
       color: $fill-header-button-hover;
     }
 
-    &:hover .slds-icon,
+    &:hover:not(:disabled) .slds-icon,
     &:focus .slds-icon {
       fill: $fill-header-button-hover; // backwards compatible for old implementations
     }
@@ -121,6 +121,8 @@
       }
     }
 
+    &.slds-is-disabled .slds-icon,
+    &.slds-is-disabled .slds-button__icon,
     &:disabled .slds-icon,
     &:disabled .slds-button__icon {
       stroke: $color-stroke-disabled;

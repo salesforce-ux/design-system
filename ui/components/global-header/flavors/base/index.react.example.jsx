@@ -72,7 +72,7 @@ export let GlobalHeader = props =>
       <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
         <li className={ className('slds-grid') }>
           <ButtonIcon
-            className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null) }
+            className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null, props.favoritesDisabled ? 'slds-is-disabled' : null) }
             disabled={ props.favoritesDisabled }
             iconClassName="slds-global-header__icon"
             symbol="favorite"
@@ -81,6 +81,7 @@ export let GlobalHeader = props =>
             <ButtonIcon
               className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon slds-m-left--none') }
               hasPopup
+              disabled={ props.favoritesDisabled }
               symbol="chevrondown"
               assistiveText="View Favorites" />
           </span>

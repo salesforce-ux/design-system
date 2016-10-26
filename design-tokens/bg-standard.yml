@@ -220,7 +220,7 @@ props:
     value: '#2A739E'
   CUSTOM_NOTIFICATION:
     value: '#6BB7E4'
-  DATADOTCOM
+  DATADOTCOM:
     value: '#1589EE'
-  RTC_PRESENCE
+  RTC_PRESENCE:
     value: '#47CFD2'

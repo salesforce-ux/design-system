@@ -89,7 +89,7 @@ const Option = props =>
 
 const DefaultSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -141,7 +141,7 @@ const DefaultSnapShot = {
 
 const SelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -193,7 +193,7 @@ const SelectedSnapShot = {
 
 const MultiSelectedSnapShot = {
   'liveRegionText': '',
-  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -349,7 +349,7 @@ const MovedInSnapShot = {
 
 const DroppedSnapShot = {
   'liveRegionText': 'Option 3: final position 2 of 4.',
-  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
   'selectionGroups': [
     {
       'label': 'First Category',
@@ -401,7 +401,7 @@ const DroppedSnapShot = {
 
 const MoveToSnapShot = {
   'liveRegionText': 'Option 3: Moved to Second Category.',
-  'optionDragLabel': 'Press space bar when on an item, to move it within the list',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
   'selectionGroups': [
     {
       'label': 'First Category',

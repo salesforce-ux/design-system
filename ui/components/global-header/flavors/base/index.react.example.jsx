@@ -85,9 +85,9 @@ export let GlobalHeader = props =>
               assistiveText="View Favorites" />
           </span>
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-horizontal--xxx-small slds-m-horizontal--xx-small', props.actions ? 'slds-is-open': null)}>
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-horizontal--xxx-small', props.actions ? 'slds-is-open': null)}>
           <ButtonIcon
-            className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-button--icon-x-small slds-global-header__button--icon-actions"
+            className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-button--icon-x-small slds-global-header__button--icon-actions slds-m-horizontal--xx-small"
             hasPopup
             symbol="add"
             assistiveText="Global Actions" />

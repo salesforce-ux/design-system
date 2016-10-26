@@ -158,6 +158,11 @@
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
+  border-collapse: separate;
+
+  thead {
+    transform: translateZ(0);
+  }
 
   .slds-cell-shrink {
     width: $square-icon-large-boundary;

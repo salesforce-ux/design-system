@@ -49,7 +49,6 @@
 //
 // This class goes on the table and deals with some items inside
 .slds-table--edit {
-  border-collapse: separate;
 
   thead {
     background-color: $color-background-alt;
@@ -92,8 +91,6 @@
   }
 
   tbody {
-    transform: translateZ(0);
-
     // Start the counter
     tr {
       counter-increment: row-number;

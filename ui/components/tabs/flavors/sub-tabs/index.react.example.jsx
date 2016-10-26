@@ -20,7 +20,7 @@ import _ from 'lodash';
 //////////////////////////////////////////////
 
 let Subtab = props =>
-  <li id={props.id} className={className('slds-tabs--default__item slds-grid slds-grid--vertical-align-center', props.hasFocus ? 'slds-has-focus' : null, props.active ? 'slds-active' : null, props.className)}>
+  <li id={props.id} className={className('slds-tabs--default__item slds-grid slds-grid--vertical-align-center', props.hasFocus ? 'slds-has-focus' : null, props.active ? 'slds-active' : null, props.className)} role="presentation">
     <a href="javascript:void(0);" className="slds-tabs--default__link slds-p-horizontal--xx-small" role="tab" title={ props.title || 'Subtab Name'}  aria-selected={ props.active ? 'true' : 'false' } tabIndex={ props.active ? '0' : '-1' }>
       { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
       <div className="slds-icon_container" title={ _.startCase(props.symbol) || 'Case' }>
@@ -61,8 +61,8 @@ export let states = [
     element:
       <div className="slds-tabs--default">
         <ul className="slds-tabs--default__nav" role="tablist">
-          <Subtab active />
-          <Subtab />
+          <Subtab active title="Tab Item 1" />
+          <Subtab title="Tab Item 2" />
         </ul>
       </div>
   },
@@ -72,8 +72,8 @@ export let states = [
     element:
       <div className="slds-tabs--default">
         <ul className="slds-tabs--default__nav" role="tablist">
-          <Subtab id="subtab-01" active hasFocus />
-          <Subtab />
+          <Subtab title="Tab Item 1" id="subtab-01" active hasFocus />
+          <Subtab title="Tab Item 2" />
         </ul>
       </div>,
     script: `
@@ -86,8 +86,8 @@ export let states = [
     element:
       <div className="slds-tabs--default">
         <ul className="slds-tabs--default__nav" role="tablist">
-          <Subtab active itemUnsaved />
-          <Subtab />
+          <Subtab title="Tab Item 1" active itemUnsaved />
+          <Subtab title="Tab Item 2" />
         </ul>
       </div>
   },
@@ -97,8 +97,8 @@ export let states = [
     element:
       <div className="slds-tabs--default">
         <ul className="slds-tabs--default__nav" role="tablist">
-          <Subtab active className="slds-border--right slds-border--left" />
-          <Subtab className="slds-border--right" />
+          <Subtab title="Tab Item 1" active className="slds-border--right slds-border--left" />
+          <Subtab title="Tab Item 2" className="slds-border--right" />
         </ul>
       </div>
   },
@@ -108,8 +108,8 @@ export let states = [
     element:
       <div className="slds-tabs--default">
         <ul className="slds-tabs--default__nav" role="tablist">
-          <Subtab active menuIcon />
-          <Subtab menuIcon />
+          <Subtab title="Tab Item 1" active menuIcon />
+          <Subtab title="Tab Item 2" menuIcon />
         </ul>
       </div>
   }

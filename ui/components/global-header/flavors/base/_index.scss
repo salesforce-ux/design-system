@@ -42,6 +42,7 @@
   }
 
   &__button--icon {
+    margin: 0 $spacing-xx-small;
     color: $fill-header-button;
 
     .slds-icon {

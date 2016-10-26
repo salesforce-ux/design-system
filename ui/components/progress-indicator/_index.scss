@@ -36,8 +36,17 @@
         }
       }
 
+      &.slds-has-error .slds-progress__marker {
+
+        &,
+        &:hover,
+        &:focus {
+          background: $progress-color-background-shade;
+        }
+      }
+
       .slds-progress__marker {
-        border-color: $progress-color-border-shade; // wrong
+        border-color: $progress-color-border-shade;
       }
     }
   }
@@ -84,6 +93,22 @@
 
     &:focus {
       box-shadow: $progress-color-background 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark;
+    }
+  }
+
+  &.slds-has-error .slds-progress__marker {
+
+    &,
+    &:hover,
+    &:focus {
+      color: $color-text-error;
+      background: $progress-color-background;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 0 $color-border-error;
     }
   }
 }

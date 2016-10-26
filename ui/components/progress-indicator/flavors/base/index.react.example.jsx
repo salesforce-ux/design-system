@@ -32,18 +32,26 @@ export let Progress = props =>
   </div>;
 
 export let Step = props =>
-  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null) }>
-    { props.done
-      ? <ButtonIcon
-          className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
-          symbol="success"
-          aria-describedby={ props['aria-describedby'] }
-          assistiveText={ props.done ? props.children + ' - Completed' : null }
-        />
-      : <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>
-          <span className="slds-assistive-text">{ props.children } { props.active ? '- Active' : null }</span>
-        </button>
-    }
+  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null, props.error ? 'slds-has-error' : null) }>
+    { props.done && !props.error ?
+      <ButtonIcon
+        className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
+        symbol="success"
+        aria-describedby={ props['aria-describedby'] }
+        assistiveText={ props.done ? props.children + ' - Completed' : null }
+      />
+    : (props.error ?
+      <ButtonIcon
+        className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
+        symbol="warning"
+        aria-describedby={ props['aria-describedby'] }
+        assistiveText={ props.error ? props.children + ' - Error' : null }
+      />
+    :
+      <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>
+        <span className="slds-assistive-text">{ props.children } { props.active ? '- Active' : null }</span>
+      </button>
+    )}
   </li>;
 
 //////////////////////////////////////////////
@@ -73,6 +81,20 @@ export let states = [
         <Progress value="25">
           <Step done aria-describedby="step-1-tooltip">Step 1</Step>
           <Step active aria-describedby="step-2-tooltip">Step 2</Step>
+          <Step aria-describedby="step-3-tooltip">Step 3</Step>
+          <Step aria-describedby="step-4-tooltip">Step 4</Step>
+          <Step aria-describedby="step-5-tooltip">Step 5</Step>
+        </Progress>
+      </div>
+  },
+  {
+    id: 'has-error',
+    label: 'Step - Error',
+    element:
+      <div className="demo-only" style={{ padding: '1rem' }}>
+        <Progress value="25">
+          <Step done aria-describedby="step-1-tooltip">Step 1</Step>
+          <Step error aria-describedby="step-2-tooltip">Step 2</Step>
           <Step aria-describedby="step-3-tooltip">Step 3</Step>
           <Step aria-describedby="step-4-tooltip">Step 4</Step>
           <Step aria-describedby="step-5-tooltip">Step 5</Step>

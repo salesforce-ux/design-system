@@ -42,7 +42,7 @@
   }
 
   &__button--icon {
-    margin: 0 $spacing-xxx-small;
+    margin: 0 $spacing-xx-small;
     color: $fill-header-button;
 
     .slds-icon {
@@ -73,7 +73,6 @@
   }
 
   &__button--icon-favorites {
-    margin: 0 $spacing-x-small;
     color: $color-text-icon-inverse;
 
     .slds-icon,

@@ -77,7 +77,7 @@ export let GlobalHeader = props =>
             iconClassName="slds-global-header__icon"
             symbol="favorite"
             assistiveText="Toggle Favorite" />
-          <span className={ className('slds-global-header__button--icon-favorites-menu slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null) }>
+          <span className={ className('slds-m-right--x-small slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null) }>
             <ButtonIcon
               className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon') }
               hasPopup

@@ -126,13 +126,9 @@
     }
   }
 
-  &__button--icon-favorites-menu {
-    margin-right: $spacing-x-small;
-  }
-
-  & .slds-global-header__icon,
-  & .slds-global-header__icon .slds-icon,
-  & .slds-global-header__icon .slds-button__icon {
+  &__icon,
+  &__icon .slds-icon,
+  &__icon .slds-button__icon {
     @include square($square-icon-global-identity-icon);
   }
 }

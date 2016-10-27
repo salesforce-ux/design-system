@@ -1,0 +1,7 @@
+{
+  "CARD_SPACING_SMALL": "0.125rem",
+  "CARD_SPACING_MEDIUM": "0.25rem",
+  "CARD_SPACING_LARGE": "0.75rem",
+  "CARD_COLOR_BORDER": "rgba(0, 0, 0, 0)",
+  "CARD_COLOR_BACKGROUND": "rgba(0, 0, 0, 0)"
+}

@@ -1,0 +1,84 @@
+{
+  "properties": [
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "2",
+      "name": "cardSpacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "4",
+      "name": "cardSpacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "12",
+      "name": "cardSpacingLarge"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Console border color for card component.",
+      "name": "cardColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Console Card component background color.",
+      "name": "cardColorBackground"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="CARD_SPACING_SMALL" category="spacing">2</property>
+  <property name="CARD_SPACING_MEDIUM" category="spacing">4</property>
+  <property name="CARD_SPACING_LARGE" category="spacing">12</property>
+  <color name="CARD_COLOR_BORDER" category="border-color">#00000000</color>
+  <color name="CARD_COLOR_BACKGROUND" category="background-color">#00000000</color>
+</resources>

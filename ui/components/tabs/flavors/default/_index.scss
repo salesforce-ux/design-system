@@ -87,7 +87,7 @@
     color: $color-text-action-label-active;
 
     &:after {
-      background-color: $color-border-tab-selected;
+      background-color: $color-brand-dark;
     }
 
     .slds-tabs--default__link {
@@ -102,7 +102,7 @@
   &:hover {
 
     &:after {
-      background-color: $color-border-tab-selected;
+      background-color: $color-brand-dark;
     }
   }
 
@@ -113,7 +113,7 @@
 
     &:after {
       height: ($border-width-thick + 1);
-      background-color: $color-text-tab-label-selected;
+      background-color: $color-brand-dark;
     }
   }
 }

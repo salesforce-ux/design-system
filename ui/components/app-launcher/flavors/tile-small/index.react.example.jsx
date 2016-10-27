@@ -21,7 +21,7 @@ import className from 'classnames';
 //////////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>
+  <div className="demo-only" style={{ paddingLeft: '.5rem', paddingRight: '.5rem' }}>
     <AppLauncherTile flavor="small" objectInitials="SC" figureClass="slds-icon-custom-27">
       <span className="slds-truncate slds-text-link">Sales Cloud</span>
     </AppLauncherTile>

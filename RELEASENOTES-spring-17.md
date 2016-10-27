@@ -53,6 +53,7 @@ The following changes have been made in this release:
   - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
 - Cards are now responsive - [Cards](/components/cards/)
 - Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
+- Avatars now support initials.
 
 **FIXED**
 

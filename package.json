@@ -1,11 +1,11 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.2.0-dev",
+  "version": "2.3.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Spring ’17",
-    "id": "206"
+    "name": "Summer ’17",
+    "id": "208"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",

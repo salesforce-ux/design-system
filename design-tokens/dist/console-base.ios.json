@@ -1,0 +1,80 @@
+{
+  "properties": [
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "4",
+      "name": "cardSpacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "8",
+      "name": "cardSpacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "16",
+      "name": "cardSpacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "4",
+      "name": "tableSpacingXSmall"
+    }
+  ]
+}

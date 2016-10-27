@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="MQ_SMALL" category="media-query">only screen and (max-width: 47.9375em)</property>
+  <property name="MQ_MEDIUM" category="media-query">only screen and (min-width: 48em)</property>
+  <property name="MQ_MEDIUM_LANDSCAPE" category="media-query">only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)</property>
+  <property name="MQ_LARGE" category="media-query">only screen and (min-width: 64.0625em)</property>
+  <property name="MQ_HIGH_RES" category="media-query">only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)</property>
+  <property name="MQ_SINGLE_COLUMN_RECORD_LAYOUT" category="media-query">(max-width: 599px)</property>
+</resources>

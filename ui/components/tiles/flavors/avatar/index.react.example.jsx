@@ -15,7 +15,7 @@ import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example'
 import className from 'classnames';
 
 const avatar = (
-  <span className="slds-avatar slds-avatar--circle slds-avatar--small">
+  <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
     <img src="/assets/images/avatar2.jpg" alt="Person's name" />
   </span>
 );
@@ -29,26 +29,16 @@ export let states = [
     id: 'tile-avatar',
     label: 'Default',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="Lexee L. Jackson" media={ avatar }>
-          <ul className="slds-list--horizontal slds-has-dividers--right">
-            <li className="slds-item">VP, Marketing</li>
-            <li className="slds-item">Decision Maker</li>
-          </ul>
-        </TileMedia>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <TileMedia title="Lexee L. Jackson" media={ avatar } />
       </div>
   },
   {
     id: 'tile-avatar-with-action',
     label: 'With actions',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="Lexee L. Jackson" media={ avatar } actions>
-          <ul className="slds-list--horizontal slds-has-dividers--right">
-            <li className="slds-item">VP, Marketing</li>
-            <li className="slds-item">Decision Maker</li>
-          </ul>
-        </TileMedia>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <TileMedia title="Lexee L. Jackson" media={ avatar } actions />
       </div>
   }
 ];

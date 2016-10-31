@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
-import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
+import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -35,54 +35,9 @@ export default (
     <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Contacts (3)</span></CardHeader>
     <CardBody>
       <div className="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
-        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-          <dl className="slds-dl--horizontal">
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Type">Type:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="Visit">Visit</span>
-            </dd>
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Date">Date:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-            </dd>
-          </dl>
-        </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-          <dl className="slds-dl--horizontal">
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Type">Type:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="Visit">Visit</span>
-            </dd>
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Date">Date:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-            </dd>
-          </dl>
-        </TileMedia>
-        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-          <dl className="slds-dl--horizontal">
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Type">Type:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="Visit">Visit</span>
-            </dd>
-            <dt className="slds-dl--horizontal__label">
-              <span className="slds-truncate" title="Date">Date:</span>
-            </dt>
-            <dd className="slds-dl--horizontal__detail slds-tile__meta">
-              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-            </dd>
-          </dl>
-        </TileMedia>
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3" />
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3" />
+        <TileMedia title="Related Record Title 1" media={ icon } actions className="slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3" />
       </div>
     </CardBody>
     <CardFooter><a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a></CardFooter>

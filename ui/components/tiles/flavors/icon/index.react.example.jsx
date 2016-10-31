@@ -27,46 +27,16 @@ export let states = [
     id: 'tile-icon',
     label: 'Default',
     element:
-    <div className="demo-only" style={{ width: '320px' }}>
-      <TileMedia title="Salesforce UX" media={ icon }>
-        <dl className="slds-dl--horizontal">
-          <dt className="slds-dl--horizontal__label">
-            <p className="slds-truncate" title="Company">Company:</p>
-          </dt>
-          <dd className="slds-dl--horizontal__detail slds-tile__meta">
-            <p className="slds-truncate" title="Salesforce">Salesforce</p>
-          </dd>
-          <dt className="slds-dl--horizontal__label">
-            <p className="slds-truncate" title="Email">Email:</p>
-          </dt>
-          <dd className="slds-dl--horizontal__detail slds-tile__meta">
-            <p className="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
-          </dd>
-        </dl>
-      </TileMedia>
+    <div className="demo-only" style={{ width: '30rem' }}>
+      <TileMedia title="Salesforce UX" media={ icon } />
     </div>
   },
   {
     id: 'tile-icon-with-action',
     label: 'With actions',
     element:
-    <div className="demo-only" style={{ width: '320px' }}>
-      <TileMedia title="Salesforce UX" media={ icon } actions>
-        <dl className="slds-dl--horizontal">
-          <dt className="slds-dl--horizontal__label">
-            <p className="slds-truncate" title="Company">Company:</p>
-          </dt>
-          <dd className="slds-dl--horizontal__detail slds-tile__meta">
-            <p className="slds-truncate" title="Salesforce">Salesforce</p>
-          </dd>
-          <dt className="slds-dl--horizontal__label">
-            <p className="slds-truncate" title="Email">Email:</p>
-          </dt>
-          <dd className="slds-dl--horizontal__detail slds-tile__meta">
-            <p className="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
-          </dd>
-        </dl>
-      </TileMedia>
+    <div className="demo-only" style={{ width: '30rem' }}>
+      <TileMedia title="Salesforce UX" media={ icon } actions />
     </div>
   }
 ];

@@ -11,15 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import className from 'classnames';
-
-let Checkbox = props =>
-  <label className="slds-checkbox">
-    <input type="checkbox" name="options" id={props.id} disabled={props.disabled} />
-    <span className="slds-checkbox--faux"></span>
-    <span className="slds-form-element__label slds-assistive-text">{props.label}</span>
-  </label>;
 
 ///////////////////////////////////////////
 // Export
@@ -31,7 +25,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> }>
+        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> }>
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>
@@ -41,7 +35,7 @@ export let states = [
     label: 'With actions',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> } actions>
+        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> } actions>
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>

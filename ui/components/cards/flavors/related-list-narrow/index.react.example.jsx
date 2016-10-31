@@ -25,54 +25,9 @@ export default (
       <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Contacts (3)</span></CardHeader>
       <CardBody>
         <div className="slds-card__body--inner">
-          <Tile title="Related Record Title 1">
-            <dl className="slds-dl--horizontal">
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Type">Type:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="Visit">Visit</span>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Date">Date:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-              </dd>
-            </dl>
-          </Tile>
-          <Tile title="Related Record Title 2">
-            <dl className="slds-dl--horizontal">
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Type">Type:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="Visit">Visit</span>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Date">Date:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-              </dd>
-            </dl>
-          </Tile>
-          <Tile title="Related Record Title 3">
-            <dl className="slds-dl--horizontal">
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Type">Type:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="Visit">Visit</span>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <span className="slds-truncate" title="Date">Date:</span>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
-              </dd>
-            </dl>
-          </Tile>
+          <Tile title="Related Record Title 1" />
+          <Tile title="Related Record Title 2" />
+          <Tile title="Related Record Title 3" />
         </div>
       </CardBody>
       <CardFooter><a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a></CardFooter>

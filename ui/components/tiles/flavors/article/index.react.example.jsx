@@ -26,7 +26,7 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
-          <ul className="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+          <ul className="slds-list--horizontal slds-has-dividers--right">
             <li className="slds-item">Breaking News</li>
             <li className="slds-item">1 day ago</li>
           </ul>

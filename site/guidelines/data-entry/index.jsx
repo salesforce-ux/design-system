@@ -163,7 +163,7 @@ export default (
         <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             To assist the users, you can add help text. If the explanation is
-            lengthy, use an “info” slds-icon and tooltip. For brief explanations
+            lengthy, use an “info” icon and tooltip. For brief explanations
             (shorter than a sentence), you can place the text underneath the
             field.
           </p>
@@ -847,9 +847,9 @@ export default (
           </p>
 
           <p>
-            A field that can be edited inline will have a pencil slds-icon next to
+            A field that can be edited inline will have a pencil icon next to
             it. The user can either double click on the field value or click
-            on the pencil slds-icon to activate inline edit.
+            on the pencil icon to activate inline edit.
           </p>
         </div>
 

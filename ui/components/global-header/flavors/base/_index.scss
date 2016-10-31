@@ -33,7 +33,8 @@
   }
 
   &__item--search {
-    flex: 0 1 $size-large;
+    flex: 0 1 rem(440px);
+    padding: 0;
   }
 
   &__logo {

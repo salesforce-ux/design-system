@@ -224,3 +224,15 @@ props:
     value: '#1589EE'
   RTC_PRESENCE:
     value: '#47CFD2'
+  PRODUCT_CONSUMED:
+    value: '#55BC9C'
+  PRODUCT_TRANSFER:
+    value: '#F88962'
+  PRODUCT_ITEM:
+    value: '#769ED9'
+  PRODUCT_ITEM_TRANSACTION:
+    value: '#F88962'
+  LOCATION:
+    value: '#4BC076'
+  ADDRESS:
+    value: '#4BC076'

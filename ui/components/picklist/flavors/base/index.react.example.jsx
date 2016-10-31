@@ -11,8 +11,49 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+export let Listbox = props =>
+  <div className={className('slds-dropdown', props.className)}>
+    {props.children}
+  </div>;
+
+export let ListboxList = props =>
+  <ul className={className('slds-dropdown__list', props.className)} role="listbox">
+    {props.children}
+  </ul>;
+
+export let ListboxItem = props =>
+  <li {...props} className={className('slds-dropdown__item', props.className)} role="option">
+      <span className="slds-truncate">
+        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }
+        {props.children}
+      </span>
+      { props.iconRight ? props.iconRight : null }
+  </li>;
+
+let ComboboxSearchInput = props =>
+  <div className="slds-form-element__control">
+    <div className="slds-input-has-icon slds-input-has-icon--right">
+      <input
+        id={ props.id }
+        className="slds-lookup__search-input"
+        type="search"
+        placeholder={ props.placeholder || 'Select an Option' }
+        aria-owns={ props.id }
+        role="combobox"
+        aria-activedescendent=""
+        readonly />
+        <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    </div>
+  </div>;
+
 
 export let states = [
   {

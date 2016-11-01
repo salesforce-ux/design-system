@@ -26,7 +26,7 @@ let ComboboxSearchInput = props =>
     <FormElementLabel>Input Label</FormElementLabel>
     <FormElementControl className="slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
       <input
-        id={ props.id }
+        id="text-input-01"
         className="slds-lookup__search-input slds-input"
         type="search"
         placeholder={ props.placeholder || 'Select an Option' }

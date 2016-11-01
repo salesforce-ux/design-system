@@ -22,21 +22,21 @@ import { FormElement, FormElementLabel, FormElementControl } from 'ui/components
 ///////////////////////////////////////////
 
 let ComboboxSearchInput = props =>
-    <FormElement>
-      <FormElementLabel>Input Label</FormElementLabel>
-      <FormElementControl className="slds-input-has-icon slds-input-has-icon--right">
-        <input
-          id={ props.id }
-          className="slds-lookup__search-input slds-input"
-          type="search"
-          placeholder={ props.placeholder || 'Select an Option' }
-          aria-owns={ props.id }
-          role="combobox"
-          aria-activedescendent=""
-          readonly />
-        <ButtonIcon className="slds-input__icon" symbol="down" assistiveText="More Options" iconClassName="slds-button__icon" />
-      </FormElementControl>
-    </FormElement>;
+  <FormElement>
+    <FormElementLabel>Input Label</FormElementLabel>
+    <FormElementControl className="slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+      <input
+        id={ props.id }
+        className="slds-lookup__search-input slds-input"
+        type="search"
+        placeholder={ props.placeholder || 'Select an Option' }
+        aria-owns={ props.id }
+        role="combobox"
+        aria-activedescendent=""
+        readOnly />
+      <ButtonIcon className="slds-input__icon slds-text-color--default" symbol="down" assistiveText="More Options" iconClassName="slds-button__icon" />
+    </FormElementControl>
+  </FormElement>;
 
 ///////////////////////////////////////////
 // Export
@@ -47,10 +47,8 @@ export let states = [
     id: 'picklist-closed',
     label: 'Closed',
     element:
-      <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
-        <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-          <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-        </button>
+      <div className="slds-picklist">
+        <ComboboxSearchInput />
         <Menu className="slds-dropdown--left">
           <MenuList className="slds-dropdown--length-5">
             <MenuItem isSelectable>Option A</MenuItem>
@@ -68,10 +66,8 @@ export let states = [
     label: 'Open',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
+        <div className="slds-picklist slds-is-open">
+          <ComboboxSearchInput />
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
               <MenuItem isSelectable tabIndex="0">Option A</MenuItem>
@@ -90,10 +86,8 @@ export let states = [
     label: 'Item selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Option A</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
+        <div className="slds-picklist slds-is-open">
+          <ComboboxSearchInput />
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
               <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
@@ -112,10 +106,8 @@ export let states = [
     label: 'Multiple items selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
+        <div className="slds-picklist slds-is-open">
+          <ComboboxSearchInput />
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
               <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
@@ -134,10 +126,8 @@ export let states = [
     label: 'Closed - Multiple items selected',
     element:
       <div className="demo-only">
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
+        <div className="slds-picklist">
+          <ComboboxSearchInput />
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
               <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option A</MenuItem>

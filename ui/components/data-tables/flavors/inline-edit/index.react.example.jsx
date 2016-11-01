@@ -54,14 +54,14 @@ let Container = props =>
   </div>;
 
 export let Table = props =>
-  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '65.75rem' }}>
+  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '66.75rem' }}>
     {props.children}
   </table>;
 
 let Thead = props =>
   <thead>
     <tr className="slds-line-height--reset">
-      <th scope="col" style={{ width: '2.75rem' }}>
+      <th scope="col" style={{ width: '3.75rem' }}>
         <div className="slds-th__action">
           <span className="slds-assistive-text">Errors</span>
         </div>
@@ -109,7 +109,7 @@ let TableFocusInfo = props =>
   </div>;
 
 let ErrorPanel = props =>
-  <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}>
+  <div id="error-tooltip-01" className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="tooltip" style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}>
     <div className="slds-popover__body">Company encountered an error.</div>
   </div>;
 
@@ -118,9 +118,14 @@ export let RowData = props => {
 
   return(
     <tr className="slds-hint-parent" aria-selected={ props.checked }>
-      <td id={ props.cellID } tabIndex={ props.errorindex } aria-selected={ props.errorSelected } className={className('slds-cell-edit slds-cell-error', props.editName)}>
-        <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={ !props.focusable ? '-1' : '0' } aria-hidden="true">
-          <span className="slds-assistive-text">Row has errors</span>
+      <td id={ props.cellID } tabIndex={ props.errorindex } role="gridcell" className={className('slds-cell-edit slds-cell-error', props.editName)}>
+        <button
+          id={ 'error-0' + props.index }
+          className={className('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)}
+          tabIndex={ props.errorindex || '-1' }
+          aria-hidden={ props.buttonInvisible ? 'true' : null }
+          aria-describedby={ props.buttonInvisible ? null : 'error-tooltip-01' }>
+          <span className="slds-assistive-text">{'Item ' + props.index + ' has errors'}</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>
         <span className="slds-row-number slds-text-body--small"></span>
@@ -128,9 +133,9 @@ export let RowData = props => {
       <td role="gridcell" className={ className('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
         <Checkbox label={ checkboxLabel } tabIndex={ !props.focusable ? '-1' : '0' } checkID="checkbox-01" />
       </td>
-      <th scope="row" tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} className={className('slds-cell-edit', props.thClassName)}>
+      <th scope="row" tabIndex={ props.initialCellTabIndex } aria-selected={props.defaultSelected} className={className('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
-          <a href="javascript:void()" className="slds-truncate" tabIndex={ !props.focusable ? '-1' : '0' } id={ props.linkId } title={ props.recordName }>
+          <a href="javascript:void()" className="slds-truncate" tabIndex={ props.initialCellTabIndex || '-1' } id={ props.linkId } title={ props.recordName }>
             { props.recordName }
           </a>
           <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ props.initialCellTabIndex } alt={ 'Edit Name: Item ' + props.index } />
@@ -601,7 +606,7 @@ export let states = [
                   <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
-                      <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: {field error} Edited: Acme" />
+                      <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Name: {field error} Edited: Acme" />
                     </span>
                   </td>
                 : null }
@@ -610,7 +615,10 @@ export let states = [
           </tbody>
         </Table>
         <ErrorPanel />
-      </Container>
+      </Container>,
+    script: `
+      document.getElementById('error-01').focus()
+    `
   },
   {
     id: 'header-cell-focused',
@@ -656,7 +664,6 @@ export let states = [
               <Th key={ i }
                 className={ (i===0) ? 'slds-has-focus' : null }
                 columnName={ columns[i] }
-                focusable
                 style={{ width: '8.75rem' }} />
             )}
           </Thead>

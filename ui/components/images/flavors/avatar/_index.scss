@@ -15,6 +15,7 @@
   vertical-align: middle;
   border-radius: $border-radius-medium;
   line-height: $line-height-reset;
+  color: $color-text-inverse;
 
   &:hover,
   &:focus:hover {
@@ -23,18 +24,24 @@
 
   &--x-small {
     @include square($square-icon-x-small-boundary);
+    font-size: $font-size-heading-xx-small;
   }
 
   &--small {
     @include square($square-icon-small-boundary);
+    font-size: $font-size-heading-xx-small;
   }
 
   &--medium {
     @include square($square-icon-medium-boundary);
+    font-size: $font-size-heading-small;
   }
 
   &--large {
     @include square($square-icon-large-boundary);
+    font-size: $font-size-heading-medium;
+    font-weight: $font-weight-light;
+    line-height: $line-height-heading;
   }
 
   &--circle {
@@ -44,5 +51,10 @@
   // New in 2.0.0
   &--empty {
     border: $border-width-thin dashed $color-border;
+  }
+
+  &__initials {
+    @include absolute-center;
+    height: 100%;
   }
 }

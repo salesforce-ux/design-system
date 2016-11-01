@@ -57,7 +57,7 @@ export let states = [
     label: 'With portrait',
     element:
       <Pill>
-        <span className="slds-pill__icon slds-avatar slds-avatar--circle">
+        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-m-right--xx-small">
           <img src="/assets/images/avatar2.jpg" alt="" />
         </span>
       </Pill>

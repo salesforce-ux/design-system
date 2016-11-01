@@ -186,7 +186,7 @@ export default (
 
               <div className="slds-form-element__icon">
                 <a href="javascript:void(0);" tabIndex="-1">
-                  <SvgIcon sprite="utility" symbol="info" className={'icon icon--x-small icon-text-default site-stencil__fill-dark'} />
+                  <SvgIcon sprite="utility" symbol="info" className="slds-icon slds-icon--x-small slds-icon-text-default site-stencil__fill-dark" />
                 </a>
               </div>
 
@@ -229,7 +229,7 @@ export default (
                 <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
                   <div className="slds-align-middle">
                     <button className="slds-button slds-button--icon-container site-stencil__color-dark" tabIndex="-1">
-                      <SvgIcon sprite="utility" symbol="left" className={'button__icon button__icon--small'} />
+                      <SvgIcon sprite="utility" symbol="left" className="slds-button__icon slds-button__icon--small" />
                     </button>
                   </div>
 
@@ -239,7 +239,7 @@ export default (
 
                   <div className="slds-align-middle">
                     <button className="slds-button slds-button--icon-container site-stencil__color-dark" tabIndex="-1">
-                      <SvgIcon sprite="utility" symbol="right" className={'button__icon button__icon--small'} />
+                      <SvgIcon sprite="utility" symbol="right" className="slds-button__icon slds-button__icon--small" />
                     </button>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default (
               </label>
 
               <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
-                <SvgIcon sprite="utility" symbol="search" className={'input__icon icon-text-default site-stencil__fill-dark'} />
+                <SvgIcon sprite="utility" symbol="search" className="slds-input__icon slds-icon-text-default site-stencil__fill-dark" />
 
                 <input disabled className="slds-lookup__search-input slds-input site-stencil__border-light site-stencil__color-dark-placeholder" type="text" tabIndex="-1" />
               </div>
@@ -362,11 +362,13 @@ export default (
                   {_.times(5, i =>
                     <li key={`item-${i}`}>
                       <a className="slds-lookup__item-action slds-media slds-media--center site-stencil__color-dark site-stencil__background-none-hover" href="javascript:void(0);" tabIndex="-1">
-                        <SvgIcon className={'icon icon-standard-account icon--small media__figure site-stencil__background-light'} />
+                        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure site-stencil__background-light" />
+
                         <div className="slds-media__body">
                           <div className="slds-lookup__result-text">
                             🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                           </div>
+
                           <span className="slds-lookup__result-meta slds-text-body--small site-stencil__color-light">
                             🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                           </span>
@@ -740,18 +742,18 @@ export default (
 
           <figure className="site-stencil slds-m-vertical--large slds-clearfix">
             <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aria-hidden="true">
-              <button className="slds-button slds-button--neutral slds-picklist__label site-stencil__border-light  site-stencil__background-none-hover site-stencil__color-dark site-stencil__squeeze" tabIndex="-1">
+              <button className="slds-button slds-button--neutral slds-picklist__label site-stencil__border-light site-stencil__background-none-hover site-stencil__color-dark site-stencil__squeeze" tabIndex="-1">
                 <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
 
-                <SvgIcon sprite="utility" symbol="down" className={'icon site-stencil__fill-dark'} />
+                <SvgIcon sprite="utility" symbol="down" className="slds-icon site-stencil__fill-dark" />
               </button>
 
               <div className="slds-dropdown slds-dropdown--left site-stencil__border-light slds-is-static site-stencil__background-none-hover-parent">
-                <ul className="list--reset dropdown__list slds-dropdown--length-5 slds-m-left--none">
+                <ul className="slds-list--reset slds-dropdown__list slds-dropdown--length-5 slds-m-left--none">
                   <li className="slds-dropdown__item slds-is-selected">
                     <a href="javascript:void(0);" tabIndex="-1" className="site-stencil__color-dark">
                       <span className="slds-truncate">
-                        <SvgIcon sprite="utility" symbol="check" className={'icon icon--selected icon--x-small icon-text-default m-right--x-small site-stencil__fill-dark'} />
+                        <SvgIcon sprite="utility" symbol="check" className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small site-stencil__fill-dark" />
 
                         🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                       </span>
@@ -762,8 +764,7 @@ export default (
                     <li key={`item-${i}`} className="slds-dropdown__item">
                       <a href="javascript:void(0);" tabIndex="-1" className="site-stencil__color-dark">
                         <span className="slds-truncate">
-                          <SvgIcon sprite="utility" symbol="check" className={'icon icon--selected icon--x-small icon-text-default m-right--x-small'} />
-
+                          <SvgIcon sprite="utility" symbol="check" className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default m-right--x-small" />
                           🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                         </span>
                       </a>
@@ -807,11 +808,11 @@ export default (
 
               <div className="slds-grid slds-grid--vertical slds-size--2-of-12">
                 <button className="slds-button slds-button--icon-container site-stencil__color-dark" tabIndex="-1">
-                  <SvgIcon sprite="utility" symbol="left" className={'button__icon'} />
+                  <SvgIcon sprite="utility" symbol="left" className="slds-button__icon" />
                 </button>
 
                 <button className="slds-button slds-button--icon-container site-stencil__color-dark" tabIndex="-1">
-                  <SvgIcon sprite="utility" symbol="right" className={'button__icon'} />
+                  <SvgIcon sprite="utility" symbol="right" className="slds-button__icon" />
                 </button>
               </div>
 
@@ -820,8 +821,8 @@ export default (
                   🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                 </span>
 
-                <div className="slds-picklist picklist--multi">
-                  <ul className="list--reset slds-picklist__options slds-picklist__options--multi site-stencil__border-light slds-m-left--none slds-size--1-of-1 slds-size--1-of-1"></ul>
+                <div className="slds-picklist slds-picklist--multi">
+                  <ul className="slds-list--reset slds-picklist__options slds-picklist__options--multi site-stencil__border-light slds-m-left--none slds-size--1-of-1 slds-size--1-of-1"></ul>
                 </div>
               </div>
             </div>
@@ -867,7 +868,7 @@ export default (
                     </span>
 
                     <button className="slds-button slds-button--icon slds-m-left--x-small site-stencil__color-dark" tabIndex="-1">
-                      <SvgIcon sprite="utility" symbol="edit" className={'button__icon button__icon--hint button__icon--edit site-stencil__fill-light'} />
+                      <SvgIcon sprite="utility" symbol="edit" className="slds-button__icon slds-button__icon--hint slds-button__icon--edit site-stencil__fill-light" />
                     </button>
                   </span>
                 </div>

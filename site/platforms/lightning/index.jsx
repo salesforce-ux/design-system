@@ -33,7 +33,7 @@ export default (
     <div className="slds-grid slds-wrap slds-grid--pull-padded">
       <div className="slds-size--1-of-1 slds-large-size--5-of-6 slds-p-horizontal--small">
         <p>
-          Your <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/lightning_out_dependencies.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">LC4VC</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/apps_slds.htm">Lightning Application</a> automatically get the Lightning Design System
+          Your <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/lightning_out_dependencies.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">Lightning Components for Visualforce (LC4VF)</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/apps_slds.htm">Lightning Application</a> automatically get the Lightning Design System
           stylesheets and design tokens by using the linked instructions to each.
           This is the easiest way to stay up-to-date and consistent with SLDS
           enhancements.</p>

@@ -34,7 +34,7 @@ export let Tile = props =>
       </h3>
     }
     <div className="slds-tile__detail slds-text-body--small">
-      { props.children }
+      { props.children ? props.children : <Detail /> }
     </div>
   </div>;
 
@@ -61,9 +61,17 @@ export let TileMedia = props =>
         </h3>
       }
       <div className="slds-tile__detail slds-text-body--small">
-        { props.children }
+        { props.children ? props.children : <Detail /> }
       </div>
     </div>
+  </div>;
+
+let Detail = props =>
+  <div className="slds-list--horizontal slds-wrap">
+    <div className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</div>
+    <div className="slds-item--detail slds-truncate">Description for first label</div>
+    <div className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</div>
+    <div className="slds-item--detail slds-truncate">Description for second label</div>
   </div>;
 
 ///////////////////////////////////////////
@@ -75,18 +83,16 @@ export let states = [
     id: 'tile',
     label: 'Default',
     element:
-      <Tile title="Salesforce UX">
-        <p className="slds-truncate">26 Members</p>
-      </Tile>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <Tile title="Salesforce UX" />
+      </div>
   },
   {
     id: 'tile-with-action',
     label: 'Default with actions',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <Tile title="Salesforce UX" actions>
-          <p className="slds-truncate">26 Members</p>
-        </Tile>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <Tile title="Salesforce UX" actions />
       </div>
   }
 ];

@@ -15,7 +15,6 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
-import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 
 export let TimelineIcon = props =>
   <div className="slds-icon_container">

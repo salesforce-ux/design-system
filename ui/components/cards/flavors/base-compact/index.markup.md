@@ -1,1 +1,0 @@
-The compact card is used primarily on the desktop &ldquo;console&rdquo; workspace experience, specifically in the &ldquo;narrow&rdquo; column which takes up one-quarter of the viewport with a minimum width of 320px to maintain readability.

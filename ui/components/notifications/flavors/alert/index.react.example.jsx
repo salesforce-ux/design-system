@@ -26,7 +26,8 @@ let Default = props =>
       <ButtonIcon
         className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
         <span className="slds-assistive-text">Info</span>
         <h2>Base System Alert</h2>
     </div>
@@ -40,7 +41,8 @@ let Success = props =>
       <ButtonIcon
         className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <span className="slds-assistive-text">Success</span>
       <h2>
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--x-small" sprite="custom" symbol="custom19" />
@@ -57,7 +59,8 @@ let ErrorAlert = props =>
       <ButtonIcon
         className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <span className="slds-assistive-text">Error</span>
       <h2>
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--x-small" sprite="utility" symbol="ban" />
@@ -74,7 +77,8 @@ let Offline = props =>
       <ButtonIcon
         className="slds-notify__close slds-button--icon-inverse"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <span className="slds-assistive-text">Offline</span>
       <h2>
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--x-small" sprite="utility" symbol="offline" />

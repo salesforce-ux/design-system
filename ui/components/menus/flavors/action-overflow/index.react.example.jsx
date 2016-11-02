@@ -21,7 +21,7 @@ import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.examp
 ///////////////////////////////////////////
 
 const moreIcon = (
-  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" title="Show More" />
 );
 
 //////////////////////////////////////////////

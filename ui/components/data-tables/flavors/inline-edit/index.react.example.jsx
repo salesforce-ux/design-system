@@ -176,6 +176,7 @@ let RowData = (props) => {
             iconClassName="slds-button__icon--hint slds-button__icon--small"
             symbol="down"
             assistiveText="Show More"
+            title="Show More"
             tabIndex={props.navigationModeTabIndex} />
         </div>
       </Td>
@@ -248,6 +249,7 @@ let RowDataStatic = props =>
           iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
           assistiveText="Show More"
+          title="Show More"
           tabIndex={props.navigationModeTabIndex} />
       </div>
     </Td>

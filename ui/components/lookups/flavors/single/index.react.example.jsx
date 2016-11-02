@@ -73,7 +73,7 @@ let LookupSearchInput = props =>
 let LookupEntity = props =>
   <div className={className('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
     <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
-    <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
+    <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" title="Filter by object" />
     { props.showEntityDropdown ?
       <Menu className="slds-dropdown--left">
         <MenuList>

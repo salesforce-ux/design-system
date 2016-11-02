@@ -105,7 +105,7 @@ export let states = [
           <Button className="slds-button--inverse">Edit</Button>
           <Button className="slds-button--inverse">Save</Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" title="More Options" />
           </div>
         </ButtonGroup>
       </div>
@@ -120,7 +120,7 @@ export let states = [
           <Button className="slds-button--inverse" disabled>Edit</Button>
           <Button className="slds-button--inverse" >Save</Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" title="More Options" />
           </div>
         </ButtonGroup>
       </div>
@@ -135,7 +135,7 @@ export let states = [
           <Button className="slds-button--inverse">Edit</Button>
           <Button className="slds-button--inverse">Save</Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
+            <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" title="More Options" />
           </div>
         </ButtonGroup>
       </div>

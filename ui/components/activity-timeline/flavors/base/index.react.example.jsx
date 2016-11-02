@@ -25,7 +25,7 @@ export let TimelineIcon = props =>
 export let TimelineActions = props =>
   <div className="slds-timeline__actions">
     <p className="slds-timeline__date">{ props.date || 'Feb 24' }</p>
-    <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
   </div>;
 
 export default (

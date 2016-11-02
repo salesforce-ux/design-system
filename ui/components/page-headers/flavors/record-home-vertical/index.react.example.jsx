@@ -55,7 +55,8 @@ export default (
                 className="slds-button--icon-border-filled"
                 symbol="down"
                 aria-haspopup="true"
-                assistiveText="More Actions" />
+                assistiveText="More Actions"
+                title="More Actions" />
             </div>
           </div>
         </div>

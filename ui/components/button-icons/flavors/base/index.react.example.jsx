@@ -49,12 +49,12 @@ export let states = [
   {
     id: 'button-icon',
     label: 'Default',
-    element: <Demo><ButtonIcon className="slds-button--icon" title="settings" /></Demo>
+    element: <Demo><ButtonIcon className="slds-button--icon" /></Demo>
   },
   {
     id: 'button-icon-error',
     label: 'Error',
-    element: <Demo><ButtonIcon className="slds-button--icon-error" symbol="warning" /></Demo>
+    element: <Demo><ButtonIcon className="slds-button--icon-error" symbol="warning" title="Warning" assistiveText="Warning" /></Demo>
   },
   {
     id: 'button-icon-disabled',

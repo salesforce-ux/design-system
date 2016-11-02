@@ -39,7 +39,8 @@ export default (
               className="slds-button--icon-border-filled"
               symbol="down"
               aria-haspopup="true"
-              assistiveText="More Actions" />
+              assistiveText="More Actions"
+              title="More Actions" />
           </div>
         </div>
       </div>
@@ -54,13 +55,15 @@ export default (
             className="slds-button--icon-more"
             symbol="table"
             hasDropdown
-            assistiveText="Change view" />
+            assistiveText="Change view"
+            title="Change view" />
         </div>
         <div className="slds-button-group slds-m-left--xx-small" role="group">
           <ButtonIcon
             className="slds-button--icon-border"
             symbol="chart"
-            assistiveText="Chart" />
+            assistiveText="Chart"
+            title="Chart" />
           <ButtonIcon
             className="slds-button--icon-border"
             symbol="filterList"
@@ -70,7 +73,8 @@ export default (
               className="slds-button--icon-more"
               symbol="sort"
               hasDropdown
-              assistiveText="Sort" />
+              assistiveText="Sort"
+              title="Sort" />
           </div>
         </div>
       </div>

@@ -64,7 +64,8 @@ let Tile = props =>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"
-          assistiveText="More Actions"/>
+          assistiveText="More Actions"
+          title="More Actions"/>
       </div>
     </div>
   </div>;
@@ -83,7 +84,8 @@ let FormElementStaticInline = props =>
       className="slds-float--right slds-button--icon slds-button--icon-small"
       iconClassName="slds-button__icon--hint"
       symbol="edit"
-      assistiveText="Edit this Field"/>
+      assistiveText="Edit this Field"
+      title="Edit this Field" />
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span className="slds-form-element__static">{props.text}</span>
@@ -104,7 +106,8 @@ let FormElementStaticLonformInline = props =>
       className="slds-float--right slds-button--icon slds-button--icon-small"
       iconClassName="slds-button__icon--hint"
       symbol="edit"
-      assistiveText="Edit this Field"/>
+      assistiveText="Edit this Field"
+      title="Edit this Field" />
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span className="slds-form-element__static slds-text-longform">{props.text}</span>

@@ -65,7 +65,8 @@ const removeButton = (
     className="slds-button--icon slds-button--icon-small"
     iconClassName="slds-button__icon--hint"
     symbol="close"
-    assistiveText="Remove" />
+    assistiveText="Remove"
+    title="Remove" />
 );
 
 ///////////////////////////////////////////
@@ -82,7 +83,8 @@ let Default = props =>
             <ButtonIcon
               className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
-              assistiveText="Close Filter Panel" />
+              assistiveText="Close Filter Panel"
+              title="Close Filter Panel" />
           </FiltersHeader>
           <FiltersBody>
             <ol className="slds-list--vertical slds-list--vertical-space">
@@ -163,7 +165,8 @@ let Locked = props =>
             <ButtonIcon
               className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
-              assistiveText="Close Filter Panel" />
+              assistiveText="Close Filter Panel"
+              title="Close Filter Panel" />
           </FiltersHeader>
           <FiltersBody>
             <ol className="slds-list--vertical slds-list--vertical-space">

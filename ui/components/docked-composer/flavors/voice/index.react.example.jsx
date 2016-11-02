@@ -50,9 +50,9 @@ let ComposerHeader = props =>
       <h2 id="dialog-heading-id" aria-live="polite" aria-atomic="true">{props.children}</h2>
     </MediaObject>
     <div className="slds-docked-composer__actions">
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" title="Minimize window" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" title="Expand Composer" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" title="Close" />
     </div>
   </header>;
 
@@ -295,7 +295,7 @@ export let states = [
             </MediaObject>
           </div>
           <div className="slds-docked-composer__toolbar slds-shrink-none slds-grid slds-grid--align-spread">
-            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" />
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" title="Mute Yourself" />
           </div>
           <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
           <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />

@@ -37,7 +37,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.className)}>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assistiveText="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assistiveText="Show More" aria-haspopup="true" title="Show More" /> }
     {props.children}
   </div>;
 

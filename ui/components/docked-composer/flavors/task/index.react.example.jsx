@@ -33,7 +33,7 @@ let LookupMulti = props =>
     <div className="slds-form-element__control slds-grid slds-box--border">
       <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--x-small slds-shrink-none">
         <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
-        <ButtonIcon className="slds-button-space-left slds-shrink-none" sprite="utility" symbol="down" assistiveText="Filter" />
+        <ButtonIcon className="slds-button-space-left slds-shrink-none" sprite="utility" symbol="down" assistiveText="Filter" title="Show More" />
       </div>
       <div className="slds-grid slds-grow">
         <input id={props.id} className="slds-lookup__search-input slds-input--bare slds-grow" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder={props.placeholder} defaultValue={props.value} />
@@ -54,9 +54,9 @@ export default (
             <h2 id="dialog-heading-id">New Task</h2>
           </MediaObject>
           <div className="slds-docked-composer__actions">
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" title="Minimize window" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" title="Expand Composer" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" title="Close" />
           </div>
         </header>
 

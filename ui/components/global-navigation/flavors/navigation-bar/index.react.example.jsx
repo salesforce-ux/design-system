@@ -97,7 +97,8 @@ export let ContextBar = props =>
               className="slds-button--icon slds-context-bar__button"
               symbol="chevrondown"
               tabIndex="-1"
-              assistiveText="Open menu item submenu" />
+              assistiveText="Open menu item submenu"
+              title="Open menu item submenu" />
           </div>
           { !props.hideDropdown ? contextDropdown : null }
         </li>

@@ -28,7 +28,7 @@ export let states = [
     label: 'Close',
     element:
       <div className="slds-popover slds-nubbin--left" role="dialog">
-        <ButtonIcon className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" />
+        <ButtonIcon className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" title="Close" />
         <div className="slds-popover__body">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
         </div>

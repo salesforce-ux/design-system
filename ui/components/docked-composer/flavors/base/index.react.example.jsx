@@ -44,9 +44,9 @@ let ComposerHeader = props =>
       <h2 id="dialog-heading-id">Header</h2>
     </MediaObject>
     <div className="slds-docked-composer__actions">
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" title="Minimize window" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" title="Expand Composer" />
+      <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" title="Close" />
     </div>
   </header>;
 

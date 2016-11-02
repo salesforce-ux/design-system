@@ -84,7 +84,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
@@ -96,7 +97,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
@@ -108,7 +110,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
@@ -120,7 +123,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>
@@ -157,7 +161,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Alpha Product">Alpha Product</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="ANLTY">ANLTY</div></td>
@@ -169,7 +174,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="MRKT">MRKT</div></td>
@@ -181,7 +187,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Service Console">Service Console</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="SRVC">SRVC</div></td>
@@ -193,7 +200,8 @@ export let states = [
                     <ButtonIcon
                       className="slds-button--icon-border slds-button--icon-small"
                       symbol="add"
-                      assistiveText="Add Product" />
+                      assistiveText="Add Product"
+                      title="Add Product" />
                   </td>
                   <th scope="row" data-label="Name"><div className="slds-truncate" title="Connectors">Connectors</div></th>
                   <td data-label="Product Code" role="gridcell"><div className="slds-truncate" title="CLASS">CLASS</div></td>

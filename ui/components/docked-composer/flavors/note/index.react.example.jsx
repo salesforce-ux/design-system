@@ -45,9 +45,9 @@ export default (
               Lei Chan - Connected
             </MediaObject>
             <div className="slds-docked-composer__actions">
-              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" title="Minimize window" />
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" title="Expand Composer" />
+              <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" title="Close" />
             </div>
           </div>
           <div className="slds-docked-composer__body slds-grow slds-grid slds-grid--vertical slds-nowrap">
@@ -64,17 +64,18 @@ export default (
               <div className="slds-pill_container">
                 <span className="slds-pill">
                   <a href="javascript:void(0);" className="slds-pill__label">Lei Chan</a>
-                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" title="Remove" />
                 </span>
                 <span className="slds-pill">
                   <a href="javascript:void(0);" className="slds-pill__label">Tesla Motors</a>
-                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" />
+                  <ButtonIcon flavor="icon-bare" sprite="utility" symbol="close" assistiveText="Remove" title="Remove" />
                 </span>
               </div>
               <ButtonIcon
                 className="slds-button--icon-container slds-shrink-none"
                 symbol="add"
-                assistiveText="Add user" />
+                assistiveText="Add user"
+                title="Add user" />
             </div>
             <textarea className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
           </div>
@@ -83,7 +84,8 @@ export default (
               <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="chat"
-                assistiveText="Chat" />
+                assistiveText="Chat"
+                title="Chat" />
               <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="settings"

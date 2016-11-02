@@ -30,7 +30,7 @@
   width: $size-small;
 
   .slds-input {
-    @include button-base;
+    @include button-interactions;
   }
 
   .slds-button {

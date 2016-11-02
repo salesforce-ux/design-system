@@ -76,7 +76,7 @@ export let states = [
     label: 'Default',
     element:
       <Tile title="Salesforce UX">
-        <p className="slds-truncate">26 Members</p>
+        <p className="slds-truncate" title="26 Members">26 Members</p>
       </Tile>
   },
   {
@@ -85,7 +85,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Salesforce UX" actions>
-          <p className="slds-truncate">26 Members</p>
+          <p className="slds-truncate" title="26 Members">26 Members</p>
         </Tile>
       </div>
   }

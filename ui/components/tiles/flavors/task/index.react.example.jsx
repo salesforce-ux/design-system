@@ -32,7 +32,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> }>
-          <p className="slds-truncate">Assignee</p>
+          <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>
       </div>
   },
@@ -42,7 +42,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia title="The Trammel Crow Company" media={ <Checkbox id="checkbox-01" label="Did you complete this task?" /> } actions>
-          <p className="slds-truncate">Assignee</p>
+          <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>
       </div>
   }

@@ -21,7 +21,7 @@ export default (
       <ModalHeader closeButton="false">
         <button className="slds-button slds-button--neutral">Cancel</button>
         <button className="slds-button slds-button--neutral">Save</button>
-        <h2 className="slds-text-heading--medium slds-truncate">New Contact</h2>
+        <h2 className="slds-text-heading--medium slds-truncate" title="New Contact">New Contact</h2>
       </ModalHeader>
       <ModalContent>
         <h3 className="slds-section-title--divider">Section Information</h3>

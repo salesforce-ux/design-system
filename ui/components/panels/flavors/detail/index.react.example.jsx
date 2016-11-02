@@ -53,10 +53,10 @@ let Tile = props =>
       <Checkbox id="completed" label="Complete Task" />
     </div>
     <div className="slds-media__body">
-      <p className="slds-truncate slds-text-heading--small">
+      <p className="slds-truncate slds-text-heading--small" title="Follow up on '15 contact">
         <a href="javascript:void(0);">Follow up on '15 contact</a>
       </p>
-      <p className="slds-truncate slds-text-body--small">Jun 18</p>
+      <p className="slds-truncate slds-text-body--small" title="Jun 18">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
         <Button className="slds-button slds-button--neutral slds-grow">Edit</Button>
         <Button className="slds-button slds-button--neutral slds-grow">Follow Up</Button>

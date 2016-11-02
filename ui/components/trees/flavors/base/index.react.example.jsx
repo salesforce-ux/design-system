@@ -27,7 +27,7 @@ let TreeItem = props =>
     symbol="chevronright"
     assistiveText="Toggle"
     title="Toggle" />
-  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Item</a>
+  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Item">Tree Item</a>
   {props.children}
 </div>;
 
@@ -42,7 +42,7 @@ let TreeBranch = props =>
     title="Toggle" />
   <a
     id={props.ariaControls + '__label'}
-    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Branch</a>
+    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Branch">Tree Branch</a>
 </div>;
 
 let Pill = props =>

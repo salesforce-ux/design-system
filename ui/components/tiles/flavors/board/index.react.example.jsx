@@ -19,14 +19,14 @@ export default (
       <li className="slds-item">
         <Tile title="Anypoint Connectors" className="slds-tile--board">
           <p className="slds-text-heading--medium">$500,000</p>
-          <p className="slds-truncate"><a href="javascript:void(0);">Company One</a></p>
+          <p className="slds-truncate" title="Company One"><a href="javascript:void(0);">Company One</a></p>
           <p className="slds-truncate">Closing 9/30/2015</p>
         </Tile>
       </li>
       <li className="slds-item">
         <Tile title="Cloudhub" className="slds-tile--board">
           <p className="slds-text-heading--medium">$185,000</p>
-          <p className="slds-truncate"><a href="javascript:void(0);">Company Two</a></p>
+          <p className="slds-truncate" title="Company Two"><a href="javascript:void(0);">Company Two</a></p>
           <p className="slds-truncate slds-has-alert">Closing 12/15/2015</p>
           <span className="slds-icon_container slds-tile--board__icon">
             <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
@@ -37,7 +37,7 @@ export default (
       <li className="slds-item">
         <Tile title="600 Widgets" className="slds-tile--board">
           <p className="slds-text-heading--medium">$35,000</p>
-          <p className="slds-truncate"><a href="javascript:void(0);">Company Three</a></p>
+          <p className="slds-truncate" title="Company Three"><a href="javascript:void(0);">Company Three</a></p>
           <p className="slds-truncate">Closing 10/12/2015</p>
         </Tile>
       </li>

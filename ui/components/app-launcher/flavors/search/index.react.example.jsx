@@ -68,12 +68,12 @@ let AppLauncherModal = props =>
         <ul className="slds-grid slds-grid--pull-padded slds-wrap">
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="account">
-              <p className="slds-truncate slds-text-link"><mark>Sales</mark> Invoices</p>
+              <p className="slds-truncate slds-text-link" title="Sales Invoices"><mark>Sales</mark> Invoices</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="announcement">
-              <p className="slds-truncate slds-text-link"><mark>Sales</mark> Objects</p>
+              <p className="slds-truncate slds-text-link" title="Sales Objects"><mark>Sales</mark> Objects</p>
             </AppLauncherTile>
           </li>
         </ul>

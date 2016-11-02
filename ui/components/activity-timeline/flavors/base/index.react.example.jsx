@@ -110,7 +110,7 @@ export default (
           <ul className="slds-list--horizontal slds-wrap">
             <li className="slds-truncate_container--50 slds-m-right--large slds-grid">
               <span className="slds-text-title">To:</span>
-              <span className="slds-text-body--small slds-m-left--xx-small slds-truncate"><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className="slds-no-flex slds-text-body--small"> + 44 more</span>
+              <span className="slds-text-body--small slds-m-left--xx-small slds-truncate" title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className="slds-no-flex slds-text-body--small"> + 44 more</span>
             </li>
             <li className="slds-m-right--large">
               <span className="slds-text-title">From:</span>

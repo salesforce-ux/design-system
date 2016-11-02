@@ -27,7 +27,7 @@ export let states = [
             <h3 className="slds-truncate" title="Mobile conversation on Monday">
               <a href="javascript:void(0);">Mobile conversation on Monday</a>
             </h3>
-            <p className="slds-truncate">Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
+            <p className="slds-truncate" title="Lei seemed interested in closing this deal quickly! Let&rsquo;s move.">Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
             <ul className="slds-list--horizontal slds-wrap">
               <li className="slds-m-right--large">
                 <span className="slds-text-title">Name:</span>

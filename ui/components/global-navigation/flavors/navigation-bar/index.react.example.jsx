@@ -72,7 +72,7 @@ export let ContextBar = props =>
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 

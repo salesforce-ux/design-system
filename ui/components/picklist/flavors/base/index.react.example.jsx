@@ -21,7 +21,7 @@ export let states = [
     element:
       <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
         <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-          <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
+          <span className="slds-truncate" title="Select an Option">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
         </button>
         <Menu className="slds-dropdown--left">
           <MenuList className="slds-dropdown--length-5">
@@ -42,7 +42,7 @@ export let states = [
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
           <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
+            <span className="slds-truncate" title="Select an Option">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
@@ -64,7 +64,7 @@ export let states = [
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
           <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Option A</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
+            <span className="slds-truncate" title="Option A">Option A</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
@@ -86,7 +86,7 @@ export let states = [
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
           <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
+            <span className="slds-truncate" title="2 Options selected">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">
@@ -108,7 +108,7 @@ export let states = [
       <div className="demo-only">
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
           <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
+            <span className="slds-truncate" title="2 Options selected">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
           </button>
           <Menu className="slds-dropdown--left">
             <MenuList className="slds-dropdown--length-5">

@@ -27,7 +27,7 @@ export let states = [
           <h3 className="slds-truncate" title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
           </h3>
-          <p className="slds-truncate">Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
+          <p className="slds-truncate" title="Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.">Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
           <ul className="slds-list--horizontal slds-wrap">
             <li className="slds-m-right--large">
               <span className="slds-text-title">Time:</span>

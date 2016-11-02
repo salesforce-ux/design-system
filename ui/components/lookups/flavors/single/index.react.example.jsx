@@ -147,7 +147,7 @@ let LookupMenuItemLabel = props => {
     <li role="presentation">
       <span className="slds-lookup__item-action slds-lookup__item-action--label" id={ uniqueId } role="option">
         <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol={ props.symbol || 'add' } />
-        <span className="slds-truncate">{ props.text || 'New Account'}</span>
+        <span className="slds-truncate" title="{ props.text || 'New Account' }">{ props.text || 'New Account'}</span>
       </span>
     </li>
   );

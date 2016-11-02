@@ -35,5 +35,13 @@ export let states = [
       <div className="slds-box slds-box--x-small">
         <p>This is an extra-small box.</p>
       </div>
+  },
+  {
+    id: 'xx-small',
+    label: 'Xx-Small',
+    element:
+      <div className="slds-box slds-box--xx-small">
+        <p>This is an extra-extra-small box.</p>
+      </div>
   }
 ];

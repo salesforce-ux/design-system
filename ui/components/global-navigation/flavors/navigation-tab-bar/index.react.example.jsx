@@ -102,11 +102,20 @@ export let ContextTabBar = props =>
           </MenuList>
         </Menu>
       </div>
-
+      <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
+        <div className="slds-context-bar__icon-action">
+          <ButtonIcon
+            className={ className('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
+            symbol="side_list"
+            aria-haspopup="true"
+            assistiveText="Toggle split view" />
+        </div>
+      </div>
+      <div className="slds-context-bar__vertical-divider"></div>
       <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className="slds-button--icon-container slds-button--icon-x-small"
+            className="slds-button--icon-container slds-button--icon-small"
             symbol="add"
             aria-haspopup="true"
             assistiveText="Open object switcher menu" />
@@ -145,6 +154,16 @@ export let states = [
     label: 'Default',
     element:
       <ContextTabBar>
+        <ContextTab title="Home" symbol="home" itemActive />
+        <ContextTab title="Tab Item 1" />
+        <ContextTab title="Tab Item 2"  />
+      </ContextTabBar>
+  },
+  {
+    id: 'split-view',
+    label: 'Split View - Active',
+    element:
+      <ContextTabBar splitViewActive>
         <ContextTab title="Home" symbol="home" itemActive />
         <ContextTab title="Tab Item 1" />
         <ContextTab title="Tab Item 2"  />

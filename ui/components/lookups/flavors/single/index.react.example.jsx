@@ -102,7 +102,7 @@ let LookupEntity = props =>
     : null}
   </div>;
 
-export let LookupMenu = props => {
+let LookupMenu = props => {
   const uniqueId = _.uniqueId('lookup-option-');
 
   return (
@@ -124,7 +124,7 @@ export let LookupMenu = props => {
   );
 };
 
-export let LookupMenuItem = props => {
+let LookupMenuItem = props => {
   const uniqueId = _.uniqueId('lookup-option-');
 
   return (
@@ -140,7 +140,7 @@ export let LookupMenuItem = props => {
   );
 };
 
-export let LookupMenuItemLabel = props => {
+let LookupMenuItemLabel = props => {
   const uniqueId = _.uniqueId('lookup-option-');
 
   return (

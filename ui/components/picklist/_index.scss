@@ -18,7 +18,8 @@
 
   &--fluid {
     .slds-picklist__label,
-    .slds-dropdown {
+    .slds-dropdown,
+    .slds-lookup {
       width: auto;
       min-width: 0;
       max-width: $size-small;

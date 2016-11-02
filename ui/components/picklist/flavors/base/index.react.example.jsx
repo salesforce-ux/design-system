@@ -10,16 +10,47 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { LookupMenu, LookupMenuItem, LookupMenuItemLabel } from 'ui/components/lookups/flavors/single/index.react.example';
 import { FormElement, FormElementLabel, FormElementControl } from 'ui/components/forms/flavors/input/index.react.example';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
+
+export let Listbox = props =>
+  <div className={className('slds-dropdown', props.className)}>
+    {props.children}
+  </div>;
+
+export let ListboxList = props =>
+  <ul className={className('slds-dropdown__list', props.className)} role="listbox">
+    {props.children}
+  </ul>;
+
+export let ListboxItem = props => {
+  const uniqueId = _.uniqueId('listbox-option-');
+
+  return (
+    <li className={className(props.className)} role="presentation">
+      <span aria-selected={props.isSelected} className={className('slds-lookup__item-action slds-lookup__item-action--label', props.isSelected ? 'slds-is-selected' : null)} role="option" id={ uniqueId }>
+        { props.isSelected ?
+          <div>
+            <span className="slds-assistive-text">Selected:</span>
+            <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" />
+          </div>
+          : null }
+        { props.header ?
+          <h3 className="slds-text-body--small" role="presentation">{props.children}</h3>
+          : <span className="slds-truncate">{props.children}</span> }
+      </span>
+    </li>
+  );
+};
 
 let ComboboxSearchInput = props =>
   <FormElement>
@@ -149,10 +180,19 @@ export let states = [
     id: 'example-for-simon',
     label: 'Hello Simon',
     element:
-      <div className="demo-only">
+      <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist">
           <ComboboxSearchInput />
-          <LookupMenu />
+          <Listbox className="slds-dropdown--left">
+            <ListboxList className="slds-dropdown--length-5">
+              <ListboxItem header>Recently Viewed</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option B</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option C</ListboxItem>
+              <ListboxItem>Option D</ListboxItem>
+              <ListboxItem>Option E</ListboxItem>
+              <ListboxItem>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
         </div>
       </div>
   }

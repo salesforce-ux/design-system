@@ -22,7 +22,7 @@ export let states = [
     element:
       <div className="demo-only">
         <span className="slds-assistive-text">Email</span>
-        <MediaObject figureRight={ <TimelineActions title="More Options for Email, Mobile conversation" /> }>
+        <MediaObject figureRight={ <TimelineActions title="More Options for Email, Mobile conversation" assistiveText="More Options for Email, Mobile conversation" /> }>
           <MediaObject className="slds-media--timeline slds-timeline__media--email" figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName="slds-timeline__icon">
             <h3 className="slds-truncate" title="Mobile conversation on Monday">
               <a href="javascript:void(0);">Mobile conversation on Monday</a>

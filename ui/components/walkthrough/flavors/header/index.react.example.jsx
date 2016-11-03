@@ -30,20 +30,16 @@ let Header = props =>
         </button>
         <Menu className="slds-dropdown--inverse slds-dropdown--left">
           <MenuList>
-            <MenuItem tabIndex="0" className="slds-is-selected" isSelected>
-              <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" />
+            <MenuItem tabIndex="0" className="slds-is-selected" isSelectable isSelected>
               Conquer Your Cases
             </MenuItem>
-            <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" />
+            <MenuItem isSelectable>
               Automate For Speed
             </MenuItem>
-            <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" />
+            <MenuItem isSelectable>
               Share Your Knowledge
             </MenuItem>
-            <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" />
+            <MenuItem isSelectable>
               Finish it up in a Flash
             </MenuItem>
             <li className="slds-has-divider--top-space" role="separator"></li>

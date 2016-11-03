@@ -141,7 +141,15 @@ let SplitView = props =>
 
 let Row = props =>
   <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation" key={ props.key }>
+
     <a href="javascript:void(0);" aria-selected="false" role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
+      { props.unread ?
+        <abbr className="slds-unread" title="unread">
+          <svg className="slds-icon slds-icon--xx-small" aria-hidden="true">
+            <circle cx="4" cy="4" r="4" />
+          </svg>
+        </abbr>
+      : null }
       <div className="slds-grid slds-wrap">
         <span role="rowheader" className="slds-truncate slds-text-body--regular slds-text-color--inverse" title={ props.name || 'Object Name' }>
           { props.colOne || 'Column 1' }

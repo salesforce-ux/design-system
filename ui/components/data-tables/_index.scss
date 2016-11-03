@@ -84,6 +84,7 @@
 
 // Add vertical borders to a table
 .slds-table--bordered {
+  border-collapse: separate;
   // scss-lint:disable SelectorDepth
   border: {
     top: $border-width-thin solid $color-border;
@@ -257,7 +258,6 @@
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
-  border-collapse: separate;
 
   thead {
     background-color: $color-background-alt;

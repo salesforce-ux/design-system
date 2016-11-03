@@ -129,7 +129,7 @@ let LookupMenuItem = props => {
 
   return (
     <li role="presentation">
-      <span className="slds-lookup__item-action slds-media slds-media--center" id={ uniqueId } role="option">
+      <span className="slds-lookup__item-action slds-media" id={ uniqueId } role="option">
         <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
         <div className="slds-media__body">
           <div className="slds-lookup__result-text">{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
@@ -203,7 +203,7 @@ export let states = [
     id: 'active',
     label: 'Active',
     element:
-      <div className="demo-only" style={{ height: '380px' }}>
+      <div className="demo-only" style={{ height: '400px' }}>
         <Lookup showLookupDropdown />
       </div>
   },

@@ -23,12 +23,12 @@ import _ from 'lodash';
 ///////////////////////////////////////////
 
 export let Listbox = props =>
-  <div className={className('slds-dropdown', props.className)}>
+  <div className={className('slds-dropdown', props.className)} role="listbox">
     {props.children}
   </div>;
 
 export let ListboxList = props =>
-  <ul className={className('slds-dropdown__list', props.className)} role="listbox">
+  <ul className={className('slds-dropdown__list', props.className)} role={ props.header ? 'group' : 'presentation' } aria-label={ props.header ? props.headerText : null }>
     {props.children}
   </ul>;
 
@@ -39,7 +39,7 @@ export let ListboxItem = props => {
     <li className={className(props.className)} role="presentation">
       <span className="slds-lookup__item-action slds-lookup__item-action--label" aria-selected={props.isSelected} role="option" id={ uniqueId }>
         { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" /> : null }
-        { props.header ? <h3 className="slds-text-body--small slds-text-color--weak">{props.children}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
+        { props.headerText ? <h3 className="slds-lookup__item--label slds-text-body--small">{props.headerText}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
       </span>
     </li>
   );
@@ -177,8 +177,8 @@ export let states = [
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
           <ComboboxSearchInput />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList>
-              <ListboxItem header>Recently Viewed</ListboxItem>
+            <ListboxList header>
+              <ListboxItem headerText="Recently Viewed">Recently Viewed</ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option A</ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option B</ListboxItem>
               <ListboxItem isSelectable>Option C</ListboxItem>

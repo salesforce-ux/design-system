@@ -54,45 +54,45 @@
     margin-top: (($square-icon-medium-content / 2) * -1);
 
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
-      fill: $color-text-icon-default;
+      fill: $color-text-input-icon;
     }
   }
 
   &--left {
     .slds-input__icon {
-      left: $spacing-small;
+      left: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
     .slds-input--bare {
-      padding-left: $spacing-x-large;
+      padding-left: $spacing-xx-large;
     }
   }
 
   &--right {
     .slds-input__icon {
-      right: $spacing-small;
+      right: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
     .slds-input--bare {
-      padding-right: $spacing-x-large;
+      padding-right: $spacing-xx-large;
     }
   }
 
   &--left-right {
 
     .slds-input__icon--left {
-      left: $spacing-small;
+      left: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input__icon--right {
-      right: $spacing-small;
+      right: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
     .slds-input--bare {
-      padding: 0 $spacing-x-large;
+      padding: 0 $spacing-xx-large;
     }
   }
 }

@@ -136,6 +136,7 @@
 }
 
 // Stateful Button Icon
+.slds-button--icon-container.slds-is-selected,
 .slds-button--icon-border.slds-is-selected {
   @include button-brand;
 

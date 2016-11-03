@@ -54,6 +54,8 @@ The following changes have been made in this release:
 - Cards are now responsive - [Cards](/components/cards/)
 - Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
 - Avatars now support initials.
+- Stateful icon buttons are now compatible with `slds-button--icon-container`
+- Spacing adjustments made to lookup items
 
 **FIXED**
 
@@ -61,6 +63,8 @@ The following issues have now been resolved:
 
 - Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
 - Data Table - Inline edit now has full support
+- Icon when inside placed inside of an input field now uses the correct token
+- Modal content properly wraps and hyphenates longform text
 
 **DEPRECATED**
 
@@ -81,10 +85,10 @@ The following features are being removed in this release:
 The following tokens have been add/removed/deprecated in this release:
 
 - Added `force-base/fill.json`
-  - Added token `FILL_HEADER_BUTTON`    
-  - Added token `FILL_HEADER_BUTTON_HOVER`
+  - Added token: `FILL_HEADER_BUTTON`    
+  - Added token: `FILL_HEADER_BUTTON_HOVER`
 - Added `force-base/text-transform.json`
-  - Added token `TEXT_TRANSFORM`
+  - Added token: `TEXT_TRANSFORM`
 - Added token: `FONT_FAMILY_TEXT`
 - Added token: `FONT_FAMILY_HEADING`
 - Added token: `SPLIT_VIEW_COLOR_BACKGROUND`
@@ -114,6 +118,28 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS`
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER`
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE`
+- Added token: `CUSTOM_101`
+- Added token: `CUSTOM_102`
+- Added token: `CUSTOM_103`
+- Added token: `CUSTOM_104`
+- Added token: `CUSTOM_105`
+- Added token: `CUSTOM_106`
+- Added token: `CUSTOM_107`
+- Added token: `CUSTOM_108`
+- Added token: `CUSTOM_109`
+- Added token: `CUSTOM_110`
+- Added token: `CUSTOM_111`
+- Added token: `CUSTOM_112`
+- Added token: `CUSTOM_113`
+- Added token: `CUSTOM_NOTIFICATION`
+- Added token: `DATADOTCOM`
+- Added token: `RTC_PRESENCE`
+- Added token: `PRODUCT_CONSUMED`
+- Added token: `PRODUCT_TRANSFER`
+- Added token: `PRODUCT_ITEM`
+- Added token: `PRODUCT_ITEM_TRANSACTION`
+- Added token: `LOCATION`
+- Added token: `ADDRESS`
 - Added alias: `SANS_SERIF`
 - Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`

@@ -26,7 +26,7 @@
     z-index: $z-index-dropdown;
     position: absolute;
     width: 100%;
-    padding: $spacing-xx-small 0;
+    padding: $spacing-x-small 0;
     display: none;
   }
 
@@ -62,14 +62,14 @@
   &__item--label {
     display: flex;
     align-items: center;
-    padding: $spacing-x-small;
+    padding: $spacing-x-small $spacing-medium;
   }
 
   &__item-action {
     font-size: $font-size-medium;
     display: flex;
     align-items: center;
-    padding: $spacing-xx-small $spacing-x-small;
+    padding: $spacing-xx-small $spacing-medium;
     color: $color-text-default;
     text-align: left;
     width: 100%;
@@ -89,13 +89,15 @@
     // Icon in results, here so it doesn't need to be repeated in DOM
     .slds-icon {
       margin-right: $spacing-x-small;
+      margin-top: $spacing-xx-small;
     }
   }
 
   &__item-action--label {
-    padding: $spacing-x-small $spacing-small;
+    padding: $spacing-x-small $spacing-medium;
 
     .slds-icon {
+      margin-left: $spacing-xx-small;
       margin-right: $spacing-small;
     }
   }
@@ -108,12 +110,14 @@
   &__result-text {
     @include truncate;
     display: block;
+    margin-bottom: $spacing-xxx-small;
   }
 
   // Meta data in results
   &__result-meta {
     display: block;
     margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+    color: $color-text-label;
   }
 
   &__pill-container {

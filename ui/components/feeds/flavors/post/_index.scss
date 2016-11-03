@@ -11,10 +11,14 @@
 .slds-feed__item-comments {
   background: $color-background-post;
   border-top: $border-width-thin solid $color-border;
-  margin-top: $spacing-x-small;
+  border-bottom: $border-width-thin solid $color-border;
 
   .slds-comment {
     padding: $spacing-x-small $spacing-medium;
+  }
+
+  @include mq-medium-min {
+    margin-top: $spacing-x-small;
   }
 }
 

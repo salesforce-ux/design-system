@@ -13,5 +13,5 @@ Changes proposed in this pull request:
 * [ ] Release notes mention the changes
 
 ⚠️ Once this pull request is merged, please merge the code into other development branches:
-[Merge branch 'summer-16' into winter-17](http://bit.ly/28Qnxke)
 [Merge branch 'winter-17' into spring-17](http://bit.ly/28OZIGM)
+[Merge branch 'spring-17' into summer-17](http://bit.ly/2fjT4LY)

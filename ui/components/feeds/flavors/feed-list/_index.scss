@@ -26,14 +26,6 @@
 
     @include mq-large-min {
       padding: $spacing-large 0;
-
-      + .slds-feed__item {
-        border-top: $border-width-thin solid $color-border;
-      }
-
-      .slds-feed__item-comments {
-        margin-bottom: ($spacing-large * -1);
-      }
     }
   }
 }

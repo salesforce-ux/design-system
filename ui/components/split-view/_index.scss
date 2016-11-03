@@ -61,9 +61,13 @@
   //
   // position dot indicator to the left of the content
   .slds-unread {
+    @include square(8px);
     position: absolute;
-    top: $spacing-small;
+    top: $spacing-medium;
     left: $spacing-x-small;
+    border-radius: $border-radius-circle;
+    display: block;
+    background: $color-text-inverse;
   }
 }
 

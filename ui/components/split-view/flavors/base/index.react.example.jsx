@@ -144,10 +144,8 @@ let Row = props =>
 
     <a href="javascript:void(0);" aria-selected="false" role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
       { props.unread ?
-        <abbr className="slds-unread" title="unread">
-          <svg className="slds-icon slds-icon--xx-small" aria-hidden="true">
-            <circle cx="4" cy="4" r="4" />
-          </svg>
+        <abbr className="slds-unread" title="unread item">
+          <span className="slds-assistive-text">Unread Item</span>
         </abbr>
       : null }
       <div className="slds-grid slds-wrap">

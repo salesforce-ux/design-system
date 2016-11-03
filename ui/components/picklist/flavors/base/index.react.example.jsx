@@ -37,9 +37,9 @@ export let ListboxItem = props => {
 
   return (
     <li className={className(props.className)} role="presentation">
-      <span className="slds-lookup__item-action slds-lookup__item-action--label" aria-selected={props.isSelected} id={ uniqueId }>
-        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }
-        { props.header ? <h3 className="slds-text-body--small slds-text-color--weak">{props.children}</h3> : <span className="slds-truncate">{props.children}</span> }
+      <span className="slds-lookup__item-action slds-lookup__item-action--label" aria-selected={props.isSelected} role="option" id={ uniqueId }>
+        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" /> : null }
+        { props.header ? <h3 className="slds-text-body--small slds-text-color--weak">{props.children}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
       </span>
     </li>
   );
@@ -80,7 +80,7 @@ export let states = [
             <ListboxItem isSelectable>Option C</ListboxItem>
             <ListboxItem isSelectable>Option D</ListboxItem>
             <ListboxItem isSelectable>Option E</ListboxItem>
-            <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
           </ListboxList>
         </Listbox>
       </div>
@@ -99,7 +99,7 @@ export let states = [
               <ListboxItem isSelectable>Option C</ListboxItem>
               <ListboxItem isSelectable>Option D</ListboxItem>
               <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -119,7 +119,7 @@ export let states = [
               <ListboxItem isSelectable>Option C</ListboxItem>
               <ListboxItem isSelectable>Option D</ListboxItem>
               <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -139,7 +139,7 @@ export let states = [
               <ListboxItem isSelectable>Option C</ListboxItem>
               <ListboxItem isSelectable>Option D</ListboxItem>
               <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -159,7 +159,7 @@ export let states = [
               <ListboxItem isSelectable>Option C</ListboxItem>
               <ListboxItem isSelectable>Option D</ListboxItem>
               <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -184,7 +184,7 @@ export let states = [
               <ListboxItem isSelectable>Option C</ListboxItem>
               <ListboxItem isSelectable>Option D</ListboxItem>
               <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>

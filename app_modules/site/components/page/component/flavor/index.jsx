@@ -157,7 +157,7 @@ class ComponentFlavor extends React.Component {
       lightning: 'Lightning Out'
     };
     const labelVisbility = {
-      internal: ['aura'],
+      internal: ['aura', 's1'],
       external: ['s1', 'lightning']
     };
     return _.keys(flavor.compatibility)

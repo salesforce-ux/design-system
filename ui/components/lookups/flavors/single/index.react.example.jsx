@@ -130,7 +130,7 @@ let LookupMenuItem = props => {
   return (
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id={ uniqueId } role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
         <div className="slds-media__body">
           <div className="slds-lookup__result-text">{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
           <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; { props.location || 'San Francisco' }</span>

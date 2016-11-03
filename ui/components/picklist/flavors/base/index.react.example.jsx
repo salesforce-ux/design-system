@@ -39,7 +39,7 @@ export let ListboxItem = props => {
     <li className={className(props.className)} role="presentation">
       <span className="slds-lookup__item-action slds-lookup__item-action--label" aria-selected={props.isSelected} role="option" id={ uniqueId }>
         { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" /> : null }
-        { props.headerText ? <h3 className="slds-lookup__item--label slds-text-body--small">{props.headerText}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
+        { props.headerText ? <h3 className="slds-text-body--small slds-text-color--weak">{props.headerText}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
       </span>
     </li>
   );

@@ -25,7 +25,7 @@ export let states = [
     id: 'global-header-search-active',
     label: 'Active',
     element:
-      <div className="demo-only" style={{ height: '260px' }}>
+      <div className="demo-only" style={{ height: '290px' }}>
         <GlobalHeader autocomplete>
           <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
             <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
@@ -44,8 +44,8 @@ export let states = [
             <div className="slds-lookup__item--label slds-text-body--small">Recent Items</div>
             <ul className="slds-lookup__list" role="listbox">
               <li role="presentation">
-                <span className="slds-lookup__item-action slds-media slds-media--center" id="option-01" role="option">
-                  <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+                <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
+                  <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="opportunity" />
                   <div className="slds-media__body">
                     <div className="slds-lookup__result-text">Salesforce - 1,000 Licenses</div>
                     <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Prospecting</span>
@@ -53,8 +53,8 @@ export let states = [
                 </span>
               </li>
               <li role="presentation">
-                <span className="slds-lookup__item-action slds-media slds-media--center" id="option-02" role="option">
-                  <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+                <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
+                  <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="contact" />
                   <div className="slds-media__body">
                     <div className="slds-lookup__result-text">Art Vandelay</div>
                     <span className="slds-lookup__result-meta slds-text-body--small">Contact &bull; avandelay@vandelay.com</span>
@@ -62,8 +62,8 @@ export let states = [
                 </span>
               </li>
               <li role="presentation">
-                <span className="slds-lookup__item-action slds-media slds-media--center" id="option-03" role="option">
-                  <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+                <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
+                  <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="account" />
                   <div className="slds-media__body">
                     <div className="slds-lookup__result-text">Vandelary Industries</div>
                     <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
@@ -71,8 +71,8 @@ export let states = [
                 </span>
               </li>
               <li role="presentation">
-                <span className="slds-lookup__item-action slds-media slds-media--center" id="option-04" role="option">
-                  <SvgIcon className="slds-icon slds-icon-custom-8 slds-icon--small slds-media__figure" sprite="custom" symbol="custom8" />
+                <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
+                  <SvgIcon className="slds-icon slds-icon-custom-8 slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="custom" symbol="custom8" />
                   <div className="slds-media__body">
                     <div className="slds-lookup__result-text">Salesforce UK 2016 Events</div>
                     <span className="slds-lookup__result-meta slds-text-body--small">General Ledger &bull; $20,000</span>
@@ -80,8 +80,8 @@ export let states = [
                 </span>
               </li>
               <li role="presentation">
-                <span className="slds-lookup__item-action slds-media slds-media--center" id="option-05" role="option">
-                  <SvgIcon className="slds-icon slds-icon-standard-lead slds-icon--small slds-media__figure" sprite="standard" symbol="lead" />
+                <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
+                  <SvgIcon className="slds-icon slds-icon-standard-lead slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="lead" />
                   <div className="slds-media__body">
                     <div className="slds-lookup__result-text">H.E. Pennypacker</div>
                     <span className="slds-lookup__result-meta slds-text-body--small">Lead &bull; Nursing</span>
@@ -100,7 +100,7 @@ export let states = [
     id: 'global-header-search-typeahead',
     label: 'Typeahead',
     element:
-      <div className="demo-only" style={{ height: '310px' }}>
+      <div className="demo-only" style={{ height: '340px' }}>
       <GlobalHeader autocomplete>
         <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left-right">
           <SvgIcon className="slds-input__icon slds-input__icon--left" sprite="utility" symbol="search" />
@@ -130,8 +130,8 @@ export let states = [
               </span>
             </li>
             <li role="presentation">
-              <span className="slds-lookup__item-action slds-media slds-media--center" id="option-01" role="option">
-                <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+              <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
+                <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="opportunity" />
                 <div className="slds-media__body">
                   <div className="slds-lookup__result-text"><mark>IBM</mark> - 1yr/100k</div>
                   <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Proposal/Quote</span>
@@ -139,8 +139,8 @@ export let states = [
               </span>
             </li>
             <li role="presentation">
-              <span className="slds-lookup__item-action slds-media slds-media--center" id="option-02" role="option">
-                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+              <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
+                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="account" />
                 <div className="slds-media__body">
                   <div className="slds-lookup__result-text"><mark>IBM</mark></div>
                   <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
@@ -148,8 +148,8 @@ export let states = [
               </span>
             </li>
             <li role="presentation">
-              <span className="slds-lookup__item-action slds-media slds-media--center" id="option-03" role="option">
-                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+              <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
+                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="account" />
                 <div className="slds-media__body">
                   <div className="slds-lookup__result-text"><mark>IBM</mark> Watson</div>
                   <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
@@ -157,8 +157,8 @@ export let states = [
               </span>
             </li>
             <li role="presentation">
-              <span className="slds-lookup__item-action slds-media slds-media--center" id="option-04" role="option">
-                <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+              <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
+                <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="opportunity" />
                 <div className="slds-media__body">
                   <div className="slds-lookup__result-text">200 Service Licenses - <mark>IBM</mark></div>
                   <span className="slds-lookup__result-meta slds-text-body--small">Opportunity  &bull; Close-Won</span>
@@ -166,8 +166,8 @@ export let states = [
               </span>
             </li>
             <li role="presentation">
-              <span className="slds-lookup__item-action slds-media slds-media--center" id="option-05" role="option">
-                <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+              <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
+                <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure slds-m-top--xx-small" sprite="standard" symbol="contact" />
                 <div className="slds-media__body">
                   <div className="slds-lookup__result-text">Art Vandelay (<mark>IBM</mark>)</div>
                   <span className="slds-lookup__result-meta slds-text-body--small">User &bull; Latex Salesman</span>

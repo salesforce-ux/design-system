@@ -22,7 +22,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-more" assistiveText="More options" />
+        <ButtonIcon hasDropdown className="slds-button--icon-more" assistiveText="More options" title="More Options" />
       </div>
   },
   {
@@ -30,7 +30,7 @@ export let states = [
     label: 'Inverse',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-more" assistiveText="More options" />
+        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-more" assistiveText="More options" title="More Options" />
       </div>
   }
 ];

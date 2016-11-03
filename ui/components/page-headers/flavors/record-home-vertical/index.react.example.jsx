@@ -55,7 +55,8 @@ export default (
                 className="slds-button--icon-border-filled"
                 symbol="down"
                 aria-haspopup="true"
-                assistiveText="More Actions" />
+                assistiveText="More Actions"
+                title="More Actions" />
             </div>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default (
           </div>
         </li>
         <li className="slds-item">
-          <div className="slds-text-title slds-truncate slds-m-bottom--xx-small">Field 7</div>
+          <div className="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 7">Field 7</div>
           <div className="slds-text-body--regular" title="Description">
             Description
           </div>

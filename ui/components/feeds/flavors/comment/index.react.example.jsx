@@ -56,7 +56,7 @@ export let CommentFooter = props =>
   </footer>;
 
 let ButtonIcon = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
     <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol={props.symbol} />
     <span className="slds-assistive-text">{props.assistiveText}</span>
   </button>;

@@ -25,7 +25,7 @@ export let Tile = props =>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
+          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options"title="More Actions" />
         </div>
       </div>
     :
@@ -52,7 +52,7 @@ export let TileMedia = props =>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
-            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More Actions" />
           </div>
         </div>
       :
@@ -76,7 +76,7 @@ export let states = [
     label: 'Default',
     element:
       <Tile title="Salesforce UX">
-        <p className="slds-truncate">26 Members</p>
+        <p className="slds-truncate" title="26 Members">26 Members</p>
       </Tile>
   },
   {
@@ -85,7 +85,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Salesforce UX" actions>
-          <p className="slds-truncate">26 Members</p>
+          <p className="slds-truncate" title="26 Members">26 Members</p>
         </Tile>
       </div>
   }

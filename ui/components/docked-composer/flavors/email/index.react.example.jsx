@@ -37,9 +37,9 @@ export default (
             <h2 id="dialogheading-id">New Email</h2>
           </MediaObject>
           <div className="slds-docked-composer__actions">
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" />
-            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="minimize_window" assistiveText="Minimize window" settings="Minimize window" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="expand_alt" assistiveText="Expand Composer" title="Expand Composer" />
+            <ButtonIcon className="slds-button--icon slds-button--icon-inverse" symbol="close" assistiveText="Close" title="Close" />
           </div>
         </header>
 
@@ -95,41 +95,50 @@ export default (
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="bold"
-                  assistiveText="Bold" />
+                  assistiveText="Bold"
+                  title="Bold" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="italic"
-                  assistiveText="Italic" />
+                  assistiveText="Italic"
+                  title="Italic" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="underline"
-                  assistiveText="Underline" />
+                  assistiveText="Underline"
+                  title="Underline" />
               </div>
               <div className="slds-button-group" role="group">
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="richtextnumberedlist"
-                  assistiveText="Numbered List" />
+                  assistiveText="Numbered List"
+                  title="Numbered List" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="richtextbulletedlist"
-                  assistiveText="Bulleted List" />
+                  assistiveText="Bulleted List"
+                  title="Bulleted List" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="left_align_text"
-                  assistiveText="Left Align Text" />
+                  assistiveText="Left Align Text"
+                  title="Left Align Text" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="center_align_text"
-                  assistiveText="Center Align Text" />
+                  assistiveText="Center Align Text"
+                  title="Center Align Text" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="right_align_text"
-                  assistiveText="Right Align Text" />
+                  assistiveText="Right Align Text"
+                  title="Right Align Text" />
                 <ButtonIcon
                   className="slds-button--icon-border-filled"
                   symbol="link"
-                  assistiveText="Link" />
+                  assistiveText="Link"
+                  title="Link" />
               </div>
             </div>
           </div>
@@ -144,23 +153,28 @@ export default (
             <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="link"
-                assistiveText="Attach File" />
+                assistiveText="Attach File"
+                title="Attach File" />
             <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="insert_template"
-                assistiveText="Insert Template" />
+                assistiveText="Insert Template"
+                title="Insert Template" />
             <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="insert_tag_field"
-                assistiveText="Insert HTML" />
+                assistiveText="Insert HTML"
+                title="Insert HTML" />
             <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="preview"
-                assistiveText="Preview" />
+                assistiveText="Preview"
+                title="Preview" />
             <ButtonIcon
                 className="slds-button--icon-container"
                 symbol="delete"
-                assistiveText="Delete" />
+                assistiveText="Delete"
+                title="Delete" />
             <Button className="slds-button slds-button--brand">Send</Button>
           </div>
 

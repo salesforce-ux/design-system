@@ -21,7 +21,7 @@ export default (
       <div className="slds-picklist">
         <ul className="slds-picklist__options slds-picklist__options--multi">
           <li draggable="true" id="po-8-0" className="slds-picklist__item" aria-selected="false" tabIndex="0" role="option">
-            <span className="slds-truncate">Option One</span>
+            <span className="slds-truncate" title="Option One">Option One</span>
           </li>
         </ul>
       </div>

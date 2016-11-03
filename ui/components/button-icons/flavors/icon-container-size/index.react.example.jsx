@@ -22,21 +22,21 @@ export let states = [
   {
     id: 'button-icon-container-size-default',
     label: 'Default',
-    element: <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
   },
   {
     id: 'button-icon-container-size-small',
     label: 'Small',
-    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-small" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
   },
   {
     id: 'button-icon-container-size-x-small',
     label: 'x-Small',
-    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
   },
   {
     id: 'button-icon-container-size-xx-small',
     label: 'xX-Small',
-    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-xx-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    element: <ButtonIcon className="slds-button--icon-border slds-button--icon-xx-small" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
   }
 ];

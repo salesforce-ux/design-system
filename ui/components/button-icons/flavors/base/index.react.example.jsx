@@ -24,14 +24,15 @@ let Demo = props =>
 
 export let ButtonIcon = props =>
   <button
-    className={className('slds-button', props.className, props.stateful ? props.selected ? 'slds-is-selected' : 'slds-not-selected' : null)}
+    className={className('slds-button', props.className, props.selected ? 'slds-is-selected' : null)}
     disabled={ props.disabled }
     aria-describedby={ props['aria-describedby'] }
     aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
-    tabIndex={ props.tabIndex } >
+    tabIndex={ props.tabIndex }
+    title={ props.title || 'settings' } >
     <SvgIcon
       className={className('slds-button__icon', props.iconClassName)}
       sprite="utility"
@@ -53,7 +54,7 @@ export let states = [
   {
     id: 'button-icon-error',
     label: 'Error',
-    element: <Demo><ButtonIcon className="slds-button--icon-error" symbol="warning" /></Demo>
+    element: <Demo><ButtonIcon className="slds-button--icon-error" symbol="warning" title="Warning" assistiveText="Warning" /></Demo>
   },
   {
     id: 'button-icon-disabled',

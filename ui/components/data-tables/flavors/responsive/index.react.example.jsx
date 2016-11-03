@@ -36,43 +36,43 @@ let HeadRowData = props =>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Close Date">
         Opportunity Name
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Account Name">
         Account Name
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Close Date">
         Close Date
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Stage">
         Stage
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Confidence">
         Confidence
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Amount">
         Amount
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-is-sortable" scope="col">
       <div className="slds-truncate" title="Contact">
         Contact
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" />
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
     <th className="slds-cell-shrink" scope="col"></th>
@@ -93,7 +93,8 @@ let RowData = props =>
         className="slds-button--icon-border-filled slds-button--icon-x-small"
         iconClassName="slds-button__icon--hint slds-button__icon--small"
         symbol="down"
-        assistiveText="Show More" />
+        assistiveText="Show More"
+        title="Show More" />
     </td>
   </tr>;
 

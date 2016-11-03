@@ -32,11 +32,11 @@ let DatepickerHeader = props =>
   <div className="slds-datepicker__filter slds-grid">
     <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
       <div className="slds-align-middle">
-        <ButtonIcon className="slds-button--icon-container" symbol="left" assistiveText="Previous Month" />
+        <ButtonIcon className="slds-button--icon-container" symbol="left" assistiveText="Previous Month" title="Previous Month" />
       </div>
       <h2 id="month" className="slds-align-middle" aria-live="assertive" aria-atomic="true">June</h2>
       <div className="slds-align-middle">
-        <ButtonIcon className="slds-button--icon-container" symbol="right" assistiveText="Next Month" />
+        <ButtonIcon className="slds-button--icon-container" symbol="right" assistiveText="Next Month" title="Next Month" />
       </div>
     </div>
     <div className="slds-shrink-none">

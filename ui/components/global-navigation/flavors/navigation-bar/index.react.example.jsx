@@ -72,7 +72,7 @@ export let ContextBar = props =>
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -97,7 +97,8 @@ export let ContextBar = props =>
               className="slds-button--icon slds-context-bar__button"
               symbol="chevrondown"
               tabIndex="-1"
-              assistiveText="Open menu item submenu" />
+              assistiveText="Open menu item submenu"
+              title="Open menu item submenu" />
           </div>
           { !props.hideDropdown ? contextDropdown : null }
         </li>

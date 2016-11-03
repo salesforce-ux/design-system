@@ -92,7 +92,8 @@ export default (
                 <ButtonIcon
                   className="slds-button--icon-border-filled slds-button--icon-x-small"
                   symbol="down"
-                  assistiveText="Show More" />
+                  assistiveText="Show More"
+                  title="Show More" />
               </td>
             </tr>
             <tr>
@@ -120,7 +121,8 @@ export default (
                 <ButtonIcon
                   className="slds-button--icon-border-filled slds-button--icon-x-small"
                   symbol="down"
-                  assistiveText="Show More" />
+                  assistiveText="Show More"
+                  title="Show More" />
               </td>
             </tr>
           </ProductList>

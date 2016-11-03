@@ -177,7 +177,7 @@ export let states = [
             <li role="presentation">
               <span className="slds-lookup__item-action slds-lookup__item-action--label" id="option-06" role="option">
                 <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="forward" />
-                <span className="slds-truncate">Go to <mark>Groups</mark> home</span>
+                <span className="slds-truncate" title="Go to Groups home">Go to <mark>Groups</mark> home</span>
               </span>
             </li>
           </ul>

@@ -19,16 +19,16 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 
 let Default = props =>
   <ButtonGroup>
-    <ButtonIcon className="slds-button--icon-border" symbol="chart" assistiveText="Charts" />
-    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" />
-    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" />
+    <ButtonIcon className="slds-button--icon-border" symbol="chart" assistiveText="Charts" title="Charts" />
+    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" title="Filter List" />
+    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" title="More Actions" />
   </ButtonGroup>;
 
 let Selected = props =>
   <ButtonGroup>
-    <ButtonIcon className="slds-button--icon-border slds-is-selected" symbol="chart" assistiveText="Charts" />
-    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" />
-    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" />
+    <ButtonIcon className="slds-button--icon-border slds-is-selected" symbol="chart" assistiveText="Charts" title="Charts" />
+    <ButtonIcon className="slds-button--icon-border" symbol="filterList" assistiveText="Filter List" title="Filter List" />
+    <ButtonIcon className="slds-button--icon-more" hasDropdown assitiveText="More Actions" title="More Actions" />
   </ButtonGroup>;
 
 ///////////////////////////////////////////

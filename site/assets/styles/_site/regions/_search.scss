@@ -234,6 +234,10 @@
 .searchbox__reset.hide {
   display: none;
 }
+.searchbox__reset:focus {
+  box-shadow: $shadow-button-focus;
+  outline: 0;
+}
 .searchbox__reset svg {
   display: block;
   margin: rem(2px) rem(4px);

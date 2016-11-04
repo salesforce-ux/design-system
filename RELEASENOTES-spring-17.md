@@ -25,6 +25,7 @@ The following components are now available:
 - Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
 - Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
 - Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
+- Added Dynamic Lists Dropdown - [Dynamic Lists](/components/menus/#flavor-dynamic-list)
 
 **ADDED**
 
@@ -65,6 +66,7 @@ The following issues have now been resolved:
 - Data Table - Inline edit now has full support
 - Icon when inside placed inside of an input field now uses the correct token
 - Modal content properly wraps and hyphenates longform text
+- Accessibility improvement - Picklists changed to a read-only combobox with a listbox.
 
 **DEPRECATED**
 

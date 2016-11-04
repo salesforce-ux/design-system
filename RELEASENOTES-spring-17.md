@@ -56,6 +56,7 @@ The following changes have been made in this release:
 - Avatars now support initials.
 - Stateful icon buttons are now compatible with `slds-button--icon-container`
 - Spacing adjustments made to lookup items
+- Spacing adjustments made to feeds
 
 **FIXED**
 

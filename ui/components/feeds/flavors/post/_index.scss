@@ -16,18 +16,18 @@
   .slds-comment {
     padding: $spacing-x-small $spacing-medium;
   }
-
-  @include mq-medium-min {
-    margin-top: $spacing-x-small;
-  }
 }
 
 .slds-post {
   background: $color-background-alt;
   padding: $spacing-small $spacing-medium;
 
+  @include mq-medium-max {
+    border-top: $border-width-thin solid $color-border;
+  }
+
   @include mq-large-min {
-    padding: 0 $spacing-medium;
+    padding: 0 $spacing-medium $spacing-x-small;
   }
 
   &__header {

@@ -18,6 +18,7 @@ import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/compon
 ///////////////////////////////////////////
 
 export default (
+  <div className="demo-only" style={{background: '#F4F6F9'}}>
   <div className="slds-feed">
     <ul className="slds-feed__list">
       <li className="slds-feed__item">
@@ -62,5 +63,6 @@ export default (
         </Post>
       </li>
     </ul>
+  </div>
   </div>
 );

@@ -87,6 +87,7 @@ export default React.createClass({
       <div>
         {this.renderBanner()}
 
+        {this.renderNav()}
         <main className="site-main" role="main">
           {this.renderInternalBanner()}
           {this.renderAnchor()}
@@ -95,7 +96,6 @@ export default React.createClass({
             {this.props.children}
           </div>
         </main>
-        {this.renderNav()}
         {this.renderFooter()}
       </div>
     );
@@ -118,14 +118,14 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox">
+      <form id="search" noValidate="novalidate" className="searchbox">
         <div role="search" className="searchbox__wrapper">
           <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
           <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
-          <button type="submit" className="slds-assistive-text">
+          <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query
           </button>
-          <button type="reset" title="Clear the search query" className="searchbox__reset hide">
+          <button type="reset" title="Clear the search query" className="searchbox__reset hide" tabIndex="0">
             <svg role="img" aria-label="Reset">
               <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
             </svg>
@@ -149,9 +149,6 @@ export default React.createClass({
         <a href="/">
           <span className="site-logo">Salesforce</span>
         </a>
-        <div className="site-skip-content">
-          <a href="#navigation">Skip to Navigation</a>
-        </div>
       </header>
     );
   },

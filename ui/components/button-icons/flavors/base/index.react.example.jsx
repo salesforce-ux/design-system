@@ -32,6 +32,7 @@ export let ButtonIcon = props =>
     aria-expanded={ props['aria-expanded'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
+    aria-pressed={ props['aria-pressed'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
     title={ props.title }
     tabIndex={ props.tabIndex } >

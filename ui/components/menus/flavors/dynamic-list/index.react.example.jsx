@@ -22,13 +22,13 @@ import _ from 'lodash';
 let Footer = props =>
   <ul>
     <li>
-      <button className="slds-button slds-lookup__item-action">
+      <button className="slds-button slds-lookup__item-action slds-lookup__item-action--label">
         <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="add" />
         Favorite this page
       </button>
     </li>
     <li>
-      <button className="slds-button slds-lookup__item-action">
+      <button className="slds-button slds-lookup__item-action slds-lookup__item-action--label">
         <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="edit" />
         Edit Favorites
       </button>
@@ -46,14 +46,12 @@ export let states = [
     element:
       <Popover
         className="slds-nubbin--top-right"
-        bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
+        bodyClassName="slds-p-around--medium"
         footerClassName="slds-p-horizontal--none"
         footer={ <Footer /> }
       >
-        <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
-          <ListboxItem role="presentation" headerText="My Favorites" />
-          <ListboxItem role="presentation">You can favorite any page!</ListboxItem>
-        </ListboxList>
+        <h3 className="slds-text-title--caps slds-m-bottom--x-small">My Favorites</h3>
+        <p>You can favorite any page!</p>
       </Popover>
   },
   {
@@ -69,7 +67,7 @@ export let states = [
       >
         <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
-          <ListboxItem>
+          <ListboxItem tabIndex="0">
             <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
             <div className="slds-media__body">
               <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
@@ -93,7 +91,7 @@ export let states = [
         <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
           { _.times(7, i =>
-            <ListboxItem>
+            <ListboxItem tabIndex={ (i===0) ? '0' : null }>
               <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
               <div className="slds-media__body">
                 <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
@@ -118,7 +116,7 @@ export let states = [
         <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
           { _.times(11, i =>
-            <ListboxItem>
+            <ListboxItem tabIndex={ (i===0) ? '0' : null }>
               <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
               <div className="slds-media__body">
                 <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>

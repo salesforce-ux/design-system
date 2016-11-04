@@ -67,12 +67,12 @@ export let TileMedia = props =>
   </div>;
 
 let Detail = props =>
-  <div className="slds-list--horizontal slds-wrap">
-    <div className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</div>
-    <div className="slds-item--detail slds-truncate">Description for first label</div>
-    <div className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</div>
-    <div className="slds-item--detail slds-truncate">Description for second label</div>
-  </div>;
+  <dl className="slds-list--horizontal slds-wrap">
+    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
+    <dd className="slds-item--detail slds-truncate">Description for first label</dd>
+    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
+    <dd className="slds-item--detail slds-truncate">Description for second label</dd>
+  </dl>;
 
 ///////////////////////////////////////////
 // Export

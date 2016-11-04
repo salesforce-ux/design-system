@@ -63,6 +63,12 @@
   'lists/flavors/description-list/index',
   'lists/flavors/name-value-pair/index',
 
+  // Borders
+  'borders/flavors/border-bottom/index',
+  'borders/flavors/border-left/index',
+  'borders/flavors/border-right/index',
+  'borders/flavors/border-top/index',
+
   // Truncation
   'truncation/flavors/single-line/index',
   'truncation/flavors/max-width/index',
@@ -102,11 +108,4 @@
   'visibility/flavors/transition-hide-show/index',
   'visibility/flavors/collapsed-expanded/index',
   'visibility/flavors/assistive-text/index',
-  'visibility/flavors/responsive/index',
-
-  // Borders
-  'borders/flavors/border-bottom/index',
-  'borders/flavors/border-left/index',
-  'borders/flavors/border-right/index',
-  'borders/flavors/border-top/index';
-
+  'visibility/flavors/responsive/index';

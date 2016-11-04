@@ -29,6 +29,7 @@ export let Listbox = props =>
 
 export let ListboxList = props =>
   <ul
+    id={ props.id || 'option-list-01' }
     className={className('slds-dropdown__list', props.className)}
     role={ props.role == 'group' ? 'group' : 'presentation' }
     aria-label={ props.role == 'group' ? props['aria-label'] : null }
@@ -69,8 +70,8 @@ let ComboboxSearchInput = props =>
         id="text-input-01"
         className="slds-lookup__search-input slds-input"
         type="search"
-        placeholder={ props.placeholder || 'Select an Option' }
-        aria-owns={ props.id }
+        placeholder="Select an Option"
+        aria-owns="option-list-01"
         role="combobox"
         aria-activedescendent=""
         aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }

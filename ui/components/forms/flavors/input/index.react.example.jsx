@@ -28,7 +28,9 @@ export let FormElement = props =>
   </div>;
 
 export let FormElementLabel = props =>
-  <label className="slds-form-element__label" htmlFor="text-input-01">{props.children}</label>;
+  <label className={ className('slds-form-element__label', props.className)} htmlFor="text-input-01">
+    {props.children}
+  </label>;
 
 export let FormElementControl = props =>
   <div className={className('slds-form-element__control', props.className)}>

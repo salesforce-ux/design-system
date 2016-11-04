@@ -30,6 +30,7 @@
   }
 
   &--fluid {
+    .slds-picklist__input,
     .slds-picklist__label,
     .slds-dropdown,
     .slds-lookup {
@@ -49,10 +50,6 @@
 
   .slds-button {
     line-height: 0;
-  }
-
-  .slds-truncate {
-    display: block;
   }
 }
 

@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { Listbox, ListboxList, ListboxItem } from 'ui/components/picklist/flavors/base/index.react.example';
 import { Popover } from 'ui/components/popovers/flavors/base/index.react.example';
+import { FormElement, FormElementLabel, FormElementControl } from 'ui/components/forms/flavors/input/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import _ from 'lodash';
 
@@ -113,7 +114,23 @@ export let states = [
         bodyRole="listbox"
         footer={ <Footer /> }
       >
-        <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
+        <FormElement className="slds-p-around--small">
+          <FormElementLabel className="slds-assistive-text">Categories</FormElementLabel>
+          <FormElementControl className="slds-input-has-icon slds-input-has-icon--right">
+            <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
+            <input
+              id="text-input-01"
+              className="slds-input slds-lookup__search-input"
+              type="search"
+              placeholder="Search Accounts"
+              aria-owns="option-list-01"
+              role="combobox"
+              aria-activedescendent=""
+              aria-expanded="true"
+              aria-autocomplete="list" />
+          </FormElementControl>
+        </FormElement>
+        <ListboxList id="option-list-01" className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
           { _.times(11, i =>
             <ListboxItem tabIndex={ (i===0) ? '0' : null }>

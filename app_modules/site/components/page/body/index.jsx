@@ -125,11 +125,6 @@ export default React.createClass({
           <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query
           </button>
-          <button type="reset" title="Clear the search query" className="searchbox__reset" tabIndex="0">
-            <svg role="img" aria-label="Reset">
-              <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
-            </svg>
-          </button>
         </div>
       </form>
     );

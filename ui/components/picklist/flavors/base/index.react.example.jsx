@@ -28,7 +28,11 @@ export let Listbox = props =>
   </div>;
 
 export let ListboxList = props =>
-  <ul className={className('slds-dropdown__list', props.className)} role={ props.header ? 'group' : 'presentation' } aria-label={ props.header ? props.headerText : null }>
+  <ul
+    className={className('slds-dropdown__list', props.className)}
+    role={ props.role == 'group' ? 'group' : 'presentation' }
+    aria-label={ props.role == 'group' ? props['aria-label'] : null }
+  >
     {props.children}
   </ul>;
 
@@ -36,10 +40,22 @@ export let ListboxItem = props => {
   const uniqueId = _.uniqueId('listbox-option-');
 
   return (
-    <li className={className(props.className)} role="presentation">
-      <span className="slds-lookup__item-action slds-lookup__item-action--label" aria-selected={props.isSelected} role="option" id={ uniqueId }>
-        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" /> : null }
-        { props.headerText ? <h3 className="slds-text-body--small slds-text-color--weak">{props.headerText}</h3> : <span className="slds-truncate" title={props.title}>{props.children}</span> }
+    <li className={ props.className } role="presentation">
+      <span
+        className={ className( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
+        aria-selected={ props.isSelected }
+        role={ !props.role ? 'option' : props.role}
+        id={ uniqueId }
+      >
+        { props.isSelectable ?
+          <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
+        : null }
+        { props.headerText ?
+          <h3 className="slds-text-title--caps">{ props.headerText }</h3>
+        : (props.text ?
+          <span className="slds-truncate" title={ props.title }>{ props.children }</span>
+        : props.children
+        )}
       </span>
     </li>
   );
@@ -75,12 +91,12 @@ export let states = [
         <ComboboxSearchInput />
         <Listbox className="slds-dropdown--left">
           <ListboxList className="slds-dropdown--length-5">
-            <ListboxItem isSelectable>Option A</ListboxItem>
-            <ListboxItem isSelectable>Option B</ListboxItem>
-            <ListboxItem isSelectable>Option C</ListboxItem>
-            <ListboxItem isSelectable>Option D</ListboxItem>
-            <ListboxItem isSelectable>Option E</ListboxItem>
-            <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            <ListboxItem isSelectable text>Option A</ListboxItem>
+            <ListboxItem isSelectable text>Option B</ListboxItem>
+            <ListboxItem isSelectable text>Option C</ListboxItem>
+            <ListboxItem isSelectable text>Option D</ListboxItem>
+            <ListboxItem isSelectable text>Option E</ListboxItem>
+            <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
           </ListboxList>
         </Listbox>
       </div>
@@ -94,12 +110,12 @@ export let states = [
           <ComboboxSearchInput />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
-              <ListboxItem isSelectable>Option A</ListboxItem>
-              <ListboxItem isSelectable>Option B</ListboxItem>
-              <ListboxItem isSelectable>Option C</ListboxItem>
-              <ListboxItem isSelectable>Option D</ListboxItem>
-              <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable text>Option A</ListboxItem>
+              <ListboxItem isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -115,11 +131,11 @@ export let states = [
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option A</ListboxItem>
-              <ListboxItem isSelectable>Option B</ListboxItem>
-              <ListboxItem isSelectable>Option C</ListboxItem>
-              <ListboxItem isSelectable>Option D</ListboxItem>
-              <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -134,12 +150,12 @@ export let states = [
           <ComboboxSearchInput />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option A</ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option B</ListboxItem>
-              <ListboxItem isSelectable>Option C</ListboxItem>
-              <ListboxItem isSelectable>Option D</ListboxItem>
-              <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option A</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -154,12 +170,12 @@ export let states = [
           <ComboboxSearchInput placeholder="2 Options selected" />
           <Listbox className="slds-dropdown--left">
             <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option A</ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option B</ListboxItem>
-              <ListboxItem isSelectable>Option C</ListboxItem>
-              <ListboxItem isSelectable>Option D</ListboxItem>
-              <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option A</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>
@@ -177,14 +193,14 @@ export let states = [
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
           <ComboboxSearchInput />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList header>
-              <ListboxItem headerText="Recently Viewed">Recently Viewed</ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option A</ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable>Option B</ListboxItem>
-              <ListboxItem isSelectable>Option C</ListboxItem>
-              <ListboxItem isSelectable>Option D</ListboxItem>
-              <ListboxItem isSelectable>Option E</ListboxItem>
-              <ListboxItem isSelectable title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            <ListboxList role="group" aria-label="Recently Viewed">
+              <ListboxItem role="presentation" headerText="Recently Viewed" />
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option A</ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
         </div>

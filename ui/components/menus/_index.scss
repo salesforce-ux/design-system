@@ -80,6 +80,36 @@
     @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
   }
 
+  // Theme
+  &--inverse {
+    background: $color-background-inverse;
+    border-color: $color-border-inverse;
+
+    .slds-dropdown__item > a {
+      color: $color-text-inverse;
+
+      &:hover,
+      &:focus {
+        color: $color-text-link-inverse-hover;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: $color-text-link-inverse-active;
+        background-color: transparent;
+      }
+
+      &[aria-disabled="true"] {
+        color: $color-text-link-inverse-disabled;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
   mark {
     font-weight: $font-weight-bold;
     background-color: transparent;
@@ -177,7 +207,6 @@
     }
 
     &.slds-is-selected .slds-icon--selected {
-      fill: $color-text-icon-default-hover;
       opacity: 1;
     }
   }

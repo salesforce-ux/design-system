@@ -4,3 +4,4 @@ flavors:
   - dropdown-positioning
   - dropdown-height
   - action-overflow
+  - dynamic-list

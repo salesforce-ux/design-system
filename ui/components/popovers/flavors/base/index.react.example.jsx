@@ -23,7 +23,7 @@ export let Popover = props => {
   const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
   return (
-    <div
+    <section
       className={ className('slds-popover', props.className) }
       role="dialog"
       aria-labelledby={ !props.header && props.headerTitle ? headingUniqueId : props.headingId }
@@ -45,7 +45,7 @@ export let Popover = props => {
           assistiveText={ props.headerAssistiveText }
         />
       : props.header }
-      <div className={ className('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId }>
+      <div className={ className('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId } role={ props.bodyRole }>
         {props.children}
       </div>
       { props.footer ?
@@ -53,7 +53,7 @@ export let Popover = props => {
           { props.footer }
         </footer>
       : null }
-    </div>
+    </section>
   );
 };
 

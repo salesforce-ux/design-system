@@ -16,9 +16,7 @@
   vertical-align: middle;
 }
 
-@mixin button-base {
-  border: $border-width-thin solid $color-border-button-default;
-
+@mixin button-interactions {
   &:hover,
   &:focus {
     background-color: $color-background-button-default-hover;
@@ -27,6 +25,11 @@
   &:active {
     background-color: $color-background-button-default-active;
   }
+}
+
+@mixin button-base {
+  border: $border-width-thin solid $color-border-button-default;
+  @include button-interactions;
 }
 
 @mixin button-brand {

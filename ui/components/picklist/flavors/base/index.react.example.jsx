@@ -10,9 +10,86 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import className from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+import { FormElement, FormElementLabel, FormElementControl } from 'ui/components/forms/flavors/input/index.react.example';
+import _ from 'lodash';
+
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+export let Listbox = props =>
+  <div className={className('slds-dropdown', props.className)} role="listbox">
+    {props.children}
+  </div>;
+
+export let ListboxList = props =>
+  <ul
+    id={ props.id || 'option-list-01' }
+    className={className('slds-dropdown__list', props.className)}
+    role={ props.role == 'group' ? 'group' : 'presentation' }
+    aria-label={ props.role == 'group' ? props['aria-label'] : null }
+  >
+    {props.children}
+  </ul>;
+
+export let ListboxItem = props => {
+  const uniqueId = _.uniqueId('listbox-option-');
+
+  return (
+    <li className={ props.className } role="presentation">
+      <span
+        className={ className( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
+        role={ !props.role ? 'option' : props.role}
+        tabIndex={ props.tabIndex || '-1' }
+        id={ uniqueId }
+      >
+        { props.isSelectable ?
+          <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
+        : null }
+        { props.headerText ?
+          <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
+        : (props.text ?
+          <span className="slds-truncate" title={ props.title }>{ props.children }</span>
+        : props.children
+        )}
+      </span>
+    </li>
+  );
+};
+
+let ComboboxSearchInput = props =>
+  <FormElement>
+    <FormElementLabel>Categories</FormElementLabel>
+    <FormElementControl className="slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+      <input
+        id="text-input-01"
+        className="slds-lookup__search-input slds-input"
+        type="search"
+        placeholder={ props.placeholder || 'Select an Option' }
+        aria-owns="option-list-01"
+        role="combobox"
+        aria-activedescendent=""
+        aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
+        readOnly />
+      <ButtonIcon
+        className="slds-input__icon slds-text-color--default"
+        symbol="down"
+        assistiveText="Expand category options"
+        aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
+        iconClassName="slds-button__icon"
+        tabIndex="-1"
+      />
+    </FormElementControl>
+  </FormElement>;
+
+///////////////////////////////////////////
+// Export
+///////////////////////////////////////////
 
 export let states = [
   {
@@ -20,19 +97,17 @@ export let states = [
     label: 'Closed',
     element:
       <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
-        <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-          <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-        </button>
-        <Menu className="slds-dropdown--left">
-          <MenuList className="slds-dropdown--length-5">
-            <MenuItem isSelectable>Option A</MenuItem>
-            <MenuItem isSelectable>Option B</MenuItem>
-            <MenuItem isSelectable>Option C</MenuItem>
-            <MenuItem isSelectable>Option D</MenuItem>
-            <MenuItem isSelectable>Option E</MenuItem>
-            <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
-          </MenuList>
-        </Menu>
+        <ComboboxSearchInput />
+        <Listbox className="slds-dropdown--left">
+          <ListboxList className="slds-dropdown--length-5">
+            <ListboxItem isSelectable text tabIndex="0">Option A</ListboxItem>
+            <ListboxItem isSelectable text>Option B</ListboxItem>
+            <ListboxItem isSelectable text>Option C</ListboxItem>
+            <ListboxItem isSelectable text>Option D</ListboxItem>
+            <ListboxItem isSelectable text>Option E</ListboxItem>
+            <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+          </ListboxList>
+        </Listbox>
       </div>
   },
   {
@@ -41,19 +116,17 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Select an Option</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
-          <Menu className="slds-dropdown--left">
-            <MenuList className="slds-dropdown--length-5">
-              <MenuItem isSelectable tabIndex="0">Option A</MenuItem>
-              <MenuItem isSelectable>Option B</MenuItem>
-              <MenuItem isSelectable>Option C</MenuItem>
-              <MenuItem isSelectable>Option D</MenuItem>
-              <MenuItem isSelectable>Option E</MenuItem>
-              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
-            </MenuList>
-          </Menu>
+          <ComboboxSearchInput dropdown="open" />
+          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+            <ListboxList>
+              <ListboxItem isSelectable text tabIndex="0">Option A</ListboxItem>
+              <ListboxItem isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
         </div>
       </div>
   },
@@ -63,19 +136,19 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">Option A</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
-          <Menu className="slds-dropdown--left">
-            <MenuList className="slds-dropdown--length-5">
-              <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
-              <MenuItem isSelectable>Option B</MenuItem>
-              <MenuItem isSelectable>Option C</MenuItem>
-              <MenuItem isSelectable>Option D</MenuItem>
-              <MenuItem isSelectable>Option E</MenuItem>
-              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
-            </MenuList>
-          </Menu>
+          <ComboboxSearchInput placeholder="Option A" dropdown="open" />
+          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+            <ListboxList>
+              <ListboxItem className="slds-is-selected" isSelected="true" text isSelectable tabIndex="0">
+                <span className="slds-assistive-text">Current Selection:</span>Option A
+              </ListboxItem>
+              <ListboxItem isSelectable text>Option B</ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
         </div>
       </div>
   },
@@ -85,19 +158,21 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
-          <Menu className="slds-dropdown--left">
-            <MenuList className="slds-dropdown--length-5">
-              <MenuItem className="slds-is-selected" isSelected="true" isSelectable tabIndex="0">Option A</MenuItem>
-              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option B</MenuItem>
-              <MenuItem isSelectable>Option C</MenuItem>
-              <MenuItem isSelectable>Option D</MenuItem>
-              <MenuItem isSelectable>Option E</MenuItem>
-              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
-            </MenuList>
-          </Menu>
+          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+            <ListboxList>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+                <span className="slds-assistive-text">Current Selection:</span>Option A
+              </ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
+                <span className="slds-assistive-text">Current Selection:</span>Option B
+              </ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
         </div>
       </div>
   },
@@ -107,24 +182,51 @@ export let states = [
     element:
       <div className="demo-only">
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
-          <button className="slds-button slds-button--neutral slds-picklist__label" aria-haspopup="true">
-            <span className="slds-truncate">2 Options selected</span> <SvgIcon className="slds-icon" sprite="utility" symbol="down" />
-          </button>
-          <Menu className="slds-dropdown--left">
-            <MenuList className="slds-dropdown--length-5">
-              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option A</MenuItem>
-              <MenuItem className="slds-is-selected" isSelected="true" isSelectable>Option B</MenuItem>
-              <MenuItem isSelectable>Option C</MenuItem>
-              <MenuItem isSelectable>Option D</MenuItem>
-              <MenuItem isSelectable>Option E</MenuItem>
-              <MenuItem isSelectable>Option FGHIJKLMNOPQRSTUVWXYZ</MenuItem>
-            </MenuList>
-          </Menu>
+          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown--left">
+            <ListboxList>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+                <span className="slds-assistive-text">Current Selection:</span>Option A
+              </ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
+                <span className="slds-assistive-text">Current Selection:</span>Option B
+              </ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
         </div>
         <PillContainer className="slds-pill_container--bare">
           <Pill label="Option A" unlinked />
           <Pill label="Option B" unlinked />
         </PillContainer>
+      </div>
+  },
+  {
+    id: 'picklist-with-header',
+    label: 'With Header',
+    element:
+      <div className="demo-only" style={{height: '240px'}}>
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+            <ListboxList role="group" aria-label="Recently Viewed">
+              <ListboxItem role="presentation" headerText="Recently Viewed" />
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+                <span className="slds-assistive-text">Current Selection:</span>Option A
+              </ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
+                <span className="slds-assistive-text">Current Selection:</span>Option B
+              </ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
+        </div>
       </div>
   }
 ];

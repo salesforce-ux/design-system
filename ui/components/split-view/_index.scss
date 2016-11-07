@@ -59,18 +59,15 @@
 
   // Unread states
   //
-  // Adds a dot indicator to the left of the content
-  &.slds-is-unread {
-
-    &:before {
-      @include square($square-icon-x-small-content);
-      content: '';
-      position: absolute;
-      left: $spacing-x-small;
-      top: $spacing-medium;
-      background: $color-background-alt;
-      border-radius: $border-radius-circle;
-    }
+  // position dot indicator to the left of the content
+  .slds-indicator--unread {
+    @include square(8px);
+    position: absolute;
+    top: $spacing-medium;
+    left: $spacing-x-small;
+    border-radius: $border-radius-circle;
+    display: block;
+    background: $color-text-inverse;
   }
 }
 

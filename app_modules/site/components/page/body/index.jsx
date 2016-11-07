@@ -120,7 +120,7 @@ export default React.createClass({
     return (
       <form id="search" noValidate="novalidate" className="searchbox">
         <div role="search" className="searchbox__wrapper">
-          <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
+          <label htmlFor="docsearch" className="slds-assistive-text">Unfortunately, the 3rd party software we rely on for search is not accessible at the moment.</label>
           <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
           <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query

@@ -23,6 +23,7 @@ The following components are now available:
 - Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 - Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
+- Added Walkthrough header - [Walkthrough Header](/components/walkthrough/#flavor-header)
 - Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
 - Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
 
@@ -41,6 +42,8 @@ The following classes are now available:
 - Added `slds-border--left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
 - Added `slds-border--right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
 - Added `slds-border--top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
+- Added `slds-box--xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
+- Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown--inverse`
 
 **CHANGES**
 
@@ -119,6 +122,7 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS`
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER`
 - Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE`
+- Added token: `COLOR_TEXT_SUCCESS_INVERSE`
 - Added token: `CUSTOM_101`
 - Added token: `CUSTOM_102`
 - Added token: `CUSTOM_103`

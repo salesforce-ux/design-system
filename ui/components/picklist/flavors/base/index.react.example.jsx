@@ -52,7 +52,7 @@ export let ListboxItem = props => {
           <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
         : null }
         { props.headerText ?
-          <h3 className="slds-text-title--caps">{ props.headerText }</h3>
+          <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
         : (props.text ?
           <span className="slds-truncate" title={ props.title }>{ props.children }</span>
         : props.children

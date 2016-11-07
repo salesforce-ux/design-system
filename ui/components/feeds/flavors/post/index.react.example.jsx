@@ -48,7 +48,7 @@ export let PostFooterMeta = props =>
   </ul>;
 
 export let PostHeader = props =>
-  <header className="slds-post__header slds-media slds-media--center">
+  <header className="slds-post__header slds-media">
     <div className="slds-media__figure">
       <a href="javascript:void(0);" title="Jason Rodgers" className="slds-avatar slds-avatar--circle slds-avatar--large">
         <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />

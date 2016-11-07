@@ -56,6 +56,7 @@ The following changes have been made in this release:
 - Avatars now support initials.
 - Stateful icon buttons are now compatible with `slds-button--icon-container`
 - Spacing adjustments made to lookup items
+- Spacing adjustments made to feeds
 
 **FIXED**
 
@@ -64,6 +65,7 @@ The following issues have now been resolved:
 - Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
 - Data Table - Inline edit now has full support
 - Icon when inside placed inside of an input field now uses the correct token
+- Modal content properly wraps and hyphenates longform text
 
 **DEPRECATED**
 

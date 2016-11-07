@@ -87,6 +87,7 @@
   }
 
   &__content {
+    @include hyphenate;
     overflow: hidden {
       y: auto;
     }

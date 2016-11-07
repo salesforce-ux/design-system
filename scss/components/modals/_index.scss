@@ -1,0 +1,234 @@
+// Lightning Design System 2.1.4
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform $duration-quickly linear,
+                opacity $duration-quickly linear;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: ($z-index-modal + 1);
+
+  &__container {
+    position: relative;
+    transform: translate(0, 0);
+    transition: transform $duration-quickly linear,
+                  opacity $duration-quickly linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 $spacing-x-large;
+    height: 100%;
+    padding: $square-icon-large-boundary 0;
+    border-radius: $border-radius-medium;
+
+    @include mq-medium-min {
+      margin: 0 auto;
+      width: 50%;
+      max-width: 40rem; // TODO: Tokenize
+      min-width: 20rem; // TODO: Tokenize
+    }
+  }
+
+  &__header,
+  &__content {
+    background: $color-background-alt;
+  }
+
+  &__header,
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  &__header {
+    position: relative;
+    border: {
+      top: {
+        right-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
+      }
+      bottom: $border-width-thick solid $color-border;
+    }
+    padding: $spacing-medium;
+    text-align: center;
+
+    + .#{$css-prefix}modal__menu {
+      border-top: {
+        left-radius: 0;
+        right-radius: 0;
+      }
+    }
+  }
+
+  &__header--empty {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  &__header--empty + .#{$css-prefix}modal__content {
+      border: {
+      top: {
+        right-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden {
+      y: auto;
+    }
+
+    &:last-child {
+      border-bottom: {
+        right-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
+      }
+      box-shadow: $shadow-drop-down;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    border-radius: $border-radius-medium;
+    padding: $spacing-medium;
+    background-color: $color-background;
+
+    @include mq-medium-max {
+
+      .#{$css-prefix}button {
+        width: 100%;
+        margin: $spacing-xxx-small 0;
+      }
+    }
+  }
+
+  &__footer {
+    border: {
+      top: $border-width-thick solid $color-border;
+      bottom: {
+        right-radius: $border-radius-medium;
+        left-radius: $border-radius-medium;
+      }
+    }
+    padding: $spacing-small $spacing-medium;
+    background-color: $color-background;
+    text-align: right;
+    box-shadow: $shadow-drop-down;
+
+    &--directional .#{$css-prefix}button:first-child {
+      float: left;
+    }
+
+    .#{$css-prefix}button + .#{$css-prefix}button {
+      margin-left: $spacing-x-small;
+    }
+  }
+
+  &__close {
+    @include square($square-icon-medium-boundary);
+    position: absolute;
+    top: ($square-icon-medium-boundary * -1.25);
+    right: ((($square-icon-medium-boundary - $square-icon-medium-content) / 2) * -1);
+  }
+}
+
+@mixin backdrop {
+  // Mixin created to not have to paste this again into the new class it's being renamed to (see below)
+  @include duration-slowly;
+  @include square(100%);
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $color-background-temp-modal-tint;
+  z-index: $z-index-modal;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $duration-slowly linear;
+  }
+}
+
+.#{$css-prefix}modal--large .#{$css-prefix}modal__container {
+
+  // TODO: We'll want to readdress this to do the .99 thing
+  @include mq-medium-min {
+    width: 90%;
+    max-width: none;
+    min-width: 40rem; // TODO: Tokenize
+  }
+}
+
+// old class
+.#{$css-prefix}modal-backdrop {
+
+  @include deprecate('4.0.0') {
+    @include backdrop;
+  }
+}
+
+.#{$css-prefix}backdrop {
+  // new class
+  @include backdrop;
+}
+
+
+
+.#{$css-prefix}fade-in-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $duration-quickly linear;
+
+  .#{$css-prefix}modal__container-reset {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+}
+
+.#{$css-prefix}slide-up-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: opacity $duration-quickly linear,
+              transform $duration-promptly linear;
+
+  .#{$css-prefix}modal__container-reset {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, $spacing-medium);
+    transition: opacity $duration-promptly linear,
+                transform $duration-promptly linear;
+  }
+}
+
+.#{$css-prefix}slide-up-saving {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -$spacing-medium);
+}
+
+
+.#{$css-prefix}slide-down-cancel {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, $spacing-medium);
+}

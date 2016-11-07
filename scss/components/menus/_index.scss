@@ -1,0 +1,305 @@
+// Lightning Design System 2.1.4
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}dropdown {
+  position: absolute;
+  z-index: $z-index-dropdown;
+  left: 50%;
+  float: left;
+  min-width: $size-xx-small;
+  max-width: $size-medium;
+  margin-top: $spacing-xxx-small;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  padding: $spacing-xx-small 0;
+  font-size: $font-size-small;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  transform: translateX(-50%);
+
+  &--left {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  &--right {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
+
+  &--bottom {
+    bottom: 100%;
+  }
+
+  &--small {
+    min-width: $size-small;
+  }
+
+  &--medium {
+    min-width: $size-medium;
+  }
+
+  &--large {
+    min-width: $size-large;
+    max-width: $max-width-action-overflow-menu;
+  }
+
+  // New in 1.00
+  //
+  // Apply to Dropdown UL
+  &--length-5 {
+    @include dropdown-overflow-length(5);
+  }
+
+  &--length-7 {
+    @include dropdown-overflow-length(7);
+  }
+
+  &--length-10 {
+    @include dropdown-overflow-length(10);
+  }
+
+  &--length-with-icon-5 {
+    @include dropdown-overflow-length(5, $icon-size: $square-icon-small-boundary);
+  }
+
+  &--length-with-icon-7 {
+    @include dropdown-overflow-length(7, $icon-size: $square-icon-small-boundary);
+  }
+
+  &--length-with-icon-10 {
+    @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
+  }
+
+  mark {
+    font-weight: $font-weight-bold;
+    background-color: transparent;
+  }
+
+  &[class*="#{$css-prefix}nubbin--top"] {
+    margin-top: ($square-tooltip-nubbin / 2);
+  }
+
+  &[class*="#{$css-prefix}nubbin--bottom"] {
+    margin-bottom: ($square-tooltip-nubbin / 2);
+  }
+
+  @include deprecate('4.0.0') {
+
+    &--nubbin-top {
+      @include nubbin(top, 'before');
+      @include nubbin(top);
+      margin-top: ($square-tooltip-nubbin / 2);
+
+      &:before {
+        background: $color-background-alt;
+      }
+
+      &:after {
+        background: $color-background-alt;
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+
+      &.#{$css-prefix}dropdown--left {
+        left: ($spacing-medium * -1);
+
+        &:before,
+        &:after {
+          left: $spacing-large;
+          margin-left: 0;
+        }
+      }
+
+      &.#{$css-prefix}dropdown--right {
+        right: ($spacing-medium * -1);
+
+        &:before,
+        &:after {
+          left: auto;
+          right: $spacing-large;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__header {
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  &__item {
+    line-height: $line-height-text;
+
+    > a {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-x-small $spacing-small;
+      color: $color-text-default;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        text-decoration: none;
+        background-color: $color-background-row-hover;
+      }
+
+      &:active {
+        text-decoration: none;
+        background-color: $color-background-row-active;
+      }
+
+      &[aria-disabled="true"] {
+        color: $color-text-button-default-disabled;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .#{$css-prefix}icon--selected {
+      opacity: 0;
+      transition: opacity $duration-immediately ease;
+    }
+
+    &.#{$css-prefix}is-selected .#{$css-prefix}icon--selected {
+      fill: $color-text-icon-default-hover;
+      opacity: 1;
+    }
+  }
+
+  @include deprecate('4.0.0') {
+
+    .#{$css-prefix}has-icon {
+      position: relative;
+
+      &--left > a,
+      &--left > span {
+        padding-left: $spacing-x-large;
+      }
+
+      &--right > a,
+      &--right > span {
+        padding-right: $spacing-x-large;
+      }
+
+      &--left-right > a,
+      &--left-right > span {
+        padding: {
+          left: $spacing-x-large;
+          right: $spacing-x-large;
+        }
+      }
+
+      .#{$css-prefix}icon {
+        @include square($square-icon-medium-content);
+        position: absolute;
+        top: 50%;
+        margin-top: (($square-icon-medium-content / 2) * -1);
+        fill: $color-text-icon-default;
+
+        &--left {
+          left: $spacing-small;
+        }
+
+        &--right {
+          right: $spacing-small;
+        }
+      }
+    }
+  } // Deprecate has-icon
+}
+
+.#{$css-prefix}dropdown-trigger {
+  position: relative;
+  display: inline-block;
+
+  .#{$css-prefix}dropdown {
+    top: 100%;
+  }
+
+  .#{$css-prefix}dropdown--bottom {
+    top: auto;
+  }
+
+  @include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
+
+    .#{$css-prefix}dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  &--hover {
+
+    .#{$css-prefix}dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .#{$css-prefix}dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  // If someone is using javascript for click to toggle - this modifier will help
+  &--click {
+
+    .#{$css-prefix}dropdown {
+      display: none;
+    }
+
+    &.#{$css-prefix}is-open .#{$css-prefix}dropdown {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // Deal with positioning when target is just an icon
+  > [class*="#{$css-prefix}button--icon"] {
+
+    ~ .#{$css-prefix}dropdown--left[class*="#{$css-prefix}nubbin"] {
+      left: ($spacing-x-small * -1);
+    }
+
+    ~ .#{$css-prefix}dropdown--right[class*="#{$css-prefix}nubbin"] {
+      right: ($spacing-x-small * -1);
+    }
+  }
+}

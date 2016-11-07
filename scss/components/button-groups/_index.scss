@@ -1,0 +1,80 @@
+// Lightning Design System 2.1.4
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+.#{$css-prefix}button-group {
+  display: flex;
+
+  .#{$css-prefix}button {
+    border-radius: 0;
+
+    + .#{$css-prefix}button,
+    + .#{$css-prefix}button--last .#{$css-prefix}button {
+      margin-left: (-1 * $border-width-thin);
+    }
+
+    &:first-child {
+      border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    }
+
+    &:focus { // @TODO: not sure this is doing anything anymore?
+      z-index: $z-index-default;
+    }
+
+    &:only-child {
+      border-radius: 0.25rem;
+    }
+  }
+
+  & + .#{$css-prefix}button-group,
+  & + .#{$css-prefix}button {
+    margin-left: $spacing-xx-small;
+  }
+
+  // This class should be placed on the wrapper
+  // of a button that's the final one in a button-group
+  //
+  // A bit of history:
+  //
+  // Button-groups were originally built to have no wrappers in their midst.
+  //
+  // And all buttons happily coexisted perfectly in the land of :last-child...
+  // but then along came the big bad, "Buttons in a group can come from all
+  // different teams and some are wrapped to contain a dropdown, etc.
+  // This code doesn't work now."
+  //
+  // There was much booing and hissing and stamping of feet.
+  //
+  // Then, Pragmatism reared its head and suggested, "Hey guys, maybe we have
+  // to supply a way for people to indicate when a button is the last one."
+  //
+  // We had situations where various buttons were wrapped and everyone believed
+  // it was the :last-child, or no one did. So the last button had to raise its
+  // hand and shout loudly, "I am .button--last!".
+  //
+  // Then there were issues where the last button could be wearing a wrap, thus
+  // the class actually needed to be placed on it's cute little sweater instead.
+  //
+  // And the poor little button became warm indeed. And it got a little smelly.
+  //
+  // Sometimes Pragmatism wins and sometimes she loses. This time she won.
+  //
+  // The end of the story of button-groups.
+
+  .#{$css-prefix}button--last .#{$css-prefix}button,
+  .#{$css-prefix}button.#{$css-prefix}button--last {
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  }
+}

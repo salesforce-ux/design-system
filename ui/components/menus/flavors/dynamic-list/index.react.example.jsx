@@ -51,7 +51,7 @@ export let states = [
         footerClassName="slds-p-horizontal--none"
         footer={ <Footer /> }
       >
-        <h3 className="slds-text-title--caps slds-m-bottom--x-small">My Favorites</h3>
+        <h3 className="slds-text-title--caps slds-m-bottom--x-small" role="presentation">My Favorites</h3>
         <p>You can favorite any page!</p>
       </Popover>
   },

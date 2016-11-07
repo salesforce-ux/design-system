@@ -11,9 +11,9 @@
 
 The following issues have now been resolved:
 
-- Title attributes were added to all button icons and truncated text for accesibility
+- Title attributes were added to all button icons and truncated text for accessibility
 - Added line-height fix for `.slds-button—icon-border-inverse`
-- Amended `slds-button--icon` documentation
+- Amended `.slds-button--icon` documentation
 - Removed unnecessary `.slds-not-selected` class from stateful `.slds-button--icon` markup and adjusted documentation
 
 ## Release [2.1.3] - September 21, 2016

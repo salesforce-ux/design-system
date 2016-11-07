@@ -70,7 +70,7 @@ let ComboboxSearchInput = props =>
         id="text-input-01"
         className="slds-lookup__search-input slds-input"
         type="search"
-        placeholder="Select an Option"
+        placeholder={ props.placeholder || 'Select an Option' }
         aria-owns="option-list-01"
         role="combobox"
         aria-activedescendent=""
@@ -136,7 +136,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput dropdown="open" />
+          <ComboboxSearchInput placeholder="Option A" dropdown="open" />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
               <ListboxItem className="slds-is-selected" isSelected="true" text isSelectable tabIndex="0">
@@ -158,7 +158,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput dropdown="open" />
+          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
@@ -210,7 +210,7 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '240px'}}>
         <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput dropdown="open" />
+          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
           <Listbox className="slds-dropdown--left slds-dropdown--length-5">
             <ListboxList role="group" aria-label="Recently Viewed">
               <ListboxItem role="presentation" headerText="Recently Viewed" />

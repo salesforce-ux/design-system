@@ -52,10 +52,10 @@ let Tile = props =>
       <Checkbox id="completed" label="Complete Task" />
     </div>
     <div className="slds-media__body">
-      <p className="slds-truncate slds-text-heading--small">
+      <p className="slds-truncate slds-text-heading--small" title="Follow up on '15 contact">
         <a href="javascript:void(0);">Follow up on '15 contact</a>
       </p>
-      <p className="slds-truncate slds-text-body--small">Jun 18</p>
+      <p className="slds-truncate slds-text-body--small" title="Jun 18">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
         <button className="slds-button slds-button--neutral slds-grow">Edit</button>
         <button className="slds-button slds-button--neutral slds-grow">Follow Up</button>
@@ -63,7 +63,8 @@ let Tile = props =>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"
-          assistiveText="More Actions"/>
+          assistiveText="More Actions"
+          title="More Actions"/>
       </div>
     </div>
   </div>;
@@ -82,7 +83,8 @@ let FormElementStaticInline = props =>
       className="slds-float--right slds-button--icon slds-button--icon-small"
       iconClassName="slds-button__icon--hint"
       symbol="edit"
-      assistiveText="Edit this Field"/>
+      assistiveText="Edit this Field"
+      title="Edit this Field" />
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span className="slds-form-element__static">{props.text}</span>
@@ -103,7 +105,8 @@ let FormElementStaticLonformInline = props =>
       className="slds-float--right slds-button--icon slds-button--icon-small"
       iconClassName="slds-button__icon--hint"
       symbol="edit"
-      assistiveText="Edit this Field"/>
+      assistiveText="Edit this Field"
+      title="Edit this Field" />
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span className="slds-form-element__static slds-text-longform">{props.text}</span>

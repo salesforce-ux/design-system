@@ -24,7 +24,7 @@ let Demo = props =>
 let ListItem = props =>
   <li className={className('slds-list__item slds-m-right--large slds-grid', props.className)}>
     <span>To:</span>
-    <span className="slds-m-left--xx-small slds-truncate">{props.children}</span>
+    <span className="slds-m-left--xx-small slds-truncate" title={props.title}>{props.children}</span>
     <span className="slds-m-left--xx-small slds-no-flex"> + 44 more</span>
   </li>;
 
@@ -48,13 +48,13 @@ const shortName = (
 let StateA = props =>
   <Demo>
     <ul>
-      <ListItem  className="slds-truncate_container--25">
+      <ListItem title="Lei Chan" className="slds-truncate_container--25">
         {shortName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--25">
+      <ListItem title="Lei Chan with Long Name" className="slds-truncate_container--25">
         {longName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--25">
+      <ListItem title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect" className="slds-truncate_container--25">
         {longestName}
       </ListItem>
     </ul>
@@ -63,13 +63,13 @@ let StateA = props =>
 let StateB = props =>
   <Demo>
     <ul>
-      <ListItem  className="slds-truncate_container--33">
+      <ListItem title="Lei Chan" className="slds-truncate_container--33">
         {shortName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--33">
+      <ListItem title="Lei Chan with Long Name" className="slds-truncate_container--33">
         {longName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--33">
+      <ListItem title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect" className="slds-truncate_container--33">
         {longestName}
       </ListItem>
     </ul>
@@ -78,13 +78,13 @@ let StateB = props =>
 let StateC = props =>
   <Demo>
     <ul>
-      <ListItem  className="slds-truncate_container--50">
+      <ListItem title="Lei Chan" className="slds-truncate_container--50">
         {shortName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--50">
+      <ListItem title="Lei Chan with Long Name" className="slds-truncate_container--50">
         {longName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--50">
+      <ListItem title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect" className="slds-truncate_container--50">
         {longestName}
       </ListItem>
     </ul>
@@ -93,13 +93,13 @@ let StateC = props =>
 let StateD = props =>
   <Demo>
     <ul>
-      <ListItem  className="slds-truncate_container--66">
+      <ListItem title="Lei Chan" className="slds-truncate_container--66">
         {shortName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--66">
+      <ListItem title="Lei Chan with Long Name" className="slds-truncate_container--66">
         {longName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--66">
+      <ListItem title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect" className="slds-truncate_container--66">
         {longestName}
       </ListItem>
     </ul>
@@ -108,13 +108,13 @@ let StateD = props =>
 let StateE = props =>
   <Demo>
     <ul>
-      <ListItem  className="slds-truncate_container--75">
+      <ListItem title="Lei Chan" className="slds-truncate_container--75">
         {shortName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--75">
+      <ListItem title="Lei Chan with Long Name" className="slds-truncate_container--75">
         {longName}
       </ListItem>
-      <ListItem  className="slds-truncate_container--75">
+      <ListItem title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect" className="slds-truncate_container--75">
         {longestName}
       </ListItem>
     </ul>

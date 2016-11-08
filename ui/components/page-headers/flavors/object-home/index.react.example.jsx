@@ -59,7 +59,8 @@ export default (
               className="slds-button--icon-border-filled"
               symbol="down"
               aria-haspopup="true"
-              assistiveText="More Actions" />
+              assistiveText="More Actions"
+              title="More Actions" />
           </div>
         </div>
         {/* Close button Group */}
@@ -77,32 +78,38 @@ export default (
             className="slds-button--icon-more"
             symbol="settings"
             hasDropdown
-            assistiveText="List View Controls" />
+            assistiveText="List View Controls"
+            title="List View Controls" />
         </div>
         <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
           <ButtonIcon
             className="slds-button--icon-more"
             symbol="table"
             hasDropdown
-            assistiveText="Change view" />
+            assistiveText="Change view"
+            title="Change view" />
         </div>
         <ButtonIcon
           className="slds-m-left--xx-small slds-button--icon-border"
           symbol="edit"
-          assistiveText="Edit List" />
+          assistiveText="Edit List"
+          title="Edit List" />
         <ButtonIcon
           className="slds-m-left--xx-small slds-button--icon-border"
           symbol="refresh"
-          assistiveText="Refresh" />
+          assistiveText="Refresh"
+          title="Refresh" />
         <div className="slds-button-group" role="group">
           <ButtonIcon
             className="slds-button--icon-border"
             symbol="chart"
-            assistiveText="Charts" />
+            assistiveText="Charts"
+            title="Charts" />
           <ButtonIcon
             className="slds-button--icon-border"
             symbol="filterList"
-            assistiveText="Filters" />
+            assistiveText="Filters"
+            title="Filters" />
         </div>
       </div>
     </div>

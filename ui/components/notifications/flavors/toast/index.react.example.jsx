@@ -28,7 +28,8 @@ let Default = props =>
         className="slds-notify__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <div className="slds-notify__content">
         <h2 className="slds-text-heading--small">Base Toast</h2>
       </div>
@@ -45,7 +46,8 @@ let Success = props =>
         className="slds-notify__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <div className="slds-notify__content slds-grid">
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="notification" />
         <div className="slds-col slds-align-middle">
@@ -65,7 +67,8 @@ let Warning = props =>
         className="slds-notify__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <div className="slds-notify__content">
         <h2 className="slds-text-heading--small">Oops, you've missed some required form inputs.</h2>
       </div>
@@ -82,7 +85,8 @@ let ErrorToast = props =>
         className="slds-notify__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <div className="slds-notify__content slds-grid">
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
         <div className="slds-col slds-align-middle">
@@ -102,7 +106,8 @@ let ErrorWithDetails = props =>
         className="slds-notify__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
-        assistiveText="Close" />
+        assistiveText="Close"
+        title="Close" />
       <div className="slds-notify__content slds-grid">
         <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
         <div className="slds-col slds-align-middle">

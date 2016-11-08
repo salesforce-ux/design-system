@@ -186,6 +186,7 @@ export let RowData = props => {
             iconClassName="slds-button__icon--hint slds-button__icon--small"
             symbol="down"
             assistiveText="Show More"
+            title="Show More"
             tabIndex={ !props.focusable ? '-1' : '0' }
           />
         </div>

@@ -98,37 +98,37 @@ let AppLauncherModal = props =>
         <ul className="slds-grid slds-grid--pull-padded slds-wrap">
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="account">
-              <p className="slds-truncate slds-text-link">Accounts</p>
+              <p className="slds-truncate slds-text-link" title="Accounts">Accounts</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="announcement">
-              <p className="slds-truncate slds-text-link">Announcements</p>
+              <p className="slds-truncate slds-text-link" title="Announcements">Announcements</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="approval">
-              <p className="slds-truncate slds-text-link">Approvals</p>
+              <p className="slds-truncate slds-text-link" title="Approvals">Approvals</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="campaign">
-              <p className="slds-truncate slds-text-link">Campaigns</p>
+              <p className="slds-truncate slds-text-link" title="Campaigns">Campaigns</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="case">
-              <p className="slds-truncate slds-text-link">Cases</p>
+              <p className="slds-truncate slds-text-link" title="Cases">Cases</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="coaching">
-              <p className="slds-truncate slds-text-link">Coaching</p>
+              <p className="slds-truncate slds-text-link" title="Coaching">Coaching</p>
             </AppLauncherTile>
           </li>
           <li className="slds-p-horizontal--small slds-size--xx-small">
             <AppLauncherTile flavor="small" symbol="contact">
-              <p className="slds-truncate slds-text-link">Contacts</p>
+              <p className="slds-truncate slds-text-link" title="Contacts">Contacts</p>
             </AppLauncherTile>
           </li>
         </ul>

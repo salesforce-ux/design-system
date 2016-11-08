@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import className from 'classnames';
 
 let ButtonIcon = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup}>
+  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
     <SvgIcon className="slds-button__icon" sprite="utility" symbol={props.symbol} />
     <span className="slds-assistive-text">{props.assistiveText}</span>
   </button>;

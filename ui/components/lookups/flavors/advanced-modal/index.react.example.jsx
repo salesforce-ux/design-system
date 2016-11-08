@@ -35,8 +35,8 @@ export default (
             <tr>
               <th colSpan="4" scope="col">
                 <div className="slds-float--right">
-                  <ButtonIcon className="slds-button--icon slds-button--icon-x-small" symbol="filterList" assistiveText="Filter List" />
-                  <ButtonIcon className="slds-button--icon slds-button--icon-x-small" symbol="sort" assistiveText="Sort" />
+                  <ButtonIcon className="slds-button--icon slds-button--icon-x-small" symbol="filterList" assistiveText="Filter List" title="Filter List" />
+                  <ButtonIcon className="slds-button--icon slds-button--icon-x-small" symbol="sort" assistiveText="Sort" title="Sort" />
                 </div>
                 5 Results, sorted by relevancy
               </th>

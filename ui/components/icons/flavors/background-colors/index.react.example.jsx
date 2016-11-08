@@ -11,28 +11,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let CaseIcon = props =>
-<span className={pf('icon_container icon-standard-case')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="case" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon-standard-case" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="standard" symbol="case" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let LogACallIcon = props =>
-<span className={pf('icon_container icon-standard-log-a-call')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="log_a_call" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon-standard-log-a-call" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="standard" symbol="log_a_call" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let CustomIcon = props =>
-<span className={pf('icon_container icon-custom-custom25')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="custom" symbol="custom25" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon-custom-custom25" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="custom" symbol="custom25" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 //////////////////////////////////////////////

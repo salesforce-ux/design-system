@@ -10,17 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'text-link-reset',
     label: 'Hyperlink',
-    element: <a href="javascript:void(0);" className={pf('text-link--reset')}>Link</a>
+    element: <a href="javascript:void(0);" className="slds-text-link--reset">Link</a>
   },
   {
     id: 'text-button-reset',
     label: 'Button',
-    element: <button className={pf('button text-link--reset')}>Button</button>
+    element: <button className="slds-button slds-text-link--reset">Button</button>
   },
 ];

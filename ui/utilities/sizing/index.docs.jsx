@@ -12,9 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeBlock from 'app_modules/ui/code-block';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
-import globals from 'app_modules/global';
 import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
@@ -26,7 +24,7 @@ export const intro = (
 export default (
 <ComponentDocs>
   <p>Our sizing class names are set up in a human-readable format, e.g. <CodeClass className="size--1-of-2" />. This equates to a width of 50%.</p>
-  <p>By default, a group of sizing helpers are created based on standard grid column spans of &ndash;2, 3, 4, 5, 6, and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class <CodeClass className="size--1-of-3" /> on each element. This will make each card take up 33.333% of containing section.</p>
+  <p>By default, a group of sizing helpers are created based on standard grid column spans of &ndash; 2, 3, 4, 5, 6, 7, 8 and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class <CodeClass className="size--1-of-3" /> on each element. This will make each card take up 33.333% of containing section.</p>
   <p>Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. <CodeClass className="medium-size--1-of-3" /> you will output a width at the specified breakpoint name.</p>
   <p>Absolute sizing helpers are also available (where widths are declared in <code>rem</code> units): <code>xx-small</code>, <code>x-small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code> and <code>xx-large</code> as defined in the <a href="/design-tokens/#category-sizing">sizing category of the Design Tokens</a>. e.g. <CodeClass className="size--large" /></p>
   <p>
@@ -35,8 +33,8 @@ export default (
     with <code>max-</code> to achieve this result.
   </p>
   <p>Here is an overview of our available breakpoint names:</p>
-  <div className={pf('scrollable--x m-bottom--medium')}>
-    <table className={pf('table table--bordered max-medium-table--stacked-horizontal no-row-hover')}>
+  <div className="slds-scrollable--x slds-m-bottom--medium">
+    <table className="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
       <thead>
         <tr className="site-text-heading--label">
           <th scope="col">Breakpoint Name</th>
@@ -74,9 +72,9 @@ export default (
   <p>Our responsive sizing helpers are built upon a mobile first approach. To achieve the desired outcome of this approach, you will need to append responsive sizing helpers to an element that overrides the previous breakpoint. A default sizing helper is <strong>required</strong> and responsive sizing helpers are additive. The following example demonstrates the class name position for each breakpoint:</p>
   <p><code>&lt;div class="[default] [small size override] [medium size override] [large size override]"&gt;</code></p>
   <p>A real world example would look like this:</p>
-  <p><code>&lt;div class="{globals.cssPrefix}size--1-of-2 {globals.cssPrefix}small-size--1-of-3 {globals.cssPrefix}medium-size--1-of-4 {globals.cssPrefix}large-size--1-of-3"&gt;</code></p>
+  <p><code>&lt;div class="slds-size--1-of-2 slds-small-size--1-of-3 slds-medium-size--1-of-4 slds-large-size--1-of-3"&gt;</code></p>
   <p>This will equate to the following width output for your element:</p>
-  <div className={pf('site-code--content scrollable--x')}>
+  <div className="site-code--content slds-scrollable--x">
     <CodeBlock language="scss">{`
 .foo {
   width: 50%;

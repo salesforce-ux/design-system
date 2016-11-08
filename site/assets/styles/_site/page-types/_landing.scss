@@ -11,8 +11,7 @@
 
 // Page
 .site-landing-page {
-  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top,
-              url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
+  background: url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
                 size: auto rem(560px);
               }
   @include mq-medium-max {
@@ -30,13 +29,22 @@
 // Hero
 .site-masthead--landing {
   @include inverse-links;
-  margin-top: -$spacing-xx-large;
-  padding-bottom: ($spacing-xx-large * 3);
+  position: relative;
+  overflow: hidden;
+  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top {
+                size: auto rem(560px);
+                color: $color-brand-dark;
+              };
+
+  @include mq-medium-max {
+    background-size: auto rem(360px);
+  }
+
 
   @include mq-medium-min {
     padding: {
       top: $spacing-x-large;
-      bottom: $spacing-x-large * 11;
+      bottom: $spacing-xx-large;
     }
   }
 
@@ -51,19 +59,23 @@
 
   .site-text-heading--large {
     font: {
-      size: rem(32px);
+      size: rem(44px);
       weight: $font-weight-light;
     }
 
-    @include mq-x-small-min {
-      font-size: rem(40px);
+    @include mq-small-min {
+      font-size: rem(56px);
     }
 
-    @include mq-small-min {
-      font-size: $site-font-size-xxx-large;
+    @include mq-medium-max {
+      text-align: center;
     }
 
     @include mq-medium-min {
+      font-size: $site-font-size-xxx-large;
+    }
+
+    @include mq-large-min {
       max-width: rem(552px);
       font-size: $site-font-size-xxxx-large;
     }
@@ -75,20 +87,53 @@
       bottom: $spacing-xx-large;
     }
   }
+
+  &-tagline {
+    font-size: $font-size-xx-large;
+
+    @include mq-medium-max {
+      text-align: center;
+    }
+  }
+
+  &-logo {
+    width: 5rem;
+    margin: $spacing-large auto;
+
+    @include mq-medium-min {
+      margin: $spacing-large $spacing-x-large 0 0;
+    }
+  }
+
+  &-cta {
+    @include mq-medium-max {
+      justify-content: center;
+    }
+  }
 }
 
+.site-releasenumber {
+  margin: $spacing-medium auto;
 
+  @include mq-small-min {
+    margin: 0 0 0 $spacing-medium;
+  }
+}
+
+.site-tagline {
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  font-size: 2.2rem;
+  font-weight: $font-weight-light;
+  color: $color-text-placeholder;
+}
 
 // Grid
 .site-grid--landing {
-  margin-top: (($spacing-xx-large * 3) * -1);
+  margin-top: (($spacing-xx-large * 2) * -1);
 
   .site-text-heading--large {
     font-size: $site-font-size-xx-large;
-  }
-
-  @include mq-medium-min {
-    margin-top: ($spacing-xx-large * 4) * -1;
   }
 
   .grid-card {
@@ -193,79 +238,11 @@
   }
 }
 
-// Floating Shapes
-.site-shapes {
-  opacity: 0;
-  transition: opacity ($duration-slowly * 2) linear;
-
-  &--on {
-    opacity: 1;
-  }
-}
-
-// Hide shapes that are out of the viewport
-// Prevents Safari from adding horizontal scrolling:
-// Fixes https://github.com/salesforce-ux/design-system/issues/223
-
-// Let's hide all shapes, and their container
-.site-shapes,
-[data-slds-shape] {
-  display: none;
-}
-
-// Now we make shapes appear one at a time
-@media (min-width: 73em) { // The first shape is in the viewport
-  .site-shapes,
-  [data-slds-shape=cub] {
-    display: block;
-  }
-}
-@media (min-width: 80em) { // The triangular prism appears
-  [data-slds-shape="tri"] {
-    display: block;
-  }
-}
-@media (min-width: 90em) { // Now to the rectangular prism
-  [data-slds-shape="rect"] {
-    display: block;
-  }
-}
-@media (min-width: 100em) {
-  [data-slds-shape="dten"] { // Finishing with the decahedron
-    display: block;
-  }
-}
-
-// CTA Buttons
-// - centered / full-width on mobile
-// - horizontally aligned with space in between on larger screens
-.site-cta-buttons {
-  margin-left: -1 * ($spacing-medium / 2);
-  margin-right: -1 * ($spacing-medium / 2);
-
-  .#{$css-prefix}button {
-    margin-left: ($spacing-medium / 2);
-    margin-right: ($spacing-medium / 2);
-
-    @include mq-x-small-max {
-      display: block;
-      margin-bottom: $spacing-small;
-    }
-  }
-}
-
-// Align the icon correctly in the middle of the button
-.site-cta-buttons__icon {
-  vertical-align: -0.5rem;
-}
-
-
 // Keep "Design System" on same line
 .text-no-wrap {
   white-space: nowrap;
   display: block;
 }
-
 
 
 // Floating Shapes

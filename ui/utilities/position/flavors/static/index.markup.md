@@ -1,1 +1,1 @@
-`.{{cssPrefix}}is-static` resets positioning of element back to normal behavior
+`.slds-is-static` resets positioning of element back to normal behavior

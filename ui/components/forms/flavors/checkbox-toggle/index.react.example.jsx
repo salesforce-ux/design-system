@@ -11,43 +11,46 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only size--1-of-2')} {...props}>
+  <div className="demo-only slds-size--1-of-2" {...props}>
     {props.children}
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('form--element'), props.className)}>
-    <legend className={pf('form-element__legend form-element__label')}>Share email with</legend>
-    <div className={pf('form-element__control box--border')}>
+  <fieldset className={className('form--element', props.className)}>
+    <legend className="slds-form-element__legend slds-form-element__label">Share email with</legend>
+    <div className="slds-form-element__control slds-box--border">
       {props.children}
     </div>
   </fieldset>;
 
 let LabelWrapper = props =>
-  <div className={className(pf('form-element'), props.className)}>
+  <div className={className('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
 let Label = props =>
-  <label className={className(pf('checkbox--toggle grid grid--vertical-align-center'), props.className)} htmlFor={props.id}>
+  <label className={className('slds-checkbox--toggle slds-grid', props.className)} htmlFor={props.id}>
     {props.children}
   </label>;
 
 let FauxLabel = props =>
-  <span className={pf('form-element__label m-bottom--none')}>{props.children}</span>;
+  <span className="slds-form-element__label slds-m-bottom--none">{props.children}</span>;
 
 let Checkbox = props =>
-  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} />;
+  <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} aria-describedby="toggle-desc" />;
 
 let Toggle = props =>
-  <span className={className(pf('checkbox--faux'), props.className)} data-check-on="On" data-check-off="Off"></span>;
+  <span id="toggle-desc" className={className('slds-checkbox--faux_container', props.className)} aria-live="assertive">
+    <span className="slds-checkbox--faux"></span>
+    <span className={className('slds-checkbox--on', props.className)}>Enabled</span>
+    <span className={className('slds-checkbox--off', props.className)}>Disabled</span>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -85,40 +88,6 @@ let StateC = props =>
     </LabelWrapper>
   </Demo>;
 
-let StateD = props =>
-  <Demo>
-    <Fieldset>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>North East Sales Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small has-divider--bottom')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox checked />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-      <LabelWrapper>
-        <Label className={pf('p-around--x-small')}>
-          <FauxLabel>Another Team</FauxLabel>
-          <Checkbox />
-          <Toggle className={pf('col--bump-left')} />
-        </Label>
-      </LabelWrapper>
-    </Fieldset>
-  </Demo>;
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
@@ -138,10 +107,5 @@ export let states = [
     id: 'checkbox-toggle-disabled',
     label: 'Disabled',
     element: <StateC />
-  },
-  {
-    id: 'checkbox-toggle-group',
-    label: 'Grouped',
-    element: <StateD />
   }
 ];

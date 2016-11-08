@@ -32,6 +32,11 @@
     }
   }
 
+  .#{$css-prefix}radio--button__label .#{$css-prefix}radio--faux,
+  [type="radio"]:checked + .#{$css-prefix}radio--button__label .#{$css-prefix}radio--faux {
+    background-color: transparent;
+  }
+
   // Apply left borders to anything radio button
   // after the first button
   + .#{$css-prefix}radio--button {
@@ -42,12 +47,15 @@
 
   // Dealing with box shadows on specific n children
   // of the button group
-  &:first-child > .#{$css-prefix}radio--faux {
+  &:first-child > .#{$css-prefix}radio--faux,
+  &:first-child > .#{$css-prefix}radio--button__label {
     border-radius: $border-radius-medium 0 0 $border-radius-medium;
   }
 
+  // The middle selector doesn't seem to be applied anywhere? I didn't find a .button--last anywhere?
   &:last-child > .#{$css-prefix}radio--faux,
-  .#{$css-prefix}button--last > .#{$css-prefix}radio--faux {
+  .#{$css-prefix}button--last > .#{$css-prefix}radio--faux,
+  &:last-child > .#{$css-prefix}radio--button__label {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
@@ -63,7 +71,8 @@
 
     // Checked State with Interactions
     &:checked + .#{$css-prefix}radio--faux,
-    &:checked ~ .#{$css-prefix}radio--faux {
+    &:checked ~ .#{$css-prefix}radio--faux,
+    &:checked + .#{$css-prefix}radio--button__label {
       background-color: $color-background-button-brand;
       color: $color-text-button-brand;
 
@@ -76,14 +85,16 @@
 
     // Focus State
     &:focus + .#{$css-prefix}radio--faux,
-    &:focus ~ .#{$css-prefix}radio--faux {
+    &:focus ~ .#{$css-prefix}radio--faux,
+    &:focus + .#{$css-prefix}radio--button__label {
       @include focus-button;
       z-index: $z-index-default; // Raises box shadow above adjacent buttons
     }
 
     // Disabled State
     &[disabled] + .#{$css-prefix}radio--faux,
-    &[disabled] ~ .#{$css-prefix}radio--faux {
+    &[disabled] ~ .#{$css-prefix}radio--faux,
+    &[disabled] + .#{$css-prefix}radio--button__label {
       background-color: $color-background-button-default-disabled;
       color: $color-text-button-default-disabled;
       cursor: default;

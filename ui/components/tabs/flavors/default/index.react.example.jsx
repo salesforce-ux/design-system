@@ -11,11 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Tabs from 'ui/components/tabs/index.react';
-import Menu from 'ui/components/menus/index.react';
-import Button from 'ui/components/buttons/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Default as ScopedTabs } from 'ui/components/tabs/flavors/scoped/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -37,7 +35,7 @@ let Default = props =>
 </div>;
 
 let Overflowing = props =>
-<div className="demo-only" style={{height: '30rem'}}>
+<div className="demo-only" style={{height: '10rem'}}>
   <Tabs>
     <Tabs.Item title="Item One" id="tab-default-1">
       Item One Content
@@ -60,74 +58,26 @@ let Overflowing = props =>
     <Tabs.Item title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More" className={pf('dropdown-trigger dropdown-trigger--click is-open tabs--default__item')}>
-      <a className={pf('tabs--default__link')} href="javascript:void(0);" aria-haspopup="true">More <span className={pf('assistive-text')}>search results</span>
-        <SvgIcon className={pf('button__icon button__icon--x-small')} sprite="utility" symbol="down" />
+    <Tabs.ItemOverflow title="More tabs" className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-tabs--default__item">
+      <a className="slds-tabs--default__link" href="javascript:void(0);" aria-haspopup="true">
+        <span className="slds-truncate" title="More tabs">More <span className="slds-assistive-text">tabs</span></span>
+        <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
       </a>
-      <Menu className={pf('dropdown--medium dropdown--right')}>
-        <Menu.List isSelectable={false} className={pf('dropdown--length-with-icon-10')}>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
+      <Menu className="slds-dropdown--right">
+        <MenuList className="slds-dropdown--length-with-icon-10">
+          <MenuItem>
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
             Accounts
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
             Approvals
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
+          </MenuItem>
+          <MenuItem>
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
             Lead
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
-            Opportunities
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
-            Products
-          </Menu.Item>
-          <li className={pf('has-divider--top-space')} role="separator"></li>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
-            Accounts
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
-            Approvals
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
-            Lead
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
-            Opportunities
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
-            Products
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-account m-right--small')} sprite="standard" symbol="account" />
-            Accounts
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-approval m-right--small')} sprite="standard" symbol="approval" />
-            Approvals
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-lead m-right--small')} sprite="standard" symbol="lead" />
-            Lead
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-opportunity m-right--small')} sprite="standard" symbol="opportunity" />
-            Opportunities
-          </Menu.Item>
-          <Menu.Item>
-            <SvgIcon className={pf('icon icon--small icon-standard-product m-right--small')} sprite="standard" symbol="product" />
-            Products
-          </Menu.Item>
-        </Menu.List>
+          </MenuItem>
+        </MenuList>
       </Menu>
     </Tabs.ItemOverflow>
   </Tabs>

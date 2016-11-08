@@ -39,7 +39,7 @@ describe('scripts/tasks/site/icons.js', () => {
   it('does create a icons.zip', () => {
 
     let wwwDownloadPath = path.resolve(__PATHS__.www, 'assets/downloads');
-    let iconsZipFile = glob.sync(`${wwwDownloadPath}/salesforce-lightning-design-system-icons.zip`);
+    let iconsZipFile = glob.sync(`${wwwDownloadPath}/salesforce_icons.zip`);
 
     expect(iconsZipFile.length).to.eql(1);
   });

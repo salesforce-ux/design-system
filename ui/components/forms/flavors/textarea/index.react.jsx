@@ -10,20 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
-
+import classNames from 'classnames';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
     return (
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
-        <div className={pf('form-element__control')}>
-          <textarea id={this.props.assistiveText.replace(' ','-')} className={pf('textarea')} placeholder={this.props.placeholder}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <div className="slds-form-element__control">
+          <textarea id={this.props.assistiveText.replace(' ','-')} className="slds-textarea" placeholder={this.props.placeholder}>
             {this.props.children}
           </textarea>
           {this.renderHelp(this.props.help)}
@@ -33,9 +28,8 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName(pf('form-element__help'));
     return (
-      <div className={className}>
+      <div className="slds-form-element__help">
         {help}
       </div>
     );

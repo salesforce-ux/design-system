@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 import g from 'app_modules/global';
@@ -21,7 +20,7 @@ const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 
 export default (
-  <PageBody anchorTitle="Visualforce" contentClassName={pf('container--large')}>
+  <PageBody anchorTitle="Visualforce" contentClassName="slds-container--large">
     <p className="site-text-introduction">
       Create a custom CSS file to use the {g.displayName} in Visualforce.
     </p>
@@ -29,7 +28,7 @@ export default (
     <p>
       If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:
     </p>
-    <ul className={pf('list--dotted')}>
+    <ul className="slds-list--dotted">
       <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-visualforce-static-resources-like-stylesheets-and-icons">FAQ</a>.</li>
       <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the component examples, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
       <li>To use the SVG spritemap icons, add the attributes <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> to the <code>&lt;html&gt;</code> element as documented in the <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>. Do not add the attributes to individual <code>&lt;svg&gt;</code> elements as can cause a page rendering bug.</li>

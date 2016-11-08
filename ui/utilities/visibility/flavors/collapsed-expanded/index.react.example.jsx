@@ -10,16 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only">
-    <div className={pf('is-collapsed')}>
+    <div className="slds-is-collapsed">
       <h3>I am collapsed</h3>
       <p>I am a child inside a collapsed element</p>
     </div>
-    <div className={pf('is-expanded')}>
+    <div className="slds-is-expanded">
       <h3>I am expanded</h3>
       <p>I am a child inside an expanded element</p></div>
   </div>

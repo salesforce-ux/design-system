@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const JumpAnchor = (props) =>
   <span
     data-js-jump-anchor={props.scrollSpyActive || null}
     className={`site-jump-anchor ${props.children ? `docsearch-level-${props.level}` : ''}`}
     id={props.id}>
-    {props.children ? <span className={pf('hide')} role="presentation">{props.children}</span> : null}
+    {props.children ? <span className="slds-hide" role="presentation">{props.children}</span> : null}
   </span>;
 
 export default JumpAnchor;

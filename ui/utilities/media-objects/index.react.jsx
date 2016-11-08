@@ -10,42 +10,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil from 'app_modules/ui/util/component';
 import classNames from 'classnames';
-const pf = componentUtil.prefix;
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassNameWithFlavor(pf('media'));
+    const className = classNames('slds-media', this.props.className, {
+      [`slds-media--${this.props.flavor}`]: this.props.flavor
+    });
     return (
       <div className={className}>
         {this.renderFigure(
           this.props.figureCenter,
-          classNames('media__figure--stacked', this.props.figureCenterClassName)
+          classNames('slds-media__figure--stacked', this.props.figureCenterClassName)
         )}
         {this.renderFigure(
           this.props.figureLeft,
           this.props.figureLeftClassName
         )}
-        <div className={pf('media__body')}>
+        <div className="slds-media__body">
           {this.props.children}
         </div>
         {this.renderFigure(
           this.props.figureRight,
-          classNames('media__figure--reverse', this.props.figureRightClassName)
+          classNames('slds-media__figure--reverse', this.props.figureRightClassName)
         )}
       </div>
     );
   }
   renderFigure(figure, className) {
     if (!figure) return null;
-    className = classNames('media__figure', className);
+    className = classNames('slds-media__figure', className);
     return (
-      <div className={pf(className)}>
+      <div className={className}>
         {figure}
       </div>
     );

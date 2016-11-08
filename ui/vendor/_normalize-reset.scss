@@ -219,7 +219,7 @@
   // -------------------- //
 
   //
-  // Known limitation: by default, Chrome and Safari on OS X allow very limited
+  // Known limitation: by default, Chrome and Safari on macOS allow very limited
   // styling of `select`, unless a `border` property is set.
   //
 
@@ -343,7 +343,7 @@
   }
 
   //
-  // Remove inner padding and search cancel button in Safari and Chrome on OS X.
+  // Remove inner padding and search cancel button in Safari and Chrome on macOS.
   // Safari (but not Chrome) clips the cancel button when the search input has
   // padding (and `textfield` appearance).
   //
@@ -383,7 +383,7 @@
 
   //
   // Don't inherit the `font-weight` (applied by a rule above).
-  // NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+  // NOTE: the default cannot safely be changed in Chrome and Safari on macOS.
   //
 
   optgroup {

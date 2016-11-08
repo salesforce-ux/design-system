@@ -1,1 +1,1 @@
-To spread out your columns on the main axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class `.{{cssPrefix}}grid--align-spread`.
+To spread out your columns on the main axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class `.slds-grid--align-spread`.

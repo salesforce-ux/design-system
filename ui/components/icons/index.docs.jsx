@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import CodeClass from 'app_modules/site/components/code-class';
 import CodeBlock from 'app_modules/ui/code-block';
@@ -34,13 +33,13 @@ export default (
       <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
     </svg>
   `}</CodeBlock>
-    <p className={pf('m-top--small')}><strong>Note:</strong> If an icon has more than one word in the name, it should be included in the <code>use</code> attribute with the underscore separator as shown on the icon page. For example: log_a_call.</p>
+    <p className="slds-m-top--small"><strong>Note:</strong> If an icon has more than one word in the name, it should be included in the <code>use</code> attribute with the underscore separator as shown on the icon page. For example: log_a_call.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>If an icon has visible descriptive text, nothing more is required. If the icon has no descriptive text, add a <code>span</code> with the <CodeClass className="icon_container"/> class. Place both the <code>svg</code> with the base <CodeClass className="icon"/> class and the description for assistive screen readers inside a <code>span</code> with the <CodeClass className="assistive-text"/> class.</p>
     <p><strong>Note:</strong> You must include the SVG sprites to link to them. If you&rsquo;re using Visualforce, see <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/resources/lightning-svg-icon-component-helper">Lightning components, see tutorial</a>.</p>
     <p>You can access the SVG sprites by downloading the entire <a href="/downloads">CSS Framework or just the icons</a>. To include a sprite in your application, the recommended method is to place it into the page as the first element inside the <code>body</code> element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> script for Internet Explorer.</p>
     <p>When placed into the <code>body</code>, the SVG sprite takes up space in the page. Use either <code>display:none</code> or <code>position:absolute</code> and set both the width and height to zero.</p>
-    <div className={pf('site-code--content scrollable--x')}>
+    <div className="site-code--content slds-scrollable--x">
       <CodeBlock language="markup">{`
         <body>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">

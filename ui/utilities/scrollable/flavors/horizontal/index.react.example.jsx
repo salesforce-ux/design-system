@@ -11,31 +11,30 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Lorem from 'react-lorem-component';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export const preview = (
 <div className="demo-only" style={{height: '240px'}}>
-  <div className={pf('scrollable--x')}>
-    <div className={pf('grid grid--overflow')}>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
-      <div className={pf('col')}><Lorem count={1} /></div>
+  <div className="slds-scrollable--x">
+    <div className="slds-grid slds-grid--overflow">
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem count={1} /></div>
     </div>
   </div>
 </div>
 );
 
 export const code = (
-<div className={pf('scrollable--x')}>
+<div className="slds-scrollable--x">
   Scrollable Content Here
 </div>
 );

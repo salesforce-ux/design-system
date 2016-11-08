@@ -1,54 +1,54 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: lookup
+    class: slds-lookup
     description: Initializes lookup
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Accepts <code>[data-select]</code> and <code>[data-scope]</code> attributes with the values of single/multi
   -
-    class: lookup__menu
+    class: slds-lookup__menu
     description: Initializes lookup results list container
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: Applies positioning and container styles
   -
-    class: lookup__list
+    class: slds-lookup__list
     description: Initializes lookup results list
     required: true
     applied: <code>&lt;ul&gt;</code>
   -
-    class: lookup__item
+    class: slds-lookup__item
     description: Results list item
     required: true
     applied: <code>&lt;li&gt;</code>
   -
-    class: lookup__item--label
+    class: slds-lookup__item--label
     description: Non-actionable label inside of a lookup item
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: lookup__item-action
+    class: slds-lookup__item-action
     description: Actionable element inside of a lookup item
     required: true
     applied: <code>&lt;a&gt;</code>
   -
-    class: lookup__item-action--label
+    class: slds-lookup__item-action--label
     description: Actionable element inside of a lookup item that's output is single line text
-    applied: <code>.{{cssPrefix}}lookup__item-action</code>
+    applied: <code>.slds-lookup__item-action</code>
   -
-    class: lookup__result-text
+    class: slds-lookup__result-text
     description: Primary entity name within lookup item
     applied: <code>&lt;span&gt;</code>
   -
-    class: lookup__result-meta
+    class: slds-lookup__result-meta
     description: Secondary info of primary entity name within lookup item
     applied: <code>&lt;a&gt;</code>
   -
-    class: lookup__search-input
+    class: slds-lookup__search-input
     description: Styles for a lookup's form input
     applied: <code>&lt;input&gt;</code>
   -
-    class: has-focus
+    class: slds-has-focus
     description: Lookup options aren't actionable so this class provides focus for keyboard interactions
-    applied: <code>.{{cssPrefix}}lookup__item</code>
+    applied: <code>.slds-lookup__item</code>

@@ -11,40 +11,39 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Action = props =>
-<span className={pf('icon_container icon_container--circle icon-action-description')} title="description of icon when needed">
-  <SvgIcon className={pf('icon icon--small')} sprite="action" symbol="description" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon_container--circle slds-icon-action-description" title="description of icon when needed">
+  <SvgIcon className="slds-icon slds-icon--small" sprite="action" symbol="description" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let Doctype = props =>
-<span className={pf('icon_container')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="doctype" symbol="xml" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="doctype" symbol="xml" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let Standard = props =>
-<span className={pf('icon_container icon-standard-account')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="standard" symbol="account" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon-standard-account" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let Utility = props =>
-<span className={pf('icon_container')} title="description of icon when needed">
-  <SvgIcon className={pf('icon icon--small icon-text-default')} sprite="utility" symbol="announcement" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container" title="description of icon when needed">
+  <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="announcement" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 let Custom = props =>
-<span className={pf('icon_container icon-custom-custom5')} title="description of icon when needed">
-  <SvgIcon className={pf('icon')} sprite="custom" symbol="custom5" />
-  <span className={pf('assistive-text')}>Description of icon</span>
+<span className="slds-icon_container slds-icon-custom-custom5" title="description of icon when needed">
+  <SvgIcon className="slds-icon" sprite="custom" symbol="custom5" />
+  <span className="slds-assistive-text">Description of icon</span>
 </span>;
 
 //////////////////////////////////////////////

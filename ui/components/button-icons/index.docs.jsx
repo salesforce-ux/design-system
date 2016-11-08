@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
@@ -25,7 +24,7 @@ export default (
   <ComponentDocs>
     <h4 className="site-text-heading--label">Accessibility</h4>
     <p>
-      If an icon button doesn’t include a label, use a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
+      If an icon button doesn’t include a label, use a <code>title</code> attribute to show on hover for sighted users, and a span with <CodeClass className="assistive-text" /> to describe the icon for screen readers.
     </p>
   </ComponentDocs>
 );

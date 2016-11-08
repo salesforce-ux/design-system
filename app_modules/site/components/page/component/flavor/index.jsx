@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import { pathToURL } from 'app_modules/util/string';
 import _ from 'lodash';
 import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
@@ -80,43 +79,60 @@ class ComponentFlavor extends React.Component {
   }
 
   render() {
-    const { flavor } = this.props;
-    const styles = {};
+    const { flavor, component } = this.props;
 
     let statesIds = null;
     if (flavor.example && _.isArray(flavor.example.states)) {
       statesIds = flavor.example.states.map(state => <JumpAnchor key={`flavor-${flavor.id}-${state.id}`} id={`flavor-${flavor.id}-${state.id}`} level="2">{flavor.title} › {state.label}</JumpAnchor>);
     }
 
-    if (flavor.status === 'prototype') {
-      styles.display = 'none';
-    }
+    let lightning = (component.lightning && flavor.id === 'base' ? component.lightning : null) || flavor.lightning;
 
     return (
       <section
-        className={pf('m-bottom--xx-large p-top--x-large')}
-        style={styles}
-        data-slds-status={flavor.status}>
-        <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout">
-          {statesIds}
-          {flavor.title}
-          {this.renderBadge(flavor.status)}
-          {this.renderBadge(flavor.formFactorStatus)}
-          {this.renderCompatiblityBadges()}
-        </Heading>
-        <div className={pf('grid wrap grid--vertical-stretch')}>
-          <h3 className={pf('assistive-text')}>Preview</h3>
-          <div className={pf('col size--1-of-1 large-size--5-of-6 large-order--1 site-component-example')}>
+        className="slds-m-bottom--xx-large slds-p-top--x-large" >
+        <div className="slds-grid slds-wrap">
+          <div className={classNames('slds-col slds-size--1-of-1', {
+            'slds-large-size--4-of-6': lightning
+          })}>
+            <Heading textLabel={flavor.title} type="h2" id={`flavor-${flavor.id}`} className="site-text-heading--large site-text-heading--callout slds-p-bottom--medium">
+              {statesIds}
+              {flavor.title}
+              {this.renderBadge(flavor.status)}
+              {this.renderBadge(flavor.formFactorStatus)}
+              {this.renderCompatiblityBadges()}
+            </Heading>
+          </div>
+          {lightning ?
+            <div className="slds-col slds-size--1-of-1 slds-large-size--2-of-6 slds-text-align--right">
+              <a href={lightning.url}>Lightning Components Developer Guide</a>
+            </div> : null
+          }
+        </div>
+
+        <div className="slds-grid slds-wrap slds-grid--vertical-stretch">
+          <h3 className="slds-assistive-text">Preview</h3>
+          <div className="slds-col slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-component-example">
             {this.renderPreview()}
-            <h3 className={pf('assistive-text')}>Code</h3>
+            <h3 className="slds-assistive-text">Code</h3>
             {this.renderDesc()}
-            {this.renderCode()}
+            {this.renderNotDevReadyCodeAlert(flavor.status)}
+            {this.renderCode(flavor, flavor.status)}
             {this.renderInfo()}
           </div>
         </div>
-
       </section>
     );
+  }
+
+  renderNotDevReadyCodeAlert(status) {
+    return (status !== 'dev-ready') ? (
+      <div className="js-show-for-proto" data-slds-status={status}>
+        <div className="slds-box slds-theme--default slds-theme--alert-texture slds-m-vertical--medium">
+          <p>Code will be available when this component reaches a Dev-Ready state.</p>
+        </div>
+      </div>
+    ) : null;
   }
 
   renderBadge(status) {
@@ -124,7 +140,7 @@ class ComponentFlavor extends React.Component {
     const words = _.words(status).join(' ');
     const statusBadgeType = _.words(status).join('-');
     const className = classNames(
-      pf('badge m-left--medium shrink-none align-middle'),
+      'slds-badge slds-m-left--medium slds-shrink-none slds-align-middle',
       `badge--${statusBadgeType}`
     );
     return (
@@ -153,10 +169,10 @@ class ComponentFlavor extends React.Component {
       .reduce((badges, key) => {
         const compatible = flavor.compatibility[key];
         const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
-        const className = pf(classNames('badge m-left--medium shrink-none align-middle', {
+        const className = classNames('slds-badge slds-m-left--medium slds-shrink-none slds-align-middle', {
           'badge--compatible': compatible,
           'badge--not-compatible': !compatible
-        }));
+        });
         return badges.concat((
           <span className={className} key={`badge-${key}`}>
             {label}
@@ -179,13 +195,9 @@ class ComponentFlavor extends React.Component {
     const { flavor } = this.props;
     const exampleDescriptionMarkup = renderMarkdownAndReplaceGlobals(flavor.exampleDescription);
 
-    return exampleDescriptionMarkup ? <div>
-            <h3 className="site-text-heading--small site-text-heading--callout">State markup changes</h3>
-            <div
+    return <div
               id={`description-${flavor.uid}`}
-              className={pf('text-longform m-bottom--large')}
-              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />
-          </div> : null;
+              dangerouslySetInnerHTML={{__html: exampleDescriptionMarkup}} />;
   }
 
   renderPreview() {
@@ -206,14 +218,14 @@ class ComponentFlavor extends React.Component {
     const previewPanel = (
       <Tabs.Content
         id={`${flavor.uid}__preview-content`}
-        className={pf('site-example--content m-bottom--xx-large scrollable--x')}
+        className="site-example--content slds-m-bottom--xx-large slds-scrollable--x"
         aria-labelledby={previewTabActive ? `${flavor.uid}__preview-tab-${previewTabActive.key}` : null}
         data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}>
         {iframe}
       </Tabs.Content>
     );
     // Only use tabs if there are more than 1
-    const contentClassName = classNames('scrollable--x', {
+    const contentClassName = classNames('slds-scrollable--x', {
       'site-example--content': this.state.previewTabActive,
       // No form factors were specified
       'site-bleed': !this.state.previewTabActive
@@ -221,7 +233,7 @@ class ComponentFlavor extends React.Component {
     return this.state.previewTabs.length > 1
       ? (
         <Tabs
-          className={classNames(pf('site-example--tabs'), {
+          className={classNames('site-example--tabs', {
             'site-example--tabs-initial-view': this.state.initialView
           })}
           flavor="default"
@@ -232,7 +244,7 @@ class ComponentFlavor extends React.Component {
       )
       : (
         <div
-          className={pf(contentClassName)}
+          className={contentClassName}
           data-form-factor={previewTabActive ? this.state.previewTabActive.key : null}>
           {iframe}
         </div>
@@ -244,7 +256,7 @@ class ComponentFlavor extends React.Component {
     return this.state.previewTabs.map((tab, index) => {
       const content = (
         <span>
-          <SvgIcon sprite="utility" symbol={tab.icon} className={pf(`icon icon__svg icon-utility-${tab.iconClass} icon--x-small icon-text-default m-right--x-small`)} />
+          <SvgIcon sprite="utility" symbol={tab.icon} className={`slds-icon slds-icon__svg slds-icon-utility-${tab.iconClass} slds-icon--x-small slds-icon-text-default slds-m-right--x-small`} />
           {tab.label}
         </span>
       );
@@ -262,13 +274,15 @@ class ComponentFlavor extends React.Component {
     });
   }
 
-  renderCode() {
-    const { flavor } = this.props;
+  renderCode(flavor, status) {
     const className = 'language-markup';
     const code = flavor.exampleMarkup
       ? highlightMarkup(flavor.exampleMarkup) : null;
     return (
-      <div className={pf('site-code--content scrollable--x')}>
+      <div
+        className="site-code--content slds-scrollable--x"
+        data-slds-status={status}
+        style={status !== 'dev-ready' ? { display: 'none' } : null }>
         <pre className={className}>
           <code
             id={`code-${flavor.uid}`}

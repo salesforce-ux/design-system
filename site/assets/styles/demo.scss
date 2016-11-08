@@ -31,6 +31,11 @@ body {
   }
 }
 
+// @TODO - this is temporarily here as a fix till BLC is fixed and DF is completed - @Stef
+.demo-only--center-card-body .#{$css-prefix}card__body {
+  text-align: center;
+}
+
 .demo-only--top {
   padding-top: 9rem;
 }

@@ -12,16 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Button from 'ui/components/buttons/index.react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only">
-  <form className={pf('form--inline')}>
+  <form className="slds-form--inline">
     <Input label="Name" assistiveText="name" />
     <Input label="Email" assistiveText="email" />
-    <div className={pf('form-element')}>
-      <Button type="button" flavor="brand">Send</Button>
+    <div className="slds-form-element">
+      <Button type="button" className="slds-button slds-button--brand">Send</Button>
     </div>
   </form>
 </div>

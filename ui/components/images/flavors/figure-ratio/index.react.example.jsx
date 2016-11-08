@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { Image } from 'ui/components/images/flavors/figure/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Export
@@ -25,9 +24,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--16-by-9')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
           image />
       </div>
   },
@@ -37,9 +36,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--4-by-3')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--4-by-3"
+          titleClass="slds-image__title--card"
           image />
       </div>
   },
@@ -49,9 +48,9 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
-          className={pf('image--card')}
-          cropClass={pf('image__crop--1-by-1')}
-          titleClass={pf('image__title--card')}
+          className="slds-image--card"
+          cropClass="slds-image__crop--1-by-1"
+          titleClass="slds-image__title--card"
           image />
       </div>
   }

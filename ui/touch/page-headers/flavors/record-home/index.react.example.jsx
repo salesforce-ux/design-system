@@ -12,19 +12,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const image = (
-  <SvgIcon className={pf('icon icon-standard-opportunity')} sprite="standard" symbol="opportunity" />
+  <SvgIcon className="slds-icon slds-icon-standard-opportunity" sprite="standard" symbol="opportunity" />
 );
 
 export default (
   <div className="slds-page-header" role="banner">
     <MediaObject figureLeft={image}>
-      <p className={pf('page-header__title truncate')} title="Rohde Corp - 80,000 Widgets">
+      <p className="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>
-      <p className={pf('text-body--small')}>
+      <p className="slds-text-body--small">
         Mark Jaeckal
         &bull;
         Unlimited Customer

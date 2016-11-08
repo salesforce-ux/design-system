@@ -1,6 +1,4 @@
-# Salesforce Lightning Design System
-
-[![Build Status](https://travis-ci.com/salesforce-ux/design-system-internal.svg?token=BMXxPFKR5GZuYsqAFsEf&branch=winter-17)](https://travis-ci.com/salesforce-ux/design-system-internal)
+# Salesforce Lightning Design System [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 
@@ -75,9 +73,11 @@ Delete temporary build and local files.
 
 The Salesforce Lightning Design System uses `npm` to manage dependencies. Please [install Node.js](https://nodejs.org), and try running `npm install` again.
 
+If Node.js is already installed, make sure you’re running v6 or up.
+
 ### Ruby dependencies
 
-Ruby comes pre-installed on Mac OS X. For other systems, check <https://www.ruby-lang.org>.
+Ruby comes pre-installed on macOS. For other systems, check <https://www.ruby-lang.org>.
 
 If `gem install bundler` fails, run `sudo gem install bundler` and try running `npm install` again.
 
@@ -85,9 +85,9 @@ If `gem install bundler` fails, run `sudo gem install bundler` and try running `
 
 JavaScript dependencies sometimes get out of sync and inexplicable bugs start to happen. Follow these steps to give a fresh start to your development environment:
 
-1. The installed `npm` version must be at least 2.1.x. You can update your npm with: `sudo npm install npm -g`.
+1. The installed `npm` version must be at least v3.10. You can update your npm with: `npm install npm -g` (`sudo` may be required).
 2. Re-install dependencies: `rm -Rf node_modules && npm install`
-3. `npm run gulp`
+3. `npm start`
 
 If this did not work, try running `npm cache clean` and repeat the above steps.
 

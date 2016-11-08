@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
-  <div className={pf('text-longform')}>
+  <div className="slds-text-longform">
     <p>The quick brown fox jumps over the lazy dog.</p>
     <p>The quick brown fox jumps over the lazy dog.</p>
-    <h3 className={pf('text-heading--small')}>Something</h3>
+    <h3 className="slds-text-heading--small">Something</h3>
     <ul>
       <li>The quick brown fox jumps over the lazy dog.</li>
       <li>The quick brown fox jumps over the lazy dog.</li>

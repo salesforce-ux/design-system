@@ -13,7 +13,6 @@ import React from 'react';
 import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
@@ -21,9 +20,9 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ height: '80px' }}>
-        <div className={pf('docked-form-footer')}>
-          <Button type="button" flavor="neutral">Cancel</Button>
-          <Button type="button" flavor="brand">Save</Button>
+        <div className="slds-docked-form-footer">
+          <Button type="button" className="slds-button slds-button--neutral">Cancel</Button>
+          <Button type="button" className="slds-button slds-button--brand">Save</Button>
         </div>
       </div>
   },
@@ -32,25 +31,25 @@ export let states = [
     label: 'With error(s)',
     element:
       <div className="demo-only" style={{ height: '80px' }}>
-        <div className={pf('docked-form-footer')}>
-          <ButtonIcon className={pf('button--icon button--icon-error')} iconClassName={pf('button__icon--large')} symbol="warning" assitiveText="Review the Following Errors" />
-          <Button type="button" flavor="neutral">Cancel</Button>
-          <Button type="button" flavor="brand">Save</Button>
+        <div className="slds-docked-form-footer">
+          <ButtonIcon className="slds-button--icon slds-button--icon-error" iconClassName="slds-button__icon--large" symbol="warning" assitiveText="Review the Following Errors" title="Review the Following Errors" />
+          <Button type="button" className="slds-button slds-button--neutral">Cancel</Button>
+          <Button type="button" className="slds-button slds-button--brand">Save</Button>
         </div>
       </div>
   },
   {
-    id: 'docked-form-footer-with-tooltip',
-    label: 'With error tooltip',
+    id: 'docked-form-footer-with-popover',
+    label: 'With error popover',
     element:
       <div className="demo-only" style={{ height: '180px' }}>
-        <div className={pf('docked-form-footer')}>
-          <ButtonIcon className={pf('button--icon button--icon-error')} iconClassName={pf('button__icon--large')} symbol="warning" assitiveText="Review the Following Errors" />
-          <Button type="button" flavor="neutral">Cancel</Button>
-          <Button type="button" flavor="brand">Save</Button>
-          <div className={pf('popover nubbin--bottom-left theme--error')} role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', left: '50%', marginLeft: '58px', transform: 'translateX(-50%)' }}>
-            <ButtonIcon className={pf('button--icon-inverse button--icon-small float--right popover__close')} symbol="close" assistiveText="Close" />
-            <div className={pf('popover__body text-longform')} id="dialog-description-01">
+        <div className="slds-docked-form-footer">
+          <ButtonIcon className="slds-button--icon slds-button--icon-error" iconClassName="slds-button__icon--large" symbol="warning" assitiveText="Review the Following Errors" title="Review the Following Errors" />
+          <Button type="button" className="slds-button slds-button--neutral">Cancel</Button>
+          <Button type="button" className="slds-button slds-button--brand">Save</Button>
+          <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', left: '50%', marginLeft: '58px', transform: 'translateX(-50%)' }}>
+            <ButtonIcon className="slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" title="Close" />
+            <div className="slds-popover__body slds-text-longform" id="dialog-description-01">
               <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
             </div>
           </div>

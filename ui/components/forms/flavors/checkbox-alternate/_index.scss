@@ -32,6 +32,11 @@
     }
   }
 
+  .#{$css-prefix}checkbox--button__label .#{$css-prefix}checkbox--faux,
+  [type="checkbox"]:checked + .#{$css-prefix}checkbox--button__label .#{$css-prefix}checkbox--faux {
+    background-color: transparent;
+  }
+
   // Apply left borders to anything checkbox button
   // after the first button
   + .#{$css-prefix}checkbox--button {
@@ -42,12 +47,14 @@
 
   // Dealing with box shadows on specific n children
   // of the button group
-  &:first-child > .#{$css-prefix}checkbox--faux {
+  &:first-child > .#{$css-prefix}checkbox--faux,
+  &:first-child > .#{$css-prefix}checkbox--button__label {
     border-radius: $border-radius-medium 0 0 $border-radius-medium;
   }
 
   &:last-child > .#{$css-prefix}checkbox--faux,
-  .#{$css-prefix}button--last > .#{$css-prefix}checkbox--faux {
+  .#{$css-prefix}button--last > .#{$css-prefix}checkbox--faux,
+  &:last-child > .#{$css-prefix}checkbox--button__label {
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
@@ -63,7 +70,8 @@
 
     // Checked State with Interactions
     &:checked + .#{$css-prefix}checkbox--faux,
-    &:checked ~ .#{$css-prefix}checkbox--faux {
+    &:checked ~ .#{$css-prefix}checkbox--faux,
+    &:checked + .#{$css-prefix}checkbox--button__label {
       background-color: $color-background-button-brand;
       color: $color-text-button-brand;
 
@@ -76,14 +84,16 @@
 
     // Focus State
     &:focus + .#{$css-prefix}checkbox--faux,
-    &:focus ~ .#{$css-prefix}checkbox--faux {
+    &:focus ~ .#{$css-prefix}checkbox--faux,
+    &:focus + .#{$css-prefix}checkbox--button__label {
       @include focus-button;
       z-index: $z-index-default; // Raises box shadow above adjacent buttons
     }
 
     // Disabled State
     &[disabled] +.#{$css-prefix}checkbox--faux,
-    &[disabled] ~ .#{$css-prefix}checkbox--faux {
+    &[disabled] ~ .#{$css-prefix}checkbox--faux,
+    &[disabled] + .#{$css-prefix}checkbox--button__label {
       background-color: $color-background-button-default-disabled;
       color: $color-text-button-default-disabled;
       cursor: default;

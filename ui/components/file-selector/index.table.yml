@@ -1,66 +1,66 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: file-selector
+    class: slds-file-selector
     description: Initializes file-selector
     required: true
     applied: <code>&lt;div&gt;</code>
   -
-    class: file-selector__dropzone
+    class: slds-file-selector__dropzone
     description: Region that a file can be dropped within
     required: true
   -
-    class: file-selector__input
+    class: slds-file-selector__input
     description: Hidden input element
     required: true
     notes: Required for accessibility purposes
   -
-    class: file-selector__body
+    class: slds-file-selector__body
     description: Container for file selector content, specifically within the dropzone
     required: true
   -
-    class: file-selector__button
+    class: slds-file-selector__button
     description: Faux button
     required: true
   -
-    class: file-selector__body-icon
+    class: slds-file-selector__body-icon
     description: Visual icon that describes state of dropzone
     required: true
   -
-    class: file-selector__text
+    class: slds-file-selector__text
     description: Descriptive call back text
     required: true
   -
-    class: has-drag
+    class: slds-has-drag
     description: Informs dropzone that file has been dragged into the viewport
     required: true
     notes: To be added with JavaScript
   -
-    class: has-drag-over
+    class: slds-has-drag-over
     description: Informs dropzone that file has been dragged into its region
     required: true
     notes: To be added with JavaScript
   -
-    class: file-selector--files
+    class: slds-file-selector--files
     description: Modifier for self contained files selector
     required: true
   -
-    class: file-selector--images
+    class: slds-file-selector--images
     description: Modifier for self container image selector
     required: true
   -
-    class: file-selector--integrated
+    class: slds-file-selector--integrated
     description: Modifier for integrated file selector
     required: true
   -
-    class: file-selector__dropzone--integrated
+    class: slds-file-selector__dropzone--integrated
     description: Specific to integrated file selector — region that a file can be dropped within
     required: true
   -
-    class: file-selector__body--integrated
+    class: slds-file-selector__body--integrated
     description: Specific to integrated file selector — container for file selector content, specifically within the dropzone
     required: true
   -
-    class: file-selector__text--integrated
+    class: slds-file-selector__text--integrated
     description: Specific to integrated file selector — Descriptive call back text
     required: true

@@ -10,21 +10,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
-
+import classNames from 'classnames';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassName(pf('select'));
+    const className = classNames('slds-select', this.props.className);
     return (
-      <div className={pf('form-element')}>
-        <label className={pf('form-element__label')} htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
-        <div className={pf('form-element__control')}>
-          <div className={pf('select_container')}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label" htmlFor={this.props.assistiveText.replace(' ','-')}>{this.props.label}</label>
+        <div className="slds-form-element__control">
+          <div className="slds-select_container">
             <select id={this.props.assistiveText.replace(' ','-')} className={className}>
               {this.props.children}
             </select>
@@ -36,9 +31,8 @@ class Component extends React.Component {
   }
   renderHelp(help) {
     if (!help) return null;
-    const className = this.$getClassName(pf('form-element__help'));
     return (
-      <div className={className}>
+      <div className="slds-form-element__help">
         {help}
       </div>
     );

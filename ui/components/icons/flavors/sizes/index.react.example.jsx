@@ -11,22 +11,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Default = props =>
-<span className={pf('icon_container icon-standard-case')}>
-  <SvgIcon className={pf(`icon${props.size ? ' icon--' + props.size : ''}`)} sprite="standard" symbol="case" />
-  <span className={pf('assistive-text')}>Case icon</span>
+<span className="slds-icon_container slds-icon-standard-case">
+  <SvgIcon className={`slds-icon${props.size ? ' slds-icon--' + props.size : ''}`} sprite="standard" symbol="case" />
+  <span className="slds-assistive-text">Case icon</span>
 </span>;
 
 let XSmall = props =>
-<span className={pf('icon_container')}>
-  <SvgIcon className={pf('icon icon-text-warning icon--x-small')} sprite="utility" symbol="warning" />
-  <span className={pf('assistive-text')}>Warning Icon</span>
+<span className="slds-icon_container">
+  <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
+  <span className="slds-assistive-text">Warning Icon</span>
 </span>;
 
 //////////////////////////////////////////////
@@ -37,21 +36,25 @@ export let states = [
   {
     id: 'x-small',
     label: 'Extra Small',
+    description: 'Extra-small - (`.{{cssPrefix}}icon--x-small`) - is typically used for small alert icons, with no background color.',
     element: <XSmall />
   },
   {
     id: 'small',
     label: 'Small',
+    description: 'Small - (`.{{cssPrefix}}icon--small`) - 1.5rem&times;1.5rem (for icons with a background color).',
     element: <Default size="small" />
   },
   {
     id: 'medium',
     label: 'Medium (default)',
+    description: 'Medium - (this default size requires no additional class) - 2rem&times;2rem.',
     element: <Default />
   },
   {
     id: 'large',
     label: 'Large',
+    description: 'Large - (`.{{cssPrefix}}icon--large`) - 3rem&times;3rem.',
     element: <Default size="large" />
   }
 ];

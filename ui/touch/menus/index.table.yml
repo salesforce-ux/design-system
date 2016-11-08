@@ -1,22 +1,22 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: action-overflow--touch
+    class: slds-action-overflow--touch
     description: Positions the Action overflow for touch to take up full screen
     applied: <code>div</code>
   -
-    class: action-overflow--touch__container
+    class: slds-action-overflow--touch__container
     description: Pushes the menu to the bottom of the screen.
     applied: <code>div</code>
   -
-    class: action-overflow--touch__content
+    class: slds-action-overflow--touch__content
     description: Creates a scrolling area that is pushed down the screen by a third of the viewport height.
     applied: <code>div</code>
   -
-    class: action-overflow--touch__body
+    class: slds-action-overflow--touch__body
     description: Draws the white menu.
     applied: <code>div</code>
   -
-    class: action-overflow--touch__footer
+    class: slds-action-overflow--touch__footer
     description: Creates the footer for the Cancel button.
     applied: <code>div</code>

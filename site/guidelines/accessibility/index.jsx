@@ -11,12 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import globals from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Accessibility" contentClassName={pf('site-guidelines site-guidelines-layout')}>
-    <div className={pf('container--large')}>
+  <PageBody anchorTitle="Accessibility" contentClassName="site-guidelines site-guidelines-layout">
+    <div className="slds-container--large">
       <p className="site-text-introduction">The Lightning Design System provides accessible markup which will serve as a foundation for your application development. In order to make sure you build accessible components, however, you will need to follow the accessibility guidance for our interactive components. This includes keyboard behavior as well as the management of ARIA roles and properties.</p>
 
       <h2 className="site-text-heading--large">What is Accessibility?</h2>

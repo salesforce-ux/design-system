@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -21,18 +20,18 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 export let AppLauncherTile = props =>
-  <a href="javascript:void(0);" className={className(pf('app-launcher__tile text-link--reset'), props.className, props.flavor == 'small' ? pf('app-launcher__tile--small') : null, props.draggable ? pf('is-draggable') : null)}>
-    <div className={className(pf('app-launcher__tile-figure'), props.flavor == 'small' ? pf('app-launcher__tile-figure--small') : null)}>
-      { props.symbol ? <SvgIcon className={pf('icon icon-standard-' + props.symbol + ' icon--large')} sprite="standard" symbol={ props.symbol } /> :
-        <span className={className(pf('avatar avatar--large align--absolute-center'), props.figureClass)}>{props.objectInitials}</span>
+  <a href="javascript:void(0);" className={className('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}>
+    <div className={className('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
+      { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
+        <span className={className('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</span>
       }
       { props.draggable ?
-        <span className={pf('icon_container')} title="Drag item to a new location">
-          <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="rows" />
-          <span className={pf('assistive-text')}>Drag item to a new location</span>
+        <span className="slds-icon_container" title="Drag item to a new location">
+          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="rows" />
+          <span className="slds-assistive-text">Drag item to a new location</span>
         </span> : null}
     </div>
-    <div className={className(pf('app-launcher__tile-body'), props.flavor == 'small' ? pf('app-launcher__tile-body--small') : null)}>
+    <div className={className('slds-app-launcher__tile-body', props.flavor == 'small' ? 'slds-app-launcher__tile-body--small' : null)}>
       {props.children}
     </div>
   </a>;
@@ -47,9 +46,9 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
-        <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')}>
-          <span className={pf('text-link')}>Sales Cloud</span>
-          <p>The primary internal Salesforce org. Used to run our...<span className={pf('text-link')}>More</span></p>
+        <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27">
+          <span className="slds-text-link">Sales Cloud</span>
+          <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
         </AppLauncherTile>
       </div>
   },
@@ -58,9 +57,9 @@ export let states = [
     label: 'Draggable',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
-        <AppLauncherTile objectInitials="SC" figureClass={pf('icon-custom-27')} draggable>
-          <span className={pf('text-link')}>Sales Cloud</span>
-          <p>The primary internal Salesforce org. Used to run our...<span className={pf('text-link')}>More</span></p>
+        <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
+          <span className="slds-text-link">Sales Cloud</span>
+          <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
         </AppLauncherTile>
       </div>
   }

@@ -10,19 +10,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--frame theme--shade')} style={{height: '250px', margin: '-1rem'}}>
-    <div className={pf('col grid grid--align-center grid--vertical-align-center')}><div>App Content</div></div>
+  <div className="slds-grid slds-grid--frame slds-theme--shade" style={{height: '250px', margin: '-1rem'}}>
+    <div className="slds-col slds-grid slds-grid--align-center slds-grid--vertical-align-center"><div>App Content</div></div>
   </div>
 </div>
 );
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className={pf('grid grid--frame')}>
+  <div className="slds-grid slds-grid--frame">
     <div>App Content</div>
   </div>
 </div>

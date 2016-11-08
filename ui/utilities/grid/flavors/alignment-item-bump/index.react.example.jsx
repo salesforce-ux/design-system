@@ -10,29 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export const preview = (
 <div className="demo-only demo-container">
-  <div className={pf('grid')}>
-    <div><div className={pf('box box--small theme--shade m-right--large')}>1</div></div>
-    <div><div className={pf('box box--small theme--shade m-right--large')}>2</div></div>
-    <div><div className={pf('box box--small theme--shade m-right--large')}>3</div></div>
-    <div><div className={pf('box box--small theme--shade m-right--large')}>4</div></div>
-    <div className={pf('col--bump-left')}><div className={pf('box box--small theme--shade m-right--large')}>5</div></div>
-    <div><div className={pf('box box--small theme--shade')}>6</div></div>
+  <div className="slds-grid">
+    <div><div className="slds-box slds-box--small slds-theme--shade slds-m-right--large">1</div></div>
+    <div><div className="slds-box slds-box--small slds-theme--shade slds-m-right--large">2</div></div>
+    <div><div className="slds-box slds-box--small slds-theme--shade slds-m-right--large">3</div></div>
+    <div><div className="slds-box slds-box--small slds-theme--shade slds-m-right--large">4</div></div>
+    <div className="slds-col--bump-left"><div className="slds-box slds-box--small slds-theme--shade slds-m-right--large">5</div></div>
+    <div><div className="slds-box slds-box--small slds-theme--shade">6</div></div>
   </div>
 </div>
 );
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className={pf('grid')}>
+  <div className="slds-grid">
     <div>1</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
-    <div className={pf('col--bump-left')}>5</div>
+    <div className="slds-col--bump-left">5</div>
     <div>6</div>
   </div>
 </div>

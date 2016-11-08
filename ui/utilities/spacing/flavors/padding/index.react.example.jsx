@@ -10,79 +10,78 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only demo-only--spacing demo-only--padding-theme">
-    <div className={pf('p-top--none')}></div>
-    <div className={pf('p-top--xxx-small')}></div>
-    <div className={pf('p-top--xx-small')}></div>
-    <div className={pf('p-top--x-small')}></div>
-    <div className={pf('p-top--small')}></div>
-    <div className={pf('p-top--medium')}></div>
-    <div className={pf('p-top--large')}></div>
-    <div className={pf('p-top--x-large')}></div>
-    <div className={pf('p-top--xx-large')}></div>
+    <div className="slds-p-top--none"></div>
+    <div className="slds-p-top--xxx-small"></div>
+    <div className="slds-p-top--xx-small"></div>
+    <div className="slds-p-top--x-small"></div>
+    <div className="slds-p-top--small"></div>
+    <div className="slds-p-top--medium"></div>
+    <div className="slds-p-top--large"></div>
+    <div className="slds-p-top--x-large"></div>
+    <div className="slds-p-top--xx-large"></div>
 
-    <div className={pf('p-right--none')}></div>
-    <div className={pf('p-right--xxx-small')}></div>
-    <div className={pf('p-right--xx-small')}></div>
-    <div className={pf('p-right--x-small')}></div>
-    <div className={pf('p-right--small')}></div>
-    <div className={pf('p-right--medium')}></div>
-    <div className={pf('p-right--large')}></div>
-    <div className={pf('p-right--x-large')}></div>
-    <div className={pf('p-right--xx-large')}></div>
+    <div className="slds-p-right--none"></div>
+    <div className="slds-p-right--xxx-small"></div>
+    <div className="slds-p-right--xx-small"></div>
+    <div className="slds-p-right--x-small"></div>
+    <div className="slds-p-right--small"></div>
+    <div className="slds-p-right--medium"></div>
+    <div className="slds-p-right--large"></div>
+    <div className="slds-p-right--x-large"></div>
+    <div className="slds-p-right--xx-large"></div>
 
-    <div className={pf('p-bottom--none')}></div>
-    <div className={pf('p-bottom--xxx-small')}></div>
-    <div className={pf('p-bottom--xx-small')}></div>
-    <div className={pf('p-bottom--x-small')}></div>
-    <div className={pf('p-bottom--small')}></div>
-    <div className={pf('p-bottom--medium')}></div>
-    <div className={pf('p-bottom--large')}></div>
-    <div className={pf('p-bottom--x-large')}></div>
-    <div className={pf('p-bottom--xx-large')}></div>
+    <div className="slds-p-bottom--none"></div>
+    <div className="slds-p-bottom--xxx-small"></div>
+    <div className="slds-p-bottom--xx-small"></div>
+    <div className="slds-p-bottom--x-small"></div>
+    <div className="slds-p-bottom--small"></div>
+    <div className="slds-p-bottom--medium"></div>
+    <div className="slds-p-bottom--large"></div>
+    <div className="slds-p-bottom--x-large"></div>
+    <div className="slds-p-bottom--xx-large"></div>
 
-    <div className={pf('p-left--none')}></div>
-    <div className={pf('p-left--xxx-small')}></div>
-    <div className={pf('p-left--xx-small')}></div>
-    <div className={pf('p-left--x-small')}></div>
-    <div className={pf('p-left--small')}></div>
-    <div className={pf('p-left--medium')}></div>
-    <div className={pf('p-left--large')}></div>
-    <div className={pf('p-left--x-large')}></div>
-    <div className={pf('p-left--xx-large')}></div>
+    <div className="slds-p-left--none"></div>
+    <div className="slds-p-left--xxx-small"></div>
+    <div className="slds-p-left--xx-small"></div>
+    <div className="slds-p-left--x-small"></div>
+    <div className="slds-p-left--small"></div>
+    <div className="slds-p-left--medium"></div>
+    <div className="slds-p-left--large"></div>
+    <div className="slds-p-left--x-large"></div>
+    <div className="slds-p-left--xx-large"></div>
 
-    <div className={pf('p-vertical--none')}></div>
-    <div className={pf('p-vertical--xxx-small')}></div>
-    <div className={pf('p-vertical--xx-small')}></div>
-    <div className={pf('p-vertical--x-small')}></div>
-    <div className={pf('p-vertical--small')}></div>
-    <div className={pf('p-vertical--medium')}></div>
-    <div className={pf('p-vertical--large')}></div>
-    <div className={pf('p-vertical--x-large')}></div>
-    <div className={pf('p-vertical--xx-large')}></div>
+    <div className="slds-p-vertical--none"></div>
+    <div className="slds-p-vertical--xxx-small"></div>
+    <div className="slds-p-vertical--xx-small"></div>
+    <div className="slds-p-vertical--x-small"></div>
+    <div className="slds-p-vertical--small"></div>
+    <div className="slds-p-vertical--medium"></div>
+    <div className="slds-p-vertical--large"></div>
+    <div className="slds-p-vertical--x-large"></div>
+    <div className="slds-p-vertical--xx-large"></div>
 
-    <div className={pf('p-horizontal--none')}></div>
-    <div className={pf('p-horizontal--xxx-small')}></div>
-    <div className={pf('p-horizontal--xx-small')}></div>
-    <div className={pf('p-horizontal--x-small')}></div>
-    <div className={pf('p-horizontal--small')}></div>
-    <div className={pf('p-horizontal--medium')}></div>
-    <div className={pf('p-horizontal--large')}></div>
-    <div className={pf('p-horizontal--x-large')}></div>
-    <div className={pf('p-horizontal--xx-large')}></div>
+    <div className="slds-p-horizontal--none"></div>
+    <div className="slds-p-horizontal--xxx-small"></div>
+    <div className="slds-p-horizontal--xx-small"></div>
+    <div className="slds-p-horizontal--x-small"></div>
+    <div className="slds-p-horizontal--small"></div>
+    <div className="slds-p-horizontal--medium"></div>
+    <div className="slds-p-horizontal--large"></div>
+    <div className="slds-p-horizontal--x-large"></div>
+    <div className="slds-p-horizontal--xx-large"></div>
 
-    <div className={pf('p-around--none')}></div>
-    <div className={pf('p-around--xxx-small')}></div>
-    <div className={pf('p-around--xx-small')}></div>
-    <div className={pf('p-around--x-small')}></div>
-    <div className={pf('p-around--small')}></div>
-    <div className={pf('p-around--medium')}></div>
-    <div className={pf('p-around--large')}></div>
-    <div className={pf('p-around--x-large')}></div>
-    <div className={pf('p-around--xx-large')}></div>
+    <div className="slds-p-around--none"></div>
+    <div className="slds-p-around--xxx-small"></div>
+    <div className="slds-p-around--xx-small"></div>
+    <div className="slds-p-around--x-small"></div>
+    <div className="slds-p-around--small"></div>
+    <div className="slds-p-around--medium"></div>
+    <div className="slds-p-around--large"></div>
+    <div className="slds-p-around--x-large"></div>
+    <div className="slds-p-around--xx-large"></div>
   </div>
 );

@@ -11,26 +11,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <div className={pf('demo-only')} style={{ paddingLeft: '2rem', paddingTop: '5rem' }}>
-    <div className={pf('form-element')}>
-      <div className={pf('form-element__label')}>
-        <label className={pf('align-middle')} htmlFor="form-help">Text Label</label>
+  <div className="demo-only" style={{ paddingLeft: '2rem', paddingTop: '5rem' }}>
+    <div className="slds-form-element">
+      <div className="slds-form-element__label">
+        <label className="slds-align-middle" htmlFor="form-help">Text Label</label>
       </div>
-      <div className={pf('form-element__icon')}>
+      <div className="slds-form-element__icon">
         <a href="javascript:void(0);">
-          <SvgIcon className={pf('icon icon--x-small icon-text-default')} sprite="utility" symbol="info" />
-          <span className={pf('assistive-text')}>Help</span>
+          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="info" />
+          <span className="slds-assistive-text">Help</span>
         </a>
       </div>
-      <div className={pf('form-element__control')}>
-        <input id="form-help" className={pf('input')} type="text" placeholder="Field Level Help" aria-describedby="help" />
+      <div className="slds-form-element__control">
+        <input id="form-help" className="slds-input" type="text" placeholder="Field Level Help" aria-describedby="help" />
       </div>
     </div>
-    <div id="help" className={pf('popover popover--tooltip nubbin--bottom-left')} role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}>
-      <div className={pf('popover__body text-longform')}>
+    <div id="help" className="slds-popover slds-popover--tooltip slds-nubbin--bottom-left" role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}>
+      <div className="slds-popover__body slds-text-longform">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
       </div>
     </div>

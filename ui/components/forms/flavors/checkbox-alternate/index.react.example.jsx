@@ -11,37 +11,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('form-element'), props.className)}>
-    <legend className={pf('form-element__legend form-element__label')}>Scheduled Day(s)</legend>
-    <div className={pf('form-element__control')}>
+  <fieldset className={className('slds-form-element', props.className)}>
+    <legend className="slds-form-element__legend slds-form-element__label">Scheduled Day(s)</legend>
+    <div className="slds-form-element__control">
       {props.children}
     </div>
   </fieldset>;
 
 let CheckboxGroup = props =>
-  <div className={pf('checkbox--button-group')}>
+  <div className="slds-checkbox--button-group">
     {props.children}
   </div>;
 
 let Checkbox = props =>
-  <label className={className(pf('button checkbox--button'), props.className)} htmlFor={props.id}>
-    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className={pf('checkbox--faux')}>
-      {props.children}
-    </span>
-  </label>;
+  <span className={className('slds-button slds-checkbox--button', props.className)} htmlFor={props.id}>
+    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled}  aria-describedby={props.errorId} />
+    <label className="slds-checkbox--button__label" htmlFor={props.id}>
+      <span className="slds-checkbox--faux">
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -62,15 +63,15 @@ let StateA = props =>
 
 let StateB = props =>
   <Demo>
-    <Fieldset className={pf('has-error')}>
+    <Fieldset className="slds-has-error">
       <CheckboxGroup>
-        <Checkbox id="monday">Mon</Checkbox>
-        <Checkbox id="tuesday">Tue</Checkbox>
-        <Checkbox id="wednesday">Wed</Checkbox>
-        <Checkbox id="thursday">Thu</Checkbox>
-        <Checkbox id="friday">Fri</Checkbox>
+        <Checkbox errorId="error_01" id="monday">Mon</Checkbox>
+        <Checkbox errorId="error_01" id="tuesday">Tue</Checkbox>
+        <Checkbox errorId="error_01" id="wednesday">Wed</Checkbox>
+        <Checkbox errorId="error_01" id="thursday">Thu</Checkbox>
+        <Checkbox errorId="error_01" id="friday">Fri</Checkbox>
       </CheckboxGroup>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 
@@ -99,12 +100,12 @@ export let states = [
   },
   {
     id: 'checkbox-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'checkbox-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

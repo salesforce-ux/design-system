@@ -13,10 +13,9 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 const icon = (
-  <SvgIcon className={pf('icon icon-standard-groups')} sprite="standard" symbol="groups" />
+  <SvgIcon className="slds-icon slds-icon-standard-groups" sprite="standard" symbol="groups" />
 );
 
 ///////////////////////////////////////////
@@ -30,18 +29,18 @@ export let states = [
     element:
     <div className="demo-only" style={{ width: '320px' }}>
       <TileMedia title="Salesforce UX" media={ icon }>
-        <dl className={pf('dl--horizontal')}>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')} title="Company">Company:</p>
+        <dl className="slds-dl--horizontal">
+          <dt className="slds-dl--horizontal__label">
+            <p className="slds-truncate" title="Company">Company:</p>
           </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')} title="Salesforce">Salesforce</p>
+          <dd className="slds-dl--horizontal__detail slds-tile__meta">
+            <p className="slds-truncate" title="Salesforce">Salesforce</p>
           </dd>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')} title="Email">Email:</p>
+          <dt className="slds-dl--horizontal__label">
+            <p className="slds-truncate" title="Email">Email:</p>
           </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')} title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
+          <dd className="slds-dl--horizontal__detail slds-tile__meta">
+            <p className="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
           </dd>
         </dl>
       </TileMedia>
@@ -53,18 +52,18 @@ export let states = [
     element:
     <div className="demo-only" style={{ width: '320px' }}>
       <TileMedia title="Salesforce UX" media={ icon } actions>
-        <dl className={pf('dl--horizontal')}>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')} title="Company">Company:</p>
+        <dl className="slds-dl--horizontal">
+          <dt className="slds-dl--horizontal__label">
+            <p className="slds-truncate" title="Company">Company:</p>
           </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')} title="Salesforce">Salesforce</p>
+          <dd className="slds-dl--horizontal__detail slds-tile__meta">
+            <p className="slds-truncate" title="Salesforce">Salesforce</p>
           </dd>
-          <dt className={pf('dl--horizontal__label')}>
-            <p className={pf('truncate')} title="Email">Email:</p>
+          <dt className="slds-dl--horizontal__label">
+            <p className="slds-truncate" title="Email">Email:</p>
           </dt>
-          <dd className={pf('dl--horizontal__detail tile__meta')}>
-            <p className={pf('truncate')} title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
+          <dd className="slds-dl--horizontal__detail slds-tile__meta">
+            <p className="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
           </dd>
         </dl>
       </TileMedia>

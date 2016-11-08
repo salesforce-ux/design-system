@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 import tinyColor from 'tinycolor2';
 
 
@@ -48,7 +47,7 @@ class CellValue extends React.Component {
     const className = classNames('cell-wrap', 'site-property-value');
 
     return (
-      <code className={pf(className)} data-slds-token-value>
+      <code className={className} data-slds-token-value>
         {this.props.value}
         {alternateHex}
         {alternateRaw}

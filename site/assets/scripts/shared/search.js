@@ -18,9 +18,8 @@ if (globals.displaySearch) {
 
   o.addEventListener('load', function (e) {
     search = docsearch({
-      appId: process.env.SEARCH_APP_ID,
-      apiKey: process.env.SEARCH_API_KEY,
-      indexName: 'winter-17',
+      apiKey: 'a5ad71e92251e2eaad9e20a9befd004b',
+      indexName: 'lightningdesignsystem',
       inputSelector: '#docsearch',
       autocompleteOptions,
       transformData: (hits) => {
@@ -35,22 +34,6 @@ if (globals.displaySearch) {
   });
   s.parentNode.insertBefore(o, s);
 }
-
-const handleResetClick = (event, node) => {
-  fastdom.mutate(() => {
-    document.querySelector('#docsearch').focus();
-    document.querySelector('#search [type="reset"]').classList.add('hide');
-    search.autocomplete.autocomplete.setVal('');
-  });
-};
-
-const handleInputKeyUp = (event, node) => {
-  if (document.querySelector('#docsearch').value.length === 0) {
-    fastdom.mutate(() => document.querySelector('#search [type="reset"]').classList.add('hide'));
-  } else {
-    fastdom.mutate(() => document.querySelector('#search [type="reset"]').classList.remove('hide'));
-  }
-};
 
 const handleInputChange = (event, node) => {
   fastdom.mutate(() => node.classList.add('filled'));
@@ -67,8 +50,6 @@ export default () => ({
     listen_dom: delegate => {
       if (globals.displaySearch) {
         delegate('submit', '#search', (e) => { e.preventDefault(); });
-        delegate('click', '#search [type="reset"]', handleResetClick);
-        delegate('keyup', '#docsearch', handleInputKeyUp);
         delegate('blur', '#docsearch', handleInputBlur);
         delegate('change', '#docsearch', handleInputChange);
       }

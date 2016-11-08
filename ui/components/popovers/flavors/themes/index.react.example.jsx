@@ -10,15 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Popover = props =>
-<div className={pf(`popover nubbin--left theme--${props.theme}`)} role="dialog">
-  <div className={pf('popover__body')}>
+<div className={`slds-popover slds-nubbin--left slds-theme--${props.theme}`} role="dialog">
+  <div className="slds-popover__body">
     Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
   </div>
 </div>;

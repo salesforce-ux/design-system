@@ -10,13 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
 <div className="demo-only">
-  <section className={pf('clearfix')}>
-    <div className={pf('float--right')}>
+  <section className="slds-clearfix">
+    <div className="slds-float--right">
       <p>I’m floooaaaating</p>
     </div>
   </section>

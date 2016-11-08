@@ -10,13 +10,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only">
-    <div className={pf('hide')}>I am hidden</div>
-    <div className={pf('show')}>I am shown as a block</div>
-    <div className={pf('show--inline-block')}>I am shown as an inline-block</div>
+    <div className="slds-hide">I am hidden</div>
+    <div className="slds-show">I am shown as a block</div>
+    <div className="slds-show--inline-block">I am shown as an inline-block</div>
   </div>
 );

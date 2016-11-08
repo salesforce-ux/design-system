@@ -11,36 +11,43 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('form-element'), props.className)}>
+  <fieldset className={className('slds-form-element', props.className)}>
     {props.children}
   </fieldset>;
 
 let Legend = props =>
-  <legend className={pf('form-element__legend form-element__label')}>{props.children}</legend>;
+  <legend className="slds-form-element__legend slds-form-element__label">{props.children}</legend>;
 
 let FormElementControl = props =>
-  <div className={className(pf('form-element__control'), props.className)}>
+  <div className={className('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
-let Radio = props =>
-  <label className={pf('radio')}>
-    <input type="radio" name="options" disabled={props.disabled} />
-    <span className={pf('radio--faux')}></span>
-    <span className={pf('form-element__label')}>{props.children}</span>
-  </label>;
+export let Radio = props => {
+  const uniqueId = _.uniqueId('radio-');
+
+  return (
+    <span className="slds-radio">
+      <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
+      <label className="slds-radio__label" htmlFor={ uniqueId }>
+        <span className="slds-radio--faux"></span>
+        <span className="slds-form-element__label">{props.children}</span>
+      </label>
+    </span>
+  );
+};
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -51,7 +58,7 @@ let Default = props =>
     <Fieldset>
       <Legend>Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -59,10 +66,10 @@ let Default = props =>
 
 let Required = props =>
   <Demo>
-    <Fieldset className={pf('is-required')}>
-      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
+    <Fieldset>
+      <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
+        <Radio checked>Radio Label One</Radio>
         <Radio>Radio Label Two</Radio>
       </FormElementControl>
     </Fieldset>
@@ -70,13 +77,13 @@ let Required = props =>
 
 let ErrorState = props =>
   <Demo>
-    <Fieldset className={pf('is-required has-error')}>
-      <Legend><abbr className={pf('required')} title="required">*</abbr> Radio Group Label</Legend>
+    <Fieldset className="slds-has-error">
+      <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
       <FormElementControl>
-        <Radio>Radio Label One</Radio>
-        <Radio>Radio Label Two</Radio>
+        <Radio errorId="error_01" checked>Radio Label One</Radio>
+        <Radio errorId="error_01">Radio Label Two</Radio>
       </FormElementControl>
-      <div className={pf('form-element__help')} iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

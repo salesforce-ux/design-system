@@ -1,46 +1,46 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different icons.
 classes:
   -
-    class: icon
+    class: slds-icon
     description: Defines an svg as an icon
     required: true
     applied: <code>svg</code>
     notes: By default icons have a white fill color
   -
-    class: icon-text-default
+    class: slds-icon-text-default
     description: Creates a text-colored fill color for utility icons
-    applied: <code>.{{cssPrefix}}icon</code>
+    applied: <code>.slds-icon</code>
   -
-    class: icon-text-warning
+    class: slds-icon-text-warning
     description: Creates a warning colored fill color
-    applied: <code>.{{cssPrefix}}icon</code>
+    applied: <code>.slds-icon</code>
   -
-    class: icon--x-small
+    class: slds-icon--x-small
     description: Creates a 1rem&times;1rem icon
-    applied: <code>.{{cssPrefix}}icon</code>
+    applied: <code>.slds-icon</code>
   -
-    class: icon--small
+    class: slds-icon--small
     description: Creates a 1.5rem&times;1.5rem icon
-    applied: <code>.{{cssPrefix}}icon</code>
+    applied: <code>.slds-icon</code>
   -
-    class: icon--large
+    class: slds-icon--large
     description: Creates a 3rem&times;3rem icon
-    applied: <code>.{{cssPrefix}}icon</code>
+    applied: <code>.slds-icon</code>
   -
-    class: icon_container
+    class: slds-icon_container
     description: Creates the rounded square background
     required: true
     applied: outer <code>span</code>
-    notes: Used when an icon with a background color is accompanied by <code>.{{cssPrefix}}assistive-text</code> and also receives a <code>background-color</code> class
+    notes: Used when an icon with a background color is accompanied by <code>.slds-assistive-text</code> and also receives a <code>background-color</code> class
   -
-    class: icon_container--circle
+    class: slds-icon_container--circle
     description: Creates a circular icon shape
-    applied: <code>.{{cssPrefix}}icon_container</code>
+    applied: <code>.slds-icon_container</code>
   -
-    class: icon__container
+    class: slds-icon__container
     description: Creates the rounded square background
     deprecated: true
   -
-    class: icon__container--circle
+    class: slds-icon__container--circle
     description: Creates a circular icon shape
     deprecated: true

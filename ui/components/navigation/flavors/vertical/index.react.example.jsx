@@ -11,19 +11,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Navigation = props =>
-  <div className={className(pf('grid grid--vertical navigation-list--vertical'), props.className)}>
+  <div className={className('slds-grid slds-grid--vertical slds-navigation-list--vertical', props.className)}>
     {props.children}
   </div>;
 
 let SectionTitle = props =>
-  <h2 className={pf('text-title--caps p-around--medium')} id={props.id}>
+  <h2 className="slds-text-title--caps slds-p-around--medium" id={props.id}>
     {props.children}
   </h2>;
 
@@ -34,7 +33,7 @@ let List = props =>
 
 let Item = props =>
   <li className={ props.className }>
-    <a href="javascript:void(0);" className={pf('navigation-list--vertical__action text-link--reset')} aria-describedby={props.id}>
+    <a href="javascript:void(0);" className="slds-navigation-list--vertical__action slds-text-link--reset" aria-describedby={props.id}>
       {props.children}
     </a>
   </li>;
@@ -52,7 +51,7 @@ export let states = [
       <Navigation>
         <SectionTitle id="entity-header">Reports</SectionTitle>
         <List>
-          <Item id="entity-header" className={pf('is-active')}>Recent</Item>
+          <Item id="entity-header" className="slds-is-active">Recent</Item>
           <Item id="entity-header">Created by Me</Item>
           <Item id="entity-header">Private Reports</Item>
           <Item id="entity-header">Public Reports</Item>
@@ -72,10 +71,10 @@ export let states = [
     label: 'Inverse',
     element:
       <div className="demo-only" style={{ width: '320px', backgroundColor: '#FAFAFB' }}>
-        <Navigation className={pf('navigation-list--vertical-inverse')}>
+        <Navigation className="slds-navigation-list--vertical-inverse">
           <SectionTitle id="search-results">Search Results</SectionTitle>
           <List>
-            <Item id="search-results" className={pf('is-active')}>Top Results</Item>
+            <Item id="search-results" className="slds-is-active">Top Results</Item>
             <Item id="search-results">Accounts</Item>
             <Item id="search-results">Contacts</Item>
             <Item id="search-results">Opportunities</Item>

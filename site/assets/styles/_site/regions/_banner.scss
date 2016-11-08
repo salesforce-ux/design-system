@@ -16,7 +16,8 @@
   a {
     display: block;
     color: $color-text-default;
-    padding: $spacing-large $spacing-x-large;
+    padding: $spacing-medium $spacing-x-large;
+    text-align: center;
 
     &:hover,
     &:focus {
@@ -35,10 +36,6 @@
     vertical-align: middle;
     line-height: $line-height-reset;
     text-transform: lowercase;
-
-    &:first-child {
-      margin-right: $spacing-x-small;
-    }
   }
 
   @include mq-medium-min {
@@ -57,6 +54,7 @@
       }
       height: $height-banner;
       line-height: $height-banner;
+      text-align: center;
     }
 
     &.site-banner--internal {
@@ -76,10 +74,15 @@
 }
 
 .site-logo {
-  width: 3.9375rem;
-  height: 2.75rem;
+  width: 5rem;
+  height: 3.5rem;
   text-indent: -9999em;
   background: url('../images/logo.svg') no-repeat;
+
+  @include mq-medium-min {
+    width: 6.5rem;
+    height: 4.75rem;
+  }
 }
 
 .site-skip-content a {

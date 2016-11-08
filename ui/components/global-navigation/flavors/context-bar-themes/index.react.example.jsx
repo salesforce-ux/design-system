@@ -12,7 +12,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { Default as ContextBar } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import { Default as ContextTabBar } from 'ui/components/global-navigation/flavors/navigation-tab-bar/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 //////////////////////////////////////////////
 // Export
@@ -22,31 +21,31 @@ export let states = [
   {
     id: 'context-bar-theme-platform',
     label: 'Platform',
-    element: <ContextBar className={pf('context-bar--theme-default context-bar--theme-dark')} />
+    element: <ContextBar className="context-bar--theme-default context-bar--theme-dark" />
   },
   {
     id: 'context-bar-theme-service',
     label: 'Service',
-    element: <ContextTabBar className={pf('context-bar--theme-service context-bar--theme-dark')} appName="Service Console" />
+    element: <ContextTabBar className="context-bar--theme-service context-bar--theme-dark" appName="Service Console" />
   },
   {
     id: 'context-bar-theme-sales',
     label: 'Sales',
-    element: <ContextTabBar className={pf('context-bar--theme-sales context-bar--theme-dark')} appName="Sales Console" />
+    element: <ContextTabBar className="context-bar--theme-sales context-bar--theme-dark" appName="Sales Console" />
   },
   {
     id: 'context-bar-theme-marketing',
     label: 'Marketing',
-    element: <ContextBar className={pf('context-bar--theme-marketing context-bar--theme-dark')} appName="Marketing Cloud" />
+    element: <ContextBar className="slds-context-bar--theme-marketing context-bar--theme-dark" appName="Marketing Cloud" />
   },
   {
     id: 'context-bar-theme-analytics',
     label: 'Analytics',
-    element: <ContextBar className={pf('context-bar--theme-analytics context-bar--theme-dark')} appName="Analytics" />
+    element: <ContextBar className="context-bar--theme-analytics context-bar--theme-dark" appName="Analytics" />
   },
   {
     id: 'context-bar-theme-community',
     label: 'Community',
-    element: <ContextBar className={pf('context-bar--theme-community context-bar--theme-dark')} appName="Community" />
+    element: <ContextBar className="context-bar--theme-community context-bar--theme-dark" appName="Community" />
   },
 ];

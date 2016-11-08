@@ -1,17 +1,17 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create different tabset looks.
 classes:
   -
-    class: navigation-list--vertical
+    class: slds-navigation-list--vertical
     description: Initializes Vertical Navigation
     required: true
     applied: <code>&lt;div&gt;</code>
     notes: The default vertical navigation is meant to display on a white background
   -
-    class: navigation-list--vertical-inverse
+    class: slds-navigation-list--vertical-inverse
     description: Inverses the interactions of the default vertical navigation list
-    applied: <code>.{{cssPrefix}}navigation-list--vertical</code>
+    applied: <code>.slds-navigation-list--vertical</code>
   -
-    class: navigation-list--vertical__action
+    class: slds-navigation-list--vertical__action
     description: Hyperlink inside navigation's list items
     required: true
     applied: <code>&lt;a&gt;</code>

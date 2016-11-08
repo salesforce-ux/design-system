@@ -3,7 +3,7 @@ GEM
   specs:
     rake (11.2.2)
     sass (3.4.22)
-    scss_lint (0.49.0)
+    scss_lint (0.50.2)
       rake (>= 0.9, < 12)
       sass (~> 3.4.20)
 
@@ -11,7 +11,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  scss_lint (= 0.49.0)
+  scss_lint (= 0.50.2)
 
 BUNDLED WITH
    1.10.6

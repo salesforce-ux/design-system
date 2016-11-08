@@ -2,5 +2,4 @@ status: 'dev-ready'
 flavors:
   - basic
   - advanced
-  - inline-edit
   - responsive

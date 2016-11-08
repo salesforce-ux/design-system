@@ -11,23 +11,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import _ from 'lodash';
 import React from 'react';
-const PT = React.PropTypes;
-import componentUtil from 'app_modules/ui/util/component';
 
 class Truncate extends React.Component {
-
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
-
   // TODO: Remove span
   render() {
     const {children, amount} = this.props;
-    return <span title={children}>{amount ? _.truncate(children, amount) : children}</span>;
+    return <span title={children}>
+      {amount ? _.truncate(children, amount) : children}
+    </span>;
   }
 }
 
-Truncate.propTypes = { truncate: PT.number };
+Truncate.propTypes = { truncate: React.PropTypes.number };
 
 export default Truncate;

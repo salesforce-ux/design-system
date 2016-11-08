@@ -1,32 +1,32 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: utility-bar_container
+    class: slds-utility-bar_container
     description: Container that is fixed to the bottom of the viewport, contains one utility panel at a time
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: utility-bar
+    class: slds-utility-bar
     description: Fixed bar at the bottom of viewport, contains items
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: utility-bar__item
+    class: slds-utility-bar__item
     description: Items that invoke specific utility bar panel
     applied: <code>&lt;button&gt;</code>
     required: true
   -
-    class: utility-panel
+    class: slds-utility-panel
     description: Container of the utility panel
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: utility-panel__header
+    class: slds-utility-panel__header
     description: Header that contains an icon, title and panel actions such as minimizing the panel
     applied: <code>&lt;div&gt;</code>
     required: true
   -
-    class: utility-panel__body
+    class: slds-utility-panel__body
     description: Area that contains the utility panel feature
     applied: <code>&lt;div&gt;</code>
     required: true

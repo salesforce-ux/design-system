@@ -13,11 +13,10 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Localization" contentClassName={pf('site-design site-design-layout')}>
-    <div className={pf('container--large')}>
+  <PageBody anchorTitle="Localization" contentClassName="site-design site-design-layout">
+    <div className="slds-container--large">
       <p className="site-text-introduction">
         Salesforce is committed to providing a high-quality experience to
         international customers.
@@ -120,16 +119,16 @@ export default (
         sentence structure in translated text.
       </p>
 
-      <figure className={pf('p-vertical--xx-large')}>
-        <form className={pf('form--inline')} aria-hidden>
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-date-range-1">
+      <figure className="slds-p-vertical--xx-large">
+        <form className="slds-form--inline" aria-hidden>
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-date-range-1">
               Date Range
             </label>
 
-            <div className={pf('form-element__control')}>
-              <div className={pf('slds-select_container')}>
-                <select className={pf('slds-select')} tabIndex={-1}
+            <div className="slds-form-element__control">
+              <div className="slds-select_container">
+                <select className="slds-select" tabIndex={-1}
                   defaultValue="Current FQ" id="form-date-range-1">
                   <option>Current FQ</option>
                 </select>
@@ -137,30 +136,30 @@ export default (
             </div>
           </div>
 
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-name-1">
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-name-1">
               From
             </label>
 
-            <div className={pf('form-element__control')}>
-              <input id="form-name-1" className={pf('input')} type="text"
+            <div className="slds-form-element__control">
+              <input id="form-name-1" className="slds-input" type="text"
                 defaultValue="10/1/2015" tabIndex={-1} />
             </div>
           </div>
 
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-email-1">
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-email-1">
               To
             </label>
 
-            <div className={pf('form-element__control')}>
-              <input id="form-email-1" className={pf('input')} type="text"
+            <div className="slds-form-element__control">
+              <input id="form-email-1" className="slds-input" type="text"
                 defaultValue="12/31/2015" tabIndex={-1} />
             </div>
           </div>
         </form>
 
-        <figcaption className={pf('text-body--small p-top--large')}>
+        <figcaption className="slds-text-body--small slds-p-top--large">
           Example inline form with From and To form fields with labels
           reading: From Date To Date.
         </figcaption>
@@ -184,16 +183,16 @@ export default (
         DATE2” to make the label more independent.
       </p>
 
-      <figure className={pf('p-vertical--xx-large')}>
-        <form className={pf('form--inline')} aria-hidden>
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-date-range-2">
+      <figure className="slds-p-vertical--xx-large">
+        <form className="slds-form--inline" aria-hidden>
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-date-range-2">
               Date Range
             </label>
 
-            <div className={pf('form-element__control')}>
-              <div className={pf('slds-select_container')}>
-                <select className={pf('slds-select')} tabIndex={-1}
+            <div className="slds-form-element__control">
+              <div className="slds-select_container">
+                <select className="slds-select" tabIndex={-1}
                   defaultValue="Current FQ" id="form-date-range-2">
                   <option>Current FQ</option>
                 </select>
@@ -201,37 +200,37 @@ export default (
             </div>
           </div>
 
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-name-2">
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-name-2">
               From:
             </label>
 
-            <div className={pf('form-element__control')}>
-              <input id="form-name-2" className={pf('input')} type="text"
+            <div className="slds-form-element__control">
+              <input id="form-name-2" className="slds-input" type="text"
                 defaultValue="10/1/2015" tabIndex={-1} />
             </div>
           </div>
 
-          <div className={pf('form-element')}>
-            <label className={pf('form-element__label')} htmlFor="form-email-2">
+          <div className="slds-form-element">
+            <label className="slds-form-element__label" htmlFor="form-email-2">
               To:
             </label>
 
-            <div className={pf('form-element__control')}>
-              <input id="form-email-2" className={pf('input')} type="text"
+            <div className="slds-form-element__control">
+              <input id="form-email-2" className="slds-input" type="text"
                 defaultValue="12/31/2015" tabIndex={-1} />
             </div>
           </div>
         </form>
 
-        <figcaption className={pf('text-body--small p-top--large')}>
+        <figcaption className="slds-text-body--small slds-p-top--large">
           Example inline form with From and To form fields each having a
           colon after their labels.
         </figcaption>
       </figure>
 
-      <div className={pf('grid grid--pull-padded wrap m-top--xx-large')}>
-        <div className={pf('col--padded size--1-of-1 large-size--2-of-3')}>
+      <div className="slds-grid slds-grid--pull-padded slds-wrap slds-m-top--xx-large">
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--2-of-3">
           <h2 className="site-text-heading--large">
             Make Your CSS Localization-Friendly
           </h2>
@@ -250,13 +249,13 @@ export default (
           </p>
         </div>
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-3">
           <figure>
             <img
               src="/assets/images/design/localization/localization-menu-english.png"
               alt="Dropdown menu in English" />
 
-            <figcaption className={pf('text-body--small p-top--large')}>
+            <figcaption className="slds-text-body--small slds-p-top--large">
               Example dropdown menu in English with capitalized words in
               options.
             </figcaption>
@@ -264,8 +263,8 @@ export default (
         </div>
       </div>
 
-      <div className={pf('grid grid--pull-padded wrap m-vertical--xx-large')}>
-        <div className={pf('col--padded size--1-of-1 large-size--2-of-3')}>
+      <div className="slds-grid slds-grid--pull-padded slds-wrap slds-m-vertical--xx-large">
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--2-of-3">
           <p>
             In French, however, only the first word is capitalized. This also
             applies to other continental European languages (Spanish, Italian)
@@ -284,13 +283,13 @@ export default (
           </p>
         </div>
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-3">
           <figure>
             <img
               src="/assets/images/design/localization/localization-menu-french.png"
               alt="Dropdown menu in French" />
 
-            <figcaption className={pf('text-body--small p-top--large')}>
+            <figcaption className="slds-text-body--small slds-p-top--large">
               Example dropdown menu in French with only the first letter of
               each option capitalized.
             </figcaption>
@@ -298,8 +297,8 @@ export default (
         </div>
       </div>
 
-      <div className={pf('grid grid--pull-padded wrap m-vertical--xx-large')}>
-        <div className={pf('col--padded size--1-of-1 large-size--2-of-3')}>
+      <div className="slds-grid slds-grid--pull-padded slds-wrap slds-m-vertical--xx-large">
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--2-of-3">
           <h3 className="site-text-heading--medium">
             Enforce Text Alignment in a Smart Way
           </h3>
@@ -319,21 +318,21 @@ export default (
           </p>
         </div>
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-3">
           <figure>
             <img
               src="/assets/images/design/localization/localization-button-done-english.png"
               alt="Button with centered text 'Done!'" />
 
-            <figcaption className={pf('text-body--small p-top--large')}>
+            <figcaption className="slds-text-body--small slds-p-top--large">
               Example dropdown menu in English with capitalized words in options.
             </figcaption>
           </figure>
         </div>
       </div>
 
-      <div className={pf('grid grid--pull-padded wrap m-vertical--xx-large')}>
-        <div className={pf('col--padded size--1-of-1 large-size--2-of-3')}>
+      <div className="slds-grid slds-grid--pull-padded slds-wrap slds-m-vertical--xx-large">
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--2-of-3">
           <p>
             This looks perfect in English; however, when “Done!” gets
             translated into Portuguese, the text becomes longer and begins to
@@ -347,13 +346,13 @@ export default (
           </p>
         </div>
 
-        <div className={pf('col--padded size--1-of-1 large-size--1-of-3')}>
+        <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-3">
           <figure>
             <img
               src="/assets/images/design/localization/localization-button-done-portuguese.png"
               alt="Button with centered text 'Done!'" />
 
-            <figcaption className={pf('text-body--small')}>
+            <figcaption className="slds-text-body--small">
               Button with centered text &lsquo;Done!&rsquo;
             </figcaption>
           </figure>
@@ -381,60 +380,60 @@ export default (
         </a>:
       </p>
 
-      <figure className={pf('p-vertical--xx-large')}>
-        <table className={pf('table table--bordered')}>
+      <figure className="slds-p-vertical--xx-large">
+        <table className="slds-table slds-table--bordered">
           <thead>
-            <tr className={pf('text-heading--label')}>
+            <tr className="slds-text-heading--label">
               <th scope="col">
-                <div className={pf('truncate')}>English Text Length</div>
+                <div className="slds-truncate">English Text Length</div>
               </th>
 
               <th scope="col">
-                <div className={pf('truncate')}>Expansion</div>
+                <div className="slds-truncate">Expansion</div>
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>1 - 10</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">1 - 10</th>
 
-              <td className={pf('truncate')}>100 - 200%</td>
+              <td className="slds-truncate">100 - 200%</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>11 - 20</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">11 - 20</th>
 
-              <td className={pf('truncate')}>80 - 100%</td>
+              <td className="slds-truncate">80 - 100%</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>21 - 30</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">21 - 30</th>
 
-              <td className={pf('truncate')}>60 - 80%</td>
+              <td className="slds-truncate">60 - 80%</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>31 - 50</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">31 - 50</th>
 
-              <td className={pf('truncate')}>40 - 60%</td>
+              <td className="slds-truncate">40 - 60%</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>51 - 70</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">51 - 70</th>
 
-              <td className={pf('truncate')}>50 - 70%</td>
+              <td className="slds-truncate">50 - 70%</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>71+</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">71+</th>
 
-              <td className={pf('truncate')}>30%</td>
+              <td className="slds-truncate">30%</td>
             </tr>
           </tbody>
         </table>
 
-        <figcaption className={pf('text-body--small p-top--large')}>
+        <figcaption className="slds-text-body--small slds-p-top--large">
           English word expansion guidelines
         </figcaption>
       </figure>
@@ -445,92 +444,92 @@ export default (
         expansion factor for the English text “Share” into various languages:
       </p>
 
-      <figure className={pf('p-vertical--xx-large')}>
-        <table className={pf('table table--bordered')}>
+      <figure className="slds-p-vertical--xx-large">
+        <table className="slds-table slds-table--bordered">
           <thead>
-            <tr className={pf('text-heading--label')}>
+            <tr className="slds-text-heading--label">
               <th scope="col">
-                <div className={pf('truncate')}>Language</div>
+                <div className="slds-truncate">Language</div>
               </th>
 
               <th scope="col">
-                <div className={pf('truncate')}>“Share”</div>
+                <div className="slds-truncate">“Share”</div>
               </th>
 
               <th scope="col">
-                <div className={pf('truncate')}>Expansion Factor</div>
+                <div className="slds-truncate">Expansion Factor</div>
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>English</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">English</th>
 
-              <td className={pf('truncate')}>Share</td>
+              <td className="slds-truncate">Share</td>
 
-              <td className={pf('truncate')}>1.0</td>
+              <td className="slds-truncate">1.0</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>German</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">German</th>
 
-              <td className={pf('truncate')}>Freigeben</td>
+              <td className="slds-truncate">Freigeben</td>
 
-              <td className={pf('truncate')}>1.8</td>
+              <td className="slds-truncate">1.8</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>French</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">French</th>
 
-              <td className={pf('truncate')}>Partager</td>
+              <td className="slds-truncate">Partager</td>
 
-              <td className={pf('truncate')}>1.5</td>
+              <td className="slds-truncate">1.5</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>Spanish</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">Spanish</th>
 
-              <td className={pf('truncate')}>Compartir</td>
+              <td className="slds-truncate">Compartir</td>
 
-              <td className={pf('truncate')}>1.8</td>
+              <td className="slds-truncate">1.8</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>Italian</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">Italian</th>
 
-              <td className={pf('truncate')}>Condividi</td>
+              <td className="slds-truncate">Condividi</td>
 
-              <td className={pf('truncate')}>1.7</td>
+              <td className="slds-truncate">1.7</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>Japanese</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">Japanese</th>
 
-              <td className={pf('truncate')}>共有</td>
+              <td className="slds-truncate">共有</td>
 
-              <td className={pf('truncate')}>0.8</td>
+              <td className="slds-truncate">0.8</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>Chinese</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">Chinese</th>
 
-              <td className={pf('truncate')}>共享</td>
+              <td className="slds-truncate">共享</td>
 
-              <td className={pf('truncate')}>0.8</td>
+              <td className="slds-truncate">0.8</td>
             </tr>
 
-            <tr className={pf('hint-parent')}>
-              <th className={pf('truncate')}>Korean</th>
+            <tr className="slds-hint-parent">
+              <th className="slds-truncate">Korean</th>
 
-              <td className={pf('truncate')}>공유</td>
+              <td className="slds-truncate">공유</td>
 
-              <td className={pf('truncate')}>0.7</td>
+              <td className="slds-truncate">0.7</td>
             </tr>
           </tbody>
         </table>
 
-        <figcaption className={pf('text-body--small p-top--large')}>
+        <figcaption className="slds-text-body--small slds-p-top--large">
           Expansion factor for the English word “Share”
         </figcaption>
       </figure>
@@ -547,22 +546,22 @@ export default (
         characters.
       </p>
 
-      <figure className={pf('p-vertical--xx-large')}>
-        <div className={pf('grid grid--pull-padded wrap')}>
-          <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
+      <figure className="slds-p-vertical--xx-large">
+        <div className="slds-grid slds-grid--pull-padded slds-wrap">
+          <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2">
             <img
               src="/assets/images/design/localization/localization-anchor-english.png"
               alt="Page header English" />
           </div>
 
-          <div className={pf('col--padded size--1-of-1 large-size--1-of-2')}>
+          <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2">
             <img
               src="/assets/images/design/localization/localization-anchor-japanese.png"
               alt="Page header Japanese" />
           </div>
         </div>
 
-        <figcaption className={pf('text-body--small p-top--large')}>
+        <figcaption className="slds-text-body--small slds-p-top--large">
           Comparison of Japanese text expansion of “Follow”
         </figcaption>
       </figure>

@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'default',
     label: 'Default',
     element:
-    <div className={pf('box theme--default')}>
+    <div className="slds-box slds-theme--default">
       <p>This is a <strong>default</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
     </div>
   },
@@ -25,7 +24,7 @@ export let states = [
     id: 'shade',
     label: 'Shade',
     element:
-    <div className={pf('box theme--shade')}>
+    <div className="slds-box slds-theme--shade">
       <p>This is a <strong>default</strong> theme and here is a <a href="javascript:void(0);">link</a>.</p>
     </div>
   },
@@ -33,7 +32,7 @@ export let states = [
     id: 'texture',
     label: 'Texture',
     element:
-    <div className={pf('box theme--shade theme--alert-texture')}>
+    <div className="slds-box slds-theme--shade slds-theme--alert-texture">
       <p>This theme has the <strong>alert texture</strong> added to the default theme and has a <a href="javascript:void(0);">link</a>.</p>
     </div>
   }

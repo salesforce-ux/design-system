@@ -11,37 +11,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={pf('demo-only')} {...props}>
+  <div className="demo-only" {...props}>
     {props.children}
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className(pf('form-element'), props.className)}>
-    <legend className={pf('form-element__legend form-element__label')}>Scheduled Day(s)</legend>
-    <div className={pf('form-element__control')}>
+  <fieldset className={className('slds-form-element', props.className)}>
+    <legend className="slds-form-element__legend slds-form-element__label">Scheduled Day(s)</legend>
+    <div className="slds-form-element__control">
       {props.children}
     </div>
   </fieldset>;
 
 let RadioGroup = props =>
-  <div className={pf('radio--button-group')}>
+  <div className="slds-radio--button-group">
     {props.children}
   </div>;
 
 let Radio = props =>
-  <label className={className(pf('button radio--button'), props.className)} htmlFor={props.id}>
-    <input name="radio" type="radio" id={props.id} disabled={props.disabled} />
-    <span className={pf('radio--faux')}>
-      {props.children}
-    </span>
-  </label>;
+  <span className={className('slds-button slds-radio--button', props.className)}>
+    <input name="radio" type="radio" id={props.id} disabled={props.disabled} aria-describedby={props.errorId} />
+    <label className="slds-radio--button__label" htmlFor={props.id}>
+      <span className="slds-radio--faux">
+        {props.children}
+      </span>
+    </label>
+  </span>;
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -62,15 +63,15 @@ let StateA = props =>
 
 let StateB = props =>
   <Demo>
-    <Fieldset className={pf('has-error')}>
+    <Fieldset className="slds-has-error">
       <RadioGroup>
-        <Radio id="monday">Mon</Radio>
-        <Radio id="tuesday">Tue</Radio>
-        <Radio id="wednesday">Wed</Radio>
-        <Radio id="thursday">Thu</Radio>
-        <Radio id="friday">Fri</Radio>
+        <Radio errorId="error_01" id="monday">Mon</Radio>
+        <Radio errorId="error_01" id="tuesday">Tue</Radio>
+        <Radio errorId="error_01" id="wednesday">Wed</Radio>
+        <Radio errorId="error_01" id="thursday">Thu</Radio>
+        <Radio errorId="error_01" id="friday">Fri</Radio>
       </RadioGroup>
-      <div className={pf('form-element__help')}>This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 
@@ -99,12 +100,12 @@ export let states = [
   },
   {
     id: 'radio-group-alt-has-error',
-    label: 'Checkbox group has error',
+    label: 'Has error',
     element: <StateB />
   },
   {
     id: 'radio-group-alt-disabled',
-    label: 'Disabled checkbox group',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

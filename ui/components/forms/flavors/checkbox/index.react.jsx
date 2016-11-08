@@ -10,37 +10,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import componentUtil, { prefix as pf } from 'app_modules/ui/util/component';
-
+import classNames from 'classnames';
 
 class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    componentUtil.install(this);
-  }
   render() {
-    const className = this.$getClassName(pf('checkbox'));
+    const className = classNames('slds-checkbox', this.props.className);
     return (
       <label className={className} htmlFor={this.props.assistiveText.replace(' ','-')}>
         <input name={this.props.name} type="checkbox" id={this.props.assistiveText.replace(' ','-')} />
-        <span className={pf('checkbox--faux')}></span>
+        <span className="slds-checkbox--faux"></span>
         {this.renderLabel(this.props.label, this.props.assistiveText)}
       </label>
     );
   }
   renderLabel(label, assistiveText) {
-    let className = this.$getClassName('form-element__label');
+    let className = classNames('slds-form-element__label', this.props.className);
     if (label) {
       return (
-        <span className={pf(className)}>
+        <span className={className}>
           {label}
         </span>
       );
     } else {
       // if assistive-text set, show non-visible accessible label
-      className = className + ' assistive-text';
+      className = className + ' slds-assistive-text';
       return (
-        <span className={pf(className)}>
+        <span className={className}>
           {assistiveText}
         </span>
       );

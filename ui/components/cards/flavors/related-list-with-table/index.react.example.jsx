@@ -12,31 +12,30 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions><span className={pf('text-heading--small')}>Contacts (1)</span></CardHeader>
+    <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Contacts (1)</span></CardHeader>
     <CardBody>
-      <table className={pf('table table--bordered no-row-hover table--cell-buffer')}>
+      <table className="slds-table slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
         <thead>
-          <tr className={pf('text-title--caps')}>
-            <th scope="col"><div className={pf('truncate')} title="Name">Name</div></th>
-            <th scope="col"><div className={pf('truncate')} title="Company">Company</div></th>
-            <th scope="col"><div className={pf('truncate')} title="Title">Title</div></th>
-            <th scope="col"><div className={pf('truncate')} title="Email">Email</div></th>
+          <tr className="slds-text-title--caps">
+            <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>
+            <th scope="col"><div className="slds-truncate" title="Company">Company</div></th>
+            <th scope="col"><div className="slds-truncate" title="Title">Title</div></th>
+            <th scope="col"><div className="slds-truncate" title="Email">Email</div></th>
           </tr>
         </thead>
         <tbody>
-          <tr className={pf('hint-parent')}>
-            <th scope="row"><div className={pf('truncate')} title="Adam Choi"><a href="javascript:void(0);">Adam Choi</a></div></th>
-            <td><div className={pf('truncate')} title="Company One">Company One</div></td>
-            <td><div className={pf('truncate')} title="Director of Operations">Director of Operations</div></td>
-            <td><div className={pf('truncate')} title="adam@company.com">adam@company.com</div></td>
+          <tr className="slds-hint-parent">
+            <th scope="row"><div className="slds-truncate" title="Adam Choi"><a href="javascript:void(0);">Adam Choi</a></div></th>
+            <td><div className="slds-truncate" title="Company One">Company One</div></td>
+            <td><div className="slds-truncate" title="Director of Operations">Director of Operations</div></td>
+            <td><div className="slds-truncate" title="adam@company.com">adam@company.com</div></td>
           </tr>
         </tbody>
       </table>
     </CardBody>
-    <CardFooter><a href="javascript:void(0);">View All <span className={pf('assistive-text')}>entity type</span></a></CardFooter>
+    <CardFooter><a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a></CardFooter>
   </Card>
 );

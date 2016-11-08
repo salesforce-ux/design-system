@@ -15,16 +15,6 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import method from 'lodash/method';
 
 import globals from 'app_modules/global';
-import whitelistUtilities from '.generated/whitelist-utilities.js';
-
-/**
- * Custom Prism addition to the markup syntax that adds a "utility-class" class
- * to any attribute value tokens that are contained in whitelistUtilities
- */
-Prism.languages.markup.tag.inside['attr-value'].inside['utility-class'] = whitelistUtilities
-  .map(c => c.replace(/^\./, ''))
-  .map(c => `${globals.cssPrefix}${c}`)
-  .map(c => new RegExp(escapeRegExp(c)));
 
 /**
  * Re-export gloabals
@@ -82,7 +72,7 @@ export const hook = (obj, name, ...args) => ['before_', '', 'after_']
   .map(name => method(`hooks.${name}`, ...args)(obj));
 
 /**
- * Return a function that will return true if all term segments matche all
+ * Return a function that will return true if all term segments match all
  * query segments
  *
  * @param {string} query

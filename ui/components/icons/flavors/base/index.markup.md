@@ -1,4 +1,4 @@
-- For [action](/icons/#action) icons, add the `.{{cssPrefix}}icon_container--circle` class to the container (`.{{cssPrefix}}icon_container`), which changes the background shape to a circle.
+- For [action](/icons/#action) icons, add the `.slds-icon_container--circle` class to the container (`.slds-icon_container`), which changes the background shape to a circle.
 - [Doctype](/icons/#doctype) icons have no background color.
 - [Standard](/icons/#standard) and [Custom](/icons/#custom) icons have a rounded square shape and use a class on the container for the background color.
 - [Utility](/icons/#utility) icons have no background color.

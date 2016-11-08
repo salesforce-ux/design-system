@@ -10,12 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 export default (
   <div className="demo-only">
-    <div className={pf('hidden')}>I am hidden</div>
-    <div className={pf('visible')}>I am visible</div>
+    <div className="slds-hidden">I am hidden</div>
+    <div className="slds-visible">I am visible</div>
   </div>
 );

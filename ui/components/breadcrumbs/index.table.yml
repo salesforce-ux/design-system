@@ -1,13 +1,13 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
 classes:
   -
-    class: breadcrumb
+    class: slds-breadcrumb
     description: Initializes a breadcrumb component
     applied: <code>&lt;ol&gt;</code>
     required: true
-    notes: This class allows the <code>.{{cssPrefix}}list__item</code> to display in the breadcrumb style
+    notes: This class allows the <code>.slds-list__item</code> to display in the breadcrumb style
   -
-    class: breadcrumb__item
+    class: slds-breadcrumb__item
     description: Item of the breadcrumb list
     required: true
     applied: <code>&lt;li&gt;</code>

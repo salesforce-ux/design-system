@@ -13,7 +13,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import className from 'classnames';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 
 //////////////////////////////////////////////
@@ -21,10 +20,10 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 //////////////////////////////////////////////
 
 const SetupDropdown = (
-  <Menu className={pf('dropdown--right nubbin--top-right')}>
+  <Menu className="slds-dropdown--right slds-nubbin--top-right">
     <MenuList>
-      <li className={pf('dropdown__header')} role="separator">
-        <span className={pf('text-title--caps')}>Setup</span>
+      <li className="slds-dropdown__header" role="separator">
+        <span className="slds-text-title--caps">Setup</span>
       </li>
       <MenuItem tabIndex="0">Setup Home</MenuItem>
     </MenuList>
@@ -32,49 +31,49 @@ const SetupDropdown = (
 );
 
 const ActionsDropdown = (
-  <Menu className={pf('dropdown--right nubbin--top-right')}>
+  <Menu className="slds-dropdown--right slds-nubbin--top-right">
     <MenuList>
-      <li className={pf('dropdown__header')} role="separator">
-        <span className={pf('text-title--caps')}>Create</span>
+      <li className="slds-dropdown__header" role="separator">
+        <span className="slds-text-title--caps">Create</span>
       </li>
-      <MenuItem tabIndex="0"><SvgIcon className={pf('icon icon--small icon-standard-note m-right--x-small')} sprite="standard" symbol="note" /> New Note</MenuItem>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-log-a-call m-right--x-small')} sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
-      <MenuItem><SvgIcon className={pf('icon icon--small icon-standard-event m-right--x-small')} sprite="standard" symbol="event" /> New Event</MenuItem>
+      <MenuItem tabIndex="0"><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-note slds-m-right--x-small" sprite="standard" symbol="note" /> New Note</MenuItem>
+      <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-log-a-call slds-m-right--x-small" sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
+      <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-event slds-m-right--x-small" sprite="standard" symbol="event" /> New Event</MenuItem>
     </MenuList>
   </Menu>
 );
 
 let ButtonIcon = props =>
-  <button className={className(pf('button'), props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
-    <SvgIcon className={className(pf('button__icon'), props.iconClassName)} sprite="utility" symbol={ props.symbol } />
-    <span className={pf('assistive-text')}>{ props.assistiveText }</span>
+  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
+    <SvgIcon className={className('slds-button__icon', props.iconClassName)} sprite="utility" symbol={ props.symbol } />
+    <span className="slds-assistive-text">{ props.assistiveText }</span>
   </button>;
 
 export let GlobalHeader = props =>
-  <header className={pf('global-header_container')}>
-    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Navigation</a>
-    <a href="javascript:void(0);" className={pf('assistive-text assistive-text--focus')}>Skip to Main Content</a>
-    <div className={pf('global-header grid grid--align-spread')}>
-      <div className={pf('global-header__item')}>
-        <div className={pf('global-header__logo')}>
+  <header className="slds-global-header_container">
+    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
+    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+    <div className="slds-global-header slds-grid slds-grid--align-spread">
+      <div className="slds-global-header__item">
+        <div className="slds-global-header__logo">
           <img src="/assets/images/logo-noname.svg" alt="" />
         </div>
       </div>
-      <div className={pf('global-header__item global-header__item--search')}>
-        <div className={className(pf('form-element lookup'), props.autocomplete ? pf('is-open'): null)}>
-          <label className={pf('assistive-text')} htmlFor="global-search-01">Search Salesforce</label>
+      <div className="slds-global-header__item slds-global-header__item--search">
+        <div className={className('slds-form-element slds-lookup', props.autocomplete ? 'slds-is-open': null)}>
+          <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
           { props.autocomplete ?
             props.children
-            : <div className={pf('form-element__control lookup__search-control input-has-icon input-has-icon--left')}>
-                <SvgIcon className={pf('input__icon')} sprite="utility" symbol="search" />
-                <input id="global-search-01" className={pf('input lookup__search-input')} type="search" placeholder="Search Salesforce" />
+            : <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
+                <input id="global-search-01" className="slds-input slds-lookup__search-input" type="search" placeholder="Search Salesforce" />
               </div> }
         </div>
       </div>
-      <ul className={pf('global-header__item grid grid--vertical-align-center')}>
-        <li className={className(pf('dropdown-trigger dropdown-trigger--click m-left--x-small'), props.setup ? pf('is-open'): null)}>
-          <button className={pf('button')} title="person name" aria-haspopup="true">
-            <span className={pf('avatar avatar--circle avatar--medium')}>
+      <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
+          <button className="slds-button" title="person name" aria-haspopup="true">
+            <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
               <img src="/assets/images/avatar2.jpg" alt="person name" />
             </span>
           </button>

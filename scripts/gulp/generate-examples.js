@@ -63,14 +63,6 @@ const flattenExamples = comps =>
 const toHtml = el =>
   prettyHTML(renderToStaticMarkup(el));
 
-const logAnd = x => {
-  console.log(x.path, String(x.contents))
-  return x
-}
-
-const logIt = () =>
-  through.obj((file, enc, next) =>
-    next(null, logAnd(file)))
 
 const wrap = x =>
   `
@@ -103,7 +95,7 @@ gulp.task('generate:examples:wrap', ['generate:examples'], () =>
     .pipe(wrapTpl())
     .pipe(gulp.dest(resolve(__PATHS__.html))))
 
-gulp.task('generate:examples', ['generate:whitelist'], () => {
+gulp.task('generate:examples', () => {
   const stream = through.obj();
   const examples = flattenExamples(addExamples(getComponents()));
   examples.forEach(ex =>

@@ -14,7 +14,6 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
 import className from 'classnames';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -22,56 +21,56 @@ import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
-    <Card className={pf('card--compact')}>
-      <CardHeader className={pf('has-divider--top')} actions="overflow">
-        <span className={pf('text-heading--small')}>Contacts</span>
+    <Card className="slds-card--compact">
+      <CardHeader className="slds-has-divider--top" actions="overflow">
+        <span className="slds-text-heading--small">Contacts</span>
       </CardHeader>
       <CardBody>
         <Tile title="Related Record Title 1">
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
             </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>
         <Tile title="Related Record Title 2">
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
             </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>
         <Tile title="Related Record Title 3">
-          <dl className={pf('dl--horizontal')}>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Type">Type:</span>
+          <dl className="slds-dl--horizontal">
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Type">Type:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="Visit">Visit</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="Visit">Visit</span>
             </dd>
-            <dt className={pf('dl--horizontal__label')}>
-              <span className={pf('truncate')} title="Date">Date:</span>
+            <dt className="slds-dl--horizontal__label">
+              <span className="slds-truncate" title="Date">Date:</span>
             </dt>
-            <dd className={pf('dl--horizontal__detail tile__meta')}>
-              <span className={pf('truncate')} title="1/31/15 3:45PM">1/31/15 3:45PM</span>
+            <dd className="slds-dl--horizontal__detail slds-tile__meta">
+              <span className="slds-truncate" title="1/31/15 3:45PM">1/31/15 3:45PM</span>
             </dd>
           </dl>
         </Tile>

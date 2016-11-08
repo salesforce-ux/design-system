@@ -15,14 +15,13 @@ import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.exampl
 import { Menu } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuList } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 const settingsIcon = (
-  <ButtonIcon className={pf('button--icon-container')} symbol="settings" assistiveText="Settings" aria-haspopup="true" />
+  <ButtonIcon className="slds-button--icon-container" symbol="settings" assistiveText="Settings" aria-haspopup="true" />
 );
 
 //////////////////////////////////////////////
@@ -30,9 +29,9 @@ const settingsIcon = (
 //////////////////////////////////////////////
 
 let TopLeft = props =>
-  <div className={pf('demo-only')} style={{height: '185px', paddingLeft: '2rem'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('dropdown--left nubbin--top-left')}>
+  <div className="demo-only" style={{height: '185px', paddingLeft: '2rem'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-dropdown--left slds-nubbin--top-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -43,9 +42,9 @@ let TopLeft = props =>
   </div>;
 
 let Top = props =>
-  <div className={pf('demo-only')} style={{height: '185px', textAlign: 'center'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('nubbin--top')}>
+  <div className="demo-only" style={{height: '185px', textAlign: 'center'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-nubbin--top">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -56,9 +55,9 @@ let Top = props =>
   </div>;
 
 let TopRight = props =>
-  <div className={pf('demo-only')} style={{height: '185px', textAlign: 'right', paddingRight: '2rem'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('dropdown--right nubbin--top-right')}>
+  <div className="demo-only" style={{height: '185px', textAlign: 'right', paddingRight: '2rem'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-dropdown--right slds-nubbin--top-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -69,9 +68,9 @@ let TopRight = props =>
   </div>;
 
 let BottomLeft = props =>
-  <div className={pf('demo-only grid grid--vertical-align-end')}  style={{height: '185px', paddingLeft: '2rem'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('dropdown--bottom dropdown--left nubbin--bottom-left')}>
+  <div className="demo-only slds-grid slds-grid--vertical-align-end"  style={{height: '185px', paddingLeft: '2rem'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-dropdown--bottom slds-dropdown--left slds-nubbin--bottom-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -82,9 +81,9 @@ let BottomLeft = props =>
   </div>;
 
 let Bottom = props =>
-  <div className={pf('demo-only grid grid--vertical-align-end grid--align-center')} style={{height: '185px'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('dropdown--bottom nubbin--bottom')}>
+  <div className="demo-only slds-grid slds-grid--vertical-align-end slds-grid--align-center" style={{height: '185px'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-dropdown--bottom slds-nubbin--bottom">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -95,9 +94,9 @@ let Bottom = props =>
   </div>;
 
 let BottomRight = props =>
-  <div className={pf('demo-only grid grid--vertical-align-end grid--align-end')} style={{height: '185px', paddingRight: '2rem'}}>
-    <Trigger className={pf('is-open')} triggerIcon={settingsIcon}>
-      <Menu className={pf('dropdown--bottom dropdown--right nubbin--bottom-right')}>
+  <div className="demo-only slds-grid slds-grid--vertical-align-end slds-grid--align-end" style={{height: '185px', paddingRight: '2rem'}}>
+    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+      <Menu className="slds-dropdown--bottom slds-dropdown--right slds-nubbin--bottom-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>

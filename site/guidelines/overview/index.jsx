@@ -12,16 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export default (
-  <PageBody anchorTitle="Guidelines" contentClassName={pf('site-guidelines site-guidelines-layout')}>
-    <div className={pf('container--large')}>
+  <PageBody anchorTitle="Guidelines" contentClassName="site-guidelines site-guidelines-layout">
+    <div className="slds-container--large">
       <p className="site-text-introduction">The Lightning Design System reflects the patterns and components that underpin the Salesforce product. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the Salesforce ecosystem.</p>
       <h2 className="site-text-heading--large">Design Principles</h2>
       <p><strong>We constantly keep these core principles in mind when making design decisions at Salesforce, and we encourage you to adopt them as well.</strong></p>
-      <ul className={pf('grid wrap grid--pull-padded-large text-align--center p-vertical--x-large')}>
-        <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
+      <ul className="slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center slds-p-vertical--x-large">
+        <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
           <div className="grid-card">
             <img src="/assets/images/guidelines/img-clarity.svg" alt="" />
             <dl>
@@ -33,7 +32,7 @@ export default (
             </dl>
           </div>
         </li>
-        <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
+        <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
           <div className="grid-card">
             <img src="/assets/images/guidelines/img-efficiency.svg" alt="" />
             <dl>
@@ -45,7 +44,7 @@ export default (
             </dl>
           </div>
         </li>
-        <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
+        <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
           <div className="grid-card">
             <img src="/assets/images/guidelines/img-consistency.svg" alt="" />
             <dl>
@@ -57,7 +56,7 @@ export default (
             </dl>
           </div>
         </li>
-        <li className={pf('col--padded-large size--1-of-1 small-size--1-of-2')}>
+        <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
           <div className="grid-card">
             <img src="/assets/images/guidelines/img-beauty.svg" alt="" />
             <dl>

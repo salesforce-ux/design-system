@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 ///////////////////////////////////////////
 // Export
@@ -21,21 +20,21 @@ export let states = [
   {
     id: 'button-icon-size-default',
     label: 'Default',
-    element: <ButtonIcon className={pf('button--icon')} />
+    element: <ButtonIcon className="slds-button--icon" />
   },
   {
     id: 'button-icon-size-large',
     label: 'Large',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--large')} />
+    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--large" />
   },
   {
     id: 'button-icon-size-small',
     label: 'Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--small')} />
+    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" />
   },
   {
     id: 'button-icon-size-x-small',
     label: 'x-Small',
-    element: <ButtonIcon className={pf('button--icon')} iconClassName={pf('button__icon--x-small')} />
+    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--x-small" />
   }
 ];

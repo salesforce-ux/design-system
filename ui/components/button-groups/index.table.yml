@@ -1,19 +1,19 @@
 description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to create button-groups.
 classes:
   -
-    class: button-group
+    class: slds-button-group
     description: Initializes a grouped set of buttons
     required: true
     applied: <code>div</code>
     notes: Changes the rounding and borders of buttons within to look like a group
   -
-    class: button--last
+    class: slds-button--last
     description: Identifies the last button when wrapped in another element
     applied: button wrapper
-    notes: Only required if the <code>.{{cssPrefix}}button</code> is wrapped. ie- to include a dropdown
+    notes: Only required if the <code>.slds-button</code> is wrapped. ie- to include a dropdown
   -
-    class: toggle-visibility
+    class: slds-toggle-visibility
     description: Identifies the last icon button when it should be hidden when `[disabled]`
-    applied: <code>.{{cssPrefix}}button</code>
+    applied: <code>.slds-button</code>
     deprecated: true
     notes: No longer required since the icon button should simply appear disabled instead of being hidden

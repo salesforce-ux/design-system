@@ -10,14 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { prefix as pf } from 'app_modules/ui/util/component';
 
 export let states = [
   {
     id: 'horizontal-list',
     label: 'Default',
     element:
-      <ul className={pf('list--horizontal')}>
+      <ul className="slds-list--horizontal">
         <li>Horizontal List</li>
         <li>List Item</li>
         <li>List Item</li>
@@ -27,7 +26,7 @@ export let states = [
     id: 'horizontal-list-links',
     label: 'Links',
     element:
-      <ul className={pf('list--horizontal')}>
+      <ul className="slds-list--horizontal">
         <li><a href="javascript:void(0);">Horizontal List with inline level links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -37,7 +36,7 @@ export let states = [
     id: 'horizontal-list-block-links',
     label: 'Block links',
     element:
-      <ul className={pf('list--horizontal has-block-links')}>
+      <ul className="slds-list--horizontal slds-has-block-links">
         <li><a href="javascript:void(0);">Horizontal List with block level links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -47,7 +46,7 @@ export let states = [
     id: 'horizontal-list-block-links-space',
     label: 'Block links with space',
     element:
-      <ul className={pf('list--horizontal has-block-links--space')}>
+      <ul className="slds-list--horizontal slds-has-block-links--space">
         <li><a href="javascript:void(0);">Horizontal List with block level links and space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -57,7 +56,7 @@ export let states = [
     id: 'horizontal-list-inline-block-links',
     label: 'Inline block links',
     element:
-      <ul className={pf('list--horizontal has-inline-block-links')}>
+      <ul className="slds-list--horizontal slds-has-inline-block-links">
         <li><a href="javascript:void(0);">Horizontal List with inline-block level links</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
@@ -67,7 +66,7 @@ export let states = [
     id: 'horizontal-list-inline-block-links-space',
     label: 'Inline block links with space',
     element:
-      <ul className={pf('list--horizontal has-inline-block-links--space')}>
+      <ul className="slds-list--horizontal slds-has-inline-block-links--space">
         <li><a href="javascript:void(0);">Horizontal List with inline-block level links and space</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>
         <li><a href="javascript:void(0);">List Item</a></li>

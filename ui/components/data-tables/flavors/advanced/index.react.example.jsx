@@ -121,6 +121,7 @@ let RowData = props => {
           assistiveText="Show More"
           title="Show More"
         />
+      </td>
     </tr>
   );
 };

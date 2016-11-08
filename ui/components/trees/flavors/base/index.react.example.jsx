@@ -24,8 +24,9 @@ let TreeItem = props =>
     className="slds-button--icon slds-m-right--x-small slds-is-disabled"
     iconClassName="slds-button__icon--small"
     symbol="chevronright"
-    assistiveText="Toggle" />
-  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Item</a>
+    assistiveText="Toggle"
+    title="Toggle" />
+  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Item">Tree Item</a>
   {props.children}
 </div>;
 
@@ -36,10 +37,11 @@ let TreeBranch = props =>
     className="slds-button--icon slds-m-right--x-small"
     iconClassName="slds-button__icon--small"
     symbol="chevronright"
-    assistiveText="Toggle" />
+    assistiveText="Toggle"
+    title="Toggle" />
   <a
     id={props.ariaControls + '__label'}
-    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate">Tree Branch</a>
+    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Branch">Tree Branch</a>
 </div>;
 
 let Pill = props =>

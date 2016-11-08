@@ -50,31 +50,31 @@ export default (
 
         <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className="slds-text-title--caps slds-truncate">Billing Address</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate" title="Billing Address">Billing Address</p></dt>
             <dd>
-              <p className="slds-truncate">3500 Deer Creek Rd.</p>
-              <p className="slds-truncate">Palo Alto, CA 94304</p>
+              <p className="slds-truncate" title="3500 Deer Creek Rd.">3500 Deer Creek Rd.</p>
+              <p className="slds-truncate" title="Palo Alto, CA 94304">Palo Alto, CA 94304</p>
             </dd>
           </dl>
         </div>
 
         <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className="slds-text-title--caps slds-truncate">Phone</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate" title="Phone">Phone</p></dt>
             <dd><a href="javascript:void(0);">212-345-3485</a></dd>
           </dl>
         </div>
 
         <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className="slds-text-title--caps slds-truncate">Website</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate" title="Website">Website</p></dt>
             <dd><a href="javascript:void(0);">teslamotors.com</a></dd>
           </dl>
         </div>
 
         <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
-            <dt><p className="slds-text-title--caps slds-truncate">Account Owner</p></dt>
+            <dt><p className="slds-text-title--caps slds-truncate" title="Account Owner">Account Owner</p></dt>
             <dd><a href="javascript:void(0);">Jeff Maguire</a></dd>
           </dl>
         </div>
@@ -90,22 +90,22 @@ export default (
         </dt>
         {/* Opportunity One */}
         <dd className="slds-tile">
-          <p className="slds-truncate">
+          <p className="slds-truncate" title="Tesla - Mule ESB">
             <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
           <div className="slds-tile__detail">
             <dl className="slds-dl--horizontal slds-text-body--small">
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Value</p>
+                <p className="slds-truncate" title="Value">Value</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">$500,000</p>
+                <p className="slds-truncate" title="$500,000">$500,000</p>
               </dd>
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Close Date</p>
+                <p className="slds-truncate" title="Close Date">Close Date</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">Dec 15, 2015</p>
+                <p className="slds-truncate" title="Dec 15, 2015">Dec 15, 2015</p>
               </dd>
             </dl>
           </div>
@@ -118,16 +118,16 @@ export default (
           <div className="slds-tile__detail">
             <dl className="slds-dl--horizontal slds-text-body--small">
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Value</p>
+                <p className="slds-truncate" title="Value">Value</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">$60,000</p>
+                <p className="slds-truncate" title="$60,000">$60,000</p>
               </dd>
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Close Date</p>
+                <p className="slds-truncate" title="Close Date">Close Date</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">Jan 15, 2016</p>
+                <p className="slds-truncate" title="Jan 15, 2016">Jan 15, 2016</p>
               </dd>
             </dl>
           </div>
@@ -143,22 +143,22 @@ export default (
         </dt>
         {/* Case One */}
         <dd className="slds-tile">
-          <p className="slds-truncate">
+          <p className="slds-truncate" title="Tesla - Anypoint Studios">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <div className="slds-tile__detail">
             <dl className="slds-dl--horizontal slds-text-body--small">
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Value</p>
+                <p className="slds-truncate" title="Value">Value</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">$60,000</p>
+                <p className="slds-truncate" title="$60,000">$60,000</p>
               </dd>
               <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate">Close Date</p>
+                <p className="slds-truncate" title="Close Date">Close Date</p>
               </dt>
               <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate">Jan 15, 2016</p>
+                <p className="slds-truncate" title="Jan 15, 2016">Jan 15, 2016</p>
               </dd>
             </dl>
           </div>

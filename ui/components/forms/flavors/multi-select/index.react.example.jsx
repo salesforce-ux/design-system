@@ -33,11 +33,11 @@ const MultiSelect = (props) => {
 
 const MoveButtons = props =>
   <div className="slds-grid slds-grid--vertical">
-    <button className="slds-button slds-button--icon-container">
+    <button className="slds-button slds-button--icon-container" title={ 'Move Selection ' + (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB }>
       <SvgIcon className="slds-button__icon" sprite="utility" symbol={ (props.direction === 'vertical') ? 'up' : 'right' } />
       <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB }</span>
     </button>
-    <button className="slds-button slds-button--icon-container">
+    <button className="slds-button slds-button--icon-container" title={'Move Selection ' +  (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA }>
       <SvgIcon className="slds-button__icon" sprite="utility" symbol={ (props.direction === 'vertical') ? 'down' : 'left' } />
       <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA }</span>
     </button>

@@ -217,37 +217,6 @@
 .searchbox__input::-webkit-search-results-decoration {
   display: none;
 }
-.searchbox__reset {
-  display: block;
-  position: absolute;
-  top: rem(8px);
-  right: rem(5px);
-  margin: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-  font-size: inherit;
-  user-select: none;
-  fill: rgba(0, 0, 0, 0.5);
-}
-.searchbox__reset.hide {
-  display: none;
-}
-.searchbox__reset:focus {
-  outline: 0;
-}
-.searchbox__reset svg {
-  display: block;
-  margin: rem(2px) rem(4px);
-  width: rem(12px);
-  height: rem(12px);
-}
-.searchbox__input:valid ~ .searchbox__reset {
-  display: block;
-  animation-name: sbx-reset-in;
-  animation-duration: .15s;
-}
 .algolia-docsearch-suggestion--no-result {
   float: none;
   width: auto;
@@ -261,16 +230,5 @@
 
   .algolia-docsearch-suggestion--title {
     font-weight: normal;
-  }
-}
-
-@keyframes sbx-reset-in {
-  0% {
-    transform: translate3d(-20%, 0, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
   }
 }

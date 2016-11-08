@@ -25,7 +25,7 @@ export let Tile = props =>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
+          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
         </div>
       </div>
     :
@@ -52,7 +52,7 @@ export let TileMedia = props =>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
-            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" />
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
           </div>
         </div>
       :

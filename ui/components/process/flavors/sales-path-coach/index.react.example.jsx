@@ -35,10 +35,10 @@ let Path = props =>
   </div>;
 
 let Trigger = props =>
-  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small" symbol="chevrondown" assistiveText="Open" />;
+  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small" symbol="chevrondown" assistiveText="Open" title="Open" />;
 
 let Triggerup = props =>
-  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small slds-flip--vertical" symbol="chevrondown" assistiveText="Close" />;
+  <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small slds-flip--vertical" symbol="chevrondown" assistiveText="Close" title="Close" />;
 
 let Action = props =>
   <button className={className('slds-button slds-button--brand slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>

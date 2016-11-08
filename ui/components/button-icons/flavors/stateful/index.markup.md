@@ -1,10 +1,8 @@
-The stateful button requires the `.slds-button--neutral` class in addition to the `.slds-button` class.
+The stateful button requires the `.slds-button--icon-border` class in addition to the `.slds-button` class.
 
-The stateful inverse button works just like the stateful button. It requires the `.slds-button--inverse` class in addition to the `.slds-button` class.
+The stateful inverse button works just like the stateful button. It requires the `.slds-button--icon-borderinverse` class in addition to the `.slds-button` class.
 
-It uses the class `.slds-not-selected` in its initial state. When the user activates the button, use JavaScript to toggle the class to `.slds-is-selected`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `.slds-button__icon--stateful` class as well as the `.slds-button__icon--left` class setting the icon on the left.
-
-Stateful icons can be toggled on and off and retain their state. Like stateful buttons, the initial state is `.slds-not-selected`, and JavaScript is used to toggle it to `.slds-is-selected` when activated.
+Stateful icons can be toggled on and off and retain their state. JavaScript is used to add the `.slds-is-selected` class to the button when activated.
 
 <h4 class="site-text-heading--label">Accessibility</h4>
 

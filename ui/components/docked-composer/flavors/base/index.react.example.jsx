@@ -53,15 +53,18 @@ export let DockedComposerPanel = props =>
         <ButtonIcon
           className="slds-button--icon"
           symbol="minimize_window"
-          assistiveText="Minimize Composer Panel" />
+          assistiveText="Minimize Composer Panel"
+          title="Minimize window" />
         <ButtonIcon
           className="slds-button--icon"
           symbol="expand_alt"
-          assistiveText="Expand Composer Panel" />
+          assistiveText="Expand Composer Panel"
+          title="Expand Composer" />
         <ButtonIcon
           className="slds-button--icon"
           symbol="close"
-          assistiveText="Close Composer Panel" />
+          assistiveText="Close Composer Panel"
+          title="Close" />
       </div>
     </div>
     { props.children }

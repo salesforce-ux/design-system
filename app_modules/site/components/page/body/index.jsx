@@ -118,17 +118,12 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" aria-hidden="true" noValidate="novalidate" className="searchbox">
+      <form id="search" noValidate="novalidate" className="searchbox">
         <div role="search" className="searchbox__wrapper">
-          <label htmlFor="docsearch" className="slds-assistive-text">Search: type text, then use the up and down arrows to navigate results</label>
+          <label htmlFor="docsearch" className="slds-assistive-text">Unfortunately, the 3rd party software we rely on for search is not accessible at the moment.</label>
           <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
-          <button type="submit" className="slds-assistive-text">
+          <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query
-          </button>
-          <button type="reset" title="Clear the search query" className="searchbox__reset hide">
-            <svg role="img" aria-label="Reset">
-              <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close" />
-            </svg>
           </button>
         </div>
       </form>
@@ -152,6 +147,7 @@ export default React.createClass({
         <div className="site-skip-content">
           <a href="#navigation">Skip to Navigation</a>
         </div>
+        {this.renderSearch()}
       </header>
     );
   },
@@ -159,7 +155,6 @@ export default React.createClass({
   renderNav() {
     return (
       <div className={classNames('site-navigation', globals.displaySearch ? 'site-navigation--has-search' : '')}>
-        {this.renderSearch()}
 
         <nav id="navigation" role="navigation" tabIndex="-1">
           {this.renderNavItems(this.state.navItems)}

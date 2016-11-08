@@ -21,6 +21,6 @@ props:
   CARD_SPACING_MEDIUM:
     value: '{!SPACING_X_SMALL}'
   CARD_SPACING_LARGE:
-    value: '{!SPACING_MEDIUM}'
+    value: '{!SPACING_SMALL}'
   TABLE_SPACING_X_SMALL:
     value: '{!SPACING_XX_SMALL}'

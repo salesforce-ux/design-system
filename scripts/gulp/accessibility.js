@@ -1,13 +1,18 @@
 import gulp from 'gulp';
-import axeCore from 'gulp-axe-core';
+import axe from 'gulp-axe-webdriver';
 
-gulp.task('a11y', ['generate:examples:wrap'], () => {
+gulp.task('a11y', ['generate:examples:wrap'], (done) => {
   const options = {
     folderOutputReport: '.reports',
     saveOutputIn: 'a11y.json',
-    browser: 'phantomjs'
+    browser: 'phantomjs',
+    a11yCheckOptions: {
+      'rules': {
+        'bypass': { enabled: false }
+      }
+    },
+    urls: ['.html/*.html'],
+    showOnlyViolations: true
   };
-  return gulp
-    .src('.html/*.html')
-    .pipe(axeCore(options));
+  return axe(options, done);
 });

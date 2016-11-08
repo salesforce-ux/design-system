@@ -38,6 +38,7 @@ export let ModalHeader = props =>
         className="slds-modal__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
+        title="Close"
         assistiveText="Close" /> : null }
     {props.children}
   </div>;

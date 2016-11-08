@@ -119,8 +119,8 @@ let RowData = props => {
           iconClassName="slds-button__icon--hint slds-button__icon--small"
           symbol="down"
           assistiveText="Show More"
+          title="Show More"
         />
-      </td>
     </tr>
   );
 };

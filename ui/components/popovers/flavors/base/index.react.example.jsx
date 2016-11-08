@@ -34,6 +34,7 @@ export let Popover = props => {
           className={ className('slds-button--icon-small slds-float--right slds-popover__close', props.inverse ? 'slds-button--icon-inverse' : 'slds-button--icon') }
           symbol="close"
           assistiveText="Close dialog"
+          title="Close dialog"
         />
       : null }
       { !props.header && props.headerTitle ?

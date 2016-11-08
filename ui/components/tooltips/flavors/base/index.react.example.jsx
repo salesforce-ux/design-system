@@ -29,6 +29,7 @@ export default (
           symbol="info"
           aria-describedby="help"
           assistiveText="Help"
+          title="Help"
         />
       </div>
     </div>

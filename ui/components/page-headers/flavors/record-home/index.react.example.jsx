@@ -51,7 +51,8 @@ export default (
               className="slds-button--icon-border-filled"
               symbol="down"
               aria-haspopup="true"
-              assistiveText="More Actions" />
+              assistiveText="More Actions"
+              title="More Actions" />
           </div>
         </div>
       </div>
@@ -71,7 +72,8 @@ export default (
             iconClassName="slds-button__icon--small"
             symbol="down"
             aria-haspopup="true"
-            assistiveText="More Actions" />
+            assistiveText="More Actions"
+            title="More Actions" />
         </p>
         <p className="slds-text-body--regular">Multiple Values</p>
       </li>

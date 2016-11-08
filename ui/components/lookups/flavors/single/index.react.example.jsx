@@ -73,7 +73,7 @@ let LookupSearchInput = props =>
 let LookupEntity = props =>
   <div className={className('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
     <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
-    <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" />
+    <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" title="Filter by object" />
     { props.showEntityDropdown ?
       <Menu className="slds-dropdown--left">
         <MenuList>
@@ -147,7 +147,7 @@ let LookupMenuItemLabel = props => {
     <li role="presentation">
       <span className="slds-lookup__item-action slds-lookup__item-action--label" id={ uniqueId } role="option">
         <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol={ props.symbol || 'add' } />
-        <span className="slds-truncate">{ props.text || 'New Account'}</span>
+        <span className="slds-truncate" title="{ props.text || 'New Account' }">{ props.text || 'New Account'}</span>
       </span>
     </li>
   );

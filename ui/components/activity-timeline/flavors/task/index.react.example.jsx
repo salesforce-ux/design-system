@@ -22,7 +22,7 @@ export let states = [
     element:
     <div className="demo-only">
       <span className="slds-assistive-text">Task</span>
-      <MediaObject figureRight={ <TimelineActions /> }>
+      <MediaObject figureRight={ <TimelineActions title="More Options for Task, Review proposals" assistiveText="More Options for Task, Review proposals" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
           <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
             <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">

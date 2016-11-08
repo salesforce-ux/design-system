@@ -38,10 +38,10 @@ let PublisherActions = props =>
   <div className="slds-publisher__actions slds-grid slds-grid--align-spread">
     <ul className="slds-grid slds-publisher__toggle-visibility">
       <li>
-        <ButtonIcon className="slds-button--icon-container" symbol="adduser" assistiveText="Add User" />
+        <ButtonIcon className="slds-button--icon-container" symbol="adduser" assistiveText="Add User" title="Add User" />
       </li>
       <li>
-        <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" />
+        <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" title="Attach a file" />
       </li>
     </ul>
     <button className="slds-button slds-button--brand">Share</button>

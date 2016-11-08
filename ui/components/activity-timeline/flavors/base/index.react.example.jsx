@@ -24,7 +24,7 @@ export let TimelineIcon = props =>
 export let TimelineActions = props =>
   <div className="slds-timeline__actions">
     <p className="slds-timeline__date">{ props.date || 'Feb 24' }</p>
-    <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" symbol="down" assistiveText="More Options" aria-haspopup="true" />
+    <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" symbol="down" assistiveText={ props.assistiveText || 'More Options' } aria-haspopup="true" title={ props.title || 'More Options' } />
   </div>;
 
 export default (
@@ -32,7 +32,7 @@ export default (
   <ul>
     <li>
       <span className="slds-assistive-text">Task</span>
-      <MediaObject figureRight={ <TimelineActions /> }>
+      <MediaObject figureRight={ <TimelineActions title="More Options for Task, Review proposals" assistiveText="More Options for Task, Review proposals" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
           <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
             <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">
@@ -54,7 +54,7 @@ export default (
     </li>
     <li>
       <span className="slds-assistive-text">Event</span>
-      <MediaObject figureRight={ <TimelineActions /> }>
+      <MediaObject figureRight={ <TimelineActions title="More Options for Event, Company One" assistiveText="More Options for Event, Company One" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--event" figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
@@ -79,7 +79,7 @@ export default (
     </li>
     <li>
       <span className="slds-assistive-text">Call</span>
-      <MediaObject figureRight={ <TimelineActions /> }>
+      <MediaObject figureRight={ <TimelineActions title="More Options for Call, Mobile conversation" assistiveText="More Options for Call, Mobile conversation" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--call" figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
@@ -100,7 +100,7 @@ export default (
     </li>
     <li>
       <span className="slds-assistive-text">Email</span>
-      <MediaObject figureRight={ <TimelineActions /> }>
+      <MediaObject figureRight={ <TimelineActions title="More Options for Email, Mobile conversation" assistiveText="More Options for Email, Mobile conversation" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--email" figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
@@ -109,7 +109,7 @@ export default (
           <ul className="slds-list--horizontal slds-wrap">
             <li className="slds-truncate_container--50 slds-m-right--large slds-grid">
               <span className="slds-text-title">To:</span>
-              <span className="slds-text-body--small slds-m-left--xx-small slds-truncate"><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className="slds-no-flex slds-text-body--small"> + 44 more</span>
+              <span className="slds-text-body--small slds-m-left--xx-small slds-truncate" title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"><a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a></span><span className="slds-no-flex slds-text-body--small"> + 44 more</span>
             </li>
             <li className="slds-m-right--large">
               <span className="slds-text-title">From:</span>

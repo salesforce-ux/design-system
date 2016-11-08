@@ -33,8 +33,8 @@ export let Image = props =>
     </a>
     { props.actions ?
       <ButtonGroup className="slds-image__actions">
-        <ButtonIcon className="slds-button--icon-border-filled" symbol="download" assistiveText="Download" />
-        <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assitiveText="More Actions" />
+        <ButtonIcon className="slds-button--icon-border-filled" symbol="download" assistiveText="Download" title="Download" />
+        <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assitiveText="More Actions" title="More Actions" />
       </ButtonGroup> : null }
     <figcaption className={className('slds-image__title', props.titleClass)}>
       { props.symbol ?

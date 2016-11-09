@@ -45,6 +45,12 @@
     background-color: $color-background-inverse;
   }
 
+  &-example-opacity {
+    display: inline-block;
+    background-color: $color-brand-darker;
+    padding: $spacing-x-small;
+  }
+
   &-indicator {
 
     &-pass,
@@ -81,11 +87,16 @@
     &-color-border,
     &-spacing,
     &-radius,
+    &-opacity,
     &-shadow {
       display: inline-block;
       width: 2rem;
       height: 2rem;
       vertical-align: middle;
+    }
+
+    &-opacity {
+      background-color: $color-background-alt;
     }
 
     &-color-border {

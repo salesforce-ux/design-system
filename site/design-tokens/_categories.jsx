@@ -140,6 +140,20 @@ const categories = {
     }
   }),
 
+  'opacity': new Category({
+    label: 'Opacity',
+    description: 'Use these opacity tokens for element transparency.',
+    renderExample(token) {
+      return (
+        <CellExample>
+          <div className="site-example-opacity">
+            <div className="site-box-opacity" style={{opacity: token.value}} />
+          </div>
+        </CellExample>
+      );
+    }
+  }),
+
   'line-height': new Category({
     label: 'Line Height',
     description: 'Use these tokens for changing the line-height of elements. Usually, the line-height-text is already inherited by default. Only set it if you need to apply it again.',

@@ -102,6 +102,7 @@ export let ContextTabBar = props =>
           </MenuList>
         </Menu>
       </div>
+      <div className="slds-context-bar__vertical-divider"></div>
       <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon

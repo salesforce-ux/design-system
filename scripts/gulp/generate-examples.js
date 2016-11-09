@@ -88,7 +88,7 @@ const wrapTpl = () =>
 
 const examplePath = resolve(__PATHS__.generated, 'examples');
 
-gulp.task('generate:examples:wrap', ['generate:examples'], () => 
+gulp.task('generate:examples:wrap', ['generate:examples'], () =>
   gulp
     .src(resolve(examplePath,'*.html'))
     .pipe(wrapTpl())

@@ -303,6 +303,7 @@
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
   border-left: $border-width-thin solid $color-border;
+  padding-left: $spacing-xx-small;
 }
 
 

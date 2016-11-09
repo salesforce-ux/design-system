@@ -15,7 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { FormElement, FormElementLabel, FormElementControl } from 'ui/components/forms/flavors/input/index.react.example';
+import { FormElement, FormElementLabel, FormElementControl, Input } from 'ui/components/forms/flavors/input/index.react.example';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -75,16 +75,21 @@ let ComboboxSearchInput = props =>
         role="combobox"
         aria-activedescendent=""
         aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
-        readOnly />
-      <ButtonIcon
-        className="slds-input__icon slds-text-color--default"
-        symbol="down"
-        assistiveText="Expand category options"
-        title="Expand category options"
-        aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
-        iconClassName="slds-button__icon"
-        tabIndex="-1"
+        readOnly={!props.autocomplete}
+        aria-autocomplete={props.autocomplete ? 'list' : null}
       />
+      { 
+        !props.autocomplete ?
+        <ButtonIcon
+          className="slds-input__icon slds-text-color--default"
+          symbol="down"
+          assistiveText="Expand category options"
+          aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
+          iconClassName="slds-button__icon"
+          tabIndex="-1"
+          />
+        : null
+      }
     </FormElementControl>
   </FormElement>;
 
@@ -221,6 +226,40 @@ export let states = [
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
                 <span className="slds-assistive-text">Current Selection:</span>Option B
               </ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+          </Listbox>
+        </div>
+      </div>
+  },
+  {
+    id: 'picklist-with-autocomplete',
+    label: 'Autocomplete',
+    element:
+      <div className="demo-only" style={{height: '240px'}}>
+        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <ComboboxSearchInput placeholder="Find Option" dropdown="open" autocomplete />
+          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+            <ListboxList role="group" aria-label="Recently Viewed">
+              <ListboxItem role="presentation" headerText="Recently Viewed" />
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+                <span className="slds-assistive-text">Current Selection:</span>Option A
+              </ListboxItem>
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
+                <span className="slds-assistive-text">Current Selection:</span>Option B
+              </ListboxItem>
+              <ListboxItem isSelectable text>Option C</ListboxItem>
+              <ListboxItem isSelectable text>Option D</ListboxItem>
+              <ListboxItem isSelectable text>Option E</ListboxItem>
+              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+            </ListboxList>
+            <ListboxList role="group" aria-label="Another List" className="slds-has-divider--top-space">
+              <ListboxItem role="presentation" headerText="Another List" />
+              <ListboxItem isSelectable text>Option A</ListboxItem>
+              <ListboxItem isSelectable text>Option B</ListboxItem>
               <ListboxItem isSelectable text>Option C</ListboxItem>
               <ListboxItem isSelectable text>Option D</ListboxItem>
               <ListboxItem isSelectable text>Option E</ListboxItem>

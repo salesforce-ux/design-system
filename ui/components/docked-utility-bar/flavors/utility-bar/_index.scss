@@ -52,7 +52,7 @@
 
     &:focus:after {
       background: $color-brand;
-      height: ($border-width-thick + 1);
+      height: ($border-width-thick + 1px);
     }
 
     &:hover,

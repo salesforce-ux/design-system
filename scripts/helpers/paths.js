@@ -40,10 +40,12 @@ const paths = {
   npm: path.resolve(root, '.npm'),
   build: path.resolve(root, '.build'),
   generated: path.resolve(root, '.generated'),
+  html: path.resolve(root, '.html'),
   tmp: path.resolve(root, '.tmp'),
   test: path.resolve(root, '.test'),
   www: path.resolve(root, '.www'),
-  logs: path.resolve(root, '.logs')
+  logs: path.resolve(root, '.logs'),
+  reports: path.resolve(root, '.reports')
 };
 
 export default {

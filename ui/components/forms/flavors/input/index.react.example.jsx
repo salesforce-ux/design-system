@@ -38,7 +38,13 @@ export let FormElementControl = props =>
   </div>;
 
 let Input = props =>
-  <input id="text-input-01" className={className('slds-input', props.className)} type={props.type || 'text'} placeholder="Placeholder Text" {...props} />;
+  <input
+    {...props}
+    id="text-input-01"
+    className={className('slds-input', props.className)}
+    type={props.type || 'text'}
+    placeholder="Placeholder Text"
+  />;
 
 //////////////////////////////////////////////
 // State Constructor(s)

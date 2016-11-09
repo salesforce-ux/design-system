@@ -44,10 +44,6 @@
 .slds-picklist__input {
   width: $size-small;
 
-  .slds-input {
-    @include button-interactions;
-  }
-
   .slds-button {
     line-height: 0;
   }

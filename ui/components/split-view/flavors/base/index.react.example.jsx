@@ -108,8 +108,8 @@ let SplitView = props =>
               </div>
             </div>
           </div>
-          <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
-            <div class="slds-button-group" role="group">
+          <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+            <div className="slds-button-group" role="group">
               <ButtonIcon
                 className="slds-button--icon-border-inverse"
                 symbol="down"

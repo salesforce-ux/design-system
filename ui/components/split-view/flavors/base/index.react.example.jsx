@@ -108,6 +108,17 @@ let SplitView = props =>
               </div>
             </div>
           </div>
+          <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+            <div class="slds-button-group" role="group">
+              <ButtonIcon
+                className="slds-button--icon-border-inverse"
+                symbol="down"
+                aria-haspopup="true"
+                assistiveText="More Actions"
+                title="More Actions" />
+              </div>
+
+          </div>
         </div>
         <div className="slds-grid slds-grid--vertical-align-center">
           <p className="slds-text-body--small slds-text-color--inverse-weak">42 items &bull; Updated just now</p>

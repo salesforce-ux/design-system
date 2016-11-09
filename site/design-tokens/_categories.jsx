@@ -140,6 +140,20 @@ const categories = {
     }
   }),
 
+  'opacity': new Category({
+    label: 'Opacity',
+    description: 'Use these opacity tokens for element transparency.',
+    renderExample(token) {
+      return (
+        <CellExample>
+          <div className="site-example-opacity">
+            <div className="site-box-opacity" style={{opacity: token.value}} />
+          </div>
+        </CellExample>
+      );
+    }
+  }),
+
   'line-height': new Category({
     label: 'Line Height',
     description: 'Use these tokens for changing the line-height of elements. Usually, the line-height-text is already inherited by default. Only set it if you need to apply it again.',
@@ -211,7 +225,7 @@ const categories = {
     label: 'Atmosphere',
     description: 'Use atmosphere tokens for box shadows to create the appearance of elevation.',
     renderExample(token) {
-      if (token.type === 'box-shadow') {
+      if (token.type === 'shadow') {
         return (
           <CellExample className="site-example site-example-atmosphere">
             <div className="site-atmosphere" style={{boxShadow: token.value}} />

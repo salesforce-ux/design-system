@@ -141,7 +141,7 @@
     align-content: center;
     align-items: center;
     flex-grow: 1;
-    padding: 0 $spacing-x-small;
+    padding: 0 $spacing-small;
     border-radius: 0;
     min-width: 0%;
     color: inherit;
@@ -229,6 +229,10 @@
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border;
 
+    .slds-context-bar__label-action {
+      padding: 0 $spacing-x-small;
+    }
+
     // Handle active states
     &.slds-is-active,
     &:nth-child(n).slds-is-active {
@@ -303,7 +307,6 @@
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
   border-left: $border-width-thin solid $color-border;
-  padding-left: $spacing-xx-small;
 }
 
 

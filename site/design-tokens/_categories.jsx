@@ -211,7 +211,7 @@ const categories = {
     label: 'Atmosphere',
     description: 'Use atmosphere tokens for box shadows to create the appearance of elevation.',
     renderExample(token) {
-      if (token.type === 'box-shadow') {
+      if (token.type === 'shadow') {
         return (
           <CellExample className="site-example site-example-atmosphere">
             <div className="site-atmosphere" style={{boxShadow: token.value}} />

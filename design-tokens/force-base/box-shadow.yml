@@ -1,6 +1,6 @@
 global:
   type: box-shadow
-  category: box-shadow
+  category: shadow
   cssProperties:
   - box-shadow
 imports:

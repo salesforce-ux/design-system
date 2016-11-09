@@ -34,8 +34,8 @@ export default (
       <div className="slds-col slds-has-flexi-truncate">
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">
           <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
-          <h1 className="slds-page-header__title">
-            <button className="slds-button slds-button--reset slds-p-right--x-small slds-type-focus slds-truncate" aria-haspopup="true" title="this should match My Leads">
+          <h1 className="slds-page-header__title slds-p-right--x-small">
+            <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="this should match My Leads">
               <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
                 <span className="slds-truncate">My Leads</span>
                 {icon}

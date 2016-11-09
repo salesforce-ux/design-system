@@ -1,0 +1,9 @@
+global:
+  type: time
+  category: time
+  cssProperties:
+  - 'animation*'
+  - 'transition*'
+props:
+  DURATION_SLIDE:
+    value: 0.25s

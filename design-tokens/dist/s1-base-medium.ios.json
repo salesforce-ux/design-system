@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "value": "250px",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "width"
+      ],
+      "name": "widthStageLeft"
+    }
+  ]
+}

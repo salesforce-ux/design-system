@@ -128,7 +128,7 @@ export let RowData = props => {
           <span className="slds-assistive-text">{'Item ' + props.index + ' has errors'}</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>
-        <span className="slds-row-number slds-text-body--small"></span>
+        <span className="slds-row-number slds-text-body--small slds-text-color--weak"></span>
       </td>
       <td role="gridcell" className={ className('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
         <Checkbox label={ checkboxLabel } tabIndex={ !props.focusable ? '-1' : '0' } checkID="checkbox-01" />

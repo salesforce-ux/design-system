@@ -79,8 +79,8 @@ gulp.task('lint:js:test', lintjs([
 
 // This task lints pre-built assets (not the JSX templates),
 // So you typically have to run `npm run build` before linting HTML files.
-gulp.task('lint:html', () => {
-  return gulp.src('.www/components/**/*.html')
+gulp.task('lint:html', ['generate:examples:wrap'], () => {
+  return gulp.src('.html/*.html')
     .pipe(htmlhint({
       // Rules documentation:
       // https://github.com/yaniswang/HTMLHint/wiki/Rules

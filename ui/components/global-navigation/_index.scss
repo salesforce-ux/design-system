@@ -229,6 +229,10 @@
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border;
 
+    .slds-context-bar__label-action {
+      padding: 0 $spacing-x-small;
+    }
+
     // Handle active states
     &.slds-is-active,
     &:nth-child(n).slds-is-active {

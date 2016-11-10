@@ -24,6 +24,7 @@
 
   &__item {
     display: flex;
+    margin-right: $border-width-thin;
   }
 
   // Button that invokes utility panel
@@ -51,10 +52,11 @@
 
     &:focus:after {
       background: $color-brand;
+      height: ($border-width-thick + 1px);
     }
 
     &:hover,
-    &:focus:hover {
+    &:focus {
       color: inherit;
       background: $color-background-utility-bar-hover;
     }

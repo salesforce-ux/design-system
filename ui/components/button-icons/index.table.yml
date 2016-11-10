@@ -30,12 +30,12 @@ classes:
     class: slds-button--icon-inverse
     description: Gives a white icon color on a dark background
     applied: <code>.slds-button</code>
-    notes: When used alone it has a subtle hover. When used in a button-group it assumes the hover state of the buttons next to it.
+    notes: When used alone it has a subtle hover.
   -
     class: slds-button--icon-border-inverse
     description: Creates an icon button with a white border
     applied: <code>.slds-button</code>
-    notes: There is no background color.
+    notes: There is no background color. Can be used in button groups with regular inverse buttons.
   -
     class: slds-button--icon-small
     description: Creates an icon button at the smaller 1.5rem (24px) size

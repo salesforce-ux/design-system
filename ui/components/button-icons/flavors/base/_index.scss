@@ -103,13 +103,16 @@
 }
 
 // Button icon on inversed background
-.slds-button--icon-inverse,
-.slds-button--icon-border-inverse {
+.slds-button--icon-inverse {
   color: $color-text-link-inverse;
 
   &:hover,
   &:focus {
     color: $color-text-link-inverse-hover;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px #e0e5ee;
   }
 
   &:active {
@@ -119,6 +122,10 @@
   &[disabled] {
     color: $color-text-link-inverse-disabled;
   }
+}
+
+.slds-button--icon-border-inverse {
+  color: $color-text-link-inverse;
 }
 
 // Button icon for errors

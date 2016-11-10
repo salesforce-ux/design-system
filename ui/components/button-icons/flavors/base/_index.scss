@@ -44,6 +44,7 @@
 
 .slds-button--icon-border-inverse {
   border: $border-width-thin solid $color-border-button-default;
+  color: $color-text-link-inverse;
 }
 
 .slds-button--icon-container,
@@ -122,10 +123,6 @@
   &[disabled] {
     color: $color-text-link-inverse-disabled;
   }
-}
-
-.slds-button--icon-border-inverse {
-  color: $color-text-link-inverse;
 }
 
 // Button icon for errors

@@ -31,6 +31,7 @@ import { pathToURL } from 'app_modules/util/string';
 
 import './scripts/gulp/assets';
 import './scripts/gulp/generate';
+import './scripts/gulp/accessibility';
 import { generateUI } from './scripts/gulp/generate-ui';
 import './scripts/gulp/lint';
 import { generatePages, generateComponentPages } from './scripts/gulp/pages';
@@ -182,6 +183,8 @@ gulp.task('clean', () => del.sync([
   __PATHS__.dist,
   __PATHS__.logs,
   __PATHS__.build,
+  __PATHS__.reports,
+  __PATHS__.html,
   path.join(__PATHS__.designTokens, 'dist')
 ]));
 

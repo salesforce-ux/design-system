@@ -18,7 +18,7 @@ import beautify from  'js-beautify';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { resolve } from 'path';
-import { assign, flatMap } from 'lodash';
+import { assign, flatMap, last } from 'lodash';
 import { generateUI } from './generate-ui';
 
 const prettyHTML = html => beautify.html(html, {
@@ -72,6 +72,37 @@ export const getExamples = () =>
 export const toHtml = (el) =>
   prettyHTML(renderToStaticMarkup(el));
 
+
+const wrap = x =>
+  `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>SLDS Demo</title>
+    </head>
+      <body>
+        ${x}
+      </body>
+    </html>
+  `;
+
+const wrapTpl = () =>
+   through.obj((file, enc, next) =>
+    next(null, new gutil.File({
+      path: last(file.path.split('/')),
+      contents: new Buffer(wrap(String(file.contents)))
+    })));
+
+
+const examplePath = resolve(__PATHS__.generated, 'examples');
+
+gulp.task('generate:examples:wrap', ['generate:examples'], () => 
+  gulp
+    .src(resolve(examplePath,'*.html'))
+    .pipe(wrapTpl())
+    .pipe(gulp.dest(resolve(__PATHS__.html))));
+
 gulp.task('generate:examples', () => {
   const stream = through.obj();
   const examples = flattenExamples(getExamples());
@@ -82,5 +113,5 @@ gulp.task('generate:examples', () => {
     })));
   stream.end();
   return stream
-    .pipe(gulp.dest(resolve(__PATHS__.generated, 'examples')));
+    .pipe(gulp.dest(examplePath));
 });

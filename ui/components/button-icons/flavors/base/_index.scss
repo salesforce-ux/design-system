@@ -113,7 +113,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 3px #e0e5ee;
+    @include focus-inverse;
   }
 
   &:active {

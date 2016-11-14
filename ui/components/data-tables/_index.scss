@@ -172,7 +172,7 @@
 // Actionable area inside th
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small;
+  padding: $spacing-x-small $table-spacing-x-small;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,

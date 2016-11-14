@@ -45,6 +45,13 @@
 .slds-button--icon-border-inverse {
   border: $border-width-thin solid $color-border-button-default;
   color: $color-text-link-inverse;
+  @include button-base;
+  background-color: $color-background-button-inverse;
+
+  &[disabled] {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+  }
 }
 
 .slds-button--icon-container,
@@ -122,16 +129,6 @@
 
   &[disabled] {
     color: $color-text-link-inverse-disabled;
-  }
-}
-
-.slds-button--icon-border-inverse {
-  @include button-base;
-  background-color: $color-background-button-inverse;
-
-  &[disabled] {
-    background-color: $color-background-button-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
   }
 }
 

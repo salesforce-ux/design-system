@@ -43,10 +43,9 @@
 }
 
 .slds-button--icon-border-inverse {
-  border: $border-width-thin solid $color-border-button-default;
-  color: $color-text-link-inverse;
   @include button-base;
   background-color: $color-background-button-inverse;
+  color: $color-text-link-inverse;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;

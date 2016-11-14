@@ -23,9 +23,38 @@
 
   ul {
     @include list-has-bullets;
+
+    ul {
+      list-style: circle;
+
+      ul {
+        list-style: square;
+      }
+    }
   }
 
   ol {
     @include list-has-numbers;
+
+    ol {
+      list-style: lower-alpha;
+
+      ol {
+        list-style: lower-roman;
+      }
+    }
+  }
+
+  .slds-video {
+    display: block;
+    max-width: 100%;
+
+    &.slds-video--center {
+      margin: 0 auto;
+    }
+
+    &.slds-video--right {
+      margin: 0 0 0 auto;
+    }
   }
 }

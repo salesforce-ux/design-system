@@ -8,7 +8,6 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
 .slds-button-group,
 .slds-button-group-list {
   display: flex;
@@ -22,33 +21,34 @@
   }
 }
 
+// The following rule must stay at the **top** due to the cascade and wrapped buttons
+.slds-button-group .slds-button:only-child {
+  border-radius: $border-radius-medium;
+}
+
 .slds-button-group .slds-button + .slds-button,
-.slds-button-group .slds-button--last .slds-button,
+.slds-button-group .slds-button + .slds-button--last .slds-button,
 .slds-button-group-list li + li .slds-button {
   margin-left: (-1 * $border-width-thin);
 }
 
-.slds-button-group .slds-button:first-child,
-.slds-button-group-list li:first-child .slds-button {
-  border: {
-    top-left-radius: $border-radius-medium;
-    bottom-left-radius: $border-radius-medium;
-  }
+// These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
+.slds-button-group-list li:first-child .slds-button,
+.slds-button-group .slds-button:first-child {
+  border-radius: $border-radius-medium 0 0 $border-radius-medium;
 }
 
+// These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
 .slds-button-group .slds-button:last-child,
 .slds-button-group-list li:last-child .slds-button,
 .slds-button-group .slds-button--last .slds-button,
 .slds-button-group .slds-button.slds-button--last {
-  border: {
-    top-right-radius: $border-radius-medium;
-    bottom-right-radius: $border-radius-medium;
-  }
+  border-radius: 0 $border-radius-medium $border-radius-medium 0;
 }
 
-.slds-button-group .slds-button:only-child,
+// The following rule must stay at the **bottom** due to the cascade
 .slds-button-group-list li:only-child .slds-button {
-  border-radius: 0.25rem;
+  border-radius: $border-radius-medium;
 }
 
 .slds-button-group + .slds-button-group,
@@ -59,3 +59,33 @@
 .slds-button-group-list + .slds-button {
   margin-left: $spacing-xx-small;
 }
+
+// The .slds-button--last class should be placed on the wrapper
+// of a button that's the final one in a button-group
+//
+// A bit of history:
+//
+// Button-groups were originally built to have no wrappers in their midst.
+//
+// And all buttons happily coexisted perfectly in the land of :last-child...
+// but then along came the big bad, "Buttons in a group can come from all
+// different teams and some are wrapped to contain a dropdown, etc.
+// This code doesn't work now."
+//
+// There was much booing and hissing and stamping of feet.
+//
+// Then, Pragmatism reared its head and suggested, "Hey guys, maybe we have
+// to supply a way for people to indicate when a button is the last one."
+//
+// We had situations where various buttons were wrapped and everyone believed
+// it was the :last-child, or no one did. So the last button had to raise its
+// hand and shout loudly, "I am .button--last!".
+//
+// Then there were issues where the last button could be wearing a wrap, thus
+// the class actually needed to be placed on it's cute little sweater instead.
+//
+// And the poor little button became warm indeed. And it got a little smelly.
+//
+// Sometimes Pragmatism wins and sometimes she loses. This time she won.
+//
+// The end of the story of button-groups.

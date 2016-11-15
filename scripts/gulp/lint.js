@@ -15,7 +15,6 @@ import gulpif from 'gulp-if';
 import runSequence from 'run-sequence';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
-import eslintFriendlyFormatter from 'eslint-friendly-formatter';
 import scsslint from 'gulp-scss-lint';
 import browserSync from 'browser-sync';
 import htmlhint from 'gulp-htmlhint';
@@ -57,7 +56,7 @@ function lintjs(files, options) {
     return gulp.src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format(eslintFriendlyFormatter))
+      .pipe(eslint.format('codeframe'))
       .pipe(gulpif(!browserSync.active, eslint.failAfterError()));
   };
 }

@@ -25,6 +25,7 @@
     @include list-has-bullets;
 
     ul {
+      // scss-lint:disable SelectorDepth
       list-style: circle;
 
       ul {
@@ -38,6 +39,7 @@
     @include list-has-numbers;
 
     ol {
+      // scss-lint:disable SelectorDepth
       list-style: lower-alpha;
 
       ol {

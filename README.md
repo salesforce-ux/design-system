@@ -93,7 +93,7 @@ If this did not work, try running `npm cache clean` and repeat the above steps.
 
 ## Contributing to the code base
 
-See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
+See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.
 
 ## Licenses
 

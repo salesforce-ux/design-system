@@ -66,6 +66,20 @@
   .slds-cell-buffer--right {
     padding-right: $spacing-large;
   }
+
+  tbody {
+    // Start the counter
+    tr {
+      counter-increment: row-number;
+    }
+  }
+
+  .slds-row-number {
+    // Add the counter number
+    &:after {
+      content: counter(row-number);
+    }
+  }
 }
 
 // Add left and right padding to the first and last cells of a table

@@ -88,7 +88,7 @@ const wrap = x =>
   `;
 
 const wrapTpl = () =>
-   through.obj((file, enc, next) =>
+  through.obj((file, enc, next) =>
     next(null, new gutil.File({
       path: last(file.path.split('/')),
       contents: new Buffer(wrap(String(file.contents)))
@@ -97,7 +97,7 @@ const wrapTpl = () =>
 
 const examplePath = resolve(__PATHS__.generated, 'examples');
 
-gulp.task('generate:examples:wrap', ['generate:examples'], () => 
+gulp.task('generate:examples:wrap', ['generate:examples'], () =>
   gulp
     .src(resolve(examplePath,'*.html'))
     .pipe(wrapTpl())

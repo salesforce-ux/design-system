@@ -68,6 +68,10 @@
       &.#{$css-prefix}active-foo {
         border-bottom-color: $color-border-tab-active;
       }
+      
+      &.#{$css-prefix}foo {
+        color: red;
+      }
     }
   }
 

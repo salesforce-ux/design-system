@@ -27,8 +27,8 @@
     ul {
       list-style: circle;
 
-      // scss-lint:disable SelectorDepth
       ul {
+      // scss-lint:disable SelectorDepth
         list-style: square;
       }
     }
@@ -40,8 +40,8 @@
     ol {
       list-style: lower-alpha;
 
-      // scss-lint:disable SelectorDepth
       ol {
+      // scss-lint:disable SelectorDepth
         list-style: lower-roman;
       }
     }

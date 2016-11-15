@@ -65,7 +65,6 @@
       margin-bottom: 0;
       border-bottom: $border-width-thin solid $color-border;
 
-      // scss-lint:disable NestingDepth SelectorDepth
       &.#{$css-prefix}active {
         border-bottom-color: $color-border-tab-active;
       }

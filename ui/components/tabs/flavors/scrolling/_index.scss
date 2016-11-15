@@ -65,7 +65,7 @@
       margin-bottom: 0;
       border-bottom: $border-width-thin solid $color-border;
 
-      &.#{$css-prefix}active {
+      &.#{$css-prefix}active-foo {
         border-bottom-color: $color-border-tab-active;
       }
     }

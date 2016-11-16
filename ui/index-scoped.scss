@@ -11,14 +11,16 @@
 
 // Lightning Design System - Scoped
 
-$include-root: true;
 @import 'bootstrap';
+
+// Resets (unscoped)
+@include root();
 
 #{$reset-wrapping-class} {
 
   // Resets
   @import 'vendor/normalize-reset';
-  @include core($scoped: true, $globals: false);
+  @include core();
 
   // Framework
   @import 'components/index';

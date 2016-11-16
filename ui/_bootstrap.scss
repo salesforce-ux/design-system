@@ -9,13 +9,13 @@
 
 // Imports necessary to bootstrap the CSS framework,
 // common to all versions of the design system (scoped and non-scoped)
+
+// Important:
+// Reserved for mixins, functions, variables
+// Importing this file MUST NOT output any CSS
+
 @import 'design-tokens';
 @import 'config';
 @import 'vendor/deprecate';
 @import 'dependencies/index';
 @import 'core/font';
-
-$include-root: false !default;
-@if $include-root {
-  @include root();
-}

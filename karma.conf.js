@@ -103,7 +103,6 @@ module.exports = function(config) {
     webpackMiddleware: {
       noInfo: true
     }
-
   };
 
   if (process.env.TRAVIS) {

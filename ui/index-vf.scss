@@ -11,29 +11,25 @@
 
 // Lightning Design System - Visualforce
 
-// Non-Scoped
-@import
+// Dependencies
+@import 'design-tokens';
+@import 'config';
+@import 'vendor/deprecate';
+@import 'dependencies/index';
+@import 'core/font';
 
-  // Dependencies
-  'design-tokens',
-  'config',
-  'vendor/deprecate',
-  'dependencies/index',
-  'core/font';
-
-// Scoped
 #{$reset-wrapping-class} {
-  @import
 
-    // Resets
-    'vendor/normalize-reset',
-    'core/core-vf',
+  // Resets
+  @import 'vendor/normalize-reset';
+  @import 'core/vf-reset';
+  @include core($scoped: true, $globals: true);
 
-    // Framework
-    'touch/index',
-    'components/index',
-    'utilities/index',
+  // Framework
+  @import 'touch/index';
+  @import 'components/index';
+  @import 'utilities/index';
 
-    // Print
-    'vendor/html5boilerplate-print';
+  // Print
+  @import 'vendor/html5boilerplate-print';
 }

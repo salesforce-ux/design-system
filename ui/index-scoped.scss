@@ -11,29 +11,25 @@
 
 // Lightning Design System - Scoped
 
-// Non-Scoped
-@import
+// Dependencies
+@import 'design-tokens';
+@import 'config';
+@import 'vendor/deprecate';
+@import 'dependencies/index';
+@import 'core/font';
 
-  // Dependencies
-  'design-tokens',
-  'config',
-  'vendor/deprecate',
-  'dependencies/index',
-  'core/font',
-  'core/root';
+@include root();
 
-// Scoped
 #{$reset-wrapping-class} {
-  @import
 
-    // Resets
-    'vendor/normalize-reset',
-    'core/core-scoped',
+  // Resets
+  @import 'vendor/normalize-reset';
+  @include core($scoped: true, $globals: false);
 
-    // Framework
-    'components/index',
-    'utilities/index',
+  // Framework
+  @import 'components/index';
+  @import 'utilities/index';
 
-    // Print
-    'vendor/html5boilerplate-print';
+  // Print
+  @import 'vendor/html5boilerplate-print';
 }

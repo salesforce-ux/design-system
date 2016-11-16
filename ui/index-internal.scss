@@ -17,6 +17,7 @@
 
   // Resets
   @import 'vendor/normalize-reset';
+  @include core($scoped: true, $globals: true);
   @import 'core/vf-reset';
 
   // Framework

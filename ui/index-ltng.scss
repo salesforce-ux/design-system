@@ -11,12 +11,7 @@
 
 // Lightning Design System - Lightning Platform
 
-// Dependencies
-@import 'design-tokens';
-@import 'config';
-@import 'vendor/deprecate';
-@import 'dependencies/index';
-@import 'core/font';
+@import 'bootstrap';
 
 #{$reset-wrapping-class} {
 

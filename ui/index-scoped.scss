@@ -11,9 +11,8 @@
 
 // Lightning Design System - Scoped
 
+$include-root: true;
 @import 'bootstrap';
-
-@include root();
 
 #{$reset-wrapping-class} {
 

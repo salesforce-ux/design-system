@@ -104,3 +104,48 @@
     }
   }
 }
+
+// A feed post is altered when inside a narrow region of the application
+// We take the existing media-queries properties that are being used on
+// slds-post and applying them to slds-post when it finds a parent class
+// named .slds-region--narrow.
+//
+// If styles are being updated via media-queries, please make sure you update
+// the .slds-region--narrow references as the goal is for slds-post to
+// inherit the styles from mobile.
+.slds-region--narrow {
+
+  // Modifying .slds-post when inside a region with the
+  // class .slds-region--narrow
+  .slds-post {
+    border: 0;
+    padding: $spacing-small $spacing-medium;
+  }
+
+  // Modifying .slds-post__content when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__content {
+    margin-bottom: $spacing-small;
+  }
+
+  // Modifying .slds-post__footer when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__footer {
+    flex-direction: column;
+  }
+
+  // Modifying .slds-post__footer-actions-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-actions-list {
+    order: 1;
+  }
+
+  // Modifying .slds-post__footer-meta-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-meta-list {
+    margin: {
+      left: 0;
+      bottom: $spacing-medium;
+    }
+  }
+}

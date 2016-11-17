@@ -148,6 +148,7 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `PRODUCT_ITEM_TRANSACTION`
 - Added token: `LOCATION`
 - Added token: `ADDRESS`
+- Added token: `CAROUSEL`
 - Added alias: `SANS_SERIF`
 - Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`

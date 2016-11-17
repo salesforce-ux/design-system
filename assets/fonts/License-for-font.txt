@@ -1,0 +1,106 @@
+FONT LICENSE AGREEMENT
+
+THIS FONT LICENSE AGREEMENT (“AGREEMENT”) IS A LEGAL AGREEMENT BETWEEN YOU AND
+SALESFORCE.COM, INC. (“WE”, “US”, “OUR”, AND “SALESFORCE”) THAT GOVERNS YOUR
+ACQUISITION AND USE OF THE SALESFORCE SANS FONT (E.G., TYPEFACE, TYPOGRAPHIC
+CHARACTERS, ALPHANUMERICS, SYMBOLS, DESIGNS, AND ORNAMENTS) AND THE RELATED
+FONT FILES (E.G., TRUETYPE (TTF), WEB OPEN FONT FORMAT (WOFF,WOFF2), EMBEDDED
+OPENTYPE (EOT), AND SCALABLE VECTOR GRAPHICS (SVG) FILES) (COLLECTIVELY, THE
+“FONT”). BY DOWNLOADING OR USING THE FONT, YOU AGREE TO THE TERMS OF THIS
+AGREEMENT.  IF YOU ARE DOWNLOADING OR USING THE FONT ON BEHALF OF A COMPANY OR
+OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU HAVE THE AUTHORITY TO BIND SUCH
+ENTITY AND ITS AFFILIATES TO THIS AGREEMENT, IN WHICH CASE THE TERMS “YOU” OR
+“YOUR” WILL REFER TO SUCH ENTITY AND ITS AFFILIATES.  IF YOU DO NOT HAVE SUCH
+AUTHORITY, OR IF YOU DO NOT AGREE WITH THE TERMS OF THIS AGREEMENT, YOU MUST
+NOT DOWNLOAD OR USE THE FONT. This Agreement was last updated on August 21,
+2015.  It is effective between You and Us as of the date You accept this
+Agreement by downloading or using the Font.
+
+1. License Grant
+Subject to the terms of this Agreement and any other
+applicable Salesforce terms, conditions, and acceptable use policies (AUPs),
+We hereby grant to You a revocable, non-transferable, non-exclusive, and non-
+sublicenseable limited license to, without modification, reproduce and use the
+Font solely to create applications with the Salesforce Lightning Design System
+that run in Salesforce or on a Salesforce platform (e.g., Lightning, Heroku,
+Visualforce) (“Applications”).
+
+2. Restrictions
+To the extent your Application contains copyright notices,
+together with all other copyright notices included with each Application, You
+will include the following copyright notice: “The Salesforce Sans Font is used
+under license from salesforce.com, inc.  Copyright 2015 Salesforce.com, Inc.”
+You may not modify, adapt, translate, reverse engineer, decompile,
+disassemble, or create derivative works based on the Font.  You must include
+the Font in an Application in a manner that does not allow a user to access
+the Font outside of the Application.  You will not use the Font on a
+standalone basis and will only use the Font as part of the Salesforce
+Lightning Design System.  You must not take any action which will have the
+direct or indirect effect of causing the Font to become subject to the terms
+of an open source license or any similar terms.  You may refer to the Font as
+“Salesforce Sans”, but You may not use any other Salesforce trademark in
+connection with the Font except as may be expressly agreed to by Salesforce in
+writing or as set forth in other applicable Salesforce terms, conditions, and
+acceptable use policies (AUPs) and in any event You must comply at all times
+with the Salesforce Trademark and Copyright Usage Guidelines located at http:/
+/www2.sfdcstatic.com/assets/pdf/misc/salesforce_Trademark_Usage_Guidelines.pdf
+and any other supplemental guidelines that may apply to you.  You must not
+license, sublicense, sell, resell, rent, lease, transfer, assign, distribute,
+time share, or otherwise commercially exploit the Font nor make the Font
+available to any third party, other than as expressly permitted by this
+Agreement.  To the extent any Font documentation, style guides, or other
+applicable Salesforce terms, conditions, and acceptable use policies (AUPs)
+impose guidelines or restrictions for the use of the Font, You will abide by
+those guidelines and restrictions.
+
+3. Ownership
+Subject to the limited rights expressly granted hereunder, We
+reserve all rights, title, and interest in and to the Font, including all
+related intellectual property rights.  No rights are granted to You hereunder
+other than as expressly set forth herein.  We shall have a royalty-free,
+worldwide, irrevocable, perpetual license to use and incorporate into the Font
+any suggestions, enhancement requests, recommendations, or other feedback
+provided by You.
+
+4. Term and Termination
+This Agreement will take effect when you download or
+use the Font and will terminate upon the earlier of:  (a) Your failure to
+comply with any term of this Agreement or any other applicable Salesforce
+terms, conditions, and acceptable use policies (AUPs); (b) return,
+destruction, or deletion of all copies of the Font in your possession; or, (c)
+60 days after Salesforce provides You with written notice of termination.
+Salesforce’s rights and your obligations will survive the termination of this
+Agreement.  Upon termination of this Agreement by Salesforce, if requested by
+Salesforce, you will destroy or delete all copies of the Font in your
+possession and cease using the Font in all Applications.
+
+5. No Warranty
+THE FONT IS PROVIDED “AS-IS,” EXCLUSIVE OF ANY WARRANTY
+WHATSOEVER.  WE DISCLAIM ALL IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION
+ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+TITLE, AND NON-INFRINGEMENT.  The Font may contain bugs or errors.  Any use of
+the Font is at Your sole risk.  You acknowledge that We may discontinue making
+the Font available to You at any time in Our sole discretion.
+
+6. No Damages
+IN NO EVENT SHALL WE HAVE ANY LIABILITY HEREUNDER TO YOU FOR
+ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT,
+SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, OR DAMAGES BASED ON
+LOST PROFITS, DATA OR USE, HOWEVER CAUSED AND, WHETHER IN CONTRACT, TORT OR
+UNDER ANY OTHER THEORY OF LIABILITY, WHETHER OR NOT YOU HAVE BEEN ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES.
+
+7. General Provisions
+You may not assign any of Your rights or obligations
+hereunder, whether by operation of law or otherwise, without Our prior written
+consent.  This Agreement shall be governed exclusively by the internal laws of
+the State of California, without regard to its conflicts of laws rules.  Each
+party hereby consents to the exclusive jurisdiction of the state and federal
+courts located in San Francisco County, California to adjudicate any dispute
+arising out of or relating to this Agreement.  This Agreement constitutes the
+entire agreement between the parties, and supersedes all prior and
+contemporaneous agreements, proposals or representations, written or oral,
+concerning its subject matter.  No modification, amendment, or waiver of any
+provision of this Agreement shall be effective unless in writing and either
+signed or accepted electronically by the party against whom the modification,
+amendment or waiver is to be asserted.

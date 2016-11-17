@@ -45,6 +45,7 @@ The following classes are now available:
 - Added `slds-border--top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
 - Added `slds-box--xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
 - Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown--inverse`
+- Added support for narrow region on feeds.
 
 **CHANGES**
 

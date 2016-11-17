@@ -236,3 +236,5 @@ props:
     value: '#4BC076'
   ADDRESS:
     value: '#4BC076'
+  CAROUSEL:
+    value: '#6bbd6e'

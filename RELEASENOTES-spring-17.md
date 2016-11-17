@@ -45,14 +45,15 @@ The following classes are now available:
 - Added `slds-border--top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
 - Added `slds-box--xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
 - Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown--inverse`
+- Added support for narrow region on feeds.
 
 **CHANGES**
 
 The following changes have been made in this release:
 
 - Global actions icon on global header updated to have a background color
-- Change global header icon's color and size
-- Change background color of docked panels
+- Changed global header icon's color and size
+- Changed background color of docked panels
   - Docked Utility Panel - [Docked Utility Panel](/components/docked-utility-bar/#flavor-utility-panel)
   - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
 - Cards are now responsive - [Cards](/components/cards/)
@@ -147,6 +148,7 @@ The following tokens have been add/removed/deprecated in this release:
 - Added token: `PRODUCT_ITEM_TRANSACTION`
 - Added token: `LOCATION`
 - Added token: `ADDRESS`
+- Added token: `CAROUSEL`
 - Added alias: `SANS_SERIF`
 - Added alias: `MALIBU`
 - Added alias: `SANS_SERIF`

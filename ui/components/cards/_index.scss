@@ -22,8 +22,8 @@
   &__header,
   &__footer,
   &__body--inner {
-    padding-left: $card-spacing-small;
-    padding-right: $card-spacing-small;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
 
     @include mq-large-min {
       padding-left: $card-spacing-large;
@@ -32,8 +32,8 @@
   }
 
   &__header {
-    padding-top: $card-spacing-small;
-    margin-bottom: $card-spacing-small;
+    padding-top: $spacing-small;
+    margin-bottom: $spacing-small;
   }
 
   &__header-link {
@@ -41,7 +41,7 @@
   }
 
   &__body {
-    margin-bottom: $card-spacing-small;
+    margin-bottom: $spacing-small;
   }
 
   &__body:empty,
@@ -50,16 +50,16 @@
   }
 
   &__footer {
-    margin-top: $card-spacing-small;
-    padding-bottom: $card-spacing-small;
+    margin-top: $spacing-small;
+    padding-bottom: $spacing-small;
     text-align: right;
   }
 
   &--narrow {
 
     .slds-card__header {
-      padding-top: $card-spacing-small;
-      margin-bottom: $card-spacing-small;
+      padding-top: $spacing-small;
+      margin-bottom: $spacing-small;
 
       @include mq-large-min {
         padding-top: $card-spacing-large;
@@ -68,7 +68,7 @@
     }
 
     .slds-card__footer {
-      padding-bottom: $card-spacing-small;
+      padding-bottom: $spacing-small;
 
       @include mq-large-min {
         padding-bottom: $card-spacing-medium;

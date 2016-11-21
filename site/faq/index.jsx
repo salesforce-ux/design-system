@@ -159,7 +159,7 @@ class FAQ extends React.Component {
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">
           {`
-<apex:stylesheet value="{!URLFOR($Resource.${compactVersion}, 'assets/styles/${g.moduleName}-vf.css')}" />
+<apex:stylesheet value="{!URLFOR($Resource.${compactVersion}, 'assets/styles/${g.moduleName}-vf.min.css')}" />
           `}</CodeBlock>
         </div>
         <p className="slds-container--large">
@@ -199,7 +199,7 @@ class FAQ extends React.Component {
         </p>
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
-<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.css"/>
+<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.min.css"/>
           `}</CodeBlock>
         </div>
         <p><a href="https://tools.lightningdesignsystem.com/css-customizer">The tool to create your custom CSS is available here.</a>

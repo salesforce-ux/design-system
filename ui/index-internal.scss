@@ -11,29 +11,20 @@
 
 // Lightning Design System - Lightning Out
 
-// Non-Scoped
-@import
+@import 'init';
 
-  // Dependencies
-  'design-tokens',
-  'config',
-  'vendor/deprecate',
-  'dependencies/index',
-  'core/font';
-
-// Scoped
 #{$reset-wrapping-class} {
-  @import
 
-    // Resets
-    'vendor/normalize-reset',
-    'core/core-vf',
+  // Resets
+  @import 'vendor/normalize-reset';
+  @include core($scoped: true, $globals: true);
+  @import 'core/vf-reset';
 
-    // Framework
-    'touch/index',
-    'components/index',
-    'utilities/index',
+  // Framework
+  @import 'touch/index';
+  @import 'components/index';
+  @import 'utilities/index';
 
-    // Print
-    'vendor/html5boilerplate-print';
+  // Print
+  @import 'vendor/html5boilerplate-print';
 }

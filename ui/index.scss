@@ -11,23 +11,16 @@
 
 // Lightning Design System
 
-@import
+@import 'init';
 
-  // Dependencies
-  'design-tokens',
-  'config',
-  'vendor/deprecate',
-  'dependencies/index',
-  'core/font',
+// Resets
+@import 'vendor/normalize';
+@include core($scoped: false, $globals: true);
 
-  // Resets
-  'vendor/normalize',
-  'core/core',
+// Framework
+@import 'touch/index';
+@import 'components/index';
+@import 'utilities/index';
 
-  // Framework
-  'touch/index',
-  'components/index',
-  'utilities/index',
-
-  // Print
-  'vendor/html5boilerplate-print';
+// Print
+@import 'vendor/html5boilerplate-print';

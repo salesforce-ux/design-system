@@ -72,13 +72,15 @@ export let DockedComposerPanel = props =>
 
 export let DockedComposerPanelBody = props =>
   <div className={className('slds-docked-composer__body', props.className)}>
-    { !props.children ? <div className="slds-align--absolute-center">Docked Composer Panel Body</div> : props.children }
+    { !props.children ?
+      <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
+    : props.children }
   </div>;
 
 export let DockedComposerPanelFooter = props =>
   <footer className={className('slds-docked-composer__footer slds-shrink-none', props.className)}>
-    { !props.children
-    ? <div className="slds-col--bump-left slds-text-align--right">
+    { !props.children ?
+      <div className="slds-col--bump-left slds-text-align--right">
         <button className="slds-button slds-button--brand">Action</button>
       </div>
     : props.children }

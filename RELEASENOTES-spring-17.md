@@ -62,7 +62,6 @@ The following changes have been made in this release:
 - Stateful icon buttons are now compatible with `slds-button--icon-container`
 - Spacing adjustments made to lookup items
 - Spacing adjustments made to feeds
-- Fixed flex issue on docked composer that made popout example stretch the height of the viewport
 
 **FIXED**
 
@@ -73,6 +72,7 @@ The following issues have now been resolved:
 - Icon when inside placed inside of an input field now uses the correct token
 - Modal content properly wraps and hyphenates longform text
 - Accessibility improvement - Picklists changed to a read-only combobox with a listbox.
+- Fixed flex issue on docked composer that made popout example stretch the height of the viewport
 
 **DEPRECATED**
 

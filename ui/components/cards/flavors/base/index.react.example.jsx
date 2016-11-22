@@ -47,11 +47,13 @@ export let CardHeader = props =>
     <header className={className('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
       { props.symbol ?
         <div className="slds-media__figure">
-          <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--small'} sprite="standard" symbol={ props.symbol } />
+          <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={ props.symbol } />
+            </span>
         </div> : null }
-      <div className="slds-media__body slds-truncate">
+      <div className="slds-media__body">
         <h2>
-          <a href="javascript:void(0);" className="slds-card__header-link">{ props.children }</a>
+          <a href="javascript:void(0);" className="slds-card__header-link slds-truncate">{ props.children }</a>
         </h2>
       </div>
     </header>

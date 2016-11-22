@@ -17,13 +17,13 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 //////////////////////////////////////////////
 
 let Default = props =>
-<span className="slds-icon_container slds-icon-standard-case">
+<span className="slds-icon_container slds-icon-standard-case" title="description of icon when needed">
   <SvgIcon className={`slds-icon${props.size ? ' slds-icon--' + props.size : ''}`} sprite="standard" symbol="case" />
   <span className="slds-assistive-text">Case icon</span>
 </span>;
 
 let XSmall = props =>
-<span className="slds-icon_container">
+<span className="slds-icon_container" title="description of icon when needed">
   <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
   <span className="slds-assistive-text">Warning Icon</span>
 </span>;

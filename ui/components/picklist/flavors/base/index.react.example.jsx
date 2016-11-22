@@ -78,7 +78,7 @@ let ComboboxSearchInput = props =>
         readOnly={!props.autocomplete}
         aria-autocomplete={props.autocomplete ? 'list' : null}
       />
-      { 
+      {
         !props.autocomplete ?
         <ButtonIcon
           className="slds-input__icon slds-text-color--default"

@@ -72,6 +72,7 @@ The following issues have now been resolved:
 - Icon when inside placed inside of an input field now uses the correct token
 - Modal content properly wraps and hyphenates longform text
 - Accessibility improvement - Picklists changed to a read-only combobox with a listbox.
+- Fixed flex issue on docked composer that made popout example stretch the height of the viewport
 
 **DEPRECATED**
 

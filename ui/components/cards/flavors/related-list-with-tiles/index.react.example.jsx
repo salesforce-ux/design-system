@@ -20,8 +20,8 @@ import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example'
 ///////////////////////////////////////////
 
 const icon = (
-  <div className="slds-icon_container">
-    <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small" sprite="standard" symbol="contact" />
+  <div className="slds-icon_container slds-icon-standard-contact" title="if needed">
+    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="contact" />
     <span className="slds-assistive-text">Contact</span>
   </div>
 );

@@ -72,7 +72,6 @@ gulp.task('styles:site', ['generate:tokens:sass'], () =>
     .pipe(sass.sync({
       precision: 10,
       includePaths: [
-        __PATHS__.root,
         __PATHS__.ui,
         __PATHS__.node_modules
       ]

@@ -29,7 +29,7 @@ export default (
       </ModalHeader>
 
       <ModalContent className="slds-p-around--medium">
-        <Lorem count={1} paragraphLowerBound={2} />
+        <Lorem count={1} />
       </ModalContent>
 
       <ModalFooter className="slds-theme--default">

@@ -63,7 +63,7 @@ let Default = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
       <ModalFooter>
         <button className="slds-button slds-button--neutral">Cancel</button>
         <button className="slds-button slds-button--brand">Save</button>
@@ -82,7 +82,7 @@ let Taglines = props =>
           to you. It is allowed to <a href="javascript:void(0);">contain links or be a link</a>.
         </p>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
       <ModalFooter>
         <button className="slds-button slds-button--neutral">Cancel</button>
         <button className="slds-button slds-button--brand">Save</button>
@@ -96,7 +96,7 @@ let Large = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
       <ModalFooter>
         <button className="slds-button slds-button--neutral">Cancel</button>
         <button className="slds-button slds-button--brand">Save</button>
@@ -110,7 +110,7 @@ let Directional = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
       <ModalFooter className="slds-modal__footer--directional">
         <button className="slds-button slds-button--neutral">Skip This Step</button>
         <button className="slds-button slds-button--brand">Save &#38; Next</button>
@@ -123,7 +123,7 @@ let Headless = props =>
     <Modal>
       <ModalHeader className="slds-modal__header slds-modal__header--empty">
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
       <ModalFooter>
         <button className="slds-button slds-button--neutral">Cancel</button>
         <button className="slds-button slds-button--brand">Save</button>
@@ -137,7 +137,7 @@ let Footless = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium"><Lorem count={2} /></ModalContent>
     </Modal>
   </Demo>;
 

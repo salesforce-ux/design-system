@@ -42,7 +42,7 @@ export default (
       </ModalHeader>
 
       <ModalContent className="slds-p-around--medium">
-        <Lorem count={2} paragraphLowerBound={5} />
+        <Lorem count={2} />
       </ModalContent>
 
       <ModalFooter>

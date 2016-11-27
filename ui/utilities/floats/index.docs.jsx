@@ -21,8 +21,8 @@ export const intro = (
 
 export default (
 <ComponentDocs>
-  <p>To float an element on the left, add the <CodeClass className="float--left" /> class to the element. To float it on the right, add the <CodeClass className="float--right" /> class.</p>
+  <p>To float an element on the left, add the <CodeClass className="slds-float--left" /> class to the element. To float it on the right, add the <CodeClass className="slds-float--right" /> class.</p>
   <p>Note: The floated element must be first in the document flow, even if it renders on the right.</p>
-  <p>If you want the parent of the floated element to contain the floats, add the <CodeClass className="clearfix" /> class to the parent.</p>
+  <p>If you want the parent of the floated element to contain the floats, add the <CodeClass className="slds-clearfix" /> class to the parent.</p>
 </ComponentDocs>
 );

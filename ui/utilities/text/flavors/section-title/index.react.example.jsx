@@ -23,7 +23,11 @@ let Section = props =>
   </div>;
 
 let SectionContent = props =>
-  <div className={className('slds-section__content', props.className)}>
+  <div
+    aria-hidden={!props.isOpen}
+    className={className('slds-section__content', props.className)}
+    id="content"
+  >
     {props.children}
   </div>;
 
@@ -33,7 +37,11 @@ let SectionTitle = props =>
   </h3>;
 
 let SectionTitleAction = props =>
-  <button className="slds-button slds-section__title-action">
+  <button
+    aria-controls="content"
+    aria-expanded={props.isOpen}
+    className="slds-button slds-section__title-action"
+  >
     <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
     {props.children}
   </button>;
@@ -54,9 +62,11 @@ export let states = [
     element:
       <Section>
         <SectionTitle>
-          <SectionTitleAction>Section Title</SectionTitleAction>
+          <SectionTitleAction isOpen={false}>
+            Section Title
+          </SectionTitleAction>
         </SectionTitle>
-        <SectionContent />
+        <SectionContent isOpen={false} />
       </Section>
   },
   {
@@ -65,9 +75,11 @@ export let states = [
     element:
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction>Section Title</SectionTitleAction>
+          <SectionTitleAction isOpen={true}>
+            Section Title
+          </SectionTitleAction>
         </SectionTitle>
-        <SectionContent>
+        <SectionContent isOpen={true}>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
         </SectionContent>

@@ -28,7 +28,7 @@ export let SpinnerContainer = props =>
 
 
 export let Spinner = props =>
-  <div role="alert" className={className('slds-spinner', props.className)}>
+  <div role="status" className={className('slds-spinner', props.className)}>
     <span className="slds-assistive-text">Loading</span>
     <div className="slds-spinner__dot-a"></div>
     <div className="slds-spinner__dot-b"></div>

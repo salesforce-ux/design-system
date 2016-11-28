@@ -40,12 +40,17 @@ let NotificationItem = props =>
   <li className={className('slds-global-header__notification slds-p-around--xx-small', props.className)}>
     <div className="slds-media slds-has-flexi-truncate slds-p-around--x-small">
       <div className="slds-media__figure">
-        <img src="/assets/images/avatar3.jpg" className="slds-avatar--small slds-avatar--circle" alt="Placeholder" />
+        <img
+          alt={props.username}
+          className="slds-avatar--small slds-avatar--circle"
+          src="/assets/images/avatar3.jpg"
+          title={`${props.username} avatar`}
+        />
       </div>
       <div className="slds-media__body">
         <div className="slds-grid slds-grid--align-spread">
           <a href="javascript:void(0);" className="slds-text-link--reset slds-has-flexi-truncate">
-            <h3 className="slds-truncate"><strong>{props.messageTitle}</strong></h3>
+            <h3 className="slds-truncate"><strong>{`${props.username} ${props.messageTitle}`}</strong></h3>
             <p className="slds-truncate">{props.message}</p>
             <p className="slds-m-top--x-small slds-text-color--weak">{props.messageTime}</p>
           </a>
@@ -76,24 +81,27 @@ export default (
       <PopoverMenu>
         <NotificationItem
           className="slds-global-header__notification--unread"
-          messageTitle="Kelly Chan mentioned you in a comment:"
+          messageTitle="mentioned you in a comment:"
           message="I need you to review this for me @Paulina"
           messageTime="10m ago"
+          username="Kelly Chan"
         >
           <TriggerButton />
           <UnreadIcon />
         </NotificationItem>
         <NotificationItem
-          messageTitle="Kelly Chan mentioned you in a comment:"
+          messageTitle="mentioned you in a comment:"
           message="I need you to review this for me @Paulina"
           messageTime="10m ago"
+          username="Kelly Chan"
         >
           <TriggerButton />
         </NotificationItem>
         <NotificationItem
-          messageTitle="Kelly Chan mentioned you in a comment:"
+          messageTitle="mentioned you in a comment:"
           message="I need you to review this for me @Paulina"
           messageTime="10m ago"
+          username="Kelly Chan"
         >
           <TriggerButton />
         </NotificationItem>

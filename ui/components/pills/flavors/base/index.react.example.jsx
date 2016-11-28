@@ -58,7 +58,11 @@ export let states = [
     element:
       <Pill>
         <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-m-right--xx-small">
-          <img src="/assets/images/avatar2.jpg" alt="" />
+          <img
+            alt="Person name"
+            src="/assets/images/avatar2.jpg"
+            title="User avatar"
+          />
         </span>
       </Pill>
   },

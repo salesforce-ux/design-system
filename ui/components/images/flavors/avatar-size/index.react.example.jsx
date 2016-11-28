@@ -23,7 +23,11 @@ export let states = [
     label: 'X Small',
     element:
       <Avatar className="slds-avatar--x-small">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   },
   {
@@ -31,7 +35,11 @@ export let states = [
     label: 'Small',
     element:
       <Avatar className="slds-avatar--small">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   },
   {
@@ -39,7 +47,11 @@ export let states = [
     label: 'Medium',
     element:
       <Avatar className="slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   },
   {
@@ -47,7 +59,11 @@ export let states = [
     label: 'Large',
     element:
       <Avatar className="slds-avatar--large">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   }
 ];

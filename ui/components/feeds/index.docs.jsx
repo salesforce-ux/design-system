@@ -22,5 +22,9 @@ export const intro = (
 
 export default (
   <ComponentDocs>
+    <h4 className="site-text-heading--label">Accessibility</h4>
+    <p>
+      Most feeds have a media object containing the user's name and avatar image. If both the image and the name link to the same location, add <code>tab-index="-1"</code> to the <code>&lt;a&gt;</code> element so that assistive technology does not read out duplicate links.
+    </p>
   </ComponentDocs>
 );

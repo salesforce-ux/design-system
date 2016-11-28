@@ -30,7 +30,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -57,7 +61,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -86,7 +94,11 @@ export let states = [
             <div className="slds-media">
               <div className="slds-media__figure">
                 <span className="slds-avatar slds-avatar--medium">
-                  <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+                  <img
+                    alt=""
+                    src="/assets/images/avatar2.jpg"
+                    title="Lei Chan avatar"
+                  />
                 </span>
               </div>
               <div className="slds-media__body">
@@ -120,7 +132,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -144,7 +160,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -172,7 +192,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -200,7 +224,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
@@ -230,7 +258,11 @@ export let states = [
             <div className="slds-media">
               <div className="slds-media__figure">
                 <span className="slds-avatar slds-avatar--medium">
-                  <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+                  <img
+                    alt=""
+                    src="/assets/images/avatar2.jpg"
+                    title="Lei Chan avatar"
+                  />
                 </span>
               </div>
               <div className="slds-media__body">
@@ -263,7 +295,11 @@ export let states = [
         <DockedComposerPanelBody className="slds-align--absolute-center slds-size--1-of-1">
           <div className="slds-text-align--center slds-align-middle">
             <span className="slds-avatar slds-avatar--large">
-              <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              <img
+                alt=""
+                src="/assets/images/avatar2.jpg"
+                title="Lei Chan avatar"
+              />
             </span>
             <h3 className="slds-text-heading--large">Lei Chan</h3>
             <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">

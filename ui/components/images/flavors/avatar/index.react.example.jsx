@@ -33,7 +33,11 @@ export let states = [
     label: 'Square',
     element:
       <Avatar className="slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="company name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   },
   {
@@ -41,7 +45,11 @@ export let states = [
     label: 'Circle',
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="User avatar"
+        />
       </Avatar>
   },
   {

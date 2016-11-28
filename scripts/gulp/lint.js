@@ -20,6 +20,8 @@ import browserSync from 'browser-sync';
 import htmlhint from 'gulp-htmlhint';
 import tokenlint from './plugins/lint-tokens';
 import yamlValidate from 'gulp-yaml-validate';
+import vnu from './vnu-lint';
+import minimist from 'minimist';
 
 gulp.task('lint:sass', () =>
   gulp.src([
@@ -105,7 +107,6 @@ gulp.task('lint:html', ['generate:examples:wrap'], () => {
     .pipe(htmlhint.reporter());
 });
 
-
 gulp.task('lint:tokens:yaml', () =>
   gulp.src([
     './ui/components/**/tokens/*.yml',
@@ -135,3 +136,14 @@ gulp.task('lint:tokens:aliases', () =>
 gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:components', 'lint:tokens:aliases']);
 
 gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tokens']);
+
+const parseComponentArgument = argv =>
+  minimist(argv.slice(2)).component || '*';
+
+gulp.task('lint:vnu', ['generate:examples:wrap'], () =>
+  gulp.src(`.html/${parseComponentArgument(process.argv)}`)
+  .pipe(vnu.lint())
+  .pipe(vnu.report())
+  .pipe(gulp.dest('.reports/')));
+
+gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html']);

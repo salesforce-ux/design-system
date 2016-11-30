@@ -35,8 +35,14 @@ let CheckboxGroup = props =>
   </div>;
 
 let Checkbox = props =>
-  <span className={className('slds-button slds-checkbox--button', props.className)} htmlFor={props.id}>
-    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled}  aria-describedby={props.errorId} />
+  <span className={className('slds-button slds-checkbox--button', props.className)}>
+    <input
+      aria-describedby={props.errorId}
+      disabled={props.disabled}
+      id={props.id}
+      name="checkbox"
+      type="checkbox"
+    />
     <label className="slds-checkbox--button__label" htmlFor={props.id}>
       <span className="slds-checkbox--faux">
         {props.children}

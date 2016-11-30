@@ -51,16 +51,37 @@ export let MenuList = props =>
     {props.children}
   </ul>;
 
-export let MenuItem = props =>
-  <li {...props} className={className('slds-dropdown__item', props.className)} role="presentation">
-    <a href="javascript:void(0);" role={ props.isSelectable ? 'menuitemcheckbox' : 'menuitem' } aria-checked={props.isSelected} tabIndex={ props.tabIndex || '-1' }>
-      <span className="slds-truncate">
-        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }
-        {props.children}
-      </span>
-      { props.iconRight ? props.iconRight : null }
-    </a>
-  </li>;
+export let MenuItem = props => {
+  const {
+    classNameProp,
+    isSelectable,
+    isSelected,
+    children,
+    iconRight,
+    tabIndex,
+    ...rest
+  } = props;
+
+  return (
+    <li {...rest} className={className('slds-dropdown__item', classNameProp)} role="presentation">
+      <a
+        href="javascript:void(0);"
+        role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
+        aria-checked={ isSelected }
+        tabIndex={ tabIndex || '-1' }>
+        <span className="slds-truncate">
+          { isSelectable ? <SvgIcon
+                            className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
+                            sprite="utility"
+                            symbol="check" /> : null }
+          { children }
+        </span>
+        { iconRight ? iconRight : null }
+      </a>
+    </li>
+  );
+};
+
 
 //////////////////////////////////////////////
 // State Constructor(s)

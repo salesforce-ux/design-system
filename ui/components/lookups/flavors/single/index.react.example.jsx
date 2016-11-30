@@ -64,7 +64,7 @@ let LookupSearchInput = props =>
         defaultValue={ props.typeahead ? 'salesforce' : null }
         aria-owns={ props.id }
         role="combobox"
-        aria-activedescendent=""
+        aria-activedescendant=""
         aria-expanded={ props.showLookupDropdown ? 'true' : 'false' }
         aria-autocomplete="list" />
     </div>

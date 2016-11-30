@@ -36,7 +36,7 @@ export let states = [
               placeholder="Search Salesforce"
               aria-owns="global-search-list-01"
               role="combobox"
-              aria-activedescendent=""
+              aria-activedescendant=""
               aria-expanded="true"
               aria-autocomplete="list" />
           </div>
@@ -111,7 +111,7 @@ export let states = [
             placeholder="Search Salesforce"
             aria-owns="global-search-list-01"
             role="combobox"
-            aria-activedescendent="option-00"
+            aria-activedescendant="option-00"
             aria-expanded="true"
             aria-autocomplete="list"
             defaultValue="ibm" />

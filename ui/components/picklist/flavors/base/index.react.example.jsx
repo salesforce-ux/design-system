@@ -73,7 +73,7 @@ let ComboboxSearchInput = props =>
         placeholder={ props.placeholder || 'Select an Option' }
         aria-owns="option-list-01"
         role="combobox"
-        aria-activedescendent=""
+        aria-activedescendant=""
         aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
         readOnly={!props.autocomplete}
         aria-autocomplete={props.autocomplete ? 'list' : null}

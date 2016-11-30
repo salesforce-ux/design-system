@@ -125,7 +125,7 @@ export let states = [
               placeholder="Search Accounts"
               aria-owns="option-list-01"
               role="combobox"
-              aria-activedescendent=""
+              aria-activedescendant=""
               aria-expanded="true"
               aria-autocomplete="list" />
           </FormElementControl>

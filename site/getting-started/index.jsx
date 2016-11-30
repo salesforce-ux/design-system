@@ -118,6 +118,7 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/visualforce">Visualforce</a>.
           </p>
+
           <h3 className="site-text-heading--label">
             Heroku
           </h3>

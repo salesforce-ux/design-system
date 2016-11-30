@@ -20,7 +20,7 @@ export default (
       <h2 className="site-text-heading--large">Tabs</h2>
       <p><strong>Use tabs to separate information into logical sections based on functionality or use case.</strong></p>
       <p>
-      <img className="image" src="/assets/images/navigation/img-tabs.svg" alt="Wireframe image of tabs design" />
+        <img className="image" src="/assets/images/navigation/img-tabs.svg" alt="Wireframe image of tabs design" />
       </p>
       <p>Users can easily switch between tabs to perform tasks without leaving the page. Assign a default tab based on the most important use case for the page. The sections that the tabs define function independently of each other, so do not use tabs to define a linear, ordered process.</p>
       <p>Tab names must be consistent—use the same part of speech for each tab, such as a noun or verb.</p>

@@ -22,5 +22,7 @@ export default (
   <ComponentDocs>
     <p>To use the spinner in a component, the parent of the spinner should be set to <code>position:relative</code>. You can use the utility class <code>.slds-is-relative</code> or add the declaration to your custom component CSS. If you are using the spinner in an <code>iframe</code> and dynamically loading DOM nodes after the page has loaded, it is recommended that you set the <code>.slds-spinner_container</code> to <code>position:fixed</code> so that it remains centered in the viewport.</p>
     <p>The background overlay for the spinner is an optional element.</p>
+    <h4 className="site-text-heading--label">Accessibility</h4>
+    <p>A spinner should have the Aria <code>role="status"</code> and contain assistive text that explains what is currently happening.</p>
   </ComponentDocs>
 );

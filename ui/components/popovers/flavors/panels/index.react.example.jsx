@@ -100,14 +100,10 @@ export default (
             <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
           <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$500,000">$500,000
-            </dd>
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Dec 15, 2015">Dec 15, 2015
-            </dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$500,000">$500,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Dec 15, 2015">Dec 15, 2015</dd>
           </dl>
         </dd>
         {/* Opportunity Two */}
@@ -116,14 +112,10 @@ export default (
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000
-            </dd>
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016
-            </dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016</dd>
           </dl>
         </dd>
         <ViewAll />
@@ -141,14 +133,10 @@ export default (
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000
-            </dd>
-            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date
-            </dt>
-            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016
-            </dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016</dd>
           </dl>
         </dd>
         <ViewAll />

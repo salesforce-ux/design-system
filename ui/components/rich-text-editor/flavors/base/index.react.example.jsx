@@ -302,8 +302,8 @@ export let RteTextarea = props => {
 
       <div tabIndex={ !props.disabled ? '0' : '-1' } className="slds-textarea slds-p-around--medium slds-text-longform slds-grid slds-grow">
         { props.text ?
-          <div contentEditable={ !props.disabled ? 'true' : null } className="slds-grow">{props.text}</div> :
-          <div contentEditable={ !props.disabled ? 'true' : null } className="slds-text-color--weak slds-grow">
+          <div contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
+          <div contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
             {props.placeholder}
           </div>
         }

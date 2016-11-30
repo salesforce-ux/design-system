@@ -1,30 +1,15 @@
 machine:
   environment:
-    CAPABILITY: force-framework
     DEPLOY_TOOLKIT: $HOME/deploy_toolkit
-    FORCE_FRAMEWORK: $HOME/force_framework
-    ANT_OPTS: -Xmx512m
+    FAILURE_FILE: /tmp/build_failures.txt
 
 dependencies:
   pre:
     - git clone -b master git@github.com:loanlifecycle/deploy_toolkit.git $DEPLOY_TOOLKIT
-    - ln -s $DEPLOY_TOOLKIT/scripts/build_Static_Resources.sh $HOME/bin/buildstatic
-    - |
-      cd $FORCE_FRAMEWORK
-      gem install bundler --pre
-    - git clone -b develop git@github.com:loanlifecycle/force-framework.git $FORCE_FRAMEWORK
+    # pycurl and paho-mqtt are used by build_notifications.py
+    - pip install pycurl paho-mqtt mock
   override:
-    - |
-      cd $FORCE_FRAMEWORK
-      $DEPLOY_TOOLKIT/scripts/get_CI_org.sh
-      cd $FORCE_FRAMEWORK/dependencies
-      git submodule update --init design-system
-      cd $FORCE_FRAMEWORK/dependencies/design-system
-      git checkout $CIRCLE_BRANCH
-      cd $FORCE_FRAMEWORK
-      buildstatic
-      npm install
-      npm run build all
+    - npm install
 
 # Just stubbing this since there is no need for anything to run here.
 database:
@@ -35,11 +20,6 @@ database:
 
 test:
   override:
-    - |
-      cd $FORCE_FRAMEWORK
-      npm test
-      ant -lib $DEPLOY_TOOLKIT/lib/salesforce/ant-salesforce.jar deployNcinoCI
+    - npm run dist || ( touch $FAILURE_FILE && exit 1 )
   post:
-    - |
-      cd $FORCE_FRAMEWORK
-      $DEPLOY_TOOLKIT/scripts/release_CI_org.sh
+    - $DEPLOY_TOOLKIT/scripts/build_notifications.py

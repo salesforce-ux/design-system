@@ -36,7 +36,14 @@ let FormElementControl = props =>
 
 export let Select = props =>
   <div className="slds-select_container">
-    <select id="select-01" className={classNames('slds-select', props.className)} disabled={props.disabled} multiple={props.multiple} aria-describedby={ props['aria-describedby'] }>
+    <select
+      aria-describedby={ props['aria-describedby'] }
+      className={classNames('slds-select', props.className)}
+      disabled={props.disabled}
+      id="select-01"
+      required={props.required}
+      multiple={props.multiple}
+    >
       {props.children}
     </select>
   </div>;
@@ -64,7 +71,7 @@ let Required = props =>
     <FormElement>
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
-        <Select>
+        <Select required>
           <option>Option One</option>
           <option>Option Two</option>
           <option>Option Three</option>
@@ -78,7 +85,7 @@ let ErrorState = props =>
     <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Select Label</FormElementLabel>
       <FormElementControl>
-        <Select aria-describedby="error-02">
+        <Select aria-describedby="error-02" required>
           <option>Option One</option>
           <option>Option Two</option>
           <option>Option Three</option>

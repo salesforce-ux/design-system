@@ -83,7 +83,7 @@ let ErrorState = props =>
         <Radio errorId="error_01" checked>Radio Label One</Radio>
         <Radio errorId="error_01">Radio Label Two</Radio>
       </FormElementControl>
-      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

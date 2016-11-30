@@ -95,7 +95,7 @@ let ErrorState = props =>
       <FormElementControl>
         <Checkbox label="Checkbox Label" errorId="error_01"><abbr className="slds-required" title="required">*</abbr></Checkbox>
       </FormElementControl>
-      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -138,7 +138,7 @@ let GroupError = props =>
         <Checkbox errorId="error_01" label="Checkbox Label" checked />
         <Checkbox errorId="error_01" label="Checkbox Label" />
       </FormElementControl>
-      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

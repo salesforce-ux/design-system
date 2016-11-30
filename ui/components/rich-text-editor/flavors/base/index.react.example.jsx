@@ -281,7 +281,7 @@ export let RteOverflow = props =>
       </li>
     </ButtonGroupList>
 
-    <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36', right: '0'}}>
+    <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36px', right: '0'}}>
       <RteInsertContent overflow />
 
       <RteClearFormatting overflow />

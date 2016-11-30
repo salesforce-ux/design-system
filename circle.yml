@@ -1,7 +1,6 @@
 machine:
   environment:
     DEPLOY_TOOLKIT: $HOME/deploy_toolkit
-    ANT_OPTS: -Xmx512m
     FAILURE_FILE: /tmp/build_failures.txt
 
 dependencies:

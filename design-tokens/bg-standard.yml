@@ -239,12 +239,12 @@ props:
   CAROUSEL:
     value: '#6bbd6e'
   OPERATING_HOURS:
-    value: '#45C173'
+    value: '#6B9EE2'
   SERVICE_APPOINTMENT:
-    value: '#FAB24C'
-  SERVICE_RESOURCE:
-    value: '#5876A3'
-  SERVICE_TERRITORY:
-    value: '#B87FD5'
-  WORK_TYPE:
     value: '#7E8BE4'
+  SERVICE_RESOURCE:
+    value: '#7E8BE4'
+  SERVICE_TERRITORY:
+    value: '#7E8BE4'
+  WORK_TYPE:
+    value: '#54698D'

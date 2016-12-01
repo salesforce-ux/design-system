@@ -31,7 +31,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '80px' }}>
         <div className="slds-docked-form-footer">
-          <ButtonIcon className="slds-button--icon slds-button--icon-error" iconClassName="slds-button__icon--large" symbol="warning" assitiveText="Review the Following Errors" title="Review the Following Errors" />
+          <ButtonIcon
+            assistiveText="Review the Following Errors"
+            className="slds-button--icon slds-button--icon-error"
+            iconClassName="slds-button__icon--large"
+            symbol="warning"
+            title="Review the Following Errors"
+          />
           <button type="button" className="slds-button slds-button--neutral">Cancel</button>
           <button type="button" className="slds-button slds-button--brand">Save</button>
         </div>
@@ -43,7 +49,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '180px' }}>
         <div className="slds-docked-form-footer">
-          <ButtonIcon className="slds-button--icon slds-button--icon-error" iconClassName="slds-button__icon--large" symbol="warning" assitiveText="Review the Following Errors" title="Review the Following Errors" />
+          <ButtonIcon
+            assistiveText="Review the Following Errors"
+            className="slds-button--icon slds-button--icon-error"
+            iconClassName="slds-button__icon--large"
+            symbol="warning"
+            title="Review the Following Errors"
+          />
           <button type="button" className="slds-button slds-button--neutral">Cancel</button>
           <button type="button" className="slds-button slds-button--brand">Save</button>
           <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', left: '50%', marginLeft: '58px', transform: 'translateX(-50%)' }}>

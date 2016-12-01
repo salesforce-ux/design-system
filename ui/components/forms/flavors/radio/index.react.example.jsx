@@ -38,7 +38,7 @@ export let Radio = props => {
       <input type="radio" id={ uniqueId } name="options" disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
       <label className="slds-radio__label" htmlFor={ uniqueId }>
         <span className="slds-radio--faux"></span>
-        <span className="slds-form-element__label">{props.children}</span>
+        <span className="slds-form-element__label">{props.label}</span>
       </label>
     </span>
   );

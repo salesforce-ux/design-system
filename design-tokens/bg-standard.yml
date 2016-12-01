@@ -238,13 +238,35 @@ props:
     value: '#4BC076'
   CAROUSEL:
     value: '#6bbd6e'
-  OPERATING_HOURS:
+  ASSIGNED_RESOURCE:
     value: '#45C173'
-  SERVICE_APPOINTMENT:
-    value: '#FAB24C'
-  SERVICE_RESOURCE:
-    value: '#5876A3'
-  SERVICE_TERRITORY:
-    value: '#B87FD5'
-  WORK_TYPE:
+  OPERATING_HOURS:
+    value: '#6B9EE2'
+  PRODUCT_REQUIRED:
+    value: '#EF6E64'
+  RESOURCE_ABSENCE:
+    value: '#45C173'
+  RESOURCE_CAPACITY:
+    value: '#45C173'
+  RESOURCE_PREFERENCE:
+    value: '#45C173'
+  RESOURCE_SKILL:
+    value: '#45C173'
+  SERVICE_TERRITORY_MEMBER:
     value: '#7E8BE4'
+  SERVICE_APPOINTMENT:
+    value: '#7E8BE4'
+  SERVICE_REPORT:
+    value: '#7E8BE4'
+  SERVICE_RESOURCE:
+    value: '#7E8BE4'
+  SERVICE_TERRITORY:
+    value: '#7E8BE4'
+  SKILL:
+    value: '#FA975C'
+  SKILL_REQUIREMENT:
+    value: '#FA975C'
+  TIMESLOT:
+    value: '#FAB24C'
+  WORK_TYPE:
+    value: '#54698D'

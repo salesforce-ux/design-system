@@ -13,9 +13,9 @@ import React from 'react';
 
 const Lorem = props =>
   <p>
-    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-    Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
-    quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt
+    aute id consequat veniam incididunt duis in sint irure nisi.
+    Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
   </p>;
 
 export const preview = (

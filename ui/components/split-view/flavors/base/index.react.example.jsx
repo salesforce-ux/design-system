@@ -148,8 +148,7 @@ let SplitView = props =>
   </div>;
 
 let Row = props =>
-  <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation" key={ props.key }>
-
+  <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation">
     <a href="javascript:void(0);" aria-selected="false" role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
       { props.unread ?
         <abbr className="slds-indicator--unread" title="unread item">

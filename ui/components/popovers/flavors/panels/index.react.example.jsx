@@ -37,16 +37,22 @@ const ViewAll = () =>
   <dd className="slds-m-top--x-small slds-text-align--right"><a href="javascript:void(0);" title="View all Opportunities">View All</a></dd>;
 
 export default (
-  <div className="slds-popover slds-popover--panel slds-nubbin--left-top" role="dialog">
+  <section className="slds-popover slds-popover--panel slds-nubbin--left-top" role="dialog">
 
     <div className="slds-popover__header">
 
-      <MediaObject figureLeft={iconHeader} flavor="center" className="slds-m-bottom--small">
-        <p className="slds-text-heading--medium slds-hyphenate"><a href="javascript:void(0);">Tesla Motors</a></p>
-      </MediaObject>
+      <header className="slds-media slds-media--center slds-m-bottom--small">
+        <span className="slds-icon_container slds-icon-standard-account slds-media__figure">
+          <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
+          <span className="slds-assistive-text">Tesla Motors</span>
+        </span>
+        <div className="slds-media__body">
+          <p className="slds-text-heading--medium slds-hyphenate"><a href="javascript:void(0);">Tesla Motors</a></p>
+        </div>
+      </header>
 
       {/* Additional Info */}
-      <div className="slds-grid slds-wrap slds-grid--pull-padded">
+      <footer className="slds-grid slds-wrap slds-grid--pull-padded">
 
         <div className="slds-p-horizontal--small slds-size--1-of-2 slds-p-bottom--x-small">
           <dl>
@@ -79,7 +85,7 @@ export default (
           </dl>
         </div>
 
-      </div>
+      </footer>
     </div>
     <div className="slds-popover__body">
       <dl className="slds-popover__body-list">
@@ -89,48 +95,28 @@ export default (
           </MediaObject>
         </dt>
         {/* Opportunity One */}
-        <dd className="slds-tile">
+        <dd className="slds-m-top--x-small">
           <p className="slds-truncate" title="Tesla - Mule ESB">
             <a href="javascript:void(0);">Tesla - Mule ESB</a>
           </p>
-          <div className="slds-tile__detail">
-            <dl className="slds-dl--horizontal slds-text-body--small">
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Value">Value</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="$500,000">$500,000</p>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Close Date">Close Date</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="Dec 15, 2015">Dec 15, 2015</p>
-              </dd>
-            </dl>
-          </div>
+          <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$500,000">$500,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Dec 15, 2015">Dec 15, 2015</dd>
+          </dl>
         </dd>
         {/* Opportunity Two */}
-        <dd className="slds-tile">
+        <dd className="slds-m-top--x-small">
           <p className="slds-truncate">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
-          <div className="slds-tile__detail">
-            <dl className="slds-dl--horizontal slds-text-body--small">
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Value">Value</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="$60,000">$60,000</p>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Close Date">Close Date</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="Jan 15, 2016">Jan 15, 2016</p>
-              </dd>
-            </dl>
-          </div>
+          <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016</dd>
+          </dl>
         </dd>
         <ViewAll />
       </dl>
@@ -142,29 +128,19 @@ export default (
           </MediaObject>
         </dt>
         {/* Case One */}
-        <dd className="slds-tile">
+        <dd className="slds-m-top--x-small">
           <p className="slds-truncate" title="Tesla - Anypoint Studios">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
-          <div className="slds-tile__detail">
-            <dl className="slds-dl--horizontal slds-text-body--small">
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Value">Value</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="$60,000">$60,000</p>
-              </dd>
-              <dt className="slds-dl--horizontal__label">
-                <p className="slds-truncate" title="Close Date">Close Date</p>
-              </dt>
-              <dd className="slds-dl--horizontal__detail slds-tile__meta">
-                <p className="slds-truncate" title="Jan 15, 2016">Jan 15, 2016</p>
-              </dd>
-            </dl>
-          </div>
+          <dl className="slds-list--horizontal slds-wrap slds-text-body--small">
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Value">Value</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="$60,000">$60,000</dd>
+            <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Close Date">Close Date</dt>
+            <dd className="slds-item--detail slds-text-color--weak slds-truncate" title="Jan 15, 2016">Jan 15, 2016</dd>
+          </dl>
         </dd>
         <ViewAll />
       </dl>
     </div>
-  </div>
+  </section>
 );

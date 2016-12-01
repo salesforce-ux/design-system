@@ -63,13 +63,13 @@ let NotificationItem = props =>
   </li>;
 
 let PopoverMenu = props =>
-  <div className="slds-popover slds-popover--large slds-nubbin--top-right" role="dialog" style={{ position: 'absolute', right: '3.125rem' }}>
+  <section className="slds-popover slds-popover--large slds-nubbin--top-right" role="dialog" style={{ position: 'absolute', right: '3.125rem' }}>
     <div className="slds-popover__body slds-p-around--none">
       <ul>
         {props.children}
       </ul>
     </div>
-  </div>;
+  </section>;
 
 //////////////////////////////////////////////
 // Export

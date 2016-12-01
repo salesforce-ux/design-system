@@ -37,8 +37,8 @@ let Demo = props =>
   </div>;
 
 export let DockedComposerPanel = props =>
-  <div className={className('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className="slds-docked-composer__header slds-grid slds-shrink-none">
+  <section className={className('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <header className="slds-docked-composer__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media--center">
         <div className="slds-media__figure slds-m-right--x-small">
           <span className="slds-icon_container">
@@ -66,9 +66,9 @@ export let DockedComposerPanel = props =>
           assistiveText="Close Composer Panel"
           title="Close" />
       </div>
-    </div>
+    </header>
     { props.children }
-  </div>;
+  </section>;
 
 export let DockedComposerPanelBody = props =>
   <div className={className('slds-docked-composer__body', props.className)}>

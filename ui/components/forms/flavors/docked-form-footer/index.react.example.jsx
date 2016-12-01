@@ -58,12 +58,12 @@ export let states = [
           />
           <button type="button" className="slds-button slds-button--neutral">Cancel</button>
           <button type="button" className="slds-button slds-button--brand">Save</button>
-          <div className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', left: '50%', marginLeft: '58px', transform: 'translateX(-50%)' }}>
+          <section className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{position: 'absolute', bottom: '56px', left: '50%', marginLeft: '66px', transform: 'translateX(-50%)' }}>
             <ButtonIcon className="slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" title="Close" />
             <div className="slds-popover__body slds-text-longform" id="dialog-description-01">
               <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
             </div>
-          </div>
+          </section>
         </div>
       </div>
   }

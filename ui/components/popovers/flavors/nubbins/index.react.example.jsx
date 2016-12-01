@@ -16,7 +16,7 @@ import React from 'react';
 //////////////////////////////////////////////
 
 let Popover = props =>
-<div className={`slds-popover slds-nubbin--${props.nubbinPosition}`} role="dialog">
+<section className={`slds-popover slds-nubbin--${props.nubbinPosition}`} role="dialog">
   <div className="slds-popover__body">
     <code>
       slds-popover
@@ -25,7 +25,7 @@ let Popover = props =>
     </code>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
   </div>
-</div>;
+</section>;
 
 //////////////////////////////////////////////
 // Export

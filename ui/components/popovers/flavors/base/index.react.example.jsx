@@ -79,15 +79,6 @@ export let states = [
     label: 'Default',
     element:
       <Popover
-        className="slds-nubbin--left">
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="javascript:void(0);">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </Popover>
-  },
-  {
-    id: 'with-close',
-    label: 'With Close',
-    element:
-      <Popover
         className="slds-nubbin--left"
         closeButton={ true }>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

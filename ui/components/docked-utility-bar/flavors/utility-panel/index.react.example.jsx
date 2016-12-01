@@ -27,8 +27,8 @@ const dialingIcon = (
 );
 
 export let UtilityPanel = props =>
-  <div className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className="slds-utility-panel__header slds-grid slds-shrink-none">
+  <section className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <header className="slds-utility-panel__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media--center">
         <div className="slds-media__figure slds-m-right--x-small">
           <span className="slds-icon_container">
@@ -45,11 +45,11 @@ export let UtilityPanel = props =>
           symbol="minimize_window"
           assistiveText="Minimize Panel" />
       </div>
-    </div>
+    </header>
     <div className="slds-utility-panel__body">
       { props.children }
     </div>
-  </div>;
+  </section>;
 
 const PanelOpen = (
   <UtilityPanel className="slds-is-open" header="Call">

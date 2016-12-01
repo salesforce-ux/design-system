@@ -15,7 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 
 export default (
 <div className="demo-only" style={{height: '640px'}}>
-  <div aria-hidden="false" role="dialog" className="slds-action-overflow--touch">
+  <section aria-hidden="false" role="dialog" className="slds-action-overflow--touch">
     <div className="slds-action-overflow--touch__container">
       <div className="slds-action-overflow--touch__content">
         <div className="slds-action-overflow--touch__body">
@@ -221,11 +221,11 @@ export default (
           </ul>
         </div>
       </div>
-      <div className="slds-action-overflow--touch__footer slds-text-align--center">
+      <footer className="slds-action-overflow--touch__footer slds-text-align--center">
         <button className="slds-button slds-button--neutral">Cancel</button>
-      </div>
+      </footer>
     </div>
-  </div>
+  </section>
   <div className="slds-backdrop slds-backdrop--open"></div>
 </div>
 );

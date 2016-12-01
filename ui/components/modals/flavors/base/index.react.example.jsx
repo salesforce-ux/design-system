@@ -25,14 +25,14 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <div role="dialog" tabIndex="-1" {...props} className={className('slds-modal slds-fade-in-open', props.className)}>
+  <section role="dialog" tabIndex="-1" {...props} className={className('slds-modal slds-fade-in-open', props.className)}>
     <div className="slds-modal__container">
       {props.children}
     </div>
-  </div>;
+  </section>;
 
 export let ModalHeader = props =>
-  <div className={className('slds-modal__header', props.className)}>
+  <header className={className('slds-modal__header', props.className)}>
     {props.closeButton != 'false' ?
       <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
@@ -41,7 +41,7 @@ export let ModalHeader = props =>
         title="Close"
         assistiveText="Close" /> : null }
     {props.children}
-  </div>;
+  </header>;
 
 export let ModalContent = props =>
   <div className={className('slds-modal__content', props.className)}>
@@ -49,9 +49,9 @@ export let ModalContent = props =>
   </div>;
 
 export let ModalFooter = props =>
-  <div className={className('slds-modal__footer', props.className)}>
+  <footer className={className('slds-modal__footer', props.className)}>
     {props.children}
-  </div>;
+  </footer>;
 
 //////////////////////////////////////////////
 // State Constructor(s)

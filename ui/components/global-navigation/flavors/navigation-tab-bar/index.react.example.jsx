@@ -121,7 +121,7 @@ export let ContextTabBar = props =>
             assistiveText="Open object switcher menu" />
         </div>
         { props.addTabActive ?
-          <div className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+          <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
             <div className="slds-popover__body">
               <div className="slds-form-element">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
@@ -131,7 +131,7 @@ export let ContextTabBar = props =>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         : null }
       </div>
     </div>

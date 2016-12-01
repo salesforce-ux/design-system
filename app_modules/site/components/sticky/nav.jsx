@@ -19,7 +19,7 @@ const forceBase = require(path.resolve(__PATHS__.designTokens, 'dist/force-base.
 
 export default props =>
   <Sticky
-    className="site-content__bleed slds-size--1-of-1 slds-large-size--1-of-6 slds-large-order--2"
+    className="site site-content__bleed slds-size--1-of-1 slds-large-size--1-of-6 slds-large-order--2"
     fixedElementsBelow="footer.site-contentinfo"
     fixedContentPadding={{
       top: forceBase.spacingLarge,

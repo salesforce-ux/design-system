@@ -169,13 +169,13 @@ const nav = formatNavItem({
           label: 'Loading'
         },
         {
+          label: 'Localization'
+        },
+        {
           label: 'Markup and Style'
         },
         {
           label: 'Messaging'
-        },
-        {
-          label: 'Localization'
         },
         {
           label: 'Motion'

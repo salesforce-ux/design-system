@@ -18,7 +18,7 @@ const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 
 export default (
-  <PageBody anchorTitle="Markup and Style" contentClassName="slds-container--large">
+  <PageBody anchorTitle="Markup and Style" contentClassName="site slds-container--large">
     <p className="site-text-introduction">
       The Salesforce Lightning Design System (SLDS) component library is actively developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
     </p>

@@ -17,7 +17,7 @@ import globals from 'app_modules/global';
 import packageJSON from '../package.json';
 
 let hero = (
-  <header className="site-masthead--landing slds-p-around--xx-large container--buffer">
+  <header className="site site-masthead--landing slds-p-around--xx-large container--buffer">
     <div className="slds-grid slds-grid--vertical-align-start slds-wrap slds-medium-nowrap">
       <img
         className="site-masthead--landing-logo"
@@ -45,7 +45,7 @@ let hero = (
 
 export default (
   <PageBody anchor={hero} contentClassName="site-landing-page">
-    <div className="container--buffer slds-container--x-large">
+    <div className="site container--buffer slds-container--x-large">
       {/* Grid */}
       <section className="site-grid--landing slds-p-vertical--xx-large site-text-longform">
         <ul className="slds-grid slds-wrap slds-grid--pull-padded-large site-grid--landing-primary">

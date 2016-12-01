@@ -75,6 +75,7 @@
     }
 
     .slds-is-nested a {
+      // scss-lint:disable SelectorDepth
       padding-left: $spacing-x-large + ($spacing-large * 2);
     }
   }

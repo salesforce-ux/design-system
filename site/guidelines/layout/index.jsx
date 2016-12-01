@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 
 export default (
-  <PageBody anchorTitle="Layout" contentClassName="site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Layout" contentClassName="site site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">A layout is a structural template that supports consistency across applications by defining visual grids, spacing, and sections. </p>
       <p>Before selecting a layout, review these guidelines:</p>

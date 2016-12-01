@@ -15,7 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 export default (
-  <PageBody anchorTitle="Messaging" contentClassName="site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Messaging" contentClassName="site site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">When the user or system takes action, various messaging patterns are used to show the result or impact.</p>
       <h2 className="site-text-heading--large">Icons</h2>

@@ -15,7 +15,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import ComponentsOverview from 'site/assets/scripts/components/components-overview';
 
 export default (
-  <PageBody anchorTitle="Component Overview">
+  <PageBody anchorTitle="Component Overview" contentClassName="site">
     <ComponentsOverview />
     <script src="/assets/scripts/components-overview.js" async />
   </PageBody>

@@ -140,7 +140,7 @@ export default React.createClass({
 
   renderBanner() {
     return (
-      <header className="site-banner" role="banner">
+      <header className="site site-banner" role="banner">
         <a href="/">
           <span className="site-logo">Salesforce</span>
         </a>
@@ -154,7 +154,7 @@ export default React.createClass({
 
   renderNav() {
     return (
-      <div className={classNames('site-navigation', globals.displaySearch ? 'site-navigation--has-search' : '')}>
+      <div className={classNames('site site-navigation', globals.displaySearch ? 'site-navigation--has-search' : '')}>
 
         <nav id="navigation" role="navigation" tabIndex="-1">
           {this.renderNavItems(this.state.navItems)}
@@ -241,7 +241,7 @@ export default React.createClass({
     const updated = moment().format('MMMM Do YYYY, h:mm a');
     const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
-      <footer className="site-contentinfo slds-grid slds-wrap site-text-longform slds-text-body--small" role="contentinfo">
+      <footer className="site site-contentinfo slds-grid slds-wrap site-text-longform slds-text-body--small" role="contentinfo">
         <p className="slds-p-horizontal--x-large slds-size--1-of-1 slds-shrink-none slds-large-size--2-of-3">
           Copyright &copy; 2015-2016 <span className="site-name">Sales<i>f</i>orce. </span>
           <CTALink

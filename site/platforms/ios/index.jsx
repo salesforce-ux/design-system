@@ -17,7 +17,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="iOS" contentClassName="slds-grid slds-wrap">
+  <PageBody anchorTitle="iOS" contentClassName="site slds-grid slds-wrap">
     <StickyNav>
       <div className="site-menu--jump-links">
         <ul className="slds-list--vertical slds-has-block-links">

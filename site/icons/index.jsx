@@ -45,7 +45,7 @@ class Icons extends React.Component {
               </ul>
             </div>
           </StickyNav>
-          <div className="slds-col slds-col-rule--right site-text-longform slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
+          <div className="site slds-col slds-col-rule--right site-text-longform slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
             <p className="site-text-introduction m-bottom--reset slds-container--large">
               Choose the icon you need from this page, then follow the implementation instructions on the <a href="/components/icons/">icon component page</a>. If you are building a Lightning Component, you may require an
               additional <CTALink href="/resources/lightning-svg-icon-component-helper" eventType="lightning-svg-icon-helper">Lightning helper component</CTALink> to use&nbsp;SVGs.

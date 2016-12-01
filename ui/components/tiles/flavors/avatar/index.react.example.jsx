@@ -16,7 +16,11 @@ import className from 'classnames';
 
 const avatar = (
   <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
-    <img src="/assets/images/avatar2.jpg" alt="Person's name" />
+    <img
+      alt=""
+      src="/assets/images/avatar2.jpg"
+      title="Lexee L. Jackson avatar"
+    />
   </span>
 );
 

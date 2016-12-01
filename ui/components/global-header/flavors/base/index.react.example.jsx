@@ -122,7 +122,11 @@ export let GlobalHeader = props =>
         <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
           <button className="slds-button" title="person name" aria-haspopup="true">
             <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
-              <img src="/assets/images/avatar2.jpg" alt="person name" />
+              <img
+                alt="Person name"
+                src="/assets/images/avatar2.jpg"
+                title="User avatar"
+              />
             </span>
           </button>
         </li>

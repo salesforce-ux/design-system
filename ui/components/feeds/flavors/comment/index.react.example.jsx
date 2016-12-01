@@ -20,8 +20,12 @@ import className from 'classnames';
 export let Comment = props =>
   <article className={className('slds-comment slds-media slds-hint-parent', props.className)}>
     <div className="slds-media__figure">
-      <a href="javascript:void(0);" title="Jenna Davis" className="slds-avatar slds-avatar--circle slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+      <a href="javascript:void(0);" className="slds-avatar slds-avatar--circle slds-avatar--medium">
+        <img
+          alt="Jenna Davis"
+          src="/assets/images/avatar2.jpg"
+          title="Jenna Davis avatar"
+        />
       </a>
     </div>
     <div className="slds-media__body">

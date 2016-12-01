@@ -19,8 +19,12 @@ import className from 'classnames';
 ///////////////////////////////////////////
 
 const image = (
-  <a className="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);" title="Jenna Davis">
-    <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+  <a className="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);">
+    <img
+      alt="Person name"
+      src="/assets/images/avatar2.jpg"
+      title="User avatar"
+    />
   </a>
 );
 

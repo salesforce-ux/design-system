@@ -54,7 +54,7 @@ class Category {
     return <CellExample />;
   }
   /**
-   * Render an optional descripton below the title
+   * Render an optional description below the title
    *
    * @return {React.PropTypes.node}
    */

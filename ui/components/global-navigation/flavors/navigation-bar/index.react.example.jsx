@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 
@@ -22,7 +22,7 @@ import _ from 'lodash';
 //////////////////////////////////////////////
 
 export let WaffleIcon = props =>
-  <a href="javascript:void(0);" className={className('slds-icon-waffle_container slds-context-bar__button', props.className)}>
+  <a href="javascript:void(0);" className={classNames('slds-icon-waffle_container slds-context-bar__button', props.className)}>
     <div className="slds-icon-waffle">
       <div className="slds-r1"></div>
       <div className="slds-r2"></div>
@@ -60,7 +60,7 @@ const contextDropdown = (
 
 export let ContextBar = props =>
 
-  <div className={className('slds-context-bar', props.className)}>
+  <div className={classNames('slds-context-bar', props.className)}>
 
     {/* Primary Section */}
     <div className="slds-context-bar__primary slds-context-bar__item--divider-right">

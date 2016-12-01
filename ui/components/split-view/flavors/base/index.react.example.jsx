@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
@@ -72,11 +72,11 @@ const results = [{
 ///////////////////////////////////////////
 
 let SplitView = props =>
-  <div className={ className('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
+  <div className={ classNames('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
     <ButtonIcon
       aria-controls="split-view-id"
       aria-expanded={ props.hidden ? 'false' : 'true' }
-      className={ className('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
+      className={ classNames('slds-button--icon-inverse slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
       iconClassName="slds-button__icon--x-small"
       symbol="left"
       assistiveText={ props.hidden ? 'Open Split View' : 'Close Split View' }
@@ -84,7 +84,7 @@ let SplitView = props =>
     <article
       aria-hidden={ props.hidden ? 'true' : 'false' }
       id="split-view-id"
-      className={ className('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }
+      className={ classNames('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className, props.hidden ? 'slds-hide' : null) }
     >
       <header className="slds-split-view__header">
         <div className="slds-grid">
@@ -148,7 +148,7 @@ let SplitView = props =>
   </div>;
 
 let Row = props =>
-  <li className={ className('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation">
+  <li className={ classNames('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation">
     <a href="javascript:void(0);" aria-selected="false" role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
       { props.unread ?
         <abbr className="slds-indicator--unread" title="unread item">

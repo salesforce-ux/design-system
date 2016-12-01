@@ -14,7 +14,7 @@ import { ButtonGroupList } from 'ui/components/button-groups/flavors/list/index.
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -27,7 +27,7 @@ export let Demo = props =>
   </div>;
 
 export let RichTextEditor = props =>
-  <div {...props} className={className('slds-rich-text-editor slds-grid slds-grid--vertical slds-nowrap', props.className)}>
+  <div {...props} className={classNames('slds-rich-text-editor slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 

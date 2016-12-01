@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 
 //////////////////////////////////////////////
@@ -20,10 +20,10 @@ import className from 'classnames';
 //////////////////////////////////////////////
 
 export let AppLauncherTile = props =>
-  <a href="javascript:void(0);" className={className('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}>
-    <div className={className('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
+  <a href="javascript:void(0);" className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}>
+    <div className={classNames('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
       { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
-        <span className={className('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</span>
+        <span className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</span>
       }
       { props.draggable ?
         <span className="slds-icon_container" title="Drag item to a new location">
@@ -31,7 +31,7 @@ export let AppLauncherTile = props =>
           <span className="slds-assistive-text">Drag item to a new location</span>
         </span> : null}
     </div>
-    <div className={className('slds-app-launcher__tile-body', props.flavor == 'small' ? 'slds-app-launcher__tile-body--small' : null)}>
+    <div className={classNames('slds-app-launcher__tile-body', props.flavor == 'small' ? 'slds-app-launcher__tile-body--small' : null)}>
       {props.children}
     </div>
   </a>;

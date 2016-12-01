@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import _ from 'lodash';
@@ -20,7 +20,7 @@ import _ from 'lodash';
 //////////////////////////////////////////////
 
 let Subtab = props =>
-  <li className={className('slds-tabs--default__item slds-grid slds-grid--vertical-align-center', props.hasFocus ? 'slds-has-focus' : null, props.active ? 'slds-active' : null, props.className)} role="presentation">
+  <li className={classNames('slds-tabs--default__item slds-grid slds-grid--vertical-align-center', props.hasFocus ? 'slds-has-focus' : null, props.active ? 'slds-active' : null, props.className)} role="presentation">
     <a
       href="javascript:void(0);"
       className="slds-tabs--default__link slds-p-horizontal--xx-small"
@@ -35,10 +35,10 @@ let Subtab = props =>
         <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.symbol || 'case' } />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
-      <span className={className('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'Subtab Name'}>{ props.title || 'Subtab Name'}</span>
+      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'Subtab Name'}>{ props.title || 'Subtab Name'}</span>
     </a>
     { props.menuIcon ?
-      <div className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
+      <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
         <ButtonIcon
           className="slds-button--icon-container slds-button--icon-x-small"
           tabIndex={ props.active ? '0' : '-1' }
@@ -48,7 +48,7 @@ let Subtab = props =>
         />
       </div>
     : null }
-    <div className={className('slds-col--bump-left slds-p-left--none slds-p-right--none', props.pinned ? 'slds-assistive-text' : null)}>
+    <div className={classNames('slds-col--bump-left slds-p-left--none slds-p-right--none', props.pinned ? 'slds-assistive-text' : null)}>
       <ButtonIcon
         className="slds-button--icon-container slds-button--icon-x-small"
         tabIndex={ props.active ? '0' : '-1' }

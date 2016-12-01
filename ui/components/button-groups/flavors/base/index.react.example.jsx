@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem, Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 
 ///////////////////////////////////////////
@@ -20,7 +20,7 @@ import className from 'classnames';
 ///////////////////////////////////////////
 
 export let ButtonGroup = props =>
-  <div className={className('slds-button-group', props.className)} role="group">
+  <div className={classNames('slds-button-group', props.className)} role="group">
     {props.children}
   </div>;
 

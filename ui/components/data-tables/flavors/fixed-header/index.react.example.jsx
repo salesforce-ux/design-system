@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Table, RowData } from 'ui/components/data-tables/flavors/inline-edit/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
@@ -66,7 +66,7 @@ let Th = props => {
   }
 
   return (
-    <th {...rest} className={className('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
+    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
       <div className="slds-cell-fixed" style={{ width: '8.75rem' }}>
         <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
           <span className="slds-assistive-text">Sort </span>

@@ -10,14 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 export let Badge = props =>
-  <span className={className('slds-badge', props.className)}>Badge Label</span>;
+  <span className={classNames('slds-badge', props.className)}>Badge Label</span>;
 
 //////////////////////////////////////////////
 // Export

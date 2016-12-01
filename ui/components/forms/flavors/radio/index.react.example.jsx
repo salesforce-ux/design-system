@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -18,7 +18,7 @@ import _ from 'lodash';
 ///////////////////////////////////////////
 
 let Fieldset = props =>
-  <fieldset className={className('slds-form-element', props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}
   </fieldset>;
 
@@ -26,7 +26,7 @@ let Legend = props =>
   <legend className="slds-form-element__legend slds-form-element__label">{props.children}</legend>;
 
 let FormElementControl = props =>
-  <div className={className('slds-form-element__control', props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 

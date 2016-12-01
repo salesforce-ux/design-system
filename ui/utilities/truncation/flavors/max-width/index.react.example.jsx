@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,7 +22,7 @@ let Demo = props =>
   </div>;
 
 let ListItem = props =>
-  <li className={className('slds-list__item slds-m-right--large slds-grid', props.className)}>
+  <li className={classNames('slds-list__item slds-m-right--large slds-grid', props.className)}>
     <span>To:</span>
     <span className="slds-m-left--xx-small slds-truncate" title={props.title}>{props.children}</span>
     <span className="slds-m-left--xx-small slds-no-flex"> + 44 more</span>

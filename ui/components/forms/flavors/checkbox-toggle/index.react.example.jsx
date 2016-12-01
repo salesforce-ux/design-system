@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,7 +22,7 @@ let Demo = props =>
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className('form--element', props.className)}>
+  <fieldset className={classNames('form--element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">Share email with</legend>
     <div className="slds-form-element__control slds-box--border">
       {props.children}
@@ -30,12 +30,12 @@ let Fieldset = props =>
   </fieldset>;
 
 let LabelWrapper = props =>
-  <div className={className('slds-form-element', props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
 let Label = props =>
-  <label className={className('slds-checkbox--toggle slds-grid', props.className)} htmlFor={props.id}>
+  <label className={classNames('slds-checkbox--toggle slds-grid', props.className)} htmlFor={props.id}>
     {props.children}
   </label>;
 
@@ -46,10 +46,10 @@ let Checkbox = props =>
   <input name="checkbox" type="checkbox" disabled={props.disabled} defaultChecked={props.checked} aria-describedby="toggle-desc" />;
 
 let Toggle = props =>
-  <span id="toggle-desc" className={className('slds-checkbox--faux_container', props.className)} aria-live="assertive">
+  <span id="toggle-desc" className={classNames('slds-checkbox--faux_container', props.className)} aria-live="assertive">
     <span className="slds-checkbox--faux"></span>
-    <span className={className('slds-checkbox--on', props.className)}>Enabled</span>
-    <span className={className('slds-checkbox--off', props.className)}>Disabled</span>
+    <span className={classNames('slds-checkbox--on', props.className)}>Enabled</span>
+    <span className={classNames('slds-checkbox--off', props.className)}>Disabled</span>
   </span>;
 
 ///////////////////////////////////////////

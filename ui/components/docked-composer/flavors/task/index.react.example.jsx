@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { DockedComposerPanel, DockedComposerPanelBody, DockedComposerPanelFooter } from 'ui/components/docked-composer/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 export default (
   <div className="demo-only" style={{ height: '500px' }}>

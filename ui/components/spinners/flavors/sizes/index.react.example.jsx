@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import { SpinnerContainer } from 'ui/components/spinners/flavors/containers/index.react.example';
 import { Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
 

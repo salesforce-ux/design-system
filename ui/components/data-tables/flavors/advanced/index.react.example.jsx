@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
@@ -49,7 +49,7 @@ const rows = [{
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={className('slds-table slds-table--bordered', props.className)} role="grid">
+  <table className={classNames('slds-table slds-table--bordered', props.className)} role="grid">
     {props.children}
   </table>;
 
@@ -63,7 +63,7 @@ export let Th = props => {
   }
 
   return (
-    <th {...rest} className={className('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
+    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
       <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
@@ -87,7 +87,7 @@ let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
   return(
-    <tr className={className('slds-hint-parent', props.className)} aria-selected={ props.checked }>
+    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={ props.checked }>
       <td role="gridcell" className="slds-text-align--right" style={{ width: '3.25rem' }}>
         <Checkbox label={ checkboxLabel } checked={ props.checked } hideLabel />
       </td>

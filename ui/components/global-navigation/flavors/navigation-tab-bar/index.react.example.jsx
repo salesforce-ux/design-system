@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 //////////////////////////////////////////////
@@ -23,16 +23,16 @@ import _ from 'lodash';
 
 // Context Tab
 let ContextTab = props =>
-  <li className={className('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
+  <li className={classNames('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
     <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' }>
       { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
       <div className="slds-icon_container" title={ _.startCase(props.symbol) || 'Case' }>
         <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.symbol || 'case' } />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
-      <span className={className('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
+      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
-    <div className={className('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
+    <div className={classNames('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
       <ButtonIcon
         className="slds-button--icon-container slds-button--icon-x-small"
         tabIndex={ props.itemActive ? '0' : '-1' }
@@ -47,7 +47,7 @@ let ContextTab = props =>
         </MenuList>
       </Menu>
     </div>
-    <div className={className('slds-context-bar__icon-action slds-col--bump-left slds-p-left--none', props.pinned ? 'slds-assistive-text' : null)}>
+    <div className={classNames('slds-context-bar__icon-action slds-col--bump-left slds-p-left--none', props.pinned ? 'slds-assistive-text' : null)}>
       <ButtonIcon
         className="slds-button--icon-container slds-button--icon-x-small"
         tabIndex={ props.itemActive ? '0' : '-1' }
@@ -62,7 +62,7 @@ let ContextTab = props =>
 
 export let ContextTabBar = props =>
 
-  <div className={className('slds-context-bar slds-context-bar--tabs', props.className)}>
+  <div className={classNames('slds-context-bar slds-context-bar--tabs', props.className)}>
 
     <div className="slds-context-bar__primary">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
@@ -74,7 +74,7 @@ export let ContextTabBar = props =>
         </span>
       </div>
 
-      <div className={className('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
+      <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
         <a href="javascript:void(0);" title="Context" className="slds-context-bar__label-action">
           <span className="slds-truncate">Object</span>
         </a>
@@ -102,17 +102,17 @@ export let ContextTabBar = props =>
           </MenuList>
         </Menu>
       </div>
-      <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
+      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className={ className('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
+            className={ classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
             aria-haspopup="true"
             assistiveText="Toggle split view" />
         </div>
       </div>
       <div className="slds-context-bar__vertical-divider"></div>
-      <div className={className('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
+      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
             className="slds-button--icon-container slds-button--icon-small"

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -24,14 +24,14 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <div role="dialog" tabIndex="-1" {...props} className={className('slds-modal slds-fade-in-open', props.className)}>
+  <div role="dialog" tabIndex="-1" {...props} className={classNames('slds-modal slds-fade-in-open', props.className)}>
     <div className="slds-modal__container">
       {props.children}
     </div>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className('slds-modal__header', props.className)}>
+  <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton != 'false' ?
       <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
@@ -43,12 +43,12 @@ export let ModalHeader = props =>
   </div>;
 
 export let ModalContent = props =>
-  <div className={className('slds-modal__content', props.className)}>
+  <div className={classNames('slds-modal__content', props.className)}>
     {props.children}
   </div>;
 
 export let ModalFooter = props =>
-  <div className={className('slds-modal__footer', props.className)}>
+  <div className={classNames('slds-modal__footer', props.className)}>
     {props.children}
   </div>;
 

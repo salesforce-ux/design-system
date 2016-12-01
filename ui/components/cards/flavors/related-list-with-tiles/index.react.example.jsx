@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 
 ///////////////////////////////////////////

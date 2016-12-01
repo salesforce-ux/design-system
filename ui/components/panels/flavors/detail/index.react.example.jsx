@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -25,24 +25,24 @@ let Demo = props =>
   </div>;
 
 let Checkbox = props =>
-  <label className={className('slds-checkbox', props.className)} htmlFor={props.id}>
+  <label className={classNames('slds-checkbox', props.className)} htmlFor={props.id}>
     <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
     <span className="slds-checkbox--faux"></span>
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
 export let Panel = props =>
-  <div className={className('slds-panel slds-grid slds-grid--vertical slds-nowrap', props.className)}>
+  <div className={classNames('slds-panel slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
 export let PanelBody = props =>
-  <div className={className('slds-form--stacked slds-grow slds-scrollable--y', props.className)}>
+  <div className={classNames('slds-form--stacked slds-grow slds-scrollable--y', props.className)}>
     {props.children}
   </div>;
 
 export let PanelSection = props =>
-  <div className={className('slds-panel__section', props.className)}>
+  <div className={classNames('slds-panel__section', props.className)}>
     {props.children}
   </div>;
 

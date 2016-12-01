@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { GlobalHeader } from 'ui/components/global-header/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 
 //////////////////////////////////////////////

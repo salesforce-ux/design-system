@@ -69,9 +69,9 @@ export let CardBody = props =>
   </div>;
 
 export let CardFooter = props =>
-  <div className={className('slds-card__footer', props.className)}>
+  <footer className={className('slds-card__footer', props.className)}>
     { props.children }
-  </div>;
+  </footer>;
 
 ///////////////////////////////////////////
 // Export

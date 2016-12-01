@@ -185,13 +185,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
         <SplitView>
-          { _.times(5, i =>
+          { results.slice(0, 5).map((result, i) =>
             <Row
               key={ i }
-              colOne={ results[i].colOne }
-              colTwo={ results[i].colTwo }
-              colThree={ results[i].colThree }
-              colFour={ results[i].colFour }
+              colOne={ result.colOne }
+              colTwo={ result.colTwo }
+              colThree={ result.colThree }
+              colFour={ result.colFour }
               tabIndex={ (i===0) ? 0 : -1 }
             />
           )}
@@ -204,13 +204,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
         <SplitView>
-          { _.times(results.length, i =>
+          { results.map((result, i) =>
             <Row
               key={ i }
-              colOne={ results[i].colOne }
-              colTwo={ results[i].colTwo }
-              colThree={ results[i].colThree }
-              colFour={ results[i].colFour }
+              colOne={ result.colOne }
+              colTwo={ result.colTwo }
+              colThree={ result.colThree }
+              colFour={ result.colFour }
               tabIndex={ (i===0) ? 0 : -1 }
             />
           )}
@@ -223,14 +223,14 @@ export let states = [
     element:
       <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
         <SplitView>
-          { _.times(results.length, i =>
+          { results.map((result, i) =>
             <Row
               key={ i }
-              unread={ results[i].unread }
-              colOne={ results[i].colOne }
-              colTwo={ results[i].colTwo }
-              colThree={ results[i].colThree }
-              colFour={ results[i].colFour }
+              unread={ result.unread }
+              colOne={ result.colOne }
+              colTwo={ result.colTwo }
+              colThree={ result.colThree }
+              colFour={ result.colFour }
               tabIndex={ (i===0) ? 0 : -1 }
             />
           )}
@@ -243,14 +243,14 @@ export let states = [
     element:
       <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
         <SplitView hidden>
-          { _.times(results.length, i =>
+          { results.map((result, i) =>
             <Row
               key={ i }
-              unread={ results[i].unread }
-              colOne={ results[i].colOne }
-              colTwo={ results[i].colTwo }
-              colThree={ results[i].colThree }
-              colFour={ results[i].colFour }
+              unread={ result.unread }
+              colOne={ result.colOne }
+              colTwo={ result.colTwo }
+              colThree={ result.colThree }
+              colFour={ result.colFour }
               tabIndex={ (i===0) ? 0 : -1 }
             />
           )}

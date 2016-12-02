@@ -36,9 +36,9 @@ export default (
 
 
   <h4 className="site-text-heading--label">Accessibility</h4>
-  <p>Every form element requires an associated, non-empty <code>&lt;label&gt;</code> element. To link the field with its label, either wrap the <code>&lt;label&gt;</code> element around the field or associate the <code>for</code> attribute of the label with the <code>id</code> of the field. For example, <code>&lt;label for="emailAddress"&gt;Enter email address:&lt;&#47;label&gt;</code> and <code>&lt;input id="emailAddress"&gt;</code>. This association ensures that assistive technology informs users what information to enter where.</p>
-  <p>When an <code>&lt;input&gt;</code> is required, add the HTML attribute <code>required</code> or <code>required=""</code> to it. Do not use true/false values inside the <code>required</code> because the mere presence of that attribute signifies the field is required.</p>
-  <p>If the field is invalid and displays an error message, the field should have an <code>aria-describedby</code> attribute that references the <code>id</code> of the error message in the <code>&lt;span&gt;</code>. This configuration allows screen readers to read the associated error message with the field.</p>
+  <p>Every field requires an associated, non-empty <code>&lt;label&gt;</code> element. The label should have a <code>for</code> attribute that references the <code>id</code> of the field. For example, <code>&lt;label for="emailAddress"&gt;Enter email address:&lt;&#47;label&gt;</code> and <code>&lt;input id="emailAddress"&gt;</code>. This association ensures that assistive technology informs users what information to enter where.</p>
+  <p>If the field is required, the <code>&lt;input&gt;</code> element should have the HTML attribute <code>required</code> or <code>required=""</code>. Similarily, if it is disabled, it should have the <code>disabled</code> or <code>disabled=""</code> attribute. Do not use true/false values inside the <code>required</code> or <code>disabled</code> because the mere presence of these attributes signifies the field is required or disabled.</p>
+  <p>If the field is invalid and displays an error message, the <code>&lt;input&gt;</code> element should have an <code>aria-describedby</code> attribute that references the <code>id</code> of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.</p>
 
 
   <h4 className="site-text-heading--label">Form Example</h4>

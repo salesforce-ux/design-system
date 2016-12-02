@@ -24,7 +24,12 @@ let Demo = props =>
   </div>;
 
 let Datepicker = props =>
-  <div className={classNames('slds-datepicker', props.className)} aria-hidden="false">
+  <div
+    aria-hidden="false"
+    aria-label="Date picker: June"
+    className={classNames('slds-datepicker', props.className)}
+    role="dialog"
+  >
     {props.children}
   </div>;
 
@@ -32,11 +37,23 @@ let DatepickerHeader = props =>
   <div className="slds-datepicker__filter slds-grid">
     <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
       <div className="slds-align-middle">
-        <ButtonIcon className="slds-button--icon-container" symbol="left" assistiveText="Previous Month" title="Previous Month" />
+        <ButtonIcon
+          assistiveText="Previous Month"
+          className="slds-button--icon-container"
+          symbol="left"
+          title="Previous Month"
+        />
       </div>
-      <h2 id="month" className="slds-align-middle" aria-live="assertive" aria-atomic="true">June</h2>
+      <h2 aria-atomic="true" aria-live="assertive" className="slds-align-middle" id="month">
+        June
+      </h2>
       <div className="slds-align-middle">
-        <ButtonIcon className="slds-button--icon-container" symbol="right" assistiveText="Next Month" title="Next Month" />
+        <ButtonIcon
+          assistiveText="Next Month"
+          className="slds-button--icon-container"
+          symbol="right"
+          title="Next Month"
+        />
       </div>
     </div>
     <div className="slds-shrink-none">
@@ -66,7 +83,13 @@ let Week = props =>
   </tr>;
 
 let Day = props =>
-  <td className={props.className} headers={props.dayHeaders} role="gridcell" aria-disabled={props.ariaDisabled} aria-selected={props.ariaSelected}>
+  <td
+    aria-disabled={props['aria-disabled']}
+    aria-selected={props['aria-selected']}
+    className={props.className}
+    role="gridcell"
+    tabIndex={props.tabIndex}
+  >
     <span className="slds-day">{props.children}</span>
   </td>;
 
@@ -78,58 +101,62 @@ let Default = props =>
   <Demo style={{height: '330px'}}>
     <Datepicker className="slds-dropdown slds-dropdown--left">
       <DatepickerHeader />
-      <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
+      <table aria-labelledby="month" aria-multiselectable="true" className="slds-datepicker__month" role="grid">
         <thead>
           <Weekdays />
         </thead>
         <tbody>
-          <Week id="week1">
-            <Day className="slds-disabled-text" dayHeaders="Sunday week1" ariaDisabled="true" ariaSelected="false">31</Day>
-            <Day dayHeaders="Monday week1" ariaSelected="false">1</Day>
-            <Day dayHeaders="Tuesday week1" ariaSelected="false">2</Day>
-            <Day dayHeaders="Wednesday week1" ariaSelected="false">3</Day>
-            <Day dayHeaders="Thursday week1" ariaSelected="false">4</Day>
-            <Day dayHeaders="Friday week1" ariaSelected="false">5</Day>
-            <Day dayHeaders="Saturday week1" ariaSelected="false">6</Day>
+          <Week>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">31</Day>
+            <Day aria-selected="false" tabIndex="0">1</Day>
+            <Day aria-selected="false">2</Day>
+            <Day aria-selected="false">3</Day>
+            <Day aria-selected="false">4</Day>
+            <Day aria-selected="false">5</Day>
+            <Day aria-selected="false">6</Day>
           </Week>
-          <Week id="week2">
-            <Day dayHeaders="Sunday week2" ariaSelected="false">7</Day>
-            <Day dayHeaders="Monday week2" ariaSelected="false">8</Day>
-            <Day dayHeaders="Tuesday week2" ariaSelected="false">9</Day>
-            <Day dayHeaders="Wednesday week2" ariaSelected="false">10</Day>
-            <Day dayHeaders="Thursday week2" ariaSelected="false">11</Day>
-            <Day dayHeaders="Friday week2" ariaSelected="false">12</Day>
-            <Day dayHeaders="Saturday week2" ariaSelected="false">13</Day>
+          <Week>
+            <Day aria-selected="false">7</Day>
+            <Day aria-selected="false">8</Day>
+            <Day aria-selected="false">9</Day>
+            <Day aria-selected="false">10</Day>
+            <Day aria-selected="false">11</Day>
+            <Day aria-selected="false">12</Day>
+            <Day aria-selected="false">13</Day>
           </Week>
-          <Week id="week3">
-            <Day dayHeaders="Sunday week3" ariaSelected="false">14</Day>
-            <Day dayHeaders="Monday week3" ariaSelected="false">15</Day>
-            <Day dayHeaders="Tuesday week3" ariaSelected="false">16</Day>
-            <Day dayHeaders="Wednesday week3" ariaSelected="false">17</Day>
-            <Day className="slds-is-today" dayHeaders="Thursday week3" ariaSelected="false">18</Day>
-            <Day dayHeaders="Friday week3" ariaSelected="false">19</Day>
-            <Day dayHeaders="Saturday week3" ariaSelected="false">20</Day>
+          <Week>
+            <Day aria-selected="false">14</Day>
+            <Day aria-selected="false">15</Day>
+            <Day aria-selected="false">16</Day>
+            <Day aria-selected="false">17</Day>
+            <Day aria-selected="false">18</Day>
+            <Day aria-selected="false">19</Day>
+            <Day aria-selected="false">20</Day>
           </Week>
-          <Week id="week4">
-            <Day dayHeaders="Sunday week4" ariaSelected="false">21</Day>
-            <Day dayHeaders="Monday week4" ariaSelected="false">22</Day>
-            <Day dayHeaders="Tuesday week4" ariaSelected="false">23</Day>
-            <Day dayHeaders="Wednesday week4" ariaSelected="false">24</Day>
-            <Day dayHeaders="Thursday week4" ariaSelected="false">25</Day>
-            <Day dayHeaders="Friday week4" ariaSelected="false">26</Day>
-            <Day dayHeaders="Saturday week4" ariaSelected="false">27</Day>
+          <Week>
+            <Day aria-selected="false">21</Day>
+            <Day aria-selected="false">22</Day>
+            <Day aria-selected="false">23</Day>
+            <Day aria-selected="false">24</Day>
+            <Day aria-selected="false">25</Day>
+            <Day aria-selected="false">26</Day>
+            <Day aria-selected="false">27</Day>
           </Week>
-          <Week id="week5">
-            <Day dayHeaders="Sunday week5" ariaSelected="false">28</Day>
-            <Day dayHeaders="Monday week5" ariaSelected="false">29</Day>
-            <Day dayHeaders="Tuesday week5" ariaSelected="false">30</Day>
-            <Day className="slds-disabled-text" dayHeaders="Wednesday week5" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className="slds-disabled-text" dayHeaders="Thursday week5" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className="slds-disabled-text" dayHeaders="Friday week5" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className="slds-disabled-text" dayHeaders="Saturday week5" ariaDisabled="true" ariaSelected="false">4</Day>
+          <Week>
+            <Day aria-selected="false">28</Day>
+            <Day aria-selected="false">29</Day>
+            <Day aria-selected="false">30</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
+            <td colSpan="7" role="gridcell">
+              <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+                Today
+              </span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -140,58 +167,65 @@ let Selected = props =>
   <Demo style={{height: '330px'}}>
     <Datepicker className="slds-dropdown slds-dropdown--left">
       <DatepickerHeader />
-      <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
+      <table className="slds-datepicker__month" aria-labelledby="month" role="grid">
         <thead>
           <Weekdays />
         </thead>
         <tbody>
-          <Week id="week11">
-            <Day className="slds-disabled-text" dayHeaders="Sunday week11" ariaDisabled="true" ariaSelected="false">31</Day>
-            <Day dayHeaders="Monday week11" ariaSelected="false">1</Day>
-            <Day dayHeaders="Tuesday week11" ariaSelected="false">2</Day>
-            <Day dayHeaders="Wednesday week11" ariaSelected="false">3</Day>
-            <Day dayHeaders="Thursday week11" ariaSelected="false">4</Day>
-            <Day dayHeaders="Friday week11" ariaSelected="false">5</Day>
-            <Day dayHeaders="Saturday week11" ariaSelected="false">6</Day>
+          <Week>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">31</Day>
+            <Day aria-selected="false" tabIndex="0">1</Day>
+            <Day aria-selected="false">2</Day>
+            <Day aria-selected="false">3</Day>
+            <Day aria-selected="false">4</Day>
+            <Day aria-selected="false">5</Day>
+            <Day aria-selected="false">6</Day>
           </Week>
-          <Week id="week12">
-            <Day dayHeaders="Sunday week12" ariaSelected="false">7</Day>
-            <Day dayHeaders="Monday week12" ariaSelected="false">8</Day>
-            <Day dayHeaders="Tuesday week12" ariaSelected="false">9</Day>
-            <Day dayHeaders="Wednesday week12" ariaSelected="false">10</Day>
-            <Day dayHeaders="Thursday week12" ariaSelected="false">11</Day>
-            <Day dayHeaders="Friday week12" ariaSelected="false">12</Day>
-            <Day dayHeaders="Saturday week12" ariaSelected="false">13</Day>
+          <Week>
+            <Day aria-selected="false">7</Day>
+            <Day aria-selected="false">8</Day>
+            <Day aria-selected="false">9</Day>
+            <Day aria-selected="false">10</Day>
+            <Day aria-selected="false">11</Day>
+            <Day aria-selected="false">12</Day>
+            <Day aria-selected="false">13</Day>
           </Week>
-          <Week id="week13">
-            <Day dayHeaders="Sunday week13" ariaSelected="false">14</Day>
-            <Day dayHeaders="Monday week13" ariaSelected="false">15</Day>
-            <Day dayHeaders="Tuesday week13" ariaSelected="false">16</Day>
-            <Day dayHeaders="Wednesday week13" ariaSelected="false">17</Day>
-            <Day className="slds-is-today" dayHeaders="Thursday week13" ariaSelected="false">18</Day>
-            <Day dayHeaders="Friday week13" ariaSelected="false">19</Day>
-            <Day dayHeaders="Saturday week13" ariaSelected="false">20</Day>
+          <Week>
+            <Day aria-selected="false">14</Day>
+            <Day aria-selected="false">15</Day>
+            <Day aria-selected="false">16</Day>
+            <Day aria-selected="false">17</Day>
+            <Day aria-selected="false" className="slds-is-today">
+              <span className="slds-assistive-text">Today: </span>
+              18
+            </Day>
+            <Day aria-selected="false">19</Day>
+            <Day aria-selected="false">20</Day>
           </Week>
-          <Week id="week14">
-            <Day dayHeaders="Sunday week14" ariaSelected="false">21</Day>
-            <Day dayHeaders="Monday week14" ariaSelected="false">22</Day>
-            <Day className="slds-is-selected" dayHeaders="Tuesday week14" ariaSelected="true">23</Day>
-            <Day dayHeaders="Wednesday week14" ariaSelected="false">24</Day>
-            <Day dayHeaders="Thursday week14" ariaSelected="false">25</Day>
-            <Day dayHeaders="Friday week14" ariaSelected="false">26</Day>
-            <Day dayHeaders="Saturday week14" ariaSelected="false">27</Day>
+          <Week>
+            <Day aria-selected="false">21</Day>
+            <Day aria-selected="false">22</Day>
+            <Day aria-selected="true" className="slds-is-selected">23</Day>
+            <Day aria-selected="false">24</Day>
+            <Day aria-selected="false">25</Day>
+            <Day aria-selected="false">26</Day>
+            <Day aria-selected="false">27</Day>
           </Week>
-          <Week id="week15">
-            <Day dayHeaders="Sunday week15" ariaSelected="false">28</Day>
-            <Day dayHeaders="Monday week15" ariaSelected="false">29</Day>
-            <Day dayHeaders="Tuesday week15" ariaSelected="false">30</Day>
-            <Day className="slds-disabled-text" dayHeaders="Wednesday week15" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className="slds-disabled-text" dayHeaders="Thursday week15" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className="slds-disabled-text" dayHeaders="Friday week15" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className="slds-disabled-text" dayHeaders="Saturday week15" ariaDisabled="true" ariaSelected="false">4</Day>
+          <Week>
+            <Day aria-selected="false">28</Day>
+            <Day aria-selected="false">29</Day>
+            <Day aria-selected="false">30</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
+            <td colSpan="7" role="gridcell">
+              <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+                Today
+              </span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -207,53 +241,60 @@ let MultiSelected = props =>
           <Weekdays />
         </thead>
         <tbody>
-          <Week id="week21">
-            <Day className="slds-disabled-text" dayHeaders="Sunday week21" ariaDisabled="true" ariaSelected="false">31</Day>
-            <Day dayHeaders="Monday week21" ariaSelected="false">1</Day>
-            <Day dayHeaders="Tuesday week21" ariaSelected="false">2</Day>
-            <Day dayHeaders="Wednesday week21" ariaSelected="false">3</Day>
-            <Day dayHeaders="Thursday week21" ariaSelected="false">4</Day>
-            <Day dayHeaders="Friday week21" ariaSelected="false">5</Day>
-            <Day dayHeaders="Saturday week21" ariaSelected="false">6</Day>
+          <Week>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">31</Day>
+            <Day aria-selected="false" tabIndex="0">1</Day>
+            <Day aria-selected="false">2</Day>
+            <Day aria-selected="false">3</Day>
+            <Day aria-selected="false">4</Day>
+            <Day aria-selected="false">5</Day>
+            <Day aria-selected="false">6</Day>
           </Week>
-          <Week id="week22">
-            <Day dayHeaders="Sunday week22" ariaSelected="false">7</Day>
-            <Day dayHeaders="Monday week22" ariaSelected="false">8</Day>
-            <Day dayHeaders="Tuesday week22" ariaSelected="false">9</Day>
-            <Day dayHeaders="Wednesday week22" ariaSelected="false">10</Day>
-            <Day dayHeaders="Thursday week22" ariaSelected="false">11</Day>
-            <Day dayHeaders="Friday week22" ariaSelected="false">12</Day>
-            <Day dayHeaders="Saturday week22" ariaSelected="false">13</Day>
+          <Week>
+            <Day aria-selected="false">7</Day>
+            <Day aria-selected="false">8</Day>
+            <Day aria-selected="false">9</Day>
+            <Day aria-selected="false">10</Day>
+            <Day aria-selected="false">11</Day>
+            <Day aria-selected="false">12</Day>
+            <Day aria-selected="false">13</Day>
           </Week>
-          <Week id="week23">
-            <Day dayHeaders="Sunday week23" ariaSelected="false">14</Day>
-            <Day dayHeaders="Monday week23" ariaSelected="false">15</Day>
-            <Day dayHeaders="Tuesday week23" ariaSelected="false">16</Day>
-            <Day dayHeaders="Wednesday week23" ariaSelected="false">17</Day>
-            <Day className="slds-is-today" dayHeaders="Thursday week23" ariaSelected="false">18</Day>
-            <Day dayHeaders="Friday week23" ariaSelected="false">19</Day>
-            <Day dayHeaders="Saturday week23" ariaSelected="false">20</Day>
+          <Week>
+            <Day aria-selected="false">14</Day>
+            <Day aria-selected="false">15</Day>
+            <Day aria-selected="false">16</Day>
+            <Day aria-selected="false">17</Day>
+            <Day aria-selected="false" className="slds-is-today">
+              <span className="slds-assistive-text">Today: </span>
+              18
+            </Day>
+            <Day aria-selected="false">19</Day>
+            <Day aria-selected="false">20</Day>
           </Week>
-          <Week id="week24" className="slds-has-multi-row-selection">
-            <Day dayHeaders="Sunday week24" ariaSelected="false">21</Day>
-            <Day dayHeaders="Monday week24" ariaSelected="false">22</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Tuesday week24" ariaSelected="true">23</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Wednesday week24" ariaSelected="true">24</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Thursday week24" ariaSelected="true">25</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Friday week24" ariaSelected="true">26</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Saturday week24" ariaSelected="true">27</Day>
+          <Week className="slds-has-multi-row-selection">
+            <Day aria-selected="false">21</Day>
+            <Day aria-selected="false">22</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">23</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">24</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">25</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">26</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">27</Day>
           </Week>
-          <Week id="week25" className="slds-has-multi-row-selection">
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Sunday week25" ariaSelected="true">28</Day>
-            <Day className="slds-is-selected slds-is-selected-multi" dayHeaders="Monday week25" ariaSelected="true">29</Day>
-            <Day dayHeaders="Tuesday week25" ariaSelected="false">30</Day>
-            <Day className="slds-disabled-text" dayHeaders="Wednesday week25" ariaDisabled="true" ariaSelected="false">1</Day>
-            <Day className="slds-disabled-text" dayHeaders="Thursday week25" ariaDisabled="true" ariaSelected="false">2</Day>
-            <Day className="slds-disabled-text" dayHeaders="Friday week25" ariaDisabled="true" ariaSelected="false">3</Day>
-            <Day className="slds-disabled-text" dayHeaders="Saturday week25" ariaDisabled="true" ariaSelected="false">4</Day>
+          <Week className="slds-has-multi-row-selection">
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">28</Day>
+            <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">29</Day>
+            <Day aria-selected="false">30</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
+            <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
           </Week>
           <tr>
-            <td colSpan="7" role="gridcell"><a href="javascript:void(0);" className="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
+            <td colSpan="7" role="gridcell">
+              <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+                Today
+              </span>
+            </td>
           </tr>
         </tbody>
       </table>

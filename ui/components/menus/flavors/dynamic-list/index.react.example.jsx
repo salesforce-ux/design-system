@@ -92,7 +92,7 @@ export let states = [
         <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
           { _.times(7, i =>
-            <ListboxItem tabIndex={ (i===0) ? '0' : null }>
+            <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
               <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
               <div className="slds-media__body">
                 <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
@@ -125,7 +125,7 @@ export let states = [
               placeholder="Search Accounts"
               aria-owns="option-list-01"
               role="combobox"
-              aria-activedescendent=""
+              aria-activedescendant=""
               aria-expanded="true"
               aria-autocomplete="list" />
           </FormElementControl>
@@ -133,7 +133,7 @@ export let states = [
         <ListboxList id="option-list-01" className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
           <ListboxItem role="presentation" headerText="My Favorites" />
           { _.times(11, i =>
-            <ListboxItem tabIndex={ (i===0) ? '0' : null }>
+            <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
               <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
               <div className="slds-media__body">
                 <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>

@@ -72,9 +72,7 @@ class ComponentFlavor extends React.Component {
         : null,
       // If the component example has states, set the initial previewState
       previewState: _.has(flavor.example, 'states')
-        ? _.first(flavor.example.states) : false,
-      // Used for accessibility
-      initialView: true
+        ? _.first(flavor.example.states) : false
     };
   }
 
@@ -233,9 +231,7 @@ class ComponentFlavor extends React.Component {
     return this.state.previewTabs.length > 1
       ? (
         <Tabs
-          className={classNames('site-example--tabs', {
-            'site-example--tabs-initial-view': this.state.initialView
-          })}
+          className="site-example--tabs"
           flavor="default"
           panel={previewPanel}
           selectedIndex={previewTabs.indexOf(previewTabActive)}>
@@ -268,8 +264,7 @@ class ComponentFlavor extends React.Component {
           data-form-factor={tab.key}
           data-controls={tab.key}
           id={`${flavor.uid}__preview-tab--${tab.key}`}
-          content={content}
-          initialView={this.state.initialView} />
+          content={content} />
       );
     });
   }

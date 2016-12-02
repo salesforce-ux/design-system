@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import { Select as Select } from 'ui/components/forms/flavors/select/index.react.example';
 
 ///////////////////////////////////////////
@@ -24,7 +24,7 @@ let Demo = props =>
   </div>;
 
 let Datepicker = props =>
-  <div className={className('slds-datepicker', props.className)} aria-hidden="false">
+  <div className={classNames('slds-datepicker', props.className)} aria-hidden="false">
     {props.children}
   </div>;
 

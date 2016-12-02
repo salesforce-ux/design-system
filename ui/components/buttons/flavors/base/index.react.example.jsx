@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -23,7 +23,7 @@ let Demo = props =>
   </div>;
 
 let Button = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled}>
+  <button className={classNames('slds-button', props.className)} disabled={props.disabled}>
     {props.children}
   </button>;
 

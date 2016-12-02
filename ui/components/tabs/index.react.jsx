@@ -17,17 +17,19 @@ const PT = React.PropTypes;
 
 class TabContent extends React.Component {
   render() {
-    const className = classNames(
-      this.props.className,
-      classNames(`slds-tabs--${this.props.flavor}__content`, {
-        'slds-show': this.props.current,
-        'slds-hide': !this.props.current
+    const { className, current, flavor, ...rest } = this.props;
+    const classNameComputed = classNames(
+      className,
+      classNames(`slds-tabs--${flavor}__content`, {
+        'slds-show': current,
+        'slds-hide': !current
       })
     );
+
     return (
       <div
-        {...this.props}
-        className={className}
+        {...rest}
+        className={classNameComputed}
         role="tabpanel"
         aria-labelledby={`${this.props.id}__item`}>
         {this.props.children}
@@ -66,17 +68,17 @@ class TabItem extends React.Component {
     );
   }
   render() {
-    const props = _.omit(this.props, ['className', 'id', 'role', 'content']);
-    const className = classNames(
-      this.props.className,
-      classNames(`slds-tabs--${this.props.flavor}__item`, {
-        'slds-active': this.props.current
+    const { className, id, role, current, flavor, content, ...rest } = this.props;
+    const classNameComputed = classNames(
+      className,
+      classNames(`slds-tabs--${flavor}__item`, {
+        'slds-active': current
       })
     );
-    const tabIndex = this.props.current ? 0 : -1;
+    const tabIndex = current ? 0 : -1;
     return (
-      <li className={className} {...props} role="presentation">
-        {this.props.content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
+      <li className={classNameComputed} {...rest} role="presentation">
+        {content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex) }
       </li>
     );
   }
@@ -91,19 +93,19 @@ TabItem.propTypes = {
 
 class TabItemOverflow extends React.Component {
   render() {
-    const props = _.omit(this.props, ['className', 'id', 'role']);
-    const className = classNames(
-      this.props.className,
+    const { className, id, role, current, flavor, children, ...rest } = this.props;
+    const classNameComputed = classNames(
+      className,
       classNames('slds-tabs__item--overflow', {
-        'slds-active': this.props.current
+        'slds-active': current
       })
     );
-    const tabIndex = this.props.current ? 0 : -1;
-    const contents = React.Children.map(this.props.children, function(c,i) {
+    const tabIndex = current ? 0 : -1;
+    const contents = React.Children.map(children, function(c,i) {
       return React.cloneElement(c);
     });
     return (
-      <li className={className} {...props} role="presentation">
+      <li className={classNameComputed} {...rest} role="presentation">
         {contents}
       </li>
     );
@@ -152,19 +154,19 @@ class Tabs extends React.Component {
     });
   }
   render() {
-    const props = _.omit(this.props, ['className', 'flavor']);
-    const className = classNames(
-      this.props.className,
-      `slds-tabs--${this.props.flavor}`
+    const { className, flavor, panel, selectedIndex, ...rest } = this.props;
+    const composedClassName = classNames(
+      className,
+      `slds-tabs--${flavor}`
     );
     return (
-      <div {...props} className={className}>
+      <div {...rest} className={composedClassName}>
         <ul
-          className={`slds-tabs--${this.props.flavor}__nav`}
+          className={`slds-tabs--${flavor}__nav`}
           role="tablist">
         {this.tabs()}
         </ul>
-        {this.props.panel ? this.props.panel : this.currentPanel()}
+        {panel ? panel : this.currentPanel()}
       </div>
     );
   }

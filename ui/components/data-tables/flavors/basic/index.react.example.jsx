@@ -10,14 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={className('slds-table slds-table--bordered slds-table--cell-buffer', props.className)}>
+  <table className={classNames('slds-table slds-table--bordered slds-table--cell-buffer', props.className)}>
     {props.children}
   </table>;
 

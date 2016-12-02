@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
@@ -23,14 +23,14 @@ import _ from 'lodash';
 ///////////////////////////////////////////
 
 export let Listbox = props =>
-  <div className={className('slds-dropdown', props.className)} role="listbox">
+  <div className={classNames('slds-dropdown', props.className)} role="listbox">
     {props.children}
   </div>;
 
 export let ListboxList = props =>
   <ul
     id={ props.id || 'option-list-01' }
-    className={className('slds-dropdown__list', props.className)}
+    className={classNames('slds-dropdown__list', props.className)}
     role={ props.role == 'group' ? 'group' : 'presentation' }
     aria-label={ props.role == 'group' ? props['aria-label'] : null }
   >
@@ -43,7 +43,7 @@ export let ListboxItem = props => {
   return (
     <li className={ props.className } role="presentation">
       <span
-        className={ className( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
+        className={ classNames( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
         role={ !props.role ? 'option' : props.role}
         tabIndex={ props.tabIndex || '-1' }
         id={ uniqueId }
@@ -73,7 +73,7 @@ let ComboboxSearchInput = props =>
         placeholder={ props.placeholder || 'Select an Option' }
         aria-owns="option-list-01"
         role="combobox"
-        aria-activedescendent=""
+        aria-activedescendant=""
         aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
         readOnly={!props.autocomplete}
         aria-autocomplete={props.autocomplete ? 'list' : null}

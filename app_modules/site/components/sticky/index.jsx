@@ -38,7 +38,7 @@ export default React.createClass({
     return (
       <div className={this.props.className} data-slds-sticky>
         {React.cloneElement(content, {
-          contentClassName,
+          className: contentClassName,
           'data-slds-sticky-content': true,
           'data-slds-sticky-fixed-elements-above': this.props.fixedElementsAbove,
           'data-slds-sticky-fixed-elements-below': this.props.fixedElementsBelow,

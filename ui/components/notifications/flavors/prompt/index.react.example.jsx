@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Lorem from 'react-lorem-component';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 
 export default (
@@ -29,7 +28,8 @@ export default (
       </ModalHeader>
 
       <ModalContent className="slds-p-around--medium">
-        <Lorem count={1} paragraphLowerBound={2} />
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
       </ModalContent>
 
       <ModalFooter className="slds-theme--default">

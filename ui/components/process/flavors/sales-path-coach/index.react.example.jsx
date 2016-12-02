@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -41,7 +41,7 @@ let Triggerup = props =>
   <ButtonIcon className="slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small slds-flip--vertical" symbol="chevrondown" assistiveText="Close" title="Close" />;
 
 let Action = props =>
-  <button className={className('slds-button slds-button--brand slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>
+  <button className={classNames('slds-button slds-button--brand slds-path__mark-complete slds-no-flex slds-m-horizontal--small', props.className)}>
     {props.children}
   </button>;
 
@@ -55,7 +55,7 @@ let Tabsmain = props =>
 let Tab = props => {
   const uniqueId = _.uniqueId('tabs-path-');
   return (
-    <li className={className('slds-tabs--path__item', props.className)} role="presentation">
+    <li className={classNames('slds-tabs--path__item', props.className)} role="presentation">
       <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
         {props.children}
       </a>
@@ -74,7 +74,7 @@ let Coachcontent2 = props =>
   </div>;
 
 let Coachcontent3 = props =>
-  <div id="content-path-3" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-3">
+  <div id="content-path-3" className={classNames('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-3">
     <div className="slds-grid slds-grid--align-spread">
       <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
         <div className="slds-grid slds-grid--align-spread">
@@ -102,7 +102,7 @@ let Coachcontent3 = props =>
   </div>;
 
 let Coachcontent4 = props =>
-  <div id="content-path-4" className={className('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-4">
+  <div id="content-path-4" className={classNames('slds-tabs--path__content', props.className)} role="tabpanel" aria-labelledby="tab-path-4">
     <div className="slds-grid slds-grid--align-spread">
       <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
         <div className="slds-grid slds-grid--align-spread">

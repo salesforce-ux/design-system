@@ -10,14 +10,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Navigation = props =>
-  <div className={className('slds-grid slds-grid--vertical slds-navigation-list--vertical', props.className)}>
+  <div className={classNames('slds-grid slds-grid--vertical slds-navigation-list--vertical', props.className)}>
     {props.children}
   </div>;
 

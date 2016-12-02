@@ -10,11 +10,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
 export let Tooltip = props =>
-  <div className={className('slds-popover slds-popover--tooltip', props.className)} role="tooltip" id={props.id} style={props.style}>
+  <div className={classNames('slds-popover slds-popover--tooltip', props.className)} role="tooltip" id={props.id} style={props.style}>
     <div className="slds-popover__body">
       { props.children }
     </div>

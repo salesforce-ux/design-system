@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
@@ -54,7 +54,7 @@ let Container = props =>
   </div>;
 
 export let Table = props =>
-  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '66.75rem' }}>
+  <table className={classNames('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '66.75rem' }}>
     {props.children}
   </table>;
 
@@ -90,7 +90,7 @@ let Checkbox = props =>
 let ButtonEdit = props =>
   <button className="slds-button slds-button--icon slds-cell-edit__button slds-m-left--x-small" tabIndex={props.tabIndex || '-1'} disabled={props.disabled} id={props.id}>
     <span className="slds-assistive-text">{props.alt}</span>
-    <SvgIcon className={className('slds-button__icon slds-button__icon--hint', props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
+    <SvgIcon className={classNames('slds-button__icon slds-button__icon--hint', props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
   </button>;
 
 let EditPanel = props =>
@@ -118,10 +118,10 @@ export let RowData = props => {
 
   return(
     <tr className="slds-hint-parent" aria-selected={ props.checked }>
-      <td id={ props.cellID } tabIndex={ props.errorindex } role="gridcell" className={className('slds-cell-edit slds-cell-error', props.editName)}>
+      <td id={ props.cellID } tabIndex={ props.errorindex } role="gridcell" className={classNames('slds-cell-edit slds-cell-error', props.editName)}>
         <button
           id={ 'error-0' + props.index }
-          className={className('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)}
+          className={classNames('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)}
           tabIndex={ props.errorindex || '-1' }
           aria-hidden={ props.buttonInvisible ? 'true' : null }
           aria-describedby={ props.buttonInvisible ? null : 'error-tooltip-01' }>
@@ -130,10 +130,10 @@ export let RowData = props => {
         </button>
         <span className="slds-row-number slds-text-body--small slds-text-color--weak"></span>
       </td>
-      <td role="gridcell" className={ className('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
+      <td role="gridcell" className={ classNames('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
         <Checkbox label={ checkboxLabel } tabIndex={ !props.focusable ? '-1' : '0' } checkID="checkbox-01" />
       </td>
-      <th scope="row" tabIndex={ props.initialCellTabIndex } aria-selected={props.defaultSelected} className={className('slds-cell-edit', props.thClassName)}>
+      <th scope="row" tabIndex={ props.initialCellTabIndex } aria-selected={props.defaultSelected} className={classNames('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
           <a href="javascript:void()" className="slds-truncate" tabIndex={ props.initialCellTabIndex || '-1' } id={ props.linkId } title={ props.recordName }>
             { props.recordName }

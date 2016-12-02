@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
 
 export let states = [

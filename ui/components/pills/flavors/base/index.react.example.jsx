@@ -12,14 +12,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Pill = props =>
-  <span className={className('slds-pill', props.className)}>
+  <span className={classNames('slds-pill', props.className)}>
     {props.children}
     {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</span>
     : <a href="javascript:void(0);" className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
@@ -27,7 +27,7 @@ export let Pill = props =>
   </span>;
 
 export let PillContainer = props =>
-  <div className={className('slds-pill_container', props.className)}>
+  <div className={classNames('slds-pill_container', props.className)}>
     {props.children}
   </div>;
 

@@ -12,10 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem, Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 export let ButtonGroupList = props =>
-  <ul {...props} className={className('slds-button-group-list', props.className)}>
+  <ul {...props} className={classNames('slds-button-group-list', props.className)}>
     {props.children}
   </ul>;
 

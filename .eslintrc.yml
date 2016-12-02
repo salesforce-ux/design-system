@@ -12,6 +12,7 @@ parserOptions:
     modules: true
     impliedStrict: true
     classes: true
+    experimentalObjectRestSpread: true
 
 rules:
   strict: [0]

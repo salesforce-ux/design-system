@@ -14,11 +14,11 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 export let TimelineIcon = props =>
   <div className="slds-icon_container">
-    <SvgIcon className={className('slds-icon slds-icon--small', props.symbol == 'log_a_call' ? 'slds-icon-standard-log-a-call' : 'slds-icon-standard-' + props.symbol)} sprite="standard" symbol={ props.symbol } />
+    <SvgIcon className={classNames('slds-icon slds-icon--small', props.symbol == 'log_a_call' ? 'slds-icon-standard-log-a-call' : 'slds-icon-standard-' + props.symbol)} sprite="standard" symbol={ props.symbol } />
   </div>;
 
 export let TimelineActions = props =>

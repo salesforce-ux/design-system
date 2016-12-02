@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -27,7 +27,7 @@ const dialingIcon = (
 );
 
 export let UtilityPanel = props =>
-  <section className={className('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+  <section className={classNames('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <header className="slds-utility-panel__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media--center">
         <div className="slds-media__figure slds-m-right--x-small">

@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { GlobalHeader } from 'ui/components/global-header/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 
 //////////////////////////////////////////////
@@ -36,7 +36,7 @@ export let states = [
               placeholder="Search Salesforce"
               aria-owns="global-search-list-01"
               role="combobox"
-              aria-activedescendent=""
+              aria-activedescendant=""
               aria-expanded="true"
               aria-autocomplete="list" />
           </div>
@@ -111,7 +111,7 @@ export let states = [
             placeholder="Search Salesforce"
             aria-owns="global-search-list-01"
             role="combobox"
-            aria-activedescendent="option-00"
+            aria-activedescendant="option-00"
             aria-expanded="true"
             aria-autocomplete="list"
             defaultValue="ibm" />

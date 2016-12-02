@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -43,13 +43,13 @@ const ActionsDropdown = (
 );
 
 let ButtonIcon = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
-    <SvgIcon className={className('slds-button__icon', props.iconClassName)} sprite="utility" symbol={ props.symbol } />
+  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.assistiveText }>
+    <SvgIcon className={classNames('slds-button__icon', props.iconClassName)} sprite="utility" symbol={ props.symbol } />
     <span className="slds-assistive-text">{ props.assistiveText }</span>
   </button>;
 
 export let GlobalHeader = props =>
-  <header className={className('slds-global-header_container', props.className)}>
+  <header className={classNames('slds-global-header_container', props.className)}>
     <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
     <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
     <div className="slds-global-header slds-grid slds-grid--align-spread">
@@ -59,7 +59,7 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <div className="slds-global-header__item slds-global-header__item--search">
-        <div className={className('slds-form-element slds-lookup', props.autocomplete ? 'slds-is-open': null)}>
+        <div className={classNames('slds-form-element slds-lookup', props.autocomplete ? 'slds-is-open': null)}>
           <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
           { props.autocomplete ?
             props.children
@@ -70,23 +70,23 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
-        <li className={ className('slds-grid') }>
+        <li className={ classNames('slds-grid') }>
           <ButtonIcon
-            className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null, props.favoritesDisabled ? 'slds-is-disabled' : null) }
+            className={ classNames('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon-favorites', props.favoritesSelected ? 'slds-is-selected' : null, props.favoritesDisabled ? 'slds-is-disabled' : null) }
             disabled={ props.favoritesDisabled }
             iconClassName="slds-global-header__icon"
             symbol="favorite"
             assistiveText="Toggle Favorite" />
-          <span className={ className('slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null) }>
+          <span className={ classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open': null) }>
             <ButtonIcon
-              className={ className('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon slds-m-left--none') }
+              className={ classNames('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon slds-m-left--none') }
               hasPopup
               disabled={ props.favoritesDisabled }
               symbol="chevrondown"
               assistiveText="View Favorites" />
           </span>
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-horizontal--xxx-small', props.actions ? 'slds-is-open': null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-horizontal--xxx-small', props.actions ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-button--icon-x-small slds-global-header__button--icon-actions slds-m-horizontal--xx-small"
             hasPopup
@@ -94,7 +94,7 @@ export let GlobalHeader = props =>
             assistiveText="Global Actions" />
           { props.actions ? ActionsDropdown : null}
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.help ? 'slds-is-open': null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.help ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
             iconClassName="slds-global-header__icon"
@@ -102,7 +102,7 @@ export let GlobalHeader = props =>
             symbol="question"
             assistiveText="Help and Training" />
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
             iconClassName="slds-global-header__icon"
@@ -111,7 +111,7 @@ export let GlobalHeader = props =>
             assistiveText="Setup" />
           { props.setup ? SetupDropdown : null}
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open': null)}>
           <ButtonIcon
             className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
             iconClassName="slds-global-header__icon"
@@ -119,7 +119,7 @@ export let GlobalHeader = props =>
             symbol="notification"
             assistiveText="Notifications" />
         </li>
-        <li className={className('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open': null)}>
           <button className="slds-button" title="person name" aria-haspopup="true">
             <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
               <img

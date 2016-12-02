@@ -18,7 +18,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 const icon = (
-  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
+  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
 );
 
 const image = (

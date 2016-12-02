@@ -11,10 +11,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 let ButtonIcon = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
+  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
     <SvgIcon className="slds-button__icon" sprite="utility" symbol={props.symbol} />
     <span className="slds-assistive-text">{props.assistiveText}</span>
   </button>;
@@ -22,7 +22,7 @@ let ButtonIcon = props =>
 export let PostFooterActions = props =>
   <ul className="slds-post__footer-actions-list slds-list--horizontal">
     <li className="slds-col slds-item slds-m-right--medium">
-      <a href="javascript:void(0);" title="Like this item" className={className('slds-post__footer-action', props.liked ? 'slds-is-active' : null)}>
+      <a href="javascript:void(0);" title="Like this item" className={classNames('slds-post__footer-action', props.liked ? 'slds-is-active' : null)}>
         <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
       </a>
@@ -72,17 +72,17 @@ export let PostHeader = props =>
   </header>;
 
 export let PostContent = props =>
-  <div className={className('slds-post__content slds-text-longform', props.className)}>
+  <div className={classNames('slds-post__content slds-text-longform', props.className)}>
     { props.children }
   </div>;
 
 export let PostFooter = props =>
-  <footer className={className('slds-post__footer', props.className)}>
+  <footer className={classNames('slds-post__footer', props.className)}>
     { props.children }
   </footer>;
 
 export let Post = props =>
-  <article className={className('slds-post', props.className)}>
+  <article className={classNames('slds-post', props.className)}>
     { props.children }
   </article>;
 

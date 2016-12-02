@@ -13,7 +13,7 @@ import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const composers = [{
@@ -37,7 +37,7 @@ let Demo = props =>
   </div>;
 
 export let DockedComposerPanel = props =>
-  <section className={className('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+  <section className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <header className="slds-docked-composer__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media--center">
         <div className="slds-media__figure slds-m-right--x-small">
@@ -71,14 +71,14 @@ export let DockedComposerPanel = props =>
   </section>;
 
 export let DockedComposerPanelBody = props =>
-  <div className={className('slds-docked-composer__body', props.className)}>
+  <div className={classNames('slds-docked-composer__body', props.className)}>
     { !props.children ?
       <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
     : props.children }
   </div>;
 
 export let DockedComposerPanelFooter = props =>
-  <footer className={className('slds-docked-composer__footer slds-shrink-none', props.className)}>
+  <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.className)}>
     { !props.children ?
       <div className="slds-col--bump-left slds-text-align--right">
         <button className="slds-button slds-button--brand">Action</button>

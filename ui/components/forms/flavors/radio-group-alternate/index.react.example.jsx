@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,7 +22,7 @@ let Demo = props =>
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className('slds-form-element', props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">Scheduled Day(s)</legend>
     <div className="slds-form-element__control">
       {props.children}
@@ -35,7 +35,7 @@ let RadioGroup = props =>
   </div>;
 
 let Radio = props =>
-  <span className={className('slds-button slds-radio--button', props.className)}>
+  <span className={classNames('slds-button slds-radio--button', props.className)}>
     <input name="radio" type="radio" id={props.id} disabled={props.disabled} aria-describedby={props.errorId} />
     <label className="slds-radio--button__label" htmlFor={props.id}>
       <span className="slds-radio--faux">

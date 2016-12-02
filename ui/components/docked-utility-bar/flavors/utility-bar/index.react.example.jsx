@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -19,7 +19,7 @@ import className from 'classnames';
 
 export let UtilityBarItem = props =>
   <li className="slds-utility-bar__item">
-    <button className={className('slds-button slds-utility-bar__action', props.className)}>
+    <button className={classNames('slds-button slds-utility-bar__action', props.className)}>
       <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol={ props.symbol } />
       { props.children }
     </button>

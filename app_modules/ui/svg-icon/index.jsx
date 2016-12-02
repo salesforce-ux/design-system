@@ -10,20 +10,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import omit from 'lodash/omit';
 
 class SvgIcon extends React.Component {
   render() {
-    const props = omit(this.props, ['className', 'sprite', 'symbol']);
+    const { sprite, symbol, ...rest } = this.props;
+
     return (
       <svg
-        {...props}
+        {...rest}
         aria-hidden={true}
-        className={this.props.className}
         dangerouslySetInnerHTML={{__html: this.getUse()}} />
     );
   }
   getUse() {
+    if (!(this.props.sprite && this.props.symbol)) {
+      return;
+    }
+
     const { sprite, symbol } = this.props;
     const href = `/assets/icons/${sprite}-sprite/svg/symbols.svg#${symbol}`;
     return `<use xlink:href="${href}"></use>`;
@@ -32,8 +35,8 @@ class SvgIcon extends React.Component {
 
 SvgIcon.propTypes = {
   className: React.PropTypes.string,
-  sprite: React.PropTypes.string.isRequired,
-  symbol: React.PropTypes.string.isRequired
+  sprite: React.PropTypes.string,
+  symbol: React.PropTypes.string
 };
 
 export default SvgIcon;

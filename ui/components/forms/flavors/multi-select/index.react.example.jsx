@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -75,7 +75,7 @@ const ListBox = props =>
 const Option = props =>
   <li
     aria-selected={ props.option.isSelected }
-    className={className('slds-picklist__item slds-is-draggable', props.option.isGrabbed ? 'slds-is-grabbed' : null)}
+    className={classNames('slds-picklist__item slds-is-draggable', props.option.isGrabbed ? 'slds-is-grabbed' : null)}
     draggable="true"
     role="option"
     tabIndex={ props.option.tabIndex }

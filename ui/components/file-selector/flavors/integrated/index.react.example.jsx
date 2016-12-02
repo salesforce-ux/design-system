@@ -11,12 +11,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
 
 let IntegratedFileSelector = props =>
-  <div className={className('slds-file-selector slds-file-selector--integrated', props.className)}>
-    <div className={className('slds-file-selector__dropzone slds-file-selector__dropzone--integrated', props.drag ? 'slds-has-drag' : null, props.draggover ? 'slds-has-drag-over' : null)} aria-hidden="true">
+  <div className={classNames('slds-file-selector slds-file-selector--integrated', props.className)}>
+    <div className={classNames('slds-file-selector__dropzone slds-file-selector__dropzone--integrated', props.drag ? 'slds-has-drag' : null, props.draggover ? 'slds-has-drag-over' : null)} aria-hidden="true">
       <input className="slds-file-selector__input slds-assistive-text" accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} tabIndex="-1" />
       <label className="slds-file-selector__body slds-file-selector__body--integrated" htmlFor="file-upload-input-01">
         { props.draggoverError ?

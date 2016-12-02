@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 const headerActionOverflow = (
   <button className="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true">
@@ -38,13 +38,13 @@ const headerSearch = (
 ///////////////////////////////////////////
 
 export let Card = props =>
-  <article className={className('slds-card', props.className)}>
+  <article className={classNames('slds-card', props.className)}>
     { props.children }
   </article>;
 
 export let CardHeader = props =>
-  <div className={className('slds-card__header slds-grid', props.className)}>
-    <header className={className('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
+  <div className={classNames('slds-card__header slds-grid', props.className)}>
+    <header className={classNames('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
       { props.symbol ?
         <div className="slds-media__figure">
           <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
@@ -58,18 +58,18 @@ export let CardHeader = props =>
       </div>
     </header>
     { props.search ? headerSearch : null }
-    <div className={className('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
+    <div className={classNames('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
       { props.actions == 'overflow' ? headerActionOverflow : headerAction }
     </div>
   </div>;
 
 export let CardBody = props =>
-  <div className={className('slds-card__body', props.className)}>
+  <div className={classNames('slds-card__body', props.className)}>
     { props.children }
   </div>;
 
 export let CardFooter = props =>
-  <footer className={className('slds-card__footer', props.className)}>
+  <footer className={classNames('slds-card__footer', props.className)}>
     { props.children }
   </footer>;
 

@@ -11,14 +11,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Tile = props =>
-  <div className={className('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <div className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions ?
       <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
         <h3 className="slds-truncate" title={ props.title || 'Title' }>
@@ -39,7 +39,7 @@ export let Tile = props =>
   </div>;
 
 export let TileMedia = props =>
-  <div className={className('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <div className={classNames('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.media ?
       <div className="slds-media__figure">
         { props.media }

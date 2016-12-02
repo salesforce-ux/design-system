@@ -15,7 +15,7 @@ import { CheckboxAddButton } from 'ui/components/forms/flavors/checkbox-add-butt
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
@@ -97,7 +97,7 @@ let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
   return(
-    <tr className={className('slds-hint-parent', props.className)} aria-selected={ props.checked }>
+    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={ props.checked }>
       <td role="gridcell" tabIndex={ (props.index === 1) ? '0': '-1' } className="slds-text-align--right" style={{ width: '3.75rem' }}>
         <CheckboxAddButton label={ checkboxLabel } checked={ props.checked } tabIndex="-1" />
       </td>

@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { GlobalHeader } from 'ui/components/global-header/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // Partials
@@ -37,7 +37,7 @@ let UnreadIcon = props =>
 
 
 let NotificationItem = props =>
-  <li className={className('slds-global-header__notification slds-p-around--xx-small', props.className)}>
+  <li className={classNames('slds-global-header__notification slds-p-around--xx-small', props.className)}>
     <div className="slds-media slds-has-flexi-truncate slds-p-around--x-small">
       <div className="slds-media__figure">
         <img

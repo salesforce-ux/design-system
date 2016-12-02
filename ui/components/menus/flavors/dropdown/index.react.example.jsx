@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -36,31 +36,52 @@ const ListIcon = (
 );
 
 export let Trigger = props =>
-  <div className={className('slds-dropdown-trigger slds-dropdown-trigger--click', props.className)}>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={ className( props.inverse ? 'slds-button--icon-border-inverse' : 'slds-button--icon-border-filled')} symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" /> }
+  <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.className)}>
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={ classNames( props.inverse ? 'slds-button--icon-border-inverse' : 'slds-button--icon-border-filled')} symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 
 export let Menu = props =>
-  <div className={className('slds-dropdown', props.className)}>
+  <div className={classNames('slds-dropdown', props.className)}>
     {props.children}
   </div>;
 
 export let MenuList = props =>
-  <ul className={className('slds-dropdown__list', props.className)} role="menu">
+  <ul className={classNames('slds-dropdown__list', props.className)} role="menu">
     {props.children}
   </ul>;
 
-export let MenuItem = props =>
-  <li {...props} className={className('slds-dropdown__item', props.className)} role="presentation">
-    <a href="javascript:void(0);" role={ props.isSelectable ? 'menuitemcheckbox' : 'menuitem' } aria-checked={props.isSelected} tabIndex={ props.tabIndex || '-1' }>
-      <span className="slds-truncate">
-        { props.isSelectable ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="check" /> : null }
-        {props.children}
-      </span>
-      { props.iconRight ? props.iconRight : null }
-    </a>
-  </li>;
+export let MenuItem = props => {
+  const {
+    className,
+    isSelectable,
+    isSelected,
+    children,
+    iconRight,
+    tabIndex,
+    ...rest
+  } = props;
+
+  return (
+    <li {...rest} className={classNames('slds-dropdown__item', className)} role="presentation">
+      <a
+        href="javascript:void(0);"
+        role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
+        aria-checked={ isSelected }
+        tabIndex={ tabIndex || '-1' }>
+        <span className="slds-truncate">
+          { isSelectable ? <SvgIcon
+                            className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
+                            sprite="utility"
+                            symbol="check" /> : null }
+          { children }
+        </span>
+        { iconRight ? iconRight : null }
+      </a>
+    </li>
+  );
+};
+
 
 //////////////////////////////////////////////
 // State Constructor(s)

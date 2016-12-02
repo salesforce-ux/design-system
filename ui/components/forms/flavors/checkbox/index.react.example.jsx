@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -23,7 +23,7 @@ let Demo = props =>
   </div>;
 
 let Fieldset = props =>
-  <fieldset className={className('slds-form-element', props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}
   </fieldset>;
 
@@ -31,7 +31,7 @@ let Legend = props =>
   <legend className="slds-form-element__legend slds-form-element__label">{props.children}</legend>;
 
 let FormElement = props =>
-  <div className={className('slds-form-element', props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
@@ -39,7 +39,7 @@ let FormElementLabel = props =>
   <label className="slds-form-element__label" htmlFor={props.id}>Checkbox Label</label>;
 
 let FormElementControl = props =>
-  <div className={className('slds-form-element__control', props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
@@ -50,9 +50,9 @@ export let Checkbox = props => {
     <span className="slds-checkbox">
       {props.children}
       <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
-      <label className={className('slds-checkbox__label', props.className)} htmlFor={ props.id ? props.id : uniqueId }>
+      <label className={classNames('slds-checkbox__label', props.className)} htmlFor={ props.id ? props.id : uniqueId }>
         <span className="slds-checkbox--faux"></span>
-        <span className={className('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{props.label}</span>
+        <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{props.label}</span>
       </label>
     </span>
   );
@@ -95,7 +95,7 @@ let ErrorState = props =>
       <FormElementControl>
         <Checkbox label="Checkbox Label" errorId="error_01"><abbr className="slds-required" title="required">*</abbr></Checkbox>
       </FormElementControl>
-      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </FormElement>
   </Demo>;
 
@@ -138,7 +138,7 @@ let GroupError = props =>
         <Checkbox errorId="error_01" label="Checkbox Label" checked />
         <Checkbox errorId="error_01" label="Checkbox Label" />
       </FormElementControl>
-      <div id="error_01" className="slds-form-element__help" iref="form-element__help">This field is required</div>
+      <div id="error_01" className="slds-form-element__help">This field is required</div>
     </Fieldset>
   </Demo>;
 

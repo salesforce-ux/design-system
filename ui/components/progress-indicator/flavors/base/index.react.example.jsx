@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
@@ -20,7 +20,7 @@ import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example
 //////////////////////////////////////////////
 
 export let Progress = props =>
-  <div className={ className('slds-progress', props.className) }>
+  <div className={ classNames('slds-progress', props.className) }>
     <ol className="slds-progress__list">
       { props.children }
     </ol>
@@ -32,7 +32,7 @@ export let Progress = props =>
   </div>;
 
 export let Step = props =>
-  <li className={ className('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null, props.error ? 'slds-has-error' : null) }>
+  <li className={ classNames('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null, props.error ? 'slds-has-error' : null) }>
     { props.done && !props.error ?
       <ButtonIcon
         className="slds-button--icon slds-progress__marker slds-progress__marker--icon"

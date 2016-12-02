@@ -10,24 +10,29 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Lorem from 'react-lorem-component';
 
+const Lorem = props =>
+  <p>
+    Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt
+    aute id consequat veniam incididunt duis in sint irure nisi.
+    Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+  </p>;
 
 export const preview = (
 <div className="demo-only" style={{height: '240px'}}>
   <div className="slds-scrollable--x">
     <div className="slds-grid slds-grid--overflow">
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
-      <div className="slds-col"><Lorem count={1} /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
+      <div className="slds-col"><Lorem /></div>
     </div>
   </div>
 </div>

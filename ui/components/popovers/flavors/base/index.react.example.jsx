@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 //////////////////////////////////////////////
@@ -24,14 +24,14 @@ export let Popover = props => {
 
   return (
     <section
-      className={ className('slds-popover', props.className) }
+      className={ classNames('slds-popover', props.className) }
       role="dialog"
       aria-labelledby={ !props.header && props.headerTitle ? headingUniqueId : props.headingId }
       aria-label={ !props.header && !props.headerTitle ? props.title : null }
       aria-describedby={ bodyUniqueId }>
       { props.closeButton ?
         <ButtonIcon
-          className={ className('slds-button--icon-small slds-float--right slds-popover__close', props.inverse ? 'slds-button--icon-inverse' : 'slds-button--icon') }
+          className={ classNames('slds-button--icon-small slds-float--right slds-popover__close', props.inverse ? 'slds-button--icon-inverse' : 'slds-button--icon') }
           symbol="close"
           assistiveText="Close dialog"
           title="Close dialog"
@@ -46,11 +46,11 @@ export let Popover = props => {
           assistiveText={ props.headerAssistiveText }
         />
       : props.header }
-      <div className={ className('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId } role={ props.bodyRole }>
+      <div className={ classNames('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId } role={ props.bodyRole }>
         {props.children}
       </div>
       { props.footer ?
-        <footer className={ className('slds-popover__footer', props.footerClassName) }>
+        <footer className={ classNames('slds-popover__footer', props.footerClassName) }>
           { props.footer }
         </footer>
       : null }
@@ -59,7 +59,7 @@ export let Popover = props => {
 };
 
 let Header = props =>
-  <header className={ className('slds-popover__header', props.className) }>
+  <header className={ classNames('slds-popover__header', props.className) }>
     { props.symbol ?
       <span className="slds-icon_container slds-m-right--small" title={ props.assistiveText }>
         <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol={ props.symbol } />

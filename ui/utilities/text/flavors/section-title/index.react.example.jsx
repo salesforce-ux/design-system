@@ -11,28 +11,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Section = props =>
-  <div className={className('slds-section', props.className)}>
+  <div className={classNames('slds-section', props.className)}>
     {props.children}
   </div>;
 
 let SectionContent = props =>
   <div
     aria-hidden={!props.isOpen}
-    className={className('slds-section__content', props.className)}
+    className={classNames('slds-section__content', props.className)}
     id="content"
   >
     {props.children}
   </div>;
 
 let SectionTitle = props =>
-  <h3 className={className('slds-section__title', props.className)}>
+  <h3 className={classNames('slds-section__title', props.className)}>
     {props.children}
   </h3>;
 

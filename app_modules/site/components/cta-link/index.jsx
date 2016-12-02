@@ -25,7 +25,7 @@ export default React.createClass({
     };
   },
   render () {
-    const { eventName, eventType, eventValues } = this.props;
+    const { eventName, eventType, eventValues, ...rest } = this.props;
     const props = {
       'data-slds-cta-event': true,
       'data-slds-cta-event-name': eventName,
@@ -34,7 +34,7 @@ export default React.createClass({
         ? JSON.stringify(eventValues) : null
     };
     return this.props.href
-      ? <a {...this.props} {...props}>{this.props.children}</a>
+      ? <a {...rest} {...props}>{this.props.children}</a>
       : React.cloneElement(React.Children.only(this.props.children), props);
   }
 });

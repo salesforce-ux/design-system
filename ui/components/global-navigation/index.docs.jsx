@@ -45,12 +45,17 @@ let NavigationBar = props =>
   </div>
 </div>;
 
-let NavigationBarItem = props =>
-  <li className="slds-context-bar__item slds-is-relative" { ...props }>
-    <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-    { props.showItems ?
-      <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
-  </li>;
+let NavigationBarItem = props => {
+  const { showItems, ...rest } = props;
+
+  return (
+    <li className="slds-context-bar__item slds-is-relative" { ...rest }>
+      <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+      { showItems ?
+        <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
+    </li>
+  );
+};
 
 export const intro = (
   <p className="site-text-introduction">

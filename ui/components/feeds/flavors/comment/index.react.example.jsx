@@ -11,14 +11,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Comment = props =>
-  <article className={className('slds-comment slds-media slds-hint-parent', props.className)}>
+  <article className={classNames('slds-comment slds-media slds-hint-parent', props.className)}>
     <div className="slds-media__figure">
       <a href="javascript:void(0);" className="slds-avatar slds-avatar--circle slds-avatar--medium">
         <img
@@ -44,7 +44,7 @@ export let CommentHeader = props =>
   </header>;
 
 export let CommentContent = props =>
-  <div className={className('slds-comment__content slds-text-longform', props.className)}>
+  <div className={classNames('slds-comment__content slds-text-longform', props.className)}>
     { props.children }
   </div>;
 
@@ -60,7 +60,7 @@ export let CommentFooter = props =>
   </footer>;
 
 let ButtonIcon = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
+  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
     <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol={props.symbol} />
     <span className="slds-assistive-text">{props.assistiveText}</span>
   </button>;

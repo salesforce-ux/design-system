@@ -10,25 +10,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className={className('demo-only', props.className)} style={{height: '6rem'}}>
+  <div className={classNames('demo-only', props.className)} style={{height: '6rem'}}>
     {props.children}
   </div>;
 
 export let SpinnerContainer = props =>
-  <div className={className('slds-spinner_container', props.className)}>
+  <div className={classNames('slds-spinner_container', props.className)}>
     {props.children}
   </div>;
 
 
 export let Spinner = props =>
-  <div role="status" className={className('slds-spinner', props.className)}>
+  <div role="status" className={classNames('slds-spinner', props.className)}>
     <span className="slds-assistive-text">Loading</span>
     <div className="slds-spinner__dot-a"></div>
     <div className="slds-spinner__dot-b"></div>

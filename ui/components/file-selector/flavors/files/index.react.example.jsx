@@ -11,14 +11,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 export let FileSelector = props =>
-<div className={className('slds-form-element', props.error ? 'slds-has-error' : null)}>
+<div className={classNames('slds-form-element', props.error ? 'slds-has-error' : null)}>
   <span className="slds-form-element__label" id="file-selector-id">Attachment</span>
   <div className="slds-form-element__control">
-    <div className={className('slds-file-selector', props.className)}>
-      <div className={className('slds-file-selector__dropzone', props.draggover ? 'slds-has-drag-over' : null)}>
+    <div className={classNames('slds-file-selector', props.className)}>
+      <div className={classNames('slds-file-selector__dropzone', props.draggover ? 'slds-has-drag-over' : null)}>
         <input className="slds-file-selector__input slds-assistive-text" accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'file-selector-id error-01' : 'file-selector-id'} />
         <label className="slds-file-selector__body" htmlFor="file-upload-input-01">
           <span className="slds-file-selector__button slds-button slds-button--neutral">

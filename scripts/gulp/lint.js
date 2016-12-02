@@ -109,7 +109,6 @@ gulp.task('lint:html', ['generate:examples:wrap'], () => {
 const parseComponentArgument = argv =>
   minimist(argv.slice(2)).component || '*';
 
-//gulp lint:vnu --component "{trees_base_with*,trees_base_deep*}"
 gulp.task('lint:vnu', ['generate:examples:wrap'], () =>
   gulp.src(`.html/${parseComponentArgument(process.argv)}`)
   .pipe(vnu.lint())

@@ -62,6 +62,7 @@ The following changes have been made in this release:
 - Stateful icon buttons are now compatible with `slds-button--icon-container`
 - Spacing adjustments made to lookup items
 - Spacing adjustments made to feeds
+- Improved support for inverse Button Icons
 
 **FIXED**
 

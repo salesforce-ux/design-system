@@ -88,7 +88,7 @@ classes:
     applied: <code>.slds-context-bar__item</code>
     required: true
   -
-    class: slds-unsaved-indicator
+    class: slds-indicator--unsaved
     description: Asterisk that is injected into the markup if a tab state is dirty
     applied: <code>&lt;abbr&gt;</code>
     required: true

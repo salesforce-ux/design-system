@@ -59,6 +59,7 @@
     "gulp-debug": "3.0.0",
     "gulp-eslint": "3.0.1",
     "gulp-filter": "4.0.0",
+    "gulp-html": "0.4.4",
     "gulp-htmlhint": "0.3.1",
     "gulp-if": "2.0.2",
     "gulp-ignore": "2.0.2",

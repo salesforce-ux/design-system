@@ -584,7 +584,7 @@ export default (
 
                         <input disabled name="checkbox" type="checkbox"  checked="checked" />
 
-                        <span className="slds-checkbox--faux site-stencil__border-dark site-stencil__background-dark slds-col--bump-left"></span>
+                        <span className="slds-checkbox--faux site-stencil__border-dark site-stencil__background-dark site-stencil__background-dark-after slds-col--bump-left"></span>
                       </label>
                     </div>
                   )}
@@ -628,7 +628,7 @@ export default (
 
                         <input disabled name="checkbox" type="checkbox"  checked="checked" />
 
-                        <span className="slds-checkbox--faux site-stencil__border-dark site-stencil__background-dark slds-col--bump-left"></span>
+                        <span className="slds-checkbox--faux site-stencil__border-dark site-stencil__background-dark-after site-stencil__background-dark slds-col--bump-left"></span>
                       </label>
                     </div>
                   )}

@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CTALink from 'app_modules/site/components/cta-link';
 
 export default (
-  <PageBody anchorTitle="Voice & Tone" contentClassName="slds-container--large">
+  <PageBody anchorTitle="Voice & Tone" contentClassName="site slds-container--large">
     <p className="site-text-introduction">
       Your custom applications shouldn’t just look and act like the Salesforce
       app – they should sound like it too.

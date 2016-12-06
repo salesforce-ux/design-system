@@ -20,7 +20,7 @@ const moduleName = g.moduleName;
 const staticAssetName = g.filenamePrefix.toUpperCase() + versionNumber;
 
 export default (
-  <PageBody anchorTitle="Visualforce" contentClassName="slds-container--large">
+  <PageBody anchorTitle="Visualforce" contentClassName="site slds-container--large">
     <p className="site-text-introduction">
       Create a custom CSS file to use the {g.displayName} in Visualforce.
     </p>

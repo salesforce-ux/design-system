@@ -15,7 +15,7 @@ import globals from 'app_modules/global';
 
 export default (
   <PageBody anchorTitle="Getting Started">
-    <div className="slds-container--large site-guidelines">
+    <div className="site slds-container--large site-guidelines">
       <p className="site-text-introduction">
         The Salesforce Lightning Design System includes the resources to
         create user interfaces consistent with the Salesforce Lightning

@@ -66,7 +66,7 @@ const Tokens = React.createClass({
               </ul>
             </div>
           </StickyNav>
-          <div className="slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
+          <div className="site slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
             {this.renderInfo()}
             {this.renderTokens()}
           </div>

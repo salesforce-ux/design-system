@@ -15,7 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import ToggleExample from 'app_modules/site/components/motion-and-animation/toggle-example';
 
 export default (
-  <PageBody anchorTitle="Motion" contentClassName="site-guidelines site-guidelines-motion">
+  <PageBody anchorTitle="Motion" contentClassName="site site-guidelines site-guidelines-motion">
     <div className="slds-container--x-large">
       <div className="slds-m-bottom--xx-large">
         <h2 className="site-text-heading--large">Key Principles</h2>

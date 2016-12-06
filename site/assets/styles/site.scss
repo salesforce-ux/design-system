@@ -19,12 +19,12 @@ $height-searchbox: calc(#{$line-height-button-small + $spacing-small} + #{$borde
 @import
   // DEPENDENCIES
   'ui/dependencies/index',
-  '_site/dependencies/typography',
-  '_site/dependencies/layout',
+  '_site/dependencies/site-typography',
+  '_site/dependencies/site-layout',
 
   // VENDOR
   '_vendor/prism/prism',
-  '_vendor/prism/overrides',
+  '_vendor/prism/prism-overrides',
 
   // CORE
   '_site/site-typography',
@@ -33,33 +33,33 @@ $height-searchbox: calc(#{$line-height-button-small + $spacing-small} + #{$borde
   '_site/site-code',
 
   // REGIONS
-  '_site/regions/page-container',
-  '_site/regions/banner',
-  '_site/regions/main',
-  '_site/regions/navigation',
-  '_site/regions/masthead',
-  '_site/regions/tools',
-  '_site/regions/content',
-  '_site/regions/contentinfo',
-  '_site/regions/search',
+  '_site/regions/site-page-container',
+  '_site/regions/site-banner',
+  '_site/regions/site-main',
+  '_site/regions/site-navigation',
+  '_site/regions/site-masthead',
+  '_site/regions/site-tools',
+  '_site/regions/site-content',
+  '_site/regions/site-contentinfo',
+  '_site/regions/site-search',
 
   // PAGE TYPES
-  '_site/page-types/demo',
-  '_site/page-types/landing',
-  '_site/page-types/examples',
-  '_site/page-types/tokens',
-  '_site/page-types/motion',
-  '_site/page-types/guidelines',
-  '_site/page-types/loading',
-  '_site/page-types/tutorial',
-  '_site/page-types/404',
+  '_site/page-types/site-demo',
+  '_site/page-types/site-landing',
+  '_site/page-types/site-examples',
+  '_site/page-types/site-tokens',
+  '_site/page-types/site-motion',
+  '_site/page-types/site-guidelines',
+  '_site/page-types/site-loading',
+  '_site/page-types/site-tutorial',
+  '_site/page-types/site-404',
 
   // COMPONENTS
-  '_site/components/grid-card',
-  '_site/components/video',
+  '_site/components/site-grid-card',
+  '_site/components/site-video',
 
   // UTILITIES
-  '_site/utilities/motion',
-  '_site/utilities/theme',
+  '_site/utilities/site-motion',
+  '_site/utilities/site-theme',
 
-  '_site/ui-icons';
+  '_site/site-ui-icons';

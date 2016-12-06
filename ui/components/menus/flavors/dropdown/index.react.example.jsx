@@ -67,7 +67,7 @@ export let MenuItem = props => {
       <a
         href="javascript:void(0);"
         role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
-        aria-checked={ isSelected }
+        aria-checked={ isSelected ? 'true' : 'false' }
         tabIndex={ tabIndex || '-1' }>
         <span className="slds-truncate">
           { isSelectable ? <SvgIcon

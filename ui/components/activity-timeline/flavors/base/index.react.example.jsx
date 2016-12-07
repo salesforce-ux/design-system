@@ -12,12 +12,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
 export let TimelineIcon = props =>
-  <div className="slds-icon_container">
+  <div className="slds-icon_container" title={props.symbol == 'log_a_call' ? 'call' : props.symbol }>
     <SvgIcon className={classNames('slds-icon slds-icon--small', props.symbol == 'log_a_call' ? 'slds-icon-standard-log-a-call' : 'slds-icon-standard-' + props.symbol)} sprite="standard" symbol={ props.symbol } />
   </div>;
 
@@ -34,7 +34,7 @@ export default (
       <span className="slds-assistive-text">Task</span>
       <MediaObject figureRight={ <TimelineActions title="More Options for Task, Review proposals" assistiveText="More Options for Task, Review proposals" /> }>
         <MediaObject className="slds-media--timeline slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
-          <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
+          <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox hideLabel label="mark-complete" /> }>
             <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">
               <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
             </h3>

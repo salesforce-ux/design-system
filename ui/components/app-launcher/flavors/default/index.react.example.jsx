@@ -13,6 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
+import { Section, SectionContent, SectionTitle, SectionTitleAction } from 'ui/utilities/text/flavors/section-title/index.react.example';
 import classNames from 'classnames';
 
 
@@ -36,15 +37,13 @@ let AppLauncherModal = props =>
       <button className="slds-button slds-button--neutral">App Exchange</button>
     </ModalHeader>
     <ModalContent className="slds-app-launcher__content slds-p-around--medium">
-      <div className="slds-section slds-is-open">
-        <div className="slds-section__title">
-          <button className="slds-button slds-button--icon slds-m-right--small">
-            <SvgIcon className="slds-button__icon" sprite="utility" symbol="switch" />
-            <span className="slds-assistive-text">Toggle visibility of section</span>
-          </button>
-          <h3>All Apps</h3>
-        </div>
-        <div className="slds-section__content">
+      <Section className="slds-is-open">
+        <SectionTitle>
+          <SectionTitleAction isOpen={true} referenceId="appsContent">
+            All Apps
+          </SectionTitleAction>
+        </SectionTitle>
+        <SectionContent isOpen={true} referenceId="appsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
               <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
@@ -83,57 +82,57 @@ let AppLauncherModal = props =>
               </AppLauncherTile>
             </li>
           </ul>
-        </div>
-      </div>
+        </SectionContent>
+      </Section>
+
       <hr />
-      <div className="slds-section slds-is-open">
-        <div className="slds-section__title">
-          <button className="slds-button slds-button--icon slds-m-right--small">
-            <SvgIcon className="slds-button__icon" sprite="utility" symbol="switch" />
-            <span className="slds-assistive-text">Toggle visibility of section</span>
-          </button>
-          <h3>All Items</h3>
-        </div>
-        <div className="slds-section__content">
-        <ul className="slds-grid slds-grid--pull-padded slds-wrap">
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="account">
-              <p className="slds-truncate slds-text-link" title="Accounts">Accounts</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="announcement">
-              <p className="slds-truncate slds-text-link" title="Announcements">Announcements</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="approval">
-              <p className="slds-truncate slds-text-link" title="Approvals">Approvals</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="campaign">
-              <p className="slds-truncate slds-text-link" title="Campaigns">Campaigns</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="case">
-              <p className="slds-truncate slds-text-link" title="Cases">Cases</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="coaching">
-              <p className="slds-truncate slds-text-link" title="Coaching">Coaching</p>
-            </AppLauncherTile>
-          </li>
-          <li className="slds-p-horizontal--small slds-size--xx-small">
-            <AppLauncherTile flavor="small" symbol="contact">
-              <p className="slds-truncate slds-text-link" title="Contacts">Contacts</p>
-            </AppLauncherTile>
-          </li>
-        </ul>
-        </div>
-      </div>
+
+      <Section className="slds-is-open">
+        <SectionTitle>
+          <SectionTitleAction isOpen={true} referenceId="itemsContent">
+            All Items
+          </SectionTitleAction>
+        </SectionTitle>
+        <SectionContent isOpen={true} referenceId="itemsContent">
+          <ul className="slds-grid slds-grid--pull-padded slds-wrap">
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="account">
+                <p className="slds-truncate slds-text-link" title="Accounts">Accounts</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="announcement">
+                <p className="slds-truncate slds-text-link" title="Announcements">Announcements</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="approval">
+                <p className="slds-truncate slds-text-link" title="Approvals">Approvals</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="campaign">
+                <p className="slds-truncate slds-text-link" title="Campaigns">Campaigns</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="case">
+                <p className="slds-truncate slds-text-link" title="Cases">Cases</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="coaching">
+                <p className="slds-truncate slds-text-link" title="Coaching">Coaching</p>
+              </AppLauncherTile>
+            </li>
+            <li className="slds-p-horizontal--small slds-size--xx-small">
+              <AppLauncherTile flavor="small" symbol="contact">
+                <p className="slds-truncate slds-text-link" title="Contacts">Contacts</p>
+              </AppLauncherTile>
+            </li>
+          </ul>
+        </SectionContent>
+      </Section>
     </ModalContent>
   </Modal>;
 

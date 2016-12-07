@@ -18,5 +18,5 @@ Section:
 
 
 **Updating Operation and State**
-- When the user interacts with the button to open the section, `aria-expanded` on the button should be true and `aria-hidden` on the section should be false.
-- When the user interacts with the button to close the section, `aria-expanded` on the button should be false and `aria-hidden` on the section should be true.
+- When the user interacts with the button to open the section, `aria-expanded` on the button should be `true` and `aria-hidden` on the section should be `false`.
+- When the user interacts with the button to close the section, `aria-expanded` on the button should be `false` and `aria-hidden` on the section should be `true`.

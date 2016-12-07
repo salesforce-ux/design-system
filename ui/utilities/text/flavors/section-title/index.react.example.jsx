@@ -17,28 +17,28 @@ import classNames from 'classnames';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Section = props =>
+export let Section = props =>
   <div className={classNames('slds-section', props.className)}>
     {props.children}
   </div>;
 
-let SectionContent = props =>
+export let SectionContent = props =>
   <div
     aria-hidden={!props.isOpen}
     className={classNames('slds-section__content', props.className)}
-    id="content"
+    id={props.referenceId}
   >
     {props.children}
   </div>;
 
-let SectionTitle = props =>
+export let SectionTitle = props =>
   <h3 className={classNames('slds-section__title', props.className)}>
     {props.children}
   </h3>;
 
-let SectionTitleAction = props =>
+export let SectionTitleAction = props =>
   <button
-    aria-controls="content"
+    aria-controls={props.referenceId}
     aria-expanded={props.isOpen}
     className="slds-button slds-section__title-action"
   >
@@ -62,11 +62,11 @@ export let states = [
     element:
       <Section>
         <SectionTitle>
-          <SectionTitleAction isOpen={false}>
+          <SectionTitleAction isOpen={false} referenceId="contentClosed">
             Section Title
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={false} />
+        <SectionContent isOpen={false} referenceId="contentClosed" />
       </Section>
   },
   {
@@ -75,11 +75,11 @@ export let states = [
     element:
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction isOpen={true}>
+          <SectionTitleAction isOpen={true} referenceId="contentOpen">
             Section Title
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={true}>
+        <SectionContent isOpen={true} referenceId="contentOpen">
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
         </SectionContent>

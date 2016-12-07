@@ -21,5 +21,58 @@ export const intro = (
 );
 
 export default (
-  <ComponentDocs></ComponentDocs>
+  <ComponentDocs>
+    <h4 className="site-text-heading--label">Accessibility</h4>
+    <p>
+      Each App Launcher section uses the <a href="/components/utilities/text/#flavor-section-title-section-title-open">Section Title</a> component. It contains a button heading that opens and closes the content below it. The button heading needs to be associated with the content so that assistive technology knows what the button opens and closes. The button and section also need aria attributes to indicate the open and closed state of the section.
+    </p>
+
+    <div className="slds-p-top--small">
+      <strong>Notable attributes</strong>
+      <br />
+
+      Button:
+      <br />
+      <ul>
+        <li>
+          <code>aria-controls</code> is used to create an association between the button and the section. If the section has an <code>id="content"</code>, then the button should have <code>aria-controls="content"</code>.
+        </li>
+        <li>
+          <code>aria-expanded</code> indicates if the section is open or closed and is read aloud by assitive technology when the button is focused.
+        </li>
+      </ul>
+
+      Section:
+      <br />
+      <ul>
+        <li>
+          <code>aria-hidden</code> indicates if the section is open or closed, and if set to <code>true</code>, assistive technology hides the section.
+        </li>
+      </ul>
+    </div>
+
+    <div className="slds-p-top--medium">
+      <strong>Keyboard navigation</strong>
+      <br />
+      <ul>
+        <li>
+          The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+        </li>
+      </ul>
+    </div>
+
+    <div className="slds-p-top--medium">
+      <strong>Updating Operation and State</strong>
+      <br />
+      <ul>
+        <li>
+          When the user interacts with the button to open the section, <code>aria-expanded</code> on the button should be <code>true</code> and <code>aria-hidden</code> on the section should be <code>false</code>.
+        </li>
+        <li>
+          When the user interacts with the button to close the section, <code>aria-expanded</code> on the button should be <code>false</code> and <code>aria-hidden</code> on the section should be <code>true</code>.
+        </li>
+      </ul>
+    </div>
+
+  </ComponentDocs>
 );

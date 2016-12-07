@@ -2,5 +2,6 @@ status: 'prototype'
 flavors:
   - ellie
   - score
+  - strength
   - trend
   - waffle

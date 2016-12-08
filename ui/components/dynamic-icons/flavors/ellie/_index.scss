@@ -30,22 +30,9 @@ $_ellie-frameset: (
   // frames 11 to 20 are frames 1 to 10 in reverse order
 );
 
-/// Fix IE Rounding
-///
-/// IE computes 0.875rem into 13.92px instead of 14px
-/// but is better at rounding values using calc()
-/// so we use calc as a hack to get the correct width
-///
-/// @param {Number} $width - unitless width
-/// @param {Number} $base-font-size [16]
-/// @return {Expression} same as $width, but in rem using calc - e.g. calc(2rem / 16)
-@function _fix-ie-rounding($width, $base-font-size: 16) {
-  @return calc(#{$width * 1rem} / #{$base-font-size});
-}
-
 .slds-icon-ellie_container {
-  width: _fix-ie-rounding($_ellie-icon-width);
-  height: _fix-ie-rounding($_ellie-icon-width);
+  width: fix-ie-rounding($_ellie-icon-width);
+  height: fix-ie-rounding($_ellie-icon-width);
   display: inline-block;
   will-change: transform;
   overflow: hidden;
@@ -54,7 +41,7 @@ $_ellie-frameset: (
 
 .slds-icon-ellie {
   width: $_ellie-sprite-width;
-  height: _fix-ie-rounding($_ellie-icon-width);
+  height: fix-ie-rounding($_ellie-icon-width);
   vertical-align: top;
   color: #00a0e3;
   will-change: transform;

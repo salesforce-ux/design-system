@@ -128,7 +128,7 @@ export let states = [
         <RichTextEditor>
           <RteToolbar>
             <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
+            <RteFormatText tabIndexSetting="-1" hasTooltip />
             <RteFormatColor />
             <RteFormatBody />
             <RteAlignText />

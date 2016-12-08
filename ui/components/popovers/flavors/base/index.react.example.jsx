@@ -46,7 +46,7 @@ export let Popover = props => {
           assistiveText={ props.headerAssistiveText }
         />
       : props.header }
-      <div className={ classNames('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId } role={ props.bodyRole }>
+      <div className={ classNames('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId }>
         {props.children}
       </div>
       { props.footer ?

@@ -172,7 +172,12 @@ window.$A11y = {
      * @returns {Boolean} whether or not DOM node has any text (whitespace doesn't count)
      */
     _hasEmptyText : function(element) {
-      return this._trim(this._getText(element)) == "";
+      const innerText = this._trim(this._getText(element));
+      if(element.children.length > 0) {
+        this._hasEmptyText(element.children[0]);
+      } else {
+        return innerText == "";
+      }
     },
 
     /**

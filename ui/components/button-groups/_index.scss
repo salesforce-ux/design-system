@@ -21,10 +21,6 @@
   }
 }
 
-// The following rule must stay at the **top** due to the cascade and wrapped buttons
-.slds-button-group .slds-button:only-child {
-  border-radius: $border-radius-medium;
-}
 
 .slds-button-group .slds-button + .slds-button,
 .slds-button-group .slds-button + .slds-button--last .slds-button,
@@ -38,15 +34,18 @@
   border-radius: $border-radius-medium 0 0 $border-radius-medium;
 }
 
-// These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
+// These selectors must remain in long hand in order to zero out borders that we don't want on last-child or :only-child wrapped buttons
 .slds-button-group .slds-button:last-child,
 .slds-button-group-list li:last-child .slds-button,
 .slds-button-group .slds-button--last .slds-button,
+.slds-button-group .slds-button.slds-button--last,
+.slds-button-group .slds-button--last .slds-button:only-child,
 .slds-button-group .slds-button.slds-button--last {
   border-radius: 0 $border-radius-medium $border-radius-medium 0;
 }
 
 // The following rule must stay at the **bottom** due to the cascade
+.slds-button-group .slds-button:only-child,
 .slds-button-group-list li:only-child .slds-button {
   border-radius: $border-radius-medium;
 }

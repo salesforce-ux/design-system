@@ -7,85 +7,15 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.slds-notify--toast {
+  border-radius: $border-radius-medium;
+  margin: $spacing-x-small;
+  padding: $spacing-small $spacing-xx-large $spacing-small $spacing-large;
+  min-width: rem(480px);
+  text-align: left;
+  justify-content: flex-start;
 
-
-.slds-theme {
-
-  &--default {
-    @include theme(default);
-  }
-
-  &--shade {
-    @include theme(shade);
-  }
-
-  &--inverse {
-    @include theme(inverse);
-    border-color: $color-background-inverse;
-  }
-
-  &--alt-inverse {
-    @include theme(alt-inverse);
-    border-color: $color-background-alt-inverse;
-  }
-
-  &--success {
-    @include inverse-links;
-    background-color: $color-background-toast-success;
-  }
-
-  &--info {
-    @include inverse-links;
-    background-color: $color-background-toast;
-  }
-
-  &--warning {
-    background-color: $color-background-warning;
-    color: $color-text-default;
-
-    .slds-icon,
-    .slds-button__icon {
-      fill: $color-text-icon-default;
-    }
-
-    a:not(.slds-button--neutral),
-    button:not(.slds-button--neutral) {
-      color: $color-text-default;
-      text-decoration: underline;
-    }
-  }
-
-  &--error {
-    @include inverse-links;
-    background-color: $color-background-toast-error;
-  }
-
-  &--offline {
-    @include inverse-links;
-    background-color: #444;
-  }
-
-  &--alert-texture {
-    @include gradient-striped;
-  }
-
-  &--inverse-text {
-    @include inverse-links;
-  }
-
-  &--default,
-  &--shade,
-  &--inverse,
-  &--alt-inverse,
-  &--success,
-  &--info,
-  &--warning,
-  &--error,
-  &--offline,
-  &--alert-texture,
-  &--inverse-text {
-    .slds-text-body--small {
-      color: inherit;
-    }
+  .slds-notify__close {
+    transform: translateY($spacing-xxx-small * -1);
   }
 }

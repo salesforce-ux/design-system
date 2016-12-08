@@ -38,7 +38,6 @@
   background: $color-background-button-default;
   border: $border-width-thin solid $color-border-button-default;
   border-radius: $border-radius-medium;
-  cursor: pointer;
 
   &.slds-is-new {
     background: $color-background-highlight;
@@ -51,11 +50,6 @@
 
   &.slds-is-locked {
     background: $color-background;
-
-    &,
-    a {
-      cursor: not-allowed;
-    }
   }
 
   + .slds-filters__item {

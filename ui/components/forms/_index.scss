@@ -78,6 +78,14 @@
       line-height: $line-height-text;
     }
   }
+
+  // Inline Edit
+  &--edit {
+
+    .slds-form-element__static {
+      width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
+    }
+  }
 }
 
 // Required Star

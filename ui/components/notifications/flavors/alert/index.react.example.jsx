@@ -49,12 +49,17 @@ export let Alert = props => {
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
+    id: 'informational',
+    label: 'Informational',
     element:
       <div className="demo-only" style={{ height: '2rem' }}>
         <Alert type="info">
-          <h2>Base System Alert</h2>
+          <SvgIcon
+            className="slds-icon slds-icon--x-small slds-m-right--x-small"
+            sprite="utility"
+            symbol="user"
+          />
+          <h2>Logged in as John Smith (johnsmith@acme.com). <a href="javascript:void(0);">Log out</a></h2>
         </Alert>
       </div>
   },
@@ -64,7 +69,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '2rem' }}>
         <Alert type="warning">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="warning" />
+          <SvgIcon
+            className="slds-icon slds-icon--x-small slds-m-right--x-small"
+            sprite="utility"
+            symbol="warning"
+          />
           <h2>Your browser is outdated. Your Salesforce experience may be degraded. <a href="javascript:void(0);">More Information</a></h2>
         </Alert>
       </div>
@@ -75,7 +84,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '2rem' }}>
         <Alert type="error">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="ban" />
+          <SvgIcon
+            className="slds-icon slds-icon--x-small slds-m-right--x-small"
+            sprite="utility"
+            symbol="ban"
+          />
           <h2>Your browser is currently not supported. Your Salesforce may be degraded. <a href="javascript:void(0);">More Information</a></h2>
         </Alert>
       </div>
@@ -86,7 +99,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '2rem' }}>
         <Alert type="offline">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="offline" />
+          <SvgIcon
+            className="slds-icon slds-icon--x-small slds-m-right--x-small"
+            sprite="utility"
+            symbol="offline"
+          />
           <h2>You are in offline mode. <a href="javascript:void(0);">More Information</a></h2>
         </Alert>
       </div>

@@ -50,13 +50,18 @@ export let Toast = props => {
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
+    id: 'informational',
+    label: 'Informational',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="info">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="info"
+          />
           <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small">Base Toast</h2>
+            <h2 className="slds-text-heading--small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
           </div>
         </Toast>
       </div>
@@ -70,7 +75,7 @@ export let states = [
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
-            symbol="notification"
+            symbol="success"
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading--small ">Account <a href="javascript:void(0);">ACME - 100</a> widgets was created.</h2>
@@ -104,7 +109,7 @@ export let states = [
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
-            symbol="notification"
+            symbol="warning"
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading--small ">Can’t save lead “Sally Wong” because another lead has the same name.</h2>

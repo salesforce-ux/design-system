@@ -36,6 +36,11 @@ let Demo = props =>
     {props.children}
   </div>;
 
+const Footer = props =>
+  <div className="slds-col--bump-left slds-text-align--right">
+    <button className="slds-button slds-button--brand">Action</button>
+  </div>;
+
 export let DockedComposerPanel = props => {
   const headingUniqueId = _.uniqueId('dialog-heading-id-');
   const bodyUniqueId = _.uniqueId('dialog-body-id-');
@@ -82,13 +87,11 @@ export let DockedComposerPanel = props => {
       <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={ bodyUniqueId }>
         { props.children }
       </div>
-      <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
-        { !props.footer ?
-          <div className="slds-col--bump-left slds-text-align--right">
-            <button className="slds-button slds-button--brand">Action</button>
-          </div>
-        : props.footer }
-      </footer>
+      { props.footer ?
+        <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
+          { props.footer }
+        </footer>
+      : null }
     </section>
   );
 };
@@ -135,7 +138,10 @@ export let states = [
     element:
     <Demo>
       <div className="slds-docked_container">
-        <DockedComposerPanel className="slds-is-open">
+        <DockedComposerPanel
+          className="slds-is-open"
+          footer={ <Footer /> }
+        >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>
@@ -147,7 +153,7 @@ export let states = [
     element:
     <Demo>
       <div className="slds-docked_container">
-        <DockedComposerPanel>
+        <DockedComposerPanel footer={ <Footer /> }>
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>
@@ -159,7 +165,7 @@ export let states = [
     element:
     <Demo>
       <Modal>
-        <DockedComposerPanel>
+        <DockedComposerPanel footer={ <Footer /> }>
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </Modal>
@@ -173,7 +179,10 @@ export let states = [
     <Demo>
       <div className="slds-docked_container">
         <ComposerOverflowMenu />
-        <DockedComposerPanel className="slds-is-open">
+        <DockedComposerPanel
+          className="slds-is-open"
+          footer={ <Footer /> }
+        >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>

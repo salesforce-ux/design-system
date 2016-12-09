@@ -36,55 +36,62 @@ let Demo = props =>
     {props.children}
   </div>;
 
-export let DockedComposerPanel = props =>
-  <section className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <header className="slds-docked-composer__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media--center">
-        <div className="slds-media__figure slds-m-right--x-small">
-          <span className="slds-icon_container">
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
-          </span>
-        </div>
-        <div className="slds-media__body">
-          <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
-        </div>
-      </div>
-      <div className="slds-col--bump-left">
-        <ButtonIcon
-          className="slds-button--icon"
-          symbol="minimize_window"
-          assistiveText="Minimize Composer Panel"
-          title="Minimize window" />
-        <ButtonIcon
-          className="slds-button--icon"
-          symbol="expand_alt"
-          assistiveText="Expand Composer Panel"
-          title="Expand Composer" />
-        <ButtonIcon
-          className="slds-button--icon"
-          symbol="close"
-          assistiveText="Close Composer Panel"
-          title="Close" />
-      </div>
-    </header>
-    { props.children }
-  </section>;
+export let DockedComposerPanel = props => {
+  const headingUniqueId = _.uniqueId('dialog-heading-id-');
+  const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
-export let DockedComposerPanelBody = props =>
-  <div className={classNames('slds-docked-composer__body', props.className)}>
-    { !props.children ?
-      <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
-    : props.children }
-  </div>;
-
-export let DockedComposerPanelFooter = props =>
-  <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.className)}>
-    { !props.children ?
-      <div className="slds-col--bump-left slds-text-align--right">
-        <button className="slds-button slds-button--brand">Action</button>
+  return (
+    <section
+      className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)}
+      role="dialog"
+      aria-labelledby={ headingUniqueId }
+      aria-describedby={ bodyUniqueId }
+    >
+      <header className="slds-docked-composer__header slds-grid slds-shrink-none">
+        <div className="slds-media slds-media--center">
+          <div className="slds-media__figure slds-m-right--x-small">
+            <span className="slds-icon_container">
+              <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <h2 id={ headingUniqueId }>{ props.header || 'Header' }</h2>
+          </div>
+        </div>
+        <div className="slds-col--bump-left">
+          <ButtonIcon
+            className="slds-button--icon"
+            symbol="minimize_window"
+            assistiveText="Minimize Composer Panel"
+            title="Minimize window"
+          />
+          <ButtonIcon
+            className="slds-button--icon"
+            symbol="expand_alt"
+            assistiveText="Expand Composer Panel"
+            title="Expand Composer"
+          />
+          <ButtonIcon
+            className="slds-button--icon"
+            symbol="close"
+            assistiveText="Close Composer Panel"
+            title="Close"
+          />
+        </div>
+      </header>
+      <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={ bodyUniqueId }>
+        { props.children }
       </div>
-    : props.children }
-  </footer>;
+      <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
+        { !props.footer ?
+          <div className="slds-col--bump-left slds-text-align--right">
+            <button className="slds-button slds-button--brand">Action</button>
+          </div>
+        : props.footer }
+      </footer>
+    </section>
+  );
+};
 
 let ComposerOverflowMenu = props =>
   <div className="slds-docked-composer slds-docked-composer--overflow">
@@ -129,8 +136,7 @@ export let states = [
     <Demo>
       <div className="slds-docked_container">
         <DockedComposerPanel className="slds-is-open">
-          <DockedComposerPanelBody />
-          <DockedComposerPanelFooter />
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>
     </Demo>
@@ -142,8 +148,7 @@ export let states = [
     <Demo>
       <div className="slds-docked_container">
         <DockedComposerPanel>
-          <DockedComposerPanelBody />
-          <DockedComposerPanelFooter />
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>
     </Demo>
@@ -155,8 +160,7 @@ export let states = [
     <Demo>
       <Modal>
         <DockedComposerPanel>
-          <DockedComposerPanelBody />
-          <DockedComposerPanelFooter />
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </Modal>
       <div className="slds-backdrop slds-backdrop--open"></div>
@@ -170,8 +174,7 @@ export let states = [
       <div className="slds-docked_container">
         <ComposerOverflowMenu />
         <DockedComposerPanel className="slds-is-open">
-          <DockedComposerPanelBody />
-          <DockedComposerPanelFooter />
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>
     </Demo>

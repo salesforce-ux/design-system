@@ -61,13 +61,18 @@ export let MenuItem = props => {
     tabIndex,
     ...rest
   } = props;
+  let ariaChecked;
+
+  if(isSelectable) {
+    ariaChecked = isSelected ? 'true' : 'false';
+  }
 
   return (
     <li {...rest} className={classNames('slds-dropdown__item', className)} role="presentation">
       <a
         href="javascript:void(0);"
         role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
-        aria-checked={ isSelected }
+        aria-checked={ ariaChecked }
         tabIndex={ tabIndex || '-1' }>
         <span className="slds-truncate">
           { isSelectable ? <SvgIcon

@@ -32,14 +32,14 @@
     width: auto;
 
     &:first-child {
-      float: left;
-      margin-right: $spacing-x-small;
+      float: $left;
+      margin-#{$right}: $spacing-x-small;
 
       + .#{$css-prefix}button {
-        float: right;
+        float: $right;
         margin: {
           top: 0;
-          left: $spacing-x-small;
+          #{$left}: $spacing-x-small;
         }
       }
     }

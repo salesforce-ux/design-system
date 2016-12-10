@@ -17,7 +17,7 @@
   }
 
   .#{$css-prefix}is-nested {
-    margin-left: $spacing-medium;
+    margin-#{$left}: $spacing-medium;
   }
 
   &--space {

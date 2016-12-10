@@ -27,7 +27,7 @@
   .#{$css-prefix}spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.25rem;
-    left: -0.25rem;
+    #{$left}: -0.25rem;
   }
 
   &.#{$css-prefix}spinner:after,
@@ -35,7 +35,7 @@
   .#{$css-prefix}spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.25rem;
-    right: -0.25rem;
+    #{$right}: -0.25rem;
   }
 }
 

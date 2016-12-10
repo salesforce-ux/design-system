@@ -23,7 +23,7 @@
     padding: {
       top: 0;
       bottom: 0;
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
     color: $color-text-default;
     line-height: $height-input;
@@ -60,34 +60,34 @@
 
   &--left {
     .#{$css-prefix}input__icon {
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     .#{$css-prefix}input,
     .#{$css-prefix}input--bare {
-      padding-left: $spacing-x-large;
+      padding-#{$left}: $spacing-x-large;
     }
   }
 
   &--right {
     .#{$css-prefix}input__icon {
-      right: $spacing-small;
+      #{$right}: $spacing-small;
     }
 
     .#{$css-prefix}input,
     .#{$css-prefix}input--bare {
-      padding-right: $spacing-x-large;
+      padding-#{$right}: $spacing-x-large;
     }
   }
 
   &--left-right {
 
     .#{$css-prefix}input__icon--left {
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     .#{$css-prefix}input__icon--right {
-      right: $spacing-small;
+      #{$right}: $spacing-small;
     }
 
     .#{$css-prefix}input,

@@ -14,8 +14,8 @@
   }
 
   .#{$css-prefix}modal__content {
-    padding-left: $spacing-x-large;
-    padding-right: $spacing-x-large;
+    padding-#{$left}: $spacing-x-large;
+    padding-#{$right}: $spacing-x-large;
   }
 
   .#{$css-prefix}modal__footer {

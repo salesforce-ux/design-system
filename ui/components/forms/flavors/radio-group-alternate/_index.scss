@@ -40,7 +40,7 @@
   // Apply left borders to anything radio button
   // after the first button
   + .#{$css-prefix}radio--button {
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
     border-radius: 0;
     margin: 0;
   }
@@ -49,14 +49,14 @@
   // of the button group
   &:first-child > .#{$css-prefix}radio--faux,
   &:first-child > .#{$css-prefix}radio--button__label {
-    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    border-radius: corner-values($border-radius-medium 0 0 $border-radius-medium);
   }
 
   // The middle selector doesn't seem to be applied anywhere? I didn't find a .button--last anywhere?
   &:last-child > .#{$css-prefix}radio--faux,
   .#{$css-prefix}button--last > .#{$css-prefix}radio--faux,
   &:last-child > .#{$css-prefix}radio--button__label {
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
   }
 
   // Hide input and style radio--faux

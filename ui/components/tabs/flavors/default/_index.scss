@@ -23,7 +23,7 @@
 
       + .#{$css-prefix}tabs__item {
         @include mq-medium-min {
-          margin-left: $spacing-large;
+          margin-#{$left}: $spacing-large;
         }
       }
 

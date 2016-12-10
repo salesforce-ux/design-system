@@ -56,11 +56,11 @@
 
   // Use to add a left padding buffer to cells, @todo will need to reset for responsive
   .#{$css-prefix}cell-buffer--left {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   .#{$css-prefix}cell-buffer--right {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }
 
@@ -69,12 +69,12 @@
 
   tr > th:first-child,
   tr > td:first-child {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   tr > th:last-child,
   tr > td:last-child {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }
 
@@ -119,7 +119,7 @@
   th + th,
   th + td,
   td + th {
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
   }
 }
 
@@ -140,7 +140,7 @@ th.#{$css-prefix}is-sortable {
   @include deprecate('4.0.0', 'The entire cell is hyperlinked now, no need for the button') {
     .#{$css-prefix}button {
       visibility: hidden;
-      margin-left: $spacing-x-small;
+      margin-#{$left}: $spacing-x-small;
     }
 
     .#{$css-prefix}button__icon {
@@ -177,7 +177,7 @@ th.#{$css-prefix}is-sortable {
 // Icon inside sortable th
 .#{$css-prefix}is-sortable__icon {
   @include square($square-icon-small-content);
-  margin-left: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
   display: none;
 }
 
@@ -199,7 +199,12 @@ th.#{$css-prefix}is-sortable {
 
   .#{$css-prefix}th__action:hover,
   .#{$css-prefix}th__action:focus {
-    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+    @include if-ltr {
+      box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+    }
+    @include if-rtl {
+      box-shadow: $color-border-separator-alt ($spacing-xx-small * 1) 0 0 inset;
+    }
   }
 }
 
@@ -209,7 +214,7 @@ th.#{$css-prefix}is-sortable {
 
   &__handle {
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     top: 0;
     width: $spacing-xx-small;
     height: 100%;
@@ -228,7 +233,7 @@ th.#{$css-prefix}is-sortable {
 
   &__divider {
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;
@@ -256,19 +261,19 @@ th.#{$css-prefix}is-sortable {
 
     &:nth-child(n) {
       padding: {
-        left: 0;
-        right: 0;
+        #{$left}: 0;
+        #{$right}: 0;
       }
     }
 
     &:first-child {
-      text-align: right;
-      padding-right: $spacing-x-small;
+      text-align: $right;
+      padding-#{$right}: $spacing-x-small;
     }
 
     &:last-child {
-      text-align: left;
-      padding-left: $spacing-x-small;
+      text-align: $left;
+      padding-#{$left}: $spacing-x-small;
     }
   }
 }

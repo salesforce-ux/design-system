@@ -19,8 +19,8 @@
   &__header,
   &__footer,
   &__body--inner {
-    padding-left: $spacing-large;
-    padding-right: $spacing-large;
+    padding-#{$left}: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 
   &__header {
@@ -36,7 +36,7 @@
   &__footer {
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;
-    text-align: right;
+    text-align: $right;
   }
 
   &--narrow {

@@ -24,12 +24,12 @@
     user-select: none;
 
     &:first-child {
-      text-align: left;
+      text-align: $left;
       flex-grow: 1;
     }
 
     &:last-child {
-      text-align: right;
+      text-align: $right;
       flex-grow: 1;
     }
 
@@ -65,7 +65,7 @@
 
   &__progress {
     position: absolute;
-    left: 0;
+    #{$left}: 0;
     top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
     height: ($square-icon-x-small-content / 2);
     display: block;
@@ -76,7 +76,7 @@
 
   &__progress-bar {
     position: absolute;
-    left: 0;
+    #{$left}: 0;
     top: 0;
     height: 100%;
     background: #0076de; // @TODO: Need a token for this

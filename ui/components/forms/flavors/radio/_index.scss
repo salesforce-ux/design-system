@@ -48,8 +48,8 @@
         content: '';
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0);
+        #{$left}: 50%;
+        transform: translate3d(if-ltr(-50%, 50%), -50%, 0);
         border-radius: $border-radius-circle;
         background: $color-brand;
       }
@@ -99,5 +99,5 @@
 .#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] + .#{$css-prefix}radio--faux,
 .#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}radio--faux,
 .#{$css-prefix}radio [type=radio] + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }

@@ -11,12 +11,16 @@
 
 // Lightning Design System
 
+// Override default value for $dir in directional.scss
+$dir: ltr;
+
 @import
 
   // Dependencies
   'design-tokens',
   'config',
   'vendor/deprecate',
+  'vendor/directional',
   'dependencies/index',
   'core/font',
 

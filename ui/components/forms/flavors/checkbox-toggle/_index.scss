@@ -31,7 +31,7 @@
       content: '';
       position: absolute;
       top: 1px;
-      left: 1px;
+      #{$left}: 1px;
       width: $square-toggle-slider;
       height: $square-toggle-slider;
       background-color: $color-background-alt;
@@ -102,7 +102,7 @@
           content: '';
           position: absolute;
           top: 1px;
-          right: 1px;
+          #{$right}: 1px;
           width: $square-toggle-slider;
           height: $square-toggle-slider;
           background-color: $color-background-alt;
@@ -114,7 +114,7 @@
           content: ' ';
           position: absolute;
           top: 0.25rem; // These are arbitrary to create the checkbox
-          left: 0.6rem; // like the right positioning above
+          #{$left}: 0.6rem; // like the right positioning above
           height: 0.7rem; // Seems silly to tokenize?
           width: 0.45rem;
           border-bottom: $border-width-thick solid $color-border-toggle-checked;

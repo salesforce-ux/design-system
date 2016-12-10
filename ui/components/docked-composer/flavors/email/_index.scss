@@ -27,12 +27,12 @@
 
   .#{$css-prefix}picklist__label {
     padding: {
-      left: $spacing-small;
-      right: $spacing-large;
+      #{$left}: $spacing-small;
+      #{$right}: $spacing-large;
     }
 
     .#{$css-prefix}icon {
-      right: $spacing-x-small;
+      #{$right}: $spacing-x-small;
     }
   }
 }

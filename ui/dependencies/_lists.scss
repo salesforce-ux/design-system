@@ -67,16 +67,16 @@
       @include square($size);
       content: '';
       margin: {
-        left: $spacing-x-small;
-        right: $spacing-x-small;
+        #{$left}: $spacing-x-small;
+        #{$right}: $spacing-x-small;
       }
       border-radius: $border-radius-circle;
       background-color: $color;
     }
 
     &:last-child {
-      margin-right: 0;
-      padding-right: 0;
+      margin-#{$right}: 0;
+      padding-#{$right}: 0;
 
       &:after {
         content: none;
@@ -91,16 +91,16 @@
       display: inline-block;
       vertical-align: middle;
       margin: {
-        left: $spacing-x-small;
-        right: $spacing-x-small;
+        #{$left}: $spacing-x-small;
+        #{$right}: $spacing-x-small;
       }
       border-radius: $border-radius-circle;
       background-color: $color;
     }
 
     &:first-child {
-      margin-right: 0;
-      padding-right: 0;
+      margin-#{$right}: 0;
+      padding-#{$right}: 0;
 
       &:before {
         content: none;

@@ -24,7 +24,7 @@
   &__item {
     display: flex;
     line-height: $line-height-button;
-    padding-left: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
 
     .#{$css-prefix}is-disabled {
       visibility: hidden;
@@ -58,7 +58,7 @@
   $max-nesting-depth: 20 !default;
   @for $current-level from 1 through $max-nesting-depth {
     [aria-level="#{$current-level}"] > .#{$css-prefix}tree__item {
-      padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
+      padding-#{$left}: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
 
@@ -79,6 +79,6 @@
   }
 
   .#{$css-prefix}pill {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 }

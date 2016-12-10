@@ -42,21 +42,21 @@
 
   .#{$css-prefix}col--padded {
     padding: {
-      right: $spacing-small;
-      left: $spacing-small;
+      #{$right}: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     &-medium {
       padding: {
-        right: $spacing-medium;
-        left: $spacing-medium;
+        #{$right}: $spacing-medium;
+        #{$left}: $spacing-medium;
       }
     }
 
     &-large {
       padding: {
-        right: $spacing-large;
-        left: $spacing-large;
+        #{$right}: $spacing-large;
+        #{$left}: $spacing-large;
       }
     }
 
@@ -76,21 +76,21 @@
 
 .#{$css-prefix}grid--pull-padded {
   margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
+    #{$right}: ($spacing-small * -1);
+    #{$left}: ($spacing-small * -1);
   }
 
   &-medium {
     margin: {
-      right: ($spacing-medium * -1);
-      left: ($spacing-medium * -1);
+      #{$right}: ($spacing-medium * -1);
+      #{$left}: ($spacing-medium * -1);
     }
   }
 
   &-large {
     margin: {
-      right: ($spacing-large * -1);
-      left: ($spacing-large * -1);
+      #{$right}: ($spacing-large * -1);
+      #{$left}: ($spacing-large * -1);
     }
   }
 }
@@ -107,7 +107,7 @@
       }
 
       &--right {
-        border-right: 1px solid $color-border-separator;
+        border-#{$right}: 1px solid $color-border-separator;
       }
 
       &--bottom {
@@ -115,7 +115,7 @@
       }
 
       &--left {
-        border-left: 1px solid $color-border-separator;
+        border-#{$left}: 1px solid $color-border-separator;
       }
     }
   }
@@ -131,7 +131,7 @@
     }
 
     &-right {
-      border-right: 1px solid $color-border-separator;
+      border-#{$right}: 1px solid $color-border-separator;
     }
 
     &-bottom {
@@ -139,7 +139,7 @@
     }
 
     &-left {
-      border-left: 1px solid $color-border-separator;
+      border-#{$left}: 1px solid $color-border-separator;
     }
   }
 }
@@ -223,6 +223,6 @@
 
 // Resets spacing/bullets for when grids are used on unordered lists
 .#{$css-prefix}text-longform ul.#{$css-prefix}grid {
-  margin-left: 0;
+  margin-#{$left}: 0;
   list-style: none;
 }

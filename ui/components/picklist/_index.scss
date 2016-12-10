@@ -27,15 +27,15 @@
 }
 
 .#{$css-prefix}picklist__label {
-  padding-right: $spacing-x-large;
+  padding-#{$right}: $spacing-x-large;
   width: $size-small;
   color: $color-text-default;
-  text-align: left;
+  text-align: $left;
 
   .#{$css-prefix}icon {
     @include square($square-icon-small-content);
     position: absolute;
-    right: $spacing-medium;
+    #{$right}: $spacing-medium;
     top: 50%;
     margin-top: (($square-icon-small-content / 2) * -1);
     fill: $color-text-icon-default;

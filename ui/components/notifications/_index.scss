@@ -13,7 +13,7 @@
   @include deprecate('4.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
   position: fixed;
   width: 100%;
-  left: 0;
+  #{$left}: 0;
   top: 0;
   z-index: $z-index-toast;
   text-align: center;
@@ -26,8 +26,8 @@
   font-weight: $font-weight-light;
 
   &__close {
-    float: right;
-    margin-left: $spacing-xx-small;
+    float: $right;
+    margin-#{$left}: $spacing-xx-small;
     line-height: $line-height-reset;
   }
 

@@ -13,10 +13,10 @@
   padding: $spacing-small $spacing-large;
   min-width: rem(480px);
   display: inline-block;
-  text-align: left;
+  text-align: $left;
 
   .#{$css-prefix}notify__close {
-    transform: translate3d($spacing-x-small, 0, 0);
+    transform: translate3d(if-ltr($spacing-x-small, $spacing-x-small * -1), 0, 0);
   }
 }
 

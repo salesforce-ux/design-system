@@ -16,10 +16,10 @@
     .#{$css-prefix}navigation-list--vertical__action {
       background-color: $color-background-row-selected;
       border-color: $color-border;
-      border-left-color: $color-background-button-brand-hover;
+      border-#{$left}-color: $color-background-button-brand-hover;
 
       &:focus {
-        border-left-width: $spacing-x-small;
+        border-#{$left}-width: $spacing-x-small;
         color: $color-text-link-focus;
       }
     }
@@ -30,7 +30,7 @@
 .#{$css-prefix}navigation-list--vertical__action {
   display: block;
   border: {
-    left: $spacing-xx-small solid transparent;
+    #{$left}: $spacing-xx-small solid transparent;
     top: $border-width-thin solid transparent;
     bottom: $border-width-thin solid transparent;
   }

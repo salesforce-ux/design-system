@@ -65,13 +65,13 @@
   }
 
   & + .#{$css-prefix}button-group {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
 
   & + .#{$css-prefix}button {
 
     @include deprecate('4.0.0') {
-      margin-left: $spacing-xx-small;
+      margin-#{$left}: $spacing-xx-small;
     }
   }
 }
@@ -79,7 +79,7 @@
 .#{$css-prefix}button-space-left {
 
   @include deprecate('4.0.0', 'Use spacing utilities instead') {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
 }
 
@@ -93,11 +93,11 @@ a.#{$css-prefix}button {
 
 // Deal with button spacing
 .#{$css-prefix}button__icon--left {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }
 
 .#{$css-prefix}button__icon--right {
-  margin-left: $spacing-x-small;
+  margin-#{$left}: $spacing-x-small;
 }
 
 .#{$css-prefix}button--small {

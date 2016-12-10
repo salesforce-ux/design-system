@@ -19,17 +19,17 @@
 
   &-block {
     padding: {
-      right: $spacing-x-large;
-      left: $spacing-x-large;
+      #{$right}: $spacing-x-large;
+      #{$left}: $spacing-x-large;
     }
     max-width: 25%;
 
     &:first-child {
-      padding-left: 0;
+      padding-#{$left}: 0;
     }
 
     &:last-child {
-      padding-right: 0;
+      padding-#{$right}: 0;
     }
   }
 }

@@ -26,11 +26,11 @@
       margin-bottom: ($border-width-thin * -1);
 
       + .#{$css-prefix}tabs__item {
-        margin-left: ($border-width-thin * -1);
+        margin-#{$left}: ($border-width-thin * -1);
       }
 
       &:first-child > a {
-        border-left: 0;
+        border-#{$left}: 0;
         border-radius: $border-radius-medium 0 0 0;
       }
 
@@ -42,8 +42,8 @@
         color: $color-text-weak;
         background-clip: padding-box;
         border: {
-          left: $border-width-thin solid transparent;
-          right: $border-width-thin solid transparent;
+          #{$left}: $border-width-thin solid transparent;
+          #{$right}: $border-width-thin solid transparent;
         }
 
         &:hover,
@@ -80,11 +80,11 @@
   margin-bottom: ($border-width-thin * -1);
 
   + .#{$css-prefix}tabs--scoped__item {
-    margin-left: ($border-width-thin * -1);
+    margin-#{$left}: ($border-width-thin * -1);
   }
 
   &:first-child .#{$css-prefix}tabs--scoped__link {
-    border-left: 0;
+    border-#{$left}: 0;
     border-radius: $border-radius-medium 0 0 0;
   }
 }
@@ -105,8 +105,8 @@
   color: $color-text-weak;
   background-clip: padding-box;
   border: {
-    left: $border-width-thin solid transparent;
-    right: $border-width-thin solid transparent;
+    #{$left}: $border-width-thin solid transparent;
+    #{$right}: $border-width-thin solid transparent;
   }
 
   &:hover,

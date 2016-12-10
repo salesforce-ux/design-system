@@ -39,7 +39,7 @@
         display: block;
         padding: $spacing-x-small;
         color: $color-text-default;
-        text-align: left;
+        text-align: $left;
         width: 100%;
         line-height: $line-height-text;
         border-radius: 0;
@@ -53,7 +53,7 @@
         }
 
         .#{$css-prefix}icon {
-          margin-right: $spacing-x-small;
+          margin-#{$right}: $spacing-x-small;
         }
       }
     }
@@ -71,7 +71,7 @@
     align-items: center;
     padding: $spacing-xx-small $spacing-x-small;
     color: $color-text-default;
-    text-align: left;
+    text-align: $left;
     width: 100%;
     line-height: $line-height-text;
     border-radius: 0;
@@ -88,7 +88,7 @@
 
     // Icon in results, here so it doesn't need to be repeated in DOM
     .#{$css-prefix}icon {
-      margin-right: $spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
     }
   }
 
@@ -96,7 +96,7 @@
     padding: $spacing-x-small $spacing-small;
 
     .#{$css-prefix}icon {
-      margin-right: $spacing-small;
+      margin-#{$right}: $spacing-small;
     }
   }
 
@@ -155,7 +155,7 @@
 
     // Send close button to the end of the pill
     .#{$css-prefix}pill__remove {
-      margin-left: auto;
+      margin-#{$left}: auto;
     }
   }
 

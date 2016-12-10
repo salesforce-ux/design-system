@@ -27,10 +27,10 @@
 
   @include mq-medium-max {
     td {
-      text-align: right;
+      text-align: $right;
 
       &:before {
-        float: left;
+        float: $left;
         margin-top: $spacing-xxx-small;
       }
     }

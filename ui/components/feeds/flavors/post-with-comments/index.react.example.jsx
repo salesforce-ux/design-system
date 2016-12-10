@@ -80,7 +80,7 @@ export let states = [
         </Post>
         <Comments>
           <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
-            <a href="javascript:void(0);">More comments</a>
+            <button className="slds-button--reset slds-text-link">More comments</button>
             <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
           </div>
           <CommentList />
@@ -105,7 +105,7 @@ export let states = [
         </Post>
         <Comments>
           <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
-            <a href="javascript:void(0);">More comments</a>
+            <button className="slds-button--reset slds-text-link">More comments</button>
             <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
           </div>
           <CommentList />

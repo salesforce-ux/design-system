@@ -10,9 +10,12 @@
 // Circle's cirumference
 $_icon-trend-circumference: 46.3385px; // r=7.375 * pi * 2
 
+// Arrow path length
+$_icon-trend-arrow-length: 20.15px;
+
 // HACK: Trick minifiers so they don't minify 0px to 0,
 // which breaks the animation in Edge
-$_icon-trend-zero: 0.001px;
+$_icon-trend-zero: 0.1px;
 
 // HACK: a 1px stroke sitting on a pixel grid line (here: the arrow)
 // doesn't get aliased well on non-retina displays,
@@ -58,7 +61,7 @@ $_icon-trend-one: 1.125px;
 
 .slds-icon-trend__arrow {
   stroke-dashoffset: $_icon-trend-zero;
-  stroke-dasharray: 39.95px;
+  stroke-dasharray: $_icon-trend-arrow-length * 2 - $_icon-trend-one;
 }
 
 .slds-icon-trend__circle {
@@ -67,7 +70,7 @@ $_icon-trend-one: 1.125px;
 
 @keyframes slds-icon-trend-arrow {
   from {
-    stroke-dashoffset: 40px;
+    stroke-dashoffset: $_icon-trend-arrow-length * 2;
   }
 }
 

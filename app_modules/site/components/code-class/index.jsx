@@ -14,6 +14,7 @@ import React from 'react';
 class CodeClass extends React.Component {
   render() {
     let { className } = this.props;
+    className = className.replace(/^slds-/g, '');
     return className ? <code>{`.slds-${className}`}</code> : null;
   }
 }

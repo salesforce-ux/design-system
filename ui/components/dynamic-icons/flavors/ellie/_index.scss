@@ -30,23 +30,27 @@ $_ellie-frameset: (
   // frames 11 to 20 are frames 1 to 10 in reverse order
 );
 
-.slds-icon-ellie_container {
+.slds-icon-ellie {
   width: fix-ie-rounding($_ellie-icon-width);
   height: fix-ie-rounding($_ellie-icon-width);
   display: inline-block;
-  will-change: transform;
   overflow: hidden;
-  animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
-}
 
-.slds-icon-ellie {
-  width: $_ellie-sprite-width;
-  height: fix-ie-rounding($_ellie-icon-width);
-  vertical-align: top;
-  color: #00a0e3;
-  will-change: transform;
-  animation: slds-icon-ellie 1.2s steps($_ellie-frames) infinite;
+  &.slds-is-animated {
+    will-change: transform;
+    animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
 
+    svg {
+      will-change: transform;
+      animation: slds-icon-ellie 1.2s steps($_ellie-frames) 2.3s 2 alternate;
+    }
+  }
+
+  svg {
+    width: $_ellie-sprite-width;
+    vertical-align: top;
+    color: #00a0e3;
+  }
   circle:nth-child(2n + 1) {
     fill: currentColor;
     stroke: currentColor;

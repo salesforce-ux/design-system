@@ -14,9 +14,10 @@ import classNames from 'classnames';
 
 export let WaffleIcon = props =>
   <a
-    href="javascript:void(0);"
     {...props}
-    className={classNames('slds-icon-waffle_container', props.className)}>
+    href="javascript:void(0);"
+    className={classNames('slds-icon-waffle_container', props.className)}
+    title="Description of the icon when needed">
     <div className="slds-icon-waffle">
       <div className="slds-r1"></div>
       <div className="slds-r2"></div>

@@ -17,10 +17,9 @@ import _ from 'lodash';
 const frames = 20;
 
 export default (
-  <span className="slds-icon-ellie_container">
+  <span className="slds-icon-ellie slds-is-animated" title="Description of the icon when needed">
     <svg
       viewBox={`0 0 ${frames * 14} 14`}
-      className="slds-icon-ellie"
       aria-hidden="true">
       {/* Loop through frames 1 through 20 */}
       { _.range(1, frames + 1).map((frame) =>
@@ -30,4 +29,5 @@ export default (
         ]
       )}
     </svg>
+    <span className="slds-assistive-text">Text alternative when needed</span>
   </span>);

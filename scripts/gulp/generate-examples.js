@@ -17,7 +17,8 @@ import path from 'path';
 import through from 'through2';
 import beautify from  'js-beautify';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { assign, flatMap } from 'lodash';
+import assign from 'lodash/assign';
+import flatMap from 'lodash/flatMap';
 import { generateUI } from './generate-ui';
 
 const prettyHTML = html => beautify.html(html, {

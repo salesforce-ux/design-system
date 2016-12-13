@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}select {
+.slds-select {
   @include form-states;
   height: calc(#{$height-input} + (#{$border-width-thin} * 2));
 
@@ -28,7 +28,7 @@
 
     // Normalize the <select> appearance in various browsers
     // See https://github.com/salesforce-ux/design-system/issues/122
-    .#{$css-prefix}select {
+    .slds-select {
       -moz-appearance: none;
       -webkit-appearance: none;
       padding: {
@@ -66,6 +66,6 @@
 }
 
 // Error Styles
-.#{$css-prefix}has-error {
-  @include form-input-error('.#{$css-prefix}select');
+.slds-has-error {
+  @include form-input-error('.slds-select');
 }

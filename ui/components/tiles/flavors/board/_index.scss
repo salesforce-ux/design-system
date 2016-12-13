@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}tile--board {
+.slds-tile--board {
   position: relative;
 
   &__icon {
@@ -19,7 +19,7 @@
     right: $spacing-xx-small;
   }
 
-  .#{$css-prefix}has-alert {
+  .slds-has-alert {
     padding-right: $spacing-large;
   }
 }

@@ -28,8 +28,8 @@
 # Ignore code coverage reports
 coverage
 
-# Ignore design tokens (available as part of the Design System in Spring ’17 and up)
-/design-tokens
+# Ignore tokens distribution
+/design-tokens/dist
 
 # Legacy folders
 /git_modules

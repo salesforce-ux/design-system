@@ -10,14 +10,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import SvgIcon from 'app_modules/ui/svg-icon';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Avatar = props =>
-  <span className={className('slds-avatar', props.className)}>
+  <span className={classNames('slds-avatar', props.className)}>
     { props.children }
   </span>;
 
@@ -32,7 +33,7 @@ export let states = [
     label: 'Square',
     element:
       <Avatar className="slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="person name" />
+        <img src="/assets/images/avatar2.jpg" alt="company name" />
       </Avatar>
   },
   {
@@ -41,6 +42,22 @@ export let states = [
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
         <img src="/assets/images/avatar2.jpg" alt="person name" />
+      </Avatar>
+  },
+  {
+    id: 'avatar-square-initials',
+    label: 'Square Initials',
+    element:
+      <Avatar className="slds-avatar--medium">
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+      </Avatar>
+  },
+  {
+    id: 'avatar-circle-initials',
+    label: 'Circle Initials',
+    element:
+      <Avatar className="slds-avatar--circle slds-avatar--medium">
+        <abbr className="slds-avatar__initials slds-icon-standard-contact" title="person name">AB</abbr>
       </Avatar>
   }
 ];

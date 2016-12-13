@@ -10,7 +10,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import Truncate from 'ui/components/lib/truncate/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
@@ -19,7 +18,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 const icon = (
-    <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" assistiveText="Down" />
+  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
 );
 
 const image = (
@@ -29,30 +28,32 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header slds-page-header--object-home" role="banner">
+  <div className="slds-page-header slds-page-header--object-home">
     <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className="slds-col slds-has-flexi-truncate">
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">
           <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
-          <button className="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
-            <div className="slds-grid slds-grid--vertical-align-center slds-truncate">
-              <h1 className="slds-page-header__title slds-truncate" title="this should match My Leads">My Leads</h1>
-              {icon}
-            </div>
-          </button>
+          <h1 className="slds-page-header__title slds-p-right--x-small">
+            <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="this should match My Leads">
+              <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+                <span className="slds-truncate">My Leads</span>
+                {icon}
+              </span>
+            </button>
+          </h1>
         </MediaObject>
       </div>
       {/* Close Col */}
       {/* Open Right Aligned Icon Grouping */}
       <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
         <div className="slds-button-group" role="group">
-          <Button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button--neutral">
             New Lead
-          </Button>
-          <Button className="slds-button slds-button--neutral">
+          </button>
+          <button className="slds-button slds-button--neutral">
             Import Leads
-          </Button>
+          </button>
           <div className="slds-button--last">
             <ButtonIcon
               className="slds-button--icon-border-filled"
@@ -62,7 +63,7 @@ export default (
               title="More Actions" />
           </div>
         </div>
-        {/* Close Button Group */}
+        {/* Close button Group */}
       </div>
       {/* Close Col */}
     </div>

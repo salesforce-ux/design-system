@@ -14,6 +14,10 @@ classes:
     description: Applies syles for primary content area of popover
     applied: <code>&lt;div&gt;</code>
   -
+    class: slds-popover__footer
+    description: Applies styles for footer area of popover
+    applied: <code>&lt;div&gt;</code>
+  -
     class: slds-popover--tooltip
     description: Modifier used to apply tooltip specific styles
     applied: <code>.slds-popover</code>

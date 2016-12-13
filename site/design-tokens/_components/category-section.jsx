@@ -21,7 +21,7 @@ export default class CategorySection extends React.Component {
 
   constructor(props) {
     super(props);
-    this.key = '';
+    // this.key = '';
   }
 
   render() {

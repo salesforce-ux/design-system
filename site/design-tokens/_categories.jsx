@@ -54,7 +54,7 @@ class Category {
     return <CellExample />;
   }
   /**
-   * Render an optional descripton below the title
+   * Render an optional description below the title
    *
    * @return {React.PropTypes.node}
    */
@@ -140,6 +140,20 @@ const categories = {
     }
   }),
 
+  'opacity': new Category({
+    label: 'Opacity',
+    description: 'Use these opacity tokens for element transparency.',
+    renderExample(token) {
+      return (
+        <CellExample>
+          <div className="site-example-opacity">
+            <div className="site-box-opacity" style={{opacity: token.value}} />
+          </div>
+        </CellExample>
+      );
+    }
+  }),
+
   'line-height': new Category({
     label: 'Line Height',
     description: 'Use these tokens for changing the line-height of elements. Usually, the line-height-text is already inherited by default. Only set it if you need to apply it again.',
@@ -181,15 +195,23 @@ const categories = {
     description: 'Use sizing tokens to set elements to our sizing scale. Size tokens can be used for the width and height properties. Square tokens are used for both width and height.',
     renderExample(token) {
       const intWidth = parseInt(token.value);
-      let width;
-      if (token.name.match(/^SIZE_/)) {
-        width = '100%';
+      let styles = {};
+
+      if (token.name.match(/^FLEX_/)) {
+        styles.flex = token.value;
       } else {
-        width = intWidth > MAX_EXAMPLE_WIDTH_REMS ? '100%' : `${intWidth}rem`;
+        styles.height = token.value;
+
+        if (token.name.match(/^SIZE_/)) {
+          styles.width = '100%';
+        } else {
+          styles.width = intWidth > MAX_EXAMPLE_WIDTH_REMS ? '100%' : `${intWidth}rem`;
+        }
       }
+
       return (
         <CellExample className="site-example-spacing">
-          <div className="site-box-spacing" style={{width: width, height: token.value}} />
+          <div className="site-box-spacing" style={styles} />
         </CellExample>
       );
     }
@@ -211,7 +233,7 @@ const categories = {
     label: 'Atmosphere',
     description: 'Use atmosphere tokens for box shadows to create the appearance of elevation.',
     renderExample(token) {
-      if (token.type === 'box-shadow') {
+      if (token.type === 'shadow') {
         return (
           <CellExample className="site-example site-example-atmosphere">
             <div className="site-atmosphere" style={{boxShadow: token.value}} />

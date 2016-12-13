@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}has-divider {
+.slds-has-divider {
 
   @include deprecate('4.0.0') {
     margin-top: $spacing-x-small;

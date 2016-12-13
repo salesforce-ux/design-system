@@ -10,10 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import Lorem from 'react-lorem-component';
-import className from 'classnames';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -26,14 +24,14 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <div role="dialog" tabIndex="-1" {...props} className={className('slds-modal slds-fade-in-open', props.className)}>
+  <div role="dialog" tabIndex="-1" {...props} className={classNames('slds-modal slds-fade-in-open', props.className)}>
     <div className="slds-modal__container">
       {props.children}
     </div>
   </div>;
 
 export let ModalHeader = props =>
-  <div className={className('slds-modal__header', props.className)}>
+  <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton != 'false' ?
       <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
@@ -45,12 +43,12 @@ export let ModalHeader = props =>
   </div>;
 
 export let ModalContent = props =>
-  <div className={className('slds-modal__content', props.className)}>
+  <div className={classNames('slds-modal__content', props.className)}>
     {props.children}
   </div>;
 
 export let ModalFooter = props =>
-  <div className={className('slds-modal__footer', props.className)}>
+  <div className={classNames('slds-modal__footer', props.className)}>
     {props.children}
   </div>;
 
@@ -64,10 +62,15 @@ let Default = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -83,10 +86,15 @@ let Taglines = props =>
           to you. It is allowed to <a href="javascript:void(0);">contain links or be a link</a>.
         </p>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -97,10 +105,15 @@ let Large = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -111,10 +124,15 @@ let Directional = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
       <ModalFooter className="slds-modal__footer--directional">
-        <Button className="slds-button slds-button--neutral">Skip This Step</Button>
-        <Button className="slds-button slds-button--brand">Save &#38; Next</Button>
+        <button className="slds-button slds-button--neutral">Skip This Step</button>
+        <button className="slds-button slds-button--brand">Save &#38; Next</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -124,10 +142,15 @@ let Headless = props =>
     <Modal>
       <ModalHeader className="slds-modal__header slds-modal__header--empty">
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
   </Demo>;
@@ -138,7 +161,12 @@ let Footless = props =>
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
-      <ModalContent className="slds-p-around--medium"><Lorem count={2} paragraphLowerBound={5} /></ModalContent>
+      <ModalContent className="slds-p-around--medium">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+      </ModalContent>
     </Modal>
   </Demo>;
 

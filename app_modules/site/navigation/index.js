@@ -169,13 +169,13 @@ const nav = formatNavItem({
           label: 'Loading'
         },
         {
+          label: 'Localization'
+        },
+        {
           label: 'Markup and Style'
         },
         {
           label: 'Messaging'
-        },
-        {
-          label: 'Localization'
         },
         {
           label: 'Motion'
@@ -194,7 +194,12 @@ const nav = formatNavItem({
     {
       route: 'components',
       label: 'Components',
-      children: [utilities, touch].concat(components)
+      children: [
+        {
+          path: '/components-overview',
+          label: 'Overview'
+        }
+      ].concat([utilities, touch]).concat(components)
     },
     {
       label: 'Design Tokens'

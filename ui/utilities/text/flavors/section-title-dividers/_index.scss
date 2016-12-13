@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}section-title--divider {
+.slds-section-title--divider {
   @include text-heading--label;
   padding: $spacing-small $spacing-medium;
   background: $color-background;

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,7 +22,7 @@ let Demo = props =>
   </div>;
 
 let FormElement = props =>
-  <div className={className('slds-form-element', props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
@@ -30,12 +30,12 @@ let FormElementLabel = props =>
   <label className="slds-form-element__label" htmlFor="textarea-input-01">{props.children}</label>;
 
 let FormElementControl = props =>
-  <div className={className('slds-form-element__control', props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
 let Textarea = props =>
-  <textarea {...props} id="textarea-input-01" className={className('slds-textarea', props.className)} placeholder="Placeholder Text" />;
+  <textarea {...props} id="textarea-input-01" className={classNames('slds-textarea', props.className)} placeholder="Placeholder Text" />;
 
 //////////////////////////////////////////////
 // State Constructor(s)

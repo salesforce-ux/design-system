@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Export
@@ -26,7 +26,7 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
-          <ul className="slds-list--horizontal slds-has-dividers--right slds-tile__meta">
+          <ul className="slds-list--horizontal slds-has-dividers--right">
             <li className="slds-item">Breaking News</li>
             <li className="slds-item">1 day ago</li>
           </ul>

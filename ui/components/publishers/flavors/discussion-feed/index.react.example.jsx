@@ -10,9 +10,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -25,7 +24,7 @@ const image = (
 );
 
 let Publisher = props =>
-  <div className={className('slds-publisher slds-publisher--discussion', props.className)}>
+  <div className={classNames('slds-publisher slds-publisher--discussion', props.className)}>
     <dl className="slds-dl--inline slds-m-bottom--small slds-publisher__toggle-visibility">
       <dt className="slds-dl--inline__label slds-text-body--small">To: </dt>
       <dd className="slds-dl--inline__detail">My Followers</dd>
@@ -45,7 +44,7 @@ let PublisherActions = props =>
         <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" title="Attach a file" />
       </li>
     </ul>
-    <Button className="slds-button slds-button--brand">Share</Button>
+    <button className="slds-button slds-button--brand">Share</button>
   </div>;
 
 ///////////////////////////////////////////

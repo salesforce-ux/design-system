@@ -15,7 +15,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import globals from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Colors" contentClassName="site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Colors" contentClassName="site site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
 
       {/* Usage */}

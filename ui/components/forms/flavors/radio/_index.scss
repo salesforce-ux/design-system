@@ -9,10 +9,10 @@
 
 
 
-.#{$css-prefix}radio {
+.slds-radio {
   display: inline-block;
 
-  .#{$css-prefix}radio--faux {
+  .slds-radio--faux {
     @include square($square-icon-medium-content);
     display: inline-block;
     position: relative;
@@ -23,7 +23,7 @@
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
   }
 
-  .#{$css-prefix}form-element__label {
+  .slds-form-element__label {
     display: inline;
     vertical-align: middle;
     font-size: $font-size-medium;
@@ -38,9 +38,9 @@
     padding: 0;
     position: absolute;
 
-    &:checked + .#{$css-prefix}radio--faux,
-    &:checked ~ .#{$css-prefix}radio--faux,
-    &:checked + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+    &:checked + .slds-radio--faux,
+    &:checked ~ .slds-radio--faux,
+    &:checked + .slds-radio__label .slds-radio--faux {
       background: $color-background-input;
 
       &:after {
@@ -55,9 +55,9 @@
       }
     }
 
-    &:focus + .#{$css-prefix}radio--faux,
-    &:focus ~ .#{$css-prefix}radio--faux,
-    &:focus + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+    &:focus + .slds-radio--faux,
+    &:focus ~ .slds-radio--faux,
+    &:focus + .slds-radio__label .slds-radio--faux {
       border-color: $color-border-input-active;
       box-shadow: $shadow-button-focus;
     }
@@ -67,8 +67,8 @@
       cursor: not-allowed;
       user-select: none;
 
-      ~ .#{$css-prefix}radio--faux,
-      + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+      ~ .slds-radio--faux,
+      + .slds-radio__label .slds-radio--faux {
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
       }
@@ -76,18 +76,18 @@
   }
 }
 
-.#{$css-prefix}has-error .#{$css-prefix}radio [type="radio"] {
+.slds-has-error .slds-radio [type="radio"] {
 
-  + .#{$css-prefix}radio--faux,
-  ~ .#{$css-prefix}radio--faux,
-  + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+  + .slds-radio--faux,
+  ~ .slds-radio--faux,
+  + .slds-radio__label .slds-radio--faux {
     border-color: $color-border-error;
     border-width: $border-width-thick;
   }
 
-  &:checked + .#{$css-prefix}radio--faux,
-  &:checked ~ .#{$css-prefix}radio--faux,
-  &:checked + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+  &:checked + .slds-radio--faux,
+  &:checked ~ .slds-radio--faux,
+  &:checked + .slds-radio__label .slds-radio--faux {
     background: $color-background-input;
 
     &:after {
@@ -96,8 +96,8 @@
   }
 }
 
-.#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] + .#{$css-prefix}radio--faux,
-.#{$css-prefix}form-element .#{$css-prefix}radio [type="radio"] ~ .#{$css-prefix}radio--faux,
-.#{$css-prefix}radio [type=radio] + .#{$css-prefix}radio__label .#{$css-prefix}radio--faux {
+.slds-form-element .slds-radio [type="radio"] + .slds-radio--faux,
+.slds-form-element .slds-radio [type="radio"] ~ .slds-radio--faux,
+.slds-radio [type=radio] + .slds-radio__label .slds-radio--faux {
   margin-right: $spacing-x-small;
 }

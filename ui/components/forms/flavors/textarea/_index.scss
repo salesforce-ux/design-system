@@ -9,13 +9,13 @@
 
 
 
-.#{$css-prefix}textarea {
+.slds-textarea {
   @include form-states;
   resize: vertical;
   padding: $spacing-x-small $spacing-small;
 }
 
 // Error Styles
-.#{$css-prefix}has-error {
-  @include form-input-error('.#{$css-prefix}textarea');
+.slds-has-error {
+  @include form-input-error('.slds-textarea');
 }

@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 
 //////////////////////////////////////////////

@@ -26,12 +26,11 @@ const setEnvironment = () => {
   // Once the package.json is loaded into process.env all values become strings
   if (process.env.npm_package_config_slds_internal === 'true') {
     process.env.INTERNAL = process.env.npm_package_config_slds_internal;
-    process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_id;
-    process.env.SLDS_VERSION = `${process.env.npm_package_version} (${process.env.INTERNAL_RELEASE_NAME})`;
+    process.env.INTERNAL_RELEASE_NAME = process.env.npm_package_slds_name;
+    process.env.SLDS_VERSION = `${process.env.npm_package_version}`;
   } else {
     // If the value isn't "true", then delete the variables
     // because the code checks like:
-    // if (process.env.INTENRAL)
     delete process.env.INTERNAL;
     delete process.env.INTERNAL_RELEASE_NAME;
     process.env.SLDS_VERSION = `${process.env.npm_package_version}`;
@@ -39,10 +38,10 @@ const setEnvironment = () => {
 };
 
 const runScript = () =>
-  exec('npm run build && npm run test && npm run lint');
+  exec('NODE_ENV=production npm run build && npm run test && npm run lint');
 
 const publishBuild = () =>
-  exec('npm run build-server');
+  exec('NODE_ENV=production npm run build-server');
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
   setEnvironment();

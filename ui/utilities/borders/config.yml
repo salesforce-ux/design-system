@@ -1,0 +1,6 @@
+status: 'dev-ready'
+flavors:
+  - border-bottom
+  - border-left
+  - border-right
+  - border-top

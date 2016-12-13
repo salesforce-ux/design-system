@@ -1,4 +1,9 @@
 status: 'dev-ready'
 flavors:
   - default
+  - sub-tabs
   - scoped
+
+lightning:
+  namespace: lightning:tabset
+  url: https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm

@@ -9,21 +9,21 @@
 
 
 
-.#{$css-prefix}has-block-links {
+.slds-has-block-links {
 
   a {
     display: block;
     text-decoration: none;
   }
 
-  .#{$css-prefix}is-nested {
+  .slds-is-nested {
     margin-left: $spacing-medium;
   }
 
   &--space {
 
-    .#{$css-prefix}list__item,
-    .#{$css-prefix}item {
+    .slds-list__item,
+    .slds-item {
       padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
     }
 
@@ -39,7 +39,7 @@
   }
 }
 
-.#{$css-prefix}has-inline-block-links {
+.slds-has-inline-block-links {
 
   a {
     display: inline-block;

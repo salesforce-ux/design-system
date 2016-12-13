@@ -11,7 +11,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import Input from 'ui/components/forms/flavors/input/index.react';
-import Button from 'ui/components/buttons/index.react';
 
 
 export default (
@@ -20,7 +19,7 @@ export default (
     <Input label="Name" assistiveText="name" />
     <Input label="Email" assistiveText="email" />
     <div className="slds-form-element">
-      <Button type="button" className="slds-button slds-button--brand">Send</Button>
+      <button type="button" className="slds-button slds-button--brand">Send</button>
     </div>
   </form>
 </div>

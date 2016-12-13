@@ -11,21 +11,21 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Tile = props =>
-  <div className={className('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <div className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions ?
       <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
         <h3 className="slds-truncate" title={ props.title || 'Title' }>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options"title="More Actions" />
+          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
         </div>
       </div>
     :
@@ -34,12 +34,12 @@ export let Tile = props =>
       </h3>
     }
     <div className="slds-tile__detail slds-text-body--small">
-      { props.children }
+      { props.children ? props.children : <Detail /> }
     </div>
   </div>;
 
 export let TileMedia = props =>
-  <div className={className('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <div className={classNames('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.media ?
       <div className="slds-media__figure">
         { props.media }
@@ -52,7 +52,7 @@ export let TileMedia = props =>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
-            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More Actions" />
+            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
           </div>
         </div>
       :
@@ -61,10 +61,18 @@ export let TileMedia = props =>
         </h3>
       }
       <div className="slds-tile__detail slds-text-body--small">
-        { props.children }
+        { props.children ? props.children : <Detail /> }
       </div>
     </div>
   </div>;
+
+let Detail = props =>
+  <dl className="slds-list--horizontal slds-wrap">
+    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
+    <dd className="slds-item--detail slds-truncate">Description for first label</dd>
+    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
+    <dd className="slds-item--detail slds-truncate">Description for second label</dd>
+  </dl>;
 
 ///////////////////////////////////////////
 // Export
@@ -75,18 +83,16 @@ export let states = [
     id: 'tile',
     label: 'Default',
     element:
-      <Tile title="Salesforce UX">
-        <p className="slds-truncate" title="26 Members">26 Members</p>
-      </Tile>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <Tile title="Salesforce UX" />
+      </div>
   },
   {
     id: 'tile-with-action',
     label: 'Default with actions',
     element:
-      <div className="demo-only" style={{ width: '320px' }}>
-        <Tile title="Salesforce UX" actions>
-          <p className="slds-truncate" title="26 Members">26 Members</p>
-        </Tile>
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <Tile title="Salesforce UX" actions />
       </div>
   }
 ];

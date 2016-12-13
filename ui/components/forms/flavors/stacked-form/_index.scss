@@ -9,15 +9,15 @@
 
 
 
-.#{$css-prefix}form--stacked .#{$css-prefix}form-element {
+.slds-form--stacked .slds-form-element {
   display: block;
 
-  + .#{$css-prefix}form-element {
+  + .slds-form-element {
     @include form-element-vertical-spacing;
   }
 
-  .#{$css-prefix}checkbox,
-  .#{$css-prefix}radio {
+  .slds-checkbox,
+  .slds-radio {
     display: block;
   }
 }

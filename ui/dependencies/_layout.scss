@@ -154,7 +154,7 @@
     }
 
     @for $i from 1 through $denominator {
-      .#{$css-prefix}#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
+      .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
         width: ($i / $denominator) * 100%;
       }
     }
@@ -168,8 +168,8 @@
 
     @for $numerator from 1 to $denominator {
 
-      // Build a class in the format `.#{$css-prefix}order--1`.
-      .#{$css-prefix}#{$breakpoint}order--#{$numerator} {
+      // Build a class in the format `.slds-order--1`.
+      .slds-#{$breakpoint}order--#{$numerator} {
         order: $numerator;
       }
     }
@@ -274,42 +274,48 @@
   }
 
   @each $token, $size in $force-base-map {
+    // Analyze tokens from map
     $token-string: inspect($token);
-
-    @if str-index($token-string, spacing) {
+    // Remove component specific spacing tokens
+    $spacing-token: unquote(str-replace($token-string, '-spacing-', ''));
+    // Loop through index that matches the substring of "spacing" to all tokens
+    // minus the component specific tokens
+    @if str-index($spacing-token, spacing) {
+      // Strip "spacing" from the matched token names
       $spacing: unquote(str-replace($token, 'spacing-', ''));
 
       // scss-lint:disable ImportantRule
       @each $position in $positions {
+        // Only apply !important to spacing--none utilities
         @if $size == 0 {
-          .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
+          .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
             #{$property}-#{$position}: 0 !important;
           }
         }
-
-        .#{$css-prefix}#{$prop-prefix}-#{$position}--#{$spacing} {
-          #{$property}-#{$position}: $size;
+        // Generate directional spacing utilities
+        @else {
+          .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
+            #{$property}-#{$position}: $size;
+          }
         }
       }
-
-      .#{$css-prefix}#{$prop-prefix}-vertical--#{$spacing} {
+      // Generate vertical spacing utilities
+      .slds-#{$prop-prefix}-vertical--#{$spacing} {
         #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
-
-      .#{$css-prefix}#{$prop-prefix}-horizontal--#{$spacing} {
+      // Generate horizontal spacing utilities
+      .slds-#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
         #{$property}-left: $size;
       }
-
-      .#{$css-prefix}#{$prop-prefix}-around--#{$spacing} {
+      // Generate vertical + horizontal spacing utilities
+      .slds-#{$prop-prefix}-around--#{$spacing} {
         #{$property}: $size;
       }
     }
   }
 }
-
-
 
 @mixin square($size) {
   width: $size;
@@ -319,7 +325,7 @@
 
 @mixin visibility($class-name, $min: null, $max: null) {
 
-  .#{$css-prefix}#{$class-name} {
+  .slds-#{$class-name} {
 
     &-show {
       display: none;
@@ -358,7 +364,7 @@
   }
   @if $max {
 
-    .#{$css-prefix}max-#{$class-name}-hide {
+    .slds-max-#{$class-name}-hide {
 
       @media (max-width: $max - 1) {
         display: none;

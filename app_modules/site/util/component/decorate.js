@@ -9,72 +9,14 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import _ from 'lodash';
 import fs from 'fs';
-import jsYaml from 'js-yaml';
 import path from 'path';
+import _ from 'lodash';
+import yaml from 'js-yaml';
 import markdown from 'markdown-it';
 import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
 
 import globals from 'app_modules/global';
-
-let lightningComponents = [{
-  component: 'badges',
-  namespace: 'lightning:badge',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.htm'
-},{
-  component: 'buttons',
-  namespace: 'lightning:button',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm'
-},{
-  component: 'button-groups',
-  namespace: 'lightning:buttonGroup',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm'
-},{
-  component: 'button-icons',
-  namespace: 'lightning:buttonIcon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm'
-}, {
-  component: 'menus',
-  flavor: 'dropdown',
-  namespace: 'lightning:buttonMenu',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm'
-}, {
-  component: 'cards',
-  namespace: 'lightning:card',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_card.htm'
-}, {
-  component: 'icons',
-  namespace: 'lightning:icon',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm'
-}, {
-  component: 'forms',
-  flavor: 'input',
-  namespace: 'lightning:input',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm'
-}, {
-  component: 'forms',
-  flavor: 'select',
-  namespace: 'lightning:select',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_select.htm'
-}, {
-  component: 'forms',
-  flavor: 'textarea',
-  namespace: 'lightning:textarea',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm'
-}, {
-  component: 'grid',
-  namespace: 'lightning:layout',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm'
-}, {
-  component: 'spinners',
-  namespace: 'lightning:spinner',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm'
-}, {
-  component: 'tabs',
-  namespace: 'lightning:tabset',
-  url: 'https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm'
-}];
 
 /**
  * Check of a directory has a file of a specified type
@@ -118,7 +60,7 @@ const addInfo = component => {
     renderMarkdownAndReplaceGlobals(fs.readFileSync(indexPath).toString());
 
   const getYaml = indexPath =>
-    jsYaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
+    yaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
 
   getIndex(component.path, 'markup.md', indexPath => {
     component.info.markup = {
@@ -131,20 +73,6 @@ const addInfo = component => {
   });
 };
 
-const addLightning = (component) => {
-  let lightning = _.find(lightningComponents, { component: component.id });
-  if (!lightning) return;
-  if (!_.has(lightning, 'flavor')) {
-    component.lightning = lightning;
-  }
-  component.flavors.forEach(flavor => {
-    flavor.lightning = _.find(lightningComponents, {
-      component: component.id,
-      flavor: flavor.id
-    });
-  });
-};
-
 /**
  * Create a new component definition
  *
@@ -153,7 +81,6 @@ const addLightning = (component) => {
  */
 export default component => {
   addInfo(component);
-  addLightning(component);
   component.flavors.forEach(flavor => {
     _.defaults(flavor, {
       showFormFactors: [],

@@ -9,9 +9,9 @@
 
 
 
-.#{$css-prefix}picklist--draggable {
+.slds-picklist--draggable {
 
-  .#{$css-prefix}button {
+  .slds-button {
     margin: $spacing-xx-small;
 
     &:first-of-type {
@@ -20,7 +20,7 @@
   }
 }
 
-.#{$css-prefix}picklist__options {
+.slds-picklist__options {
   border: $border-width-thin solid $color-border-input {
     radius: $border-radius-medium;
   };
@@ -34,7 +34,7 @@
   }
 }
 
-.#{$css-prefix}picklist__item {
+.slds-picklist__item {
   position: relative;
   line-height: $line-height-text;
 

@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}badge {
+.slds-badge {
   background-color: $color-background-shade;
   padding: $spacing-xx-small $spacing-x-small;
   border-radius: $border-radius-pill;
@@ -21,7 +21,7 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  + .#{$css-prefix}badge {
+  + .slds-badge {
     margin-left: $spacing-x-small;
   }
 

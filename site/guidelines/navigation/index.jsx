@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 
 export default (
-  <PageBody anchorTitle="Navigation" contentClassName="site-guidelines site-guidelines-navigation">
+  <PageBody anchorTitle="Navigation" contentClassName="site site-guidelines site-guidelines-navigation">
     <div className="slds-container--large">
       <p className="site-text-introduction">Navigational patterns help users move between pages and situate themselves in the application.</p>
       <h2 className="site-text-heading--large">Tabs</h2>

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,8 +22,8 @@ let Demo = props =>
     {props.children}
   </div>;
 
-export let Button = props =>
-  <button className={className('slds-button', props.className)} disabled={props.disabled}>
+let Button = props =>
+  <button className={classNames('slds-button', props.className)} disabled={props.disabled}>
     {props.children}
   </button>;
 
@@ -151,5 +151,10 @@ export let states = [
     id: 'button-inverse-disabled',
     label: 'Inverse disabled',
     element: <InverseDisabled />
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Button className="slds-button--success">Button Success</Button>
   }
 ];

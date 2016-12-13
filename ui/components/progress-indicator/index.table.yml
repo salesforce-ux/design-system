@@ -1,0 +1,45 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: slds-progress
+    description: Initializes popover
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress__list
+    description: An ordered list containing steps of a process
+    required: true
+    applied: <code>&lt;ol&gt;</code>
+  -
+    class: slds-progress__item
+    description: A list item for each step of the process
+    required: true
+    applied: <code>&lt;li&gt;</code>
+  -
+    class: slds-progress__marker
+    description: Dot indicator for each step
+    required: true
+    applied: <code>&lt;span&gt;</code>
+  -
+    class: slds-progress__marker--icon
+    description: Modifier that notifies the marker indicator that the step has been completed and its getting an icon
+    required: true
+    applied: <code>&lt;a&gt;</code>
+  -
+    class: slds-progress-bar
+    description: Container for progress bar
+    required: true
+    applied: <code>&lt;span&gt;</code>
+    notes: <code>&lt;span&gt;</code> sits outside of <code>&lt;ol&gt;</code>
+  -
+    class: slds-is-active
+    description: Stateful class for the active step
+    required: true
+    applied: <code>slds-progress__item</code>
+    notes: Class should be applied thought JavaScript
+  -
+    class: slds-is-completed
+    description: Stateful class for a completed step, <code>.slds-progress__item</code> should receive a success icon at this point
+    required: true
+    applied: <code>slds-progress__item</code>
+    notes: Class should be applied thought JavaScript

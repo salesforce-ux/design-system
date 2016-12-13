@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
@@ -52,26 +52,26 @@ const results = [{
 }];
 
 let LookupSearchInput = props =>
-  <div className={className('slds-form-element__control', props.polymorphic ? 'slds-grid slds-box--border' : null)}>
+  <div className={classNames('slds-form-element__control', props.polymorphic ? 'slds-grid slds-box--border' : null)}>
     { props.polymorphic ? <LookupEntity showEntityDropdown={ props.showEntityDropdown } /> : null }
-    <div className={className('slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grow' : null)}>
+    <div className={classNames('slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grow' : null)}>
       <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
       <input
         id={ props.id }
-        className={className('slds-lookup__search-input', props.polymorphic ? 'slds-input--bare' : 'slds-input')}
+        className={classNames('slds-lookup__search-input', props.polymorphic ? 'slds-input--bare' : 'slds-input')}
         type="search"
         placeholder={ props.placeholder || 'Search Accounts' }
         defaultValue={ props.typeahead ? 'salesforce' : null }
         aria-owns={ props.id }
         role="combobox"
-        aria-activedescendent=""
+        aria-activedescendant=""
         aria-expanded={ props.showLookupDropdown ? 'true' : 'false' }
         aria-autocomplete="list" />
     </div>
   </div>;
 
 let LookupEntity = props =>
-  <div className={className('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
+  <div className={classNames('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
     <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small" sprite="standard" symbol="account" />
     <ButtonIcon className="slds-button--icon slds-button--icon-small" symbol="down" assistiveText="Filter by object" aria-haspopup="true" title="Filter by object" />
     { props.showEntityDropdown ?
@@ -129,7 +129,7 @@ let LookupMenuItem = props => {
 
   return (
     <li role="presentation">
-      <span className="slds-lookup__item-action slds-media slds-media--center" id={ uniqueId } role="option">
+      <span className="slds-lookup__item-action slds-media" id={ uniqueId } role="option">
         <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
         <div className="slds-media__body">
           <div className="slds-lookup__result-text">{ props.typeahead ? props.children : props.name || 'Salesforce.com, Inc.' }</div>
@@ -169,10 +169,10 @@ export let Lookup = props => {
   const uniqueId = _.uniqueId('lookup-');
 
   return (
-    <div className={className('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null)} data-select="single">
+    <div className={classNames('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null)} data-select="single">
       { !props.selection ?
-      <label className={className('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
-      <span className={className('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
+      <label className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueId }>{ props.label || 'Account Name' }</label> :
+      <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
       }
       { !props.selection ?
         <LookupSearchInput
@@ -203,7 +203,7 @@ export let states = [
     id: 'active',
     label: 'Active',
     element:
-      <div className="demo-only" style={{ height: '380px' }}>
+      <div className="demo-only" style={{ height: '400px' }}>
         <Lookup showLookupDropdown />
       </div>
   },

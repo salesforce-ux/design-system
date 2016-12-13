@@ -9,8 +9,12 @@
 
 
 
-.#{$css-prefix}box {
+.slds-box {
   @include box($borders: around);
+
+  &--xx-small {
+    padding: $spacing-xx-small;
+  }
 
   &--x-small {
     padding: $spacing-x-small;

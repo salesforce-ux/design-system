@@ -22,7 +22,7 @@ export const intro = (
 
 export default (
   <ComponentDocs>
+    <p>Tiles are setup to be displayed with or without an image/icon. The default pattern for tiles has an image/icon, a detail body which contains a list of information and action overflow menu dropdown. The detail body list, by default, comes as a name/value pairing but can be swapped out with a string of text or an inline horizontal list.</p>
     <p>Tiles can have different groupings of information based on its context. Pay close attention to the markup, as each tile layout is constructed differently.</p>
-    <p>Include other optional elements, such as images, icons, action overflows, and description lists, within the containing tile.</p>
   </ComponentDocs>
 );

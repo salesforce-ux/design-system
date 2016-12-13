@@ -17,7 +17,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Heroku" contentClassName="slds-grid slds-wrap">
+  <PageBody anchorTitle="Heroku" contentClassName="site slds-grid slds-wrap">
     <StickyNav>
       <div className="site-menu--jump-links">
         <h3 className="site-text-heading--label">Steps</h3>

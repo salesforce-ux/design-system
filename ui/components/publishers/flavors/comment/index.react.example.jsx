@@ -10,10 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -27,7 +26,7 @@ const image = (
 
 export let Publisher = props =>
   <MediaObject figureLeft={image} className="slds-comment slds-hint-parent">
-    <div className={className('slds-publisher slds-publisher--comment', props.className)}>
+    <div className={classNames('slds-publisher slds-publisher--comment', props.className)}>
       <label htmlFor="comment-text-input-01" className="slds-assistive-text">Write a comment</label>
       <textarea id="comment-text-input-01" className="slds-publisher__input slds-input--bare slds-text-longform" placeholder="Write a comment&hellip;" />
       <div className="slds-publisher__actions slds-grid slds-grid--align-spread">
@@ -39,7 +38,7 @@ export let Publisher = props =>
             <ButtonIcon className="slds-button--icon-container" symbol="attach" assistiveText="Attach a file" title="Attach a file" />
           </li>
         </ul>
-        <Button className="slds-button slds-button--brand">Comment</Button>
+        <button className="slds-button slds-button--brand">Comment</button>
       </div>
     </div>
   </MediaObject>;

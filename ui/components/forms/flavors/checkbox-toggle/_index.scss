@@ -7,10 +7,10 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.#{$css-prefix}checkbox--toggle {
+.slds-checkbox--toggle {
   width: 100%;
 
-  .#{$css-prefix}checkbox--faux {
+  .slds-checkbox--faux {
     display: block;
     position: relative;
     width: $width-toggle;
@@ -50,24 +50,24 @@
     position: absolute;
 
     // scss-lint:disable NestingDepth SelectorDepth
-    + .#{$css-prefix}checkbox--faux_container {
+    + .slds-checkbox--faux_container {
       font-size: $font-size-x-small;
       color: $color-text-label;
 
-      .#{$css-prefix}checkbox--off {
+      .slds-checkbox--off {
         display: block;
       }
 
-      .#{$css-prefix}checkbox--on {
+      .slds-checkbox--on {
         display: none;
       }
     }
 
     &:focus {
 
-      & + .#{$css-prefix}checkbox--faux,
-      & ~ .#{$css-prefix}checkbox--faux,
-      & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+      & + .slds-checkbox--faux,
+      & ~ .slds-checkbox--faux,
+      & + .slds-checkbox--faux_container .slds-checkbox--faux {
         background-color: $color-background-toggle-hover;
         border-color: $color-border-input-active;
         box-shadow: $shadow-button-focus;
@@ -78,18 +78,18 @@
     &:checked {
 
       // scss-lint:disable NestingDepth SelectorDepth
-      + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--off {
+      + .slds-checkbox--faux_container .slds-checkbox--off {
           display: none;
         }
 
       // scss-lint:disable NestingDepth SelectorDepth
-      + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--on {
+      + .slds-checkbox--faux_container .slds-checkbox--on {
         display: block;
       }
 
-      & + .#{$css-prefix}checkbox--faux,
-      & ~ .#{$css-prefix}checkbox--faux,
-      & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+      & + .slds-checkbox--faux,
+      & ~ .slds-checkbox--faux,
+      & + .slds-checkbox--faux_container .slds-checkbox--faux {
         border-color: $color-background-toggle-active;
         background-color: $color-background-toggle-active;
 
@@ -127,9 +127,9 @@
 
       &:focus {
 
-        & + .#{$css-prefix}checkbox--faux,
-        & ~ .#{$css-prefix}checkbox--faux,
-        & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+        & + .slds-checkbox--faux,
+        & ~ .slds-checkbox--faux,
+        & + .slds-checkbox--faux_container .slds-checkbox--faux {
           background-color: $color-background-toggle-active-hover;
         }
       }
@@ -139,9 +139,9 @@
     &[disabled] {
     // scss-lint:disable NestingDepth
 
-      & + .#{$css-prefix}checkbox--faux,
-      & ~ .#{$css-prefix}checkbox--faux,
-      & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+      & + .slds-checkbox--faux,
+      & ~ .slds-checkbox--faux,
+      & + .slds-checkbox--faux_container .slds-checkbox--faux {
         // scss-lint:disable NestingDepth
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
@@ -159,7 +159,7 @@
 
       &:checked {
 
-        & + .#{$css-prefix}checkbox--faux_container .#{$css-prefix}checkbox--faux {
+        & + .slds-checkbox--faux_container .slds-checkbox--faux {
 
           &:before {
             background-color: $color-background-input-checkbox-disabled;

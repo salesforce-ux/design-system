@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}image {
+.slds-image {
   display: block;
   position: relative;
 
@@ -57,7 +57,7 @@
       right: 0;
       bottom: 0;
 
-      .#{$css-prefix}image__text {
+      .slds-image__text {
         z-index: 1;
       }
     }

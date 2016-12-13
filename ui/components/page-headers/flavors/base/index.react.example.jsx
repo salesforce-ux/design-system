@@ -18,7 +18,7 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header" role="banner">
+  <div className="slds-page-header">
     <MediaObject figureLeft={image}>
       <p className="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets

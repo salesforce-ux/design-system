@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 
 export default (
-  <PageBody anchorTitle="Displaying Data" contentClassName="site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Displaying Data" contentClassName="site site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">Lists and feeds help users navigate data either by theme or chronology. These various ways of displaying data are optimized to help users locate, browse, and work together on records.</p>
 

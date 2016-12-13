@@ -13,15 +13,15 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonGroup } from 'ui/components/button-groups/flavors/base/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
 ///////////////////////////////////////////
 
 export let Image = props =>
-  <figure className={className('slds-image', props.className)}>
-    <a href="javascript:void(0);" className={className('slds-image__crop', props.cropClass)}>
+  <figure className={classNames('slds-image', props.className)}>
+    <a href="javascript:void(0);" className={classNames('slds-image__crop', props.cropClass)}>
       { props.overlay ? <div className="slds-image--overlay"></div> : null }
       { props.image ?
         <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
@@ -36,7 +36,7 @@ export let Image = props =>
         <ButtonIcon className="slds-button--icon-border-filled" symbol="download" assistiveText="Download" title="Download" />
         <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assitiveText="More Actions" title="More Actions" />
       </ButtonGroup> : null }
-    <figcaption className={className('slds-image__title', props.titleClass)}>
+    <figcaption className={classNames('slds-image__title', props.titleClass)}>
       { props.symbol ?
       <span className="slds-icon_container slds-m-right--x-small" title={ props.symbol || 'unknown file type' }>
         <SvgIcon className="slds-icon slds-icon--x-small" sprite="doctype" symbol={ props.symbol || 'unknown' } />

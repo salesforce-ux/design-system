@@ -37,7 +37,6 @@
 
   // Card
   'cards/index',
-  'cards/flavors/base-compact/index',
 
   // Forms
   'forms/index',
@@ -49,6 +48,7 @@
   'forms/flavors/checkbox-toggle/index',
   'forms/flavors/select/index',
   'forms/flavors/checkbox-alternate/index',
+  'forms/flavors/checkbox-add-button/index',
   'forms/flavors/multi-select/index',
   'forms/flavors/horizontal-form/index',
   'forms/flavors/stacked-form/index',
@@ -74,6 +74,9 @@
   'popovers/flavors/panels/index',
   'popovers/flavors/nubbins/index',
 
+  // Walkthrough
+  'walkthrough/flavors/popovers/index',
+
   // Tooltips
   'tooltips/index',
 
@@ -91,7 +94,6 @@
   // Docked Composer
   'docked-composer/index',
   'docked-composer/flavors/email/index',
-  'docked-composer/flavors/task/index',
 
   // Docked Utility Bar
   'docked-utility-bar/flavors/utility-bar/index',
@@ -99,6 +101,7 @@
 
   // Global Header
   'global-header/flavors/base/index',
+  'global-header/flavors/notifications/index',
 
   // Global Navigation
   'global-navigation/index',
@@ -127,13 +130,19 @@
   'process/flavors/wizard/index',
   'process/flavors/sales-path-coach/index',
 
+  // Progress Indicator
+  'progress-indicator/index',
+
+  // Rich Text Editor
+  'rich-text-editor/index',
+
   // Spinners
   'spinners/index',
-  'spinners/flavors/small/index',
-  'spinners/flavors/medium/index',
-  'spinners/flavors/large/index',
-  'spinners/flavors/brand-small/index',
-  'spinners/flavors/inverse-small/index',
+  'spinners/flavors/sizes/index',
+  'spinners/flavors/colors/index',
+
+  // Split view list
+  'split-view/index',
 
   // Title
   'tiles/index',
@@ -152,6 +161,7 @@
   'notifications/flavors/alert/index',
   'notifications/flavors/prompt/index',
   'notifications/flavors/modal-toast/index',
+  'walkthrough/flavors/header/index',
 
   // Lookup
   'lookups/index',

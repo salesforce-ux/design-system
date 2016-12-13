@@ -9,30 +9,30 @@
 
 
 
-.#{$css-prefix}text-heading--large {
+.slds-text-heading--large {
   font-weight: $font-weight-light;
   font-size: $font-size-xx-large;
   line-height: $line-height-heading;
 }
 
-.#{$css-prefix}text-heading--medium {
+.slds-text-heading--medium {
   font-weight: $font-weight-light;
   font-size: $font-size-x-large;
   line-height: $line-height-heading;
 }
 
-.#{$css-prefix}text-heading--small {
+.slds-text-heading--small {
   font-size: $font-size-large;
   line-height: $line-height-heading;
 }
 
 @include  deprecate('4.0.0', 'Use slds text-title instead') {
 
-  .#{$css-prefix}text-heading--label {
+  .slds-text-heading--label {
     @include text-heading--label;
   }
 
-  .#{$css-prefix}text-heading--label-normal {
+  .slds-text-heading--label-normal {
     @include text-heading--label-normal;
   }
 }

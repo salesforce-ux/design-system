@@ -42,26 +42,20 @@ let NavigationBar = props =>
       { props.showSections ?
         <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>Secondary</div> : null }
     </nav>
-    <div className="slds-context-bar__tertiary slds-col--bump-left slds-is-relative">
-      <ul className="slds-grid">
-        <li className="slds-context-bar__item slds-is-relative">
-          <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-          { props.showItems ?
-            <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
-        </li>
-      </ul>
-      { props.showSections ?
-        <div className="site-dimension site-dimension--absolute slds-p-horizontal--x-small"><div className="site-dimension__line site-dimension__line--red"></div>Tertiary</div> : null }
-    </div>
   </div>
 </div>;
 
-let NavigationBarItem = props =>
-  <li className="slds-context-bar__item slds-is-relative" { ...props }>
-    <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
-    { props.showItems ?
-      <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
-  </li>;
+let NavigationBarItem = props => {
+  const { showItems, ...rest } = props;
+
+  return (
+    <li className="slds-context-bar__item slds-is-relative" { ...rest }>
+      <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
+      { showItems ?
+        <div className="site-dimension site-dimension--absolute-box slds-m-horizontal--xx-small"></div> : null }
+    </li>
+  );
+};
 
 export const intro = (
   <p className="site-text-introduction">
@@ -73,13 +67,12 @@ export default (
   <ComponentDocs>
     <h2 className="site-text-heading--label">1.0. Building the Navigation Bar</h2>
     <NavigationBar showSections />
-    <p>The navigation bar is composed of a wrapper and 2 required and 1 optional region:</p>
+    <p>The navigation bar is composed of a wrapper and 2 required regions:</p>
     <ul>
       <li><strong>Primary,</strong> which contains the App Launcher and App Name</li>
       <li><strong>Secondary,</strong> which contains the App Items, for navigating within the current app</li>
-      <li>And optionally, <strong>Tertiary,</strong> which includes Actions, for triggering actions specific to the current app.</li>
     </ul>
-    <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="context-bar__primary" />. </p>
+    <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="context-bar__primary" />.</p>
 
     <h2 className="site-text-heading--label">1.1. Items on the Navigation Bar</h2>
     <NavigationBar showItems />
@@ -133,7 +126,7 @@ export default (
               <SvgIcon className="slds-button__icon slds-button__icon--hint slds-button__icon--small" sprite="utility" symbol="chevrondown" />
               <span className="slds-assistive-text">Assistive text for submenu</span>
             </button>
-            <div className="site-dimension site-dimension--absolute p-horizontal"><div className="site-dimension__line site-dimension__line--red"></div></div>
+            <div className="site-dimension site-dimension--absolute slds-p-horizontal"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
         </div>
       </div>

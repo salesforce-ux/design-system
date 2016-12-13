@@ -29,6 +29,10 @@ classes:
     description: Creates the inverse style for dark backgrounds
     applied: <code>.slds-button</code>
   -
+    class: slds-button--success
+    description: Creates the success style
+    applied: <code>.slds-button</code>
+  -
     class: slds-button__icon
     description: Sets the size and color of the icon inside a button
     applied: <code>svg</code>

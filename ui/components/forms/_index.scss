@@ -9,7 +9,7 @@
 
 
 
-.#{$css-prefix}form-element {
+.slds-form-element {
   position: relative;
 
   // Deprecated, use .form-element__label instead
@@ -40,8 +40,8 @@
 
     // Force radios and checkboxes to be on own line when there
     // are multiples in a group
-    .#{$css-prefix}radio,
-    .#{$css-prefix}checkbox {
+    .slds-radio,
+    .slds-checkbox {
       display: block;
     }
   }
@@ -74,22 +74,22 @@
 
     // If read only state is longform
     // Apply text line height
-    &.#{$css-prefix}text-longform {
+    &.slds-text-longform {
       line-height: $line-height-text;
     }
   }
 }
 
 // Required Star
-.#{$css-prefix}required {
+.slds-required {
   color: $color-text-error;
   margin: 0 $spacing-xxx-small;
 }
 
 // Error Styles
-.#{$css-prefix}has-error {
+.slds-has-error {
 
-  .#{$css-prefix}form-element__help {
+  .slds-form-element__help {
     color: $color-text-error;
   }
 }

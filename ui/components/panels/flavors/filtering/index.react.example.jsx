@@ -10,10 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import { Panel } from 'ui/components/panels/flavors/detail/index.react.example';
 import { PanelBody } from 'ui/components/panels/flavors/detail/index.react.example';
 import { PanelSection } from 'ui/components/panels/flavors/detail/index.react.example';
@@ -28,12 +27,12 @@ let Demo = props =>
   </div>;
 
 export let Filters = props =>
-  <div className={className('slds-filters', props.className)}>
+  <div className={classNames('slds-filters', props.className)}>
     {props.children}
   </div>;
 
 export let FiltersHeader = props =>
-  <div className={className('slds-filters__header slds-grid slds-has-divider--bottom-space', props.className)}>
+  <div className={classNames('slds-filters__header slds-grid slds-has-divider--bottom-space', props.className)}>
     { props.children }
   </div>;
 
@@ -50,7 +49,7 @@ export let FiltersFooter = props =>
 
 export let FilterObject = props =>
   <li className="slds-item slds-hint-parent">
-    <div className={className('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
+    <div className={classNames('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
       <a href="javascript:void(0);" className="slds-grow slds-has-blur-focus">
         {props.type ? (<p className="slds-text-body--small">{props.type}</p>) : null }
         <p>{props.children}</p>
@@ -108,8 +107,8 @@ let NewFilter = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button className="slds-button slds-button--neutral">Cancel</Button>
-            <Button className="slds-button slds-button--brand">Save</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Save</button>
           </FiltersHeader>
           <FiltersBody>
             <ol className="slds-list--vertical slds-list--vertical-space">
@@ -134,8 +133,8 @@ let ErrorPanel = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader className="slds-grid--align-spread">
-            <Button className="slds-button slds-button--neutral">Cancel</Button>
-            <Button className="slds-button slds-button--brand">Save</Button>
+            <button className="slds-button slds-button--neutral">Cancel</button>
+            <button className="slds-button slds-button--brand">Save</button>
           </FiltersHeader>
           <FiltersBody>
             <div className="slds-text-color--error slds-m-bottom--x-small" aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>

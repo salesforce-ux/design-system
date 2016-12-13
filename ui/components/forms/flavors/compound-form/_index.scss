@@ -9,30 +9,30 @@
 
 
 
-.#{$css-prefix}form--compound {
+.slds-form--compound {
 
-  .#{$css-prefix}form-element__row {
+  .slds-form-element__row {
     display: flex;
     margin-bottom: $spacing-x-small;
 
-    + .#{$css-prefix}form-element__row {
+    + .slds-form-element__row {
       clear: both;
     }
   }
 
-  .#{$css-prefix}form-element {
+  .slds-form-element {
     width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
 
-    + .#{$css-prefix}form-element {
+    + .slds-form-element {
       padding-left: $spacing-x-small;
     }
   }
 
   @include deprecate('4.0.0') {
-    .#{$css-prefix}form-element__control {
+    .slds-form-element__control {
       position: relative;
 
-      + .#{$css-prefix}form-element__control {
+      + .slds-form-element__control {
         padding-left: $spacing-x-small;
       }
     }

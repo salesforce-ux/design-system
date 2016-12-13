@@ -44,7 +44,7 @@
 
 @mixin popover-nubbins($color: inherit, $shadow: true) {
 
-  .#{$css-prefix}nubbin--top {
+  .slds-nubbin--top {
     @include nubbin(top, 'before', $color);
 
     @if $shadow != null {
@@ -57,7 +57,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--top-left {
+  .slds-nubbin--top-left {
     @include nubbin(top, 'before', $color);
 
     @if $shadow != null {
@@ -76,7 +76,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--top-right {
+  .slds-nubbin--top-right {
     @include nubbin(top, 'before', $color);
 
     @if $shadow != null {
@@ -97,7 +97,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--bottom {
+  .slds-nubbin--bottom {
     @include nubbin(bottom, 'before', $color);
 
     @if $shadow != null {
@@ -110,7 +110,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--bottom-left {
+  .slds-nubbin--bottom-left {
     @include nubbin(bottom, 'before', $color);
 
     @if $shadow != null {
@@ -130,7 +130,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--bottom-right {
+  .slds-nubbin--bottom-right {
     @include nubbin(bottom, 'before', $color);
 
     @if $shadow != null {
@@ -152,7 +152,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--left {
+  .slds-nubbin--left {
     @include nubbin(left, 'before', $color);
 
     @if $shadow != null {
@@ -165,7 +165,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--left-top {
+  .slds-nubbin--left-top {
     @include nubbin(left, 'before', $color);
 
     @if $shadow != null {
@@ -183,7 +183,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--left-bottom {
+  .slds-nubbin--left-bottom {
     @include nubbin(left, 'before', $color);
 
     @if $shadow != null {
@@ -206,7 +206,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--right {
+  .slds-nubbin--right {
     @include nubbin(right, 'before', $color);
 
     @if $shadow != null {
@@ -219,7 +219,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--right-top {
+  .slds-nubbin--right-top {
     @include nubbin(right, 'before', $color);
 
     @if $shadow != null {
@@ -237,7 +237,7 @@
     }
   }
 
-  .#{$css-prefix}nubbin--right-bottom {
+  .slds-nubbin--right-bottom {
     @include nubbin(right, 'before', $color);
 
     @if $shadow != null {

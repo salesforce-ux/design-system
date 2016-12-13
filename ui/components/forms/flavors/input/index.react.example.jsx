@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -22,21 +22,29 @@ let Demo = props =>
     {props.children}
   </div>;
 
-let FormElement = props =>
-  <div className={className('slds-form-element', props.className)}>
+export let FormElement = props =>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>;
 
-let FormElementLabel = props =>
-  <label className="slds-form-element__label" htmlFor="text-input-01">{props.children}</label>;
+export let FormElementLabel = props =>
+  <label className={ classNames('slds-form-element__label', props.className)} htmlFor="text-input-01">
+    {props.children}
+  </label>;
 
-let FormElementControl = props =>
-  <div className={className('slds-form-element__control', props.className)}>
+export let FormElementControl = props =>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>;
 
 let Input = props =>
-  <input id="text-input-01" className={className('slds-input', props.className)} type={props.type || 'text'} placeholder="Placeholder Text" {...props} />;
+  <input
+    {...props}
+    id="text-input-01"
+    className={classNames('slds-input', props.className)}
+    type={props.type || 'text'}
+    placeholder="Placeholder Text"
+  />;
 
 //////////////////////////////////////////////
 // State Constructor(s)

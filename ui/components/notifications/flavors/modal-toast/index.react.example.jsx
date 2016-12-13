@@ -11,10 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
-import Button from 'ui/components/buttons/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import Lorem from 'react-lorem-component';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>
@@ -43,12 +41,15 @@ export default (
       </ModalHeader>
 
       <ModalContent className="slds-p-around--medium">
-        <Lorem count={2} paragraphLowerBound={5} />
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+          quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt
+          nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
       </ModalContent>
 
       <ModalFooter>
-        <Button className="slds-button slds-button--neutral">Cancel</Button>
-        <Button className="slds-button slds-button--brand">Save</Button>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Save</button>
       </ModalFooter>
     </Modal>
     <div className="slds-backdrop slds-backdrop--open" />

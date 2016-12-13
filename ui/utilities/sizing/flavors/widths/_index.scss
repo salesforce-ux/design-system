@@ -23,7 +23,7 @@ $_sizes: (
 
 // Absolute sizes (rem)
 @each $name, $width in $_sizes {
-  .#{$css-prefix}size--#{$name} {
+  .slds-size--#{$name} {
     width: $width;
   }
 }
@@ -33,7 +33,7 @@ $_sizes: (
 
 // Ordering helpers
 @for $i from 1 through 12 {
-  .#{$css-prefix}order--#{$i} {
+  .slds-order--#{$i} {
     order: $i;
   }
 }
@@ -54,7 +54,7 @@ $_sizes: (
     // Generate responsive absolute (rem) width names,
     // e.g. <div class="slds-medium-size--x-small">
     @each $name, $width in $_sizes {
-      .#{$css-prefix}#{$size}-size--#{$name} {
+      .slds-#{$size}-size--#{$name} {
         width: $width;
       }
     }
@@ -66,7 +66,7 @@ $_sizes: (
     // Loop through column spread and generate
     // ordering helpers, e.g. <div class="slds-medium-order--2">
     @for $i from 1 through 12 {
-      .#{$css-prefix}#{$size}-order--#{$i} {
+      .slds-#{$size}-order--#{$i} {
         order: $i;
       }
     }
@@ -77,7 +77,7 @@ $_sizes: (
     // Generate responsive absolute (rem) width names (up to size),
     // e.g. <div class="slds-max-medium-size--x-small">
     @each $name, $width in $_sizes {
-      .#{$css-prefix}max-#{$size}-size--#{$name} {
+      .slds-max-#{$size}-size--#{$name} {
         width: $width;
       }
     }
@@ -89,7 +89,7 @@ $_sizes: (
     // Loop through column spread and generate
     // ordering helpers, e.g. <div class="slds-max-medium-order--2">
     @for $i from 1 through 12 {
-      .#{$css-prefix}max-#{$size}-order--#{$i} {
+      .slds-max-#{$size}-order--#{$i} {
         order: $i;
       }
     }

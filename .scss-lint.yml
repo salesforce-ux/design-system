@@ -90,7 +90,7 @@ linters:
   SelectorDepth:
     enabled: true
     max_depth: 3
-  SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
+  SelectorFormat:
     enabled: true
     convention: '^[a-z0-9_\-]+$'
     convention_explanation: 'Valid class names: block_container, block, block--modifier, block__element, block__element--modifier'

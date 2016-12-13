@@ -7,6 +7,12 @@ classes:
     applied: <code>div</code>
     notes: Changes the rounding and borders of buttons within to look like a group
   -
+    class: slds-button-group-list
+    description: Initializes a grouped set of buttons if used with an unordered list
+    required: true
+    applied: <code>ul</code>
+    notes: Changes the rounding and borders of buttons within to look like a group
+  -
     class: slds-button--last
     description: Identifies the last button when wrapped in another element
     applied: button wrapper

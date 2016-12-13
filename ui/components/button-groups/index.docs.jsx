@@ -22,10 +22,10 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <p>Buttons in a group are surrounded by a parent with the <CodeClass className="button-group"/> class. If the last button is an icon, like the down triangle, use the <CodeClass className="button--icon-border-filled"/> class when accompanying a <CodeClass className="button--neutral"/> group. </p>
+    <p>Buttons in a group are surrounded by a parent with the <CodeClass className="button-group" /> class, unless they are in a list (in which case they use <CodeClass className="button-group-list" />. If the last button is an icon, like the down triangle, use the <CodeClass className="button--icon-border-filled"/> class when accompanying a <CodeClass className="button--neutral"/> group.</p>
 
     <p>If the last button in a group needs to be wrapped in another element (for example, a drop-down trigger), add the <CodeClass className="button--last"/> class to the wrapper element to create proper spacing and borders.</p>
     <h4 className="site-text-heading--label">Accessibility</h4>
-    <p>Include the Aria role <code>role="group"</code> so that assistive technologies are alerted to the grouping.</p>
+    <p>Unless you are using the list version, include the Aria role <code>role="group"</code> so that assistive technologies are alerted to the grouping.</p>
   </ComponentDocs>
 );

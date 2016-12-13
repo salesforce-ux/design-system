@@ -9,14 +9,14 @@
 
 
 
-.#{$css-prefix}table {
+.slds-table {
   // scss-lint:disable SelectorDepth
   background-color: $color-background-alt;
 
   // Cells
   th,
   td {
-    padding: $spacing-x-small;
+    padding: $table-spacing-x-small;
     white-space: nowrap;
     position: relative;
   }
@@ -24,10 +24,14 @@
   // Table Heading Cells
   th {
     font-weight: $font-weight-regular;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   // Default Table Row Hover
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover {
+  &:not(.slds-no-row-hover) tbody tr:hover {
     > td,
     > th {
       background-color: $color-background-row-hover;
@@ -35,8 +39,8 @@
   }
 
   // Selected Table Row + Hover
-  tbody tr.#{$css-prefix}is-selected,
-  &:not(.#{$css-prefix}no-row-hover) tr.#{$css-prefix}is-selected:hover {
+  tbody tr.slds-is-selected,
+  &:not(.slds-no-row-hover) tr.slds-is-selected:hover {
 
     > td,
     > th {
@@ -45,27 +49,41 @@
   }
 
   // By default, nowrap is applied
-  .#{$css-prefix}cell-wrap {
+  .slds-cell-wrap {
     white-space: normal;
   }
 
   // Reduce cell to the width of its content, if space is available
-  .#{$css-prefix}cell-shrink {
+  .slds-cell-shrink {
     width: 1%;
   }
 
   // Use to add a left padding buffer to cells, @todo will need to reset for responsive
-  .#{$css-prefix}cell-buffer--left {
+  .slds-cell-buffer--left {
     padding-left: $spacing-large;
   }
 
-  .#{$css-prefix}cell-buffer--right {
+  .slds-cell-buffer--right {
     padding-right: $spacing-large;
+  }
+
+  tbody {
+    // Start the counter
+    tr {
+      counter-increment: row-number;
+    }
+  }
+
+  .slds-row-number {
+    // Add the counter number
+    &:after {
+      content: counter(row-number);
+    }
   }
 }
 
 // Add left and right padding to the first and last cells of a table
-.#{$css-prefix}table--cell-buffer {
+.slds-table--cell-buffer {
 
   tr > th:first-child,
   tr > td:first-child {
@@ -79,7 +97,8 @@
 }
 
 // Add vertical borders to a table
-.#{$css-prefix}table--bordered {
+.slds-table--bordered {
+  border-collapse: separate;
   // scss-lint:disable SelectorDepth
   border: {
     top: $border-width-thin solid $color-border;
@@ -105,15 +124,15 @@
   // This retains the selected state when a row is hovered
   //
   // Box shadow used to eliminate jumpiness on hover
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > td:not(.#{$css-prefix}is-selected),
-  &:not(.#{$css-prefix}no-row-hover) tbody tr:hover > th:not(.#{$css-prefix}is-selected) {
+  &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+  &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
     box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
                 $color-border 0 ($border-width-thin) 0 inset;
   }
 }
 
 // Add column borders
-.#{$css-prefix}table--col-bordered {
+.slds-table--col-bordered {
 
   td + td,
   th + th,
@@ -124,7 +143,7 @@
 }
 
 // Add alternating strips to rows
-.#{$css-prefix}table--striped {
+.slds-table--striped {
   // scss-lint:disable SelectorDepth
   tbody tr:nth-of-type(even) > td,
   tbody tr:nth-of-type(even) > th {
@@ -132,79 +151,86 @@
   }
 }
 
-// Applies move cursor to moveable cell
-th.#{$css-prefix}is-sortable {
-  cursor: pointer;
-  padding: 0; // Reset padding so actionable link bleeds to edge
+// If the column is sortable than lets handle the actionable region of the <th> cell
+.slds-is-sortable {
 
-  @include deprecate('4.0.0', 'The entire cell is hyperlinked now, no need for the button') {
-    .#{$css-prefix}button {
-      visibility: hidden;
-      margin-left: $spacing-x-small;
-    }
+  .slds-th__action:hover,
+  .slds-th__action:focus,
+  &.slds-has-focus .slds-th__action,
+  &.slds-has-focus .slds-th__action:hover,
+  &.slds-has-focus .slds-th__action:focus {
+    background-color: $color-background-row-hover;
+    color: $color-text-link;
 
-    .#{$css-prefix}button__icon {
+    .slds-icon {
+      display: inline-block;
       fill: $color-text-link;
-    }
-
-    &:hover {
-      background-color: $color-background-row-hover;
-      color: $color-text-link;
-
-      .#{$css-prefix}button {
-        visibility: visible;
-      }
     }
   }
 }
 
 // Actionable area inside th
-.#{$css-prefix}th__action {
+.slds-th__action {
   display: flex;
-  padding: $spacing-x-small;
+  padding: $spacing-x-small $table-spacing-x-small;
+  height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
   &:hover {
     outline: 0;
     background-color: $color-background-row-hover;
+  }
 
-    .#{$css-prefix}is-sortable__icon {
-      display: inline-block;
-    }
+  &--form {
+    display: inline-flex; // Allows for alignment of form element, such as a checkbox
   }
 }
 
 // Icon inside sortable th
-.#{$css-prefix}is-sortable__icon {
+.slds-is-sortable__icon {
   @include square($square-icon-small-content);
   margin-left: $spacing-xx-small;
   display: none;
 }
 
 // Active state of sorted column
-.#{$css-prefix}is-sorted {
+.slds-is-sorted {
 
-  .#{$css-prefix}is-sortable__icon {
+  .slds-is-sortable__icon {
     display: inline-block;
   }
 
   // Change direction of arrow
-  &--asc .#{$css-prefix}is-sortable__icon {
+  &--asc .slds-is-sortable__icon {
     transform: rotate(180deg);
   }
 }
 
 // Provide an indicator that resizing is available
-.#{$css-prefix}is-resizable {
+.slds-is-resizable {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 
-  .#{$css-prefix}th__action:hover,
-  .#{$css-prefix}th__action:focus {
+  .slds-th__action:hover,
+  .slds-th__action:focus {
     box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
   }
 }
 
+[role="gridcell"]:focus {
+  outline: 0;
+}
+
+[role="gridcell"]:focus,
+[role="gridcell"].slds-has-focus {
+  box-shadow: $color-border-selection 0 0 0 1px inset;
+}
+
+[role="gridcell"]:active {
+  box-shadow: initial;
+}
+
 // Resizable handle
-.#{$css-prefix}resizable {
+.slds-resizable {
   max-width: 100%;
 
   &__handle {
@@ -234,7 +260,7 @@ th.#{$css-prefix}is-sortable {
     background: $color-background-button-brand;
   }
 
-  &__input:focus ~ .#{$css-prefix}resizable__handle {
+  &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
   }
 }
@@ -242,16 +268,24 @@ th.#{$css-prefix}is-sortable {
 // Resizable data table columns
 //
 // Set table to use fixed layout for width and truncation purposes
-.#{$css-prefix}table--fixed-layout {
+.slds-table--fixed-layout {
   table-layout: fixed;
   width: 100%;
   white-space: nowrap;
 
   thead {
     background-color: $color-background-alt;
+
+    th {
+      padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
+    }
   }
 
-  .#{$css-prefix}cell-shrink {
+  tbody {
+    transform: translateZ(0);
+  }
+
+  .slds-cell-shrink {
     width: $square-icon-large-boundary;
 
     &:nth-child(n) {
@@ -273,7 +307,7 @@ th.#{$css-prefix}is-sortable {
   }
 }
 
-.#{$css-prefix}table--compact {
+.slds-table--compact {
 
   th,
   td {

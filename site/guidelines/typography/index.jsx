@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 
 export default (
-  <PageBody anchorTitle="Typography" contentClassName="site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Typography" contentClassName="site site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">Text is the primary way that users digest content and accomplish work, so it’s important to use good typographic principles to establish a clear visual hierarchy and to maximize legibility.</p>
       <h2 className="site-text-heading--large">Salesforce Sans</h2>

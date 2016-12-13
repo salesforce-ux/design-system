@@ -11,9 +11,38 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { Table, RowData } from 'ui/components/data-tables/flavors/inline-edit/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
+
+const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
+
+const rows = [{
+  'recordName': 'Acme - 1,200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '4/10/15',
+  'stage': 'Value Proposition',
+  'confidence': '30%',
+  'amount': '$25,000,000',
+  'contact': 'jrogers@acme.com'
+}, {
+  'recordName': 'Acme - 200 Widgets',
+  'accountName': 'Acme',
+  'closeDate': '1/31/15',
+  'stage': 'Prospecting',
+  'confidence': '60%',
+  'amount': '$5,000,000',
+  'contact': 'bob@acme.com'
+}, {
+  'recordName': 'salesforce.com - 1,000 Widgets',
+  'accountName': 'salesforce.com',
+  'closeDate': '1/31/15 3:45PM',
+  'stage': 'Id. Decision Makers',
+  'confidence': '70%',
+  'amount': '$25,000',
+  'contact': 'nathan@salesforce.com'
+}];
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -21,54 +50,35 @@ import _ from 'lodash';
 
 let Container = props =>
   <div className="slds-table--header-fixed_container" tabIndex={props.tabIndex} id={props.id}>
-    <div className="table--header-fixed_container--inner">
-      {props.children}
+    <div className="slds-scrollable" style={{height: '100px', position: 'static'}}>
+      <div className="table--header-fixed_container--inner slds-table--edit_container">
+        {props.children}
+      </div>
     </div>
   </div>;
 
-let Table = props =>
-  <table className={className('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout slds-table--header-fixed', props.className)} role="grid">
-    {props.children}
-  </table>;
-
-let Thead = props =>
-  <thead>
-    <tr className="slds-text-title--caps">
-      <th scope="col" style={{ width: '2.75rem' }}><div style={{ width: '2.75rem' }} className="slds-cell-fixed"><span className="slds-assistive-text">Errors</span></div></th>
-      <th role="gridcell" style={{ width: '2.125rem' }}><div className="slds-cell-fixed" style={{ width: '2.125rem' }}><div className="slds-p-around--x-small"><Checkbox label="Select All" /></div></div></th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Name</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Company</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Address</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Email</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Phone</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Status</Th>
-      <Th className="slds-is-sortable slds-is-resizable" scope="col" navigationModeTabIndex={props.navigationModeTabIndex}>Confidence</Th>
-      <th scope="col" style={{ width: '6.25rem' }}><div className="slds-cell-fixed"><div className="slds-p-around--x-small"><span className="slds-truncate slds-p-right--large" title="Actions">Actions</span></div></div></th>
-    </tr>
-  </thead>;
-
-let Th = (props) => {
-  const rangeLabel = props.children + ' column width';
+let Th = props => {
+  const { columnName, ...rest } = props;
+  const uniqueId = _.uniqueId('cell-resize-handle-');
   let sortDirection;
-  if(props['aria-sort']) {
+  if (props['aria-sort']) {
     sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
   }
-  const uniqueId = _.uniqueId('cell-resize-handle-');
 
-  return(
-    <th {...props} aria-label={props.children} style={{ width: '8.25rem' }} scope="row">
-      <div className="slds-cell-fixed" style={{ width: '8.25rem' }}>
-        <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={props.navigationModeTabIndex}>
+  return (
+    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
+      <div className="slds-cell-fixed" style={{ width: '8.75rem' }}>
+        <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
           <span className="slds-assistive-text">Sort </span>
-          <span className="slds-truncate" title={props.children}>{props.children}</span>
+          <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
           <div className="slds-icon_container">
             <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
           </div>
           <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
         </a>
         <div className="slds-resizable">
-          <label htmlFor={uniqueId} className="slds-assistive-text">{rangeLabel}</label>
-          <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={props.navigationModeTabIndex} />
+          <label htmlFor={uniqueId} className="slds-assistive-text">{ columnName || 'Column Name' } column width</label>
+          <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ !props.focusable ? '-1' : '0' } />
           <span className="slds-resizable__handle">
             <span className="slds-resizable__divider"></span>
           </span>
@@ -78,11 +88,6 @@ let Th = (props) => {
   );
 };
 
-let Td = props =>
-  <td {...props} role="gridcell">
-    { props.children }
-  </td>;
-
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
@@ -90,190 +95,49 @@ let Checkbox = props =>
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
-let ButtonEdit = props =>
-  <button className="slds-button slds-button--icon slds-cell-edit__button slds-m-left--x-small" tabIndex={props.tabIndex || '-1'} disabled={props.disabled} id={props.id}>
-    <span className="slds-assistive-text">{props.alt}</span>
-    <SvgIcon className={className('slds-button__icon slds-button__icon--hint', props.iconClassName)} sprite="utility" symbol={props.symbol || 'edit'} />
-  </button>;
-
-let RowData = (props) => {
-  let checkboxLabel = 'Select row ' + props.title;
-
-  return(
-    <tr className="slds-hint-parent">
-      <td tabIndex={props.errorindex} aria-selected={props.errorSelected}>
-        <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
-          <button className={className('slds-button slds-button--icon slds-button--icon-error', props.buttonInvisible)} tabIndex={props.navigationModeTabIndex}>
-            <span className="slds-assistive-text">Row has errors</span>
-            <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
-          </button>
-          <span className="slds-row-number slds-text-body--small"></span>
-        </div>
-      </td>
-      <Td tabIndex={props.initialCellTabIndex} aria-selected={props.checkSelected}>
-        <div className={className('slds-cell-edit', props.checkClass)}>
-          <Checkbox label={checkboxLabel} tabIndex={props.navigationModeTabIndex} checkID="checkbox-01" />
-        </div>
-      </Td>
-      <th aria-selected={props.defaultSelected}>
-        <span className={className('slds-grid slds-grid--align-spread slds-cell-edit', props.thClassName)}>
-          <a href="javascript:void(0);" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
-        </span>
-      </th>
-      { props.children }
-      <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-          <span className="slds-truncate slds-grow" title="12 Embarcadero Plaza, San Francisco, CA 94105 United States">12 Embarcadero Plaza, San Francisco, CA 94105</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 12 Embarcadero Plaza, San Francisco, CA 94105 United States" />
-        </span>
-      </Td>
-      <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-          <span className="slds-truncate slds-grow" title="jdoe@acme.com">jdoe@acme.com</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: jdoe@acme.com" />
-        </span>
-      </Td>
-      <Td aria-readonly="true">
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-          <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
-          <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-        </span>
-      </Td>
-      <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-          <span className="slds-truncate slds-grow" title="Contacted">Contacted</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: Contacted" />
-        </span>
-      </Td>
-      <Td>
-        <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-          <span className="slds-truncate slds-grow slds-text-align--right" title="60%">60%</span>
-          <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 60%" />
-        </span>
-      </Td>
-      <Td>
-        <div className="slds-cell-edit slds-text-align--right slds-p-right--large">
-          <ButtonIcon
-            className="slds-button--icon-border-filled slds-button--icon-x-small"
-            iconClassName="slds-button__icon--hint slds-button__icon--small"
-            symbol="down"
-            assistiveText="Show More"
-            title="Show More"
-            tabIndex={props.navigationModeTabIndex} />
-        </div>
-      </Td>
-    </tr>
-  );
-};
-
-let RowDataStatic = props =>
-  <tr className="slds-hint-parent">
-    <td>
-      <div id={props.cellID} className={className('slds-cell-edit slds-cell-error', props.editName)}>
-        <button className="slds-hidden slds-button slds-button--icon slds-button--icon-error" tabIndex={props.navigationModeTabIndex} aria-hidden="true">
-          <span className="slds-assistive-text">Row has no errors</span>
-          <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
-        </button>
-        <span className="slds-row-number slds-text-body--small"></span>
-      </div>
-    </td>
-    <Td>
-      <div className="slds-cell-edit">
-        <Checkbox label="Select Row John Doe" tabIndex={props.navigationModeTabIndex} />
-      </div>
-    </Td>
-    <th>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <a href="javascript:void(0);" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
-      </span>
-    </th>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow" title="Rohde Corp">Rohde Corp</span>
-            <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Company: Rohde Corp" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow" title="1 Ferry Building San Francisco, CA 94105">1 Ferry Building San Francisco, CA 94105</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Address: 1 Ferry Building San Francisco, CA 94105 United States" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow" title="lchan@rohdecorp.com">lchan@rohdecorp.com</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Email: lchan@rohdecorp.com" />
-      </span>
-    </Td>
-    <Td aria-readonly="true">
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow" title="800-555-1212">800-555-1212</span>
-        <ButtonEdit iconClassName="button__icon--lock button__icon--small" tabIndex={props.navigationModeTabIndex} alt="Edit Phone: 800-555-1212" symbol="lock" disabled />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow" title="New">New</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Status: New" />
-      </span>
-    </Td>
-    <Td>
-      <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <span className="slds-truncate slds-grow slds-text-align--right" title="20%">20%</span>
-        <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Confidence: 20%" />
-      </span>
-    </Td>
-    <Td>
-      <div className="slds-cell-edit slds-text-align--right slds-p-right--large">
-        <ButtonIcon
-          className="slds-button--icon-border-filled slds-button--icon-x-small"
-          iconClassName="slds-button__icon--hint slds-button__icon--small"
-          symbol="down"
-          assistiveText="Show More"
-          title="Show More"
-          tabIndex={props.navigationModeTabIndex} />
-      </div>
-    </Td>
-  </tr>;
-
-
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'data-table-fixed-header',
-    label: 'Default',
-    element:
-      <Container>
-        <Table className="slds-no-cell-focus">
-          <Thead navigationModeTabIndex="0" />
-          <tbody>
-            <RowData title="Lei Chan" initialCellTabIndex="0" navigationModeTabIndex="0" buttonInvisible="slds-hidden" thClassName="slds-has-focus">
-              <Td>
-                <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-                  <span className="slds-truncate slds-grow" title="Acme Enterprises">Acme Enterprises</span>
-                  <ButtonEdit iconClassName="button__icon--edit" tabIndex="0" alt="Edit Company: Acme Enterprises" />
-                </span>
-              </Td>
-            </RowData>
-            <RowDataStatic navigationModeTabIndex="0" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-            <RowDataStatic navigationModeTabIndex="-1" />
-          </tbody>
-        </Table>
-      </Container>
-  }
-];
+export default (
+  <Container>
+    <Table className="slds-no-cell-focus slds-table--header-fixed">
+      <thead>
+        <tr className="slds-line-height--reset">
+          <th scope="col" style={{ width: '3.75rem' }}>
+            <div style={{ width: '3.75rem' }} className="slds-th__action slds-cell-fixed">
+              <span className="slds-assistive-text">Errors</span>
+            </div>
+          </th>
+          <th scope="col" style={{ width: '2rem' }}>
+            <div style={{ width: '2rem' }} className="slds-th__action slds-cell-fixed slds-p-around--x-small">
+              <Checkbox label="Select All" />
+            </div>
+          </th>
+          { _.times(columns.length, i =>
+            <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+          )}
+          <th scope="col" style={{ width: '3.25rem' }}>
+            <div style={{ width: '2.75rem' }} className="slds-th__action slds-cell-fixed">
+              <span className="slds-assistive-text">Actions</span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        { _.times(rows.length, i =>
+          <RowData key={ i }
+            recordName={ rows[i].recordName }
+            accountName={ rows[i].accountName }
+            closeDate={ rows[i].closeDate }
+            stage={ rows[i].stage }
+            confidence={ rows[i].confidence }
+            amount={ rows[i].amount }
+            contact={ rows[i].contact }
+            buttonInvisible="slds-hidden"
+          />
+        )}
+      </tbody>
+    </Table>
+  </Container>
+);

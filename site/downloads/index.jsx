@@ -16,7 +16,7 @@ import CTALink from 'app_modules/site/components/cta-link';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Downloads" contentClassName="slds-container--large">
+  <PageBody anchorTitle="Downloads" contentClassName="site slds-container--large">
 
     <p className="site-text-introduction">
       We provide multiple options for downloading the Design System, as well as specific downloads for icons, design tokens and swatches.

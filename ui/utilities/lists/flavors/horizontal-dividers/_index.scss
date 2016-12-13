@@ -9,20 +9,20 @@
 
 
 // Left horizontal dot separator
-.#{$css-prefix}has-dividers--left > .#{$css-prefix}list__item,
-.#{$css-prefix}has-dividers--left > .#{$css-prefix}item {
+.slds-has-dividers--left > .slds-list__item,
+.slds-has-dividers--left > .slds-item {
   @include dot-separator(left);
 }
 
 // Right horizontal dot separator
-.#{$css-prefix}has-dividers--right > .#{$css-prefix}list__item,
-.#{$css-prefix}has-dividers--right > .#{$css-prefix}item {
+.slds-has-dividers--right > .slds-list__item,
+.slds-has-dividers--right > .slds-item {
   @include dot-separator(right);
 }
 
 // Deprecate in 0.15.0
 @include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
-  .#{$css-prefix}list--horizontal.#{$css-prefix}has-dividers > .#{$css-prefix}list__item {
+  .slds-list--horizontal.slds-has-dividers > .slds-list__item {
     @include dot-separator;
   }
 }

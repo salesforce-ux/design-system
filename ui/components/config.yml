@@ -19,6 +19,7 @@ components:
   - global-navigation
   - icons
   - images
+  - list-builder
   - lookups
   - menus
   - modals
@@ -29,10 +30,13 @@ components:
   - picklist
   - pills
   - process
+  - progress-indicator
   - popovers
   - publishers
+  - rich-text-editor
   - spinners
   - tabs
   - tiles
   - tooltips
   - trees
+  - walkthrough

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import className from 'classnames';
+import classNames from 'classnames';
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -24,17 +24,20 @@ let Demo = props =>
 
 export let ButtonIcon = props =>
   <button
-    className={className('slds-button', props.className, props.selected ? 'slds-is-selected' : null)}
+    className={classNames('slds-button', props.className, props.selected ? 'slds-is-selected' : null)}
     disabled={ props.disabled }
+    role={ props.role }
     aria-describedby={ props['aria-describedby'] }
     aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
+    aria-expanded={ props['aria-expanded'] }
     aria-controls={ props['aria-controls'] }
     aria-hidden={ props['aria-hidden'] }
+    aria-pressed={ props['aria-pressed'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
     tabIndex={ props.tabIndex }
     title={ props.title || 'settings' } >
     <SvgIcon
-      className={className('slds-button__icon', props.iconClassName)}
+      className={classNames('slds-button__icon', props.iconClassName)}
       sprite="utility"
       symbol={ props.symbol || 'settings' } />
     { props.hasDropdown ? <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" /> : null }

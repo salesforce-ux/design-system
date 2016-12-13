@@ -31,6 +31,7 @@ const paths = {
   scripts: path.resolve(root, 'scripts'),
   site: path.resolve(root, 'site'),
   ui: path.resolve(root, 'ui'),
+  designTokens: path.resolve(root, 'design-tokens'),
 
   icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),
   uiKit: path.resolve(node_modules, '@salesforce-ux/design-system-ui-kit'),

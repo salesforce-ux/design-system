@@ -21,6 +21,7 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
+import runSequence from 'run-sequence';
 
 const sign = x => (x < 0) ? '' : '+';
 
@@ -28,7 +29,7 @@ Number.prototype.toKB = function () {
   return (this / 1024).toFixed(2);
 };
 
-gulp.task('stylestats', done => {
+gulp.task('stylestats', ['styles'], done => {
   const localFile = '.www/assets/styles/slds.css';
   const remoteFile = 'https://www.lightningdesignsystem.com/assets/styles/slds.css';
 
@@ -63,7 +64,7 @@ gulp.task('stylestats', done => {
   });
 });
 
-gulp.task('styles', () =>
+gulp.task('styles:site', ['generate:tokens:sass'], () =>
   gulp
     .src('site/assets/styles/*.scss')
     .pipe(plumber())
@@ -71,7 +72,6 @@ gulp.task('styles', () =>
     .pipe(sass.sync({
       precision: 10,
       includePaths: [
-        __PATHS__.root,
         __PATHS__.ui,
         __PATHS__.node_modules
       ]
@@ -82,3 +82,19 @@ gulp.task('styles', () =>
     .pipe(gulp.dest('.www/assets/styles'))
     .pipe(browserSync.stream({ match: '**/*.css' }))
 );
+
+// Quick check that all variants compile correctly to CSS
+gulp.task('styles:test', () =>
+  gulp
+    .src('ui/index-*.scss')
+    .pipe(sass.sync({
+      includePaths: [
+        __PATHS__.node_modules
+      ]
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('.www/assets/styles/.test'))
+);
+
+gulp.task('styles', callback => {
+  runSequence('styles:site', 'styles:test', callback);
+});

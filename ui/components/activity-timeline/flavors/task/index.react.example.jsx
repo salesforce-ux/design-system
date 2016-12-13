@@ -13,7 +13,6 @@ import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/flavors/base/index.react.example';
 
 export let states = [

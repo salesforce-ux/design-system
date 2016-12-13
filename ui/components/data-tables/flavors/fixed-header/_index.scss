@@ -7,34 +7,35 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-.#{$css-prefix}table--header-fixed_container {
+// This code creates the fixed header (faux header) used in the inline-edit data-table. I don't think we'll surface this for customers as it's very complex when scrolling horizontally and requires some other code for containers, etc
+.slds-table--header-fixed_container {
   position: relative;
   padding-top: 2rem; // This matches the height of the hover state w/border
   border-top: $border-width-thin solid $color-border;
   background-color: $color-background-alt;
-  background-image: linear-gradient(
-    to bottom,
-    $color-background-alt,
-    $color-background-alt 1.9375rem,
-    $color-border 1.9375rem,
-    $color-border 2rem,
-    $color-background-alt 2rem,
-    $color-background-alt
-    ); // Creates line below th for faux fixed headers
+  overflow: hidden;
+
+  &:before {
+    border-bottom: $border-width-thin solid $color-border;
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+  }
 }
 
-.#{$css-prefix}cell-fixed {
+.slds-cell-fixed {
   position: absolute;
   top: 0;
   min-height: 2rem;
 }
 
-.#{$css-prefix}table--header-fixed {
+.slds-table--header-fixed {
   border-top: 0;
 
   thead th {
     position: static;
+    padding: 0;
     border-top: 0;
   }
 

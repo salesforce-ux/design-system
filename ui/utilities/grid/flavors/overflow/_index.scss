@@ -9,10 +9,10 @@
 
 
 
-.#{$css-prefix}grid--overflow {
+.slds-grid--overflow {
   flex-flow: row nowrap;
 
-  .#{$css-prefix}col {
+  .slds-col {
     min-width: 11.25em; //equals 180px
     max-width: 22.5em;
   }

@@ -22,11 +22,11 @@ body {
   @include clearfix;
   position: relative;
 
-  .#{$css-prefix}picklist__options {
+  .slds-picklist__options {
     position: static;
   }
 
-  .#{$css-prefix}notify--alert {
+  .slds-notify--alert {
     margin: $spacing-x-small 0;
   }
 }

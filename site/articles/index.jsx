@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Articles" contentClassName="slds-text-longform">
+  <PageBody anchorTitle="Articles" contentClassName="site slds-text-longform">
     <div className="slds-container--large">
       <p>Interested in learning more about the Design System, how we built it, and how you can use it? Check out the links below, and check back often - we&#39;re always writing articles and gathering community-generated content:</p>
       <ul>

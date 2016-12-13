@@ -20,23 +20,19 @@
 }
 
 .slds-notify {
-  @include inverse-links;
+  @include inverse-text;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background: $color-background-toast;
   font-weight: $font-weight-light;
 
   &__close {
     float: right;
+    position: absolute;
+    top: $spacing-small;
+    right: $spacing-small;
     margin-left: $spacing-xx-small;
-    line-height: $line-height-reset;
-  }
-
-  &__content {
-    padding-top: $spacing-xx-small;
-
-    // needed for left-hand icons
-    .slds-icon {
-      margin-top: ($spacing-xx-small * -1);
-    }
   }
 }

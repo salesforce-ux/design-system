@@ -12,112 +12,37 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
-
-let demoHeight = '4rem';
+import classNames from 'classnames';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let Default = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-notify_container">
-    <div className="slds-notify slds-notify--toast" role="alert">
-      <span className="slds-assistive-text">Info</span>
-      <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
-        iconClassName="slds-button__icon--large"
-        symbol="close"
-        assistiveText="Close"
-        title="Close" />
-      <div className="slds-notify__content">
-        <h2 className="slds-text-heading--small">Base Toast</h2>
-      </div>
-    </div>
-  </div>
-</div>;
+export let Toast = props => {
+  const {
+    containerClassName,
+    className,
+    type,
+    children,
+    ...rest
+  } = props;
 
-let Success = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-notify_container">
-    <div className="slds-notify slds-notify--toast slds-theme--success" role="alert">
-      <span className="slds-assistive-text">Success</span>
-      <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
-        iconClassName="slds-button__icon--large"
-        symbol="close"
-        assistiveText="Close"
-        title="Close" />
-      <div className="slds-notify__content slds-grid">
-        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="notification" />
-        <div className="slds-col slds-align-middle">
-          <h2 className="slds-text-heading--small ">Your new contact <a href="javascript:void(0);">Sara Smith</a> was successfully created.</h2>
-        </div>
+  return (
+    <div className={ classNames('slds-notify_container slds-is-relative', containerClassName) }>
+      <div className={ classNames('slds-notify slds-notify--toast', className, type ? 'slds-theme--' + type : null) } role="alert">
+        <span className="slds-assistive-text">{ type || 'info' }</span>
+        { children }
+        <ButtonIcon
+          className="slds-notify__close slds-button--icon-inverse"
+          iconClassName="slds-button__icon--large"
+          symbol="close"
+          assistiveText="Close"
+          title="Close"
+        />
       </div>
     </div>
-  </div>
-</div>;
-
-let Warning = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-notify_container">
-    <div className="slds-notify slds-notify--toast slds-theme--warning" role="alert">
-      <span className="slds-assistive-text">Warning</span>
-      <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
-        iconClassName="slds-button__icon--large"
-        symbol="close"
-        assistiveText="Close"
-        title="Close" />
-      <div className="slds-notify__content">
-        <h2 className="slds-text-heading--small">Oops, you've missed some required form inputs.</h2>
-      </div>
-    </div>
-  </div>
-</div>;
-
-let ErrorToast = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-notify_container">
-    <div className="slds-notify slds-notify--toast slds-theme--error" role="alert">
-      <span className="slds-assistive-text">Error</span>
-      <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
-        iconClassName="slds-button__icon--large"
-        symbol="close"
-        assistiveText="Close"
-        title="Close" />
-      <div className="slds-notify__content slds-grid">
-        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
-        <div className="slds-col slds-align-middle">
-          <h2 className="slds-text-heading--small">You encountered some errors when trying to save edits to Samuel Smith.</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>;
-
-let ErrorWithDetails = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-notify_container">
-    <div className="slds-notify slds-notify--toast" role="alert">
-      <span className="slds-assistive-text">Error</span>
-      <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
-        iconClassName="slds-button__icon--large"
-        symbol="close"
-        assistiveText="Close"
-        title="Close" />
-      <div className="slds-notify__content slds-grid">
-        <SvgIcon className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
-        <div className="slds-col slds-align-middle">
-          <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
-          <p>Here's some detail of what happened, being very descriptive and transparent.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>;
+  );
+};
 
 //////////////////////////////////////////////
 // Export
@@ -125,28 +50,89 @@ let ErrorWithDetails = props =>
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element: <Default />
+    id: 'informational',
+    label: 'Informational',
+    element:
+      <div className="demo-only" style={{ height: '4rem' }}>
+        <Toast type="info">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="info"
+          />
+          <div className="slds-notify__content">
+            <h2 className="slds-text-heading--small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
+          </div>
+        </Toast>
+      </div>
   },
   {
     id: 'success',
     label: 'Success',
-    element: <Success />
+    element:
+      <div className="demo-only" style={{ height: '4rem' }}>
+        <Toast type="success">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="success"
+          />
+          <div className="slds-notify__content">
+            <h2 className="slds-text-heading--small ">Account <a href="javascript:void(0);">ACME - 100</a> widgets was created.</h2>
+          </div>
+        </Toast>
+      </div>
   },
   {
     id: 'warning',
     label: 'Warning',
-    element: <Warning />
+    element:
+      <div className="demo-only" style={{ height: '4rem' }}>
+        <Toast type="warning">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="warning"
+          />
+          <div className="slds-notify__content">
+            <h2 className="slds-text-heading--small ">Can’t share file “report-q3.pdf” with the selected users.</h2>
+          </div>
+        </Toast>
+      </div>
   },
   {
     id: 'error',
     label: 'Error',
-    element: <ErrorToast />
+    element:
+      <div className="demo-only" style={{ height: '4rem' }}>
+        <Toast type="error">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="warning"
+          />
+          <div className="slds-notify__content">
+            <h2 className="slds-text-heading--small ">Can’t save lead “Sally Wong” because another lead has the same name.</h2>
+          </div>
+        </Toast>
+      </div>
   },
   {
     id: 'error-with-details',
     label: 'Error With Details',
-    element: <ErrorWithDetails />
+    element:
+      <div className="demo-only" style={{ height: '4rem' }}>
+        <Toast type="error">
+          <SvgIcon
+            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
+            sprite="utility"
+            symbol="warning"
+          />
+          <div className="slds-notify__content">
+            <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
+            <p>Here's some detail of what happened, being very descriptive and transparent.</p>
+          </div>
+        </Toast>
+      </div>
   }
 ];

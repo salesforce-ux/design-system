@@ -52,6 +52,7 @@ export let FilterObject = props => {
   if (props.errorMessage) {
     ariaDesribedBy = 'error-filter-01';
   }
+
   return (
     <li className="slds-item slds-hint-parent">
       <div className={classNames('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
@@ -61,17 +62,18 @@ export let FilterObject = props => {
           aria-describedby={ ariaDesribedBy }
           disabled={ props.disabled }
         >
+          <span className="slds-assistive-text">Edit filter:</span>
           {props.type ?
             <p className="slds-text-body--small">{props.type}</p>
           : null }
-          <p><span className="slds-assistive-text">Edit filter:</span> {props.children}</p>
+          <p>{props.children}</p>
         </button>
         { props.removable ?
           <ButtonIcon
             className="slds-button--icon slds-button--icon-small"
             iconClassName="slds-button__icon--hint"
             symbol="close"
-            assistiveText={'Remove ' + props.children}
+            assistiveText={ props.type ? 'Remove filter: ' + props.type + ' ' + props.children : 'Remove filter: ' + props.children }
             title={'Remove ' + props.children}
           />
         : null }

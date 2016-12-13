@@ -28,7 +28,7 @@ export default (
           <p className="slds-text-heading--medium">$185,000</p>
           <p className="slds-truncate" title="Company Two"><a href="javascript:void(0);">Company Two</a></p>
           <p className="slds-truncate slds-has-alert">Closing 12/15/2015</p>
-          <span className="slds-icon_container slds-tile--board__icon">
+          <span className="slds-icon_container slds-tile--board__icon" title="description of icon when needed">
             <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
             <span className="slds-assistive-text">Warning Icon</span>
           </span>

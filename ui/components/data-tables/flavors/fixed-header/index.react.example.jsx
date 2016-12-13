@@ -117,7 +117,7 @@ let RowData = (props) => {
       </Td>
       <th aria-selected={props.defaultSelected}>
         <span className={className('slds-grid slds-grid--align-spread slds-cell-edit', props.thClassName)}>
-          <a href="javascript:void()" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
+          <a href="javascript:void(0);" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} id={props.linkId} title="Lei Chan">Lei Chan</a>
           <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: Lei Chan" />
         </span>
       </th>
@@ -185,7 +185,7 @@ let RowDataStatic = props =>
     </Td>
     <th>
       <span className="slds-grid slds-grid--align-spread slds-cell-edit">
-        <a href="javascript:void()" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
+        <a href="javascript:void(0);" className="slds-truncate slds-grow" tabIndex={props.navigationModeTabIndex} title="John Doe">John Doe</a>
         <ButtonEdit iconClassName="button__icon--edit" tabIndex={props.navigationModeTabIndex} alt="Edit Name: John Doe" />
       </span>
     </th>

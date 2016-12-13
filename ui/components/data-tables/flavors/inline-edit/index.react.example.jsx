@@ -135,7 +135,7 @@ export let RowData = props => {
       </td>
       <th scope="row" tabIndex={ props.initialCellTabIndex } aria-selected={props.defaultSelected} className={classNames('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
-          <a href="javascript:void()" className="slds-truncate" tabIndex={ props.initialCellTabIndex || '-1' } id={ props.linkId } title={ props.recordName }>
+          <a href="javascript:void(0);" className="slds-truncate" tabIndex={ props.initialCellTabIndex || '-1' } id={ props.linkId } title={ props.recordName }>
             { props.recordName }
           </a>
           <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ props.initialCellTabIndex } alt={ 'Edit Name: Item ' + props.index } />

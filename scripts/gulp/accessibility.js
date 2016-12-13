@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import axe from 'gulp-axe-webdriver';
 
-gulp.task('a11y', ['generate:examples:wrap'], (done) => {
+gulp.task('a11y', ['generate:wrappedexamples'], (done) => {
   const options = {
     folderOutputReport: '.reports',
     saveOutputIn: 'a11y.json',

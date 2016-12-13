@@ -72,7 +72,7 @@ export const getExamples = () =>
 export const toHtml = (el) =>
   prettyHTML(renderToStaticMarkup(el));
 
-gulp.task('generate:examples:wrap', ['generate:examples'], () =>
+gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
     .src(`${__PATHS__.generated}/examples/*.html`)
     .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><title>Example</title>', '</html>'))

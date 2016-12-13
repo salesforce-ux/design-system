@@ -15,10 +15,12 @@ import gulpif from 'gulp-if';
 import runSequence from 'run-sequence';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
-import eslintFriendlyFormatter from 'eslint-friendly-formatter';
 import scsslint from 'gulp-scss-lint';
 import browserSync from 'browser-sync';
 import htmlhint from 'gulp-htmlhint';
+import vnu from './vnu-lint';
+import minimist from 'minimist';
+
 
 gulp.task('lint:sass', () =>
   gulp.src([
@@ -55,7 +57,7 @@ function lintjs(files, options) {
     return gulp.src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format(eslintFriendlyFormatter))
+      .pipe(eslint.format('codeframe'))
       .pipe(gulpif(!browserSync.active, eslint.failAfterError()));
   };
 }
@@ -103,5 +105,14 @@ gulp.task('lint:html', ['generate:examples:wrap'], () => {
     }))
     .pipe(htmlhint.reporter());
 });
+
+const parseComponentArgument = argv =>
+  minimist(argv.slice(2)).component || '*';
+
+gulp.task('lint:vnu', ['generate:examples:wrap'], () =>
+  gulp.src(`.html/${parseComponentArgument(process.argv)}`)
+  .pipe(vnu.lint())
+  .pipe(vnu.report())
+  .pipe(gulp.dest('.reports/')));
 
 gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html']);

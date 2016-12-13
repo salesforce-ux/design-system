@@ -16,7 +16,7 @@ import CodeClass from 'app_modules/site/components/code-class';
 
 export const intro = (
   <p className="site-text-introduction">
-  The page header is a masthead that contains the Title of the page, and supporting details.
+    The page header is a masthead that contains the Title of the page, and supporting details.
   </p>
 );
 

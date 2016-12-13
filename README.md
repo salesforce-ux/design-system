@@ -47,6 +47,7 @@ gulp lint:js
 gulp lint:js:test
 gulp lint:spaces
 gulp lint:html
+gulp lint:vnu (optional: --component "{trees_base_with*,trees_base_deep*}")
 ```
 
 ### Compilation

@@ -38,8 +38,7 @@ export default (
           This is the easiest way to stay up-to-date and consistent with SLDS
           enhancements.</p>
 
-        <p><strong>Note:</strong> If you still need to use a static resource with the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.
-        </p>
+        <p><strong>Note:</strong> If you still need to use a static resource with the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.</p>
 
         <p>
           Please note the following when using the Lightning Design System with

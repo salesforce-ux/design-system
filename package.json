@@ -59,7 +59,6 @@
     "gulp-debug": "3.0.0",
     "gulp-eslint": "3.0.1",
     "gulp-filter": "4.0.0",
-    "gulp-html": "0.4.4",
     "gulp-htmlhint": "0.3.1",
     "gulp-if": "2.0.2",
     "gulp-ignore": "2.0.2",
@@ -112,6 +111,7 @@
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
     "uuid": "3.0.1",
+    "vnu-jar": "16.6.29",
     "webpack": "1.14.0",
     "webpack-dev-middleware": "1.8.4"
   },

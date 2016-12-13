@@ -15,6 +15,7 @@ const gutil = require('gulp-util');
 const path = require('path');
 const merge = require('merge');
 const _ = require('lodash');
+const vnuJarPath = require('vnu-jar');
 const PluginError = gutil.PluginError;
 
 // We disliked the original gulp plugin, but wanted it simply for its ability to host
@@ -24,8 +25,7 @@ const PluginError = gutil.PluginError;
 // 2) it returns a vinyl file with the report contents
 // 3) it prints a . per test instead of silence
 const lint = function(opt) {
-  const real_vnu_module_path = path.resolve(__dirname, '../../node_modules/gulp-html');
-  let vnu = 'java -jar ' + real_vnu_module_path + '/vnu/vnu.jar ';
+  let vnu = 'java -jar ' + vnuJarPath + ' ';
 
   const options = merge({
     'errors-only': false,

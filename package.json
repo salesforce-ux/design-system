@@ -77,6 +77,7 @@
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "3.2.0",
     "invariant": "2.2.2",
+    "jest": "17.0.0",
     "js-beautify": "1.6.4",
     "js-yaml": "3.7.0",
     "karma": "1.3.0",
@@ -141,6 +142,7 @@
     "start": "gulp",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
+    "test-snapshot": "jest __tests__/snapshot.js",
     "test-browser": "karma start",
     "test-integration": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/integration/**/*.js'",
     "test-unit": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js'"

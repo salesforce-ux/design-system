@@ -1,6 +1,6 @@
 status: 'prototype'
 flavors:
-  - default
+  - app-launcher
   - search
   - tile
   - tile-small

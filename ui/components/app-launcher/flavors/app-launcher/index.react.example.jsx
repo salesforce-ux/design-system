@@ -20,7 +20,6 @@ import classNames from 'classnames';
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
-
 let AppLauncherModal = props =>
   <Modal className="slds-modal--large slds-app-launcher" aria-labelledby="header43">
     <ModalHeader className="slds-app-launcher__header slds-grid slds-grid--align-spread slds-grid--vertical-align-center">
@@ -44,39 +43,45 @@ let AppLauncherModal = props =>
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent isOpen={true} referenceId="appsContent">
+          <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">
+            {props.dragDropLiveRegion}
+          </div>
+          <div className="slds-assistive-text" id={props.dragDropId}>
+            {props.dragDropInstructions}
+          </div>
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-27" objectInitials="SC" referenceId={props.dragDropId}>
                 <span className="slds-text-link">Sales Cloud</span>
                 <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="MC" figureClass="slds-icon-custom-59" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-59" objectInitials="MC" referenceId={props.dragDropId}>
                 <span className="slds-text-link">Marketing Cloud</span>
                 <p>Salesforce Marketing Cloud lets businesses of any size...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="HR" figureClass="slds-icon-custom-10" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-10" objectInitials="HR" referenceId={props.dragDropId}>
                 <span className="slds-text-link">HR Concierge</span>
                 <p>Community for managing employee benefits and time off.</p>
               </AppLauncherTile>
             </li>
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="MM" figureClass="slds-icon-custom-6" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-6" objectInitials="MM" referenceId={props.dragDropId}>
                 <span className="slds-text-link">My Money</span>
                 <p>Manage your finances across multiple financial platforms...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="CC" figureClass="slds-icon-custom-91" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-91" objectInitials="CC" referenceId={props.dragDropId}>
                 <span className="slds-text-link">Call Center</span>
                 <p>The key to call center and contact center management is more...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
             </li>
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile objectInitials="CS" figureClass="slds-icon-custom-50" draggable>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-50" objectInitials="CS" referenceId={props.dragDropId}>
                 <span className="slds-text-link">Customer Support Communitiy</span>
                 <p>Areas of Focus are used to track customer support for your...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
@@ -139,10 +144,58 @@ let AppLauncherModal = props =>
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
-
-export default (
-  <div className="demo-only" style={{ height: '800px' }}>
-    <AppLauncherModal />
-    <div className="slds-backdrop slds-backdrop--open" />
-  </div>
-);
+const dragDropId = 'dragDropInstructions';
+export let states = [
+  {
+    id: 'app-launcher',
+    label: 'Default',
+    element:
+    <div className="demo-only" style={{ height: '800px' }}>
+      <AppLauncherModal
+        dragDropId={dragDropId}
+        dragDropInstructions="Press space bar to move this app within the list."
+        dragDropLiveRegion=""
+      />
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  },
+  {
+    id: 'app-launcher-grabbed',
+    label: 'Grabbed',
+    element:
+    <div className="demo-only" style={{ height: '800px' }}>
+      <AppLauncherModal
+        dragDropId={dragDropId}
+        dragDropInstructions=""
+        dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
+      />
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  },
+  {
+    id: 'app-launcher-moved',
+    label: 'Moved in list',
+    element:
+    <div className="demo-only" style={{ height: '800px' }}>
+      <AppLauncherModal
+        dragDropId={dragDropId}
+        dragDropInstructions=""
+        dragDropLiveRegion="Sales Cloud: new position 3 of 6."
+      />
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  },
+  {
+    id: 'app-launcher-dropped',
+    label: 'Dropped',
+    element:
+    <div className="demo-only" style={{ height: '800px' }}>
+      <AppLauncherModal
+        dragDropId={dragDropId}
+        dragDropInstructions="Press space bar to move this app within the list."
+        dragDropLiveRegion="Sales Cloud: final position 4 of 6."
+      />
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  }
+];

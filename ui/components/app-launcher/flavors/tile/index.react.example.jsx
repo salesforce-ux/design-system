@@ -20,7 +20,11 @@ import classNames from 'classnames';
 //////////////////////////////////////////////
 
 export let AppLauncherTile = props =>
-  <a href="javascript:void(0);" className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}>
+  <a
+    aria-describedby={ props.draggable ? props.referenceId : null }
+    href="javascript:void(0);"
+    className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}
+  >
     <div className={classNames('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
       { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
         <span className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</span>

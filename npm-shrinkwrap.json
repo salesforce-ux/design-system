@@ -1554,7 +1554,13 @@
     },
     "exec-sh": {
       "version": "0.2.0",
-      "dev": true
+      "dev": true,
+      "dependencies": {
+        "merge": {
+          "version": "1.2.0",
+          "dev": true
+        }
+      }
     },
     "exit": {
       "version": "0.1.2",
@@ -2517,10 +2523,6 @@
     },
     "gulp-filter": {
       "version": "4.0.0",
-      "dev": true
-    },
-    "gulp-html": {
-      "version": "0.4.5",
       "dev": true
     },
     "gulp-htmlhint": {
@@ -3749,13 +3751,7 @@
     },
     "lintspaces": {
       "version": "0.5.0",
-      "dev": true,
-      "dependencies": {
-        "merge": {
-          "version": "1.1.2",
-          "dev": true
-        }
-      }
+      "dev": true
     },
     "load-json-file": {
       "version": "1.1.0",
@@ -4144,7 +4140,7 @@
       "dev": true
     },
     "merge": {
-      "version": "1.2.0",
+      "version": "1.1.2",
       "dev": true
     },
     "merge-descriptors": {
@@ -6002,7 +5998,7 @@
       "dev": true
     },
     "vnu-jar": {
-      "version": "16.12.27",
+      "version": "16.6.29",
       "dev": true
     },
     "void-elements": {

@@ -122,7 +122,7 @@ export let states = [
     label: 'Error With Details',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="info">
+        <Toast type="error">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"

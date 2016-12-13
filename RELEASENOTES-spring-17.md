@@ -15,7 +15,6 @@ The following components are now available:
 
 - Added Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
-- Added Split View - Compact List - [Split View](/components/split-view/)
 - Added Button Group List - [Button Group List](compoments/button-groups/#flavor-list) - the new recommended way to mark up button groups.
 - Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
 - Added Global Header Notifications - [Global Header Notifications](/components/global/#flavor-notifications)
@@ -23,7 +22,7 @@ The following components are now available:
 - Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
 - Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
-- Added Walkthrough header - [Walkthrough Header](/components/walkthrough/#flavor-header)
+- Added Walkthrough Header - [Walkthrough Header](/components/walkthrough/#flavor-header)
 - Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
 - Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
 - Added Dynamic Lists Dropdown - [Dynamic Lists](/components/menus/#flavor-dynamic-list)
@@ -68,11 +67,11 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
-- Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
-- Data Table - Inline edit now has full support
-- Icon when inside placed inside of an input field now uses the correct token
-- Modal content properly wraps and hyphenates longform text
 - Accessibility improvement - Picklists changed to a read-only combobox with a listbox.
+- Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
+- Data Table › Inline edit now has full support
+- Icon inside of an input field now uses the correct token
+- Modal content properly wraps and hyphenates longform text
 - Fixed flex issue on docked composer that made popout example stretch the height of the viewport
 
 **DEPRECATED**
@@ -100,8 +99,6 @@ The following tokens have been add/removed/deprecated in this release:
   - Added token: `TEXT_TRANSFORM`
 - Added token: `FONT_FAMILY_TEXT`
 - Added token: `FONT_FAMILY_HEADING`
-- Added token: `SPLIT_VIEW_COLOR_BACKGROUND`
-- Added token: `SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER`
 - Added token: `Z_INDEX_STICKY`
 - Added token: `FONT_FAMILY_TEXT`
 - Added token: `FONT_FAMILY_HEADING`

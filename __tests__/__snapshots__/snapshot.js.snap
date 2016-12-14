@@ -18465,6 +18465,5 @@ exports[`test visibility_transition-hide-show_default.html 1`] = `
 "<div class=\"demo-only\">
   <div class=\"slds-transition-hide\">I have zero opacity</div>
   <div class=\"slds-transition-show\">I have 100% opacity</div>
-</div>
-"
+</div>"
 `;

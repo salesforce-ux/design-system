@@ -42,13 +42,16 @@ const Footer = props =>
   </div>;
 
 export let DockedComposerPanel = props => {
-  const headingUniqueId = _.uniqueId('dialog-heading-id-');
-  const bodyUniqueId = _.uniqueId('dialog-body-id-');
-
+  let headingUniqueId;
+  let bodyUniqueId;
+  if (!props.nestedDialog) {
+    headingUniqueId = _.uniqueId('dialog-heading-id-');
+    bodyUniqueId = _.uniqueId('dialog-body-id-');
+  }
   return (
     <section
       className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)}
-      role="dialog"
+      role={ !props.nestedDialog ? 'dialog' : null}
       aria-labelledby={ headingUniqueId }
       aria-describedby={ bodyUniqueId }
     >
@@ -165,7 +168,7 @@ export let states = [
     element:
     <Demo>
       <Modal>
-        <DockedComposerPanel footer={ <Footer /> }>
+        <DockedComposerPanel footer={ <Footer /> } nestedDialog>
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </Modal>

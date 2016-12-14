@@ -39,6 +39,7 @@ export let Step = props =>
         symbol="success"
         aria-describedby={ props['aria-describedby'] }
         assistiveText={ props.done ? props.children + ' - Completed' : null }
+        title={ props.done ? props.children + ' - Completed' : null }
       />
     : (props.error ?
       <ButtonIcon
@@ -46,6 +47,7 @@ export let Step = props =>
         symbol="warning"
         aria-describedby={ props['aria-describedby'] }
         assistiveText={ props.error ? props.children + ' - Error' : null }
+        title={ props.error ? props.children + ' - Error' : null }
       />
     :
       <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>

@@ -21,7 +21,7 @@ export default (
         <h2 className="site-text-heading--large">Key Principles</h2>
         <ul className="site-motion-principle-list slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-timing.svg" alt="Timing Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Timing</dt>
@@ -32,7 +32,7 @@ export default (
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-elevation.svg" alt="Elevation Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Elevation</dt>
@@ -41,7 +41,7 @@ export default (
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-effects.svg" alt="Effects Image" style={{height: '60px'}} />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Effects</dt>
@@ -55,7 +55,7 @@ export default (
         <h2 className="site-text-heading--large">Type of Animation</h2>
         <ul className="site-motion-principle-list slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-enter-exit.svg" alt="Enter then Exit Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Enter & Exit</dt>
@@ -66,7 +66,7 @@ export default (
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-emphasis.svg" alt="Emphasis Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Emphasis</dt>
@@ -75,7 +75,7 @@ export default (
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-transitional.svg" alt="Transitional Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Transitional </dt>
@@ -84,7 +84,7 @@ export default (
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-4">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/motion/img-personality.svg" alt="Personality and Branding Image" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Personality & Branding</dt>
@@ -140,66 +140,66 @@ export default (
       </div>
 
       <div className="slds-p-vertical--xx-large">
-        <div className="atmosphere-graph">
-          <div className="atmosphere-vertical-ruler" />
+        <div className="site-atmosphere-graph">
+          <div className="site-atmosphere-vertical-ruler" />
 
-          <div className="atmosphere-hline" style={{bottom: '26rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '25rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '24rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '23rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '26rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '25rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '24rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '23rem'}} />
 
-          <div className="atmosphere-hlabel" style={{bottom: '22rem'}}>
+          <div className="site-atmosphere-hlabel" style={{bottom: '22rem'}}>
             <span>15</span>
-            <div className="atmosphere-hline" />
+            <div className="site-atmosphere-hline" />
           </div>
 
-          <div className="atmosphere-hline" style={{bottom: '21rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '20rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '19rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '18rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '21rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '20rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '19rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '18rem'}} />
 
-          <div className="atmosphere-hlabel" style={{bottom: '17rem'}}>
+          <div className="site-atmosphere-hlabel" style={{bottom: '17rem'}}>
             <span>10</span>
-            <div className="atmosphere-hline" />
+            <div className="site-atmosphere-hline" />
           </div>
 
-          <div className="atmosphere-hline" style={{bottom: '16rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '15rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '14rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '13rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '16rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '15rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '14rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '13rem'}} />
 
-          <div className="atmosphere-hlabel" style={{bottom: '12rem'}}>
+          <div className="site-atmosphere-hlabel" style={{bottom: '12rem'}}>
             <span>5</span>
-            <div className="atmosphere-hline" />
+            <div className="site-atmosphere-hline" />
           </div>
 
-          <div className="atmosphere-hline" style={{bottom: '11rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '10rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '9rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '8rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '11rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '10rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '9rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '8rem'}} />
 
-          <div className="atmosphere-hline atmosphere-0-line" style={{bottom: '7rem'}} />
-          <div className="atmosphere-hlabel" style={{bottom: '8rem'}}>
+          <div className="site-atmosphere-hline atmosphere-0-line" style={{bottom: '7rem'}} />
+          <div className="site-atmosphere-hlabel" style={{bottom: '8rem'}}>
             <span>GROUND</span>
           </div>
 
-          <div className="atmosphere-hline" style={{bottom: '6rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '5rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '4rem'}} />
-          <div className="atmosphere-hline" style={{bottom: '3rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '6rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '5rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '4rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '3rem'}} />
 
-          <div className="atmosphere-hlabel" style={{bottom: '2rem'}}>
+          <div className="site-atmosphere-hlabel" style={{bottom: '2rem'}}>
             <span>-5</span>
-            <div className="atmosphere-hline" />
+            <div className="site-atmosphere-hline" />
           </div>
 
-          <div className="atmosphere-hline" style={{bottom: '1rem'}} />
+          <div className="site-atmosphere-hline" style={{bottom: '1rem'}} />
 
-          <span className="elevation-dot elevation-dot-sunken"><span>-3</span></span>
-          <span className="elevation-dot elevation-dot-grounded"><span>0</span></span>
-          <span className="elevation-dot elevation-dot-raised"><span>2</span></span>
-          <span className="elevation-dot elevation-dot-floating"><span>4</span></span>
-          <span className="elevation-dot elevation-dot-flying"><span>16</span></span>
+          <span className="site-elevation-dot site-elevation-dot-sunken"><span>-3</span></span>
+          <span className="site-elevation-dot site-elevation-dot-grounded"><span>0</span></span>
+          <span className="site-elevation-dot site-elevation-dot-raised"><span>2</span></span>
+          <span className="site-elevation-dot site-elevation-dot-floating"><span>4</span></span>
+          <span className="site-elevation-dot site-elevation-dot-flying"><span>16</span></span>
         </div>
       </div>
 

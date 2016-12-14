@@ -7,14 +7,14 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site {
-  line-height: $site-line-height-text;
-  color: $site-color-text-default;
+.site-body {
+  overflow-x: hidden;
 }
 
-body {
-  overflow-x: hidden;
+.site {
   font-size: $site-font-size-medium;
+  line-height: $site-line-height-text;
+  color: $site-color-text-default;
 }
 
 [class*="site-text-heading"],
@@ -61,18 +61,10 @@ cite {
   &:first-child {
     margin-top: 0;
   }
-
-  .site-code--content + .slds-container--medium &:first-child {
-    margin-top: $spacing-xx-large;
-  }
 }
 
 .site-text-heading--large {
   font-size: $site-font-size-x-large;
-
-  .slds-select {
-    font-size: $site-font-size-medium;
-  }
 }
 
 .site-text-heading--medium {
@@ -90,7 +82,7 @@ cite {
   font-size: $site-font-size-medium;
   letter-spacing: 0.0625rem;
 
-  .grid-card & {
+  .site-grid-card & {
     padding-top: $spacing-medium;
   }
 }
@@ -119,11 +111,7 @@ cite {
   }
 }
 
-.site-figure {
-  margin-bottom: $spacing-x-large;
-}
-
-.site-main-content ,
+.site-main-content,
 .site-guidelines,
 .site-release-notes {
 
@@ -196,13 +184,4 @@ cite {
 
 .site-nowrap {
   white-space: nowrap;
-}
-
-// TODO: Replace these with new margin reset utilities
-.m-bottom--reset {
-  margin-bottom: 0;
-}
-
-.m-top--reset {
-  margin-top: 0;
 }

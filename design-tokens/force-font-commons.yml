@@ -5,18 +5,18 @@ global:
   - src
 props:
   SALESFORCE_SANS_REGULAR_WOFF2:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Regular.woff2
+    value: /slds/fonts/v2.2.0/SalesforceSans-Regular.woff2
   SALESFORCE_SANS_REGULAR_WOFF:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Regular.woff
+    value: /slds/fonts/v2.2.0/SalesforceSans-Regular.woff
   SALESFORCE_SANS_LIGHT_WOFF2:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Light.woff2
+    value: /slds/fonts/v2.2.0/SalesforceSans-Light.woff2
   SALESFORCE_SANS_LIGHT_WOFF:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Light.woff
+    value: /slds/fonts/v2.2.0/SalesforceSans-Light.woff
   SALESFORCE_SANS_BOLD_WOFF2:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff2
+    value: /slds/fonts/v2.2.0/SalesforceSans-Bold.woff2
   SALESFORCE_SANS_BOLD_WOFF:
-    value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff
+    value: /slds/fonts/v2.2.0/SalesforceSans-Bold.woff
   SALESFORCE_SANS_LIGHT_ITALIC_WOFF2:
-    value: /slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff2
+    value: /slds/fonts/v2.2.0/SalesforceSans-LightItalic.woff2
   SALESFORCE_SANS_LIGHT_ITALIC_WOFF:
-    value: /slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff
+    value: /slds/fonts/v2.2.0/SalesforceSans-LightItalic.woff

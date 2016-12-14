@@ -10,32 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
-let ButtonIcon = props =>
-  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
-    <SvgIcon className="slds-button__icon" sprite="utility" symbol={props.symbol} />
-    <span className="slds-assistive-text">{props.assistiveText}</span>
-  </button>;
 
 export let PostFooterActions = props =>
   <ul className="slds-post__footer-actions-list slds-list--horizontal">
     <li className="slds-col slds-item slds-m-right--medium">
-      <a href="javascript:void(0);" title="Like this item" className={classNames('slds-post__footer-action', props.liked ? 'slds-is-active' : null)}>
+      <button title="Like this item" className={classNames('slds-button--reset slds-post__footer-action', props.liked ? 'slds-is-active' : null)} aria-pressed={ props.liked ? true : false }>
         <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
-      </a>
+      </button>
     </li>
     <li className="slds-col slds-item slds-m-right--medium">
-      <a href="javascript:void(0);" title="Comment on this item" className="slds-post__footer-action">
+      <button title="Comment on this item" className="slds-button--reset slds-post__footer-action">
         <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="share_post" /> Comment
-      </a>
+      </button>
     </li>
     <li className="slds-col slds-item slds-m-right--medium">
-      <a href="javascript:void(0);" title="Share this item" className="slds-post__footer-action">
+      <button title="Share this item" className="slds-button--reset slds-post__footer-action">
         <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="share" /> Share
-      </a>
+      </button>
     </li>
   </ul>;
 
@@ -63,7 +59,13 @@ export let PostHeader = props =>
         <p>
           <a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a>
         </p>
-        <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" hasPopup="true" symbol="down" assistiveText="More Options" />
+        <ButtonIcon
+          className="slds-button--icon-border slds-button--icon-x-small"
+          aria-haspopup="true"
+          symbol="down"
+          assistiveText="More Options"
+          title="More Options"
+        />
       </div>
       <p className="slds-text-body--small">
         <a href="javascript:void(0);" title="Click for single-item view of this post" className="slds-text-link--reset">5 days Ago</a>

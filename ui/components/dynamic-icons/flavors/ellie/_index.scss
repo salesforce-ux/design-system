@@ -46,6 +46,13 @@ $_ellie-frameset: (
     }
   }
 
+  &.slds-is-paused {
+    &,
+    svg {
+      animation-play-state: paused;
+    }
+  }
+
   svg {
     width: $_ellie-sprite-width;
     vertical-align: top;

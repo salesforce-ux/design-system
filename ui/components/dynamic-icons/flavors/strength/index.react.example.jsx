@@ -54,5 +54,10 @@ export let states = [
     id: 'animated',
     label: 'Animated on load',
     element: <Strength className="slds-is-animated" data-slds-strength="3" />
+  },
+  {
+    id: 'paused',
+    label: 'Paused',
+    element: <Strength className="slds-is-animated slds-is-paused" data-slds-strength="3" />
   }
 ];

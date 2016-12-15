@@ -75,6 +75,11 @@
       animation-play-state: running;
     }
   }
+
+  &.slds-is-paused circle {
+    // scss-lint:disable ImportantRule
+    animation-play-state: paused !important;
+  }
 }
 
 // scss-lint:disable SingleLinePerProperty

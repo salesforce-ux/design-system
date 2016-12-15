@@ -12,13 +12,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import fs from 'fs';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import insert from 'gulp-insert';
 import path from 'path';
 import through from 'through2';
 import beautify from  'js-beautify';
 import { renderToStaticMarkup } from 'react-dom/server';
-
-import { resolve } from 'path';
-import { assign, flatMap, last } from 'lodash';
+import assign from 'lodash/assign';
+import flatMap from 'lodash/flatMap';
 import { generateUI } from './generate-ui';
 
 const prettyHTML = html => beautify.html(html, {
@@ -41,7 +41,7 @@ const getStates = file =>
       : file.states;
 
 const requireExample = flavor =>
-  require(resolve(__PATHS__.ui, flavor.examplePath));
+  require(path.resolve(__PATHS__.ui, flavor.examplePath));
 
 export const addExamples = components =>
   components.map(comp =>
@@ -72,36 +72,11 @@ export const getExamples = () =>
 export const toHtml = (el) =>
   prettyHTML(renderToStaticMarkup(el));
 
-
-const wrap = x =>
-  `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <title>SLDS Demo</title>
-    </head>
-      <body>
-        ${x}
-      </body>
-    </html>
-  `;
-
-const wrapTpl = () =>
-  through.obj((file, enc, next) =>
-    next(null, new gutil.File({
-      path: last(file.path.split('/')),
-      contents: new Buffer(wrap(String(file.contents)))
-    })));
-
-
-const examplePath = resolve(__PATHS__.generated, 'examples');
-
-gulp.task('generate:examples:wrap', ['generate:examples'], () =>
+gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
-    .src(resolve(examplePath,'*.html'))
-    .pipe(wrapTpl())
-    .pipe(gulp.dest(resolve(__PATHS__.html))));
+    .src(`${__PATHS__.generated}/examples/*.html`)
+    .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><title>Example</title>', '</html>'))
+    .pipe(gulp.dest(__PATHS__.html)));
 
 gulp.task('generate:examples', () => {
   const stream = through.obj();
@@ -113,5 +88,5 @@ gulp.task('generate:examples', () => {
     })));
   stream.end();
   return stream
-    .pipe(gulp.dest(examplePath));
+    .pipe(gulp.dest(`${__PATHS__.generated}/examples`));
 });

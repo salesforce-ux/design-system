@@ -49,7 +49,7 @@ export let Checkbox = props => {
   return (
     <span className="slds-checkbox">
       {props.children}
-      <input type="checkbox" name="options" id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
+      <input type="checkbox" name={ props.name || 'options' } id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
       <label className={classNames('slds-checkbox__label', props.className)} htmlFor={ props.id ? props.id : uniqueId }>
         <span className="slds-checkbox--faux"></span>
         <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{props.label}</span>

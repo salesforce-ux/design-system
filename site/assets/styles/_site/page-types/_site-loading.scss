@@ -10,8 +10,8 @@
 .site-guidelines-loading {
 
   @include mq-medium-min {
-    .image,
-    .image:only-of-type {
+    .site-image,
+    .site-image:only-of-type {
       margin-bottom: $spacing-small;
     }
   }

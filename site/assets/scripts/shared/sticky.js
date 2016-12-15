@@ -202,11 +202,11 @@ class Sticky {
       this.refs.content.scrollLeft = 0;
     }
     setClassName(this.refs.content, {
-      'sticky--fixed': isFixed
+      'site-sticky--fixed': isFixed
     });
     // Placeholder
     setClassName(this.refs.placeholder, {
-      'sticky__placeholder--on': isFixed
+      'site-sticky__placeholder--on': isFixed
     });
     this.setStyleProperty(this.refs.placeholder, 'height',
       isFixed && size.height ? `${size.height}px` : '');

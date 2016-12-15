@@ -26,7 +26,7 @@ export default React.createClass({
   render() {
     const { which, title, description } = this.props;
     const className = classNames('site-example-tile__object', {
-      [`${which}-example`]: which
+      [`site-${which}-example`]: which
     });
     const state = JSON.stringify({
       which: this.props.which,
@@ -47,7 +47,7 @@ export default React.createClass({
           <div className="site-example-tile__title">
             {title}
           </div>
-          <hr className="hr hr--dark-blue" />
+          <hr className="site-hr site-hr--dark-blue" />
           <div className="site-example-tile__description">
             {description}
           </div>

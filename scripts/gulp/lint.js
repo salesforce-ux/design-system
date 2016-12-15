@@ -80,7 +80,7 @@ gulp.task('lint:js:test', lintjs([
 
 // This task lints pre-built assets (not the JSX templates),
 // So you typically have to run `npm run build` before linting HTML files.
-gulp.task('lint:html', ['generate:examples:wrap'], () => {
+gulp.task('lint:html', ['generate:wrappedexamples'], () => {
   return gulp.src('.html/*.html')
     .pipe(htmlhint({
       // Rules documentation:
@@ -140,7 +140,7 @@ gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tok
 const parseComponentArgument = argv =>
   minimist(argv.slice(2)).component || '*';
 
-gulp.task('lint:vnu', ['generate:examples:wrap'], () =>
+gulp.task('lint:vnu', ['generate:wrappedexamples'], () =>
   gulp.src(`.html/${parseComponentArgument(process.argv)}`)
   .pipe(vnu.lint())
   .pipe(vnu.report())

@@ -23,7 +23,7 @@ const handleNavClick = (event, node) => {
   const isOpen = /is-open/.test(node.parentElement.className);
   setClassName(node.parentElement, {
     'slds-is-open': !isOpen,
-    'site-is-closed': isOpen
+    'is-closed': isOpen
   });
 };
 

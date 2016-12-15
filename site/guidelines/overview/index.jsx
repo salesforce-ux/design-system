@@ -21,48 +21,48 @@ export default (
       <p><strong>We constantly keep these core principles in mind when making design decisions at Salesforce, and we encourage you to adopt them as well.</strong></p>
       <ul className="slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center slds-p-vertical--x-large">
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="site-grid-card">
+          <div className="grid-card">
             <img src="/assets/images/guidelines/img-clarity.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Clarity</dt>
               <dd>
-                <hr className="site-hr site-hr--blue" />
+                <hr className="hr hr--blue" />
                 Eliminate ambiguity. Enable people to see, understand, and act with confidence.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="site-grid-card">
+          <div className="grid-card">
             <img src="/assets/images/guidelines/img-efficiency.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Efficiency</dt>
               <dd>
-                <hr className="site-hr site-hr--blue"/>
+                <hr className="hr hr--blue"/>
                 Streamline and optimize workflows. Intelligently anticipate needs to help people work better, smarter, and faster.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="site-grid-card">
+          <div className="grid-card">
             <img src="/assets/images/guidelines/img-consistency.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Consistency</dt>
               <dd>
-                <hr className="site-hr site-hr--blue"/>
+                <hr className="hr hr--blue"/>
                 Create familiarity and strengthen intuition by applying the same solution to the same problem.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="site-grid-card">
+          <div className="grid-card">
             <img src="/assets/images/guidelines/img-beauty.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Beauty</dt>
               <dd>
-                <hr className="site-hr site-hr--blue"/>
+                <hr className="hr hr--blue"/>
                 Demonstrate respect for people’s time and attention through thoughtful and elegant craftsmanship.
               </dd>
             </dl>

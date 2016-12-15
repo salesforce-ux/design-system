@@ -9,7 +9,7 @@
 
 @include mq-medium-min {
   // scss-lint:disable IdSelector
-  .site-page-wrapper > div {
+  .page-wrapper > div {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -28,7 +28,7 @@
   }
 }
 
-.site-container--buffer {
+.container--buffer {
   padding: $spacing-large;
 
   @include mq-large-min {

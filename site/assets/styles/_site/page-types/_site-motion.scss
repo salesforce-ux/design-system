@@ -9,13 +9,13 @@
 
 
 // Atmosphere Graph
-.site-atmosphere-graph {
+.atmosphere-graph {
   position: relative;
   height: 27rem;
   background: $color-background-alt;
 }
 
-.site-atmosphere-hlabel {
+.atmosphere-hlabel {
   position: absolute;
   left: -1rem;
   transform: translateX(5.25rem);
@@ -27,13 +27,13 @@
     right: 1rem;
   }
 
-  .site-atmosphere-hline {
+  .atmosphere-hline {
     left: 0.5rem;
     width: 2.5rem;
   }
 }
 
-.site-atmosphere-hline {
+.atmosphere-hline {
   position: absolute;
   left: 5.5rem;
   width: 0.5rem;
@@ -41,14 +41,14 @@
   transform: translateX(-1rem);
 }
 
-.site-atmosphere-0-line {
+.atmosphere-0-line {
   left: 0;
   right: 0;
   width: auto;
   border-top: $border-width-thin solid $color-border-separator-alt-2;
 }
 
-.site-atmosphere-vertical-ruler {
+.atmosphere-vertical-ruler {
   position: absolute;
   top: 0;
   left: 5rem;
@@ -56,7 +56,7 @@
   border-left: $border-width-thick solid $color-border-separator-alt;
 }
 
-.site-elevation-dot {
+.elevation-dot {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -76,31 +76,31 @@
   }
 }
 
-.site-elevation-dot-flying {
+.elevation-dot-flying {
   bottom: 23rem;
   left: 90%;
   box-shadow: $elevation-shadow-16;
 }
 
-.site-elevation-dot-floating {
+.elevation-dot-floating {
   bottom: 11rem;
   left: 75%;
   box-shadow: $elevation-shadow-4;
 }
 
-.site-elevation-dot-raised {
+.elevation-dot-raised {
   bottom: 9rem;
   left: 60%;
   box-shadow: $elevation-shadow-2;
 }
 
-.site-elevation-dot-grounded {
+.elevation-dot-grounded {
   bottom: 7rem;
   left: 45%;
   box-shadow: $elevation-shadow-0;
 }
 
-.site-elevation-dot-sunken {
+.elevation-dot-sunken {
   bottom: 4rem;
   left: 30%;
   box-shadow: $elevation-shadow-3-below;
@@ -126,7 +126,7 @@
     user-select: none;
     cursor: pointer;
 
-    .site-hr {
+    .hr {
       margin: {
         top: $spacing-small;
         bottom: $spacing-small;
@@ -167,7 +167,7 @@
 }
 
 // Animations
-.site-color-example {
+.color-example {
   transition: $duration-promptly background-color linear;
 
   span {
@@ -183,7 +183,7 @@
   }
 }
 
-.site-elevation-example {
+.elevation-example {
   height: 9rem;
   position: relative;
 
@@ -198,7 +198,7 @@
   }
 }
 
-.site-fade-example {
+.fade-example {
   transition: $duration-promptly opacity linear;
 
   &--on {
@@ -206,7 +206,7 @@
   }
 }
 
-.site-fall-example {
+.fall-example {
   transition: $duration-promptly all ease-in-out;
   box-shadow: $elevation-shadow-8;
 
@@ -217,7 +217,7 @@
   }
 }
 
-.site-flip-example {
+.flip-example {
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
@@ -225,7 +225,7 @@
   }
 }
 
-.site-grow-example {
+.grow-example {
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
@@ -233,13 +233,13 @@
   }
 }
 
-.site-jiggle-example {
+.jiggle-example {
   &--on {
     animation: site-mass-jiggle-keyframes $duration-slowly forwards;
   }
 }
 
-.site-lower-example {
+.lower-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
   box-shadow: $elevation-shadow-8;
 
@@ -249,7 +249,7 @@
   }
 }
 
-.site-pop-example {
+.pop-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
   box-shadow: $elevation-shadow-0;
 
@@ -259,7 +259,7 @@
   }
 }
 
-.site-punch-example {
+.punch-example {
   transition: $duration-promptly box-shadow ease-in-out;
   box-shadow: $elevation-shadow-0;
 
@@ -276,7 +276,7 @@
   }
 }
 
-.site-raise-example {
+.raise-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
   box-shadow: $elevation-shadow-4;
 
@@ -286,7 +286,7 @@
   }
 }
 
-.site-roll-example {
+.roll-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
@@ -295,11 +295,11 @@
   }
 }
 
-.site-shake-example--on {
+.shake-example--on {
   animation: site-mass-shake-keyframes $duration-slowly forwards;
 }
 
-.site-shrink-example {
+.shrink-example {
   transition: $duration-promptly transform ease-in-out;
 
   &--on {
@@ -307,7 +307,7 @@
   }
 }
 
-.site-slide-example {
+.slide-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly opacity ease-in-out;
 
   &--on {
@@ -316,7 +316,7 @@
   }
 }
 
-.site-spin-example {
+.spin-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
@@ -325,7 +325,7 @@
   }
 }
 
-.site-tilt-example {
+.tilt-example {
   transition: $duration-promptly transform ease-in-out, $duration-promptly box-shadow ease-in-out;
 
   &--on {
@@ -334,7 +334,7 @@
   }
 }
 
-.site-twist-example {
+.twist-example {
   transition: $duration-promptly transform ease-in-out;
 
   &--on {

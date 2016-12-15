@@ -366,7 +366,7 @@ export default (
                   🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢
                 </div>
 
-                <ul className="site-list--reset slds-lookup__list slds-m-left--none">
+                <ul className="list--reset slds-lookup__list slds-m-left--none">
                   {_.times(5, i =>
                     <li key={`item-${i}`}>
                       <a className="slds-lookup__item-action slds-media slds-media--center site-stencil__color-dark site-stencil__background-none-hover" href="javascript:void(0);" tabIndex="-1">
@@ -763,7 +763,7 @@ export default (
               </button>
 
               <div className="slds-dropdown slds-dropdown--left site-stencil__border-light slds-is-static site-stencil__background-none-hover-parent">
-                <ul className="slds-dropdown__list slds-dropdown--length-5 slds-m-left--none">
+                <ul className="slds-list--reset slds-dropdown__list slds-dropdown--length-5 slds-m-left--none">
                   <li className="slds-dropdown__item slds-is-selected">
                     <a href="javascript:void(0);" tabIndex="-1" className="site-stencil__color-dark">
                       <span className="slds-truncate">
@@ -838,7 +838,7 @@ export default (
                 </span>
 
                 <div className="slds-picklist slds-picklist--multi">
-                  <ul className="slds-picklist__options slds-picklist__options--multi site-stencil__border-light slds-m-left--none slds-size--1-of-1 slds-size--1-of-1"></ul>
+                  <ul className="slds-list--reset slds-picklist__options slds-picklist__options--multi site-stencil__border-light slds-m-left--none slds-size--1-of-1 slds-size--1-of-1"></ul>
                 </div>
               </div>
             </div>

@@ -204,6 +204,20 @@
   }
 }
 
+.ruled .site-example-spec-container.slds-cell:first-child {
+  position: relative;
+  margin-right: $spacing-medium * 2;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: -$spacing-medium;
+    bottom: 0;
+    border-right: 1px solid #ff0;
+    content: ' ';
+  }
+}
+
 .site-tokens {
 
   code {
@@ -228,11 +242,26 @@
     @include mq-medium-min {
       width: 20%;
     }
+
+    &.token--empty {
+      // scss-lint:disable NestingDepth
+
+      > div:before {
+        margin: $spacing-xx-small 0;
+        display: block;
+        padding: $spacing-x-small $spacing-small;
+        width: 100%;
+        font-style: italic;
+        background: $color-background;
+        color: $color-text-weak;
+        content: 'Same as Previous Form Factor';
+      }
+    }
   }
 
-  &.site-background-color {
+  &.background-color {
 
-    td.site-token > div {
+    td.token > div {
       height: 2rem;
       box-shadow: $color-background-alt 0 1px 0 inset,
                   $color-background-alt 0 -1px 0 inset;
@@ -245,7 +274,7 @@
 
     @include mq-small-max {
 
-      td.site-token {
+      td.token {
         // scss-lint:disable NestingDepth
 
         > div {
@@ -266,7 +295,7 @@
 
     @include mq-medium-min {
       // scss-lint:disable NestingDepth SelectorDepth
-      td.site-token {
+      td.token {
         vertical-align: top;
         padding: {
           top: $spacing-small;

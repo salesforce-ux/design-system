@@ -25,12 +25,10 @@ export default (
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
       <div className="slds-form-element__control">
         <Checkbox
-          assistiveText="opportunities ownership"
           label="All opportunities owned by you"
           name="default"
         />
         <Checkbox
-          assistiveText="contact ownership"
           label="All contacts in the account owned by you"
           name="default"
         />
@@ -40,12 +38,10 @@ export default (
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
       <div className="slds-form-element__control">
         <Radio
-          assistiveText="lead"
           label="Lead Generation"
           name="options"
         />
         <Radio
-          assistiveText="education"
           label="Education Leads"
           name="options"
         />
@@ -54,7 +50,6 @@ export default (
     <div className="slds-form-element">
       <div className="slds-form-element__control">
         <Checkbox
-          assistiveText="agree"
           label="I agree to the Terms & Service"
           name="agree"
         />

@@ -23,4 +23,17 @@ kbd {
   &.slds-scrollable--x {
     @include scrollbar;
   }
+
+  .active,
+  .always-show pre {
+    display: block;
+  }
+
+  .slds-container--medium + & {
+    margin-top: $spacing-medium;
+  }
+
+  + .slds-container--medium p:first-child {
+    padding-top: $spacing-medium;
+  }
 }

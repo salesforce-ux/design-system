@@ -187,7 +187,7 @@
   font-size: rem(13px);
   color: $color-background-browser;
 }
-.site-searchbox {
+.searchbox {
   display: inline-block;
   position: relative;
   width: 13rem;
@@ -199,11 +199,11 @@
   box-sizing: border-box;
   visibility: visible !important;
 }
-.site-searchbox__wrapper {
+.searchbox__wrapper {
   width: 100%;
   height: 100%;
 }
-.site-searchbox__input {
+.searchbox__input {
   padding-right: rem(27px);
   padding-left: 1rem;
 
@@ -211,10 +211,10 @@
     box-shadow: none;
   }
 }
-.site-searchbox__input::-webkit-search-decoration,
-.site-searchbox__input::-webkit-search-cancel-button,
-.site-searchbox__input::-webkit-search-results-button,
-.site-searchbox__input::-webkit-search-results-decoration {
+.searchbox__input::-webkit-search-decoration,
+.searchbox__input::-webkit-search-cancel-button,
+.searchbox__input::-webkit-search-results-button,
+.searchbox__input::-webkit-search-results-decoration {
   display: none;
 }
 .algolia-docsearch-suggestion--no-result {

@@ -24,7 +24,7 @@ export default (
       <p>Spinners are animated SVGs or GIFs. They reduce the use of awkward white screens and blank containers to communicate that the system is working. Use spinners when a component on a page is making an asynchronous update without refreshing the page.</p>
       <div className="site-diagram-section-list slds-grid slds-wrap">
         <figure className="slds-large-size--1-of-2">
-          <img className="site-image" src="/assets/images/loading/img-loading-card.svg" alt="Wireframe image of card loading" />
+          <img className="image" src="/assets/images/loading/img-loading-card.svg" alt="Wireframe image of card loading" />
           <figcaption>Card</figcaption>
         </figure>
         <div className="site-diagram-section-middle slds-large-size--1-of-2">
@@ -33,7 +33,7 @@ export default (
       </div>
       <div className="site-diagram-section-list slds-grid slds-wrap">
         <figure className="slds-large-size--1-of-2">
-          <img className="site-image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
+          <img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
           <figcaption>List View</figcaption>
         </figure>
         <div className="site-diagram-section-middle slds-large-size--1-of-2">
@@ -47,31 +47,31 @@ export default (
         <ul className="slds-grid slds-wrap slds-grid--pull-padded-large">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--1-of-3">
             <figure>
-              <img className="site-image" src="/assets/images/loading/img-loading-record.svg" alt="Wireframe image of record home card loading" />
+              <img className="image" src="/assets/images/loading/img-loading-record.svg" alt="Wireframe image of record home card loading" />
               <figcaption>Card Loading</figcaption>
             </figure>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--1-of-3">
             <figure>
-              <img className="site-image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
+              <img className="image" src="/assets/images/loading/img-loading-lazy.svg" alt="Wireframe image of lazy loading" />
               <figcaption>Lazy Loading</figcaption>
             </figure>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--1-of-3">
             <figure>
-              <img className="site-image" src="/assets/images/loading/img-loading-list.svg" alt="Wireframe image of list loading" />
+              <img className="image" src="/assets/images/loading/img-loading-list.svg" alt="Wireframe image of list loading" />
               <figcaption>List Loading</figcaption>
             </figure>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--1-of-3">
             <figure>
-              <img className="site-image" src="/assets/images/loading/img-loading-modal.svg" alt="Wireframe image of modal loading" />
+              <img className="image" src="/assets/images/loading/img-loading-modal.svg" alt="Wireframe image of modal loading" />
               <figcaption>Modal Loading</figcaption>
             </figure>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--1-of-3">
             <figure>
-              <img className="site-image" src="/assets/images/loading/img-loading-page.svg" alt="Wireframe image of full screen loading" />
+              <img className="image" src="/assets/images/loading/img-loading-page.svg" alt="Wireframe image of full screen loading" />
               <figcaption>Full Screen Loading</figcaption>
             </figure>
           </li>

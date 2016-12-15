@@ -118,10 +118,10 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" noValidate="novalidate" className="site-searchbox">
-        <div role="search" className="site-searchbox__wrapper">
+      <form id="search" noValidate="novalidate" className="searchbox">
+        <div role="search" className="searchbox__wrapper">
           <label htmlFor="docsearch" className="slds-assistive-text">Unfortunately, the 3rd party software we rely on for search is not accessible at the moment.</label>
-          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="site-searchbox__input slds-input" />
+          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
           <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query
           </button>
@@ -172,7 +172,7 @@ export default React.createClass({
         'slds-is-open': item.isOpen,
         'slds-is-selected': item.isSelected,
         'slds-is-active': item.isActive,
-        'site-is-closed': !item.isOpen && item.hasChildren
+        'is-closed': !item.isOpen && item.hasChildren
       });
       const dataProps = {};
       if (item.hasChildren) {

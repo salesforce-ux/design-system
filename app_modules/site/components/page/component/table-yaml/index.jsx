@@ -30,7 +30,7 @@ class TableYAML extends React.Component {
         ? <p dangerouslySetInnerHTML={{__html: d.notes}} />
         : <p>--</p>;
       let deprecated = d.deprecated
-        ? <span className="slds-badge slds-shrink-none slds-align-middle site-badge--deprecated">Deprecated</span>
+        ? <span className="slds-badge slds-shrink-none slds-align-middle badge--deprecated">Deprecated</span>
         : null;
       return (
         <tr key={`tableyaml-${sanitizedClass}-${index}`}>

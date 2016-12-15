@@ -36,14 +36,14 @@ const setAria = (tab, bool) =>
   tab.firstChild.setAttribute('aria-selected', bool);
 
 const addActive = tab => {
-  setClassName(tab, 'slds-is-active');
+  setClassName(tab, 'slds-active');
   setAria(tab, true);
   tab.firstChild.focus();
   showPanel(tab);
 };
 
 const removeActive = tab => {
-  setClassName(tab, {'slds-is-active': false});
+  setClassName(tab, {'slds-active': false});
   setAria(tab, false);
   hidePanel(tab);
 };
@@ -57,7 +57,7 @@ const runTabClick = (tab, otherTabs) => {
 };
 
 const activeTab = ul =>
-  $('li', ul).reduce((acc, li) => li.className.indexOf('slds-is-active') > 0 ? li : acc, null);
+  $('li', ul).reduce((acc, li) => li.className.indexOf('slds-active') > 0 ? li : acc, null);
 
 
 const handleTabClick = li => {

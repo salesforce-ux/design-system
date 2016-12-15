@@ -139,7 +139,7 @@ class ComponentFlavor extends React.Component {
     const statusBadgeType = _.words(status).join('-');
     const className = classNames(
       'slds-badge slds-m-left--medium slds-shrink-none slds-align-middle',
-      `site-badge--${statusBadgeType}`
+      `badge--${statusBadgeType}`
     );
     return (
       <span className={className}>{words}</span>
@@ -168,11 +168,11 @@ class ComponentFlavor extends React.Component {
         const compatible = flavor.compatibility[key];
         const label = `${compatible ? '' : 'Not '}Compatible with ${labels[key]}`;
         const className = classNames('slds-badge slds-m-left--medium slds-shrink-none slds-align-middle', {
-          'site-badge--compatible': compatible,
-          'site-badge--not-compatible': !compatible
+          'badge--compatible': compatible,
+          'badge--not-compatible': !compatible
         });
         return badges.concat((
-          <span className={className} key={`site-badge-${key}`}>
+          <span className={className} key={`badge-${key}`}>
             {label}
           </span>
         ));

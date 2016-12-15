@@ -136,7 +136,7 @@
     font-size: $site-font-size-xx-large;
   }
 
-  .site-grid-card {
+  .grid-card {
     @include mq-large-min {
       min-height: rem(460px);
     }
@@ -182,7 +182,7 @@
   }
 
   // Deal with grid card
-  .site-grid-card {
+  .grid-card {
     padding: $spacing-x-large;
     min-height: rem(260px);
 
@@ -194,7 +194,7 @@
       margin: 0;
     }
 
-    .site-hr {
+    .hr {
       margin: $spacing-small 0;
       width: 100%;
     }
@@ -205,7 +205,7 @@
 
 
 // Colorful horizontal rules
-.site-hr {
+.hr {
   width: 50%;
   height: 1px;
   border: 0;

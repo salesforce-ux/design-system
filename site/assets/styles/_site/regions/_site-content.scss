@@ -16,7 +16,7 @@
   }
 }
 
-.site-sticky {
+.sticky {
   position: static;
 
   &--fixed {
@@ -27,13 +27,34 @@
   }
 }
 
-.site-sticky__placeholder {
+.sticky__placeholder {
   display: none;
 
   &--on {
     display: block;
   }
 }
+
+.site-text-longform .has-border-bottom {
+  margin-bottom: $spacing-medium;
+  border-bottom: $border-width-thin solid $color-border-separator;
+  padding-bottom: $spacing-medium;
+}
+
+.framed-image {
+  margin-bottom: $spacing-medium;
+  border: $border-width-thin solid $color-border;
+  padding: $spacing-x-small;
+}
+
+.resources-illustration {
+  display: block;
+  margin: $spacing-large auto;
+  width: 80%;
+  max-width: 20rem;
+}
+
+
 
 @include mq-large-max {
 
@@ -49,7 +70,7 @@
 // Defaults for site menu jump links list
 .site-menu--jump-links {
 
-  .slds-icon__svg {
+  .icon__svg {
     display: none;
   }
 
@@ -60,7 +81,7 @@
       display: block;
     }
 
-    .slds-icon__svg {
+    .icon__svg {
       opacity: 1;
       transform: rotate(0deg);
     }
@@ -68,11 +89,14 @@
 }
 
 // Nested list for variant states
-.site-states a {
-  padding: {
-    top: $spacing-x-small;
-    bottom: $spacing-x-small;
-    left: $spacing-x-large;
+.site-states {
+
+  a {
+    padding: {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
+      left: $spacing-x-large;
+    }
   }
 }
 
@@ -128,7 +152,7 @@
       }
     }
 
-    .slds-icon__svg {
+    .icon__svg {
       @include square($square-icon-x-small-content);
       display: inline-block;
       opacity: 0.5;

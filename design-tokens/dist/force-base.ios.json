@@ -1,0 +1,5100 @@
+{
+  "properties": [
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "1px",
+      "name": "borderWidthThin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2px",
+      "name": "borderWidthThick"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "1px",
+      "name": "borderStrokeWidthThin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2px",
+      "name": "borderStrokeWidthThick"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "0",
+      "name": "spacingNone"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2",
+      "name": "spacingXxxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "4",
+      "name": "spacingXxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "8",
+      "name": "spacingXSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "12",
+      "name": "spacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "16",
+      "name": "spacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "24",
+      "name": "spacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "32",
+      "name": "spacingXLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "48",
+      "name": "spacingXxLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "96",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeXxSmall"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "192",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeXSmall"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "240",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeSmall"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "320",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeMedium"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "400",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "640",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeXLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "960",
+      "comment": "Generic sizing token scale for UI components.",
+      "name": "sizeXxLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Small utility icon without border.",
+      "name": "squareIconUtilitySmall"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Medium utility icon without border.",
+      "name": "squareIconUtilityMedium"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "24",
+      "comment": "Large utility icon without border.",
+      "name": "squareIconUtilityLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "48",
+      "comment": "Anchor: Outer colored tile",
+      "name": "squareIconLargeBoundary"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "80",
+      "comment": "Anchor: avatar",
+      "name": "squareIconLargeBoundaryAlt"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32",
+      "comment": "Anchor: Icon content (white shape)",
+      "name": "squareIconLargeContent"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "38",
+      "comment": "Use squareIconMediumBoundary",
+      "deprecated": true,
+      "name": "squareIconMedium"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32",
+      "comment": "Stage left & actions: Outer colored tile",
+      "name": "squareIconMediumBoundary"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "36",
+      "comment": "Icon button boundary.",
+      "name": "squareIconMediumBoundaryAlt"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Stage left & actions: Icon content (white shape)",
+      "name": "squareIconMediumContent"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "14",
+      "comment": "Alternate medium tap target size",
+      "name": "squareIconMediumContentAlt"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Small tap target size",
+      "deprecated": true,
+      "name": "squareIconSmall"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "24",
+      "comment": "Search Results: Outer colored tile",
+      "name": "squareIconSmallBoundary"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "12",
+      "comment": "Search Results: Icon content (white shape)",
+      "name": "squareIconSmallContent"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Very small icon button boundary.",
+      "name": "squareIconXSmallBoundary"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "8",
+      "comment": "Very small icons in icon buttons.",
+      "name": "squareIconXSmallContent"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Very very small icon button boundary.",
+      "name": "squareIconXxSmallBoundary"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "14",
+      "comment": "Very small icons to replace force font with temporary override.",
+      "name": "squareIconXxSmallContent"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "50",
+      "comment": "Large tap target size.",
+      "deprecated": true,
+      "name": "squareIconLarge"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "26",
+      "comment": "Minimum height of a pill.",
+      "name": "heightPill"
+    },
+    {
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Brand fill color",
+      "name": "fillBrand"
+    },
+    {
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Brand hover fill color",
+      "name": "fillBrandHover"
+    },
+    {
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Brand active fill color",
+      "name": "fillBrandActive"
+    },
+    {
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Header button icon color",
+      "name": "fillHeaderButton"
+    },
+    {
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Hovered header button icon color",
+      "name": "fillHeaderButtonHover"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "300",
+      "comment": "Use for large headings only.",
+      "name": "fontWeightLight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "comment": "Most all body copy.",
+      "name": "fontWeightRegular"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "700",
+      "comment": "Used sparingly for emphasized text within regular body copy.",
+      "name": "fontWeightBold"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "deprecated": true,
+      "name": "fontSizeXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "14",
+      "deprecated": true,
+      "name": "fontSizeSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "16",
+      "deprecated": true,
+      "name": "fontSizeMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "deprecated": true,
+      "name": "fontSizeMediumA"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "20",
+      "deprecated": true,
+      "name": "fontSizeLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "24",
+      "deprecated": true,
+      "name": "fontSizeXLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "25.12",
+      "deprecated": true,
+      "name": "fontSizeXLargeA"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "32",
+      "deprecated": true,
+      "name": "fontSizeXxLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "comment": "Extra extra small text.",
+      "name": "fontSizeTextXxSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "12",
+      "comment": "Extra small body text.",
+      "name": "fontSizeTextXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "13",
+      "comment": "Small body text.",
+      "name": "fontSizeTextSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "16",
+      "comment": "Medium body text.",
+      "name": "fontSizeTextMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "comment": "Large body text.",
+      "name": "fontSizeTextLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "20",
+      "comment": "Extra large body text.",
+      "name": "fontSizeTextXLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "10",
+      "comment": "Extra Extra small headings.",
+      "name": "fontSizeHeadingXxSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "12",
+      "comment": "Extra small headings.",
+      "name": "fontSizeHeadingXSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "14",
+      "comment": "Small headings.",
+      "name": "fontSizeHeadingSmall"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "comment": "Medium headings.",
+      "name": "fontSizeHeadingMedium"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "24",
+      "comment": "Large headings.",
+      "name": "fontSizeHeadingLarge"
+    },
+    {
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "32",
+      "comment": "Extra large headings.",
+      "name": "fontSizeHeadingXLarge"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1.25",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightHeading"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightText"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "1",
+      "comment": "Remove extra leading. Unitless line-heights for reusability",
+      "name": "lineHeightReset"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "40",
+      "comment": "Line heights for tabs",
+      "name": "lineHeightTab"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "deprecated": true,
+      "comment": "Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.",
+      "name": "fontFamily"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "name": "fontFamilyText"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "name": "fontFamilyHeading"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "2",
+      "name": "borderRadiusSmall"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "4",
+      "comment": "Icons in lists, record home icon, unbound input elements",
+      "name": "borderRadiusMedium"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "8",
+      "name": "borderRadiusLarge"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "240",
+      "name": "borderRadiusPill"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0.5",
+      "comment": "Circle for global use, action icon bgd shape",
+      "name": "borderRadiusCircle"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "background*"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Default border color for UI elements.",
+      "name": "colorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Our product brand blue.",
+      "name": "colorBorderBrand"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Our product brand blue, darkened to meet accessibility color contrast ratios with white text.",
+      "name": "colorBorderBrandDark"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "comment": "Border color for UI elements related to the concept of an external user or customer.",
+      "name": "colorBorderCustomer"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Border color for UI elements that have to do with destructive actions.",
+      "name": "colorBorderDestructive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(166, 26, 20)",
+      "comment": "Hover border color for UI elements that have to do with destructive actions.",
+      "name": "colorBorderDestructiveHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(135, 5, 0)",
+      "comment": "Active border color for UI elements that have to do with destructive actions.",
+      "name": "colorBorderDestructiveActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Border color for UI elements related to providing neutral information (not error, success, or warning).",
+      "name": "colorBorderInfo"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Border color for UI elements that have to do with errors.",
+      "name": "colorBorderError"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(234, 130, 136)",
+      "comment": "Alternative border color for UI elements related to errors.",
+      "name": "colorBorderErrorAlt"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(234, 130, 136)",
+      "comment": "Dark alternative border color for UI elements related to errors.",
+      "name": "colorBorderErrorDark"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(68, 68, 68)",
+      "comment": "Border color for UI elements related to the offline state.",
+      "name": "colorBorderOffline"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "Border color for UI elements that have to do with success.",
+      "name": "colorBorderSuccess"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "Dark alternative border color for UI elements that have to do with success.",
+      "name": "colorBorderSuccessDark"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 183, 93)",
+      "comment": "Border color for UI elements that have to do with warnings.",
+      "name": "colorBorderWarning"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(6, 28, 63)",
+      "comment": "Border color to match UI elements using color-background-inverse.",
+      "name": "colorBorderInverse"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Border color for a selected tab in a tab group.",
+      "name": "colorBorderTabSelected"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Border color for an active tab.",
+      "name": "colorBorderTabActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Lightest separator color - used as default separator on white backgrounds.",
+      "name": "colorBorderSeparator"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Medium separator color - used as default separator on light gray backgrounds.",
+      "name": "colorBorderSeparatorAlt"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(168, 183, 199)",
+      "comment": "Darkest separator color - used as an alternate separator color when more differentiation is desired.",
+      "name": "colorBorderSeparatorAlt2"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(42, 66, 108)",
+      "comment": "Used as a separator on dark backgrounds, such as stage left navigation.",
+      "name": "colorBorderSeparatorInverse"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Used as the border color for selected rows or items on list-like components.",
+      "name": "colorBorderRowSelected"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Used as the border color for the hover state on selected rows or items on list-like components.",
+      "name": "colorBorderRowSelectedHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(42, 66, 108)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a specific region. Specific to builders.",
+      "deprecated": true,
+      "name": "colorBorderHint"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a selected component. Specific to builders.",
+      "name": "colorBorderSelection"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a component that is being hovered over. Specific to builders.",
+      "name": "colorBorderSelectionHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a component that is being clicked. Specific to builders.",
+      "name": "colorBorderSelectionActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(94, 180, 255)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a selected canvas element. Specific to builders.",
+      "name": "colorBorderCanvasElementSelection"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "specificity": "builders",
+      "comment": "Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.",
+      "name": "colorBorderCanvasElementSelectionHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.5)",
+      "comment": "Border color for a button with an icon that has a parent element that has a hover state",
+      "name": "colorBorderIconInverseHint"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.75)",
+      "comment": "Hovered border color for a button with an icon that has a parent element that has a hover state",
+      "name": "colorBorderIconInverseHintHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Border color for brandable primary button",
+      "name": "colorBorderButtonBrand"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Border color for brandable primary button - disabled state",
+      "name": "colorBorderButtonBrandDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Border color for default secondary button",
+      "name": "colorBorderButtonDefault"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.15)",
+      "comment": "Border color for disabled inverse button.",
+      "name": "colorBorderButtonInverseDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Border color on form elements.",
+      "name": "colorBorderInput"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Border color on active form elements.",
+      "name": "colorBorderInputActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(168, 183, 199)",
+      "comment": "Border color on disabled form elements.",
+      "name": "colorBorderInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The borders to create the checkmark",
+      "name": "colorBorderInputCheckboxSelectedCheckmark"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "These borders create the faux checkmark when the checkbox toggle is in the checked state.",
+      "name": "colorBorderToggleChecked"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "stroke"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Our product brand blue.",
+      "name": "colorStrokeBrand"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "stroke"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Hover stroke color for our product brand blue.",
+      "name": "colorStrokeBrandHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "stroke"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Active stroke color for our product brand blue.",
+      "name": "colorStrokeBrandActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "stroke"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Disabled stroke color.",
+      "name": "colorStrokeDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "stroke"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Stroke color for our global header buttons.",
+      "name": "colorStrokeHeaderButton"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default background color for the whole app.",
+      "name": "colorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Second default background color for the app.",
+      "name": "colorBackgroundAlt"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.",
+      "name": "colorBackgroundAlt2"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Alternative background color for dark portions of the app.",
+      "name": "colorBackgroundAltInverse"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Used as the background color for the hover state on rows or items on list-like components.",
+      "name": "colorBackgroundRowHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Used as the background color for the active state on rows or items on list-like components.",
+      "name": "colorBackgroundRowActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(240, 248, 252)",
+      "comment": "Used as the background color for selected rows or items on list-like components.",
+      "name": "colorBackgroundRowSelected"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(217, 255, 223)",
+      "comment": "Used as the background color for the new state on rows or items on list-like components.",
+      "name": "colorBackgroundRowNew"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(6, 28, 63)",
+      "comment": "Default background color for dark portions of the app (like Stage Left or tooltips).",
+      "name": "colorBackgroundInverse"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Secondary top bar background color (child browser, file preview, etc.)",
+      "name": "colorBackgroundBrowser"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Background color for default mobile chrome (ex. global header)",
+      "name": "colorBackgroundChromeMobile"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Background color for default desktop chrome (ex. global header)",
+      "name": "colorBackgroundChromeDesktop"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "comment": "Background color for UI elements related to the concept of an external user or customer.",
+      "name": "colorBackgroundCustomer"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 255, 189)",
+      "comment": "Background color for highlighting UI elements.",
+      "name": "colorBackgroundHighlight"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 240, 63)",
+      "comment": "Background color for highlighting text in search results.",
+      "name": "colorBackgroundHighlightSearch"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 237, 255)",
+      "comment": "Background color for text selected with a mouse.",
+      "name": "colorBackgroundSelection"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Background for utility icons that live in the action bar on mobile.",
+      "name": "colorBackgroundActionbarIconUtility"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Color of the indicator dot.",
+      "name": "colorBackgroundIndicatorDot"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Color of the spinner dot.",
+      "name": "colorBackgroundSpinnerDot"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Standard modal header",
+      "name": "colorBackgroundModal"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Brandable modal header",
+      "name": "colorBackgroundModalBrand"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Notifications badge background color.",
+      "name": "colorBackgroundNotificationBadge"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Notifications badge background color.",
+      "name": "colorBackgroundNotificationBadgeHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Notifications badge background color.",
+      "name": "colorBackgroundNotificationBadgeFocus"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Notifications badge background color.",
+      "name": "colorBackgroundNotificationBadgeActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Background color for notification list item.",
+      "name": "colorBackgroundNotification"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(240, 248, 252)",
+      "comment": "Background color for a new notification list item.",
+      "name": "colorBackgroundNotificationNew"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(6, 28, 63)",
+      "comment": "Stage left org switcher dropdown arrow background color.",
+      "name": "colorBackgroundOrgSwitcherArrow"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Background color for payloads in the feed.",
+      "name": "colorBackgroundPayload"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Background color of comment posts in the feed.",
+      "name": "colorBackgroundPost"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Hover color for utility bar item.",
+      "name": "colorBackgroundUtilityBarHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Active color for utility bar item.",
+      "name": "colorBackgroundUtilityBarActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "specificity": "builders",
+      "comment": "Used as gray background when more contrast is desired.",
+      "name": "colorBackgroundShade"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "specificity": "builders",
+      "comment": "Used as gray background in conjunction with Shade when more contrast is desired.",
+      "name": "colorBackgroundShadeDark"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Used as background for loading stencils on white background.",
+      "name": "colorBackgroundStencil"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Used as an alternate background for loading stencils on gray backgrounds.",
+      "name": "colorBackgroundStencilAlt"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(126, 140, 153, 0.8)",
+      "comment": "Used as the default background color for temporary dialog elements, such as the progress spinner background.",
+      "name": "colorBackgroundTempModal"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(126, 140, 153, 0.8)",
+      "comment": "The color of the mask overlay that appears when you enter a modal state.",
+      "name": "colorBackgroundTempModalTint"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.75)",
+      "comment": "The color of the mask overlay that appears when you enter a modal state.",
+      "deprecated": true,
+      "name": "colorBackgroundTempModalTintAlt"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.75)",
+      "comment": "The color of the mask overlay that appears when you enter a modal state.",
+      "name": "colorBackgroundBackdrop"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(240, 248, 252, 0.75)",
+      "comment": "The color of the mask overlay that provides user feedback on interaction.",
+      "name": "colorBackgroundBackdropTint"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "The background color of an internal scrollbar.",
+      "name": "colorBackgroundScrollbar"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(168, 183, 199)",
+      "comment": "The background color of an internal scrollbar track.",
+      "name": "colorBackgroundScrollbarTrack"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Our product brand blue.",
+      "name": "colorBrand"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Our product brand blue, darkened to meet accessibility color contrast ratios with white text.",
+      "name": "colorBrandDark"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Our product brand blue, darkened even further.",
+      "name": "colorBrandDarker"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Toggle background color.",
+      "name": "colorBackgroundToggle"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Disabled toggle background color.",
+      "name": "colorBackgroundToggleDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(126, 140, 153)",
+      "comment": "Hovered toggle background color.",
+      "name": "colorBackgroundToggleHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Active toggle background color.",
+      "name": "colorBackgroundToggleActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Hovered active toggle background color.",
+      "name": "colorBackgroundToggleActiveHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.07)",
+      "comment": "Button backgrounds on modal headers",
+      "name": "colorBackgroundModalButton"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.16)",
+      "comment": "Active button backgrounds on modal headers",
+      "name": "colorBackgroundModalButtonActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default input field",
+      "name": "colorBackgroundInput"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Selected input field (when user has clicked or tabbed into field)",
+      "name": "colorBackgroundInputActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default checkboxes",
+      "name": "colorBackgroundInputCheckbox"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Disabled checkboxes",
+      "name": "colorBackgroundInputCheckboxDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Selected checkboxes",
+      "name": "colorBackgroundInputCheckboxSelected"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Disabled input",
+      "name": "colorBackgroundInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 221, 225)",
+      "comment": "Background color for input field that has encountered an error.",
+      "name": "colorBackgroundInputError"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.16)",
+      "comment": "Background color for search input fields.",
+      "deprecated": true,
+      "name": "colorBackgroundInputSearch"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Background color for pills.",
+      "name": "colorBackgroundPill"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.4)",
+      "comment": "Color of mask overlay that sits on top of an image when text is present.",
+      "name": "colorBackgroundImageOverlay"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Color for UI elements related to destructive actions.",
+      "name": "colorBackgroundDestructive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(166, 26, 20)",
+      "comment": "Hover color for UI elements related to destructive actions.",
+      "name": "colorBackgroundDestructiveHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(135, 5, 0)",
+      "comment": "Active color for UI elements related to destructive actions.",
+      "name": "colorBackgroundDestructiveActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Background color for UI elements related to providing neutral information (not error, success, or warning).",
+      "name": "colorBackgroundInfo"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(212, 80, 76)",
+      "comment": "Color for UI elements related to errors.",
+      "name": "colorBackgroundError"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Dark color for UI elements related to errors. Accessible with white text.",
+      "name": "colorBackgroundErrorDark"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(234, 130, 136)",
+      "comment": "Alternative color for UI elements related to errors.",
+      "deprecated": true,
+      "name": "colorBackgroundErrorAlt"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(68, 68, 68)",
+      "comment": "Color for UI elements related to the offline state.",
+      "name": "colorBackgroundOffline"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "Color for UI elements that have to do with success.",
+      "name": "colorBackgroundSuccess"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "Dark color for UI elements that have to do with success. Accessible with white text.",
+      "name": "colorBackgroundSuccessDark"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(84, 105, 141, 0.95)",
+      "comment": "Background color for toast messaging.",
+      "name": "colorBackgroundToast"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(4, 132, 75, 0.95)",
+      "comment": "Background color for success toast messaging.",
+      "name": "colorBackgroundToastSuccess"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(194, 57, 52, 0.95)",
+      "comment": "Background color for error toast messaging.",
+      "name": "colorBackgroundToastError"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 183, 93)",
+      "comment": "Color for UI elements that have to do with warning.",
+      "name": "colorBackgroundWarning"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "Background color for success buttons",
+      "name": "colorBackgroundButtonSuccess"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "Hovered background color for success buttons",
+      "name": "colorBackgroundButtonSuccessHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "Active background color for success buttons",
+      "name": "colorBackgroundButtonSuccessActive"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -2px 4px #F4F6F9",
+      "comment": "Shadow above overflow menu close bar.",
+      "name": "shadowActionOverflowFooter"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -2px 4px rgba(0, 0, 0, 0.07)",
+      "comment": "Shadow for overlays.",
+      "deprecated": true,
+      "name": "shadowOverlay"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 4px 0 rgba(0, 0, 0, 0.40)",
+      "comment": "Shadow for drag-n-drop.",
+      "name": "shadowDrag"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 3px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Shadow for drop down.",
+      "name": "shadowDropDown"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 4px rgba(0, 0, 0, 0.07)",
+      "comment": "Shadow for header.",
+      "name": "shadowHeader"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
+      "comment": "Shadow for buttons.",
+      "deprecated": true,
+      "name": "shadowButton"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 0 3px #0070D2",
+      "comment": "Custom glow for focus states on UI elements with explicit containers.",
+      "name": "shadowButtonFocus"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 0 3px #E0E5EE",
+      "comment": "Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.",
+      "name": "shadowButtonFocusInverse"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 4px 4px rgba(0, 0, 0, 0.16)",
+      "comment": "Shadow to make inline edit card pop out.",
+      "name": "shadowInlineEdit"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 0 2px 2px #1589EE inset",
+      "comment": "Inset shadow for editable grid",
+      "name": "shadowFocusInset"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -2px 2px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Shadow on elements that are docked to the bottom of the viewport.",
+      "name": "shadowDocked"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 1px 1px rgba(0, 0, 0, 0.16)",
+      "comment": "Shadow on images.",
+      "name": "shadowImage"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "-3",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation3Inset"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation0"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "2",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation2"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "4",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation4"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "8",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation8"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "16",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation16"
+    },
+    {
+      "type": "number",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "32",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevation32"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 3px 3px 0 rgba(0, 0, 0, 0.16) inset",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow3Below"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow0"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 2px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow2"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 4px 4px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow4"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 8px 8px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow8"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 16px 16px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow16"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 32px 32px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationShadow32"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -3px 3px 0 rgba(0, 0, 0, 0.16) inset",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow3Below"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow0"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -2px 2px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated: Use SHADOW_DOCKED",
+      "deprecated": true,
+      "name": "elevationInverseShadow2"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -4px 4px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow4"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -8px 8px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow8"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -16px 16px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow16"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 -32px 32px 0 rgba(0, 0, 0, 0.16)",
+      "comment": "Deprecated",
+      "deprecated": true,
+      "name": "elevationInverseShadow32"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Action label text color",
+      "name": "colorTextActionLabel"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Action label active text color",
+      "name": "colorTextActionLabelActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Our product brand blue.",
+      "name": "colorTextBrand"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Top bar icon color",
+      "name": "colorTextBrowser"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(0, 0, 0, 0.4)",
+      "comment": "Top bar active icon color",
+      "name": "colorTextBrowserActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "comment": "Customer text used in anchor subtitle",
+      "name": "colorTextCustomer"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Body text color",
+      "name": "colorTextDefault"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Error text for inputs and error misc",
+      "name": "colorTextError"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Input disabled text",
+      "name": "colorTextInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Typed input text",
+      "name": "colorTextInputFocusInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Input icon",
+      "name": "colorTextInputIcon"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Inverse text color for dark backgrounds",
+      "name": "colorTextInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Weak inverse text color for dark backgrounds",
+      "name": "colorTextInverseWeak"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(94, 180, 255)",
+      "comment": "Active state on a standalone link on a dark background.",
+      "name": "colorTextInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Hover state on a standalone link on a dark background.",
+      "name": "colorTextInverseHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Link text (508)",
+      "name": "colorTextLink"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Active link text",
+      "name": "colorTextLinkActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Disabled link text",
+      "name": "colorTextLinkDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Focus link text",
+      "name": "colorTextLinkFocus"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "border*"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Hover link text",
+      "name": "colorTextLinkHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Link color on dark background",
+      "name": "colorTextLinkInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.75)",
+      "comment": "Link color on dark background - hover state",
+      "name": "colorTextLinkInverseHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.5)",
+      "comment": "Link color on dark background - active state",
+      "name": "colorTextLinkInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.15)",
+      "comment": "Link color on dark background - disabled state",
+      "name": "colorTextLinkInverseDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Modal header title",
+      "name": "colorTextModal"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Modal header button text color",
+      "name": "colorTextModalButton"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Text in stage left navigation.",
+      "name": "colorTextStageLeft"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "Color for default text in a tab group.",
+      "name": "colorTextTabLabel"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Color for text on a selected tab in a tab group.",
+      "name": "colorTextTabLabelSelected"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Color for text in hover state in a tab group.",
+      "name": "colorTextTabLabelHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Color for text in focus state in a tab group.",
+      "name": "colorTextTabLabelFocus"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Color for text in active state in a tab group.",
+      "name": "colorTextTabLabelActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Color for disabled text in a tab group.",
+      "name": "colorTextTabLabelDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Color for text on toast messages.",
+      "name": "colorTextToast"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 183, 93)",
+      "comment": "Color for texts or icons that are related to warnings on a dark background.",
+      "name": "colorTextWarning"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(132, 72, 0)",
+      "comment": "Color for texts that are related to warnings on a light background.",
+      "name": "colorTextWarningAlt"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Color for text that is purposefully de-emphasized to create visual hierarchy.",
+      "name": "colorTextWeak"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Color for non-interactive icons that represent a selected item in a list",
+      "name": "colorTextIconBrand"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Color for interactive utility icons",
+      "name": "colorTextIconUtility"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Color for disabled toggles",
+      "name": "colorTextToggleDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Text color for brandable primary button",
+      "name": "colorTextButtonBrand"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Text color for brandable primary button - hover state",
+      "name": "colorTextButtonBrandHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Text color for brandable primary button - active state",
+      "name": "colorTextButtonBrandActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Text color for brandable primary button - disabled state",
+      "name": "colorTextButtonBrandDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Text color for default secondary button",
+      "name": "colorTextButtonDefault"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Text color for default secondary button - hover state",
+      "name": "colorTextButtonDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Text color for default secondary button - active state",
+      "name": "colorTextButtonDefaultActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Text color for default secondary button - disabled state",
+      "name": "colorTextButtonDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextButtonDefaultHint"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextButtonInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.15)",
+      "comment": "Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextButtonInverseDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Default icon color.",
+      "name": "colorTextIconDefault"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(159, 170, 181)",
+      "comment": "Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextIconDefaultHint"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.5)",
+      "comment": "Icon color for a button that has a parent element that has a hover state on a dark background. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextIconInverseHint"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextIconDefaultHintBorderless"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Default icon color - hover state.",
+      "name": "colorTextIconDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Default icon color - active state.",
+      "name": "colorTextIconDefaultActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "Default icon color - disabled state",
+      "name": "colorTextIconDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background",
+      "name": "colorTextIconInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background - hover state",
+      "name": "colorTextIconInverseHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background - active state",
+      "name": "colorTextIconInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.15)",
+      "comment": "Icon color on dark background - disabled state",
+      "name": "colorTextIconInverseDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.75)",
+      "comment": "Hovered icon color for a button that has a parent element that has a hover state",
+      "name": "colorTextIconInverseHintHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Text color for field labels.",
+      "name": "colorTextLabel"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Input placeholder text.",
+      "name": "colorTextPlaceholder"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Input placeholder text on dark backgrounds.",
+      "name": "colorTextPlaceholderInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "Color of required field marker.",
+      "name": "colorTextRequired"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Text color for pills.",
+      "name": "colorTextPill"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(2, 128, 72)",
+      "comment": "Text color for success text.",
+      "name": "colorTextSuccess"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "Text color for success text on dark backgrounds.",
+      "name": "colorTextSuccessInverse"
+    },
+    {
+      "type": "text-transform",
+      "category": "text-transform",
+      "cssProperties": [
+        "text-transform"
+      ],
+      "value": "none",
+      "comment": "Default value for text-transform",
+      "name": "textTransform"
+    },
+    {
+      "type": "opacity",
+      "category": "opacity",
+      "cssProperties": [
+        "opacity"
+      ],
+      "value": "0.5",
+      "comment": "50% transparency of an element",
+      "name": "opacity5"
+    },
+    {
+      "type": "opacity",
+      "category": "opacity",
+      "cssProperties": [
+        "opacity"
+      ],
+      "value": "0.8",
+      "comment": "80% transparency of an element",
+      "name": "opacity8"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0s",
+      "comment": "0 seconds, 0 frames",
+      "name": "durationInstantly"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0.05s",
+      "comment": "0.05 seconds, 3 frames",
+      "name": "durationImmediately"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0.1s",
+      "comment": "0.1 seconds, 6 frames",
+      "name": "durationQuickly"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0.2s",
+      "comment": "0.2 seconds, 12 frames",
+      "name": "durationPromptly"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0.4s",
+      "comment": "0.4 seconds, 24 frames",
+      "name": "durationSlowly"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "3.2s",
+      "comment": "3.2 seconds, 192 frames",
+      "name": "durationPaused"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "4.8s",
+      "comment": "4.8 seconds",
+      "name": "durationToastShort"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "9.6s",
+      "comment": "9.6 seconds",
+      "name": "durationToastMedium"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "10000",
+      "comment": "Toasts",
+      "name": "zIndexToast"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "9000",
+      "comment": "Modal",
+      "name": "zIndexModal"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "8000",
+      "comment": "Overlay",
+      "name": "zIndexOverlay"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "7000",
+      "comment": "Dropdown",
+      "name": "zIndexDropdown"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "6000",
+      "comment": "Dialog",
+      "name": "zIndexDialog"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "5000",
+      "comment": "Popup",
+      "name": "zIndexPopup"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "100",
+      "comment": "Stickied element",
+      "name": "zIndexSticky"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "1",
+      "comment": "Default",
+      "name": "zIndexDefault"
+    },
+    {
+      "type": "z-index",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": "-99999",
+      "comment": "Deep dive",
+      "name": "zIndexDeepdive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Brandable primary button",
+      "name": "colorBackgroundButtonBrand"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Brandable primary button - active state",
+      "name": "colorBackgroundButtonBrandActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Brandable primary button - hover state",
+      "name": "colorBackgroundButtonBrandHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Brandable primary button - disabled state",
+      "name": "colorBackgroundButtonBrandDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default secondary button",
+      "name": "colorBackgroundButtonDefault"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default secondary button - hover state",
+      "name": "colorBackgroundButtonDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default secondary button - focus state",
+      "name": "colorBackgroundButtonDefaultFocus"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Default secondary button - active state",
+      "name": "colorBackgroundButtonDefaultActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default secondary button - disabled state",
+      "name": "colorBackgroundButtonDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Background color for icon-only button",
+      "name": "colorBackgroundButtonIcon"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Background color for icon-only button - hover state",
+      "name": "colorBackgroundButtonIconHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Background color for icon-only button - focus state",
+      "name": "colorBackgroundButtonIconFocus"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Background color for icon-only button - active state",
+      "name": "colorBackgroundButtonIconActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Background color for icon-only button - disabled state",
+      "name": "colorBackgroundButtonIconDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Button backgrounds on inverse/dark backgrounds",
+      "name": "colorBackgroundButtonInverse"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.24)",
+      "comment": "Active button backgrounds on inverse backgrounds on mobile",
+      "name": "colorBackgroundButtonInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Disabled button backgrounds on inverse/dark backgrounds",
+      "name": "colorBackgroundButtonInverseDisabled"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height",
+        "bottom"
+      ],
+      "value": "30",
+      "comment": "Line heights for regular buttons",
+      "name": "lineHeightButton"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "28",
+      "comment": "Line heights for small buttons",
+      "name": "lineHeightButtonSmall"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default Card component background color.",
+      "name": "cardColorBackground"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "12",
+      "name": "cardSpacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "16",
+      "name": "cardSpacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "24",
+      "name": "cardSpacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "8",
+      "name": "tableSpacingXSmall"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Docked panel header’s background color.",
+      "name": "colorBackgroundDockedPanelHeader"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Height of the docked bar.",
+      "name": "heightDockedBar"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "20.8",
+      "comment": "Line heights for toggle buttons",
+      "name": "lineHeightToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Slider size for toggle.",
+      "name": "squareToggleSlider"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "48",
+      "comment": "Slider width.",
+      "name": "widthToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "24",
+      "comment": "Slider height.",
+      "name": "heightToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Global identity icon size.",
+      "name": "squareIconGlobalIdentityIcon"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default context bar background color.",
+      "name": "colorBackgroundContextBar"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Brand color in context bar for default theme",
+      "name": "colorBackgroundContextBarBrandAccent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Hovered context bar item background color.",
+      "name": "colorBackgroundContextBarItemHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Active context bar item background color.",
+      "name": "colorBackgroundContextBarItemActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Context TAB bar item background color.",
+      "name": "colorBackgroundContextTabBarItem"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Hovered context bar item background color.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarInverseItemHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.4)",
+      "comment": "Active context bar item background color.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarInverseItemActive"
+    },
+    {
+      "type": "gradient",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 1)",
+      "comment": "A Gradient used for putting shadows on the bottom when box-shadow is not possible.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarShadow"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Highlight for context bar action (hover and focus states).",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarActionHighlight"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Default color for animated icon waffle for app switcher.",
+      "name": "colorBackgroundIconWaffle"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Divider in context bar",
+      "deprecated": true,
+      "name": "colorBorderContextBarDivider"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.2)",
+      "comment": "Border color in context bar",
+      "name": "colorBorderContextBarItem"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Border color in context bar on dark background",
+      "deprecated": true,
+      "name": "colorBorderContextBarInverseItem"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefault"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(223, 228, 238)",
+      "comment": "Alternate border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultAlt"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(11, 35, 153)",
+      "comment": "Hovered border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(223, 228, 238)",
+      "comment": "Active border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultActive"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Context bar height.",
+      "name": "heightContextBar"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Context bar text color",
+      "name": "colorTextContextBar"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Context bar text color on a dark background",
+      "deprecated": true,
+      "name": "colorTextContextBarInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.4)",
+      "comment": "Context bar action trigger text color",
+      "deprecated": true,
+      "name": "colorTextContextBarActionTrigger"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "deprecated": true,
+      "comment": "Use COLOR_BACKGROUND_PAGE_HEADER instead.",
+      "name": "colorBackgroundAnchor"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Page Header background color",
+      "name": "colorBackgroundPageHeader"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "The background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathComplete"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(4, 132, 75, 0.95)",
+      "comment": "The hover background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathCompleteHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "The background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "The hover background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrentHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "The background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncomplete"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "The hover background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncompleteHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "The background color for the final stage of a Salespath when it has been lost.",
+      "name": "colorBackgroundPathLost"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 251)",
+      "comment": "The background color for Salespath guidance coaching section.",
+      "name": "colorBackgroundGuidance"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Used as a separator between dark colors like the stages of salespath.",
+      "name": "colorBorderPathDivider"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "24",
+      "comment": "Line heights for salespath",
+      "name": "lineHeightSalespath"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32",
+      "comment": "Height of Salespath",
+      "name": "heightSalesPath"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The default background color for Progress Indicator",
+      "name": "progressColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "The shaded background color for Progress Indicator",
+      "name": "progressColorBackgroundShade"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "The background color for the Progress Bar",
+      "name": "progressBarColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(94, 180, 255)",
+      "comment": "The background color of the fill for the Progess Bar",
+      "name": "progressBarColorBackgroundFill"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Shaded borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderShade"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Hovered border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Active border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderActive"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "2",
+      "comment": "Height of the Progress Bar",
+      "name": "progressBarHeight"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(51, 62, 79)",
+      "comment": "Split View background color.",
+      "name": "splitViewColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(65, 76, 94)",
+      "comment": "Split View background color on row hover.",
+      "name": "splitViewColorBackgroundRowHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(44, 54, 70)",
+      "comment": "Row dividers in Split View list",
+      "name": "splitViewColorBorder"
+    }
+  ]
+}

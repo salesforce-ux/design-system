@@ -6,8 +6,8 @@ machine:
 dependencies:
   pre:
     - git clone -b master git@github.com:loanlifecycle/deploy_toolkit.git $DEPLOY_TOOLKIT
-    # pycurl and paho-mqtt are used by build_notifications.py
-    - pip install pycurl paho-mqtt mock
+    # These are used by build_notifications.py
+    - pip install paho-mqtt mock nose2 cov-core requests pycurl
   override:
     - npm install
 

@@ -36,6 +36,13 @@ $_icon-trend-one: 1.125px;
       animation: slds-icon-trend-circle ($duration-slowly * 2) ease-in-out both;
     }
   }
+
+  &.slds-is-paused {
+    .slds-icon-trend__arrow,
+    .slds-icon-trend__circle {
+      animation-play-state: paused;
+    }
+  }
 }
 
 .slds-icon-trend[data-slds-trend="down"] {

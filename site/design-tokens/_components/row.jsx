@@ -50,8 +50,8 @@ class Row extends React.Component {
       : <CellExample />;
     const isSizeToken = token.name.toString().match(/^SIZE_/);
     const className = classNames({
-      'token': token,
-      'token--empty': _.isUndefined(token),
+      'site-token': token,
+      'site-token--empty': _.isUndefined(token),
       'site-token__generic-size': isSizeToken
     });
     return <CellValue

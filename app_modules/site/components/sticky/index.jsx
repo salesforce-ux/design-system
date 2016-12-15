@@ -33,7 +33,7 @@ export default React.createClass({
   render() {
     const content = React.Children.only(this.props.children);
     const contentClassName = classNames(content.props.className, {
-      'sticky': true,
+      'site-sticky': true,
     });
     return (
       <div className={this.props.className} data-slds-sticky>

@@ -52,8 +52,8 @@ let Default = props =>
   <Fieldset>
     <Legend>Radio Group Label</Legend>
     <FormElementControl>
-      <Radio checked>Radio Label One</Radio>
-      <Radio>Radio Label Two</Radio>
+      <Radio checked label="Radio Label One" />
+      <Radio label="Radio Label Two" />
     </FormElementControl>
   </Fieldset>;
 
@@ -61,8 +61,8 @@ let Required = props =>
   <Fieldset>
     <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
     <FormElementControl>
-      <Radio checked>Radio Label One</Radio>
-      <Radio>Radio Label Two</Radio>
+      <Radio checked label="Radio Label One" />
+      <Radio label="Radio Label Two" />
     </FormElementControl>
   </Fieldset>;
 
@@ -70,8 +70,8 @@ let ErrorState = props =>
   <Fieldset className="slds-has-error">
     <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
     <FormElementControl>
-      <Radio errorId="error_01" checked>Radio Label One</Radio>
-      <Radio errorId="error_01">Radio Label Two</Radio>
+      <Radio errorId="error_01" checked label="Radio Label One" />
+      <Radio errorId="error_01" label="Radio Label Two" />
     </FormElementControl>
     <div id="error_01" className="slds-form-element__help">This field is required</div>
   </Fieldset>;
@@ -80,8 +80,8 @@ let Disabled = props =>
   <Fieldset>
     <Legend>Radio Group Label</Legend>
     <FormElementControl>
-      <Radio disabled>Radio Label One</Radio>
-      <Radio disabled>Radio Label Two</Radio>
+      <Radio disabled label="Radio Label One" />
+      <Radio disable label="Radio Label Two" />
     </FormElementControl>
   </Fieldset>;
 

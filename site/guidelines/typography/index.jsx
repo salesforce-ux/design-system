@@ -31,17 +31,17 @@ export default (
       <p>We use different type sizes and weights to convey a visual</p>
       <div className="slds-p-vertical--x-large slds-m-bottom--medium">
           <h3 className="slds-text-heading--large slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Large</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Large</p>
           <h3 className="slds-text-heading--medium slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Medium</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Medium</p>
           <h3 className="slds-text-heading--small slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Small</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Small</p>
           <h3 className="slds-text-heading--label slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Label</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Label</p>
           <h3 className="text-body--default slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Body Default</p>
+          <p className="site-text-heading--label slds-m-top--none">Body Default</p>
           <h3 className="slds-text-body--small slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Body Small</p>
+          <p className="site-text-heading--label slds-m-top--none">Body Small</p>
       </div>
       <p>For more information about these styles, check out our <a href="/components/utilities/text/">CSS Text Utilities.</a></p>
 

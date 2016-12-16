@@ -29,8 +29,8 @@ export default class CategorySection extends React.Component {
     if (!tokens.length) return null;
     return (
       <section
-        className={`site-tokens ${category.key}`}
-        data-slds-tokens-section={category.key}>
+        className={`site-tokens site-${category.key}`}
+        data-slds-tokens-section={`site-${category.key}`}>
         <Heading
           textLabel={category.label}
           type="h2"

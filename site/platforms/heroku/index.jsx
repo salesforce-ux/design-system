@@ -221,7 +221,7 @@ app.listen(port);
         </div>
         <p><strong>Sanity Checkpoint:</strong> Run <code>node server.js</code> in your terminal and your project will be served on <a href="http://localhost:8080/" target="_blank">http:&#47;&#47;localhost:8080&#47;</a>. You may also run <code>npm run start</code> as it will yield the same results.</p>
         <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
-          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
+          <img className="slds-image site-tutorial-image" src="/assets/images/tutorial/heroku/image1.png" alt="Sanity checkpoint of static text." />
         </figure>
 
         <Heading type="h2" id="step-5-download-slds-assets" className="site-text-heading--large">Step 5: Download the {g.displayName}</Heading>
@@ -327,7 +327,7 @@ demo_slds_heroku/
           `}</CodeBlock>
           </div>
         <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
-          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
+          <img className="slds-image site-tutorial-image" src="/assets/images/tutorial/heroku/image2.png" alt="Static page with grid system" />
         </figure>
 
         <h3 className="site-text-heading--medium">
@@ -355,7 +355,7 @@ demo_slds_heroku/
         <h3 className="site-text-heading--medium">G. Things are looking kind of squashed!</h3>
         <p>If you feel kind of cramped, check out the <a href="/components/utilities/spacing" target="_blank">Utilities</a> page for spacing classes.</p>
         <figure className="slds-large-size--2-of-2 slds-order--1 slds-large-order--2">
-          <img className="slds-image tutorial-image" src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
+          <img className="slds-image site-tutorial-image" src="/assets/images/tutorial/heroku/image8.png" alt="Static page header, image, tabs, activity timeline, and card components." />
         </figure>
 
         <Heading type="h2" id="step-7-deploy-to-heroku" className="site-text-heading--large">Step 7: Deploy to Heroku</Heading>

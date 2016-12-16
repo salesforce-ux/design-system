@@ -77,7 +77,7 @@ export default React.createClass({
           <li className="list__name site-states-parent" key={flavor.uid}>
             <a href={`#flavor-${flavor.id}`}>
               {flavor.title}
-              { states ? <SvgIcon className="slds-icon slds-icon-text-default icon__svg slds-align-middle slds-col--bump-left" sprite="utility" symbol="down" /> : null }
+              { states ? <SvgIcon className="slds-icon slds-icon-text-default slds-icon__svg slds-align-middle slds-col--bump-left" sprite="utility" symbol="down" /> : null }
             </a>
             {states}
           </li>

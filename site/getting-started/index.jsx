@@ -14,8 +14,8 @@ import PageBody from 'app_modules/site/components/page/body';
 import globals from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="Getting Started">
-    <div className="site slds-container--large site-guidelines">
+  <PageBody anchorTitle="Getting Started" className="site-guidelines">
+    <div className="slds-container--large">
       <p className="site-text-introduction">
         The Salesforce Lightning Design System includes the resources to
         create user interfaces consistent with the Salesforce Lightning
@@ -38,10 +38,7 @@ export default (
         <li>icons, font, and design&nbsp;guidelines.</li>
       </ul>
 
-
-
       <div className="slds-grid slds-grid--pull-padded slds-wrap">
-
         <div className="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2 slds-small-order--1 slds-large-order--2">
           <h2 className="site-text-heading--large slds-p-top--xx-large">
             Designers
@@ -127,12 +124,8 @@ export default (
             Get started with the Lightning Design System
             on&nbsp;<a href="/platforms/heroku">Heroku</a>.
           </p>
-
         </div>
       </div>
-
     </div>
-
-
   </PageBody>
 );

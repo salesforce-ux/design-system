@@ -14,41 +14,43 @@ import PageBody from 'app_modules/site/components/page/body';
 import CTALink from 'app_modules/site/components/cta-link';
 
 export default (
-  <PageBody anchorTitle="Voice & Tone" contentClassName="site slds-container--large">
-    <p className="site-text-introduction">
-      Your custom applications shouldn’t just look and act like the Salesforce
-      app – they should sound like it too.
-    </p>
+  <PageBody anchorTitle="Voice & Tone">
+    <div className="slds-container--large">
+      <p className="site-text-introduction">
+        Your custom applications shouldn’t just look and act like the Salesforce
+        app – they should sound like it too.
+      </p>
 
-    <p>
-      At Salesforce, we have guidelines we follow when we create written
-      content. We apply the guidelines to text that appears in the app,
-      including on-screen instructions and error messages. We use the same
-      guidelines for other types of information, such as online help,
-      developer doc, Walkthroughs, and Trailhead modules.
-    </p>
+      <p>
+        At Salesforce, we have guidelines we follow when we create written
+        content. We apply the guidelines to text that appears in the app,
+        including on-screen instructions and error messages. We use the same
+        guidelines for other types of information, such as online help,
+        developer doc, Walkthroughs, and Trailhead modules.
+      </p>
 
-    <p>
-      Use the Voice & Tone Guidelines to get a quick introduction to our unique voice and tone, and to
-      understand how to apply it to your work. The doc provides some quick
-      writing guidelines, and includes great examples of the voice and tone
-      from the app and the doc.
-    </p>
+      <p>
+        Use the Voice & Tone Guidelines to get a quick introduction to our unique voice and tone, and to
+        understand how to apply it to your work. The doc provides some quick
+        writing guidelines, and includes great examples of the voice and tone
+        from the app and the doc.
+      </p>
 
-    <form className="slds-p-bottom--medium" action="/assets/downloads/salesforce-voice-and-tone.pdf">
-      <CTALink eventName="Download" eventType="voice-and-tone">
-        <button className="slds-button slds-button--neutral">
-          Download Voice and Tone Guidelines
-        </button>
-      </CTALink>
-    </form>
+      <form className="slds-p-bottom--medium" action="/assets/downloads/salesforce-voice-and-tone.pdf">
+        <CTALink eventName="Download" eventType="voice-and-tone">
+          <button className="slds-button slds-button--neutral">
+            Download Voice and Tone Guidelines
+          </button>
+        </CTALink>
+      </form>
 
-    <p>
-      For more in-depth information about Salesforce style, including details
-      around usage, terminology, and punctuation, use
-      the <a href="https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/">Salesforce Style Guide for Documentation and User Interface Text</a>.
-      This is especially helpful if you’re writing customized help or training
-      content.
-    </p>
+      <p>
+        For more in-depth information about Salesforce style, including details
+        around usage, terminology, and punctuation, use
+        the <a href="https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/">Salesforce Style Guide for Documentation and User Interface Text</a>.
+        This is especially helpful if you’re writing customized help or training
+        content.
+      </p>
+    </div>
   </PageBody>
 );

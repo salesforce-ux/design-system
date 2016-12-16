@@ -57,18 +57,20 @@ const Tokens = React.createClass({
     return (
       <div>
         {this.renderHeader()}
-        <div className="slds-p-around--xx-large slds-grid slds-wrap site-content">
-          <StickyNav fixedElementsAbove=".site-tools">
-            <div className="site-menu--jump-links">
-              <h3 className="site-text-heading--label">Categories</h3>
-              <ul className="slds-list--vertical slds-has-block-links">
-                {this.renderCategories()}
-              </ul>
+        <div className="site-content site">
+          <div className="slds-grid slds-wrap">
+            <StickyNav fixedElementsAbove=".site-tools">
+              <div className="site-menu--jump-links">
+                <h3 className="site-text-heading--label">Categories</h3>
+                <ul className="slds-list--vertical slds-has-block-links">
+                  {this.renderCategories()}
+                </ul>
+              </div>
+            </StickyNav>
+            <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
+              {this.renderInfo()}
+              {this.renderTokens()}
             </div>
-          </StickyNav>
-          <div className="site slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1 site-main-content">
-            {this.renderInfo()}
-            {this.renderTokens()}
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@ const Tokens = React.createClass({
           </div>
         </div>;
     return (
-      <Sticky>
+      <Sticky className="site">
         <div className="site-tools slds-form--inline">
           <div className="slds-form-element slds-p-vertical--medium">
             <label className="slds-assistive-text" htmlFor="find-token-input">Find Token</label>

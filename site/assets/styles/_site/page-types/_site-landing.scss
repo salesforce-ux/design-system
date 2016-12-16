@@ -7,88 +7,89 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.site {
 
-
-// Page
-.site-landing-page {
-  background: url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
-                size: auto rem(560px);
-              }
-  @include mq-medium-max {
-    background-size: auto rem(360px);
-  }
-  padding: {
-    left: 0;
-    right: 0;
-  }
-}
-
-
-
-
-// Hero
-.site-masthead--landing {
-  @include inverse-links;
-  position: relative;
-  overflow: hidden;
-  background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top {
-                size: auto rem(560px);
-                color: $color-brand-dark;
-              };
-
-  @include mq-medium-max {
-    background-size: auto rem(360px);
-  }
-
-
-  @include mq-medium-min {
+  // Page
+  &.site-landing-page {
+    background: url(#{$static-image-path}/landing/bg-landing-footer.svg) no-repeat -1px bottom {
+                  size: auto rem(560px);
+                }
+    @include mq-medium-max {
+      background-size: auto rem(360px);
+    }
     padding: {
-      top: $spacing-x-large;
-      bottom: $spacing-xx-large;
+      left: 0;
+      right: 0;
     }
   }
 
-  .slds-button {
-    border: 0;
-  }
 
-  .site-text-heading--large,
-  .site-text-heading--medium {
-    color: inherit;
-  }
 
-  .site-text-heading--large {
-    font: {
-      size: rem(44px);
-      weight: $font-weight-light;
-    }
 
-    @include mq-small-min {
-      font-size: rem(56px);
-    }
+  // Hero
+  &.site-masthead--landing {
+    @include inverse-links;
+    position: relative;
+    overflow: hidden;
+    background: url(#{$static-image-path}/landing/bg-landing-hero.svg) no-repeat -1px top {
+                  size: auto rem(560px);
+                  color: $color-brand-dark;
+                };
 
     @include mq-medium-max {
-      text-align: center;
+      background-size: auto rem(360px);
     }
+
 
     @include mq-medium-min {
-      font-size: $site-font-size-xxx-large;
+      padding: {
+        top: $spacing-x-large;
+        bottom: $spacing-xx-large;
+      }
     }
 
-    @include mq-large-min {
-      max-width: rem(552px);
-      font-size: $site-font-size-xxxx-large;
+    .slds-button {
+      border: 0;
+    }
+
+    .site-text-heading--large,
+    .site-text-heading--medium {
+      color: inherit;
+    }
+
+    .site-text-heading--large {
+      font: {
+        size: rem(44px);
+        weight: $font-weight-light;
+      }
+
+      @include mq-small-min {
+        font-size: rem(56px);
+      }
+
+      @include mq-medium-max {
+        text-align: center;
+      }
+
+      @include mq-medium-min {
+        font-size: $site-font-size-xxx-large;
+      }
+
+      @include mq-large-min {
+        max-width: rem(552px);
+        font-size: $site-font-size-xxxx-large;
+      }
+    }
+
+    .site-text-heading--medium {
+      margin: {
+        top: 0;
+        bottom: $spacing-xx-large;
+      }
     }
   }
 
-  .site-text-heading--medium {
-    margin: {
-      top: 0;
-      bottom: $spacing-xx-large;
-    }
-  }
-
-  &-tagline {
+  .site-masthead--landing-tagline {
     font-size: $font-size-xx-large;
 
     @include mq-medium-max {
@@ -96,7 +97,7 @@
     }
   }
 
-  &-logo {
+  .site-masthead--landing-logo {
     width: 5rem;
     margin: $spacing-large auto;
 
@@ -105,196 +106,232 @@
     }
   }
 
-  &-cta {
+  .site-masthead--landing-cta {
+
     @include mq-medium-max {
       justify-content: center;
     }
   }
-}
 
-.site-releasenumber {
-  margin: $spacing-medium auto;
+  .site-releasenumber {
+    margin: $spacing-medium auto;
 
-  @include mq-small-min {
-    margin: 0 0 0 $spacing-medium;
-  }
-}
-
-.site-tagline {
-  border-top: 1px solid $color-border;
-  border-bottom: 1px solid $color-border;
-  font-size: 2.2rem;
-  font-weight: $font-weight-light;
-  color: $color-text-placeholder;
-}
-
-// Grid
-.site-grid--landing {
-  margin-top: (($spacing-xx-large * 2) * -1);
-
-  .site-text-heading--large {
-    font-size: $site-font-size-xx-large;
-  }
-
-  .site-grid-card {
-    @include mq-large-min {
-      min-height: rem(460px);
+    @include mq-small-min {
+      margin: 0 0 0 $spacing-medium;
     }
   }
-}
 
-.site-grid--landing-primary {
-  li > p {
-    text-align: center;
-    @include mq-medium-max {
-      margin-bottom: $spacing-x-large;
-    }
+  .site-tagline {
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    font-size: 2.2rem;
+    font-weight: $font-weight-light;
+    color: $color-text-placeholder;
   }
-  @include mq-medium-min {
-    li:nth-child(odd) {
-      > dl {
-        padding-right: $spacing-xx-large;
-      }
-      > p {
-        text-align: right;
-      }
+
+  // Grid
+  .site-grid--landing {
+    margin-top: (($spacing-xx-large * 2) * -1);
+
+    .site-text-heading--large {
+      font-size: $site-font-size-xx-large;
     }
-    li:nth-child(even) {
-      > dl {
-        padding-left: $spacing-xx-large;
-      }
-      > p {
-        text-align: left;
+
+    // scss-lint:disable SelectorDepth
+    .site-grid-card {
+
+      @include mq-large-min {
+        min-height: rem(460px);
       }
     }
   }
-}
 
-// Resource Footer
-.site-resources--landing {
-  background-repeat: no-repeat;
-  @include mq-medium-min {
-    margin-bottom: ($spacing-xx-large * -1);
-    padding: {
-      top: ($spacing-xx-large);
-      bottom: ($spacing-xx-large);
+  .site-grid--landing-primary {
+
+    // scss-lint:disable SelectorDepth
+    li > p {
+      text-align: center;
+
+      @include mq-medium-max {
+        margin-bottom: $spacing-x-large;
+      }
     }
-  }
-
-  // Deal with grid card
-  .site-grid-card {
-    padding: $spacing-x-large;
-    min-height: rem(260px);
 
     @include mq-medium-min {
-      text-align: left;
+
+      // scss-lint:disable NestingDepth
+      li:nth-child(odd) {
+
+        // scss-lint:disable SelectorDepth NestingDepth
+        > dl {
+          padding-right: $spacing-xx-large;
+        }
+
+        // scss-lint:disable SelectorDepth
+        > p {
+          text-align: right;
+        }
+      }
+
+      // scss-lint:disable NestingDepth
+      li:nth-child(even) {
+
+        > dl {
+          padding-left: $spacing-xx-large;
+        }
+
+        > p {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  // Resource Footer
+  .site-resources--landing {
+    background-repeat: no-repeat;
+
+    @include mq-medium-min {
+      margin-bottom: ($spacing-xx-large * -1);
+      padding: {
+        top: ($spacing-xx-large);
+        bottom: ($spacing-xx-large);
+      }
     }
 
-    .site-text-heading--label {
-      margin: 0;
+    // Deal with grid card
+    .site-grid-card {
+      padding: $spacing-x-large;
+      min-height: rem(260px);
+
+      @include mq-medium-min {
+        text-align: left;
+      }
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      .site-text-heading--label {
+        margin: 0;
+      }
+
+      .site-hr {
+        margin: $spacing-small 0;
+        width: 100%;
+      }
+    }
+  }
+
+  // Colorful horizontal rules
+  .site-hr {
+    width: 50%;
+    height: 1px;
+    border: 0;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    border-radius: $border-radius-pill;
+
+    &--green {
+      @include gradient-horizontal(#9ce8bc, #48916c)
     }
 
-    .site-hr {
-      margin: $spacing-small 0;
-      width: 100%;
+    &--orange {
+      @include gradient-horizontal(#ffca73, #d67b03)
     }
+
+    &--purple {
+      @include gradient-horizontal(#ccd0ff, #696cb4)
+    }
+
+    &--blue {
+      @include gradient-horizontal(#73beff, #2196ed)
+    }
+
+    &--turquoise {
+      @include gradient-horizontal(#2ecbbe, #2ea193)
+    }
+
+    &--pink {
+      @include gradient-horizontal(#fa9fbb, #bf4c76)
+    }
+
+    &--dark-blue {
+      @include gradient-horizontal(#284f8a, #16325c)
+    }
+  }
+
+  // Keep "Design System" on same line
+  .text-no-wrap {
+    white-space: nowrap;
+    display: block;
   }
 }
 
-
-
-
-// Colorful horizontal rules
-.site-hr {
-  width: 50%;
-  height: 1px;
-  border: 0;
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  border-radius: $border-radius-pill;
-
-  &--green {
-    @include gradient-horizontal(#9ce8bc, #48916c)
-  }
-  &--orange {
-    @include gradient-horizontal(#ffca73, #d67b03)
-  }
-  &--purple {
-    @include gradient-horizontal(#ccd0ff, #696cb4)
-  }
-  &--blue {
-    @include gradient-horizontal(#73beff, #2196ed)
-  }
-  &--turquoise {
-    @include gradient-horizontal(#2ecbbe, #2ea193)
-  }
-  &--pink {
-    @include gradient-horizontal(#fa9fbb, #bf4c76)
-  }
-  &--dark-blue {
-    @include gradient-horizontal(#284f8a, #16325c)
-  }
-}
-
-// Keep "Design System" on same line
-.text-no-wrap {
-  white-space: nowrap;
-  display: block;
-}
-
-
-// Floating Shapes
+  // Floating Shapes
 @keyframes floater {
+
   0% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   25% {
     transform: translate3d(0, -10px, 0) rotate(5deg);
   }
+
   50% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   75% {
     transform: translate3d(0, 10px, 0) rotate(-5deg);
   }
+
   100% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
 }
 
 @keyframes floater-1 {
+
   0% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   25% {
     transform: translate3d(0, 10px, 0) rotate(5deg);
   }
+
   50% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   75% {
     transform: translate3d(0, -10px, 0) rotate(-5deg);
   }
+
   100% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
 }
 
 @keyframes floater-2 {
+
   0% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   25% {
     transform: translate3d(0, 15px, 0) rotate(10deg);
   }
+
   50% {
     transform: translate3d(0, 0, 0) rotate(0);
   }
+
   75% {
     transform: translate3d(0, -15px, 0) rotate(-5deg);
   }
+
   100% {
     transform: translate3d(0, 0, 0) rotate(0);
   }

@@ -9,49 +9,39 @@
 
 .site {
 
-  &-example-color-text {
+  .site-example-color-text {
     padding: $spacing-xx-small;
     font-size: $font-size-x-large;
     line-height: $line-height-reset;
-
-    figure {
-      position: relative;
-      cursor: help;
-
-      + figure {
-        font-size: $font-size-medium;
-        line-height: $line-height-text;
-      }
-    }
 
     td {
       padding: $spacing-x-small $spacing-medium;
     }
   }
 
-  &-example-color-background {
+  .site-example-color-background {
     background-color: $color-background;
   }
 
-  &-example-color-background-alt {
+  .site-example-color-background-alt {
     background-color: $color-background-alt;
   }
 
-  &-example-color-background-inverse {
+  .site-example-color-background-inverse {
     background-color: $color-background-inverse;
   }
 
-  &-example-color-text-inverse {
+  .site-example-color-text-inverse {
     background-color: $color-background-inverse;
   }
 
-  &-example-opacity {
+  .site-example-opacity {
     display: inline-block;
     background-color: $color-brand-darker;
     padding: $spacing-x-small;
   }
 
-  &-indicator {
+  .site-indicator {
 
     &-pass,
     &-fail {
@@ -82,7 +72,7 @@
     }
   }
 
-  &-box {
+  .site-box {
 
     &-color-border,
     &-spacing,
@@ -116,7 +106,7 @@
     }
   }
 
-  &-atmosphere {
+  .site-atmosphere {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -124,7 +114,7 @@
     background-color: #fff;
   }
 
-  &-token {
+  .site-token {
 
     &__generic-size {
       position: relative;
@@ -166,7 +156,8 @@
     }
   }
 
-  &-spec-legend {
+  .site-spec-legend {
+
     dt {
       width: $spacing-medium;
       text-align: center;
@@ -187,19 +178,16 @@
 
 @include mq-medium-min {
 
-  .site {
+  .site-example {
 
-    &-example {
-
-      &-atmosphere,
-      &-color-text,
-      &-color-border,
-      &-font-size,
-      &-spacing,
-      &-radius,
-      &-shadow {
-        vertical-align: middle;
-      }
+    &-atmosphere,
+    &-color-text,
+    &-color-border,
+    &-font-size,
+    &-spacing,
+    &-radius,
+    &-shadow {
+      vertical-align: middle;
     }
   }
 }

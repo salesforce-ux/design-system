@@ -8,6 +8,7 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 .site-body {
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -15,173 +16,172 @@
   font-size: $site-font-size-medium;
   line-height: $site-line-height-text;
   color: $site-color-text-default;
-}
 
-[class*="site-text-heading"],
-p,
-blockquote,
-figure,
-ul,
-ol,
-dl,
-table {
-  margin-bottom: $spacing-medium;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-ul,
-ol {
+  [class*="site-text-heading"],
+  p,
+  blockquote,
+  figure,
   ul,
-  ol {
-    margin-bottom: 0; // Is this needed? Rule above should cover this, I think
-  }
-}
-
-blockquote {
-  margin: {
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-}
-
-cite {
-  font-style: normal;
-}
-
-[class*="site-text-heading"] {
-  margin-top: $spacing-xx-large;
-  font-weight: $font-weight-regular;
-  line-height: $line-height-heading;
-  color: $site-color-text-strong;
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-.site-text-heading--large {
-  font-size: $site-font-size-x-large;
-}
-
-.site-text-heading--medium {
-  font-size: $site-font-size-large;
-}
-
-[class*="text-heading--label"],
-.slds-max-medium-table--stacked-horizontal td:before {
-  font-size: $site-font-size-small;
-  text-transform: uppercase;
-}
-
-.site-text-heading--label-weak-large {
-  margin-bottom: 0;
-  font-size: $site-font-size-medium;
-  letter-spacing: 0.0625rem;
-
-  .site-grid-card & {
-    padding-top: $spacing-medium;
-  }
-}
-
-.site-text-heading--label {
-
-  &,
-  thead & th {
-    font-weight: $font-weight-bold;
-  }
-}
-
-.site-text-heading--callout {
-  color: $site-color-text-heading-callout;
-}
-
-.site-text-introduction {
-  margin-bottom: $spacing-x-large + $spacing-medium;
-  font: {
-    size: $font-size-large;
-    weight: $font-weight-light;
-  }
-
-  & + & {
-    margin-top: -$spacing-large;
-  }
-}
-
-.site-main-content,
-.site-guidelines,
-.site-release-notes {
-
-  ul:not(.slds-grid),
-  ol:not(.slds-grid) {
-    @include mq-small-min {
-      margin-left: $spacing-x-large;
-    }
-
-    @include mq-medium-min {
-      margin-left: $spacing-xx-large;
-    }
-  }
-
-  ul:not(.slds-grid) {
-    @include list-has-bullets;
-  }
-
-  ol:not(.slds-grid) {
-    @include list-has-numbers;
-  }
-}
-
-.site-main-content {
-
-  ol {
-    @include list-has-numbers;
-
-    @include mq-small-min {
-      margin-left: $spacing-x-large;
-    }
-
-    @include mq-medium-min {
-      margin-left: $spacing-xx-large;
-    }
-  }
-
-  .site-text-introduction:only-child {
-    margin-bottom: 0;
-  }
-
-  .slds-tabs--default__nav:not(.slds-grid) {
-    margin-left: 0;
-    list-style: none;
-  }
-}
-
-.slds-no-row-hover:not(.slds-table--bordered) tr {
-
-  > th,
-  > td {
-
-    &:first-child {
-      padding-left: 0;
-    }
+  ol,
+  dl,
+  table {
+    margin-bottom: $spacing-medium;
 
     &:last-child {
-      padding-right: 0;
+      margin-bottom: 0;
     }
   }
-}
 
-.slds-tabs--default__nav {
-  margin-bottom: 0;
-}
+  ul,
+  ol {
+    ul,
+    ol {
+      margin-bottom: 0; // Is this needed? Rule above should cover this, I think
+    }
+  }
 
-.site-hide {
-  display: none;
-}
+  blockquote {
+    margin: {
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
 
-.site-nowrap {
-  white-space: nowrap;
+  cite {
+    font-style: normal;
+  }
+
+  [class*="site-text-heading"] {
+    margin-top: $spacing-xx-large;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-heading;
+    color: $site-color-text-strong;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .site-text-heading--large {
+    font-size: $site-font-size-x-large;
+  }
+
+  .site-text-heading--medium {
+    font-size: $site-font-size-large;
+  }
+
+  [class*="text-heading--label"],
+  .slds-max-medium-table--stacked-horizontal td:before {
+    font-size: $site-font-size-small;
+    text-transform: uppercase;
+  }
+
+  .site-text-heading--label-weak-large {
+    margin-bottom: 0;
+    font-size: $site-font-size-medium;
+    letter-spacing: 0.0625rem;
+
+    .site-grid-card & {
+      padding-top: $spacing-medium;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
+  .site-text-heading--label,
+  thead .site-text-heading--label th {
+    font-weight: $font-weight-bold;
+  }
+
+  .site-text-heading--callout {
+    color: $site-color-text-heading-callout;
+  }
+
+  .site-text-introduction {
+    margin-bottom: $spacing-x-large + $spacing-medium;
+    font: {
+      size: $font-size-large;
+      weight: $font-weight-light;
+    }
+
+    & + & {
+      margin-top: -$spacing-large;
+    }
+  }
+
+  .site-main-content,
+  .site-guidelines,
+  .site-release-notes {
+
+    ul:not(.slds-grid),
+    ol:not(.slds-grid) {
+      @include mq-small-min {
+        margin-left: $spacing-x-large;
+      }
+
+      @include mq-medium-min {
+        margin-left: $spacing-xx-large;
+      }
+    }
+
+    ul:not(.slds-grid) {
+      @include list-has-bullets;
+    }
+
+    ol:not(.slds-grid) {
+      @include list-has-numbers;
+    }
+  }
+
+  .site-main-content {
+
+    ol {
+      @include list-has-numbers;
+
+      @include mq-small-min {
+        margin-left: $spacing-x-large;
+      }
+
+      @include mq-medium-min {
+        margin-left: $spacing-xx-large;
+      }
+    }
+
+    .site-text-introduction:only-child {
+      margin-bottom: 0;
+    }
+
+    .slds-tabs--default__nav:not(.slds-grid) {
+      margin-left: 0;
+      list-style: none;
+    }
+  }
+
+  .slds-no-row-hover:not(.slds-table--bordered) tr {
+    // scss-lint:disable SelectorDepth
+
+    > th,
+    > td {
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .slds-tabs--default__nav {
+    margin-bottom: 0;
+  }
+
+  .site-hide {
+    display: none;
+  }
+
+  .site-nowrap {
+    white-space: nowrap;
+  }
 }

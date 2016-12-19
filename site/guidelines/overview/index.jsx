@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 
 export default (
-  <PageBody anchorTitle="Guidelines" contentClassName="site site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Guidelines" contentClassName="site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">The Lightning Design System reflects the patterns and components that underpin the Salesforce product. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the Salesforce ecosystem.</p>
       <h2 className="site-text-heading--large">Design Principles</h2>

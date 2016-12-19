@@ -34,14 +34,16 @@ export default React.createClass({
           title={component.title}
           actions={this.renderComponentOverviewLink()}
           path={`/${component.sitePath}`} />
-        <div className="site-content slds-grid slds-wrap slds-large-nowrap">
-          {this.renderFlavorsNav()}
-          <div className="site site-main-content slds-col slds-col--rule-right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
-            {this.renderIntro()}
-            {this.renderFlavors()}
-            <h3 id="overview" className="site-text-heading--large slds-p-top--x-large">Component Overview</h3>
-            {this.renderDocs()}
-            {this.renderInfoTable()}
+        <div className="site site-content">
+          <div className="slds-grid slds-wrap slds-large-nowrap">
+            {this.renderFlavorsNav()}
+            <div className="site site-main-content slds-col slds-col--rule-right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
+              {this.renderIntro()}
+              {this.renderFlavors()}
+              <h3 id="overview" className="site-text-heading--large slds-p-top--x-large">Component Overview</h3>
+              {this.renderDocs()}
+              {this.renderInfoTable()}
+            </div>
           </div>
         </div>
       </div>

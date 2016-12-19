@@ -45,9 +45,9 @@ let hero = (
 
 export default (
   <PageBody anchor={hero} contentClassName="site-landing-page">
-    <div className="site site-container--buffer slds-container--x-large">
+    <div className="site-container--buffer slds-container--x-large">
       {/* Grid */}
-      <section className="site-grid--landing slds-p-vertical--xx-large site-text-longform">
+      <section className="site-grid--landing slds-p-vertical--xx-large">
         <ul className="slds-grid slds-wrap slds-grid--pull-padded-large site-grid--landing-primary">
           <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
             <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">

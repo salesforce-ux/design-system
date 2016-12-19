@@ -7,146 +7,154 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-jump-anchor {
-  position: absolute;
-  top: ($spacing-x-large * -1);
+.site {
 
-  &__container {
-    position: relative;
+  .site-jump-anchor {
+    position: absolute;
+    top: ($spacing-x-large * -1);
+
+    &__container {
+      position: relative;
+    }
   }
-}
 
-.site-sticky {
-  position: static;
-
-  &--fixed {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: $z-index-dropdown;
-  }
-}
-
-.site-sticky__placeholder {
-  display: none;
-
-  &--on {
-    display: block;
-  }
-}
-
-@include mq-large-max {
-
-  .sticky--fixed {
+  .site-sticky {
     position: static;
+
+    &--fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: $z-index-dropdown;
+    }
   }
 
-  .sticky__placeholder--on {
+  .site-sticky__placeholder {
     display: none;
-  }
-}
 
-// Defaults for site menu jump links list
-.site-menu--jump-links {
-
-  .slds-icon__svg {
-    display: none;
-  }
-
-  // Deal with open states
-  .slds-is-open {
-
-    .site-states {
+    &--on {
       display: block;
     }
-
-    .slds-icon__svg {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
   }
-}
 
-// Nested list for variant states
-.site-states a {
-  padding: {
-    top: $spacing-x-small;
-    bottom: $spacing-x-small;
-    left: $spacing-x-large;
-  }
-}
+  @include mq-large-max {
 
-// Large Overrides
-@include mq-large-min {
-
-  .site-main-content {
-    margin: {
-      top: -$spacing-xx-large;
-      bottom: -$spacing-xx-large;
+    .sticky--fixed {
+      position: static;
     }
-    padding: {
-      top: $spacing-xx-large;
-      right: $spacing-xx-large;
-      bottom: $spacing-xx-large * 2;
+
+    .sticky__placeholder--on {
+      display: none;
     }
   }
 
-  // Component nav container
-  .site-menu--jump-links_container {
-    width: 16.667%;
-  }
-
-  // List of jump menu items
+  // Defaults for site menu jump links list
   .site-menu--jump-links {
-    @include scrollbar($track: $color-background-alt);
-    overflow-x: hidden;
-    z-index: $z-index-default;
-
-    // Label at the top of jump menu items
-    .site-text-heading--label {
-      padding-left: $spacing-large;
-    }
-
-    // Links
-    a {
-      display: flex;
-      padding: $spacing-x-small $spacing-x-small $spacing-x-small $spacing-large;
-      line-height: 1.28571428571429;
-      color: $color-text-default;
-
-      &:hover {
-        background-color: rgba($color-background, 0.5);
-      }
-    }
-
-    // When component variant is selected
-    .slds-is-selected {
-      background-color: $color-background;
-
-      a:hover {
-        background-color: darken($color-background, 2.5);
-      }
-    }
 
     .slds-icon__svg {
-      @include square($square-icon-x-small-content);
-      display: inline-block;
-      opacity: 0.5;
-      transform: rotate(-90deg);
+      display: none;
+    }
+
+    // Deal with open states
+    .slds-is-open {
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      .site-states {
+        display: block;
+      }
+
+      .slds-icon__svg {
+        // scss-lint:disable SelectorDepth
+        opacity: 1;
+        transform: rotate(0deg);
+      }
     }
   }
 
   // Nested list for variant states
-  .site-states {
-    display: none;
+  .site-states a {
+    padding: {
+      top: $spacing-x-small;
+      bottom: $spacing-x-small;
+      left: $spacing-x-large;
+    }
+  }
 
-    a {
-      padding-left: $spacing-x-large;
+  // Large Overrides
+  @include mq-large-min {
+
+    .site-main-content {
+      margin: {
+        top: -$spacing-xx-large;
+        bottom: -$spacing-xx-large;
+      }
+      padding: {
+        top: $spacing-xx-large;
+        right: $spacing-xx-large;
+        bottom: $spacing-xx-large * 2;
+      }
     }
 
-    .slds-is-active a {
-      color: $color-text-tab-label-selected;
-      background-color: $color-background-alt-2;
+    // Component nav container
+    .site-menu--jump-links_container {
+      width: 16.667%;
+    }
+
+    // List of jump menu items
+    .site-menu--jump-links {
+      @include scrollbar($track: $color-background-alt);
+      overflow-x: hidden;
+      z-index: $z-index-default;
+
+      // Label at the top of jump menu items
+      .site-text-heading--label {
+        padding-left: $spacing-large;
+      }
+
+      // Links
+      a {
+        display: flex;
+        padding: $spacing-x-small $spacing-x-small $spacing-x-small $spacing-large;
+        line-height: 1.28571428571429;
+        color: $color-text-default;
+
+        &:hover {
+          background-color: rgba($color-background, 0.5);
+        }
+      }
+
+      // When component variant is selected
+      // scss-lint:disable SelectorDepth NestingDepth
+      .slds-is-selected {
+        background-color: $color-background;
+
+        // scss-lint:disable SelectorDepth NestingDepth
+        a:hover {
+          background-color: darken($color-background, 2.5);
+        }
+      }
+
+      .slds-icon__svg {
+        @include square($square-icon-x-small-content);
+        display: inline-block;
+        opacity: 0.5;
+        transform: rotate(-90deg);
+      }
+    }
+
+    // Nested list for variant states
+    // scss-lint:disable SelectorDepth
+    .site-states {
+      display: none;
+
+      a {
+        padding-left: $spacing-x-large;
+      }
+
+      .slds-is-active a {
+        color: $color-text-tab-label-selected;
+        background-color: $color-background-alt-2;
+      }
     }
   }
 }

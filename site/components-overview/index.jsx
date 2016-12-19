@@ -15,8 +15,11 @@ import PageBody from 'app_modules/site/components/page/body';
 import ComponentsOverview from 'site/assets/scripts/components/components-overview';
 
 export default (
-  <PageBody anchorTitle="Component Overview" contentClassName="site">
-    <ComponentsOverview />
+  <PageBody anchorTitle="Component Overview">
+    <div className="slds-container--large">
+      <ComponentsOverview />
+    </div>
+
     <script src="/assets/scripts/components-overview.js" async />
   </PageBody>
 );

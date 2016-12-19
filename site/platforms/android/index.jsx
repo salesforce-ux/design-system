@@ -15,6 +15,8 @@ import CodeBlock from 'app_modules/ui/code-block';
 
 export default (
   <PageBody anchorTitle="Android">
-    <p>Android</p>
+    <div className="slds-container--large">
+      <p>Android</p>
+    </div>
   </PageBody>
 );

@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import CodeBlock from 'app_modules/ui/code-block';
 
 export default (
-  <PageBody anchorTitle="Loading" contentClassName="site site-guidelines site-guidelines-loading site-text-longform">
+  <PageBody anchorTitle="Loading" contentClassName="site-guidelines site-guidelines-loading">
     <div className="slds-container--large">
       <p className="site-text-introduction">Loading indicators help to reassure the user that the system is actively retrieving data.</p>
 

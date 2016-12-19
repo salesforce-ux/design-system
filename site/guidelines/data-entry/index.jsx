@@ -18,25 +18,23 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 export default (
   <PageBody anchorTitle="Data Entry" contentClassName="site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
-      <div className="site">
-        <p className="site-text-introduction">
-          Salesforce users need to add, change, and delete information
-          frequently. A wide variety of text entry and selection options clearly
-          and efficiently facilitates this experience.
-        </p>
+      <p className="site-text-introduction">
+        Salesforce users need to add, change, and delete information
+        frequently. A wide variety of text entry and selection options clearly
+        and efficiently facilitates this experience.
+      </p>
 
-        <h2 className="site-text-heading--large">Basic Text Input</h2>
+      <h2 className="site-text-heading--large">Basic Text Input</h2>
 
-        <p>
-          <strong>
-            The simplest method of freeform data entry, for single and multiple
-            lines of text.
-          </strong>
-        </p>
-      </div>
+      <p>
+        <strong>
+          The simplest method of freeform data entry, for single and multiple
+          lines of text.
+        </strong>
+      </p>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             To limit the amount of text, use a single­line input. To restrict
             the type of input, you can specify the format, such as number or
@@ -80,7 +78,7 @@ export default (
       </div>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             To group related fields together, such as individual parts of an
             address, use compound inputs.
@@ -119,7 +117,7 @@ export default (
       <h3 className="site-text-heading--medium">Sizing</h3>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             The default text size creates a visual hierarchy between the label
             text and the input text. To conserve vertical space or when you
@@ -162,7 +160,7 @@ export default (
       <h3 className="site-text-heading--medium">Input Help</h3>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             To assist the users, you can add help text. If the explanation is
             lengthy, use an “info” icon and tooltip. For brief explanations
@@ -204,7 +202,7 @@ export default (
         </div>
       </div>
 
-      <div className="site slds-m-top--xx-large">
+      <div className="slds-m-top--xx-large">
         <h2 className="site-text-heading--large">Complex Text Input</h2>
 
         <p>
@@ -217,17 +215,15 @@ export default (
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
         <div className="slds-col--padded-large slds-large-size--1-of-2">
-          <div className="site">
-            <h3 className="site-text-heading--medium slds-p-top--x-large">
-              Date Pickers
-            </h3>
+          <h3 className="site-text-heading--medium slds-p-top--x-large">
+            Date Pickers
+          </h3>
 
-            <p className="slds-m-vertical--large">
-              Instead of forcing the user to manually type a date, a datepicker
-              provides a visual way for the user to browse and select a single
-              date or range of dates.
-            </p>
-          </div>
+          <p className="slds-m-vertical--large">
+            Instead of forcing the user to manually type a date, a datepicker
+            provides a visual way for the user to browse and select a single
+            date or range of dates.
+          </p>
 
           <figure className="site-stencil slds-m-vertical--large slds-clearfix">
             <div className="slds-datepicker slds-dropdown slds-dropdown--left site-stencil__border-light slds-is-static slds-m-top--none" aria-hidden="true">
@@ -337,17 +333,15 @@ export default (
         </div>
 
         <div className="slds-col--padded-large slds-large-size--1-of-2">
-          <div className="site">
-            <h3 className="site-text-heading--medium slds-p-top--x-large">
-              Lookups
-            </h3>
+          <h3 className="site-text-heading--medium slds-p-top--x-large">
+            Lookups
+          </h3>
 
-            <p className="slds-m-vertical--large">
-              A lookup allows the user to search a database for records to fill
-              a field. The lookup can either limit the user to a single record
-              or allow for multiple records to populate a single field.
-            </p>
-          </div>
+          <p className="slds-m-vertical--large">
+            A lookup allows the user to search a database for records to fill
+            a field. The lookup can either limit the user to a single record
+            or allow for multiple records to populate a single field.
+          </p>
 
           <figure className="site-stencil slds-m-vertical--large">
             <div className="slds-form-element slds-lookup slds-is-open" aria-hidden="true">
@@ -395,7 +389,7 @@ export default (
         </div>
       </div>
 
-      <div className="site slds-m-top--xx-large">
+      <div className="slds-m-top--xx-large">
         <h2 className="site-text-heading--large">Selection Input</h2>
 
         <p>
@@ -409,7 +403,7 @@ export default (
       </div>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             Use a single checkbox for Boolean fields in which the user can
             choose only between true and false or on and off.
@@ -456,7 +450,7 @@ export default (
       <h3 className="site-text-heading--medium">Radio Lists</h3>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             A radio list allows the user to select one option from a short
             list (fewer than 10 options). You must have enough space to
@@ -506,7 +500,7 @@ export default (
       <h3 className="site-text-heading--medium">Checkbox Toggle</h3>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             A toggle is similar to a checkbox in that it presents users with a
             binary choice for an item. However, a toggle is self-contained
@@ -540,7 +534,7 @@ export default (
       <h4 className="site-text-heading--label">Usage</h4>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
 
           <p className="slds-m-vertical--large">
             Use a toggle if the field you’re building:
@@ -719,7 +713,7 @@ export default (
         </div>
       </div>
 
-      <div className="site slds-m-top--xx-large">
+      <div className="slds-m-top--xx-large">
         <h4 className="site-text-heading--label">Labels</h4>
 
         <p>A toggle is always accompanied by two external labels:</p>
@@ -742,17 +736,15 @@ export default (
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large slds-p-top--x-large">
         <div className="slds-col--padded-large slds-large-size--1-of-2">
-          <div className="site">
-            <h2 className="site-text-heading--medium">Picklists</h2>
+          <h2 className="site-text-heading--medium">Picklists</h2>
 
-            <p className="slds-m-vertical--large">
-              Picklists, commonly known as dropdown menus, allow the user to
-              select one option or multiple options from a list. Picklists are
-              used instead of radio lists and checkbox lists inside of a larger
-              form. They provide more flexibility in the number of options the
-              user can choose from.
-            </p>
-          </div>
+          <p className="slds-m-vertical--large">
+            Picklists, commonly known as dropdown menus, allow the user to
+            select one option or multiple options from a list. Picklists are
+            used instead of radio lists and checkbox lists inside of a larger
+            form. They provide more flexibility in the number of options the
+            user can choose from.
+          </p>
 
           <figure className="site-stencil slds-m-vertical--large slds-clearfix">
             <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aria-hidden="true">
@@ -795,14 +787,12 @@ export default (
         </div>
 
         <div className="slds-col--padded-large slds-large-size--1-of-2">
-          <div className="site">
-            <h2 className="site-text-heading--medium">Dueling Picklists</h2>
+          <h2 className="site-text-heading--medium">Dueling Picklists</h2>
 
-            <p className="slds-m-vertical--large">
-              Use this control when the user needs to select more than one
-              option and define the order of the selected items.
-            </p>
-          </div>
+          <p className="slds-m-vertical--large">
+            Use this control when the user needs to select more than one
+            option and define the order of the selected items.
+          </p>
 
           <figure className="site-stencil slds-m-vertical--large">
             <div className="slds-picklist--draggable slds-grid" aria-hidden="true">
@@ -853,7 +843,7 @@ export default (
       <h2 className="site-text-heading--medium">Inline Edit</h2>
 
       <div className="slds-grid slds-wrap slds-grid--pull-padded-large">
-        <div className="site slds-col--padded-large slds-large-size--1-of-2">
+        <div className="slds-col--padded-large slds-large-size--1-of-2">
           <p className="slds-m-vertical--large">
             Inline editing allows the user to edit some part of a record
             without making a major switch between viewing and editing. This is

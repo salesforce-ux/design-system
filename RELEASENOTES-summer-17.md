@@ -25,6 +25,8 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
+- Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
+
 **DEPRECATED**
 
 The following features are being marked as deprecated in this release and will be removed in three releases:

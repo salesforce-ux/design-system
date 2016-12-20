@@ -56,7 +56,7 @@ let Tab = props => {
   const uniqueId = _.uniqueId('tabs-path-');
   return (
     <li className={classNames('slds-tabs--path__item', props.className)} role="presentation">
-      <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex={props.tabIndex || '-1'} role="tab" href="javascript:void(0);" aria-live="assertive">
+      <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex={props.tabIndex || '-1'} role="tab" href="javascript:void(0);">
         {props.children}
       </a>
     </li>

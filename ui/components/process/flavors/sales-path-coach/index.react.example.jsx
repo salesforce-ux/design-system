@@ -164,6 +164,7 @@ let StateA = props =>
       <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Current Stage:</span>
         </span>
         <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
@@ -205,6 +206,7 @@ let StateB = props =>
       <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Current Stage:</span>
         </span>
         <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
@@ -267,6 +269,7 @@ let StateC = props =>
       <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+          <span className="slds-assistive-text">Current Stage:</span>
         </span>
         <span className="slds-tabs--path__title">Unqualified</span>
       </Tab>
@@ -310,6 +313,7 @@ let StateD = props =>
           <Tab className="slds-is-current" tabIndex="0">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Current Stage:</span>
             </span>
             <span className="slds-tabs--path__title">Unqualified</span>
           </Tab>
@@ -360,6 +364,7 @@ let StateE = props =>
           <Tab className="slds-is-current">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Current Stage:</span>
             </span>
             <span className="slds-tabs--path__title">Unqualified</span>
           </Tab>
@@ -421,6 +426,7 @@ let StateF = props =>
         <Tab className="slds-is-lost" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Current Stage:</span>
           </span>
           <span className="slds-tabs--path__title">Closed Lost</span>
         </Tab>
@@ -463,6 +469,7 @@ let StateG = props =>
         <Tab className="slds-is-complete slds-is-won" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
+            <span className="slds-assistive-text">Current Stage:</span>
           </span>
           <span className="slds-tabs--path__title">Closed Won</span>
         </Tab>

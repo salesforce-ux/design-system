@@ -75,7 +75,7 @@ export let ContextTabBar = props =>
       </div>
 
       <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
-        <a href="javascript:void(0);" title="Context" className="slds-context-bar__label-action">
+        <a href="javascript:void(0);" title="Object" className="slds-context-bar__label-action">
           <span className="slds-truncate">Object</span>
         </a>
         <div className="slds-context-bar__icon-action">

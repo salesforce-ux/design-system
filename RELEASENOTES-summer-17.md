@@ -33,6 +33,8 @@ The following features are being marked as deprecated in this release and will b
 
 The following features are being removed in this release:
 
+Removed the like count in the bottom right of the Feed card.
+
 **TOKENS**
 
 The following tokens have been add/removed/deprecated in this release:

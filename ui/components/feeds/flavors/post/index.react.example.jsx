@@ -37,7 +37,6 @@ export let PostFooterActions = props =>
 
 export let PostFooterMeta = props =>
   <ul className="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
-    { props.liked ? <li className="slds-item">1 likes</li> : null }
     { props.comments ? <li className="slds-item">{ props.comments || '0' } comments</li> : null }
     <li className="slds-item">20 shares</li>
     <li className="slds-item">259 views</li>

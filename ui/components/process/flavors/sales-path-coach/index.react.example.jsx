@@ -56,7 +56,7 @@ let Tab = props => {
   const uniqueId = _.uniqueId('tabs-path-');
   return (
     <li className={classNames('slds-tabs--path__item', props.className)} role="presentation">
-      <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+      <a className="slds-tabs--path__link" id={uniqueId} aria-controls="content-path-1" aria-selected="false" tabIndex={props.tabIndex || '-1'} role="tab" href="javascript:void(0);" aria-live="assertive">
         {props.children}
       </a>
     </li>
@@ -161,7 +161,7 @@ let StateA = props =>
         </span>
         <span className="slds-tabs--path__title">Open</span>
       </Tab>
-      <Tab className="slds-is-current">
+      <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
@@ -202,7 +202,7 @@ let StateB = props =>
         </span>
         <span className="slds-tabs--path__title">Open</span>
       </Tab>
-      <Tab className="slds-is-current">
+      <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
@@ -264,7 +264,7 @@ let StateC = props =>
         </span>
         <span className="slds-tabs--path__title">Stage Five</span>
       </Tab>
-      <Tab className="slds-is-current">
+      <Tab className="slds-is-current" tabIndex="0">
         <span className="slds-tabs--path__stage">
           <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
         </span>
@@ -307,7 +307,7 @@ let StateD = props =>
             </span>
             <span className="slds-tabs--path__title">Open</span>
           </Tab>
-          <Tab className="slds-is-current">
+          <Tab className="slds-is-current" tabIndex="0">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
@@ -363,7 +363,7 @@ let StateE = props =>
             </span>
             <span className="slds-tabs--path__title">Unqualified</span>
           </Tab>
-          <Tab className="slds-is-incomplete slds-is-active">
+          <Tab className="slds-is-incomplete slds-is-active" tabIndex="0">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
@@ -418,7 +418,7 @@ let StateF = props =>
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </Tab>
-        <Tab className="slds-is-lost">
+        <Tab className="slds-is-lost" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
@@ -460,7 +460,7 @@ let StateG = props =>
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </Tab>
-        <Tab className="slds-is-complete slds-is-won">
+        <Tab className="slds-is-complete slds-is-won" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>

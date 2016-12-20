@@ -1,5 +1,5 @@
 // Copyright (c) 2015, salesforce.com, inc. All rights reserved.
-//
+
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 // Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 // Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -7,47 +7,34 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-
-// Calculate PX into EM
-// Use - width: pem(600px);
-// Output - width: 37.5em;
-@function pem($pixels) {
-  @return ($pixels / 16px * 1em);
+.slds-icon-score {
+  display: inline-block;
+  width: rem(5px);
+  height: rem(5px);
+  position: relative;
 }
 
-// Calculate PX into REM
-// Use - width: rem(600px);
-// Output - width: 37.5rem;
-@function rem($pixels) {
-  @return ($pixels / 16px * 1rem);
+// We are variying opacity (instead of stroke & fill)
+// because it is a more performant way of achieving this effect
+[class*="slds-icon-score__"] {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  will-change: opacity;
+  stroke-width: 1.125px;
 }
 
-// Replace `$search` with `$replace` in `$string`
-// @author Hugo Giraudel
-// Use - str-replace($string, ' ', '-')
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
+.slds-icon-score__positive {
+  fill: #30a664;
+  stroke: #30a664;
 }
 
-/// Fix IE Rounding
-///
-/// IE computes 0.875rem into 13.92px instead of 14px
-/// but is better at rounding values using calc()
-/// so we use calc as a hack to get the correct width
-///
-/// This is required for closely positioning elements on a pixel grid
-/// e.g. in an icon where pixel perfection is important
-///
-/// @param {Number} $width - unitless width
-/// @param {Number} $base-font-size [16]
-/// @return {Expression} same as $width, but in rem using calc - e.g. calc(2rem / 16)
-@function fix-ie-rounding($width, $base-font-size: 16) {
-  @return calc(#{$width * 1rem} / #{$base-font-size});
+.slds-icon-score__negative {
+  fill: transparent;
+  stroke: #d2504c;
+}
+
+[data-slds-state="positive"] .slds-icon-score__positive,
+[data-slds-state="negative"] .slds-icon-score__negative {
+  opacity: 1;
 }

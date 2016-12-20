@@ -1,0 +1,147 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Improves readability and code structure
+
+
+.slds-icon-waffle_container {
+  outline: 0;
+
+  &:hover,
+  &:focus {
+
+    [class*="slds-r"] {
+      animation: slds-icon-waffle-throb 2 200ms alternate;
+    }
+
+    .slds-r1,
+    .slds-r2,
+    .slds-r3 {
+      background-color: #418fde;
+    }
+    .slds-r4,
+    .slds-r5,
+    .slds-r7 {
+      background-color: #ed8b00;
+    }
+    .slds-r6,
+    .slds-r8,
+    .slds-r9 {
+      background-color: #ffb60f;
+    }
+    .slds-r2,
+    .slds-r4 {
+      transition-delay: 50ms;
+      animation-delay: 50ms;
+    }
+    .slds-r3,
+    .slds-r5,
+    .slds-r7 {
+      transition-delay: 100ms;
+      animation-delay: 100ms;
+    }
+    .slds-r6,
+    .slds-r8 {
+      transition-delay: 150ms;
+      animation-delay: 150ms;
+    }
+    .slds-r9 {
+      transition-delay: 200ms;
+      animation-delay: 200ms;
+    }
+  }
+}
+
+.slds-icon-waffle {
+  @include square(rem(21px));
+  position: relative;
+  cursor: pointer;
+
+  [class*="slds-r"] {
+    @include square(rem(5px));
+    background-color: $color-background-icon-waffle;
+    display: inline-block;
+    position: absolute;
+    border-radius: $border-radius-circle;
+    transition: background-color 100ms;
+    transform-origin: 50% 50%;
+    will-change: scale, background-color;
+  }
+
+  // Positioning
+  .slds-r1 {
+    top: 0;
+    left: 0;
+  }
+
+  .slds-r2 {
+    top: 0;
+    left: rem(8px);
+  }
+
+  .slds-r3 {
+    top: 0;
+    right: 0;
+  }
+
+  .slds-r4 {
+    top: rem(8px);
+    left: 0;
+  }
+
+  .slds-r5 {
+    top: rem(8px);
+    left: rem(8px);
+  }
+
+  .slds-r6 {
+    top: rem(8px);
+    right: 0;
+  }
+
+  .slds-r7 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .slds-r8 {
+    bottom: 0;
+    left: rem(8px);
+  }
+
+  .slds-r9 {
+    bottom: 0;
+    right: 0;
+  }
+
+  // Default delays
+  // scss-lint:disable MergeableSelector
+  .slds-r1 {
+    transition-delay: 200ms;
+  }
+  .slds-r2,
+  .slds-r4 {
+    transition-delay: 150ms;
+  }
+  .slds-r3,
+  .slds-r5,
+  .slds-r7 {
+    transition-delay: 100ms;
+  }
+  .slds-r6,
+  .slds-r8 {
+    transition-delay: 50ms;
+  }
+}
+
+@keyframes slds-icon-waffle-throb {
+  to {
+    transform: scale(1.5);
+  }
+}

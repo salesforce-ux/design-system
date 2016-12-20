@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -67,7 +67,7 @@ export let ContextTabBar = props =>
     <div className="slds-context-bar__primary">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
         <div className="slds-context-bar__icon-action">
-          { <WaffleIcon /> }
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
           <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.appName || 'App Name' }</span>

@@ -13,6 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -20,22 +21,6 @@ import _ from 'lodash';
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
-
-export let WaffleIcon = props =>
-  <a href="javascript:void(0);" className={classNames('slds-icon-waffle_container slds-context-bar__button', props.className)}>
-    <div className="slds-icon-waffle">
-      <div className="slds-r1"></div>
-      <div className="slds-r2"></div>
-      <div className="slds-r3"></div>
-      <div className="slds-r4"></div>
-      <div className="slds-r5"></div>
-      <div className="slds-r6"></div>
-      <div className="slds-r7"></div>
-      <div className="slds-r8"></div>
-      <div className="slds-r9"></div>
-    </div>
-    <span className="slds-assistive-text">Open App Launcher</span>
-  </a>;
 
 // Context Item Dropdown
 const contextDropdown = (
@@ -68,7 +53,7 @@ export let ContextBar = props =>
       {/* App Switcher */}
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
         <div className="slds-context-bar__icon-action">
-          <WaffleIcon />
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">

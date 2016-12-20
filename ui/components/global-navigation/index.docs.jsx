@@ -14,7 +14,7 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import _ from 'lodash';
 
 let NavigationBar = props =>
@@ -23,7 +23,7 @@ let NavigationBar = props =>
     <div className="slds-context-bar__primary slds-context-bar__item--divider-right slds-is-relative">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
         <div className="slds-context-bar__icon-action">
-          <WaffleIcon />
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
           <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -169,7 +169,7 @@ export default (
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
             <div className="site-dimension site-dimension--absolute"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
@@ -187,7 +187,7 @@ export default (
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -205,7 +205,7 @@ export default (
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>

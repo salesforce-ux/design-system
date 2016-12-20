@@ -101,7 +101,7 @@ export let DockedComposerPanel = props => {
 
 let ComposerOverflowMenu = props =>
   <div className="slds-docked-composer slds-docked-composer--overflow">
-    <button className="slds-button slds-button--icon docked-composer--overflow__button" aria-haspopup="true">
+    <button className="slds-button slds-button--icon slds-docked-composer--overflow__button" aria-haspopup="true">
       <SvgIcon className="slds-button__icon" sprite="utility" symbol="standard_objects" />
       <span className="slds-text-body--small slds-m-left--xx-small">3 <span className="slds-assistive-text">other docked composer panels</span></span>
     </button>
@@ -112,7 +112,7 @@ let ComposerOverflowMenu = props =>
           <MenuItem key={ i }>
             <span className={'slds-icon_container slds-icon-standard-' + composers[i].entity + ' slds-m-right--x-small'}>
               <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={ composers[i].entity } />
-              <span className="slds-assistive-text">{ composers[i].entity } Icon</span>
+              <span className="slds-assistive-text">{ composers[i].entity }</span>
             </span>
             { composers[i].title }
           </MenuItem>

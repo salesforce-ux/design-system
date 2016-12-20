@@ -117,8 +117,7 @@ export let ContextTabBar = props =>
           <ButtonIcon
             className="slds-button--icon-container slds-button--icon-small"
             symbol="add"
-            aria-haspopup="true"
-            assistiveText="Open object switcher menu" />
+            assistiveText="New Tab" />
         </div>
         { props.addTabActive ?
           <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>

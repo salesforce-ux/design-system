@@ -25,6 +25,9 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
+- Remove `aria-haspopup="true"` from `slds-context-bar__icon-action`'s button 
+  global nav tab bar.
+- Change assistive text on above mentioned button to `New Tab`.
 - Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
 
 **DEPRECATED**
